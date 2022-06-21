@@ -1,0 +1,44 @@
+Arguments: 
+  /Users/dpapp/.nvm/versions/node/v18.1.0/bin/node /usr/local/bin/yarn add -D react react-dom
+
+PATH: 
+  /Users/dpapp/.nvm/versions/node/v18.1.0/bin:/Users/dpapp/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/dpapp/.fig/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  18.1.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/dpapp/Projects/emseUI/package.json: Unexpected token } in JSON at position 272
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "emse-ui",
+    "version": "1.0.0",
+    "description": "The component library to be used in the Async Portal at EMSE.",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+    },
+    "keywords": [],
+    "author": "Dániel B. Papp",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
