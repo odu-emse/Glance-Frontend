@@ -1,25 +1,35 @@
 import * as PropTypes from "prop-types"
+import * as React from "react"
 import Loader from "../../util/Loader"
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, loading, size, label, ...props }:ButtonProps):JSX.Element => {
-	const baseStyles = "rounded-md py-2 px-5 flex items-center"
-	const variant = primary ? "bg-blue-700 text-white" : "bg-blue-200 text-black"
+
+export const Button = ({ primary, loading, size, label, disabled, ...props }:ButtonProps):JSX.Element => {
+	const baseStyles = "rounded-md flex items-center"
+	const variant:string = primary ? "bg-blue-700 text-white" : "bg-blue-200 text-black"
+	let buttonSize : string
+	if(size === "small") {
+		buttonSize = "h-4 w-auto py-4 px-2"
+	}
+	else if(size === "large") {
+		buttonSize = "h-12 w-auto py-8 px-10"
+	}
+	else if(size === "base") {
+		buttonSize = "h-10 w-auto py-2 px-5"
+	}
 
 	return (
 		<button
 			type="button"
-			className={[baseStyles, 
-				size === "small" ? "h-4 w-auto" : null,
-				size === "base" ? "h-10 w-auto" : null,
-				size === "large" ? "h-12 w-auto" : null,
-				, variant].join(" ")}
+			disabled={disabled}
+			className={[
+				disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
+				baseStyles, 
+				buttonSize, 
+				variant].join(" ")}
 			{...props}
 		>
 			{loading? (
-				<Loader textColor='black' />) : null}
+				<Loader textColor={`${primary ? "blue-700" : "blue-200"}`} />) : null}
 			{label}
 		</button>
 	)
@@ -30,6 +40,7 @@ type ButtonProps = {
     loading?: boolean
     size?: "small" | "base" | "large"
     label: string
+	disabled?: boolean
     onClick: () => void
 }
 
@@ -39,7 +50,7 @@ Button.propTypes = {
    */
 	primary: PropTypes.bool,
 	/**
-   * What background color to use
+   * Is the button representing a loading state?
    */
 	loading: PropTypes.bool,
 	/**

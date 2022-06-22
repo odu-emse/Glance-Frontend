@@ -1,4 +1,5 @@
 import * as PropTypes from "prop-types"
+import * as React from "react"
 
 const Loader = ({textColor, backgroundColor}) => ( 
 	<svg role="status" className={`inline w-4 h-4 mr-3 text-${textColor ? textColor : "white"} animate-spin`} viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

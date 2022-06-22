@@ -1,42 +1,45 @@
-import { Button } from '../components/Button';
+import { Button } from "../components/Button"
+import * as React from "react"
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Button',
-  component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-  },
-};
+	title: "Components/Button",
+	component: Button,
+	argTypes: {
+		disabled: { control: "boolean", defaultValue: false },
+	},
+}
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args} />
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
+export const Primary = Template.bind({})
 Primary.args = {
-  primary: true,
-  label: 'Click here!',
-  loading: false,
-};
+	primary: true,
+	label: "Click here!",
+	loading: false,
+	size: "base",
+	disabled: false
+}
 
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 Secondary.args = {
-  label: 'Click here!',
-  loading: false,
-};
+	label: "Click here!",
+	loading: false,
+	size: "base",
+	disabled: false
+}
 
-export const Large = Template.bind({});
+export const Large = Template.bind({})
 Large.args = {
-  size: 'large',
-  label: 'Click here!',
-  loading: false,
-};
+	size: "large",
+	label: "Click here!",
+	loading: false,
+	disabled: false
+}
 
-export const Small = Template.bind({});
+export const Small = Template.bind({})
 Small.args = {
-  size: 'small',
-  label: 'Click here!',
-  loading: false,
-};
+	size: "small",
+	label: "Click here!",
+	loading: false,
+	disabled: false
+}

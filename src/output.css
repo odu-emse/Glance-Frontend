@@ -1110,12 +1110,12 @@ input:checked + .toggle-bg {
   margin-right: auto;
 }
 
-.ml-auto {
-  margin-left: auto;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .mr-2 {
@@ -1230,20 +1230,28 @@ input:checked + .toggle-bg {
   display: none;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-4 {
+  height: 1rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-8 {
   height: 2rem;
 }
 
-.h-5 {
-  height: 1.25rem;
+.h-6 {
+  height: 1.5rem;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-5 {
+  height: 1.25rem;
 }
 
 .h-20 {
@@ -1266,10 +1274,6 @@ input:checked + .toggle-bg {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-min {
@@ -1326,8 +1330,12 @@ input:checked + .toggle-bg {
   height: 0px;
 }
 
-.h-12 {
-  height: 3rem;
+.w-4 {
+  width: 1rem;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .w-6 {
@@ -1366,10 +1374,6 @@ input:checked + .toggle-bg {
   width: 0.75rem;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1402,10 +1406,6 @@ input:checked + .toggle-bg {
 
 .w-2 {
   width: 0.5rem;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .max-w-sm {
@@ -2297,6 +2297,26 @@ input:checked + .toggle-bg {
   padding: 0px !important;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2310,11 +2330,6 @@ input:checked + .toggle-bg {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .py-0\.5 {
@@ -2362,9 +2377,9 @@ input:checked + .toggle-bg {
   padding-bottom: 0.75rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pl-0 {
@@ -2695,10 +2710,6 @@ input:checked + .toggle-bg {
 .ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
