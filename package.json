@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"dependencies": {
 		"prop-types": "^15.8.1",
-		"react-icons": "^4.4.0"
+		"react-icons": "^4.4.0",
+		"react-router-dom": "^6.3.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.5",
@@ -21,6 +22,7 @@
 		"@storybook/testing-library": "^0.0.13",
 		"@testing-library/cypress": "^8.0.3",
 		"@types/prop-types": "^15.7.5",
+		"@types/react-router-dom": "^5.3.3",
 		"@typescript-eslint/eslint-plugin": "^5.29.0",
 		"@typescript-eslint/parser": "^5.29.0",
 		"autoprefixer": "^10.4.7",
