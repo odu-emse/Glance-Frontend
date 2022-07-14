@@ -11,6 +11,8 @@ import {
 	MdWidgets,
 } from 'react-icons/md'
 import { Link } from '../Link'
+import { Logo } from '../Logo/Logo'
+import { Hamburger } from '../Hamburger/Hamburger'
 
 type SidebarProps = {
 	/**
@@ -43,14 +45,7 @@ type SidebarProps = {
 	) => React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const Sidebar = ({
-	// open,
-	// setOpen,
-	// dropdown,
-	// setDropdown,
-	authenticated,
-	setAuthenticated,
-}: SidebarProps) => {
+export const Sidebar = ({ authenticated, setAuthenticated }: SidebarProps) => {
 	const [open, setOpen] = React.useState(false)
 	const [dropdown, setDropdown] = React.useState(false)
 	return (
@@ -59,59 +54,12 @@ export const Sidebar = ({
 				open ? 'w-3/12' : 'w-1/12'
 			}`}
 		>
-			<div
+			<nav
 				className={`sticky z-50 flex flex-col bg-gray-800 top-0 left-0 right-0 h-screen`}
 			>
-				<button
-					className="inline-flex items-center justify-center py-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white w-full"
-					aria-expanded="false"
-					onClick={() => setOpen(!open)}
-				>
-					<span className="sr-only">Open side menu</span>
-					<svg
-						className="block h-6 w-6"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						aria-hidden="true"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
-					</svg>
-					<svg
-						className="hidden h-6 w-6"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						aria-hidden="true"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M6 18L18 6M6 6l12 12"
-						/>
-					</svg>
-				</button>
+				<Hamburger onClick={() => setOpen(!open)} />
 
-				<div className="logo w-full flex items-center justify-center py-5">
-					<img
-						className="block max-h-16 w-auto h-auto"
-						src={`${
-							open
-								? 'https://www.odu.edu/content/dam/odu/logos/univ/png-72dpi/odu-sig-noidea-fullcolor.png'
-								: 'https://www.odu.edu/content/dam/odu/logos/univ/png-72dpi/crown-r-2-color.png'
-						}`}
-						alt="Workflow"
-						loading="lazy"
-					/>
-				</div>
+				<Logo open={open} />
 
 				<div
 					className={`menu relative h-full flex flex-col ${
@@ -122,19 +70,17 @@ export const Sidebar = ({
 						<>
 							<Link
 								to="/users/login"
-								className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+								className={
 									!open && 'flex items-center justify-center'
-								}`}
-								activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+								}
 							>
 								{open ? 'Login' : <GoSignIn size={30} />}
 							</Link>
 							<Link
 								to="/users/register"
-								className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+								className={
 									!open && 'flex items-center justify-center'
-								}`}
-								activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+								}
 							>
 								{open ? 'Register' : <GoPerson size={30} />}
 							</Link>
@@ -144,12 +90,12 @@ export const Sidebar = ({
 							<div className="flex flex-col">
 								<Link
 									to="/portal"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									active={true}
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'Portal'
@@ -159,12 +105,11 @@ export const Sidebar = ({
 								</Link>
 								<Link
 									to="/dashboard"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'Dashboard'
@@ -177,12 +122,11 @@ export const Sidebar = ({
 								</Link>
 								<Link
 									to="/program"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'My Program'
@@ -192,12 +136,11 @@ export const Sidebar = ({
 								</Link>
 								<Link
 									to="/assignments"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'Assignments'
@@ -207,12 +150,11 @@ export const Sidebar = ({
 								</Link>
 								<Link
 									to="/community"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'Community'
@@ -225,12 +167,11 @@ export const Sidebar = ({
 								</Link>
 								<Link
 									to="/support"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'Your support'
@@ -245,7 +186,7 @@ export const Sidebar = ({
 
 							<div className="flex flex-col w-full">
 								<button
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={` text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest list-none ${
 										!open
 											? 'flex items-center justify-center'
 											: 'text-left'
@@ -281,7 +222,6 @@ export const Sidebar = ({
 									<Link
 										to={`/users/`}
 										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 										role="menuitem"
 									>
 										Your Profile
@@ -289,7 +229,6 @@ export const Sidebar = ({
 									<Link
 										to="/users/logout"
 										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 										role="menuitem"
 									>
 										Sign out
@@ -297,12 +236,11 @@ export const Sidebar = ({
 								</div>
 								<Link
 									to="/sitemap"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'Sitemap'
@@ -315,12 +253,11 @@ export const Sidebar = ({
 								</Link>
 								<Link
 									to="/users/logout"
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+									className={
 										!open
 											? 'flex items-center justify-center'
 											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									}
 								>
 									{open ? (
 										'Logout'
@@ -335,7 +272,7 @@ export const Sidebar = ({
 						</>
 					)}
 				</div>
-			</div>
+			</nav>
 		</aside>
 	)
 }
