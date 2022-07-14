@@ -1,76 +1,83 @@
 import { Layout } from '../components/Layout'
+import { Sidebar } from '../components/Sidebar'
 import * as React from 'react'
+import { Content } from '../components/Content'
+import { RouteProps, Wrapper } from '../components/Wrapper'
 
 export default {
 	title: 'Components/Layout',
 	component: Layout,
-	// argTypes: {
-	// 	label: { control: "text", description: "The text to be rendered inside of the button component." },
-	// 	size: {control: "select", options: ["small", "base", "large"], description: "The size of the button."},
-	// 	primary: { control: "boolean", description: "Decides whether the button is the a main call to action on the page or just a supplementary element." },
-	// 	loading: { control: "boolean", description: "Describes the state of the page or an element that is related to the button." },
-	// 	disabled: { control: "boolean", description: "Disables the button" },
-	// 	type: { control: "select", options: ["button", "submit", "reset"], defaultValue: "button", description: "The HTML type of the button to be used." },
-	// 	onClick: { control: "action", description: "The function to be called when the button is clicked." },
-	// },
 	argTypes: {
-		dark: {
+		authenticated: {
+			type: 'boolean',
 			control: 'boolean',
-			description: 'Decides whether the layout is dark or light.',
+			defaultValue: false,
 		},
 	},
 }
 
+const routes: [RouteProps] = [
+	{
+		index: true,
+		path: '/',
+		element: null,
+	},
+]
+
 const Template = (args) => {
 	return (
-		<Layout {...args}>
-			<h1>Some text that belongs in here</h1>{' '}
+		<Layout>
+			<Wrapper routes={routes} />
+			<Sidebar {...args} />
+			<Content>
+				<h1 className="border-blue-300 border-dashed border-4">
+					Hello World
+				</h1>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Optio, ad. Quam molestiae porro unde illo, odit vero
+					perspiciatis, saepe quos delectus totam esse harum nemo
+					itaque blanditiis consequuntur placeat laboriosam!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Optio, ad. Quam molestiae porro unde illo, odit vero
+					perspiciatis, saepe quos delectus totam esse harum nemo
+					itaque blanditiis consequuntur placeat laboriosam!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Optio, ad. Quam molestiae porro unde illo, odit vero
+					perspiciatis, saepe quos delectus totam esse harum nemo
+					itaque blanditiis consequuntur placeat laboriosam!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Optio, ad. Quam molestiae porro unde illo, odit vero
+					perspiciatis, saepe quos delectus totam esse harum nemo
+					itaque blanditiis consequuntur placeat laboriosam!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Optio, ad. Quam molestiae porro unde illo, odit vero
+					perspiciatis, saepe quos delectus totam esse harum nemo
+					itaque blanditiis consequuntur placeat laboriosam!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Optio, ad. Quam molestiae porro unde illo, odit vero
+					perspiciatis, saepe quos delectus totam esse harum nemo
+					itaque blanditiis consequuntur placeat laboriosam!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Optio, ad. Quam molestiae porro unde illo, odit vero
+					perspiciatis, saepe quos delectus totam esse harum nemo
+					itaque blanditiis consequuntur placeat laboriosam!
+				</p>
+			</Content>
 		</Layout>
 	)
 }
 
 export const Primary = Template.bind({})
-Primary.args = {
-	dark: false,
-}
-
-// export const Primary = Template.bind({})
-// Primary.args = {
-// 	primary: true,
-// 	loading: false,
-// 	size: "base",
-// 	disabled: false
-// }
-
-// export const Secondary = Template.bind({})
-// Secondary.args = {
-// 	primary: false,
-// }
-
-// export const Large = Template.bind({})
-// Large.args = {
-// 	size: "large",
-// 	loading: false,
-// 	disabled: false
-// }
-
-// export const Small = Template.bind({})
-// Small.args = {
-// 	size: "small",
-// 	loading: false,
-// 	disabled: false
-// }
-// export const Loading = Template.bind({})
-// Loading.args = {
-// 	primary: true,
-// 	size: "base",
-// 	loading: true,
-// 	disabled: false
-// }
-// export const Disabled = Template.bind({})
-// Disabled.args = {
-// 	primary: true,
-// 	size: "base",
-// 	loading: false,
-// 	disabled: true
-// }
