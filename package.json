@@ -1,6 +1,6 @@
 {
 	"name": "emse-ui",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "The component library to be used in the Async Portal at EMSE.",
 	"main": "index.js",
 	"dependencies": {
