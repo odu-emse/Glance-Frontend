@@ -11,41 +11,17 @@ import {
 	MdWidgets,
 } from 'react-icons/md'
 import { Link } from '../Link'
-import { Logo } from '../Logo/Logo'
-import { Hamburger } from '../Hamburger/Hamburger'
+import { Logo } from './'
+import { Hamburger } from './'
 
 type SidebarProps = {
 	/**
 	 * @default false
 	 */
-	open: boolean
-	/**
-	 * Set State function to toggle the navigation to the open and closed states
-	 */
-	setOpen: (open: boolean) => React.Dispatch<React.SetStateAction<boolean>>
-	/**
-	 * @default false
-	 */
-	dropdown: boolean
-	/**
-	 * Set State function to toggle the dropdown of the user's profile. Has no affect if the user is not authenticated.
-	 */
-	setDropdown: (
-		dropdown: boolean
-	) => React.Dispatch<React.SetStateAction<boolean>>
-	/**
-	 * @default false
-	 */
 	authenticated: boolean
-	/**
-	 * Set State function to set the authenticated state of the current user
-	 */
-	setAuthenticated: (
-		authenticated: boolean
-	) => React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const Sidebar = ({ authenticated, setAuthenticated }: SidebarProps) => {
+export const Sidebar = ({ authenticated }: SidebarProps) => {
 	const [open, setOpen] = React.useState(false)
 	const [dropdown, setDropdown] = React.useState(false)
 	return (
@@ -59,129 +35,67 @@ export const Sidebar = ({ authenticated, setAuthenticated }: SidebarProps) => {
 			>
 				<Hamburger onClick={() => setOpen(!open)} />
 
-				<Logo open={open} />
+				<Logo extended={open} />
 
 				<div
 					className={`menu relative h-full flex flex-col ${
 						authenticated ? 'justify-between' : 'justify-end'
 					}`}
 				>
-					{!authenticated === true ? (
+					{!authenticated ? (
 						<>
 							<Link
 								to="/users/login"
-								className={
-									!open && 'flex items-center justify-center'
-								}
-							>
-								{open ? 'Login' : <GoSignIn size={30} />}
-							</Link>
+								icon={<GoSignIn size={30} />}
+								label="Login"
+								open={open}
+							/>
 							<Link
 								to="/users/register"
-								className={
-									!open && 'flex items-center justify-center'
-								}
-							>
-								{open ? 'Register' : <GoPerson size={30} />}
-							</Link>
+								icon={<GoPerson size={30} />}
+								label="Register"
+								open={open}
+							/>
 						</>
 					) : (
 						<>
 							<div className="flex flex-col">
 								<Link
 									to="/portal"
-									active={true}
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'Portal'
-									) : (
-										<MdWidgets size={30} title="Portal" />
-									)}
-								</Link>
+									icon={<MdWidgets size={30} />}
+									label="Portal"
+									open={open}
+								/>
 								<Link
 									to="/dashboard"
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'Dashboard'
-									) : (
-										<MdSpaceDashboard
-											size={30}
-											title="Dashboard"
-										/>
-									)}
-								</Link>
+									icon={<MdSpaceDashboard size={30} />}
+									label="Dashboard"
+									open={open}
+								/>
 								<Link
 									to="/program"
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'My Program'
-									) : (
-										<BsStack size={30} title="My Program" />
-									)}
-								</Link>
+									icon={<BsStack size={30} />}
+									label="My Program"
+									open={open}
+								/>
 								<Link
 									to="/assignments"
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'Assignments'
-									) : (
-										<BiTask size={30} title="Assignments" />
-									)}
-								</Link>
+									icon={<BiTask size={30} />}
+									label="Assignments"
+									open={open}
+								/>
 								<Link
 									to="/community"
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'Community'
-									) : (
-										<MdOutlineExplore
-											size={30}
-											title="Community"
-										/>
-									)}
-								</Link>
+									icon={<MdOutlineExplore size={30} />}
+									label="Community"
+									open={open}
+								/>
 								<Link
 									to="/support"
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'Your support'
-									) : (
-										<MdLiveHelp
-											size={30}
-											title="Your support"
-										/>
-									)}
-								</Link>
+									icon={<MdLiveHelp size={30} />}
+									label="Support"
+									open={open}
+								/>
 							</div>
 
 							<div className="flex flex-col w-full">
@@ -221,53 +135,28 @@ export const Sidebar = ({ authenticated, setAuthenticated }: SidebarProps) => {
 								>
 									<Link
 										to={`/users/`}
-										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+										label="Your Profile"
 										role="menuitem"
-									>
-										Your Profile
-									</Link>
+									/>
+
 									<Link
 										to="/users/logout"
-										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+										label="Logout"
 										role="menuitem"
-									>
-										Sign out
-									</Link>
+									/>
 								</div>
 								<Link
 									to="/sitemap"
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'Sitemap'
-									) : (
-										<AiOutlinePartition
-											size={30}
-											title="Sitemap"
-										/>
-									)}
-								</Link>
+									icon={<AiOutlinePartition size={30} />}
+									label="Sitemap"
+									open={open}
+								/>
 								<Link
-									to="/users/logout"
-									className={
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}
-								>
-									{open ? (
-										'Logout'
-									) : (
-										<RiShutDownLine
-											size={30}
-											title="Logout"
-										/>
-									)}
-								</Link>
+									to="/logout"
+									icon={<RiShutDownLine size={30} />}
+									label="Logout"
+									open={open}
+								/>
 							</div>
 						</>
 					)}
