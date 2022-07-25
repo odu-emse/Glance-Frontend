@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BrowserRouter, Link as NavLink } from 'react-router-dom'
+import { Link as NavLink } from 'react-router-dom'
 
 export const Link = ({
 	to,
@@ -9,37 +9,51 @@ export const Link = ({
 	label,
 	icon,
 	open,
-	children,
 	role,
+	children,
 }: LinkProps) => {
 	return (
-		<BrowserRouter>
+		<NavLink
+			to={to ?? ''}
+			className={role === 'logo' ? 'h-full w-full' : ''}
+		>
 			<li
 				className={`${
 					role === 'menuitem'
-						? 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'
-						: ' '
-				}text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest list-none ${className} ${
+						? 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 justify-start'
+						: 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest list-none'
+				} ${className && className} ${
 					active
 						? `bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4 ${activeClassName}`
+						: ''
+				} ${
+					!open && role !== 'menuitem'
+						? 'flex items-center justify-center'
 						: ''
 				}`}
 				role={role}
 			>
-				<NavLink to={to || ''}>{children || label}</NavLink>
+				<span className="flex gap-2 items-center">
+					<span className={`${open ? 'opacity-50' : 'opacity-100'}`}>
+						{icon}
+					</span>
+					{open && label}
+				</span>
+				{role === 'menuitem' && label}
+				{children ? children : null}
 			</li>
-		</BrowserRouter>
+		</NavLink>
 	)
 }
 
-type LinkProps = {
+export type LinkProps = {
 	to: string
 	activeClassName?: string
-	className: string
+	className?: string
 	active?: boolean
-	label?: string
+	label?: string | React.ReactNode
 	icon?: React.ReactNode
 	open?: boolean
-	children: React.ReactNode
 	role?: string
+	children?: React.ReactNode
 }
