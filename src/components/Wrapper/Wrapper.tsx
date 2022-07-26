@@ -22,7 +22,7 @@ export const Wrapper = ({ routes }: WrapperProps): JSX.Element => {
 }
 
 type WrapperProps = {
-	routes: [RouteProps]
+	routes: RouteProps[]
 }
 
 export type RouteProps = {
