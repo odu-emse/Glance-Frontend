@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { AiOutlinePartition } from 'react-icons/ai'
-import { BiTask } from 'react-icons/bi'
+import { BiTask, BiUser } from 'react-icons/bi'
 import { BsStack } from 'react-icons/bs'
 import { RiShutDownLine } from 'react-icons/ri'
 import { GoPerson, GoSignIn } from 'react-icons/go'
@@ -13,6 +13,7 @@ import {
 import { Link } from '../Link'
 import { Logo } from './'
 import { Hamburger } from './'
+import Anchor from '../Link/Anchor'
 
 type SidebarProps = {
 	/**
@@ -99,15 +100,15 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 							</div>
 
 							<div className="flex flex-col w-full">
-								<button
-									className={` text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest list-none ${
-										!open
-											? 'flex items-center justify-center'
-											: 'text-left'
-									}`}
+								<Anchor
+									className=""
+									role="tooltip-parent"
 									id="user-menu"
 									aria-haspopup="true"
 									onClick={() => setDropdown(!dropdown)}
+									path=""
+									open={open}
+									icon={<BiUser size={30} />}
 								>
 									<span className="sr-only">
 										Open user menu
@@ -116,13 +117,13 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 										'Account'
 									) : (
 										<img
-											className="md:h-8 md:w-8 h-auto w-auto rounded-full"
+											className="md:h-8 md:w-8 h-auto w-auto rounded-full hover:ring-2 hover:ring-slate-100 transition-all"
 											src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
 											alt="user account avatar"
 											loading="lazy"
 										/>
 									)}
-								</button>
+								</Anchor>
 								<div
 									className={`${
 										dropdown === true ? 'block' : 'hidden'
