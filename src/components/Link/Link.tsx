@@ -20,8 +20,8 @@ export const Link = ({
 			<li
 				className={`${
 					role === 'menuitem'
-						? 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 justify-start'
-						: 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest list-none'
+						? 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 justify-start transition-all'
+						: 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest list-none transition-all'
 				} ${className && className} ${
 					active
 						? `bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4 ${activeClassName}`
