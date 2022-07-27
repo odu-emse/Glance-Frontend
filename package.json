@@ -1,6 +1,6 @@
 {
 	"name": "emse-ui",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "The component library to be used in the Async Portal at EMSE.",
 	"main": "index.js",
 	"dependencies": {
@@ -68,5 +68,8 @@
 		"type": "git",
 		"url": "https://github.com/odu-emse/emse-ui.git"
 	},
-	"license": "ISC"
+	"license": "ISC",
+	"engines": {
+		"node": ">=17.0.0 <=18.1.0"
+	}
 }
