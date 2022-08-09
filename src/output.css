@@ -989,6 +989,10 @@ input:checked + .toggle-bg {
   pointer-events: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -1455,6 +1459,10 @@ input:checked + .toggle-bg {
 
 .w-2 {
   width: 0.5rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .max-w-sm {

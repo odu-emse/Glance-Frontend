@@ -1,10 +1,9 @@
 import * as React from 'react'
 import { PieComponent } from '../components/Chart'
-import RadarComponent from '../components/Chart/Radar'
 import Panel from '../components/Panel/Panel'
 
 export default {
-	title: 'Components/Panel',
+	title: 'Molecules/Panel',
 	component: Panel,
 	argTypes: {},
 }

@@ -13,7 +13,7 @@ import { BiTask } from 'react-icons/bi'
 import { BrowserRouter } from 'react-router-dom'
 
 export default {
-	title: 'Components/Sidebar',
+	title: 'Molecules/Sidebar',
 	component: Sidebar,
 	argTypes: {
 		authenticated: {

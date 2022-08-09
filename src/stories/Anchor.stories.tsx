@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Anchor, { AnchorProps } from '../components/Link/Anchor'
 
 export default {
-	title: 'Components/Anchor',
+	title: 'Atoms/Anchor',
 	component: Anchor,
 	argTypes: {
 		path: {

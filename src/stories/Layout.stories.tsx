@@ -5,7 +5,7 @@ import { Content } from '../components/Content'
 import { BrowserRouter } from 'react-router-dom'
 
 export default {
-	title: 'Components/Layout',
+	title: 'Organisms/Layout',
 	component: Layout,
 	argTypes: {
 		authenticated: {

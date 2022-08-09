@@ -2,7 +2,7 @@ import { Button } from '../components/Button'
 import * as React from 'react'
 
 export default {
-	title: 'Components/Button',
+	title: 'Atoms/Button',
 	component: Button,
 	argTypes: {
 		label: {
