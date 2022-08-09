@@ -3,7 +3,7 @@ import {
 	Legend,
 	PolarAngleAxis,
 	PolarGrid,
-	Radar,
+	PolarRadiusAxis,
 	RadarChart,
 	ResponsiveContainer,
 	Tooltip,
@@ -19,7 +19,21 @@ export const RadarComponent = ({
 	outerRadius,
 	centerYCoor,
 	centerXCoor,
+	children,
+	fillColor,
+	strokeColor,
+	fillOpacity,
+	dataKey,
+	radiusAxis,
+	radiusAxisAngle,
 }: RadarProps): JSX.Element => {
+	const matrixChildren = []
+
+	if (children.props.children?.length > 1) {
+		React.Children.map(children.props.children, (child) => {
+			matrixChildren.push(child)
+		})
+	}
 	return (
 		<ResponsiveContainer
 			width={width && width}
@@ -34,28 +48,22 @@ export const RadarComponent = ({
 				margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
 			>
 				<PolarGrid />
-				<PolarAngleAxis dataKey="subject" />
-				<Radar
-					name="Current semester"
-					dataKey="A"
-					stroke="#e74d3c"
-					fill="#e74d3c"
-					fillOpacity={0.5}
-				/>
-				<Radar
-					name="Next semester"
-					dataKey="B"
-					stroke="#f39d12"
-					fill="#f39d12"
-					fillOpacity={0.5}
-				/>
-				<Radar
-					name="Projected semester"
-					dataKey="C"
-					stroke="#7ccc63"
-					fill="#7ccc63"
-					fillOpacity={0.5}
-				/>
+				<PolarAngleAxis dataKey={dataKey} />
+				{radiusAxis && <PolarRadiusAxis angle={90 | radiusAxisAngle} />}
+				{matrixChildren?.length > 0
+					? matrixChildren.map((child, childIndex) => {
+							return React.cloneElement(child, {
+								key: childIndex,
+								fill: fillColor,
+								stroke: strokeColor,
+								fillOpacity: fillOpacity,
+							})
+					  })
+					: React.cloneElement(children, {
+							fill: fillColor,
+							fillOpacity: fillOpacity,
+							stroke: strokeColor,
+					  })}
 				{tooltip && <Tooltip />}
 				{legend && (
 					<Legend
@@ -77,19 +85,91 @@ export const RadarComponent = ({
 }
 
 export type RadarProps = {
-	data: {
-		subject: string
-		A: number
-		B: number
-		C: number
-		fullMark: number
-	}[]
+	/**
+	 * The data to be displayed in the chart. The data should be in the form of an array of objects, each object should have a `dataKey` property which is exactly referenced in the `dataKey` prop being passed in.
+	 * @type Array<RadarPoint>
+	 */
+	data: RadarPoint[]
+	/**
+	 * The width of the chart in pixel value.
+	 * @type number
+	 */
 	width: number
+	/**
+	 * The height of the chart in pixel value, unless the aspect ratio is locked, in which case it is treated as a percentage of the parent element.
+	 * @type number
+	 */
 	height: number
+	/**
+	 * If true, the idiom will have the tooltip hover interaction enabled.
+	 * @default false
+	 */
 	tooltip?: boolean
+	/**
+	 * If true, the idiom will include a legend
+	 * @default false
+	 */
 	legend?: boolean
+	/**
+	 * If true, the aspect ratio of the chart will be locked. The idiom will also treat the height property as a percentage, rather than a px value.
+	 * @default false
+	 */
 	aspectLock?: boolean
 	outerRadius?: number
+	/**
+	 * The Center Y coordinate of the radar chart in percentage
+	 */
 	centerYCoor?: number
+	/**
+	 * The Center X coordinate of the radar chart in percentage.
+	 */
 	centerXCoor?: number
+	/**
+	 * The `<Radar />` component that you wish to render.
+	 */
+	children: React.ReactElement<
+		any,
+		string | React.JSXElementConstructor<any>
+	> &
+		React.ReactElement<any, string | React.JSXElementConstructor<any>>[]
+	/**
+	 * The fill color of the chart.
+	 */
+	fillColor: string
+	/**
+	 * The stroke color of the idiom.
+	 */
+	strokeColor: string
+	/**
+	 * The property from the data object that will be used to create the corner of the chart.
+	 * @default subject
+	 */
+	dataKey: string
+	/**
+	 * The opacity of the fill color that the idiom will possess.
+	 * @default 0.5
+	 */
+	fillOpacity: number
+	/**
+	 * If true, the radius axis will be displayed.
+	 * @default true
+	 */
+	radiusAxis?: boolean
+	/**
+	 * The radius axis' angle, if visible.
+	 * @default 90
+	 */
+	radiusAxisAngle?: number
+}
+
+interface RadarPoint {
+	x: number
+	y: number
+	cx?: number
+	cy?: number
+	angle?: number
+	radius?: number
+	value?: number
+	payload?: any
+	name?: string
 }
