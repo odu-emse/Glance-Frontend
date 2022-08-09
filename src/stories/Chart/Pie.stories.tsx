@@ -2,22 +2,32 @@ import * as React from 'react'
 import { PieComponent, PieProps } from '../../components/Chart'
 
 export default {
-	title: 'Components/Chart/Pie Chart',
+	title: 'Molecules/Chart/Pie Chart',
 	component: PieComponent,
+	args: {
+		width: 100,
+		height: 100,
+	},
 	argTypes: {
+		data: { control: false },
+		legendConfig: { control: false },
 		legend: { control: { type: 'boolean' } },
 		tooltip: { control: { type: 'boolean' } },
-		outerRadius: { control: { type: 'number' } },
-		innerRadius: { control: { type: 'number' } },
-		paddingAngle: { control: { type: 'number' } },
-		width: { control: { type: 'number' } },
-		height: { control: { type: 'number' } },
-		centerXCoor: { control: { type: 'number' } },
-		centerYCoor: { control: { type: 'number' } },
+		outerRadius: { control: { type: 'range' } },
+		innerRadius: { control: { type: 'range' } },
+		paddingAngle: { control: { type: 'range' } },
+		width: { control: { type: 'range' } },
+		height: { control: { type: 'range' } },
+		centerXCoor: { control: { type: 'range', min: 0, max: 100 } },
+		centerYCoor: { control: { type: 'range', min: 0, max: 100 } },
 	},
 }
 
-const Template = (args: PieProps) => <PieComponent {...args} />
+const Template = (args: PieProps) => (
+	<div className="w-full h-96">
+		<PieComponent {...args} />
+	</div>
+)
 
 const data = [
 	{ name: 'iphone4', value: 120, fill: '#ff7300' },
@@ -30,9 +40,9 @@ Simple.args = {
 	data,
 	legend: true,
 	tooltip: true,
-	outerRadius: 200,
-	innerRadius: 100,
-	paddingAngle: 0,
+	outerRadius: 100,
+	innerRadius: 50,
+	paddingAngle: 5,
 	legendConfig: {
 		align: 'right',
 		layout: 'vertical',
