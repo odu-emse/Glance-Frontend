@@ -1,34 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EMSE - Asynchronous Learning Management Platform | UI
 
-## Getting Started
+This repository contains all the files that are required for the operation of the AMLP user interface. The UI is a web application that facilitates interactions with the API. The UI is built using ReactJS and is ran in a Docker container.
 
-First, run the development server:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-```bash
-npm run dev
-# or
-yarn dev
+## Pre-requisites
+
+-   Docker
+    > Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+    -   [Install Docker for your OS](https://docs.docker.com/desktop/)
+-   make
+    > Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the makefile, which lists each of the non-source files and how to compute it from other files. When you write a program, you should write a makefile for it, so that it is possible to use Make to build and install the program.
+    -   [Install GNU win32 on Windows](http://gnuwin32.sourceforge.net
+
+## Environmental Variables
+
+After cloning the repository, create a .env file with the appropriate variables that you received from your supervisor or through documentation. This file will contain the necessary variables like, our JWT configuration and our edge functions' URL.
+
+```shell
+$ cd emsePortal && touch .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Caveats when working on UI
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+To run the UI, first please make sure you have all the necessary Pre-Requisite are installed. Without these, the application will not be able to run or compile.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Second, you should verify if you are working across the entire stack (need to modify both the UI and the API to complete your issue), or is it specific for only the UI. If the later, you should only run commands that have `dev` in the name. If you require to work across the entire stack, please follow the set-up steps in the API's README.md file, and use all the `local` commands.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+As a short hand explanation, `local` commands expect you to have the API running on your machine, while `dev` commands reach out to our staging server API.
 
-## Learn More
+## Common Commands
 
-To learn more about Next.js, take a look at the following resources:
+### Start container
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To start up the application using our staging API, use the following command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```shell
+$ make up-dev
+```
 
-## Deploy on Vercel
+If you want to run the application using your local instance of the API, use the following command:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```shell
+$ make up-local
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Build image
+
+While currently there isn't a huge difference in what these two commands do, they are here for future scaling support and to make it easier to switch between the two. In short, if you are using the staging API, you should use the `make build-dev` command, otherwise, use the `make build-local` command. Stick to either one throughout your entire development process, to avoid duplicate images and containers being built.
+
+```shell
+$ make build-dev
+```
+
+```shell
+$ make build-local
+```
+
+### Remove image
+
+```shell
+$ make rm-dev
+```
+
+```shell
+$ make rm-local
+```
+
+### Enter container
+
+This command is useful when you want to look into the Docker container and it's current files that are shared across your own OS.
+
+```shell
+$ make enter-dev
+```
+
+```shell
+$ make enter-local
+```
+
+## Helper Commands
+
+### Clean system
+
+This command should only be used if you know what you are doing. It will remove all images, containers, cached files, and other files that are not needed for Docker's basic operation.
+
+```shell
+$ make prune
+```
+
+### List containers
+
+```shell
+$ make rncn
+```
+
+### List images
+
+```shell
+$ make img
+```
+
+### Stop all containers
+
+```shell
+$ make down
+```
