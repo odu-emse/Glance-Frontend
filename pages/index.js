@@ -8,7 +8,7 @@ const Index = () => {
         <meta name="description" content="ALMP" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p>Hello</p>
+      <p className='text-3xl font-bold underline'>Hello</p>
     </div>
   )
 }
