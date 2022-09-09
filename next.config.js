@@ -6,6 +6,9 @@ const nextConfig = {
     domains: [
       "images.unsplash.com"
     ]
+  },
+  env: {
+    "backend": "http://localhost:4000/graphql"
   }
 }
 
