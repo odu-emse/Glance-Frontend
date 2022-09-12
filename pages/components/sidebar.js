@@ -16,10 +16,27 @@ import { useEffect, useState } from 'react'
 
 export default function Sidebar() {
 	const [open, setOpen] = useState(false)
-	const [loading, setLoading] = useState(false)
+	//const [loading, setLoading] = useState(false)
 	const [dropdown, setDropdown] = useState(false)
-	const [authenticated, setAuthenticated] = useState(false)
+	const [authenticated, setAuthenticated] = useState(true)
 
+	/*async function auth() {
+		try {
+			const res = await checkForToken()
+			res ? setAuthenticated(true) : setAuthenticated(false)
+			setLoading(false)
+		} catch (err) {
+			throw new Error(err)
+		}
+	}
+
+	useEffect(() => {
+		auth()
+	}, [])
+
+	if (loading) {
+		return loader()
+	}*/
 
 	return (
 		<aside
@@ -33,7 +50,9 @@ export default function Sidebar() {
 				<button
 					className="inline-flex items-center justify-center py-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white w-full"
 					aria-expanded="false"
-					onClick={() => setOpen(!open)}
+					onClick={() => setOpen(!open)
+					            
+								}
 				>
 					<span className="sr-only">Open side menu</span>
 					<svg
@@ -82,54 +101,62 @@ export default function Sidebar() {
 				</div>
 
 				<div
-					className={`menu relative h-full flex flex-col ${
+					className ={`menu relative h-full flex flex-col justify-between`}
+					/*className={`menu relative h-full flex flex-col ${
 						authenticated ? 'justify-between' : 'justify-end'
-					}`}
+					}`}*/
 				>
 					{!authenticated === true ? (
 						<>
-							<Link href="/users/login"
+							<Link href="/users/login">
+								<a
 								className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 									!open && 'flex items-center justify-center'
 								}`}
 								activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-							>
+								>
 								{open ? 'Login' : <GoSignIn size={30} />}
+								</a>
 							</Link>
-							<Link href="/users/register"
+							<Link href="/users/register">
+								<a
 								className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 									!open && 'flex items-center justify-center'
 								}`}
 								activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 							>
 								{open ? 'Register' : <GoPerson size={30} />}
+								</a>
 							</Link>
 						</>
 					) : (
 						<>
 							<div className="flex flex-col">
-								<Link href="/portal"
+								<Link href="/portal">
+									<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
 											: ''
 									}`}
 									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
+								    >
 									{open ? (
 										'Portal'
 									) : (
 										<MdWidgets size={30} title="Portal" />
 									)}
+									</a>
 								</Link>
-								<Link href="/dashboard"
+								<Link href="/dashboard">
+									<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
 											: ''
 									}`}
 									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
+									>
 									{open ? (
 										'Dashboard'
 									) : (
@@ -138,9 +165,10 @@ export default function Sidebar() {
 											title="Dashboard"
 										/>
 									)}
+									</a>
 								</Link>
-								<Link href="/program"
-									
+								<Link href="/program">
+									<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
@@ -153,9 +181,10 @@ export default function Sidebar() {
 									) : (
 										<BsStack size={30} title="My Program" />
 									)}
+									</a>
 								</Link>
-								<Link href="/assignments"
-								
+								<Link href="/assignments">
+								<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
@@ -168,9 +197,10 @@ export default function Sidebar() {
 									) : (
 										<BiTask size={30} title="Assignments" />
 									)}
+									</a>
 								</Link>
-								<Link href="/community"
-									
+								<Link href="/community">
+									<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
@@ -186,8 +216,10 @@ export default function Sidebar() {
 											title="Community"
 										/>
 									)}
+									</a>
 								</Link>
-								<Link href="/support"
+								<Link href="/support">
+									<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
@@ -203,6 +235,7 @@ export default function Sidebar() {
 											title="Your support"
 										/>
 									)}
+									</a>
 								</Link>
 							</div>
 
@@ -242,24 +275,30 @@ export default function Sidebar() {
 									onMouseLeave={() => setDropdown(!dropdown)}
 								>
 									<Link
-										href={`/users`}
+									   //to={`/users/${decoder()}`}
+										href={`/users`}>
+											<a
 										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 										role="menuitem"
 									>
 										Your Profile
+										</a>
 									</Link>
 									<Link
-										href="/users/logout"
+										href="/users/logout">
+										<a
 										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 										role="menuitem"
 									>
 										Sign out
+										</a>
 									</Link>
 								</div>
 								<Link
-									href="/sitemap"
+									href="/sitemap">
+									<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
@@ -275,9 +314,11 @@ export default function Sidebar() {
 											title="Sitemap"
 										/>
 									)}
+									</a>
 								</Link>
 								<Link
-									href="/users/logout"
+									href="/users/logout">
+										<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open
 											? 'flex items-center justify-center'
@@ -293,6 +334,7 @@ export default function Sidebar() {
 											title="Logout"
 										/>
 									)}
+									</a>
 								</Link>
 							</div>
 						</>
