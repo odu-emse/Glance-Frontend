@@ -26,5 +26,6 @@ export default async function handler(req, res) {
 
   //const body = await response.json();
   //console.log(body)
-  res.redirect("/");
+  //res.redirect("/");
+  res.status(200).send("Hello")
 }
