@@ -1,14 +1,33 @@
-import React from 'react'
-import VideoPlayer from '@/components/modules/VideoPlayer'
+import React, { useState, useEffect } from 'react'
+import VideoPlayer from '@/components/modules/VideoPlayer';
 
 const ModuleSection = () => {
+
+	const [ data, setData ] = useState(null);
+	const [isLoading, setLoading] = useState(true);
+	useEffect(() => {
+		setLoading(true)
+		fetch('/api/modules')
+			.then((res) => res.json())
+			.then((data) => {
+				setData(data)
+				setLoading(false)
+			});
+	}, []);
+	
+
+	if (isLoading) return <p>Loading...</p>
+	if (!data) return <p>Content failed to load.</p>
+
+	const section = data.sections[0];
+
 	return (
 		<section className="mx-auto container h-screen">
-			<h1 className="my-3 text-3xl font-bold">Module Name - Section Title</h1>
+			<h1 className="my-3 text-3xl font-bold">{ data.name } - {section.name}</h1>
 			<div className="flex h-4/5 gap-2 my-2">
 				{/* Section content */}
 				<div className="flex flex-col w-3/4 justify-between">
-					<VideoPlayer />
+					<VideoPlayer path={section.content.url} />
 					<div className="bg-gray-100">
 						<h1 className="text-3xl font-bold mb-2">Transcript</h1>
 						<p>
