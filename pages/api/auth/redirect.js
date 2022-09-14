@@ -3,9 +3,7 @@
 const authCodeQuery = (code) => {
   const payload = {
       query: `{
-          login(code: "${code}") {
-              accessToken
-          }
+          login(code: "${code}")
       }`
   }
 
