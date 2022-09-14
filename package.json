@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@react-oauth/google": "^0.2.6",
+    "nanoid": "^4.0.0",
     "next": "12.2.5",
+    "random-sentence": "^1.0.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.9",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
     "postcss": "^8.4.16",
