@@ -1,4 +1,10 @@
+import { useRouter } from "next/router";
+
 const Module = () => {
+
+    const router = useRouter();
+    const { moduleId } = router.query;
+
     return (
         <div>
             <div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
