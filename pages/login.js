@@ -12,13 +12,23 @@ const Login = () => {
     });
 
     return (
-        <div>
+        <div className="h-screen flex items-center">
+            
+            <div className="grid place-items-center h-1/4 w-full ">
+                <div>
+             <p className= "text-7xl font-extrabold font-weight:2000 text-center text-black-3000">ALMP</p>
+            <p className="text-black-400 font-semibold text-xl">You must be logged in to access this resource.</p>
+            </div>
+        
             <button 
                 onClick={() => login()}
-                className="p-3 bg-slate-400"
+                className="text-white rounded-lg p-3 bg-blue-400"
+            
             >
                 Login with Google
             </button>
+            </div>
+
         </div>
     );
 }
