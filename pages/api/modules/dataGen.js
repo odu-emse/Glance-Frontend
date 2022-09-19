@@ -76,6 +76,7 @@ function generateModule() {
     return {
         id: nanoid(),
         name: randomSentence({min: 3, max: 6}),
+        dependancies: [],
         sections: finalSections,
         headSection: firstSection.id,
         tailSection: lastSection.id
@@ -83,7 +84,7 @@ function generateModule() {
 }
 
 let data = {}
-const numberOfModules = (Math.random() * 10) + 1;
+const numberOfModules = (Math.random() * 50) + 1;
 for(let i = 0; i < numberOfModules; i++) {
     let mod = generateModule();
     data[mod.id] = mod;
