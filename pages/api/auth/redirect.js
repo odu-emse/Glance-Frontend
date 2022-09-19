@@ -28,5 +28,8 @@ export default async function handler(req, res) {
     return;
   }
 
+  console.log(body);
+  res.setHeader("Set-Cookie", `auth=${body.data.login}; Secure; HttpOnly;`);
+
   res.redirect("/");
 }
