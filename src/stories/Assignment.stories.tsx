@@ -1,54 +1,41 @@
 import * as React from 'react'
-import {Assignment} from "../components/Assignment"
+import { Assignment } from '../components/Assignment'
 
 export default {
-    title: "Components/Assignment", //providing path
-    component: Assignment,
-    argTypes: {
-        questionCount: {
-            control: 'number',
-            description:
-                'The count for total of questions for this assignment card.',
-        },
-        moduleIdentifier: {
-            control: 'text',
-            description:
-            'The module Identifier of this assignemnt card',
-        },
-        moduleName: {
-            control: 'text',
-            description:
-            'The module name of this assignemnt card',
-        }
-
-    },
-    
-    //argTypes: {}, giving user the control based on the Protypes
-                  // i.g.
-                  // argTypes: {
-                  //    size: {control: 'select'}
-                  // }
+	title: 'Atoms/AssignmentCard', //providing path
+	component: Assignment,
+	argTypes: {},
+	//argTypes: {}, giving user the control based on the Prop-types
+	// i.g.
+	// argTypes: {
+	//    size: {control: 'select'}
+	// }
 }
 
-const Template = (args) => (<Assignment {...args} />) 
-    //with {}, it doesn't automatically return
+const Template = (args) => <Assignment {...args} />
+//with {}, it doesn't automatically return
 
 export const Primary = Template.bind({})
 Primary.args = {
-    questionCount: 68,
-    moduleIdentifier: "M 137G",
-    moduleName: "Introduction to Organizational Analysis - Assignment 4"
+	questionCount: 68,
+	moduleIdentifier: 'M 137G',
+	moduleName: 'Introduction to Organizational Analysis',
+	assignmentName: 'Assignment 4',
 }
 export const Secondary = Template.bind({})
+Secondary.storyName = 'Single Question'
 Secondary.args = {
-    questionCount: 13,
-    moduleIdentifier: "ENMA 601",
-    moduleName: "Analysis of Organizational Systems - Exam 2"
+	questionCount: 1,
+	moduleIdentifier: 'ENMA 601',
+	moduleName: 'Analysis of Organizational Systems',
+	assignmentName: 'Exam 2',
 }
 
 export const Tertiary = Template.bind({})
+Tertiary.storyName = 'Lower Case Module Identifier'
 Tertiary.args = {
-    questionCount: 37,
-    moduleIdentifier: "ENMA 604",
-    moduleName: "Project Management - Assignment 2"
+	questionCount: 37,
+	moduleIdentifier: 'enma 604',
+	moduleName: 'Project Management',
+	assignmentName: 'Assignment 2',
 }
