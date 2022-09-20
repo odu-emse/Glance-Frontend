@@ -2,14 +2,21 @@ import randomSentence from 'random-sentence';
 import { nanoid } from 'nanoid';
 
 function generateLesson() {
+	const type = getRandomArbitrary(1,3) === 1 ? 'video' : 'pdf';
+
+	let content = {}
+	if(type == "pdf") {
+		content.url = "http://localhost:3000/pdf/pdf1.pdf"
+	} else {
+		content.url = `http://localhost:3000/videos/video${getRandomArbitrary(1, 16)}.mp4`,
+		content.transcript = randomSentence({ min: 200, max: 300 })
+	}
+
 	return {
 		id: nanoid(),
 		name: randomSentence({ min: 3, max: 6 }),
-		type: 'video',
-		content: {
-			url: `http://localhost:3000/videos/video${getRandomArbitrary(1, 16)}.mp4`,
-			transcript: randomSentence({ min: 20, max: 80 }),
-		},
+		type: type,
+		content: content,
 		next: null,
 		prev: null,
 	};
