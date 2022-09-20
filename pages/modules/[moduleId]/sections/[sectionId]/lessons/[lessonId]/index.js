@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import VideoPlayer from '@/components/modules/VideoPlayer';
+import VideoContent from '@/components/modules/ContentType/VideoContent';
 import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation';
+import PDFContent from '@/components/modules/ContentType/PDFContent';
 
 const ModuleSection = () => {
 
@@ -41,20 +42,27 @@ const ModuleSection = () => {
 	if(lesson.next === null && section.next !== null) nextPage = `/modules/${moduleId}/sections/${section.next}/lessons/${data.sections[section.next].headLesson}`;
 	if(lesson.prev === null && section.prev !== null) prevPage = `/modules/${moduleId}/sections/${section.prev}/lessons/${data.sections[section.prev].tailLesson}`;
 
+	let content = null;
+	if(lesson.type == "pdf" ) {
+		content = <PDFContent url={lesson.content.url} />
+	} else {
+		content = <VideoContent url={lesson.content.url} transcript={lesson.content.transcript} />
+	}
+
 	return (
 		<section className="mx-auto container h-screen">
 			<h1 className="my-3 text-3xl font-bold">{ data.name } - { lesson.name }</h1>
 			<div className="flex h-4/5 gap-2 my-2">
 				{/* Section content */}
-				<div className="flex flex-col w-3/4 justify-between">
-					<VideoPlayer path={lesson.content.url} />
-					<div className="bg-gray-100">
-						<h1 className="text-3xl font-bold mb-2">Transcript</h1>
-						<p>
-							{ lesson.content.transcript }
-						</p>
-					</div>
-				</div>
+				
+				{/* 
+					TODO: USE DYNAMIC IMPORTS HERE!!!!! REDUCE FILE SIZE!!!!! YES. I AM SCREAMING!!!!
+					https://nextjs.org/docs/advanced-features/dynamic-import
+				 */}
+				
+				{ content }
+				
+				
 				{/* Section sidebar */}
 				<aside className="bg-white h-full w-1/4">
 					<ModuleNavigation data={data} selected={lessonId} />
