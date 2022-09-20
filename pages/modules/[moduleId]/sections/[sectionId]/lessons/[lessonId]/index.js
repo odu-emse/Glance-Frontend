@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import VideoPlayer from '@/components/modules/VideoPlayer';
-import ModuleNavigation from '@/components/modules/ModuleNavigation';
+import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation';
 
 const ModuleSection = () => {
 
@@ -56,8 +56,8 @@ const ModuleSection = () => {
 					</div>
 				</div>
 				{/* Section sidebar */}
-				<aside className="bg-gray-100 h-full w-1/4 p-3">
-					<ModuleNavigation moduleData={data} />
+				<aside className="bg-white h-full w-1/4">
+					<ModuleNavigation data={data} selected={lessonId} />
 				</aside>
 			</div>
 			{/* Previous and Next buttons */}
