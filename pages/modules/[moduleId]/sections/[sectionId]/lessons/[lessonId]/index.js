@@ -88,7 +88,7 @@ const ModuleSection = () => {
 }
 
 ModuleSection.getLayout = function getLayout(page) {
-	return <Layout />
+	return <Layout>{page}</Layout>
 }
 
 export default ModuleSection

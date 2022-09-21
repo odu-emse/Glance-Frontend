@@ -51,7 +51,7 @@ const AllModules = () => {
 }
 
 AllModules.getLayout = function getLayout(page) {
-	return <Layout />
+	return <Layout>{page}</Layout>
 }
 
 export default AllModules;

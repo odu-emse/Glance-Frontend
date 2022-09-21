@@ -5,7 +5,7 @@ const Dashboard = () => {
 }
 
 Dashboard.getLayout = function getLayout(page) {
-	return <Layout />
+	return <Layout>{page}</Layout>
 }
 
 export default Dashboard;

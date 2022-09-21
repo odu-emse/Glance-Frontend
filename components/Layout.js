@@ -1,17 +1,16 @@
 import Sidebar from './Sidebar';
 import { useEffect, useState } from 'react';
 import Router from 'next/router';
-import LoadingSplash from './LoadingSplash';
 
 const Layout = ({ children }) => {
 
 	const [ authenticated, setAuthenticated ] = useState(false);
-	const [ loading, setLoading ] = useState(false);
+	const [ authLoading, setAuthLoading ] = useState(false);
 
 	useEffect(() => {
 		
 		async function checkAuth() {
-			setLoading(true);
+			setAuthLoading(true);
 			const response = await fetch("/api/auth/check");
 			
 			if (!response.ok) {
@@ -21,14 +20,14 @@ const Layout = ({ children }) => {
 			}
 
 			setAuthenticated(true);
-			setLoading(false);
+			setAuthLoading(false);
 		}
 
 		checkAuth();
 
 	}, []);
 
-	if(loading) return <p>Loading...</p>
+	if(authLoading) return <p>Loading...</p>
 
 	return (
 		<main className="flex gap-x-1">

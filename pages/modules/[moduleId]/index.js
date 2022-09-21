@@ -125,7 +125,7 @@ const DefaultModule = ({ module }) => {
 };
 
 Module.getLayout = function getLayout(page) {
-	return <Layout />
+	return <Layout>{page}</Layout>
 }
 
 export default Module;

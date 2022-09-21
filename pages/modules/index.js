@@ -36,7 +36,7 @@ const ModulesPage = () => {
 };
 
 ModulesPage.getLayout = function getLayout(page) {
-	return <Layout />
+	return <Layout>{page}</Layout>
 }
 
 export default ModulesPage;

@@ -494,7 +494,7 @@ function UserProfile(){
 }
 
 UserProfile.getLayout = function getLayout(page) {
-	return <Layout />
+	return <Layout>{page}</Layout>
 }
 
 export default UserProfile;
