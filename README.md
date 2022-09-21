@@ -8,12 +8,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Pre-requisites
 
--   Docker
-    > Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
-    -   [Install Docker for your OS](https://docs.docker.com/desktop/)
--   make
-    > Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the makefile, which lists each of the non-source files and how to compute it from other files. When you write a program, you should write a makefile for it, so that it is possible to use Make to build and install the program.
-    -   [Install GNU win32 on Windows](http://gnuwin32.sourceforge.net
+- Docker
+  > Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+  - [Install Docker for your OS](https://docs.docker.com/desktop/)
+- make
+  > Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the makefile, which lists each of the non-source files and how to compute it from other files. When you write a program, you should write a makefile for it, so that it is possible to use Make to build and install the program.
+  - [Install GNU win32 on Windows](http://gnuwin32.sourceforge.net
 
 ## Environmental Variables
 

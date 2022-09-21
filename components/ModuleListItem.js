@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { calculateRating } from '../utils/calculateRating'
+import React from 'react';
+import Link from 'next/link';
+import { calculateRating } from '../utils/calculateRating';
 
 const ModuleItem = ({ modules, loading }) => {
 	const filterModules = (mod) => {
@@ -129,8 +129,8 @@ const ModuleItem = ({ modules, loading }) => {
 			</section>
 		) : (
 			<p className="text-3xl">Sorry, no modules could be found</p>
-		)
-	}
+		);
+	};
 
 	return loading ? (
 		<h1>Loading...</h1>
@@ -139,7 +139,7 @@ const ModuleItem = ({ modules, loading }) => {
 			<h4 className="my-3 text-7xl opacity-20">My Modules</h4>
 			{filterModules(modules)}
 		</div>
-	)
-}
+	);
+};
 
-export default ModuleItem
+export default ModuleItem;

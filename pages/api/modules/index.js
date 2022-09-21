@@ -1,6 +1,5 @@
-import data from "./data";
+import data from './data';
 
 export default function handler(req, res) {
-  res.status(200).json(data)
+	res.status(200).json(data);
 }
-  

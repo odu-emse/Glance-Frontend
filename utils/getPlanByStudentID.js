@@ -100,7 +100,7 @@ export default async function getPlan(studentID) {
 						}
 					}
 				}`,
-	}
+	};
 	return await fetch(process.env.NEXT_PUBLIC_API_URL, {
 		method: 'POST',
 		body: JSON.stringify(payload),
@@ -109,13 +109,13 @@ export default async function getPlan(studentID) {
 		},
 	})
 		.then((document) => {
-			return document.json()
+			return document.json();
 		})
 		.then((res) => {
-			return res.data.plan
+			return res.data.plan;
 		})
 		.catch((err) => {
-			console.error(err)
-			throw new Error(err)
-		})
+			console.error(err);
+			throw new Error(err);
+		});
 }

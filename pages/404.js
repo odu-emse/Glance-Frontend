@@ -8,7 +8,7 @@ const NotFound = () => {
 				Go Home
 			</Link>
 		</div>
-	)
-}
+	);
+};
 
 export default NotFound;

@@ -1,13 +1,13 @@
 export const calculateRating = (feedback) => {
 	try {
-		let sum = 0
+		let sum = 0;
 		feedback.map((rating) => {
-			sum += rating.rating
-		})
+			sum += rating.rating;
+		});
 
-		return Math.floor(sum / feedback.length)
+		return Math.floor(sum / feedback.length);
 	} catch (error) {
-		console.error(error)
-		return null
+		console.error(error);
+		return null;
 	}
-}
+};
