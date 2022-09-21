@@ -23,7 +23,9 @@ const ModulesPage = () => {
 	) : (
 		<section className="gap-1 md:px-10 w-full flex flex-col md:flex-row">
 			<div className="flex flex-col md:w-full w-3/4">
-				<h1 className="text-3xl font-bold">My Modules</h1>
+				<h1 className="text-7xl opacity-50 font-black text-gray-400">
+					My Modules
+				</h1>
 				{modules.map((module) => {
 					return <ModuleItem key={module.id} module={module} />;
 				})}

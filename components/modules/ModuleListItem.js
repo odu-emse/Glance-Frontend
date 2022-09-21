@@ -44,7 +44,9 @@ const ModuleItem = ({ module }) => {
 								<li className="underline font-extralight">Discussion</li>
 								<li className="underline font-extralight">Assignments</li>
 								<li className="underline font-extralight">Download</li>
-								<li className="underline font-extralight">Abandon</li>
+								<li className="underline font-extralight text-red-600">
+									Abandon
+								</li>
 							</ul>
 						</div>
 					</div>
