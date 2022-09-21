@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import checkAuthentication from '@/utils/checkAuthentication';
 import Head from 'next/head';
 import '../styles/globals.css';
 
