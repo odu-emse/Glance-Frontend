@@ -1,18 +1,21 @@
 import * as React from 'react'
-import { Assignment } from '../components/Assignment'
+import { AssignmentCard, AssignmentProps } from '../components/Assignment'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
-	title: 'Atoms/AssignmentCard', //providing path
-	component: Assignment,
+	title: 'Atoms/Assignment Card', //providing path
+	component: AssignmentCard,
 	argTypes: {},
 	//argTypes: {}, giving user the control based on the Prop-types
 	// i.g.
 	// argTypes: {
 	//    size: {control: 'select'}
 	// }
-}
+} as ComponentMeta<typeof AssignmentCard>
 
-const Template = (args) => <Assignment {...args} />
+const Template: ComponentStory<typeof AssignmentCard> = (
+	args: AssignmentProps
+) => <AssignmentCard {...args} />
 //with {}, it doesn't automatically return
 
 export const Primary = Template.bind({})

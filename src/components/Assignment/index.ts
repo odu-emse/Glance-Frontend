@@ -1,1 +1,1 @@
-export * from "./Assignment"
+export * from './AssignmentCard'

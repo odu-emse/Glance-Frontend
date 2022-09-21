@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const Assignment = ({
+export const AssignmentCard = ({
 	questionCount,
 	moduleIdentifier,
 	moduleName,
@@ -26,7 +26,7 @@ export const Assignment = ({
 	)
 }
 
-type AssignmentProps = {
+export type AssignmentProps = {
 	/**
 	 * The count for total of questions for this assignment card.
 	 */
