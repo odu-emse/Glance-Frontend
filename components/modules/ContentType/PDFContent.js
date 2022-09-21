@@ -1,5 +1,3 @@
-import VideoPlayer from '../VideoPlayer';
-
 const PDFContent = ({ url }) => {
 	return (
 		<div className="flex flex-col w-3/4">

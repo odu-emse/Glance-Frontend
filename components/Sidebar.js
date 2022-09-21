@@ -18,7 +18,7 @@ export default function Sidebar() {
 	const [open, setOpen] = useState(false);
 	//const [loading, setLoading] = useState(false)
 	const [dropdown, setDropdown] = useState(false);
-	const [authenticated, setAuthenticated] = useState(true);
+	const [authenticated ] = useState(true);
 
 	/*async function auth() {
 		try {

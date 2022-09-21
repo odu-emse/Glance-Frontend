@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Lesson from './Lesson';
 
 function generateLessons(data, selected, moduleId) {

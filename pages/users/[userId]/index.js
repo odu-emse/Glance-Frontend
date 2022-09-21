@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 export default function UserProfile() {
-	const [user, setUser] = useState(null);
-	const [loading, setLoading] = useState(false);
-	const [isInstructor, setIsInstructor] = useState(true);
+	//const [user, setUser] = useState(null);
+	//const [loading, setLoading] = useState(false);
+	const [isInstructor ] = useState(true);
 	const [showInstructor, setShowInstructor] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 
@@ -365,7 +365,7 @@ export default function UserProfile() {
 												<button
 													type="submit"
 													className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
-													onClick={(e) => {
+													onClick={() => {
 														//updateUser(e)
 														setShowModal(false);
 													}}

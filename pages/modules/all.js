@@ -16,7 +16,7 @@ const AllModules = () => {
 				setData(data);
 				setLoading(false);
 			})
-			.catch((error) => {
+			.catch(() => {
 				setLoading(false);
 			});
 	}, []);

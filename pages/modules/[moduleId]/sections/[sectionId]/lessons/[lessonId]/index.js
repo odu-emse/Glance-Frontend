@@ -23,7 +23,7 @@ const ModuleSection = () => {
 				setData(data);
 				setLoading(false);
 			})
-			.catch((error) => {
+			.catch(() => {
 				setLoading(false);
 			});
 	}, [moduleId, sectionId, lessonId]);

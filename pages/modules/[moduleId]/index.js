@@ -18,7 +18,7 @@ const Module = () => {
 		const data = await getModuleData();
 		setModule(data);
 		setLoading(false);
-	}, []);
+	}, [getModuleData]);
 
 	return loading ? (
 		<h1>Loading...</h1>
