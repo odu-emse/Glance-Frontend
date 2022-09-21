@@ -1,24 +1,24 @@
-import { AiOutlinePartition } from 'react-icons/ai'
-import { BiTask } from 'react-icons/bi'
-import { BsStack } from 'react-icons/bs'
-import Link from 'next/link'
-import { RiShutDownLine } from 'react-icons/ri'
+import { AiOutlinePartition } from 'react-icons/ai';
+import { BiTask } from 'react-icons/bi';
+import { BsStack } from 'react-icons/bs';
+import Link from 'next/link';
+import { RiShutDownLine } from 'react-icons/ri';
 //import { checkForToken, decoder, loader } from './helpers'
-import { GoPerson, GoSignIn } from 'react-icons/go'
+import { GoPerson, GoSignIn } from 'react-icons/go';
 
 import {
 	MdLiveHelp,
 	MdOutlineExplore,
 	MdSpaceDashboard,
 	MdWidgets,
-} from 'react-icons/md'
-import { useEffect, useState } from 'react'
+} from 'react-icons/md';
+import { useEffect, useState } from 'react';
 
 export default function Sidebar() {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 	//const [loading, setLoading] = useState(false)
-	const [dropdown, setDropdown] = useState(false)
-	const [authenticated, setAuthenticated] = useState(true)
+	const [dropdown, setDropdown] = useState(false);
+	const [authenticated, setAuthenticated] = useState(true);
 
 	/*async function auth() {
 		try {
@@ -50,9 +50,7 @@ export default function Sidebar() {
 				<button
 					className="inline-flex items-center justify-center py-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white w-full"
 					aria-expanded="false"
-					onClick={() => setOpen(!open)
-					            
-								}
+					onClick={() => setOpen(!open)}
 				>
 					<span className="sr-only">Open side menu</span>
 					<svg
@@ -101,7 +99,7 @@ export default function Sidebar() {
 				</div>
 
 				<div
-					className ={`menu relative h-full flex flex-col justify-between`}
+					className={`menu relative h-full flex flex-col justify-between`}
 					/*className={`menu relative h-full flex flex-col ${
 						authenticated ? 'justify-between' : 'justify-end'
 					}`}*/
@@ -110,22 +108,22 @@ export default function Sidebar() {
 						<>
 							<Link href="/users/login">
 								<a
-								className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-									!open && 'flex items-center justify-center'
-								}`}
-								activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+										!open && 'flex items-center justify-center'
+									}`}
+									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 								>
-								{open ? 'Login' : <GoSignIn size={30} />}
+									{open ? 'Login' : <GoSignIn size={30} />}
 								</a>
 							</Link>
 							<Link href="/users/register">
 								<a
-								className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-									!open && 'flex items-center justify-center'
-								}`}
-								activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-							>
-								{open ? 'Register' : <GoPerson size={30} />}
+									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+										!open && 'flex items-center justify-center'
+									}`}
+									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+								>
+									{open ? 'Register' : <GoPerson size={30} />}
 								</a>
 							</Link>
 						</>
@@ -134,107 +132,82 @@ export default function Sidebar() {
 							<div className="flex flex-col">
 								<Link href="/portal">
 									<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								    >
-									{open ? (
-										'Portal'
-									) : (
-										<MdWidgets size={30} title="Portal" />
-									)}
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									>
+										{open ? 'Portal' : <MdWidgets size={30} title="Portal" />}
 									</a>
 								</Link>
 								<Link href="/dashboard">
 									<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
-									{open ? (
-										'Dashboard'
-									) : (
-										<MdSpaceDashboard
-											size={30}
-											title="Dashboard"
-										/>
-									)}
+										{open ? (
+											'Dashboard'
+										) : (
+											<MdSpaceDashboard size={30} title="Dashboard" />
+										)}
 									</a>
 								</Link>
 								<Link href="/program">
 									<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
-									{open ? (
-										'My Program'
-									) : (
-										<BsStack size={30} title="My Program" />
-									)}
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									>
+										{open ? (
+											'My Program'
+										) : (
+											<BsStack size={30} title="My Program" />
+										)}
 									</a>
 								</Link>
 								<Link href="/assignments">
-								<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
-									{open ? (
-										'Assignments'
-									) : (
-										<BiTask size={30} title="Assignments" />
-									)}
+									<a
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									>
+										{open ? (
+											'Assignments'
+										) : (
+											<BiTask size={30} title="Assignments" />
+										)}
 									</a>
 								</Link>
 								<Link href="/community">
 									<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
-									{open ? (
-										'Community'
-									) : (
-										<MdOutlineExplore
-											size={30}
-											title="Community"
-										/>
-									)}
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									>
+										{open ? (
+											'Community'
+										) : (
+											<MdOutlineExplore size={30} title="Community" />
+										)}
 									</a>
 								</Link>
 								<Link href="/support">
 									<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
-									{open ? (
-										'Your support'
-									) : (
-										<MdLiveHelp
-											size={30}
-											title="Your support"
-										/>
-									)}
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									>
+										{open ? (
+											'Your support'
+										) : (
+											<MdLiveHelp size={30} title="Your support" />
+										)}
 									</a>
 								</Link>
 							</div>
@@ -242,17 +215,13 @@ export default function Sidebar() {
 							<div className="flex flex-col w-full">
 								<button
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: 'text-left'
+										!open ? 'flex items-center justify-center' : 'text-left'
 									}`}
 									id="user-menu"
 									aria-haspopup="true"
 									onClick={() => setDropdown(!dropdown)}
 								>
-									<span className="sr-only">
-										Open user menu
-									</span>
+									<span className="sr-only">Open user menu</span>
 									{open ? (
 										'Account'
 									) : (
@@ -275,65 +244,53 @@ export default function Sidebar() {
 									onMouseLeave={() => setDropdown(!dropdown)}
 								>
 									<Link
-									   //to={`/users/${decoder()}`}
-										href={`/users`}>
-											<a
-										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-										role="menuitem"
+										//to={`/users/${decoder()}`}
+										href={`/users`}
 									>
-										Your Profile
+										<a
+											className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+											activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+											role="menuitem"
+										>
+											Your Profile
 										</a>
 									</Link>
-									<Link
-										href="/users/logout">
+									<Link href="/users/logout">
 										<a
-										className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-										role="menuitem"
-									>
-										Sign out
+											className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+											activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+											role="menuitem"
+										>
+											Sign out
 										</a>
 									</Link>
 								</div>
-								<Link
-									href="/sitemap">
+								<Link href="/sitemap">
 									<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
-									{open ? (
-										'Sitemap'
-									) : (
-										<AiOutlinePartition
-											size={30}
-											title="Sitemap"
-										/>
-									)}
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									>
+										{open ? (
+											'Sitemap'
+										) : (
+											<AiOutlinePartition size={30} title="Sitemap" />
+										)}
 									</a>
 								</Link>
-								<Link
-									href="/users/logout">
-										<a
-									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open
-											? 'flex items-center justify-center'
-											: ''
-									}`}
-									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
-								>
-									{open ? (
-										'Logout'
-									) : (
-										<RiShutDownLine
-											size={30}
-											title="Logout"
-										/>
-									)}
+								<Link href="/users/logout">
+									<a
+										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
+											!open ? 'flex items-center justify-center' : ''
+										}`}
+										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
+									>
+										{open ? (
+											'Logout'
+										) : (
+											<RiShutDownLine size={30} title="Logout" />
+										)}
 									</a>
 								</Link>
 							</div>
@@ -342,5 +299,5 @@ export default function Sidebar() {
 				</div>
 			</div>
 		</aside>
-	)
+	);
 }
