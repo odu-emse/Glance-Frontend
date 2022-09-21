@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useMemo } from 'react';
 import ModuleItem from '@/components/modules/ModuleListItem';
+import Layout from '@/components/Layout';
 
 const ModulesPage = () => {
 	const [loading, setLoading] = useState(true);
@@ -33,5 +34,9 @@ const ModulesPage = () => {
 		</section>
 	);
 };
+
+ModulesPage.getLayout = function getLayout(page) {
+	return <Layout />
+}
 
 export default ModulesPage;

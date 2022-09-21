@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
+import Layout from '@/components/Layout';
 
 const Module = () => {
 	const router = useRouter();
@@ -122,5 +123,9 @@ const DefaultModule = ({ module }) => {
 		</div>
 	);
 };
+
+Module.getLayout = function getLayout(page) {
+	return <Layout />
+}
 
 export default Module;
