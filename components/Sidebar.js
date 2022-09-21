@@ -12,7 +12,7 @@ import {
 	MdSpaceDashboard,
 	MdWidgets,
 } from 'react-icons/md';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Sidebar() {
 	const [open, setOpen] = useState(false);
