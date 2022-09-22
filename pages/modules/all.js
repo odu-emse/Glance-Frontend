@@ -4,6 +4,7 @@
 import ModuleItem from "@/components/modules/ModuleItem";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Layout from "@/components/Layout";
 
 const AllModules = () => {
 
@@ -47,6 +48,10 @@ const AllModules = () => {
             </div>
         </div>
     );
+}
+
+AllModules.getLayout = function getLayout(page) {
+	return <Layout>{page}</Layout>
 }
 
 export default AllModules;

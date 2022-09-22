@@ -1,15 +1,16 @@
 import Layout from '@/components/Layout';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import Head from 'next/head';
 import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
+	const getLayout = Component.getLayout || ((page) => page)
+
 	return (
-		<GoogleOAuthProvider clientId="179547029989-eueljn9jl5gqgforq4jpav2qddfhqhlu.apps.googleusercontent.com">
-			<Layout>
+		getLayout(
+			<GoogleOAuthProvider clientId="179547029989-eueljn9jl5gqgforq4jpav2qddfhqhlu.apps.googleusercontent.com">
 				<Component {...pageProps} />
-			</Layout>
-		</GoogleOAuthProvider>
+			</GoogleOAuthProvider>
+		)
 	);
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function UserProfile(){
+function UserProfile(){
 
     const [user, setUser] = useState(null) 
     const [loading, setLoading] = useState(false) 
@@ -492,3 +492,9 @@ export default function UserProfile(){
     )
                 
 }
+
+UserProfile.getLayout = function getLayout(page) {
+	return <Layout>{page}</Layout>
+}
+
+export default UserProfile;

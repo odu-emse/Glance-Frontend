@@ -4,6 +4,7 @@ import Link from 'next/link';
 import VideoContent from '@/components/modules/ContentType/VideoContent';
 import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation';
 import PDFContent from '@/components/modules/ContentType/PDFContent';
+import Layout from '@/components/Layout';
 
 const ModuleSection = () => {
 
@@ -84,6 +85,10 @@ const ModuleSection = () => {
 			</div>
 		</section>
 	)
+}
+
+ModuleSection.getLayout = function getLayout(page) {
+	return <Layout>{page}</Layout>
 }
 
 export default ModuleSection
