@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import Layout from '@/components/Layout';
+import Link from 'next/link';
 
 const Module = () => {
 	const router = useRouter();
@@ -40,9 +41,9 @@ const DefaultModule = ({ module }) => {
 	return (
 		<div className="flex xl:flex-row flex-col-reverse">
 			<div className="xl:w-2/3 w-full sm:mb-4 sm:mr-0 lg:mb-0 lg:mr-5">
-				<h1 className="text-3xl font-bold mb-2">Module | {module.name}</h1>
+				<h1 className="text-3xl font-bold mb-2">{module.name}</h1>
 				<p className="mb-4">
-					Instructed by{' '}
+					Instructed by { ' ' }
 					<a className="underline" href="./">
 						{module.instructor}
 					</a>
@@ -107,14 +108,11 @@ const DefaultModule = ({ module }) => {
 					</span>
 				</div>
 				<div className="d-flex flex-column my-3">
-					<button
-						onClick={(event) => {
-							addModule(event);
-						}}
-						className="bg-blue-400 rounded text-white py-2 px-4 w-full"
-					>
-						Enroll module
-					</button>
+					<Link href={`/modules/${module.id}/sections/${module.headSection}/lessons/${module.sections[module.headSection].headLesson}`}>
+						<button className="bg-blue-400 rounded text-white py-2 px-4 w-full">
+							Open Module
+						</button>
+					</Link>
 					<button className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3">
 						Favorite
 					</button>
