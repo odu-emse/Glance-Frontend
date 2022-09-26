@@ -3,40 +3,20 @@ import { BiTask } from 'react-icons/bi';
 import { BsStack } from 'react-icons/bs';
 import Link from 'next/link';
 import { RiShutDownLine } from 'react-icons/ri';
-//import { checkForToken, decoder, loader } from './helpers'
 import { GoPerson, GoSignIn } from 'react-icons/go';
-
+import Image from 'next/image';
 import {
 	MdLiveHelp,
 	MdOutlineExplore,
 	MdSpaceDashboard,
 	MdWidgets,
 } from 'react-icons/md';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Sidebar() {
 	const [open, setOpen] = useState(false);
-	//const [loading, setLoading] = useState(false)
 	const [dropdown, setDropdown] = useState(false);
-	const [authenticated, setAuthenticated] = useState(true);
-
-	/*async function auth() {
-		try {
-			const res = await checkForToken()
-			res ? setAuthenticated(true) : setAuthenticated(false)
-			setLoading(false)
-		} catch (err) {
-			throw new Error(err)
-		}
-	}
-
-	useEffect(() => {
-		auth()
-	}, [])
-
-	if (loading) {
-		return loader()
-	}*/
+	const [authenticated] = useState(true);
 
 	return (
 		<aside
@@ -97,16 +77,10 @@ export default function Sidebar() {
 						loading="lazy"
 					/>
 				</div>
-
-				<div
-					className={`menu relative h-full flex flex-col justify-between`}
-					/*className={`menu relative h-full flex flex-col ${
-						authenticated ? 'justify-between' : 'justify-end'
-					}`}*/
-				>
+				<div className={`menu relative h-full flex flex-col justify-between`}>
 					{!authenticated === true ? (
 						<>
-							<Link href="/users/login">
+							<Link href="/login">
 								<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 										!open && 'flex items-center justify-center'
@@ -154,7 +128,7 @@ export default function Sidebar() {
 										)}
 									</a>
 								</Link>
-								<Link href="/program">
+								<Link href="/modules">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
 											!open ? 'flex items-center justify-center' : ''
@@ -225,12 +199,13 @@ export default function Sidebar() {
 									{open ? (
 										'Account'
 									) : (
-										<img
-											className="md:h-8 md:w-8 h-auto w-auto rounded-full"
-											src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-											alt="user account avatar"
-											loading="lazy"
-										/>
+										<div className="w-10 h-10 overflow-hidden relative rounded-full">
+											<Image
+												src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+												alt="user account avatar"
+												layout="fill"
+											/>
+										</div>
 									)}
 								</button>
 								<div
@@ -243,10 +218,7 @@ export default function Sidebar() {
 									onMouseOut={() => setDropdown(!dropdown)}
 									onMouseLeave={() => setDropdown(!dropdown)}
 								>
-									<Link
-										//to={`/users/${decoder()}`}
-										href={`/users`}
-									>
+									<Link href={`/users/1`}>
 										<a
 											className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 											activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
