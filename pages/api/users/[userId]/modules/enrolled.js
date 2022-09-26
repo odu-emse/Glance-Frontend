@@ -7,8 +7,8 @@ export default function handler(req, res) {
 	// 2. Get plan from user
 
 	let mockData = [];
-	const rand = Math.floor(Math.random() * 5);
 	for (let index = 0; index < 5; index++) {
+		const rand = Math.floor(Math.random() * 22);
 		mockData.push(data[rand]);
 	}
 

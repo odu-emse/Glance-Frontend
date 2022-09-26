@@ -88,40 +88,22 @@ const UserProfile = () => {
 				</h3>
 				<form>
 					<div className="flex md:flex-row md:justify-between flex-col mb-3">
-						<label htmlFor="name" className="block flex-1 mr-2">
-							First name
-							<input
-								className="bg-gray-50 border border-gray-200 rounded shadow-sm py-1 px-2 block w-full mt-1"
-								type="text"
-								placeholder="First name"
-								name="firstName"
-								defaultValue={account?.given_name}
-							/>
+						<label htmlFor="name" className="block flex-1 mr-2 p-1">
+							<strong>First Name</strong><br />
+							{account?.given_name}
 						</label>
-						<label htmlFor="name" className="block flex-1 ml-2">
-							Last name
-							<input
-								className="bg-gray-50 border border-gray-200 rounded shadow-sm py-1 px-2 block w-full mt-1"
-								type="text"
-								placeholder="Last name"
-								name="lastName"
-								defaultValue={account?.family_name}
-							/>
+						<label htmlFor="name" className="block flex-1 ml-2 p-1">
+							<strong>Last Name</strong><br />
+							{account?.family_name}
 						</label>
 					</div>
 					<div className="w-full mb-3">
-						<label htmlFor="" className="block flex-1">
-							Email
-							<input
-								className="bg-gray-50 border border-gray-200 rounded shadow-sm py-1 px-2 block w-full mt-1"
-								type="email"
-								placeholder="Email"
-								name="email"
-								defaultValue={account?.email}
-							/>
+						<label htmlFor="" className="block flex-1 p-1">
+							<strong>Email</strong><br />
+							{account?.email}
 						</label>
 					</div>
-					<div className="w-full mb-3">
+					{ /*<div className="w-full mb-3">
 						<label htmlFor="" className="block flex-1">
 							Date of birth
 							<input
@@ -131,7 +113,7 @@ const UserProfile = () => {
 								name="dob"
 							/>
 						</label>
-					</div>
+					</div> */}
 					{showInstructor && (
 						<>
 							<div className="w-full mb-3">

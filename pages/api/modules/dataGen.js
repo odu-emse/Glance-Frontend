@@ -1,7 +1,14 @@
 import randomSentence from 'random-sentence';
 import { nanoid } from 'nanoid';
 
-function generateLesson() {
+function numberToLetter(num) {
+	const remainder = num % 26;
+	const stack = Math.floor(num / 26) - 1;
+	let out = `${(stack >= 0) ? String.fromCharCode(97 + stack) : ''}${String.fromCharCode(97 + remainder)}`;
+	return out.toUpperCase();
+}
+
+function generateLesson(lessonCount) {
 	const type = getRandomArbitrary(1,3) === 1 ? 'video' : 'pdf';
 
 	let content = {}
@@ -14,7 +21,7 @@ function generateLesson() {
 
 	return {
 		id: nanoid(),
-		name: randomSentence({ min: 3, max: 6 }),
+		name: `Lesson ${numberToLetter(lessonCount)}`,
 		type: type,
 		content: content,
 		next: null,
@@ -26,7 +33,7 @@ function getRandomArbitrary(min, max) {
 	return Math.floor(Math.random() * (max - min) + min);
 }
 
-function generateSection() {
+function generateSection(lessonCount) {
 	let finalLessons = {};
 
 	const numberOfLessons = Math.random() * 10 + 1;
@@ -34,7 +41,7 @@ function generateSection() {
 	let firstLesson = null;
 
 	for (let i = 0; i < numberOfLessons; i++) {
-		let lesson = generateLesson();
+		let lesson = generateLesson(lessonCount + i);
 		lesson.prev = lastLesson != null ? lastLesson.id : null;
 
 		if (lastLesson != null) {
@@ -60,14 +67,14 @@ function generateSection() {
 	};
 }
 
-function generateModule() {
+function generateModule(i) {
+	let lessonCount = 0;
 	let finalSections = {};
-
 	const numberOfSections = Math.random() * 10 + 1;
 	let lastSection = null;
 	let firstSection = null;
 	for (let i = 0; i < numberOfSections; i++) {
-		let section = generateSection();
+		let section = generateSection(lessonCount);
 		section.prev = lastSection != null ? lastSection.id : null;
 
 		if (lastSection != null) {
@@ -80,6 +87,8 @@ function generateModule() {
 		if (firstSection == null) {
 			firstSection = section;
 		}
+
+		lessonCount += Object.values(section.lessons).length;
 	}
 
 	let objectives = [];
@@ -90,7 +99,8 @@ function generateModule() {
 
 	return {
 		id: nanoid(),
-		name: randomSentence({ min: 3, max: 6 }),
+		name: `Module ${numberToLetter(i)}`,
+		instructor: "Joel DeSante",
 		dependencies: [],
 		description: randomSentence({ min: 15, max: 35 }),
 		objectives,
@@ -103,7 +113,7 @@ function generateModule() {
 let data = [];
 const numberOfModules = Math.random() * 50 + 1;
 for (let i = 0; i < numberOfModules; i++) {
-	let mod = generateModule();
+	let mod = generateModule(i);
 	data.push(mod);
 }
 
