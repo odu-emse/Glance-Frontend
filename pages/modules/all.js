@@ -1,37 +1,24 @@
 /**
  * This page displays all modules
  */
+import useSWR from "swr";
 import ModuleItem from "@/components/modules/ModuleItem";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Layout from "@/components/Layout";
+import fetcher from "@/utils/fetcher";
 
 const AllModules = () => {
-
-    const [ data, setData ] = useState(null);
-	const [ isLoading, setLoading ] = useState(true);
-
-    useEffect(() => {
-        fetch(`/api/modules`)
-			.then((res) => res.json())
-			.then((data) => {
-				setData(data)
-				setLoading(false)
-			}).catch((error => {
-				setLoading(false);
-			}));
-    }, []);
-
-    if (isLoading) return <p>Loading...</p>
-	if (!data) return <p>Content failed to load.</p>
+	
+    const { data, error } = useSWR('/api/modules', fetcher);
+    
+    if(error) return <p>Failed to load content...</p>
+    if(!data) return <p>Loading...</p>
 
     let mods = []
     for (const mod in data) {
         const o = data[mod];
         mods.push(<ModuleItem data={o} key={o.id} />)
     }
-
-    console.log(mods)
 
     return (
         <div className="p-5">
