@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useMemo } from 'react';
 import ModuleItem from '@/components/modules/ModuleListItem';
 import Layout from '@/components/Layout';
+import useSWR from 'swr';
+import fetcher from '@/utils/fetcher';
 
 const ModulesPage = () => {
 	const [loading, setLoading] = useState(true);
