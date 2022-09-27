@@ -43,7 +43,7 @@ const DefaultModule = ({ module }) => {
 			<div className="xl:w-2/3 w-full sm:mb-4 sm:mr-0 lg:mb-0 lg:mr-5">
 				<h1 className="text-3xl font-bold mb-2">{module.name}</h1>
 				<p className="mb-4">
-					Instructed by { ' ' }
+					Instructed by{' '}
 					<a className="underline" href="./">
 						{module.instructor}
 					</a>
@@ -108,12 +108,19 @@ const DefaultModule = ({ module }) => {
 					</span>
 				</div>
 				<div className="d-flex flex-column my-3">
-					<Link href={`/modules/${module.id}/sections/${module.headSection}/lessons/${module.sections[module.headSection].headLesson}`}>
+					<Link
+						href={`/modules/${module.id}/sections/${
+							module.headSection
+						}/lessons/${module.sections[module.headSection].headLesson}`}
+					>
 						<button className="bg-blue-400 rounded text-white py-2 px-4 w-full">
 							Open Module
 						</button>
 					</Link>
-					<button className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3">
+					<button
+						className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3"
+						onClick={addModule}
+					>
 						Favorite
 					</button>
 				</div>
@@ -123,7 +130,7 @@ const DefaultModule = ({ module }) => {
 };
 
 Module.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>
-}
+	return <Layout>{page}</Layout>;
+};
 
 export default Module;

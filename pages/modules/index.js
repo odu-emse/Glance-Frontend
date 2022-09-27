@@ -2,8 +2,8 @@ import React from 'react';
 import { useState, useMemo } from 'react';
 import ModuleItem from '@/components/modules/ModuleListItem';
 import Layout from '@/components/Layout';
-import useSWR from 'swr';
-import fetcher from '@/utils/fetcher';
+// import useSWR from 'swr';
+// import fetcher from '@/utils/fetcher';
 
 const ModulesPage = () => {
 	const [loading, setLoading] = useState(true);
@@ -38,7 +38,7 @@ const ModulesPage = () => {
 };
 
 ModulesPage.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>
-}
+	return <Layout>{page}</Layout>;
+};
 
 export default ModulesPage;

@@ -2,7 +2,7 @@ import data from '../../../modules/data';
 
 export default function handler(req, res) {
 	// 1. Get userx ID
-	const { userId } = req.query;
+	// const { userId } = req.query;
 
 	// 2. Get plan from user
 
