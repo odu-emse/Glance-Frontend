@@ -29,6 +29,7 @@
 		"@typescript-eslint/parser": "^5.29.0",
 		"autoprefixer": "^10.4.7",
 		"babel-loader": "^8.2.5",
+		"concurrently": "^7.4.0",
 		"cypress": "^10.1.0",
 		"eslint": "^8.18.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -49,10 +50,12 @@
 		"react-dom": "^18.2.0"
 	},
 	"scripts": {
+		"start": "concurrently \"yarn style\" \"yarn storybook\"",
 		"test": "cypress",
 		"test:watch": "cypress open",
 		"storybook": "start-storybook -p 6006 -h localhost",
 		"build-storybook": "build-storybook",
+		"style": "npx tailwindcss -i ./src/global.css -o ./src/output.css --watch",
 		"lint": "eslint ./src",
 		"lint:fix": "eslint ./src --fix",
 		"patch": "npm version patch",
