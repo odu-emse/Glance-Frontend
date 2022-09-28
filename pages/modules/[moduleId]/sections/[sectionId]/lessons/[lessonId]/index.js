@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation';
