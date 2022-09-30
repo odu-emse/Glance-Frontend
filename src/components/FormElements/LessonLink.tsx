@@ -22,13 +22,11 @@ export const LessonLink = ({
                     </a>
                 </div>
             </li>
-        );
+        )
 }
 
-type LessonLinkProps = {
-    /**
-     * Descriptive label that indicates the name of the module
-     */
+export type LessonLinkProps = {
+   
     label: string
     /**
      * Opens up the URL the label points to
