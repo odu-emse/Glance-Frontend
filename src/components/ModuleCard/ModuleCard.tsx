@@ -9,7 +9,7 @@ export const ModuleCard = ({
         <div>
             <div className="border-gray h-48 w-full flex flex-nowrap border border-solid">
                 <div className={`flex h-full w-4 mr-4 ${completion ? `bg-green-400` :
-                    module.percentage >= 25 ? `bg-blue-300` : `bg-red-500`
+                    module.percentage > 25 ? `bg-blue-300` : `bg-red-400`
                     }`}>
                     <div className="h-full p-5">
                         <p className="pb-8 text-gray-300 text-sm w-48">{`${module.courseName} M ${module.moduleIdentifiers}`}</p>
