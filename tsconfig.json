@@ -1,6 +1,11 @@
 {
 	"compilerOptions": {
-		"types": ["cypress", "@testing-library/cypress"],
+		"types": [
+			"cypress",
+			"jest",
+			"@testing-library/cypress",
+			"@testing-library/jest-dom"
+		],
 		"jsx": "react-jsx",
 		"allowJs": false,
 		"strict": true,
