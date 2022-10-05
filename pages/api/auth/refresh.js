@@ -1,4 +1,12 @@
+import { OAuth2Client } from 'google-auth-library';
+
 export default async function handler(req, res) {
+
+  const token = req.cookies?.refresh;
+  if(token === undefined) {
+    res.status(401).send("No refresh token found.");
+    return;
+  }
 
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
     method: 'POST',
@@ -7,10 +15,7 @@ export default async function handler(req, res) {
     },
     body: JSON.stringify({
       query: `{
-        login(code: "${req.query.code}") {
-          id_token,
-          refresh_token
-        }
+        refresh(code: "${token}")
       }`
     }),
     credentials: 'include',
@@ -30,8 +35,15 @@ export default async function handler(req, res) {
     return;
   }
 
-  res.setHeader("Set-Cookie", `auth=${body.data.login.id_token}; Secure; HttpOnly;`);
-  res.setHeader("Set-Cookie", `refresh=${body.data.login.refresh_token}; Secure; HttpOnly;`);
-
-  res.redirect("/");
+  const client = new OAuth2Client(process.env.GOOGLE_ID);
+	try {
+		const response = await client.verifyIdToken({
+			idToken: body.data.refresh,
+			audience: process.env.GOOGLE_ID,
+		});
+    res.setHeader("Set-Cookie", `auth=${body.data.refresh}; Secure; HttpOnly;`);
+		res.status(200).json(response);
+	} catch (e) {
+		res.status(401).send('Unauthorized');
+	}
 }
