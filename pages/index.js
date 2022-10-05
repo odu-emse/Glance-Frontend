@@ -1,7 +1,27 @@
 import LoadingSplash from '@/components/LoadingSplash';
-import Head from 'next/head'
+import gqlfetcher from '@/utils/gqlFetcher';
+import Head from 'next/head';
+import useSWR from 'swr';
 
 const Index = () => {
+
+  if (typeof window !== "undefined") {
+    const { data, error } = useSWR({
+        query: `
+          {
+            user(id: "weruyoewrweoru") {
+              id
+            }
+          }
+        `,
+        token: window.localStorage.getItem("auth")
+      }, 
+      gqlfetcher
+    );
+    console.log(`Error: ${error}`)
+    console.log(data)
+  }
+
   return (
     <div className='flex justify-center items-center h-screen'>
       <Head>

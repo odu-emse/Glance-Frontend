@@ -11,6 +11,8 @@
   "dependencies": {
     "@react-oauth/google": "^0.2.6",
     "google-auth-library": "^8.5.1",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
     "nanoid": "^4.0.0",
     "next": "12.2.5",
     "random-sentence": "^1.0.4",

@@ -1,5 +1,9 @@
 import { OAuth2Client } from 'google-auth-library';
 
+async function refreshAuthToken(token) {
+
+}
+
 export default async function handler(req, res) {
 	const token = req.cookies?.auth;
 	if (token === undefined) {
@@ -15,6 +19,16 @@ export default async function handler(req, res) {
 		});
 		res.status(200).json(response);
 	} catch (e) {
-		res.status(401).send('Unauthorized');
+
+		// The users token is invalid. Try to refresh first
+		const refreshToken = req.cookies?.refresh;
+		if(refreshToken === undefined) {
+			res.status(401).send('Unauthorized');
+			return;
+		}
+
+		const id_token = await refreshAuthToken(refreshToken);
+		
+		
 	}
 }
