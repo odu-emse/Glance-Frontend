@@ -49,6 +49,7 @@ export const Input = ({
 						type="submit"
 						className="absolute right-0 top-0 bottom-0 px-3 py-2.5 text-gray-500 dark:text-gray-400 focus:ring-blue-600 dark:focus:ring-blue-500 focus:outline-none"
 					>
+						<span className="sr-only">Search</span>
 						<BiSearch size={24} />
 					</button>
 				)}
