@@ -20,6 +20,15 @@ Topic1.args={
         },
         {
             label: "Module2",
+            url:"lessonlink/module-2"
+        },
+        {
+            label: "Module3",
+            url:"lessonlink/module-3"
+            checked: true
+        },
+        {
+            label: "Module2",
             url:"lessonlink/module-2",
             checked: false
         },

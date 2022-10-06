@@ -22,7 +22,7 @@ export const LessonLink = ({
                     </a>
                 </div>
             </li>
-        );
+        )
 }
 
 export type LessonLinkProps = {
