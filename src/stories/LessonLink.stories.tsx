@@ -3,7 +3,7 @@ import  { LessonLink }  from '../components/FormElements/LessonLink'
 
 
 export default {
-	title: 'Molecules/LessonLink',
+	title: 'Atoms/Lesson Link',
 	component: LessonLink,
 }
 

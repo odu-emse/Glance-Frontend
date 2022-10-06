@@ -12,12 +12,12 @@ export const LessonLink = ({
             <li className='list-none'>
                 <div className='flex items-center'>
                     <span 
-                    className='cursor-pointer'
+                    className='cursor-pointer mr-1'
                     onClick={ () => setIsChecked(!isChecked) }
                     >
                         {isChecked ? <AiFillCheckCircle/> : <AiOutlineCheckCircle/>}
                     </span>
-                    <a href={url}>
+                    <a className="hover:underline" href={url}>
                     {label}
                     </a>
                 </div>
@@ -26,7 +26,9 @@ export const LessonLink = ({
 }
 
 export type LessonLinkProps = {
-   
+    /**
+     * Descriptive label that indicates the name of the module
+     */
     label: string
     /**
      * Opens up the URL the label points to
@@ -37,9 +39,3 @@ export type LessonLinkProps = {
      */
     checked?: boolean  
 }
-
-// LessonLink.defaultProps ={
-//     url : "../components",
-//     checked : false, 
-//     label: "Introduction"
-// }
