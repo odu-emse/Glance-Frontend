@@ -1,5 +1,15 @@
 import { OAuth2Client } from 'google-auth-library';
 
+/* 
+
+	FIXME: Make this a POST request!
+	Using a query string is secure but also prone to accidents!
+	See https://stackoverflow.com/questions/323200/is-a-https-query-string-secure
+
+	TL;DR Post bodies won't be logged which avoids exposing JWTs in server logs.
+
+*/
+
 export default async function handler(req, res) {
 	const { token } = req.query;
 
