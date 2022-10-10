@@ -1,14 +1,16 @@
 import Sidebar from './Sidebar';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 
 import AuthenticationContext from '@/contexts/AuthenticationContext';
 import useAuth from 'hooks/useAuth';
 
 const Layout = ({ children }) => {
 
+	const router = useRouter()
+
 	const { isAuthorized, user, loading } = useAuth();
 	if(loading) return <p>Loading...</p>
-	if(!isAuthorized) return <p>Not Authorized</p>
+	if(!isAuthorized) router.push('/login')
 
 	return (
 		<AuthenticationContext.Provider value={user}>
