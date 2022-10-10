@@ -5,6 +5,7 @@ const useAuth = () => {
     const [ isAuthorized, setAuthorized ] = useState(false);
     const [ user, setUser ] = useState(null);
     const [ loading, setLoading ] = useState(true);
+    const [jwt, setJWT] = useState(null);
 
     useEffect(() => {
         const handle = async () => {
@@ -29,6 +30,7 @@ const useAuth = () => {
             setAuthorized(true);
             setUser(body);
             setLoading(false);
+            setJWT(token)
         }
 
         handle();
@@ -37,7 +39,8 @@ const useAuth = () => {
     return {
         isAuthorized,
         user,
-        loading
+        loading,
+        jwt
     }
 }
 
