@@ -1,33 +1,38 @@
 import { useRouter } from 'next/router';
-import { useMemo, useState } from 'react';
+import React from 'react';
 import Layout from '@/components/Layout';
 import Link from 'next/link';
+import useAuth from '@/hooks/useAuth';
+import useSWR from 'swr';
+import gqlFetcher from '@/utils/gqlFetcher';
+import { getModuleByID } from '@/scripts/getModuleByID';
 
 const Module = () => {
 	const router = useRouter();
 	const { moduleId } = router.query;
 
-	const [loading, setLoading] = useState(true);
-	const [module, setModule] = useState({});
+	const {jwt: token} = useAuth()
 
-	const getModuleData = async () => {
-		const res = await fetch(`/api/modules/${moduleId}`);
-		const data = await res.json();
-		return data;
-	};
+	const { data, error } = useSWR(
+		{
+			query: getModuleByID(moduleId),
+			token,
+		},
+		gqlFetcher
+	);
 
-	useMemo(async () => {
-		const data = await getModuleData();
-		setModule(data);
-		setLoading(false);
-	}, []);
+	if(error) {
+		console.log(error);
+		throw new Error(error);
+	}
+	if(!data){
+		return <div>Loading...</div>
+	}
 
-	return loading ? (
-		<h1>Loading...</h1>
-	) : (
+	return (
 		<div>
 			<div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
-				<DefaultModule module={module} />
+				<DefaultModule module={data.module} />
 			</div>
 		</div>
 	);
@@ -38,26 +43,34 @@ const addModule = async (e) => {
 };
 
 const DefaultModule = ({ module }) => {
+	const instructors = module.members?.filter((member) => member.role === 'TEACHER')
 	return (
 		<div className="flex xl:flex-row flex-col-reverse">
 			<div className="xl:w-2/3 w-full sm:mb-4 sm:mr-0 lg:mb-0 lg:mr-5">
-				<h1 className="text-3xl font-bold mb-2">{module.name}</h1>
+				<h1 className="text-3xl font-bold mb-2">{module.moduleName}</h1>
 				<p className="mb-4">
 					Instructed by{' '}
-					<a className="underline" href="./">
-						{module.instructor}
-					</a>
+						{instructors.map((instructor) => {
+							return (
+								<span key={instructor.id}>
+									<a className="underline" href={`/users/${instructor.id}`}>
+										{instructor.plan.student.firstName} {instructor.plan.student.lastName}
+									</a>
+								</span>
+							);
+						})}
 				</p>
+				<p className="text-sm opacity-50">{module.intro}</p>
 				<div className="border shadow-md rounded-sm py-3 px-4 bg-gray-50 border-gray-50">
 					<h3 className="text-lg font-bold">Module objectives</h3>
 					<ul className="list-disc">
-						{module.objectives.map((objective, objIndex) => {
-							return (
-								<li className="ml-5" key={objIndex}>
-									{objective}
-								</li>
-							);
-						})}
+						{/*{module.objectives.map((objective, objIndex) => {*/}
+						{/*	return (*/}
+						{/*		<li className="ml-5" key={objIndex}>*/}
+						{/*			{objective}*/}
+						{/*		</li>*/}
+						{/*	);*/}
+						{/*})}*/}
 					</ul>
 				</div>
 				<div className="border shadow-md rounded-sm py-3 px-4 mt-3 bg-gray-50 border-gray-50">
@@ -109,9 +122,10 @@ const DefaultModule = ({ module }) => {
 				</div>
 				<div className="d-flex flex-column my-3">
 					<Link
-						href={`/modules/${module.id}/sections/${
-							module.headSection
-						}/lessons/${module.sections[module.headSection].headLesson}`}
+						href=""
+						// href={`/modules/${module.id}/sections/${
+						// 	module.headSection
+						// }/lessons/${module.sections[module.headSection].headLesson}`}
 					>
 						<button className="bg-blue-400 rounded text-white py-2 px-4 w-full">
 							Open Module

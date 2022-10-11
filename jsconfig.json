@@ -5,7 +5,8 @@
 			"@/components/*": ["components/*"],
 			"@/utils/*": ["utils/*"],
 			"@/contexts/*": ["contexts/*"],
-			"@/hooks/*": ["hooks/*"]
+			"@/hooks/*": ["hooks/*"],
+			"@/scripts/*": ["scripts/*"]
 		}
 	}
 }
