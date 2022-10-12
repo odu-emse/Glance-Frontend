@@ -17,17 +17,15 @@ const ModulesPage = () => {
 		},
 		gqlFetcher
 	);
-	console.log(data);
 
 	if(error) {
 		console.log(error);
 		throw new Error(error);
 	}
-	if(!data){
-		return <div>Loading...</div>
-	}
 
-	return (
+	return !data ? (
+		<div>Loading...</div>
+	) : (
 		<section className="gap-1 md:px-10 w-full flex flex-col md:flex-row">
 			<div className="flex flex-col md:w-full w-3/4">
 				<div className='flex items-center justify-between'>

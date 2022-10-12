@@ -1,38 +1,93 @@
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useContext } from 'react';
 import Layout from '@/components/Layout';
 import Link from 'next/link';
-import useAuth from '@/hooks/useAuth';
 import useSWR from 'swr';
 import gqlFetcher from '@/utils/gqlFetcher';
-import { getModuleByID } from '@/scripts/getModuleByID';
+import { gql } from 'graphql-request';
+import AuthenticationContext from '@/contexts/AuthenticationContext';
 
 const Module = () => {
 	const router = useRouter();
 	const { moduleId } = router.query;
 
-	const {jwt: token} = useAuth()
+	const {user, jwt} = useContext(AuthenticationContext);
 
-	const { data, error } = useSWR(
+	const { data: accountData, error: userFetchError } = useSWR(
 		{
-			query: getModuleByID(moduleId),
-			token,
+			query: gql`
+          {
+						user(id: "${user?.sub}") {
+								id
+								plan{
+										modules {
+												module {
+														id
+                        }
+                    }
+								}
+						}
+            module(id: "${moduleId}") {
+                id
+                moduleName
+                moduleNumber
+                description
+                duration
+                intro
+                numSlides
+                keywords
+                createdAt
+                updatedAt
+                assignments {
+                    id
+                    name
+                }
+                members {
+                    id
+                    role
+                    plan {
+                        student {
+                            id
+                            lastName
+                            firstName
+                        }
+                    }
+                }
+                parentCourses {
+                    id
+                    course {
+                        name
+                    }
+                }
+                feedback {
+                    id
+                    rating
+                }
+            }
+          }
+			`,
+			token: jwt,
 		},
 		gqlFetcher
 	);
 
-	if(error) {
-		console.log(error);
-		throw new Error(error);
-	}
-	if(!data){
-		return <div>Loading...</div>
+	if(userFetchError) {
+		console.log(userFetchError);
+		throw new Error(userFetchError);
 	}
 
-	return (
+	const isEnrolled = (moduleID) => {
+		return accountData.user.plan.modules.filter((enrollment) => enrollment.module.id === moduleID).flatMap((enrollment) => enrollment.module.id)[0] === moduleID
+	}
+
+	console.log(accountData);
+
+	return !accountData ? (
+		<div>Loading...</div>
+	) : (
 		<div>
 			<div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
-				<DefaultModule module={data.module} />
+				<DefaultModule module={accountData.module} isEnrolled={isEnrolled} />
 			</div>
 		</div>
 	);
@@ -40,9 +95,15 @@ const Module = () => {
 
 const addModule = async (e) => {
 	e.preventDefault();
+	console.log(e.target.value);
 };
 
-const DefaultModule = ({ module }) => {
+const removeModule = async (e) => {
+	e.preventDefault();
+	console.log(e.target.value);
+};
+
+const DefaultModule = ({ module, isEnrolled }) => {
 	const instructors = module.members?.filter((member) => member.role === 'TEACHER')
 	return (
 		<div className="flex xl:flex-row flex-col-reverse">
@@ -131,12 +192,23 @@ const DefaultModule = ({ module }) => {
 							Open Module
 						</button>
 					</Link>
-					<button
-						className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3"
-						onClick={addModule}
-					>
-						Favorite
-					</button>
+						{isEnrolled(module.id) ? (
+							<button
+								className="border-2 bg-red-500 text-white border-red-600 rounded py-2 px-4 w-full mt-3"
+								onClick={removeModule}
+								value={module.id}
+							>
+								Abandon
+							</button>
+						) : (
+							<button
+								className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3"
+								onClick={addModule}
+								value={module.id}
+							>
+								Enroll
+							</button>
+						)}
 				</div>
 			</div>
 		</div>

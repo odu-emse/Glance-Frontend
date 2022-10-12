@@ -8,12 +8,12 @@ const Layout = ({ children }) => {
 
 	const router = useRouter()
 
-	const { isAuthorized, user, loading } = useAuth();
+	const { isAuthorized, user, loading, jwt } = useAuth();
 	if(loading) return <p>Loading...</p>
 	if(!isAuthorized) router.push('/login')
 
 	return (
-		<AuthenticationContext.Provider value={user}>
+		<AuthenticationContext.Provider value={{ user, jwt }}>
 			<main className="flex gap-x-1">
 				<Sidebar />
 				<section className="w-full">

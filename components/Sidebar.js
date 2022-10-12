@@ -17,7 +17,7 @@ import AuthenticationContext from '@/contexts/AuthenticationContext';
 export default function Sidebar() {
 	const [open, setOpen] = useState(false);
 	const [dropdown, setDropdown] = useState(false);
-	const account = useContext(AuthenticationContext);
+	const { user: account } = useContext(AuthenticationContext);
 	const [authenticated] = useState(!!account);
 
 	return (
