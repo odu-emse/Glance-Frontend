@@ -1,35 +1,100 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
+import useAuth from '@/hooks/useAuth';
+import gqlFetcher from '@/utils/gqlFetcher';
+import useSWR from 'swr';
+import { gql } from 'graphql-request';
+import { useRouter } from 'next/router';
 
 const UserProfile = () => {
 	const [isInstructor] = useState(true);
 	const [showInstructor, setShowInstructor] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const [account, setAccount] = useState(null);
+	const {jwt: token, user} = useAuth()
+	const router = useRouter();
 
-	/**
-	* 	setAccount((prevState) => {[...prevState, {
-				title: "",
-				officeLocation: "",
-				officeHours: "",
-				contactPolicy: "",
-				phone: "",
-				researchInterests: "",
-				teachingPhilosophy: "",
-			}]});
-	 */
+	const { data, error } = useSWR(
+		{
+			query: gql`
+          {
+            user(id: "${user?.sub}") {
+              id
+	            openID
+	            picURL
+              firstName
+              lastName
+              dob
+              email
+              plan{
+                id
+                modules{
+                  enrolledAt
+	                role
+	                module{
+			                id
+			                moduleName
+			                moduleNumber
+	                }
+                }
+	              assignmentResults {
+                  id
+		              submittedAt
+		              result
+		              gradedBy {
+				              firstName
+				              lastName
+				              email
+				              instructorProfile {
+                          id
+						              title
+						              officeLocation
+						              officeHours
+						              contactPolicy
+						              phone
+						              background
+						              researchInterest
+                      }
+                  }
+		              assignment {
+				              id
+				              name
+				              dueAt
+                  }
+                }
+              }
+              instructorProfile{
+                id
+                title
+                officeLocation
+                officeHours
+                contactPolicy
+                phone
+                background
+                researchInterest
+              }
+            }
+          }
+        `,
+			token,
+		},
+		gqlFetcher
+	);
 
-	useEffect(() => {
-		async function checkAuth() {
-			const response = await fetch('/api/auth/check');
-			const data = await response.json();
-			setAccount(() => data.payload);
-		}
-		checkAuth();
-	}, []);
+	if(error) {
+		console.log(error);
+		throw new Error(error);
+	}
+	if(!data){
+		return <div>Loading...</div>
+	}
 
-	return (
+
+	return router.query.user !== user?.sub ? (
+		<div className="w-2/3">
+			Show the profile of the user with id {router.query.user}
+		</div>
+	) : (
 		<div className="w-11/12 lg:w-3/4 mx-4 lg:mx-auto flex flex-col md:flex-row mt-3">
 			<aside className="w-full md:w-1/4 mr-8 flex flex-col">
 				<div className="relative h-48 w-48 mb-3 rounded-lg overflow-clip mx-auto group">
@@ -38,8 +103,8 @@ const UserProfile = () => {
 					</div>
 					<Image
 						src={`${
-							account?.picture
-								? account.picture
+							data.user?.picURL
+								? data.user.picURL
 								: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
 						}`}
 						alt="user avatar"
@@ -90,17 +155,17 @@ const UserProfile = () => {
 					<div className="flex md:flex-row md:justify-between flex-col mb-3">
 						<label htmlFor="name" className="block flex-1 mr-2 p-1">
 							<strong>First Name</strong><br />
-							{account?.given_name}
+							{user?.given_name}
 						</label>
 						<label htmlFor="name" className="block flex-1 ml-2 p-1">
 							<strong>Last Name</strong><br />
-							{account?.family_name}
+							{user?.family_name}
 						</label>
 					</div>
 					<div className="w-full mb-3">
 						<label htmlFor="" className="block flex-1 p-1">
 							<strong>Email</strong><br />
-							{account?.email}
+							{user?.email}
 						</label>
 					</div>
 					{ /*<div className="w-full mb-3">
