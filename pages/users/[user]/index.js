@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
-import useAuth from '@/hooks/useAuth';
 import gqlFetcher from '@/utils/gqlFetcher';
 import useSWR from 'swr';
 import { gql } from 'graphql-request';

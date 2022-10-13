@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import ModuleItem from '@/components/modules/ModuleListItem';
 import Layout from '@/components/Layout';
-import useAuth from '@/hooks/useAuth';
 import useSWR from 'swr';
 import gqlFetcher from '@/utils/gqlFetcher';
 import { getUserByOpenID } from '@/scripts/getUserByOpenID';
