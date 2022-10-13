@@ -1,36 +1,45 @@
 import React from 'react';
-import { useState, useMemo } from 'react';
 import ModuleItem from '@/components/modules/ModuleListItem';
 import Layout from '@/components/Layout';
-// import useSWR from 'swr';
-// import fetcher from '@/utils/fetcher';
+import useAuth from '@/hooks/useAuth';
+import useSWR from 'swr';
+import gqlFetcher from '@/utils/gqlFetcher';
+import { getUserByOpenID } from '@/scripts/getUserByOpenID';
+import Link from 'next/link';
 
 const ModulesPage = () => {
-	const [loading, setLoading] = useState(true);
-	const [modules, setModules] = useState({});
+	const {jwt: token, user} = useAuth()
 
-	const getModuleData = async () => {
-		const res = await fetch('/api/users/1/modules/enrolled');
-		const data = await res.json();
-		return data;
-	};
+	const { data, error } = useSWR(
+		{
+			query: getUserByOpenID(user?.sub),
+			token,
+		},
+		gqlFetcher
+	);
 
-	useMemo(async () => {
-		const data = await getModuleData();
-		setModules(data);
-		setLoading(false);
-	}, []);
+	if(error) {
+		console.log(error);
+		throw new Error(error);
+	}
 
-	return loading ? (
-		<h1>Loading...</h1>
+	return !data ? (
+		<div>Loading...</div>
 	) : (
 		<section className="gap-1 md:px-10 w-full flex flex-col md:flex-row">
 			<div className="flex flex-col md:w-full w-3/4">
+				<div className='flex items-center justify-between'>
 				<h1 className="text-7xl opacity-50 font-black text-gray-400">
 					My Modules
 				</h1>
-				{modules.map((module) => {
-					return <ModuleItem key={module.id} module={module} />;
+					<Link href={`/modules/all`} passHref={true}>
+						<a className="rounded-full border font-semibold py-3 px-7">
+						View All Modules
+						</a>
+					</Link>
+				</div>
+				{data.user.plan.modules.filter((doc) => doc.role === "STUDENT").map((enrollment) => {
+					return <ModuleItem key={enrollment.module.id} module={enrollment.module} />;
 				})}
 			</div>
 		</section>

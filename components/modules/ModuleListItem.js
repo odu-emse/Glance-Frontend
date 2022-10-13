@@ -10,14 +10,14 @@ const ModuleItem = ({ module }) => {
 				>
 					<div className="p-2 flex flex-col justify-between md:w-1/2 w-full">
 						<div className="flex items-center">
-							<h3 className="font-light text-lg">{module.name}</h3>
+							<h3 className="font-light text-lg">{module.moduleNumber}</h3>
 						</div>
 						<div className="flex flex-col py-5">
 							<h4 className="font-bold text-xl">
-								{/* {moduleEnrollment.module.moduleName} */}
+								{module.moduleName}
 							</h4>
 							<h6 className="font-light text-gray-500">
-								{/* {moduleEnrollment.module.intro} */}
+								{module.intro}
 							</h6>
 						</div>
 						<div className="w-full">
@@ -37,7 +37,7 @@ const ModuleItem = ({ module }) => {
 											)}
 										/> */}
 								<p className="text-gray-300 ml-2 font-weight-light">
-									{/* ({moduleEnrollment.module.feedback.length}) */}
+									({module.feedback?.length})
 								</p>
 							</div>
 							<ul className="flex justify-between items-center">
@@ -78,7 +78,7 @@ const ModuleItem = ({ module }) => {
 							/>
 						</svg>
 						<h2 className="text-base font-semibold">
-							{/* Approximately {moduleEnrollment.module.duration} hours left */}
+							Approximately {module.duration} hours left
 						</h2>
 					</div>
 					<div className="flex flex-col md:w-1/4 w-full items-center justify-center text-center">
@@ -93,12 +93,11 @@ const ModuleItem = ({ module }) => {
 								Continue
 							</a>
 						</Link>
-						{/* 
-						<Link href={`/modules`} passHref key={module.moduleName}>
+						<Link href={`/modules/${module.id}/tree`} passHref key={module.moduleName}>
 							<a className="text-white bg-yellow-500 px-3 py-1 w-full my-1">
 								Tree View
 							</a>
-						</Link> */}
+						</Link>
 					</div>
 				</div>
 			</div>
