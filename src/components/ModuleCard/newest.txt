@@ -6,7 +6,7 @@ export const ModuleCard = ({
   completion,
 }: ModuleProps): JSX.Element => {
   return (
-    <div className="border-gray flex h-50 md:h-48 w-screen flex-wrap border border-solid">
+    <div className="border-gray flex h-auto h-50 md:h-48 w-screen flex-wrap md:flex-nowrap border border-solid">
       <div
         className={`flex flex-col p-2 w-screen h-1 md:h-full md:w-4 mr-4 ${
           completion
@@ -16,20 +16,16 @@ export const ModuleCard = ({
             : `bg-red-400`
         }`}
       >
-        <div className="flex mt-4 flex-col md:flex-row md:items-start md:justify-start items-center justify-center">
-          <div className="md:flex md:flex-col md:w-full">
-            <p className="flex md:ml-10 md:pb-4 text-gray-300 md:pl-2 md:text-sm items-center justify-center">{`${module.courseName} M ${module.moduleIdentifiers}`}</p>
-            <p className="flex md:ml-10 md:pb-4 font-bold pl-2 text-lg">
-              {module.moduleName}
-            </p>
-          </div>
+        <div className="flex mt-4 flex-col w-screen md:items-start md:justify-start items-center justify-center">
+          <p className="flex md:ml-10 md:pb-4 text-gray-300 md:pl-2 md:text-sm">{`${module.courseName} M ${module.moduleIdentifiers}`}</p>
+          <p className="flex md:ml-10 md:pb-4 font-bold pl-2 text-lg">{module.moduleName}</p>
           <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-center md:items-start md:justify-start">
-            <div className="flex flex-col items-center justify-center md:flex-row md:items-start md:justify-start">
-              <p className="md:mt-5 md:ml-10">{module.percentage + `%`}</p>
-              <p className="md:mt-5 md:ml-1">Viewed</p>
+            <div className="flex flex-col items-center justify-center">
+              <p className="flex ">{module.percentage + ` %`}</p>
+              <p className="flex ">Viewed</p>
               {completion ? (
-                <div className="flex flex-col items-center justify-center ">
-                  <p className="md:mx-16 md:mt-2 md:w-48">
+                <div className="flex flex-col items-center justify-center">
+                  <p className="">
                     {`Average time: ${module.averageTime} ${
                       module.averageTime === 1 ? `minute` : `minutes`
                     }`}
@@ -39,23 +35,20 @@ export const ModuleCard = ({
                   }`}</p>
                 </div>
               ) : (
-                <p className="md:mx-16 md:mt-2">
+                <p className="">
                   {`Approximately ${module.duration} ${
                     module.duration === 1 ? `minute` : `minutes`
                   } left `}
                 </p>
               )}
               {completion ? (
-                <div className="flex items-center justify-center">
-                  <p className="md:"></p>
-                  <p className="text-white bg-blue-300 px-20  py-1 w-full my-1">
-                    Continue
-                  </p>
-                </div>
+                <p className="text-white bg-blue-300 px-20  py-1 w-full my-1">
+                  Continue
+                </p>
               ) : (
-                <div className="flex flex-col md:flex-row w-full h-50 items-center justify-center gap-3 md:items-start md:justify-start">
-                  <p className="mt-2 flex h-2 w-96 bg-gray-300 md:ml-5 md:h-32 md:w-3 "></p>
-
+                <div className="flex flex-col items-center justify-center gap-3 ">
+                  <p className="mt-2 flex h-2 w-96 bg-gray-300"></p>
+                  
                   <p className="text-gray-400 text-sm">Current Topic</p>
                   <p className="font-medium text-sm">{module.currentTopic}</p>
                   <p className="text-white bg-blue-300 px-20 py-1 w-24">
@@ -64,7 +57,7 @@ export const ModuleCard = ({
                     </span>
                   </p>
                   {/* Link to returnIdPage */}
-                  <p className="text-white bg-orange-400 px-20 py-1 w-24 mb-2">
+                  <p className="text-white bg-orange-400 px-20 py-1 w-24">
                     <span className="flex items-center justify-center">
                       {module.treeView}
                     </span>
@@ -73,7 +66,7 @@ export const ModuleCard = ({
                 </div>
               )}
 
-              <p className="underline underline-offset-2 inline-block text-sm text-gray-400">
+              <p className="mt-2 underline underline-offset-2 inline-block text-sm text-gray-400">
                 <span className="md:pl-4 md:pr-8 border-black md:border-r-4">
                   Forum
                 </span>
@@ -99,7 +92,7 @@ export const ModuleCard = ({
               )}
             </div>
 
-            <svg className="md:mx-10 w-20 h-20">
+            <svg className="w-20 h-20">
               <circle
                 className="text-gray-300"
                 strokeWidth="5"
@@ -113,7 +106,7 @@ export const ModuleCard = ({
                 className="text-blue-600"
                 strokeWidth="5"
                 strokeDasharray="10"
-                strokeDashoffset={`${100 - (module.percentage / 100) * 10}`}
+                strokeDashoffset={`${100 - module.percentage / 100 * 10}`}
                 strokeLinecap="round"
                 stroke="currentColor"
                 fill="transparent"
@@ -145,3 +138,6 @@ export type ModuleProps = {
   module: ModuleObject;
   completion: boolean;
 };
+
+
+<div className="md:absolute md:m-auto md:bottom-0 md:top-0 md:left-0 md:right-0">

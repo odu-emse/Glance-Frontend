@@ -1,0 +1,57 @@
+<div className="border-gray flex h-48 w-screen flex-wrap md:flex-nowrap border border-solid">
+  <div className={`flex p-2 w-screen h-1 md:h-full md:w-4 mr-4 ${completion ? `bg-green-400` :
+        module.percentage > 25 ? `bg-blue-300` : `bg-red-400`
+      }`}>
+  <div className="flex h-full p-4 w-full">
+    <div> 
+      <p className="items-center justify-center w-screen md:w-auto md:pb-4 lg:pb-8 text-gray-300 md:text-sm">{`${module.courseName} M ${module.moduleIdentifiers}`}</p>
+      <p className="pb-8 xl:pb-12 tracking-wide inline-block font-bold text-lg">{module.moduleName}</p>
+      <div className="w-40 flex flex-col md:flex-row">
+        <p className="underline underline-offset-2 inline-block text-sm text-gray-400"><span className="pl-4 pr-8 border-black border-r-4">Forum</span></p>
+        <p className="underline underline-offset-2 inline-block text-sm text-gray-400"><span className="pl-8 pr-8 border-black border-r-4">Assignment</span></p>
+        <p className="underline underline-offset-2 inline-block text-sm text-gray-400"><span className="pl-8 pr-8 border-black border-r-4">Download</span></p>
+        <p className="underline underline-offset-2 inline-block text-sm text-red-500"><span className="pl-8 pr-8 underline-offset-8">Abandon</span></p>
+      </div>
+    </div>
+    <div className="flex flex-col md:flex-row md:pl-8 md:ml-24 md:items-center md:justify-center">
+      <svg className="w-20 h-20">
+          <circle
+            className="text-gray-300"
+            strokeWidth="5"
+            stroke="currentColor"
+            fill="transparent"
+            r="30"
+            cx="40"
+            cy="40"
+        />
+          <circle
+              className="text-blue-600"
+              strokeWidth="5"
+              strokeDasharray="10"
+              strokeDashoffset="100 - 75 / 100 * 10"
+              strokeLinecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="30"
+              cx="40"
+              cy="40"
+          />
+      </svg>
+    </div>
+    <div className="flex flex-col items-center justify-center text-center xl:ml-14 lg:ml-20">
+      <p>50 %</p>
+      <p>Viewed</p>
+    </div>
+    <div className="flex  items-center justify-center text-center ml-20 test-sm text-gray-400">
+      <span className="test-sm">Approximately 38 minutes left</span> 
+    </div>
+    <div className="ml-4 flex h-6/ w-1 bg-gray-300"></div>
+    <div className="mx-12 xl:w-auto lg:w-96 flex flex-col items-center justify-center gap-3 ">
+      <p className="text-gray-400 text-sm pt-4">Current Topic</p>
+      <p className="font-medium text-sm mb-1">Ethical Behavior and leadership</p>
+      <p className="text-white w-full h-auto bg-blue-300 px-20  py-1 my-1 text-center">Continue</p>
+      <p className="text-white w-full bg-orange-400 px-20 py-1 my-1 text-center ">Tree View</p>
+      </div>
+    </div>
+  </div>
+</div>
