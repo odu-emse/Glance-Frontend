@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
 import useAuth from '@/hooks/useAuth';
@@ -6,12 +6,13 @@ import gqlFetcher from '@/utils/gqlFetcher';
 import useSWR from 'swr';
 import { gql } from 'graphql-request';
 import { useRouter } from 'next/router';
+import AuthenticationContext from '@/contexts/AuthenticationContext';
 
 const UserProfile = () => {
 	const [isInstructor] = useState(true);
 	const [showInstructor, setShowInstructor] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const {jwt: token, user} = useAuth()
+	const {jwt: token, user} = useContext(AuthenticationContext);
 	const router = useRouter();
 
 	const { data, error } = useSWR(

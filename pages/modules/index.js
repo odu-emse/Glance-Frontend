@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ModuleItem from '@/components/modules/ModuleListItem';
 import Layout from '@/components/Layout';
 import useAuth from '@/hooks/useAuth';
@@ -6,9 +6,10 @@ import useSWR from 'swr';
 import gqlFetcher from '@/utils/gqlFetcher';
 import { getUserByOpenID } from '@/scripts/getUserByOpenID';
 import Link from 'next/link';
+import AuthenticationContext from '@/contexts/AuthenticationContext';
 
 const ModulesPage = () => {
-	const {jwt: token, user} = useAuth()
+	const { jwt: token, user } = useContext(AuthenticationContext);
 
 	const { data, error } = useSWR(
 		{
@@ -20,7 +21,7 @@ const ModulesPage = () => {
 
 	if(error) {
 		console.log(error);
-		throw new Error(error);
+		return <p>There was an unexpected error. Please try again.</p>
 	}
 
 	return !data ? (
