@@ -22,11 +22,11 @@ const addModule = async (module, plan) => {
 	const response = await request(process.env.NEXT_PUBLIC_API_URL, query);
 	
 };
-
-const removeModule = async (module) => {
+//615d417beb61dd47623c8b6b
+const removeModule = async (enrollmentId) => {
 	const query = gql`
 		mutation {
-			deleteModuleEnrollment(id: "${module}") {
+			deleteModuleEnrollment(id: "${enrollmentId}") {
 				id
 			}
 		}
