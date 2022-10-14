@@ -9,12 +9,13 @@ import { getUserByOpenID } from '@/scripts/getUserByOpenID';
 import gqlFetcher from '@/utils/gqlFetcher';
 import { useContext } from "react";
 import AuthenticationContext from "@/contexts/AuthenticationContext";
+import { getAllModules } from "@/scripts/getAllModules";
 
 const AllModules = () => {
   const { jwt: token, user } = useContext(AuthenticationContext);
   const { data, error } = useSWR(
     {
-      query: getUserByOpenID(user?.sub),
+      query: getAllModules(),
       token,
     },
     gqlFetcher
@@ -36,8 +37,8 @@ const AllModules = () => {
           <h1 className="text-4xl mb-2 font-bold">All Available Modules</h1>
           <p className="text-gray-600 text-light mb-4">A list of all the modules currently available</p>
           <div className="grid gap-3">
-              { data.user.plan.modules.map((enrollment) => {
-                  return <ModuleItem role={enrollment.role} key={enrollment.module.id} data={enrollment.module} />;
+              { data.modules.map((m) => {
+                  return <ModuleItem key={m.id} data={m} />;
               }) }
           </div>
       </div>

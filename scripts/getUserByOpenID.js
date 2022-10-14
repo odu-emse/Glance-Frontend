@@ -5,12 +5,12 @@ export const getUserByOpenID = (openID) => {
 			{
 				user(id: "${openID}") {
 					id
-					plan{
+					plan {
 						id
-						modules{
+						modules {
 							enrolledAt
 							role
-							module{
+							module {
 								id
 								moduleName
 								moduleNumber

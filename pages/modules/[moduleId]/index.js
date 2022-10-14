@@ -4,106 +4,117 @@ import Layout from '@/components/Layout';
 import Link from 'next/link';
 import useSWR from 'swr';
 import gqlFetcher from '@/utils/gqlFetcher';
-import { gql } from 'graphql-request';
+import request, { gql } from 'graphql-request';
 import AuthenticationContext from '@/contexts/AuthenticationContext';
+
+const addModule = async (module, plan) => {
+	const query = gql`
+		mutation {
+			addModuleEnrollment(input: {
+				module: "${module}",
+				plan: "${plan}",
+				role: STUDENT
+			}) {
+				id
+			}
+		}
+	`
+	const response = await request(process.env.NEXT_PUBLIC_API_URL, query);
+	
+};
+
+const removeModule = async (module) => {
+	const query = gql`
+		mutation {
+			deleteModuleEnrollment(id: "${module}") {
+				id
+			}
+		}
+	`
+};
 
 const Module = () => {
 	const router = useRouter();
 	const { moduleId } = router.query;
+	const { user, jwt } = useContext(AuthenticationContext);
 
-	const {user, jwt} = useContext(AuthenticationContext);
-
-	const { data: accountData, error: userFetchError } = useSWR(
+	const { data, error } = useSWR(
 		{
 			query: gql`
-          {
-						user(id: "${user?.sub}") {
+			{
+				user(id: "${user?.sub}") {
+					id
+					plan {
+						modules {
+							module {
 								id
-								plan{
-										modules {
-												module {
-														id
-                        }
-                    }
-								}
+							}
 						}
-            module(id: "${moduleId}") {
-                id
-                moduleName
-                moduleNumber
-                description
-                duration
-                intro
-                numSlides
-                keywords
-                createdAt
-                updatedAt
-                assignments {
-                    id
-                    name
-                }
-                members {
-                    id
-                    role
-                    plan {
-                        student {
-                            id
-                            lastName
-                            firstName
-                        }
-                    }
-                }
-                parentCourses {
-                    id
-                    course {
-                        name
-                    }
-                }
-                feedback {
-                    id
-                    rating
-                }
-            }
-          }
+					}
+				}
+				module(id: "${moduleId}") {
+					id
+					moduleName
+					moduleNumber
+					description
+					duration
+					intro
+					numSlides
+					keywords
+					createdAt
+					updatedAt
+					assignments {
+						id
+						name
+					}
+					members {
+						id
+						role
+						plan {
+							student {
+								id
+								lastName
+								firstName
+							}
+						}
+					}
+					parentCourses {
+						id
+						course {
+							name
+						}
+					}
+					feedback {
+						id
+						rating
+					}
+				}
+			}
 			`,
 			token: jwt,
 		},
 		gqlFetcher
 	);
 
-	if(userFetchError) {
-		console.log(userFetchError);
-		throw new Error(userFetchError);
-	}
+	if(error) return <p>There was an issue processing this request. Please try again later.</p>
+	if(!data) return <p>Loading...</p>
 
 	const isEnrolled = (moduleID) => {
-		return accountData.user.plan.modules.filter((enrollment) => enrollment.module.id === moduleID).flatMap((enrollment) => enrollment.module.id)[0] === moduleID
+		return data.user.plan.modules.filter((enrollment) => enrollment.module.id === moduleID).flatMap((enrollment) => enrollment.module.id)[0] === moduleID
 	}
 
-	console.log(accountData);
+	console.log(data);
 
-	return !accountData ? (
-		<div>Loading...</div>
-	) : (
+	return (
 		<div>
 			<div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
-				<DefaultModule module={accountData.module} isEnrolled={isEnrolled} />
+				<DefaultModule module={data.module} isEnrolled={isEnrolled} plan={ data.user.plan.id } />
 			</div>
 		</div>
 	);
 };
 
-const addModule = async (e) => {
-	e.preventDefault();
-	console.log(e.target.value);
-};
-
-const removeModule = async (e) => {
-	e.preventDefault();
-	console.log(e.target.value);
-};
-
-const DefaultModule = ({ module, isEnrolled }) => {
+const DefaultModule = ({ module, isEnrolled, plan }) => {
 	const instructors = module.members?.filter((member) => member.role === 'TEACHER')
 	return (
 		<div className="flex xl:flex-row flex-col-reverse">
@@ -203,8 +214,7 @@ const DefaultModule = ({ module, isEnrolled }) => {
 						) : (
 							<button
 								className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3"
-								onClick={addModule}
-								value={module.id}
+								onClick={(e) => { addModule(module.id, plan ) }}
 							>
 								Enroll
 							</button>
