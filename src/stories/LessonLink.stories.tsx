@@ -1,13 +1,14 @@
 import * as React from 'react'
 import  { LessonLink }  from '../components/FormElements/LessonLink'
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 
 export default {
 	title: 'Atoms/Lesson Link',
 	component: LessonLink,
-}
+} as ComponentMeta<typeof LessonLink>
 
-const Template = (args) => <LessonLink {...args}/>
+const Template: ComponentStory<typeof LessonLink> = (args) => <LessonLink {...args}/>
 
 export const Primary = Template.bind({})
 //P.storyName = 'Primary'
