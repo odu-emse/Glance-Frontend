@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { Input, InputProps } from '../components/FormElements'
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
 	title: 'Atoms/Input',
@@ -16,9 +17,9 @@ export default {
 			control: false,
 		},
 	},
-}
+} as ComponentMeta<typeof Input>
 
-const Template = (args: InputProps) => {
+const Template:ComponentStory<typeof Input> = (args: InputProps) => {
 	const [value, setValue] = useState(args.defaultValue ?? '')
 
 	return (

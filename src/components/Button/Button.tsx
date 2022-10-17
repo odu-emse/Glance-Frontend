@@ -23,6 +23,8 @@ export const Button = ({
 		buttonSize = 'h-12 w-auto py-8 px-10'
 	} else if (size === 'base') {
 		buttonSize = 'h-10 w-auto py-2 px-5'
+	} else {
+		buttonSize = ""
 	}
 
 	return (
