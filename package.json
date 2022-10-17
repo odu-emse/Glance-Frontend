@@ -20,6 +20,9 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.5",
+		"@babel/plugin-proposal-decorators": "^7.19.3",
+		"@babel/plugin-proposal-export-default-from": "^7.18.10",
+		"@babel/preset-typescript": "^7.18.6",
 		"@storybook/addon-actions": "^6.5.11",
 		"@storybook/addon-essentials": "^6.5.11",
 		"@storybook/addon-interactions": "^6.5.11",
@@ -61,7 +64,7 @@
 		"react-dom": "^18.2.0"
 	},
 	"scripts": {
-		"start": "concurrently \"yarn style\" \"yarn storybook\"",
+		"start": "yarn style:build && concurrently \"yarn style\" \"yarn storybook\"",
 		"test": "cypress",
 		"test:watch": "cypress open",
 		"storybook": "start-storybook -p 6006 -h localhost",
