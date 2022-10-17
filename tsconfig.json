@@ -5,6 +5,12 @@
 		"allowJs": false,
 		"strict": true,
 		"allowSyntheticDefaultImports": true,
-		"forceConsistentCasingInFileNames": true
-	}
+		"forceConsistentCasingInFileNames": true,
+		"declaration": true,
+		"declarationDir": "./lib",
+		"outDir": "./lib",
+		"lib": ["dom", "esnext", "dom.iterable", "ES2021"]
+	},
+	"exclude": ["node_modules", "cypress", "dist"],
+	"include": ["src/components/**/*", "src/index.ts", "src/util/**/*"],
 }
