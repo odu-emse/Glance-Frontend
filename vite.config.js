@@ -7,15 +7,14 @@ export default defineConfig({
     plugins: [
         react(),
         dts({
-            insertTypesEntry: true,
+            outputDir: "dist/types",
         }),
     ],
     build: {
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
-            name: 'EMSE-UI',
-            formats: ['es', 'umd'],
-            fileName: (format) => `index.${format}.js`,
+            name: 'emse-ui',
+            fileName: (format) => `emse-ui.${format}.js`,
         },
         rollupOptions: {
             external: ['react', 'react-dom', 'react-router-dom'],
@@ -23,7 +22,6 @@ export default defineConfig({
                 globals: {
                     react: 'React',
                     'react-dom': 'ReactDOM',
-                    'styled-components': 'styled',
                 },
             },
         },

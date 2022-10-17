@@ -1,14 +1,14 @@
 {
 	"name": "emse-ui",
-	"version": "1.1.1",
+	"version": "1.1.6",
 	"description": "The component library to be used in the Async Portal at EMSE.",
-	"main": "./lib/index.umd.js",
-	"module": "./lib/index.es.js",
-	"types": "./lib/index.d.ts",
+	"main": "./dist/emse-ui.umd.js",
+	"module": "./dist/emse-ui.es.js",
+	"types": "./dist/emse-ui.d.ts",
 	"exports": {
 		".": {
-			"import": "./lib/index.es.js",
-			"require": "./lib/index.umd.js"
+			"import": "./dist/emse-ui.es.js",
+			"require": "./dist/emse-ui.umd.js"
 		}
 	},
 	"dependencies": {
@@ -27,6 +27,7 @@
 		"@storybook/react": "^6.5.11",
 		"@storybook/testing-library": "^0.0.13",
 		"@testing-library/cypress": "^8.0.3",
+		"@types/node": "^18.11.0",
 		"@types/prop-types": "^15.7.5",
 		"@types/react": "^18.0.21",
 		"@types/react-router-dom": "^5.3.3",
@@ -74,7 +75,7 @@
 		"major": "npm version major"
 	},
 	"files": [
-		"/lib"
+		"/dist"
 	],
 	"keywords": [],
 	"author": {
