@@ -4,6 +4,7 @@
 	"description": "The component library to be used in the Async Portal at EMSE.",
 	"main": "index.js",
 	"dependencies": {
+		"moment": "^2.29.4",
 		"prop-types": "^15.8.1",
 		"react-icons": "^4.4.0",
 		"react-router-dom": "^6.3.0",
