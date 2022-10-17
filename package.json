@@ -1,9 +1,10 @@
 {
 	"name": "emse-ui",
-	"version": "1.0.8",
+	"version": "1.1.0",
 	"description": "The component library to be used in the Async Portal at EMSE.",
 	"main": "index.js",
 	"dependencies": {
+		"moment": "^2.29.4",
 		"prop-types": "^15.8.1",
 		"react-icons": "^4.4.0",
 		"react-router-dom": "^6.3.0",
@@ -54,8 +55,9 @@
 		"test": "cypress",
 		"test:watch": "cypress open",
 		"storybook": "start-storybook -p 6006 -h localhost",
-		"build-storybook": "build-storybook",
+		"build-storybook": "yarn style:build && build-storybook",
 		"style": "npx tailwindcss -i ./src/global.css -o ./src/output.css --watch",
+		"style:build": "npx tailwindcss -i ./src/global.css -o ./src/output.css",
 		"lint": "eslint ./src",
 		"lint:fix": "eslint ./src --fix",
 		"patch": "npm version patch",
