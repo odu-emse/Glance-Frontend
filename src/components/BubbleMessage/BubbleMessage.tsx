@@ -7,7 +7,6 @@ export const BubbleMessage = ({
 	message,
     timestamp1,
 }: BubbleMessageProps) => {
-   // const timestamp= 1664376815
 	return (
         <div className="container ">
         <div className="">
