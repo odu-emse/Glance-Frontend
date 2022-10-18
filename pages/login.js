@@ -17,8 +17,8 @@ const Login = () => {
             
             <div className="grid place-items-center h-1/4 w-full ">
                 <div>
-                    <p className= "text-7xl font-extrabold font-weight:2000 text-center text-black-3000">ALMP</p>
-                    <p className="text-black-400 font-semibold text-xl">You must be logged in to access this resource.</p>
+                    <h1 className= "text-7xl font-black text-center text-black">ALMP</h1>
+                    <h2 className="text-black font-semibold text-xl">You must be logged in to access this resource.</h2>
                 </div>
             
                 <Button
