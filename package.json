@@ -1,6 +1,6 @@
 {
 	"name": "emse-ui",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"description": "The component library to be used in the Async Portal at EMSE.",
 	"main": "./dist/emse-ui.umd.js",
 	"module": "./dist/emse-ui.es.js",
