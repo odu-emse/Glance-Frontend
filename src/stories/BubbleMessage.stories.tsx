@@ -33,7 +33,7 @@ Primary.args = {
 	},*/
     message:[{
         image:'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-        message:'Hi',
+        message:'HiI',
         timestamp:1664376815
     },{
     image:'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
