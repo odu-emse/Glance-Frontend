@@ -9,6 +9,7 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'prettier',
+		'plugin:storybook/recommended',
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -19,5 +20,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['react', '@typescript-eslint'],
-	rules: {},
+	rules: {
+		'react/jsx-no-comment-textnodes': 'off',
+	},
 }
