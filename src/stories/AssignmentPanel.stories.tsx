@@ -27,7 +27,7 @@ const Template: ComponentStory<typeof AssignmentPanel> = (args) => {
 }
 
 export const AssignmentPanelTemplate = Template.bind({})
-AssignmentPanelTemplate.storyName = 'Assignment Panel'
+AssignmentPanelTemplate.storyName = 'Default Assignment Panel'
 AssignmentPanelTemplate.args = {
 	moduleInformation: {
 		connections: [
