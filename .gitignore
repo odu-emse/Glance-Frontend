@@ -39,3 +39,7 @@ public/videos/
 
 .env
 .idea/
+!/cypress/screenshots/
+!/cypress/videos/
+/cypress/screenshots/**/*.png
+/cypress/videos/**/*.mp4

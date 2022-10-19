@@ -1,21 +1,15 @@
 {
-  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:testing-library/react"],
-  "plugins": ["testing-library"],
+  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:cypress/recommended"],
+  "plugins": ["cypress"],
   "rules": {
-    "testing-library/await-async-query": "error",
-    "testing-library/no-await-sync-query": "error",
-    "testing-library/no-debugging-utils": "warn",
-    "testing-library/no-dom-import": "off"
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error"
   },
-  "overrides": [
-    {
-      "files": [
-        "**/*.test.js",
-        "**/*.test.jsx"
-      ],
-      "env": {
-        "jest": true
-      }
-    }
-  ]
+  "env": {
+      "cypress/globals": true
+  }
 }
