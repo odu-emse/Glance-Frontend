@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Pie,Line, PieChart,LineChart, Tooltip, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
-import {
+import { Line, LineChart, Tooltip, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import type {
 	HorizontalAlignmentType,
 	IconType,
 	VerticalAlignmentType,
@@ -9,13 +9,9 @@ import { LayoutType } from 'recharts/types/util/types'
 
 export const LineComponent = ({
 	data,
-    data1,
 	tooltip,
 	legend,
 	legendConfig,
-	innerRadius,
-	outerRadius,
-	paddingAngle,
 	width,
 	height,
 	centerYCoor,
@@ -24,7 +20,6 @@ export const LineComponent = ({
 	ml,
 	mr,
 	mb,
-    xaxisValues,
 }: LineProps) => {
 	return (
 		<ResponsiveContainer width={`${width}%`} height={`${height}%`}>
@@ -38,12 +33,6 @@ export const LineComponent = ({
 				<Line
 					cx={centerXCoor && centerXCoor}
 					cy={centerYCoor && centerYCoor}
-
-					//endAngle={0}
-					//startAngle={360}
-					//outerRadius={outerRadius}
-					//innerRadius={innerRadius}
-					//paddingAngle={paddingAngle}
 					dataKey="graph1"
 					fill="#6495ED"
 					stroke="#6495ED"
@@ -51,12 +40,6 @@ export const LineComponent = ({
                 <Line
 					cx={centerXCoor && centerXCoor}
 					cy={centerYCoor && centerYCoor}
-
-					//endAngle={0}
-					//startAngle={360}
-					//outerRadius={outerRadius}
-					//innerRadius={innerRadius}
-					//paddingAngle={paddingAngle}
 					dataKey="graph2"
 					fill="#CCCCFF"
 					stroke="#CCCCFF"

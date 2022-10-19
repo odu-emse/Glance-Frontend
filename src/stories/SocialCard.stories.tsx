@@ -1,12 +1,15 @@
 import * as React from 'react'
 import { SocialCard } from '../components/SocialCard'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Molecules/Social Card',
 	component: SocialCard,
-}
+} as ComponentMeta<typeof SocialCard>
 
-const Template = (args) => <SocialCard {...args} />
+const Template: ComponentStory<typeof SocialCard> = (args) => (
+	<SocialCard {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {

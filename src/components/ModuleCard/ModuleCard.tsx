@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "../Link";
 
 export const ModuleCard = ({
   module,
