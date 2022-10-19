@@ -11,18 +11,15 @@ const Redirect = () => {
             {
                 query: `
                     mutation{
-                        login(code: "${router.query.code}"){
-                            id
-                        }
-                    } 
+                        login(code: "${router.query.code}")
+                    }
                 `
             },
             gqlFetcher
         )
-        console.log(error)
         if(error) return <p>Error</p>
         if(!data) return <p>Loading...</p>;
-        window.localStorage.setItem("auth", data.login.id_token)
+        window.localStorage.setItem("auth", data.login)
 
         router.push("/")
     }
