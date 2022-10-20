@@ -9,6 +9,7 @@ export const Input = ({
 	description,
 	required = false,
 	type,
+	id,
 	defaultValue,
 	disabled = false,
 	error = false,
@@ -94,7 +95,7 @@ export type InputProps = {
 	/**
 	 * The input type determines the way browsers conduct their validation and on a device by device basis it can change the keyboard behavior for the user.
 	 */
-	type: 'text' | 'email' | 'password' | 'search' | 'url' | 'tel' | 'number'
+	type: 'text' | 'email' | 'password' | 'search' | 'url' | 'tel' | 'number' | 'file'
 	/**
 	 * The default value of the input. This is used to set the value of the input when the page is first loaded.
 	 */
@@ -107,4 +108,5 @@ export type InputProps = {
 	 * The error value is used to render different styles of the input element based on the current error state that is passed in as a parameter.
 	 */
 	error?: boolean
+	id?: string
 }
