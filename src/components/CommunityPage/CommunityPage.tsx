@@ -3,6 +3,7 @@ import { Input } from '../FormElements'
 import type { InputProps } from '../FormElements'
 import { SocialCard } from '../SocialCard'
 import type { SocialCardProps, UserAccountProps } from '../SocialCard'
+// import { AiFillLike } from 'react-icons/ai'
 
 export const CommunityPage = ({
 	socialCardProps,
