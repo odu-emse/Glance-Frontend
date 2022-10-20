@@ -5,7 +5,7 @@ import {
 	FaBookmark,
 	FaCommentDots,
 	FaGraduationCap,
-	FaSmile,
+	FaRegSmile,
 	FaStar,
 } from 'react-icons/fa'
 import { MdAttachFile } from 'react-icons/md'
@@ -131,8 +131,8 @@ export const SocialCard = ({
 						<button className="flex items-center justify-center px-5">
 							<MdAttachFile size={20} className="mr-1" />
 						</button>
-						<button className="flex items-center justify-center px-8 ">
-							<FaSmile size={20} className="mr-1" />
+						<button className="flex items-center justify-center px-8">
+							<FaRegSmile size={20} className="mr-1" />
 						</button>
 					</div>
 				</div>
@@ -141,7 +141,7 @@ export const SocialCard = ({
 	)
 }
 
-type SocialCardProps = {
+export type SocialCardProps = {
 	user: UserAccountProps
 	timestamp: number
 	content: string
@@ -149,7 +149,7 @@ type SocialCardProps = {
 	comments: number
 }
 
-type UserAccountProps = {
+export type UserAccountProps = {
 	lastName: string
 	firstName: string
 	title: string
