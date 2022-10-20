@@ -35,6 +35,7 @@
 		"@testing-library/cypress": "^8.0.3",
 		"@types/node": "^18.11.0",
 		"@types/jest": "^29.1.1",
+		"@types/jest": "^29.1.1",
 		"@types/prop-types": "^15.7.5",
 		"@types/react": "^18.0.21",
 		"@types/react-router-dom": "^5.3.3",
