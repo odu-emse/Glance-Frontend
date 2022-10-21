@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Sidebar from '../../components/sidebar'
 
 export default function UserProfile(){
 
