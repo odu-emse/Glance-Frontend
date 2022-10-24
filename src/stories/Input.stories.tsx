@@ -1,8 +1,6 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { Input, InputProps } from '../components/FormElements'
-import { within, userEvent } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
@@ -44,13 +42,13 @@ Email.args = {
 	type: 'email',
 }
 
-Email.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
-
-	const label = canvas.getByText('Email address')
-	userEvent.type(canvas.getByRole('input'), 'email@provider.com')
-	expect(label.classList.contains('peer-focus:text-blue-600'))
-}
+// Email.play = async ({ canvasElement }) => {
+// 	const canvas = within(canvasElement)
+//
+// 	const label = canvas.getByText('Email address')
+// 	userEvent.type(canvas.getByRole('input'), 'email@provider.com')
+// 	expect(label.classList.contains('peer-focus:text-blue-600'))
+// }
 
 export const Descriptive = Template.bind({})
 Descriptive.args = {
@@ -75,14 +73,16 @@ Disabled.args = {
 	...Email.args,
 	disabled: true,
 }
-Disabled.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement)
+// TODO: Rewrite this test to use cypress
 
-	const input = canvas.getByRole('input')
-	userEvent.type(input, 'email@provider.com')
-	expect(input.textContent).toBe('')
-	expect(input).toBeDisabled()
-}
+// Disabled.play = async ({ canvasElement }) => {
+// 	const canvas = within(canvasElement)
+//
+// 	const input = canvas.getByRole('input')
+// 	userEvent.type(input, 'email@provider.com')
+// 	expect(input.textContent).toBe('')
+// 	expect(input).toBeDisabled()
+// }
 
 export const ErrorState = Template.bind({})
 ErrorState.args = {
