@@ -5,7 +5,7 @@ volumes:
         external: true
 
 services:
-    dev:
+    ui:
         container_name: emse_ui_lib
         build:
             context: .
@@ -32,7 +32,7 @@ services:
             - ./src:/usr/src/app/src
         networks:
             - ui_network
-        command: npx onchange "**/*" -- npx prettier --write --config ./.pret tierrc --ignore-unknown {{changed}}
+        command: npx onchange "**/*" -- npx prettier --write --config ./.prettierrc --ignore-unknown {{changed}}
     tailwind:
         container_name: emse_ui_lib_tailwind
         build:
