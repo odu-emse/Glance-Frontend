@@ -15,12 +15,20 @@ up-detached:
 	docker-compose up -d
 down:
 	docker-compose down
+down-ui:
+	docker-compose down ui
 down-tailwind:
 	docker-compose down tailwind
 down-prettier:
 	docker-compose down prettier
 restart:
 	docker-compose restart
+restart-ui:
+	docker-compose restart ui
+restart-prettier:
+	docker-compose restart prettier
+restart-tailwind:
+	docker-compose restart tailwind
 logs:
 	docker-compose logs -f
 ps:

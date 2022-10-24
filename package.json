@@ -1,6 +1,6 @@
 {
 	"name": "emse-ui",
-	"version": "1.1.7",
+	"version": "1.2.0",
 	"description": "The component library to be used in the Async Portal at EMSE.",
 	"main": "./dist/emse-ui.umd.js",
 	"module": "./dist/emse-ui.es.js",
@@ -71,19 +71,16 @@
 		"react-dom": "^18.2.0"
 	},
 	"scripts": {
-		"start": "yarn style:build && concurrently \"yarn style\" \"yarn storybook\"",
+		"start": "concurrently \"yarn style\" \"yarn storybook\"",
 		"test": "cypress run",
-		"test:ui": "cypress open --component",
+		"test:open": "cypress open --component",
 		"storybook": "start-storybook -p 6006 --quiet",
 		"build-storybook": "yarn style:build && build-storybook",
 		"build": "tsc --skipLibCheck --excludeDirectories node_module && vite build",
 		"style": "npx tailwindcss -i ./src/global.css -o ./src/output.css --watch",
 		"style:build": "npx tailwindcss -i ./src/global.css -o ./src/output.css",
 		"lint": "eslint ./src",
-		"lint:fix": "eslint ./src --fix",
-		"patch": "npm version patch",
-		"minor": "npm version minor",
-		"major": "npm version major"
+		"lint:fix": "eslint ./src --fix"
 	},
 	"files": [
 		"/dist"
