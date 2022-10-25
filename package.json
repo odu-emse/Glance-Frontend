@@ -72,7 +72,7 @@
 	},
 	"scripts": {
 		"start": "concurrently \"yarn style\" \"yarn storybook\"",
-		"test": "cypress run",
+		"test": "cypress run --component",
 		"test:open": "cypress open --component",
 		"storybook": "start-storybook -p 6006 --quiet",
 		"build-storybook": "yarn style:build && build-storybook",
