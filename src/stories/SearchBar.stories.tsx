@@ -5,6 +5,6 @@ export default {
 	// component:
 }
 
-const Template = (args) => <input />
+const Template = () => <input />
 
 export const Primary = Template.bind({})

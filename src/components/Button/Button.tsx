@@ -16,7 +16,7 @@ export const Button = ({
 	const variant: string = primary
 		? 'bg-blue-700 text-white hover:bg-blue-500 '
 		: 'bg-blue-300 text-black hover:bg-blue-100 '
-	let buttonSize: string
+	let buttonSize = ''
 	if (size === 'small') {
 		buttonSize = 'h-4 w-auto py-4 px-2'
 	} else if (size === 'large') {

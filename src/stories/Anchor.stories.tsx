@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import Anchor, { AnchorProps } from '../components/Link/Anchor'
+import { Anchor, AnchorProps } from '../components/Link'
 
 export default {
 	title: 'Atoms/Anchor',

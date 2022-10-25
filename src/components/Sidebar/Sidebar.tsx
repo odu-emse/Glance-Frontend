@@ -10,10 +10,8 @@ import {
 	MdSpaceDashboard,
 	MdWidgets,
 } from 'react-icons/md'
-import { Link } from '../Link'
-import { Logo } from './'
-import { Hamburger } from './'
-import Anchor from '../Link/Anchor'
+import { Link, Anchor } from '../Link'
+import { Logo, Hamburger } from './'
 
 type SidebarProps = {
 	/**
