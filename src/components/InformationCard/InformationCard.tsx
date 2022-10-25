@@ -16,7 +16,7 @@ export const InformationCard = ({
 	handle,
 }: InformationProps): JSX.Element => {
 	return (
-		<div className="border-solid border-gray rounded border flex justify-between w-2/5">
+		<div className="border-solid border-gray rounded shadow-lg border flex justify-between w-2/5">
 			{percentComplete && (
 				<>
 					<div className="flex justify-start items-center px-2">
