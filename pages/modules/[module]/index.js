@@ -3,7 +3,7 @@ const Module = () => {
         <div>
             <div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
                 <div className="flex xl:flex-row flex-col-reverse">
-                    <div className="w-full xl:w-2/3 lg:w-2/3 md:w-2/3 mt-2 sm:mb-4 sm:mr-0 lg:mb-0 lg:mr-5">
+                    <div className="w-full md:w-2/3 mt-2 sm:mb-4 sm:mr-0 lg:mb-0 lg:mr-5">
                         <h1 className="text-xl lg:text-3xl md:text-2xl font-bold mb-2">
                             Module {module.moduleNumber} | {module.moduleName}
                         </h1>
