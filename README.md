@@ -1,4 +1,5 @@
-# EMSE UI - 
+# EMSE UI
+[![Component Library CI](https://github.com/odu-emse/emse-UI/actions/workflows/main.yml/badge.svg)](https://github.com/odu-emse/emse-UI/actions/workflows/main.yml)
 > A modern Component Library used by the Asynchrous Learning Management Portal and other EMSE applications that are used by the Async project.  
 
 <!-- TOC -->
