@@ -9,6 +9,7 @@ export const Input = ({
 	description,
 	required = false,
 	type,
+	id,
 	defaultValue,
 	disabled = false,
 	error = false,
@@ -49,6 +50,7 @@ export const Input = ({
 						type="submit"
 						className="absolute right-0 top-0 bottom-0 px-3 py-2.5 text-gray-500 dark:text-gray-400 focus:ring-blue-600 dark:focus:ring-blue-500 focus:outline-none"
 					>
+						<span className="sr-only">Search</span>
 						<BiSearch size={24} />
 					</button>
 				)}
@@ -94,7 +96,7 @@ export type InputProps = {
 	/**
 	 * The input type determines the way browsers conduct their validation and on a device by device basis it can change the keyboard behavior for the user.
 	 */
-	type: 'text' | 'email' | 'password' | 'search' | 'url' | 'tel' | 'number'
+	type: 'text' | 'email' | 'password' | 'search' | 'url' | 'tel' | 'number' | 'file'
 	/**
 	 * The default value of the input. This is used to set the value of the input when the page is first loaded.
 	 */
@@ -107,4 +109,5 @@ export type InputProps = {
 	 * The error value is used to render different styles of the input element based on the current error state that is passed in as a parameter.
 	 */
 	error?: boolean
+	id?: string
 }

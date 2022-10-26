@@ -24,7 +24,7 @@ const Panel = ({
 	)
 }
 
-type PanelProps = {
+export type PanelProps = {
 	children: JSX.Element | React.ReactNode
 	className?: string
 	size?: 1 | 2 | 4 | 6

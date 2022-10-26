@@ -1,14 +1,15 @@
 import * as React from 'react'
 import { PieComponent } from '../components/Chart'
-import Panel from '../components/Panel/Panel'
+import Panel, {PanelProps} from '../components/Panel/Panel'
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
 	title: 'Molecules/Panel',
 	component: Panel,
 	argTypes: {},
-}
+} as ComponentMeta<typeof Panel>
 
-const Template = (args) => <Panel {...args}></Panel>
+const Template: ComponentStory<typeof Panel> = (args:PanelProps) => <Panel {...args}/>
 
 export const Text = Template.bind({})
 Text.args = {

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Radar } from 'recharts'
 import { RadarComponent, RadarProps } from '../../components/Chart'
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
 	title: 'Molecules/Chart/Radar Chart',
@@ -53,9 +54,9 @@ export default {
 			control: false,
 		},
 	},
-}
+} as ComponentMeta<typeof RadarComponent>
 
-const Template = (args: RadarProps) => {
+const Template: ComponentStory<typeof RadarComponent> = (args: RadarProps) => {
 	return (
 		<div className="mx-auto container relative">
 			<RadarComponent {...args} />

@@ -55,31 +55,31 @@ export const AssignmentPanel = ({
 				<div id="software" className="pb-8">
 					<h1 className={heading}>Required Software</h1>
 					<ul className={list}>
-						{moduleInformation.software.map(
+						{moduleInformation.software ? moduleInformation.software.map(
 							(software, sfwIndex) => (
 								<li key={sfwIndex}>{software}</li>
 							)
-						)}
+						) : null}
 					</ul>
 				</div>
 
 				<div id="modules" className="pb-8">
 					<h1 className={heading}>Required Modules</h1>
 					<ul className={list}>
-						{moduleInformation.deps.map((dep, depIndex) => (
+						{moduleInformation.deps ? moduleInformation.deps.map((dep, depIndex) => (
 							<li key={depIndex}>{dep}</li>
-						))}
+						)) : null}
 					</ul>
 				</div>
 
 				<div id="connections" className="pb-8">
 					<h1 className={heading}>Connections</h1>
 					<ul className="text-xs">
-						{moduleInformation.connections.map((mod, modIndex) => (
+						{moduleInformation.connections ? moduleInformation.connections.map((mod, modIndex) => (
 							<li className="pb-1 border-b" key={modIndex}>
 								{mod.moduleTitle} - {mod.assignmentTitle}
 							</li>
-						))}
+						)) : null}
 					</ul>
 				</div>
 
@@ -94,13 +94,13 @@ export const AssignmentPanel = ({
 	)
 }
 
-type AssignmentPanelProps = {
+export type AssignmentPanelProps = {
 	open: boolean
 	handle: (open: boolean) => void
 	moduleInformation: ModuleInformation
 }
 
-type ModuleInformation = {
+export type ModuleInformation = {
 	moduleTitle: string
 	assignmentTitle: string
 	deps?: string[]

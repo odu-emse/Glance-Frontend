@@ -9,7 +9,7 @@ import {
 	Tooltip,
 } from 'recharts'
 
-export const RadarComponent = ({
+export const RadarComponent:React.FC<RadarProps> = ({
 	data,
 	width,
 	height,
@@ -26,10 +26,10 @@ export const RadarComponent = ({
 	dataKey,
 	radiusAxis,
 	radiusAxisAngle,
-}: RadarProps): JSX.Element => {
-	const matrixChildren = []
+}): JSX.Element => {
+	const matrixChildren: any[] = []
 
-	if (children.props.children?.length > 1) {
+	if (typeof children !== "string" && typeof children !== "number" && children && !children && children.props.children?.length > 1) {
 		React.Children.map(children.props.children, (child) => {
 			matrixChildren.push(child)
 		})
@@ -49,7 +49,7 @@ export const RadarComponent = ({
 			>
 				<PolarGrid />
 				<PolarAngleAxis dataKey={dataKey} />
-				{radiusAxis && <PolarRadiusAxis angle={90 | radiusAxisAngle} />}
+				{radiusAxis && <PolarRadiusAxis angle={radiusAxisAngle ? radiusAxisAngle : 90} />}
 				{matrixChildren?.length > 0
 					? matrixChildren.map((child, childIndex) => {
 							return React.cloneElement(child, {
@@ -127,11 +127,7 @@ export type RadarProps = {
 	/**
 	 * The `<Radar />` component that you wish to render.
 	 */
-	children: React.ReactElement<
-		any,
-		string | React.JSXElementConstructor<any>
-	> &
-		React.ReactElement<any, string | React.JSXElementConstructor<any>>[]
+	children: React.ReactNode | React.ReactNode[] | any
 	/**
 	 * The fill color of the chart.
 	 */
@@ -162,9 +158,7 @@ export type RadarProps = {
 	radiusAxisAngle?: number
 }
 
-interface RadarPoint {
-	x: number
-	y: number
+export type RadarPoint = {
 	cx?: number
 	cy?: number
 	angle?: number
@@ -172,4 +166,10 @@ interface RadarPoint {
 	value?: number
 	payload?: any
 	name?: string
+	subject?: string
+	A?: number
+	B?: number
+	C?: number
+	D?: number
+	fullMark?: number
 }
