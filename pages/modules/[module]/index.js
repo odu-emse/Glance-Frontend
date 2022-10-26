@@ -2,8 +2,8 @@ const Module = () => {
     return (
         <div>
             <div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
-                <div className="flex xl:flex-row flex-col-reverse">
-                    <div className="w-full md:w-2/3 mt-2 sm:mb-4 sm:mr-0 lg:mb-0 lg:mr-5">
+                <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col-reverse">
+                    <div className="w-full xl:w-3/4 lg:w-2/3 md:w-3/5 mt-2 sm:mb-4 sm:mr-0 lg:mb-0 lg:mr-5 md:mr-5">
                         <h1 className="text-xl lg:text-3xl md:text-2xl font-bold mb-2">
                             Module {module.moduleNumber} | {module.moduleName}
                         </h1>
@@ -67,7 +67,7 @@ const Module = () => {
                             <p>{module.description}</p>
                         </div>
                     </div>
-                    <div className="w-full xl:w-1/3 lg:w-1/3 md:w-3/4 border border-gray-50 px-3 py-4 rounded shadow-md lg:text-left">
+                    <div className="w-full xl:w-1/3 lg:w-1/3 md:w-1/3 border border-gray-50 px-3 py-4 rounded shadow-md lg:text-left">
                         {/*TODO: we need to get content delivery working to get this fixed */}
                         {/* <img
                             src={`${content.href}/story_content/thumbnail.jpg`}
