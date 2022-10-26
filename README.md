@@ -45,7 +45,6 @@
 ## Local Development
 To run the source code in development on your local environment, you first need to ensure that you have installed the pre-requisite pieces of software. If you do not wish to install them, you can utilize `Docker` to run the application.
 ```console
-# runs the application using your local installation of Node.js
 yarn start
 ```
 
@@ -100,21 +99,6 @@ The following commands will stop all 3 services.
 make down
 ```
 
-#### Stopping services individually
-The following commands will stop each service individually.
-- Stopping the storybook instance:
-  ```console
-  make down-ui
-  ```
-- Stopping prettier:
-  ```console
-  make down-prettier
-  ```
-- Stopping Tailwind CSS compilation:
-    ```console
-    make down-tailwind
-    ```
-
 ### Restarting
 The following commands will restart all 3 services.
 ```console
@@ -129,13 +113,13 @@ The following commands will restart each service individually.
   ```
 - Restarting prettier:
   ```console
-    make restart-prettier
+  make restart-prettier
   ```
   
 - Restarting Tailwind CSS compilation:
-    ```console
-    make restart-tailwind
-    ```
+  ```console
+  make restart-tailwind
+  ```
 
 ### Logs
 The following command will show the logs for all 3 services in one terminal session. 
