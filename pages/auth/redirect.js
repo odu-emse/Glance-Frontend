@@ -10,20 +10,16 @@ const Redirect = () => {
         const { data, error } = useSWR(
             {
                 query: `
-                    {
-                        login(code: "${router.query.code}") {
-                            id_token,
-                            refresh_token
-                        }
+                    mutation{
+                        login(code: "${router.query.code}")
                     }
                 `
             },
             gqlFetcher
         )
-        
         if(error) return <p>Error</p>
         if(!data) return <p>Loading...</p>;
-        window.localStorage.setItem("auth", data.login.id_token)
+        window.localStorage.setItem("auth", data.login)
 
         router.push("/")
     }
