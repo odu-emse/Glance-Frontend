@@ -1,0 +1,21 @@
+name: Component Library CI
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install yarn
+        run: npm install -g yarn
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v4
+        with:
+          install: true
+          component: true
+          record: true
+          test: yarn test
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

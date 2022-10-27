@@ -27,7 +27,7 @@ export type AnchorProps = {
 	icon?: React.ReactNode
 }
 
-const Anchor = ({
+export const Anchor = ({
 	path,
 	children,
 	className,
@@ -69,5 +69,3 @@ const Anchor = ({
 		</Link>
 	)
 }
-
-export default Anchor

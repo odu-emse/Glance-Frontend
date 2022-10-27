@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { PieComponent, PieProps } from '../../components/Chart'
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
 	title: 'Molecules/Chart/Pie Chart',
@@ -21,9 +22,9 @@ export default {
 		centerXCoor: { control: { type: 'range', min: 0, max: 100 } },
 		centerYCoor: { control: { type: 'range', min: 0, max: 100 } },
 	},
-}
+} as ComponentMeta<typeof PieComponent>
 
-const Template = (args: PieProps) => (
+const Template:ComponentStory<typeof PieComponent> = (args: PieProps) => (
 	<div className="w-full h-96">
 		<PieComponent {...args} />
 	</div>

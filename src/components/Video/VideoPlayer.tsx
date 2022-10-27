@@ -4,7 +4,7 @@ import { FaExpand } from 'react-icons/fa'
 import { RiPictureInPictureExitLine, RiVolumeUpFill } from 'react-icons/ri'
 import { FiPlay } from 'react-icons/fi'
 
-const VideoPlayer = ({ src }: VideoPlayerProps) => {
+export const VideoPlayer = ({ src }: VideoPlayerProps) => {
 	const icons =
 		'flex justify-center items-center text-white w-12 h-10 bg-teal-200'
 
@@ -56,5 +56,3 @@ type VideoPlayerProps = {
 	 */
 	src: string
 }
-
-export default VideoPlayer

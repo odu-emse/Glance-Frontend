@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { Input, InputProps } from '../components/FormElements'
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
 	title: 'Atoms/Input',
@@ -16,9 +17,9 @@ export default {
 			control: false,
 		},
 	},
-}
+} as ComponentMeta<typeof Input>
 
-const Template = (args: InputProps) => {
+const Template:ComponentStory<typeof Input> = (args: InputProps) => {
 	const [value, setValue] = useState(args.defaultValue ?? '')
 
 	return (
@@ -36,17 +37,22 @@ const Template = (args: InputProps) => {
 export const Email = Template.bind({})
 Email.args = {
 	label: 'Email address',
-	name: 'floating_email',
-	role: 'email',
+	name: 'email',
+	role: 'input',
 	type: 'email',
 }
 
+// Email.play = async ({ canvasElement }) => {
+// 	const canvas = within(canvasElement)
+//
+// 	const label = canvas.getByText('Email address')
+// 	userEvent.type(canvas.getByRole('input'), 'email@provider.com')
+// 	expect(label.classList.contains('peer-focus:text-blue-600'))
+// }
+
 export const Descriptive = Template.bind({})
 Descriptive.args = {
-	label: 'Email address',
-	name: 'floating_email',
-	role: 'email',
-	type: 'email',
+	...Email.args,
 	description: (
 		<>
 			For more information on how your data is stored and accessed
@@ -64,28 +70,29 @@ Descriptive.args = {
 
 export const Disabled = Template.bind({})
 Disabled.args = {
-	label: 'Email address',
-	name: 'floating_email',
-	role: 'email',
-	type: 'email',
+	...Email.args,
 	disabled: true,
 }
+// TODO: Rewrite this test to use cypress
+
+// Disabled.play = async ({ canvasElement }) => {
+// 	const canvas = within(canvasElement)
+//
+// 	const input = canvas.getByRole('input')
+// 	userEvent.type(input, 'email@provider.com')
+// 	expect(input.textContent).toBe('')
+// 	expect(input).toBeDisabled()
+// }
 
 export const ErrorState = Template.bind({})
 ErrorState.args = {
-	label: 'Email address',
-	name: 'floating_email',
-	role: 'email',
-	type: 'email',
+	...Email.args,
 	error: true,
 }
 
 export const ErrorStateWithDescription = Template.bind({})
 ErrorStateWithDescription.args = {
-	label: 'Email address',
-	name: 'floating_email',
-	role: 'email',
-	type: 'email',
+	...Email.args,
 	error: true,
 	description: (
 		<p className="text-red-600 dark:text-red-500">
