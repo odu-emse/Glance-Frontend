@@ -62,7 +62,6 @@ export const TabsPanel = ({
 							)}
 							</ul>
 					</div>
-					
 				</div>
 			</div>
 		</div>

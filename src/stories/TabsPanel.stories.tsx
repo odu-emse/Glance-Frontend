@@ -1,23 +1,17 @@
 import * as React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { TabsPanel } from '../components/TabsPanel'
 
 export default {
 	title: 'Molecules/TabsPanel',
 	component: TabsPanel,
 	argTypes: {
-		selected: {
-			type: 'boolean',
-			control: 'boolean',
-			defaultValue: true,
-		},
+		
 	},
 }
 
-const Template: ComponentStory<typeof TabsPanel> = (args) => {
-	const [selected, setSelected] = React.useState(true)
+const Template = (args) => {
 	return (
-			<TabsPanel {...args} handle={setSelected} selected={selected} />
+			<TabsPanel {...args} />
 	)
 }
 
