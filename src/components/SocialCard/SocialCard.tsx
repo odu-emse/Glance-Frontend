@@ -20,8 +20,10 @@ export const SocialCard = ({
 	const [isClicked, setIsClicked] = React.useState(false)
 
 	return (
-		<div className="flex items-center justify-center min-h-screen">
-			<div className="rounded-xl border p-5 shadow-md md:w-9/12 bg-white w-full">
+		// removed items-center justify-center min-h-screen for community layout
+		<div className="flex">
+			{/* {modify md:w-9/12 to md:w-screen for better fit community page} */}
+			<div className="rounded-xl border p-5 shadow-md md:w-screen bg-white w-full">
 				<div className="flex w-full items-center justify-between  pb-3">
 					<div className="flex items-center space-x-3">
 						<div className="flex flex-wrap justify-center">
