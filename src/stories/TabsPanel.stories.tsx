@@ -1,21 +1,21 @@
 import * as React from 'react'
 import { TabsPanel } from '../components/TabsPanel'
+import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Molecules/TabsPanel',
 	component: TabsPanel,
-	argTypes: {
-		
-	},
-}
+} as ComponentMeta<typeof TabsPanel>
 
-const Template = (args) => {
+const Template: ComponentStory<typeof TabsPanel> = (args) => {
 	return (
+		<div className='w-2/4 mx-auto'>
 			<TabsPanel {...args} />
+		</div>
 	)
 }
 
-export const Course = Template.bind({})
+export const Course:ComponentStory<typeof TabsPanel> = Template.bind({})
 Course.args = {
 	moduleInfo: [
 		{
@@ -39,7 +39,7 @@ Course.args = {
 			title: "ENMA 601",
 			assignment: [
 				{
-					type: 'Assignment Type 64',
+					type: 'Assignment Type 6444',
 					average: 45
 				},
 				{
