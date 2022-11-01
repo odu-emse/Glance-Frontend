@@ -18,7 +18,7 @@ Primary.args = {
 	completion: false,
 	module: {
 		courseName: 'ENMA 601',
-		moduleIdentifiers: '178P',
+		moduleIdentifiers: 'M 178P',
 		moduleName: 'Ethnics and Philosophy in Engineering Applications',
 		percentage: 50,
 		duration: 38,
