@@ -5,9 +5,9 @@ export const ModuleCard = ({
 	completion,
 }: ModuleProps): JSX.Element => {
 	return (
-		<div className="flex flex-col md:flex-row md:items-stretch gap-4 border-gray bg-gray-100 drop-shadow-md border border-solid rounded">
+		<div className="flex flex-col lg:flex-row md:items-stretch gap-4 border-gray bg-gray-100 drop-shadow-md border border-solid rounded">
 			<div
-				className={`flex w-full md:w-4 p-2 md:p-0 ${
+				className={`flex w-full lg:w-4 p-2 lg:p-0 ${
 					completion
 						? `bg-green-400`
 						: module.percentage > 25
@@ -15,10 +15,10 @@ export const ModuleCard = ({
 						: `bg-red-400`
 				}`}
 			></div>
-			<div className="flex grow flex-col md:flex-row md:gap-10">
+			<div className="flex grow flex-col lg:flex-row md:gap-10">
 				<div className="grow flex flex-col justify-between m-1">
-					<div className="flex text-gray-500 ">{`${module.courseName} - ${module.moduleIdentifiers}`}</div>
-					<div className="flex md:pb-4 font-bold text-xs lg:text-lg md:text-base">
+					<div className="flex text-gray-500 lg:text-base text-sm">{`${module.courseName} - ${module.moduleIdentifiers}`}</div>
+					<div className="flex lg:pb-4 font-bold text-base xl:text-lg">
 						{module.moduleName}
 					</div>
 					<div className="flex flex-row text-sm justify-between">
@@ -41,7 +41,7 @@ export const ModuleCard = ({
 
 				<div className="flex-none flex flex-col items-center">
 					<div className="completionPercentage">
-						<p className="md:mt-5">
+						<p className="lg:mt-5">
 							{module.percentage + `%`} Viewed
 						</p>
 					</div>
@@ -72,9 +72,9 @@ export const ModuleCard = ({
 						/>
 					</svg>
 
-					<div className="timeLeftInCompletion">
+					<div className="">
 						{completion ? (
-							<div className="flex flex-col items-cenetr">
+							<div className="flex flex-col items-center">
 								<p className="">
 									{`Average time: ${module.averageTime} ${
 										module.averageTime === 1
@@ -105,28 +105,28 @@ export const ModuleCard = ({
 							</p>
 						</div>
 					) : (
-						<div className="flex flex-col lg:flex-col md:flex-col w-full h-50 items-center justify-center gap-3 md:items-start md:justify-start">
+						<div className="flex flex-col w-full h-50 items-center justify-center gap-3 lg:items-center">
 							<div className="text-gray-400 text-sm">
 								Current Topic
 							</div>
 							<div className="font-medium text-sm pr-2">
 								{module.currentTopic}
 							</div>
-							<div className="flex flex-col">
+							<div className="flex flex-col w-full px-3">
 								<div className="py-1">
-									<p className="text-white bg-blue-300 px-24 py-1 w-32">
+									<button className="text-white bg-blue-300 px-24 py-1 w-full">
 										<span className="flex items-center justify-center">
 											{module.returnIdPage}
 										</span>
-									</p>
+									</button>
 								</div>
 								{/* Link to returnIdPage */}
 								<div>
-									<p className="text-white bg-orange-400 px-24 py-1 w-24 mb-2">
+									<button className="text-white bg-orange-400 px-24 py-1 w-full mb-2">
 										<span className="flex items-center justify-center">
 											{module.treeView}
 										</span>
-									</p>
+									</button>
 								</div>
 								{/* Link to treeView */}
 							</div>
