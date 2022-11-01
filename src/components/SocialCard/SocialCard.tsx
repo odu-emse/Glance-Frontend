@@ -144,20 +144,56 @@ export const SocialCard = ({
 }
 
 export type SocialCardProps = {
+	/**
+	 * Assigning the below declared type "UserAccountprops" to user
+	 */
 	user: UserAccountProps
+	/**
+	 * A descriptive label to display the timestamp of the user's comment
+	 */
 	timestamp: number
+	/**
+	 * A descriptive label to display the content of the user's comment
+	 */
 	content: string
+	/**
+	 * A descriptive label to display the number of likes of the user's comment
+	 */
 	likes: number
+	/**
+	 * A descriptive label to display the number of comments of the user's comment
+	 */
 	comments: number
 }
 
 export type UserAccountProps = {
+	/**
+	 * A descriptive label to display the user's Last Name
+	 */
 	lastName: string
+	/**
+	 * A descriptive label to display the user's First Name
+	 */
 	firstName: string
+	/**
+	 * A descriptive label to display the title
+	 */
 	title: string
+	/**
+	 * A descriptive label to display the name of the office user belongs
+	 */
 	office: string
+	/**
+	 * A descriptive label to display the name of the department user belongs
+	 */
 	department: string
+	/**
+	 * A descriptive label to display the user's role(advisor/TA)
+	 */
 	role: string
+	/**
+	 * A descriptive label to display the user's profile picture
+	 */
 	image: string
 }
 

@@ -1,1 +1,1 @@
-cy.findByRole("button", {name: /Jackie Chan/i}).click()
+cy.findByRole('button', { name: /Jackie Chan/i }).click()
