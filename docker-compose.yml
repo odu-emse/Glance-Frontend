@@ -1,9 +1,5 @@
 version: '3.9'
 
-volumes:
-    emse-ui:
-        external: true
-
 services:
     ui:
         container_name: emse_ui_lib
