@@ -26,8 +26,17 @@ const Panel = ({
 
 export type PanelProps = {
 	children: JSX.Element | React.ReactNode
+	/**
+     *  Indicates the className - based on selection of a property named 'size', className is atlered 
+     */
 	className?: string
+	/**
+     *  Indicates the size - user selective option
+     */
 	size?: 1 | 2 | 4 | 6
+	/**
+     *  Indicates the title of the panel component
+     */
 	title: string
 }
 
