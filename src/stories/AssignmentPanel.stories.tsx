@@ -1,3 +1,4 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import * as React from 'react'
 import { AssignmentPanel } from '../components/Assignment'
 
@@ -11,9 +12,9 @@ export default {
 			defaultValue: true,
 		},
 	},
-}
+} as ComponentMeta<typeof AssignmentPanel>
 
-const Template = (args) => {
+const Template: ComponentStory<typeof AssignmentPanel> = (args) => {
 	const [open, setOpen] = React.useState(true)
 	return (
 		<div className="overflow-x-hidden max-w-screen relative min-h-screen">
@@ -25,8 +26,9 @@ const Template = (args) => {
 	)
 }
 
-export const Panel = Template.bind({})
-Panel.args = {
+export const AssignmentPanelTemplate = Template.bind({})
+AssignmentPanelTemplate.storyName = 'Default Assignment Panel'
+AssignmentPanelTemplate.args = {
 	moduleInformation: {
 		connections: [
 			{

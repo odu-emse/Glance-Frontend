@@ -16,7 +16,7 @@ export const Button = ({
 	const variant: string = primary
 		? 'bg-blue-700 text-white hover:bg-blue-500 '
 		: 'bg-blue-300 text-black hover:bg-blue-100 '
-	let buttonSize: string
+	let buttonSize = ''
 	if (size === 'small') {
 		buttonSize = 'h-4 w-auto py-4 px-2'
 	} else if (size === 'large') {
@@ -46,12 +46,33 @@ export const Button = ({
 }
 
 type ButtonProps = {
+	/**
+	 * A boolean that determines whether the button is the principal call/action on the page
+	 */
 	primary?: boolean
+	/**
+	 * A boolean that determines whether the button is representing a loading state
+	 */
 	loading?: boolean
+	/**
+	 * An enum that defines the button's size
+	 */
 	size?: 'small' | 'base' | 'large'
+	/**
+	 * An enum that defines the button's type
+	 */
 	type: 'button' | 'submit' | 'reset'
+	/**
+	 * A descriptive label to display the text content on the button
+	 */
 	label: string
+	/**
+	 * A boolean that determines whether the button representing a disabled state
+	 */
 	disabled?: boolean
+	/**
+	 * A onclick event that executes a JavaScript's function when the button gets clicked
+	 */
 	onClick: () => void
 }
 

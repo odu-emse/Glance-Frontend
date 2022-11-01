@@ -6,14 +6,12 @@ export const Wrapper = ({ routes }: WrapperProps): JSX.Element => {
 	return (
 		<Routes>
 			{routes
-				? routes.map((route, index) => (
+				? routes.map((route, index):JSX.Element => (
 						<Route
-							path={route.path}
-							index={route.index}
+							path={route.path!}
+							// index={route.index}
 							key={index}
-							element={() => {
-								return <Content>{route.element}</Content>
-							}}
+							// element={() => <Content children={route.element} />}
 						/>
 				  ))
 				: null}

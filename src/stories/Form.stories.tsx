@@ -1,14 +1,15 @@
 import * as React from 'react'
 import { Form, Input } from '../components/FormElements'
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
 	title: 'Molecules/Form',
 	component: Form,
 	args: {},
 	argTypes: {},
-}
+} as ComponentMeta<typeof Form>
 
-const Template = (args) => {
+const Template:ComponentStory<typeof Form> = (args) => {
 	const [formData, setFormData] = React.useState({
 		firstName: '',
 		lastName: '',

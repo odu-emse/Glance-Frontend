@@ -1,5 +1,28 @@
 {
-  "compilerOptions": {
-    "types": ["cypress", "@testing-library/cypress"]
-  }
+	"compilerOptions": {
+		"types": [
+			"cypress",
+			"cypress-axe",
+			"jest",
+			"@testing-library/cypress",
+			"@testing-library/jest-dom"
+		],
+		"jsx": "react-jsx",
+		"allowJs": false,
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"declaration": true,
+		"declarationDir": "./dist/types",
+		"outDir": "./dist",
+		"lib": ["dom", "esnext", "dom.iterable", "ES2021"],
+		"baseUrl": ".",
+		"paths": {
+			"@/stories/*": ["src/stories/*"],
+			"@/components/*": ["src/components/*"],
+			"@/util/*": ["src/util/*"],
+		}
+	},
+	"exclude": ["node_modules", "cypress", "dist"],
+	"include": ["src/components/**/*", "src/index.ts", "src/util/**/*"],
 }

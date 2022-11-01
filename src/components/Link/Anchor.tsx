@@ -2,17 +2,32 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 
 export type AnchorProps = {
+	/**
+     * Indicates the path upon clicking on the link
+     */
 	path: string
 	children: React.ReactNode
+	/**
+	 * A descriptive label for the className
+	 */
 	className?: string
+	/**
+	 * Indicates role of the anchor element, upon which styling changes based on user's selection
+	 */
 	role?: string
+	/**
+     * A Boolean that decides the styling of anchor tag
+     */
 	open?: boolean
 	onClick?: (e?: React.MouseEvent<HTMLAnchorElement>) => void
+	/**
+     * Indicates id as string
+     */
 	id?: string
 	icon?: React.ReactNode
 }
 
-const Anchor = ({
+export const Anchor = ({
 	path,
 	children,
 	className,
@@ -54,5 +69,3 @@ const Anchor = ({
 		</Link>
 	)
 }
-
-export default Anchor
