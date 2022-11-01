@@ -16,7 +16,7 @@ export const Input = ({
 }: InputProps) => {
 	return (
 		<>
-			<div className="relative z-0 mb-6 w-full group">
+			<div className="relative z-0 w-full group">
 				<input
 					type={type}
 					name={name}
