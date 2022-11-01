@@ -5,7 +5,7 @@ import {
 	FaBookmark,
 	FaCommentDots,
 	FaGraduationCap,
-	FaSmile,
+	FaRegSmile,
 	FaStar,
 } from 'react-icons/fa'
 import { MdAttachFile } from 'react-icons/md'
@@ -20,8 +20,10 @@ export const SocialCard = ({
 	const [isClicked, setIsClicked] = React.useState(false)
 
 	return (
-		<div className="flex items-center justify-center min-h-screen">
-			<div className="rounded-xl border p-5 shadow-md md:w-9/12 bg-white w-full">
+		// removed items-center justify-center min-h-screen for community layout
+		<div className="flex">
+			{/* {modify md:w-9/12 to md:w-screen for better fit community page} */}
+			<div className="rounded-xl border p-5 shadow-md md:w-screen bg-white w-full">
 				<div className="flex w-full items-center justify-between  pb-3">
 					<div className="flex items-center space-x-3">
 						<div className="flex flex-wrap justify-center">
@@ -131,8 +133,8 @@ export const SocialCard = ({
 						<button className="flex items-center justify-center px-5">
 							<MdAttachFile size={20} className="mr-1" />
 						</button>
-						<button className="flex items-center justify-center px-8 ">
-							<FaSmile size={20} className="mr-1" />
+						<button className="flex items-center justify-center px-8">
+							<FaRegSmile size={20} className="mr-1" />
 						</button>
 					</div>
 				</div>
@@ -141,7 +143,7 @@ export const SocialCard = ({
 	)
 }
 
-type SocialCardProps = {
+export type SocialCardProps = {
 	/**
 	 * Assigning the below declared type "UserAccountprops" to user
 	 */
@@ -164,7 +166,7 @@ type SocialCardProps = {
 	comments: number
 }
 
-type UserAccountProps = {
+export type UserAccountProps = {
 	/**
 	 * A descriptive label to display the user's Last Name
 	 */
