@@ -41,5 +41,11 @@ export const Accordion = ({ lessons, title }: AccordionProps) => {
 
 export type AccordionProps = {
 	title: string
+	/**
+	 * String that shows up the Title message on the Accordion Prop Component
+	 */
 	lessons: LessonLinkProps[]
+	/**
+	 * String that has been used here are dynamically used from the Lessonlink Component
+	 */
 }
