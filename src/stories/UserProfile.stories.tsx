@@ -19,7 +19,7 @@ Primary.args = {
 		planOfStudy: [
 			{
 				status: 'Scheduled',
-				term: 'summer 2022',
+				term: 'Summer 2022',
 			},
 			{
 				status: 'Late',
