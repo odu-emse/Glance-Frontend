@@ -7,9 +7,9 @@ const { Primary, Secondary, Tertiary } = composeStories(stories)
 
 describe('AssignmentCard.tsx', function () {
 	const questionCount = 68
-    const moduleIdentifier = 'M 137G'
-    const moduleName = 'Introduction to Organizational Analysis'
-    const assignmentName = 'Assignment 4'
+    	const moduleIdentifier = 'M 137G'
+    	const moduleName = 'Introduction to Organizational Analysis'
+	const assignmentName = 'Assignment 4'
 	beforeEach(() => {
 		cy.injectAxe()
 	})
