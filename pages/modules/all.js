@@ -8,6 +8,7 @@ import Layout from "@/components/Layout";
 import { getUserByOpenID } from '@/scripts/getUserByOpenID';
 import gqlFetcher from '@/utils/gqlFetcher';
 import useAuth from '@/hooks/useAuth';
+import { ModuleCard } from "emse-ui";
 
 const AllModules = () => {
   const {jwt:token, user } = useAuth();
@@ -20,7 +21,7 @@ const AllModules = () => {
   );
     
     if(error) return <p>Failed to load content...</p>
-    if(!data) return <p>Loading...</p>
+    if(!data || !data?.user) return <p>Loading...</p>
 
   console.log(data);
 
@@ -36,7 +37,9 @@ const AllModules = () => {
             <p className="text-gray-600 text-light mb-4">A list of all the modules currently available</p>
             <div className="grid gap-3">
                 { data.user.plan.modules.map((enrollment) => {
-                    return <ModuleItem role={enrollment.role} key={enrollment.module.id} data={enrollment.module} />;
+                    //return <ModuleItem role={enrollment.role} key={enrollment.module.id} data={enrollment.module} />;
+                    console.log(enrollment.module)
+                    return <ModuleCard module={enrollment.module} completion={false}/>
                 }) }
             </div>
         </div>
