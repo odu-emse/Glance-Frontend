@@ -80,6 +80,7 @@ export const AssignmentPanel = ({
 								{mod.moduleTitle} - {mod.assignmentTitle}
 							</li>
 						)) : null}
+						
 					</ul>
 				</div>
 
@@ -95,15 +96,47 @@ export const AssignmentPanel = ({
 }
 
 export type AssignmentPanelProps = {
+	/**
+	 * Boolean that decides if the component is open or not
+	 * @type boolean
+	 * @default true
+	 */
 	open: boolean
+	/**
+	 * Function placeholder to differentiate the onClick functionality
+	 * based on the state of the 'open' boolean
+	 */
 	handle: (open: boolean) => void
+	/**
+	 * Class that holds all module information
+	 */
 	moduleInformation: ModuleInformation
 }
 
 export type ModuleInformation = {
+	/**
+	 * Descriptive name of the course module's title
+	 * @type string
+	 */
 	moduleTitle: string
+	/**
+	 * Title of the assignment associated with the course module
+	 * @type string
+	 */
 	assignmentTitle: string
+	/**
+	 * Array of strings that lists course modules that are required to start the current module
+	 * @type string
+	 */
 	deps?: string[]
+	/**
+	 * Array of strings that lists the required software to run the module assignment
+	 * @type string
+	 */
 	software?: string[]
+	/**
+	 * Array type that holds other modules that have connection with current module
+	 * @type array
+	 */
 	connections?: ModuleInformation[]
 }

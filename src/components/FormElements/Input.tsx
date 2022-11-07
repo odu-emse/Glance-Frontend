@@ -9,20 +9,21 @@ export const Input = ({
 	description,
 	required = false,
 	type,
-	id,
+	ariaLabel,
 	defaultValue,
 	disabled = false,
 	error = false,
 }: InputProps) => {
 	return (
 		<>
-			<div className="relative z-0 mb-6 w-full group">
+			<div className="relative z-0 w-full group">
 				<input
 					type={type}
 					name={name}
 					id={name}
 					placeholder=" "
 					role={role}
+					aria-label={ariaLabel}
 					className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none dark:text-white focus:outline-none focus:ring-0 peer ${
 						error
 							? 'border-red-500 dark:border-red-400 focus:border-red-600 dark:focus:border-red-500'
@@ -57,7 +58,11 @@ export const Input = ({
 				{description && (
 					<p
 						id="helper-text-explanation"
-						className="mt-2 text-sm text-gray-500 dark:text-gray-400"
+						className={`mt-2 text-sm ${
+							error
+								? 'text-red-600 dark:text-red-500'
+								: 'text-gray-500 dark:text-gray-400'
+						}`}
 					>
 						{description}
 					</p>
@@ -96,7 +101,15 @@ export type InputProps = {
 	/**
 	 * The input type determines the way browsers conduct their validation and on a device by device basis it can change the keyboard behavior for the user.
 	 */
-	type: 'text' | 'email' | 'password' | 'search' | 'url' | 'tel' | 'number' | 'file'
+	type:
+		| 'text'
+		| 'email'
+		| 'password'
+		| 'search'
+		| 'url'
+		| 'tel'
+		| 'number'
+		| 'file'
 	/**
 	 * The default value of the input. This is used to set the value of the input when the page is first loaded.
 	 */
@@ -109,5 +122,8 @@ export type InputProps = {
 	 * The error value is used to render different styles of the input element based on the current error state that is passed in as a parameter.
 	 */
 	error?: boolean
-	id?: string
+	/**
+	 * The aria-label attribute is used to provide a label for the input element. This is used to provide additional context to the user, under the input element. This is just supplementary information, so its visual hierarchy should not interfere with the input element's.
+	 */
+	ariaLabel?: string
 }

@@ -48,4 +48,7 @@ export type AccordionProps = {
 	 * Utilizing Atom Element "Lesson link" properties in this component
 	 */
 	lessons: LessonLinkProps[]
+	/**
+	 * String that has been used here are dynamically used from the Lessonlink Component
+	 */
 }
