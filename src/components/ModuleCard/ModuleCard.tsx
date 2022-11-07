@@ -1,7 +1,18 @@
 import * as React from 'react'
 
 export const ModuleCard = ({
-	module,
+	parentCourse,
+	moduleName,
+	moduleNumber,
+	percentageCompleted,
+	averageTime,
+	userTime,
+	duration,
+	currentTopic,
+	primaryLink,
+	primaryLinkLabel,
+	secondaryLink,
+	secondaryLinkLabel,
 	completion,
 }: ModuleProps): JSX.Element => {
 	return (
@@ -10,16 +21,16 @@ export const ModuleCard = ({
 				className={`flex w-full lg:w-4 p-2 lg:p-0 ${
 					completion
 						? `bg-green-400`
-						: module.percentage > 25
+						: percentageCompleted > 25
 						? `bg-blue-300`
 						: `bg-red-400`
 				}`}
 			></div>
 			<div className="flex grow flex-col lg:flex-row md:gap-10">
 				<div className="grow flex flex-col justify-between m-1">
-					<div className="flex text-gray-500 lg:text-base text-sm">{`${module.courseName} - ${module.moduleIdentifiers}`}</div>
+					<div className="flex text-gray-500 lg:text-base text-sm">{`${parentCourse} - ${moduleNumber}`}</div>
 					<div className="flex lg:pb-4 font-bold text-base xl:text-lg">
-						{module.moduleName}
+						{moduleName}
 					</div>
 					<div className="flex flex-row text-sm justify-between">
 						<p className="underline text-sm text-gray-400">Forum</p>
@@ -42,7 +53,7 @@ export const ModuleCard = ({
 				<div className="flex-none flex flex-col items-center">
 					<div className="completionPercentage">
 						<p className="lg:mt-5">
-							{module.percentage + `%`} Viewed
+							{percentageCompleted + `%`} Viewed
 						</p>
 					</div>
 
@@ -61,7 +72,7 @@ export const ModuleCard = ({
 							strokeWidth="5"
 							strokeDasharray="10"
 							strokeDashoffset={`${
-								100 - (module.percentage / 100) * 10
+								100 - (percentageCompleted / 100) * 10
 							}`}
 							strokeLinecap="round"
 							stroke="currentColor"
@@ -76,20 +87,18 @@ export const ModuleCard = ({
 						{completion ? (
 							<div className="flex flex-col items-center">
 								<p className="">
-									{`Average time: ${module.averageTime} ${
-										module.averageTime === 1
-											? `minute`
-											: `minutes`
+									{`Average time: ${averageTime} ${
+										averageTime === 1 ? `minute` : `minutes`
 									}`}
 								</p>
-								<p>{`Your time: ${module.userTime} ${
-									module.userTime === 1 ? `minute` : `minutes`
+								<p>{`Your time: ${userTime} ${
+									userTime === 1 ? `minute` : `minutes`
 								}`}</p>
 							</div>
 						) : (
 							<p className="">
-								{`Approximately ${module.duration} ${
-									module.duration === 1 ? `minute` : `minutes`
+								{`Approximately ${duration} ${
+									duration === 1 ? `minute` : `minutes`
 								} left `}
 							</p>
 						)}
@@ -110,22 +119,28 @@ export const ModuleCard = ({
 								Current Topic
 							</div>
 							<div className="font-medium text-sm pr-2">
-								{module.currentTopic}
+								{currentTopic}
 							</div>
 							<div className="flex flex-col w-full px-3">
 								<div className="py-1">
 									<button className="text-white bg-blue-300 px-24 py-1 w-full">
-										<span className="flex items-center justify-center">
-											{module.returnIdPage}
-										</span>
+										<a
+											href={primaryLink}
+											className="flex items-center justify-center"
+										>
+											{primaryLinkLabel}
+										</a>
 									</button>
 								</div>
 								{/* Link to returnIdPage */}
 								<div>
 									<button className="text-white bg-orange-400 px-24 py-1 w-full mb-2">
-										<span className="flex items-center justify-center">
-											{module.treeView}
-										</span>
+										<a
+											href={secondaryLink}
+											className="flex items-center justify-center"
+										>
+											{secondaryLinkLabel}
+										</a>
 									</button>
 								</div>
 								{/* Link to treeView */}
@@ -137,69 +152,24 @@ export const ModuleCard = ({
 		</div>
 	)
 }
-type ModuleObject = {
-	/**
-	 * A descriptive name of the course
-	 * @type string
-	 */
-	courseName: string
-	/**
-	 * An identification code that is specific to the course module
-	 * @type string
-	 */
-	moduleIdentifiers: string
-	/**
-	 * A short descriptive name of the course module code
-	 * @type string
-	 */
-	moduleName: string
-	/**
-	 * The percentage of completion of the course module
-	 * @type number
-	 */
-	percentage: number
-	/**
-	 * The duration of time that is left until completion of the course module
-	 * @type number
-	 */
-	duration?: number
-	/**
-	 * The average time to complete the course module based on other users completion time
-	 * @type number
-	 */
-	averageTime?: number
-	/**
-	 * The time the user has spent on the course module
-	 * @type number
-	 */
-	userTime?: number
-	/**
-	 * The current topic that the user is completing at that time
-	 * @type string
-	 */
-	currentTopic?: string
-	/**
-	 * A string that identifies the page that the user was previously on
-	 * @type string
-	 */
-	returnIdPage: string
-	/**
-	 * A larger view of the course modules in tree format
-	 * @type string
-	 */
-	treeView?: string
-}
 
 export type ModuleProps = {
-	/**
-	 * A reference to the type 'ModuleObjects'
-	 * @type Prop
-	 */
-	module: ModuleObject
 	/**
 	 * Boolean that determines if the course module is completed or not
 	 * @type boolean
 	 * @default false
 	 */
 	completion: boolean
+	parentCourse: string
+	moduleName: string
+	moduleNumber: string
+	percentageCompleted: number
+	averageTime?: number
+	userTime?: number
+	duration?: number
+	currentTopic: string
+	primaryLink: string
+	primaryLinkLabel: string
+	secondaryLink: string
+	secondaryLinkLabel: string
 }
