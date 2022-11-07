@@ -31,4 +31,7 @@ export const SidebarForModules = ({ topics }: SidebarForModulesProps) => {
 
 export type SidebarForModulesProps = {
 	topics: AccordionProps[]
+	/**
+	 * The Props used in this component have been used dynamically from the Accordion Component
+	 */
 }

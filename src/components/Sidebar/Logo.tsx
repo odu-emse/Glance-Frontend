@@ -9,10 +9,10 @@ export const Logo = ({ extended }: LogoProps): JSX.Element => {
 					className="block max-h-16 mx-auto"
 					src={`${
 						extended
-							? 'https://www.odu.edu/content/dam/odu/logos/univ/png-72dpi/odu-sig-noidea-fullcolor.png'
-							: 'https://www.odu.edu/content/dam/odu/logos/univ/png-72dpi/crown-r-2-color.png'
+							? 'https://ww1.odu.edu/content/dam/odu/logos/univ/png-72dpi/odu-sig-noidea-fullcolor.png'
+							: 'https://ww1.odu.edu/content/dam/odu/logos/univ/png-72dpi/crown-r-2-color.png'
 					}`}
-					alt="Workflow"
+					alt="ODU Logo"
 					loading="lazy"
 				/>
 			</Link>
