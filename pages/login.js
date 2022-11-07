@@ -1,3 +1,4 @@
+import { Button } from 'emse-ui';
 import { useGoogleLogin } from '@react-oauth/google';
 
 const Login = () => {
@@ -18,15 +19,9 @@ const Login = () => {
                 <div>
                     <p className= "text-7xl font-extrabold font-weight:2000 text-center text-black-3000">ALMP</p>
                     <p className="text-black-400 font-semibold text-xl">You must be logged in to access this resource.</p>
-                </div>
-            
-                <button 
-                    onClick={() => login()}
-                    className="text-white rounded-lg p-3 bg-blue-400"
-                
-                >
-                    Login with Google
-                </button>
+                </div>        
+
+                <Button label="Login with Google" onClick={() => login()} />
             </div>
 
         </div>

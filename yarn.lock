@@ -1836,12 +1836,11 @@ emoji-regex@^9.2.2:
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
 
-emse-ui@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/emse-ui/-/emse-ui-1.2.2.tgz#71b434810db2f3b18fce87b38ba34b00c05c0d2a"
-  integrity sha512-w1SVAOiea6c4SNNv1WSo+vqprz+4PRCLy2jom6grOoyh2Wy9rp9xI5NzJbGFdxKHDq+UBrxcnzaB2urkLCX2Nw==
+emse-ui@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/emse-ui/-/emse-ui-1.1.5.tgz#f29c41dacd609dee1460cf56615b7d888dcbf234"
+  integrity sha512-Pc9pu2XjFoXRZJhhP6mCKJLDsoXujLhzsSaTGaU3zSGiR7MeIb70wBKWNY0u+JB4hatMA6a9Ks31oXRRsJvKsw==
   dependencies:
-    moment "^2.29.4"
     prop-types "^15.8.1"
     react-icons "^4.4.0"
     react-router-dom "^6.3.0"
