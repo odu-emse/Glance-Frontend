@@ -5,7 +5,6 @@
 			"cypress-axe",
 			"jest",
 			"@testing-library/cypress",
-			"@testing-library/jest-dom"
 		],
 		"jsx": "react-jsx",
 		"allowJs": false,

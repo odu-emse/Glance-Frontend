@@ -10,5 +10,5 @@ lib/
 .DS_Store
 /cypress/screenshots/**/*.png
 /cypress/videos/*.mp4
-
+*.tgz
 src/output.css
