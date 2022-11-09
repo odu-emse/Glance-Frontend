@@ -1,24 +1,20 @@
 import * as React from 'react'
-import { Link as NavLink } from 'react-router-dom'
 import { IconContext } from 'react-icons'
 
 export const Link = ({
-	to,
+	to = '',
 	activeClassName,
 	className,
 	active = false,
 	label,
 	icon,
-	open,
+	extended,
 	role,
 	children,
 }: LinkProps) => {
 	return (
 		<IconContext.Provider value={{ className: 'xxs:h-4 xs:h-4 sm:h-6' }}>
-			<NavLink
-				to={to ?? ''}
-				className={role === 'logo' ? 'h-full w-full' : ''}
-			>
+			<a href={to} className={role === 'logo' ? 'h-full w-full' : ''}>
 				<li
 					className={`${
 						role === 'menuitem'
@@ -31,7 +27,7 @@ export const Link = ({
 							? `bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4 ${activeClassName}`
 							: ''
 					} ${
-						!open && role !== 'menuitem'
+						!extended && role !== 'menuitem'
 							? 'flex items-center justify-center'
 							: ''
 					}`}
@@ -39,18 +35,20 @@ export const Link = ({
 				>
 					<span className="flex sm:gap-2 gap-0 items-center">
 						<span
-							className={`${open ? 'opacity-50' : 'opacity-100'}`}
+							className={`${
+								extended ? 'opacity-50' : 'opacity-100'
+							}`}
 						>
 							{icon}
 						</span>
 						<span className="xxs:text-xxs xs:text-xs sm:text-base">
-							{open && label}
+							{extended && label}
 						</span>
 					</span>
 					{role === 'menuitem' && label}
 					{children ? children : null}
 				</li>
-			</NavLink>
+			</a>
 		</IconContext.Provider>
 	)
 }
@@ -60,7 +58,7 @@ Link.defaultProps = {
 	active: false,
 	label: '',
 	icon: null,
-	open: false,
+	extended: false,
 }
 
 export type LinkProps = {
@@ -70,7 +68,7 @@ export type LinkProps = {
 	active?: boolean
 	label?: string | React.ReactNode
 	icon?: React.ReactNode
-	open?: boolean
+	extended?: boolean
 	role: string
 	children?: React.ReactNode
 }
