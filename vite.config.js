@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import NodeGlobalsPolyfillPlugin from '@esbuild-plugins/node-globals-polyfill'
 import NodeModulesPolyfillPlugin from '@esbuild-plugins/node-modules-polyfill'
+import nodePolyfills from 'rollup-plugin-polyfill-node'
 
 export default defineConfig({
 	optimizeDeps: {
@@ -46,6 +47,7 @@ export default defineConfig({
 				// Enable rollup polyfills plugin
 				// used during production bundling
 				// rollupNodePolyFill(),
+				nodePolyfills()
 			],
 		},
 	},
