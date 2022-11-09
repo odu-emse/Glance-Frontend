@@ -4,8 +4,8 @@ import { Button } from '../Button'
 export const Form = ({
 	children,
 	allowPrevious = false,
-	perviousLabel = 'Back',
-	proceedLabel = 'Submit',
+	previousLabel = '',
+	proceedLabel = '',
 }: FormProps) => {
 	return (
 		<form className="">
@@ -13,7 +13,7 @@ export const Form = ({
 			<div className="flex justify-between items-center">
 				{allowPrevious && (
 					<Button
-						label={perviousLabel}
+						label={previousLabel}
 						type="reset"
 						primary={false}
 					/>
@@ -33,7 +33,7 @@ export type FormProps = {
 	/**
 	 * A descriptive label for the previous / back button.
 	 */
-	perviousLabel?: string
+	previousLabel?: string
 	/**
 	 * A descriptive label for the submit / next button.
 	 */
