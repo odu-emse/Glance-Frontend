@@ -16,9 +16,9 @@ export const ModuleCard = ({
 	completion,
 }: ModuleProps): JSX.Element => {
 	return (
-		<div className="flex flex-col lg:flex-row md:items-stretch gap-4 border-gray bg-gray-100 drop-shadow-md border border-solid rounded">
+		<div className="moduleCard flex flex-col lg:flex-row md:items-stretch gap-4 border-gray bg-gray-100 drop-shadow-md border border-solid rounded">
 			<div
-				className={`flex w-full lg:w-4 p-2 lg:p-0 ${
+				className={`statusColorCode flex w-full lg:w-4 p-2 lg:p-0 ${
 					completion
 						? `bg-green-400`
 						: percentageCompleted > 25
@@ -33,17 +33,17 @@ export const ModuleCard = ({
 						{moduleName}
 					</div>
 					<div className="flex flex-row text-sm justify-between">
-						<p className="underline text-sm text-gray-400">Forum</p>
-						<p className="underline text-sm text-gray-400">
+						<p className="underline text-sm text-gray-700">Forum</p>
+						<p className="underline text-sm text-gray-700">
 							Assignment
 						</p>
-						<p className="underline text-sm text-gray-400">
+						<p className="underline text-sm text-gray-700">
 							Download
 						</p>
 						{completion ? (
 							``
 						) : (
-							<p className="underline text-sm text-red-500">
+							<p className="underline text-sm text-red-700">
 								Abandon
 							</p>
 						)}
@@ -115,7 +115,7 @@ export const ModuleCard = ({
 						</div>
 					) : (
 						<div className="flex flex-col w-full h-50 items-center justify-center gap-3 lg:items-center">
-							<div className="text-gray-400 text-sm">
+							<div className="text-gray-600 text-sm">
 								Current Topic
 							</div>
 							<div className="font-medium text-sm pr-2">
