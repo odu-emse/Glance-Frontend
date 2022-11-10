@@ -40,9 +40,12 @@ export const Accordion = ({ lessons, title }: AccordionProps) => {
 }
 
 export type AccordionProps = {
+	/**
+	 * A descriptive label for the title
+	 */
 	title: string
 	/**
-	 * String that shows up the Title message on the Accordion Prop Component
+	 * Utilizing Atom Element "Lesson link" properties in this component
 	 */
 	lessons: LessonLinkProps[]
 	/**

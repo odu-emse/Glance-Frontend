@@ -44,12 +44,14 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 					{!authenticated ? (
 						<>
 							<Link
+								role="anchor"
 								to="/users/login"
 								icon={<GoSignIn size={30} />}
 								label="Login"
 								open={open}
 							/>
 							<Link
+								role="anchor"
 								to="/users/register"
 								icon={<GoPerson size={30} />}
 								label="Register"
@@ -60,36 +62,42 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 						<>
 							<div className="flex flex-col">
 								<Link
+									role="anchor"
 									to="/portal"
 									icon={<MdWidgets size={30} />}
 									label="Portal"
 									open={open}
 								/>
 								<Link
+									role="anchor"
 									to="/dashboard"
 									icon={<MdSpaceDashboard size={30} />}
 									label="Dashboard"
 									open={open}
 								/>
 								<Link
+									role="anchor"
 									to="/program"
 									icon={<BsStack size={30} />}
 									label="My Program"
 									open={open}
 								/>
 								<Link
+									role="anchor"
 									to="/assignments"
 									icon={<BiTask size={30} />}
 									label="Assignments"
 									open={open}
 								/>
 								<Link
+									role="anchor"
 									to="/community"
 									icon={<MdOutlineExplore size={30} />}
 									label="Community"
 									open={open}
 								/>
 								<Link
+									role="anchor"
 									to="/support"
 									icon={<MdLiveHelp size={30} />}
 									label="Support"
@@ -124,7 +132,7 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 								</Anchor>
 								<div
 									className={`${
-										dropdown === true ? 'block' : 'hidden'
+										dropdown ? 'block' : 'hidden'
 									} absolute left-full mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-50`}
 									role="menu"
 									aria-orientation="vertical"
@@ -145,12 +153,14 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 									/>
 								</div>
 								<Link
+									role="anchor"
 									to="/sitemap"
 									icon={<AiOutlinePartition size={30} />}
 									label="Sitemap"
 									open={open}
 								/>
 								<Link
+									role="anchor"
 									to="/logout"
 									icon={<RiShutDownLine size={30} />}
 									label="Logout"
