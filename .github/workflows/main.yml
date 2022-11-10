@@ -26,6 +26,9 @@ jobs:
   generate-changelog:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: nuuday/github-changelog-action@v1.0.0
         with:
           next_version: "1.0.0"
