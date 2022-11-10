@@ -41,61 +41,75 @@ describe('Form.tsx', function () {
     })
 
     it('should have dotted outline on submit button when clicked', function() {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
+		cy.mount(<Default allowPrevious={true} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
 		cy.get('button').should('have.class', 'focus:outline-blue-500')
-        cy.get('button').should('have.class', 'focus:outline-dashed')
+        cy.get('button').each(($el) => {
+			cy.wrap($el).should('have.class', 'focus:outline-dashed')
+		})
 	})
 
     it('should change users cursor to pointer on hover', function() {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('button').should('have.class', 'cursor-pointer')
-        cy.get('button').should('have.css', 'cursor', 'pointer')
-	})
-
-    it('should change the textbox underline to blue when clicked on', function () {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('input').should('have.class', 'focus:border-blue-600')
-	})
-
-    it('should allow users to enter text inside the first and last name boxes', function () {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('input[type=text]').should('have.attr', 'type', 'text')
-	})
-
-    it('should allow users to enter emails inside the email box', function () {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('input[type=email]').should('have.attr', 'type', 'email')
-	})
-
-    it('should allow users to enter passwords inside the password box', function () {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('input[type=password]').should('have.attr', 'type', 'password')
-	})
-
-    it('should turn placeholder text to blue when focused', function() {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('label').should('have.class', 'peer-focus:dark:text-blue-500 peer-focus:text-blue-600')
-	})
-
-    it('should transition placeholder above input box and shrink font size by 75%', function() {
-		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('label').should('have.class', 'transform -translate-y-6 scale-75 top-3 -z-10')
-	})
-
-    it('should show a previous/back button', function() {
 		cy.mount(<Default allowPrevious={true} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('button[type=reset]').should('have.attr', 'type', 'reset')
+		cy.get('button').each(($el) => {
+			cy.wrap($el).trigger('mouseover').should('have.css', 'cursor', 'pointer')
+		})
+	})
+
+    it('should change the input border to blue when clicked on', function () {
+		cy.mount(<Default />)
+		cy.get('input').each(($el) => {
+			cy.wrap($el).should('have.class', 'focus:border-blue-600')
+		})
+	})
+
+    it('should allow users to enter text inside the first and last name inputs', function () {
+		cy.mount(<Default />)
+		cy.get('input[name="firstName"]').type('John').should('have.value', 'John')
+		cy.get('input[name="lastName"]').type('Doe').should('have.value', 'Doe')
+	})
+
+    it('should allow users to enter emails inside the email input', function () {
+		cy.mount(<Default />)
+		cy.get('input[name=email]').should('have.attr', 'type', 'email')
+	})
+
+    it('should allow users to enter passwords inside the password input', function () {
+		cy.mount(<Default />)
+		cy.get('input[name=password]').should('have.attr', 'type', 'password')
+	})
+
+    it('should turn label text to blue when focused', function() {
+		cy.mount(<Default />)
+		cy.get('input').each(($input) => {
+			cy.wrap($input).focus().siblings('label').should('have.class', 'peer-focus:dark:text-blue-500 peer-focus:text-blue-600')
+		})
+	})
+
+    it('should transition label above input box and shrink font size by 75%', function() {
+		cy.mount(<Default />)
+		cy.get('input').each(($el) => {
+			cy.wrap($el).type('something smart').then(($input) => {
+				cy.wrap($input).siblings('label').should('have.css', 'transform', 'matrix(0.75, 0, 0, 0.75, 0, -24)').and('have.class', 'transform -translate-y-6 scale-75 top-3 -z-10')
+			})
+		})
+	})
+
+    it('should render previous/back buttons if allowPrevious is true', function() {
+		cy.mount(<Default allowPrevious={true} />)
+		cy.get('button').should('have.length', 2)
     })  
 
-    it('should name the previous/next button to the given previousLabel (Previous!)', function() {
+    it('should render button with the label given to previousLabel', function() {
 		cy.mount(<Default allowPrevious={true} previousLabel={"Previous!"} proceedLabel={proceedLabel}/>)
-        cy.get('button[type=reset]').should('have.attr', 'type', 'reset')
-        cy.get('button[type=reset]').should('contain', "Previous!")
+		cy.get('button.bg-blue-300').as('secondaryButton')
+        cy.get('@secondaryButton').should('have.attr', 'type', 'reset')
+        cy.get('@secondaryButton').should('contain', "Previous!")
     })
 
-    it('should name the proceed/next button to the given proceedLabel (Next!)', function() {
+    it('should render button with the label given proceedLabel', function() {
 		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={"Next!"} />)
-        cy.get('button[type=submit]').should('have.attr', 'type', 'submit')
-        cy.get('button[type=submit]').should('have.text', "Next!")
+		cy.get('button.bg-blue-700').as('primaryButton')
+        cy.get('@primaryButton').should('have.attr', 'type', 'submit')
+        cy.get('@primaryButton').should('have.text', "Next!")
     })
 })

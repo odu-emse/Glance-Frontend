@@ -5,7 +5,7 @@ export const Form = ({
 	children,
 	allowPrevious = false,
 	previousLabel = '',
-	proceedLabel = '',
+	proceedLabel = 'Submit',
 }: FormProps) => {
 	return (
 		<form className="">
