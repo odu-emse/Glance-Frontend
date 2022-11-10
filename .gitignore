@@ -12,3 +12,4 @@ lib/
 /cypress/videos/*.mp4
 *.tgz
 src/output.css
+package

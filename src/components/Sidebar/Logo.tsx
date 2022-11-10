@@ -4,7 +4,7 @@ import { Link } from '../Link'
 export const Logo = ({ extended }: LogoProps): JSX.Element => {
 	return (
 		<div className="flex items-center justify-center py-5 w-full">
-			<Link to="/" className="w-full" role="logo" open={extended}>
+			<Link to="/" className="w-full" role="logo" extended={extended}>
 				<img
 					className="block max-h-16 mx-auto"
 					src={`${
