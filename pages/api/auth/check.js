@@ -1,5 +1,4 @@
 import { OAuth2Client } from 'google-auth-library';
-import { NextApiRequest, NextApiResponse } from 'next';
 
 /* 
 
@@ -11,7 +10,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 */
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
 	const { token } = req.query;
 
 	if(token === undefined || token === null) {
