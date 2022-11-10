@@ -36,7 +36,7 @@ export default defineConfig({
 			fileName: (format) => `emse-ui.${format}.js`,
 		},
 		rollupOptions: {
-			external: ['react', 'react-dom', 'react-router-dom'],
+			external: ['react', 'react-dom'],
 			output: {
 				globals: {
 					react: 'React',
