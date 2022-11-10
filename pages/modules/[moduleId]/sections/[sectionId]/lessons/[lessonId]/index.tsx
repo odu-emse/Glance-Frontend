@@ -5,6 +5,7 @@ import Layout from '@/components/Layout';
 import ContentLoader from '@/components/modules/content_type/ContentLoader';
 import useSWR from 'swr';
 import fetcher from '@/utils/fetcher';
+import { Button } from "emse-ui";
 
 const ModuleSection = () => {
 	//const [data, setData] = useState(null);
@@ -55,15 +56,13 @@ const ModuleSection = () => {
 			<div className="w-full flex justify-between items-center">
 				{prevPage !== null && (
 					<Link href={prevPage} passHref>
-						<a className={`bg-blue-600 px-5 py-3 rounded text-white`}>
-							Previous
-						</a>
+						<Button label="Previous" />
 					</Link>
 				)}
 
 				{nextPage !== null && (
 					<Link href={nextPage} passHref>
-						<a className={`bg-blue-600 px-5 py-3 rounded text-white`}>Next</a>
+						<Button label="Next" />
 					</Link>
 				)}
 			</div>

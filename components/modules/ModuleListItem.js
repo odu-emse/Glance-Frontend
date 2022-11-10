@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Button } from 'emse-ui';
 
 const ModuleItem = ({ module }) => {
 	return (
@@ -89,9 +90,7 @@ const ModuleItem = ({ module }) => {
 							Ethical Behavior and Leadership
 						</h2>
 						<Link href={`/modules/${module.id}`} passHref key={module.id}>
-							<a className="text-white bg-blue-300 px-3 py-1 w-full my-1">
-								Continue
-							</a>
+							<Button label="Continue" />
 						</Link>
 						<Link href={`/modules/${module.id}/tree`} passHref key={module.moduleName}>
 							<a className="text-white bg-yellow-500 px-3 py-1 w-full my-1">

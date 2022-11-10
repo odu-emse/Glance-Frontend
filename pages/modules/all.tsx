@@ -8,7 +8,7 @@ import Layout from "@/components/Layout";
 import { getUserByOpenID } from '@/scripts/getUserByOpenID';
 import gqlFetcher from '@/utils/gqlFetcher';
 import useAuth from '@/hooks/useAuth';
-import { ModuleCard } from "emse-ui";
+import { ModuleCard, Button } from "emse-ui";
 
 const AllModules = () => {
   const {jwt:token, user } = useAuth();
@@ -28,9 +28,7 @@ const AllModules = () => {
     return (
         <div className="p-5">
             <Link href="/modules" passHref>
-                <a className="p-2 bg-blue-500 text-white rounded">
-                    Back to Enrolled Modules
-                </a>
+              <Button label="Back to enrolled modules" />
             </Link>
             <hr className="mt-4 mb-4" />
             <h1 className="text-4xl mb-2 font-bold">All Available Modules</h1>
