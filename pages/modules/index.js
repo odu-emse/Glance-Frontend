@@ -24,7 +24,7 @@ const ModulesPage = () => {
 		console.log(error);
 		throw new Error(error);
 	}
-	if(!data || !data?.user){
+	if(!data){
 		return <div>Loading...</div>
 	}
 
@@ -39,13 +39,9 @@ const ModulesPage = () => {
 						<Button label="View All Modules" />
 					</Link>
 				</div>
-				{
-					data.user.plan.modules.filter((doc) => doc.role === "STUDENT").map((enrollment) => {
-						return <ModuleItem key={enrollment.module.id} module={enrollment.module} />;
-					})
-
-					//console.log(data)
-				}
+				{data.user.plan.modules.filter((doc) => doc.role === "STUDENT").map((enrollment) => {
+					return <ModuleItem key={enrollment.module.id} module={enrollment.module} />;
+				})}
 			</div>
 		</section>
 	);
