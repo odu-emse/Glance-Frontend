@@ -1,6 +1,7 @@
 import { OAuth2Client } from 'google-auth-library';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const token = req.cookies?.refresh;
   if(token === undefined) {
