@@ -1,6 +1,10 @@
 name: Component Library CI
 
-on: [push]
+on:
+    push:
+        branches: [ master, dev ]
+    pull_request:
+        branches: [ master, dev ]
 
 jobs:
   cypress-run:
@@ -19,3 +23,10 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: nuuday/github-changelog-action@v1.0.0
+        with:
+          next_version: "1.0.0"
+          config_dir: ".chglog"

@@ -2,6 +2,36 @@
 ## [Unreleased]
 
 
+<a name="v1.3.0-rc.4"></a>
+## [v1.3.0-rc.4] - 2022-11-09
+
+<a name="v1.3.0-rc.3"></a>
+## [v1.3.0-rc.3] - 2022-11-07
+
+<a name="v1.3.0-rc.2"></a>
+## [v1.3.0-rc.2] - 2022-11-07
+### Pull Requests
+- Merge pull request [#39](https://github.com/odu-emse/emse-UI/issues/39) from odu-emse/ALMP-381
+- Merge pull request [#38](https://github.com/odu-emse/emse-UI/issues/38) from odu-emse/ALMP-396
+
+
+<a name="v1.3.0-rc.1"></a>
+## [v1.3.0-rc.1] - 2022-11-02
+### Pull Requests
+- Merge pull request [#37](https://github.com/odu-emse/emse-UI/issues/37) from odu-emse/ALMP-361
+- Merge pull request [#36](https://github.com/odu-emse/emse-UI/issues/36) from odu-emse/ALMP-400
+- Merge pull request [#34](https://github.com/odu-emse/emse-UI/issues/34) from odu-emse/ALMP-372
+- Merge pull request [#35](https://github.com/odu-emse/emse-UI/issues/35) from odu-emse/ALMP-371
+- Merge pull request [#26](https://github.com/odu-emse/emse-UI/issues/26) from odu-emse/ALMP-302
+- Merge pull request [#27](https://github.com/odu-emse/emse-UI/issues/27) from odu-emse/ALMP-358
+- Merge pull request [#32](https://github.com/odu-emse/emse-UI/issues/32) from odu-emse/ALMP-376
+- Merge pull request [#31](https://github.com/odu-emse/emse-UI/issues/31) from odu-emse/ALMP-369
+- Merge pull request [#29](https://github.com/odu-emse/emse-UI/issues/29) from odu-emse/ALMP-375
+- Merge pull request [#28](https://github.com/odu-emse/emse-UI/issues/28) from odu-emse/ALMP-352-REBASE
+- Merge pull request [#25](https://github.com/odu-emse/emse-UI/issues/25) from odu-emse/ALMP-377
+- Merge pull request [#24](https://github.com/odu-emse/emse-UI/issues/24) from odu-emse/ALMP-372
+
+
 <a name="v1.2.2"></a>
 ## [v1.2.2] - 2022-10-26
 ### Pull Requests
@@ -191,7 +221,11 @@
 - :sparkles: Added cypress component testing
 
 
-[Unreleased]: https://github.com/odu-emse/emse-UI/compare/v1.2.2...HEAD
+[Unreleased]: https://github.com/odu-emse/emse-UI/compare/v1.3.0-rc.4...HEAD
+[v1.3.0-rc.4]: https://github.com/odu-emse/emse-UI/compare/v1.3.0-rc.3...v1.3.0-rc.4
+[v1.3.0-rc.3]: https://github.com/odu-emse/emse-UI/compare/v1.3.0-rc.2...v1.3.0-rc.3
+[v1.3.0-rc.2]: https://github.com/odu-emse/emse-UI/compare/v1.3.0-rc.1...v1.3.0-rc.2
+[v1.3.0-rc.1]: https://github.com/odu-emse/emse-UI/compare/v1.2.2...v1.3.0-rc.1
 [v1.2.2]: https://github.com/odu-emse/emse-UI/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/odu-emse/emse-UI/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/odu-emse/emse-UI/compare/v1.1.7...v1.2.0
