@@ -75,10 +75,10 @@ export type TabsProps = {
 
 export type ModuleInfo = {
 	title: string
-	assignment: Assignment[]
+	assignment: AssignmentPropType[]
 }
 
-export type Assignment = {
+export type AssignmentPropType = {
 	type: string
 	average: number
 }

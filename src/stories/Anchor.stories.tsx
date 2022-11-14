@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { BrowserRouter } from 'react-router-dom'
 import { Anchor, AnchorProps } from '../components/Link'
 
 export default {
@@ -22,18 +21,16 @@ export default {
 }
 
 const Template = (args: AnchorProps) => (
-	<BrowserRouter>
-		<Anchor
-			{...args}
-			onClick={() => {
-				alert(
-					'Your click was handled! This is an example of a custom onClick function. You can also infer the click event from the onClick prop, and access event details.'
-				)
-			}}
-		>
-			Link to resource
-		</Anchor>
-	</BrowserRouter>
+	<Anchor
+		{...args}
+		onClick={() => {
+			alert(
+				'Your click was handled! This is an example of a custom onClick function. You can also infer the click event from the onClick prop, and access event details.'
+			)
+		}}
+	>
+		Link to resource
+	</Anchor>
 )
 
 export const Primary = Template.bind({})

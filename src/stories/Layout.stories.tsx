@@ -2,7 +2,6 @@ import { Layout } from '../components/Layout'
 import { Sidebar } from '../components/Sidebar'
 import * as React from 'react'
 import { Content } from '../components/Content'
-import { BrowserRouter } from 'react-router-dom'
 
 export default {
 	title: 'Organisms/Layout',
@@ -18,7 +17,6 @@ export default {
 
 const Template = (args: { authenticated: boolean }) => {
 	return (
-		<BrowserRouter>
 			<Layout>
 				<Sidebar authenticated={args.authenticated} />
 				<Content>
@@ -39,7 +37,6 @@ const Template = (args: { authenticated: boolean }) => {
 					</p>
 				</Content>
 			</Layout>
-		</BrowserRouter>
 	)
 }
 

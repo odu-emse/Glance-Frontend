@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { Input, InputProps } from '../components/FormElements'
-import {ComponentMeta, ComponentStory} from "@storybook/react";
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Atoms/Input',
@@ -19,7 +19,7 @@ export default {
 	},
 } as ComponentMeta<typeof Input>
 
-const Template:ComponentStory<typeof Input> = (args: InputProps) => {
+const Template: ComponentStory<typeof Input> = (args: InputProps) => {
 	const [value, setValue] = useState(args.defaultValue ?? '')
 
 	return (
@@ -34,6 +34,13 @@ const Template:ComponentStory<typeof Input> = (args: InputProps) => {
 	)
 }
 
+export const Default = Template.bind({})
+Default.args = {
+	label: 'Label',
+	name: 'text-input',
+	type: 'text',
+	ariaLabel: 'Text input field',
+}
 export const Email = Template.bind({})
 Email.args = {
 	label: 'Email address',
@@ -94,12 +101,8 @@ export const ErrorStateWithDescription = Template.bind({})
 ErrorStateWithDescription.args = {
 	...Email.args,
 	error: true,
-	description: (
-		<p className="text-red-600 dark:text-red-500">
-			The error occurred while we were processing your request. Please try
-			again and contact your system administrator if this issue persists.
-		</p>
-	),
+	description:
+		'The error occurred while we were processing your request. Please try again and contact your system administrator if this issue persists.',
 }
 
 export const Search = Template.bind({})

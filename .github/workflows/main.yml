@@ -1,9 +1,29 @@
 name: Component Library CI
 
-on: [push]
+on:
+    push:
+        branches: [ master, dev ]
+    pull_request:
+        branches: [ master, dev ]
 
 jobs:
+  build-storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 16.17.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.17.0
+      - name: Install dependencies
+        run: yarn
+      - name: Run Linter
+        run: yarn lint
+      - name: Build Storybook
+        run: yarn build-storybook
   cypress-run:
+    needs: [build-storybook]
     runs-on: ubuntu-latest
     steps:
       - name: Install yarn
@@ -15,7 +35,35 @@ jobs:
           install: true
           component: true
           record: true
-          test: yarn test
+          command: yarn test
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  generate-changelog:
+    needs: [build-storybook]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: nuuday/github-changelog-action@v1.0.0
+        with:
+          next_version: "1.0.0"
+          config_dir: "./.chglog/config.yml"
+  chromatic-deployment:
+    needs: [build-storybook, cypress-run]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: yarn
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_KEY }}
+        env:
+          CI: true
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_KEY }}
+          CHROMATIC_STORYBOOK_VERSION: 6.5.12
