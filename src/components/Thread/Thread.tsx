@@ -2,7 +2,7 @@ import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 
-export const Thread = ({ title, body, upvotes }: ThreadProps) => {
+export const Thread: React.FC<ThreadProps> = ({ title, body, upvotes }) => {
 	return (
 		<div className="rounded shadow px-5 py-3 flex flex-col gap-2">
 			<p className="text-xl font-medium">{title}</p>
@@ -25,7 +25,7 @@ export const Thread = ({ title, body, upvotes }: ThreadProps) => {
 	)
 }
 
-type ThreadProps = {
+export type ThreadProps = {
 	/**
 	 * The source link to the video file.
 	 */
