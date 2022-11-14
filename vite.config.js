@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import NodeGlobalsPolyfillPlugin from '@esbuild-plugins/node-globals-polyfill'
 import NodeModulesPolyfillPlugin from '@esbuild-plugins/node-modules-polyfill'
+import nodePolyfills from 'rollup-plugin-polyfill-node'
 
 export default defineConfig({
 	optimizeDeps: {
@@ -35,7 +36,7 @@ export default defineConfig({
 			fileName: (format) => `emse-ui.${format}.js`,
 		},
 		rollupOptions: {
-			external: ['react', 'react-dom', 'react-router-dom'],
+			external: ['react', 'react-dom'],
 			output: {
 				globals: {
 					react: 'React',
@@ -46,6 +47,7 @@ export default defineConfig({
 				// Enable rollup polyfills plugin
 				// used during production bundling
 				// rollupNodePolyFill(),
+				nodePolyfills()
 			],
 		},
 	},

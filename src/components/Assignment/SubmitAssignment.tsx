@@ -37,7 +37,7 @@ export const Assignment = ({
             <hr/>
             <div id="uploadFile">
             <label className="mt-2" htmlFor="file_input">UPLOAD FILE</label>
-            <Input id="file_input" label="" name="upload" onChange={()=>null}type="file" />
+            <Input role="file_input" label="" name="upload" onChange={()=>null} type="file" />
             </div>
 
             <textarea id="responseField"

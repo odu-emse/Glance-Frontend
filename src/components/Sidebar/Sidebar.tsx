@@ -1,28 +1,24 @@
 import * as React from 'react'
-import { AiOutlinePartition } from 'react-icons/ai'
-import { BiTask, BiUser } from 'react-icons/bi'
-import { BsStack } from 'react-icons/bs'
-import { RiShutDownLine } from 'react-icons/ri'
-import { GoPerson, GoSignIn } from 'react-icons/go'
-import {
-	MdLiveHelp,
-	MdOutlineExplore,
-	MdSpaceDashboard,
-	MdWidgets,
-} from 'react-icons/md'
-import { Link, Anchor } from '../Link'
 import { Logo, Hamburger } from './'
 
-type SidebarProps = {
+export type SidebarProps = {
 	/**
 	 * @default false
 	 */
 	authenticated: boolean
+	children: React.ReactNode | React.ReactNode[]
+	authChildren: React.ReactNode | React.ReactNode[]
+	handleOpen: () => void
+	open: boolean
 }
 
-export const Sidebar = ({ authenticated }: SidebarProps) => {
-	const [open, setOpen] = React.useState(false)
-	const [dropdown, setDropdown] = React.useState(false)
+export const Sidebar: React.FC<SidebarProps> = ({
+	authenticated,
+	authChildren,
+	children,
+	handleOpen,
+	open,
+}) => {
 	return (
 		<aside
 			className={`relative bg-gray-300 transition-all ${
@@ -32,7 +28,7 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 			<nav
 				className={`sticky z-50 flex flex-col bg-gray-800 top-0 left-0 right-0 h-screen`}
 			>
-				<Hamburger onClick={() => setOpen(!open)} />
+				<Hamburger onClick={handleOpen} />
 
 				<Logo extended={open} />
 
@@ -41,124 +37,7 @@ export const Sidebar = ({ authenticated }: SidebarProps) => {
 						authenticated ? 'justify-between' : 'justify-end'
 					}`}
 				>
-					{!authenticated ? (
-						<>
-							<Link
-								to="/users/login"
-								icon={<GoSignIn size={30} />}
-								label="Login"
-								open={open}
-							/>
-							<Link
-								to="/users/register"
-								icon={<GoPerson size={30} />}
-								label="Register"
-								open={open}
-							/>
-						</>
-					) : (
-						<>
-							<div className="flex flex-col">
-								<Link
-									to="/portal"
-									icon={<MdWidgets size={30} />}
-									label="Portal"
-									open={open}
-								/>
-								<Link
-									to="/dashboard"
-									icon={<MdSpaceDashboard size={30} />}
-									label="Dashboard"
-									open={open}
-								/>
-								<Link
-									to="/program"
-									icon={<BsStack size={30} />}
-									label="My Program"
-									open={open}
-								/>
-								<Link
-									to="/assignments"
-									icon={<BiTask size={30} />}
-									label="Assignments"
-									open={open}
-								/>
-								<Link
-									to="/community"
-									icon={<MdOutlineExplore size={30} />}
-									label="Community"
-									open={open}
-								/>
-								<Link
-									to="/support"
-									icon={<MdLiveHelp size={30} />}
-									label="Support"
-									open={open}
-								/>
-							</div>
-
-							<div className="flex flex-col w-full">
-								<Anchor
-									className=""
-									role="tooltip-parent"
-									id="user-menu"
-									aria-haspopup="true"
-									onClick={() => setDropdown(!dropdown)}
-									path=""
-									open={open}
-									icon={<BiUser size={30} />}
-								>
-									<span className="sr-only">
-										Open user menu
-									</span>
-									{open ? (
-										'Account'
-									) : (
-										<img
-											className="md:h-8 md:w-8 h-auto w-auto rounded-full hover:ring-2 hover:ring-slate-100 transition-all"
-											src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-											alt="user account avatar"
-											loading="lazy"
-										/>
-									)}
-								</Anchor>
-								<div
-									className={`${
-										dropdown === true ? 'block' : 'hidden'
-									} absolute left-full mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-50`}
-									role="menu"
-									aria-orientation="vertical"
-									aria-labelledby="user-menu"
-									onMouseOut={() => setDropdown(!dropdown)}
-									onMouseLeave={() => setDropdown(!dropdown)}
-								>
-									<Link
-										to={`/users/`}
-										label="Your Profile"
-										role="menuitem"
-									/>
-
-									<Link
-										to="/users/logout"
-										label="Logout"
-										role="menuitem"
-									/>
-								</div>
-								<Link
-									to="/sitemap"
-									icon={<AiOutlinePartition size={30} />}
-									label="Sitemap"
-									open={open}
-								/>
-								<Link
-									to="/logout"
-									icon={<RiShutDownLine size={30} />}
-									label="Logout"
-									open={open}
-								/>
-							</div>
-						</>
-					)}
+					{!authenticated && authChildren ? authChildren : children}
 				</div>
 			</nav>
 		</aside>

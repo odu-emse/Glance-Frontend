@@ -1,15 +1,15 @@
 import * as React from 'react'
 
-export const AssignmentCard = ({
+export const AssignmentCard: React.FC<AssignmentProps> = ({
 	questionCount,
 	moduleIdentifier,
 	moduleName,
 	assignmentName,
-}: AssignmentProps): JSX.Element => {
+}): React.ReactElement => {
 	return (
 		<div className="border-solid border-gray border">
 			<div>
-				<p className="mx-3 my-3 text-gray-300 inline-block text-xs">
+				<p className="mx-3 my-3 text-gray500 inline-block text-xs">
 					{questionCount}{' '}
 					{questionCount === 1 ? 'question' : 'questions'}
 				</p>

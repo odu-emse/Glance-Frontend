@@ -1,10 +1,9 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 
 export type AnchorProps = {
 	/**
-     * Indicates the path upon clicking on the link
-     */
+	 * Indicates the path upon clicking on the link
+	 */
 	path: string
 	children: React.ReactNode
 	/**
@@ -16,25 +15,25 @@ export type AnchorProps = {
 	 */
 	role?: string
 	/**
-     * A Boolean that decides the styling of anchor tag
-     */
+	 * A Boolean that decides the styling of anchor tag
+	 */
 	open?: boolean
 	onClick?: (e?: React.MouseEvent<HTMLAnchorElement>) => void
 	/**
-     * Indicates id as string
-     */
+	 * Indicates id as string
+	 */
 	id?: string
 	icon?: React.ReactNode
 }
 
 export const Anchor = ({
-	path,
+	path = '',
 	children,
-	className,
-	role,
+	className = '',
+	role = '',
 	open,
-	onClick,
-	id,
+	onClick = () => undefined,
+	id = '',
 	icon,
 	...rest
 }: AnchorProps): JSX.Element => {
@@ -51,13 +50,7 @@ export const Anchor = ({
 		.filter(Boolean)
 		.join(' ')
 	return (
-		<Link
-			to={path ?? ''}
-			className={classes}
-			{...rest}
-			onClick={onClick}
-			id={id ?? ''}
-		>
+		<a href={path} className={classes} onClick={onClick} id={id} {...rest}>
 			{icon && open ? (
 				<span className="flex gap-2 items-center">
 					<span className="opacity-50">{icon}</span>
@@ -66,6 +59,6 @@ export const Anchor = ({
 			) : (
 				children
 			)}
-		</Link>
+		</a>
 	)
 }

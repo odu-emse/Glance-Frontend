@@ -4,12 +4,16 @@
 			"cypress",
 			"cypress-axe",
 			"jest",
-			"@testing-library/cypress",
-			"@testing-library/jest-dom"
+			"@testing-library/cypress"
 		],
 		"jsx": "react-jsx",
 		"allowJs": false,
 		"strict": true,
+		"emitDeclarationOnly": true,
+		"moduleResolution": "Node",
+		"module": "ESNext",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
 		"declaration": true,
@@ -20,7 +24,7 @@
 		"paths": {
 			"@/stories/*": ["src/stories/*"],
 			"@/components/*": ["src/components/*"],
-			"@/util/*": ["src/util/*"],
+			"@/util/*": ["src/util/*"]
 		}
 	},
 	"exclude": ["node_modules", "cypress", "dist"],
