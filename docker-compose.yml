@@ -1,5 +1,9 @@
 version: '3.9'
 
+volumes:
+    app_data:
+
+
 services:
     ui:
         container_name: emse_ui_lib
@@ -13,7 +17,7 @@ services:
         ports:
             - '6006:6006'
         volumes:
-            -   ./src:/usr/src/app/src
+            -   app_data:/usr/src/app/src
             -   ./.storybook:/usr/src/app/.storybook
         networks:
             - ui_network
@@ -25,7 +29,7 @@ services:
             dockerfile: Dockerfile
             target: base
         volumes:
-            - ./src:/usr/src/app/src
+            - app_data:/usr/src/app/src
         networks:
             - ui_network
         command: npx onchange "**/*" -- npx prettier --write --config ./.prettierrc --ignore-unknown {{changed}}
@@ -36,7 +40,7 @@ services:
             dockerfile: Dockerfile
             target: base
         volumes:
-            - ./src:/usr/src/app/src
+            - app_data:/usr/src/app/src
         networks:
             - ui_network
         command: yarn style
