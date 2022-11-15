@@ -81,7 +81,7 @@
 		"storybook": "start-storybook -p 6006 --quiet",
 		"test-storybook": "test-storybook",
 		"test-storybook:cov": "test-storybook",
-		"build-storybook": "yarn style:build && build-storybook",
+		"build-storybook": "yarn style:build && npx --max_old_space_size=16384 build-storybook",
 		"build": "tsc --skipLibCheck --excludeDirectories node_module && vite build",
 		"style": "npx tailwindcss -i ./src/global.css -o ./src/output.css --watch",
 		"style:build": "npx tailwindcss -i ./src/global.css -o ./src/output.css",
