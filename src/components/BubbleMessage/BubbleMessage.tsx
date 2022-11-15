@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as moment from 'moment'
+import moment from 'moment'
 
 export const BubbleMessage = ({
 								  message,
@@ -50,8 +50,7 @@ export const BubbleMessage = ({
 													<div className='w-50 h-50 px-2 opacity-50'>
 														<span className='block text-xs text-slate-500'>
 															<span>// </span>
-															{moment
-																.unix(timestamp)
+															{moment(timestamp)
 																.format(
 																	'hh:mm A'
 																)}
