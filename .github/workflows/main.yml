@@ -67,3 +67,19 @@ jobs:
           CI: true
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_KEY }}
           CHROMATIC_STORYBOOK_VERSION: 6.5.12
+  coverage:
+    runs-on: ubuntu-latest
+    name: Create Storybook Coverage Report
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn
+      - name: Run tests and collect coverage
+        run: yarn test-storybook --coverage
+      - name: Upload coverage reports to Codecov
+        run: |
+          # Replace `linux` below with the appropriate OS
+          # Options are `alpine`, `linux`, `macos`, `windows`
+          curl -Os https://uploader.codecov.io/latest/macos/codecov
+          chmod +x codecov
+          ./codecov -t a2998128-c3a7-40b8-b413-cbcddc0acf16
