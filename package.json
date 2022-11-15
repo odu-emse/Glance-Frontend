@@ -83,6 +83,7 @@
 		"build": "tsc --skipLibCheck --excludeDirectories node_module && vite build",
 		"style": "npx tailwindcss -i ./src/global.css -o ./src/output.css --watch",
 		"style:build": "npx tailwindcss -i ./src/global.css -o ./src/output.css",
+		"ci": "start-server-and-test storybook http://localhost:6006 test-storybook --coverage",
 		"lint": "eslint ./src",
 		"lint:fix": "eslint ./src --fix"
 	},

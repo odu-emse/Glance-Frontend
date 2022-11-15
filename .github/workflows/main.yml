@@ -75,7 +75,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Run tests and collect coverage
-        run: yarn test-storybook --coverage
+        run: yarn ci
       - name: Upload coverage reports to Codecov
         run: |
           # Replace `linux` below with the appropriate OS
