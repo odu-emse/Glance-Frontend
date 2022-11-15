@@ -40,7 +40,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   generate-changelog:
-    needs: [build-storybook, chromatic-deployment, coverage]
+    needs: [chromatic-deployment, coverage]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -51,7 +51,6 @@ jobs:
           next_version: "1.0.0"
           config_dir: "./.chglog/config.yml"
   chromatic-deployment:
-    needs: [build-storybook, cypress-run]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
