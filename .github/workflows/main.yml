@@ -78,6 +78,8 @@ jobs:
           node-version: 16.17.0
       - name: Install dependencies
         run: yarn
+      - name: Build styles
+        run: yarn style:build
       - name: Run tests and collect coverage
         run: yarn ci
       - name: Upload coverage reports to Codecov
