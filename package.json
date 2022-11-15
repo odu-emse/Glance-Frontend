@@ -79,11 +79,12 @@
 		"test:open": "cypress open --component",
 		"storybook": "start-storybook -p 6006 --quiet",
 		"test-storybook": "test-storybook",
+		"test-storybook:cov": "test-storybook",
 		"build-storybook": "yarn style:build && build-storybook",
 		"build": "tsc --skipLibCheck --excludeDirectories node_module && vite build",
 		"style": "npx tailwindcss -i ./src/global.css -o ./src/output.css --watch",
 		"style:build": "npx tailwindcss -i ./src/global.css -o ./src/output.css",
-		"ci": "start-server-and-test storybook http://localhost:6006 test-storybook --coverage",
+		"ci": "start-server-and-test storybook http://localhost:6006 test-storybook:cov",
 		"lint": "eslint ./src",
 		"lint:fix": "eslint ./src --fix"
 	},
