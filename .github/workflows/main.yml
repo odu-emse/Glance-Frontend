@@ -84,8 +84,6 @@ jobs:
         run: yarn ci
       - name: Upload coverage reports to Codecov
         run: |
-          # Replace `linux` below with the appropriate OS
-          # Options are `alpine`, `linux`, `macos`, `windows`
-          curl -Os https://uploader.codecov.io/latest/macos/codecov
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
           chmod +x codecov
           ./codecov -t a2998128-c3a7-40b8-b413-cbcddc0acf16
