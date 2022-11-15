@@ -50,6 +50,7 @@ export default defineConfig({
 				nodePolyfills()
 			],
 		},
+		sourcemap: false
 	},
 	resolve: {
 		alias: {
