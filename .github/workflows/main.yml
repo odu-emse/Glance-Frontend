@@ -11,15 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Node.js 16.17.0
         uses: actions/setup-node@v3
         with:
           node-version: 16.17.0
       - name: Install dependencies
         run: yarn
-      - name: Run Linter
-        run: yarn lint
       - name: Build Storybook
         run: yarn build-storybook
   cypress-run:
@@ -29,7 +27,7 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - uses: cypress-io/github-action@v4
         with:
           install: true
@@ -43,7 +41,7 @@ jobs:
     needs: [chromatic-deployment]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - uses: nuuday/github-changelog-action@v1.0.0
@@ -53,7 +51,7 @@ jobs:
     needs: [coverage]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Use Node.js 16.17.0
@@ -69,13 +67,14 @@ jobs:
         env:
           CI: true
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_KEY }}
-          CHROMATIC_STORYBOOK_VERSION: 6.4.19
+          CHROMATIC_STORYBOOK_VERSION: 6.5.12
           exitOnceUploaded: true
   coverage:
+    needs: [build-storybook]
     runs-on: ubuntu-latest
     name: Create Storybook Coverage Report
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js 16.17.0
         uses: actions/setup-node@v3
         with:
