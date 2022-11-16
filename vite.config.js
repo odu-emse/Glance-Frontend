@@ -8,6 +8,7 @@ import nodePolyfills from 'rollup-plugin-polyfill-node'
 
 export default defineConfig({
 	optimizeDeps: {
+		include: ['react', 'react-dom', 'recharts'],
 		esbuildOptions: {
 			define: {
 				global: 'globalThis',
@@ -40,11 +41,15 @@ export default defineConfig({
 					react: 'React',
 					'react-dom': 'ReactDOM',
 				},
+				manualChunks: {
+					react: ['recharts'],
+				}
 			},
 			plugins: [
 				nodePolyfills()
 			],
 		},
+		sourcemap: true,
 	},
 	resolve: {
 		alias: {
