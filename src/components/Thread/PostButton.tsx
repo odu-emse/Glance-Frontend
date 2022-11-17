@@ -9,10 +9,8 @@ export const PostButton = () => {
 				placeholder="Type Here.."
 			></textarea>
 
-			<span className="absolute right-2 bottom-2 flex items-center ">
-				<button className="bg-blue-500 hover:bg-blue-700 text-white text-base font-bold py-1 px-3 m-2 rounded-full">
-					Post
-				</button>
+			<span className="absolute right-2 bottom-2 flex items-center m-2 ">
+				<Button label="Post" size="small" />
 			</span>
 		</div>
 	)
