@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { TextArea } from '../components/TextArea'
+import type { TextAreaProps } from '../components/TextArea'
+
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 
@@ -23,7 +25,7 @@ export default {
 	},
 } as ComponentMeta<typeof TextArea>
 
-const Template: ComponentStory<typeof TextArea> = (args) => {
+const Template: ComponentStory<typeof TextArea> = (args: TextAreaProps) => {
 	const [value, setValue] = useState('')
 	const handleChange = (evt: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setValue(evt.target?.value)
@@ -31,7 +33,7 @@ const Template: ComponentStory<typeof TextArea> = (args) => {
 	return <TextArea {...args} value={value} handle={handleChange} />
 }
 
-export const Primary = Template.bind({})
+export const Primary: ComponentStory<typeof TextArea> = Template.bind({})
 Primary.storyName = 'Default'
 Primary.args = {
 	value: 'This is a default value text for the text area component.',
@@ -48,19 +50,23 @@ Primary.args = {
 	autofocus: false,
 }
 
-export const Disabled = Template.bind({})
+export const Disabled: ComponentStory<typeof TextArea> = Template.bind({})
+Disabled.storyName = 'Disabled TextArea'
+
 Disabled.args = {
 	...Primary.args,
 	disabled: true,
 }
 
-export const WithLabel = Template.bind({})
+export const WithLabel: ComponentStory<typeof TextArea> = Template.bind({})
+WithLabel.storyName = 'TextArea with a label on the top'
+
 WithLabel.args = {
 	...Primary.args,
 	label: 'Basic Text Area',
 }
 
-export const MaxLength = Template.bind({})
+export const MaxLength: ComponentStory<typeof TextArea> = Template.bind({})
 MaxLength.storyName = 'Specific Max Length'
 MaxLength.args = {
 	...Primary.args,

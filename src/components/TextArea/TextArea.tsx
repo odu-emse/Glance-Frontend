@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import useAutosizeTextArea from './useAutosizeTextArea'
 import { IoSend } from 'react-icons/io5'
 
-export const TextArea = ({
+export const TextArea: React.FC<TextAreaProps> = ({
 	handle = () => null,
 	value = '',
 	id = 'text-area',
@@ -18,7 +18,7 @@ export const TextArea = ({
 	wrap = 'soft',
 	autofocus = false,
 	label = '',
-}: TextAreaProps) => {
+}): React.ReactElement => {
 	const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
 	useAutosizeTextArea(textAreaRef.current, value)
@@ -54,7 +54,7 @@ export const TextArea = ({
 							disabled ? 'opacity-50' : ''
 						}`}
 					>
-						<button type="button">
+						<button type="button" aria-label="send">
 							<IoSend size={20} className="mr-1" />
 						</button>
 					</span>
@@ -69,7 +69,7 @@ export const TextArea = ({
 	)
 }
 
-type TextAreaProps = {
+export type TextAreaProps = {
 	/**
 	 * A event handler that changes the value of the text area element
 	 */
