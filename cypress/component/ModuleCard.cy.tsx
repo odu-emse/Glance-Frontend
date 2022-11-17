@@ -46,5 +46,10 @@ describe('ModuleCard.tsx', function () {
 		cy.get('div.statusColorCode').should('have.css', 'background-color', 'rgb(164, 202, 254)')
 	})
 
+    // it('should change p tag text to continue when completion prop is set to true'), function () {
+    //     cy.mount(<Tertiary module={moduleObject} />)
+    //     cy.get('div.moduleCompleted').should('', "")
+    // }
+
 })
 

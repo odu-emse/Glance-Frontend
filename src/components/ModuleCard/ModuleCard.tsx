@@ -107,14 +107,14 @@ export const ModuleCard = ({
 
 				<div className="flex-none flex flex-col items-center justify-center ">
 					{completion ? (
-						<div className="flex items-center justify-center px-2">
+						<div className="moduleCompleted flex items-center justify-center px-2">
 							<p className="md:"></p>
 							<p className="text-white bg-blue-300 px-20 py-1 w-full my-1">
 								Continue
 							</p>
 						</div>
 					) : (
-						<div className="flex flex-col w-full h-50 items-center justify-center gap-3 lg:items-center">
+						<div className="moduleInProgress currentTopicStatus flex flex-col w-full h-50 items-center justify-center gap-3 lg:items-center">
 							<div className="text-gray-600 text-sm">
 								Current Topic
 							</div>
