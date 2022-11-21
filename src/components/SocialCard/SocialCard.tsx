@@ -168,6 +168,10 @@ export type SocialCardProps = {
 
 export type UserAccountProps = {
 	/**
+	 * A unique ID to identify different users
+	 */
+	id?: string
+	/**
 	 * A descriptive label to display the user's Last Name
 	 */
 	lastName: string
