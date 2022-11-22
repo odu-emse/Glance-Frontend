@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { Pie, PieChart, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-import {
+import type {
 	HorizontalAlignmentType,
 	IconType,
 	VerticalAlignmentType,
 } from 'recharts/types/component/DefaultLegendContent'
-import { LayoutType } from 'recharts/types/util/types'
+import type { LayoutType } from 'recharts/types/util/types'
 
 export const PieComponent = ({
 	data,

@@ -13,3 +13,4 @@ lib/
 *.tgz
 src/output.css
 package
+coverage

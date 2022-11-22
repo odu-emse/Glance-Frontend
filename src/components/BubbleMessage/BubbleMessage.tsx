@@ -1,139 +1,96 @@
 import * as React from 'react'
-import * as moment from 'moment'
+import moment from 'moment'
 
 export const BubbleMessage = ({
-    message,
-    timestamp1,
-}: BubbleMessageProps) => {
-    return (
-        <div className="container ">
-            <div className="">
-                <div>
-                    <div className="w-full">
-
-                        <div className="relative w-full p-6 overflow-y-auto h-[40rem]">
-
-                            <ul className="space-y-2">
-                                <li className="flex justify-start">
-                                    <div className="w-50 h-50 px-2">
-
-
-
-
-                                        <img src={message[0].image}
-                                            alt="..."
-                                            className="shadow-lg rounded-full max-w-full h-8 align-middle border-none" />
-
-                                    </div>
-                                    <div className="relative max-w-xl px-4 py-2 text-white bg-blue-200 rounded shadow">
-
-                                        <span className="block">{message[0].message}</span>
-                                    </div>
-                                    <div className="w-50 h-50 px-2">
-                                        <span className="block text-xs text-slate-500">{moment.unix(message[0].timestamp).format("hh:mm a")}</span>
-
-                                    </div>
-                                </li>
-                                <li className="flex justify-end">
-                                    <div className="w-50 h-50 px-2">
-                                        <span className="block text-xs text-slate-500">{moment.unix(message[1].timestamp).format("hh:mm a")}</span>
-
-                                    </div>
-                                    <div className="relative max-w-xl px-4 py-2 text-white bg-blue-200 rounded shadow">
-                                        <span className="block">{message[1].message}</span>
-                                    </div>
-                                    <div className="w-50 h-50 px-2">
-
-
-
-
-                                        <img src={message[1].image}
-                                            alt="..."
-                                            className="shadow-lg rounded-full max-w-full h-8 align-middle border-none" />
-
-                                    </div>
-                                </li>
-                                <li className="flex justify-end">
-                                    <div className="w-50 h-50 px-2">
-                                        <span className="block text-xs text-slate-500">{moment.unix(message[2].timestamp).format("hh:mm a")}</span>
-
-                                    </div>
-                                    <div className="relative max-w-xl px-4 py-2 text-white bg-blue-200 rounded shadow">
-                                        <span className="block">{message[2].message}</span>
-                                    </div>
-
-                                    <div className="flex flex-wrap justify-center">
-                                        <div className="w-50 h-50 px-2">
-
-
-
-                                            <img src={message[2].image}
-                                                alt="..."
-                                                className="shadow-lg rounded-full max-w-full h-8 align-middle border-none" />
-
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className="flex justify-start">
-                                    <div className="w-50 h-50 px-2">
-
-
-
-
-                                        <img src={message[3].image}
-                                            alt="..."
-                                            className="shadow-lg rounded-full max-w-full h-8 align-middle border-none" />
-
-                                    </div>
-                                    <div className="relative max-w-xl px-4 py-2 text-white bg-blue-200 rounded shadow">
-                                        <span className="block">{message[3].message} </span>
-                                    </div>
-                                    <div className="w-50 h-50 px-2">
-                                        <span className="block text-xs text-slate-500">{moment.unix(message[3].timestamp).format("hh:mm a")}</span>
-
-                                    </div>
-                                </li>
-                                <li className="flex justify-center">
-
-
-                                    <div className="w-50 h-50 px-2 t-100">
-                                        <span className="block text-xs text-slate-500">{moment.unix(timestamp1).format("dddd, MMMM Do, hh:mm a")}</span>
-
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+								  message,
+								  currentUserID
+							  }: BubbleMessageProps) => {
+	return (
+		<div className='container '>
+			<div className=''>
+				<div>
+					<div className='w-full'>
+						<div className='relative w-full p-6 overflow-y-auto h-[40rem]'>
+							<ul className='space-y-2'>
+								{message.length > 0 &&
+									message.map(
+										(
+											{ message, user, timestamp },
+											index
+										) => (
+											<>
+												<li
+													className={`flex items-center ${
+														user.id ===
+														currentUserID
+															? 'flex-row-reverse'
+															: 'justify-start'
+													}`}
+													key={index}
+												>
+													<div className='w-50 h-50 px-2'>
+														<img
+															src={user.image}
+															alt='User profile picture'
+															className='shadow-lg rounded-full max-w-full h-8 aspect-square'
+														/>
+													</div>
+													<div
+														className={`relative max-w-xl px-4 py-2 text-white ${
+															user.id ===
+															currentUserID
+																? 'bg-blue-300'
+																: 'bg-gray-300'
+														} rounded shadow`}
+													>
+														<span className='block'>
+															{message}
+														</span>
+													</div>
+													<div className='w-50 h-50 px-2 opacity-50'>
+														<span className='block text-xs text-slate-500'>
+															<span>// </span>
+															{moment(timestamp)
+																.format(
+																	'hh:mm A'
+																)}
+														</span>
+													</div>
+												</li>
+												{message[index + 1] && (
+													<li className='flex justify-center'>
+														<div className='w-50 h-50 px-2 t-100'>
+															<span className='block text-xs text-slate-500'>
+																{/*{moment*/}
+																{/*	.unix(timestamp1)*/}
+																{/*	.format(*/}
+																{/*		'dddd, MMMM Do, hh:mm a'*/}
+																{/*	)}*/}
+															</span>
+														</div>
+													</li>
+												)}
+											</>
+										)
+									)}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
-type BubbleMessageProps = {
-    /**
-     * Assigning the below declared type "MessageProps" to message
-     */
-    message: MessageProps
-    /**
-     * Indicates the daywise timestamp 
-    */
-    timestamp1: number
+export type BubbleMessageProps = {
+	message: MessageProps
+	currentUserID: string | number
 }
-type MessageProps = {
-    /**
-     * Displays user's profile picture
-     */
-    image: string
-    /**
-     * Displays messages of the users
-     */
-    message: string
-    /**
-     *  Indicates the timestamp of the user's messages
-     */
-    timestamp: number
+export type MessageProps = {
+	user: {
+		id: string | number
+		image: string
+	}
+	message: string
+	timestamp: number
 }[]

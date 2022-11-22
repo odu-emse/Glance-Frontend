@@ -1,6 +1,8 @@
 import { Button } from '../components/Button'
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { userEvent, within } from '@storybook/testing-library'
+import { expect } from '@storybook/jest';
 import { HiLightningBolt } from 'react-icons/hi'
 
 export default {
@@ -36,7 +38,7 @@ export default {
 	},
 } as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
+const Template: ComponentStory<typeof Button> = (args) => <Button data-testid="button" {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
@@ -45,6 +47,13 @@ Primary.args = {
 	size: 'base',
 	disabled: false,
 }
+Primary.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+	await canvas.getByTestId('button')
+	// await userEvent.type(canvas.getByTestId('password1'), 'k32904n£#1kjad');
+	// await userEvent.type(canvas.getByTestId('password2'), 'k32904n£#1kjad');
+	// await userEvent.click(canvas.getByTestId('submit'));
+};
 
 export const PrimaryIcon = Template.bind({})
 PrimaryIcon.args = {

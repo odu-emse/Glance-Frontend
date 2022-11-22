@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as moment from 'moment'
+import moment from 'moment'
 
 import { FaTrash, FaArchive } from 'react-icons/fa'
 
@@ -32,7 +32,7 @@ export const ChatHistory = ({ messages, handle }: ChatHistoryProps) => {
 									{message.name}
 								</div>
 								<span className="text-gray-500 text-xs">
-									{moment.unix(message.timestamp).fromNow()}
+									{moment(message.timestamp).fromNow()}
 								</span>
 							</div>
 						</div>
