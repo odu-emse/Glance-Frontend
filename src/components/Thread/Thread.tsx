@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
-import { Anchor, Link } from '../Link'
-import { UserAccountProps } from '../SocialCard'
+import { Anchor } from '../Link'
 
 export const Thread: React.FC<ThreadProps> = ({
-	title,
+	title = undefined,
 	body,
 	upvotes,
 	userProfile,
@@ -20,7 +19,6 @@ export const Thread: React.FC<ThreadProps> = ({
 					src={userProfile.image}
 					alt="user profile image"
 					className="shadow-lg rounded-full max-w-full h-6 align-middle border-none"
-					//	onClick={() => setIsClicked(!isClicked)}
 				/>
 				<div className="userName font-bold px-2">
 					{userProfile.firstName}
@@ -48,12 +46,40 @@ export const Thread: React.FC<ThreadProps> = ({
 	)
 }
 
+export type UserAccount = {
+	/**
+	 * A unique ID to identify different users
+	 */
+	id: string | number
+	/**
+	 * The first name of the user
+	 */
+	firstName: string
+	/**
+	 * The last name of the user
+	 */
+	lastName: string
+	/**
+	 * The image URL of the user
+	 */
+	image: string
+}
+
 export type ThreadProps = {
 	/**
-	 * The source link to the video file.
+	 * The title of the thread component
 	 */
-	title: string | null
+	title?: string
+	/**
+	 * The body of the thread component
+	 */
 	body: string
+	/**
+	 * The number of upvotes the thread has
+	 */
 	upvotes: number
-	userProfile: UserAccountProps
+	/**
+	 * The user account the thread belongs to
+	 */
+	userProfile: UserAccount
 }
