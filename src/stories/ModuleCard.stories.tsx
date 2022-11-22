@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof ModuleCard> = (args: ModuleProps) => (
 	<ModuleCard {...args} />
 )
 
-export const Primary = Template.bind({})
+export const Primary: ComponentStory<typeof ModuleCard> = Template.bind({})
 Primary.storyName = 'first module card'
 Primary.args = {
 	completion: false,
@@ -30,7 +30,7 @@ Primary.args = {
 	secondaryLinkLabel: '/module/178P/treeview',
 }
 
-export const Secondary = Template.bind({})
+export const Secondary: ComponentStory<typeof ModuleCard> = Template.bind({})
 Secondary.storyName = 'second module card'
 Secondary.args = {
 	completion: false,
@@ -48,7 +48,7 @@ Secondary.args = {
 	secondaryLinkLabel: '/module/209V/treeview',
 }
 
-export const Tertiary = Template.bind({})
+export const Tertiary: ComponentStory<typeof ModuleCard> = Template.bind({})
 Tertiary.storyName = 'third module card'
 Tertiary.args = {
 	completion: true,
