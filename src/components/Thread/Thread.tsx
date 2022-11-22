@@ -1,10 +1,31 @@
 import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
+import { Anchor } from '../Link'
 
-export const Thread: React.FC<ThreadProps> = ({ title, body, upvotes }) => {
+export const Thread: React.FC<ThreadProps> = ({
+	title = undefined,
+	body,
+	upvotes,
+	userProfile,
+}) => {
 	return (
 		<div className="rounded shadow px-5 py-3 flex flex-col gap-2">
+			<Anchor
+				path={`/user/${userProfile.id}`}
+				className="flex items-center no-underline"
+			>
+				<img
+					src={userProfile.image}
+					alt="user profile image"
+					className="shadow-lg rounded-full max-w-full h-6 align-middle border-none"
+				/>
+				<div className="userName font-bold px-2">
+					{userProfile.firstName}
+					{userProfile.lastName}
+				</div>
+			</Anchor>
+
 			<p className="text-xl font-medium">{title}</p>
 			<p className="text-sm">{body}</p>
 			<div className="flex flex-row justify-end gap-4">
@@ -25,11 +46,40 @@ export const Thread: React.FC<ThreadProps> = ({ title, body, upvotes }) => {
 	)
 }
 
+export type UserAccount = {
+	/**
+	 * A unique ID to identify different users
+	 */
+	id: string | number
+	/**
+	 * The first name of the user
+	 */
+	firstName: string
+	/**
+	 * The last name of the user
+	 */
+	lastName: string
+	/**
+	 * The image URL of the user
+	 */
+	image: string
+}
+
 export type ThreadProps = {
 	/**
-	 * The source link to the video file.
+	 * The title of the thread component
 	 */
-	title: string | null
+	title?: string
+	/**
+	 * The body of the thread component
+	 */
 	body: string
+	/**
+	 * The number of upvotes the thread has
+	 */
 	upvotes: number
+	/**
+	 * The user account the thread belongs to
+	 */
+	userProfile: UserAccount
 }
