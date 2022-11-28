@@ -11,6 +11,9 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/addon-coverage"
   ],
+  "staticDirs": [
+    '../public'
+  ],
   "framework": "@storybook/react",
   core: {
     builder: '@storybook/builder-vite',
