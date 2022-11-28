@@ -12,5 +12,6 @@ const Template: ComponentStory<typeof VideoPlayer> = (args) => <VideoPlayer {...
 
 export const Sample = Template.bind({})
 Sample.args = {
-	src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+	source: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+	type: 'video/mp4'
 }
