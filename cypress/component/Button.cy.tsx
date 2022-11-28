@@ -3,7 +3,7 @@ import { composeStories } from '@storybook/testing-react'
 import * as stories from '../../src/stories/Button.stories'
 import terminalLog from '../support/component'
 
-const { Primary, PrimaryIcon, Secondary, Loading, Small, Large, Disabled } = composeStories(stories)
+const { Primary, PrimaryIcon, Secondary, Loading, Small, Large, Disabled, Pill } = composeStories(stories)
 
 describe('Button.tsx', function () {
 	const label = <p>Click Me!</p>
@@ -64,5 +64,13 @@ describe('Button.tsx', function () {
 	it('should have decreased size if size prop is set to small', function() {
 		cy.mount(<Small size="small">{ label }</Small>)
 		cy.get('button').should('have.class', 'text-sm')
+	})
+	it('should have pill shape if shape prop is set to pill', function() {
+		cy.mount(<Pill shape="pill">{ label }</Pill>)
+		cy.get('button').should('have.class', 'rounded-full')
+	})
+	it('should have regular rounded shape if shape prop is set to regular/by default', function() {
+		cy.mount(<Primary>{ label }</Primary>)
+		cy.get('button').should('have.class', 'rounded')
 	})
 })
