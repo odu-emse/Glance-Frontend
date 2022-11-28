@@ -12,10 +12,6 @@ export const Button = ({
 	type,
 	...props
 }: ButtonProps): JSX.Element => {
-	const variantStyles: string = variant
-		? 'bg-blue-700 text-white hover:bg-blue-500 '
-		: 'bg-blue-300 text-black hover:bg-blue-100 '
-
 	return (
 		<button
 			type={type}

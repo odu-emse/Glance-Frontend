@@ -13,12 +13,15 @@ export const Form = ({
 			<div className="flex justify-between items-center">
 				{allowPrevious && (
 					<Button
-						label={previousLabel}
 						type="reset"
-						primary={false}
-					/>
+						variant='secondary'
+					>
+						{previousLabel}
+					</Button>
 				)}
-				<Button label={proceedLabel} type="submit" primary />
+				<Button type="submit" variant='primary'>
+					{proceedLabel}
+				</Button>
 			</div>
 		</form>
 	)
