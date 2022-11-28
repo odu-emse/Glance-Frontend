@@ -14,6 +14,7 @@ export const VideoPlayer = ({
     const [ viewComments, setViewComments ] = useState(false);
     const [ controlsFocused, setControlsFocused ] = useState(false);
     const [ commentInputBox, setCommentInputBox ] = useState("");
+	const [ isFullscreen, setFullScreen ] = useState(false);
 
     const videoPlayer = useRef<HTMLVideoElement | null>(null);
     const progressBar = useRef<HTMLInputElement | null>(null);
@@ -78,7 +79,7 @@ export const VideoPlayer = ({
                 onPause={() => setVideoPlaying(false)}
             >
                 <source src={source} type={type} />
-                Your browser doesn't support video playback. Please consider updating to the latest version.
+                Your browser doesn&apos;t support video playback. Please consider updating to the latest version.
             </video>
 
             {/* The card panel. */}
@@ -90,7 +91,7 @@ export const VideoPlayer = ({
                         <button className={`flex gap-1 items-center justify-center hover:text-blue-300 ${ commentInputBox.length > 0 && controlsFocused && viewComments ? 'visible' : 'invisible' }`}><FaArrowCircleUp /> Send</button>
                     </div>
 
-                    { cards.map((card) => <VideoChip text={card.name} timestamp={card.timestamp} />) }
+                    { cards.map((card, index) => <VideoChip text={card.name} timestamp={card.timestamp} key={index} />) }
 
                 </div>
             </div>
@@ -137,8 +138,8 @@ export const VideoPlayer = ({
                         <div className="absolute w-full h-full">
 
                             { 
-                                cards.map((card) => (
-                                    <div className="absolute h-full w-1 bg-blue-500 z-50" style={{ left: _.clamp((card.timestamp / videoPlayer.current?.duration) * 100, 0, 100) + "%" }}>
+                                cards.map((card, index) => (
+                                    <div className="absolute h-full w-1 bg-blue-500 z-50" style={{ left: _.clamp((card.timestamp / videoPlayer.current!.duration) * 100, 0, 100) + "%" }} key={index}>
                                         { /* Tooltip? */ }
                                     </div>
                                 ))
@@ -172,7 +173,7 @@ export const VideoPlayer = ({
                         </div>
                         <div>
                             <button>
-                                { true ? <FaCompress /> : <FaExpand /> }
+                                { isFullscreen ? <FaCompress /> : <FaExpand /> }
                             </button>
                         </div>
                     </div>
