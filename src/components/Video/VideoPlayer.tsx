@@ -19,9 +19,10 @@ export const VideoPlayer = ({
 	const [ isCaptionsVisible, setCaptionsVisible ] = useState(false);
 	const [ isFullscreen, setFullScreen ] = useState(false);
 
-    const videoPlayer = useRef<HTMLVideoElement | null>(null);
-    const progressBar = useRef<HTMLInputElement | null>(null);
-	const captionsTrack = useRef<HTMLTrackElement | null>(null);
+    const player = useRef<HTMLDivElement>(null);
+    const videoPlayer = useRef<HTMLVideoElement>(null);
+    const progressBar = useRef<HTMLInputElement>(null);
+	const captionsTrack = useRef<HTMLTrackElement>(null);
     
     const handleTimeUpdate = (event: SyntheticEvent<HTMLVideoElement, Event>) => {
 		if(!progressBar.current) return;
@@ -57,6 +58,18 @@ export const VideoPlayer = ({
 		track.mode = isCaptionsVisible ? 'disabled' : 'showing';
 	}
 
+    const handleFullScreenButonClick = () => {
+        
+        if(document.fullscreenElement) {
+            document.exitFullscreen();
+        } else {
+            if(!player.current) return;
+            player.current.requestFullscreen();
+        }
+        
+        setFullScreen(!document.fullscreenElement);
+    }
+
     const handleCommentBoxValueChange = (event: ChangeEvent) => {
 		if(!videoPlayer.current) return;
 		const target = event.target as HTMLInputElement
@@ -79,6 +92,7 @@ export const VideoPlayer = ({
             className="relative w-full h-96 bg-black"
             onMouseEnter={ () => setControlsFocused(true) } 
             onMouseLeave={ () => setControlsFocused(false) }
+            ref={player}
         >
             <video 
                 className="w-full h-full absolute" 
@@ -188,7 +202,7 @@ export const VideoPlayer = ({
                             <button><FaVolumeMute /></button>
                         </div>
                         <div>
-                            <button>
+                            <button onClick={ handleFullScreenButonClick }>
                                 { isFullscreen ? <FaCompress /> : <FaExpand /> }
                             </button>
                         </div>
