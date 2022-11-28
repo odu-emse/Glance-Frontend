@@ -1,17 +1,11 @@
 import * as React from 'react'
 import { Thread } from '../components/Thread'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { mockData } from '../util/threadData'
 
 export default {
 	title: 'Molecules/Thread',
 	component: Thread,
-	argTypes: {
-		title: {
-			control: {
-				type: 'text',
-			},
-		},
-	},
 } as ComponentMeta<typeof Thread>
 
 const Template: ComponentStory<typeof Thread> = (args) => <Thread {...args} />
@@ -28,6 +22,7 @@ Sample.args = {
 		lastName: 'desante',
 		image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 	},
+	id: '12345',
 }
 
 export const Comment = Template.bind({})
@@ -42,4 +37,20 @@ NoUpvote.storyName = 'Thread with no upvotes'
 NoUpvote.args = {
 	...Sample.args,
 	upvotes: 0,
+}
+
+const SecondaryTemplate: ComponentStory<typeof Thread> = (args) => {
+	return (
+		<>
+			{mockData.map((thread, threadIndex) => (
+				<Thread key={threadIndex} {...args} {...thread} />
+			))}
+		</>
+	)
+}
+
+export const MultipleThreads = SecondaryTemplate.bind({})
+MultipleThreads.storyName = 'List of threads'
+MultipleThreads.args = {
+	...Sample.args,
 }
