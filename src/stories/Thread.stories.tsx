@@ -6,13 +6,6 @@ import { mockData } from '../util/threadData'
 export default {
 	title: 'Molecules/Thread',
 	component: Thread,
-	argTypes: {
-		title: {
-			control: {
-				type: 'text',
-			},
-		},
-	},
 } as ComponentMeta<typeof Thread>
 
 const Template: ComponentStory<typeof Thread> = (args) => <Thread {...args} />
@@ -57,7 +50,7 @@ const SecondaryTemplate: ComponentStory<typeof Thread> = (args) => {
 }
 
 export const MultipleThreads = SecondaryTemplate.bind({})
-MultipleThreads.storyName = 'Multiple threads'
+MultipleThreads.storyName = 'List of threads'
 MultipleThreads.args = {
 	...Sample.args,
 }
