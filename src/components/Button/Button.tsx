@@ -3,7 +3,8 @@ import * as React from 'react'
 import Loader from '../../util/Loader'
 
 export const Button = ({
-	variant,
+	variant = 'primary',
+	shape = 'regular',
 	loading,
 	size,
 	children,
@@ -21,10 +22,12 @@ export const Button = ({
 			disabled={disabled}
 			className={[
 				'flex flex-row items-center justify-center gap-2',
-				'rounded',
 				'focus:outline-dashed focus:outline-blue-500',
 				'px-4 py-2',
 				'font-medium',
+
+				shape == 'regular' && 'rounded',
+				shape == 'pill' && 'rounded-full',
 
 				size == 'small' && 'text-sm',
 				size == 'large' && 'text-lg',
@@ -57,6 +60,10 @@ type ButtonProps = {
 	 */
 	variant?: 'primary' | 'secondary' | 'transparent'
 	/**
+	 * An enum that determines the shape of the button
+	 */
+	shape?: 'regular' | 'pill'
+	/**
 	 * A boolean that determines whether the button is representing a loading state
 	 */
 	loading?: boolean
@@ -88,6 +95,10 @@ Button.propTypes = {
 	 */
 	variant: PropTypes.oneOf(['primary', 'secondary', 'transparent']),
 	/**
+	 * Is this the principal call to action on the page?
+	 */
+	shape: PropTypes.oneOf(['regular', 'pill']),
+	/**
 	 * Is the button representing a loading state?
 	 */
 	loading: PropTypes.bool,
@@ -115,6 +126,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	variant: 'primary',
+	shape: 'regular',
 	loading: false,
 	size: 'base',
 	onClick: undefined,

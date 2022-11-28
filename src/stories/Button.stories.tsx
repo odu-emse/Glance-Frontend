@@ -2,7 +2,6 @@ import { Button } from '../components/Button'
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest';
 import { HiLightningBolt } from 'react-icons/hi'
 
 export default {
@@ -17,6 +16,11 @@ export default {
 		variant: {
 			control: 'select',
 			description: 'Decides the which variant should be rendered.',
+		},
+		shape: {
+			control: 'select',
+			options: ['regular', 'pill'],
+			description: 'Decides the shape of the button.'
 		},
 		loading: {
 			control: 'boolean',
@@ -47,13 +51,6 @@ Primary.args = {
 	size: 'base',
 	disabled: false,
 }
-Primary.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await canvas.getByTestId('button')
-	// await userEvent.type(canvas.getByTestId('password1'), 'k32904n£#1kjad');
-	// await userEvent.type(canvas.getByTestId('password2'), 'k32904n£#1kjad');
-	// await userEvent.click(canvas.getByTestId('submit'));
-};
 
 export const PrimaryIcon = Template.bind({})
 PrimaryIcon.args = {
@@ -77,6 +74,12 @@ Secondary.args = {
 export const Transparent = Template.bind({})
 Transparent.args = {
 	variant: 'transparent',
+}
+
+export const Pill = Template.bind({})
+Pill.args = {
+	...Primary.args,
+	shape: 'pill',
 }
 
 export const Large = Template.bind({})
