@@ -12,6 +12,7 @@ const Template: ComponentStory<typeof VideoPlayer> = (args) => <VideoPlayer {...
 
 export const Sample = Template.bind({})
 Sample.args = {
-	source: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+	source: '/friday.mp4',
+	captions: '/friday.vtt',
 	type: 'video/mp4'
 }

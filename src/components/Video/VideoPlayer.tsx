@@ -1,11 +1,12 @@
 import _ from "lodash";
 import React, { ChangeEvent, SyntheticEvent, useEffect, useRef, useState } from "react";
-import { FaPlay, FaPause, FaComments, FaExpand, FaCompress, FaClosedCaptioning, FaVolumeMute, FaVolumeDown, FaVolumeUp, FaArrowCircleUp } from "react-icons/fa";
+import { FaPlay, FaPause, FaComments, FaExpand, FaCompress, FaClosedCaptioning, FaRegClosedCaptioning, FaVolumeMute, FaVolumeDown, FaVolumeUp, FaArrowCircleUp } from "react-icons/fa";
 import { VideoChip } from "./VideoChip";
 
 export const VideoPlayer = ({ 
 	source, 
 	type, 
+	captions,
 	autoplay = false,
 	cards = []
 }: VideoPlayerProps): JSX.Element => {
@@ -14,10 +15,13 @@ export const VideoPlayer = ({
     const [ viewComments, setViewComments ] = useState(false);
     const [ controlsFocused, setControlsFocused ] = useState(false);
     const [ commentInputBox, setCommentInputBox ] = useState("");
+	
+	const [ isCaptionsVisible, setCaptionsVisible ] = useState(false);
 	const [ isFullscreen, setFullScreen ] = useState(false);
 
     const videoPlayer = useRef<HTMLVideoElement | null>(null);
     const progressBar = useRef<HTMLInputElement | null>(null);
+	const captionsTrack = useRef<HTMLTrackElement | null>(null);
     
     const handleTimeUpdate = (event: SyntheticEvent<HTMLVideoElement, Event>) => {
 		if(!progressBar.current) return;
@@ -46,6 +50,13 @@ export const VideoPlayer = ({
         videoPlayer.current.pause();
     }
 
+	const handleCaptionsButtonClick = () => {
+		if(!captionsTrack.current) return;
+		setCaptionsVisible(!isCaptionsVisible);
+		const track = captionsTrack.current.track;
+		track.mode = isCaptionsVisible ? 'disabled' : 'showing';
+	}
+
     const handleCommentBoxValueChange = (event: ChangeEvent) => {
 		if(!videoPlayer.current) return;
 		const target = event.target as HTMLInputElement
@@ -69,7 +80,6 @@ export const VideoPlayer = ({
             onMouseEnter={ () => setControlsFocused(true) } 
             onMouseLeave={ () => setControlsFocused(false) }
         >
-
             <video 
                 className="w-full h-full absolute" 
                 autoPlay={autoplay}
@@ -78,6 +88,10 @@ export const VideoPlayer = ({
                 onPlay={() => setVideoPlaying(true)}
                 onPause={() => setVideoPlaying(false)}
             >
+
+
+				<track kind="captions" srcLang="en" src={captions} ref={captionsTrack} />
+
                 <source src={source} type={type} />
                 Your browser doesn&apos;t support video playback. Please consider updating to the latest version.
             </video>
@@ -166,7 +180,9 @@ export const VideoPlayer = ({
                     { /* These are left side settings */ }
                     <div className="flex-none flex items-center gap-4">
                         <div>
-                            <button><FaClosedCaptioning /></button>
+                            <button onClick={ handleCaptionsButtonClick }>
+								{ isCaptionsVisible ? <FaClosedCaptioning /> : <FaRegClosedCaptioning /> }
+							</button>
                         </div>
                         <div>
                             <button><FaVolumeMute /></button>
@@ -185,6 +201,7 @@ export const VideoPlayer = ({
 
 type VideoPlayerProps = {
 	source: string
+	captions: string
 	type: 'video/mp4' | 'video/ogg' | 'video/webm'
 	autoplay?: boolean,
 	cards: VideoCard[]
