@@ -93,6 +93,7 @@ export const VideoPlayer = ({
 
         const liveCommentTicks = cards.map((card, index) => (
             <div 
+                key={index}
                 className="absolute h-4 w-4 z-50" 
                 onClick={ () => { handleCommentTickButtonClick(card.id) } }
                 style={{ left: _.clamp((card.timestamp / videoPlayer.current!.duration) * 100, 0, 100) + "%" }}
