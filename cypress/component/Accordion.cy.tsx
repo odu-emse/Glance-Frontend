@@ -55,7 +55,7 @@ describe('Accordion.tsx', function () {
 		}, terminalLog)
 	})
  
-    it('should render component questionCount with title and LessonLinks length', () => {
+    it('should render component with title and LessonLinks length', () => {
 		cy.mount(<Topic1 />)
 		
 		cy.get('button').should('have.class', 'flex items-center justify-between w-80 p-5 font-medium text-left border border-b-0 border-gray-400 rounded-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:border-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-400 dark:bg-gray-800 text-black dark:text-white')
