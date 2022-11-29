@@ -5,13 +5,18 @@ import { Accordion } from '../components/Accordion'
 export default {
 	title: 'Molecules/Accordion',
 	component: Accordion,
+	argTypes: {
+		title: { control: 'text' },
+
+		lessons: { control: 'LessonLinkProps[]' },
+	},
 } as ComponentMeta<typeof Accordion>
 
 const Template: ComponentStory<typeof Accordion> = (args) => (
 	<Accordion {...args} />
 )
 
-export const Topic1 = Template.bind({})
+export const Topic1: ComponentStory<typeof Accordion> = Template.bind({})
 Topic1.storyName = 'Default'
 Topic1.args = {
 	title: 'Topic 1',
@@ -34,7 +39,7 @@ Topic1.args = {
 	],
 }
 
-export const Topic2 = Template.bind({})
+export const Topic2: ComponentStory<typeof Accordion> = Template.bind({})
 Topic2.storyName = 'More elements'
 Topic2.args = {
 	title: 'Topic 2',
@@ -73,7 +78,7 @@ Topic2.args = {
 		},
 	],
 }
-export const Topic3 = Template.bind({})
+export const Topic3: ComponentStory<typeof Accordion> = Template.bind({})
 Topic3.storyName = 'All completed'
 Topic3.args = {
 	title: 'Topic 3',
