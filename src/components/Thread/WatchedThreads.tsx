@@ -10,7 +10,9 @@ export const WatchedThreads = ({ threads }: WatchedThreadsProps) => {
 					role="thread link"
 					className="text-blue-800 flex py-1 text-lg"
 				>
-					{thread.module_name}
+					{thread.module_name.length > 30
+						? `${thread.module_name.substring(0, 30)}...`
+						: thread.module_name}
 				</Anchor>
 			))}
 		</>

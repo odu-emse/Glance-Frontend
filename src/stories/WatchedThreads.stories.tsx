@@ -16,7 +16,8 @@ export const Default = Template.bind({})
 Default.args = {
 	threads: [
 		{
-			module_name: 'Is the sky purple?',
+			module_name:
+				'Is the sky purple or have I just been looking at my computer for too long?',
 			module_id: 'moduleid1',
 			thread_id: 'threadid1',
 		},
@@ -31,7 +32,7 @@ Default.args = {
 			thread_id: 'threadid2',
 		},
 		{
-			module_name: 'This is a test. Test test test.',
+			module_name: 'This is a test. Test test test',
 			module_id: 'moduleid6',
 			thread_id: 'threadid1',
 		},
