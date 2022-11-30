@@ -1,5 +1,7 @@
 # EMSE - Asynchronous Learning Management Platform | UI
 
+Hello!
+
 This repository contains all the files that are required for the operation of the AMLP user interface. The UI is a web application that facilitates interactions with the API. The UI is built using ReactJS and is ran in a Docker container.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
