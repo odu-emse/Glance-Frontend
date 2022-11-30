@@ -97,8 +97,8 @@ export const SocialCard = ({
 					</div>
 				</div>
 
-				<div className="mt-4 mb-6 w-200 h-200">
-					<div className="text-sm text-neutral-600 ">{content}</div>
+				<div className=" mt-4 mb-6 w-full h-200">
+					<div className=" break-words text-sm text-neutral-600 ">{content}</div>
 				</div>
 				<div className="border-b p-2">
 					<div className="flex items-center justify-between text-slate-500 ">
