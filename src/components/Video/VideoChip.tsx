@@ -2,15 +2,17 @@ import { FaComment } from 'react-icons/fa'
 import moment from 'moment';
 
 export const VideoChip = ({
+    id,
     text, 
-    timestamp 
+    timestamp,
+    icon
 }: VideoChipProps) => {
     return (
-        <div className='mb-2'>
+        <div className='mb-2' id={id}>
             <div className='rounded p-4 cursor-pointer bg-white text-black flex gap-2 items-top justify-start'>
                 <span className='text-gray-600 mt-1 mr-1'>
                     <div className='w-6 h-6 rounded-full overflow-hidden'>
-                        <img className='w-full h-full object-cover' src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg" />
+                        <img className='w-full h-full object-cover' src={icon} />
                     </div>
                 </span>
                 <p className='font-medium mt-1'>{text}</p>
@@ -23,6 +25,8 @@ export const VideoChip = ({
 }
 
 type VideoChipProps = {
+    id: string,
     text: string
-    timestamp: number
+    timestamp: number,
+    icon: string
 }

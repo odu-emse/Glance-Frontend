@@ -2,6 +2,7 @@ import _ from "lodash";
 import React, { ChangeEvent, SyntheticEvent, useEffect, useRef, useState } from "react";
 import { FaPlay, FaPause, FaComments, FaExpand, FaCompress, FaClosedCaptioning, FaRegClosedCaptioning, FaVolumeMute, FaVolumeDown, FaVolumeUp, FaArrowCircleUp } from "react-icons/fa";
 import { VideoChip } from "./VideoChip";
+import { VideoCommentTick } from "./VideoCommentTick";
 
 export const VideoPlayer = ({ 
 	source, 
@@ -70,6 +71,11 @@ export const VideoPlayer = ({
         setFullScreen(!document.fullscreenElement);
     }
 
+    const handleCommentTickButtonClick = (id: string) => {
+        setViewComments(true);
+        location.hash = `#${id}`;
+    }
+
     const handleCommentBoxValueChange = (event: ChangeEvent) => {
 		if(!videoPlayer.current) return;
 		const target = event.target as HTMLInputElement
@@ -78,14 +84,29 @@ export const VideoPlayer = ({
     }
 
     // ----- Setup Cards -----
+    const generateCommentTicks = () => {
+        if(!videoPlayer.current) return;
 
-    /*useEffect(() => {
-        const sorted = [...cards].sort((cardA, cardB) => {
-            return cardA.timestamp > cardB.timestamp;
+        cards.sort((cardA, cardB) => {
+            return cardA.timestamp > cardB.timestamp ? 1 : 0;
         });
 
-        setCards(sorted);
-    });*/
+        const liveCommentTicks = cards.map((card, index) => (
+            <div 
+                key={index}
+                className="absolute h-4 w-4 z-50" 
+                onClick={ () => { handleCommentTickButtonClick(card.id) } }
+                style={{ left: _.clamp((card.timestamp / videoPlayer.current!.duration) * 100, 0, 100) + "%" }}
+            >
+                <VideoCommentTick 
+                    icon={card.icon} 
+                    key={index}
+                />
+            </div>
+        ))
+
+        return liveCommentTicks;
+    }
 
     return (
         <div 
@@ -119,7 +140,7 @@ export const VideoPlayer = ({
                         <button className={`flex gap-1 items-center justify-center hover:text-blue-300 ${ commentInputBox.length > 0 && controlsFocused && viewComments ? 'visible' : 'invisible' }`}><FaArrowCircleUp /> Send</button>
                     </div>
 
-                    { cards.map((card, index) => <VideoChip text={card.name} timestamp={card.timestamp} key={index} />) }
+                    { cards.map((card, index) => <VideoChip text={card.name} timestamp={card.timestamp} icon={card.icon} key={index} id={card.id} />) }
 
                 </div>
             </div>
@@ -162,25 +183,15 @@ export const VideoPlayer = ({
                         className="relative grow h-2 flex items-center"
                     >
 
-                        {/* Live comments overlay */}
-                        <div className="absolute w-full h-full">
-
-                            { 
-                                cards.map((card, index) => (
-                                    <div className="absolute h-full w-1 bg-blue-500 z-50" style={{ left: _.clamp((card.timestamp / videoPlayer.current!.duration) * 100, 0, 100) + "%" }} key={index}>
-                                        { /* Tooltip? */ }
-                                    </div>
-                                ))
-                            }
-
-                        </div>
+                        { 
+                            generateCommentTicks()
+                        }
 
                         <input
                             type="range" 
                             className="w-full h-full z-10 appearance-none"
                             style={{
                                 outline: "none",
-
                             }} 
                             ref={progressBar}
                             onChange={handleProgressBarChange}
@@ -222,6 +233,8 @@ type VideoPlayerProps = {
 }
 
 type VideoCard = {
+    id: string,
 	timestamp: number
-	name: string
+	name: string,
+    icon: string
 }
