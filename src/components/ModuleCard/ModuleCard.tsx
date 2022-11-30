@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import { Button } from '../Button'
 export const ModuleCard = ({
 	parentCourse,
 	moduleName,
@@ -123,25 +123,39 @@ export const ModuleCard = ({
 							</div>
 							<div className="flex flex-col w-full px-3">
 								<div className="py-1">
-									<button className="text-white bg-blue-300 px-24 py-1 w-full">
+									<Button
+										loading={false}
+										size="base"
+										onClick={null || undefined}
+										type="button"
+										disabled={false}
+										variant="primary"
+									>
 										<a
 											href={primaryLink}
 											className="flex items-center justify-center"
 										>
 											{primaryLinkLabel}
 										</a>
-									</button>
+									</Button>
 								</div>
 								{/* Link to returnIdPage */}
 								<div>
-									<button className="text-white bg-orange-400 px-24 py-1 w-full mb-2">
+									<Button
+										loading={false}
+										size="base"
+										onClick={null || undefined}
+										type="button"
+										disabled={false}
+										variant="secondary"
+									>
 										<a
 											href={secondaryLink}
 											className="flex items-center justify-center"
 										>
 											{secondaryLinkLabel}
 										</a>
-									</button>
+									</Button>{' '}
 								</div>
 								{/* Link to treeView */}
 							</div>
