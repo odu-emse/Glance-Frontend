@@ -61,6 +61,7 @@ export const Thread: React.FC<ThreadProps> = ({ title, body, upvotes, id, userPr
 				</button>
 			</div>
 		</div>
+			
 	)
 }
 

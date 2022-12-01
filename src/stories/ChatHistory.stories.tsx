@@ -34,7 +34,7 @@ Primary.args = {
 			image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 			selected: false,
 			timestamp: 1748347589,
-			newNotification: false,
+			newNotification: true,
 		},
 		{
 			name: 'AVantika',
