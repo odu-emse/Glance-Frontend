@@ -1,0 +1,8 @@
+.git
+.github
+node_modules
+dist
+storybook-static
+.vscode
+.idea
+.husky

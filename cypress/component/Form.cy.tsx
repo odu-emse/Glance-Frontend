@@ -30,13 +30,11 @@ describe('Form.tsx', function () {
 		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
 		cy.get('button').should('have.class', 'bg-blue-700')
         cy.get('button').should('have.class', 'text-white')
-		cy.get('button').should('have.class', 'h-10 w-auto py-2 px-5')
-        cy.get('button').should('have.css', 'padding', '8px 20px')
     })
 
     it('should change submit button color to a lighter blue on hover and keep text white', function() {
 		cy.mount(<Default allowPrevious={allowPrevious} previousLabel={previousLabel} proceedLabel={proceedLabel} />)
-		cy.get('button').should('have.class', 'hover:bg-blue-500')
+		cy.get('button').should('have.class', 'hover:bg-blue-600')
         cy.get('button').should('have.class', 'text-white')
     })
 
@@ -101,7 +99,7 @@ describe('Form.tsx', function () {
 
     it('should render button with the label given to previousLabel', function() {
 		cy.mount(<Default allowPrevious={true} previousLabel={"Previous!"} proceedLabel={proceedLabel}/>)
-		cy.get('button.bg-blue-300').as('secondaryButton')
+		cy.get('button.bg-gray-300').as('secondaryButton')
         cy.get('@secondaryButton').should('have.attr', 'type', 'reset')
         cy.get('@secondaryButton').should('contain', "Previous!")
     })

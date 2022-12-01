@@ -1,8 +1,28 @@
 import * as React from 'react'
+
 import { LessonLink } from '../FormElements/LessonLink'
 import type { LessonLinkProps } from '../FormElements/LessonLink'
 
-export const Accordion = ({ lessons, title }: AccordionProps) => {
+export const Accordion: React.FC<AccordionProps> = ({
+	title = 'Topic 1',
+	lessons = [
+		{
+			label: 'Module1',
+			url: 'lesonlink/module-1',
+			checked: true,
+		},
+		{
+			label: 'Module2',
+			url: 'lessonlink/module-2',
+			checked: false,
+		},
+		{
+			label: 'Module3',
+			url: 'lessonlink/module-3',
+			checked: true,
+		},
+	],
+}): React.ReactElement => {
 	return (
 		<div className="accordion">
 			<div className="accordion-heading">

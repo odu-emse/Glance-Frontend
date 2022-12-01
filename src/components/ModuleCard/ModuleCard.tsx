@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import { Button } from '../Button'
 export const ModuleCard = ({
 	parentCourse,
 	moduleName,
@@ -16,9 +16,9 @@ export const ModuleCard = ({
 	completion,
 }: ModuleProps): JSX.Element => {
 	return (
-		<div className="flex flex-col lg:flex-row md:items-stretch gap-4 border-gray bg-gray-100 drop-shadow-md border border-solid rounded">
+		<div className="moduleCard flex flex-col lg:flex-row md:items-stretch gap-4 border-gray bg-gray-100 drop-shadow-md border border-solid rounded">
 			<div
-				className={`flex w-full lg:w-4 p-2 lg:p-0 ${
+				className={`statusColorCode flex w-full lg:w-4 p-2 lg:p-0 ${
 					completion
 						? `bg-green-400`
 						: percentageCompleted > 25
@@ -33,17 +33,17 @@ export const ModuleCard = ({
 						{moduleName}
 					</div>
 					<div className="flex flex-row text-sm justify-between">
-						<p className="underline text-sm text-gray-400">Forum</p>
-						<p className="underline text-sm text-gray-400">
+						<p className="underline text-sm text-gray-700">Forum</p>
+						<p className="underline text-sm text-gray-700">
 							Assignment
 						</p>
-						<p className="underline text-sm text-gray-400">
+						<p className="underline text-sm text-gray-700">
 							Download
 						</p>
 						{completion ? (
 							``
 						) : (
-							<p className="underline text-sm text-red-500">
+							<p className="underline text-sm text-red-700">
 								Abandon
 							</p>
 						)}
@@ -107,15 +107,15 @@ export const ModuleCard = ({
 
 				<div className="flex-none flex flex-col items-center justify-center ">
 					{completion ? (
-						<div className="flex items-center justify-center px-2">
+						<div className="moduleCompleted flex items-center justify-center px-2">
 							<p className="md:"></p>
 							<p className="text-white bg-blue-300 px-20 py-1 w-full my-1">
 								Continue
 							</p>
 						</div>
 					) : (
-						<div className="flex flex-col w-full h-50 items-center justify-center gap-3 lg:items-center">
-							<div className="text-gray-400 text-sm">
+						<div className="moduleInProgress currentTopicStatus flex flex-col w-full h-50 items-center justify-center gap-3 lg:items-center">
+							<div className="text-gray-600 text-sm">
 								Current Topic
 							</div>
 							<div className="font-medium text-sm pr-2">
@@ -123,25 +123,39 @@ export const ModuleCard = ({
 							</div>
 							<div className="flex flex-col w-full px-3">
 								<div className="py-1">
-									<button className="text-white bg-blue-300 px-24 py-1 w-full">
+									<Button
+										loading={false}
+										size="base"
+										onClick={null || undefined}
+										type="button"
+										disabled={false}
+										variant="primary"
+									>
 										<a
 											href={primaryLink}
 											className="flex items-center justify-center"
 										>
 											{primaryLinkLabel}
 										</a>
-									</button>
+									</Button>
 								</div>
 								{/* Link to returnIdPage */}
 								<div>
-									<button className="text-white bg-orange-400 px-24 py-1 w-full mb-2">
+									<Button
+										loading={false}
+										size="base"
+										onClick={null || undefined}
+										type="button"
+										disabled={false}
+										variant="secondary"
+									>
 										<a
 											href={secondaryLink}
 											className="flex items-center justify-center"
 										>
 											{secondaryLinkLabel}
 										</a>
-									</button>
+									</Button>{' '}
 								</div>
 								{/* Link to treeView */}
 							</div>

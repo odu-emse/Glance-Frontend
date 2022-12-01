@@ -3,44 +3,49 @@ import * as React from 'react'
 import Loader from '../../util/Loader'
 
 export const Button = ({
-	primary,
+	variant = 'primary',
+	shape = 'regular',
 	loading,
 	size,
-	label,
+	children,
 	disabled,
 	type,
 	...props
 }: ButtonProps): JSX.Element => {
-	const baseStyles =
-		'rounded-md flex items-center focus:outline-dashed focus:outline-blue-500'
-	const variant: string = primary
-		? 'bg-blue-700 text-white hover:bg-blue-500 '
-		: 'bg-blue-300 text-black hover:bg-blue-100 '
-	let buttonSize = ''
-	if (size === 'small') {
-		buttonSize = 'h-4 w-auto py-4 px-2'
-	} else if (size === 'large') {
-		buttonSize = 'h-12 w-auto py-8 px-10'
-	} else if (size === 'base') {
-		buttonSize = 'h-10 w-auto py-2 px-5'
-	}
-
 	return (
 		<button
 			type={type}
 			disabled={disabled}
 			className={[
+				'flex flex-row items-center justify-center gap-2',
+				'focus:outline-dashed focus:outline-blue-500',
+				'px-4 py-2',
+				'font-medium',
+
+				shape == 'regular' && 'rounded',
+				shape == 'pill' && 'rounded-full',
+
+				size == 'small' && 'text-sm',
+				size == 'large' && 'text-lg',
+
 				disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
-				baseStyles,
-				buttonSize,
-				variant,
+
+				variant == 'primary' &&
+					'shadow bg-blue-700 text-white hover:bg-blue-600',
+				variant == 'secondary' &&
+					'shadow bg-gray-300 text-gray-700 hover:bg-gray-200',
+				variant == 'transparent' && 'bg-transparent text-black',
 			].join(' ')}
 			{...props}
 		>
 			{loading ? (
-				<Loader textColor={`${primary ? 'blue-700' : 'blue-200'}`} />
+				<Loader
+					textColor={`${
+						variant == 'primary' ? 'blue-700' : 'blue-200'
+					}`}
+				/>
 			) : null}
-			{label}
+			{children}
 		</button>
 	)
 }
@@ -49,7 +54,11 @@ type ButtonProps = {
 	/**
 	 * A boolean that determines whether the button is the principal call/action on the page
 	 */
-	primary?: boolean
+	variant?: 'primary' | 'secondary' | 'transparent'
+	/**
+	 * An enum that determines the shape of the button
+	 */
+	shape?: 'regular' | 'pill'
 	/**
 	 * A boolean that determines whether the button is representing a loading state
 	 */
@@ -63,9 +72,9 @@ type ButtonProps = {
 	 */
 	type: 'button' | 'submit' | 'reset'
 	/**
-	 * A descriptive label to display the text content on the button
+	 * The JSX contnet to be displayed within the button
 	 */
-	label: string
+	children: React.ReactNode
 	/**
 	 * A boolean that determines whether the button representing a disabled state
 	 */
@@ -80,7 +89,11 @@ Button.propTypes = {
 	/**
 	 * Is this the principal call to action on the page?
 	 */
-	primary: PropTypes.bool,
+	variant: PropTypes.oneOf(['primary', 'secondary', 'transparent']),
+	/**
+	 * Is this the principal call to action on the page?
+	 */
+	shape: PropTypes.oneOf(['regular', 'pill']),
 	/**
 	 * Is the button representing a loading state?
 	 */
@@ -92,7 +105,7 @@ Button.propTypes = {
 	/**
 	 * Button contents
 	 */
-	label: PropTypes.string.isRequired,
+	children: PropTypes.element,
 	/**
 	 * Optional click handler
 	 */
@@ -108,11 +121,12 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-	primary: true,
+	variant: 'primary',
+	shape: 'regular',
 	loading: false,
 	size: 'base',
 	onClick: undefined,
-	label: 'Click here!',
+	children: <p>Click Here</p>,
 	disabled: false,
 	type: 'button',
 }
