@@ -1860,10 +1860,10 @@ emoji-regex@^9.2.2:
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
 
-emse-ui@^1.3.0-rc.6:
-  version "1.3.0-rc.6"
-  resolved "https://registry.yarnpkg.com/emse-ui/-/emse-ui-1.3.0-rc.6.tgz#1f9b379dc64beff92805f03c549118a12a1fb4df"
-  integrity sha512-lPQu5ZZScxcxYkyfPiqKaUEvUn5hffFqxuFzslhxiIp+wso/6OnmE9rtyc+rAhTdVj2TJK0dfL6JbnLQV+jNLA==
+emse-ui@^1.3.0-rc.10:
+  version "1.3.0-rc.10"
+  resolved "https://registry.yarnpkg.com/emse-ui/-/emse-ui-1.3.0-rc.10.tgz#55860361e188c394fd2eba1b2d0ad2cc4b49648d"
+  integrity sha512-YZW+kOZ7iglPWfCzKApbnD7JJhg/YPGGoeVdiCACqXcEKwcvTUGxmn6MtTs+GAd4sDrUUIUEVDvkmRz7C6Z13g==
   dependencies:
     moment "^2.29.4"
     prop-types "^15.8.1"

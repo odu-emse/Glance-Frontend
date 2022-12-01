@@ -1,4 +1,4 @@
-import {Thread, Input} from 'emse-ui'
+import {Thread, Input, WatchedThreads} from 'emse-ui'
 
 const Module = () => {
     const userName="joeldesante"
@@ -61,7 +61,30 @@ const Module = () => {
             </div>
             <aside className="mx-10 flex-none">
             <p className='text-xl font bold'>Active Modules component</p>
-            <p className='text-xl font bold'>Watched Threads component</p>
+            <WatchedThreads
+            threads={[
+                {
+                module_id: 'moduleid1',
+                module_name: 'Is the sky purple or have I just been looking at my computer for too long?',
+                thread_id: 'threadid1'
+                },
+                {
+                module_id: 'moduleid2',
+                module_name: 'What is the meaning of life?',
+                thread_id: 'threadid4'
+                },
+                {
+                module_id: 'moduleid1',
+                module_name: 'Why did the engineer cross the road?',
+                thread_id: 'threadid2'
+                },
+                {
+                module_id: 'moduleid6',
+                module_name: 'This is a test. Test test test',
+                thread_id: 'threadid1'
+                }
+            ]}
+            />
             </aside>
 
             
