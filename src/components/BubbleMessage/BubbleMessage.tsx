@@ -20,7 +20,7 @@ export const BubbleMessage = ({
 										) => (
 											<>
 												<li
-													className={`flex items-center ${
+													className={`flex items-center left-li ${
 														user.id ===
 														currentUserID
 															? 'flex-row-reverse'
@@ -58,7 +58,7 @@ export const BubbleMessage = ({
 													</div>
 												</li>
 												{message[index + 1] && (
-													<li className='flex justify-center'>
+													<li className='flex justify-center right-li'>
 														<div className='w-50 h-50 px-2 t-100'>
 															<span className='block text-xs text-slate-500'>
 																{/*{moment*/}
