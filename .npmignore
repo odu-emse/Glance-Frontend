@@ -1,0 +1,7 @@
+cypress/
+src/
+storybook-static
+.storybook
+.vscode
+.idea
+*.tgz
