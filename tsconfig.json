@@ -19,7 +19,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
 		"paths": {
-			"@/components/*": ["stroybook/components/*"],
+			"@/components/*": ["storybook/components/*"],
 			"@/utils/*": ["utils/*"],
 			"@/contexts/*": ["contexts/*"],
 			"@/hooks/*": ["hooks/*"],
