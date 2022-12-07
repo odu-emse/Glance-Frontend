@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js style
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js test:cy:open
 
 PATH: 
   /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin arm64
 
 Trace: 
-  SyntaxError: /Users/jdesante/Development/frontend/package.json: Unexpected token } in JSON at position 454
+  SyntaxError: /Users/jdesante/Development/frontend/package.json: Unexpected token , in JSON at position 181
       at JSON.parse (<anonymous>)
       at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
       at Generator.next (<anonymous>)
@@ -30,12 +30,14 @@ npm manifest:
       "dev": "next dev",
       "build": "next build",
       "start": "next start",
-      "lint": "next lint",
+      "lint": "next lint",,
+      "test:cy": "cypress run --component",
+  		"test:cy:open": "cypress open --component",
       "test": "jest --watch",
       "storybook": "start-storybook -p 6006",
       "build-storybook": "build-storybook",
-      "style": "npx tailwindcss -i ./src/global.css -o ./src/output.css --watch",
-  		"style:build": "npx tailwindcss -i ./src/global.css -o ./src/output.css",
+      "style": "npx tailwindcss -i ./styles/globals.css -o ./storybook/output.css --watch",
+      "style:build": "npx tailwindcss -i ./styles/globals.css -o ./storybook/output.css"
     },
     "dependencies": {
       "@react-oauth/google": "^0.2.6",
@@ -73,14 +75,14 @@ npm manifest:
       "eslint": "8.23.0",
       "eslint-config-next": "12.2.5",
       "eslint-plugin-storybook": "^0.6.8",
+      "flowbite": "^1.4.7",
+      "flowbite-react": "^0.0.27",
       "jest": "^29.1.2",
       "jest-environment-jsdom": "^29.1.2",
       "postcss": "^8.4.18",
       "tailwindcss": "^3.2.3",
       "typescript": "^4.8.4",
-      "vite": "^3.2.5",
-      "flowbite": "^1.4.7",
-  		"flowbite-react": "^0.0.27"
+      "vite": "^3.2.5"
     }
   }
 
