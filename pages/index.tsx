@@ -1,4 +1,4 @@
-import LoadingSplash from '@/components/LoadingSplash';
+import LoadingSplash from '../components/LoadingSplash';
 import Head from 'next/head';
 
 const Index = () => {

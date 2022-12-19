@@ -1,7 +1,7 @@
 import './commands'
 import { mount } from 'cypress/react18'
 import 'cypress-axe'
-import '../../src/output.css'
+import '../../storybook/output.css'
 
 declare global {
 	// eslint-disable-next-line @typescript-eslint/no-namespace
