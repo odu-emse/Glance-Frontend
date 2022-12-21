@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { SocialCard } from '../components/SocialCard'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { SocialCardProps } from '../components/SocialCard'
+import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Molecules/Social Card',
@@ -10,8 +11,7 @@ export default {
 const Template: ComponentStory<typeof SocialCard> = (args) => (
 	<SocialCard {...args} />
 )
-
-export const Primary = Template.bind({})
+export const Primary: ComponentStory<typeof SocialCard> = Template.bind({})
 Primary.args = {
 	timestamp: 1664376815,
 	content:
@@ -28,7 +28,7 @@ Primary.args = {
 		department: 'Engineering Management & Systems Engineering',
 	},
 }
-export const Secondary = Template.bind({})
+export const Secondary: ComponentStory<typeof SocialCard> = Template.bind({})
 Secondary.storyName = 'Longer Content'
 Secondary.args = {
 	...Primary.args,
