@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { IconContext } from 'react-icons'
+import Link from 'node_modules/next/link'
 
-export const Link = ({
+export const LinkComponent = ({
 	to = '',
 	activeClassName,
 	className,
@@ -14,7 +15,7 @@ export const Link = ({
 }: LinkProps) => {
 	return (
 		<IconContext.Provider value={{ className: 'xxs:h-4 xs:h-4 sm:h-6' }}>
-			<a href={to} className={role === 'logo' ? 'h-full w-full' : ''}>
+			<Link href={to} className={role === 'logo' ? 'h-full w-full' : ''}>
 				<li
 					className={`${
 						role === 'menuitem'
@@ -48,12 +49,12 @@ export const Link = ({
 					{role === 'menuitem' && label}
 					{children ? children : null}
 				</li>
-			</a>
+			</Link>
 		</IconContext.Provider>
 	)
 }
 
-Link.defaultProps = {
+LinkComponent.defaultProps = {
 	className: '',
 	active: false,
 	label: '',
