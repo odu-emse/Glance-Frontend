@@ -19,7 +19,7 @@ export type AnchorProps = {
 	 * A Boolean that decides the styling of anchor tag
 	 */
 	open?: boolean
-	onClick?: (e?: React.MouseEvent<HTMLAnchorElement>) => void
+	//onClick?: (e?: React.MouseEvent<HTMLAnchorElement>) => void
 	/**
 	 * Indicates id as string
 	 */
