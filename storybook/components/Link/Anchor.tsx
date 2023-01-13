@@ -1,4 +1,4 @@
-import Link from 'node_modules/next/link'
+import Link from 'next/link'
 import * as React from 'react'
 
 export type AnchorProps = {
@@ -33,7 +33,7 @@ export const Anchor = ({
 	className = '',
 	role = '',
 	open,
-	onClick = () => undefined,
+	//onClick = () => undefined,
 	id = '',
 	icon,
 	...rest
@@ -51,7 +51,7 @@ export const Anchor = ({
 		.filter(Boolean)
 		.join(' ')
 	return (
-		<Link href={path} className={classes} onClick={onClick} id={id} {...rest}>
+		<Link href={path} className={classes} id={id} {...rest}>
 			{icon && open ? (
 				<span className="flex gap-2 items-center">
 					<span className="opacity-50">{icon}</span>

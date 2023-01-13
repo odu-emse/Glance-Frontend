@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { IconContext } from 'react-icons'
-import Link from 'node_modules/next/link'
+import Link from 'next/link'
 
 export const LinkComponent = ({
 	to = '',
