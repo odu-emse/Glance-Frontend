@@ -1,7 +1,8 @@
 /node_modules
 /.vscode
-storybook-static/
-.idea/
+/storybook-static/
+/.idea/
+/.next/
 
 dist/
 
@@ -14,4 +15,3 @@ lib/
 src/output.css
 package
 coverage
-.next/
