@@ -42,7 +42,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 							})
 						}
 					>
-						<MdAttachFile size={20} className="mr-1" />
+						<MdAttachFile size={20} className="mr-1"data-cy="Attachfile" />
 						{isClicked === 1 && (
 							<div className="relative  h-auto ">
 								<div className=" absolute z-20 w-50 py-0 px-0 mt-0 ml-10 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800">
@@ -50,6 +50,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 										<input
 											type="file"
 											className="text-sm text-grey-500 file:mr-5 file:py-2 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:cursor-pointer hover:file:bg-amber-50 hover:file:text-amber-700"
+			
 										/>
 									</label>
 								</div>
@@ -67,7 +68,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 							})
 						}
 					>
-						<BiImageAdd size={20} className="mr-1" />
+						<BiImageAdd size={20} className="mr-1"data-cy="ImageAdd" />
 						{isClicked === 2 && (
 							<div className="relative  h-auto ">
 								<div className=" absolute z-20 w-50 py-0 px-0 mt-0 ml-10 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800">
@@ -100,7 +101,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 							})
 						}
 					>
-						<RiFileGifFill size={20} className="mr-1" />
+						<RiFileGifFill size={20} className="mr-1"data-cy="GifFill" />
 						{isClicked === 3 && (
 							<div className="relative  h-auto ">
 								<div className=" absolute z-20 w-50 py-0 px-0 mt-0 ml-10 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800">
@@ -122,7 +123,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 						)}
 					</button>
 					<button className="flex items-center justify-center  ">
-						<FaDollarSign size={20} className="mr-1" />
+						<FaDollarSign size={20} className="mr-1"data-cy="DollarSign" />
 					</button>
 				</div>
 				<div className="w-full">
