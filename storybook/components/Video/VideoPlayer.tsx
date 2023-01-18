@@ -3,14 +3,13 @@ import React, { ChangeEvent, SyntheticEvent, useEffect, useRef, useState } from 
 import { FaPlay, FaPause, FaComments, FaExpand, FaCompress, FaClosedCaptioning, FaRegClosedCaptioning, FaVolumeMute, FaVolumeDown, FaVolumeUp, FaArrowCircleUp } from "react-icons/fa";
 import { VideoChip } from "./VideoChip";
 import { VideoCommentTick } from "./VideoCommentTick";
-
-export const VideoPlayer = ({ 
+export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	source, 
 	type, 
 	captions,
 	autoplay = false,
 	cards = []
-}: VideoPlayerProps): JSX.Element => {
+}): React.ReactElement => {
 
     const [ videoPlaying, setVideoPlaying ] = useState(autoplay);
     const [ viewComments, setViewComments ] = useState(false);
