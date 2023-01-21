@@ -1,4 +1,4 @@
-import { Sidebar } from '../components/Sidebar'
+import { Sidebar } from '../components/Sidebar/Sidebar'
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Anchor, Link } from '../components/Link'
@@ -13,7 +13,7 @@ import { BsStack } from 'react-icons/bs'
 import { BiTask, BiUser } from 'react-icons/bi'
 import { AiOutlinePartition } from 'react-icons/ai'
 import { RiShutDownLine } from 'react-icons/ri'
-import { SidebarProps } from '../components/Sidebar'
+import { SidebarProps } from '../components/Sidebar/Sidebar'
 
 export default {
 	title: 'Molecules/Sidebar',
