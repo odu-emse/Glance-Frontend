@@ -191,7 +191,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 								viewComments
 									? 'visible'
 									: 'invisible'
-							}`} data-cy="send"
+							}`}
+							data-cy="send"
 						>
 							<FaArrowCircleUp /> Send
 						</button>
@@ -225,7 +226,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 									? 'p-4 bg-white text-black rounded-full shadow-lg'
 									: 'p-4 text-white'
 							}
-							onClick={() => setViewComments(!viewComments)} data-cy="comment"
+							onClick={() => setViewComments(!viewComments)}
+							data-cy="comment-button"
 						>
 							<FaComments />
 						</button>

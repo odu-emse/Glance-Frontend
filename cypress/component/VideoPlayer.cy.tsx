@@ -20,6 +20,7 @@ describe('VideoPlayer.tsx', function () {
 		expect(cy.get('button')).to.exist
 		expect(cy.get('input')).to.exist
 		expect(cy.get('video')).to.exist
+		expect(cy.get('p')).to.exist
 	})
 	it('should have no accessibility violations', () => {
 		cy.mount(<Sample />)
@@ -148,7 +149,7 @@ describe('VideoPlayer.tsx', function () {
 		// list of live comments should be hidden by default
 		cy.get('body')
 			.trigger('mouseover')
-			.get('button[data-cy=comment]')
+			.get('button[data-cy=comment-button]')
 			.should('not.be.visible')
 			.should('exist')
 			.click()
@@ -157,10 +158,19 @@ describe('VideoPlayer.tsx', function () {
 			.should('not.be.visible')
 		// writing message to the textarea and verifying it
 		cy.get('textarea[data-cy=message]')
+			.click()
+			.should('be.focused')
 			.type('Hello World')
 			.should('have.value', 'Hello World')
 		cy.get('textarea[data-cy=message]')
 			.get('button[data-cy=send]')
 			.should('be.visible')
+	})
+	it('live comments should have the medium font size and top margin of 4px', () => {
+		cy.mount(<Sample />)
+		cy.get('div p')
+			.should('have.class', 'font-medium mt-1')
+			.and('have.css', 'margin-top', '4px')
+			.and('have.css', 'font-weight', '500')
 	})
 })
