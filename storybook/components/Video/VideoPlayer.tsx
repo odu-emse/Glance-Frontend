@@ -182,6 +182,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 							onChange={handleCommentBoxValueChange}
 							placeholder="Leave a comment..."
 							className="w-full p-2 rounded outline-none text-black"
+							data-cy="message"
 						></textarea>
 						<button
 							className={`flex gap-1 items-center justify-center hover:text-blue-300 ${
@@ -190,7 +191,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 								viewComments
 									? 'visible'
 									: 'invisible'
-							}`}
+							}`} data-cy="send"
 						>
 							<FaArrowCircleUp /> Send
 						</button>
@@ -210,7 +211,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
 			{/* Overlay controls set */}
 			<div
-				className={`absolute w-full h-full flex flex-col text-white ${
+				className={`overlay absolute w-full h-full flex flex-col text-white ${
 					controlsFocused ? 'visible' : 'invisible'
 				}`}
 			>
@@ -224,7 +225,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 									? 'p-4 bg-white text-black rounded-full shadow-lg'
 									: 'p-4 text-white'
 							}
-							onClick={() => setViewComments(!viewComments)}
+							onClick={() => setViewComments(!viewComments)} data-cy="comment"
 						>
 							<FaComments />
 						</button>
@@ -268,7 +269,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 					{/* These are left side settings */}
 					<div className="flex-none flex items-center gap-4">
 						<div>
-							<button onClick={handleCaptionsButtonClick}>
+							<button
+								onClick={handleCaptionsButtonClick}
+								data-cy="caption"
+							>
 								{isCaptionsVisible ? (
 									<FaClosedCaptioning />
 								) : (
