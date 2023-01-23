@@ -8,9 +8,10 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof VideoPlayer>
 
-const Template: ComponentStory<typeof VideoPlayer> = (args) => <VideoPlayer {...args} />
 
-export const Sample = Template.bind({})
+const Template: ComponentStory<typeof VideoPlayer> = (args) => (<VideoPlayer {...args} />)
+
+export const Sample: ComponentStory<typeof VideoPlayer> = Template.bind({})
 Sample.args = {
 	source: '/friday.mp4',
 	captions: '/friday.vtt',
