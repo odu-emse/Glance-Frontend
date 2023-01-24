@@ -284,16 +284,29 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 						</div>
 						<div>
 							<button
+                                className="group relative rounded-full"
 								onClick={handleAudioMuteToggle}
 								data-cy="volume"
 							>
 								{isAudioMuted ? (
-									<FaVolumeMute />
+                                    <>
+                                    <FaVolumeMute />
+                                    <div className="rotate-90 absolute hidden group-hover:flex -left-2 -top-1 -translate-y-full w-16 px-2 py-1 bg-gray-700 rounded-lg">
+                                    <input id="disabled-range" type="range" className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-200" disabled />
+						            </div>
+                                    </>
 								) : (
-									<FaVolumeUp />
+                                    <>
+                                    <FaVolumeUp />
+                                    <div className="absolute hidden group-hover:flex -left-2 -top-1 -translate-y-full w-16 px-2 py-1 bg-gray-700 rounded-lg ">
+                                    <input id="default-range" type="range" className="w-full h-2 bg-gray-200 rounded-lg  ursor-pointer dark:bg-gray-200"/>
+						            </div>						            
+                                    </>
 								)}
 							</button>
 						</div>
+
+                        
 						<div>
 							<button onClick={handleFullScreenButonClick}>
 								{isFullscreen ? <FaCompress /> : <FaExpand />}
@@ -303,7 +316,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				</div>
 			</div>
 		</div>
+        
 	)
+   
 }
 
 type VideoPlayerProps = {
@@ -321,3 +336,5 @@ type VideoCard = {
 	name: string
 	icon: string
 }
+
+
