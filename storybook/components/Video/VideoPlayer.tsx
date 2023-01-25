@@ -304,9 +304,20 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 									<FaVolumeUp />					            
 								)}
 							</button>
-							<div className="absolute bottom-0 hidden group-hover:flex">
-                                <input id="default-range" type="range" min="0" max="100" orient="vertical" value={isAudioMuted ? 0 : 80} step="1"/>
-							</div>
+                                <input 
+									className="absolute bottom-0 hidden group-hover:flex -translate-y-6 w-4"
+									style={{
+										"-webkit-appearance": "slider-vertical",
+										"writing-mode": "bt-lr",
+									}}
+									id="default-range" 
+									type="range" 
+									min="0" 
+									max="100" 
+									orient="vertical" 
+									value={isAudioMuted ? 0 : 80} 
+									step="1"
+								/>
 						</div>
 
                         
