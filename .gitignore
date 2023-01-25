@@ -1,17 +1,14 @@
-/node_modules
+# IDE Junk
 /.vscode
-storybook-static/
-.idea/
+/.idea
 
-dist/
-
-lib/
-
+# Computer Exhaust
 .DS_Store
+
+# Generated Content
+/node_modules
+/dist
 /cypress/screenshots/**/*.png
 /cypress/videos/*.mp4
-*.tgz
-src/output.css
-package
-coverage
-.next/
+/src/output.css
+/.next
