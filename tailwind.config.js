@@ -3,7 +3,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx,mdx}", './node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/emse-ui/**/*/*.js",
+  ],
   theme: {
     screens: {
       'xxs': '320px',
