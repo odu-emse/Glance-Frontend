@@ -298,7 +298,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 								)}
 
 								<div className="absolute hidden group-hover:flex -left-3 -top-1 -translate-y-full w-16 px-2 py-2 bg-gray-700 rounded-md">
-                                <input id="default-range" type="range" value={isAudioMuted ? 0 : 80} className="w-full h-2 bg-gray-200 rounded-lg  ursor-pointer dark:bg-gray-200"/>
+                                <input id="default-range" type="range" min="0" max="100" value={isAudioMuted ? 0 : 80} step="10" className="w-full h-2 bg-gray-200 rounded-lg  ursor-pointer dark:bg-gray-200"/>
 						        </div>
 							</button>
 						</div>
