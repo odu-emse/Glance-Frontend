@@ -6,6 +6,7 @@ import React, {
 	useRef,
 	useState,
 } from 'react'
+
 import {
 	FaPlay,
 	FaPause,
@@ -28,6 +29,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	captions,
 	autoplay = false,
 	defaultVolume = false,
+	volume,
 	cards = [],
 }): React.ReactElement => {
 	const [videoPlaying, setVideoPlaying] = useState(autoplay)
@@ -212,7 +214,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
 			{/* Overlay controls set */}
 			<div
-				className={`overlay absolute w-full h-full flex flex-col text-white ${
+				className={`absolute w-full h-full flex flex-col text-white ${
 					controlsFocused ? 'visible' : 'invisible'
 				}`}
 			>
@@ -287,22 +289,17 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                                 className="group relative rounded-full"
 								onClick={handleAudioMuteToggle}
 								data-cy="volume"
+
 							>
 								{isAudioMuted ? (
-                                    <>
-                                    <FaVolumeMute />
-                                    <div className="rotate-90 absolute hidden group-hover:flex -left-2 -top-1 -translate-y-full w-16 px-2 py-1 bg-gray-700 rounded-lg">
-                                    <input id="disabled-range" type="range" className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-200" disabled />
-						            </div>
-                                    </>
+									<FaVolumeMute/>
 								) : (
-                                    <>
-                                    <FaVolumeUp />
-                                    <div className="absolute hidden group-hover:flex -left-2 -top-1 -translate-y-full w-16 px-2 py-1 bg-gray-700 rounded-lg ">
-                                    <input id="default-range" type="range" className="w-full h-2 bg-gray-200 rounded-lg  ursor-pointer dark:bg-gray-200"/>
-						            </div>						            
-                                    </>
+									<FaVolumeUp />					            
 								)}
+
+								<div className="absolute hidden group-hover:flex -left-3 -top-1 -translate-y-full w-16 px-2 py-2 bg-gray-700 rounded-md">
+                                <input id="default-range" type="range" value={isAudioMuted ? 0 : 80} className="w-full h-2 bg-gray-200 rounded-lg  ursor-pointer dark:bg-gray-200"/>
+						        </div>
 							</button>
 						</div>
 
@@ -328,6 +325,7 @@ type VideoPlayerProps = {
 	autoplay?: boolean
 	defaultVolume?: boolean
 	cards: VideoCard[]
+	volume: number
 }
 
 type VideoCard = {
