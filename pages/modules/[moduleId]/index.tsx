@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import Layout from '@/components/Layout';
+import Layout from '../../../components/Layout';
 import Link from 'next/link';
 import useAuth from '@/hooks/useAuth';
 import useSWR from 'swr';
@@ -16,7 +16,42 @@ const Module = () => {
 
 	const { data, error } = useSWR(
 		{
-			query: getModuleByID(moduleId),
+			query: `
+			query {
+				module(input:{
+				  id: "620d2d2df524b2dcf02b5bbe"
+				}){
+				  id,
+				  members {
+					role
+					plan {
+					  student {
+						firstName
+						lastName
+					  }
+					}
+				  }
+				  moduleName,
+				  parentModules {
+					id
+				  }
+				  objectives,
+				  collections{
+					id,
+					name,
+					lessons{
+					  id,
+					  name,
+					  content {
+						id,
+						type,
+						link
+					  },
+					}
+				  }
+				}
+			  }
+			`,
 			token,
 		},
 		gqlFetcher
@@ -30,10 +65,12 @@ const Module = () => {
 		return <div>Loading...</div>
 	}
 
+	console.log(data.module[0])
+
 	return (
 		<div>
 			<div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
-				<DefaultModule module={data.module} />
+				<DefaultModule module={data.module[0]} />
 			</div>
 		</div>
 	);

@@ -4,7 +4,7 @@ import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigatio
 import Layout from '@/components/Layout';
 import ContentLoader from '@/components/modules/content_type/ContentLoader';
 import useSWR from 'swr';
-import fetcher from '@/utils/fetcher';
+import gqlFetcher from '@/utils/gqlFetcher';
 import { Button } from "emse-ui";
 
 const ModuleSection = () => {
@@ -13,9 +13,40 @@ const ModuleSection = () => {
 	const router = useRouter();
 	let { moduleId, sectionId, lessonId } = router.query;
 	
-	const { data, errors } = useSWR(`/api/modules/${moduleId}`, fetcher);
+	const { data, error } = useSWR(
+		{
+			query: `
+				query {
+					module(input:{
+						id: "620d2d2df524b2dcf02b5bbe"
+					}) {
+						id,
+						moduleName,
+						parentModules {
+							id
+						}
+						objectives,
+						collections {
+							id,
+							name,
+							lessons {
+								id,
+								name,
+								content {
+									id,
+									type,
+									link
+								},
+							}
+						}
+					}
+				}
+			`
+		},
+		gqlFetcher
+	)
 	if(!data) return <p>Loading...</p>
-	if(errors) return <p>Content failed to load...</p>
+	if(error) return <p>Content failed to load...</p>
 
 	const section = data?.sections[sectionId];
 	const lesson = section?.lessons[lessonId];
