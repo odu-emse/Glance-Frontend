@@ -32,6 +32,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	volume,
 	cards = [],
 }): React.ReactElement => {
+	
 	const [videoPlaying, setVideoPlaying] = useState(autoplay)
 	const [viewComments, setViewComments] = useState(false)
 	const [controlsFocused, setControlsFocused] = useState(false)
@@ -150,6 +151,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 			onMouseLeave={() => setControlsFocused(false)}
 			ref={player}
 		>
+			
+			{ /* Internal Raw HTML5 Video Player */ }
 			<video
 				className="w-full h-full absolute"
 				autoPlay={autoplay}
@@ -167,7 +170,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				<source src={source} type={type} />
 				Your browser doesn&apos;t support video playback. Please
 				consider updating to the latest version.
-			</video>
+        	</video>
+			{ /* END OF Internal Raw HTML5 Video Player */ }
+
+
+
 
 			{/* The card panel. */}
 			<div
@@ -284,9 +291,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 								)}
 							</button>
 						</div>
-						<div>
+						<div className='group relative'>
 							<button
-                                className="group relative rounded-full"
+                                className="rounded-full"
 								onClick={handleAudioMuteToggle}
 								data-cy="volume"
 
@@ -296,11 +303,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 								) : (
 									<FaVolumeUp />					            
 								)}
-
-								<div className="absolute hidden group-hover:flex -left-3 -top-1 -translate-y-full w-16 px-2 py-2 bg-gray-700 rounded-md">
-                                <input id="default-range" type="range" min="0" max="100" value={isAudioMuted ? 0 : 80} step="10" className="w-full h-2 bg-gray-200 rounded-lg  ursor-pointer dark:bg-gray-200"/>
-						        </div>
 							</button>
+							<div className="absolute bottom-0 hidden group-hover:flex">
+                                <input id="default-range" type="range" min="0" max="100" orient="vertical" value={isAudioMuted ? 0 : 80} step="1"/>
+							</div>
 						</div>
 
                         
