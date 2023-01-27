@@ -26,6 +26,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	source,
 	type,
 	captions,
+	mouseInactiveTime,
 	autoplay = false,
 	defaultVolume = false,
 	cards = [],
@@ -38,10 +39,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	const [isCaptionsVisible, setCaptionsVisible] = useState(false)
 	const [isFullscreen, setFullScreen] = useState(false)
 
+	const [ mouseInactive, setMouseInactive] = useState(false)
+
 	const player = useRef<HTMLDivElement>(null)
 	const videoPlayer = useRef<HTMLVideoElement>(null)
 	const progressBar = useRef<HTMLInputElement>(null)
 	const captionsTrack = useRef<HTMLTrackElement>(null)
+	let mouseTimeout = useRef<any>();
 
 	const handleTimeUpdate = (
 		event: SyntheticEvent<HTMLVideoElement, Event>
@@ -109,6 +113,17 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 		setAudioMuted(!isAudioMuted)
 	}
 
+	const handlemouseInactivity = () => {
+        clearTimeout(mouseTimeout.current);
+		setControlsFocused(true);
+		//console.log("Timeout Cleared")
+
+        mouseTimeout.current = setTimeout(() => {
+			//console.log("Timeout Set")	
+			setControlsFocused(false)
+        }, 3000)   
+	}
+
 	// ----- Setup Cards -----
 	const generateCommentTicks = () => {
 		if (!videoPlayer.current) return
@@ -146,6 +161,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 			className="relative w-full h-96 bg-black"
 			onMouseEnter={() => setControlsFocused(true)}
 			onMouseLeave={() => setControlsFocused(false)}
+			onMouseMove={() => {
+				handlemouseInactivity()
+			}}
 			ref={player}
 		>
 			<video
@@ -313,6 +331,7 @@ type VideoPlayerProps = {
 	autoplay?: boolean
 	defaultVolume?: boolean
 	cards: VideoCard[]
+	
 }
 
 type VideoCard = {
