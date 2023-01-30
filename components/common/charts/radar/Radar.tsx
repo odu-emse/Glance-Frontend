@@ -56,9 +56,7 @@ export const RadarComponent: React.FC<RadarProps> = ({
 				<PolarGrid />
 				<PolarAngleAxis dataKey={dataKey} />
 				{radiusAxis && (
-					<PolarRadiusAxis
-						angle={radiusAxisAngle || 90}
-					/>
+					<PolarRadiusAxis angle={radiusAxisAngle || 90} />
 				)}
 				{matrixChildren?.length > 0
 					? matrixChildren.map((child, childIndex) => {

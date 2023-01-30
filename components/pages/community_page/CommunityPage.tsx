@@ -7,7 +7,8 @@ import {
 	AiOutlineDown,
 	AiOutlineTrophy,
 	AiFillPlusSquare,
- AiOutlinePlus } from 'react-icons/ai'
+	AiOutlinePlus,
+} from 'react-icons/ai'
 import { BiSearch, BiMessageRoundedDetail, BiPoll } from 'react-icons/bi'
 import { RiContactsBookLine } from 'react-icons/ri'
 import { GrGroup } from 'react-icons/gr'

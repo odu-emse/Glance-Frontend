@@ -32,6 +32,5 @@ export default async function handler(
 		return
 	} catch (e) {
 		res.status(401).send('Unauthorized')
-		
 	}
 }
