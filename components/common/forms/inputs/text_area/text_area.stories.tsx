@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { TextArea } from './TextArea'
-import type { TextAreaProps } from './TextArea'
+import { TextArea } from './text_area'
+import type { TextAreaProps } from './text_area'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { useState } from 'react'

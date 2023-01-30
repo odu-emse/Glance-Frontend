@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Layout } from '../../common/pages/layouts/layout/Layout'
 import useAuth from '../../../hooks/useAuth'
 import gqlFetcher from '../../../utils/gqlFetcher'
 import useSWR from 'swr'

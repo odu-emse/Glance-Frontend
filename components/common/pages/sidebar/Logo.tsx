@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from '../../links/link/Link'
 
-export const Logo = ({ extended }: LogoProps): JSX.Element => {
+export const Logo = ({ extended }: LogoProps) => {
 	return (
 		<div className="flex items-center justify-center py-5 w-full">
 			<Link to="/" className="w-full" role="logo" extended={extended}>

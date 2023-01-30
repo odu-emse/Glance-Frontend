@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const Hamburger = ({ onClick }: HamburgerProps): JSX.Element => {
+export const Hamburger = ({ onClick }: HamburgerProps) => {
 	return (
 		<button
 			className="inline-flex items-center justify-center py-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white w-full"

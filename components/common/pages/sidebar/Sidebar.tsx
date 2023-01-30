@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Logo } from './Logo'
-import { Hamburger } from './Hamburger'
+import { Logo } from './logo'
+import { Hamburger } from './hamburger'
 
 export type SidebarProps = {
 	/**

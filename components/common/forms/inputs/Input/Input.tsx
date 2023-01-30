@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { BiSearch } from 'react-icons/bi'
-import { dropdownOption } from '../Select/Select'
+import { dropdownOption } from '../select/select'
 
 export const Input = ({
 	label,
@@ -126,7 +126,7 @@ export type InputProps = {
 	/**
 	 * The description value is used to give users additional information about the either the input or the error that happened. This is used to provide additional context to the user, under the input element. This is just supplementary information, so it's visual hierarchy should not interfere with the input element's.
 	 */
-	description?: string | React.ReactNode | JSX.Element
+	description?: string | React.ReactNode | React.ReactElement
 	/**
 	 * The required attribute is used to indicate weather the input element is required or not.
 	 */

@@ -28,7 +28,7 @@ export type PanelProps = {
 	/**
 	 *  Indicates the children elements in JSX.Element or React.ReactNode
 	 */
-	children: JSX.Element | React.ReactNode
+	children: React.ReactElement | React.ReactNode
 	/**
 	 *  Indicates the className - based on selection of a property named 'size', className is atlered
 	 */

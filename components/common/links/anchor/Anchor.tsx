@@ -36,7 +36,7 @@ export const Anchor = ({
 	id = '',
 	icon,
 	...rest
-}: AnchorProps): JSX.Element => {
+}: AnchorProps) => {
 	const classes = [
 		'underline',
 		className && className,

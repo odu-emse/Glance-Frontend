@@ -14,7 +14,7 @@ export const ModuleCard = ({
 	secondaryLink,
 	secondaryLinkLabel,
 	completion,
-}: ModuleProps): JSX.Element => {
+}: ModuleProps) => {
 	return (
 		<div className="moduleCard flex flex-col lg:flex-row md:items-stretch gap-4 border-gray bg-gray-100 drop-shadow-md border border-solid rounded">
 			<div

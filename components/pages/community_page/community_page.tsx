@@ -23,7 +23,7 @@ export const CommunityPage = ({
 	pollSurveysProps,
 	challengesProps,
 	contactProps,
-}: CommunityPageProps): JSX.Element => {
+}: CommunityPageProps) => {
 	return (
 		<div className="h-auto mx-auto relative bg-[#E7E8E9] overflow-hidden">
 			<div className="flex flex-1">

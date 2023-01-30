@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useRef } from 'react'
-import useAutosizeTextArea from './useAutosizeTextArea'
+import useAutosizeTextArea from './use_autosize_text_area'
 import { IoSend } from 'react-icons/io5'
 
 export const TextArea: React.FC<TextAreaProps> = ({

@@ -7,13 +7,17 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
+
 		"test:cy": "cypress run --component",
 		"test:cy:open": "cypress open --component",
 		"test": "jest --watch",
+		
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
+		
 		"style": "npx tailwindcss -i ./styles/globals.css -o ./components/output.css --watch",
 		"style:build": "npx tailwindcss -i ./styles/globals.css -o ./storybook/output.css",
+		
 		"prepare": "husky install"
 	},
 	"dependencies": {

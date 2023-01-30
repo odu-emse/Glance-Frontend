@@ -41,8 +41,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	const [isCaptionsVisible, setCaptionsVisible] = useState(false)
 	const [isFullscreen, setFullScreen] = useState(false)
 
-	const [mouseInactive, setMouseInactive] = useState(false)
-
 	const player = useRef<HTMLDivElement>(null)
 	const videoPlayer = useRef<HTMLVideoElement>(null)
 	const progressBar = useRef<HTMLInputElement>(null)

@@ -11,7 +11,7 @@ export const Select: React.FC<dropdownProps> = ({
 	multiple = false,
 	size = 1,
 	autoFocus = false,
-}): JSX.Element => {
+}) => {
 	return (
 		<label className="items-center flex gap-1 mb-2 text-l font-medium text-gray-900">
 			{label && label}
@@ -126,7 +126,7 @@ export type dropdownOption = {
 	/**
 	 * Optional icon to be displayed in the dropdown before the option
 	 */
-	icon?: JSX.Element
+	icon?: React.ReactElement
 	/**
 	 * Specifies that an option should be disabled
 	 */

@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Form } from './Form'
-import { Input } from '../inputs/Input/Input'
+import { Form } from './form'
+import { Input } from '../inputs/input/input'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useState } from 'react'
-import { Input, InputProps } from './Input'
+import { Input, InputProps } from './input'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
@@ -20,7 +20,7 @@ export default {
 } as ComponentMeta<typeof Input>
 
 const Template: ComponentStory<typeof Input> = (args: InputProps) => {
-	const [value, setValue] = useState(args.defaultValue ?? '')
+	const [ value ] = useState(args.defaultValue ?? '')
 	const [options, setOptions] = useState([])
 
 	return (

@@ -8,5 +8,7 @@ module.exports = {
 				case: 'snakeCase',
 			},
 		],
+		'no-empty-pattern': 'off',
+		'no-use-before-define': 'off'
 	},
 }
