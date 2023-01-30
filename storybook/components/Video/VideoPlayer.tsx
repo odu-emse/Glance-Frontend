@@ -6,6 +6,7 @@ import React, {
 	useRef,
 	useState,
 } from 'react'
+
 import {
 	FaPlay,
 	FaPause,
@@ -29,8 +30,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	mouseInactiveTime,
 	autoplay = false,
 	defaultVolume = false,
+	volume,
 	cards = [],
 }): React.ReactElement => {
+	
 	const [videoPlaying, setVideoPlaying] = useState(autoplay)
 	const [viewComments, setViewComments] = useState(false)
 	const [controlsFocused, setControlsFocused] = useState(false)
@@ -166,6 +169,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 			}}
 			ref={player}
 		>
+			
+			{ /* Internal Raw HTML5 Video Player */ }
 			<video
 				className="w-full h-full absolute"
 				autoPlay={autoplay}
@@ -183,7 +188,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				<source src={source} type={type} />
 				Your browser doesn&apos;t support video playback. Please
 				consider updating to the latest version.
-			</video>
+        	</video>
+			{ /* END OF Internal Raw HTML5 Video Player */ }
+
+
+
 
 			{/* The card panel. */}
 			<div
@@ -230,7 +239,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
 			{/* Overlay controls set */}
 			<div
-				className={`overlay absolute w-full h-full flex flex-col text-white ${
+				className={`absolute w-full h-full flex flex-col text-white ${
 					controlsFocused ? 'visible' : 'invisible'
 				}`}
 			>
@@ -300,18 +309,36 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 								)}
 							</button>
 						</div>
-						<div>
+						<div className='group relative'>
 							<button
+                                className="rounded-full"
 								onClick={handleAudioMuteToggle}
 								data-cy="volume"
+
 							>
 								{isAudioMuted ? (
-									<FaVolumeMute />
+									<FaVolumeMute/>
 								) : (
-									<FaVolumeUp />
+									<FaVolumeUp />					            
 								)}
 							</button>
+                                <input 
+									className="absolute bottom-0 hidden group-hover:flex -translate-y-6 w-4"
+									style={{
+										"-webkit-appearance": "slider-vertical",
+										"writing-mode": "bt-lr",
+									}}
+									id="default-range" 
+									type="range" 
+									min="0" 
+									max="100" 
+									orient="vertical" 
+									value={isAudioMuted ? 0 : 80} 
+									step="1"
+								/>
 						</div>
+
+                        
 						<div>
 							<button onClick={handleFullScreenButonClick}>
 								{isFullscreen ? <FaCompress /> : <FaExpand />}
@@ -321,7 +348,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				</div>
 			</div>
 		</div>
+        
 	)
+   
 }
 
 type VideoPlayerProps = {
@@ -331,7 +360,7 @@ type VideoPlayerProps = {
 	autoplay?: boolean
 	defaultVolume?: boolean
 	cards: VideoCard[]
-	
+	volume: number
 }
 
 type VideoCard = {
@@ -340,3 +369,5 @@ type VideoCard = {
 	name: string
 	icon: string
 }
+
+
