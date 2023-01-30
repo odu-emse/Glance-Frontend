@@ -90,7 +90,7 @@ describe('VideoPlayer.tsx', function () {
 				video.pause()
 				track.oncuechange = () => {
 					// https://github.com/mdn/interactive-examples/blob/a31ab1f205d90b93a945dff726d6dbfead150ea1/live-examples/media/examples/friday.vtt
-					let captionText = track.activeCues[0].text
+					const captionText = track.activeCues[0].text
 					expect(captionText).to.equal(
 						"Yes, he's in - in a bad humor"
 					)
@@ -100,7 +100,7 @@ describe('VideoPlayer.tsx', function () {
 				video.pause()
 				track.oncuechange = () => {
 					// https://github.com/mdn/interactive-examples/blob/a31ab1f205d90b93a945dff726d6dbfead150ea1/live-examples/media/examples/friday.vtt
-					let captionText = track.activeCues[0].text
+					const captionText = track.activeCues[0].text
 					expect(captionText).to.equal(
 						"Somebody must've stolen the crown jewels"
 					)

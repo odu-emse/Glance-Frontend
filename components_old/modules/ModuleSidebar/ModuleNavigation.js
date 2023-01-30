@@ -1,7 +1,7 @@
 import Section from './Section'
 
 function generateSections(data, selected) {
-	let sections = []
+	const sections = []
 	let nextSection = data.headSection
 	while (nextSection !== null) {
 		const sectionData = data.sections[nextSection]

@@ -1,7 +1,7 @@
 import Lesson from './Lesson'
 
 function generateLessons(data, selected, moduleId) {
-	let lessons = []
+	const lessons = []
 	let nextLesson = data.headLesson
 	while (nextLesson !== null) {
 		const lessonData = data.lessons[nextLesson]

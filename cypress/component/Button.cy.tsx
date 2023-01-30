@@ -40,7 +40,7 @@ describe('Button.tsx', function () {
 		cy.mount(<Loading loading={true}>{label}</Loading>)
 		cy.get('button').children().should('have.class', 'animate-spin')
 	})
-	//TODO: we are only checking if the class name is added but not if the css is actually applied
+	// TODO: we are only checking if the class name is added but not if the css is actually applied
 	it('should have outline on focus', function () {
 		cy.mount(<Primary>{label}</Primary>)
 		cy.get('button').should('have.class', 'focus:outline-blue-500')

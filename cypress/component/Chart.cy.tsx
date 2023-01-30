@@ -263,7 +263,7 @@ describe('Radar Chart', function () {
 		cy.injectAxe()
 	})
 	it('should render component', () => {
-		//TODO: The Radar Rendering, No accessibility Voilation and panel width TestCase Component.
+		// TODO: The Radar Rendering, No accessibility Voilation and panel width TestCase Component.
 		// Ended up cy.Mount error, which needs to be fixed in Radar Chart Component.
 	})
 })
