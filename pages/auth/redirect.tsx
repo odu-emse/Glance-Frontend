@@ -1,6 +1,6 @@
-import gqlFetcher from '@/utils/gql_fetcher';
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
+import gqlFetcher from '@/utils/gql_fetcher'
+import { useRouter } from 'next/router'
+import useSWR from 'swr'
 
 const Redirect = () => {
 	const router = useRouter()

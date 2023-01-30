@@ -1,10 +1,5 @@
 import _ from 'lodash'
-import React, {
-	ChangeEvent,
-	SyntheticEvent,
-	useRef,
-	useState,
-} from 'react'
+import React, { ChangeEvent, SyntheticEvent, useRef, useState } from 'react'
 
 import {
 	FaPlay,
@@ -15,8 +10,8 @@ import {
 	FaClosedCaptioning,
 	FaRegClosedCaptioning,
 	FaVolumeMute,
-//	FaVolumeOff,
-//	FaVolumeDown,
+	//	FaVolumeOff,
+	//	FaVolumeDown,
 	FaVolumeUp,
 	FaArrowCircleUp,
 } from 'react-icons/fa'

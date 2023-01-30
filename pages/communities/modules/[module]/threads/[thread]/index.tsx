@@ -1,4 +1,4 @@
-import { Thread } from '@/common/community/thread/thread/thread';
+import { Thread } from '@/common/community/thread/thread/thread'
 import { Button } from 'emse-ui'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 const ThreadPage = () => {
