@@ -2,9 +2,9 @@ import * as React from 'react'
 import moment from 'moment'
 
 export const BubbleMessage = ({
-								  message,
-								  currentUserID
-							  }: BubbleMessageProps) => {
+		message,
+		currentUserID
+	}: BubbleMessageProps) => {
 	return (
 		<div className='container '>
 			<div className=''>

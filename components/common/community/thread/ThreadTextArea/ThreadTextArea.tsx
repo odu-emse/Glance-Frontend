@@ -1,7 +1,7 @@
-import { Button } from '../../button/Button'
-import { Input } from '../../forms/FormElements/Input'
+import { Button } from '../../../button/Button'
+import { Input } from '../../../forms/inputs/Input/Input'
 
-export const PostButton = () => {
+export const ThreadTextArea = () => {
 	return (
 		<div className="relative">
 			<textarea

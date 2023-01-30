@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { LessonLink } from '../forms/FormElements/LessonLink'
-import type { LessonLinkProps } from '../forms/FormElements/LessonLink'
+import { LessonLink } from '../forms/inputs/LessonLink/LessonLink'
+import type { LessonLinkProps } from '../forms/inputs/LessonLink/LessonLink'
 
 export const Accordion: React.FC<AccordionProps> = ({
 	title = 'Topic 1',

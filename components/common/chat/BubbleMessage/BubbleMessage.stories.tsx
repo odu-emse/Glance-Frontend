@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { BubbleMessage } from './BubbleMessage'
 
 export default {
-	title: 'Molecules/Bubble Message',
+	title: 'Common/Chat/Bubble Message',
 	component: BubbleMessage,
 	args: {},
 } as ComponentMeta<typeof BubbleMessage>
