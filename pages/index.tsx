@@ -1,17 +1,17 @@
-import LoadingSplash from '../components/LoadingSplash';
-import Head from 'next/head';
+import LoadingSplash from '../components/LoadingSplash'
+import Head from 'next/head'
 
 const Index = () => {
-  return (
-    <div className='flex justify-center items-center h-screen'>
-      <Head>
-        <title>ALMP</title>
-        <meta name="description" content="ALMP" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <LoadingSplash />
-    </div>
-  )
+	return (
+		<div className="flex justify-center items-center h-screen">
+			<Head>
+				<title>ALMP</title>
+				<meta name="description" content="ALMP" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<LoadingSplash />
+		</div>
+	)
 }
 
-export default Index;
+export default Index

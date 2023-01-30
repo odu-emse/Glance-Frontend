@@ -1,42 +1,42 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation';
-import Layout from '@/components/Layout';
-import ContentLoader from '@/components/modules/content_type/ContentLoader';
-import useSWR from 'swr';
-import fetcher from '@/utils/fetcher';
-import { Button } from "emse-ui";
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation'
+import Layout from '@/components/Layout'
+import ContentLoader from '@/components/modules/content_type/ContentLoader'
+import useSWR from 'swr'
+import fetcher from '@/utils/fetcher'
+import { Button } from 'emse-ui'
 
 const ModuleSection = () => {
-	//const [data, setData] = useState(null);
+	// const [data, setData] = useState(null);
 
-	const router = useRouter();
-	let { moduleId, sectionId, lessonId } = router.query;
-	
-	const { data, errors } = useSWR(`/api/modules/${moduleId}`, fetcher);
-	if(!data) return <p>Loading...</p>
-	if(errors) return <p>Content failed to load...</p>
+	const router = useRouter()
+	const { moduleId, sectionId, lessonId } = router.query
 
-	const section = data?.sections[sectionId];
-	const lesson = section?.lessons[lessonId];
+	const { data, errors } = useSWR(`/api/modules/${moduleId}`, fetcher)
+	if (!data) return <p>Loading...</p>
+	if (errors) return <p>Content failed to load...</p>
 
-	if(!section || !lesson) return <p>Content failed to load...</p>
+	const section = data?.sections[sectionId]
+	const lesson = section?.lessons[lessonId]
 
-	let nextPage = null;
-	let prevPage = null;
+	if (!section || !lesson) return <p>Content failed to load...</p>
+
+	let nextPage = null
+	let prevPage = null
 
 	if (lesson.next !== null)
-		nextPage = `/modules/${moduleId}/sections/${sectionId}/lessons/${lesson.next}`;
+		nextPage = `/modules/${moduleId}/sections/${sectionId}/lessons/${lesson.next}`
 	if (lesson.prev !== null)
-		prevPage = `/modules/${moduleId}/sections/${sectionId}/lessons/${lesson.prev}`;
+		prevPage = `/modules/${moduleId}/sections/${sectionId}/lessons/${lesson.prev}`
 	if (lesson.next === null && section.next !== null)
 		nextPage = `/modules/${moduleId}/sections/${section.next}/lessons/${
 			data.sections[section.next].headLesson
-		}`;
+		}`
 	if (lesson.prev === null && section.prev !== null)
 		prevPage = `/modules/${moduleId}/sections/${section.prev}/lessons/${
 			data.sections[section.prev].tailLesson
-		}`;
+		}`
 
 	return (
 		<section className="mx-auto container h-screen">
@@ -67,11 +67,11 @@ const ModuleSection = () => {
 				)}
 			</div>
 		</section>
-	);
-};
+	)
+}
 
 ModuleSection.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>;
-};
+	return <Layout>{page}</Layout>
+}
 
-export default ModuleSection;
+export default ModuleSection

@@ -1,15 +1,15 @@
-import React from 'react';
-import ModuleItem from '@/components/modules/ModuleListItem';
-import Layout from '@/components/Layout';
-import useAuth from '@/hooks/useAuth';
-import useSWR from 'swr';
-import gqlFetcher from '@/utils/gqlFetcher';
-import { getUserByOpenID } from '@/scripts/getUserByOpenID';
-import Link from 'next/link';
-import { Button } from "emse-ui";
+import React from 'react'
+import ModuleItem from '@/components/modules/ModuleListItem'
+import Layout from '@/components/Layout'
+import useAuth from '@/hooks/useAuth'
+import useSWR from 'swr'
+import gqlFetcher from '@/utils/gqlFetcher'
+import { getUserByOpenID } from '@/scripts/getUserByOpenID'
+import Link from 'next/link'
+import { Button } from 'emse-ui'
 
 const ModulesPage = () => {
-	const {jwt: token, user} = useAuth()
+	const { jwt: token, user } = useAuth()
 
 	const { data, error } = useSWR(
 		{
@@ -17,42 +17,49 @@ const ModulesPage = () => {
 			token,
 		},
 		gqlFetcher
-	);
-	console.log(data);
+	)
+	console.log(data)
 
-	if(error) {
-		console.log(error);
-		throw new Error(error);
+	if (error) {
+		console.log(error)
+		throw new Error(error)
 	}
-	if(!data || !data?.user){
+	if (!data || !data?.user) {
 		return <div>Loading...</div>
 	}
 
 	return (
 		<section className="gap-1 md:px-10 w-full flex flex-col md:flex-row">
 			<div className="flex flex-col md:w-full w-3/4">
-				<div className='flex items-center justify-between'>
-				<h1 className="text-7xl opacity-50 font-black text-gray-400">
-					My Modules
-				</h1>
+				<div className="flex items-center justify-between">
+					<h1 className="text-7xl opacity-50 font-black text-gray-400">
+						My Modules
+					</h1>
 					<Link href={`/modules/all`} passHref={true}>
 						<Button label="View All Modules" />
 					</Link>
 				</div>
 				{
-					data.user.plan.modules.filter((doc) => doc.role === "STUDENT").map((enrollment) => {
-						return <ModuleItem key={enrollment.module.id} module={enrollment.module} />;
-					})
+					data.user.plan.modules
+						.filter((doc) => doc.role === 'STUDENT')
+						.map((enrollment) => {
+							return (
+								<ModuleItem
+									key={enrollment.module.id}
+									module={enrollment.module}
+								/>
+							)
+						})
 
-					//console.log(data)
+					// console.log(data)
 				}
 			</div>
 		</section>
-	);
-};
+	)
+}
 
 ModulesPage.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>;
-};
+	return <Layout>{page}</Layout>
+}
 
-export default ModulesPage;
+export default ModulesPage

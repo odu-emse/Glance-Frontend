@@ -25,7 +25,7 @@ export default function terminalLog(violations: any[]) {
 			id,
 			impact,
 			description,
-			nodes: nodes.length
+			nodes: nodes.length,
 		})
 	)
 
