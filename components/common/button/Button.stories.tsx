@@ -34,3 +34,8 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+export const Width = Template.bind({});
+Width.args = {
+  size: 1,
+  label: 'Button',
+};
