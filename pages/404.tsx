@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { Button } from 'emse-ui';
+import Link from 'next/link'
+import { Button } from 'emse-ui'
 
 const NotFound = () => {
 	return (
@@ -12,4 +12,4 @@ const NotFound = () => {
 	)
 }
 
-export default NotFound;
+export default NotFound

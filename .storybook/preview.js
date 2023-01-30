@@ -1,1 +1,1 @@
-import "../components/output.css";
+import '../components/output.css'

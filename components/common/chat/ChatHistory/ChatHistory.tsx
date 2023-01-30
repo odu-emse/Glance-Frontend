@@ -9,27 +9,23 @@ export const ChatHistory = ({ messages, handle }: ChatHistoryProps) => {
 
 	return (
 		<div className="flex flex-col w-full h-full max-h-screen border-r-2 overflow-y-scroll">
-
 			{messages?.length &&
 				messages.map((message, messageIndex) => (
 					<div
 						className={`flex flex-row py-4 px-2 justify-center items-center border-b-2 relative before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-blue-100 before:transition-opacity before:block
-						 ${
-							isChecked === messageIndex 
-								? ' before:opacity-100'
-								: ' before:opacity-0'
-							}` 
-					}
+						 ${isChecked === messageIndex ? ' before:opacity-100' : ' before:opacity-0'}`}
 						key={messageIndex}
 						onClick={() => setIsChecked(messageIndex)}
 					>
 						<div
-                           className = {`
-                                ${messages[messageIndex].newNotification===true
-                                ? ' rounded-full mx-1 bg-blue-500 h-2.5 w-5 flex items-center justify-center'
-                                : ''
-                                }`} >
-                            </div>
+							className={`
+                                ${
+									messages[messageIndex].newNotification ===
+									true
+										? ' rounded-full mx-1 bg-blue-500 h-2.5 w-5 flex items-center justify-center'
+										: ''
+								}`}
+						></div>
 						<div className="w-1/4">
 							<img
 								src={message.image}

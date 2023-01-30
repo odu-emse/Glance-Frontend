@@ -23,16 +23,19 @@ const Template: ComponentStory<typeof Input> = (args: InputProps) => {
 	const [value, setValue] = useState(args.defaultValue ?? '')
 	const [options, setOptions] = useState([])
 
-	
- 
 	return (
 		<Input
 			{...args}
 			onChange={(value) => {
-				const isVisable = value.length > 0;
-				
-				if(isVisable) {
-					setOptions((prev) => ['result1', 'result2','result3','result4'])
+				const isVisable = value.length > 0
+
+				if (isVisable) {
+					setOptions((prev) => [
+						'result1',
+						'result2',
+						'result3',
+						'result4',
+					])
 				} else {
 					setOptions((prev) => [])
 				}

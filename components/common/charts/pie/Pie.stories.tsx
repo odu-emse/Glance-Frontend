@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { PieComponent, PieProps } from './Pie'
-import {ComponentMeta, ComponentStory} from "@storybook/react";
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Common/Charts/Pie Chart',
@@ -24,7 +24,7 @@ export default {
 	},
 } as ComponentMeta<typeof PieComponent>
 
-const Template:ComponentStory<typeof PieComponent> = (args: PieProps) => (
+const Template: ComponentStory<typeof PieComponent> = (args: PieProps) => (
 	<div className="w-full h-96">
 		<PieComponent {...args} />
 	</div>

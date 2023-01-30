@@ -1,7 +1,7 @@
-import { gql } from 'graphql-request';
+import { gql } from 'graphql-request'
 
 export const getUserByOpenID = (openID) => {
-		return gql`
+	return gql`
 			{
 				user(id: "${openID}") {
 					id

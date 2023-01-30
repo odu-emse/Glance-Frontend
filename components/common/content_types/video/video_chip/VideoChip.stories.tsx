@@ -1,6 +1,6 @@
 import * as React from 'react'
-import {ComponentMeta, ComponentStory} from "@storybook/react";
-import { VideoChip } from './VideoChip';
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { VideoChip } from './VideoChip'
 
 export default {
 	title: 'Common/Content Types/Video Chip',
@@ -8,10 +8,12 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof VideoChip>
 
-const Template: ComponentStory<typeof VideoChip> = (args) => <VideoChip {...args} />
+const Template: ComponentStory<typeof VideoChip> = (args) => (
+	<VideoChip {...args} />
+)
 
 export const Sample = Template.bind({})
 Sample.args = {
 	text: 'Hello there',
-	timestamp: 89
+	timestamp: 89,
 }

@@ -1,41 +1,41 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button } from './Button';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Button } from './Button'
 
 export default {
-  title: 'Common/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof Button>;
+	title: 'Common/Button',
+	component: Button,
+	argTypes: {
+		backgroundColor: { control: 'color' },
+	},
+} as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 Primary.args = {
-  primary: true,
-  label: 'Button',
-};
+	primary: true,
+	label: 'Button',
+}
 
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 Secondary.args = {
-  label: 'Button',
-};
+	label: 'Button',
+}
 
-export const Large = Template.bind({});
+export const Large = Template.bind({})
 Large.args = {
-  size: 'large',
-  label: 'Button',
-};
+	size: 'large',
+	label: 'Button',
+}
 
-export const Small = Template.bind({});
+export const Small = Template.bind({})
 Small.args = {
-  size: 'small',
-  label: 'Button',
-};
-export const Width = Template.bind({});
+	size: 'small',
+	label: 'Button',
+}
+export const Width = Template.bind({})
 Width.args = {
-  size: 1,
-  label: 'Button',
-};
+	size: 1,
+	label: 'Button',
+}

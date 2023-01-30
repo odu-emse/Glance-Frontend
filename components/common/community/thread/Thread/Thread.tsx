@@ -3,7 +3,13 @@ import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { Anchor } from '../../../links/anchor/Anchor'
 
-export const Thread: React.FC<ThreadProps> = ({ title, body, upvotes, id, userProfile }) => {
+export const Thread: React.FC<ThreadProps> = ({
+	title,
+	body,
+	upvotes,
+	id,
+	userProfile,
+}) => {
 	const [isClicked, setIsClicked] = React.useState(false)
 	let url: string
 	return (
@@ -61,7 +67,6 @@ export const Thread: React.FC<ThreadProps> = ({ title, body, upvotes, id, userPr
 				</button>
 			</div>
 		</div>
-			
 	)
 }
 

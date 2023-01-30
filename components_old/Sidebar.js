@@ -1,24 +1,24 @@
-import { AiOutlinePartition } from 'react-icons/ai';
-import { BiTask } from 'react-icons/bi';
-import { BsStack } from 'react-icons/bs';
-import Link from 'next/link';
-import { RiShutDownLine } from 'react-icons/ri';
-import { GoPerson, GoSignIn } from 'react-icons/go';
-import Image from 'next/image';
+import { AiOutlinePartition } from 'react-icons/ai'
+import { BiTask } from 'react-icons/bi'
+import { BsStack } from 'react-icons/bs'
+import Link from 'next/link'
+import { RiShutDownLine } from 'react-icons/ri'
+import { GoPerson, GoSignIn } from 'react-icons/go'
+import Image from 'next/image'
 import {
 	MdLiveHelp,
 	MdOutlineExplore,
 	MdSpaceDashboard,
 	MdWidgets,
-} from 'react-icons/md';
-import { useContext, useState } from 'react';
-import AuthenticationContext from '@/contexts/AuthenticationContext';
+} from 'react-icons/md'
+import { useContext, useState } from 'react'
+import AuthenticationContext from '@/contexts/AuthenticationContext'
 
 export default function Sidebar() {
-	const [open, setOpen] = useState(false);
-	const [dropdown, setDropdown] = useState(false);
-	const account = useContext(AuthenticationContext);
-	const [authenticated] = useState(!!account);
+	const [open, setOpen] = useState(false)
+	const [dropdown, setDropdown] = useState(false)
+	const account = useContext(AuthenticationContext)
+	const [authenticated] = useState(!!account)
 
 	return (
 		<aside
@@ -79,13 +79,16 @@ export default function Sidebar() {
 						loading="lazy"
 					/>
 				</div>
-				<div className={`menu relative h-full flex flex-col justify-between`}>
+				<div
+					className={`menu relative h-full flex flex-col justify-between`}
+				>
 					{!authenticated === true ? (
 						<>
 							<Link href="/login">
 								<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open && 'flex items-center justify-center'
+										!open &&
+										'flex items-center justify-center'
 									}`}
 									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 								>
@@ -95,7 +98,8 @@ export default function Sidebar() {
 							<Link href="/users/register">
 								<a
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open && 'flex items-center justify-center'
+										!open &&
+										'flex items-center justify-center'
 									}`}
 									activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 								>
@@ -109,80 +113,114 @@ export default function Sidebar() {
 								<Link href="/portal">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
-										{open ? 'Portal' : <MdWidgets size={30} title="Portal" />}
+										{open ? (
+											'Portal'
+										) : (
+											<MdWidgets
+												size={30}
+												title="Portal"
+											/>
+										)}
 									</a>
 								</Link>
 								<Link href="/dashboard">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
 										{open ? (
 											'Dashboard'
 										) : (
-											<MdSpaceDashboard size={30} title="Dashboard" />
+											<MdSpaceDashboard
+												size={30}
+												title="Dashboard"
+											/>
 										)}
 									</a>
 								</Link>
 								<Link href="/modules">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
 										{open ? (
 											'My Program'
 										) : (
-											<BsStack size={30} title="My Program" />
+											<BsStack
+												size={30}
+												title="My Program"
+											/>
 										)}
 									</a>
 								</Link>
 								<Link href="/assignments">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
 										{open ? (
 											'Assignments'
 										) : (
-											<BiTask size={30} title="Assignments" />
+											<BiTask
+												size={30}
+												title="Assignments"
+											/>
 										)}
 									</a>
 								</Link>
 								<Link href="/community">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
 										{open ? (
 											'Community'
 										) : (
-											<MdOutlineExplore size={30} title="Community" />
+											<MdOutlineExplore
+												size={30}
+												title="Community"
+											/>
 										)}
 									</a>
 								</Link>
 								<Link href="/support">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
 										{open ? (
 											'Your support'
 										) : (
-											<MdLiveHelp size={30} title="Your support" />
+											<MdLiveHelp
+												size={30}
+												title="Your support"
+											/>
 										)}
 									</a>
 								</Link>
@@ -191,13 +229,17 @@ export default function Sidebar() {
 							<div className="flex flex-col w-full">
 								<button
 									className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-										!open ? 'flex items-center justify-center' : 'text-left'
+										!open
+											? 'flex items-center justify-center'
+											: 'text-left'
 									}`}
 									id="user-menu"
 									aria-haspopup="true"
 									onClick={() => setDropdown(!dropdown)}
 								>
-									<span className="sr-only">Open user menu</span>
+									<span className="sr-only">
+										Open user menu
+									</span>
 									{open ? (
 										'Account'
 									) : (
@@ -246,28 +288,38 @@ export default function Sidebar() {
 								<Link href="/sitemap">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
 										{open ? (
 											'Sitemap'
 										) : (
-											<AiOutlinePartition size={30} title="Sitemap" />
+											<AiOutlinePartition
+												size={30}
+												title="Sitemap"
+											/>
 										)}
 									</a>
 								</Link>
 								<Link href="/users/logout">
 									<a
 										className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4 text-sm font-medium uppercase tracking-widest ${
-											!open ? 'flex items-center justify-center' : ''
+											!open
+												? 'flex items-center justify-center'
+												: ''
 										}`}
 										activeClassName="bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4"
 									>
 										{open ? (
 											'Logout'
 										) : (
-											<RiShutDownLine size={30} title="Logout" />
+											<RiShutDownLine
+												size={30}
+												title="Logout"
+											/>
 										)}
 									</a>
 								</Link>
@@ -277,5 +329,5 @@ export default function Sidebar() {
 				</div>
 			</div>
 		</aside>
-	);
+	)
 }

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Form } from './Form'
-import { Input } from '../inputs/Input/Input';
-import {ComponentMeta, ComponentStory} from "@storybook/react";
+import { Input } from '../inputs/Input/Input'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Common/Forms/Form',
@@ -10,7 +10,7 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof Form>
 
-const Template:ComponentStory<typeof Form> = (args) => {
+const Template: ComponentStory<typeof Form> = (args) => {
 	const [formData, setFormData] = React.useState({
 		firstName: '',
 		lastName: '',
@@ -75,5 +75,5 @@ const Template:ComponentStory<typeof Form> = (args) => {
 		</Form>
 	)
 }
-export const Default:ComponentStory<typeof Form> = Template.bind({})
+export const Default: ComponentStory<typeof Form> = Template.bind({})
 Default.args = {}

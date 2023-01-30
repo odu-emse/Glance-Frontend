@@ -11,7 +11,9 @@ export const ThreadTextArea = () => {
 			></textarea>
 
 			<span className="absolute right-2 bottom-2 flex items-center m-2 ">
-				<Button size="small" shape='pill'>Post</Button>
+				<Button size="small" shape="pill">
+					Post
+				</Button>
 			</span>
 		</div>
 	)

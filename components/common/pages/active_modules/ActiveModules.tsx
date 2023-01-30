@@ -6,7 +6,7 @@ export const ActiveModules = ({ modules }: ActiveModulesProps) => {
 			<h1 className="font-semibold text-2xl py-1">Active Module List</h1>
 			{modules.map((module, moduleIndex) => (
 				<Anchor
-				key={moduleIndex}
+					key={moduleIndex}
 					path={`/communities/modules/${module.module_id}/`}
 					role="thread link"
 					className="text-blue-800 flex py-1 text-lg"
@@ -25,7 +25,6 @@ export type ActiveModulesProps = {
 }
 
 type ActiveModulesObject = {
-    module_name: string
+	module_name: string
 	module_id: string
-
 }

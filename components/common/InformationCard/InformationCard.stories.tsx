@@ -1,8 +1,5 @@
 import * as React from 'react'
-import {
-	InformationCard,
-	InformationProps,
-} from './InformationCard'
+import { InformationCard, InformationProps } from './InformationCard'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {

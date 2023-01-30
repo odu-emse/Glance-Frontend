@@ -30,7 +30,7 @@ export type PanelProps = {
 	 */
 	children: JSX.Element | React.ReactNode
 	/**
-	 *  Indicates the className - based on selection of a property named 'size', className is atlered 
+	 *  Indicates the className - based on selection of a property named 'size', className is atlered
 	 */
 	className?: string
 	/**

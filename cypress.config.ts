@@ -1,7 +1,7 @@
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
-  projectId: 'ye2f54',
+	projectId: 'ye2f54',
 	component: {
 		devServer: {
 			framework: 'react',
@@ -18,7 +18,7 @@ export default defineConfig({
 					console.table(message)
 
 					return null
-				}
+				},
 			})
 		},
 		specPattern: 'cypress/component/*.cy.tsx',

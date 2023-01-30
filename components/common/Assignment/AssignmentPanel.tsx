@@ -55,32 +55,43 @@ export const AssignmentPanel = ({
 				<div id="software" className="pb-8">
 					<h1 className={heading}>Required Software</h1>
 					<ul className={list}>
-						{moduleInformation.software ? moduleInformation.software.map(
-							(software, sfwIndex) => (
-								<li key={sfwIndex}>{software}</li>
-							)
-						) : null}
+						{moduleInformation.software
+							? moduleInformation.software.map(
+									(software, sfwIndex) => (
+										<li key={sfwIndex}>{software}</li>
+									)
+							  )
+							: null}
 					</ul>
 				</div>
 
 				<div id="modules" className="pb-8">
 					<h1 className={heading}>Required Modules</h1>
 					<ul className={list}>
-						{moduleInformation.deps ? moduleInformation.deps.map((dep, depIndex) => (
-							<li key={depIndex}>{dep}</li>
-						)) : null}
+						{moduleInformation.deps
+							? moduleInformation.deps.map((dep, depIndex) => (
+									<li key={depIndex}>{dep}</li>
+							  ))
+							: null}
 					</ul>
 				</div>
 
 				<div id="connections" className="pb-8">
 					<h1 className={heading}>Connections</h1>
 					<ul className="text-xs">
-						{moduleInformation.connections ? moduleInformation.connections.map((mod, modIndex) => (
-							<li className="pb-1 border-b" key={modIndex}>
-								{mod.moduleTitle} - {mod.assignmentTitle}
-							</li>
-						)) : null}
-						
+						{moduleInformation.connections
+							? moduleInformation.connections.map(
+									(mod, modIndex) => (
+										<li
+											className="pb-1 border-b"
+											key={modIndex}
+										>
+											{mod.moduleTitle} -{' '}
+											{mod.assignmentTitle}
+										</li>
+									)
+							  )
+							: null}
 					</ul>
 				</div>
 

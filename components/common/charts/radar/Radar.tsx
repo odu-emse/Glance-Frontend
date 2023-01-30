@@ -9,7 +9,7 @@ import {
 	Tooltip,
 } from 'recharts'
 
-export const RadarComponent:React.FC<RadarProps> = ({
+export const RadarComponent: React.FC<RadarProps> = ({
 	data,
 	width,
 	height,
@@ -29,7 +29,13 @@ export const RadarComponent:React.FC<RadarProps> = ({
 }): JSX.Element => {
 	const matrixChildren: any[] = []
 
-	if (typeof children !== "string" && typeof children !== "number" && children && !children && children.props.children?.length > 1) {
+	if (
+		typeof children !== 'string' &&
+		typeof children !== 'number' &&
+		children &&
+		!children &&
+		children.props.children?.length > 1
+	) {
 		React.Children.map(children.props.children, (child) => {
 			matrixChildren.push(child)
 		})
@@ -49,7 +55,11 @@ export const RadarComponent:React.FC<RadarProps> = ({
 			>
 				<PolarGrid />
 				<PolarAngleAxis dataKey={dataKey} />
-				{radiusAxis && <PolarRadiusAxis angle={radiusAxisAngle ? radiusAxisAngle : 90} />}
+				{radiusAxis && (
+					<PolarRadiusAxis
+						angle={radiusAxisAngle ? radiusAxisAngle : 90}
+					/>
+				)}
 				{matrixChildren?.length > 0
 					? matrixChildren.map((child, childIndex) => {
 							return React.cloneElement(child, {

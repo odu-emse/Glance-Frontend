@@ -14,7 +14,7 @@ export const Input = ({
 	defaultValue,
 	disabled = false,
 	error = false,
-	options
+	options,
 }: InputProps) => {
 	return (
 		<>
@@ -26,10 +26,11 @@ export const Input = ({
 					placeholder="Enter here"
 					role={role}
 					aria-label={ariaLabel}
-					className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none dark:text-white focus:outline-none focus:ring-0 peer ${error
+					className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none dark:text-white focus:outline-none focus:ring-0 peer ${
+						error
 							? 'border-red-500 dark:border-red-400 focus:border-red-600 dark:focus:border-red-500'
 							: 'dark:focus:border-blue-500 focus:border-blue-600 dark:border-gray-600 border-gray-300'
-						}
+					}
 					${disabled ? 'cursor-not-allowed' : ''}
 					`}
 					required={required}
@@ -66,15 +67,15 @@ export const Input = ({
 								</>
 							)}
 						</option>
-
-					))}			
+					))}
 
 				<label
 					htmlFor={name}
-					className={`peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 ${error
+					className={`peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 ${
+						error
 							? 'peer-focus:dark:text-red-500 peer-focus:text-red-600'
 							: 'peer-focus:dark:text-blue-500 peer-focus:text-blue-600'
-						}`}
+					}`}
 				>
 					{label}
 				</label>
@@ -90,10 +91,11 @@ export const Input = ({
 				{description && (
 					<p
 						id="helper-text-explanation"
-						className={`mt-2 text-sm ${error
+						className={`mt-2 text-sm ${
+							error
 								? 'text-red-600 dark:text-red-500'
 								: 'text-gray-500 dark:text-gray-400'
-							}`}
+						}`}
 					>
 						{description}
 					</p>
@@ -133,14 +135,14 @@ export type InputProps = {
 	 * The input type determines the way browsers conduct their validation and on a device by device basis it can change the keyboard behavior for the user.
 	 */
 	type:
-	| 'text'
-	| 'email'
-	| 'password'
-	| 'search'
-	| 'url'
-	| 'tel'
-	| 'number'
-	| 'file'
+		| 'text'
+		| 'email'
+		| 'password'
+		| 'search'
+		| 'url'
+		| 'tel'
+		| 'number'
+		| 'file'
 	/**
 	 * The default value of the input. This is used to set the value of the input when the page is first loaded.
 	 */

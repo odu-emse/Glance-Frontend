@@ -13,38 +13,31 @@ export const Button = ({
 	className,
 	...props
 }: ButtonProps): JSX.Element => {
-	
-		const classes =[
-			'flex flex-row items-center justify-center gap-2',
-				'focus:outline-dashed focus:outline-blue-500',
-				'px-4 py-2',
-				'font-medium',
-				className,
-		        size === 1 && 'w-full',
-				
-				shape === 'regular' && 'rounded',
-				shape == 'pill' && 'rounded-full',
+	const classes = [
+		'flex flex-row items-center justify-center gap-2',
+		'focus:outline-dashed focus:outline-blue-500',
+		'px-4 py-2',
+		'font-medium',
+		className,
+		size === 1 && 'w-full',
 
-				size === 'small' && 'text-sm',
-				size === 'large' && 'text-lg',
-				
+		shape === 'regular' && 'rounded',
+		shape == 'pill' && 'rounded-full',
 
-				disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
+		size === 'small' && 'text-sm',
+		size === 'large' && 'text-lg',
 
-				variant === 'primary' &&
-					'shadow bg-blue-700 text-white hover:bg-blue-600',
-				variant === 'secondary' &&
-					'shadow bg-gray-300 text-gray-700 hover:bg-gray-200',
-				variant === 'transparent' && 'bg-transparent text-black',
-		].join(' ')
-		
+		disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
+
+		variant === 'primary' &&
+			'shadow bg-blue-700 text-white hover:bg-blue-600',
+		variant === 'secondary' &&
+			'shadow bg-gray-300 text-gray-700 hover:bg-gray-200',
+		variant === 'transparent' && 'bg-transparent text-black',
+	].join(' ')
+
 	return (
-		<button
-			type={type}
-			disabled={disabled}
-			className={classes}
-			
-		>
+		<button type={type} disabled={disabled} className={classes}>
 			{loading ? (
 				<Loader
 					textColor={`${
@@ -73,7 +66,7 @@ type ButtonProps = {
 	/**
 	 * An enum that defines the button's size
 	 */
-	size?: 'small' | 'base' | 'large' |1
+	size?: 'small' | 'base' | 'large' | 1
 	/**
 	 * An enum that defines the button's type
 	 */
@@ -91,9 +84,9 @@ type ButtonProps = {
 	 */
 	onClick: () => void
 	/**
-	 *  Indicates the className - based on selection of a property named 'size', className is atlered 
+	 *  Indicates the className - based on selection of a property named 'size', className is atlered
 	 */
-	 className?: string
+	className?: string
 }
 
 Button.propTypes = {
@@ -130,9 +123,9 @@ Button.propTypes = {
 	 */
 	type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
 	/**
-	 *  Indicates the className - based on selection of a property named 'size', className is atlered 
+	 *  Indicates the className - based on selection of a property named 'size', className is atlered
 	 */
-	 className: PropTypes.string,
+	className: PropTypes.string,
 }
 
 Button.defaultProps = {

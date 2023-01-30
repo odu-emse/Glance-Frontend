@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { Button } from 'emse-ui';
+import React from 'react'
+import Link from 'next/link'
+import { Button } from 'emse-ui'
 
 const ModuleItem = ({ module }) => {
 	return (
@@ -11,7 +11,9 @@ const ModuleItem = ({ module }) => {
 				>
 					<div className="p-2 flex flex-col justify-between md:w-1/2 w-full">
 						<div className="flex items-center">
-							<h3 className="font-light text-lg">{module.name}</h3>
+							<h3 className="font-light text-lg">
+								{module.name}
+							</h3>
 						</div>
 						<div className="flex flex-col py-5">
 							<h4 className="font-bold text-xl">
@@ -42,9 +44,15 @@ const ModuleItem = ({ module }) => {
 								</p>
 							</div>
 							<ul className="flex justify-between items-center">
-								<li className="underline font-extralight">Discussion</li>
-								<li className="underline font-extralight">Assignments</li>
-								<li className="underline font-extralight">Download</li>
+								<li className="underline font-extralight">
+									Discussion
+								</li>
+								<li className="underline font-extralight">
+									Assignments
+								</li>
+								<li className="underline font-extralight">
+									Download
+								</li>
 								<li className="underline font-extralight text-red-600">
 									Abandon
 								</li>
@@ -89,7 +97,11 @@ const ModuleItem = ({ module }) => {
 						<h2 className="text-lg font-semibold">
 							Ethical Behavior and Leadership
 						</h2>
-						<Link href={`/modules/${module.id}`} passHref key={module.id}>
+						<Link
+							href={`/modules/${module.id}`}
+							passHref
+							key={module.id}
+						>
 							<Button label="Continue" />
 						</Link>
 						{/* 
@@ -100,7 +112,7 @@ const ModuleItem = ({ module }) => {
 				</div>
 			</div>
 		</section>
-	);
-};
+	)
+}
 
-export default ModuleItem;
+export default ModuleItem

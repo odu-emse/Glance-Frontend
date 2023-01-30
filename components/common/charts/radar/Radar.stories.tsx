@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Radar } from 'recharts'
 import { RadarComponent, RadarProps } from './Radar'
-import {ComponentMeta, ComponentStory} from "@storybook/react";
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Common/Charts/Radar Chart',

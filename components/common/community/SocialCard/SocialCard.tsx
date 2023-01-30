@@ -68,7 +68,9 @@ export const SocialCard: React.FC<SocialCardProps> = ({
 
 						<div className="mt-4 mb-6">
 							<div className="fullname mb-1 text-lg font-bold text-slate-700">
-								<span className="text-slate-500 role">{user.role}</span>{' '}
+								<span className="text-slate-500 role">
+									{user.role}
+								</span>{' '}
 								- {user.firstName} {user.lastName}
 							</div>
 							<div className="department text-xs text-neutral-500">
@@ -79,25 +81,27 @@ export const SocialCard: React.FC<SocialCardProps> = ({
 					</div>
 
 					<div className="role-symbol px-10 ">
-							{user.role === 'Prof' && (
-								<FaStar size={38} className="text-yellow-400" />
-							)}
+						{user.role === 'Prof' && (
+							<FaStar size={38} className="text-yellow-400" />
+						)}
 
-							{user.role === 'Advisor' && (
-								<FaGraduationCap
-									size={38}
-									className="text-yellow-400"
-								/>
-							)}
+						{user.role === 'Advisor' && (
+							<FaGraduationCap
+								size={38}
+								className="text-yellow-400"
+							/>
+						)}
 
-							{user.role === 'TA' && (
-								<FaBookmark size={38} className="text-yellow-400" />
-							)}
+						{user.role === 'TA' && (
+							<FaBookmark size={38} className="text-yellow-400" />
+						)}
 					</div>
 				</div>
 
 				<div className=" mt-4 mb-6 w-full h-200">
-					<div className=" break-words text-sm text-neutral-600 ">{content}</div>
+					<div className=" break-words text-sm text-neutral-600 ">
+						{content}
+					</div>
 				</div>
 				<div className="border-b p-2">
 					<div className="flex items-center justify-between text-slate-500 ">
@@ -129,10 +133,16 @@ export const SocialCard: React.FC<SocialCardProps> = ({
 
 					{/* Comment icons */}
 					<div className="flex gap-2">
-						<button aria-label="attach-file" className="flex items-center justify-center px-5">
+						<button
+							aria-label="attach-file"
+							className="flex items-center justify-center px-5"
+						>
 							<MdAttachFile size={20} className="mr-1" />
 						</button>
-						<button aria-label="insert-emoji" className="flex items-center justify-center px-8">
+						<button
+							aria-label="insert-emoji"
+							className="flex items-center justify-center px-8"
+						>
 							<FaRegSmile size={20} className="mr-1" />
 						</button>
 					</div>

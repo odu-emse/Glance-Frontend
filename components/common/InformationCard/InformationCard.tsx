@@ -19,7 +19,10 @@ export const InformationCard = ({
 		<div className="border-solid border-gray rounded shadow-lg border flex justify-between w-2/5">
 			{percentComplete && (
 				<>
-					<div className="flex justify-start items-center px-2" id ='Default'>
+					<div
+						className="flex justify-start items-center px-2"
+						id="Default"
+					>
 						<div className="checkIcon">
 							<FaRegCheckCircle fill="green" size={30} />
 						</div>
@@ -44,7 +47,7 @@ export const InformationCard = ({
 			{testType && (
 				<>
 					<div className="m-3 flex items-center">
-						<div className="testInformation" id ='primary'>
+						<div className="testInformation" id="primary">
 							<p>
 								{testType} : {testModule}
 							</p>
@@ -65,7 +68,10 @@ export const InformationCard = ({
 			{grade && (
 				<>
 					<div className="m-3 flex flex-col">
-						<div className="module text-xl font-medium" id='secondary'>
+						<div
+							className="module text-xl font-medium"
+							id="secondary"
+						>
 							{moduleIdentifier}{' '}
 						</div>
 						<div className="flex justify-start items-center text-gray-600 inline-block text-sm">

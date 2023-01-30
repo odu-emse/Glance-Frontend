@@ -1,5 +1,13 @@
 import * as React from 'react'
-import { Line, LineChart, Tooltip, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import {
+	Line,
+	LineChart,
+	Tooltip,
+	Legend,
+	ResponsiveContainer,
+	XAxis,
+	YAxis,
+} from 'recharts'
 import type {
 	HorizontalAlignmentType,
 	IconType,
@@ -23,13 +31,12 @@ export const LineComponent = ({
 }: LineProps) => {
 	return (
 		<ResponsiveContainer width={`${width}%`} height={`${height}%`}>
-			<LineChart  margin={{ top: mt, right: mr, left: ml, bottom: mb }} data={data}>
-                <XAxis 
-                   dataKey="name"
-                />
-                <YAxis
-                dataKey="graph2"
-                />
+			<LineChart
+				margin={{ top: mt, right: mr, left: ml, bottom: mb }}
+				data={data}
+			>
+				<XAxis dataKey="name" />
+				<YAxis dataKey="graph2" />
 				<Line
 					cx={centerXCoor && centerXCoor}
 					cy={centerYCoor && centerYCoor}
@@ -37,7 +44,7 @@ export const LineComponent = ({
 					fill="#6495ED"
 					stroke="#6495ED"
 				/>
-                <Line
+				<Line
 					cx={centerXCoor && centerXCoor}
 					cy={centerYCoor && centerYCoor}
 					dataKey="graph2"
@@ -45,7 +52,7 @@ export const LineComponent = ({
 					stroke="#CCCCFF"
 				/>
 				{tooltip && <Tooltip />}
-                {legend && (
+				{legend && (
 					<Legend
 						layout={
 							legendConfig.layout
@@ -66,7 +73,7 @@ export const LineComponent = ({
 								: 'circle'
 						}
 					/>
-				)}	
+				)}
 			</LineChart>
 		</ResponsiveContainer>
 	)
@@ -80,13 +87,13 @@ export type LineProps = {
 	 * - **value**: The value of the data point.
 	 * - **fill**: The fill color of the data point.
 	 */
-    xaxisValues: string[]
-	 data: {name:string,graph1: number}[]
-     data1: {name:string,graph2: number}[]
+	xaxisValues: string[]
+	data: { name: string; graph1: number }[]
+	data1: { name: string; graph2: number }[]
 
-    // data1: { name: string; value: number; fill: string }[]
+	// data1: { name: string; value: number; fill: string }[]
 
-    // data2: { name: string; value: number; fill: string }[]
+	// data2: { name: string; value: number; fill: string }[]
 
 	/**
 	 * The configuration of the legend. If legend is set to false, the configuration is ignored.

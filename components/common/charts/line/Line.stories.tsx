@@ -29,16 +29,16 @@ const Template = (args: LineProps) => (
 	</div>
 )
 
-const data =[
-	{ name:"January", graph1: 120,graph2: 200,  },
-	{ name:"February",graph1: 500, graph2: 700,  },
-	{ name:"March",graph1: 600, graph2: 900,},
-   ];
+const data = [
+	{ name: 'January', graph1: 120, graph2: 200 },
+	{ name: 'February', graph1: 500, graph2: 700 },
+	{ name: 'March', graph1: 600, graph2: 900 },
+]
 
 export const Simple = Template.bind({})
 Simple.args = {
 	data,
-    
+
 	legend: true,
 	tooltip: true,
 	outerRadius: 100,

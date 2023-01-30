@@ -33,7 +33,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	volume,
 	cards = [],
 }): React.ReactElement => {
-	
 	const [videoPlaying, setVideoPlaying] = useState(autoplay)
 	const [viewComments, setViewComments] = useState(false)
 	const [controlsFocused, setControlsFocused] = useState(false)
@@ -42,13 +41,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	const [isCaptionsVisible, setCaptionsVisible] = useState(false)
 	const [isFullscreen, setFullScreen] = useState(false)
 
-	const [ mouseInactive, setMouseInactive] = useState(false)
+	const [mouseInactive, setMouseInactive] = useState(false)
 
 	const player = useRef<HTMLDivElement>(null)
 	const videoPlayer = useRef<HTMLVideoElement>(null)
 	const progressBar = useRef<HTMLInputElement>(null)
 	const captionsTrack = useRef<HTMLTrackElement>(null)
-	let mouseTimeout = useRef<any>();
+	let mouseTimeout = useRef<any>()
 
 	const handleTimeUpdate = (
 		event: SyntheticEvent<HTMLVideoElement, Event>
@@ -117,14 +116,14 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	}
 
 	const handlemouseInactivity = () => {
-        clearTimeout(mouseTimeout.current);
-		setControlsFocused(true);
+		clearTimeout(mouseTimeout.current)
+		setControlsFocused(true)
 		//console.log("Timeout Cleared")
 
-        mouseTimeout.current = setTimeout(() => {
-			//console.log("Timeout Set")	
+		mouseTimeout.current = setTimeout(() => {
+			//console.log("Timeout Set")
 			setControlsFocused(false)
-        }, 3000)   
+		}, 3000)
 	}
 
 	// ----- Setup Cards -----
@@ -169,8 +168,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 			}}
 			ref={player}
 		>
-			
-			{ /* Internal Raw HTML5 Video Player */ }
+			{/* Internal Raw HTML5 Video Player */}
 			<video
 				className="w-full h-full absolute"
 				autoPlay={autoplay}
@@ -188,11 +186,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				<source src={source} type={type} />
 				Your browser doesn&apos;t support video playback. Please
 				consider updating to the latest version.
-        	</video>
-			{ /* END OF Internal Raw HTML5 Video Player */ }
-
-
-
+			</video>
+			{/* END OF Internal Raw HTML5 Video Player */}
 
 			{/* The card panel. */}
 			<div
@@ -309,36 +304,34 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 								)}
 							</button>
 						</div>
-						<div className='group relative'>
+						<div className="group relative">
 							<button
-                                className="rounded-full"
+								className="rounded-full"
 								onClick={handleAudioMuteToggle}
 								data-cy="volume"
-
 							>
 								{isAudioMuted ? (
-									<FaVolumeMute/>
+									<FaVolumeMute />
 								) : (
-									<FaVolumeUp />					            
+									<FaVolumeUp />
 								)}
 							</button>
-                                <input 
-									className="absolute bottom-0 hidden group-hover:flex -translate-y-6 w-4"
-									style={{
-										"-webkit-appearance": "slider-vertical",
-										"writing-mode": "bt-lr",
-									}}
-									id="default-range" 
-									type="range" 
-									min="0" 
-									max="100" 
-									orient="vertical" 
-									value={isAudioMuted ? 0 : 80} 
-									step="1"
-								/>
+							<input
+								className="absolute bottom-0 hidden group-hover:flex -translate-y-6 w-4"
+								style={{
+									'-webkit-appearance': 'slider-vertical',
+									'writing-mode': 'bt-lr',
+								}}
+								id="default-range"
+								type="range"
+								min="0"
+								max="100"
+								orient="vertical"
+								value={isAudioMuted ? 0 : 80}
+								step="1"
+							/>
 						</div>
 
-                        
 						<div>
 							<button onClick={handleFullScreenButonClick}>
 								{isFullscreen ? <FaCompress /> : <FaExpand />}
@@ -348,9 +341,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				</div>
 			</div>
 		</div>
-        
 	)
-   
 }
 
 type VideoPlayerProps = {
@@ -369,5 +360,3 @@ type VideoCard = {
 	name: string
 	icon: string
 }
-
-

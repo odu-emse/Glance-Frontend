@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { Layout }from '../../common/pages/layouts/layout/Layout';
-import useAuth from '../../../hooks/useAuth';
-import gqlFetcher from '../../../utils/gqlFetcher';
-import useSWR from 'swr';
-import { gql } from 'graphql-request';
-import { useRouter } from 'next/router';
-
-
+import React, { useState } from 'react'
+import Image from 'next/image'
+import { Layout } from '../../common/pages/layouts/layout/Layout'
+import useAuth from '../../../hooks/useAuth'
+import gqlFetcher from '../../../utils/gqlFetcher'
+import useSWR from 'swr'
+import { gql } from 'graphql-request'
+import { useRouter } from 'next/router'
 
 export const UserPage = () => {
-        const [isInstructor] = useState(true);
-        const [showInstructor, setShowInstructor] = useState(false);
-        const [showModal, setShowModal] = useState(false);
-        const {jwt: token, user} = useAuth()
-        const router = useRouter();
-    
-        const { data, error } = useSWR(
-            {
-                query: gql`
+	const [isInstructor] = useState(true)
+	const [showInstructor, setShowInstructor] = useState(false)
+	const [showModal, setShowModal] = useState(false)
+	const { jwt: token, user } = useAuth()
+	const router = useRouter()
+
+	const { data, error } = useSWR(
+		{
+			query: gql`
               {
                 user(id: "${user?.sub}") {
                   id
@@ -78,21 +76,21 @@ export const UserPage = () => {
                 }
               }
             `,
-                token,
-            },
-            gqlFetcher
-        );
-    
-        if(error) {
-            console.log(error);
-            // throw new Error(error);
-        }
-        if(!data){
-            return <div>Loading...</div>
-        }
+			token,
+		},
+		gqlFetcher
+	)
 
-	return router.query.user !== user?.sub ?( 
-        <div className="w-2/3">
+	if (error) {
+		console.log(error)
+		// throw new Error(error);
+	}
+	if (!data) {
+		return <div>Loading...</div>
+	}
+
+	return router.query.user !== user?.sub ? (
+		<div className="w-2/3">
 			Show the profile of the user with id {router.query.user}
 		</div>
 	) : (
@@ -115,7 +113,9 @@ export const UserPage = () => {
 				</div>
 				<nav className="w-full mr-8 flex flex-col border border-gray-200 shadow-sm rounded-md">
 					{isInstructor ? (
-						<button onClick={() => setShowInstructor(!showInstructor)}>
+						<button
+							onClick={() => setShowInstructor(!showInstructor)}
+						>
 							<li className="py-1 px-3 hover:bg-gray-100 border-b border-gray-300 list-none">
 								Switch to Professor
 							</li>
@@ -149,27 +149,33 @@ export const UserPage = () => {
 				</nav>
 			</aside>
 			<div className="w-full md:w-3/4">
-				<h3 id="user" className="text-2xl bold border-b border-gray-100 mb-3">
+				<h3
+					id="user"
+					className="text-2xl bold border-b border-gray-100 mb-3"
+				>
 					Profile
 				</h3>
 				<form>
 					<div className="flex md:flex-row md:justify-between flex-col mb-3">
 						<label htmlFor="name" className="block flex-1 mr-2 p-1">
-							<strong>First Name</strong><br />
+							<strong>First Name</strong>
+							<br />
 							{user?.given_name}
 						</label>
 						<label htmlFor="name" className="block flex-1 ml-2 p-1">
-							<strong>Last Name</strong><br />
+							<strong>Last Name</strong>
+							<br />
 							{user?.family_name}
 						</label>
 					</div>
 					<div className="w-full mb-3">
 						<label htmlFor="" className="block flex-1 p-1">
-							<strong>Email</strong><br />
+							<strong>Email</strong>
+							<br />
 							{user?.email}
 						</label>
 					</div>
-					{ /*<div className="w-full mb-3">
+					{/*<div className="w-full mb-3">
 						<label htmlFor="" className="block flex-1">
 							Date of birth
 							<input
@@ -262,15 +268,17 @@ export const UserPage = () => {
 					<button
 						className="bg-blue-300 border-blue-200 rounded w-auto text black px-4 py-2 m-2"
 						onClick={(e) => {
-							e.preventDefault();
-							setShowModal(!showModal);
+							e.preventDefault()
+							setShowModal(!showModal)
 						}}
 					>
 						Update Profile
 					</button>
 
 					<div
-						className={`relative z-10 ${showModal ? 'visible' : 'invisible'}`}
+						className={`relative z-10 ${
+							showModal ? 'visible' : 'invisible'
+						}`}
 						aria-labelledby="modal-title"
 						role="dialog"
 						aria-modal="true"
@@ -314,7 +322,7 @@ export const UserPage = () => {
 													type="submit"
 													className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
 													onClick={() => {
-														setShowModal(false);
+														setShowModal(false)
 													}}
 												>
 													Confirm
@@ -322,7 +330,9 @@ export const UserPage = () => {
 												<button
 													type="reset"
 													className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-red-600 text-white text-base font-medium hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-													onClick={() => setShowModal(false)}
+													onClick={() =>
+														setShowModal(false)
+													}
 												>
 													Cancel
 												</button>
@@ -378,8 +388,6 @@ export const UserPage = () => {
 				</button> */}
 			</div>
 		</div>
-
-    )}
-export type UserPageProps = { 
-
+	)
 }
+export type UserPageProps = {}

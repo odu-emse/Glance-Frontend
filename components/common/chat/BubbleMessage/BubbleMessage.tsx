@@ -2,16 +2,16 @@ import * as React from 'react'
 import moment from 'moment'
 
 export const BubbleMessage = ({
-		message,
-		currentUserID
-	}: BubbleMessageProps) => {
+	message,
+	currentUserID,
+}: BubbleMessageProps) => {
 	return (
-		<div className='container '>
-			<div className=''>
+		<div className="container ">
+			<div className="">
 				<div>
-					<div className='w-full'>
-						<div className='relative w-full p-6 overflow-y-auto h-[40rem]'>
-							<ul className='space-y-2'>
+					<div className="w-full">
+						<div className="relative w-full p-6 overflow-y-auto h-[40rem]">
+							<ul className="space-y-2">
 								{message.length > 0 &&
 									message.map(
 										(
@@ -28,11 +28,11 @@ export const BubbleMessage = ({
 													}`}
 													key={index}
 												>
-													<div className='w-50 h-50 px-2'>
+													<div className="w-50 h-50 px-2">
 														<img
 															src={user.image}
-															alt='User profile picture'
-															className='shadow-lg rounded-full max-w-full h-8 aspect-square'
+															alt="User profile picture"
+															className="shadow-lg rounded-full max-w-full h-8 aspect-square"
 														/>
 													</div>
 													<div
@@ -43,24 +43,23 @@ export const BubbleMessage = ({
 																: 'bg-gray-300'
 														} rounded shadow`}
 													>
-														<span className='block'>
+														<span className="block">
 															{message}
 														</span>
 													</div>
-													<div className='w-50 h-50 px-2 opacity-50'>
-														<span className='block text-xs text-slate-500'>
+													<div className="w-50 h-50 px-2 opacity-50">
+														<span className="block text-xs text-slate-500">
 															<span>// </span>
-															{moment(timestamp)
-																.format(
-																	'hh:mm A'
-																)}
+															{moment(
+																timestamp
+															).format('hh:mm A')}
 														</span>
 													</div>
 												</li>
 												{message[index + 1] && (
-													<li className='flex justify-center right-li'>
-														<div className='w-50 h-50 px-2 t-100'>
-															<span className='block text-xs text-slate-500'>
+													<li className="flex justify-center right-li">
+														<div className="w-50 h-50 px-2 t-100">
+															<span className="block text-xs text-slate-500">
 																{/*{moment*/}
 																{/*	.unix(timestamp1)*/}
 																{/*	.format(*/}
