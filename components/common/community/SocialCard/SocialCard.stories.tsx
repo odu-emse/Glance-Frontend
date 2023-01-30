@@ -3,7 +3,7 @@ import { SocialCard } from './SocialCard'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-	title: 'Community/Social Card',
+	title: 'Common/Community/Social Card',
 	component: SocialCard,
 } as ComponentMeta<typeof SocialCard>
 

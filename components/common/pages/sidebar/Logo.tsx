@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from '../Link'
+import { Link } from '../../links/link/Link'
 
 export const Logo = ({ extended }: LogoProps): JSX.Element => {
 	return (

@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { UserPage } from '../components/UserPage'
+import { UserPage } from './UserPage'
 import type { UserPageProps } from '../components/UserPage'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 
 export default {
-	title: 'Atoms/UserPage',
+	title: 'Pages/User Page',
 	component: UserPage,
 	argTypes: {
 	

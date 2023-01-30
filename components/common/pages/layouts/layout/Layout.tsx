@@ -2,9 +2,9 @@
 import {Sidebar} from '../../sidebar/Sidebar';
 import { useRouter } from 'next/router';
 import { GoPerson, GoSignIn } from 'react-icons/go';
-import AuthenticationContext from '../../../contexts/AuthenticationContext';
-import useAuth from '../../../hooks/useAuth';
-import { Link } from '../../../link/Link';
+import AuthenticationContext from '../../.././../../contexts/AuthenticationContext';
+import useAuth from '../../../../../hooks/useAuth';
+import { Link } from '../../../links/link/Link';
 import { useState } from 'react';
 
 export const Layout = ({ children }) => {

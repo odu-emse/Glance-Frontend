@@ -1,4 +1,4 @@
-import { Anchor } from '../Link/Anchor'
+import { Anchor } from '../../links/anchor/Anchor'
 
 export const ActiveModules = ({ modules }: ActiveModulesProps) => {
 	return (

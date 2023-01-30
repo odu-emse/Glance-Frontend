@@ -1,7 +1,7 @@
 
 import * as React from 'react'
-import { Button } from '../Button/Button'
-import { Link } from '../Link/Link'
+import { Button } from '../../../common/button/Button'
+import { Link } from '../../../common/links/link/Link'
 
 export const PagenotFound: React.FC<PagenotFoundProps> = ({
 	

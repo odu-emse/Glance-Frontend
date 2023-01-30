@@ -19,7 +19,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
 		"paths": {
-			"@/components/*": ["storybook/components/*"],
+			"@/components/*": ["components/*"],
+      "@/pages/*": ["components/pages/*"],
+      "@/common/*": ["components/common/*"],
 			"@/utils/*": ["utils/*"],
 			"@/contexts/*": ["contexts/*"],
 			"@/hooks/*": ["hooks/*"],

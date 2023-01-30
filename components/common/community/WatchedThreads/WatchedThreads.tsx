@@ -1,4 +1,4 @@
-import { Anchor } from '../../link/Anchor'
+import { Anchor } from '../../links/anchor/Anchor'
 
 export const WatchedThreads = ({ threads }: WatchedThreadsProps) => {
 	return (

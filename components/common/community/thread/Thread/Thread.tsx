@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
-import { Anchor } from '../../../link/Anchor'
+import { Anchor } from '../../../links/anchor/Anchor'
 
 export const Thread: React.FC<ThreadProps> = ({ title, body, upvotes, id, userProfile }) => {
 	const [isClicked, setIsClicked] = React.useState(false)

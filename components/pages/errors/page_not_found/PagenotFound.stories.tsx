@@ -1,13 +1,13 @@
 
 import * as React from 'react'
-import { PagenotFound } from '../components/Pages'
-import type { PagenotFoundProps } from '../components/Pages'
+import { PagenotFound } from './PagenotFound'
+import type { PagenotFoundProps } from './PagenotFound'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 
 export default {
-	title: 'Atoms/404 Page..',
+	title: 'Pages/Errors/Page Not Found',
 	component: PagenotFound,
 	argTypes: {
 	

@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { ActiveModules } from '../components/Thread/ActiveModules'
+import { ActiveModules } from './ActiveModules'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-	title: 'Atoms/ActiveModules',
+	title: 'Common/Pages/Active Modules',
 	component: ActiveModules,
 	argTypes: {},
 } as ComponentMeta<typeof ActiveModules>
