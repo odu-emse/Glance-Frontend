@@ -14,4 +14,4 @@ lib/
 src/output.css
 package
 coverage
-.next/
+/.next

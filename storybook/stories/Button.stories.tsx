@@ -1,7 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from './Button';
+
+import { Button } from '../components/Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -37,5 +38,10 @@ Large.args = {
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
+  label: 'Button',
+};
+export const Width = Template.bind({});
+Width.args = {
+  size: 1,
   label: 'Button',
 };
