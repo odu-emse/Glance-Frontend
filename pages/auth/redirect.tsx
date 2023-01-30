@@ -1,4 +1,4 @@
-import gqlFetcher from '@/utils/gqlFetcher'
+import gqlFetcher from '@/utils/gql_fetcher'
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
 

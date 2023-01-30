@@ -2,10 +2,10 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import Layout from '@/components/Layout'
 import Link from 'next/link'
-import useAuth from '@/hooks/useAuth'
+import useAuth from '@/hooks/use_auth'
 import useSWR from 'swr'
-import gqlFetcher from '@/utils/gqlFetcher'
-import { getModuleByID } from '@/scripts/getModuleByID'
+import gqlFetcher from '@/utils/gql_fetcher'
+import { getModuleByID } from '@/scripts/get_module_by_id'
 import { Button } from 'emse-ui'
 
 const Module = () => {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useState } from 'react'
-import { Button } from '../../../button/Button'
+import { Button } from '../../../button/button'
 import { Input } from '../../../forms/inputs/input/input'
 
 export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {

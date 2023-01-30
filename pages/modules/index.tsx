@@ -1,10 +1,10 @@
 import React from 'react'
 import ModuleItem from '@/components/modules/ModuleListItem'
 import Layout from '@/components/Layout'
-import useAuth from '@/hooks/useAuth'
+import useAuth from '@/hooks/use_auth'
 import useSWR from 'swr'
-import gqlFetcher from '@/utils/gqlFetcher'
-import { getUserByOpenID } from '@/scripts/getUserByOpenID'
+import gqlFetcher from '@/utils/gql_fetcher'
+import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
 import Link from 'next/link'
 import { Button } from 'emse-ui'
 

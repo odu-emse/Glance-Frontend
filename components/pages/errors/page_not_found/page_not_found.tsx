@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button } from '../../../common/button/Button'
+import { Button } from '../../../common/button/button'
 import { Link } from '../../../common/links/link/link'
 
 export type PageNotFoundProps = {}

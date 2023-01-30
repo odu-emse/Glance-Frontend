@@ -1,4 +1,4 @@
-import { Accordion, AccordionProps } from '../../accordion/Accordion'
+import { Accordion, AccordionProps } from '../../accordion/accordion'
 import * as React from 'react'
 
 export const SidebarForModules = ({ topics }: SidebarForModulesProps) => {
