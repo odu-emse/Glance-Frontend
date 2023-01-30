@@ -13,7 +13,8 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"style": "npx tailwindcss -i ./styles/globals.css -o ./components/output.css --watch",
-		"style:build": "npx tailwindcss -i ./styles/globals.css -o ./storybook/output.css"
+		"style:build": "npx tailwindcss -i ./styles/globals.css -o ./storybook/output.css",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@react-oauth/google": "^0.2.6",
@@ -78,6 +79,7 @@
 		"eslint-plugin-unicorn": "^45.0.2",
 		"flowbite": "^1.4.7",
 		"flowbite-react": "^0.0.27",
+		"husky": "^8.0.3",
 		"jest": "^29.3.1",
 		"postcss": "^8.4.14",
 		"pre-commit": "^1.2.2",
