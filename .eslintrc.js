@@ -9,6 +9,6 @@ module.exports = {
 			},
 		],
 		'no-empty-pattern': 'off',
-		'no-use-before-define': 'off'
+		'no-use-before-define': 'off',
 	},
 }

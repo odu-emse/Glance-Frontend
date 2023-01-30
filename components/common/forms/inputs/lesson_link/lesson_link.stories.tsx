@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LessonLink } from './LessonLink'
+import { LessonLink } from './lesson_link'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {

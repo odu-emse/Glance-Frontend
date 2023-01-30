@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
-import { Anchor } from '../../../links/anchor/Anchor'
+import { Anchor } from '../../../links/anchor/anchor'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,

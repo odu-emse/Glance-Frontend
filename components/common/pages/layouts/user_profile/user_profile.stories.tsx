@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { UserProfile } from './UserProfile'
+import { UserProfile } from './user_profile'
 
 export default {
 	title: 'Common/Pages/Layouts/User Profile',

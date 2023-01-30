@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Anchor, AnchorProps } from './Anchor'
+import { Anchor, AnchorProps } from './anchor'
 
 export default {
 	title: 'Common/Links/Anchor',

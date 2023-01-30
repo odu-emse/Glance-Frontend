@@ -1,8 +1,8 @@
-import { Sidebar } from '../../sidebar/Sidebar'
+import { Sidebar } from '../../sidebar/sidebar'
 import { GoPerson, GoSignIn } from 'react-icons/go'
 import AuthenticationContext from '../../../../../contexts/AuthenticationContext'
 import useAuth from '../../../../../hooks/useAuth'
-import { Link } from '../../../links/link/Link'
+import { Link } from '../../../links/link/link'
 import { useState } from 'react'
 
 export const Layout = ({ children }) => {

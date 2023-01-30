@@ -1,1 +1,1 @@
-export * from './Content'
+sexport * from './content'

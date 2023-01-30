@@ -1,4 +1,4 @@
-import { ActiveModules } from 'components/common/pages/active_modules/ActiveModules'
+import { ActiveModules } from 'components/common/pages/active_modules/active_modules'
 import { Thread, Input, WatchedThreads } from 'emse-ui'
 
 const Module = () => {

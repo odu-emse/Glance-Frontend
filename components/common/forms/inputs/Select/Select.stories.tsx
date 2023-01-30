@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Select } from './Select'
-import type { dropdownProps } from './Select'
+import { Select } from './select'
+import type { dropdownProps } from './select'
 
 export default {
 	title: 'Common/Forms/Inputs/Select',

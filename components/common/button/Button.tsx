@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import Loader from '../../util/Loader'
+import Loader from '../../util/loader'
 
 export const Button = ({
 	variant = 'primary',

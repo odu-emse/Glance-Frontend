@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ActiveModules } from './ActiveModules'
+import { ActiveModules } from './active_modules'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {

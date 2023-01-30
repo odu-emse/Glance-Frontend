@@ -1,5 +1,5 @@
 import { Button } from '../../../button/Button'
-import { Input } from '../../../forms/inputs/Input/Input'
+import { Input } from '../../../forms/inputs/input/input'
 
 export const ThreadTextArea = () => {
 	return (

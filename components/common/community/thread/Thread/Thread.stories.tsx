@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Thread } from './Thread'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { mockData } from '../../../../util/threadData'
+import { mockData } from '../../../../util/thread_data'
 
 export default {
 	title: 'Common/Community/Thread/Thread',

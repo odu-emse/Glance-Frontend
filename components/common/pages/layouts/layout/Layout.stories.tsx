@@ -1,7 +1,7 @@
-import { Layout } from './Layout'
-import { Sidebar } from '../../sidebar/Sidebar'
+import { Layout } from './layout'
+import { Sidebar } from '../../sidebar/sidebar'
 import * as React from 'react'
-import { Content } from '../../content/Content'
+import { Content } from '../../content/content'
 
 export default {
 	title: 'Common/Pages/Layouts/Layout',

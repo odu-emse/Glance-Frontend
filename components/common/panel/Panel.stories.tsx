@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { PieComponent } from '../charts/pie/Pie'
-import type { PanelProps } from './Panel'
-import Panel from './Panel'
+import type { PanelProps } from './panel'
+import Panel from './panel'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {

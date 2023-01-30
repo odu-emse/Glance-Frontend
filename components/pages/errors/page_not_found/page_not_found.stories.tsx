@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { PageNotFound } from './page_not_found'
 import type { PageNotFoundProps } from './page_not_found'
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
 	title: 'Pages/Errors/Page Not Found',

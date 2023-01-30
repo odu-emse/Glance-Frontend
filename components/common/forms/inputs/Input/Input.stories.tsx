@@ -20,7 +20,7 @@ export default {
 } as ComponentMeta<typeof Input>
 
 const Template: ComponentStory<typeof Input> = (args: InputProps) => {
-	const [ value ] = useState(args.defaultValue ?? '')
+	const [value] = useState(args.defaultValue ?? '')
 	const [options, setOptions] = useState([])
 
 	return (

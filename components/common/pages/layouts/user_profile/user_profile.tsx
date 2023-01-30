@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { Button } from '../../../button/Button'
-import { Input } from '../../../forms/inputs/Input/Input'
+import { Input } from '../../../forms/inputs/input/input'
 
 export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 	const [showModal] = useState(false)
