@@ -1,4 +1,3 @@
-import { FaComment } from 'react-icons/fa'
 import moment from 'moment'
 
 export const VideoChip = ({ id, text, timestamp, icon }: VideoChipProps) => {

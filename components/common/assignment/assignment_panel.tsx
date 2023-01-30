@@ -5,7 +5,7 @@ export const AssignmentPanel = ({
 	open,
 	handle,
 	moduleInformation,
-}: AssignmentPanelProps): JSX.Element => {
+}: AssignmentPanelProps) => {
 	const heading = 'text-sm font-medium pb-1.5'
 
 	const list = 'text-xs list-disc pl-3'

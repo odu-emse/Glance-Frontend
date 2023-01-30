@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 
-export const TabsPanel = ({ moduleInfo }: TabsProps): JSX.Element => {
+export const TabsPanel = ({ moduleInfo }: TabsProps) => {
 	const [index, setIndex] = React.useState(0)
 
 	const padTopList = 'pt-1.5'

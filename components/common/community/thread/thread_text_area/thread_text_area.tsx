@@ -1,5 +1,4 @@
-import { Button } from '../../../button/button'
-import { Input } from '../../../forms/inputs/input/input'
+import { Button } from '@/common/button/button';
 
 export const ThreadTextArea = () => {
 	return (

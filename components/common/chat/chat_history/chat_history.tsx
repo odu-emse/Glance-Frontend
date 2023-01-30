@@ -5,7 +5,7 @@ import { FaTrash, FaArchive } from 'react-icons/fa'
 
 export const ChatHistory = ({ messages, handle }: ChatHistoryProps) => {
 	const [isChecked, setIsChecked] = React.useState(0 ?? null)
-	const [isNotified, setIsNotified] = React.useState(0 ?? null)
+	// const [isNotified, setIsNotified] = React.useState(0 ?? null)
 
 	return (
 		<div className="flex flex-col w-full h-full max-h-screen border-r-2 overflow-y-scroll">

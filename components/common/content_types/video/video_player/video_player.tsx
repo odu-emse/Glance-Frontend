@@ -2,7 +2,6 @@ import _ from 'lodash'
 import React, {
 	ChangeEvent,
 	SyntheticEvent,
-	useEffect,
 	useRef,
 	useState,
 } from 'react'
@@ -16,8 +15,8 @@ import {
 	FaClosedCaptioning,
 	FaRegClosedCaptioning,
 	FaVolumeMute,
-	FaVolumeOff,
-	FaVolumeDown,
+//	FaVolumeOff,
+//	FaVolumeDown,
 	FaVolumeUp,
 	FaArrowCircleUp,
 } from 'react-icons/fa'
@@ -27,7 +26,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	source,
 	type,
 	captions,
-	mouseInactiveTime,
 	autoplay = false,
 	defaultVolume = false,
 	volume,

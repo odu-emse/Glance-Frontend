@@ -10,5 +10,7 @@ module.exports = {
 		],
 		'no-empty-pattern': 'off',
 		'no-use-before-define': 'off',
+		'react-hooks/rules-of-hooks': 'warn',
+		'react/jsx-no-comment-textnodes': 'warn'
 	},
 }

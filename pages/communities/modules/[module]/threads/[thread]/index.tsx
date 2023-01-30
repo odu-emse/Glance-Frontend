@@ -1,8 +1,6 @@
-import { Thread } from '../../../../../../storybook/components/Thread/index'
+import { Thread } from '@/common/community/thread/thread/thread';
 import { Button } from 'emse-ui'
-import { GoPerson, GoSignIn } from 'react-icons/go'
-import Index from 'pages/index'
-import { Layout } from '@/components/Layout/index'
+import { Layout } from '@/common/pages/layouts/layout/layout'
 const ThreadPage = () => {
 	return (
 		<>

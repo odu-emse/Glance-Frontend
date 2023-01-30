@@ -2,7 +2,6 @@
  * This page displays all modules
  */
 import useSWR from 'swr'
-import ModuleItem from '@/components/modules/ModuleItem'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
@@ -36,13 +35,14 @@ const AllModules = () => {
 				A list of all the modules currently available
 			</p>
 			<div className="grid gap-3">
-				{data.user.plan.modules.map((enrollment) => {
+				{data.user.plan.modules.map((enrollment, index) => {
 					// return <ModuleItem role={enrollment.role} key={enrollment.module.id} data={enrollment.module} />;
 					console.log(enrollment.module)
 					return (
 						<ModuleCard
 							module={enrollment.module}
 							completion={false}
+							key={index}
 						/>
 					)
 				})}

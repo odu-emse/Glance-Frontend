@@ -22,7 +22,7 @@ export const Button = ({
 		size === 1 && 'w-full',
 
 		shape === 'regular' && 'rounded',
-		shape == 'pill' && 'rounded-full',
+		shape === 'pill' && 'rounded-full',
 
 		size === 'small' && 'text-sm',
 		size === 'large' && 'text-lg',
@@ -41,7 +41,7 @@ export const Button = ({
 			{loading ? (
 				<Loader
 					textColor={`${
-						variant == 'primary' ? 'blue-700' : 'blue-200'
+						variant === 'primary' ? 'blue-700' : 'blue-200'
 					}`}
 				/>
 			) : null}

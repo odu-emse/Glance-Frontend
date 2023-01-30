@@ -26,7 +26,7 @@ export const RadarComponent: React.FC<RadarProps> = ({
 	dataKey,
 	radiusAxis,
 	radiusAxisAngle,
-}): JSX.Element => {
+}) => {
 	const matrixChildren: any[] = []
 
 	if (
