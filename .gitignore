@@ -1,0 +1,14 @@
+# IDE Junk
+/.vscode
+/.idea
+
+# Computer Exhaust
+.DS_Store
+
+# Generated Content
+/node_modules
+/dist
+/cypress/screenshots/**/*.png
+/cypress/videos/*.mp4
+/src/output.css
+/.next
