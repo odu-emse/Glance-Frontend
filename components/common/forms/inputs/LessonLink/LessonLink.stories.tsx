@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof LessonLink> = (args) => (
 )
 
 export const Primary = Template.bind({})
-//P.storyName = 'Primary'
+// P.storyName = 'Primary'
 Primary.args = {
 	label: 'Module1',
 	url: 'lesonlink/module-1',

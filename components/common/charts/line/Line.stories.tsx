@@ -9,7 +9,7 @@ export default {
 		height: 100,
 	},
 	argTypes: {
-		//data: { control: true },
+		// data: { control: true },
 		legendConfig: { control: false },
 		legend: { control: { type: 'boolean' } },
 		tooltip: { control: { type: 'boolean' } },

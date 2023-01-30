@@ -7,13 +7,12 @@ import {
 	AiOutlineDown,
 	AiOutlineTrophy,
 	AiFillPlusSquare,
-} from 'react-icons/ai'
+ AiOutlinePlus } from 'react-icons/ai'
 import { BiSearch, BiMessageRoundedDetail, BiPoll } from 'react-icons/bi'
 import { RiContactsBookLine } from 'react-icons/ri'
 import { GrGroup } from 'react-icons/gr'
 import { CgPoll } from 'react-icons/cg'
 import { GoLinkExternal } from 'react-icons/go'
-import { AiOutlinePlus } from 'react-icons/ai'
 import { MdSend } from 'react-icons/md'
 
 export const CommunityPage = ({

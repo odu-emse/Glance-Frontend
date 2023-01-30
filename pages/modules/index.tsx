@@ -51,7 +51,7 @@ const ModulesPage = () => {
 							)
 						})
 
-					//console.log(data)
+					// console.log(data)
 				}
 			</div>
 		</section>

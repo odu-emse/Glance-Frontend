@@ -37,7 +37,7 @@ const AllModules = () => {
 			</p>
 			<div className="grid gap-3">
 				{data.user.plan.modules.map((enrollment) => {
-					//return <ModuleItem role={enrollment.role} key={enrollment.module.id} data={enrollment.module} />;
+					// return <ModuleItem role={enrollment.role} key={enrollment.module.id} data={enrollment.module} />;
 					console.log(enrollment.module)
 					return (
 						<ModuleCard

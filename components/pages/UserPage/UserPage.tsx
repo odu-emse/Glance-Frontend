@@ -175,7 +175,7 @@ export const UserPage = () => {
 							{user?.email}
 						</label>
 					</div>
-					{/*<div className="w-full mb-3">
+					{/* <div className="w-full mb-3">
 						<label htmlFor="" className="block flex-1">
 							Date of birth
 							<input

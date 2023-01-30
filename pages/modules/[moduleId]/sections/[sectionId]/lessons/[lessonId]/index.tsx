@@ -8,10 +8,10 @@ import fetcher from '@/utils/fetcher'
 import { Button } from 'emse-ui'
 
 const ModuleSection = () => {
-	//const [data, setData] = useState(null);
+	// const [data, setData] = useState(null);
 
 	const router = useRouter()
-	let { moduleId, sectionId, lessonId } = router.query
+	const { moduleId, sectionId, lessonId } = router.query
 
 	const { data, errors } = useSWR(`/api/modules/${moduleId}`, fetcher)
 	if (!data) return <p>Loading...</p>

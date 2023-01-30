@@ -4,7 +4,7 @@ import type { ModuleProps } from './module_card'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
-	title: 'Common/ModuleCard', //providing path
+	title: 'Common/ModuleCard', // providing path
 	component: ModuleCard,
 } as ComponentMeta<typeof ModuleCard>
 

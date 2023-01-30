@@ -57,7 +57,7 @@ export const RadarComponent: React.FC<RadarProps> = ({
 				<PolarAngleAxis dataKey={dataKey} />
 				{radiusAxis && (
 					<PolarRadiusAxis
-						angle={radiusAxisAngle ? radiusAxisAngle : 90}
+						angle={radiusAxisAngle || 90}
 					/>
 				)}
 				{matrixChildren?.length > 0
@@ -66,12 +66,12 @@ export const RadarComponent: React.FC<RadarProps> = ({
 								key: childIndex,
 								fill: fillColor,
 								stroke: strokeColor,
-								fillOpacity: fillOpacity,
+								fillOpacity,
 							})
 					  })
 					: React.cloneElement(children, {
 							fill: fillColor,
-							fillOpacity: fillOpacity,
+							fillOpacity,
 							stroke: strokeColor,
 					  })}
 				{tooltip && <Tooltip />}

@@ -60,11 +60,11 @@ export const BubbleMessage = ({
 													<li className="flex justify-center right-li">
 														<div className="w-50 h-50 px-2 t-100">
 															<span className="block text-xs text-slate-500">
-																{/*{moment*/}
-																{/*	.unix(timestamp1)*/}
-																{/*	.format(*/}
-																{/*		'dddd, MMMM Do, hh:mm a'*/}
-																{/*	)}*/}
+																{/* {moment */}
+																{/*	.unix(timestamp1) */}
+																{/*	.format( */}
+																{/*		'dddd, MMMM Do, hh:mm a' */}
+																{/*	)} */}
 															</span>
 														</div>
 													</li>

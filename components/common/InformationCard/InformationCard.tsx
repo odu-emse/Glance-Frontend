@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { FaRegCheckCircle } from 'react-icons/fa'
-import { BsFillExclamationOctagonFill } from 'react-icons/bs'
+import { BsFillExclamationOctagonFill , BsFillClockFill, BsFillBellFill } from 'react-icons/bs'
 import { MdClose } from 'react-icons/md'
-import { BsFillClockFill, BsFillBellFill } from 'react-icons/bs'
 
 export const InformationCard = ({
 	percentComplete,

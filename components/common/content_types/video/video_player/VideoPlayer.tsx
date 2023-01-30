@@ -47,7 +47,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	const videoPlayer = useRef<HTMLVideoElement>(null)
 	const progressBar = useRef<HTMLInputElement>(null)
 	const captionsTrack = useRef<HTMLTrackElement>(null)
-	let mouseTimeout = useRef<any>()
+	const mouseTimeout = useRef<any>()
 
 	const handleTimeUpdate = (
 		event: SyntheticEvent<HTMLVideoElement, Event>
@@ -118,10 +118,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	const handlemouseInactivity = () => {
 		clearTimeout(mouseTimeout.current)
 		setControlsFocused(true)
-		//console.log("Timeout Cleared")
+		// console.log("Timeout Cleared")
 
 		mouseTimeout.current = setTimeout(() => {
-			//console.log("Timeout Set")
+			// console.log("Timeout Set")
 			setControlsFocused(false)
 		}, 3000)
 	}

@@ -10,9 +10,9 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 		lastName: user.lastName,
 		email: user.email,
 	})
-	//const [showProfile, setShowProfile] = useState(false)
+	// const [showProfile, setShowProfile] = useState(false)
 
-	//const [showPlanOfStudy, setShowPlanOfStudy] = useState(false)
+	// const [showPlanOfStudy, setShowPlanOfStudy] = useState(false)
 
 	return (
 		<div className="flex flex-col md:flex-row w-11/12 lg:w-3/4 mx-4 lg:mx-auto  mt-3">
@@ -126,7 +126,7 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 
 					<button
 						className="text-white border-red-400 bg-red-500 rounded w-auto px-4 py-2"
-						//onClick={() => deleteUser()}
+						// onClick={() => deleteUser()}
 					>
 						Kill account
 					</button>

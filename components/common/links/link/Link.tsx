@@ -46,7 +46,7 @@ export const Link = ({
 						</span>
 					</span>
 					{role === 'menuitem' && label}
-					{children ? children : null}
+					{children || null}
 				</li>
 			</a>
 		</IconContext.Provider>

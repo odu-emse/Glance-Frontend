@@ -71,13 +71,13 @@ const DefaultModule = ({ module }) => {
 				<div className="border shadow-md rounded-sm py-3 px-4 bg-gray-50 border-gray-50">
 					<h3 className="text-lg font-bold">Module objectives</h3>
 					<ul className="list-disc">
-						{/*{module.objectives.map((objective, objIndex) => {*/}
-						{/*	return (*/}
-						{/*		<li className="ml-5" key={objIndex}>*/}
-						{/*			{objective}*/}
-						{/*		</li>*/}
-						{/*	);*/}
-						{/*})}*/}
+						{/* {module.objectives.map((objective, objIndex) => { */}
+						{/*	return ( */}
+						{/*		<li className="ml-5" key={objIndex}> */}
+						{/*			{objective} */}
+						{/*		</li> */}
+						{/*	); */}
+						{/* })} */}
 					</ul>
 				</div>
 				<div className="border shadow-md rounded-sm py-3 px-4 mt-3 bg-gray-50 border-gray-50">
@@ -90,7 +90,7 @@ const DefaultModule = ({ module }) => {
 				</div>
 			</div>
 			<div className="xl:w-1/3 w-full xl:border border-gray-50 px-3 py-4 rounded-sm xl:shadow-md">
-				{/*TODO: we need to get content delivery working to get this fixed */}
+				{/* TODO: we need to get content delivery working to get this fixed */}
 				{/* <img
 						src={`${content.href}/story_content/thumbnail.jpg`}
 						alt={`${module.moduleName} module thumbnail`}
@@ -138,7 +138,7 @@ const DefaultModule = ({ module }) => {
 					</span>
 					<span className="flex mt-3 font-light items-center">
 						<div className="text-gray-400 mr-3">
-							{/*} <Award /> */}
+							{/* } <Award /> */}
 						</div>
 						Certificate of completion
 					</span>
