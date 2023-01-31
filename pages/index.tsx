@@ -1,4 +1,4 @@
-//import LoadingSplash from '@/common'
+// import LoadingSplash from '@/common'
 import Head from 'next/head'
 
 const Index = () => {

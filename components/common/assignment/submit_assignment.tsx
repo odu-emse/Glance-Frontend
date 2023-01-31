@@ -44,7 +44,8 @@ export const Assignment = ({
 					label=""
 					name="upload"
 					onChange={() => null}
-					type="file" options={[]}
+					type="file"
+					options={[]}
 				/>
 			</div>
 

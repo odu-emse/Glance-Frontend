@@ -73,9 +73,11 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 										...formData,
 										firstname: s,
 									})
-								} }
+								}}
 								defaultValue={user.firstname}
-								disabled={!isCurrentUser} options={[]}							/>
+								disabled={!isCurrentUser}
+								options={[]}
+							/>
 
 							<Input
 								label="Last Name"
@@ -86,9 +88,11 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 										...formData,
 										lastName: s,
 									})
-								} }
+								}}
 								defaultValue={user.lastName}
-								disabled={!isCurrentUser} options={[]}							/>
+								disabled={!isCurrentUser}
+								options={[]}
+							/>
 						</div>
 						<div className="w-full mb-3">
 							<Input
@@ -97,15 +101,16 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 								type="text"
 								onChange={(s) => {
 									setFormData({ ...formData, email: s })
-								} }
+								}}
 								defaultValue={user.email}
-								disabled={!isCurrentUser} options={[]}							/>
+								disabled={!isCurrentUser}
+								options={[]}
+							/>
 						</div>
 
-						<Button
-							type="submit"
-							disabled={!isCurrentUser}
-						>Update Profile</Button>
+						<Button type="submit" disabled={!isCurrentUser}>
+							Update Profile
+						</Button>
 
 						<div
 							className={`relative z-10 ${

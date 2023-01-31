@@ -12,6 +12,6 @@ module.exports = {
 		'no-use-before-define': 'off',
 		'react-hooks/rules-of-hooks': 'warn',
 		'react/jsx-no-comment-textnodes': 'warn',
-		'react/no-children-prop': 'warn'
+		'react/no-children-prop': 'warn',
 	},
 }

@@ -4,12 +4,17 @@ const Index = () => {
 	return (
 		<div className="flex justify-center items-center h-screen">
 			<p>Communities Index</p>
-			<Thread body={''} upvotes={0} userProfile={{
-				id: '',
-				firstName: '',
-				lastName: '',
-				image: ''
-			}} id={''} />
+			<Thread
+				body={''}
+				upvotes={0}
+				userProfile={{
+					id: '',
+					firstName: '',
+					lastName: '',
+					image: '',
+				}}
+				id={''}
+			/>
 		</div>
 	)
 }
