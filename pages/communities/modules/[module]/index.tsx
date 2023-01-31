@@ -1,5 +1,7 @@
 import { ActiveModules } from 'components/common/pages/active_modules/active_modules'
-import { Thread, Input, WatchedThreads } from 'emse-ui'
+import { Thread } from '@/common/community/threads/thread/thread';
+import { WatchedThreads } from '@/components/common/community/watched_threads/watched_threads';
+import { Input } from '@/components/common/forms/inputs/input/input';
 
 const Module = () => {
 	const userName = 'joeldesante'
@@ -26,14 +28,12 @@ const Module = () => {
 						Recent Threads
 					</h1>
 					<Input
-						className="grow"
 						defaultValue=""
 						label="Search"
 						name="floating_search"
-						onChange={function noRefCheck() {}}
+						onChange={function noRefCheck() { } }
 						role="search"
-						type="search"
-					/>
+						type="search" options={[]}/>
 				</div>
 				<div className="m-3">
 					<div className="my-4">

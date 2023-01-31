@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Input } from '../FormElements'
-import type { InputProps } from '../FormElements'
-import { SocialCard } from '../SocialCard'
-import type { SocialCardProps, UserAccountProps } from '../SocialCard'
+import { Input } from '../../common/forms/inputs/input/input'
+import type { InputProps } from '../../common/forms/inputs/input/input'
+import { SocialCard } from '../../common/community/social_card/social_card'
+import type { SocialCardProps, UserAccountProps } from '../../common/community/social_card/social_card'
 import {
 	AiOutlineDown,
 	AiOutlineTrophy,
@@ -99,8 +99,7 @@ export const CommunityPage = ({
 								name={inputProps.name}
 								onChange={inputProps.onChange}
 								role={inputProps.role}
-								type={inputProps.type}
-							/>
+								type={inputProps.type} options={[]}							/>
 						</div>
 						<div className="mx-4">
 							<p className="text-gray-700 ">Groups</p>

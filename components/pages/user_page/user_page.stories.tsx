@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { UserPage } from './user_page'
-import type { UserPageProps } from '../components/UserPage'
+import type { UserPageProps } from './user_page'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 

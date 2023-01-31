@@ -18,7 +18,9 @@ export default {
 const Template = (args: { authenticated: boolean }) => {
 	return (
 		<Layout>
-			<Sidebar authenticated={args.authenticated} />
+			<Sidebar authenticated={args.authenticated} children={''} authChildren={''} handleOpen={function (): void {
+				throw new Error('Function not implemented.')
+			} } open={false} />
 			<Content>
 				<h1 className="border-blue-300 border-dashed border-4">
 					Hello World

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button } from 'emse-ui'
+import { Button } from '@/common/button/button'
 
 const NotFound = () => {
 	return (

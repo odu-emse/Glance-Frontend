@@ -25,9 +25,11 @@ export default async function handler(
 	try {
 		const client = new OAuth2Client(process.env.NEXT_PUBLIC_GOOGLE_ID)
 		const response = await client.verifyIdToken({
+			// @ts-ignore
 			idToken: token,
 			audience: process.env.NEXT_PUBLIC_GOOGLE_ID,
 		})
+		// @ts-ignore
 		res.status(200).json(response.getPayload())
 		return
 	} catch (e) {

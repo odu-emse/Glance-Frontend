@@ -27,18 +27,16 @@ const Template: ComponentStory<typeof Form> = (args) => {
 					type="text"
 					onChange={(s) => {
 						setFormData({ ...formData, firstName: s })
-					}}
-					defaultValue={formData.firstName}
-				/>
+					} }
+					defaultValue={formData.firstName} options={[]}				/>
 				<Input
 					label="Last Name"
 					name="lastName"
 					type="text"
 					onChange={(s) => {
 						setFormData({ ...formData, lastName: s })
-					}}
-					defaultValue={formData.lastName}
-				/>
+					} }
+					defaultValue={formData.lastName} options={[]}				/>
 			</div>
 			<Input
 				label="Email"
@@ -46,9 +44,8 @@ const Template: ComponentStory<typeof Form> = (args) => {
 				type="email"
 				onChange={(s) => {
 					setFormData({ ...formData, email: s })
-				}}
-				defaultValue={formData.email}
-			/>
+				} }
+				defaultValue={formData.email} options={[]}			/>
 			<div className="flex justify-between gap-5">
 				<Input
 					label="Password"
@@ -56,9 +53,8 @@ const Template: ComponentStory<typeof Form> = (args) => {
 					type="password"
 					onChange={(s) => {
 						setFormData({ ...formData, password: s })
-					}}
-					defaultValue={formData.password}
-				/>
+					} }
+					defaultValue={formData.password} options={[]}				/>
 				<Input
 					label="Password Confirmation"
 					name="passwordConfirmation"
@@ -68,9 +64,8 @@ const Template: ComponentStory<typeof Form> = (args) => {
 							...formData,
 							passwordConfirmation: s,
 						})
-					}}
-					defaultValue={formData.passwordConfirmation}
-				/>
+					} }
+					defaultValue={formData.passwordConfirmation} options={[]}				/>
 			</div>
 		</Form>
 	)

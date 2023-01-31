@@ -1,15 +1,14 @@
-import { Thread } from '@/common/community/thread/thread/thread'
-import { Button } from 'emse-ui'
+import { Thread } from '@/components/common/community/threads/thread/thread'
+import { Button } from '@/common/button/button'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 const ThreadPage = () => {
 	return (
 		<>
 			<div>
 				<Button
-					label="< Back"
 					className="mt-6 ml-4 bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
 					onClick={() => history.back()}
-				/>
+				>Back</Button>
 				<div className="flex justify-center items-center">
 					<h1>Communities Thread</h1>
 				</div>

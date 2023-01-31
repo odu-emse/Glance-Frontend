@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../src/stories/Accordion.stories'
+import * as stories from '@/common/accordion/accordion.stories'
 import terminalLog from '../support/component'
 
 const { Topic1, Topic2, Topic3 } = composeStories(stories)

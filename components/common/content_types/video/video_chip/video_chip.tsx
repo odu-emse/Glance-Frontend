@@ -18,6 +18,7 @@ export const VideoChip = ({ id, text, timestamp, icon }: VideoChipProps) => {
 				<small>
 					{moment
 						.utc(timestamp * 1000)
+						// @ts-ignore
 						.format('HH:mm:ss', { trim: true })
 						.replace(/^0(?:0:0?)?/, '')}
 				</small>

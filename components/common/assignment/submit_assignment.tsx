@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Button } from '../Button'
-import { Input } from '../FormElements'
+import { Button } from '../button/button'
+import { Input } from '../forms/inputs/input/input'
 import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io'
 
 export const Assignment = ({
@@ -44,7 +44,7 @@ export const Assignment = ({
 					label=""
 					name="upload"
 					onChange={() => null}
-					type="file"
+					type="file" options={[]}
 				/>
 			</div>
 
@@ -56,7 +56,7 @@ export const Assignment = ({
 				placeholder="Type your response here..."
 			></textarea>
 
-			<Button label="SUBMIT" type="submit" primary />
+			<Button type="submit">Submit</Button>
 		</div>
 	)
 }

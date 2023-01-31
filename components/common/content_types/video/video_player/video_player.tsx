@@ -310,6 +310,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 							<input
 								className="absolute bottom-0 hidden group-hover:flex -translate-y-6 w-4"
 								style={{
+									// @ts-ignore
 									'-webkit-appearance': 'slider-vertical',
 									'writing-mode': 'bt-lr',
 								}}

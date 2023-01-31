@@ -1,4 +1,4 @@
-import LoadingSplash from '../components/LoadingSplash'
+//import LoadingSplash from '@/common'
 import Head from 'next/head'
 
 const Index = () => {
@@ -9,7 +9,6 @@ const Index = () => {
 				<meta name="description" content="ALMP" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<LoadingSplash />
 		</div>
 	)
 }
