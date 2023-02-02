@@ -20,7 +20,6 @@ import { GoLinkExternal } from 'react-icons/go'
 import { MdSend } from 'react-icons/md'
 import gqlFetcher from '../../../utils/gql_fetcher'
 import { gql } from 'graphql-request'
-import { useRouter } from 'next/router'
 import useSWR from 'swr'
 
 export const CommunityPage = ({
