@@ -69,6 +69,7 @@ export const CommunityPage = ({
 }`,
 		},
 		gqlFetcher
+		
 	)
 
 	if (error) {

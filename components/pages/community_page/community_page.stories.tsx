@@ -3,6 +3,7 @@ import * as React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CommunityPage, CommunityPageProps } from './community_page'
 
+
 export default {
 	title: 'Organisms/Community Page', //providing path
 	component: CommunityPage,
