@@ -23,7 +23,6 @@ import { gql } from 'graphql-request'
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
 
-
 export const CommunityPage = ({
 	socialCardProps,
 	inputProps,
@@ -68,16 +67,15 @@ export const CommunityPage = ({
 
 }
 }`,
-		  
 		},
 		gqlFetcher
 	)
 
-	if(error) {
-		console.log(error);
-		throw new Error(error);
+	if (error) {
+		console.log(error)
+		throw new Error(error)
 	}
-	if(!data){
+	if (!data) {
 		return <div>Loading...</div>
 	}
 
