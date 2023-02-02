@@ -4,7 +4,7 @@ import { useGoogleLogin } from '@react-oauth/google'
 
 export const Login = () => {
 	const login = () => {
-		const login = useGoogleLogin({
+		useGoogleLogin({
 			onSuccess: async (codeResponse) => console.log(codeResponse),
 			onError: (error) => console.log(error),
 			flow: 'auth-code',
