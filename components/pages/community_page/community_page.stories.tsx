@@ -1,8 +1,7 @@
 import * as React from 'react'
-//import { CommunityPage, CommunityPageProps } from "../components/pages/community_page";
+// import { CommunityPage, CommunityPageProps } from "../components/pages/community_page";
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CommunityPage, CommunityPageProps } from './community_page'
-
 
 export default {
 	title: 'Organisms/Community Page', //providing path
