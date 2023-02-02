@@ -18,6 +18,11 @@ import { GrGroup } from 'react-icons/gr'
 import { CgPoll } from 'react-icons/cg'
 import { GoLinkExternal } from 'react-icons/go'
 import { MdSend } from 'react-icons/md'
+import gqlFetcher from '../../../utils/gql_fetcher'
+import { gql } from 'graphql-request'
+import { useRouter } from 'next/router'
+import useSWR from 'swr'
+
 
 export const CommunityPage = ({
 	socialCardProps,
@@ -27,6 +32,55 @@ export const CommunityPage = ({
 	challengesProps,
 	contactProps,
 }: CommunityPageProps) => {
+	const { data, error } = useSWR(
+		{
+			query: gql`
+		  {
+			thread(id: “") {
+ id
+	title
+	author {
+	  picURL
+	  createdAt
+	  firstName
+	  lastName
+	  instructorProfile {
+		title
+	  }
+	}
+	upvotes
+	comments {
+	  id
+	  title
+	  author {
+		picURL
+		createdAt
+		firstName
+		lastName
+		instructorProfile {
+		  title
+		}
+	  }
+	  
+	}
+	createdAt
+
+
+}
+}`,
+		  
+		},
+		gqlFetcher
+	)
+
+	if(error) {
+		console.log(error);
+		throw new Error(error);
+	}
+	if(!data){
+		return <div>Loading...</div>
+	}
+
 	return (
 		<div className="h-auto mx-auto relative bg-[#E7E8E9] overflow-hidden">
 			<div className="flex flex-1">
@@ -53,7 +107,7 @@ export const CommunityPage = ({
 							<SocialCard
 								timestamp={socialCardProps.timestamp}
 								content={socialCardProps.content}
-								likes={socialCardProps.likes}
+								likes={data.thread.upvotes}
 								comments={socialCardProps.comments}
 								user={socialCardProps.user}
 							/>
