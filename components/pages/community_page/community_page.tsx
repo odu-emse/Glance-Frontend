@@ -29,43 +29,41 @@ export const CommunityPage = ({
 	pollSurveysProps,
 	challengesProps,
 	contactProps,
-}: CommunityPageProps) => {
+}) => {
 	const { data, error } = useSWR(
 		{
 			query: gql`
-		  {
-			thread(id: “") {
- id
-	title
-	author {
-	  picURL
-	  createdAt
-	  firstName
-	  lastName
-	  instructorProfile {
-		title
-	  }
-	}
-	upvotes
-	comments {
-	  id
-	  title
-	  author {
-		picURL
-		createdAt
-		firstName
-		lastName
-		instructorProfile {
-		  title
-		}
-	  }
-	  
-	}
-	createdAt
-
-
-}
-}`,
+				{
+					thread(input: {}) {
+						id
+						title
+						author {
+							picURL
+							createdAt
+							firstName
+							lastName
+							instructorProfile {
+								title
+							}
+						}
+						upvotes
+						comments {
+							id
+							title
+							author {
+								picURL
+								createdAt
+								firstName
+								lastName
+								instructorProfile {
+									title
+								}
+							}
+						}
+						createdAt
+					}
+				}
+			`,
 		},
 		gqlFetcher
 	)
