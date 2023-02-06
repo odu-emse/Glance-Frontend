@@ -49,12 +49,12 @@ const ModulesPage = () => {
 					data.user.plan.modules
 						.filter((doc) => doc.role === 'STUDENT')
 						.map((enrollment) => {
-							return (
-								{/* <ModuleItem
+							return {
+								/* <ModuleItem
 									key={enrollment.module.id}
 									module={enrollment.module}
-							/>*/}
-							)
+							/>*/
+							}
 						})
 
 					// console.log(data)
