@@ -7,7 +7,7 @@ export const ModuleCard = ({
 	registeredUsers,
 }: ModuleCardProps) => {
 	return (
-		<div className="border-solid border-gray bg-gray-200 rounded flex justify-between shadow-lg border w-2/5">
+		<div className="border-solid border-gray bg-gray-200 rounded flex justify-between border w-2/5">
 			<div className="m-2">
 				<p className="text-2xl py-2">{moduleName}</p>
 				<div className="flex text-xs font-medium">

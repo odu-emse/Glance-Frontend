@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Modules } from './modules'
-
+import { ModuleProps, Modules } from './modules'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+
 
 export default {
 	title: 'Pages/AdminPanel/Modules',
@@ -9,10 +9,9 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof Modules>
 
-const Template: ComponentStory<typeof Modules> = (args: any) => (
+const Template: ComponentStory<typeof Modules> = (args) => (
 	<Modules {...args} />
 )
 
-export const Primary: ComponentStory<typeof Modules> = Template.bind({})
-Primary.storyName = 'Default'
-Primary.args = {}
+export const Default: ComponentStory<typeof Modules> = Template.bind({})
+Default.args = {}
