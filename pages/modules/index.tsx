@@ -1,7 +1,7 @@
 import React from 'react'
 
-//import ModuleItem from '@/components/modules/ModuleListItem'
-//import Layout from '@/components/Layout'
+// import ModuleItem from '@/components/modules/ModuleListItem'
+// import Layout from '@/components/Layout'
 
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
@@ -50,10 +50,10 @@ const ModulesPage = () => {
 						.filter((doc) => doc.role === 'STUDENT')
 						.map((enrollment) => {
 							return (
-								<ModuleItem
+								{/* <ModuleItem
 									key={enrollment.module.id}
 									module={enrollment.module}
-								/>
+							/>*/}
 							)
 						})
 
