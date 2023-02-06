@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ModuleCard } from './module_card'
+import { ModuleCard, ModuleCardProps } from './module_card'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
@@ -8,10 +8,13 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof ModuleCard>
 
-const Template: ComponentStory<typeof ModuleCard> = (args: any) => (
+const Template: ComponentStory<typeof ModuleCard> = (args: ModuleCardProps) => (
 	<ModuleCard {...args} />
 )
 
 export const Default: ComponentStory<typeof ModuleCard> = Template.bind({})
-Default.args = {}
-
+Default.args = {
+    moduleName: 'Module A',
+    instructorName: 'Instructor',
+    registeredUsers: 342
+}
