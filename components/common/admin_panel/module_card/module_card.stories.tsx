@@ -14,7 +14,7 @@ const Template: ComponentStory<typeof ModuleCard> = (args: ModuleCardProps) => (
 
 export const Default: ComponentStory<typeof ModuleCard> = Template.bind({})
 Default.args = {
-    moduleName: 'Module A',
-    instructorName: 'Instructor',
-    registeredUsers: 342
+	moduleName: 'Module A',
+	instructorName: 'Instructor',
+	registeredUsers: 342,
 }
