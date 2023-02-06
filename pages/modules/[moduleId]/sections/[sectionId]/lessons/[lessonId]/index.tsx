@@ -5,7 +5,7 @@ import Layout from '@/components/Layout'
 import ContentLoader from '@/components/modules/content_type/ContentLoader'
 import useSWR from 'swr'
 import fetcher from '@/utils/fetcher'
-import { Button } from 'emse-ui'
+import { Button } from '@/components/common/button/button'
 
 const ModuleSection = () => {
 	// const [data, setData] = useState(null);
@@ -56,13 +56,13 @@ const ModuleSection = () => {
 			<div className="w-full flex justify-between items-center">
 				{prevPage !== null && (
 					<Link href={prevPage} passHref>
-						<Button label="Previous" />
+						<Button>Previous</Button>
 					</Link>
 				)}
 
 				{nextPage !== null && (
 					<Link href={nextPage} passHref>
-						<Button label="Next" />
+						<Button>Next</Button>
 					</Link>
 				)}
 			</div>

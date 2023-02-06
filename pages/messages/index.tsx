@@ -1,4 +1,5 @@
-import { BubbleMessage, ChatHistory, MessageInput } from 'emse-ui'
+import { BubbleMessage } from "@/components/common/chat/bubble_message/bubble_message"
+import { ChatHistory } from "@/components/common/chat/chat_history/chat_history"
 
 const Index = () => {
 	return (
@@ -91,7 +92,10 @@ const Index = () => {
 							},
 						]}
 					/>
-					<MessageInput />
+					{ /*
+					FIXME: Replace this with a component
+					ALMP-559 
+					<MessageInput /> */ }
 				</div>
 			</div>
 		</>

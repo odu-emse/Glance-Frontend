@@ -6,7 +6,7 @@ import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
 import Link from 'next/link'
-import { Button } from 'emse-ui'
+import { Button } from '@/components/common/button/button'
 
 const ModulesPage = () => {
 	const { jwt: token, user } = useAuth()
@@ -36,7 +36,7 @@ const ModulesPage = () => {
 						My Modules
 					</h1>
 					<Link href={`/modules/all`} passHref={true}>
-						<Button label="View All Modules" />
+						<Button>View All Modules</Button>
 					</Link>
 				</div>
 				{

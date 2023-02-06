@@ -6,7 +6,7 @@ import useAuth from '@/hooks/use_auth'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 import { getModuleByID } from '@/scripts/get_module_by_id'
-import { Button } from 'emse-ui'
+import { Button } from '@/components/common/button/button'
 
 const Module = () => {
 	const router = useRouter()
@@ -150,7 +150,7 @@ const DefaultModule = ({ module }) => {
 						// 	module.headSection
 						// }/lessons/${module.sections[module.headSection].headLesson}`}
 					>
-						<Button label="Open Module" />
+						<Button>Open Module</Button>
 					</Link>
 					<button
 						className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3"
