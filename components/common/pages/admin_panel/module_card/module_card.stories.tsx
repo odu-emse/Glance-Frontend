@@ -3,7 +3,7 @@ import { ModuleCard, ModuleCardProps } from './module_card'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-	title: 'Common/AdminPanel/ModuleCard',
+	title: 'Common/Admin Panel/ModuleCard',
 	component: ModuleCard,
 	argTypes: {},
 } as ComponentMeta<typeof ModuleCard>
