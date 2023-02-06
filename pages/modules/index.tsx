@@ -1,12 +1,18 @@
 import React from 'react'
-import ModuleItem from '@/components/modules/ModuleListItem'
-import Layout from '@/components/Layout'
+
+//import ModuleItem from '@/components/modules/ModuleListItem'
+//import Layout from '@/components/Layout'
+
+import { Layout } from '@/components/common/pages/layouts/layout/layout'
+import { Button } from '@/components/common/button/button'
+
+import Link from 'next/link'
+
 import useAuth from '@/hooks/use_auth'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
+
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
-import Link from 'next/link'
-import { Button } from '@/components/common/button/button'
 
 const ModulesPage = () => {
 	const { jwt: token, user } = useAuth()

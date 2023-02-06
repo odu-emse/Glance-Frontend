@@ -3,14 +3,21 @@
  */
 import useSWR from 'swr'
 import Link from 'next/link'
-import Layout from '@/components/Layout'
+
+import { Layout } from '@/components/common/pages/layouts/layout/layout'
+
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
+
 import gqlFetcher from '@/utils/gql_fetcher'
+
 import useAuth from '@/hooks/use_auth'
+
 import { Button } from '@/components/common/button/button'
+
 import { ModuleCard } from '@/components/common/module_card/module_card'
 
 const AllModules = () => {
+	console.log('EAT MY ASS')
 	const { jwt: token, user } = useAuth()
 	const { data, error } = useSWR(
 		{
@@ -20,7 +27,11 @@ const AllModules = () => {
 		gqlFetcher
 	)
 
-	if (error) return <p>Failed to load content...</p>
+	if (error) {
+		console.log(user)
+		console.error(error)
+		return <p>Failed to load content...</p>
+	}
 	if (!data || !data?.user) return <p>Loading...</p>
 
 	console.log(data)

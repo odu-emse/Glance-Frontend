@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 
 const useAuth = () => {
+	console.debug('Bootstrapping AuthHook')
 	const [isAuthorized, setAuthorized] = useState(false)
 	const [user, setUser] = useState(null)
 	const [loading, setLoading] = useState(true)
 	const [jwt, setJWT] = useState(null)
 
 	useEffect(() => {
+		console.debug('Effect triggered for AuthHook')
 		const handle = async () => {
 			const token = window.localStorage.getItem('auth')
 			if (token === null) {

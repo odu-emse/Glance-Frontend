@@ -1,18 +1,16 @@
 import React from 'react'
-import { Button } from '../../common/button/button'
+import { Button } from '@/common/button/button'
 import { useGoogleLogin } from '@react-oauth/google'
 
 export const Login = () => {
-	const login = () => {
-		useGoogleLogin({
-			onSuccess: async (codeResponse) => console.log(codeResponse),
-			onError: (error) => console.log(error),
-			flow: 'auth-code',
-			hosted_domain: 'odu.edu',
-			ux_mode: 'redirect',
-			redirect_uri: 'http://localhost:3000/auth/redirect',
-		})
-	}
+	const login = useGoogleLogin({
+		onSuccess: async (codeResponse) => console.log(codeResponse),
+		onError: (error) => console.log(error),
+		flow: 'auth-code',
+		hosted_domain: 'odu.edu',
+		ux_mode: 'redirect',
+		redirect_uri: 'http://localhost:3000/auth/redirect',
+	})
 
 	return (
 		<div className="h-screen flex items-center">
@@ -26,7 +24,14 @@ export const Login = () => {
 					</p>
 				</div>
 
-				<Button onClick={() => login()}>Login with Google</Button>
+				<Button
+					onClick={() => {
+						console.debug('Clicked the login button.')
+						login()
+					}}
+				>
+					Login with Google
+				</Button>
 			</div>
 		</div>
 	)

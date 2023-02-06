@@ -3,40 +3,40 @@ import { gql } from 'graphql-request'
 export const getUserByOpenID = (openID) => {
 	return gql`
 			{
-				user(id: "${openID}") {
+				user(
+					input: { openID: "${openID}" }
+				) {
+				id
+				plan{
 					id
-					plan{
+					modules{
+					enrolledAt
+					role
+					module{
 						id
-						modules{
-							enrolledAt
-							role
-							module{
-								id
-								moduleName
-								moduleNumber
-								intro
-								createdAt
-								description
-								duration
-								keywords
-								numSlides
-								feedback {
-									id
-									rating
-								}
-								parentCourses {
-									id
-									course {
-										name
-									}
-								}
-								members {
-									id
-									role
-								}
-							}
+						moduleName
+						moduleNumber
+						intro
+						createdAt
+						description
+						duration
+						keywords
+						numSlides
+						feedback {
+						id
+						rating
+						}
+						parentModules {
+						id
+						moduleName
+						}
+						members {
+						id
+						role
 						}
 					}
+					}
+				}
 				}
 			}
 		`

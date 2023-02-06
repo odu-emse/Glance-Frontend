@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import Layout from '@/components/Layout'
+import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import Link from 'next/link'
 import useAuth from '@/hooks/use_auth'
 import useSWR from 'swr'
