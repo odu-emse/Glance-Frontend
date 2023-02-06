@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../button/button'
+import { Button } from '../../common/button/button'
 import { useGoogleLogin } from '@react-oauth/google'
 
 export const Login = () => {
