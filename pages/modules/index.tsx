@@ -50,10 +50,12 @@ const ModulesPage = () => {
 						.filter((doc) => doc.role === 'STUDENT')
 						.map((enrollment) => {
 							return {
-								/*<ModuleItem
-									key={enrollment.module.id}
-									module={enrollment.module}
-							/>*/
+								/*
+									<ModuleItem
+										key={enrollment.module.id}
+										module={enrollment.module}
+									/>
+								*/
 							}
 						})
 
