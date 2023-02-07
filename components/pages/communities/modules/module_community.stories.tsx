@@ -4,7 +4,7 @@ import type { ModuleCommunityProps } from './module_community'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-	title: 'pages/communities/Module Community',
+	title: 'Pages/Communities/Modules/Module Community',
 	component: ModuleCommunity,
 	argTypes: {},
 } as ComponentMeta<typeof ModuleCommunity>
@@ -12,12 +12,9 @@ export default {
 const Template: ComponentStory<typeof ModuleCommunity> = (
 	args: ModuleCommunityProps
 ) => {
-	return <ModuleCommunity{...args} />
-    //	return <PageNotFound {...args} />
-
+	return <ModuleCommunity {...args} />
+	//	return <PageNotFound {...args} />
 }
-
-
 
 export const Primary: ComponentStory<typeof ModuleCommunity> = Template.bind({})
 Primary.storyName = 'Default'
