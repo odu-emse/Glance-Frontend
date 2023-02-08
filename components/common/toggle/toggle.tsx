@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+import React from 'react'
 export const ToggleSwitch: React.FC<ToggleProps> = ({
 	identifier,
 	label,
@@ -9,10 +10,10 @@ export const ToggleSwitch: React.FC<ToggleProps> = ({
 	onChange,
 	onClick,
 }): React.ReactElement => {
-	const classes = [
-		'relative inline-block items-center mb-5 cursor-pointer',
+	// const classes = [
+	// 	'relative inline-block items-center mb-5 cursor-pointer',
 		// 'relative inline-flex items-center mb-5 cursor-pointer',
-	].join(' ')
+	// ].join(' ')
 	// const input = ['sr-only peer'].join(' ')
 	// const slider = [`w-9`].join(' ')
 
@@ -22,11 +23,11 @@ export const ToggleSwitch: React.FC<ToggleProps> = ({
 	// 	onChange(event.target.checked)
 	// }
 
-	const [toggle, setToggle] = useState(false)
+	// const [toggle, setToggle] = useState(false)
 
-	const handleToggleChange = () => {
-		setToggle(!toggle)
-	}
+	// const handleToggleChange = () => {
+	// 	setToggle(!toggle)
+	// }
 
 	// const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 	// 	setIsChecked(event.target.checked)
