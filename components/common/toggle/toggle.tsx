@@ -12,7 +12,7 @@ export const ToggleSwitch: React.FC<ToggleProps> = ({
 }): React.ReactElement => {
 	// const classes = [
 	// 	'relative inline-block items-center mb-5 cursor-pointer',
-		// 'relative inline-flex items-center mb-5 cursor-pointer',
+	// 'relative inline-flex items-center mb-5 cursor-pointer',
 	// ].join(' ')
 	// const input = ['sr-only peer'].join(' ')
 	// const slider = [`w-9`].join(' ')
