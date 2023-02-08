@@ -1,56 +1,23 @@
 import * as React from 'react'
-import { SocialCard } from '../components/SocialCard'
-import type { SocialCardProps } from '../components/SocialCard'
+import { ToggleSwitch } from './toggle'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+// import { action } from '@storybook/addon-actions';
 
 export default {
-	title: 'Molecules/Social Card',
-	component: SocialCard,
-} as ComponentMeta<typeof SocialCard>
-
-const Template: ComponentStory<typeof SocialCard> = (args) => (
-	<SocialCard {...args} />
+	title: 'function/toggle option',
+	component: ToggleSwitch,
+	argTypes: {},
+} as ComponentMeta<typeof ToggleSwitch>
+const Template: ComponentStory<typeof ToggleSwitch> = (args: any) => (
+	<ToggleSwitch {...args} />
 )
-export const Primary: ComponentStory<typeof SocialCard> = Template.bind({})
-Primary.args = {
-	timestamp: 1664376815,
-	content:
-		'AWESOME hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii',
-	likes: 20,
-	comments: 50,
-	user: {
-		firstName: 'Avantika',
-		lastName: 'Mittapally',
-		role: 'Advisor',
-		image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-		title: 'Chair of Department',
-		office: 'ESB 2101',
-		department: 'Engineering Management & Systems Engineering',
-	},
-}
-export const Secondary: ComponentStory<typeof SocialCard> = Template.bind({})
-Secondary.storyName = 'Longer Content'
-Secondary.args = {
-	...Primary.args,
-	content:
-		'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae error iure officiis exercitationem, commodi ab reiciendis eum ex veritatis placeat amet architecto itaque cumque blanditiis numquam repellat, necessitatibus natus nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae error iure officiis exercitationem, commodi ab reiciendis eum ex veritatis placeat amet architecto itaque cumque blanditiis numquam repellat, necessitatibus natus nihil!',
-}
-export const TA = Template.bind({})
-TA.storyName = 'TA user'
-TA.description = 'TA user here'
-TA.args = {
-	...Secondary.args,
-	user: {
-		...Secondary.args.user,
-		role: 'TA',
-	},
-}
-export const Prof = Template.bind({})
-Prof.storyName = 'Professor user'
-Prof.args = {
-	...Secondary.args,
-	user: {
-		...Secondary.args.user,
-		role: 'Prof',
-	},
+export const Default: ComponentStory<typeof ToggleSwitch> = Template.bind({})
+Default.args = {
+	identifier: 'name',
+	label: 'name',
+	variant: 'primary',
+	status: false,
+	size: 'base',
+	disabled: false,
+	onChange: false,
 }
