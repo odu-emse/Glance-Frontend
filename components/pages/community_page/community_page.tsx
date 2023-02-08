@@ -1,4 +1,6 @@
 import * as React from 'react'
+import moment from 'moment'
+
 import { Input } from '../../common/forms/inputs/input/input'
 import type { InputProps } from '../../common/forms/inputs/input/input'
 import { SocialCard } from '../../common/community/social_card/social_card'
@@ -24,6 +26,7 @@ import useSWR from 'swr'
 
 export const CommunityPage = ({
 	socialCardProps,
+	userAccountProps,
 	inputProps,
 	groupsProps,
 	pollSurveysProps,
@@ -37,6 +40,7 @@ export const CommunityPage = ({
 					thread(input: {}) {
 						id
 						title
+						body
 						author {
 							picURL
 							createdAt
@@ -44,6 +48,7 @@ export const CommunityPage = ({
 							lastName
 							instructorProfile {
 								title
+								officeLocation
 							}
 						}
 						upvotes
@@ -57,6 +62,7 @@ export const CommunityPage = ({
 								lastName
 								instructorProfile {
 									title
+									officeLocation
 								}
 							}
 						}
@@ -75,9 +81,11 @@ export const CommunityPage = ({
 	if (!data) {
 		return <div>Loading...</div>
 	}
+console.log(data.thread.createdAt)
+console.log(data.thread)
 
 	return (
-		<div className="h-auto mx-auto relative bg-[#E7E8E9] overflow-hidden">
+		<div className="h-auto mx-auto relative bg-[#E7E8E9] overflow-scroll">
 			<div className="flex flex-1">
 				<div className="container mt-2 md:ml-10 relative md:w-7/12">
 					<div className="flex flex-col h-screen">
@@ -98,14 +106,44 @@ export const CommunityPage = ({
 								Sort by Relevance <AiOutlineDown />
 							</div>
 						</button>
-						<div>
+						
+						<div >
+						{data.thread.length > 0 &&
+						data.thread.map(
+										(
+											{ data1,author, createdAt, upvotes,instructorProfile,comments,body},
+											index
+										) => (
+											<>
+							
 							<SocialCard
-								timestamp={socialCardProps.timestamp}
-								content={socialCardProps.content}
-								likes={data.thread.upvotes}
-								comments={socialCardProps.comments}
-								user={socialCardProps.user}
+						
+								timestamp={moment(createdAt).unix()}
+								content={body}
+								likes={upvotes}
+								comments={comments.length}
+								user={{
+									firstName:author.firstName,
+									lastName:author.lastName,
+									
+									role:author.instructorProfile?.title ?
+									author.instructorProfile.title
+									:
+									"advisor",
+									image:author.picURL,
+									title:'',
+									office:author.instructorProfile?.officeLocation ?
+									author.officeLocation.title
+									:
+									"ESB 2101",
+									department:''
+								}}
+								
+								key={index}
 							/>
+								</>
+				)
+									)}
 						</div>
 						<div className="md:hidden flex flex-row h-full items-end justify-evenly w-full">
 							<div className="">
@@ -140,8 +178,11 @@ export const CommunityPage = ({
 								</button>
 							</div>
 						</div>
+					
 					</div>
+					
 				</div>
+				
 				<div className="hidden md:flex md:container md:ml-36 md:relative md:w-11/12 bg-white shadow-lg h-screen overflow-y-auto">
 					<div className="flex flex-col h-full w-full ">
 						<div className="px-3 h-20 flex shrink-0 w-full items-center justify-center border-b border-gray-150">
@@ -396,3 +437,5 @@ export type ContactProps = {
 	contactProfileImage: string
 	contactStatus: string
 }
+
+
