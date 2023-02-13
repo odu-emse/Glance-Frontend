@@ -9,11 +9,8 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof ModuleThread>
 
-const Template: ComponentStory<typeof ModuleThread> = (
-	args:any
-) => {
+const Template: ComponentStory<typeof ModuleThread> = (args: any) => {
 	return <ModuleThread {...args} />
-	
 }
 
 export const Primary: ComponentStory<typeof ModuleThread> = Template.bind({})

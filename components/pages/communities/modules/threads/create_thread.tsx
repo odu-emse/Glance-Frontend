@@ -1,21 +1,20 @@
-import { Button } from "../../../../common/button/button"
-import { Input } from "../../../../common/forms/inputs/input/input"
+import { Button } from '../../../../common/button/button'
+import { Input } from '../../../../common/forms/inputs/input/input'
 
-
-export const ModuleThread = () =>{
-    return(
-        <>
-        <Input
-        ariaLabel="Text input field"
-        defaultValue=""
-        label="Label"
-        name="text-input"
-        onChange={() => {}}
-        options={[]}
-        type="text"
-        />
-    <textarea
-      className="
+export const ModuleThread = () => {
+	return (
+		<>
+			<Input
+				ariaLabel="Text input field"
+				defaultValue=""
+				label="Label"
+				name="text-input"
+				onChange={() => {}}
+				options={[]}
+				type="text"
+			/>
+			<textarea
+				className="
         form-control 
         block 
         w-full 
@@ -32,15 +31,13 @@ export const ModuleThread = () =>{
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-      placeholder="Thread Input"
-    ></textarea>
-        <div className="button flex justify-end">
-                <Button>
-                <p>
-                    SUBMIT BUTTON
-                </p>
-                </Button>
-        </div>
-        </>
-    )
+				placeholder="Thread Input"
+			></textarea>
+			<div className="button flex justify-end">
+				<Button>
+					<p>SUBMIT BUTTON</p>
+				</Button>
+			</div>
+		</>
+	)
 }
