@@ -2,73 +2,94 @@ import {
 	ModuleCard,
 	ModuleCardProps,
 } from '../../../common/pages/admin_panel/module_card/module_card'
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
+
 import React, { useState } from 'react';
+import { DndContext, DragOverlay, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
+import { SortableContext, verticalListSortingStrategy, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable" 
 
 
 
 export const Modules = ({ moduleCardProps, modules = [] }: ModuleProps) => {
-    const [module, updateModule] = useState(modules);
+    
+	const [ active, setActive ] = useState(null)
 
-    function handleOnDragEnd(result) {
-        
-    }
+	//console.log(modules)
 
-	for (let i = 0; i < 3; i++) {
-        const ind = i; 
-		module.push(
-        //     <div className="m-3" key={i}>
-        //         <ModuleCard
-        
-        //                 moduleName={'Module A'}
-        //                 instructorName={'Instructor'}
-        //                 registeredUsers={34}
-        //         />
-        //     </div>
-        // )
-        // }
-            
-			<DragDropContext key={ind} onDragEnd={handleOnDragEnd}>
-				
-					<Droppable droppableId={moduleCardProps.id}>
-						{(provided) => (
-							<ul
-								className="modules"
-								{...provided.droppableProps}
-								ref={provided.innerRef}
-							>
-                                <div className="m-3" key={ind}>
-								<Draggable draggableId="id" index={ind}>
-									{(provided) => (
-										<li
-											ref={provided.innerRef}
-											{...provided.draggableProps}
-											{...provided.dragHandleProps}
-										>
-											<ModuleCard
-                                                
-                                                moduleName={'Module A'}
-                                                instructorName={'Instructor'}
-                                                registeredUsers={34} id={0}											/>
-										</li>
-									)}
-								</Draggable>
-								</div>
-                                {provided.placeholder}
-							</ul>
-						)}
-					</Droppable>
-				
-			</DragDropContext>
-    )
-}
+	const [ items, setItems ] = useState(modules);
+	const sensors = useSensors(
+		useSensor(PointerSensor),
+		useSensor(KeyboardSensor, {
+			coordinateGetter: sortableKeyboardCoordinates
+		})
+	)
 
 	return (
-		<>
+		<div>
 			<h1 className="text-xl m-3 py-2">Your Modules</h1>
-			<div className="moduleCard">{modules}</div>
-		</>
+
+			<DndContext 
+				onDragEnd={handleOnDragEnd}
+				onDragStart={handleOnDragStart}
+				collisonDetection={closestCenter}
+				sensors={sensors}
+			>
+				<SortableContext 
+					items={items} 
+					strategy={verticalListSortingStrategy}
+				>
+					{ 
+						items.map( 
+							item => <div className="m-3" key={item.module.id}>
+								<ModuleCard 
+									id={item.module.id} 
+									moduleName={item.module.id} 
+									instructorName={"Joel DeSante"} 
+									registeredUsers={50} 
+								/>
+							</div>
+						) 
+							
+					}
+				</SortableContext>
+				<DragOverlay>
+					{ 
+						active ? 
+						<ModuleCard 
+							key={active.module.id}
+							id={active.module.id} 
+							moduleName={active.module.id} 
+							instructorName={"Joel DeSante"} 
+							registeredUsers={50} 
+						/> 
+						: null 
+					}
+				</DragOverlay>
+			</DndContext>
+		</div>
 	)
+
+	function handleOnDragStart(event) {
+		const { active } = event
+		setActive(
+			items.find( item => active.id === item.module.id )
+		)
+	}
+
+	function handleOnDragEnd(event) {
+		const {active, over} = event;
+
+		//console.log("ACTIVE", active, "OVER", over)
+
+		if(active.id !== over.id) {
+			setItems((items) => {
+				const oldIndex = items.findIndex(item => active.id === item.module.id)
+				const newIndex = items.findIndex(item => over.id === item.module.id)
+				return arrayMove(items, oldIndex, newIndex)
+			})
+		}
+
+		setActive(null)
+	}
 }
 
 export type ModuleProps = {

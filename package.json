@@ -17,6 +17,8 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@dnd-kit/core": "^6.0.7",
+		"@dnd-kit/sortable": "^7.0.2",
 		"@react-oauth/google": "^0.2.6",
 		"and": "^0.0.3",
 		"google-auth-library": "^8.5.1",

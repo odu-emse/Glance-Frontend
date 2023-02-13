@@ -1,5 +1,7 @@
 import { BiArchiveIn } from 'react-icons/bi'
 import { RiDeleteBin5Line } from 'react-icons/ri'
+import { useSortable } from '@dnd-kit/sortable'
+import { CSS } from '@dnd-kit/utilities'
 
 export const ModuleCard = ({
 	id,
@@ -7,8 +9,28 @@ export const ModuleCard = ({
 	instructorName,
 	registeredUsers,
 }: ModuleCardProps) => {
+
+	const {
+		attributes,
+		listeners,
+		setNodeRef,
+		transform,
+		transition
+	} = useSortable({id: id})
+
+	const style = {
+		transform: CSS.Transform.toString(transform),
+		transition
+	}
+
 	return (
-		<div className="border-solid border-gray bg-gray-200 rounded flex justify-between border w-2/5">
+		<div
+			ref={setNodeRef}
+			style={style}
+			{...attributes}
+			{...listeners} 
+			className="border-solid border-gray bg-gray-200 rounded flex justify-between border w-2/5"
+		>
 			<div className="m-2">
 				
 				<p className="text-2xl py-2">{moduleName}</p>
@@ -28,7 +50,7 @@ export const ModuleCard = ({
 }
 
 export type ModuleCardProps = {
-	id: number
+	id: string
 	moduleName: string
 	/**
 	 * String that shows up name of the module on Default Card
