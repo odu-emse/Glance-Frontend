@@ -8,7 +8,7 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof Modules>
 
-const Template: ComponentStory<typeof Modules> = (args) => <Modules {...args} />
+const Template: ComponentStory<typeof Modules> = (args:ModuleProps) => <Modules {...args} />
 
 export const Default: ComponentStory<typeof Modules> = Template.bind({})
 Default.args = {

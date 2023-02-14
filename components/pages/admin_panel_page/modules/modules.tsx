@@ -1,6 +1,5 @@
 import {
 	ModuleCard,
-	ModuleCardProps,
 } from '../../../common/pages/admin_panel/module_card/module_card'
 
 import React, { useState } from 'react'
@@ -22,9 +21,7 @@ import {
 
 export const Modules = ({ modules = [] }: ModuleProps) => {
 	const [active, setActive] = useState(null)
-
-	//console.log(modules)
-
+	//	console.log(modules)
 	const [items, setItems] = useState(modules)
 	const sensors = useSensors(
 		useSensor(PointerSensor),
@@ -80,7 +77,7 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 
 	function handleOnDragEnd(event) {
 		const { active, over } = event
-		//console.log("ACTIVE", active, "OVER", over)
+		//	console.log("ACTIVE", active, "OVER", over)
 		if (active.id !== over.id) {
 			setItems((items) => {
 				const oldIndex = items.findIndex(
