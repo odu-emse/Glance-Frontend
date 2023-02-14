@@ -9,18 +9,12 @@ export const ModuleCard = ({
 	instructorName,
 	registeredUsers,
 }: ModuleCardProps) => {
-
-	const {
-		attributes,
-		listeners,
-		setNodeRef,
-		transform,
-		transition
-	} = useSortable({id: id})
+	const { attributes, listeners, setNodeRef, transform, transition } =
+		useSortable({ id: id })
 
 	const style = {
 		transform: CSS.Transform.toString(transform),
-		transition
+		transition,
 	}
 
 	return (
@@ -28,11 +22,10 @@ export const ModuleCard = ({
 			ref={setNodeRef}
 			style={style}
 			{...attributes}
-			{...listeners} 
-			className="border-solid border-gray bg-gray-200 rounded flex justify-between border w-2/5"
+			{...listeners}
+			className="border-solid border-gray bg-gray-200  hover:bg-gray-100 rounded flex justify-between border"
 		>
 			<div className="m-2">
-				
 				<p className="text-2xl py-2">{moduleName}</p>
 				<div className="flex text-xs font-medium">
 					<p className="uppercase pr-2">{instructorName}</p>
@@ -51,13 +44,16 @@ export const ModuleCard = ({
 
 export type ModuleCardProps = {
 	id: string
+	/**
+	 * unique number that shows up identity of the module card
+	 */
 	moduleName: string
 	/**
-	 * String that shows up name of the module on Default Card
+	 * string that shows up name of the module on Default Card
 	 */
 	instructorName: string
 	/**
-	 * String that shows up name of the instructor on Default Card
+	 * string that shows up name of the instructor on Default Card
 	 */
 	registeredUsers: number
 	/**
