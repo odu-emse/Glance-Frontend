@@ -6,7 +6,7 @@ export const ModuleThread = () => {
 		<>
 			<Input
 				ariaLabel="Text input field"
-				defaultValue=""
+				defaultValue="THREAD TITLE"
 				label="Label"
 				name="text-input"
 				onChange={() => {}}
@@ -31,7 +31,7 @@ export const ModuleThread = () => {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-				placeholder="Thread Input"
+				placeholder="THREAD INPUT"
 			></textarea>
 			<div className="button flex justify-end">
 				<Button>
