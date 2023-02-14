@@ -1,6 +1,4 @@
-import {
-	ModuleCard,
-} from '../../../common/pages/admin_panel/module_card/module_card'
+import { ModuleCard } from '../../../common/pages/admin_panel/module_card/module_card'
 
 import React, { useState } from 'react'
 import {
