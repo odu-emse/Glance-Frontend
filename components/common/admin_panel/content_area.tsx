@@ -1,7 +1,9 @@
 import React from 'react'
 import { useDropzone } from 'react-dropzone'
 
-export const ContentArea: React.FC<ContentArea> = ( { }): React.ReactElement => {
+export const ContentArea: React.FC<
+	ContentAreaProps
+> = ({}): React.ReactElement => {
 	const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
 
 	const files = acceptedFiles.map((file) => (
@@ -57,21 +59,21 @@ export const ContentArea: React.FC<ContentArea> = ( { }): React.ReactElement => 
 	)
 }
 
-export type ContentArea = {
-    /**
-    * useDropzone hook just binds the necessary handlers to create a drag 'n' drop zone
-    */
-    useDropzone: string
-    /**
-    * the getRootProps() fn to get the props required for drag 'n' drop and use them on any element.
-    */
-    getRootProps: Function
-    /**
-    *  the getInputProps() fn is used for click and keydown behavior
-    */
-    getInputProps: Function
-    /**
-    *  the acceptedFiles() fn is used for track and map the uploaded files to the list
-    */
-    acceptedFiles: Function
+export type ContentAreaProps = {
+	/**
+	 * useDropzone hook just binds the necessary handlers to create a drag 'n' drop zone
+	 */
+	useDropzone: string
+	/**
+	 * the getRootProps() fn to get the props required for drag 'n' drop and use them on any element.
+	 */
+	getRootProps: Function
+	/**
+	 *  the getInputProps() fn is used for click and keydown behavior
+	 */
+	getInputProps: Function
+	/**
+	 *  the acceptedFiles() fn is used for track and map the uploaded files to the list
+	 */
+	acceptedFiles: Function
 }
