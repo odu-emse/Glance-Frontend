@@ -1,6 +1,6 @@
 import { Sidebar } from '../../sidebar/sidebar'
 import { GoPerson, GoSignIn } from 'react-icons/go'
-import { useSession } from "next-auth/react"
+import { useSession } from 'next-auth/react'
 import { Link } from '../../../links/link/link'
 import { useState } from 'react'
 
@@ -9,7 +9,7 @@ export const Layout = ({ children }) => {
 
 	const { data: session, status } = useSession()
 	console.log(status)
-	if (status == "loading") return <p>Loading...</p>
+	if (status == 'loading') return <p>Loading...</p>
 
 	return (
 		<main className="flex gap-x-1">

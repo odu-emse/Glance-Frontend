@@ -13,7 +13,6 @@ import gqlFetcher from '@/utils/gql_fetcher'
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
 
 const ModulesPage = () => {
-
 	/*if(!session) {
 		return <div>Loading...</div>
 	}
@@ -60,7 +59,6 @@ const ModulesPage = () => {
 								
 							}
 						})*/
-
 					// console.log(data)
 				}
 			</div>
