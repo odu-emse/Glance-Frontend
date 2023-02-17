@@ -2,25 +2,27 @@ import React from 'react'
 
 // import ModuleItem from '@/components/modules/ModuleListItem'
 // import Layout from '@/components/Layout'
-
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
 
 import Link from 'next/link'
 
-import useAuth from '@/hooks/use_auth'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
 
 const ModulesPage = () => {
-	const { jwt: token, user } = useAuth()
+
+	/*if(!session) {
+		return <div>Loading...</div>
+	}
+	console.log(session)
 
 	const { data, error } = useSWR(
 		{
-			query: getUserByOpenID(user?.sub),
-			token,
+			query: getUserByOpenID(session.openId),
+			token: session.idToken,
 		},
 		gqlFetcher
 	)
@@ -32,7 +34,7 @@ const ModulesPage = () => {
 	}
 	if (!data || !data?.user) {
 		return <div>Loading...</div>
-	}
+	}*/
 
 	return (
 		<section className="gap-1 md:px-10 w-full flex flex-col md:flex-row">
@@ -46,7 +48,7 @@ const ModulesPage = () => {
 					</Link>
 				</div>
 				{
-					data.user.plan.modules
+					/*data.user.plan.modules
 						.filter((doc) => doc.role === 'STUDENT')
 						.map((enrollment) => {
 							return {
@@ -55,9 +57,9 @@ const ModulesPage = () => {
 										key={enrollment.module.id}
 										module={enrollment.module}
 									/>
-								*/
+								
 							}
-						})
+						})*/
 
 					// console.log(data)
 				}
