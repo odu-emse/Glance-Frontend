@@ -44,7 +44,7 @@ const AllModules = () => {
 		gqlFetcher
 	)
 
-	if (status == 'loading') return <p>Loading...</p>
+	if (status === 'loading') return <p>Loading...</p>
 	if (error) {
 		console.log(error)
 		return <p>Error...</p>

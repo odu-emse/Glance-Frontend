@@ -5,8 +5,7 @@ import Link from 'next/link'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
 
-//import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation'
-//import ContentLoader from '@/components/modules/content_type/ContentLoader'
+// import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation' 
 import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
 
 import useSWR from 'swr'
@@ -15,7 +14,7 @@ import { getLessonByID } from '@/scripts/get_lesson_by_id'
 
 const ModuleSection = () => {
 	const router = useRouter()
-	const { moduleId, collectionId, lessonId } = router.query
+	const { moduleId, lessonId } = router.query
 
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
@@ -25,7 +24,7 @@ const ModuleSection = () => {
 		gqlFetcher
 	)
 
-	if (status == 'loading') return <p>Loading...</p>
+	if (status === 'loading') return <p>Loading...</p>
 	if (error) {
 		console.log(error)
 		return <p>Error...</p>
@@ -36,7 +35,7 @@ const ModuleSection = () => {
 	}
 
 	function flattenCollections(collections) {
-		let output = []
+		const output = []
 		const sortedCollections = collections.sort(
 			(collectionA, collectionB) =>
 				collectionA.position > collectionB.position
@@ -57,8 +56,8 @@ const ModuleSection = () => {
 	}
 
 	const lesson = data.lesson[0]
-	const module = lesson.collection.module
-	const collections = flattenCollections(module.collections)
+	const _module = lesson.collection.module
+	const collections = flattenCollections(_module.collections)
 	const content = lesson.content[0]
 
 	console.log(lesson)

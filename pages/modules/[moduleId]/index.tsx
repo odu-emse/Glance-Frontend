@@ -22,7 +22,7 @@ const Module = () => {
 		gqlFetcher
 	)
 
-	if (status == 'loading') return <p>Loading...</p>
+	if (status === 'loading') return <p>Loading...</p>
 	if (error) {
 		console.log(error)
 		return <p>Error...</p>
@@ -32,13 +32,13 @@ const Module = () => {
 		return <div>Loading...</div>
 	}
 
-	const module = data.module[0]
-	console.log(module)
+	const _module = data.module[0]
+	console.log(_module)
 
 	return (
 		<div>
 			<div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
-				<DefaultModule module={module} />
+				<DefaultModule module={_module} />
 			</div>
 		</div>
 	)
