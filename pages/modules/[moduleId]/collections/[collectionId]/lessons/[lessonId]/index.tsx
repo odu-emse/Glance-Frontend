@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
 
-// import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation' 
+// import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation'
 import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
 
 import useSWR from 'swr'
