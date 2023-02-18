@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const ModuleItem = ({ data, role }) => {
+export const ModuleItem = ({ data, role }) => {
 	// Use the link below once DB schema is updated
 	// const link = `/modules/${data.id}/sections/${data?.headSection}/lessons/${data?.sections[data?.headSection]?.headLesson}`
 	return (
@@ -16,4 +16,26 @@ const ModuleItem = ({ data, role }) => {
 	)
 }
 
-export default ModuleItem
+export type ModuleItemProps = {
+	/**
+	 * Boolean that determines if the course module is completed or not
+	 * @type boolean
+	 * @default false
+	 */
+	data: {
+		id: String,
+		moduleName: String,
+		moduleNumber: Number,
+		intro: String,
+		createdAt: String,
+		description: String,
+		duration: Number,
+		keywords: Array<String>,
+		numSlides: Number,
+		feedback: String|null,
+		parentModules: Array<any>|null,
+		members: Array<any>|null
+	}
+	role: String
+}
+

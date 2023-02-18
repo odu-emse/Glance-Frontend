@@ -6,34 +6,32 @@ import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
 
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
+
 
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
+import { ModuleItem } from '@/components/common/module_flow/module_item/module_item'
 
 const ModulesPage = () => {
-	/*if(!session) {
-		return <div>Loading...</div>
-	}
-	console.log(session)
 
+	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
-		{
-			query: getUserByOpenID(session.openId),
-			token: session.idToken,
-		},
+		status !== 'loading' ? { query: getUserByOpenID(session.openId), token: session.idToken } : null,
 		gqlFetcher
 	)
-	console.log(data)
 
-	if (error) {
+	if (status == 'loading') return <p>Loading...</p>
+	if (error) { 
 		console.log(error)
-		throw new Error(error)
+		return <p>Error...</p>
 	}
+	
 	if (!data || !data?.user) {
 		return <div>Loading...</div>
-	}*/
+	}
 
 	return (
 		<section className="gap-1 md:px-10 w-full flex flex-col md:flex-row">
@@ -46,21 +44,15 @@ const ModulesPage = () => {
 						<Button>View All Modules</Button>
 					</Link>
 				</div>
+
 				{
-					/*data.user.plan.modules
+					data.user[0].plan.modules
 						.filter((doc) => doc.role === 'STUDENT')
 						.map((enrollment) => {
-							return {
-								/*
-									<ModuleItem
-										key={enrollment.module.id}
-										module={enrollment.module}
-									/>
-								
-							}
-						})*/
-					// console.log(data)
+							return <ModuleItem data={enrollment.module} role={enrollment.role} />
+						})
 				}
+
 			</div>
 		</section>
 	)

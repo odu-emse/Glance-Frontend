@@ -14,4 +14,4 @@ const PDFContent = ({ data }) => {
 	)
 }
 
-export default PDFContent
+export default PDFContent;
