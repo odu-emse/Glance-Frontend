@@ -8,7 +8,6 @@ import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 
-
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 
@@ -16,19 +15,20 @@ import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
 import { ModuleItem } from '@/components/common/module_flow/module_item/module_item'
 
 const ModulesPage = () => {
-
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
-		status !== 'loading' ? { query: getUserByOpenID(session.openId), token: session.idToken } : null,
+		status !== 'loading'
+			? { query: getUserByOpenID(session.openId), token: session.idToken }
+			: null,
 		gqlFetcher
 	)
 
 	if (status == 'loading') return <p>Loading...</p>
-	if (error) { 
+	if (error) {
 		console.log(error)
 		return <p>Error...</p>
 	}
-	
+
 	if (!data || !data?.user) {
 		return <div>Loading...</div>
 	}
@@ -45,14 +45,16 @@ const ModulesPage = () => {
 					</Link>
 				</div>
 
-				{
-					data.user[0].plan.modules
-						.filter((doc) => doc.role === 'STUDENT')
-						.map((enrollment) => {
-							return <ModuleItem data={enrollment.module} role={enrollment.role} />
-						})
-				}
-
+				{data.user[0].plan.modules
+					.filter((doc) => doc.role === 'STUDENT')
+					.map((enrollment) => {
+						return (
+							<ModuleItem
+								data={enrollment.module}
+								role={enrollment.role}
+							/>
+						)
+					})}
 			</div>
 		</section>
 	)

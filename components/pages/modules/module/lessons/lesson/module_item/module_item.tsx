@@ -23,19 +23,18 @@ export type ModuleItemProps = {
 	 * @default false
 	 */
 	data: {
-		id: String,
-		moduleName: String,
-		moduleNumber: Number,
-		intro: String,
-		createdAt: String,
-		description: String,
-		duration: Number,
-		keywords: Array<String>,
-		numSlides: Number,
-		feedback: String|null,
-		parentModules: Array<any>|null,
-		members: Array<any>|null
+		id: String
+		moduleName: String
+		moduleNumber: Number
+		intro: String
+		createdAt: String
+		description: String
+		duration: Number
+		keywords: Array<String>
+		numSlides: Number
+		feedback: String | null
+		parentModules: Array<any> | null
+		members: Array<any> | null
 	}
 	role: String
 }
-

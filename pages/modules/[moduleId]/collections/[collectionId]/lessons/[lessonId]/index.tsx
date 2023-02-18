@@ -14,19 +14,19 @@ import gqlFetcher from '@/utils/gql_fetcher'
 import { getLessonByID } from '@/scripts/get_lesson_by_id'
 
 const ModuleSection = () => {
-	
 	const router = useRouter()
 	const { moduleId, collectionId, lessonId } = router.query
 
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
-		status !== 'loading' ? { query: getLessonByID(lessonId), token: session.idToken } : null,
+		status !== 'loading'
+			? { query: getLessonByID(lessonId), token: session.idToken }
+			: null,
 		gqlFetcher
 	)
 
-
 	if (status == 'loading') return <p>Loading...</p>
-	if (error) { 
+	if (error) {
 		console.log(error)
 		return <p>Error...</p>
 	}
@@ -36,34 +36,44 @@ const ModuleSection = () => {
 	}
 
 	function flattenCollections(collections) {
-
 		let output = []
-		const sortedCollections = collections.sort((collectionA, collectionB) => collectionA.position > collectionB.position)
+		const sortedCollections = collections.sort(
+			(collectionA, collectionB) =>
+				collectionA.position > collectionB.position
+		)
 		for (const collection of sortedCollections) {
-			const sortedLessons = collection.lessons.sort((lessonA, lessonB) => lessonA.position > lessonB.position)
+			const sortedLessons = collection.lessons.sort(
+				(lessonA, lessonB) => lessonA.position > lessonB.position
+			)
 			for (const lesson of sortedLessons) {
 				output.push({
 					collectionId: collection.id,
-					lessonId: lesson.id
+					lessonId: lesson.id,
 				})
 			}
 		}
 
-		return output;
+		return output
 	}
 
-	const lesson = data.lesson[0];
-	const module = lesson.collection.module;
+	const lesson = data.lesson[0]
+	const module = lesson.collection.module
 	const collections = flattenCollections(module.collections)
 	const content = lesson.content[0]
 
 	console.log(lesson)
-	
+
 	// --- Next/Prev Page calculations
-	const currentLessonIndex = collections.findIndex(collection => collection.lessonId === lessonId);
-	const previousLesson = currentLessonIndex > 0 ? collections[currentLessonIndex - 1] : null
-	const nextLesson = currentLessonIndex < (collections.length - 1)  ? collections[currentLessonIndex + 1] : null
-	
+	const currentLessonIndex = collections.findIndex(
+		(collection) => collection.lessonId === lessonId
+	)
+	const previousLesson =
+		currentLessonIndex > 0 ? collections[currentLessonIndex - 1] : null
+	const nextLesson =
+		currentLessonIndex < collections.length - 1
+			? collections[currentLessonIndex + 1]
+			: null
+
 	return (
 		<section className="mx-auto container h-screen">
 			<h1 className="my-3 text-3xl font-bold">
@@ -81,17 +91,23 @@ const ModuleSection = () => {
 			</div>
 			{/* Previous and Next buttons */}
 			<div className="w-full flex justify-between items-center">
-				{ previousLesson !== null && (
-					<Link href={`/modules/${moduleId}/collections/${previousLesson.collectionId}/lessons/${previousLesson.lessonId}`} passHref>
+				{previousLesson !== null && (
+					<Link
+						href={`/modules/${moduleId}/collections/${previousLesson.collectionId}/lessons/${previousLesson.lessonId}`}
+						passHref
+					>
 						<Button>Previous</Button>
 					</Link>
-				) }
+				)}
 
-				{ nextLesson !== null && (
-					<Link href={`/modules/${moduleId}/collections/${nextLesson.collectionId}/lessons/${nextLesson.lessonId}`} passHref>
+				{nextLesson !== null && (
+					<Link
+						href={`/modules/${moduleId}/collections/${nextLesson.collectionId}/lessons/${nextLesson.lessonId}`}
+						passHref
+					>
 						<Button>Next</Button>
 					</Link>
-				) }
+				)}
 			</div>
 		</section>
 	)

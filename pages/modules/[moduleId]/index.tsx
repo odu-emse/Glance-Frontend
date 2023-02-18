@@ -16,22 +16,23 @@ const Module = () => {
 
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
-		status !== 'loading' ? { query: getModuleByID(moduleId), token: session.idToken } : null,
+		status !== 'loading'
+			? { query: getModuleByID(moduleId), token: session.idToken }
+			: null,
 		gqlFetcher
 	)
 
-
 	if (status == 'loading') return <p>Loading...</p>
-	if (error) { 
+	if (error) {
 		console.log(error)
 		return <p>Error...</p>
 	}
-	
+
 	if (!data || !data?.module) {
 		return <div>Loading...</div>
 	}
 
-	const module = data.module[0];
+	const module = data.module[0]
 	console.log(module)
 
 	return (
