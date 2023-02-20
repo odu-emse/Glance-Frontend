@@ -11,11 +11,11 @@ export const Button = ({
 	disabled,
 	type,
 	className,
+	onClick,
 	...props
 }: ButtonProps) => {
 	const classes = [
 		'flex flex-row items-center justify-center gap-2',
-		'focus:outline-dashed focus:outline-blue-500',
 		'px-4 py-2',
 		'font-medium',
 		className,
@@ -37,7 +37,12 @@ export const Button = ({
 	].join(' ')
 
 	return (
-		<button type={type} disabled={disabled} className={classes}>
+		<button
+			type={type}
+			disabled={disabled}
+			className={classes}
+			onClick={onClick}
+		>
 			{loading ? (
 				<Loader
 					textColor={`${
