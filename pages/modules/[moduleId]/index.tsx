@@ -1,39 +1,44 @@
 import { useRouter } from 'next/router'
-import React from 'react'
-import Layout from '@/components/Layout'
+import { Layout } from '@/components/common/pages/layouts/layout/layout'
+
 import Link from 'next/link'
-import useAuth from '@/hooks/use_auth'
+
+import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
+
 import { getModuleByID } from '@/scripts/get_module_by_id'
-import { Button } from 'emse-ui'
+import { Button } from '@/components/common/button/button'
 
 const Module = () => {
 	const router = useRouter()
 	const { moduleId } = router.query
 
-	const { jwt: token } = useAuth()
-
+	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
-		{
-			query: getModuleByID(moduleId),
-			token,
-		},
+		status !== 'loading'
+			? { query: getModuleByID(moduleId), token: session.idToken }
+			: null,
 		gqlFetcher
 	)
 
+	if (status === 'loading') return <p>Loading...</p>
 	if (error) {
 		console.log(error)
-		throw new Error(error)
+		return <p>Error...</p>
 	}
-	if (!data) {
+
+	if (!data || !data?.module) {
 		return <div>Loading...</div>
 	}
+
+	const _module = data.module[0]
+	console.log(_module)
 
 	return (
 		<div>
 			<div className="mx-auto max-w-7xl py-4 px-4 w-3/4 sm:w-full xl:w-2/3">
-				<DefaultModule module={data.module} />
+				<DefaultModule module={_module} />
 			</div>
 		</div>
 	)
@@ -145,12 +150,9 @@ const DefaultModule = ({ module }) => {
 				</div>
 				<div className="d-flex flex-column my-3">
 					<Link
-						href=""
-						// href={`/modules/${module.id}/sections/${
-						// 	module.headSection
-						// }/lessons/${module.sections[module.headSection].headLesson}`}
+						href={`/modules/${module.id}/collections/AAA/lessons/BBB`}
 					>
-						<Button label="Open Module" />
+						<Button>Open Module</Button>
 					</Link>
 					<button
 						className="border-2 border-blue-300 rounded py-2 px-4 w-full mt-3"
