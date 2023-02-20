@@ -1,45 +1,40 @@
 import { gql } from 'graphql-request'
 
 export const getModuleByID = (courseID) => {
-	return gql`
-		{
-			module(id: "${courseID}") {
+	return gql`{
+		module (
+			input:{
+    			id: "${courseID}"
+  			}
+		) {
+			id,
+			members {
+				role
+				plan {
+					student {
+						firstName
+						lastName
+					}
+				}
+			}
+			moduleName,
+			parentModules {
 				id
-				moduleName
-				moduleNumber
-				description
-				duration
-				intro
-				numSlides
-				keywords
-				createdAt
-				updatedAt
-				assignments {
-					id
-					name
-				}
-				members {
-					id
-					role
-					plan {
-						student {
-							id
-							lastName
-							firstName
-						}
-					}
-				}
-				parentCourses {
-					id
-					course {
-						name
-					}
-				}
-				feedback {
-					id
-					rating
+			}
+			objectives,
+			collections{
+				id,
+				name,
+				lessons{
+					id,
+					name,
+					content {
+					id,
+					type,
+					link
+					},
 				}
 			}
 		}
-	`
+	}`
 }
