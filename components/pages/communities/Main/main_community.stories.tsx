@@ -29,11 +29,11 @@ const Template: ComponentStory<typeof MainCommunity> = (
 	if (error) return <p>Failed to load content...</p>
 	if (!data) return <p>Loading...</p>
 
-	console.log(data)
+	//console.log(data)
 
-	data.thread.sort()
+	//console.log(data.thread.sort())
 
-	return <MainCommunity threads={data.thread} {...args} />
+	return <MainCommunity threads={data.thread.sort()} {...args} />
 }
 
 export const Primary: ComponentStory<typeof MainCommunity> = Template.bind({})

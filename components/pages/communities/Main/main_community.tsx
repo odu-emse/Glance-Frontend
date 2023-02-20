@@ -39,33 +39,24 @@ export const MainCommunity: React.FC<MainCommunityProps> = ({
 						options={[]}
 					/>
 				</div>
-				<div className="m-3">
-					<div className="my-4">
-						<Thread
-							body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat diam vitae nibh mollis, dignissim mollis augue porttitor. Aliquam viverra auctor semper. Vestibulum placerat luctus tortor eu iaculis. Fusce a ullamcorper sapien. Phasellus at sollicitudin mauris. Duis suscipit, libero at consectetur vestibulum, leo lectus tristique mauris, convallis gravida est elit eu nibh. Mauris efficitur ultrices tincidunt. Nam sed tincidunt velit. Suspendisse gravida porta mi a egestas."
-							id="12345"
-							title="How did the United States land on the moon?"
-							upvotes={10}
-							userProfile={{
-								firstName: 'joel',
-								id: 1,
-								image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								lastName: 'desante',
-							}}
-						/>
-					</div>
-					<Thread
-						body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat diam vitae nibh mollis, dignissim mollis augue porttitor. Aliquam viverra auctor semper. Vestibulum placerat luctus tortor eu iaculis. Fusce a ullamcorper sapien. Phasellus at sollicitudin mauris. Duis suscipit, libero at consectetur vestibulum, leo lectus tristique mauris, convallis gravida est elit eu nibh. Mauris efficitur ultrices tincidunt. Nam sed tincidunt velit. Suspendisse gravida porta mi a egestas."
-						id="12345"
-						title="How did the United States land on the moon?"
-						upvotes={10}
-						userProfile={{
-							firstName: 'joel',
-							id: 1,
-							image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-							lastName: 'desante',
-						}}
-					/>
+				<div className="m-2">
+                        {threads.map((thread, index)=> (
+                            <div className="my-4">
+                                <Thread
+                                    key = {index}
+                                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat diam vitae nibh mollis, dignissim mollis augue porttitor. Aliquam viverra auctor semper. Vestibulum placerat luctus tortor eu iaculis. Fusce a ullamcorper sapien. Phasellus at sollicitudin mauris. Duis suscipit, libero at consectetur vestibulum, leo lectus tristique mauris, convallis gravida est elit eu nibh. Mauris efficitur ultrices tincidunt. Nam sed tincidunt velit. Suspendisse gravida porta mi a egestas."
+                                    id="12345"
+                                    title="How did the United States land on the moon?"
+                                    upvotes={10}
+                                    userProfile={{
+                                        firstName: 'joel',
+                                        id: 1,
+                                        image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
+                                        lastName: 'desante',
+                                    }}
+                                />
+                            </div>
+                        ))}
 				</div>
 			</div>
 			<aside className="mx-10 flex-none">
@@ -103,6 +94,8 @@ export const MainCommunity: React.FC<MainCommunityProps> = ({
 	)
 }
 
-export type MainCommunityProps = {}
+export type MainCommunityProps = {
+    threads: any
+}
 
 //data.thread.sort
