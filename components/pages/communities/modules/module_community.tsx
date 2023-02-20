@@ -4,17 +4,15 @@ import { WatchedThreads } from '../../../common/community/watched_threads/watche
 import { Input } from '../../../common/forms/inputs/input/input'
 import * as React from 'react'
 
-
 export type ModuleCommunityProps = {}
 
 export const ModuleCommunity: React.FC<
-ModuleCommunityProps
+	ModuleCommunityProps
 > = ({}): React.ReactElement => {
-    
-        const userName = 'joeldesante'
-        const userEmail = 'jdsante@odu.edu'
-        const moduleName = 'This is the name of the module'
-    
+	const userName = 'joeldesante'
+	const userEmail = 'jdsante@odu.edu'
+	const moduleName = 'This is the name of the module'
+
 	return (
 		<div className="m-8 flex">
 			<div className="m-10 grow">

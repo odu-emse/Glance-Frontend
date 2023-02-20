@@ -1,18 +1,14 @@
-
 import { Thread } from '../../../common/community/threads/thread/thread'
 import { WatchedThreads } from '../../../common/community/watched_threads/watched_threads'
 import { Input } from '../../../common/forms/inputs/input/input'
 import * as React from 'react'
 
-
-export const MainCommunity: React.FC<
-MainCommunityProps
-> = ({
-    threads
+export const MainCommunity: React.FC<MainCommunityProps> = ({
+	threads,
 }): React.ReactElement => {
-        const userName = 'joeldesante'
-        const userEmail = 'jdsante@odu.edu'
-        const moduleName = 'This is the name of the module'
+	const userName = 'joeldesante'
+	const userEmail = 'jdsante@odu.edu'
+	const moduleName = 'This is the name of the module'
 	return (
 		<div className="m-8 flex">
 			<div className="m-10 grow">
@@ -73,9 +69,7 @@ MainCommunityProps
 				</div>
 			</div>
 			<aside className="mx-10 flex-none">
-				<div className="mb-10">
-					
-				</div>
+				<div className="mb-10"></div>
 				<div className="mb-10">
 					<WatchedThreads
 						threads={[
@@ -110,6 +104,5 @@ MainCommunityProps
 }
 
 export type MainCommunityProps = {}
-
 
 //data.thread.sort
