@@ -4,7 +4,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react'
 // import { action } from '@storybook/addon-actions';
 
 export default {
-	title: 'function/toggle option',
+	title: 'common/Toggle Switch',
 	component: ToggleSwitch,
 	argTypes: {
 		checked: {
@@ -15,17 +15,15 @@ export default {
 	},
 } as ComponentMeta<typeof ToggleSwitch>
 const Template: ComponentStory<typeof ToggleSwitch> = (args: any) => {
-	const [isChecked, setIsChecked] = React.useState(false)
-	return <ToggleSwitch {...args} handle={setIsChecked} checked={isChecked} />
+	// const disabled = false;
+	return <ToggleSwitch {...args} />
 }
 
 export const Default: ComponentStory<typeof ToggleSwitch> = Template.bind({})
 Default.args = {
-	identifier: 'name',
 	label: 'name',
 	variant: 'primary',
 	checked: false,
-	size: 'base',
-	status: false,
-	disabled: false,
+	size: 'large',
+	disabled: true,
 }
