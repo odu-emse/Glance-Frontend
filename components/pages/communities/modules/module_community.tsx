@@ -7,7 +7,6 @@ import gqlFetcher from '../../../../utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import useSWR from 'swr'
 
-
 export type ModuleCommunityProps = {}
 
 export const ModuleCommunity: React.FC<
@@ -63,8 +62,8 @@ export const ModuleCommunity: React.FC<
 		return <div>Loading...</div>
 	}
 
-	const module = data?.module[0]
-	const teacher = module?.members.filter(
+	const mod = data?.module[0]
+	const teacher = mod?.members.filter(
 		(member) => member.role === 'TEACHER'
 	)[0]
 
@@ -74,7 +73,7 @@ export const ModuleCommunity: React.FC<
 				{
 					<>
 						<p className="text-3xl font-semibold">
-							{module.moduleName}
+							{mod.moduleName}
 						</p>
 
 						<div className="flex my-2 items-center">
@@ -109,7 +108,7 @@ export const ModuleCommunity: React.FC<
 								options={[]}
 							/>
 						</div>
-						{module.collections.map((col) =>
+						{mod.collections.map((col) =>
 							col.lessons.map((les) =>
 								les.threads.map((thr, index) => (
 									<div className="m-3">
