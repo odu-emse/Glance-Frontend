@@ -1,3 +1,5 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+
 module.exports = {
 	addons: ['@storybook/addon-essentials'],
 	babel: async (options) => ({
@@ -7,8 +9,7 @@ module.exports = {
 	framework: '@storybook/react',
 	stories: ['../components/**/*.stories.@(js|jsx|ts|tsx)'],
 	webpackFinal: async (config, { configType }) => {
-		// Make whatever fine-grained changes you need
-		// Return the altered config
+		config.resolve.plugins = [new TsconfigPathsPlugin()]
 		return config
 	},
 }
