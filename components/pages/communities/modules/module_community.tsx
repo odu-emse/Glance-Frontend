@@ -111,7 +111,7 @@ export const ModuleCommunity: React.FC<
 						{mod.collections.map((col) =>
 							col.lessons.map((les) =>
 								les.threads.map((thr, index) => (
-									<div className="m-3">
+									<div className="m-3" key={index}>
 										<div className="my-4">
 											<Thread
 												body={thr.body}
@@ -126,7 +126,6 @@ export const ModuleCommunity: React.FC<
 													lastName:
 														thr.author.lastName,
 												}}
-												key={index}
 											/>
 										</div>
 										{/* <Thread

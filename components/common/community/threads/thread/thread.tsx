@@ -9,12 +9,14 @@ export const Thread: React.FC<ThreadProps> = ({
 	upvotes,
 	id,
 	userProfile,
-	...props
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
 	let url: string
 	return (
-		<div className="rounded shadow px-5 py-3 flex flex-col gap-2" id={id} {...props}>
+		<div
+			className="rounded shadow px-5 py-3 flex flex-col gap-2"
+			id={id}
+		>
 			<Anchor
 				path={`/user/${userProfile.id}`}
 				className="flex items-center no-underline"
