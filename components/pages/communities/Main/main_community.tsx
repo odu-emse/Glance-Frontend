@@ -116,6 +116,8 @@ export const MainCommunity: React.FC<MainCommunityProps> = ({
 }
 
 export type MainCommunityProps = {
-	threads: any
+	threads: Array<object>
+	/**
+	 * data coming from backend stored as an array of objects
+	 */
 }
-
