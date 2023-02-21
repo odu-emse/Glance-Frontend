@@ -9,6 +9,7 @@ import useSWR from 'swr'
 
 export type ModuleCommunityProps = {}
 
+
 export const ModuleCommunity: React.FC<
 	ModuleCommunityProps
 > = ({}): React.ReactElement => {
