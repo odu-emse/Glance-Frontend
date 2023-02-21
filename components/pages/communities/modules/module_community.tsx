@@ -6,8 +6,7 @@ import * as React from 'react'
 import gqlFetcher from '../../../../utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import useSWR from 'swr'
-import useAuth from '../../../../hooks/use_auth'
-import { useState } from 'react'
+
 
 export type ModuleCommunityProps = {}
 
@@ -112,7 +111,7 @@ export const ModuleCommunity: React.FC<
 						</div>
 						{module.collections.map((col) =>
 							col.lessons.map((les) =>
-								les.threads.map((thr) => (
+								les.threads.map((thr,index) => (
 									<div className="m-3">
 										<div className="my-4">
 											<Thread
@@ -128,6 +127,7 @@ export const ModuleCommunity: React.FC<
 													lastName:
 														thr.author.lastName,
 												}}
+												key={index}
 											/>
 										</div>
 										{/* <Thread
