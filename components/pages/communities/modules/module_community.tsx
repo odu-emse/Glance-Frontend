@@ -147,7 +147,7 @@ export const ModuleCommunity: React.FC<
 							)
 						)}
 					</>
-					//))))
+					// ))))
 				}
 			</div>
 			<aside className="mx-10 flex-none">
