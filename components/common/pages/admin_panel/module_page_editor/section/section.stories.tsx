@@ -8,12 +8,12 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof ModuleSection>
 
-const Template: ComponentStory<typeof ModuleSection> = (args: ModuleSectionProps) => (
-	<ModuleSection {...args} />
-)
+const Template: ComponentStory<typeof ModuleSection> = (
+	args: ModuleSectionProps
+) => <ModuleSection {...args} />
 
 export const Default: ComponentStory<typeof ModuleSection> = Template.bind({})
 Default.args = {
-	sectionName: "Section 1",
-    sectionId : 1
+	sectionName: 'Section 1',
+	sectionId: 1,
 }
