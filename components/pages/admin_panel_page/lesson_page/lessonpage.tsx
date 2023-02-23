@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Select } from 'components/common/forms/inputs/select/select'
-import { content_area } from 'components/common/admin_panel/content_area'
+// import { content_area } from 'components/common/admin_panel/content_area'
 export type lessonpageProps = {}
 export const Lessonpage: React.FC<
 	lessonpageProps
@@ -41,12 +41,12 @@ export const Lessonpage: React.FC<
 			<>
 				{' '}
 				<section className="container">
-					<div {...getRootProps({ className: 'dropzone' })}>
-						<input {...getInputProps()} />
+					<div>
+						<input />
 						<div className="flex items-center justify-center w-auto">
 							<label
-								for="dropzone-file"
-								class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+								htmlFor="dropzone-file"
+								className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
 							>
 								<div className="flex flex-col items-center justify-center pt-5 pb-6">
 									<svg
@@ -81,7 +81,7 @@ export const Lessonpage: React.FC<
 					</div>
 					<aside>
 						<h4>Uploaded Files:</h4>
-						<ul>{files}</ul>
+						{/* <ul>{files}</ul> */}
 					</aside>
 				</section>
 			</>
