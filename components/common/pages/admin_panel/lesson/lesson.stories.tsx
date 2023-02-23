@@ -8,12 +8,12 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof ModuleLesson>
 
-const Template: ComponentStory<typeof ModuleLesson> = (args: ModuleLessonProps) => (
-	<ModuleLesson {...args} />
-)
+const Template: ComponentStory<typeof ModuleLesson> = (
+	args: ModuleLessonProps
+) => <ModuleLesson {...args} />
 
 export const Default: ComponentStory<typeof ModuleLesson> = Template.bind({})
 Default.args = {
-	lessonName: "Introduction to Dynamic Web Content",
-    lessonId: 1
+	lessonName: 'Introduction to Dynamic Web Content',
+	lessonId: 1,
 }
