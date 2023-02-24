@@ -17,19 +17,19 @@ Default.args = {
 	modules: [
 		{
 			module_name: 'Module 1',
-            module_id: 'moduleid1',
+			module_id: 'moduleid1',
 		},
 		{
 			module_name: 'Module 2',
-            module_id: 'moduleid2',
+			module_id: 'moduleid2',
 		},
 		{
-            module_name: 'Module 3',
-            module_id: 'moduleid3',
+			module_name: 'Module 3',
+			module_id: 'moduleid3',
 		},
 		{
-            module_name: 'Module 4',
-            module_id: 'moduleid4',
+			module_name: 'Module 4',
+			module_id: 'moduleid4',
 		},
 	],
 }
