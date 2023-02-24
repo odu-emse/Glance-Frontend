@@ -26,5 +26,11 @@ export type ActiveModulesProps = {
 
 type ActiveModulesObject = {
 	module_name: string
+	/**
+	 * string that shows up name of the module on Default Card
+	 */
 	module_id: string
+	/**
+	 * unique number that shows up identity of the module card
+	 */
 }
