@@ -2,6 +2,7 @@
 /.vscode
 /.idea
 
+
 # Computer Exhaust
 .DS_Store
 
@@ -11,4 +12,5 @@
 /cypress/screenshots/**/*.png
 /cypress/videos/*.mp4
 /src/output.css
+/components/output.css
 /.next
