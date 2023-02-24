@@ -92,5 +92,9 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 }
 
 export type ModuleProps = {
+	/**
+	 * Array type that holds all modules data
+	 * @type array
+	 */
 	modules: Array<any>
 }
