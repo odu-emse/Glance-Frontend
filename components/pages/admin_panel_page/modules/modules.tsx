@@ -17,16 +17,71 @@ import {
 	sortableKeyboardCoordinates,
 } from '@dnd-kit/sortable'
 
+import gqlFetcher from '../../../../utils/gql_fetcher'
+import { gql } from 'graphql-request'
+import useSWR from 'swr'
 export const Modules = ({ modules = [] }: ModuleProps) => {
 	const [active, setActive] = useState(null)
 	//	console.log(modules)
 	const [items, setItems] = useState(modules)
+
 	const sensors = useSensors(
 		useSensor(PointerSensor),
 		useSensor(KeyboardSensor, {
 			coordinateGetter: sortableKeyboardCoordinates,
 		})
 	)
+	const { data, error } = useSWR(
+		{
+			query: gql`
+				{
+					module(input: {}) {
+						id
+						moduleName
+						description
+						members {
+							role
+							plan {
+								student {
+									firstName
+									lastName
+									email
+									picURL
+								}
+							}
+						}
+						collections {
+							lessons {
+								threads {
+									title
+									author {
+										email
+										firstName
+										lastName
+										picURL
+									}
+									body
+
+									upvotes
+								}
+							}
+						}
+					}
+				}
+			`,
+		},
+		gqlFetcher
+	)
+
+	if (error) {
+		console.log(error)
+		throw new Error(error)
+	}
+	if (!data) {
+		return <div>Loading...</div>
+	}
+	const mods = data.module
+	console.log(mods)
 
 	return (
 		<div>
@@ -42,12 +97,16 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 					items={items}
 					strategy={verticalListSortingStrategy}
 				>
-					{items.map((item) => (
-						<div className="m-3" key={item.module.id}>
+					{data.module.map((mod) => (
+						<div className="m-3" key={mod.id}>
 							<ModuleCard
-								id={item.module.id}
-								moduleName={item.module.id}
-								instructorName={'Joel DeSante'}
+								id={mod.id}
+								moduleName={mod.moduleName}
+								instructorName={
+									mod.members.filter(
+										(member) => member.role === 'TEACHER'
+									)[0]?.plan.student.firstName
+								}
 								registeredUsers={50}
 							/>
 						</div>
@@ -58,8 +117,8 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 						<ModuleCard
 							key={active.module.id}
 							id={active.module.id}
-							moduleName={active.module.id}
-							instructorName={'Joel DeSante'}
+							moduleName={active.module.moduleName}
+							instructorName={'Joeal'}
 							registeredUsers={50}
 						/>
 					) : null}
