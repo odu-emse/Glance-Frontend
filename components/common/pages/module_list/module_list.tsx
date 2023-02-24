@@ -1,9 +1,9 @@
 import { Anchor } from '../../links/anchor/anchor'
 
-export const ActiveModules = ({ modules }: ActiveModulesProps) => {
+export const ModuleList = ({ modules }: ModuleListProps) => {
 	return (
 		<>
-			<h1 className="font-semibold text-2xl py-1">Active Module List</h1>
+			<h1 className="font-semibold text-2xl py-1">Your Modules</h1>
 			{modules.map((module, moduleIndex) => (
 				<Anchor
 					key={moduleIndex}
@@ -20,11 +20,10 @@ export const ActiveModules = ({ modules }: ActiveModulesProps) => {
 	)
 }
 
-export type ActiveModulesProps = {
-	modules: Array<ActiveModulesObject>
+export type ModuleListProps = {
+	modules: Array<ModuleListObject>
 }
-
-type ActiveModulesObject = {
+type ModuleListObject = {
 	module_name: string
 	/**
 	 * string that shows up name of the module on Default Card

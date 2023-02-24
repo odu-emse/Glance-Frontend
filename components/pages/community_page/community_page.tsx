@@ -1,4 +1,6 @@
 import * as React from 'react'
+import moment from 'moment'
+
 import { Input } from '../../common/forms/inputs/input/input'
 import type { InputProps } from '../../common/forms/inputs/input/input'
 import { SocialCard } from '../../common/community/social_card/social_card'
@@ -18,17 +20,72 @@ import { GrGroup } from 'react-icons/gr'
 import { CgPoll } from 'react-icons/cg'
 import { GoLinkExternal } from 'react-icons/go'
 import { MdSend } from 'react-icons/md'
+import gqlFetcher from '../../../utils/gql_fetcher'
+import { gql } from 'graphql-request'
+import useSWR from 'swr'
 
 export const CommunityPage = ({
 	socialCardProps,
+	userAccountProps,
 	inputProps,
 	groupsProps,
 	pollSurveysProps,
 	challengesProps,
 	contactProps,
-}: CommunityPageProps) => {
+}) => {
+	const { data, error } = useSWR(
+		{
+			query: gql`
+				{
+					thread(input: {}) {
+						id
+						title
+						body
+						author {
+							picURL
+							createdAt
+							firstName
+							lastName
+							instructorProfile {
+								title
+								officeLocation
+							}
+						}
+						upvotes
+						comments {
+							id
+							title
+							author {
+								picURL
+								createdAt
+								firstName
+								lastName
+								instructorProfile {
+									title
+									officeLocation
+								}
+							}
+						}
+						createdAt
+					}
+				}
+			`,
+		},
+		gqlFetcher
+	)
+
+	if (error) {
+		console.log(error)
+		throw new Error(error)
+	}
+	if (!data) {
+		return <div>Loading...</div>
+	}
+	console.log(data.thread.createdAt)
+	console.log(data.thread)
+
 	return (
-		<div className="h-auto mx-auto relative bg-[#E7E8E9] overflow-hidden">
+		<div className="h-auto mx-auto relative bg-[#E7E8E9] overflow-scroll">
 			<div className="flex flex-1">
 				<div className="container mt-2 md:ml-10 relative md:w-7/12">
 					<div className="flex flex-col h-screen">
@@ -49,14 +106,56 @@ export const CommunityPage = ({
 								Sort by Relevance <AiOutlineDown />
 							</div>
 						</button>
+
 						<div>
-							<SocialCard
-								timestamp={socialCardProps.timestamp}
-								content={socialCardProps.content}
-								likes={socialCardProps.likes}
-								comments={socialCardProps.comments}
-								user={socialCardProps.user}
-							/>
+							{data.thread.length > 0 &&
+								data.thread.map(
+									(
+										{
+											data1,
+											author,
+											createdAt,
+											upvotes,
+											instructorProfile,
+											comments,
+											body,
+										},
+										index
+									) => (
+										<>
+											<SocialCard
+												timestamp={moment(
+													createdAt
+												).unix()}
+												content={body}
+												likes={upvotes}
+												comments={comments.length}
+												user={{
+													firstName: author.firstName,
+													lastName: author.lastName,
+
+													role: author
+														.instructorProfile
+														?.title
+														? author
+																.instructorProfile
+																.title
+														: 'advisor',
+													image: author.picURL,
+													title: '',
+													office: author
+														.instructorProfile
+														?.officeLocation
+														? author.officeLocation
+																.title
+														: 'ESB 2101',
+													department: '',
+												}}
+												key={index}
+											/>
+										</>
+									)
+								)}
 						</div>
 						<div className="md:hidden flex flex-row h-full items-end justify-evenly w-full">
 							<div className="">
@@ -93,6 +192,7 @@ export const CommunityPage = ({
 						</div>
 					</div>
 				</div>
+
 				<div className="hidden md:flex md:container md:ml-36 md:relative md:w-11/12 bg-white shadow-lg h-screen overflow-y-auto">
 					<div className="flex flex-col h-full w-full ">
 						<div className="px-3 h-20 flex shrink-0 w-full items-center justify-center border-b border-gray-150">
