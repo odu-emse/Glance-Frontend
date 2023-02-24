@@ -1,5 +1,4 @@
 import { ModuleCard } from '../../../common/pages/admin_panel/module_card/module_card'
-import { useRouter } from 'next/router'
 
 import React, { useState } from 'react'
 import {
@@ -25,7 +24,6 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 	const [active, setActive] = useState(null)
 	//	console.log(modules)
 	const [items, setItems] = useState(modules)
-	const router = useRouter()
 
 	const sensors = useSensors(
 		useSensor(PointerSensor),
@@ -37,39 +35,38 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 		{
 			query: gql`
 				{
-                    module(input:{}){
-                        id
-                        moduleName
-                        description
-                        members {
-                                                role
-                                                plan {
-                                                    student {
-                                                        firstName
-                                                        lastName
-                                                        email
-                                                        picURL
-                                                    }
-                                                }
-                                            }
-                        collections{
-                          lessons{
-                            threads{
-                               title
-                          author{
-                            email
-                            firstName
-                            lastName
-                            picURL
-                          }
-                          body
-                          
-                          upvotes
-                          
-                            }
-                          }
-                        }
-                      }
+					module(input: {}) {
+						id
+						moduleName
+						description
+						members {
+							role
+							plan {
+								student {
+									firstName
+									lastName
+									email
+									picURL
+								}
+							}
+						}
+						collections {
+							lessons {
+								threads {
+									title
+									author {
+										email
+										firstName
+										lastName
+										picURL
+									}
+									body
+
+									upvotes
+								}
+							}
+						}
+					}
 				}
 			`,
 		},
@@ -83,9 +80,8 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 	if (!data) {
 		return <div>Loading...</div>
 	}
-const mods=data.module
-console.log(mods)
-
+	const mods = data.module
+	console.log(mods)
 
 	return (
 		<div>
@@ -97,26 +93,22 @@ console.log(mods)
 				collisonDetection={closestCenter}
 				sensors={sensors}
 			>
-
 				<SortableContext
 					items={items}
 					strategy={verticalListSortingStrategy}
 				>
-
 					{data.module.map((mod) => (
-						<div className="m-3" key={mod.id}
-						>
-							
-
+						<div className="m-3" key={mod.id}>
 							<ModuleCard
 								id={mod.id}
 								moduleName={mod.moduleName}
-								instructorName={ mod.members.filter((member)=>member.role==='TEACHER')[0]?.plan.student.firstName}
+								instructorName={
+									mod.members.filter(
+										(member) => member.role === 'TEACHER'
+									)[0]?.plan.student.firstName
+								}
 								registeredUsers={50}
 							/>
-							
-
-
 						</div>
 					))}
 				</SortableContext>
@@ -129,7 +121,6 @@ console.log(mods)
 							instructorName={'Joeal'}
 							registeredUsers={50}
 						/>
-						
 					) : null}
 				</DragOverlay>
 			</DndContext>
