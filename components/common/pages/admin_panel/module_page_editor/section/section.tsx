@@ -29,11 +29,11 @@ export const ModuleSection = ({
 
 export type ModuleSectionProps = {
 	sectionName: string
-    /**
+	/**
 	 * string that shows up name of the secion on Default Card
 	 */
 	sectionId: number
-    /**
+	/**
 	 * unique number that shows up id of the secion
 	 */
 }
