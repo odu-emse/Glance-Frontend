@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { Select } from 'components/common/forms/inputs/select/select'
+import { ContentArea } from 'components/common/admin_panel/content_area'
+import { Button } from 'components/common/button/button'
 
 export const Lessonpage: React.FC<lessonpageProps> = ({
 	lessonName,
@@ -8,10 +10,10 @@ export const Lessonpage: React.FC<lessonpageProps> = ({
 	return (
 		<>
 			<div>
-				<h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+				<p className=" text-xl font-bold leading-7 text-gray-900 sm:truncate  sm:tracking-tight">
 					{' '}
 					Section {sectionNumber} : {lessonName}{' '}
-				</h2>
+				</p>
 			</div>
 			<div>
 				<Select
@@ -36,9 +38,28 @@ export const Lessonpage: React.FC<lessonpageProps> = ({
 					size={1}
 				/>
 			</div>
-			{/* <div className='content-area'>
-					Content Area Component
-		 </div> */}
+			<div className='content-area'>
+			<ContentArea />
+		 </div>
+		 <div className='flex flex-row justify-end'>
+			<Button
+			size="small"
+			className='mx-2'
+			>
+			<p>
+				Confirm
+			</p>
+			</Button>
+
+			<Button
+				size="small"
+				className='mx-2'
+				>
+				<p>
+					Cancel
+				</p>
+			</Button>
+		 </div>
 		</>
 	)
 }
