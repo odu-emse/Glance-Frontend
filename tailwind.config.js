@@ -14,19 +14,30 @@ module.exports = {
 			...defaultTheme.screens,
 		},
 		fontSize: {
-			xxs: '0.5rem',
-			xs: '0.75rem',
-			...defaultTheme.fontSize,
+			sm: '10pt',
+			DEFAULT: '12pt'
 		},
 		colors: {
-			black: '#0A192D' /* Midnight Blue */,
-			white: '#FFFBFB' /* Vanilla Icecream White (Lightly warmed for ease on eyes) */,
+			black: {
+				DEFAULT: '#0A192D' /* Midnight Blue */
+			},
+			white: {
+				DEFAULT: '#FFFBFB' /* Vanilla Icecream White (Lightly warmed for ease on eyes) */,
+			},
 			carrier: '#404A5A' /* Carrier Gray */,
 			royalblue: '#204498' /* Royal Blue */,
 			monarchblue: '#003057' /* Monarch Blue */,
 			wgray: '#D6D5DA' /* USS Wisconsin Grey */,
 			barryblue: '#7B9CCF' /* Barry Blue */,
 		},
+		fontFamily: {
+			serif: ['Lora', 'serif']
+		},
+		extend: {
+			borderRadius: {
+				DEFAULT: '1px'
+			}
+		}
 	},
 	plugins: [require('flowbite/plugin')],
 }
