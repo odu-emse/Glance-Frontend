@@ -35,24 +35,24 @@ const Index = () => {
 				<hr />
 				<div>
 					<p>
-						Step 7: Clean up. After you're done using the concrete,
+						Step 7: Clean up. After youre done using the concrete,
 						be sure to clean up any tools or surfaces that came into
 						contact with it. Concrete can be difficult to remove
-						once it dries, so it's best to clean it up as soon as
+						once it dries, so its best to clean it up as soon as
 						possible. Mixing concrete can be a messy and physically
 						demanding process, so be sure to wear protective gear
-						and take breaks as needed. With practice, you'll become
+						and take breaks as needed. With practice, youll become
 						more skilled at mixing concrete and be able to tackle a
 						wide range of DIY and construction projects.
 					</p>
 					<p>
-						Step 7: Clean up. After you're done using the concrete,
+						Step 7: Clean up. After youre done using the concrete,
 						be sure to clean up any tools or surfaces that came into
 						contact with it. Concrete can be difficult to remove
-						once it dries, so it's best to clean it up as soon as
+						once it dries, so its best to clean it up as soon as
 						possible. Mixing concrete can be a messy and physically
 						demanding process, so be sure to wear protective gear
-						and take breaks as needed. With practice, you'll become
+						and take breaks as needed. With practice, youll become
 						more skilled at mixing concrete and be able to tackle a
 						wide range of DIY and construction projects.
 					</p>
@@ -64,13 +64,13 @@ const Index = () => {
 						<h2>This is the subtitle for this section</h2>
 					</header>
 					<p>
-						Step 7: Clean up. After you're done using the concrete,
+						Step 7: Clean up. After youre done using the concrete,
 						be sure to clean up any tools or surfaces that came into
 						contact with it. Concrete can be difficult to remove
-						once it dries, so it's best to clean it up as soon as
+						once it dries, so its best to clean it up as soon as
 						possible. Mixing concrete can be a messy and physically
 						demanding process, so be sure to wear protective gear
-						and take breaks as needed. With practice, you'll become
+						and take breaks as needed. With practice, youll become
 						more skilled at mixing concrete and be able to tackle a
 						wide range of DIY and construction projects.
 					</p>

@@ -3,11 +3,7 @@ import React from 'react'
 // import ModuleItem from '@/components/modules/ModuleListItem'
 // import Layout from '@/components/Layout'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
-import { Button } from '@/components/common/button/button'
-
-import Link from 'next/link'
 import { useSession } from 'next-auth/react'
-
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 
@@ -41,9 +37,8 @@ const ModulesPage = () => {
 			<div>
 				{data.user[0].plan.modules.map((enrollment, index) => {
 					return (
-						<div className="mb-4">
+						<div className="mb-4" key={index}>
 							<ModuleItem
-								key={index}
 								data={enrollment.module}
 								role={enrollment.role}
 							/>
