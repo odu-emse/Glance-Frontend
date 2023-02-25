@@ -9,8 +9,10 @@ export const ModuleItem = ({ data, role }) => {
 		<Link href={`/modules/${data.id}`} passHref>
 			<div className="container shadow cursor-pointer flex justify-center items-center">
 				<div className="flex grow flex-col gap-1">
-					<div className="flex flex-col md:flex-row gap-2">
+					<div className="flex flex-row gap-2">
 						<figcaption>MODULE {data.moduleNumber}</figcaption>
+						<figcaption>/</figcaption>
+						<figcaption>{role}</figcaption>
 					</div>
 					<div>
 						<h2>{data.moduleName}</h2>
