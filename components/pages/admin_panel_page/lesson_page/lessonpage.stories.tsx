@@ -16,5 +16,6 @@ const Template: ComponentStory<typeof Lessonpage> = (args: lessonpageProps) => (
 export const Primary: ComponentStory<typeof Lessonpage> = Template.bind({})
 Primary.storyName = 'Default'
 Primary.args = {
-	options: ['', 'Quiz', 'Pdf', 'Video'],
+	lessonName: "name of the lesson",
+	sectionNumber: 1
 }
