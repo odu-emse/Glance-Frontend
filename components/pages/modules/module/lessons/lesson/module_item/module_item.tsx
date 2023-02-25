@@ -1,16 +1,31 @@
 import Link from 'next/link'
 
+import { HiChevronRight } from 'react-icons/hi'
+
 export const ModuleItem = ({ data, role }) => {
 	// Use the link below once DB schema is updated
 	// const link = `/modules/${data.id}/sections/${data?.headSection}/lessons/${data?.sections[data?.headSection]?.headLesson}`
 	return (
-		<Link href={`/modules/${data.id}`}>
-			<div className="border p-4 shadow-md cursor-pointer rounded hover:bg-gray-100">
-				<div className="flex items-center justify-between">
-					<h4 className="text-lg">{data.moduleName}</h4>
-					<p>{role}</p>
+		<Link href={`/modules/${data.id}`} passHref>
+			<div className="container shadow cursor-pointer flex justify-center items-center">
+				<div className="flex grow flex-col gap-1">
+					<div className="flex flex-col md:flex-row gap-2">
+						<figcaption>MODULE {data.moduleNumber}</figcaption>
+					</div>
+					<div>
+						<h2>{data.moduleName}</h2>
+					</div>
 				</div>
-				<p className="text-sm text-gray-400">Click to open</p>
+				<div className="hidden md:block">
+					<span
+						className="w-12 h-12 block bg-royalblue text-white rounded-full flex justify-center items-center"
+						style={{
+							fontSize: '24px',
+						}}
+					>
+						<HiChevronRight />
+					</span>
+				</div>
 			</div>
 		</Link>
 	)
