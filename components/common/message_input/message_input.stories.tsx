@@ -3,8 +3,6 @@ import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { MessageInput } from './message_input'
 
-
-
 export default {
 	title: 'Common/Message Input',
 	component: MessageInput,

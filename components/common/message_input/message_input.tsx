@@ -7,7 +7,7 @@ import { IoSendSharp } from 'react-icons/io5'
 
 export const MessageInput: React.FC<MessageInputProps> = ({
 	message,
-}): JSX.Element => {
+}): React.ReactElement => {
 	const [isClicked, setIsClicked] = React.useState<null | number>(null)
 
 	return (
@@ -17,7 +17,8 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 					<div className="flex space-x-3 md:space-x-3">
 						{message?.length > 0 &&
 							message.map((item, index) => (
-								<button
+								<button 
+                                    key={index}
 									type="button"
 									className="py-2.5 px-5 mr-2 mb-2 text-xs font-medium text-gray-600 focus:outline-none bg-transparent rounded-full border-2 border-blue-300 hover:bg-gray-100 hover:text-gray-600 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
 								>
