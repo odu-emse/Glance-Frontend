@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDropzone } from 'react-dropzone'
 
-
 export const ContentArea: React.FC<
 	ContentAreaProps
 > = ({}): React.ReactElement => {
