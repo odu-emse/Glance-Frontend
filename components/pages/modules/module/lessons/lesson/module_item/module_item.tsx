@@ -7,7 +7,7 @@ export const ModuleItem = ({ data, role }) => {
 	// const link = `/modules/${data.id}/sections/${data?.headSection}/lessons/${data?.sections[data?.headSection]?.headLesson}`
 	return (
 		<Link href={`/modules/${data.id}`} passHref>
-			<div className="container shadow cursor-pointer flex justify-center items-center">
+			<div className="stdcontainer shadow cursor-pointer flex justify-center items-center w-full">
 				<div className="flex grow flex-col gap-1">
 					<div className="flex flex-row gap-2">
 						<figcaption>MODULE {data.moduleNumber}</figcaption>

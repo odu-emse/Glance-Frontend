@@ -11,8 +11,8 @@ const Loader = ({
 		role="status"
 		className={`inline w-4 h-4 mr-3 text-${
 			textColor || 'white'
-		} animate-spin`}
-		viewBox="0 0 100 101"
+		} animate-spin w-8 h-8`}
+		viewBox="0 0 100 100"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 	>

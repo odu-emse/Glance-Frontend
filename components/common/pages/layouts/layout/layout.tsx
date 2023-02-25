@@ -1,39 +1,57 @@
+import { useContext, useState } from 'react'
+import { Button } from '@/components/common/button/button'
+import GlobalLoadingContext from '@/contexts/global_loading_context'
+import Loader from '@/components/util/loader'
 import { Sidebar } from '../../sidebar/sidebar'
-import { GoPerson, GoSignIn } from 'react-icons/go'
-import { Link } from '../../../links/link/link'
-import { useState } from 'react'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 
 export const Layout = ({ children }) => {
-	const [open, setOpen] = useState(false)
+	const router = useRouter()
+	const [isLoading, setLoading] = useState(true)
+	const { data: session, status } = useSession()
+
+	if (status === 'loading') {
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
+	}
+
+	if (status !== 'loading' && session === null) {
+		router.push('/login')
+		return
+	}
 
 	return (
-		<main className="flex gap-x-1">
-			<Sidebar
-				handleOpen={() => setOpen(!open)}
-				open={open}
-				authenticated={true}
-				authChildren={
-					<>
-						<Link
-							role={'anchor'}
-							to={'/users/login'}
-							icon={<GoSignIn size={30} />}
-							label={'Login'}
-							extended={open}
-						/>
-						<Link
-							role="anchor"
-							to="/users/register"
-							icon={<GoPerson size={30} />}
-							label="Register"
-							extended={open}
-						/>
-					</>
-				}
-			>
-				{undefined}
-			</Sidebar>
-			<section className="w-full">{children}</section>
-		</main>
+		<section>
+			<nav className="bg-royalblue stdcontainer-sharp">
+				<h2 className="text-white">ALMP</h2>
+			</nav>
+			<div className="flex h-full">
+				<Sidebar
+					isLoading={status === 'loading'}
+					userSession={session}
+				/>
+				<main className="grow">
+					<GlobalLoadingContext.Provider
+						value={{ isLoading, setLoading }}
+					>
+						{isLoading === true && (
+							<div className="flex justify-center items-center stdcontainer h-32">
+								<Loader textColor="royalblue" />
+							</div>
+						)}
+
+						<div style={{ display: isLoading ? 'none' : 'block' }}>
+							{' '}
+							{/* Totally unneeded but it makes me happy to have this display so here it is... */}
+							{children}
+						</div>
+					</GlobalLoadingContext.Provider>
+				</main>
+			</div>
+		</section>
 	)
 }
