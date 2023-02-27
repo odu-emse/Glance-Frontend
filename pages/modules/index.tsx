@@ -3,11 +3,7 @@ import React from 'react'
 // import ModuleItem from '@/components/modules/ModuleListItem'
 // import Layout from '@/components/Layout'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
-import { Button } from '@/components/common/button/button'
-
-import Link from 'next/link'
 import { useSession } from 'next-auth/react'
-
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 
@@ -34,28 +30,21 @@ const ModulesPage = () => {
 	}
 
 	return (
-		<section className="gap-1 md:px-10 w-full flex flex-col md:flex-row">
-			<div className="flex flex-col md:w-full w-3/4">
-				<div className="flex items-center justify-between">
-					<h1 className="text-7xl opacity-50 font-black text-gray-400">
-						My Modules
-					</h1>
-					<Link href={`/modules/all`} passHref={true}>
-						<Button>View All Modules</Button>
-					</Link>
-				</div>
-
-				{data.user[0].plan.modules
-					.filter((doc) => doc.role === 'STUDENT')
-					.map((enrollment, index) => {
-						return (
+		<section className="container">
+			<header>
+				<h1>Modules</h1>
+			</header>
+			<div>
+				{data.user[0].plan.modules.map((enrollment, index) => {
+					return (
+						<div className="mb-4" key={index}>
 							<ModuleItem
-								key={index}
 								data={enrollment.module}
 								role={enrollment.role}
 							/>
-						)
-					})}
+						</div>
+					)
+				})}
 			</div>
 		</section>
 	)

@@ -1,3 +1,157 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Register the font faces */
+@font-face {
+	font-family: 'Lora';
+	src: url('/fonts/lora-regular.ttf'), url('/fonts/lora-bold.ttf');
+}
+
+@font-face {
+	font-family: 'Microgramma';
+	src: url('/fonts/microgramma-regular.ttf'),
+		url('/fonts/microgramma-bold.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/fonts/montserrat-regular.ttf'), url('/fonts/montserrat-bold.ttf');
+}
+
+/* Colors */
+:root {
+	--black: #0a192d; /* Midnight Blue */
+	--white: #fffbfb; /* Vanilla Icecream White (Lightly warmed for ease on eyes) */
+	--carrier: #404a5a; /* Carrier Gray */
+	--royal-blue: #204498; /* Royal Blue */
+	--monarch-blue: #003057; /* Monarch Blue */
+	--wisconsin-gray: #d6d5da; /* USS Wisconsin Grey */
+	--barry-blue: #7b9ccf; /* Barry Blue */
+
+	font-family: 'Lora', serif;
+	color: var(--black);
+	font-size: 12pt;
+}
+
+html {
+	background-color: var(--white);
+}
+
+/*
+    The choice to make H1 and H3 the title elements then H2 and H4 the subtitle 
+    elements was with SEO in mind. 
+    
+    You might have expected to see the font sizes linearly scaling in proportion the
+    the H[value] of the header. However, it makes more to focus on order of importance
+    rather than size in this case. 
+
+    In short H2 (subtitle 1) is a higher priority than H3 (title 2) and so even though it
+    has a smaller font size it still occupies the H2 element.
+*/
+
+/* Title 1 and Title 2 */
+h1,
+h3 {
+	font-family: 'Microgramma', sans-serif;
+	font-style: normal;
+	text-transform: uppercase;
+	color: var(--monarch-blue);
+	letter-spacing: -0.5px;
+}
+
+h1 {
+	color: var(--royal-blue);
+	font-weight: 700;
+	font-size: 27pt;
+}
+
+h3 {
+	font-size: 18pt;
+}
+
+/* Subtitle 1 and Subtitle 2 */
+h2,
+h4 {
+	font-family: 'Montserrat', sans-serif;
+	color: var(--black);
+}
+
+h2 {
+	color: var(--monarch-blue);
+	font-weight: 700;
+	font-size: 16pt;
+}
+
+h4 {
+	font-size: 14pt;
+}
+
+/* H5 and H6 will default to just being bold paragraph types */
+h5,
+h6 {
+	font-family: 'Lora', serif;
+	color: var(--black);
+	font-weight: 700;
+}
+
+/* Figcaptions */
+figcaption {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: var(--carrier);
+	text-transform: uppercase;
+	font-size: 8pt;
+}
+
+figcaption a {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 8pt;
+}
+
+/* Hyper Links */
+a {
+	color: var(--royal-blue);
+	text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1em;
+}
+
+/* Standard Spacing */
+section > header {
+	margin: 24px 0px;
+}
+
+section > header > h1,
+h3 {
+	margin-bottom: 10px;
+}
+
+p {
+	margin: 16px 0px;
+	line-height: 1.75em;
+}
+
+ul,
+ol {
+	margin: 24px 0px;
+	margin-left: 24px;
+	list-style: disc;
+}
+
+li {
+	margin: 8px 0px;
+	line-height: 1.75m;
+}
+
+/* Standard container */
+.container {
+	padding: 1rem 1.5rem;
+	border-radius: 1px;
+}
