@@ -12,22 +12,28 @@ export type SidebarProps = {
 
 export const Sidebar: React.FC<SidebarProps> = ({ userSession, isLoading }) => {
 	return (
-		<div className='relative'>
+		<div className="relative">
 			<aside className="fixed rounded-none h-screen top-0 w-[200px] flex flex-col pt-20">
-				<div className='px-5 mb-4'>
+				<div className="px-5 mb-4">
 					<h3 className="text-black">ALMP</h3>
 				</div>
-				<div className='grow'>
-					<SidebarItem value='OVERVIEW' href='/overview' />
-					<SidebarItem value='MODULES' href='/modules' />
-					<SidebarItem value='COMMUNITIES' href='/communities' />
-					<SidebarItem value='GRADES' href='/grades' />
+				<div className="grow">
+					<SidebarItem value="OVERVIEW" href="/overview" />
+					<SidebarItem value="MODULES" href="/modules" />
+					<SidebarItem value="COMMUNITIES" href="/communities" />
+					<SidebarItem value="GRADES" href="/grades" />
 				</div>
 				<div>
 					{!isLoading && userSession && (
 						<>
-							<SidebarItem value="ACCOUNT" href={`/users/${userSession.openId}/settings`}/>
-							<SidebarItem value={userSession.user.name} href={`/users/${userSession.openId}`}/>
+							<SidebarItem
+								value="ACCOUNT"
+								href={`/users/${userSession.openId}/settings`}
+							/>
+							<SidebarItem
+								value={userSession.user.name}
+								href={`/users/${userSession.openId}`}
+							/>
 						</>
 					)}
 				</div>
