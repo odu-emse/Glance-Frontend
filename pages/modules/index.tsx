@@ -57,6 +57,7 @@ const ModulesPage = () => {
 				})}
 			</div>
 		</section>
+		
 	)
 }
 

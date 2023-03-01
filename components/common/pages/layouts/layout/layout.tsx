@@ -26,9 +26,7 @@ export const Layout = ({ children }) => {
 
 	return (
 		<section>
-			<nav className="bg-royalblue stdcontainer-sharp">
-				<h2 className="text-white">ALMP</h2>
-			</nav>
+			<nav className="bg-royalblue stdcontainer-sharp"></nav>
 			<div className="flex h-full">
 				<Sidebar
 					isLoading={status === 'loading'}

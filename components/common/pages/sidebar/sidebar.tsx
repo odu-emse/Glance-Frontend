@@ -3,6 +3,7 @@ import { Logo } from './logo'
 import { Hamburger } from './hamburger'
 import { Button } from '../../button/button'
 import Link from 'node_modules/next/link'
+import { SidebarItem } from './sidebar_item/sidebar_item'
 
 export type SidebarProps = {
 	userSession: any
@@ -10,26 +11,28 @@ export type SidebarProps = {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ userSession, isLoading }) => {
-	console.log(userSession)
-
 	return (
-		<div>
-			<div className="w-[250px]"></div>
-			<aside className="fixed rounded-none h-screen w-[250px] border-r">
-				<ul>
-					<li>MODULES</li>
-					<li>MODULES</li>
-					<li>MODULES</li>
-					<li>MODULES</li>
-				</ul>
-				<ul>
-					<li>isLoading {isLoading ? 'true' : 'false'}</li>
-					{isLoading && <li>Loading Account Info</li>}
+		<div className='relative'>
+			<aside className="fixed rounded-none h-screen top-0 w-[200px] flex flex-col pt-20">
+				<div className='px-5 mb-4'>
+					<h3 className="text-black">ALMP</h3>
+				</div>
+				<div className='grow'>
+					<SidebarItem value='OVERVIEW' href='/overview' />
+					<SidebarItem value='MODULES' href='/modules' />
+					<SidebarItem value='COMMUNITIES' href='/communities' />
+					<SidebarItem value='GRADES' href='/grades' />
+				</div>
+				<div>
 					{!isLoading && userSession && (
-						<li>Logged in as {userSession.user.name}</li>
+						<>
+							<SidebarItem value="ACCOUNT" href={`/users/${userSession.openId}/settings`}/>
+							<SidebarItem value={userSession.user.name} href={`/users/${userSession.openId}`}/>
+						</>
 					)}
-				</ul>
+				</div>
 			</aside>
+			<div className="w-[200px] pointer-events-none"></div>
 		</div>
 	)
 }
