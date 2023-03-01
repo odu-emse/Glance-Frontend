@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'node_modules/next/link'
 
 export type SidebarItemProps = {

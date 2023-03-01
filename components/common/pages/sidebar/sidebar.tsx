@@ -1,8 +1,4 @@
 import * as React from 'react'
-import { Logo } from './logo'
-import { Hamburger } from './hamburger'
-import { Button } from '../../button/button'
-import Link from 'node_modules/next/link'
 import { SidebarItem } from './sidebar_item/sidebar_item'
 
 export type SidebarProps = {

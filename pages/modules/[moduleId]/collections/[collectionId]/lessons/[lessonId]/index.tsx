@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
 
-import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
+// import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
 
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'

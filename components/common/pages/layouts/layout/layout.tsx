@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react'
-import { Button } from '@/components/common/button/button'
+import { useState } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import Loader from '@/components/util/loader'
 import { Sidebar } from '../../sidebar/sidebar'
