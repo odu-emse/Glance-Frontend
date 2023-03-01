@@ -66,7 +66,7 @@ const ModuleSection = () => {
 	const lesson = data.lesson[0]
 	const _module = lesson.collection.module
 	const collections = flattenCollections(_module.collections)
-	const content = lesson.content[0]
+	// const content = lesson.content[0]
 
 	// --- Next/Prev Page calculations
 	const currentLessonIndex = collections.findIndex(
