@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'node_modules/next/link'
+import Link from 'next/link'
 
 export type SidebarItemProps = {
 	value: string
