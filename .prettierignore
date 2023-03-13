@@ -1,2 +1,4 @@
 .next/
 */output.css
+node_modules/
+.*/
