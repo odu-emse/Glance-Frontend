@@ -1,4 +1,4 @@
-name: Prettier Code Formatting and Linting
+name: Prettier Code Formatting
 
 on:
   push:

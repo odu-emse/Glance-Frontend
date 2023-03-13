@@ -1,0 +1,12 @@
+name: Linting
+
+on:
+  push:
+    branches: ['*']
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Super-Linter
+      uses: github/super-linter@v4.10.1
