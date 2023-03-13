@@ -13,7 +13,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: Run Formatter
-        run: npx prettier --config ./.prettierrc --ignore-path ./.prettierignore --write src/**/*.ts
+        run: npx prettier --config ./.prettierrc --ignore-path ./.prettierignore --write /**/*.ts
       - name: Run Linter
         run: npm run lint
       - name: Check for modified files
