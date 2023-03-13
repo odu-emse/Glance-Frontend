@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { ModuleRequirement, ModuleRequirementProps } from './module_requirement_editor'
+import {
+	ModuleRequirement,
+	ModuleRequirementProps,
+} from './module_requirement_editor'
 import useSWR from 'swr'
 import gqlFetcher from '../../../../utils/gql_fetcher'
 import { gql } from 'graphql-request'
-
 
 export default {
 	title: 'Common/Admin Panel/Module/Requirements',
@@ -15,16 +17,16 @@ export default {
 const Template: ComponentStory<typeof ModuleRequirement> = (
 	args: ModuleRequirementProps
 ) => {
-    const { data, error } = useSWR(
+	const { data, error } = useSWR(
 		{
 			query: gql`
 				{
 					module(input: {}) {
-                        id
-						parentModules{
-                            moduleName
-                            id    
-                        }
+						id
+						parentModules {
+							moduleName
+							id
+						}
 					}
 				}
 			`,
@@ -34,12 +36,12 @@ const Template: ComponentStory<typeof ModuleRequirement> = (
 	if (error) return <p>Failed to load content...</p>
 	if (!data) return <p>Loading...</p>
 
-		//console.log(data)
+	//console.log(data)
 
-    return <ModuleRequirement requirements={data.module} {...args} />
+	return <ModuleRequirement requirements={data.module} {...args} />
 }
 
-export const Default: ComponentStory<typeof ModuleRequirement> = Template.bind({})
-Default.args = {
-	
-}
+export const Default: ComponentStory<typeof ModuleRequirement> = Template.bind(
+	{}
+)
+Default.args = {}
