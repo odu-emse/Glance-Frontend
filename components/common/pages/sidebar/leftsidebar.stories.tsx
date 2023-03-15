@@ -11,5 +11,5 @@ const Template = (args) => <Sidebar {...args} />
 
 export const Default: ComponentStory<typeof Sidebar> = Template.bind({})
 Default.args = {
-icon: "https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"	
+	icon: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 }
