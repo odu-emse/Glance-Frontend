@@ -9,8 +9,8 @@ import { Thread } from '../thread/thread'
  * @returns {Array} An array of DOM thread components.
  */
 const commentGen = (parentComment) => {
-	if (parentComment.comments === undefined) return [] 
-	let threads = []
+	if (parentComment.comments === undefined) return []
+	const threads = []
 	for (const comment of parentComment.comments) {
 		const subThreads = commentGen(comment)
 		threads.push(
@@ -53,5 +53,5 @@ export const CommentsHierarchy: React.FC<CommentsHierarchyProps> = ({
  * @property {Object} thread - The parent comment tree.
  */
 export type CommentsHierarchyProps = {
-	thread: any 
+	thread: any
 }
