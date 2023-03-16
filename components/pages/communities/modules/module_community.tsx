@@ -16,7 +16,7 @@ export const ModuleCommunity: React.FC<
 		{
 			query: gql`
 				{
-					module(input: { }) {
+					module(input: {}) {
 						id
 						moduleName
 						description
@@ -44,7 +44,7 @@ export const ModuleCommunity: React.FC<
 									body
 
 									upvotes {
-											id
+										id
 									}
 								}
 							}
@@ -65,9 +65,7 @@ export const ModuleCommunity: React.FC<
 	}
 
 	const mod = data?.module[0]
-	const teacher = mod?.members.filter(
-		(member) => member.plan.student
-	)[0]
+	const teacher = mod?.members.filter((member) => member.plan.student)[0]
 
 	return (
 		<div className="m-8 flex">

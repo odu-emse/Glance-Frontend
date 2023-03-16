@@ -51,23 +51,23 @@ export const CommunityPage = ({
 								officeLocation
 							}
 						}
-						upvotes{
-								id
+						upvotes {
+							id
 						}
 						comments {
 							id
 							title
-#								TODO: Uncomment this when the backend is ready (see ALMP-632)
-#							author {
-#								picURL
-#								createdAt
-#								firstName
-#								lastName
-#								instructorProfile {
-#									title
-#									officeLocation
-#								}
-#							}
+							#								TODO: Uncomment this when the backend is ready (see ALMP-632)
+							#							author {
+							#								picURL
+							#								createdAt
+							#								firstName
+							#								lastName
+							#								instructorProfile {
+							#									title
+							#									officeLocation
+							#								}
+							#							}
 						}
 						createdAt
 					}

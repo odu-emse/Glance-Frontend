@@ -61,8 +61,8 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 										picURL
 									}
 									body
-									upvotes{
-											id
+									upvotes {
+										id
 									}
 								}
 							}
