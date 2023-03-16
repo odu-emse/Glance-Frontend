@@ -16,3 +16,7 @@
 /.next
 /coverage
 /storybook-static
+build-storybook.log
+.env
+.env.*
+!.env.example

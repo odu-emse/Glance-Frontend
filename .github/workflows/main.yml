@@ -75,7 +75,7 @@ jobs:
           - name: Set up Node
             uses: actions/setup-node@v3
             with:
-              node-version: '18'
+              node-version: '16.19.1'
           - name: Get cached dependencies
             uses: actions/cache@v3
             with:
@@ -90,7 +90,7 @@ jobs:
             env:
                 CI: true
                 CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_KEY }}
-                CHROMATIC_STORYBOOK_VERSION: 6.5.12
+                CHROMATIC_STORYBOOK_VERSION: 6.5.15
                 exitOnceUploaded: true
     coverage:
         needs: [build-storybook]
