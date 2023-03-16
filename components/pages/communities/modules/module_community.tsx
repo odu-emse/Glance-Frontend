@@ -16,7 +16,7 @@ export const ModuleCommunity: React.FC<
 		{
 			query: gql`
 				{
-					module(input: { id: "620d2d2df524b2dcf02b5bbe" }) {
+					module(input: { }) {
 						id
 						moduleName
 						description
@@ -43,7 +43,9 @@ export const ModuleCommunity: React.FC<
 									}
 									body
 
-									upvotes
+									upvotes {
+											id
+									}
 								}
 							}
 						}
@@ -64,7 +66,7 @@ export const ModuleCommunity: React.FC<
 
 	const mod = data?.module[0]
 	const teacher = mod?.members.filter(
-		(member) => member.role === 'TEACHER'
+		(member) => member.plan.student
 	)[0]
 
 	return (
