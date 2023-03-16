@@ -1,7 +1,7 @@
 module.exports = {
 	plugins: ['unicorn', 'jest'],
-	"env": {
-		"jest/globals": true
+	env: {
+		'jest/globals': true,
 	},
 	extends: ['next', 'next/core-web-vitals', 'semistandard', 'prettier'],
 	rules: {
@@ -16,10 +16,10 @@ module.exports = {
 		'react-hooks/rules-of-hooks': 'warn',
 		'react/jsx-no-comment-textnodes': 'warn',
 		'react/no-children-prop': 'warn',
-		"jest/no-disabled-tests": "warn",
-		"jest/no-focused-tests": "error",
-		"jest/no-identical-title": "error",
-		"jest/prefer-to-have-length": "warn",
-		"jest/valid-expect": "error"
+		'jest/no-disabled-tests': 'warn',
+		'jest/no-focused-tests': 'error',
+		'jest/no-identical-title': 'error',
+		'jest/prefer-to-have-length': 'warn',
+		'jest/valid-expect': 'error',
 	},
 }

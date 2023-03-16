@@ -1,5 +1,5 @@
 describe('Index', () => {
 	it('should render', () => {
-		expect(true).toBeTruthy();
-	});
+		expect(true).toBeTruthy()
+	})
 })
