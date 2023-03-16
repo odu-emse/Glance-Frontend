@@ -1,42 +1,59 @@
 name: Component Library CI
 
 on:
-    push:
-        branches: [master, dev]
     pull_request:
-        branches: [master, dev]
+        branches: [main, development]
 
 jobs:
     build-storybook:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v3
-            - name: Use Node.js 16.17.0
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16.17.0
-            - name: Install dependencies
-              run: yarn
-            - name: Build Storybook
-              run: yarn build-storybook
+          - name: Checkout
+            uses: actions/checkout@v3
+            with:
+              ref: ${{ github.head_ref }}
+          - name: Set up Node
+            uses: actions/setup-node@v3
+            with:
+              node-version: '18'
+          - name: Get cached dependencies
+            uses: actions/cache@v3
+            with:
+              path: '**/node_modules'
+              key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+          - name: Install dependencies
+            run: npm install
+          - name: Build Storybook
+            run: npm run build-storybook
     cypress-run:
         needs: [build-storybook]
         runs-on: ubuntu-latest
         steps:
-            - name: Install yarn
-              run: npm install -g yarn
-            - name: Checkout
-              uses: actions/checkout@v3
-            - uses: cypress-io/github-action@v4
-              with:
-                  install: true
-                  component: true
-                  record: true
-                  command: yarn test
-              env:
-                  CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          - name: Checkout
+            uses: actions/checkout@v3
+            with:
+              ref: ${{ github.head_ref }}
+          - name: Set up Node
+            uses: actions/setup-node@v3
+            with:
+              node-version: '18'
+          - name: Get cached dependencies
+            uses: actions/cache@v3
+            with:
+              path: '**/node_modules'
+              key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+          - name: Install dependencies
+            run: npm install
+          - name: Run Cypress tests
+            uses: cypress-io/github-action@v4
+            with:
+                install: true
+                component: true
+                record: true
+                command: npm run test:cy
+            env:
+                CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     generate-changelog:
         needs: [chromatic-deployment]
         runs-on: ubuntu-latest
@@ -51,42 +68,54 @@ jobs:
         needs: [coverage]
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-              with:
-                  fetch-depth: 0
-            - name: Use Node.js 16.17.0
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16.17.0
-            - name: Install dependencies
-              run: yarn
-            - name: Publish to Chromatic
-              uses: chromaui/action@v1
-              with:
-                  projectToken: ${{ secrets.CHROMATIC_PROJECT_KEY }}
-              env:
-                  CI: true
-                  CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_KEY }}
-                  CHROMATIC_STORYBOOK_VERSION: 6.5.12
-                  exitOnceUploaded: true
+          - name: Checkout
+            uses: actions/checkout@v3
+            with:
+              ref: ${{ github.head_ref }}
+          - name: Set up Node
+            uses: actions/setup-node@v3
+            with:
+              node-version: '18'
+          - name: Get cached dependencies
+            uses: actions/cache@v3
+            with:
+              path: '**/node_modules'
+              key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+          - name: Install dependencies
+            run: npm install
+          - name: Publish to Chromatic
+            uses: chromaui/action@v1
+            with:
+                projectToken: ${{ secrets.CHROMATIC_PROJECT_KEY }}
+            env:
+                CI: true
+                CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_KEY }}
+                CHROMATIC_STORYBOOK_VERSION: 6.5.12
+                exitOnceUploaded: true
     coverage:
         needs: [build-storybook]
         runs-on: ubuntu-latest
         name: Create Storybook Coverage Report
         steps:
-            - uses: actions/checkout@v3
-            - name: Use Node.js 16.17.0
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16.17.0
-            - name: Install dependencies
-              run: yarn
-            - name: Build styles
-              run: yarn style:build
-            - name: Run tests and collect coverage
-              run: yarn ci
-            - name: Upload coverage reports to Codecov
-              run: |
-                  curl -Os https://uploader.codecov.io/latest/linux/codecov
-                  chmod +x codecov
-                  ./codecov -t a2998128-c3a7-40b8-b413-cbcddc0acf16
+          - name: Checkout
+            uses: actions/checkout@v3
+            with:
+              ref: ${{ github.head_ref }}
+          - name: Set up Node
+            uses: actions/setup-node@v3
+            with:
+              node-version: '18'
+          - name: Get cached dependencies
+            uses: actions/cache@v3
+            with:
+              path: '**/node_modules'
+              key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+          - name: Install dependencies
+            run: npm install
+          - name: Run coverage
+            run: npm run test:cov
+          - name: Upload coverage reports to Codecov
+            run: |
+                curl -Os https://uploader.codecov.io/latest/linux/codecov
+                chmod +x codecov
+                ./codecov -t a2998128-c3a7-40b8-b413-cbcddc0acf16
