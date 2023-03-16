@@ -15,9 +15,9 @@ export const Button = ({
 	...props
 }: ButtonProps) => {
 	const classes = [
-		'flex flex-row items-center justify-center gap-2',
-		'px-4 py-2',
-		'font-medium',
+		'flex flex-row items-center justify-center gap-1',
+		'px-[1em] py-[0.5em]',
+		'font-bold',
 		className,
 		size === 1 && 'w-full',
 
@@ -30,9 +30,9 @@ export const Button = ({
 		disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
 
 		variant === 'primary' &&
-			'shadow bg-blue-700 text-white hover:bg-blue-600',
+			'shadow bg-royalblue text-white hover:bg-blue-600',
 		variant === 'secondary' &&
-			'shadow bg-gray-300 text-gray-700 hover:bg-gray-200',
+			'shadow bg-wgray text-gray-700 hover:bg-gray-200',
 		variant === 'transparent' && 'bg-transparent text-black',
 	].join(' ')
 
@@ -42,6 +42,11 @@ export const Button = ({
 			disabled={disabled}
 			className={classes}
 			onClick={onClick}
+			style={{
+				fontFamily: 'Montserrat',
+				textTransform: 'uppercase',
+				fontWeight: 'bold',
+			}}
 		>
 			{loading ? (
 				<Loader
