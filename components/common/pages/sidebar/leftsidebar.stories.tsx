@@ -8,7 +8,6 @@ export default {
 	component: Sidebar,
 } as ComponentMeta<typeof Sidebar>
 
-
 const Template: ComponentStory<typeof Sidebar> = (args) => {
 	const [open, setOpen] = React.useState(true)
 	return (
@@ -18,9 +17,7 @@ const Template: ComponentStory<typeof Sidebar> = (args) => {
 	)
 }
 
-
-
 export const Default: ComponentStory<typeof Sidebar> = Template.bind({})
 Default.args = {
-icon: "https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"	
+	icon: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 }
