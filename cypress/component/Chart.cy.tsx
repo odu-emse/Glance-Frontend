@@ -5,15 +5,13 @@ import * as pie from '@/common/charts/pie/pie.stories'
 import terminalLog from '../support/component'
 import * as line from '@/common/charts/line/line.stories'
 import * as radar from '@/common/charts/radar/radar.stories'
-import { LineComponent } from '../../components/common/charts/line/line';
-import { PieComponent } from '../../components/common/charts/pie/pie';
-import { RadarComponent } from '../../components/common/charts/radar/radar';
+import { LineComponent } from '../../components/common/charts/line/line'
+import { PieComponent } from '../../components/common/charts/pie/pie'
+import { RadarComponent } from '../../components/common/charts/radar/radar'
 
+const { Simple: SimplePie } = composeStories(pie)
 
-const { Simple: SimplePie } =
-	composeStories(pie)
-
-const { Simple: SimpleLine} = composeStories(line)
+const { Simple: SimpleLine } = composeStories(line)
 
 const { Simple: SimpleRadar } = composeStories(radar)
 
@@ -64,9 +62,9 @@ describe('Line Chart', function () {
 				<div className="h-64" id="test-id">
 					<PieComponent
 						data={[
-							{ name: 'January', value: 120, fill: "" },
-							{ name: 'February', value: 500, fill: "" },
-							{ name: 'March', value: 600, fill: "" },
+							{ name: 'January', value: 120, fill: '' },
+							{ name: 'February', value: 500, fill: '' },
+							{ name: 'March', value: 600, fill: '' },
 						]}
 						legend={true}
 						tooltip={true}
@@ -100,9 +98,9 @@ describe('Line Chart', function () {
 				<div className="h-64" id="test-id">
 					<PieComponent
 						data={[
-							{ name: 'January', value: 120, fill: "#454545" },
-							{ name: 'February', value: 500, fill: "#454545" },
-							{ name: 'March', value: 600, fill: "#454545" },
+							{ name: 'January', value: 120, fill: '#454545' },
+							{ name: 'February', value: 500, fill: '#454545' },
+							{ name: 'March', value: 600, fill: '#454545' },
 						]}
 						legend={true}
 						tooltip={true}

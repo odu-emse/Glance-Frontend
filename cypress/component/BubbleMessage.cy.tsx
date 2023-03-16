@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
 import * as stories from '@/common/chat/bubble_message/bubble_message.stories'
-import terminalLog from '../support/component';
+import terminalLog from '../support/component'
 
 const { Primary, Secondary } = composeStories(stories)
 
@@ -47,12 +47,16 @@ describe('BubbleMessage.tsx', function () {
 	})
 	it('should have no accessibility violations', () => {
 		cy.mount(<Primary />)
-		cy.checkA11y(undefined, {
-			runOnly: {
-				type: 'tag',
-				values: ['wcag2a', 'wcag2aa', "section508"],
-			}
-		}, terminalLog)
+		cy.checkA11y(
+			undefined,
+			{
+				runOnly: {
+					type: 'tag',
+					values: ['wcag2a', 'wcag2aa', 'section508'],
+				},
+			},
+			terminalLog
+		)
 	})
 	it('should render messages at the left', () => {
 		cy.mount(<Primary />)
