@@ -15,7 +15,7 @@ jobs:
           - name: Set up Node
             uses: actions/setup-node@v3
             with:
-              node-version: '18'
+              node-version: '16.19.1'
           - name: Get cached dependencies
             uses: actions/cache@v3
             with:

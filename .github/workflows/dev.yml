@@ -1,4 +1,4 @@
-name: Code Linting
+name: Dev Pipeline - Format and Lint
 
 on:
   push:
