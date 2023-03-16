@@ -18,6 +18,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({ value, href, icon , co
 				
 				style={{
 					fontFamily: 'Montserrat, sans-serif',
+					// ...collapsed ? { justifyContent: 'center' } : {}
 				}}
 			>
 				<img src={icon} width={32} height={32} />
