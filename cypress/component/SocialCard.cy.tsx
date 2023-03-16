@@ -1,6 +1,7 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../storybook/stories/SocialCard.stories'
+import * as stories from '@/common/community/social_card/social_card.stories'
 import terminalLog from '../support/component'
 
 const { Primary, Secondary } = composeStories(stories)

@@ -1,8 +1,8 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../storybook/stories/VideoPlayer.stories'
+import * as stories from '@/common/content_types/video/video_player/video_player.stories'
 import terminalLog from '../support/component'
-import cypressConfig from 'cypress.config'
 
 const { Sample } = composeStories(stories)
 

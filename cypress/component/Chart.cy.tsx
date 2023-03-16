@@ -1,33 +1,36 @@
+/// <reference types="cypress" />
 import * as React from 'react'
-import { Radar } from 'recharts'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../storybook/stories/Chart/Pie.stories'
+import * as pie from '@/common/charts/pie/pie.stories'
 import terminalLog from '../support/component'
-import { LineComponent } from '../../storybook/components/Chart/Line'
-import { PieComponent } from '../../storybook/components/Chart/Pie'
-import {
-	RadarComponent,
-	RadarProps,
-} from '../../storybook/components/Chart/Radar'
+import * as line from '@/common/charts/line/line.stories'
+import * as radar from '@/common/charts/radar/radar.stories'
+import { LineComponent } from '../../components/common/charts/line/line';
+import { PieComponent } from '../../components/common/charts/pie/pie';
+import { RadarComponent } from '../../components/common/charts/radar/radar';
 
-const { Simple, SingleChildrenRadar, MultipleChildrenRadar } =
-	composeStories(stories)
+
+const { Simple: SimplePie } =
+	composeStories(pie)
+
+const { Simple: SimpleLine} = composeStories(line)
+
+const { Simple: SimpleRadar } = composeStories(radar)
 
 // Line Chart Test Cases
 describe('Line Chart', function () {
-	const legend = true
 	beforeEach(() => {
 		cy.injectAxe()
 	})
 	it('should render component1', () => {
 		cy.mount(
-			<Simple legend={true}>
+			<SimpleLine legend={true}>
 				<div className="h-96" id="w-full">
 					<LineComponent
 						data={[
-							{ name: 'January', graph1: 120, graph2: 200 },
-							{ name: 'February', graph1: 500, graph2: 700 },
-							{ name: 'March', graph1: 600, graph2: 900 },
+							{ name: 'January', graph1: 120 },
+							{ name: 'February', graph1: 500 },
+							{ name: 'March', graph1: 600 },
 						]}
 						legend={true}
 						tooltip={true}
@@ -43,7 +46,7 @@ describe('Line Chart', function () {
 						data1={[]}
 					/>
 				</div>
-			</Simple>
+			</SimpleLine>
 		)
 		expect(cy.get('div')).to.exist
 		cy.get('div').should('exist')
@@ -57,13 +60,13 @@ describe('Line Chart', function () {
 
 	it('should have no accessibility violations', () => {
 		cy.mount(
-			<Simple legend={true}>
+			<SimplePie legend={true}>
 				<div className="h-64" id="test-id">
 					<PieComponent
 						data={[
-							{ name: 'January', graph1: 120, graph2: 200 },
-							{ name: 'February', graph1: 500, graph2: 700 },
-							{ name: 'March', graph1: 600, graph2: 900 },
+							{ name: 'January', value: 120, fill: "" },
+							{ name: 'February', value: 500, fill: "" },
+							{ name: 'March', value: 600, fill: "" },
 						]}
 						legend={true}
 						tooltip={true}
@@ -75,11 +78,9 @@ describe('Line Chart', function () {
 						}}
 						width={100}
 						height={100}
-						xaxisValues={[]}
-						data1={[]}
 					/>
 				</div>
-			</Simple>
+			</SimplePie>
 		)
 		cy.checkA11y(
 			undefined,
@@ -95,13 +96,13 @@ describe('Line Chart', function () {
 
 	it('should respect panel width with charts', () => {
 		cy.mount(
-			<Simple legend={true} size={2}>
+			<SimplePie legend={true} size={2}>
 				<div className="h-64" id="test-id">
 					<PieComponent
 						data={[
-							{ name: 'January', graph1: 120, graph2: 200 },
-							{ name: 'February', graph1: 500, graph2: 700 },
-							{ name: 'March', graph1: 600, graph2: 900 },
+							{ name: 'January', value: 120, fill: "#454545" },
+							{ name: 'February', value: 500, fill: "#454545" },
+							{ name: 'March', value: 600, fill: "#454545" },
 						]}
 						legend={true}
 						tooltip={true}
@@ -113,11 +114,9 @@ describe('Line Chart', function () {
 						}}
 						width={100}
 						height={100}
-						xaxisValues={[]}
-						data1={[]}
 					/>
 				</div>
-			</Simple>
+			</SimplePie>
 		)
 		cy.get('div')
 			.children('div.recharts-responsive-container')
@@ -127,13 +126,12 @@ describe('Line Chart', function () {
 
 // Pie Chart Test Cases
 describe('Pie Chart', function () {
-	const legend = true
 	beforeEach(() => {
 		cy.injectAxe()
 	})
 	it('should render component', () => {
 		cy.mount(
-			<Simple legend={true}>
+			<SimplePie legend={true}>
 				<div className="h-64" id="test-id">
 					<PieComponent
 						data={[
@@ -153,7 +151,7 @@ describe('Pie Chart', function () {
 						height={100}
 					/>
 				</div>
-			</Simple>
+			</SimplePie>
 		)
 		expect(cy.get('div')).to.exist
 		cy.get('div').should('exist')
@@ -166,7 +164,7 @@ describe('Pie Chart', function () {
 	})
 	it('should have no accessibility violations', () => {
 		cy.mount(
-			<Simple legend={true}>
+			<SimplePie legend={true}>
 				<div className="h-64" id="test-id">
 					<PieComponent
 						data={[
@@ -186,7 +184,7 @@ describe('Pie Chart', function () {
 						height={100}
 					/>
 				</div>
-			</Simple>
+			</SimplePie>
 		)
 		cy.checkA11y(
 			undefined,
@@ -201,7 +199,7 @@ describe('Pie Chart', function () {
 	})
 	it('should respect panel width with charts', () => {
 		cy.mount(
-			<Simple legend={true} size={2}>
+			<SimplePie legend={true} size={2}>
 				<div className="h-64" id="test-id">
 					<PieComponent
 						data={[
@@ -221,7 +219,7 @@ describe('Pie Chart', function () {
 						height={100}
 					/>
 				</div>
-			</Simple>
+			</SimplePie>
 		)
 		cy.get('div')
 			.children('div.recharts-responsive-container')
@@ -232,7 +230,6 @@ describe('Pie Chart', function () {
 // Radar Chart Test Cases
 
 describe('Radar Chart', function () {
-	const legend = true
 	const data = [
 		{
 			subject: 'ENMA 600',
@@ -265,5 +262,24 @@ describe('Radar Chart', function () {
 	it('should render component', () => {
 		// TODO: The Radar Rendering, No accessibility Voilation and panel width TestCase Component.
 		// Ended up cy.Mount error, which needs to be fixed in Radar Chart Component.
+		cy.mount(
+			<SimpleRadar legend={true}>
+				<div className="h-64" id="test-id">
+					<RadarComponent
+						data={data}
+						legend={false}
+						tooltip={false}
+						width={100}
+						height={100}
+						dataKey={'A'}
+						fillColor={'#ff7300'}
+						strokeColor={'#ff7300'}
+						fillOpacity={0.6}
+					>
+						{null}
+					</RadarComponent>
+				</div>
+			</SimpleRadar>
+		)
 	})
 })

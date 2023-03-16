@@ -1,7 +1,8 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../src/stories/BubbleMessage.stories'
-import terminalLog from '../support/component'
+import * as stories from '@/common/chat/bubble_message/bubble_message.stories'
+import terminalLog from '../support/component';
 
 const { Primary, Secondary } = composeStories(stories)
 
@@ -44,15 +45,15 @@ describe('BubbleMessage.tsx', function () {
 		expect(cy.get('img')).to.exist
 		expect(cy.get('span')).to.exist
 	})
-	// it('should have no accessibility violations', () => {
-	// 	cy.mount(<Primary />)
-	// 	cy.checkA11y(undefined, {
-	// 		runOnly: {
-	// 			type: 'tag',
-	// 			values: ['wcag2a', 'wcag2aa', "section508"],
-	// 		}
-	// 	}, terminalLog)
-	// })
+	it('should have no accessibility violations', () => {
+		cy.mount(<Primary />)
+		cy.checkA11y(undefined, {
+			runOnly: {
+				type: 'tag',
+				values: ['wcag2a', 'wcag2aa', "section508"],
+			}
+		}, terminalLog)
+	})
 	it('should render messages at the left', () => {
 		cy.mount(<Primary />)
 		cy.get('li.left-li').should('have.class', 'flex items-center  ')

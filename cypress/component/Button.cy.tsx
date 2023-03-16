@@ -1,11 +1,11 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../src/stories/Button.stories'
+import * as stories from '@/common/button/button.stories'
 import terminalLog from '../support/component'
 
 const {
 	Primary,
-	PrimaryIcon,
 	Secondary,
 	Loading,
 	Small,

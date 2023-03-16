@@ -1,6 +1,7 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../src/stories/Form.stories'
+import * as stories from '@/common/forms/form/form.stories'
 import terminalLog from '../support/component'
 
 const { Default } = composeStories(stories)
