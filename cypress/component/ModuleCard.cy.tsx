@@ -4,7 +4,7 @@ import { composeStories } from '@storybook/testing-react'
 import * as stories from '@/common/module_card/module_card.stories'
 import terminalLog from '../support/component'
 
-const { Primary} = composeStories(stories)
+const { Primary } = composeStories(stories)
 
 describe('ModuleCard.tsx', function () {
 	const courseName = 'ENMA'
