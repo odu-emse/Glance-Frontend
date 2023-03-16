@@ -42,7 +42,7 @@ NoUpvote.args = {
 const SecondaryTemplate: ComponentStory<typeof Thread> = (args) => {
 	return (
 		<>
-			{mockData.map((thread, threadIndex) => (
+			{mockData.slice(0, 5).map((thread, threadIndex) => (
 				<Thread key={threadIndex} {...args} {...thread} />
 			))}
 		</>
