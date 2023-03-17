@@ -18,8 +18,12 @@ export const getModuleByID = (courseID) => {
 				}
 			}
 			moduleName,
+			moduleNumber,
+			description,
 			parentModules {
-				id
+				id,
+				moduleName,
+				moduleNumber
 			}
 			objectives,
 			collections{

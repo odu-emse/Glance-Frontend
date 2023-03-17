@@ -5,14 +5,18 @@ import Link from 'next/link'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
 
-// import ModuleNavigation from '@/components/modules/ModuleSidebar/ModuleNavigation'
-import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
+// import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
 
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 import { getLessonByID } from '@/scripts/get_lesson_by_id'
+import { useContext } from 'react'
+import GlobalLoadingContext from '@/contexts/global_loading_context'
 
 const ModuleSection = () => {
+	const { setLoading } = useContext(GlobalLoadingContext)
+	setLoading(true)
+
 	const router = useRouter()
 	const { moduleId, lessonId } = router.query
 
@@ -24,15 +28,19 @@ const ModuleSection = () => {
 		gqlFetcher
 	)
 
-	if (status === 'loading') return <p>Loading...</p>
+	if (status === 'loading') return
 	if (error) {
 		console.log(error)
-		return <p>Error...</p>
+		setLoading(false)
+		return (
+			<p>
+				There was an issue loading this page. Please check your internet
+				connection and try again.
+			</p>
+		)
 	}
 
-	if (!data || !data?.lesson) {
-		return <div>Loading...</div>
-	}
+	if (!data || !data?.lesson) return
 
 	function flattenCollections(collections) {
 		const output = []
@@ -58,9 +66,7 @@ const ModuleSection = () => {
 	const lesson = data.lesson[0]
 	const _module = lesson.collection.module
 	const collections = flattenCollections(_module.collections)
-	const content = lesson.content[0]
-
-	console.log(lesson)
+	// const content = lesson.content[0]
 
 	// --- Next/Prev Page calculations
 	const currentLessonIndex = collections.findIndex(
@@ -73,14 +79,28 @@ const ModuleSection = () => {
 			? collections[currentLessonIndex + 1]
 			: null
 
+	setLoading(false)
+
 	return (
-		<section className="mx-auto container h-screen">
-			<h1 className="my-3 text-3xl font-bold">
-				{module.moduleName} - {lesson.name}
-			</h1>
+		<section className="stdcontainer">
+			<header>
+				<h4 className="mb-6">
+					<Link href={`/modules/${_module.id}`} passHref>
+						<a
+							title={`Return to the home page of "${_module.moduleName}"`}
+						>
+							MODULE {_module.moduleNumber}
+						</a>
+					</Link>
+					&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
+					{_module.moduleName}
+				</h4>
+				<h3>{lesson.name}</h3>
+			</header>
+
 			<div className="flex h-4/5 gap-2 my-2">
 				{/* Section content */}
-				<ContentLoader type={content.type} data={content.link} />
+				{/* <ContentLoader type={content.type} data={content.link} /> */}
 
 				{/* Section sidebar */}
 				<aside className="bg-white h-full w-1/4">
@@ -98,7 +118,7 @@ const ModuleSection = () => {
 						<Button>Previous</Button>
 					</Link>
 				)}
-
+				<div className="grow"></div>
 				{nextLesson !== null && (
 					<Link
 						href={`/modules/${moduleId}/collections/${nextLesson.collectionId}/lessons/${nextLesson.lessonId}`}

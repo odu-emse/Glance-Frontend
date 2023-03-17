@@ -5,4 +5,4 @@ echo "=== Running Pre Commit Pipeline. ==="
 # ----------------------------------------------------------------
 
 echo "Fixing Code Formatting w/ Prettier"
-npx prettier --write .
+# npx prettier --write .
