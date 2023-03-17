@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 // import ModuleItem from '@/components/modules/ModuleListItem'
 // import Layout from '@/components/Layout'
@@ -9,8 +9,12 @@ import gqlFetcher from '@/utils/gql_fetcher'
 
 import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
 import { ModuleItem } from '@/components/pages/modules/module/lessons/lesson/module_item/module_item'
+import GlobalLoadingContext from '@/contexts/global_loading_context'
 
 const ModulesPage = () => {
+	const { setLoading } = useContext(GlobalLoadingContext)
+	setLoading(true)
+
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
 		status !== 'loading'
@@ -19,18 +23,24 @@ const ModulesPage = () => {
 		gqlFetcher
 	)
 
-	if (status === 'loading') return <p>Loading...</p>
+	if (status === 'loading') return
 	if (error) {
 		console.log(error)
-		return <p>Error...</p>
+		setLoading(false)
+		return (
+			<p>
+				There was an issue loading this page... Please check your
+				internet connection and try again.
+			</p>
+		)
 	}
 
-	if (!data || !data?.user) {
-		return <div>Loading...</div>
-	}
+	if (!data || !data?.user) return
+
+	setLoading(false)
 
 	return (
-		<section className="container">
+		<section className="stdcontainer">
 			<header>
 				<h1>Modules</h1>
 			</header>

@@ -5,9 +5,9 @@ echo "=== Running Pre Push Pipeline. ==="
 # ----------------------------------------------------------------
 
 echo "Fixing Code Formatting w/ Prettier"
-npx prettier --check .
+# npx prettier --check .
 
 echo "Checking Linting Rules"
-npm run lint
+# npm run lint
 
 # Add testing

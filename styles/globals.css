@@ -32,6 +32,9 @@
 	font-family: 'Lora', serif;
 	color: var(--black);
 	font-size: 12pt;
+
+	-webkit-font-smoothing: antialiased;
+	text-rendering: geometricPrecision;
 }
 
 html {
@@ -151,7 +154,12 @@ li {
 }
 
 /* Standard container */
-.container {
+.stdcontainer {
 	padding: 1rem 1.5rem;
 	border-radius: 1px;
+}
+
+.stdcontainer-sharp {
+	padding: 1rem 1.5rem;
+	border-radius: 0px;
 }
