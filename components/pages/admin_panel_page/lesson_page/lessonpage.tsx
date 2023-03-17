@@ -38,28 +38,18 @@ export const Lessonpage: React.FC<lessonpageProps> = ({
 					size={1}
 				/>
 			</div>
-			<div className='content-area'>
-			<ContentArea />
-		 </div>
-		 <div className='flex flex-row justify-end'>
-			<Button
-			size="small"
-			className='mx-2'
-			>
-			<p>
-				Confirm
-			</p>
-			</Button>
+			<div className="content-area">
+				<ContentArea />
+			</div>
+			<div className="flex flex-row justify-end">
+				<Button size="small" className="mx-2">
+					<p>Confirm</p>
+				</Button>
 
-			<Button
-				size="small"
-				className='mx-2'
-				>
-				<p>
-					Cancel
-				</p>
-			</Button>
-		 </div>
+				<Button size="small" className="mx-2">
+					<p>Cancel</p>
+				</Button>
+			</div>
 		</>
 	)
 }
@@ -68,9 +58,9 @@ export type lessonpageProps = {
 	/**
 	 * A descriptive label for the title
 	 */
-	 lessonName: string,
-	 /**
-	  * A descriptive section number for the title
-	  */
-	 sectionNumber: number,
+	lessonName: string
+	/**
+	 * A descriptive section number for the title
+	 */
+	sectionNumber: number
 }
