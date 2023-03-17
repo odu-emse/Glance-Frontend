@@ -1,10 +1,7 @@
 import { Anchor } from 'components/common/links/anchor/anchor'
 import * as React from 'react'
 
-export const SidebarLessons = ({
-	open,
-	handle,
-}): React.ReactElement => {
+export const SidebarLessons = ({ open, handle }): React.ReactElement => {
 	const lessons = [
 		'Operations Research',
 		'Supply Chain Management',
@@ -12,7 +9,7 @@ export const SidebarLessons = ({
 		'Nonlinear Algebra',
 		'OR Quiz 1',
 	]
-	
+
 	return (
 		<div className="overflow-x-hidden max-w-screen relative min-h-screen">
 			<aside
@@ -26,9 +23,11 @@ export const SidebarLessons = ({
 				</div>
 
 				{lessons.map((lesson, index) => (
-					<div className="font-montserrat text-blue mx-3 blue-800 flex text-base" key={index}>
+					<div
+						className="font-montserrat text-blue mx-3 blue-800 flex text-base"
+						key={index}
+					>
 						<Anchor
-							
 							path={`/lesson`}
 							role="lesson link"
 							className="font-montserrat text-blue m-3 blue-800 flex text-base"
