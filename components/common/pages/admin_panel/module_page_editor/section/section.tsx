@@ -8,7 +8,7 @@ export const ModuleSection = ({
 	const [isClicked, setIsClicked] = useState(false)
 
 	return (
-		<div className="m-2 text-lg flex items-center">
+		<div className="text-lg flex items-center">
 			<span>
 				{isClicked ? (
 					<RxCaretDown size={25} />
@@ -17,7 +17,7 @@ export const ModuleSection = ({
 				)}
 			</span>
 			<div
-				className="cursor-pointer"
+				className="cursor-pointer select-none"
 				onClick={() => setIsClicked(!isClicked)}
 				key={sectionId}
 			>

@@ -1,13 +1,21 @@
 import * as React from 'react'
-import { Sidebar } from './sidebar'
+import { Sidebar, SidebarProps } from './sidebar'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import { SidebarItemProps } from './sidebar_item/sidebar_item'
 
 export default {
 	title: 'Common/Pages/Layouts/Left Sidebar',
 	component: Sidebar,
 } as ComponentMeta<typeof Sidebar>
 
-const Template = (args) => <Sidebar {...args} />
+const Template: ComponentStory<typeof Sidebar> = (args) => {
+	const [open, setOpen] = React.useState(true)
+	return (
+		<div className="overflow-x-hidden max-w-screen relative min-h-screen">
+			<Sidebar {...args} handle={setOpen} open={open} />
+		</div>
+	)
+}
 
 export const Default: ComponentStory<typeof Sidebar> = Template.bind({})
 Default.args = {

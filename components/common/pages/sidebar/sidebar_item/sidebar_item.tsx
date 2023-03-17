@@ -20,6 +20,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 				className="px-4 py-1 mx-1 my-2 rounded cursor-pointer hover:bg-wgray flex gap-2"
 				style={{
 					fontFamily: 'Montserrat, sans-serif',
+					// ...collapsed ? { justifyContent: 'center' } : {}
 				}}
 			>
 				<img src={icon} width={32} height={32} />
