@@ -22,9 +22,11 @@ export const SidebarLessons = () => {
 				</div>
 
 				{lessons.map((lesson, index) => (
-					<div className="font-montserrat text-blue mx-3 blue-800 flex text-base" key={index}>
+					<div
+						className="font-montserrat text-blue mx-3 blue-800 flex text-base"
+						key={index}
+					>
 						<Anchor
-							
 							path={`/lesson`}
 							role="lesson link"
 							className="font-montserrat text-blue m-3 blue-800 flex text-base"
