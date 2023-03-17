@@ -8,7 +8,9 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof SidebarLessons>
 
-const Template: ComponentStory<typeof SidebarLessons> = (args:SidebarLessonsProps) => {
+const Template: ComponentStory<typeof SidebarLessons> = (
+	args: SidebarLessonsProps
+) => {
 	const [open, setOpen] = React.useState(true)
 	return (
 		<div className="overflow-x-hidden max-w-screen relative min-h-screen">
@@ -22,4 +24,3 @@ const Template: ComponentStory<typeof SidebarLessons> = (args:SidebarLessonsProp
 
 export const Default = Template.bind({})
 Default.args = {}
-
