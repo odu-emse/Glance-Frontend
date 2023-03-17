@@ -8,9 +8,18 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof SidebarLessons>
 
-const Template: ComponentStory<typeof SidebarLessons> = (
-	args: SidebarLessonsProps
-) => <SidebarLessons {...args} />
+const Template: ComponentStory<typeof SidebarLessons> = (args:SidebarLessonsProps) => {
+	const [open, setOpen] = React.useState(true)
+	return (
+		<div className="overflow-x-hidden max-w-screen relative min-h-screen">
+			<button onClick={() => setOpen(!open)}>
+				{open ? 'Close panel' : 'Open panel'}
+			</button>
+			<SidebarLessons {...args} handle={setOpen} open={open} />
+		</div>
+	)
+}
 
 export const Default = Template.bind({})
 Default.args = {}
+

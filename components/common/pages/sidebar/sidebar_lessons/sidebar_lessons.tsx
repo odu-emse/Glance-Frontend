@@ -1,7 +1,10 @@
 import { Anchor } from 'components/common/links/anchor/anchor'
 import * as React from 'react'
 
-export const SidebarLessons = () => {
+export const SidebarLessons = ({
+	open,
+	handle,
+}): React.ReactElement => {
 	const lessons = [
 		'Operations Research',
 		'Supply Chain Management',
@@ -9,6 +12,7 @@ export const SidebarLessons = () => {
 		'Nonlinear Algebra',
 		'OR Quiz 1',
 	]
+	
 	return (
 		<div className="overflow-x-hidden max-w-screen relative min-h-screen">
 			<aside
