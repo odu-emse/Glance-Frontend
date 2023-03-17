@@ -10,7 +10,7 @@ const Index = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className="container">
+			<div className="stdcontainer">
 				<div>
 					<h1>H1 - Title 1</h1>
 					<br />

@@ -14,6 +14,7 @@ export const getLessonByID = (lessonID) => {
 				module {
 					id
 					moduleName
+					moduleNumber
 					collections {
 						id
 						position
