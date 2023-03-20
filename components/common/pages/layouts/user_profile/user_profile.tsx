@@ -15,16 +15,29 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 	// const [showPlanOfStudy, setShowPlanOfStudy] = useState(false)
 
 	return (
-		<div className="flex flex-col md:flex-row w-11/12 lg:w-3/4 mx-4 lg:mx-auto  mt-3">
-			<aside className="flex-none flex-col w-full md:w-1/4 mr-8 ">
-				<div className="relative h-48 w-48 mb-3 rounded-lg overflow-clip mx-auto group">
+		<div>
+			<h1 className='text-royalblue ml-6 mb-5 '>{user.firstname} {user.lastName}</h1>
+		<div className="flex flex-col md:flex-row  mt-3">
+			<aside className="flex-none flex-col mr-8 mx-6">
+				<div className="relative h-48 w-48 mb-5 rounded-full overflow-clip mx-auto group">
 					<div className="opacity-0 group-hover:opacity-100 w-full h-full z-10 absolute left-0 transition-opacity top-0 uppercase font-black text-white text-xl tracking-wider flex justify-center items-center">
 						<span className="cursor-pointer">Edit</span>
 					</div>
 					<img src={user.image} alt="..." />
 					<div className="absolute bg-gray-100 opacity-10 group-hover:opacity-70 inset-0"></div>
 				</div>
-				<nav className="flex flex-col  border border-gray-200 shadow-sm rounded-md">
+
+				<div className='flex justify-center'>
+				<Button
+				size="large"
+				>
+				<p>
+					Edit Profile
+				</p>
+				</Button>
+
+				</div>
+				{/* <nav className="flex flex-col  border border-gray-200 shadow-sm rounded-md">
 					<button>
 						<li className=" py-1 px-3 hover:bg-gray-100 border-b border-gray-300 list-none">
 							Profile Details{' '}
@@ -53,10 +66,22 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 							Plan of Study
 						</li>
 					</a>
-				</nav>
+				</nav> */}
 			</aside>
 
-			<div className="grow flex flex-col">
+			<div className='flex flex-col justify-between mx-10'>
+				<div className='contantDetails'>
+					<h6 className="m-0">Contact Information</h6>
+					<p className='email m-0'>{user.email}</p>
+					<p className='phone m-0'>123-4567-890</p>
+				</div>
+				<div>
+					<h6 className='m-0'>Biography</h6>
+					<p className='m-0'>gtrhrt4 </p>
+				</div>
+			</div>
+
+			{/* <div className="grow flex flex-col">
 				<div id="user" className="w-full my-10">
 					<h3 className="text-2xl bold border-b border-gray-200 mb-3">
 						Profile
@@ -177,7 +202,8 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 						</tbody>
 					</table>
 				</div>
-			</div>
+			</div> */}
+		</div>
 		</div>
 	)
 }
