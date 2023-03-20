@@ -10,6 +10,8 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 		lastName: user.lastName,
 		email: user.email,
 	})
+
+	const [isEditMode, setEditMode] = useState(false)
 	// const [showProfile, setShowProfile] = useState(false)
 
 	// const [showPlanOfStudy, setShowPlanOfStudy] = useState(false)
@@ -29,11 +31,10 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 
 				<div className='flex justify-center'>
 				<Button
+				onClick={() => setEditMode(!isEditMode)}
 				size="large"
 				>
-				<p>
-					Edit Profile
-				</p>
+				<p>{isEditMode ? 'Save Changes' : 'Edit Profile'}</p>
 				</Button>
 
 				</div>
@@ -70,15 +71,52 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 			</aside>
 
 			<div className='flex flex-col justify-between mx-10'>
-				<div className='contantDetails'>
-					<h6 className="m-0">Contact Information</h6>
+				{isEditMode ? (
+					<>
+					<p>
+					See Settings to change your preferred contact information.Check the contact methods you’d prefer to be visible to others on your profile.
+					</p>
+					<div>
+					<h5>Biography</h5>
+					<textarea
+                        className="
+                        form-control 
+                        block 
+                        w-1/2 
+                        rounded
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        transition
+                        ease-in-out
+                        m-0
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        placeholder="Write something about yourself..."
+                    ></textarea>
+					</div>
+					</>
+					
+				) : (
+					<>
+					<div className='contantDetails'>
+					<h6 className="m-0">Contact Information:</h6>
 					<p className='email m-0'>{user.email}</p>
 					<p className='phone m-0'>123-4567-890</p>
-				</div>
-				<div>
+					</div>
+
+					<div>
 					<h6 className='m-0'>Biography</h6>
-					<p className='m-0'>gtrhrt4 </p>
-				</div>
+					<p className='m-0'>Joel DeSante is a senior at Old Dominion University, studying Game Design ... </p>
+					</div>
+					</>
+				)}
+				
+				
+
+				
+
 			</div>
 
 			{/* <div className="grow flex flex-col">
