@@ -36,17 +36,17 @@ const Template: ComponentStory<typeof ModuleRequirement> = (
 	)
 	if (error) return <p>Failed to load content...</p>
 	if (!data) return <p>Loading...</p>
-	let transformedArr = [];
+	let moduleNames = [];
 	if(data?.module){
-		dataModule = data.module.forEach(req => {
-			return req.parentModules.forEach(mod => {
-				transformedArr.push(mod.moduleName)
+		dataModule = data.module.forEach(requirment => {
+			return requirment.parentModules.forEach(module => {
+				moduleNames.push(module.moduleName)
 			})
 		})
 	}
-	console.log({transformedArr})
+	console.log({moduleNames})
 
-	return <ModuleRequirement requirements={transformedArr} {...args} />
+	return <ModuleRequirement requirements={moduleNames} {...args} />
 }
 
 export const Default: ComponentStory<typeof ModuleRequirement> = Template.bind({})

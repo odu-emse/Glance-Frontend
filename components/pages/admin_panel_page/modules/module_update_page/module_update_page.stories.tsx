@@ -17,6 +17,7 @@ const Template: ComponentStory<typeof ModuleUpdate> = (args: any) => {
 			query: gql`
 				{
 					module(input: { id: "61560592009b2b64008696c5" }) {
+						id
 						moduleName
 						moduleNumber
 						description

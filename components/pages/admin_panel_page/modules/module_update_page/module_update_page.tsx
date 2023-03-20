@@ -2,26 +2,32 @@ import { ModuleRequirement } from '@/components/common/admin_panel/module_requir
 import { Button } from '@/components/common/button/button'
 import { useState } from 'react'
 import { mutate } from "swr"
+import { gql } from 'graphql-request'
 
 export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 	console.log('details', moduleDetails)
 
 	const [isEditMode, setEditMode] = useState(false)
+	const [updatedModule, setUpdatedModule] = useState({description:""})
 
-    const runMutation = () => {
+	
+    const runMutation = (moduleID, updatedModule) => {
         mutate(async () => {
             fetch('http://localhost:4000/graphql', {
                 method: "POST",
                 body: JSON.stringify({
                     query: gql`
-                        mutation DeleteModule($input: ID!){
-                            deleteModule(id: $input ){
+                        mutation UpdateModule($input: UpdateModule!){
+                            updateModule(input: $input){
                                 id
                             }
                         }
                     `,
                     variables: {
-                        input: moduleID
+                        input: {
+							id: moduleID,
+							...updatedModule
+						}
                     }
                 }),
                 headers: {
@@ -47,9 +53,6 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 						<span className="text-royalblue text-3xl uppercase">
 							{module.moduleNumber}
 						</span>
-						<span className="text-royalblue text-3xl uppercase">
-							{module.moduleNumber}
-						</span>
 					</div>
 				</div>
 			))}
@@ -59,7 +62,7 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 					<p>Resume Module</p>
 				</Button>
 				<Button onClick={() => {setEditMode(!isEditMode)
-                                          runMutation() }} size="small">
+                                          runMutation(moduleDetails[0].id, updatedModule) }} size="small">
 					<p>{isEditMode ? 'Save Changes' : 'Edit Page'}</p>
 				</Button>
 			</div>
@@ -84,7 +87,15 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
                         ease-in-out
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-						placeholder="Module INPUT"
+						placeholder="Describe module here..."
+						onChange={e => {
+							let updatedValue = {description:e.target.value}
+							setUpdatedModule(updatedModule => ({
+								...updatedModule,
+								...updatedValue
+							})
+							)
+						  } }
 					></textarea>
 				) : (
 					<div>
@@ -125,7 +136,15 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
                         transition
                         ease-in-out
                     "
-						placeholder="objectives"
+						placeholder="Add objectives here..."
+						onChange={e => {
+							let updatedValue = {objectives:e.target.value}
+							setUpdatedModule(updatedModule => ({
+								...updatedModule,
+								...updatedValue
+							})
+							)
+						  } }
 					></textarea>
 				) : (
 					<ul className="my-0">
@@ -142,5 +161,13 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 }
 
 export type ModuleUpdateProps = {
-	moduleDetails: Array<any>
+	moduleDetails: Array<moduleType>
+}
+
+export type moduleType = {
+	id : string,
+	moduleName : string
+	moduleNumber : number
+	description : string
+	objectives : Array<string>
 }

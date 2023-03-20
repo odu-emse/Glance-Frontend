@@ -1,20 +1,20 @@
 import { useState } from 'react'
-import { BsArrowReturnRight } from 'react-icons/bs'
+
 import Chips from 'react-chips';
 
 export const ModuleRequirement = ({ requirements }: ModuleRequirementProps) => {
   console.log('pre-req', requirements)
 
   const [searchWord, setsearchWord] = useState('');
-  console.log(searchWord)
+  //console.log(searchWord)
 
   const [selectedPreReqs, setSelectedPreReqs] = useState([]);
 
 
-  function handleSelect(val) {
-    console.log(val)
-    setSelectedPreReqs([...selectedPreReqs, val])
-  }
+  // function handleSelect(val) {
+  //   console.log(val)
+  //   setSelectedPreReqs([...selectedPreReqs, val])
+  // }
 
   function handleChips(chips) {
     console.log({ chips })
@@ -34,18 +34,19 @@ export const ModuleRequirement = ({ requirements }: ModuleRequirementProps) => {
           }}
           value={searchWord}
         /> */}
-      <Chips
-        onChange={handleChips}
-        value={selectedPreReqs}
-        placeholder="Search"
-        suggestions={requirements.filter(req => {
-          return req?.toLowerCase().includes(searchWord.toLowerCase())
-        }).map(disReq => disReq)}
-
-        alwaysRenderSuggestions={true}
-        focusInputOnSuggestionClick={false}
-        >
-      </Chips>
+      <div className="block min-h-[auto] w-1/2 rounded bg-gray-200">
+        <Chips
+          onChange={handleChips}
+          value={selectedPreReqs}
+          placeholder="Search for pre-requisites here..."
+          suggestions={requirements.filter(req => {
+            return req?.toLowerCase().includes(searchWord.toLowerCase())
+          }).map(disReq => disReq)}
+          alwaysRenderSuggestions={true}
+          focusInputOnSuggestionClick={false}
+          >
+        </Chips>
+      </div>
       {/* <ul>
         {requirements.filter(req => {
           return req?.toLowerCase().includes(searchWord.toLowerCase())
