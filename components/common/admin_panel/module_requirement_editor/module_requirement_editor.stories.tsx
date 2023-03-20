@@ -17,6 +17,7 @@ export default {
 const Template: ComponentStory<typeof ModuleRequirement> = (
 	args: ModuleRequirementProps
 ) => {
+	let dataModule;
 	const { data, error } = useSWR(
 		{
 			query: gql`
@@ -35,13 +36,18 @@ const Template: ComponentStory<typeof ModuleRequirement> = (
 	)
 	if (error) return <p>Failed to load content...</p>
 	if (!data) return <p>Loading...</p>
+	let transformedArr = [];
+	if(data?.module){
+		dataModule = data.module.forEach(req => {
+			return req.parentModules.forEach(mod => {
+				transformedArr.push(mod.moduleName)
+			})
+		})
+	}
+	console.log({transformedArr})
 
-	//console.log(data)
-
-	return <ModuleRequirement requirements={data.module} {...args} />
+	return <ModuleRequirement requirements={transformedArr} {...args} />
 }
 
-export const Default: ComponentStory<typeof ModuleRequirement> = Template.bind(
-	{}
-)
+export const Default: ComponentStory<typeof ModuleRequirement> = Template.bind({})
 Default.args = {}

@@ -1,11 +1,36 @@
 import { ModuleRequirement } from '@/components/common/admin_panel/module_requirement_editor/module_requirement_editor'
 import { Button } from '@/components/common/button/button'
 import { useState } from 'react'
+import { mutate } from "swr"
 
 export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 	console.log('details', moduleDetails)
 
 	const [isEditMode, setEditMode] = useState(false)
+
+    const runMutation = () => {
+        mutate(async () => {
+            fetch('http://localhost:4000/graphql', {
+                method: "POST",
+                body: JSON.stringify({
+                    query: gql`
+                        mutation DeleteModule($input: ID!){
+                            deleteModule(id: $input ){
+                                id
+                            }
+                        }
+                    `,
+                    variables: {
+                        input: moduleID
+                    }
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }, false)
+    }
+
 
 	return (
 		<div>
@@ -33,7 +58,8 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 				<Button size="small">
 					<p>Resume Module</p>
 				</Button>
-				<Button onClick={() => setEditMode(!isEditMode)} size="small">
+				<Button onClick={() => {setEditMode(!isEditMode)
+                                          runMutation() }} size="small">
 					<p>{isEditMode ? 'Save Changes' : 'Edit Page'}</p>
 				</Button>
 			</div>
