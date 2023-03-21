@@ -50,14 +50,12 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 					</span>
 
 					<div className="flex flex-row items-center gap-3">
-						<span className="text-royalblue text-3xl uppercase">
-							{module.moduleNumber}
-						</span>
+						<span className="text-gray text-sm uppercase">Module {module.moduleNumber} / Instructed by "instructorName"</span>
 					</div>
 				</div>
 			))}
 
-			<div className="flex flex-row items-center gap-2">
+			<div className="flex flex-row items-center gap-2 border-b py-5 border-gray-300">
 				<Button size="small">
 					<p>Resume Module</p>
 				</Button>
@@ -67,7 +65,7 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 				</Button>
 			</div>
 
-			<div className="description mb-3">
+			<div className="description my-3">
 				<span className="text-royalblue text-base font-bold">
 					Description
 				</span>
