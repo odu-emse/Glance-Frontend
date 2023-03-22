@@ -2,16 +2,23 @@ import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { Anchor } from '../../../links/anchor/anchor'
-
+import { IconContext } from 'react-icons'
 export const Thread: React.FC<ThreadProps> = ({
 	title,
 	body,
 	upvotes,
 	id,
 	userProfile,
+	handleUpvote,
 	children,
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
+	const [isUpvoted, setIsUpvoted] = React.useState(false)
+
+	const _handleUpvote = () => {
+		handleUpvote()
+		setIsUpvoted(!isUpvoted)
+	}
 	let url: string
 	return (
 		<>
@@ -26,8 +33,10 @@ export const Thread: React.FC<ThreadProps> = ({
 						className="shadow-lg rounded-full max-w-full h-6 align-middle border-none"
 					/>
 					<div className="userName font-bold px-2">
-						{userProfile.firstName}
-						{userProfile.lastName}
+						{userProfile.firstName.charAt(0).toUpperCase() +
+							userProfile.firstName.slice(1)}{' '}
+						{userProfile.lastName.charAt(0).toUpperCase() +
+							userProfile.lastName.slice(1)}
 					</div>
 				</Anchor>
 
@@ -61,11 +70,20 @@ export const Thread: React.FC<ThreadProps> = ({
 					<button className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200">
 						<GoCommentDiscussion size={18} />
 					</button>
-					<button className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200 flex flex-row gap-1 justify-center items-center">
+					<button
+						onClick={() => _handleUpvote()}
+						className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200 flex flex-row gap-1 justify-center items-center"
+					>
 						<span className={`${upvotes <= 0 ? 'hidden' : ''}`}>
 							{upvotes}
 						</span>
-						<GoArrowUp size={18} />
+						<IconContext.Provider
+							value={{ color: isUpvoted ? 'red' : '' }}
+						>
+							<div>
+								<GoArrowUp size={18} />
+							</div>
+						</IconContext.Provider>
 					</button>
 				</div>
 			</div>
@@ -121,4 +139,6 @@ export type ThreadProps = {
 	 * The child comments of this thread as an array
 	 */
 	children?: any
+
+	handleUpvote: () => void
 }
