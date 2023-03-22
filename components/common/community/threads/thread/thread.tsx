@@ -21,7 +21,7 @@ export const Thread: React.FC<ThreadProps> = ({
 					className="flex items-center no-underline"
 				>
 					<img
-						src={userProfile.image}
+						src={userProfile.picURL || "https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"}
 						alt="user profile image"
 						className="shadow-lg rounded-full max-w-full h-6 align-middle border-none"
 					/>
@@ -93,7 +93,7 @@ export type UserAccount = {
 	/**
 	 * The image URL of the user
 	 */
-	image: string
+	picURL: string
 }
 
 export type ThreadProps = {

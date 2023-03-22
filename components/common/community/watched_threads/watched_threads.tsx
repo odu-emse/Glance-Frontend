@@ -7,7 +7,7 @@ export const WatchedThreads = ({ threads }: WatchedThreadsProps) => {
 			{threads.map((thread, threadIndex) => (
 				<Anchor
 					key={threadIndex}
-					path={`/communities/modules/${thread.module_id}/threads/${thread.thread_id}`}
+					path={`/communities/modules/${thread.parentLesson.collection.module.id}/threads/${thread.id}`}
 					role="thread link"
 					className="text-blue-800 flex py-1 text-lg"
 				>
