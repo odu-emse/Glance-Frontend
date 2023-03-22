@@ -1,6 +1,7 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../src/stories/InformationCard.stories'
+import * as stories from '@/common/information_card/information_card.stories'
 import terminalLog from '../support/component'
 
 const { Default, Primary, Secondary } = composeStories(stories)
@@ -9,7 +10,6 @@ describe('InformationCard.tsx', function () {
 	const percentComplete = 'Complete'
 	const statusMessage = 'Spend 13 or more hours in module view'
 	const testModule = 'Introduction to Organization Analysis'
-	const moduleIdentifier = 'M 137G'
 	const grade = 'A'
 	beforeEach(() => {
 		cy.injectAxe()

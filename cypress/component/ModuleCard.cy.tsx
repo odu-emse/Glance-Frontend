@@ -1,9 +1,10 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../src/stories/ModuleCard.stories'
+import * as stories from '@/common/module_card/module_card.stories'
 import terminalLog from '../support/component'
 
-const { Primary, Secondary, Tertiary } = composeStories(stories)
+const { Primary } = composeStories(stories)
 
 describe('ModuleCard.tsx', function () {
 	const courseName = 'ENMA'
@@ -53,9 +54,4 @@ describe('ModuleCard.tsx', function () {
 			'rgb(164, 202, 254)'
 		)
 	})
-
-	// it('should change p tag text to continue when completion prop is set to true'), function () {
-	//     cy.mount(<Tertiary module={moduleObject} />)
-	//     cy.get('div.moduleCompleted').should('', "")
-	// }
 })

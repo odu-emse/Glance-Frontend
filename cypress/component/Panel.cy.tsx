@@ -1,8 +1,9 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../src/stories/Panel.stories'
+import * as stories from '@/common/panel/panel.stories'
 import terminalLog from '../support/component'
-import { PieComponent } from '../../src/components/Chart'
+import { PieComponent } from '@/common/charts/pie/pie'
 
 const { Text, Chart, List } = composeStories(stories)
 

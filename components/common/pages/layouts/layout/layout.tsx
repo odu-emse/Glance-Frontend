@@ -18,10 +18,11 @@ export const Layout = ({ children }) => {
 		)
 	}
 
-	if (status !== 'loading' && session === null) {
-		router.push('/login')
-		return
-	}
+	// TODO: we might want to uncomment this once we have next routing integrated
+	// if (status !== 'loading' && session === null) {
+	// 	router.push('/login')
+	// 	return
+	// }
 
 	return (
 		<section>
