@@ -1,7 +1,7 @@
 #landing-box {
-    background-image: url("/images/student-gettin-outta-here.jpg");
+	background-image: url('/images/student-gettin-outta-here.jpg');
 }
 
 h1.white {
-    color: white !important;
+	color: white !important;
 }
