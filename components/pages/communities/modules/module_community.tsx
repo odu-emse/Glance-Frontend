@@ -177,29 +177,29 @@ export const ModuleCommunity: React.FC<
 					<WatchedThreads
 						threads={[
 							{
-								'id': '63e3f79631115da3472a72dc',
-								'title': 'this is testing',
-								'parentLesson': {
+								id: '63e3f79631115da3472a72dc',
+								title: 'this is testing',
+								parentLesson: {
 									id: '63e3f79631115da3472a72dc',
-									'collection': {
+									collection: {
 										id: '641c71563985a78ee17cbca2',
-										'module': {
-											'moduleName': 'Some dummy data',
-											'id': '63e129a9cbfa5080578a7986',
+										module: {
+											moduleName: 'Some dummy data',
+											id: '63e129a9cbfa5080578a7986',
 										},
 									},
 								},
 							},
 							{
-								'id': '641c6f4f3985a78ee17cbca0',
-								'title': 'Hydration',
-								'parentLesson': {
+								id: '641c6f4f3985a78ee17cbca0',
+								title: 'Hydration',
+								parentLesson: {
 									id: '641c71563985a78ee17cbca2',
-									'collection': {
+									collection: {
 										id: '641c71563985a78ee17cbca2',
-										'module': {
-											'moduleName': 'Some dummy data',
-											'id': '63e129a9cbfa5080578a7986',
+										module: {
+											moduleName: 'Some dummy data',
+											id: '63e129a9cbfa5080578a7986',
 										},
 									},
 								},
