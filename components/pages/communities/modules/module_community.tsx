@@ -7,9 +7,9 @@ import gqlFetcher from '../../../../utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import useSWR from 'swr'
 import { useRouter } from 'next/router'
-import { useSession } from 'next-auth/react';
-import { User } from '../../../../types';
-import { Layout } from '@/common/pages/layouts/layout/layout';
+import { useSession } from 'next-auth/react'
+import { User } from '../../../../types'
+import { Layout } from '@/common/pages/layouts/layout/layout'
 
 export type ModuleCommunityProps = {}
 
@@ -17,9 +17,10 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 	const router = useRouter()
 	const { data: session } = useSession()
 	const { module } = router.query
-	const { data: userData, error: userError } = useSWR(session ?
-		{
-			query: gql`{
+	const { data: userData, error: userError } = useSWR(
+		session
+			? {
+					query: gql`{
           user(input:{
               openID: "${session?.openId}"
           }){
@@ -28,12 +29,14 @@ export const ModuleCommunity = ({}): React.ReactElement => {
               }
           }
       }`,
-		} : null,
+			  }
+			: null,
 		gqlFetcher
 	) as { data: { user: Array<User> }; error: Error }
-	const { data, error } = useSWR(userData ?
-		{
-			query: gql`
+	const { data, error } = useSWR(
+		userData
+			? {
+					query: gql`
           {
               moduleEnrollment(input:{
                   module: "${module}"
@@ -72,12 +75,14 @@ export const ModuleCommunity = ({}): React.ReactElement => {
               }
           }
 			`,
-		} : null,
+			  }
+			: null,
 		gqlFetcher
 	)
 
-	const {data: instructorData, error: instructorError} = useSWR({
-		query: gql`{
+	const { data: instructorData, error: instructorError } = useSWR(
+		{
+			query: gql`{
 				moduleEnrollment(input:{role: TEACHER, module: "${module}"}){
 						id
             plan{
@@ -89,8 +94,10 @@ export const ModuleCommunity = ({}): React.ReactElement => {
                 }
             }
 				}
-		}`
-	}, gqlFetcher)
+		}`,
+		},
+		gqlFetcher
+	)
 
 	if (error || userError || instructorError) {
 		console.log(error)
@@ -111,19 +118,27 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 
 						<div className="flex my-2 items-center">
 							<img
-								src={instructorData.moduleEnrollment[0].plan.student.picURL}
+								src={
+									instructorData.moduleEnrollment[0].plan
+										.student.picURL
+								}
 								alt="profile image"
 								className="shadow-lg rounded-full max-w-full h-4 align-middle border-none"
 							/>
 
 							<small className="pl-2 font-bold">
-								{instructorData.moduleEnrollment[0].plan.student.email}
+								{
+									instructorData.moduleEnrollment[0].plan
+										.student.email
+								}
 							</small>
 
 							<small>
 								<span className="px-1 font-bold">&bull;</span>
-								{instructorData.moduleEnrollment[0].plan.student.firstName +
-									instructorData.moduleEnrollment[0].plan.student.lastName}
+								{instructorData.moduleEnrollment[0].plan.student
+									.firstName +
+									instructorData.moduleEnrollment[0].plan
+										.student.lastName}
 							</small>
 						</div>
 
@@ -141,38 +156,45 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 								options={[]}
 							/>
 						</div>
-						{data.moduleEnrollment[0].module.collections.map((col) =>
-							col.lessons.map((les) =>
-								 (
-											les.threads.filter(v => v.title).sort((a, b) => new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf()).map((thr, index) => (
-												<div className="m-3" key={index}>
-													<div className="my-4">
-														<Thread
-															body={thr.body}
-															id="12345"
-															title={thr.title}
-															upvotes={thr.upvotes.length || 0}
-															userProfile={thr.author}
-														/>
-													</div>
-												</div>
-											))
+						{data.moduleEnrollment[0].module.collections.map(
+							(col) =>
+								col.lessons.map((les) =>
+									les.threads
+										.filter((v) => v.title)
+										.sort(
+											(a, b) =>
+												new Date(
+													b.updatedAt
+												).valueOf() -
+												new Date(a.updatedAt).valueOf()
 										)
-							)
+										.map((thr, index) => (
+											<div className="m-3" key={index}>
+												<div className="my-4">
+													<Thread
+														body={thr.body}
+														id="12345"
+														title={thr.title}
+														upvotes={
+															thr.upvotes
+																.length || 0
+														}
+														userProfile={thr.author}
+													/>
+												</div>
+											</div>
+										))
+								)
 						)}
 					</>
 				}
 			</div>
 			<aside className="mx-10 flex-none">
 				<div className="mb-10">
-					<ActiveModules
-						modules={[]}
-					/>
+					<ActiveModules modules={[]} />
 				</div>
 				<div className="mb-10">
-					<WatchedThreads
-						threads={[]}
-					/>
+					<WatchedThreads threads={[]} />
 				</div>
 			</aside>
 		</div>

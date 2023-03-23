@@ -50,9 +50,10 @@ export type ModuleEnrollmentQueryResponse = {
 const Index = ({}) => {
 	const { data: session } = useSession()
 
-	const { data: userData, error: userError } = useSWR(session ?
-			{
-				query: gql`{
+	const { data: userData, error: userError } = useSWR(
+		session
+			? {
+					query: gql`{
             user(input:{
                 openID: "${session?.openId}"
             }){
@@ -70,49 +71,52 @@ const Index = ({}) => {
                 }
             }
         }`,
-			} : null,
+			  }
+			: null,
 		gqlFetcher
 	) as { data: { user: Array<User> }; error: Error }
 
-	const { data, error } = useSWR(userData ?
-		{
-			query: gql`
-          {
-              moduleEnrollment(
-                  input: { plan: "63da9120020a625cc55f64a6" }
-              ) {
-                  id
-                  status
-                  role
-                  module {
-                      id
-                      moduleName
-                      collections {
-                          lessons {
-                              id
-                              threads {
-                                  id
-                                  title
-                                  body
-                                  author {
-                                      id
-                                      firstName
-                                      lastName
-                                      email
-                                      picURL
-                                  }
-                                  upvotes {
-                                      id
-                                  }
-                                  updatedAt
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-			`,
-		} : null,
+	const { data, error } = useSWR(
+		userData
+			? {
+					query: gql`
+						{
+							moduleEnrollment(
+								input: { plan: "63da9120020a625cc55f64a6" }
+							) {
+								id
+								status
+								role
+								module {
+									id
+									moduleName
+									collections {
+										lessons {
+											id
+											threads {
+												id
+												title
+												body
+												author {
+													id
+													firstName
+													lastName
+													email
+													picURL
+												}
+												upvotes {
+													id
+												}
+												updatedAt
+											}
+										}
+									}
+								}
+							}
+						}
+					`,
+			  }
+			: null,
 		gqlFetcher
 	) as { data: ModuleEnrollmentQueryResponse; error: Error }
 
@@ -161,7 +165,7 @@ const Index = ({}) => {
 								(collection) => {
 									return collection.lessons.map((lesson) => {
 										return lesson.threads
-											.filter(v => v.title !== null)
+											.filter((v) => v.title !== null)
 											.sort(
 												(a, b) =>
 													new Date(
