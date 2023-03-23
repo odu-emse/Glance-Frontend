@@ -57,6 +57,9 @@ const Index = ({}) => {
             user(input:{
                 openID: "${session?.openId}"
             }){
+								plan {
+									id
+                }
                 watchedThreads{
                     id
                     title
@@ -82,7 +85,7 @@ const Index = ({}) => {
 					query: gql`
 						{
 							moduleEnrollment(
-								input: { plan: "63da9120020a625cc55f64a6" }
+								input: { plan: "${userData.user[0].plan.id}" }
 							) {
 								id
 								status
@@ -118,7 +121,7 @@ const Index = ({}) => {
 			  }
 			: null,
 		gqlFetcher
-	) as { data: ModuleEnrollmentQueryResponse; error: Error }
+	)
 
 	if (error || userError) return <p>Failed to load content...</p>
 	if (!data || !userData) return <p>Loading...</p>
