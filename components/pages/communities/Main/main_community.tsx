@@ -1,53 +1,52 @@
-import { Thread } from '@/common/community/threads/thread/thread';
-import { WatchedThreads } from '@/common/community/watched_threads/watched_threads';
-import { Input } from '@/common/forms/inputs/input/input';
-import { ModuleList } from '@/common/pages/module_list/module_list';
-import * as React from 'react';
+import { Thread } from '@/common/community/threads/thread/thread'
+import { WatchedThreads } from '@/common/community/watched_threads/watched_threads'
+import { Input } from '@/common/forms/inputs/input/input'
+import { ModuleList } from '@/common/pages/module_list/module_list'
+import * as React from 'react'
 
 export const MainCommunity: React.FC<MainCommunityProps> = ({
-																															threads,
-																														}): React.ReactElement => {
-	const userName = 'joeldesante';
-	const userEmail = 'jdsante@odu.edu';
-	const moduleName = 'This is the name of the module';
+	threads,
+}): React.ReactElement => {
+	const userName = 'joeldesante'
+	const userEmail = 'jdsante@odu.edu'
+	const moduleName = 'This is the name of the module'
 	return (
-		<div className='m-8 flex'>
-			<div className='m-10 grow'>
-				<p className='text-3xl font-semibold'>{moduleName}</p>
-				<div className='flex my-2 items-center'>
+		<div className="m-8 flex">
+			<div className="m-10 grow">
+				<p className="text-3xl font-semibold">{moduleName}</p>
+				<div className="flex my-2 items-center">
 					<img
-						src='https://i.pinimg.com/custom_covers/222x/85498161615209203_1636332751.jpg'
-						alt='profile image'
-						className='shadow-lg rounded-full max-w-full h-4 align-middle border-none'
+						src="https://i.pinimg.com/custom_covers/222x/85498161615209203_1636332751.jpg"
+						alt="profile image"
+						className="shadow-lg rounded-full max-w-full h-4 align-middle border-none"
 					/>
-					<small className='pl-2 font-bold'>{userName}</small>
+					<small className="pl-2 font-bold">{userName}</small>
 					<small>
-						<span className='px-1 font-bold'>&bull;</span>
+						<span className="px-1 font-bold">&bull;</span>
 						{userEmail}
 					</small>
 				</div>
-				<div className='flex items-center'>
-					<h1 className='text-lg font-semibold flex-none pr-20'>
+				<div className="flex items-center">
+					<h1 className="text-lg font-semibold flex-none pr-20">
 						Recent Threads
 					</h1>
 					<Input
-						defaultValue=''
-						label='Search'
-						name='floating_search'
-						onChange={function noRefCheck() {
-						}}
-						role='search'
-						type='search'
+						defaultValue=""
+						label="Search"
+						name="floating_search"
+						onChange={function noRefCheck() {}}
+						role="search"
+						type="search"
 						options={[]}
 					/>
 				</div>
-				<div className='m-2'>
+				<div className="m-2">
 					{threads.map((thread, index) => (
-						<div className='my-4' key={index}>
+						<div className="my-4" key={index}>
 							<Thread
-								body='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat diam vitae nibh mollis, dignissim mollis augue porttitor. Aliquam viverra auctor semper. Vestibulum placerat luctus tortor eu iaculis. Fusce a ullamcorper sapien. Phasellus at sollicitudin mauris. Duis suscipit, libero at consectetur vestibulum, leo lectus tristique mauris, convallis gravida est elit eu nibh. Mauris efficitur ultrices tincidunt. Nam sed tincidunt velit. Suspendisse gravida porta mi a egestas.'
-								id='12345'
-								title='How did the United States land on the moon?'
+								body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat diam vitae nibh mollis, dignissim mollis augue porttitor. Aliquam viverra auctor semper. Vestibulum placerat luctus tortor eu iaculis. Fusce a ullamcorper sapien. Phasellus at sollicitudin mauris. Duis suscipit, libero at consectetur vestibulum, leo lectus tristique mauris, convallis gravida est elit eu nibh. Mauris efficitur ultrices tincidunt. Nam sed tincidunt velit. Suspendisse gravida porta mi a egestas."
+								id="12345"
+								title="How did the United States land on the moon?"
 								upvotes={10}
 								userProfile={{
 									firstName: 'joel',
@@ -60,8 +59,8 @@ export const MainCommunity: React.FC<MainCommunityProps> = ({
 					))}
 				</div>
 			</div>
-			<aside className='mx-10 flex-none'>
-				<div className='mb-10'>
+			<aside className="mx-10 flex-none">
+				<div className="mb-10">
 					<ModuleList
 						modules={[
 							{
@@ -83,66 +82,66 @@ export const MainCommunity: React.FC<MainCommunityProps> = ({
 						]}
 					/>
 				</div>
-				<div className='mb-10'>
+				<div className="mb-10">
 					<WatchedThreads
 						threads={[
 							{
-								'id': '63e3f79631115da3472a72dc',
-								'title': 'this is testing',
-								'parentLesson': {
+								id: '63e3f79631115da3472a72dc',
+								title: 'this is testing',
+								parentLesson: {
 									id: '63e3f79631115da3472a72dc',
-									'collection': {
+									collection: {
 										id: '641c71563985a78ee17cbca2',
-										'module': {
-											'moduleName': 'Some dummy data',
-											'id': '63e129a9cbfa5080578a7986',
+										module: {
+											moduleName: 'Some dummy data',
+											id: '63e129a9cbfa5080578a7986',
 										},
 									},
 								},
 							},
 							{
-								'id': '641c6f4f3985a78ee17cbca0',
-								'title': 'Hydration',
-								'parentLesson': {
+								id: '641c6f4f3985a78ee17cbca0',
+								title: 'Hydration',
+								parentLesson: {
 									id: '641c71563985a78ee17cbca2',
-									'collection': {
+									collection: {
 										id: '641c71563985a78ee17cbca2',
-										'module': {
-											'moduleName': 'Some dummy data',
-											'id': '63e129a9cbfa5080578a7986',
+										module: {
+											moduleName: 'Some dummy data',
+											id: '63e129a9cbfa5080578a7986',
 										},
 									},
 								},
 							},
 							{
-								'id': '641c712a3985a78ee17cbca1',
-								'parentLesson': {
+								id: '641c712a3985a78ee17cbca1',
+								parentLesson: {
 									id: '641c71563985a78ee17cbca2',
-									'collection': {
+									collection: {
 										id: '641c71563985a78ee17cbca2',
-										'module': {
-											'moduleName': 'Some dummy data',
-											'id': '63e129a9cbfa5080578a7986',
+										module: {
+											moduleName: 'Some dummy data',
+											id: '63e129a9cbfa5080578a7986',
 										},
 									},
 								},
 							},
 							{
-								'id': '641c71563985a78ee17cbca2',
-								'title': 'CATS CATS CATS',
-								'parentLesson': {
+								id: '641c71563985a78ee17cbca2',
+								title: 'CATS CATS CATS',
+								parentLesson: {
 									id: '641c71563985a78ee17cbca2',
-									'collection': {
+									collection: {
 										id: '641c71563985a78ee17cbca2',
-										'module': {
-											'id': '63e129a9cbfa5080578a7986',
-											'collections': [
+										module: {
+											id: '63e129a9cbfa5080578a7986',
+											collections: [
 												{
-													'id': '641c6f4f3985a78ee17cbca0',
-													'lessons': [
+													id: '641c6f4f3985a78ee17cbca0',
+													lessons: [
 														{
-															'id': '64134bd645693aa3e9813e8e',
-															'threads': [],
+															id: '64134bd645693aa3e9813e8e',
+															threads: [],
 															name: 'Lesson 1',
 															collection: {
 																id: '64134bd645693aa3e9813e8e',
@@ -158,14 +157,13 @@ export const MainCommunity: React.FC<MainCommunityProps> = ({
 									},
 								},
 							},
-						]
-						}
+						]}
 					/>
 				</div>
 			</aside>
 		</div>
-	);
-};
+	)
+}
 
 export type MainCommunityProps = {
 	threads: Array<object>
