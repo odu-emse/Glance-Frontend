@@ -24,13 +24,3 @@ export const WatchedThreads = ({ threads }: { threads: Array<ThreadType> }) => {
 		</>
 	)
 }
-
-export type WatchedThreadsProps = {
-	threads: Array<WatchedThreadsObkect>
-}
-
-type WatchedThreadsObkect = {
-	module_id: string
-	thread_id: string
-	module_name: string
-}
