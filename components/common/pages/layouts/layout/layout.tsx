@@ -7,7 +7,8 @@ import { useRouter } from 'next/router'
 
 export const Layout = ({ children }) => {
 	const router = useRouter()
-	const [isLoading, setLoading] = useState(true)
+	const [isLoading, setLoading] = useState(false)
+	const [open, setOpen] = useState(true)
 	const { data: session, status } = useSession()
 
 	if (status === 'loading') {
@@ -31,6 +32,8 @@ export const Layout = ({ children }) => {
 				<Sidebar
 					isLoading={status === 'loading'}
 					userSession={session}
+					handle={setOpen}
+					open={open}
 				/>
 				<main className="grow">
 					<GlobalLoadingContext.Provider
