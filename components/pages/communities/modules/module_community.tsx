@@ -34,66 +34,68 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 		gqlFetcher
 	) as { data: { user: Array<User> }; error: Error }
 	const { data, error } = useSWR(
-		userData
-			&& {
-					query: gql` query CommunitiesPageQuery($moduleID: ID, $role: UserRole!, $planID: ID){
-              roleQuery: moduleEnrollment(input:{
-                  module: $moduleID
-                  role: $role
-              }){
-                  id
-                  plan {
-                      student {
-                          firstName
-                          lastName
-                          email
-                          picURL
-                      }
-                  }
-              }
-              userQuery: moduleEnrollment(input:{
-                  module: $moduleID
-                  plan: $planID
-              }){
-                  id
-                  status
-                  role
-                  module {
-                      id
-                      collections {
-                          id
-                          lessons {
-                              id
-                              name
-                              threads {
-                                  id
-                                  title
-                                  body
-                                  updatedAt
-                                  createdAt
-                                  author {
-                                      id
-                                      email
-                                      firstName
-                                      lastName
-                                      picURL
-                                  }
-                                  upvotes {
-                                      id
-                                  }
-                              }
-                          }
-                      }
-                  }
-              }
+		userData && {
+			query: gql`
+				query CommunitiesPageQuery(
+					$moduleID: ID
+					$role: UserRole!
+					$planID: ID
+				) {
+					roleQuery: moduleEnrollment(
+						input: { module: $moduleID, role: $role }
+					) {
+						id
+						plan {
+							student {
+								firstName
+								lastName
+								email
+								picURL
+							}
+						}
 					}
+					userQuery: moduleEnrollment(
+						input: { module: $moduleID, plan: $planID }
+					) {
+						id
+						status
+						role
+						module {
+							id
+							collections {
+								id
+								lessons {
+									id
+									name
+									threads {
+										id
+										title
+										body
+										updatedAt
+										createdAt
+										author {
+											id
+											email
+											firstName
+											lastName
+											picURL
+										}
+										upvotes {
+											id
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			`,
 			variables: {
-						moduleID: module,
-						planID: userData.user[0].plan.id,
-						role: 'TEACHER'
-			}
-			  },
+				moduleID: module,
+				planID: userData.user[0].plan.id,
+				role: 'TEACHER',
+			},
+		},
 		gqlFetcher
 	)
 
@@ -116,27 +118,19 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 
 						<div className="flex my-2 items-center">
 							<img
-								src={
-									data.roleQuery[0].plan
-										.student.picURL
-								}
+								src={data.roleQuery[0].plan.student.picURL}
 								alt="profile image"
 								className="shadow-lg rounded-full max-w-full h-4 align-middle border-none"
 							/>
 
 							<small className="pl-2 font-bold">
-								{
-									data.roleQuery[0].plan
-										.student.email
-								}
+								{data.roleQuery[0].plan.student.email}
 							</small>
 
 							<small>
 								<span className="px-1 font-bold">&bull;</span>
-								{data.roleQuery[0].plan.student
-									.firstName +
-									data.roleQuery[0].plan
-										.student.lastName}
+								{data.roleQuery[0].plan.student.firstName +
+									data.roleQuery[0].plan.student.lastName}
 							</small>
 						</div>
 
@@ -154,35 +148,31 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 								options={[]}
 							/>
 						</div>
-						{data.userQuery[0].module.collections.map(
-							(col) =>
-								col.lessons.map((les) =>
-									les.threads
-										.filter((v) => v.title)
-										.sort(
-											(a, b) =>
-												new Date(
-													b.updatedAt
-												).valueOf() -
-												new Date(a.updatedAt).valueOf()
-										)
-										.map((thr, index) => (
-											<div className="m-3" key={index}>
-												<div className="my-4">
-													<Thread
-														body={thr.body}
-														id="12345"
-														title={thr.title}
-														upvotes={
-															thr.upvotes
-																.length || 0
-														}
-														userProfile={thr.author}
-													/>
-												</div>
+						{data.userQuery[0].module.collections.map((col) =>
+							col.lessons.map((les) =>
+								les.threads
+									.filter((v) => v.title)
+									.sort(
+										(a, b) =>
+											new Date(b.updatedAt).valueOf() -
+											new Date(a.updatedAt).valueOf()
+									)
+									.map((thr, index) => (
+										<div className="m-3" key={index}>
+											<div className="my-4">
+												<Thread
+													body={thr.body}
+													id="12345"
+													title={thr.title}
+													upvotes={
+														thr.upvotes.length || 0
+													}
+													userProfile={thr.author}
+												/>
 											</div>
-										))
-								)
+										</div>
+									))
+							)
 						)}
 					</>
 				}
