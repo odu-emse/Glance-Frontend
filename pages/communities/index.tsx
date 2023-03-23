@@ -1,100 +1,14 @@
 import { Thread } from '@/components/common/community/threads/thread/thread'
-import useSWR from 'swr'
-import { gql } from 'graphql-request'
-import gqlFetcher from '@/utils/gql_fetcher'
-import * as React from 'react'
-import { Input } from '@/common/forms/inputs/input/input'
-import { ModuleList } from '@/common/pages/module_list/module_list'
-import { WatchedThreads } from '@/common/community/watched_threads/watched_threads'
-import { Layout } from '@/common/pages/layouts/layout/layout'
-import { useSession } from 'next-auth/react'
-
-export type Module = {
-	id: string
-	moduleNumber: number
-	moduleName: string
-	description: string
-	duration: number
-	intro: string
-	numSlides: number
-	keywords: string[]
-	objectives: string[]
-	createdAt: Date
-	updatedAt: Date
-	members: ModuleEnrollment[]
-	parentModules: Module[]
-	subModules: Module[]
-	collections: Collection[]
-	courseIDs: string[]
-}
-
-export type User = {
-	id: string
-	openID: string
-	email: string
-	picURL: string | ''
-	createdAt?: string
-	firstName: string | null
-	lastName: string | null
-	middleName?: string | null
-	isAdmin?: boolean | null
-	isActive?: boolean | null
-	plan?: PlanOfStudy | null
-	watchedThreads?: Array<ThreadType | null> | null
-	createdThreads?: Array<ThreadType | null> | null
-}
-
-export type PlanOfStudy = {
-	id: string
-	student?: User | null
-	modules?: Array<ModuleEnrollment | null> | null
-	modulesLeft?: Array<ModuleEnrollment | null> | null
-}
-
-export type ModuleEnrollment = {
-	id: string
-	enrolledAt: Date
-	role: 'STUDENT' | 'TEACHER' | 'GRADER'
-	status: 'ACTIVE' | 'INACTIVE'
-	module: Module
-	plan?: PlanOfStudy | null
-	inactivePlan?: PlanOfStudy | null
-}
-
-export type Collection = {
-	id: string
-	name: string
-	createdAt: Date
-	updatedAt: Date
-	lessons?: Nullable<Nullable<Lesson>[]>
-	module: Module
-	moduleID: string
-	position?: Nullable<number>
-}
-
-export type ThreadType = {
-	id: string
-	title?: string | null
-	author: User
-	body: string
-	comments?: Array<ThreadType | null> | null
-	upvotes?: Array<User | null>
-	usersWatching?: Array<User | null>
-	parentLesson?: Nullable<Lesson>
-	createdAt: Date
-	updatedAt: Date
-	parentThread?: Nullable<ThreadType>
-	parentThreadID?: Nullable<string>
-}
-
-type Lesson = {
-	id: string
-	name: string
-	threads?: Nullable<Nullable<ThreadType>[]>
-	position?: Nullable<number>
-}
-
-type Nullable<T> = T | null
+import useSWR from 'swr';
+import { gql } from 'graphql-request';
+import gqlFetcher from '@/utils/gql_fetcher';
+import * as React from 'react';
+import { Input } from '@/common/forms/inputs/input/input';
+import { ModuleList } from '@/common/pages/module_list/module_list';
+import { WatchedThreads } from '@/common/community/watched_threads/watched_threads';
+import { Layout } from '@/common/pages/layouts/layout/layout';
+import { useSession } from 'next-auth/react';
+import { Collection, Lesson, Module, ModuleEnrollment, ThreadType, User } from '../../types';
 
 export type ModuleEnrollmentQueryResponse = {
 	moduleEnrollment: Array<
@@ -128,7 +42,6 @@ export type ModuleEnrollmentQueryResponse = {
 
 const Index = ({}) => {
 	const { data: session } = useSession()
-	console.log(session)
 	const { data, error } = useSWR(
 		{
 			query: gql`
@@ -146,6 +59,7 @@ const Index = ({}) => {
 								lessons {
 									id
 									threads {
+										id
 										title
 										comments {
 											id
@@ -192,6 +106,7 @@ const Index = ({}) => {
                 parentLesson{
                     collection{
                         module{
+														moduleName
                             id
                         }
                     }
@@ -201,11 +116,12 @@ const Index = ({}) => {
     }`,
 		},
 		gqlFetcher
-	) as { data: User[]; error: Error }
+	) as { data: {user: Array<User>}; error: Error }
 
 	if (error) return <p>Failed to load content...</p>
 	if (!data) return <p>Loading...</p>
 	// if (!userData) return <p>Loading...</p>
+
 	return (
 		<div className="m-8 flex">
 			<div className="m-10 grow">
@@ -249,7 +165,6 @@ const Index = ({}) => {
 									return collection.lessons.map((lesson) => {
 										return lesson.threads.map(
 											(thread, threadMapIndex) => {
-												console.log(thread)
 												return (
 													<div
 														className="my-4"
@@ -285,17 +200,17 @@ const Index = ({}) => {
 					/>
 				</div>
 				<div className="mb-10">
-					{/*<WatchedThreads*/}
-					{/*	threads={userData.map(v => v).watchedThreads || []}*/}
-					{/*/>*/}
+					<WatchedThreads
+						threads={userData?.user[0].watchedThreads.map(v => v) || []}
+					/>
 				</div>
 			</aside>
 		</div>
 	)
 }
 
-// Index.getLayout = function getLayout(page) {
-// 	return <Layout>{page}</Layout>
-// }
+Index.getLayout = function getLayout(page) {
+	return <Layout>{page}</Layout>
+}
 
 export default Index
