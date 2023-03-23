@@ -63,17 +63,17 @@ export type ContentAreaProps = {
 	/**
 	 * useDropzone hook just binds the necessary handlers to create a drag 'n' drop zone
 	 */
-	useDropzone: string
+	useDropzone?: string
 	/**
 	 * the getRootProps() fn to get the props required for drag 'n' drop and use them on any element.
 	 */
-	getRootProps: Function
+	getRootProps?: Function
 	/**
 	 *  the getInputProps() fn is used for click and keydown behavior
 	 */
-	getInputProps: Function
+	getInputProps?: Function
 	/**
 	 *  the acceptedFiles() fn is used for track and map the uploaded files to the list
 	 */
-	acceptedFiles: Function
+	acceptedFiles?: Function
 }
