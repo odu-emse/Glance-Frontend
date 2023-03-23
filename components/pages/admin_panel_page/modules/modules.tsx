@@ -91,7 +91,7 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 			<DndContext
 				onDragEnd={handleOnDragEnd}
 				onDragStart={handleOnDragStart}
-				collisonDetection={closestCenter}
+				collisionDetection={closestCenter}
 				sensors={sensors}
 			>
 				<SortableContext
