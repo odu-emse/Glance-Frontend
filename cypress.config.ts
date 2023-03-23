@@ -1,11 +1,11 @@
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
-	projectId: 'ye2f54',
+	projectId: 'fzf5cw',
 	component: {
 		devServer: {
-			framework: 'react',
-			bundler: 'vite',
+			framework: 'next',
+			bundler: 'webpack',
 		},
 		setupNodeEvents(on, config) {
 			on('task', {

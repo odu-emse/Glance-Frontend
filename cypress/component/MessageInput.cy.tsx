@@ -1,19 +1,10 @@
+/// <reference types="cypress" />
 import * as React from 'react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from '../../storybook/stories/MessageInput.stories'
-import terminalLog from '../support/component'
-import { MessageInput } from '../../storybook/components/MessageInput/MessageInput'
-import cypressConfig from 'cypress.config'
-
+import * as stories from '@/common/forms/inputs/input/input.stories'
 const { Primary } = composeStories(stories)
-const { Default } = composeStories(stories)
 
-// describe('MessageInput.tsx', function () {
-// 	beforeEach(() => {
-// 		cy.injectAxe()
-// 	})
 describe('MessageInput.tsx', function () {
-	const send = 'Submit'
 	beforeEach(() => {
 		cy.injectAxe()
 	})
