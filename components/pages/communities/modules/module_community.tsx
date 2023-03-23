@@ -6,66 +6,99 @@ import * as React from 'react'
 import gqlFetcher from '../../../../utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import useSWR from 'swr'
+import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react';
+import { User } from '../../../../types';
+import { Layout } from '@/common/pages/layouts/layout/layout';
 
 export type ModuleCommunityProps = {}
 
-export const ModuleCommunity: React.FC<
-	ModuleCommunityProps
-> = ({}): React.ReactElement => {
-	const { data, error } = useSWR(
+export const ModuleCommunity = ({}): React.ReactElement => {
+	const router = useRouter()
+	const { data: session } = useSession()
+	const { module } = router.query
+	const { data: userData, error: userError } = useSWR(session ?
+		{
+			query: gql`{
+          user(input:{
+              openID: "${session?.openId}"
+          }){
+              plan {
+									id
+              }
+          }
+      }`,
+		} : null,
+		gqlFetcher
+	) as { data: { user: Array<User> }; error: Error }
+	const { data, error } = useSWR(userData ?
 		{
 			query: gql`
-				{
-					module(input: {}) {
-						id
-						moduleName
-						description
-						members {
-							role
-							plan {
-								student {
-									firstName
-									lastName
-									email
-									picURL
-								}
-							}
-						}
-						collections {
-							lessons {
-								threads {
-									title
-									author {
-										email
-										firstName
-										lastName
-										picURL
-									}
-									body
-
-									upvotes {
-										id
-									}
-								}
-							}
-						}
-					}
-				}
+          {
+              moduleEnrollment(input:{
+                  module: "${module}"
+                  plan: "${userData.user[0].plan.id}"
+              }){
+                  id
+                  status
+									role
+                  module{
+                      id
+                      collections{
+                          id
+                          lessons{
+                              id
+                              name
+															threads {
+																	id
+																	title
+																	body
+																	updatedAt
+																	createdAt
+																	author {
+																		id
+																		email
+																		firstName
+																		lastName
+																		picURL
+																	}
+																	upvotes {
+																		id
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
 			`,
-		},
+		} : null,
 		gqlFetcher
 	)
 
-	if (error) {
+	const {data: instructorData, error: instructorError} = useSWR({
+		query: gql`{
+				moduleEnrollment(input:{role: TEACHER, module: "${module}"}){
+						id
+            plan{
+                student{
+                    firstName
+                    lastName
+                    email
+                    picURL
+                }
+            }
+				}
+		}`
+	}, gqlFetcher)
+
+	if (error || userError || instructorError) {
 		console.log(error)
 		throw new Error(error)
 	}
-	if (!data) {
+	if (!data || !userData || !instructorData) {
 		return <div>Loading...</div>
 	}
-
-	const mod = data?.module[0]
-	const teacher = mod?.members.filter((member) => member.plan.student)[0]
 
 	return (
 		<div className="m-8 flex">
@@ -73,24 +106,24 @@ export const ModuleCommunity: React.FC<
 				{
 					<>
 						<p className="text-3xl font-semibold">
-							{mod.moduleName}
+							{data.moduleEnrollment[0].module.moduleName}
 						</p>
 
 						<div className="flex my-2 items-center">
 							<img
-								src={teacher.plan.student.picURL}
+								src={instructorData.moduleEnrollment[0].plan.student.picURL}
 								alt="profile image"
 								className="shadow-lg rounded-full max-w-full h-4 align-middle border-none"
 							/>
 
 							<small className="pl-2 font-bold">
-								{teacher.plan.student.email}
+								{instructorData.moduleEnrollment[0].plan.student.email}
 							</small>
 
 							<small>
 								<span className="px-1 font-bold">&bull;</span>
-								{teacher.plan.student.firstName +
-									teacher.plan.student.lastName}
+								{instructorData.moduleEnrollment[0].plan.student.firstName +
+									instructorData.moduleEnrollment[0].plan.student.lastName}
 							</small>
 						</div>
 
@@ -108,106 +141,44 @@ export const ModuleCommunity: React.FC<
 								options={[]}
 							/>
 						</div>
-						{mod.collections.map((col) =>
+						{data.moduleEnrollment[0].module.collections.map((col) =>
 							col.lessons.map((les) =>
-								les.threads.map((thr, index) => (
-									<div className="m-3" key={index}>
-										<div className="my-4">
-											<Thread
-												body={thr.body}
-												id="12345"
-												title={thr.title}
-												upvotes={thr.upvotes}
-												userProfile={{
-													firstName:
-														thr.author.firstname,
-													id: 1,
-													picURL: thr.author.picURL,
-													lastName:
-														thr.author.lastName,
-												}}
-											/>
-										</div>
-										{/* <Thread
-						body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat diam vitae nibh mollis, dignissim mollis augue porttitor. Aliquam viverra auctor semper. Vestibulum placerat luctus tortor eu iaculis. Fusce a ullamcorper sapien. Phasellus at sollicitudin mauris. Duis suscipit, libero at consectetur vestibulum, leo lectus tristique mauris, convallis gravida est elit eu nibh. Mauris efficitur ultrices tincidunt. Nam sed tincidunt velit. Suspendisse gravida porta mi a egestas."
-						id="12345"
-						title="How did the United States land on the moon?"
-						upvotes={10}
-						userProfile={{
-							firstName: 'joel',
-							id: 1,
-							image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-							lastName: 'desante',
-						}}
-					/> */}
-									</div>
-								))
+								 (
+											les.threads.filter(v => v.title).sort((a, b) => new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf()).map((thr, index) => (
+												<div className="m-3" key={index}>
+													<div className="my-4">
+														<Thread
+															body={thr.body}
+															id="12345"
+															title={thr.title}
+															upvotes={thr.upvotes.length || 0}
+															userProfile={thr.author}
+														/>
+													</div>
+												</div>
+											))
+										)
 							)
 						)}
 					</>
-					// ))))
 				}
 			</div>
 			<aside className="mx-10 flex-none">
 				<div className="mb-10">
 					<ActiveModules
-						modules={[
-							{
-								module_id: 'moduleid1',
-								module_name:
-									'Is the sky purple or have I just been looking at my computer for too long?',
-							},
-							{
-								module_id: 'moduleid2',
-								module_name: 'What is the meaning of life?',
-							},
-							{
-								module_id: 'moduleid1',
-								module_name:
-									'Why did the engineer cross the road?',
-							},
-							{
-								module_id: 'moduleid6',
-								module_name: 'This is a test. Test test test',
-							},
-						]}
+						modules={[]}
 					/>
 				</div>
 				<div className="mb-10">
 					<WatchedThreads
-						threads={[
-							{
-								id: '63e3f79631115da3472a72dc',
-								title: 'this is testing',
-								parentLesson: {
-									id: '63e3f79631115da3472a72dc',
-									collection: {
-										id: '641c71563985a78ee17cbca2',
-										module: {
-											moduleName: 'Some dummy data',
-											id: '63e129a9cbfa5080578a7986',
-										},
-									},
-								},
-							},
-							{
-								id: '641c6f4f3985a78ee17cbca0',
-								title: 'Hydration',
-								parentLesson: {
-									id: '641c71563985a78ee17cbca2',
-									collection: {
-										id: '641c71563985a78ee17cbca2',
-										module: {
-											moduleName: 'Some dummy data',
-											id: '63e129a9cbfa5080578a7986',
-										},
-									},
-								},
-							},
-						]}
+						threads={[]}
 					/>
 				</div>
 			</aside>
 		</div>
 	)
+}
+
+ModuleCommunity.getLayout = function getLayout(page) {
+	return <Layout>{page}</Layout>
 }

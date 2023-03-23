@@ -103,11 +103,11 @@ export type UserAccount = {
 	/**
 	 * The first name of the user
 	 */
-	firstName: string
+	firstName?: string
 	/**
 	 * The last name of the user
 	 */
-	lastName: string
+	lastName?: string
 	/**
 	 * The image URL of the user
 	 */

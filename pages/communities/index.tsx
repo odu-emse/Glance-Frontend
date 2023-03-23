@@ -49,71 +49,72 @@ export type ModuleEnrollmentQueryResponse = {
 
 const Index = ({}) => {
 	const { data: session } = useSession()
-	const { data, error } = useSWR(
-		{
-			query: gql`
-				{
-					moduleEnrollment(
-						input: { plan: "63da9120020a625cc55f64a6" }
-					) {
-						id
-						status
-						role
-						module {
-							id
-							moduleName
-							collections {
-								lessons {
-									id
-									threads {
-										id
-										title
-										body
-										author {
-											id
-											firstName
-											lastName
-											email
-											picURL
-										}
-										upvotes {
-											id
-										}
-										updatedAt
-									}
-								}
-							}
-						}
-					}
-				}
-			`,
-		},
-		gqlFetcher
-	) as { data: ModuleEnrollmentQueryResponse; error: Error }
 
-	const { data: userData, error: userError } = useSWR(
-		{
-			query: gql`{
-				user(input:{
-						openID: "${session.openId}"
-				}){
-            watchedThreads{
-                id
-                title
-                parentLesson{
-                    collection{
-                        module{
-														moduleName
-                            id
+	const { data: userData, error: userError } = useSWR(session ?
+			{
+				query: gql`{
+            user(input:{
+                openID: "${session?.openId}"
+            }){
+                watchedThreads{
+                    id
+                    title
+                    parentLesson{
+                        collection{
+                            module{
+                                moduleName
+                                id
+                            }
                         }
                     }
                 }
             }
-				}
-    }`,
-		},
+        }`,
+			} : null,
 		gqlFetcher
 	) as { data: { user: Array<User> }; error: Error }
+
+	const { data, error } = useSWR(userData ?
+		{
+			query: gql`
+          {
+              moduleEnrollment(
+                  input: { plan: "63da9120020a625cc55f64a6" }
+              ) {
+                  id
+                  status
+                  role
+                  module {
+                      id
+                      moduleName
+                      collections {
+                          lessons {
+                              id
+                              threads {
+                                  id
+                                  title
+                                  body
+                                  author {
+                                      id
+                                      firstName
+                                      lastName
+                                      email
+                                      picURL
+                                  }
+                                  upvotes {
+                                      id
+                                  }
+                                  updatedAt
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+			`,
+		} : null,
+		gqlFetcher
+	) as { data: ModuleEnrollmentQueryResponse; error: Error }
 
 	if (error || userError) return <p>Failed to load content...</p>
 	if (!data || !userData) return <p>Loading...</p>
@@ -160,6 +161,7 @@ const Index = ({}) => {
 								(collection) => {
 									return collection.lessons.map((lesson) => {
 										return lesson.threads
+											.filter(v => v.title !== null)
 											.sort(
 												(a, b) =>
 													new Date(

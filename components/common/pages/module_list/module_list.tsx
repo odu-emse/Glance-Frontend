@@ -24,7 +24,7 @@ export type ModuleListProps = {
 	modules: Array<ModuleListObject>
 }
 type ModuleListObject = {
-	moduleName: string
+	moduleName?: string
 	/**
 	 * string that shows up name of the module on Default Card
 	 */

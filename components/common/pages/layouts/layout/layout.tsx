@@ -20,10 +20,10 @@ export const Layout = ({ children }) => {
 	}
 
 	// TODO: we might want to uncomment this once we have next routing integrated
-	if (isLoading && session === null) {
-		router.push('/login').catch((err) => console.log(err))
-		return
-	}
+	// if (isLoading && session === null) {
+	// 	router.push('/login').catch((err) => console.log(err))
+	// 	return
+	// }
 
 	return (
 		<section>
