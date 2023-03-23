@@ -107,7 +107,7 @@ export type UserAccount = {
 	/**
 	 * The image URL of the user
 	 */
-	picURL: string
+	picURL?: string
 }
 
 export type ThreadProps = {

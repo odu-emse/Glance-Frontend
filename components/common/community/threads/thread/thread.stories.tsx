@@ -20,7 +20,7 @@ Sample.args = {
 		id: 1,
 		firstName: 'joel',
 		lastName: 'desante',
-		image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
+		picURL: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 	},
 	id: '12345',
 }

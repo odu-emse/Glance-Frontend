@@ -81,6 +81,7 @@ type Lesson = {
 	name: string
 	threads?: Nullable<Nullable<ThreadType>[]>
 	position?: Nullable<number>
+	collection: Collection
 }
 
 type Nullable<T> = T | null

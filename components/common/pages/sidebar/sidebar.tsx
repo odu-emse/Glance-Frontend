@@ -1,4 +1,3 @@
-import { Button } from 'components/common/button/button'
 import * as React from 'react'
 import { SidebarItem } from './sidebar_item/sidebar_item'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
