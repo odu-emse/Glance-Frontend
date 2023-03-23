@@ -18,9 +18,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 	handle,
 }) => {
 	return (
-		<div className={`${
-			open ? 'w-96' : 'w-1/12'
-		} relative`}>
+		<div className={`${open ? 'w-96' : 'w-1/12'} relative`}>
 			<aside
 				id="sidePanel"
 				style={{

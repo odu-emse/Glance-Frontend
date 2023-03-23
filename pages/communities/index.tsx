@@ -1,14 +1,21 @@
 import { Thread } from '@/components/common/community/threads/thread/thread'
-import useSWR from 'swr';
-import { gql } from 'graphql-request';
-import gqlFetcher from '@/utils/gql_fetcher';
-import * as React from 'react';
-import { Input } from '@/common/forms/inputs/input/input';
-import { ModuleList } from '@/common/pages/module_list/module_list';
-import { WatchedThreads } from '@/common/community/watched_threads/watched_threads';
-import { Layout } from '@/common/pages/layouts/layout/layout';
-import { useSession } from 'next-auth/react';
-import { Collection, Lesson, Module, ModuleEnrollment, ThreadType, User } from '../../types';
+import useSWR from 'swr'
+import { gql } from 'graphql-request'
+import gqlFetcher from '@/utils/gql_fetcher'
+import * as React from 'react'
+import { Input } from '@/common/forms/inputs/input/input'
+import { ModuleList } from '@/common/pages/module_list/module_list'
+import { WatchedThreads } from '@/common/community/watched_threads/watched_threads'
+import { Layout } from '@/common/pages/layouts/layout/layout'
+import { useSession } from 'next-auth/react'
+import {
+	Collection,
+	Lesson,
+	Module,
+	ModuleEnrollment,
+	ThreadType,
+	User,
+} from '../../types'
 
 export type ModuleEnrollmentQueryResponse = {
 	moduleEnrollment: Array<
@@ -116,7 +123,7 @@ const Index = ({}) => {
     }`,
 		},
 		gqlFetcher
-	) as { data: {user: Array<User>}; error: Error }
+	) as { data: { user: Array<User> }; error: Error }
 
 	if (error) return <p>Failed to load content...</p>
 	if (!data) return <p>Loading...</p>
@@ -201,7 +208,9 @@ const Index = ({}) => {
 				</div>
 				<div className="mb-10">
 					<WatchedThreads
-						threads={userData?.user[0].watchedThreads.map(v => v) || []}
+						threads={
+							userData?.user[0].watchedThreads.map((v) => v) || []
+						}
 					/>
 				</div>
 			</aside>
