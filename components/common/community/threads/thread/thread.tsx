@@ -11,10 +11,10 @@ export const Thread: React.FC<ThreadProps> = ({
 	userProfile,
 	handleUpvote,
 	children,
+	isUpvoted: initialIsUpvoted,
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
-	const [isUpvoted, setIsUpvoted] = React.useState(false)
-
+	const [isUpvoted, setIsUpvoted] = React.useState(initialIsUpvoted)
 	const _handleUpvote = () => {
 		handleUpvote()
 		setIsUpvoted(!isUpvoted)
@@ -95,6 +95,9 @@ export const Thread: React.FC<ThreadProps> = ({
 	)
 }
 
+/**
+ * @typedef {Object} UserAccount
+ */
 export type UserAccount = {
 	/**
 	 * A unique ID to identify different users
@@ -114,6 +117,9 @@ export type UserAccount = {
 	image: string
 }
 
+/**
+ * @typedef {Object} ThreadProps
+ */
 export type ThreadProps = {
 	/**
 	 * The title of the thread component
@@ -139,6 +145,13 @@ export type ThreadProps = {
 	 * The child comments of this thread as an array
 	 */
 	children?: any
-
+	/**
+	 * @property {Function} handleUpvote - A callback function that is triggered when the upvote button is clicked. It should handle the logic for upvoting the thread, such as updating the upvote count and making API calls as needed.
+	 * @returns void
+	 */
 	handleUpvote: () => void
+	/**
+	 * @property {boolean} [isUpvoted] - An optional boolean prop that indicates whether the current user has upvoted the thread. If true, the upvote icon will be displayed in red. If false or undefined, the upvote icon will have the default color.
+	 */
+	isUpvoted?: boolean
 }

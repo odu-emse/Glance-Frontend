@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import { Thread, ThreadProps } from './thread'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { mockData } from '../../../../util/thread_data'
@@ -19,12 +19,10 @@ const idByStoryName = {
 
 const getIdByStoryName = (storyName: string) => {
 	const id = idByStoryName[storyName]
-	console.log('getIdByStoryName: ' + id)
 	return id || idByStoryName.Default
 }
 
 const useUpvoteThread = (moduleID, userProfileID) => {
-	console.log('AGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA')
 	mutate(async () => {
 		fetch('http://emse.dev.joeldesante.com:4000/graphql', {
 			method: 'POST',
@@ -48,7 +46,7 @@ const useUpvoteThread = (moduleID, userProfileID) => {
 	}, false)
 }
 
-const useThreadData = (threadId: string) => {
+const useThreadData = (threadId: string, usrprofileId: string | number) => {
 	const { data, error } = useSWR(
 		{
 			query: gql`
@@ -70,7 +68,11 @@ const useThreadData = (threadId: string) => {
 		},
 		gqlFetcher
 	)
-	return { data, error }
+	const isUpvoted = data?.thread[0].upvotes.some(
+		(upvote) => upvote.id === usrprofileId
+	)
+
+	return { data, error, isUpvoted }
 }
 
 const Template: ComponentStory<typeof Thread> = ({
@@ -80,12 +82,11 @@ const Template: ComponentStory<typeof Thread> = ({
 	userProfile,
 	...args
 }: ThreadProps & { storyName: string }) => {
-	console.log('storyName: ' + storyName)
 	const threadId = getIdByStoryName(storyName)
-	console.log('threadId: ' + threadId)
 
-	const { data, error } = useThreadData(threadId)
+	const { data, error, isUpvoted } = useThreadData(threadId, userProfile.id)
 	const thread = React.useMemo(() => data?.thread?.[0], [data])
+
 	if (!thread) return <p>Loading...</p>
 	if (error) return <p>Failed to load content...</p>
 
@@ -95,9 +96,10 @@ const Template: ComponentStory<typeof Thread> = ({
 			id={thread.id}
 			title={title || thread.title}
 			body={thread.body}
-			handleUpvote={() => useUpvoteThread(thread.id, userProfile.id)} // Use 'upvote' instead of 'useUpvoteThread'
+			handleUpvote={() => useUpvoteThread(thread.id, userProfile.id)}
 			upvotes={upvotes || thread.upvotes.length}
-			userProfile={userProfile} // Add the userProfile prop here
+			userProfile={userProfile}
+			isUpvoted={isUpvoted}
 		/>
 	)
 }
