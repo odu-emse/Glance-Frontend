@@ -1,7 +1,7 @@
-import { ActiveModules } from '../../../common/pages/active_modules/active_modules'
-import { Thread } from '../../../common/community/threads/thread/thread'
-import { WatchedThreads } from '../../../common/community/watched_threads/watched_threads'
-import { Input } from '../../../common/forms/inputs/input/input'
+import { ActiveModules } from '@/common/pages/active_modules/active_modules'
+import { Thread } from '@/common/community/threads/thread/thread'
+import { WatchedThreads } from '@/common/community/watched_threads/watched_threads'
+import { Input } from '@/common/forms/inputs/input/input'
 import * as React from 'react'
 import gqlFetcher from '../../../../utils/gql_fetcher'
 import { gql } from 'graphql-request'
@@ -122,7 +122,7 @@ export const ModuleCommunity: React.FC<
 													firstName:
 														thr.author.firstname,
 													id: 1,
-													image: thr.author.picURL,
+													picURL: thr.author.picURL,
 													lastName:
 														thr.author.lastName,
 												}}
@@ -177,26 +177,32 @@ export const ModuleCommunity: React.FC<
 					<WatchedThreads
 						threads={[
 							{
-								module_id: 'moduleid1',
-								module_name:
-									'Is the sky purple or have I just been looking at my computer for too long?',
-								thread_id: 'threadid1',
+								'id': '63e3f79631115da3472a72dc',
+								'title': 'this is testing',
+								'parentLesson': {
+									id: '63e3f79631115da3472a72dc',
+									'collection': {
+										id: '641c71563985a78ee17cbca2',
+										'module': {
+											'moduleName': 'Some dummy data',
+											'id': '63e129a9cbfa5080578a7986',
+										},
+									},
+								},
 							},
 							{
-								module_id: 'moduleid2',
-								module_name: 'What is the meaning of life?',
-								thread_id: 'threadid4',
-							},
-							{
-								module_id: 'moduleid1',
-								module_name:
-									'Why did the engineer cross the road?',
-								thread_id: 'threadid2',
-							},
-							{
-								module_id: 'moduleid6',
-								module_name: 'This is a test. Test test test',
-								thread_id: 'threadid1',
+								'id': '641c6f4f3985a78ee17cbca0',
+								'title': 'Hydration',
+								'parentLesson': {
+									id: '641c71563985a78ee17cbca2',
+									'collection': {
+										id: '641c71563985a78ee17cbca2',
+										'module': {
+											'moduleName': 'Some dummy data',
+											'id': '63e129a9cbfa5080578a7986',
+										},
+									},
+								},
 							},
 						]}
 					/>
