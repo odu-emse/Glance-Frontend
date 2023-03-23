@@ -37,15 +37,19 @@ export const Thread: React.FC<ThreadProps> = ({
 
 				<p className="text-xl font-medium">{title}</p>
 				<p className="text-sm">
-					{body.length >= 50 ? <>
-						{expanded ? body : body.slice(0, 150)}
-						<span
-							className="text-blue-500 cursor-pointer"
-							onClick={() => setExpanded(!expanded)}
-						>
-							{expanded ? ' show less' : '... show more'}
-						</span>
-					</> : body}
+					{body.length >= 50 ? (
+						<>
+							{expanded ? body : body.slice(0, 150)}
+							<span
+								className="text-blue-500 cursor-pointer"
+								onClick={() => setExpanded(!expanded)}
+							>
+								{expanded ? ' show less' : '... show more'}
+							</span>
+						</>
+					) : (
+						body
+					)}
 				</p>
 				<div className="flex flex-row justify-end gap-4">
 					<button

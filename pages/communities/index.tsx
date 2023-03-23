@@ -159,8 +159,17 @@ const Index = ({}) => {
 							return enrollment.module.collections.map(
 								(collection) => {
 									return collection.lessons.map((lesson) => {
-										return lesson.threads.sort((a, b) => new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf() ).map(
-											(thread, threadMapIndex) => {
+										return lesson.threads
+											.sort(
+												(a, b) =>
+													new Date(
+														b.updatedAt
+													).valueOf() -
+													new Date(
+														a.updatedAt
+													).valueOf()
+											)
+											.map((thread, threadMapIndex) => {
 												return (
 													<div
 														className="my-4"
@@ -181,8 +190,7 @@ const Index = ({}) => {
 														/>
 													</div>
 												)
-											}
-										)
+											})
 									})
 								}
 							)
@@ -197,7 +205,11 @@ const Index = ({}) => {
 				</div>
 				<div className="mb-10">
 					<WatchedThreads
-						threads={userData?.user[0].watchedThreads.filter(v => v.parentLesson) || []}
+						threads={
+							userData?.user[0].watchedThreads.filter(
+								(v) => v.parentLesson
+							) || []
+						}
 					/>
 				</div>
 			</aside>

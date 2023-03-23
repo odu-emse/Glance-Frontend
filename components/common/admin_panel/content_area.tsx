@@ -6,7 +6,7 @@ export const ContentArea: React.FC<
 > = ({}): React.ReactElement => {
 	const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
 
-	const files = acceptedFiles.map((file: File & {path: string}) => (
+	const files = acceptedFiles.map((file: File & { path: string }) => (
 		<li key={file.path}>
 			{file.path} - {file.size} bytes
 		</li>
