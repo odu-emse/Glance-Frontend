@@ -35,75 +35,73 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 	) as { data: { user: Array<User> }; error: Error }
 	const { data, error } = useSWR(
 		userData
-			? {
-					query: gql`
-          {
-              moduleEnrollment(input:{
-                  module: "${module}"
-                  plan: "${userData.user[0].plan.id}"
+			&& {
+					query: gql` query CommunitiesPageQuery($moduleID: ID, $role: UserRole!, $planID: ID){
+              roleQuery: moduleEnrollment(input:{
+                  module: $moduleID
+                  role: $role
+              }){
+                  id
+                  plan {
+                      student {
+                          firstName
+                          lastName
+                          email
+                          picURL
+                      }
+                  }
+              }
+              userQuery: moduleEnrollment(input:{
+                  module: $moduleID
+                  plan: $planID
               }){
                   id
                   status
-									role
-                  module{
+                  role
+                  module {
                       id
-                      collections{
+                      collections {
                           id
-                          lessons{
+                          lessons {
                               id
                               name
-															threads {
-																	id
-																	title
-																	body
-																	updatedAt
-																	createdAt
-																	author {
-																		id
-																		email
-																		firstName
-																		lastName
-																		picURL
-																	}
-																	upvotes {
-																		id
+                              threads {
+                                  id
+                                  title
+                                  body
+                                  updatedAt
+                                  createdAt
+                                  author {
+                                      id
+                                      email
+                                      firstName
+                                      lastName
+                                      picURL
+                                  }
+                                  upvotes {
+                                      id
                                   }
                               }
                           }
                       }
                   }
               }
-          }
+					}
 			`,
-			  }
-			: null,
+			variables: {
+						moduleID: module,
+						planID: userData.user[0].plan.id,
+						role: 'TEACHER'
+			}
+			  },
 		gqlFetcher
 	)
 
-	const { data: instructorData, error: instructorError } = useSWR(
-		{
-			query: gql`{
-				moduleEnrollment(input:{role: TEACHER, module: "${module}"}){
-						id
-            plan{
-                student{
-                    firstName
-                    lastName
-                    email
-                    picURL
-                }
-            }
-				}
-		}`,
-		},
-		gqlFetcher
-	)
-
-	if (error || userError || instructorError) {
+	if (error || userError) {
 		console.log(error)
 		throw new Error(error)
 	}
-	if (!data || !userData || !instructorData) {
+	if (!data || !userData) {
 		return <div>Loading...</div>
 	}
 
@@ -113,13 +111,13 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 				{
 					<>
 						<p className="text-3xl font-semibold">
-							{data.moduleEnrollment[0].module.moduleName}
+							{data.userQuery[0].module.moduleName}
 						</p>
 
 						<div className="flex my-2 items-center">
 							<img
 								src={
-									instructorData.moduleEnrollment[0].plan
+									data.roleQuery[0].plan
 										.student.picURL
 								}
 								alt="profile image"
@@ -128,16 +126,16 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 
 							<small className="pl-2 font-bold">
 								{
-									instructorData.moduleEnrollment[0].plan
+									data.roleQuery[0].plan
 										.student.email
 								}
 							</small>
 
 							<small>
 								<span className="px-1 font-bold">&bull;</span>
-								{instructorData.moduleEnrollment[0].plan.student
+								{data.roleQuery[0].plan.student
 									.firstName +
-									instructorData.moduleEnrollment[0].plan
+									data.roleQuery[0].plan
 										.student.lastName}
 							</small>
 						</div>
@@ -156,7 +154,7 @@ export const ModuleCommunity = ({}): React.ReactElement => {
 								options={[]}
 							/>
 						</div>
-						{data.moduleEnrollment[0].module.collections.map(
+						{data.userQuery[0].module.collections.map(
 							(col) =>
 								col.lessons.map((les) =>
 									les.threads
