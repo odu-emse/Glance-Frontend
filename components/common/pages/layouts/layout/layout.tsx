@@ -20,20 +20,21 @@ export const Layout = ({ children }) => {
 	}
 
 	// TODO: we might want to uncomment this once we have next routing integrated
-	// if (status !== 'loading' && session === null) {
-	// 	router.push('/login')
-	// 	return
-	// }
+	if (status !== 'loading' && session === null) {
+		router.push('/login').catch((err) => console.log(err))
+		return
+	}
 
 	return (
 		<section>
 			<nav className="bg-royalblue stdcontainer-sharp"></nav>
 			<div className="flex h-full">
 				<Sidebar
-					isLoading={status === 'loading'}
+					isLoading={isLoading}
 					userSession={session}
 					handle={setOpen}
 					open={open}
+					icon={null}
 				/>
 				<main className="grow">
 					<GlobalLoadingContext.Provider
