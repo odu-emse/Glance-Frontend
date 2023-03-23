@@ -68,18 +68,7 @@ const Index = ({}) => {
 									threads {
 										id
 										title
-										comments {
-											id
-											body
-											comments {
-												id
-												body
-												comments {
-													id
-													body
-												}
-											}
-										}
+										body
 										author {
 											id
 											firstName
@@ -90,6 +79,7 @@ const Index = ({}) => {
 										upvotes {
 											id
 										}
+										updatedAt
 									}
 								}
 							}
@@ -105,7 +95,7 @@ const Index = ({}) => {
 		{
 			query: gql`{
 				user(input:{
-						openID: "${session?.openId}"
+						openID: "${session.openId}"
 				}){
             watchedThreads{
                 id
@@ -125,9 +115,8 @@ const Index = ({}) => {
 		gqlFetcher
 	) as { data: { user: Array<User> }; error: Error }
 
-	if (error) return <p>Failed to load content...</p>
-	if (!data) return <p>Loading...</p>
-	// if (!userData) return <p>Loading...</p>
+	if (error || userError) return <p>Failed to load content...</p>
+	if (!data || !userData) return <p>Loading...</p>
 
 	return (
 		<div className="m-8 flex">
@@ -170,7 +159,7 @@ const Index = ({}) => {
 							return enrollment.module.collections.map(
 								(collection) => {
 									return collection.lessons.map((lesson) => {
-										return lesson.threads.map(
+										return lesson.threads.sort((a, b) => new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf() ).map(
 											(thread, threadMapIndex) => {
 												return (
 													<div
@@ -208,9 +197,7 @@ const Index = ({}) => {
 				</div>
 				<div className="mb-10">
 					<WatchedThreads
-						threads={
-							userData?.user[0].watchedThreads.map((v) => v) || []
-						}
+						threads={userData?.user[0].watchedThreads.filter(v => v.parentLesson) || []}
 					/>
 				</div>
 			</aside>
