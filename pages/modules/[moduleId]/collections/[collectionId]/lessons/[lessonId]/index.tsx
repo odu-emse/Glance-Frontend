@@ -13,7 +13,6 @@ import { useContext } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { gql } from 'graphql-request'
 
-
 const ModuleSection = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
 	setLoading(true)
@@ -67,7 +66,7 @@ const ModuleSection = () => {
 	}
 
 	const lesson = data.lesson[0]
-	console.log("lesson1", lesson)
+	console.log('lesson1', lesson)
 	const _module = lesson.collection.module
 	const collections = flattenCollections(_module.collections)
 	//const content = lesson.content[0]
@@ -85,17 +84,16 @@ const ModuleSection = () => {
 
 	setLoading(false)
 
-
 	//TO get Content Type
 	const lessonContent = lesson.content
-	   //console.log("content",lessonContent)
-	let contentType = "";
-	for(let i = 0; i < lessonContent.length; i++) {
-		if(lessonContent[i].primary === true) { 
+	//console.log("content",lessonContent)
+	let contentType = ''
+	for (let i = 0; i < lessonContent.length; i++) {
+		if (lessonContent[i].primary === true) {
 			contentType = lessonContent[i].type
-			break;
-	  }
-	} 
+			break
+		}
+	}
 
 	return (
 		<section className="stdcontainer">
@@ -153,8 +151,3 @@ ModuleSection.getLayout = function getLayout(page) {
 }
 
 export default ModuleSection
-
-
-
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

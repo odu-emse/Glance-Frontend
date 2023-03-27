@@ -25,6 +25,8 @@ export const ContentLoader = ({ type, data }) => {
 	//Temp type
 	//type = "VIDEO"
 
-	const Content = dynamic(() => import(`./${type.toLowerCase()}`), { ssr: false })
+	const Content = dynamic(() => import(`./${type.toLowerCase()}`), {
+		ssr: false,
+	})
 	return <Content data={data} />
 }
