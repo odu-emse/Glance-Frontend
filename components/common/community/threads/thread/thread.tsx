@@ -2,7 +2,7 @@ import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { Anchor } from '@/common/links/anchor/anchor'
-import { Button } from '@/common/button/button';
+import { Button } from '@/common/button/button'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -36,20 +36,14 @@ export const Thread: React.FC<ThreadProps> = ({
 						{userProfile.lastName}
 					</div>
 				</Anchor>
-				{
-					title && (
-
-				<p className="text-xl font-medium">{title}</p>
-					)
-				}
-				<p className="text-sm relative">
-							{body.slice(0, 150)}
-				</p>
+				{title && <p className="text-xl font-medium">{title}</p>}
+				<p className="text-sm relative">{body.slice(0, 150)}</p>
 				{viewCutOff && (
-				<Button
-					className="w-2/3 mx-auto"
-					size="small"
-				>{`View Thread (${commentCount} comments)`}</Button>)}
+					<Button
+						className="w-2/3 mx-auto"
+						size="small"
+					>{`View Thread (${commentCount} comments)`}</Button>
+				)}
 				<div className="flex flex-row justify-end gap-4">
 					<button
 						className="group relative text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"

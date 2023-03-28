@@ -4,7 +4,7 @@ import { gql } from 'graphql-request'
 import gqlFetcher from '@/utils/gql_fetcher'
 import * as React from 'react'
 import { Input } from '@/common/forms/inputs/input/input'
-import { WatchedSidebarList } from '@/common/community/watched_threads/watched_threads';
+import { WatchedSidebarList } from '@/common/community/watched_threads/watched_threads'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import {
@@ -15,7 +15,7 @@ import {
 	ThreadType,
 	User,
 } from '../../types'
-import moment from 'moment';
+import moment from 'moment'
 
 export type ModuleEnrollmentQueryResponse = {
 	moduleEnrollment: Array<
@@ -155,7 +155,14 @@ const Index = ({}) => {
 			  }
 			: null,
 		gqlFetcher
-	) as { data: { moduleEnrollment: Array<ModuleEnrollment>, mostWatched: Array<ThreadType>, mostActive: Array<ThreadType> }; error: Error }
+	) as {
+		data: {
+			moduleEnrollment: Array<ModuleEnrollment>
+			mostWatched: Array<ThreadType>
+			mostActive: Array<ThreadType>
+		}
+		error: Error
+	}
 
 	if (error || userError) return <p>Failed to load content...</p>
 	if (!data || !userData) return <p>Loading...</p>
@@ -230,7 +237,10 @@ const Index = ({}) => {
 															userProfile={
 																thread.author
 															}
-															commentCount={thread.comments.length}
+															commentCount={
+																thread.comments
+																	.length
+															}
 															viewCutOff={true}
 														/>
 													</div>
@@ -244,12 +254,41 @@ const Index = ({}) => {
 			</div>
 			<aside className="mx-10 flex-none">
 				<div className="mb-10">
-					<WatchedSidebarList title={'Most Active'} threads={data.mostActive.filter(v => !!v.title && !!v.parentLesson && new Date().valueOf() >= new Date(
-						moment(v.updatedAt).subtract(7, 'days').toDate()
-					).valueOf()).sort((a,b) => b.comments.length - a.comments.length) || []} />
+					<WatchedSidebarList
+						title={'Most Active'}
+						threads={
+							data.mostActive
+								.filter(
+									(v) =>
+										!!v.title &&
+										!!v.parentLesson &&
+										new Date().valueOf() >=
+											new Date(
+												moment(v.updatedAt)
+													.subtract(7, 'days')
+													.toDate()
+											).valueOf()
+								)
+								.sort(
+									(a, b) =>
+										b.comments.length - a.comments.length
+								) || []
+						}
+					/>
 				</div>
 				<div className="mb-10">
-					<WatchedSidebarList title={'Most Watched'} threads={data.mostWatched.filter(v => !!v.title && !!v.parentLesson).sort((a, b) => b.usersWatching.length - a.usersWatching.length) || []} />
+					<WatchedSidebarList
+						title={'Most Watched'}
+						threads={
+							data.mostWatched
+								.filter((v) => !!v.title && !!v.parentLesson)
+								.sort(
+									(a, b) =>
+										b.usersWatching.length -
+										a.usersWatching.length
+								) || []
+						}
+					/>
 				</div>
 			</aside>
 		</div>

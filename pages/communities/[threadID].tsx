@@ -1,22 +1,23 @@
-import { Layout } from '@/common/pages/layouts/layout/layout';
-import { Button } from '@/common/button/button';
-import { Thread } from '@/common/community/threads/thread/thread';
-import { useRouter } from 'next/router';
-import { gql } from 'graphql-request';
-import gqlFetcher from '@/utils/gql_fetcher';
-import useSWR from 'swr';
-import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area';
-import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy';
+import { Layout } from '@/common/pages/layouts/layout/layout'
+import { Button } from '@/common/button/button'
+import { Thread } from '@/common/community/threads/thread/thread'
+import { useRouter } from 'next/router'
+import { gql } from 'graphql-request'
+import gqlFetcher from '@/utils/gql_fetcher'
+import useSWR from 'swr'
+import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area'
+import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
 
 const ThreadID = () => {
-	const router = useRouter();
+	const router = useRouter()
 
-	const {threadID} = router.query;
+	const { threadID } = router.query
 
-	console.log(threadID);
+	console.log(threadID)
 
-	const {data: threadData, error: threadError} = useSWR({
-		query: gql`
+	const { data: threadData, error: threadError } = useSWR(
+		{
+			query: gql`
 			query {
 				thread(input: {
 					id: "${threadID}"
@@ -63,9 +64,11 @@ const ThreadID = () => {
 				}
 			}
 		`,
-	}, gqlFetcher)
+		},
+		gqlFetcher
+	)
 
-	if(threadError) {
+	if (threadError) {
 		return (
 			<Layout>
 				<h1>Error</h1>
@@ -73,8 +76,8 @@ const ThreadID = () => {
 		)
 	}
 
-	if(!threadData) {
-		return "...Loading"
+	if (!threadData) {
+		return '...Loading'
 	}
 
 	return (
@@ -92,20 +95,18 @@ const ThreadID = () => {
 			</div>
 			<div className="m-3 mt-8 h-fit">
 				<h2>{threadData.thread[0].title}</h2>
-				<p className="ml-4 mb-14">
-					{threadData.thread[0].body}
-				</p>
+				<p className="ml-4 mb-14">{threadData.thread[0].body}</p>
 				<ThreadTextArea />
 			</div>
-			<div className=''>
+			<div className="">
 				<CommentsHierarchy thread={threadData.thread[0]} />
 			</div>
 		</section>
-	);
-};
+	)
+}
 
 ThreadID.getLayout = function getLayout(page) {
 	return <Layout>{page}</Layout>
 }
 
-export default ThreadID;
+export default ThreadID
