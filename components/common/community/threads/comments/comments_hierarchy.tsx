@@ -14,19 +14,16 @@ const commentGen = (parentComment) => {
 	for (const comment of parentComment.comments) {
 		const subThreads = commentGen(comment)
 		threads.push(
+			<div className="mt-8">
 			<Thread
 				body={comment.body}
 				id={comment.id}
-				upvotes={10}
-				userProfile={{
-					id: 1,
-					firstName: 'joel',
-					lastName: 'desante',
-					picURL: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-				}}
+				upvotes={comment.upvotes?.length || 0}
+				userProfile={comment.author}
 			>
 				{subThreads}
 			</Thread>
+			</div>
 		)
 	}
 	return threads
