@@ -8,47 +8,16 @@ import { WatchedSidebarList } from '@/common/community/watched_threads/watched_t
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import {
-	Collection,
-	Lesson,
-	Module,
 	ModuleEnrollment,
 	ThreadType,
 	User,
 } from '../../types'
 import moment from 'moment';
-
-export type ModuleEnrollmentQueryResponse = {
-	moduleEnrollment: Array<
-		ModuleEnrollment & {
-			module: Module & {
-				collections: Array<
-					Collection & {
-						lessons: Array<
-							Lesson & {
-								threads: Array<
-									ThreadType & {
-										comments: Array<
-											ThreadType & {
-												comments: Array<
-													ThreadType & {
-														comments: Array<ThreadType>
-													}
-												>
-											}
-										>
-									}
-								>
-							}
-						>
-					}
-				>
-			}
-		}
-	>
-}
+import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar';
 
 const Index = ({}) => {
 	const { data: session } = useSession()
+	const [openWatchedThreads, setOpenWatchedThreads] = React.useState(true)
 
 	const { data: userData, error: userError } = useSWR(
 		session
@@ -161,7 +130,7 @@ const Index = ({}) => {
 	if (!data || !userData) return <p>Loading...</p>
 
 	return (
-		<div className="m-8 flex">
+		<div className="mx-8 flex">
 			<div className="m-10 grow">
 				<div className="flex my-2 items-center">
 					<img
@@ -182,7 +151,7 @@ const Index = ({}) => {
 				</div>
 				<div className="flex items-center">
 					<h1 className="text-lg font-semibold flex-none pr-20">
-						Recent Threads
+						Communities
 					</h1>
 					<Input
 						defaultValue=""
@@ -232,6 +201,7 @@ const Index = ({}) => {
 															}
 															commentCount={thread.comments.length}
 															viewCutOff={true}
+															showAuthor={false}
 														/>
 													</div>
 												)
@@ -242,16 +212,17 @@ const Index = ({}) => {
 						})}
 				</div>
 			</div>
-			<aside className="mx-10 flex-none">
+				<WatchedThreadSidebar open={openWatchedThreads} handle={setOpenWatchedThreads}>
 				<div className="mb-10">
 					<WatchedSidebarList title={'Most Active'} threads={data.mostActive.filter(v => !!v.title && !!v.parentLesson && new Date().valueOf() >= new Date(
 						moment(v.updatedAt).subtract(7, 'days').toDate()
 					).valueOf()).sort((a,b) => b.comments.length - a.comments.length) || []} />
 				</div>
+					<div className='border border-black w-full my-14'></div>
 				<div className="mb-10">
 					<WatchedSidebarList title={'Most Watched'} threads={data.mostWatched.filter(v => !!v.title && !!v.parentLesson).sort((a, b) => b.usersWatching.length - a.usersWatching.length) || []} />
 				</div>
-			</aside>
+				</WatchedThreadSidebar>
 		</div>
 	)
 }

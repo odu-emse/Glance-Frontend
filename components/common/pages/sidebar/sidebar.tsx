@@ -74,11 +74,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 				</div>
 				<button
 					id="closeButton"
-					style={{
-						right: '-15px',
-						bottom: '30px',
-					}}
-					className="absolute bottom-1 right-0 p-2 rounded-md text-red border bg-blue-500"
+					className="absolute bottom-7 -right-4 p-2 rounded-md text-red border bg-blue-500"
 					onClick={() => handle(!open)}
 				>
 					{open ? <IoIosArrowBack /> : <IoIosArrowForward />}
