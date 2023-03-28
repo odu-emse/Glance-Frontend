@@ -12,6 +12,7 @@ export const Thread: React.FC<ThreadProps> = ({
 	userProfile,
 	children,
 	commentCount = 0,
+	viewCutOff = false,
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
 	let url: string
@@ -35,14 +36,20 @@ export const Thread: React.FC<ThreadProps> = ({
 						{userProfile.lastName}
 					</div>
 				</Anchor>
+				{
+					title && (
+
 				<p className="text-xl font-medium">{title}</p>
+					)
+				}
 				<p className="text-sm relative">
 							{body.slice(0, 150)}
 				</p>
+				{viewCutOff && (
 				<Button
 					className="w-2/3 mx-auto"
 					size="small"
-				>{`View Thread (${commentCount} comments)`}</Button>
+				>{`View Thread (${commentCount} comments)`}</Button>)}
 				<div className="flex flex-row justify-end gap-4">
 					<button
 						className="group relative text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"
@@ -135,4 +142,9 @@ export type ThreadProps = {
 	 * The number of comments the thread has. This is used to display in the view thread button
 	 */
 	commentCount?: number
+
+	/**
+	 * If true, the thread will be cut off after 150 characters and a view thread button will be displayed
+	 */
+	viewCutOff?: boolean
 }

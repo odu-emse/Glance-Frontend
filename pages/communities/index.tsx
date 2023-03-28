@@ -4,8 +4,7 @@ import { gql } from 'graphql-request'
 import gqlFetcher from '@/utils/gql_fetcher'
 import * as React from 'react'
 import { Input } from '@/common/forms/inputs/input/input'
-import { ModuleList } from '@/common/pages/module_list/module_list'
-import { WatchedSidebarList, WatchedThreads } from '@/common/community/watched_threads/watched_threads';
+import { WatchedSidebarList } from '@/common/community/watched_threads/watched_threads';
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import {
@@ -232,6 +231,7 @@ const Index = ({}) => {
 																thread.author
 															}
 															commentCount={thread.comments.length}
+															viewCutOff={true}
 														/>
 													</div>
 												)
