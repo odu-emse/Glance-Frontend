@@ -1,7 +1,13 @@
 import { Anchor } from '../../links/anchor/anchor'
 import { ThreadType } from '../../../../types'
 
-export const WatchedThreads = ({ threads, title = "Watched Threads" }: { threads: Array<ThreadType>, title?: string }) => {
+export const WatchedThreads = ({
+	threads,
+	title = 'Watched Threads',
+}: {
+	threads: Array<ThreadType>
+	title?: string
+}) => {
 	return (
 		<>
 			<h1 className="font-bold text-2xl py-1">{title}</h1>
@@ -25,7 +31,7 @@ export const WatchedThreads = ({ threads, title = "Watched Threads" }: { threads
 	)
 }
 
-export const WatchedSidebarList = ({title, threads}) => {
+export const WatchedSidebarList = ({ title, threads }) => {
 	return (
 		<>
 			<h4 className="text-2xl uppercase mb-2.5">{title}</h4>
@@ -37,12 +43,8 @@ export const WatchedSidebarList = ({title, threads}) => {
 					role="thread link"
 					className="text-blue-800 font-bold flex pb-3 text-lg"
 				>
-					{thread.title.length >
-					30
-						? `${thread.title.substring(
-							0,
-							30
-						)}...`
+					{thread.title.length > 30
+						? `${thread.title.substring(0, 30)}...`
 						: thread.title}
 				</Anchor>
 			))}
