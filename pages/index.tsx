@@ -1,11 +1,18 @@
 //import "styles/pages/index.css"
 import { Button } from '@/components/common/button/button'
 import Head from 'next/head'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { Anchor } from '@/components/common/links/anchor/anchor'
 
 // background: rgb(32,68,152);
 // background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
 
 const Index = () => {
+	const { data: session, status } = useSession()
+	const [isLoading, setLoading] = useState(true)
+
 	return (
 		<>
 			<Head>
@@ -20,13 +27,15 @@ const Index = () => {
 				backgroundPosition: 'center',
 			}}
 			>
-				<a className="w-32" href="/login">
+				<Anchor className="w-32"
+				onClick={() => setLoading((status === "authenticated"))}
+				path = {isLoading ? "/modules" : "/"}>
 					<button
 						type="button"
 						className=" absolute top-8 right-20 h-11 w-24 inline-block rounded-md bg-white text-base font-semibold text-royalblue-300 uppercase drop-shadow-lg leading-normal hover:bg-gray-200">
 						Login
 					</button>
-				</a>
+				</Anchor>
 				
 			<div
 				className="w-screen h-screen flex items-center justify-center flex-col"
@@ -58,3 +67,5 @@ const Index = () => {
 }
 
 export default Index
+
+
