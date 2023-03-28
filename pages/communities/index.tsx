@@ -7,13 +7,9 @@ import { Input } from '@/common/forms/inputs/input/input'
 import { WatchedSidebarList } from '@/common/community/watched_threads/watched_threads'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
-import {
-	ModuleEnrollment,
-	ThreadType,
-	User,
-} from '../../types'
-import moment from 'moment';
-import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar';
+import { ModuleEnrollment, ThreadType, User } from '../../types'
+import moment from 'moment'
+import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar'
 
 const Index = ({}) => {
 	const { data: session } = useSession()
@@ -222,7 +218,10 @@ const Index = ({}) => {
 						})}
 				</div>
 			</div>
-				<WatchedThreadSidebar open={openWatchedThreads} handle={setOpenWatchedThreads}>
+			<WatchedThreadSidebar
+				open={openWatchedThreads}
+				handle={setOpenWatchedThreads}
+			>
 				<div className="mb-10">
 					<WatchedSidebarList
 						title={'Most Active'}
@@ -246,7 +245,7 @@ const Index = ({}) => {
 						}
 					/>
 				</div>
-					<div className='border border-black w-full my-14'></div>
+				<div className="border border-black w-full my-14"></div>
 				<div className="mb-10">
 					<WatchedSidebarList
 						title={'Most Watched'}
@@ -261,7 +260,7 @@ const Index = ({}) => {
 						}
 					/>
 				</div>
-				</WatchedThreadSidebar>
+			</WatchedThreadSidebar>
 		</div>
 	)
 }

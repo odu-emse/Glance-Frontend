@@ -19,36 +19,30 @@ export const Thread: React.FC<ThreadProps> = ({
 	let url: string
 	return (
 		<>
-			<div className="rounded-sm shadow-lg px-5 py-2 flex flex-col border-gray-300 border" id={id}>
-				{
-					showAuthor && (
-				<Anchor
-					path={`/user/${userProfile.id}`}
-					className="flex items-center no-underline"
-				>
-					<img
-						src={
-							userProfile.picURL ||
-							'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png'
-						}
-						alt="user profile image"
-						className="shadow-lg rounded-full max-w-full h-8 aspect-square align-middle border-none"
-					/>
-					<h4 className="font-bold px-2">
-						{userProfile.firstName}{" "}
-						{userProfile.lastName}
-					</h4>
-				</Anchor>)
-				}
-				{
-					title && (
-
-				<h4 className="font-bold uppercase">{title}</h4>
-					)
-				}
-				<p className="text-sm relative">
-							{body.slice(0, 150)}
-				</p>
+			<div
+				className="rounded-sm shadow-lg px-5 py-2 flex flex-col border-gray-300 border"
+				id={id}
+			>
+				{showAuthor && (
+					<Anchor
+						path={`/user/${userProfile.id}`}
+						className="flex items-center no-underline"
+					>
+						<img
+							src={
+								userProfile.picURL ||
+								'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png'
+							}
+							alt="user profile image"
+							className="shadow-lg rounded-full max-w-full h-8 aspect-square align-middle border-none"
+						/>
+						<h4 className="font-bold px-2">
+							{userProfile.firstName} {userProfile.lastName}
+						</h4>
+					</Anchor>
+				)}
+				{title && <h4 className="font-bold uppercase">{title}</h4>}
+				<p className="text-sm relative">{body.slice(0, 150)}</p>
 				{viewCutOff && (
 					<Button
 						className="w-2/3 mx-auto"

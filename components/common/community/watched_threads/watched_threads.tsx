@@ -35,19 +35,19 @@ export const WatchedSidebarList = ({ title, threads }) => {
 	return (
 		<>
 			<h4 className="text-2xl uppercase mb-2.5">{title}</h4>
-			<div className='border border-gray-300 px-8 py-6'>
-			{threads.map((thread, threadIndex) => (
-				<Anchor
-					key={threadIndex}
-					path={`/communities/${thread.id}`}
-					role="thread link"
-					className="text-blue-800 font-bold flex pb-3 text-lg"
-				>
-					{thread.title.length > 30
-						? `${thread.title.substring(0, 30)}...`
-						: thread.title}
-				</Anchor>
-			))}
+			<div className="border border-gray-300 px-8 py-6">
+				{threads.map((thread, threadIndex) => (
+					<Anchor
+						key={threadIndex}
+						path={`/communities/${thread.id}`}
+						role="thread link"
+						className="text-blue-800 font-bold flex pb-3 text-lg"
+					>
+						{thread.title.length > 30
+							? `${thread.title.substring(0, 30)}...`
+							: thread.title}
+					</Anchor>
+				))}
 			</div>
 		</>
 	)
