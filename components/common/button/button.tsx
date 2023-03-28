@@ -34,7 +34,8 @@ export const Button = ({
 		variant === 'secondary' &&
 			'shadow bg-wgray text-gray-700 hover:bg-gray-200',
 		variant === 'transparent' && 'bg-transparent text-black',
-		variant === 'white' && 'shadow bg-white text-midnight hover:bg-gray-100'
+		variant === 'white' &&
+			'shadow bg-white text-midnight hover:bg-gray-100',
 	].join(' ')
 
 	return (

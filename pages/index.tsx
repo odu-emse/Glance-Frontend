@@ -17,7 +17,7 @@ const Index = () => {
 			<Head>
 				<title>ALMP</title>
 			</Head>
-			
+
 			<div
 				id="landing-box"
 				className="w-screen h-screen flex items-center justify-center flex-col"
@@ -49,21 +49,18 @@ const Index = () => {
 					<small className="m-0 p-0">FE Version 0.3.0</small>
 				</span>
 
-				<Anchor className="w-32 no-underline"
-				onClick={() => setLoading((status === "authenticated"))}
-				path = {isLoading ? "/modules" : "/"}>
-					<Button
-					variant="white"
-					>
-					<p className="m-0">LOGIN</p>
+				<Anchor
+					className="w-32 no-underline"
+					onClick={() => setLoading(status === 'authenticated')}
+					path={isLoading ? '/modules' : '/'}
+				>
+					<Button variant="white">
+						<p className="m-0">LOGIN</p>
 					</Button>
 				</Anchor>
 			</div>
 		</>
-		
 	)
 }
 
 export default Index
-
-
