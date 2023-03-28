@@ -34,6 +34,7 @@ export const Button = ({
 		variant === 'secondary' &&
 			'shadow bg-wgray text-gray-700 hover:bg-gray-200',
 		variant === 'transparent' && 'bg-transparent text-black',
+		variant === 'white' && 'shadow bg-white text-midnight hover:bg-gray-100'
 	].join(' ')
 
 	return (
@@ -64,7 +65,7 @@ type ButtonProps = {
 	/**
 	 * A boolean that determines whether the button is the principal call/action on the page
 	 */
-	variant?: 'primary' | 'secondary' | 'transparent'
+	variant?: 'primary' | 'secondary' | 'transparent' | 'white'
 	/**
 	 * An enum that determines the shape of the button
 	 */

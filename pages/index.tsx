@@ -2,7 +2,6 @@
 import { Button } from '@/components/common/button/button'
 import Head from 'next/head'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Anchor } from '@/components/common/links/anchor/anchor'
 
@@ -18,27 +17,16 @@ const Index = () => {
 			<Head>
 				<title>ALMP</title>
 			</Head>
+			
 			<div
-			id="landing-box"
-			style={{
-				backgroundImage:
-					"linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%), url('/images/student-gettin-outta-here.jpg')",
-				backgroundSize: 'cover',
-				backgroundPosition: 'center',
-			}}
-			>
-				<Anchor className="w-32"
-				onClick={() => setLoading((status === "authenticated"))}
-				path = {isLoading ? "/modules" : "/"}>
-					<button
-						type="button"
-						className=" absolute top-8 right-20 h-11 w-24 inline-block rounded-md bg-white text-base font-semibold text-royalblue-300 uppercase drop-shadow-lg leading-normal hover:bg-gray-200">
-						Login
-					</button>
-				</Anchor>
-				
-			<div
+				id="landing-box"
 				className="w-screen h-screen flex items-center justify-center flex-col"
+				style={{
+					backgroundImage:
+						"linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%), url('/images/student-gettin-outta-here.jpg')",
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+				}}
 			>
 				<h1
 					style={{
@@ -60,9 +48,19 @@ const Index = () => {
 					<span>&bull;</span>
 					<small className="m-0 p-0">FE Version 0.3.0</small>
 				</span>
-			</div>
+
+				<Anchor className="w-32 no-underline"
+				onClick={() => setLoading((status === "authenticated"))}
+				path = {isLoading ? "/modules" : "/"}>
+					<Button
+					variant="white"
+					>
+					<p className="m-0">LOGIN</p>
+					</Button>
+				</Anchor>
 			</div>
 		</>
+		
 	)
 }
 
