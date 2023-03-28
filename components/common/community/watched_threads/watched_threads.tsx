@@ -32,7 +32,7 @@ export const WatchedSidebarList = ({title, threads}) => {
 			{threads.map((thread, threadIndex) => (
 				<Anchor
 					key={threadIndex}
-					path={`/communities/modules/${thread.parentLesson.collection.module.id}/threads/${thread.id}`}
+					path={`/communities/${thread.id}`}
 					role="thread link"
 					className="text-blue-800 flex py-1 text-lg"
 				>
