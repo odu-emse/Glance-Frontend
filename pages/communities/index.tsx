@@ -5,7 +5,7 @@ import gqlFetcher from '@/utils/gql_fetcher'
 import * as React from 'react'
 import { Input } from '@/common/forms/inputs/input/input'
 import { ModuleList } from '@/common/pages/module_list/module_list'
-import { WatchedThreads } from '@/common/community/watched_threads/watched_threads'
+import { WatchedSidebarList, WatchedThreads } from '@/common/community/watched_threads/watched_threads';
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import {
@@ -16,6 +16,7 @@ import {
 	ThreadType,
 	User,
 } from '../../types'
+import moment from 'moment';
 
 export type ModuleEnrollmentQueryResponse = {
 	moduleEnrollment: Array<
@@ -111,17 +112,51 @@ const Index = ({}) => {
 													id
 												}
 												updatedAt
+												comments {
+														id
+                        }
 											}
 										}
 									}
 								}
 							}
+                mostWatched: thread(input:{}){
+                    id
+                    title
+                    usersWatching{
+                        id
+                    }
+                    parentLesson{
+                        collection{
+                            module{
+                                id
+                                moduleName
+                            }
+                        }
+                    }
+                }
+                mostActive: thread(input:{}){
+                    id
+                    title
+                    updatedAt
+                    comments{
+                        id
+                    }
+                    parentLesson{
+                        collection{
+                            module{
+                                id
+                                moduleName
+                            }
+                        }
+                    }
+                }
 						}
 					`,
 			  }
 			: null,
 		gqlFetcher
-	)
+	) as { data: { moduleEnrollment: Array<ModuleEnrollment>, mostWatched: Array<ThreadType>, mostActive: Array<ThreadType> }; error: Error }
 
 	if (error || userError) return <p>Failed to load content...</p>
 	if (!data || !userData) return <p>Loading...</p>
@@ -196,6 +231,7 @@ const Index = ({}) => {
 															userProfile={
 																thread.author
 															}
+															commentCount={thread.comments.length}
 														/>
 													</div>
 												)
@@ -208,18 +244,12 @@ const Index = ({}) => {
 			</div>
 			<aside className="mx-10 flex-none">
 				<div className="mb-10">
-					<ModuleList
-						modules={data.moduleEnrollment.map((v) => v.module)}
-					/>
+					<WatchedSidebarList title={'Most Active'} threads={data.mostActive.filter(v => !!v.title && !!v.parentLesson && new Date().valueOf() >= new Date(
+						moment(v.updatedAt).subtract(7, 'days').toDate()
+					).valueOf()).sort((a,b) => b.comments.length - a.comments.length) || []} />
 				</div>
 				<div className="mb-10">
-					<WatchedThreads
-						threads={
-							userData?.user[0].watchedThreads.filter(
-								(v) => v.parentLesson
-							) || []
-						}
-					/>
+					<WatchedSidebarList title={'Most Watched'} threads={data.mostWatched.filter(v => !!v.title && !!v.parentLesson).sort((a, b) => b.usersWatching.length - a.usersWatching.length) || []} />
 				</div>
 			</aside>
 		</div>

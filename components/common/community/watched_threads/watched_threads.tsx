@@ -1,10 +1,10 @@
 import { Anchor } from '../../links/anchor/anchor'
 import { ThreadType } from '../../../../types'
 
-export const WatchedThreads = ({ threads }: { threads: Array<ThreadType> }) => {
+export const WatchedThreads = ({ threads, title = "Watched Threads" }: { threads: Array<ThreadType>, title?: string }) => {
 	return (
 		<>
-			<h1 className="font-bold text-2xl py-1">Watched Threads</h1>
+			<h1 className="font-bold text-2xl py-1">{title}</h1>
 			{threads.map((thread, threadIndex) => (
 				<Anchor
 					key={threadIndex}
@@ -19,6 +19,30 @@ export const WatchedThreads = ({ threads }: { threads: Array<ThreadType> }) => {
 								30
 						  )}...`
 						: thread.parentLesson.collection.module.moduleName}
+				</Anchor>
+			))}
+		</>
+	)
+}
+
+export const WatchedSidebarList = ({title, threads}) => {
+	return (
+		<>
+			<h1 className="font-bold text-2xl py-1">{title}</h1>
+			{threads.map((thread, threadIndex) => (
+				<Anchor
+					key={threadIndex}
+					path={`/communities/modules/${thread.parentLesson.collection.module.id}/threads/${thread.id}`}
+					role="thread link"
+					className="text-blue-800 flex py-1 text-lg"
+				>
+					{thread.title.length >
+					30
+						? `${thread.title.substring(
+							0,
+							30
+						)}...`
+						: thread.title}
 				</Anchor>
 			))}
 		</>

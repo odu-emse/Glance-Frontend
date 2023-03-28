@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
-import { Anchor } from '../../../links/anchor/anchor'
+import { Anchor } from '@/common/links/anchor/anchor'
+import { Button } from '@/common/button/button';
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -10,13 +11,13 @@ export const Thread: React.FC<ThreadProps> = ({
 	id,
 	userProfile,
 	children,
+	commentCount = 0,
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
-	const [expanded, setExpanded] = React.useState(false)
 	let url: string
 	return (
 		<>
-			<div className="rounded shadow pl-5 flex flex-col " id={id}>
+			<div className="rounded shadow px-5 flex flex-col " id={id}>
 				<Anchor
 					path={`/user/${userProfile.id}`}
 					className="flex items-center no-underline"
@@ -34,23 +35,14 @@ export const Thread: React.FC<ThreadProps> = ({
 						{userProfile.lastName}
 					</div>
 				</Anchor>
-
 				<p className="text-xl font-medium">{title}</p>
-				<p className="text-sm">
-					{body.length >= 50 ? (
-						<>
-							{expanded ? body : body.slice(0, 150)}
-							<span
-								className="text-blue-500 cursor-pointer"
-								onClick={() => setExpanded(!expanded)}
-							>
-								{expanded ? ' show less' : '... show more'}
-							</span>
-						</>
-					) : (
-						body
-					)}
+				<p className="text-sm relative">
+							{body.slice(0, 150)}
 				</p>
+				<Button
+					className="w-2/3 mx-auto"
+					size="small"
+				>{`View Thread (${commentCount} comments)`}</Button>
 				<div className="flex flex-row justify-end gap-4">
 					<button
 						className="group relative text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"
@@ -139,4 +131,8 @@ export type ThreadProps = {
 	 * The child comments of this thread as an array
 	 */
 	children?: any
+	/**
+	 * The number of comments the thread has. This is used to display in the view thread button
+	 */
+	commentCount?: number
 }
