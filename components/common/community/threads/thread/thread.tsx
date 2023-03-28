@@ -13,12 +13,15 @@ export const Thread: React.FC<ThreadProps> = ({
 	children,
 	commentCount = 0,
 	viewCutOff = false,
+	showAuthor = true,
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
 	let url: string
 	return (
 		<>
-			<div className="rounded shadow px-5 flex flex-col " id={id}>
+			<div className="rounded-sm shadow-lg px-5 py-2 flex flex-col border-gray-300 border" id={id}>
+				{
+					showAuthor && (
 				<Anchor
 					path={`/user/${userProfile.id}`}
 					className="flex items-center no-underline"
@@ -29,17 +32,18 @@ export const Thread: React.FC<ThreadProps> = ({
 							'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png'
 						}
 						alt="user profile image"
-						className="shadow-lg rounded-full max-w-full h-6 align-middle border-none"
+						className="shadow-lg rounded-full max-w-full h-8 aspect-square align-middle border-none"
 					/>
-					<div className="userName font-bold px-2">
-						{userProfile.firstName}
+					<h4 className="font-bold px-2">
+						{userProfile.firstName}{" "}
 						{userProfile.lastName}
-					</div>
-				</Anchor>
+					</h4>
+				</Anchor>)
+				}
 				{
 					title && (
 
-				<p className="text-xl font-medium">{title}</p>
+				<h4 className="font-bold uppercase">{title}</h4>
 					)
 				}
 				<p className="text-sm relative">
@@ -147,4 +151,9 @@ export type ThreadProps = {
 	 * If true, the thread will be cut off after 150 characters and a view thread button will be displayed
 	 */
 	viewCutOff?: boolean
+
+	/**
+	 * If true, the author of the thread will be displayed
+	 */
+	showAuthor?: boolean
 }
