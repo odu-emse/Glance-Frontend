@@ -10,7 +10,7 @@ import { useSession } from 'next-auth/react'
 import { ModuleEnrollment, ThreadType, User } from '../../types'
 import moment from 'moment'
 import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar'
-import Loader from '@/components/util/loader';
+import Loader from '@/components/util/loader'
 
 const Index = ({}) => {
 	const { data: session } = useSession()
@@ -130,16 +130,18 @@ const Index = ({}) => {
 		error: Error
 	}
 
-	if (error || userError) return (
-		<div className="flex justify-center items-center stdcontainer h-screen">
-			<h1 className="text-2xl font-bold">Error</h1>
-		</div>
-	)
-	if (!data || !userData) return (
-		<div className="flex justify-center items-center stdcontainer h-screen">
-			<Loader textColor="royalblue" />
-		</div>
-	)
+	if (error || userError)
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<h1 className="text-2xl font-bold">Error</h1>
+			</div>
+		)
+	if (!data || !userData)
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
 
 	return (
 		<div className="mx-8 flex">

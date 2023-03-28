@@ -7,7 +7,7 @@ import gqlFetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area'
 import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
-import Loader from '@/components/util/loader';
+import Loader from '@/components/util/loader'
 
 const ThreadID = () => {
 	const router = useRouter()
