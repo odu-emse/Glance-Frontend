@@ -7,6 +7,7 @@ import gqlFetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area'
 import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
+import Loader from '@/components/util/loader';
 
 const ThreadID = () => {
 	const router = useRouter()
@@ -70,14 +71,18 @@ const ThreadID = () => {
 
 	if (threadError) {
 		return (
-			<Layout>
-				<h1>Error</h1>
-			</Layout>
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<h1 className="text-2xl">Error</h1>
+			</div>
 		)
 	}
 
 	if (!threadData) {
-		return '...Loading'
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
 	}
 
 	return (
