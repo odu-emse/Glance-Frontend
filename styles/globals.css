@@ -53,6 +53,14 @@ html {
     has a smaller font size it still occupies the H2 element.
 */
 
+.sans {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.serif {
+	font-family: 'Lora', serif;
+}
+
 /* Title 1 and Title 2 */
 h1,
 h3 {
