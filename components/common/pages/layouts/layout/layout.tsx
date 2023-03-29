@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import GlobalLoadingContext from '@/contexts/global_loading_context';
-import Loader from '@/components/util/loader';
-import { Sidebar } from '../../sidebar/sidebar';
-import { useSession } from 'next-auth/react';
+import { useState } from 'react'
+import GlobalLoadingContext from '@/contexts/global_loading_context'
+import Loader from '@/components/util/loader'
+import { Sidebar } from '../../sidebar/sidebar'
+import { useSession } from 'next-auth/react'
 
 export const Layout = ({ children }) => {
 	const [isLoading, setLoading] = useState(false)

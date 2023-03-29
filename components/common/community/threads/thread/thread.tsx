@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go';
-import { TbShare } from 'react-icons/tb';
-import Link from 'next/link';
+import * as React from 'react'
+import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
+import { TbShare } from 'react-icons/tb'
+import Link from 'next/link'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -23,32 +23,28 @@ export const Thread: React.FC<ThreadProps> = ({
 				id={id}
 			>
 				{showAuthor && (
-					<Link
-						href={`/user/${userProfile.id}`}
-					>
+					<Link href={`/user/${userProfile.id}`}>
 						<div className="flex items-center no-underline cursor-pointer w-fit">
-						<img
-							src={
-								userProfile.picURL ||
-								'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png'
-							}
-							alt="user profile image"
-							className="shadow-lg rounded-full max-w-full h-8 aspect-square align-middle border-none"
-						/>
-						<h4 className="font-bold px-2">
-							{userProfile.firstName} {userProfile.lastName}
-						</h4>
+							<img
+								src={
+									userProfile.picURL ||
+									'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png'
+								}
+								alt="user profile image"
+								className="shadow-lg rounded-full max-w-full h-8 aspect-square align-middle border-none"
+							/>
+							<h4 className="font-bold px-2">
+								{userProfile.firstName} {userProfile.lastName}
+							</h4>
 						</div>
 					</Link>
 				)}
 				{title && <h4 className="font-bold uppercase">{title}</h4>}
 				<p className="text-sm relative">{body.slice(0, 150)}</p>
 				{viewCutOff && (
-					<Link
-						href={`/communities/${id}`}
-					>
+					<Link href={`/communities/${id}`}>
 						<h2 className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer">
-						{`View Thread (${commentCount} comments)`}
+							{`View Thread (${commentCount} comments)`}
 						</h2>
 					</Link>
 				)}
