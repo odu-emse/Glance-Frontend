@@ -12,9 +12,13 @@ export default {
 } as ComponentMeta<typeof Thread>
 
 const idByStoryName = {
-	'Thread without title': '63e4055f25783eaaa4f0879c',
+	// dev
+	// 'Thread without title': '63e4055f25783eaaa4f0879c',
+	// Default: '63e3f79631115da3472a72dc',
 
-	Default: '63e3f79631115da3472a72dc',
+	// local
+	'Thread without title': '63efe94f9dc50e659bdeacf8',
+	Default: '63efe9549dc50e659bdeacfb',
 }
 
 const getIdByStoryName = (storyName: string) => {
@@ -24,7 +28,7 @@ const getIdByStoryName = (storyName: string) => {
 
 const useUpvoteThread = (moduleID, userProfileID) => {
 	mutate(async () => {
-		fetch('http://emse.dev.joeldesante.com:4000/graphql', {
+		fetch(process.env.NEXT_PUBLIC_API_URL, {
 			method: 'POST',
 			body: JSON.stringify({
 				query: gql`
@@ -83,7 +87,7 @@ const Template: ComponentStory<typeof Thread> = ({
 	...args
 }: ThreadProps & { storyName: string }) => {
 	const threadId = getIdByStoryName(storyName)
-
+	console.log(threadId)
 	const { data, error, isUpvoted } = useThreadData(threadId, userProfile.id)
 	const thread = React.useMemo(() => data?.thread?.[0], [data])
 
@@ -109,7 +113,11 @@ Sample.storyName = 'Default'
 Sample.args = {
 	storyName: Sample.storyName,
 	userProfile: {
-		id: '63e51cbd14406c6ad63f73a6',
+		// dev
+		// id: '63e51cbd14406c6ad63f73a6',
+
+		// local
+		id: '615d417beb61dd47623c8b6b',
 		firstName: 'joel',
 		lastName: 'desante',
 		image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
@@ -121,7 +129,11 @@ Comment.storyName = 'Thread without title'
 Comment.args = {
 	storyName: Comment.storyName,
 	userProfile: {
-		id: '63e51cbd14406c6ad63f73a6',
+		// dev
+		// id: '63e51cbd14406c6ad63f73a6',
+
+		// local
+		id: '615d417beb61dd47623c8b6b',
 		firstName: 'joel',
 		lastName: 'desante',
 		image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
