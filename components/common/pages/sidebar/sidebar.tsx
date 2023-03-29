@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { SidebarItem } from './sidebar_item/sidebar_item'
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import * as React from 'react';
+import { SidebarItem } from './sidebar_item/sidebar_item';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 export type SidebarProps = {
 	userSession: any
