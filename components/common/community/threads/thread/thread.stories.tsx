@@ -87,7 +87,6 @@ const Template: ComponentStory<typeof Thread> = ({
 	...args
 }: ThreadProps & { storyName: string }) => {
 	const threadId = getIdByStoryName(storyName)
-	console.log(threadId)
 	const { data, error, isUpvoted } = useThreadData(threadId, userProfile.id)
 	const thread = React.useMemo(() => data?.thread?.[0], [data])
 
