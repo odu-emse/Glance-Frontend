@@ -1,8 +1,7 @@
-import * as React from 'react'
-import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
-import { TbShare } from 'react-icons/tb'
-import { Anchor } from '@/common/links/anchor/anchor'
-import { Button } from '@/common/button/button'
+import * as React from 'react';
+import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go';
+import { TbShare } from 'react-icons/tb';
+import Link from 'next/link';
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -24,10 +23,10 @@ export const Thread: React.FC<ThreadProps> = ({
 				id={id}
 			>
 				{showAuthor && (
-					<Anchor
-						path={`/user/${userProfile.id}`}
-						className="flex items-center no-underline"
+					<Link
+						href={`/user/${userProfile.id}`}
 					>
+						<div className="flex items-center no-underline cursor-pointer w-fit">
 						<img
 							src={
 								userProfile.picURL ||
@@ -39,15 +38,19 @@ export const Thread: React.FC<ThreadProps> = ({
 						<h4 className="font-bold px-2">
 							{userProfile.firstName} {userProfile.lastName}
 						</h4>
-					</Anchor>
+						</div>
+					</Link>
 				)}
 				{title && <h4 className="font-bold uppercase">{title}</h4>}
 				<p className="text-sm relative">{body.slice(0, 150)}</p>
 				{viewCutOff && (
-					<Button
-						className="w-2/3 mx-auto"
-						size="small"
-					>{`View Thread (${commentCount} comments)`}</Button>
+					<Link
+						href={`/communities/${id}`}
+					>
+						<h2 className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer">
+						{`View Thread (${commentCount} comments)`}
+						</h2>
+					</Link>
 				)}
 				<div className="flex flex-row justify-end gap-4">
 					<button
