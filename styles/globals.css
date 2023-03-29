@@ -5,13 +5,26 @@
 /* Register the font faces */
 @font-face {
 	font-family: 'Lora';
-	src: url('/fonts/lora-regular.ttf'), url('/fonts/lora-bold.ttf');
+	src: url('/fonts/lora-regular.ttf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Lora';
+	src: url('/fonts/lora-bold.ttf');
+	font-weight: bold;
 }
 
 @font-face {
 	font-family: 'Microgramma';
-	src: url('/fonts/microgramma-regular.ttf'),
-		url('/fonts/microgramma-bold.ttf');
+	src: url('/fonts/microgramma-regular.ttf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Microgramma';
+	src: url('/fonts/microgramma-bold.ttf');
+	font-weight: bold;
 }
 
 @font-face {
@@ -66,6 +79,7 @@ h1,
 h3 {
 	font-family: 'Microgramma', sans-serif;
 	font-style: normal;
+	font-weight: bold;
 	text-transform: uppercase;
 	color: var(--monarch-blue);
 	letter-spacing: -0.5px;

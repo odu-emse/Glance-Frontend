@@ -2,10 +2,10 @@
 import { Button } from '@/components/common/button/button'
 import Head from 'next/head'
 import { useSession } from 'next-auth/react'
-import { useState } from 'react'
-import { Anchor } from '@/components/common/links/anchor/anchor'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+
 
 // background: rgb(32,68,152);
 // background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
@@ -24,7 +24,7 @@ const Index = () => {
 	return (
 		<>
 			<Head>
-				<title>ALMP</title>
+				<title>Glance</title>
 			</Head>
 
 			<div
@@ -37,32 +37,44 @@ const Index = () => {
 					backgroundPosition: 'center',
 				}}
 			>
+				<div className="flex items-center justify-center">
+				<Image 
+					className=""
+					src="/logos/ALMPLogo_New2_White.svg"
+					alt="glance"
+					width={100}
+					height={90}
+					/>
+				
 				<h1
 					style={{
-						color: '#FFFFFF',
 						fontWeight: 700,
-						fontSize: '4em',
+						fontSize: '52px',
 					}}
-					className="select-none"
+					className="text-white"
 				>
-					ALMP
+					GLANCE
 				</h1>
-				<span
-					className="flex items-center gap-4 sans"
-					style={{
-						color: '#FFFFFF',
-					}}
-				>
-					<small className="m-0 p-0">API Version 0.3.5</small>
-					<span>&bull;</span>
-					<small className="m-0 p-0">FE Version 0.3.0</small>
-				</span>
+				</div>
+
+				<h5
+				className=" text-white sans text-sm leading-5 font-bold"
+				>Education At A Glance</h5>
 
 				<Link href={'/login'} passHref>
-					<Button variant="white">
-						<p className="m-0">LOGIN</p>
+					<Button variant="white" className="m-5">
+						<p className="m-0 text-sm">LOGIN</p>
 					</Button>
 				</Link>
+
+				<span
+					className="sans font-bold absolute bottom-1 left-3 gap-4 sans text-white text-sm"
+				>
+					<small className="m-0 p-0">API Version 0.3.5</small>
+					<span className="mx-1">&bull;</span>
+					<small className="m-0 p-0">FE Version 0.3.0</small>
+				</span>
+				
 			</div>
 		</>
 	)
