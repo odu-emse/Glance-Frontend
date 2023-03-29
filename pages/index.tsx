@@ -12,14 +12,13 @@ import { useRouter } from 'next/router'
 
 const Index = () => {
 	const { status } = useSession()
-	const { push } = useRouter();
+	const { push } = useRouter()
 
 	console.log(status)
-	if(status === "authenticated") {
+	if (status === 'authenticated') {
 		// Redirect to modules page
-		push("/modules")
+		push('/modules')
 	}
-
 
 	return (
 		<>
