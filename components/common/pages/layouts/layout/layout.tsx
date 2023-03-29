@@ -1,12 +1,10 @@
-import { useState } from 'react'
-import GlobalLoadingContext from '@/contexts/global_loading_context'
-import Loader from '@/components/util/loader'
-import { Sidebar } from '../../sidebar/sidebar'
-import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
+import { useState } from 'react';
+import GlobalLoadingContext from '@/contexts/global_loading_context';
+import Loader from '@/components/util/loader';
+import { Sidebar } from '../../sidebar/sidebar';
+import { useSession } from 'next-auth/react';
 
 export const Layout = ({ children }) => {
-	const router = useRouter()
 	const [isLoading, setLoading] = useState(false)
 	const [open, setOpen] = useState(true)
 	const { data: session, status } = useSession()
@@ -18,12 +16,6 @@ export const Layout = ({ children }) => {
 			</div>
 		)
 	}
-
-	// TODO: we might want to uncomment this once we have next routing integrated
-	// if (isLoading && session === null) {
-	// 	router.push('/login').catch((err) => console.log(err))
-	// 	return
-	// }
 
 	return (
 		<section>
