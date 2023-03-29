@@ -58,7 +58,7 @@ const Index = () => {
 					<small className="m-0 p-0">FE Version 0.3.0</small>
 				</span>
 
-				<Link href={'/login'}>
+				<Link href={'/login'} passHref>
 					<Button variant="white">
 						<p className="m-0">LOGIN</p>
 					</Button>
