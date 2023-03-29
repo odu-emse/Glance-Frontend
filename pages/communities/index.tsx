@@ -5,7 +5,7 @@ const Index = () => {
 		<div className="flex justify-center items-center h-screen">
 			<p>Communities Index</p>
 			<Thread
-				body={''}
+				body={'hhhhhhh'}
 				upvotes={0}
 				userProfile={{
 					id: '',
