@@ -4,13 +4,22 @@ import Head from 'next/head'
 import { useSession } from 'next-auth/react'
 import { useState } from 'react'
 import { Anchor } from '@/components/common/links/anchor/anchor'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 // background: rgb(32,68,152);
 // background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
 
 const Index = () => {
-	const { data: session, status } = useSession()
-	const [isLoading, setLoading] = useState(true)
+	const { status } = useSession()
+	const { push } = useRouter();
+
+	console.log(status)
+	if(status === "authenticated") {
+		// Redirect to modules page
+		push("/modules")
+	}
+
 
 	return (
 		<>
@@ -49,15 +58,11 @@ const Index = () => {
 					<small className="m-0 p-0">FE Version 0.3.0</small>
 				</span>
 
-				<Anchor
-					className="w-32 no-underline"
-					onClick={() => setLoading(status === 'authenticated')}
-					path={isLoading ? '/modules' : '/'}
-				>
+				<Link href={'/login'}>
 					<Button variant="white">
 						<p className="m-0">LOGIN</p>
 					</Button>
-				</Anchor>
+				</Link>
 			</div>
 		</>
 	)
