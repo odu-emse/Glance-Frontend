@@ -28,7 +28,7 @@ const getIdByStoryName = (storyName: string) => {
 
 const useUpvoteThread = (moduleID, userProfileID) => {
 	mutate(async () => {
-		fetch(process.env.NEXT_PUBLIC_API_URL, {
+		await fetch(process.env.NEXT_PUBLIC_API_URL, {
 			method: 'POST',
 			body: JSON.stringify({
 				query: gql`

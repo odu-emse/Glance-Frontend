@@ -3,6 +3,11 @@ import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { IconContext } from 'react-icons'
 import Link from 'next/link'
+import { useContext } from 'react';
+import GlobalUserContext from '@/contexts/global_user_context';
+import useSWR from 'swr';
+import gqlFetcher, { client } from '@/utils/gql_fetcher';
+import { gql } from 'graphql-request';
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -10,7 +15,6 @@ export const Thread: React.FC<ThreadProps> = ({
 	upvotes,
 	id,
 	userProfile,
-	handleUpvote,
 	children,
 	isUpvoted: initialIsUpvoted,
 	commentCount = 0,
@@ -19,10 +23,30 @@ export const Thread: React.FC<ThreadProps> = ({
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
 	const [isUpvoted, setIsUpvoted] = React.useState(initialIsUpvoted)
-	const _handleUpvote = () => {
-		handleUpvote()
-		setIsUpvoted(!isUpvoted)
+	const {user} = useContext(GlobalUserContext)
+
+	const { mutate } = useSWR({}, gqlFetcher)
+
+	const upvoteThread = (threadId: string) => {
+		mutate(async () => {
+			await client.request(gql`
+          mutation UpvoteThread($input: ID!){
+              upvoteThread(id: $input, userID: "${user.id}"){
+                  id
+              }
+          }
+			`, {
+				input: threadId
+			})
+		}, false)
+		.then(() => {
+			setIsUpvoted(!isUpvoted)
+		})
+		.catch((err) => {
+			console.log(err)
+		})
 	}
+
 	let url: string
 	return (
 		<>
@@ -85,7 +109,7 @@ export const Thread: React.FC<ThreadProps> = ({
 						<GoCommentDiscussion size={18} />
 					</button>
 					<button
-						onClick={() => _handleUpvote()}
+						onClick={() => upvoteThread(id)}
 						className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200 flex flex-row gap-1 justify-center items-center"
 					>
 						<span className={`${upvotes <= 0 ? 'hidden' : ''}`}>
@@ -163,11 +187,12 @@ export type ThreadProps = {
 	 * @property {Function} handleUpvote - A callback function that is triggered when the upvote button is clicked. It should handle the logic for upvoting the thread, such as updating the upvote count and making API calls as needed.
 	 * @returns void
 	 */
-	handleUpvote: () => void
+	// handleUpvote: (id:string) => void
 	/**
 	 * @property {boolean} [isUpvoted] - An optional boolean prop that indicates whether the current user has upvoted the thread. If true, the upvote icon will be displayed in red. If false or undefined, the upvote icon will have the default color.
 	 */
 	isUpvoted?: boolean
+	/**
 	 * The number of comments the thread has. This is used to display in the view thread button
 	 */
 	commentCount?: number
