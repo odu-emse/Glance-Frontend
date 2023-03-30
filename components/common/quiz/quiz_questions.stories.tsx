@@ -8,13 +8,14 @@ export default {
 	argTypes: {},
 } as ComponentMeta<typeof QuizQuestion>
 
-const Template: ComponentStory<typeof QuizQuestion> = (args: QuizQuestionProps) => (
-	<QuizQuestion {...args} />
-)
+const Template: ComponentStory<typeof QuizQuestion> = (
+	args: QuizQuestionProps
+) => <QuizQuestion {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-	question: "How do you know whether a system is in a dynamic or static state?",
-	questionNumber : 1,
-	options: ["Option1", "Option2", "Option3", "Option4"]
+	question:
+		'How do you know whether a system is in a dynamic or static state?',
+	questionNumber: 1,
+	options: ['Option1', 'Option2', 'Option3', 'Option4'],
 }
