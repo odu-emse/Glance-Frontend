@@ -183,43 +183,57 @@ const UserProfile = () => {
 					<div className="flex flex-col items-start justify-center">
 						{!isEditMode ? (
 							<>
-								<Link href={'settings#plan'}>
-									<h4 className="uppercase my-2 font-bold text-royalblue underline">
+								<Link href={`/users/${userID}/settings#plan`}>
+									<a>
+										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 										Plan of study
-									</h4>
+										</h4>
+									</a>
 								</Link>
-								<Link href={'/settings#watched'}>
-									<h4 className="uppercase my-2 font-bold text-royalblue underline">
+								<Link href={`/users/${userID}/settings#watched`}>
+									<a>
+										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 										Watched Threads
-									</h4>
+										</h4>
+									</a>
 								</Link>
-								<Link href={'/settings#feedback'}>
-									<h4 className="uppercase my-2 font-bold text-royalblue underline">
+								<Link href={`/users/${userID}/settings#feedback`}>
+									<a>
+										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 										Module Reviews
-									</h4>
+										</h4>
+									</a>
 								</Link>
-								<Link href={'/settings#connections'}>
-									<h4 className="uppercase my-2 font-bold text-royalblue underline">
+								<Link href={`/users/${userID}/settings#connection`}>
+									<a>
+										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 										Connections
-									</h4>
+										</h4>
+									</a>
 								</Link>
 							</>
 						) : (
 							<>
-								<Link href={'/settings#privacy'}>
-									<h4 className="uppercase my-2 font-bold text-royalblue underline">
+								<Link href={`/users/${userID}/settings#privacy`}>
+									<a>
+										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 										Privacy Settings
-									</h4>
+										</h4>
+									</a>
 								</Link>
-								<Link href={'/settings#connections'}>
-									<h4 className="uppercase my-2 font-bold text-royalblue underline">
+								<Link href={`/users/${userID}/settings#connection`}>
+									<a>
+										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 										Connection Settings
-									</h4>
+										</h4>
+									</a>
 								</Link>
-								<Link href={'/settings#notifications'}>
-									<h4 className="uppercase my-2 font-bold text-royalblue underline">
+								<Link href={`/users/${userID}/settings#notification`}>
+									<a>
+										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 										Notification Settings
-									</h4>
+										</h4>
+									</a>
 								</Link>
 							</>
 						)}
@@ -244,7 +258,6 @@ const UserProfile = () => {
 									prefer to be visible to others on your
 									profile.
 								</p>
-								{/* <img src={ Chat_Bubble } alt="chat bubble" /> */}
 								<span className="flex-none m-5">
 									<svg
 										width="65"
