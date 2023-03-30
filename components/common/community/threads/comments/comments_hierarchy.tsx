@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Thread } from '../thread/thread'
-import { ThreadType } from '../../../../../types';
+import { ThreadType } from '../../../../../types'
 
 /**
  * This function generates an array of DOM thread components based on a parent comment tree.

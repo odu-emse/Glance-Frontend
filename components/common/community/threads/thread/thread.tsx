@@ -3,11 +3,11 @@ import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { IconContext } from 'react-icons'
 import Link from 'next/link'
-import { useContext } from 'react';
-import GlobalUserContext from '@/contexts/global_user_context';
-import useSWR from 'swr';
-import gqlFetcher, { client } from '@/utils/gql_fetcher';
-import { gql } from 'graphql-request';
+import { useContext } from 'react'
+import GlobalUserContext from '@/contexts/global_user_context'
+import useSWR from 'swr'
+import gqlFetcher, { client } from '@/utils/gql_fetcher'
+import { gql } from 'graphql-request'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -23,28 +23,31 @@ export const Thread: React.FC<ThreadProps> = ({
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
 	const [isUpvoted, setIsUpvoted] = React.useState(initialIsUpvoted)
-	const {user} = useContext(GlobalUserContext)
+	const { user } = useContext(GlobalUserContext)
 
 	const { mutate } = useSWR({}, gqlFetcher)
 
 	const upvoteThread = (threadId: string) => {
 		mutate(async () => {
-			await client.request(gql`
+			await client.request(
+				gql`
           mutation UpvoteThread($input: ID!){
               upvoteThread(id: $input, userID: "${user.id}"){
                   id
               }
           }
-			`, {
-				input: threadId
-			})
+			`,
+				{
+					input: threadId,
+				}
+			)
 		}, false)
-		.then(() => {
-			setIsUpvoted(!isUpvoted)
-		})
-		.catch((err) => {
-			console.log(err)
-		})
+			.then(() => {
+				setIsUpvoted(!isUpvoted)
+			})
+			.catch((err) => {
+				console.log(err)
+			})
 	}
 
 	let url: string

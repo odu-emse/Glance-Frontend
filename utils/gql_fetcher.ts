@@ -11,8 +11,7 @@ const gqlFetcher = (args) => {
 }
 
 export const client = new GraphQLClient(process.env.NEXT_PUBLIC_API_URL, {
-	headers: {
-	},
+	headers: {},
 })
 
 export default gqlFetcher

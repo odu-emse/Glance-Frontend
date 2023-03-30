@@ -6,9 +6,7 @@ import { createContext } from 'react'
 
 const GlobalUserContext = createContext({
 	user: null,
-	setUser: (user) => {
-
-	}
+	setUser: (user) => {},
 })
 
 export default GlobalUserContext
