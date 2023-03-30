@@ -1,7 +1,7 @@
 import { Thread } from '@/components/common/community/threads/thread/thread'
 import useSWR from 'swr'
 import { gql } from 'graphql-request'
-import gqlFetcher from '@/utils/gql_fetcher'
+import gqlFetcher from '@/utils/gql_fetcher';
 import * as React from 'react'
 import { Input } from '@/common/forms/inputs/input/input'
 import { WatchedSidebarList } from '@/common/community/watched_threads/watched_threads'
@@ -23,6 +23,7 @@ const Index = ({}) => {
             user(input:{
                 openID: "${session?.openId}"
             }){
+								id
 								plan {
 									id
                 }
