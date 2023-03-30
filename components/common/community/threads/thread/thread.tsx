@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
-import { Anchor } from '../../../links/anchor/anchor'
+import Link from 'next/link'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -10,29 +10,44 @@ export const Thread: React.FC<ThreadProps> = ({
 	id,
 	userProfile,
 	children,
+	commentCount = 0,
+	viewCutOff = false,
+	showAuthor = true,
 }) => {
 	const [isClicked, setIsClicked] = React.useState(false)
 	let url: string
 	return (
 		<>
-			<div className="rounded shadow pl-5 flex flex-col " id={id}>
-				<Anchor
-					path={`/user/${userProfile.id}`}
-					className="flex items-center no-underline"
-				>
-					<img
-						src={userProfile.image}
-						alt="user profile image"
-						className="shadow-lg rounded-full max-w-full h-6 align-middle border-none"
-					/>
-					<div className="userName font-bold px-2">
-						{userProfile.firstName}
-						{userProfile.lastName}
-					</div>
-				</Anchor>
-
-				<p className="text-xl font-medium">{title}</p>
-				<p className="text-sm">{body}</p>
+			<div
+				className="rounded-sm shadow-lg px-5 py-2 flex flex-col border-gray-300 border"
+				id={id}
+			>
+				{showAuthor && (
+					<Link href={`/user/${userProfile.id}`}>
+						<div className="flex items-center no-underline cursor-pointer w-fit">
+							<img
+								src={
+									userProfile.picURL ||
+									'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png'
+								}
+								alt="user profile image"
+								className="shadow-lg rounded-full max-w-full h-8 aspect-square align-middle border-none"
+							/>
+							<h4 className="font-bold px-2">
+								{userProfile.firstName} {userProfile.lastName}
+							</h4>
+						</div>
+					</Link>
+				)}
+				{title && <h4 className="font-bold uppercase">{title}</h4>}
+				<p className="text-sm relative">{body.slice(0, 150)}</p>
+				{viewCutOff && (
+					<Link href={`/communities/${id}`}>
+						<h2 className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer">
+							{`View Thread (${commentCount} comments)`}
+						</h2>
+					</Link>
+				)}
 				<div className="flex flex-row justify-end gap-4">
 					<button
 						className="group relative text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"
@@ -85,15 +100,15 @@ export type UserAccount = {
 	/**
 	 * The first name of the user
 	 */
-	firstName: string
+	firstName?: string
 	/**
 	 * The last name of the user
 	 */
-	lastName: string
+	lastName?: string
 	/**
 	 * The image URL of the user
 	 */
-	image: string
+	picURL?: string
 }
 
 export type ThreadProps = {
@@ -121,4 +136,18 @@ export type ThreadProps = {
 	 * The child comments of this thread as an array
 	 */
 	children?: any
+	/**
+	 * The number of comments the thread has. This is used to display in the view thread button
+	 */
+	commentCount?: number
+
+	/**
+	 * If true, the thread will be cut off after 150 characters and a view thread button will be displayed
+	 */
+	viewCutOff?: boolean
+
+	/**
+	 * If true, the author of the thread will be displayed
+	 */
+	showAuthor?: boolean
 }

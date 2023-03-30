@@ -6,7 +6,7 @@ export const ContentArea: React.FC<
 > = ({}): React.ReactElement => {
 	const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
 
-	const files = acceptedFiles.map((file) => (
+	const files = acceptedFiles.map((file: File & { path: string }) => (
 		<li key={file.path}>
 			{file.path} - {file.size} bytes
 		</li>
@@ -17,8 +17,8 @@ export const ContentArea: React.FC<
 				<input {...getInputProps()} />
 				<div className="flex items-center justify-center w-auto">
 					<label
-						for="dropzone-file"
-						class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+						htmlFor="dropzone-file"
+						className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
 					>
 						<div className="flex flex-col items-center justify-center pt-5 pb-6">
 							<svg
@@ -63,17 +63,17 @@ export type ContentAreaProps = {
 	/**
 	 * useDropzone hook just binds the necessary handlers to create a drag 'n' drop zone
 	 */
-	useDropzone: string
+	useDropzone?: string
 	/**
 	 * the getRootProps() fn to get the props required for drag 'n' drop and use them on any element.
 	 */
-	getRootProps: Function
+	getRootProps?: Function
 	/**
 	 *  the getInputProps() fn is used for click and keydown behavior
 	 */
-	getInputProps: Function
+	getInputProps?: Function
 	/**
 	 *  the acceptedFiles() fn is used for track and map the uploaded files to the list
 	 */
-	acceptedFiles: Function
+	acceptedFiles?: Function
 }

@@ -23,7 +23,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 					// ...collapsed ? { justifyContent: 'center' } : {}
 				}}
 			>
-				<img src={icon} width={32} height={32} />
+				<img src={icon} className="aspect-square w-8 h-8" />
 				{!collapsed ? <p className="m-0 p-0">{value}</p> : null}
 			</div>
 		</Link>
