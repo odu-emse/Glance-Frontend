@@ -186,52 +186,64 @@ const UserProfile = () => {
 								<Link href={`/users/${userID}/settings#plan`}>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-										Plan of study
+											Plan of study
 										</h4>
 									</a>
 								</Link>
-								<Link href={`/users/${userID}/settings#watched`}>
+								<Link
+									href={`/users/${userID}/settings#watched`}
+								>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-										Watched Threads
+											Watched Threads
 										</h4>
 									</a>
 								</Link>
-								<Link href={`/users/${userID}/settings#feedback`}>
+								<Link
+									href={`/users/${userID}/settings#feedback`}
+								>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-										Module Reviews
+											Module Reviews
 										</h4>
 									</a>
 								</Link>
-								<Link href={`/users/${userID}/settings#connection`}>
+								<Link
+									href={`/users/${userID}/settings#connection`}
+								>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-										Connections
+											Connections
 										</h4>
 									</a>
 								</Link>
 							</>
 						) : (
 							<>
-								<Link href={`/users/${userID}/settings#privacy`}>
+								<Link
+									href={`/users/${userID}/settings#privacy`}
+								>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-										Privacy Settings
+											Privacy Settings
 										</h4>
 									</a>
 								</Link>
-								<Link href={`/users/${userID}/settings#connection`}>
+								<Link
+									href={`/users/${userID}/settings#connection`}
+								>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-										Connection Settings
+											Connection Settings
 										</h4>
 									</a>
 								</Link>
-								<Link href={`/users/${userID}/settings#notification`}>
+								<Link
+									href={`/users/${userID}/settings#notification`}
+								>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-										Notification Settings
+											Notification Settings
 										</h4>
 									</a>
 								</Link>
