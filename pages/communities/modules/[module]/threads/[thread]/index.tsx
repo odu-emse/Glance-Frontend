@@ -25,7 +25,7 @@ const ThreadPage = () => {
 						userProfile={{
 							firstName: 'joel',
 							id: 1,
-							image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
+							picURL: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 							lastName: 'desante',
 						}}
 					/>
@@ -38,7 +38,7 @@ const ThreadPage = () => {
 					userProfile={{
 						firstName: 'joel',
 						id: 1,
-						image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
+						picURL: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 						lastName: 'desante',
 					}}
 				/>

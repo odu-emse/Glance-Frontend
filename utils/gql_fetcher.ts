@@ -7,7 +7,7 @@ const gqlFetcher = (args) => {
 		},
 	})
 
-	return client.request(args.query)
+	return client.request(args.query, args.variables || {})
 }
 
 export default gqlFetcher
