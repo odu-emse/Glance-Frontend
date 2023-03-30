@@ -13,8 +13,6 @@ const ThreadID = () => {
 
 	const { threadID } = router.query
 
-	console.log(threadID)
-
 	const { data: threadData, error: threadError } = useSWR(
 		{
 			query: gql`
