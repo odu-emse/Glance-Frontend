@@ -15,6 +15,7 @@ export const Input = ({
 	disabled = false,
 	error = false,
 	options,
+	placeholder = 'Enter here',
 }: InputProps) => {
 	return (
 		<>
@@ -23,7 +24,7 @@ export const Input = ({
 					type={type}
 					name={name}
 					id={name}
-					placeholder="Enter here"
+					placeholder={placeholder}
 					role={role}
 					aria-label={ariaLabel}
 					className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none dark:text-white focus:outline-none focus:ring-0 peer ${
@@ -160,5 +161,9 @@ export type InputProps = {
 	 */
 	ariaLabel?: string
 
-	options: dropdownOption[] | string[]
+	options?: dropdownOption[] | string[]
+	/**
+	 * The placeholder value is used to provide a placeholder for the input element. This is used to provide additional context to the user, under the input element.
+	 */
+	placeholder?: string
 }
