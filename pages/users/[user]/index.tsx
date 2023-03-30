@@ -4,18 +4,19 @@ import gqlFetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import { gql } from 'graphql-request'
 import { useRouter } from 'next/router'
-import { Button } from '@/common/button/button';
-import { Anchor } from '@/common/links/anchor/anchor';
+import { Button } from '@/common/button/button'
+import { Anchor } from '@/common/links/anchor/anchor'
 
 const UserProfile = () => {
 	const [isEditMode, setEditMode] = useState(false)
 	const router = useRouter()
 
-	const {user: userID} = router.query
+	const { user: userID } = router.query
 
-	const { data, error } = useSWR( userID ?
-		{
-			query: gql`
+	const { data, error } = useSWR(
+		userID
+			? {
+					query: gql`
           {
             user(input: { openID: "${userID}" }) {
               id
@@ -28,7 +29,8 @@ const UserProfile = () => {
             }
           }
         `,
-		} : null,
+			  }
+			: null,
 		gqlFetcher
 	)
 
@@ -40,7 +42,7 @@ const UserProfile = () => {
 		return <div>Loading...</div>
 	}
 
-	const user : {
+	const user: {
 		id: string
 		openID: string
 		picURL: string
@@ -134,7 +136,9 @@ const UserProfile = () => {
 						<h5 className="m-0">Contact Information:</h5>
 						{!isEditMode ? (
 							<>
-								<p className="email m-0">{data.user[0].email}</p>
+								<p className="email m-0">
+									{data.user[0].email}
+								</p>
 								<p className="phone m-0">123-4567-890</p>
 							</>
 						) : (
