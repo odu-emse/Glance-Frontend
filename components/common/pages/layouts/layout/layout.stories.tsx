@@ -20,7 +20,13 @@ const Template = (args: { authenticated: boolean }) => {
 	return (
 		<SessionProvider>
 			<Layout>
-				<Sidebar isLoading={false} userSession={null} />
+				<Sidebar
+					isLoading={false}
+					userSession={null}
+					icon={null}
+					handle={() => console.log('toggled')}
+					open={false}
+				/>
 				<Content>
 					<h1 className="border-blue-300 border-dashed border-4">
 						Hello World
