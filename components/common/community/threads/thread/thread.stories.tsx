@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Thread, ThreadProps } from './thread';
+import { Thread, ThreadProps } from './thread'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { mockData } from '../../../../util/thread_data'
 import useSWR, { mutate } from 'swr'
