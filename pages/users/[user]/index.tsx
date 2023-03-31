@@ -5,7 +5,7 @@ import useSWR from 'swr'
 import { gql } from 'graphql-request'
 import { useRouter } from 'next/router'
 import { Button } from '@/common/button/button'
-import { Anchor } from '@/common/links/anchor/anchor'
+import Link from 'next/link'
 
 const UserProfile = () => {
 	const [isEditMode, setEditMode] = useState(false)
@@ -81,52 +81,52 @@ const UserProfile = () => {
 					<div className="flex flex-col items-start ml-8 justify-center">
 						{!isEditMode ? (
 							<>
-								<Anchor
-									path={''}
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									{' '}
 									Plan of study
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									Watched Threads
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									Module Reviews
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									Connections
-								</Anchor>
+								</Link>
 							</>
 						) : (
 							<>
-								<Anchor
-									path={''}
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold"
 								>
 									Privacy Settings
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold"
 								>
 									Connection Settings
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold"
 								>
 									Notification Settings
-								</Anchor>
+								</Link>
 							</>
 						)}
 					</div>
@@ -145,9 +145,9 @@ const UserProfile = () => {
 							<div className="flex flex-row items-center">
 								<p className=" w-1/2 m-3">
 									See{' '}
-									<Anchor path={'/toSettings'}>
+									<Link href={'/toSettings'}>
 										Settings
-									</Anchor>{' '}
+									</Link>{' '}
 									to change your preferred contact
 									information.Check the contact methods you’d
 									prefer to be visible to others on your

@@ -3,7 +3,6 @@ import { Button } from '@/components/common/button/button'
 import Head from 'next/head'
 import { useSession } from 'next-auth/react'
 import { useState } from 'react'
-import { Anchor } from '@/components/common/links/anchor/anchor'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 

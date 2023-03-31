@@ -1,20 +1,20 @@
-import { Anchor } from '../../links/anchor/anchor'
+import Link from "next/link"
 
 export const ModuleList = ({ modules }: ModuleListProps) => {
 	return (
 		<>
 			<h1 className="font-semibold text-2xl py-1">Your Modules</h1>
 			{modules.map((module, moduleIndex) => (
-				<Anchor
+				<Link
 					key={moduleIndex}
-					path={`/communities/modules/${module.id}/`}
+					href={`/communities/modules/${module.id}/`}
 					role="thread link"
 					className="text-blue-800 flex py-1 text-lg"
 				>
 					{module.moduleName.length > 30
 						? `${module.moduleName.substring(0, 30)}...`
 						: module.moduleName}
-				</Anchor>
+				</Link>
 			))}
 		</>
 	)
