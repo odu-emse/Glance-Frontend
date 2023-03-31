@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import Loader from '@/components/util/loader'
 import { Sidebar } from '../../sidebar/sidebar'
@@ -10,7 +10,6 @@ export const Layout = ({ children }) => {
 	const [isLoading, setLoading] = useState(true)
 	const [isAccountVisible, setAccountVisible] = useState(false)
 	const { data: session, status } = useSession()
-
 
 	if (status === 'loading') {
 		return (
@@ -26,6 +25,7 @@ export const Layout = ({ children }) => {
 		router.push('/login')
 		return
 	}
+	console.log(session.user.image);
 
 	return (
 		<section>
@@ -39,10 +39,12 @@ export const Layout = ({ children }) => {
 						<figcaption onClick={() => signOut()} className={"text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200"}>Log out</figcaption>
 					</div>
 				</div>
-
 			</nav>
 
-			<div className="flex h-full" onClick={() => setAccountVisible(false)}>
+			<div
+				className="flex h-full"
+				onClick={() => setAccountVisible(false)}
+			>
 				<Sidebar
 					isLoading={status === 'loading'}
 					userSession={session}
