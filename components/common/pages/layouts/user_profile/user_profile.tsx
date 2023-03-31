@@ -140,9 +140,7 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 							<div className="flex flex-row items-center">
 								<p className=" w-1/2 m-3">
 									See{' '}
-									<Link href={'/toSettings'}>
-										Settings
-									</Link>{' '}
+									<Link href={'/toSettings'}>Settings</Link>{' '}
 									to change your preferred contact
 									information.Check the contact methods you’d
 									prefer to be visible to others on your
