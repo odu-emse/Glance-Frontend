@@ -25,18 +25,59 @@ export const Layout = ({ children }) => {
 		router.push('/login')
 		return
 	}
-	console.log(session.user.image);
+	console.log(session.user.image)
 
 	return (
 		<section>
 			<nav className="flex bg-royalblue stdcontainer-sharp justify-end">
-				<div className={"flex gap-2 items-center relative"}  onClick={() => setAccountVisible(true)}>
-					<figcaption className={"text-xs/[16px]"}><span className={"text-gray-400"}>Hello,</span> <span className={"font-bold text-white"}>{session.user.name}</span></figcaption>
-					<img src={session.user.image} alt={"profile image"} className="rounded-full w-8 h-8 border"/>
-					<div className={`${isAccountVisible ? "flex" : "hidden"} right-0.5 top-12 absolute border border-black items-end justify-end flex-col w-56 float-right mr-5`}>
-						<figcaption onClick={() => router.push(`/users/${session.openId}`)} className={"text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200"}>View Profile </figcaption>
-						<figcaption onClick={() => router.push(`/users/${session.openId}/settings`)} className={"text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200"}>Account Settings</figcaption>
-						<figcaption onClick={() => signOut()} className={"text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200"}>Log out</figcaption>
+				<div
+					className={'flex gap-2 items-center relative'}
+					onClick={() => setAccountVisible(true)}
+				>
+					<figcaption className={'text-xs/[16px]'}>
+						<span className={'text-gray-400'}>Hello,</span>{' '}
+						<span className={'font-bold text-white'}>
+							{session.user.name}
+						</span>
+					</figcaption>
+					<img
+						src={session.user.image}
+						alt={'profile image'}
+						className="rounded-full w-8 h-8 border"
+					/>
+					<div
+						className={`${
+							isAccountVisible ? 'flex' : 'hidden'
+						} right-0.5 top-12 absolute border border-black items-end justify-end flex-col w-56 float-right mr-5`}
+					>
+						<figcaption
+							onClick={() =>
+								router.push(`/users/${session.openId}`)
+							}
+							className={
+								'text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200'
+							}
+						>
+							View Profile{' '}
+						</figcaption>
+						<figcaption
+							onClick={() =>
+								router.push(`/users/${session.openId}/settings`)
+							}
+							className={
+								'text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200'
+							}
+						>
+							Account Settings
+						</figcaption>
+						<figcaption
+							onClick={() => signOut()}
+							className={
+								'text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200'
+							}
+						>
+							Log out
+						</figcaption>
 					</div>
 				</div>
 			</nav>
