@@ -1,15 +1,41 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import Loader from '@/components/util/loader'
 import { Sidebar } from '../../sidebar/sidebar'
 import { useSession, signOut } from 'next-auth/react'
 import { useRouter } from 'next/router'
+import GlobalUserContext from '@/contexts/global_user_context'
+import gqlFetcher from '@/utils/gql_fetcher'
+import useSWR from 'swr'
+import { gql } from 'graphql-request'
 
 export const Layout = ({ children }) => {
-	const router = useRouter()
-	const [isLoading, setLoading] = useState(true)
-	const [isAccountVisible, setAccountVisible] = useState(false)
+  const router = useRouter()
+	const [isLoading, setLoading] = useState(false)
+	const [open, setOpen] = useState(true)
+  const [isAccountVisible, setAccountVisible] = useState(false)
 	const { data: session, status } = useSession()
+	const { setUser } = useContext(GlobalUserContext)
+
+	const { data, error } = useSWR(
+		session
+			? {
+					query: gql`
+			query {
+				user(input: {
+					openID: "${session.openId}"
+				}){
+					id
+					plan {
+							id
+					}
+				}
+			}
+		`,
+			  }
+			: null,
+		gqlFetcher
+	)
 
 	if (status === 'loading') {
 		return (
@@ -18,18 +44,31 @@ export const Layout = ({ children }) => {
 			</div>
 		)
 	}
-
-	// TODO: we might want to uncomment this once we have next routing integrated
-	// Uncommented to prevent session undefined error for building navbar.
-	if (status !== 'loading' && session === null) {
-		router.push('/login')
-		return
+  
+	if (error) {
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<h1 className="text-2xl text-royalblue">
+					Error loading user data
+				</h1>
+			</div>
+		)
 	}
-	console.log(session.user.image)
+
+	if (!data) {
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
+	}
 
 	return (
 		<section>
-			<nav className="flex bg-royalblue stdcontainer-sharp justify-end">
+			<GlobalUserContext.Provider
+				value={{ user: data.user[0] || null, setUser }}
+			>
+				<nav className="flex bg-royalblue stdcontainer-sharp justify-end">
 				<div
 					className={'flex gap-2 items-center relative'}
 					onClick={() => setAccountVisible(true)}
@@ -81,33 +120,37 @@ export const Layout = ({ children }) => {
 					</div>
 				</div>
 			</nav>
+				<div className="flex h-full" onClick={() => setAccountVisible(false)}>
+					<Sidebar
+						isLoading={isLoading}
+						userSession={session}
+						handle={setOpen}
+						open={open}
+						icon={null}
+					/>
+					<main className="grow">
+						<GlobalLoadingContext.Provider
+							value={{ isLoading, setLoading }}
+						>
+							{isLoading === true && (
+								<div className="flex justify-center items-center stdcontainer h-32">
+									<Loader textColor="royalblue" />
+								</div>
+							)}
 
-			<div
-				className="flex h-full"
-				onClick={() => setAccountVisible(false)}
-			>
-				<Sidebar
-					isLoading={status === 'loading'}
-					userSession={session}
-				/>
-				<main className="grow">
-					<GlobalLoadingContext.Provider
-						value={{ isLoading, setLoading }}
-					>
-						{isLoading === true && (
-							<div className="flex justify-center items-center stdcontainer h-32">
-								<Loader textColor="royalblue" />
+							<div
+								style={{
+									display: isLoading ? 'none' : 'block',
+								}}
+							>
+								{' '}
+								{/* Totally unneeded but it makes me happy to have this display so here it is... */}
+								{children}
 							</div>
-						)}
-
-						<div style={{ display: isLoading ? 'none' : 'block' }}>
-							{' '}
-							{/* Totally unneeded but it makes me happy to have this display so here it is... */}
-							{children}
-						</div>
-					</GlobalLoadingContext.Provider>
-				</main>
-			</div>
+						</GlobalLoadingContext.Provider>
+					</main>
+				</div>
+			</GlobalUserContext.Provider>
 		</section>
 	)
 }

@@ -7,13 +7,13 @@ export const ModuleList = ({ modules }: ModuleListProps) => {
 			{modules.map((module, moduleIndex) => (
 				<Anchor
 					key={moduleIndex}
-					path={`/communities/modules/${module.module_id}/`}
+					path={`/communities/modules/${module.id}/`}
 					role="thread link"
 					className="text-blue-800 flex py-1 text-lg"
 				>
-					{module.module_name.length > 30
-						? `${module.module_name.substring(0, 30)}...`
-						: module.module_name}
+					{module.moduleName.length > 30
+						? `${module.moduleName.substring(0, 30)}...`
+						: module.moduleName}
 				</Anchor>
 			))}
 		</>
@@ -24,11 +24,11 @@ export type ModuleListProps = {
 	modules: Array<ModuleListObject>
 }
 type ModuleListObject = {
-	module_name: string
+	moduleName?: string
 	/**
 	 * string that shows up name of the module on Default Card
 	 */
-	module_id: string
+	id: string
 	/**
 	 * unique number that shows up identity of the module card
 	 */
