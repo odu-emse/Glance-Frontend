@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { Sidebar, SidebarProps } from './sidebar'
+import { Sidebar } from './sidebar'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { SidebarItemProps } from './sidebar_item/sidebar_item'
 
 export default {
 	title: 'Common/Pages/Layouts/Left Sidebar',

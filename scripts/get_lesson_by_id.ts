@@ -7,6 +7,7 @@ export const getLessonByID = (lessonID) => {
 			content {
 				type
 				link
+				primary
 			}
 			collection {
 				id

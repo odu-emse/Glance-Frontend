@@ -7,7 +7,11 @@ const gqlFetcher = (args) => {
 		},
 	})
 
-	return client.request(args.query)
+	return client.request(args.query, args.variables || {})
 }
+
+export const client = new GraphQLClient(process.env.NEXT_PUBLIC_API_URL, {
+	headers: {},
+})
 
 export default gqlFetcher

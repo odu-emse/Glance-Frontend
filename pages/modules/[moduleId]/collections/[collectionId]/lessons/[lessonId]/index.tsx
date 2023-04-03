@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
-
 import Link from 'next/link'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
 
-// import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
+import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
 
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 import { getLessonByID } from '@/scripts/get_lesson_by_id'
 import { useContext } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
+import { gql } from 'graphql-request'
 
 const ModuleSection = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -27,6 +27,8 @@ const ModuleSection = () => {
 			: null,
 		gqlFetcher
 	)
+
+	//console.log("data",data)
 
 	if (status === 'loading') return
 	if (error) {
@@ -64,9 +66,10 @@ const ModuleSection = () => {
 	}
 
 	const lesson = data.lesson[0]
+	console.log('lesson1', lesson)
 	const _module = lesson.collection.module
 	const collections = flattenCollections(_module.collections)
-	// const content = lesson.content[0]
+	//const content = lesson.content[0]
 
 	// --- Next/Prev Page calculations
 	const currentLessonIndex = collections.findIndex(
@@ -80,6 +83,17 @@ const ModuleSection = () => {
 			: null
 
 	setLoading(false)
+
+	//TO get Content Type
+	const lessonContent = lesson.content
+	//console.log("content",lessonContent)
+	let contentType = ''
+	for (let i = 0; i < lessonContent.length; i++) {
+		if (lessonContent[i].primary === true) {
+			contentType = lessonContent[i].type
+			break
+		}
+	}
 
 	return (
 		<section className="stdcontainer">
@@ -99,8 +113,8 @@ const ModuleSection = () => {
 			</header>
 
 			<div className="flex h-4/5 gap-2 my-2">
-				{/* Section content */}
-				{/* <ContentLoader type={content.type} data={content.link} /> */}
+				{/* Section content  */}
+				<ContentLoader type={contentType} data={lessonContent} />
 
 				{/* Section sidebar */}
 				<aside className="bg-white h-full w-1/4">
