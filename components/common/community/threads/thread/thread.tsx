@@ -1,9 +1,8 @@
-import * as React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { IconContext } from 'react-icons'
 import Link from 'next/link'
-import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import useSWR from 'swr'
 import gqlFetcher, { client } from '@/utils/gql_fetcher'
@@ -12,7 +11,7 @@ import { gql } from 'graphql-request'
 export const Thread: React.FC<ThreadProps> = ({
 	title,
 	body,
-	upvotes,
+	// upvotes,
 	id,
 	userProfile,
 	children,
@@ -21,13 +20,43 @@ export const Thread: React.FC<ThreadProps> = ({
 	viewCutOff = false,
 	showAuthor = true,
 }) => {
-	const [isClicked, setIsClicked] = React.useState(false)
-	const [isUpvoted, setIsUpvoted] = React.useState(initialIsUpvoted)
+	const [isClicked, setIsClicked] = useState(false)
+	const [isUpvoted, setIsUpvoted] = useState(initialIsUpvoted)
 	const { user } = useContext(GlobalUserContext)
+	const [upvotes, setUpvotes] = useState(0)
+	const { data } = useSWR(
+		{
+			query: gql`
+				query GetThread($input: ID!) {
+					thread(input: { id: $input }) {
+						id
+						title
+						body
+						upvotes {
+							openID
+							id
+						}
+					}
+				}
+			`,
+			variables: { input: id },
+		},
+		gqlFetcher
+	)
+
+	useEffect(() => {
+		if (data) {
+			const initialIsUpvoted = data.thread[0].upvotes.some(
+				(upvote) => upvote.id === user.id
+			)
+			setIsUpvoted(initialIsUpvoted)
+			setUpvotes(data.thread[0].upvotes.length)
+		}
+	}, [data, user.id])
 
 	const { mutate } = useSWR({}, gqlFetcher)
 
-	const upvoteThread = (threadId: string) => {
+	const upvoteThread = (threadId) => {
 		mutate(async () => {
 			await client.request(
 				gql`
@@ -44,6 +73,31 @@ export const Thread: React.FC<ThreadProps> = ({
 		}, false)
 			.then(() => {
 				setIsUpvoted(!isUpvoted)
+				setUpvotes(upvotes + 1)
+			})
+			.catch((err) => {
+				console.log(err)
+			})
+	}
+
+	const downvoteThread = (threadId) => {
+		mutate(async () => {
+			await client.request(
+				gql`
+          mutation DownvoteThread($input: ID!){
+			downvoteThread(id: $input, userID: "${user.id}"){
+                  id
+              }
+          }
+			`,
+				{
+					input: threadId,
+				}
+			)
+		}, false)
+			.then(() => {
+				setIsUpvoted(!isUpvoted)
+				setUpvotes(upvotes - 1)
 			})
 			.catch((err) => {
 				console.log(err)
@@ -112,7 +166,9 @@ export const Thread: React.FC<ThreadProps> = ({
 						<GoCommentDiscussion size={18} />
 					</button>
 					<button
-						onClick={() => upvoteThread(id)}
+						onClick={() =>
+							isUpvoted ? downvoteThread(id) : upvoteThread(id)
+						}
 						className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200 flex flex-row gap-1 justify-center items-center"
 					>
 						<span className={`${upvotes <= 0 ? 'hidden' : ''}`}>
@@ -173,7 +229,7 @@ export type ThreadProps = {
 	/**
 	 * The number of upvotes the thread has
 	 */
-	upvotes: number
+	// upvotes: number
 	/**
 	 * The user account the thread belongs to
 	 */
