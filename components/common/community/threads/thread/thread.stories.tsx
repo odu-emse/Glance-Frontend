@@ -99,7 +99,7 @@ const Template: ComponentStory<typeof Thread> = ({
 			id={thread.id}
 			title={title || thread.title}
 			body={thread.body}
-			handleUpvote={() => useUpvoteThread(thread.id, userProfile.id)}
+			// handleUpvote={() => useUpvoteThread(thread.id, userProfile.id)}
 			upvotes={upvotes || thread.upvotes.length}
 			userProfile={userProfile}
 			isUpvoted={isUpvoted}
