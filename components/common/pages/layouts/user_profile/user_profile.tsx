@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { Button } from '../../../button/button'
+import Link from 'next/link'
 //import { Input } from '../../../forms/inputs/input/input'
-import { Anchor } from '@/components/common/links/anchor/anchor'
 //import Chat_Bubble from 'public/SVGs'
 
 export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
@@ -47,52 +47,52 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 					<div className="flex flex-col items-start ml-8 justify-center">
 						{!isEditMode ? (
 							<>
-								<Anchor
-									path={''}
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									{' '}
 									Plan of study
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									Watched Threads
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									Module Reviews
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold font-montesrrat"
 								>
 									Connections
-								</Anchor>
+								</Link>
 							</>
 						) : (
 							<>
-								<Anchor
-									path={''}
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold"
 								>
 									Privacy Settings
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold"
 								>
 									Connection Settings
-								</Anchor>
-								<Anchor
-									path={''}
+								</Link>
+								<Link
+									href={''}
 									className="uppercase m-2 font-bold"
 								>
 									Notification Settings
-								</Anchor>
+								</Link>
 							</>
 						)}
 					</div>
@@ -140,9 +140,7 @@ export const UserProfile = ({ user, isCurrentUser }: UserProfileProps) => {
 							<div className="flex flex-row items-center">
 								<p className=" w-1/2 m-3">
 									See{' '}
-									<Anchor path={'/toSettings'}>
-										Settings
-									</Anchor>{' '}
+									<Link href={'/toSettings'}>Settings</Link>{' '}
 									to change your preferred contact
 									information.Check the contact methods you’d
 									prefer to be visible to others on your

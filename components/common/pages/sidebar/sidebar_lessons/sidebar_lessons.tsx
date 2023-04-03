@@ -1,5 +1,5 @@
-import { Anchor } from 'components/common/links/anchor/anchor'
 import * as React from 'react'
+import Link from 'next/link'
 
 export const SidebarLessons = ({ open, handle }): React.ReactElement => {
 	const lessons = [
@@ -27,13 +27,13 @@ export const SidebarLessons = ({ open, handle }): React.ReactElement => {
 						className="font-montserrat text-blue mx-3 blue-800 flex text-base"
 						key={index}
 					>
-						<Anchor
-							path={`/lesson`}
+						<Link
+							href={`/lesson`}
 							role="lesson link"
 							className="font-montserrat text-blue m-3 blue-800 flex text-base"
 						>
 							{lesson}
-						</Anchor>
+						</Link>
 					</div>
 				))}
 			</aside>
