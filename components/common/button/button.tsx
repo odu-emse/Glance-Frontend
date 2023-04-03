@@ -122,7 +122,11 @@ Button.propTypes = {
 	/**
 	 * Button contents
 	 */
-	children: PropTypes.oneOfType([PropTypes.node, PropTypes.string, PropTypes.number]),
+	children: PropTypes.oneOfType([
+		PropTypes.node,
+		PropTypes.string,
+		PropTypes.number,
+	]),
 	/**
 	 * Optional click handler
 	 */

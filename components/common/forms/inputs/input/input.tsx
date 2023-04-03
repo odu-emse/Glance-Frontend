@@ -16,14 +16,16 @@ export const Input = ({
 	error = false,
 	options,
 	placeholder = 'Enter here',
-	className = ""
+	className = '',
 }: InputProps) => {
 	const classes = [
 		className,
 		'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent appearance-none dark:text-white focus:outline-none focus:ring-0 peer',
 		className.includes('border') ? '' : 'border-0 border-b-2',
-		error ? 'border-red-500 dark:border-red-400 focus:border-red-600 dark:focus:border-red-500' : 'dark:focus:border-blue-500 focus:border-blue-600 dark:border-gray-600 border-gray-300',
-		disabled ? 'cursor-not-allowed' : ''
+		error
+			? 'border-red-500 dark:border-red-400 focus:border-red-600 dark:focus:border-red-500'
+			: 'dark:focus:border-blue-500 focus:border-blue-600 dark:border-gray-600 border-gray-300',
+		disabled ? 'cursor-not-allowed' : '',
 	].join(' ')
 	return (
 		<>

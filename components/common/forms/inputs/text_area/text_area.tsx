@@ -28,7 +28,9 @@ export const TextArea: React.FC<TextAreaProps> = ({
 	const classes = [
 		className,
 		'w-full bg-white placeholder:italic border border-slate-400 shadow-md rounded-md py-2 pl-3 pr-10 focus:outline-2 focus:outline-dashed focus:ring-0 disabled:opacity-50 disabled:cursor-not-allowed',
-		value.length === maxLength ? 'border-red-400 focus:border-red-500 focus:outline-red-400 focus:ring-red-400' : ' focus:outline-blue-400',
+		value.length === maxLength
+			? 'border-red-400 focus:border-red-500 focus:outline-red-400 focus:ring-red-400'
+			: ' focus:outline-blue-400',
 	].join(' ')
 
 	return (

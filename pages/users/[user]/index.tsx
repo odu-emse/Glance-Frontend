@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { Input } from '@/common/forms/inputs/input/input'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { TextArea }  from '@/common/forms/inputs/text_area/text_area'
+import { TextArea } from '@/common/forms/inputs/text_area/text_area'
 
 type UserProfileType = {
 	social?: {
@@ -70,7 +70,10 @@ const UserProfile = () => {
 						$socialInput: SocialInput!
 						$userInput: UpdateUser!
 					) {
-						updateUserSocial(userId: $accountID, input: $socialInput) {
+						updateUserSocial(
+							userId: $accountID
+							input: $socialInput
+						) {
 							id
 							github
 							linkedin
@@ -78,9 +81,9 @@ const UserProfile = () => {
 							facebook
 							twitter
 						}
-						updateUser(input: $userInput){
-								id
-								biography
+						updateUser(input: $userInput) {
+							id
+							biography
 						}
 					}
 				`,
@@ -175,8 +178,9 @@ const UserProfile = () => {
 												{
 													id: account.id,
 													openID: userID as string,
-													biography: updatedProfile.biography
-												},
+													biography:
+														updatedProfile.biography,
+												}
 											)
 											setEditMode(!isEditMode)
 										}}
@@ -347,7 +351,7 @@ const UserProfile = () => {
 									type="url"
 									placeholder="GITHUB:"
 									defaultValue={user.social?.github}
-									label={"GITHUB:"}
+									label={'GITHUB:'}
 									name={'github'}
 									onChange={(e: string) => {
 										setUpdatedProfile((prevState) => ({
