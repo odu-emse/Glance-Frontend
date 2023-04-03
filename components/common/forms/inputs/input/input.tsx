@@ -15,7 +15,18 @@ export const Input = ({
 	disabled = false,
 	error = false,
 	options,
+	placeholder = 'Enter here',
+	className = '',
 }: InputProps) => {
+	const classes = [
+		className,
+		'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent appearance-none dark:text-white focus:outline-none focus:ring-0 peer',
+		className.includes('border') ? '' : 'border-0 border-b-2',
+		error
+			? 'border-red-500 dark:border-red-400 focus:border-red-600 dark:focus:border-red-500'
+			: 'dark:focus:border-blue-500 focus:border-blue-600 dark:border-gray-600 border-gray-300',
+		disabled ? 'cursor-not-allowed' : '',
+	].join(' ')
 	return (
 		<>
 			<div className="relative z-0 w-full group">
@@ -23,16 +34,10 @@ export const Input = ({
 					type={type}
 					name={name}
 					id={name}
-					placeholder="Enter here"
+					placeholder={placeholder}
 					role={role}
 					aria-label={ariaLabel}
-					className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none dark:text-white focus:outline-none focus:ring-0 peer ${
-						error
-							? 'border-red-500 dark:border-red-400 focus:border-red-600 dark:focus:border-red-500'
-							: 'dark:focus:border-blue-500 focus:border-blue-600 dark:border-gray-600 border-gray-300'
-					}
-					${disabled ? 'cursor-not-allowed' : ''}
-					`}
+					className={classes}
 					required={required}
 					defaultValue={defaultValue}
 					onChange={(event) => onChange(event.target.value)}
@@ -160,5 +165,13 @@ export type InputProps = {
 	 */
 	ariaLabel?: string
 
-	options: dropdownOption[] | string[]
+	options?: dropdownOption[] | string[]
+	/**
+	 * The placeholder value is used to provide a placeholder for the input element. This is used to provide additional context to the user, under the input element.
+	 */
+	placeholder?: string
+	/**
+	 * The className value is used to provide a custom class name to the input element.
+	 */
+	className?: string
 }
