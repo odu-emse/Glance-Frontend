@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { Input } from '@/common/forms/inputs/input/input'
 import GlobalUserContext from '@/contexts/global_user_context'
+import { TextArea }  from '@/common/forms/inputs/text_area/text_area'
 
 type UserProfileType = {
 	social?: {
@@ -45,13 +46,20 @@ const UserProfile = () => {
 	const { mutate: mutateSocial } = useSWR({}, gqlFetcher)
 
 	const updateSocial = (
+		openID: string,
 		accountID: string,
-		input: {
-			github: string | null
-			linkedin: string | null
-			portfolio: string | null
-			facebook: string | null
-			twitter: string | null
+		socialInput: {
+			github?: string | null
+			linkedin?: string | null
+			portfolio?: string | null
+			facebook?: string | null
+			twitter?: string | null
+		},
+		userInput: {
+			id: string
+			openID: string
+			biography?: string | null
+			phoneNumber?: string | null
 		}
 	) => {
 		mutateSocial(async () => {
@@ -59,16 +67,27 @@ const UserProfile = () => {
 				gql`
 					mutation UpdateSocial(
 						$accountID: ID!
-						$input: SocialInput!
+						$socialInput: SocialInput!
+						$userInput: UpdateUser!
 					) {
-						updateUserSocial(userId: $accountID, input: $input) {
+						updateUserSocial(userId: $accountID, input: $socialInput) {
 							id
+							github
+							linkedin
+							portfolio
+							facebook
+							twitter
+						}
+						updateUser(input: $userInput){
+								id
+								biography
 						}
 					}
 				`,
 				{
 					accountID,
-					input,
+					socialInput,
+					userInput,
 				}
 			)
 		}).catch((err) => {
@@ -150,8 +169,14 @@ const UserProfile = () => {
 										onClick={() => {
 											console.log('Saving changes')
 											updateSocial(
+												userID as string,
 												account.id,
-												updatedProfile.social
+												updatedProfile.social || {},
+												{
+													id: account.id,
+													openID: userID as string,
+													biography: updatedProfile.biography
+												},
 											)
 											setEditMode(!isEditMode)
 										}}
@@ -317,12 +342,12 @@ const UserProfile = () => {
 								</h4>
 							</>
 						) : (
-							<>
+							<div className="flex flex-col gap-2 mt-2">
 								<Input
 									type="url"
 									placeholder="GITHUB:"
 									defaultValue={user.social?.github}
-									label={null}
+									label={"GITHUB:"}
 									name={'github'}
 									onChange={(e: string) => {
 										setUpdatedProfile((prevState) => ({
@@ -333,12 +358,13 @@ const UserProfile = () => {
 											},
 										}))
 									}}
+									className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
 								/>
 								<Input
 									type="text"
 									placeholder="TWITTER:"
 									defaultValue={user.social?.twitter}
-									label={null}
+									label="TWITTER:"
 									name={'twitter'}
 									onChange={(e: string) => {
 										setUpdatedProfile((prevState) => ({
@@ -349,12 +375,13 @@ const UserProfile = () => {
 											},
 										}))
 									}}
+									className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
 								/>
 								<Input
 									type="url"
 									placeholder="LINKEDIN:"
 									defaultValue={user.social?.linkedin}
-									label={null}
+									label="LINKEDIN:"
 									name={'linkedin'}
 									onChange={(e: string) => {
 										setUpdatedProfile((prevState) => ({
@@ -365,12 +392,13 @@ const UserProfile = () => {
 											},
 										}))
 									}}
+									className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
 								/>
 								<Input
 									type="text"
 									placeholder="FACEBOOK:"
 									defaultValue={user.social?.facebook}
-									label={null}
+									label="FACEBOOK:"
 									name={'facebook'}
 									onChange={(e: string) => {
 										setUpdatedProfile((prevState) => ({
@@ -381,13 +409,13 @@ const UserProfile = () => {
 											},
 										}))
 									}}
-									options={[]}
+									className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
 								/>
 								<Input
 									type="url"
 									placeholder="PORTFOLIO:"
 									defaultValue={user.social?.portfolio}
-									label={null}
+									label="PORTFOLIO:"
 									name={'portfolio'}
 									onChange={(e: string) => {
 										setUpdatedProfile((prevState) => ({
@@ -398,9 +426,9 @@ const UserProfile = () => {
 											},
 										}))
 									}}
-									options={[]}
+									className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
 								/>
-							</>
+							</div>
 						)}
 					</div>
 
@@ -413,29 +441,18 @@ const UserProfile = () => {
 								</h4>
 							</div>
 						) : (
-							<textarea
-								className="
-							form-control
-							block
-							w-full
-							rounded
-							text-base
-							font-normal
-							text-gray-700
-							bg-white bg-clip-padding
-							border border-solid border-gray-300
-							transition
-							ease-in-out
-							m-0
-							focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-								placeholder="Write something about yourself..."
-								defaultValue={user?.biography}
-								onChange={(e) => {
+							<TextArea
+								defaultValue={user.biography}
+								handle={(evt) => {
 									setUpdatedProfile((prevState) => ({
 										...prevState,
-										biography: e.target.value,
+										biography: evt.target.value,
 									}))
 								}}
+								name={'biography'}
+								placeholder="Write something about yourself..."
+								rows={5}
+								className="border-royalblue focus:border-royalblue rounded-none font-normal"
 							/>
 						)}
 					</div>
