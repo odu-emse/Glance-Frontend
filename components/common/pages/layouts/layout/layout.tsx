@@ -48,7 +48,7 @@ export const Layout = ({ children }) => {
 	if (error) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
-				<h1 className="text-2xl text-royalblue">
+				<h1>
 					Error loading user data
 				</h1>
 			</div>
