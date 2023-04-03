@@ -18,6 +18,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
 	wrap = 'soft',
 	autofocus = false,
 	label = '',
+	defaultValue = '',
 }): React.ReactElement => {
 	const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
@@ -30,12 +31,12 @@ export const TextArea: React.FC<TextAreaProps> = ({
 				<div className="relative">
 					<textarea
 						id={id}
+						defaultValue={defaultValue}
 						onChange={handle}
 						ref={textAreaRef}
 						rows={rows}
 						name={name}
 						role={role}
-						value={value}
 						placeholder={placeholder}
 						disabled={disabled}
 						maxLength={maxLength}
@@ -77,7 +78,7 @@ export type TextAreaProps = {
 	/**
 	 * A default string value which will be displayed in the element on page load
 	 */
-	value: string
+	value?: string
 	/**
 	 * A string defines an identifier which must be unique in the whole document
 	 */
@@ -126,4 +127,8 @@ export type TextAreaProps = {
 	 * A string that represents a caption for the text area
 	 */
 	label?: string
+	/**
+	 * A string that represents a default value for the text area
+	 */
+	defaultValue?: string
 }
