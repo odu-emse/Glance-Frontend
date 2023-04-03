@@ -19,10 +19,17 @@ export const TextArea: React.FC<TextAreaProps> = ({
 	autofocus = false,
 	label = '',
 	defaultValue = '',
+	className = '',
 }): React.ReactElement => {
 	const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
 	useAutosizeTextArea(textAreaRef.current, value)
+
+	const classes = [
+		className,
+		'w-full bg-white placeholder:italic border border-slate-400 shadow-md rounded-md py-2 pl-3 pr-10 focus:outline-2 focus:outline-dashed focus:ring-0 disabled:opacity-50 disabled:cursor-not-allowed',
+		value.length === maxLength ? 'border-red-400 focus:border-red-500 focus:outline-red-400 focus:ring-red-400' : ' focus:outline-blue-400',
+	].join(' ')
 
 	return (
 		<div>
@@ -44,11 +51,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
 						readOnly={readOnly}
 						wrap={wrap}
 						autoFocus={autofocus}
-						className={`w-full bg-white placeholder:italic border border-slate-400 shadow-md rounded-md py-2 pl-3 pr-10 focus:outline-2 focus:outline-dashed focus:ring-0 disabled:opacity-50 disabled:cursor-not-allowed ${
-							value.length === maxLength
-								? 'border-red-400 focus:border-red-500 focus:outline-red-400 focus:ring-red-400'
-								: ' focus:outline-blue-400'
-						}`}
+						className={classes}
 					/>
 					<span
 						className={`absolute right-2 bottom-2 flex items-center ${
@@ -131,4 +134,8 @@ export type TextAreaProps = {
 	 * A string that represents a default value for the text area
 	 */
 	defaultValue?: string
+	/**
+	 * A string that represents a class name for the text area
+	 */
+	className?: string
 }
