@@ -49,6 +49,7 @@ export const Button = ({
 				textTransform: 'uppercase',
 				fontWeight: 'bold',
 			}}
+			{...props}
 		>
 			{loading ? (
 				<Loader
@@ -86,7 +87,7 @@ type ButtonProps = {
 	/**
 	 * The JSX contnet to be displayed within the button
 	 */
-	children: React.ReactNode
+	children: React.ReactNode | string | number
 	/**
 	 * A boolean that determines whether the button representing a disabled state
 	 */
@@ -121,7 +122,7 @@ Button.propTypes = {
 	/**
 	 * Button contents
 	 */
-	children: PropTypes.element,
+	children: PropTypes.oneOfType([PropTypes.node, PropTypes.string, PropTypes.number]),
 	/**
 	 * Optional click handler
 	 */
