@@ -23,6 +23,7 @@ const Index = ({}) => {
             user(input:{
                 openID: "${session?.openId}"
             }){
+								id
 								plan {
 									id
                 }

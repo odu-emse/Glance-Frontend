@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Thread } from '../thread/thread'
+import { ThreadType } from '../../../../../types'
 
 /**
  * This function generates an array of DOM thread components based on a parent comment tree.
@@ -50,5 +51,5 @@ export const CommentsHierarchy: React.FC<CommentsHierarchyProps> = ({
  * @property {Object} thread - The parent comment tree.
  */
 export type CommentsHierarchyProps = {
-	thread: any
+	thread: ThreadType
 }
