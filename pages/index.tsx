@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { Logo } from '@/components/common/svg/logo'
 
 // background: rgb(32,68,152);
 // background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
@@ -35,21 +36,14 @@ const Index = () => {
 					backgroundPosition: 'center',
 				}}
 			>
-				<div className="flex items-center justify-center">
-					<Image
-						className=""
-						src="/logos/ALMPLogo_New2_White.svg"
-						alt="glance"
-						width={100}
-						height={90}
-					/>
-
+				<div className="flex items-center justify-center gap-2">
+					<Logo width={70} height={70} />
 					<h1
 						style={{
 							fontWeight: 700,
 							fontSize: '52px',
 						}}
-						className="text-white"
+						className="text-white mt-2"
 					>
 						GLANCE
 					</h1>
