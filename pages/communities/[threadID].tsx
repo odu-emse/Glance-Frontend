@@ -12,7 +12,6 @@ import GlobalUserContext from '@/contexts/global_user_context';
 
 const ThreadID = () => {
 	const router = useRouter()
-	const [commentBody, setCommentBody] = useState('')
 	const {user} = useContext(GlobalUserContext)
 	const { threadID } = router.query
 
@@ -37,6 +36,7 @@ const ThreadID = () => {
             }
 						comments {
 								updatedAt
+								createdAt
 								id
 								body
 								author {
@@ -46,7 +46,6 @@ const ThreadID = () => {
 									email
 								}
 								comments {
-									updatedAt
 									id
 									body
 									author {
@@ -56,7 +55,6 @@ const ThreadID = () => {
 										email
                   }
 										comments {
-											updatedAt
 											id
 											body
 											author {
@@ -187,7 +185,7 @@ const ThreadID = () => {
 			<div className="m-3 mt-8 h-fit">
 				<h2>{threadData.thread[0].title}</h2>
 				<p className="ml-4 mb-14">{threadData.thread[0].body}</p>
-				<ThreadTextArea handle={setCommentBody} onSubmit={() => addCommentToThread(threadID, commentBody, user.id)} />
+				<ThreadTextArea onSubmit={addCommentToThread} threadID={threadID} userID={user.id} />
 			</div>
 			<div className="">
 				<CommentsHierarchy thread={sortedThread} />
