@@ -69,16 +69,16 @@ export const Layout = ({ children }) => {
 			>
 				<nav className="flex bg-royalblue stdcontainer-sharp justify-between">
 					<div className="flex items-center gap-1">
-					<Logo width={25} height={25} />
-					<h4
-						style={{
-							fontWeight: 700,
-							fontSize: '24px',
-						}}
-						className="text-white"
-					>
-						GLANCE
-					</h4>
+						<Logo width={25} height={25} />
+						<h4
+							style={{
+								fontWeight: 700,
+								fontSize: '24px',
+							}}
+							className="text-white"
+						>
+							GLANCE
+						</h4>
 					</div>
 					<div
 						className={'flex gap-2 items-center relative'}
