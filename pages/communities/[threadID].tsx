@@ -12,6 +12,7 @@ import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { ModuleEnrollment, ThreadType } from '../../types'
 
+
 const ThreadID = () => {
 	const router = useRouter()
 	const { user } = useContext(GlobalUserContext)
@@ -37,6 +38,8 @@ const ThreadID = () => {
 							id
             }
 						comments {
+								updatedAt
+								createdAt
 								id
 								body
 								author {
@@ -108,6 +111,37 @@ const ThreadID = () => {
 		})
 	}
 
+	const { mutate } = useSWR({}, gqlFetcher)
+
+	const addCommentToThread = (threadId, commentBody, author) => {
+		mutate(async () => {
+			await client.request(
+				gql`
+					mutation AddCommentToThread(
+						$threadID: ID!
+						$commentBody: String!
+						$commentAuthor: ID!
+					) {
+						addCommentToThread(
+							parentThreadID: $threadID
+							data: { body: $commentBody, author: $commentAuthor }
+						) {
+							id
+							body
+						}
+					}
+				`,
+				{
+					threadID: threadId,
+					commentBody,
+					commentAuthor: author,
+				}
+			)
+		}, false).catch((err) => {
+			console.log(err)
+		})
+	}
+
 	if (threadError) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
@@ -127,6 +161,16 @@ const ThreadID = () => {
 	const isCurrentUserWatching = threadData.thread[0].usersWatching.some(
 		(acc) => acc.id === user.id
 	)
+
+	const sortedComments = threadData.thread[0].comments.sort(
+		(a, b) =>
+			new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf()
+	)
+
+	const sortedThread = {
+		...threadData.thread[0],
+		comments: sortedComments,
+	}
 
 	return (
 		<section className="px-8 mb-4">
@@ -148,10 +192,14 @@ const ThreadID = () => {
 			<div className="m-3 mt-8 h-fit">
 				<h2>{threadData.thread[0].title}</h2>
 				<p className="ml-4 mb-14">{threadData.thread[0].body}</p>
-				<ThreadTextArea />
+				<ThreadTextArea
+					onSubmit={addCommentToThread}
+					threadID={threadID}
+					userID={user.id}
+				/>
 			</div>
 			<div className="">
-				<CommentsHierarchy thread={threadData.thread[0]} />
+				<CommentsHierarchy thread={sortedThread} />
 			</div>
 		</section>
 	)

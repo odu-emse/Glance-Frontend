@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect, createRef } from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { IconContext } from 'react-icons'
@@ -7,6 +7,7 @@ import GlobalUserContext from '@/contexts/global_user_context'
 import useSWR from 'swr'
 import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import { gql } from 'graphql-request'
+import { TextArea } from '@/common/forms/inputs/text_area/text_area'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -22,8 +23,12 @@ export const Thread: React.FC<ThreadProps> = ({
 }) => {
 	const [isClicked, setIsClicked] = useState(false)
 	const [isUpvoted, setIsUpvoted] = useState(initialIsUpvoted)
+	const [addComment, setAddComment] = useState(false)
+	const [commentBody, setCommentBody] = useState('')
 	const { user } = useContext(GlobalUserContext)
 	const [upvotes, setUpvotes] = useState(0)
+	const currentThread = createRef<HTMLDivElement>()
+
 	const { data } = useSWR(
 		{
 			query: gql`
@@ -44,6 +49,8 @@ export const Thread: React.FC<ThreadProps> = ({
 		gqlFetcher
 	)
 
+	const { mutate, data: mutationData } = useSWR({}, gqlFetcher)
+
 	useEffect(() => {
 		if (data) {
 			const initialIsUpvoted = data.thread[0].upvotes.some(
@@ -52,9 +59,7 @@ export const Thread: React.FC<ThreadProps> = ({
 			setIsUpvoted(initialIsUpvoted)
 			setUpvotes(data.thread[0].upvotes.length)
 		}
-	}, [data, user.id])
-
-	const { mutate } = useSWR({}, gqlFetcher)
+	}, [data, user.id, mutationData])
 
 	const upvoteThread = (threadId) => {
 		mutate(async () => {
@@ -103,6 +108,34 @@ export const Thread: React.FC<ThreadProps> = ({
 				console.log(err)
 			})
 	}
+	const addCommentToThread = (threadId, commentBody, author) => {
+		mutate(async () => {
+			await client.request(
+				gql`
+					mutation AddCommentToThread(
+						$threadID: ID!
+						$commentBody: String!
+						$commentAuthor: ID!
+					) {
+						addCommentToThread(
+							parentThreadID: $threadID
+							data: { body: $commentBody, author: $commentAuthor }
+						) {
+							id
+							body
+						}
+					}
+				`,
+				{
+					threadID: threadId,
+					commentBody,
+					commentAuthor: author,
+				}
+			)
+		}, false).catch((err) => {
+			console.log(err)
+		})
+	}
 
 	let url: string
 	return (
@@ -110,6 +143,7 @@ export const Thread: React.FC<ThreadProps> = ({
 			<div
 				className="rounded-sm shadow-lg px-5 py-2 flex flex-col border-gray-300 border"
 				id={id}
+				ref={currentThread}
 			>
 				{showAuthor && (
 					<Link href={`/user/${userProfile.id}`}>
@@ -147,22 +181,21 @@ export const Thread: React.FC<ThreadProps> = ({
 							url = window.location.href
 							navigator.clipboard
 								.writeText(`${url}#${id}`)
-								.then(() => {
-									setIsClicked(true)
-								})
-								.catch(() => {
-									console.log('error')
-								})
+								.then(() => setIsClicked(true))
+								.catch(() => console.log('error'))
 						}}
 					>
 						<TbShare size={18} />
 						{isClicked && (
 							<div className="absolute hidden group-hover:flex -left-2 -top-2 -translate-y-full w-16 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">
-								copied!
+								Copied!
 							</div>
 						)}
 					</button>
-					<button className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200">
+					<button
+						className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"
+						onClick={() => setAddComment(!addComment)}
+					>
 						<GoCommentDiscussion size={18} />
 					</button>
 					<button
@@ -184,6 +217,30 @@ export const Thread: React.FC<ThreadProps> = ({
 					</button>
 				</div>
 			</div>
+			{addComment && (
+				<div className="flex flex-col gap-2 mt-3">
+					<TextArea
+						className="h-28"
+						placeholder="Add a comment..."
+						handle={(e) => setCommentBody(e.target.value)}
+						autofocus={true}
+					/>
+					<button
+						className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer"
+						onClick={() => {
+							addCommentToThread(
+								currentThread.current.id,
+								commentBody,
+								user.id
+							)
+							setAddComment(false)
+							setCommentBody(null)
+						}}
+					>
+						Post Comment
+					</button>
+				</div>
+			)}
 			<div className="ml-12">
 				{/* Comments go here */}
 				{children}

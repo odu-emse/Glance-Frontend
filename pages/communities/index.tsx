@@ -7,10 +7,11 @@ import { Input } from '@/common/forms/inputs/input/input'
 import { WatchedSidebarList } from '@/common/community/watched_threads/watched_threads'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
-import { ModuleEnrollment, ThreadType, User } from '../../types'
+import { ThreadType, User } from '../../types'
 import moment from 'moment'
 import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar'
 import Loader from '@/components/util/loader'
+import { Button } from '@/common/button/button'
 
 const Index = ({}) => {
 	const { data: session } = useSession()
@@ -30,14 +31,6 @@ const Index = ({}) => {
                 watchedThreads{
                     id
                     title
-                    parentLesson{
-                        collection{
-                            module{
-                                moduleName
-                                id
-                            }
-                        }
-                    }
                 }
             }
         }`,
@@ -51,72 +44,40 @@ const Index = ({}) => {
 			? {
 					query: gql`
 						{
-							moduleEnrollment(
-								input: { plan: "${userData.user[0].plan.id}" }
-							) {
+							threads: thread(input: {}) {
 								id
-								status
-								role
-								module {
+								title
+								body
+								author {
 									id
-									moduleName
-									collections {
-										lessons {
-											id
-											threads {
-												id
-												title
-												body
-												author {
-													id
-													firstName
-													lastName
-													email
-													picURL
-												}
-												upvotes {
-													id
-												}
-												updatedAt
-												comments {
-														id
-                        }
-											}
-										}
-									}
+									firstName
+									lastName
+									email
+									picURL
+								}
+								upvotes {
+									id
+								}
+								updatedAt
+								comments {
+									id
 								}
 							}
-                mostWatched: thread(input:{}){
-                    id
-                    title
-                    usersWatching{
-                        id
-                    }
-                    parentLesson{
-                        collection{
-                            module{
-                                id
-                                moduleName
-                            }
-                        }
-                    }
-                }
-                mostActive: thread(input:{}){
-                    id
-                    title
-                    updatedAt
-                    comments{
-                        id
-                    }
-                    parentLesson{
-                        collection{
-                            module{
-                                id
-                                moduleName
-                            }
-                        }
-                    }
-                }
+							mostWatched: thread(input: {}) {
+								id
+								title
+								usersWatching {
+									id
+								}
+							}
+							mostActive: thread(input: {}) {
+								id
+								title
+								updatedAt
+								comments {
+									id
+								}
+							}
 						}
 					`,
 			  }
@@ -124,7 +85,7 @@ const Index = ({}) => {
 		gqlFetcher
 	) as {
 		data: {
-			moduleEnrollment: Array<ModuleEnrollment>
+			threads: Array<ThreadType>
 			mostWatched: Array<ThreadType>
 			mostActive: Array<ThreadType>
 		}
@@ -164,68 +125,48 @@ const Index = ({}) => {
 						{session?.user.email}
 					</small>
 				</div>
-				<div className="flex items-center">
-					<h1 className="text-lg font-semibold flex-none pr-20">
+				<div className="flex items-center justify-between">
+					<h1 className="text-lg font-semibold flex-none">
 						Communities
 					</h1>
-					<Input
-						defaultValue=""
-						label="Search"
-						name="floating_search"
-						onChange={function noRefCheck() {}}
-						role="search"
-						type="search"
-						options={[]}
-					/>
+					<div className="flex flex-row gap-1">
+						<Input
+							defaultValue=""
+							label={null}
+							name="floating_search"
+							onChange={function noRefCheck() {}}
+							role="search"
+							type="search"
+							placeholder="Search threads..."
+							className="w-2/3 md:w-72"
+						/>
+						<div className="flex gap-2 w-fit">
+							<Button>SORT</Button>
+							<Button>FILTER</Button>
+						</div>
+					</div>
 				</div>
 				<div className="m-2">
-					{data.moduleEnrollment
-						.filter((v) => v.status !== 'INACTIVE')
-						.map((enrollment) => {
-							return enrollment.module.collections.map(
-								(collection) => {
-									return collection.lessons.map((lesson) => {
-										return lesson.threads
-											.filter((v) => v.title !== null)
-											.sort(
-												(a, b) =>
-													new Date(
-														b.updatedAt
-													).valueOf() -
-													new Date(
-														a.updatedAt
-													).valueOf()
-											)
-											.map((thread, threadMapIndex) => {
-												return (
-													<div
-														className="my-4"
-														key={threadMapIndex}
-													>
-														<Thread
-															body={thread.body}
-															id={thread.id}
-															title={thread.title}
-															upvotes={
-																thread.upvotes
-																	?.length ||
-																0
-															}
-															userProfile={
-																thread.author
-															}
-															commentCount={
-																thread.comments
-																	.length
-															}
-															viewCutOff={true}
-															showAuthor={false}
-														/>
-													</div>
-												)
-											})
-									})
-								}
+					{data.threads
+						.filter((v) => v.title !== null)
+						.sort(
+							(a, b) =>
+								new Date(b.updatedAt).valueOf() -
+								new Date(a.updatedAt).valueOf()
+						)
+						.map((thread, threadMapIndex) => {
+							return (
+								<div className="my-4" key={threadMapIndex}>
+									<Thread
+										body={thread.body}
+										id={thread.id}
+										title={thread.title}
+										userProfile={thread.author}
+										commentCount={thread.comments.length}
+										viewCutOff={true}
+										showAuthor={false}
+									/>
+								</div>
 							)
 						})}
 				</div>
@@ -242,7 +183,6 @@ const Index = ({}) => {
 								.filter(
 									(v) =>
 										!!v.title &&
-										!!v.parentLesson &&
 										new Date().valueOf() >=
 											new Date(
 												moment(v.updatedAt)
@@ -263,7 +203,7 @@ const Index = ({}) => {
 						title={'Most Watched'}
 						threads={
 							data.mostWatched
-								.filter((v) => !!v.title && !!v.parentLesson)
+								.filter((v) => !!v.title)
 								.sort(
 									(a, b) =>
 										b.usersWatching.length -
