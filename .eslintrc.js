@@ -1,8 +1,5 @@
 module.exports = {
 	plugins: ['unicorn'],
-	env: {
-		'cypress/globals': true,
-	},
 	extends: ['next', 'next/core-web-vitals', 'semistandard', 'prettier'],
 	rules: {
 		'unicorn/filename-case': [
