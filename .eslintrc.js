@@ -1,5 +1,8 @@
 module.exports = {
 	plugins: ['unicorn'],
+	env: {
+		jest: true,
+	},
 	extends: ['next', 'next/core-web-vitals', 'semistandard', 'prettier'],
 	rules: {
 		'unicorn/filename-case': [
