@@ -2,15 +2,19 @@ import { Layout } from '@/common/pages/layouts/layout/layout'
 import { Button } from '@/common/button/button'
 import { useRouter } from 'next/router'
 import { gql } from 'graphql-request'
-import gqlFetcher from '@/utils/gql_fetcher'
+import gqlFetcher, { client } from '@/utils/gql_fetcher';
 import useSWR from 'swr'
 import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area'
 import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
 import Loader from '@/components/util/loader'
+import { FaBell } from 'react-icons/fa';
+import { useContext } from 'react';
+import GlobalUserContext from '@/contexts/global_user_context';
+import { ModuleEnrollment, ThreadType } from '../../types';
 
 const ThreadID = () => {
 	const router = useRouter()
-
+	const { user } = useContext(GlobalUserContext)
 	const { threadID } = router.query
 
 	const { data: threadData, error: threadError } = useSWR(
@@ -28,6 +32,9 @@ const ThreadID = () => {
 								firstName
 								lastName
 								email
+            }
+						usersWatching {
+							id
             }
 						comments {
 								id
@@ -64,7 +71,39 @@ const ThreadID = () => {
 		`,
 		},
 		gqlFetcher
-	)
+	) as {
+		data: {
+			thread: Array<ThreadType>
+		}
+		error: Error
+	}
+
+	const {mutate} = useSWR({}, gqlFetcher)
+
+	const watchThread = (threadID, userID) => {
+		mutate(async () => {
+			await client.request(
+				gql`
+            mutation AddUserAsWatcher($threadID: ID!, $userID: ID!){
+                addUserAsWatcherToThread(id: $threadID, userID: $userID){
+                    id
+                    title
+                    body
+                    usersWatching{
+                        id
+                    }
+                }
+            }
+				`,
+				{
+				threadID,
+					userID
+			}
+			)
+		}, false).catch((err) => {
+			console.log(err)
+		})
+	}
 
 	if (threadError) {
 		return (
@@ -82,6 +121,10 @@ const ThreadID = () => {
 		)
 	}
 
+	const isCurrentUserWatching = threadData.thread[0].usersWatching.some(
+		(acc) => acc.id === user.id
+	)
+
 	return (
 		<section className="px-8 mb-4">
 			<div className="mx-3">
@@ -91,8 +134,16 @@ const ThreadID = () => {
 				>
 					Back
 				</Button>
-				<div className="flex items-center my-3">
+				<div className="flex items-center my-3 justify-between">
 					<h1>Communities</h1>
+					<Button
+						onClick={() => watchThread(threadID, user.id)}
+					>
+						<FaBell />
+						{
+							isCurrentUserWatching ? "Unwatch" : "Watch"
+						}
+					</Button>
 				</div>
 			</div>
 			<div className="m-3 mt-8 h-fit">
