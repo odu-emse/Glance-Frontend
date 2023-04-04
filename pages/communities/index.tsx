@@ -11,6 +11,7 @@ import { ModuleEnrollment, ThreadType, User } from '../../types'
 import moment from 'moment'
 import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar'
 import Loader from '@/components/util/loader'
+import { Button } from '@/common/button/button';
 
 const Index = ({}) => {
 	const { data: session } = useSession()
@@ -164,19 +165,26 @@ const Index = ({}) => {
 						{session?.user.email}
 					</small>
 				</div>
-				<div className="flex items-center">
-					<h1 className="text-lg font-semibold flex-none pr-20">
+				<div className="flex items-center justify-between">
+					<h1 className="text-lg font-semibold flex-none">
 						Communities
 					</h1>
+					<div className='flex flex-row gap-1'>
 					<Input
 						defaultValue=""
-						label="Search"
+						label={null}
 						name="floating_search"
 						onChange={function noRefCheck() {}}
 						role="search"
 						type="search"
-						options={[]}
+						placeholder="Search threads..."
+						className="w-2/3 md:w-72"
 					/>
+						<div className='flex gap-2 w-fit'>
+						<Button>SORT</Button>
+						<Button>FILTER</Button>
+						</div>
+					</div>
 				</div>
 				<div className="m-2">
 					{data.moduleEnrollment
