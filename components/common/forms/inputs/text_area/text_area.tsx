@@ -20,6 +20,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
 	label = '',
 	defaultValue = '',
 	className = '',
+	icon = true,
 }): React.ReactElement => {
 	const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
@@ -55,15 +56,15 @@ export const TextArea: React.FC<TextAreaProps> = ({
 						autoFocus={autofocus}
 						className={classes}
 					/>
-					<span
+					{icon && <span
 						className={`absolute right-2 bottom-2 flex items-center ${
 							disabled ? 'opacity-50' : ''
 						}`}
 					>
-						<button type="button" aria-label="send">
-							<IoSend size={20} className="mr-1" />
-						</button>
-					</span>
+ 						<button type='button' aria-label='send'>
+ 							<IoSend size={20} className='mr-1' />
+ 						</button>
+ 					</span>}
 				</div>
 				{value.length === maxLength && (
 					<span className="text-xs px-2 bg-gray-100 ml-auto mr-0 block w-fit">
@@ -140,4 +141,8 @@ export type TextAreaProps = {
 	 * A string that represents a class name for the text area
 	 */
 	className?: string
+	/**
+	 * A boolean that determines whether the text area should have an icon inside of it or not shown at all
+	 */
+	icon?: boolean
 }
