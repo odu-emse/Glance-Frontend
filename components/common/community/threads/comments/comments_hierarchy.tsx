@@ -19,7 +19,6 @@ const commentGen = (parentComment) => {
 				<Thread
 					body={comment.body}
 					id={comment.id}
-					upvotes={comment.upvotes?.length || 0}
 					userProfile={comment.author}
 				>
 					{subThreads}
