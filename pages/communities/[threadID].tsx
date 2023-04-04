@@ -10,7 +10,7 @@ import Loader from '@/components/util/loader'
 import { FaBell } from 'react-icons/fa'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { ModuleEnrollment, ThreadType } from '../../types'
+import { ThreadType } from '../../types'
 
 const ThreadID = () => {
 	const router = useRouter()
@@ -109,8 +109,6 @@ const ThreadID = () => {
 			console.log(err)
 		})
 	}
-
-	const { mutate } = useSWR({}, gqlFetcher)
 
 	const addCommentToThread = (threadId, commentBody, author) => {
 		mutate(async () => {
