@@ -8,6 +8,7 @@ import GlobalUserContext from '@/contexts/global_user_context'
 import gqlFetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import { gql } from 'graphql-request'
+import { Logo } from '@/components/common/svg/logo'
 
 export const Layout = ({ children }) => {
 	const router = useRouter()
@@ -66,7 +67,19 @@ export const Layout = ({ children }) => {
 			<GlobalUserContext.Provider
 				value={{ user: data.user[0] || null, setUser }}
 			>
-				<nav className="flex bg-royalblue stdcontainer-sharp justify-end">
+				<nav className="flex bg-royalblue stdcontainer-sharp justify-between">
+					<div className="flex items-center gap-1">
+					<Logo width={25} height={25} />
+					<h4
+						style={{
+							fontWeight: 700,
+							fontSize: '24px',
+						}}
+						className="text-white"
+					>
+						GLANCE
+					</h4>
+					</div>
 					<div
 						className={'flex gap-2 items-center relative'}
 						onClick={() => setAccountVisible(true)}
