@@ -43,41 +43,39 @@ const Index = ({}) => {
 			? {
 					query: gql`
 						{
-							threads: thread(
-								input: {}
-							) {
+							threads: thread(input: {}) {
+								id
+								title
+								body
+								author {
 									id
-									title
-									body
-									author {
-											id
-											firstName
-											lastName
-											email
-											picURL
-									}
-									upvotes {
-											id
-									}
-									updatedAt
-									comments {
-											id
-									}
+									firstName
+									lastName
+									email
+									picURL
+								}
+								upvotes {
+									id
+								}
+								updatedAt
+								comments {
+									id
+								}
 							}
-							mostWatched: thread(input:{}){
+							mostWatched: thread(input: {}) {
+								id
+								title
+								usersWatching {
 									id
-									title
-									usersWatching{
-											id
-									}
+								}
 							}
-							mostActive: thread(input:{}){
+							mostActive: thread(input: {}) {
+								id
+								title
+								updatedAt
+								comments {
 									id
-									title
-									updatedAt
-									comments{
-											id
-									}
+								}
 							}
 						}
 					`,
@@ -141,41 +139,28 @@ const Index = ({}) => {
 					/>
 				</div>
 				<div className="m-2">
-					{data.threads.filter((v) => v.title !== null)
+					{data.threads
+						.filter((v) => v.title !== null)
 						.sort(
 							(a, b) =>
-								new Date(
-									b.updatedAt
-								).valueOf() -
-								new Date(
-									a.updatedAt
-								).valueOf()
+								new Date(b.updatedAt).valueOf() -
+								new Date(a.updatedAt).valueOf()
 						)
 						.map((thread, threadMapIndex) => {
 							return (
-								<div
-									className="my-4"
-									key={threadMapIndex}
-								>
+								<div className="my-4" key={threadMapIndex}>
 									<Thread
 										body={thread.body}
 										id={thread.id}
 										title={thread.title}
-										userProfile={
-											thread.author
-										}
-										commentCount={
-											thread.comments
-												.length
-										}
+										userProfile={thread.author}
+										commentCount={thread.comments.length}
 										viewCutOff={true}
 										showAuthor={false}
 									/>
 								</div>
 							)
-						})
-
-						}
+						})}
 				</div>
 			</div>
 			<WatchedThreadSidebar
