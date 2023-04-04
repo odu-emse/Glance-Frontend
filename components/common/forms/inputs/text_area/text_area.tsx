@@ -56,15 +56,17 @@ export const TextArea: React.FC<TextAreaProps> = ({
 						autoFocus={autofocus}
 						className={classes}
 					/>
-					{icon && <span
-						className={`absolute right-2 bottom-2 flex items-center ${
-							disabled ? 'opacity-50' : ''
-						}`}
-					>
- 						<button type='button' aria-label='send'>
- 							<IoSend size={20} className='mr-1' />
- 						</button>
- 					</span>}
+					{icon && (
+						<span
+							className={`absolute right-2 bottom-2 flex items-center ${
+								disabled ? 'opacity-50' : ''
+							}`}
+						>
+							<button type="button" aria-label="send">
+								<IoSend size={20} className="mr-1" />
+							</button>
+						</span>
+					)}
 				</div>
 				{value.length === maxLength && (
 					<span className="text-xs px-2 bg-gray-100 ml-auto mr-0 block w-fit">
