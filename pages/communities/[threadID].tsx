@@ -2,15 +2,18 @@ import { Layout } from '@/common/pages/layouts/layout/layout'
 import { Button } from '@/common/button/button'
 import { useRouter } from 'next/router'
 import { gql } from 'graphql-request'
-import gqlFetcher from '@/utils/gql_fetcher'
+import gqlFetcher, { client } from '@/utils/gql_fetcher';
 import useSWR from 'swr'
 import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area'
 import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
 import Loader from '@/components/util/loader'
+import { useContext, useState } from 'react';
+import GlobalUserContext from '@/contexts/global_user_context';
 
 const ThreadID = () => {
 	const router = useRouter()
-
+	const [commentBody, setCommentBody] = useState('')
+	const {user} = useContext(GlobalUserContext)
 	const { threadID } = router.query
 
 	const { data: threadData, error: threadError } = useSWR(
@@ -30,6 +33,7 @@ const ThreadID = () => {
 								email
             }
 						comments {
+								updatedAt
 								id
 								body
 								author {
@@ -39,6 +43,7 @@ const ThreadID = () => {
 									email
 								}
 								comments {
+									updatedAt
 									id
 									body
 									author {
@@ -48,6 +53,7 @@ const ThreadID = () => {
 										email
                   }
 										comments {
+											updatedAt
 											id
 											body
 											author {
@@ -66,6 +72,37 @@ const ThreadID = () => {
 		gqlFetcher
 	)
 
+	const { mutate} = useSWR({}, gqlFetcher)
+
+	const addCommentToThread = (threadId, commentBody, author) => {
+		mutate(async () => {
+			await client.request(
+				gql`
+            mutation AddCommentToThread(
+                $threadID: ID!
+                $commentBody: String!
+                $commentAuthor: ID!
+            ) {
+                addCommentToThread(
+                    parentThreadID: $threadID
+                    data: { body: $commentBody, author: $commentAuthor }
+                ) {
+                    id
+                    body
+                }
+            }
+				`,
+				{
+					threadID: threadId,
+					commentBody,
+					commentAuthor: author,
+				}
+			)
+		}, false).catch((err) => {
+			console.log(err)
+		})
+	}
+
 	if (threadError) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
@@ -80,6 +117,13 @@ const ThreadID = () => {
 				<Loader textColor="royalblue" />
 			</div>
 		)
+	}
+
+	const sortedComments = threadData.thread[0].comments.sort((a, b) => new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf())
+
+	const sortedThread = {
+		...threadData.thread[0],
+		comments: sortedComments
 	}
 
 	return (
@@ -98,10 +142,10 @@ const ThreadID = () => {
 			<div className="m-3 mt-8 h-fit">
 				<h2>{threadData.thread[0].title}</h2>
 				<p className="ml-4 mb-14">{threadData.thread[0].body}</p>
-				<ThreadTextArea />
+				<ThreadTextArea handle={setCommentBody} onSubmit={() => addCommentToThread(threadID, commentBody, user.id)} />
 			</div>
 			<div className="">
-				<CommentsHierarchy thread={threadData.thread[0]} />
+				<CommentsHierarchy thread={sortedThread} />
 			</div>
 		</section>
 	)
