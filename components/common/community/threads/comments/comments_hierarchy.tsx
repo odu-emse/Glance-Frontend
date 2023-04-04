@@ -15,7 +15,7 @@ const commentGen = (parentComment) => {
 	for (const comment of parentComment.comments) {
 		const subThreads = commentGen(comment)
 		threads.push(
-			<div className="mt-8">
+			<div className="mt-8" key={comment.id}>
 				<Thread
 					body={comment.body}
 					id={comment.id}
