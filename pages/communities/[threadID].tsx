@@ -2,15 +2,15 @@ import { Layout } from '@/common/pages/layouts/layout/layout'
 import { Button } from '@/common/button/button'
 import { useRouter } from 'next/router'
 import { gql } from 'graphql-request'
-import gqlFetcher, { client } from '@/utils/gql_fetcher';
+import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area'
 import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
 import Loader from '@/components/util/loader'
-import { FaBell } from 'react-icons/fa';
-import { useContext } from 'react';
-import GlobalUserContext from '@/contexts/global_user_context';
-import { ModuleEnrollment, ThreadType } from '../../types';
+import { FaBell } from 'react-icons/fa'
+import { useContext } from 'react'
+import GlobalUserContext from '@/contexts/global_user_context'
+import { ModuleEnrollment, ThreadType } from '../../types'
 
 const ThreadID = () => {
 	const router = useRouter()
@@ -78,27 +78,30 @@ const ThreadID = () => {
 		error: Error
 	}
 
-	const {mutate} = useSWR({}, gqlFetcher)
+	const { mutate } = useSWR({}, gqlFetcher)
 
 	const watchThread = (threadID, userID) => {
 		mutate(async () => {
 			await client.request(
 				gql`
-            mutation AddUserAsWatcher($threadID: ID!, $userID: ID!){
-                addUserAsWatcherToThread(id: $threadID, userID: $userID){
-                    id
-                    title
-                    body
-                    usersWatching{
-                        id
-                    }
-                }
-            }
+					mutation AddUserAsWatcher($threadID: ID!, $userID: ID!) {
+						addUserAsWatcherToThread(
+							id: $threadID
+							userID: $userID
+						) {
+							id
+							title
+							body
+							usersWatching {
+								id
+							}
+						}
+					}
 				`,
 				{
-				threadID,
-					userID
-			}
+					threadID,
+					userID,
+				}
 			)
 		}, false).catch((err) => {
 			console.log(err)
@@ -136,13 +139,9 @@ const ThreadID = () => {
 				</Button>
 				<div className="flex items-center my-3 justify-between">
 					<h1>Communities</h1>
-					<Button
-						onClick={() => watchThread(threadID, user.id)}
-					>
+					<Button onClick={() => watchThread(threadID, user.id)}>
 						<FaBell />
-						{
-							isCurrentUserWatching ? "Unwatch" : "Watch"
-						}
+						{isCurrentUserWatching ? 'Unwatch' : 'Watch'}
 					</Button>
 				</div>
 			</div>
