@@ -1,8 +1,8 @@
 import { Button } from '../../../button/button'
-import { TextArea } from '@/common/forms/inputs/text_area/text_area';
-import React, { useState } from 'react';
+import { TextArea } from '@/common/forms/inputs/text_area/text_area'
+import React, { useState } from 'react'
 
-export const ThreadTextArea = ({onSubmit, threadID, userID}) => {
+export const ThreadTextArea = ({ onSubmit, threadID, userID }) => {
 	const [commentBody, setCommentBody] = useState('')
 	return (
 		<div>
@@ -15,10 +15,14 @@ export const ThreadTextArea = ({onSubmit, threadID, userID}) => {
 				icon={false}
 			/>
 			<span className="flex justify-end items-center m-2 ">
-				<Button size="small" shape="regular" onClick={() => {
-					onSubmit(threadID, commentBody, userID)
-					setCommentBody("")
-				}}>
+				<Button
+					size="small"
+					shape="regular"
+					onClick={() => {
+						onSubmit(threadID, commentBody, userID)
+						setCommentBody('')
+					}}
+				>
 					Post
 				</Button>
 			</span>
