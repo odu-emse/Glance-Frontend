@@ -9,6 +9,7 @@ import { CommentsHierarchy } from '@/common/community/threads/comments/comments_
 import Loader from '@/components/util/loader'
 import { useContext, useState } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
+import { ThreadType } from '../../types'
 
 const ThreadID = () => {
 	const router = useRouter()
