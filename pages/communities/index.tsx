@@ -7,7 +7,7 @@ import { Input } from '@/common/forms/inputs/input/input'
 import { WatchedSidebarList } from '@/common/community/watched_threads/watched_threads'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
-import { ModuleEnrollment, ThreadType, User } from '../../types'
+import { ThreadType, User } from '../../types'
 import moment from 'moment'
 import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar'
 import Loader from '@/components/util/loader'
@@ -31,14 +31,6 @@ const Index = ({}) => {
                 watchedThreads{
                     id
                     title
-                    parentLesson{
-                        collection{
-                            module{
-                                moduleName
-                                id
-                            }
-                        }
-                    }
                 }
             }
         }`,
@@ -52,72 +44,42 @@ const Index = ({}) => {
 			? {
 					query: gql`
 						{
-							moduleEnrollment(
-								input: { plan: "${userData.user[0].plan.id}" }
+							threads: thread(
+								input: {}
 							) {
-								id
-								status
-								role
-								module {
 									id
-									moduleName
-									collections {
-										lessons {
+									title
+									body
+									author {
 											id
-											threads {
-												id
-												title
-												body
-												author {
-													id
-													firstName
-													lastName
-													email
-													picURL
-												}
-												upvotes {
-													id
-												}
-												updatedAt
-												comments {
-														id
-                        }
-											}
-										}
+											firstName
+											lastName
+											email
+											picURL
 									}
-								}
+									upvotes {
+											id
+									}
+									updatedAt
+									comments {
+											id
+									}
 							}
-                mostWatched: thread(input:{}){
-                    id
-                    title
-                    usersWatching{
-                        id
-                    }
-                    parentLesson{
-                        collection{
-                            module{
-                                id
-                                moduleName
-                            }
-                        }
-                    }
-                }
-                mostActive: thread(input:{}){
-                    id
-                    title
-                    updatedAt
-                    comments{
-                        id
-                    }
-                    parentLesson{
-                        collection{
-                            module{
-                                id
-                                moduleName
-                            }
-                        }
-                    }
-                }
+							mostWatched: thread(input:{}){
+									id
+									title
+									usersWatching{
+											id
+									}
+							}
+							mostActive: thread(input:{}){
+									id
+									title
+									updatedAt
+									comments{
+											id
+									}
+							}
 						}
 					`,
 			  }
@@ -125,7 +87,7 @@ const Index = ({}) => {
 		gqlFetcher
 	) as {
 		data: {
-			moduleEnrollment: Array<ModuleEnrollment>
+			threads: Array<ThreadType>
 			mostWatched: Array<ThreadType>
 			mostActive: Array<ThreadType>
 		}
@@ -187,55 +149,41 @@ const Index = ({}) => {
 					</div>
 				</div>
 				<div className="m-2">
-					{data.moduleEnrollment
-						.filter((v) => v.status !== 'INACTIVE')
-						.map((enrollment) => {
-							return enrollment.module.collections.map(
-								(collection) => {
-									return collection.lessons.map((lesson) => {
-										return lesson.threads
-											.filter((v) => v.title !== null)
-											.sort(
-												(a, b) =>
-													new Date(
-														b.updatedAt
-													).valueOf() -
-													new Date(
-														a.updatedAt
-													).valueOf()
-											)
-											.map((thread, threadMapIndex) => {
-												return (
-													<div
-														className="my-4"
-														key={threadMapIndex}
-													>
-														<Thread
-															body={thread.body}
-															id={thread.id}
-															title={thread.title}
-															upvotes={
-																thread.upvotes
-																	?.length ||
-																0
-															}
-															userProfile={
-																thread.author
-															}
-															commentCount={
-																thread.comments
-																	.length
-															}
-															viewCutOff={true}
-															showAuthor={false}
-														/>
-													</div>
-												)
-											})
-									})
-								}
+					{data.threads.filter((v) => v.title !== null)
+						.sort(
+							(a, b) =>
+								new Date(
+									b.updatedAt
+								).valueOf() -
+								new Date(
+									a.updatedAt
+								).valueOf()
+						)
+						.map((thread, threadMapIndex) => {
+							return (
+								<div
+									className="my-4"
+									key={threadMapIndex}
+								>
+									<Thread
+										body={thread.body}
+										id={thread.id}
+										title={thread.title}
+										userProfile={
+											thread.author
+										}
+										commentCount={
+											thread.comments
+												.length
+										}
+										viewCutOff={true}
+										showAuthor={false}
+									/>
+								</div>
 							)
-						})}
+						})
+
+						}
 				</div>
 			</div>
 			<WatchedThreadSidebar
@@ -250,7 +198,6 @@ const Index = ({}) => {
 								.filter(
 									(v) =>
 										!!v.title &&
-										!!v.parentLesson &&
 										new Date().valueOf() >=
 											new Date(
 												moment(v.updatedAt)
@@ -271,7 +218,7 @@ const Index = ({}) => {
 						title={'Most Watched'}
 						threads={
 							data.mostWatched
-								.filter((v) => !!v.title && !!v.parentLesson)
+								.filter((v) => !!v.title)
 								.sort(
 									(a, b) =>
 										b.usersWatching.length -
