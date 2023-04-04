@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, createRef } from 'react';
+import React, { useContext, useState, useEffect, createRef } from 'react'
 import { GoArrowUp, GoCommentDiscussion } from 'react-icons/go'
 import { TbShare } from 'react-icons/tb'
 import { IconContext } from 'react-icons'
@@ -7,7 +7,7 @@ import GlobalUserContext from '@/contexts/global_user_context'
 import useSWR from 'swr'
 import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import { gql } from 'graphql-request'
-import { TextArea } from '@/common/forms/inputs/text_area/text_area';
+import { TextArea } from '@/common/forms/inputs/text_area/text_area'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -112,30 +112,29 @@ export const Thread: React.FC<ThreadProps> = ({
 		mutate(async () => {
 			await client.request(
 				gql`
-            mutation AddCommentToThread(
-                $threadID: ID!
-                $commentBody: String!
-                $commentAuthor: ID!
-            ) {
-                addCommentToThread(
-                    parentThreadID: $threadID
-                    data: { body: $commentBody, author: $commentAuthor }
-                ){
-                    id
-                    body
-                }
-            }
-			`,
+					mutation AddCommentToThread(
+						$threadID: ID!
+						$commentBody: String!
+						$commentAuthor: ID!
+					) {
+						addCommentToThread(
+							parentThreadID: $threadID
+							data: { body: $commentBody, author: $commentAuthor }
+						) {
+							id
+							body
+						}
+					}
+				`,
 				{
 					threadID: threadId,
 					commentBody,
-					commentAuthor: author
+					commentAuthor: author,
 				}
 			)
-		}, false)
-			.catch((err) => {
-				console.log(err)
-			})
+		}, false).catch((err) => {
+			console.log(err)
+		})
 	}
 
 	let url: string
@@ -197,7 +196,10 @@ export const Thread: React.FC<ThreadProps> = ({
 							</div>
 						)}
 					</button>
-					<button className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200" onClick={() => setAddComment(!addComment)}>
+					<button
+						className="text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"
+						onClick={() => setAddComment(!addComment)}
+					>
 						<GoCommentDiscussion size={18} />
 					</button>
 					<button
@@ -230,7 +232,11 @@ export const Thread: React.FC<ThreadProps> = ({
 					<button
 						className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer"
 						onClick={() => {
-							addCommentToThread(currentThread.current.id, commentBody, user.id)
+							addCommentToThread(
+								currentThread.current.id,
+								commentBody,
+								user.id
+							)
 							setAddComment(false)
 							setCommentBody(null)
 						}}
