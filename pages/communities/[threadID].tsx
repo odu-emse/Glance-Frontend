@@ -12,7 +12,6 @@ import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { ModuleEnrollment, ThreadType } from '../../types'
 
-
 const ThreadID = () => {
 	const router = useRouter()
 	const { user } = useContext(GlobalUserContext)
