@@ -181,18 +181,14 @@ export const Thread: React.FC<ThreadProps> = ({
 							url = window.location.href
 							navigator.clipboard
 								.writeText(`${url}#${id}`)
-								.then(() => {
-									setIsClicked(true)
-								})
-								.catch(() => {
-									console.log('error')
-								})
+								.then(() => setIsClicked(true))
+								.catch(() => console.log('error'))
 						}}
 					>
 						<TbShare size={18} />
 						{isClicked && (
 							<div className="absolute hidden group-hover:flex -left-2 -top-2 -translate-y-full w-16 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">
-								copied!
+								Copied!
 							</div>
 						)}
 					</button>
