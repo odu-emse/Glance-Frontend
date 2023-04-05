@@ -11,13 +11,13 @@ import { FaBell } from 'react-icons/fa'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { ThreadType } from '../../types'
-import ReactMarkdown from 'react-markdown';
-import { markdownConfig } from '@/utils/markdown.config';
-import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
+import ReactMarkdown from 'react-markdown'
+import { markdownConfig } from '@/utils/markdown.config'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
-import MarkdownContainer from '@/common/community/threads/markdown/markdown_container';
+import MarkdownContainer from '@/common/community/threads/markdown/markdown_container'
 
 const ThreadID = () => {
 	const router = useRouter()
@@ -208,9 +208,9 @@ const ThreadID = () => {
 			<div className="m-3 mt-8 h-fit">
 				<h2>{threadData.thread[0].title}</h2>
 				<p className="ml-4 mb-14">
-				<MarkdownContainer>
-					{threadData.thread[0].body}
-				</MarkdownContainer>
+					<MarkdownContainer>
+						{threadData.thread[0].body}
+					</MarkdownContainer>
 				</p>
 				<ThreadTextArea
 					onSubmit={addCommentToThread}
