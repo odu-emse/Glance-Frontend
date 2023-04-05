@@ -17,7 +17,7 @@ export const Input = ({
 	options,
 	placeholder = 'Enter here',
 	className = '',
-	icon = false
+	icon = false,
 }: InputProps) => {
 	const classes = [
 		className,
