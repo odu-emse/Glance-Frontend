@@ -17,6 +17,7 @@ export const Input = ({
 	options,
 	placeholder = 'Enter here',
 	className = '',
+	icon = false
 }: InputProps) => {
 	const classes = [
 		className,
@@ -84,7 +85,7 @@ export const Input = ({
 				>
 					{label}
 				</label>
-				{type === 'search' && (
+				{type === 'search' && icon && (
 					<button
 						type="submit"
 						className="absolute right-0 top-0 bottom-0 px-3 py-2.5 text-gray-500 dark:text-gray-400 focus:ring-blue-600 dark:focus:ring-blue-500 focus:outline-none"
@@ -174,4 +175,8 @@ export type InputProps = {
 	 * The className value is used to provide a custom class name to the input element.
 	 */
 	className?: string
+	/**
+	 * The icon boolean is used to determine weather or not to render the search icon on the input element.
+	 */
+	icon?: boolean
 }
