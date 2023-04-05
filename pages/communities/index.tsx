@@ -182,7 +182,7 @@ const Index = ({}) => {
 										userProfile={thread.author}
 										commentCount={thread.comments.length}
 										viewCutOff={true}
-										showAuthor={false}
+										showAuthor={true}
 									/>
 								</div>
 							)

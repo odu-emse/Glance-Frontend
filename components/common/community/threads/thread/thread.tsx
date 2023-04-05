@@ -37,6 +37,7 @@ export const Thread: React.FC<ThreadProps> = ({
 						id
 						title
 						body
+						topics
 						upvotes {
 							openID
 							id
@@ -137,6 +138,8 @@ export const Thread: React.FC<ThreadProps> = ({
 		})
 	}
 
+	const threadData = data?.thread[0]
+
 	let url: string
 	return (
 		<>
@@ -147,26 +150,42 @@ export const Thread: React.FC<ThreadProps> = ({
 			>
 				{showAuthor && (
 					<Link href={`/user/${userProfile.id}`}>
-						<div className="flex items-center no-underline cursor-pointer w-fit">
+						<div className="flex items-center no-underline cursor-pointer w-fit mb-2">
 							<img
 								src={
 									userProfile.picURL ||
 									'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png'
 								}
 								alt="user profile image"
-								className="shadow-lg rounded-full max-w-full h-8 aspect-square align-middle border-none"
+								className="shadow-lg rounded-full max-w-full h-5 aspect-square align-middle border-none"
 							/>
-							<h4 className="font-bold px-2">
+							<h4 className="font-normal px-2 text-sm text-royalblue hover:underline">
 								{userProfile.firstName} {userProfile.lastName}
 							</h4>
 						</div>
 					</Link>
 				)}
 				{title && <h4 className="font-bold uppercase">{title}</h4>}
-				<p className="text-sm relative">{body.slice(0, 150)}</p>
+				{threadData?.topics.length > 0 && (
+					<div className="flex flex-row gap-2 mt-2 mb-1.5">
+						{threadData.topics.map((topic, topicIndex) => {
+							return (
+								<h4
+									className="bg-wgray inline-block w-fit py-1 px-2 uppercase text-sm"
+									key={topicIndex}
+								>
+									{topic}
+								</h4>
+							)
+						})}
+					</div>
+				)}
+				<p className="text-base font-normal my-2">
+					{body.slice(0, 150)}
+				</p>
 				{viewCutOff && (
 					<Link href={`/communities/${id}`}>
-						<h2 className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer">
+						<h2 className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer mb-2">
 							{`View Thread (${commentCount} comments)`}
 						</h2>
 					</Link>
