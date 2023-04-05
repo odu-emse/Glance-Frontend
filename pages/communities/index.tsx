@@ -151,8 +151,21 @@ const Index = ({}) => {
 				<div className="m-2">
 					{data.threads
 						.filter((v) => {
-							if(searchQuery === '') return v.title !== null
-							else return v.title?.toLowerCase().includes(searchQuery.toLowerCase()) || v.body?.toLowerCase().includes(searchQuery.toLowerCase()) || v.topics?.some((topic) => topic.toLowerCase().includes(searchQuery.toLowerCase()))
+							if (searchQuery === '') return v.title !== null
+							else
+								return (
+									v.title
+										?.toLowerCase()
+										.includes(searchQuery.toLowerCase()) ||
+									v.body
+										?.toLowerCase()
+										.includes(searchQuery.toLowerCase()) ||
+									v.topics?.some((topic) =>
+										topic
+											.toLowerCase()
+											.includes(searchQuery.toLowerCase())
+									)
+								)
 						})
 						.sort(
 							(a, b) =>
