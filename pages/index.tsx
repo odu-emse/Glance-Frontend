@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { Logo } from '@/components/common/svg/logo'
+import { signIn } from 'next-auth/react'
 
 // background: rgb(32,68,152);
 // background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
@@ -53,11 +54,13 @@ const Index = () => {
 					Education At A Glance
 				</h5>
 
-				<Link href={'/login'} passHref>
-					<Button variant="white" className="m-5">
-						<p className="m-0 text-sm">LOGIN</p>
-					</Button>
-				</Link>
+				<Button
+					variant="white"
+					className="m-5"
+					onClick={() => signIn()}
+				>
+					LOGIN
+				</Button>
 
 				<span className="sans font-bold absolute bottom-1 left-3 gap-4 sans text-white text-sm">
 					<small className="m-0 p-0">API Version 0.3.5</small>

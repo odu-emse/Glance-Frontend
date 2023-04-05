@@ -25,9 +25,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
 				}}
 				className={`h-screen overflow-y-scroll w-full bg-white transition-all drop-shadow-lg p-0`}
 			>
-				<div className="p-5 mb-1">
-					<h3 className="text-black">ALMP</h3>
-				</div>
 				<div className="flex flex-col grow">
 					<SidebarItem
 						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
