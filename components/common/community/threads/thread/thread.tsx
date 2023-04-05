@@ -166,16 +166,23 @@ export const Thread: React.FC<ThreadProps> = ({
 					</Link>
 				)}
 				{title && <h4 className="font-bold uppercase">{title}</h4>}
-				{threadData?.topics.length > 0 && <div className='flex flex-row gap-2 mt-2 mb-1.5'>
-					{threadData.topics.map((topic, topicIndex) => {
-						return (
-							<h4 className='bg-wgray inline-block w-fit py-1 px-2 uppercase text-sm' key={topicIndex}>
-								{topic}
-							</h4>
-						);
-					})}
-				</div>}
-				<p className="text-base font-normal my-2">{body.slice(0, 150)}</p>
+				{threadData?.topics.length > 0 && (
+					<div className="flex flex-row gap-2 mt-2 mb-1.5">
+						{threadData.topics.map((topic, topicIndex) => {
+							return (
+								<h4
+									className="bg-wgray inline-block w-fit py-1 px-2 uppercase text-sm"
+									key={topicIndex}
+								>
+									{topic}
+								</h4>
+							)
+						})}
+					</div>
+				)}
+				<p className="text-base font-normal my-2">
+					{body.slice(0, 150)}
+				</p>
 				{viewCutOff && (
 					<Link href={`/communities/${id}`}>
 						<h2 className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer mb-2">
