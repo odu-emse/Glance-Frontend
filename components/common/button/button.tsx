@@ -18,6 +18,8 @@ export const Button = ({
 		'flex flex-row items-center justify-center gap-1',
 		'px-[1em] py-[0.5em]',
 		'font-bold',
+		'uppercase',
+		'sans',
 		className,
 		size === 1 && 'w-full',
 
@@ -44,11 +46,6 @@ export const Button = ({
 			disabled={disabled}
 			className={classes}
 			onClick={onClick}
-			style={{
-				fontFamily: 'Montserrat',
-				textTransform: 'uppercase',
-				fontWeight: 'bold',
-			}}
 			{...props}
 		>
 			{loading ? (
@@ -151,7 +148,7 @@ Button.defaultProps = {
 	loading: false,
 	size: 'base',
 	onClick: undefined,
-	children: <p>Click Here</p>,
+	children: "Click Here",
 	disabled: false,
 	type: 'button',
 }
