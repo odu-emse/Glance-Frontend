@@ -54,7 +54,11 @@ const Index = () => {
 					Education At A Glance
 				</h5>
 
-				<Button variant="white" className="m-5" onClick={ () => signIn() }>
+				<Button
+					variant="white"
+					className="m-5"
+					onClick={() => signIn()}
+				>
 					LOGIN
 				</Button>
 
