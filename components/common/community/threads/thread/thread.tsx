@@ -8,15 +8,16 @@ import useSWR from 'swr'
 import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import { TextArea } from '@/common/forms/inputs/text_area/text_area'
+import { ThreadType } from '../../../../../types'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
 	body,
-	// upvotes,
 	id,
 	userProfile,
 	children,
 	isUpvoted: initialIsUpvoted,
+	upvotesProp = [],
 	commentCount = 0,
 	viewCutOff = false,
 	showAuthor = true,
@@ -25,42 +26,22 @@ export const Thread: React.FC<ThreadProps> = ({
 	const [isUpvoted, setIsUpvoted] = useState(initialIsUpvoted)
 	const [addComment, setAddComment] = useState(false)
 	const [commentBody, setCommentBody] = useState('')
+	const [upvotes, setUpvotes] = useState(upvotesProp?.length || 0)
 	const { user } = useContext(GlobalUserContext)
-	const [upvotes, setUpvotes] = useState(0)
 	const currentThread = createRef<HTMLDivElement>()
 
-	const { data } = useSWR(
-		{
-			query: gql`
-				query GetThread($input: ID!) {
-					thread(input: { id: $input }) {
-						id
-						title
-						body
-						topics
-						upvotes {
-							openID
-							id
-						}
-					}
-				}
-			`,
-			variables: { input: id },
-		},
-		gqlFetcher
-	)
+	const { mutate } = useSWR({}, gqlFetcher)
 
-	const { mutate, data: mutationData } = useSWR({}, gqlFetcher)
 
 	useEffect(() => {
-		if (data) {
-			const initialIsUpvoted = data.thread[0].upvotes.some(
+		if (upvotesProp) {
+			const initialIsUpvoted = upvotesProp.some(
 				(upvote) => upvote.id === user.id
 			)
 			setIsUpvoted(initialIsUpvoted)
-			setUpvotes(data.thread[0].upvotes.length)
+			setUpvotes(upvotesProp.length)
 		}
-	}, [data, user.id, mutationData])
+	}, [user.id, upvotesProp])
 
 	const upvoteThread = (threadId) => {
 		mutate(async () => {
@@ -303,10 +284,6 @@ export type ThreadProps = {
 	 */
 	body: string
 	/**
-	 * The number of upvotes the thread has
-	 */
-	// upvotes: number
-	/**
 	 * The user account the thread belongs to
 	 */
 	userProfile: UserAccount
@@ -319,14 +296,13 @@ export type ThreadProps = {
 	 */
 	children?: any
 	/**
-	 * @property {Function} handleUpvote - A callback function that is triggered when the upvote button is clicked. It should handle the logic for upvoting the thread, such as updating the upvote count and making API calls as needed.
-	 * @returns void
-	 */
-	// handleUpvote: (id:string) => void
-	/**
-	 * @property {boolean} [isUpvoted] - An optional boolean prop that indicates whether the current user has upvoted the thread. If true, the upvote icon will be displayed in red. If false or undefined, the upvote icon will have the default color.
+	 * An optional boolean prop that indicates whether the current user has upvoted the thread. If true, the upvote icon will be displayed in red. If false or undefined, the upvote icon will have the default color.
 	 */
 	isUpvoted?: boolean
+	/**
+	 * The number of upvotes the thread has. This is used to display in the upvote button
+	 */
+	upvotesProp?: ThreadType['upvotes']
 	/**
 	 * The number of comments the thread has. This is used to display in the view thread button
 	 */
