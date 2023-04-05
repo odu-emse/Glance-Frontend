@@ -32,7 +32,6 @@ export const Thread: React.FC<ThreadProps> = ({
 
 	const { mutate } = useSWR({}, gqlFetcher)
 
-
 	useEffect(() => {
 		if (upvotesProp) {
 			const initialIsUpvoted = upvotesProp.some(
