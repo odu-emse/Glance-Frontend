@@ -148,7 +148,7 @@ Button.defaultProps = {
 	loading: false,
 	size: 'base',
 	onClick: undefined,
-	children: "Click Here",
+	children: 'Click Here',
 	disabled: false,
 	type: 'button',
 }
