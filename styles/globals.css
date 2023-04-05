@@ -29,7 +29,13 @@
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('/fonts/montserrat-regular.ttf'), url('/fonts/montserrat-bold.ttf');
+	src: url('/fonts/montserrat-regular.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/fonts/montserrat-bold.ttf');
+	font-weight: bold;
 }
 
 /* Colors */
