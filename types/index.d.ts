@@ -73,6 +73,7 @@ export type ThreadType = {
 	updatedAt?: Date
 	parentThread?: Nullable<ThreadType>
 	parentThreadID?: Nullable<string>
+	topics: [string]
 }
 
 type Lesson = {

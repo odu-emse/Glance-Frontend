@@ -16,6 +16,7 @@ import { Button } from '@/common/button/button'
 const Index = ({}) => {
 	const { data: session } = useSession()
 	const [openWatchedThreads, setOpenWatchedThreads] = React.useState(true)
+	const [searchQuery, setSearchQuery] = React.useState('')
 
 	const { data: userData, error: userError } = useSWR(
 		session
@@ -48,6 +49,7 @@ const Index = ({}) => {
 								id
 								title
 								body
+								topics
 								author {
 									id
 									firstName
@@ -134,7 +136,7 @@ const Index = ({}) => {
 							defaultValue=""
 							label={null}
 							name="floating_search"
-							onChange={function noRefCheck() {}}
+							onChange={setSearchQuery}
 							role="search"
 							type="search"
 							placeholder="Search threads..."
@@ -148,7 +150,23 @@ const Index = ({}) => {
 				</div>
 				<div className="m-2">
 					{data.threads
-						.filter((v) => v.title !== null)
+						.filter((v) => {
+							if (searchQuery === '') return v.title !== null
+							else
+								return (
+									v.title
+										?.toLowerCase()
+										.includes(searchQuery.toLowerCase()) ||
+									v.body
+										?.toLowerCase()
+										.includes(searchQuery.toLowerCase()) ||
+									v.topics?.some((topic) =>
+										topic
+											.toLowerCase()
+											.includes(searchQuery.toLowerCase())
+									)
+								)
+						})
 						.sort(
 							(a, b) =>
 								new Date(b.updatedAt).valueOf() -
