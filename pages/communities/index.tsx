@@ -184,6 +184,7 @@ const Index = ({}) => {
 										viewCutOff={true}
 										showAuthor={false}
 										upvotesProp={thread.upvotes}
+										topics={thread.topics}
 									/>
 								</div>
 							)
