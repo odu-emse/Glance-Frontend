@@ -15,6 +15,7 @@ export const Thread: React.FC<ThreadProps> = ({
 	body,
 	id,
 	userProfile,
+	topics = [],
 	children,
 	isUpvoted: initialIsUpvoted,
 	upvotesProp = [],
@@ -118,8 +119,6 @@ export const Thread: React.FC<ThreadProps> = ({
 		})
 	}
 
-	const threadData = data?.thread[0]
-
 	let url: string
 	return (
 		<>
@@ -146,9 +145,9 @@ export const Thread: React.FC<ThreadProps> = ({
 					</Link>
 				)}
 				{title && <h4 className="font-bold uppercase">{title}</h4>}
-				{threadData?.topics.length > 0 && (
+				{topics.length > 0 && (
 					<div className="flex flex-row gap-2 mt-2 mb-1.5">
-						{threadData.topics.map((topic, topicIndex) => {
+						{topics.map((topic, topicIndex) => {
 							return (
 								<h4
 									className="bg-wgray inline-block w-fit py-1 px-2 uppercase text-sm"
@@ -286,6 +285,10 @@ export type ThreadProps = {
 	 * The user account the thread belongs to
 	 */
 	userProfile: UserAccount
+	/**
+	 * The topics the thread belongs to as an array of strings
+	 */
+	topics?: string[]
 	/**
 	 * The unique ID of the thread
 	 */
