@@ -8,7 +8,7 @@ import useSWR from 'swr'
 import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import { TextArea } from '@/common/forms/inputs/text_area/text_area'
-import { ThreadType } from '../../../../../types';
+import { ThreadType } from '../../../../../types'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -17,7 +17,7 @@ export const Thread: React.FC<ThreadProps> = ({
 	userProfile,
 	children,
 	isUpvoted: initialIsUpvoted,
-	upvotesProp= [],
+	upvotesProp = [],
 	commentCount = 0,
 	viewCutOff = false,
 	showAuthor = true,

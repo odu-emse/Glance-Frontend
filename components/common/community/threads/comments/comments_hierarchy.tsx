@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Thread } from '../thread/thread'
 import { ThreadType } from '../../../../../types'
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 /**
  * This function generates an array of DOM thread components based on a parent comment tree.
@@ -10,7 +10,7 @@ import { ReactNode } from 'react';
  * @param {Object} parentComment - The parent comment tree.
  * @returns {Array} An array of DOM thread components.
  */
-const commentGen = (parentComment:ThreadType): Array<ReactNode> | [] => {
+const commentGen = (parentComment: ThreadType): Array<ReactNode> | [] => {
 	if (parentComment.comments === undefined) return []
 	const threads = []
 	for (const comment of parentComment.comments) {
