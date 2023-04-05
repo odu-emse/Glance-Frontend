@@ -165,6 +165,7 @@ const Index = ({}) => {
 										commentCount={thread.comments.length}
 										viewCutOff={true}
 										showAuthor={false}
+										upvotesProp={thread.upvotes}
 									/>
 								</div>
 							)
