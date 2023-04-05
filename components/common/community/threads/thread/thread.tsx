@@ -9,6 +9,7 @@ import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import { TextArea } from '@/common/forms/inputs/text_area/text_area'
 import { ThreadType } from '../../../../../types'
+import MarkdownContainer from '@/common/community/threads/markdown/markdown_container';
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -160,7 +161,9 @@ export const Thread: React.FC<ThreadProps> = ({
 					</div>
 				)}
 				<p className="text-base font-normal my-2">
+				<MarkdownContainer>
 					{body.slice(0, 150)}
+				</MarkdownContainer>
 				</p>
 				{viewCutOff && (
 					<Link href={`/communities/${id}`}>
