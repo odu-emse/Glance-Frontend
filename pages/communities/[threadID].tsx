@@ -29,11 +29,14 @@ const ThreadID = () => {
 						body
 						author {
 							id
-								firstName
-								lastName
-								email
+							firstName
+							lastName
+							email
             }
 						usersWatching {
+							id
+            }
+						upvotes {
 							id
             }
 						comments {
@@ -47,6 +50,9 @@ const ThreadID = () => {
 									lastName
 									email
 								}
+								upvotes {
+									id
+                }
 								comments {
 									id
 									body
@@ -56,16 +62,22 @@ const ThreadID = () => {
 										lastName
 										email
                   }
-										comments {
+									upvotes {
+										id
+									}
+									comments {
+										id
+										body
+										author {
 											id
-											body
-											author {
+											firstName
+											lastName
+											email
+										}
+											upvotes {
 												id
-												firstName
-												lastName
-												email
-                      }
-                    }
+											}
+									}
                 }
 						}
 				}
