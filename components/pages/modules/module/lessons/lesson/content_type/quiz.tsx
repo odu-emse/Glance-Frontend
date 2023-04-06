@@ -50,13 +50,22 @@ const QuizContent = ({ data }) => {
 			<hr className="border border-black" />
 			<div className="my-3 flex gap-x-40 font-extrabold">
 				<span>
-					<h4>Time Limit&nbsp;&nbsp;&nbsp;&nbsp;{quizData.quiz[0].timeLimit}</h4>
+					<h4>
+						Time Limit&nbsp;&nbsp;&nbsp;&nbsp;
+						{quizData.quiz[0].timeLimit}
+					</h4>
 				</span>
 				<span>
-					<h4>Question&nbsp;&nbsp;&nbsp;&nbsp;{quizData.quiz[0].numQuestions}</h4>
+					<h4>
+						Question&nbsp;&nbsp;&nbsp;&nbsp;
+						{quizData.quiz[0].numQuestions}
+					</h4>
 				</span>
 				<span>
-					<h4>Points&nbsp;&nbsp;&nbsp;&nbsp;{quizData.quiz[0].totalPoints}</h4>
+					<h4>
+						Points&nbsp;&nbsp;&nbsp;&nbsp;
+						{quizData.quiz[0].totalPoints}
+					</h4>
 				</span>
 			</div>
 			<hr className="border border-black" />
