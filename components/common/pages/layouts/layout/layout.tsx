@@ -131,7 +131,7 @@ export const Layout = ({ children }) => {
 						open={open}
 						icon={null}
 					/>
-					<main className="grow">
+					<main className="flex-1">
 						<GlobalLoadingContext.Provider
 							value={{ isLoading, setLoading }}
 						>
