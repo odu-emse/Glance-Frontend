@@ -3,7 +3,7 @@ import * as React from 'react'
 const Loader = ({
 	textColor,
 	backgroundColor,
-	pageLoader = true
+	pageLoader = true,
 }: {
 	textColor?: string
 	backgroundColor?: string
@@ -11,9 +11,9 @@ const Loader = ({
 }) => (
 	<svg
 		role="status"
-		className={`inline text-${
-			textColor || 'white'
-		} animate-spin ${pageLoader ? "w-8 h-8 mr-3" : "w-4 h-4"}`}
+		className={`inline text-${textColor || 'white'} animate-spin ${
+			pageLoader ? 'w-8 h-8 mr-3' : 'w-4 h-4'
+		}`}
 		viewBox="0 0 100 100"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"

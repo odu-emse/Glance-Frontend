@@ -8,7 +8,7 @@ import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thre
 import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
 import Loader from '@/components/util/loader'
 import { FaBell } from 'react-icons/fa'
-import { useContext } from 'react';
+import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { ThreadType } from '../../types'
 import 'katex/dist/katex.min.css'
@@ -19,7 +19,11 @@ const ThreadID = () => {
 	const { user } = useContext(GlobalUserContext)
 	const { threadID } = router.query
 
-	const { data: threadData, error: threadError, isValidating } = useSWR(
+	const {
+		data: threadData,
+		error: threadError,
+		isValidating,
+	} = useSWR(
 		{
 			query: gql`
 			query {
@@ -155,9 +159,11 @@ const ThreadID = () => {
 					commentAuthor: author,
 				}
 			)
-		}, false).then(() => window.location.reload()).catch((err) => {
-			console.log(err)
-		})
+		}, false)
+			.then(() => window.location.reload())
+			.catch((err) => {
+				console.log(err)
+			})
 	}
 
 	if (threadError) {

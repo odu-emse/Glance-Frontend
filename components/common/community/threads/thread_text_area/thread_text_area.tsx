@@ -1,7 +1,7 @@
 import { Button } from '../../../button/button'
 import { TextArea } from '@/common/forms/inputs/text_area/text_area'
 import React, { useState } from 'react'
-import Loader from '@/components/util/loader';
+import Loader from '@/components/util/loader'
 
 export const ThreadTextArea = ({ onSubmit, threadID, userID }) => {
 	const [commentBody, setCommentBody] = useState<string | null>('')
@@ -25,7 +25,11 @@ export const ThreadTextArea = ({ onSubmit, threadID, userID }) => {
 						onSubmit(threadID, commentBody, userID)
 					}}
 				>
-					{isSubmitting ? <Loader textColor="royalblue" pageLoader={false} /> : 'Post'}
+					{isSubmitting ? (
+						<Loader textColor="royalblue" pageLoader={false} />
+					) : (
+						'Post'
+					)}
 				</Button>
 			</span>
 		</div>
