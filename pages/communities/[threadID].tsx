@@ -10,11 +10,6 @@ import Loader from '@/components/util/loader'
 import { useContext, useState } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { ThreadType } from '../../types'
-import ReactMarkdown from 'react-markdown'
-import { markdownConfig } from '@/utils/markdown.config'
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 import MarkdownContainer from '@/common/community/threads/markdown/markdown_container'
 
@@ -23,7 +18,11 @@ const ThreadID = () => {
 	const { user } = useContext(GlobalUserContext)
 	const { threadID } = router.query
 
-	const { data: threadData, error: threadError } = useSWR(
+	const {
+		data: threadData,
+		error: threadError,
+		isValidating,
+	} = useSWR(
 		{
 			query: gql`
 			query {
@@ -90,12 +89,19 @@ const ThreadID = () => {
 			}
 		`,
 		},
-		gqlFetcher
+		gqlFetcher,
+		{
+			revalidateIfStale: true,
+			revalidateOnMount: true,
+			refreshWhenHidden: true,
+			revalidateOnFocus: true,
+		}
 	) as {
 		data: {
 			thread: Array<ThreadType>
 		}
 		error: Error
+		isValidating: boolean
 	}
 
 	const { mutate } = useSWR({}, gqlFetcher)
@@ -153,9 +159,11 @@ const ThreadID = () => {
 					userID,
 				}
 			)
-		}, false).catch((err) => {
-			console.log(err)
-		})
+		}, false)
+			.then(() => window.location.reload())
+			.catch((err) => {
+				console.log(err)
+			})
 	}
 
 	if (threadError) {
@@ -166,7 +174,7 @@ const ThreadID = () => {
 		)
 	}
 
-	if (!threadData) {
+	if (isValidating || !threadData) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
 				<Loader textColor="royalblue" />
