@@ -71,7 +71,15 @@ const QuizContent = ({ data }) => {
 			<hr className="border border-black" />
 
 			<h2 className="mt-3 tracking-wider">INSTRUCTIONS</h2>
-			<p>Covers </p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+				Adipisci quod dolore autem? Alias quidem id a quia est maxime
+				laborum error laboriosam odio excepturi consequuntur distinctio
+				quae vero, ratione molestias.{' '}
+			</p>
+			<div className="mt-12 container flex justify-center items-center h-full w-full">
+				<Button>Take Quiz</Button>
+			</div>
 		</div>
 	)
 }
