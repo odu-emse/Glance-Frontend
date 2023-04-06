@@ -17,13 +17,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
 	handle,
 }) => {
 	return (
-		<div className={`${open ? 'w-96' : 'w-1/12'} relative`}>
+		<div className={`${open ? 'w-64' : 'w-1/12'} relative h-full`}>
 			<aside
 				id="sidePanel"
 				style={{
-					overflowY: 'visible',
+					overflow: 'visible',
 				}}
-				className={`h-screen overflow-y-scroll w-full bg-white transition-all drop-shadow-lg p-0`}
+				className={`h-full bg-white transition-all drop-shadow-lg p-0`}
 			>
 				<div className="flex flex-col grow">
 					<SidebarItem
@@ -71,10 +71,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
 				</div>
 				<button
 					id="closeButton"
-					className="absolute bottom-7 -right-4 p-2 rounded-md text-red border bg-blue-500"
+					className="absolute bottom-7 -right-4 p-2 rounded-md text-red border bg-royalblue"
 					onClick={() => handle(!open)}
 				>
-					{open ? <IoIosArrowBack /> : <IoIosArrowForward />}
+					{open ? <IoIosArrowBack color="white"/> : <IoIosArrowForward color="white" />}
 				</button>
 			</aside>
 
