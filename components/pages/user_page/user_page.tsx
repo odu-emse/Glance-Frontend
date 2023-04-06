@@ -107,6 +107,7 @@ export const UserPage = () => {
 						}`}
 						alt="user avatar"
 						layout="fill"
+
 					/>
 					<div className="absolute bg-blue-300 opacity-50 group-hover:opacity-90 inset-0"></div>
 				</div>

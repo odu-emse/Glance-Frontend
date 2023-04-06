@@ -150,8 +150,10 @@ const UserProfile = () => {
 							<span className="cursor-pointer">Edit</span>
 						</div>
 						<img
-							src={user.picURL}
+							className="w-full"
+							src={sessionUser.user.image}
 							alt="The profile picture of the current user"
+							referrerPolicy="no-referrer"
 						/>
 						<div className="absolute bg-gray-100 opacity-10 group-hover:opacity-70 inset-0"></div>
 					</div>
