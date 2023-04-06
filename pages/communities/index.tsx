@@ -124,7 +124,7 @@ const Index = ({}) => {
 
 	return (
 		<div className="mx-8 flex">
-			<div className="m-10 grow">
+			<div className="m-10 grow flex-1">
 				<div className="flex my-2 items-center">
 					<img
 						src={
@@ -257,6 +257,29 @@ const Index = ({}) => {
 								searchQuery === ''
 							) {
 								return v.topics?.includes(filterType.value)
+							}
+							if (
+								filterType.label === 'topic' &&
+								searchQuery.length > 0
+							) {
+								return (
+									v.topics?.includes(filterType.value) &&
+									(v.title
+										?.toLowerCase()
+										.includes(searchQuery.toLowerCase()) ||
+										v.body
+											?.toLowerCase()
+											.includes(
+												searchQuery.toLowerCase()
+											) ||
+										v.topics?.some((topic) =>
+											topic
+												.toLowerCase()
+												.includes(
+													searchQuery.toLowerCase()
+												)
+										))
+								)
 							}
 							if (searchQuery === '') return v.title !== null
 							else if (searchQuery.length > 0)
