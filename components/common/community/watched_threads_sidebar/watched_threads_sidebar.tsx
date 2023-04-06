@@ -19,7 +19,7 @@ const WatchedThreadSidebar: React.FC<WatchedThreadsSidebarProps> = ({
 				overflowY: 'visible',
 			}}
 			className={`${
-				open ? 'w-80' : 'w-3'
+				open ? 'flex-none' : 'w-3'
 			} border-l border-gray-300 relative h-screen overflow-y-scroll bg-white transition-all p-3 pt-14`}
 		>
 			{open && children}
