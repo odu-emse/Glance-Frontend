@@ -74,7 +74,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
 					className="absolute bottom-7 -right-4 p-2 rounded-md text-red border bg-royalblue"
 					onClick={() => handle(!open)}
 				>
-					{open ? <IoIosArrowBack color="white"/> : <IoIosArrowForward color="white" />}
+					{open ? (
+						<IoIosArrowBack color="white" />
+					) : (
+						<IoIosArrowForward color="white" />
+					)}
 				</button>
 			</aside>
 
