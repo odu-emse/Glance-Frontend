@@ -8,9 +8,9 @@ import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
-import GlobalUserContext from '@/contexts/global_user_context';
-import { gql } from 'graphql-request';
-import { User } from '../../../types';
+import GlobalUserContext from '@/contexts/global_user_context'
+import { gql } from 'graphql-request'
+import { User } from '../../../types'
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -23,7 +23,7 @@ const Module = () => {
 	const { data: userData, error: userError } = useSWR(
 		session
 			? {
-				query: gql`{
+					query: gql`{
             user(input:{
                 openID: "${session?.openId}"
             }){
@@ -33,17 +33,21 @@ const Module = () => {
                 }
             }
         }`,
-			}
+			  }
 			: null,
 		gqlFetcher
 	) as { data: { user: Array<User> }; error: Error }
 
 	const { data, error } = useSWR(
 		status !== 'loading' && userData
-			? { query: getModuleByID, token: session.idToken, variables: {
-				moduleID: moduleId as string,
-				planID: userData?.user[0].plan.id
-				} }
+			? {
+					query: getModuleByID,
+					token: session.idToken,
+					variables: {
+						moduleID: moduleId as string,
+						planID: userData?.user[0].plan.id,
+					},
+			  }
 			: null,
 		gqlFetcher
 	)
