@@ -258,19 +258,27 @@ const Index = ({}) => {
 							) {
 								return v.topics?.includes(filterType.value)
 							}
-							if(filterType.label === 'topic' && searchQuery.length > 0) {
-								return v.topics?.includes(filterType.value) && (
-									v.title
+							if (
+								filterType.label === 'topic' &&
+								searchQuery.length > 0
+							) {
+								return (
+									v.topics?.includes(filterType.value) &&
+									(v.title
 										?.toLowerCase()
 										.includes(searchQuery.toLowerCase()) ||
-									v.body
-										?.toLowerCase()
-										.includes(searchQuery.toLowerCase()) ||
-									v.topics?.some((topic) =>
-										topic
-											.toLowerCase()
-											.includes(searchQuery.toLowerCase())
-									)
+										v.body
+											?.toLowerCase()
+											.includes(
+												searchQuery.toLowerCase()
+											) ||
+										v.topics?.some((topic) =>
+											topic
+												.toLowerCase()
+												.includes(
+													searchQuery.toLowerCase()
+												)
+										))
 								)
 							}
 							if (searchQuery === '') return v.title !== null
