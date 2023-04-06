@@ -87,7 +87,9 @@ const ModuleSection = () => {
 	//TO get Content Type
 	const lessonContent = lesson.content
 	//console.log("content",lessonContent)
-	let contentType = ''
+	// hard-coded contentType
+	let contentType = 'quiz'
+	// let contentTYPE = ''
 	for (let i = 0; i < lessonContent.length; i++) {
 		if (lessonContent[i].primary === true) {
 			contentType = lessonContent[i].type
@@ -119,7 +121,7 @@ const ModuleSection = () => {
 				{/* Section sidebar */}
 				<aside className="bg-white h-full w-1/4">
 					{/* <ModuleNavigation data={data} selected={lessonId} /> */}
-					AAA
+					{/* AAA */}
 				</aside>
 			</div>
 			{/* Previous and Next buttons */}
