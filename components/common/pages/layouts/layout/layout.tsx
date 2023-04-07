@@ -63,11 +63,11 @@ export const Layout = ({ children }) => {
 	}
 
 	return (
-		<section>
+		<section className="h-screen">
 			<GlobalUserContext.Provider
 				value={{ user: data.user[0] || null, setUser }}
 			>
-				<nav className="flex bg-royalblue stdcontainer-sharp justify-between">
+				<nav className="flex bg-royalblue stdcontainer-sharp justify-between h-16 sticky">
 					<div className="flex items-center gap-1">
 						<Logo width={25} height={25} />
 						<h4
@@ -135,7 +135,7 @@ export const Layout = ({ children }) => {
 					</div>
 				</nav>
 				<div
-					className="flex h-full"
+					className="flex h-[calc(100%_-_4rem)]"
 					onClick={() => setAccountVisible(false)}
 				>
 					<Sidebar
@@ -145,7 +145,7 @@ export const Layout = ({ children }) => {
 						open={open}
 						icon={null}
 					/>
-					<main className="grow">
+					<main className="grow overflow-y-auto">
 						<GlobalLoadingContext.Provider
 							value={{ isLoading, setLoading }}
 						>
