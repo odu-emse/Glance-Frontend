@@ -94,6 +94,7 @@ export const Layout = ({ children }) => {
 							src={session.user.image}
 							alt={'profile image'}
 							className="rounded-full w-8 h-8 border"
+							referrerPolicy="no-referrer"
 						/>
 						<div
 							className={`${
