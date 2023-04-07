@@ -9,12 +9,12 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
 		<>
 			<Head>
 				<link
-					href={'/logos/ALMPLogo_NEW.svg'}
+					href={'/favicon-blue.ico'}
 					rel={'icon'}
 					media={'(prefers-color-scheme: light)'}
 				/>
 				<link
-					href={'/logos/ALMPLogo_New2_White.svg'}
+					href={'/favicon-white.ico'}
 					rel={'icon'}
 					media={'(prefers-color-scheme: dark)'}
 				/>
