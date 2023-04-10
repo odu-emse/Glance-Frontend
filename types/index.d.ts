@@ -76,12 +76,26 @@ export type ThreadType = {
 	parentThreadID?: Nullable<string>
 }
 
-type Lesson = {
+export type Lesson = {
 	id: string
 	name?: string
 	threads?: Nullable<Nullable<ThreadType>[]>
 	position?: Nullable<number>
 	collection?: Collection
+}
+
+export type LessonProgress = {
+	id: string
+	status?: number
+	completed?: boolean
+	createAt?: Date
+	updatedAt?: Date
+	enrollment?: ModuleEnrollment
+	lesson?: Lesson
+}
+
+export type LessonByModuleEnrollment = Pick<Lesson, "id" | "name" | "position"> & {
+	lessonProgress: Array<LessonProgress>
 }
 
 type Nullable<T> = T | null
