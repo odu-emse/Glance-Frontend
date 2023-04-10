@@ -3,16 +3,16 @@ import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
-import { getModuleByIDUnenrolled } from '@/scripts/get_module_by_id';
+import { getModuleByIDUnenrolled } from '@/scripts/get_module_by_id'
 import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { Module as ModuleType } from '../../../types';
-import { useProgress } from '@/hooks/use_progress';
-import Loader from '@/components/util/loader';
-import * as React from 'react';
+import { Module as ModuleType } from '../../../types'
+import { useProgress } from '@/hooks/use_progress'
+import Loader from '@/components/util/loader'
+import * as React from 'react'
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -23,9 +23,7 @@ const Module = () => {
 	const router = useRouter()
 	const { moduleId } = router.query
 
-
-
-	const { data: moduleData, error:moduleError } = useSWR(
+	const { data: moduleData, error: moduleError } = useSWR(
 		status !== 'loading'
 			? {
 					query: getModuleByIDUnenrolled,
@@ -43,27 +41,27 @@ const Module = () => {
 		error: Error
 	}
 
-	const [{
-			collectionID,
-			lessonID
-		},
-		loading,
-		progressError,
-		self
-	] = useProgress({
-		moduleID: moduleId as string,
-		planID: user.plan.id,
-	})
+	const [{ collectionID, lessonID }, loading, progressError, self] =
+		useProgress({
+			moduleID: moduleId as string,
+			planID: user.plan.id,
+		})
 
-	if (status === 'loading') return (
-		<div className="flex justify-center items-center stdcontainer h-screen">
-			<Loader textColor="royalblue" />
-		</div>
-	)
+	if (status === 'loading')
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
 
-	if(moduleError){
+	if (moduleError) {
 		setLoading(false)
-		return <h3>There was an issue loading this page. Please check your internet connection and try again...</h3>
+		return (
+			<h3>
+				There was an issue loading this page. Please check your internet
+				connection and try again...
+			</h3>
+		)
 	}
 
 	if (!moduleData) {
@@ -75,7 +73,7 @@ const Module = () => {
 	}
 
 	if (progressError) {
-		console.error(progressError);
+		console.error(progressError)
 	}
 
 	const mod = moduleData.module[0]
@@ -85,13 +83,15 @@ const Module = () => {
 
 	setLoading(false)
 
-	const isStarted = !self ? false : self
-		.map((lesson) => lesson)
-		.some((lesson) =>
-			lesson.lessonProgress
-				.map((progress) => progress)
-				.some((progress) => progress.status !== 0)
-		)
+	const isStarted = !self
+		? false
+		: self
+				.map((lesson) => lesson)
+				.some((lesson) =>
+					lesson.lessonProgress
+						.map((progress) => progress)
+						.some((progress) => progress.status !== 0)
+				)
 
 	return (
 		<section className="stdcontainer">
@@ -139,8 +139,7 @@ const Module = () => {
 					<h2>Description</h2>
 				</header>
 				<p className="mt-0">
-					{mod.description ??
-						'No description has been provided.'}
+					{mod.description ?? 'No description has been provided.'}
 				</p>
 			</section>
 
