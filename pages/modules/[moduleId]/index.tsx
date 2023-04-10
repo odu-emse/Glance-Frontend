@@ -3,14 +3,16 @@ import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
-import { getModuleByID } from '@/scripts/get_module_by_id'
+import { getModuleByIDUnenrolled } from '@/scripts/get_module_by_id';
 import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { LessonByModuleEnrollment } from '../../../types'
-import { useProgress } from '@/hooks/use_progress'
+import { Module as ModuleType } from '../../../types';
+import { useProgress } from '@/hooks/use_progress';
+import Loader from '@/components/util/loader';
+import * as React from 'react';
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -21,59 +23,69 @@ const Module = () => {
 	const router = useRouter()
 	const { moduleId } = router.query
 
-	const { data, error } = useSWR(
+
+
+	const { data: moduleData, error:moduleError } = useSWR(
 		status !== 'loading'
 			? {
-					query: getModuleByID,
+					query: getModuleByIDUnenrolled,
 					token: session.idToken,
 					variables: {
 						moduleID: moduleId as string,
-						planID: user.plan.id,
 					},
 			  }
 			: null,
 		gqlFetcher
 	) as {
 		data: {
-			module: {
-				id: string
-			}
-			lessonsByModuleEnrollment: LessonByModuleEnrollment[]
+			module: ModuleType[]
 		}
 		error: Error
 	}
 
-	const [{ collectionID, lessonID }, loading, progressError] = useProgress({
+	const [{
+			collectionID,
+			lessonID
+		},
+		loading,
+		progressError,
+		self
+	] = useProgress({
 		moduleID: moduleId as string,
 		planID: user.plan.id,
 	})
 
-	if (status === 'loading' || loading) return
-	if (error || progressError) {
-		console.log(error)
+	if (status === 'loading') return (
+		<div className="flex justify-center items-center stdcontainer h-screen">
+			<Loader textColor="royalblue" />
+		</div>
+	)
+
+	if(moduleError){
 		setLoading(false)
+		return <h3>There was an issue loading this page. Please check your internet connection and try again...</h3>
+	}
+
+	if (!moduleData) {
 		return (
-			<p>
-				There was an issue loading this page. Please check your internet
-				connection and try again...
-			</p>
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
 		)
 	}
 
-	if (!data) {
-		return
+	if (progressError) {
+		console.error(progressError);
 	}
 
-	const moduleData = data.module[0]
-	const instructors = moduleData.members?.filter(
+	const mod = moduleData.module[0]
+	const instructors = mod.members?.filter(
 		(member) => member.role === 'TEACHER'
 	)
 
 	setLoading(false)
 
-	console.log(data.lessonsByModuleEnrollment.map((lesson) => lesson))
-
-	const isStarted = data.lessonsByModuleEnrollment
+	const isStarted = !self ? false : self
 		.map((lesson) => lesson)
 		.some((lesson) =>
 			lesson.lessonProgress
@@ -81,39 +93,12 @@ const Module = () => {
 				.some((progress) => progress.status !== 0)
 		)
 
-	// const findNextLesson = () : string => {
-	// 	let nextLessonID = ''
-	// 	const lessons = data.lessonsByModuleEnrollment.map(lesson => lesson)
-	// 	const lastCompletedLesson = lessons.find(lesson => lesson.lessonProgress.map(progress => progress).some(progress => progress.completed))
-	//
-	// 	if (lastCompletedLesson) {
-	// 		const nextLesson = lessons.find(lesson => lesson.position === lastCompletedLesson.position + 1)
-	// 		if (nextLesson) {
-	// 			nextLessonID = nextLesson.id
-	// 		} else {
-	// 			nextLessonID = lastCompletedLesson.id
-	// 		}
-	// 	}
-	// 	return nextLessonID
-	// }
-	//
-	// const findCollection = (lessonID: string) : string => {
-	// 	let collectionID = ''
-	// 	const lessons = data.lessonsByModuleEnrollment.map(lesson => lesson)
-	// 	const lesson = lessons.find(lesson => lesson.id === lessonID)
-	// 	if (lesson) {
-	// 		collectionID = lesson.collection.id
-	// 	}
-	// 	console.log(collectionID);
-	// 	return collectionID
-	// }
-
 	return (
 		<section className="stdcontainer">
 			<header>
-				<h1>{moduleData.moduleName}</h1>
+				<h1>{mod.moduleName}</h1>
 				<div className="flex flex-row gap-2">
-					<figcaption>MODULE {moduleData.moduleNumber}</figcaption>
+					<figcaption>MODULE {mod.moduleNumber}</figcaption>
 					<figcaption>/</figcaption>
 					<figcaption>
 						Instructed by{' '}
@@ -138,7 +123,7 @@ const Module = () => {
 
 			<div className="my-4">
 				<Link
-					href={`/modules/${moduleData.id}/collections/${collectionID}/lessons/${lessonID}`}
+					href={`/modules/${mod.id}/collections/${collectionID}/lessons/${lessonID}`}
 					passHref
 				>
 					<Button>
@@ -154,7 +139,7 @@ const Module = () => {
 					<h2>Description</h2>
 				</header>
 				<p className="mt-0">
-					{moduleData.description ??
+					{mod.description ??
 						'No description has been provided.'}
 				</p>
 			</section>
@@ -164,7 +149,7 @@ const Module = () => {
 					<h2>Requirements</h2>
 				</header>
 				<ul className="mt-0 mb-0">
-					{moduleData.parentModules.map((parentModule, index) => {
+					{mod.parentModules.map((parentModule, index) => {
 						return (
 							<li key={index}>
 								<Link
@@ -180,7 +165,7 @@ const Module = () => {
 						)
 					})}
 				</ul>
-				{moduleData.parentModules.length === 0 && (
+				{mod.parentModules.length === 0 && (
 					<p className="mt-0">No prior requirements necessary.</p>
 				)}
 			</section>
@@ -190,11 +175,11 @@ const Module = () => {
 					<h2>Objectives</h2>
 				</header>
 				<ul className="mt-0 mb-0">
-					{moduleData.objectives.map((objective, index) => {
+					{mod.objectives.map((objective, index) => {
 						return <li key={index}>{objective}</li>
 					})}
 				</ul>
-				{moduleData.objectives.length === 0 && (
+				{mod.objectives.length === 0 && (
 					<p className="mt-0">
 						No module objectives have been provided.
 					</p>
