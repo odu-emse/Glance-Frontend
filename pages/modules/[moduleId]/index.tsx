@@ -9,11 +9,11 @@ import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { LessonByModuleEnrollment } from '../../../types';
+import { LessonByModuleEnrollment } from '../../../types'
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
-	const {user} = useContext(GlobalUserContext)
+	const { user } = useContext(GlobalUserContext)
 	const { data: session, status } = useSession()
 	setLoading(true)
 
@@ -38,7 +38,7 @@ const Module = () => {
 				id: string
 			}
 			lessonsByModuleEnrollment: LessonByModuleEnrollment[]
-		},
+		}
 		error: Error
 	}
 
@@ -65,9 +65,15 @@ const Module = () => {
 
 	setLoading(false)
 
-	console.log(data.lessonsByModuleEnrollment.map(lesson => lesson));
+	console.log(data.lessonsByModuleEnrollment.map((lesson) => lesson))
 
-	const isStarted = data.lessonsByModuleEnrollment.map(lesson => lesson).some(lesson => lesson.lessonProgress.map(progress => progress).some(progress => progress.status !== 0))
+	const isStarted = data.lessonsByModuleEnrollment
+		.map((lesson) => lesson)
+		.some((lesson) =>
+			lesson.lessonProgress
+				.map((progress) => progress)
+				.some((progress) => progress.status !== 0)
+		)
 
 	return (
 		<section className="stdcontainer">
@@ -102,7 +108,9 @@ const Module = () => {
 					href={`/modules/${moduleData.id}/collections/${moduleData.collections[0].id}/lessons/${moduleData.collections[0].lessons[0].id}`}
 					passHref
 				>
-					<Button>{isStarted ? 'RESUME MODULE' : 'START MODULE'}</Button>
+					<Button>
+						{isStarted ? 'RESUME MODULE' : 'START MODULE'}
+					</Button>
 				</Link>
 			</div>
 
