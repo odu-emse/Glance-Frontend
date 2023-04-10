@@ -63,7 +63,7 @@ const Index = () => {
 					LOGIN
 				</Button>
 
-				<DynamicVersion backendVersion={"0.3.0"} isLight={true} />
+				<DynamicVersion backendVersion={'0.3.0'} isLight={true} />
 			</div>
 		</>
 	)

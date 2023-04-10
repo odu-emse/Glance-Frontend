@@ -7,12 +7,10 @@ export default {
 	argTypes: {},
 }
 
-const Template = (
-	args: DynamicVersionProps
-) => <DynamicVersion {...args} />
+const Template = (args: DynamicVersionProps) => <DynamicVersion {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
 	backendVersion: '0.3.0',
-	isLight: false
+	isLight: false,
 }

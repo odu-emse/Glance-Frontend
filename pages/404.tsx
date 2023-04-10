@@ -10,7 +10,7 @@ const NotFound = () => {
 			<Link className="underline text-blue-500" href="/">
 				<Button>Return Home</Button>
 			</Link>
-			<DynamicVersion backendVersion={"0.3.0"} isLight={false} />
+			<DynamicVersion backendVersion={'0.3.0'} isLight={false} />
 		</div>
 	)
 }
