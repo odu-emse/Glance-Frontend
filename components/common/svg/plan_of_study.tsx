@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const Logo = ({ width, height }) => {
+export const PlanOfStudy = ({ width, height }) => {
 	return (
 		<svg
 			width={width}
