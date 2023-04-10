@@ -54,6 +54,10 @@ export const Layout = ({ children }) => {
 		)
 	}
 
+	if (typeof window !== 'undefined' && !session) {
+		router.push('/', '/', { shallow: true })
+	}
+
 	if (!data) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
