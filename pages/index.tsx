@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { Logo } from '@/components/common/svg/logo'
 import { signIn } from 'next-auth/react'
+import { DynamicVersion } from '@/components/common/version/dynamic_version'
 
 // background: rgb(32,68,152);
 // background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
@@ -62,11 +63,7 @@ const Index = () => {
 					LOGIN
 				</Button>
 
-				<span className="sans font-bold absolute bottom-1 left-3 gap-4 sans text-white text-sm">
-					<small className="m-0 p-0">API Version 0.3.5</small>
-					<span className="mx-1">&bull;</span>
-					<small className="m-0 p-0">FE Version 0.3.0</small>
-				</span>
+				<DynamicVersion backendVersion={"0.3.0"} isLight={true} />
 			</div>
 		</>
 	)

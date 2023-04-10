@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/common/button/button'
+import { DynamicVersion } from '@/components/common/version/dynamic_version'
 
 const NotFound = () => {
 	return (
@@ -9,6 +10,7 @@ const NotFound = () => {
 			<Link className="underline text-blue-500" href="/">
 				<Button>Return Home</Button>
 			</Link>
+			<DynamicVersion backendVersion={"0.3.0"} isLight={false} />
 		</div>
 	)
 }
