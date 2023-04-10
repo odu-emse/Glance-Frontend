@@ -94,7 +94,10 @@ export type LessonProgress = {
 	lesson?: Lesson
 }
 
-export type LessonByModuleEnrollment = Pick<Lesson, "id" | "name" | "position"> & {
+export type LessonByModuleEnrollment = Pick<
+	Lesson,
+	'id' | 'name' | 'position'
+> & {
 	lessonProgress: Array<LessonProgress>
 }
 
