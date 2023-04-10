@@ -1,7 +1,8 @@
-import { getModuleByID } from 'scripts/get_module_by_id'
-import { Lesson, LessonProgress, ModuleEnrollment } from '../types'
-import useSWR from 'swr'
-import gql_fetcher from '@/utils/gql_fetcher'
+
+import { getModuleByIDEnrolled } from 'scripts/get_module_by_id';
+import { Lesson, LessonByModuleEnrollment, LessonProgress } from '../types';
+import useSWR from 'swr';
+import gql_fetcher from '@/utils/gql_fetcher';
 
 /**
  * @param moduleID - The ID of the module to get the progress for
@@ -24,37 +25,41 @@ export const useProgress = ({
 		lessonID: string | null
 	},
 	loading: boolean,
-	error: Error
+	error: Error,
+	self: LessonByModuleEnrollment[]
 ] => {
-	const { data, isValidating, error } = useSWR(
-		{
-			query: getModuleByID,
-			variables: {
-				moduleID,
-				planID,
-			},
-		},
-		gql_fetcher
-	)
 
-	if (isValidating)
-		return [
-			{
-				collectionID: null,
-				lessonID: null,
-			},
-			true,
-			null,
-		]
-	if (error)
-		return [
-			{
-				collectionID: null,
-				lessonID: null,
-			},
-			false,
-			error,
-		]
+	const { data, isValidating, error } = useSWR({
+		query: getModuleByIDEnrolled,
+		variables: {
+			moduleID,
+			planID,
+		},
+	}, gql_fetcher, {
+		revalidateOnFocus: false,
+		revalidateIfStale: false,
+		revalidateOnReconnect: false,
+		refreshWhenHidden: false,
+		revalidateOnMount: false,
+		errorRetryCount: 1,
+		shouldRetryOnError: false,
+	}) as {
+		data: {
+			lessonsByModuleEnrollment: LessonByModuleEnrollment[]
+		},
+		isValidating: boolean,
+		error: Error
+	}
+
+	if (isValidating) return [{
+		collectionID: null, lessonID: null
+	}, true, null, data?.lessonsByModuleEnrollment ?? []]
+	if (error) return [{
+		collectionID: null, lessonID: null
+	}, false, error, []]
+	if(!data) return [{
+		collectionID: null, lessonID: null
+	}, true, null, []]
 
 	const { lessonsByModuleEnrollment } = data
 
@@ -63,47 +68,22 @@ export const useProgress = ({
 		(a, b) => a.collection.position - b.collection.position
 	)
 
-	console.log('all data', progresses)
-
-	const completedLessons = progresses.filter((lesson: Lesson) => {
-		const lessonProgress = lesson.lessonProgress.filter(
-			(progress: LessonProgress) => progress.completed
-		)
-		return lessonProgress.length > 0
-	})
-
-	console.log('completed lessons', completedLessons)
-
 	/**
-	 *
-		find out if the completed lessons are in the same collection
-		if they are, return the next lesson in the collection
-		if they are not, return the first lesson in the next collection
+	 * find out if the completed lessons are in the same collection
+	 * if they are, return the next lesson in the collection
+	 * if they are not, return the first lesson in the next collection
 	 */
+	const lessonsLeft = progresses.filter((lesson: Lesson) => {
+		const lessonProgress = lesson.lessonProgress.filter((progress: LessonProgress) => progress.completed)
+		return lessonProgress.length === 0
+	}).sort((a, b) => a.collection.position - b.collection.position)
 
-	const lessonsLeft = progresses
-		.filter((lesson: Lesson) => {
-			const lessonProgress = lesson.lessonProgress.filter(
-				(progress: LessonProgress) => progress.completed
-			)
-			return lessonProgress.length === 0
-		})
-		.sort((a, b) => a.collection.position - b.collection.position)
+	const nextCollection = lessonsLeft[0]?.collection
 
-	console.log('incomplete lessons', lessonsLeft)
+	const nextLesson = lessonsLeft.filter((lesson: Lesson) => lesson.collection.id === nextCollection.id)[0]
 
-	const nextCollection = lessonsLeft[0].collection
-
-	const nextLesson = lessonsLeft.filter(
-		(lesson: Lesson) => lesson.collection.id === nextCollection.id
-	)[0]
-
-	return [
-		{
-			collectionID: nextCollection.id,
-			lessonID: nextLesson.id,
-		},
-		isValidating,
-		error,
-	]
+	return [{
+		collectionID: nextCollection.id,
+		lessonID: nextLesson.id,
+	}, false, null, lessonsByModuleEnrollment]
 }
