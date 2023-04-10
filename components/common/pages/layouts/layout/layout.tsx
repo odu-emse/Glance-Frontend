@@ -38,6 +38,10 @@ export const Layout = ({ children }) => {
 		gqlFetcher
 	)
 
+	console.log(session);
+	console.log(status)
+
+
 	if (status === 'loading') {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
@@ -52,6 +56,10 @@ export const Layout = ({ children }) => {
 				<h1>Error loading user data</h1>
 			</div>
 		)
+	}
+
+	if (typeof(window) !== "undefined" && !session) {
+		router.push('/', '/', {shallow: true});
 	}
 
 	if (!data) {
