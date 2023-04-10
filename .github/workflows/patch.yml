@@ -3,7 +3,7 @@ on:
     branches:
       - development
     paths:
-      - '**/!(package*.json)'
+      - '**/!(package.json)'
 jobs:
   update_patch_version:
     name: "Update the patch version of the module"
