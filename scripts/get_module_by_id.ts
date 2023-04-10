@@ -40,6 +40,15 @@ export const getModuleByID = gql`
 			id
 			name
 			position
+			collection {
+				id
+				name
+				position
+				module {
+						id
+						moduleName
+				}
+			}
 			lessonProgress {
 				status
 				completed

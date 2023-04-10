@@ -82,6 +82,7 @@ export type Lesson = {
 	threads?: Nullable<Nullable<ThreadType>[]>
 	position?: Nullable<number>
 	collection?: Collection
+	lessonProgress?: Array<LessonProgress>
 }
 
 export type LessonProgress = {
@@ -96,7 +97,7 @@ export type LessonProgress = {
 
 export type LessonByModuleEnrollment = Pick<
 	Lesson,
-	'id' | 'name' | 'position'
+	'id' | 'name' | 'position' | "collection"
 > & {
 	lessonProgress: Array<LessonProgress>
 }

@@ -9,7 +9,8 @@ import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { LessonByModuleEnrollment } from '../../../types'
+import { LessonByModuleEnrollment } from '../../../types';
+import { useProgress } from '@/hooks/use_progress';
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -42,8 +43,13 @@ const Module = () => {
 		error: Error
 	}
 
-	if (status === 'loading') return
-	if (error) {
+	const [{collectionID, lessonID}, loading, progressError] = useProgress({
+		moduleID: moduleId as string,
+		planID: user.plan.id,
+	})
+
+	if (status === 'loading' || loading) return
+	if (error || progressError) {
 		console.log(error)
 		setLoading(false)
 		return (
@@ -75,6 +81,33 @@ const Module = () => {
 				.some((progress) => progress.status !== 0)
 		)
 
+	// const findNextLesson = () : string => {
+	// 	let nextLessonID = ''
+	// 	const lessons = data.lessonsByModuleEnrollment.map(lesson => lesson)
+	// 	const lastCompletedLesson = lessons.find(lesson => lesson.lessonProgress.map(progress => progress).some(progress => progress.completed))
+	//
+	// 	if (lastCompletedLesson) {
+	// 		const nextLesson = lessons.find(lesson => lesson.position === lastCompletedLesson.position + 1)
+	// 		if (nextLesson) {
+	// 			nextLessonID = nextLesson.id
+	// 		} else {
+	// 			nextLessonID = lastCompletedLesson.id
+	// 		}
+	// 	}
+	// 	return nextLessonID
+	// }
+	//
+	// const findCollection = (lessonID: string) : string => {
+	// 	let collectionID = ''
+	// 	const lessons = data.lessonsByModuleEnrollment.map(lesson => lesson)
+	// 	const lesson = lessons.find(lesson => lesson.id === lessonID)
+	// 	if (lesson) {
+	// 		collectionID = lesson.collection.id
+	// 	}
+	// 	console.log(collectionID);
+	// 	return collectionID
+	// }
+
 	return (
 		<section className="stdcontainer">
 			<header>
@@ -105,7 +138,7 @@ const Module = () => {
 
 			<div className="my-4">
 				<Link
-					href={`/modules/${moduleData.id}/collections/${moduleData.collections[0].id}/lessons/${moduleData.collections[0].lessons[0].id}`}
+					href={`/modules/${moduleData.id}/collections/${collectionID}/lessons/${lessonID}`}
 					passHref
 				>
 					<Button>
