@@ -37,9 +37,7 @@ export const Layout = ({ children }) => {
 			: null,
 		gqlFetcher
 	)
-
-	console.log(session);
-	console.log(status)
+	
 
 
 	if (status === 'loading') {
