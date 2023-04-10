@@ -38,9 +38,8 @@ export const Layout = ({ children }) => {
 		gqlFetcher
 	)
 
-	console.log(session);
+	console.log(session)
 	console.log(status)
-
 
 	if (status === 'loading') {
 		return (
@@ -58,8 +57,8 @@ export const Layout = ({ children }) => {
 		)
 	}
 
-	if (typeof(window) !== "undefined" && !session) {
-		router.push('/', '/', {shallow: true});
+	if (typeof window !== 'undefined' && !session) {
+		router.push('/', '/', { shallow: true })
 	}
 
 	if (!data) {
