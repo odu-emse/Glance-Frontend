@@ -9,51 +9,41 @@ import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { gql } from 'graphql-request'
-import { User } from '../../../types'
+import { LessonByModuleEnrollment } from '../../../types';
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
+	const {user} = useContext(GlobalUserContext)
 	const { data: session, status } = useSession()
 	setLoading(true)
 
 	const router = useRouter()
 	const { moduleId } = router.query
 
-	const { data: userData, error: userError } = useSWR(
-		session
-			? {
-					query: gql`{
-            user(input:{
-                openID: "${session?.openId}"
-            }){
-                id
-                plan {
-                    id
-                }
-            }
-        }`,
-			  }
-			: null,
-		gqlFetcher
-	) as { data: { user: Array<User> }; error: Error }
-
 	const { data, error } = useSWR(
-		status !== 'loading' && userData
+		status !== 'loading'
 			? {
 					query: getModuleByID,
 					token: session.idToken,
 					variables: {
 						moduleID: moduleId as string,
-						planID: userData?.user[0].plan.id,
+						planID: user.plan.id,
 					},
 			  }
 			: null,
 		gqlFetcher
-	)
+	) as {
+		data: {
+			module: {
+				id: string
+			}
+			lessonsByModuleEnrollment: LessonByModuleEnrollment[]
+		},
+		error: Error
+	}
 
 	if (status === 'loading') return
-	if (error || userError) {
+	if (error) {
 		console.log(error)
 		setLoading(false)
 		return (
@@ -64,7 +54,7 @@ const Module = () => {
 		)
 	}
 
-	if (!data || !data?.module) {
+	if (!data) {
 		return
 	}
 
@@ -74,6 +64,10 @@ const Module = () => {
 	)
 
 	setLoading(false)
+
+	console.log(data.lessonsByModuleEnrollment.map(lesson => lesson));
+
+	const isStarted = data.lessonsByModuleEnrollment.map(lesson => lesson).some(lesson => lesson.lessonProgress.map(progress => progress).some(progress => progress.status !== 0))
 
 	return (
 		<section className="stdcontainer">
@@ -108,7 +102,7 @@ const Module = () => {
 					href={`/modules/${moduleData.id}/collections/${moduleData.collections[0].id}/lessons/${moduleData.collections[0].lessons[0].id}`}
 					passHref
 				>
-					<Button>RESUME MODULE</Button>
+					<Button>{isStarted ? 'RESUME MODULE' : 'START MODULE'}</Button>
 				</Link>
 			</div>
 
@@ -146,7 +140,7 @@ const Module = () => {
 					})}
 				</ul>
 				{moduleData.parentModules.length === 0 && (
-					<p className="mt-0">No prior requirments necessary.</p>
+					<p className="mt-0">No prior requirements necessary.</p>
 				)}
 			</section>
 
