@@ -1,14 +1,43 @@
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import '../styles/globals.css';
+import React from 'react'
+import { SessionProvider } from 'next-auth/react'
+import '../styles/globals.css'
+import Head from 'next/head'
 
-function App({ Component, pageProps }) {
-	const getLayout = Component.getLayout || ((page) => page);
-
-	return getLayout(
-		<GoogleOAuthProvider clientId="179547029989-eueljn9jl5gqgforq4jpav2qddfhqhlu.apps.googleusercontent.com">
-			<Component {...pageProps} />
-		</GoogleOAuthProvider>
-	);
+const isServerSideRendered = () => {
+	return typeof window === 'undefined'
 }
 
-export default App;
+function App({ Component, pageProps: { session, ...pageProps } }) {
+	if (!isServerSideRendered()) {
+		// TODO: Make this only visible when developers are logged in.
+		import('react-dom').then((ReactDOM) => {
+			import('@axe-core/react').then((axe) => {
+				axe.default(React, ReactDOM, 1000, {})
+			})
+		})
+	}
+
+	const getLayout = Component.getLayout || ((page) => page)
+
+	return (
+		<>
+			<Head>
+				<link
+					href={'/favicon-blue.ico'}
+					rel={'icon'}
+					media={'(prefers-color-scheme: light)'}
+				/>
+				<link
+					href={'/favicon-white.ico'}
+					rel={'icon'}
+					media={'(prefers-color-scheme: dark)'}
+				/>
+			</Head>
+			<SessionProvider session={session}>
+				{getLayout(<Component {...pageProps} />)}
+			</SessionProvider>
+		</>
+	)
+}
+
+export default App

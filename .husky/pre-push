@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "=== Running Pre Push Pipeline. ==="
+# ----------------------------------------------------------------
+
+echo "Fixing Code Formatting w/ Prettier"
+# npx prettier --check .
+
+echo "Checking Linting Rules"
+# npm run lint
+
+# Add testing
