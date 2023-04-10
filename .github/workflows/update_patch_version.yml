@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - development
+    paths:
+      - '**/!(package*.json)'
+jobs:
+  update_patch_version:
+    name: "Update the patch version of the module"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Update Version
+        run: npm version patch
+      - name: Commit changes
+        run: |
+          git config --global user.name 'Bot'
+          git config --global user.email 'bot@bot.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "Automated version changes"
+          git push
