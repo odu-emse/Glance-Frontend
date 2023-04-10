@@ -9,8 +9,8 @@ import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { LessonByModuleEnrollment } from '../../../types';
-import { useProgress } from '@/hooks/use_progress';
+import { LessonByModuleEnrollment } from '../../../types'
+import { useProgress } from '@/hooks/use_progress'
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -43,7 +43,7 @@ const Module = () => {
 		error: Error
 	}
 
-	const [{collectionID, lessonID}, loading, progressError] = useProgress({
+	const [{ collectionID, lessonID }, loading, progressError] = useProgress({
 		moduleID: moduleId as string,
 		planID: user.plan.id,
 	})

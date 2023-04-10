@@ -45,8 +45,8 @@ export const getModuleByID = gql`
 				name
 				position
 				module {
-						id
-						moduleName
+					id
+					moduleName
 				}
 			}
 			lessonProgress {
