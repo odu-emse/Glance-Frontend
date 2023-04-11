@@ -7,8 +7,9 @@ import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { User } from '@/types/index'
-import { UserProfile } from '@/pages/user/user_profile/user_profile'
-import Loader from '@/components/util/loader'
+import { UserProfile } from '@/pages/user/user_profile/user_profile';
+import Loader from '@/components/util/loader';
+import RequestFailed from '@/pages/errors/request_failed/request_failed';
 
 const UserProfilePage = () => {
 	const router = useRouter()
@@ -106,15 +107,8 @@ const UserProfilePage = () => {
 		gqlFetcher
 	)
 
-	if (error) {
-		return (
-			<div className="flex flex-col gap-2 justify-center items-center stdcontainer h-screen">
-				<h1 className="text-2xl font-bold">Error</h1>
-				<h3 className="text-lg font-semibold">
-					Could not retrieve user information!
-				</h3>
-			</div>
-		)
+	if(error){
+		return <RequestFailed title="Error" subtitle="Could not retrieve user information!" />
 	}
 
 	if (!data) {
