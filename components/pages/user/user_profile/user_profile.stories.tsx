@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { UserProfile, UserProfileProps } from './user_profile';
+import * as React from 'react'
+import { UserProfile, UserProfileProps } from './user_profile'
 
 export default {
 	title: 'Pages/User/User Profile',
@@ -31,11 +31,11 @@ export default {
 			},
 		},
 	},
-};
+}
 
-const Template = (args) => <UserProfile {...args} />;
+const Template = (args) => <UserProfile {...args} />
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 Primary.args = {
 	user: {
 		firstName: 'John',
@@ -63,10 +63,25 @@ Primary.args = {
 		lastName: 'Doe',
 		openID: '1',
 	},
-	updateSocial(openID: string, accountID: string, socialInput: { github?: string | null; linkedin?: string | null; portfolio?: string | null; facebook?: string | null; twitter?: string | null }, userInput: { id: string; openID: string; biography?: string | null; phoneNumber?: string | null }): void {
-	},
+	updateSocial(
+		openID: string,
+		accountID: string,
+		socialInput: {
+			github?: string | null
+			linkedin?: string | null
+			portfolio?: string | null
+			facebook?: string | null
+			twitter?: string | null
+		},
+		userInput: {
+			id: string
+			openID: string
+			biography?: string | null
+			phoneNumber?: string | null
+		}
+	): void {},
 	verifyEdit(): boolean {
-		return false;
+		return false
 	},
 	sessionUser: {
 		id: '1',
@@ -79,14 +94,14 @@ Primary.args = {
 		openId: '1',
 		idToken: '1',
 	},
-} as UserProfileProps;
-Primary.storyName = 'User Profile - logged out';
+} as UserProfileProps
+Primary.storyName = 'User Profile - logged out'
 
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 Secondary.args = {
 	...Primary.args,
 	verifyEdit(): boolean {
-		return true;
+		return true
 	},
-};
-Secondary.storyName = 'User Profile - logged in';
+}
+Secondary.storyName = 'User Profile - logged in'

@@ -2,15 +2,21 @@ import * as React from 'react'
 import { useState } from 'react'
 import { Button } from '@/common/button/button'
 import Link from 'next/link'
-import { Input } from '@/common/forms/inputs/input/input';
-import { TextArea } from '@/common/forms/inputs/text_area/text_area';
-import { User } from '@/types/index';
-import { Session } from 'next-auth';
-import { UserAccount } from '@/common/community/threads/thread/thread';
+import { Input } from '@/common/forms/inputs/input/input'
+import { TextArea } from '@/common/forms/inputs/text_area/text_area'
+import { User } from '@/types/index'
+import { Session } from 'next-auth'
+import { UserAccount } from '@/common/community/threads/thread/thread'
 
-export const UserProfile = ({ user, sessionUser, verifyEdit, updateSocial, userOpenID, contextAccount }: UserProfileProps) => {
-	const [updatedProfile, setUpdatedProfile] =
-		useState<User | null>(null)
+export const UserProfile = ({
+	user,
+	sessionUser,
+	verifyEdit,
+	updateSocial,
+	userOpenID,
+	contextAccount,
+}: UserProfileProps) => {
+	const [updatedProfile, setUpdatedProfile] = useState<User | null>(null)
 
 	const [isEditMode, setEditMode] = useState(false)
 
@@ -57,7 +63,7 @@ export const UserProfile = ({ user, sessionUser, verifyEdit, updateSocial, userO
 													id: contextAccount.id,
 													openID: userOpenID as string,
 													biography:
-													updatedProfile.biography,
+														updatedProfile.biography,
 												}
 											)
 											setEditMode(!isEditMode)
@@ -90,7 +96,9 @@ export const UserProfile = ({ user, sessionUser, verifyEdit, updateSocial, userO
 					<div className="flex flex-col items-start justify-center">
 						{!isEditMode ? (
 							<>
-								<Link href={`/users/${userOpenID}/settings#plan`}>
+								<Link
+									href={`/users/${userOpenID}/settings#plan`}
+								>
 									<a>
 										<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 											Plan of study
@@ -368,7 +376,7 @@ export type UserProfileProps = {
 	userOpenID: string
 	contextAccount:
 		| (Omit<UserAccount & { openID: string; biography?: string }, 'id'> & {
-		id: string
-	})
+				id: string
+		  })
 		| null
 }

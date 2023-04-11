@@ -10,13 +10,11 @@ import { useSession } from 'next-auth/react'
 import { Input } from '@/common/forms/inputs/input/input'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { TextArea } from '@/common/forms/inputs/text_area/text_area'
-import { User } from '@/types/index';
-
+import { User } from '@/types/index'
 
 const UserProfile = () => {
 	const [isEditMode, setEditMode] = useState(false)
-	const [updatedProfile, setUpdatedProfile] =
-		useState<User | null>(null)
+	const [updatedProfile, setUpdatedProfile] = useState<User | null>(null)
 	const router = useRouter()
 	const { data: sessionUser } = useSession()
 	const { user: account } = useContext(GlobalUserContext)
