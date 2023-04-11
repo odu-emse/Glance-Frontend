@@ -7,7 +7,8 @@ import useSWR from 'swr'
 import { ThreadTextArea } from '@/common/community/threads/thread_text_area/thread_text_area'
 import { CommentsHierarchy } from '@/common/community/threads/comments/comments_hierarchy'
 import Loader from '@/components/util/loader'
-import { useContext, useState } from 'react'
+import { FaBell } from 'react-icons/fa'
+import { useContext } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { ThreadType } from '../../types'
 import 'katex/dist/katex.min.css'
@@ -106,6 +107,34 @@ const ThreadID = () => {
 
 	const { mutate } = useSWR({}, gqlFetcher)
 
+	const watchThread = (threadID, userID) => {
+		mutate(async () => {
+			await client.request(
+				gql`
+					mutation AddUserAsWatcher($threadID: ID!, $userID: ID!) {
+						addUserAsWatcherToThread(
+							id: $threadID
+							userID: $userID
+						) {
+							id
+							title
+							body
+							usersWatching {
+								id
+							}
+						}
+					}
+				`,
+				{
+					threadID,
+					userID,
+				}
+			)
+		}, false).catch((err) => {
+			console.log(err)
+		})
+	}
+
 	const addCommentToThread = (threadId, commentBody, author) => {
 		mutate(async () => {
 			await client.request(
@@ -128,35 +157,6 @@ const ThreadID = () => {
 					threadID: threadId,
 					commentBody,
 					commentAuthor: author,
-				}
-			)
-		}, false).catch((err) => {
-			console.log(err)
-		})
-	}
-
-
-	const watchThread = (threadID, userID) => {
-		mutate(async () => {
-			await client.request(
-				gql`
-					mutation AddUserAsWatcher($threadID: ID!, $userID: ID!) {
-						addUserAsWatcherToThread(
-							id: $threadID
-							userID: $userID
-						) {
-							id
-							title
-							body
-							usersWatching {
-								id
-							}
-						}
-					}
-				`,
-				{
-					threadID,
-					userID,
 				}
 			)
 		}, false)
@@ -186,7 +186,10 @@ const ThreadID = () => {
 		(acc) => acc.id === user.id
 	)
 
-	const sortedComments = threadData.thread[0].comments.sort((a, b) => new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf())
+	const sortedComments = threadData.thread[0].comments.sort(
+		(a, b) =>
+			new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf()
+	)
 
 	const sortedThread = {
 		...threadData.thread[0],
