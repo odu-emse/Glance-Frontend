@@ -30,7 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
 						collapsed={!open}
 						value="PLAN OF STUDY"
-						href="/planofstudy"
+						href={`/plan/${userSession.openId}`}
 					/>
 					<SidebarItem
 						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
