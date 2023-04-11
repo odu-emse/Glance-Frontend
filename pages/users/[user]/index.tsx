@@ -7,8 +7,8 @@ import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { User } from '@/types/index'
-import { UserProfile } from '@/pages/user/user_profile/user_profile';
-import Loader from '@/components/util/loader';
+import { UserProfile } from '@/pages/user/user_profile/user_profile'
+import Loader from '@/components/util/loader'
 
 const UserProfilePage = () => {
 	const router = useRouter()
@@ -106,11 +106,13 @@ const UserProfilePage = () => {
 		gqlFetcher
 	)
 
-	if(error){
+	if (error) {
 		return (
 			<div className="flex flex-col gap-2 justify-center items-center stdcontainer h-screen">
 				<h1 className="text-2xl font-bold">Error</h1>
-				<h3 className="text-lg font-semibold">Could not retrieve user information!</h3>
+				<h3 className="text-lg font-semibold">
+					Could not retrieve user information!
+				</h3>
 			</div>
 		)
 	}
@@ -123,14 +125,16 @@ const UserProfilePage = () => {
 		)
 	}
 
-	return <UserProfile
-		sessionUser={sessionUser}
-		user={data.user[0] as User}
-		contextAccount={account}
-		updateSocial={updateSocial}
-		userOpenID={userID as string}
-		verifyEdit={verifyEdit}
-	/>
+	return (
+		<UserProfile
+			sessionUser={sessionUser}
+			user={data.user[0] as User}
+			contextAccount={account}
+			updateSocial={updateSocial}
+			userOpenID={userID as string}
+			verifyEdit={verifyEdit}
+		/>
+	)
 }
 
 UserProfilePage.getLayout = function getLayout(page) {
