@@ -10,29 +10,13 @@ import { useSession } from 'next-auth/react'
 import { Input } from '@/common/forms/inputs/input/input'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { TextArea } from '@/common/forms/inputs/text_area/text_area'
+import { User } from '@/types/index';
 
-type UserProfileType = {
-	social?: {
-		github: string | null
-		linkedin: string | null
-		portfolio: string | null
-		facebook: string | null
-		twitter: string | null
-	} | null
-	id: string
-	openID: string
-	picURL: string
-	firstName: string
-	lastName: string
-	dob: string
-	biography: string | null
-	phoneNumber: string | null
-	email: string
-}
+
 const UserProfile = () => {
 	const [isEditMode, setEditMode] = useState(false)
 	const [updatedProfile, setUpdatedProfile] =
-		useState<UserProfileType | null>(null)
+		useState<User | null>(null)
 	const router = useRouter()
 	const { data: sessionUser } = useSession()
 	const { user: account } = useContext(GlobalUserContext)
@@ -136,7 +120,7 @@ const UserProfile = () => {
 		return <div>Loading...</div>
 	}
 
-	const user: UserProfileType = data.user[0]
+	const user: User = data.user[0]
 
 	return (
 		<div className="m-11">
