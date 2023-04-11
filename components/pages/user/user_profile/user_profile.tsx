@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { useState } from 'react'
-import { Button } from '../../../button/button'
+import { Button } from '@/common/button/button'
 import Link from 'next/link'
 import { Input } from '@/common/forms/inputs/input/input';
 import { TextArea } from '@/common/forms/inputs/text_area/text_area';
-import { User } from '../../../../../types';
+import { User } from '@/types/index';
 import { Session } from 'next-auth';
 import { UserAccount } from '@/common/community/threads/thread/thread';
 
