@@ -99,55 +99,54 @@ const ModuleSection = () => {
 	return (
 		<section className="flex">
 			<div className="SectionContent stdcontainer grow flex-col">
-			<header>
-				<h4 className="mb-6">
-					<Link href={`/modules/${_module.id}`} passHref>
-						<a
-							title={`Return to the home page of "${_module.moduleName}"`}
-						>
-							MODULE {_module.moduleNumber}
-						</a>
-					</Link>
-					&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
-					{_module.moduleName}
-				</h4>
-				<h3>{lesson.name}</h3>
-			</header>
+				<header>
+					<h4 className="mb-6">
+						<Link href={`/modules/${_module.id}`} passHref>
+							<a
+								title={`Return to the home page of "${_module.moduleName}"`}
+							>
+								MODULE {_module.moduleNumber}
+							</a>
+						</Link>
+						&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
+						{_module.moduleName}
+					</h4>
+					<h3>{lesson.name}</h3>
+				</header>
 
-			<div className="flex h-4/5 gap-2 my-2">
-				{/* Section content  */}
-				<ContentLoader type={contentType} data={lessonContent} />
-			</div>
-			{/* Previous and Next buttons */}
-			<div className="w-full flex justify-between items-center">
-				{previousLesson !== null && (
-					<Link
-						href={`/modules/${moduleId}/collections/${previousLesson.collectionId}/lessons/${previousLesson.lessonId}`}
-						passHref
-					>
-						<Button>Previous</Button>
-					</Link>
-				)}
-				<div className="grow"></div>
-				{nextLesson !== null && (
-					<Link
-						href={`/modules/${moduleId}/collections/${nextLesson.collectionId}/lessons/${nextLesson.lessonId}`}
-						passHref
-					>
-						<Button>Next</Button>
-					</Link>
-				)}
-			</div>
+				<div className="flex h-4/5 gap-2 my-2">
+					{/* Section content  */}
+					<ContentLoader type={contentType} data={lessonContent} />
+				</div>
+				{/* Previous and Next buttons */}
+				<div className="w-full flex justify-between items-center">
+					{previousLesson !== null && (
+						<Link
+							href={`/modules/${moduleId}/collections/${previousLesson.collectionId}/lessons/${previousLesson.lessonId}`}
+							passHref
+						>
+							<Button>Previous</Button>
+						</Link>
+					)}
+					<div className="grow"></div>
+					{nextLesson !== null && (
+						<Link
+							href={`/modules/${moduleId}/collections/${nextLesson.collectionId}/lessons/${nextLesson.lessonId}`}
+							passHref
+						>
+							<Button>Next</Button>
+						</Link>
+					)}
+				</div>
 			</div>
 			{/* Section sidebar */}
 			<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
-					{/* <ModuleNavigation data={data} selected={lessonId} /> */}
-					<SidebarLessons 
+				{/* <ModuleNavigation data={data} selected={lessonId} /> */}
+				<SidebarLessons
 					open={true}
 					handle={() => console.log('toggled')}
-					/>
+				/>
 			</aside>
-
 		</section>
 	)
 }
