@@ -12,6 +12,7 @@ import { getLessonByID } from '@/scripts/get_lesson_by_id'
 import { useContext } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { gql } from 'graphql-request'
+import { SidebarLessons } from '@/components/common/pages/sidebar/sidebar_lessons/sidebar_lessons'
 
 const ModuleSection = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -96,7 +97,8 @@ const ModuleSection = () => {
 	}
 
 	return (
-		<section className="stdcontainer">
+		<section className="flex">
+			<div className="SectionContent stdcontainer grow flex-col">
 			<header>
 				<h4 className="mb-6">
 					<Link href={`/modules/${_module.id}`} passHref>
@@ -115,12 +117,6 @@ const ModuleSection = () => {
 			<div className="flex h-4/5 gap-2 my-2">
 				{/* Section content  */}
 				<ContentLoader type={contentType} data={lessonContent} />
-
-				{/* Section sidebar */}
-				<aside className="bg-white h-full w-1/4">
-					{/* <ModuleNavigation data={data} selected={lessonId} /> */}
-					AAA
-				</aside>
 			</div>
 			{/* Previous and Next buttons */}
 			<div className="w-full flex justify-between items-center">
@@ -142,6 +138,16 @@ const ModuleSection = () => {
 					</Link>
 				)}
 			</div>
+			</div>
+			{/* Section sidebar */}
+			<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
+					{/* <ModuleNavigation data={data} selected={lessonId} /> */}
+					<SidebarLessons 
+					open={true}
+					handle={() => console.log('toggled')}
+					/>
+			</aside>
+
 		</section>
 	)
 }
