@@ -10,19 +10,17 @@ export default {
 		title: {
 			control: {
 				type: 'text',
-			}
+			},
 		},
 		subtitle: {
 			control: {
 				type: 'text',
-			}
-		}
+			},
+		},
 	},
 } as Meta<typeof RequestFailed>
 
-const Template: StoryFn<typeof RequestFailed> = (
-	args: RequestFailedProps
-) => {
+const Template: StoryFn<typeof RequestFailed> = (args: RequestFailedProps) => {
 	return <RequestFailed {...args} />
 }
 
