@@ -1,4 +1,4 @@
-import MarkdownContainer from "@/components/common/community/threads/markdown/markdown_container"
+import MarkdownContainer from '@/components/common/community/threads/markdown/markdown_container'
 
 const TEXTContent = ({ data }) => {
 	//console.log("t",data)
@@ -11,9 +11,7 @@ const TEXTContent = ({ data }) => {
 
 	return (
 		<div className="flex flex-col w-3/4">
-			<MarkdownContainer>
-				{ text }
-			</MarkdownContainer>
+			<MarkdownContainer>{text}</MarkdownContainer>
 		</div>
 	)
 }
