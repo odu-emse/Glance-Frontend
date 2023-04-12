@@ -8,7 +8,7 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 	console.log('details', moduleDetails)
 
 	const [isEditMode, setEditMode] = useState(false)
-	const [updatedModule, setUpdatedModule] = useState({description:""})
+	const [updatedModule, setUpdatedModule] = useState({description:"", objectives:""})
 
 	
     const runMutation = (moduleID, updatedModule) => {
