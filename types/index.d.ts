@@ -69,17 +69,16 @@ export type ThreadType = {
 	comments?: Array<ThreadType | null> | null
 	upvotes?: Array<User | null>
 	usersWatching?: Array<User | null>
-	parentLesson?: Nullable<Lesson>
 	createdAt?: Date
 	updatedAt?: Date
 	parentThread?: Nullable<ThreadType>
 	parentThreadID?: Nullable<string>
+	topics: [string]
 }
 
 type Lesson = {
 	id: string
 	name?: string
-	threads?: Nullable<Nullable<ThreadType>[]>
 	position?: Nullable<number>
 	collection?: Collection
 }

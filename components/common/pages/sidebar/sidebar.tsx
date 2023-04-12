@@ -17,7 +17,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 	handle,
 }) => {
 	return (
-		<div className={`${open ? 'w-64' : 'w-1/12'} relative h-full`}>
+		<div className={`${open ? 'flex-none' : 'w-1/12'} relative`}>
 			<aside
 				id="sidePanel"
 				style={{
