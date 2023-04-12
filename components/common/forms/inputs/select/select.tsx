@@ -5,6 +5,7 @@ export const Select: React.FC<dropdownProps> = ({
 																									handle = () => null,
 																									label,
 																									disabled = false,
+	required = false,
 																									name,
 																									id,
 																									autoFocus = false,
@@ -22,6 +23,18 @@ export const Select: React.FC<dropdownProps> = ({
 					{label}
 					</span>
 					)}
+					<select hidden={true} required={required}>
+						{options.length > 0 &&
+							options.map((option: string | dropdownOption, optionIndex) => (
+								<option
+									key={optionIndex}
+									value={typeof option === 'string' ? option : option.value}
+									selected={typeof option === 'string' ? false : option.selected}
+								>
+									{typeof option === 'string' ? option : option.label}
+								</option>
+							))}
+					</select>
 					<div
 						className={`w-full p-3 border border-royalblue ${open && 'border-b-0'} focus:ring-0 ml-1 focus:outline-dashed focus:outline-royalblue sans capitalize font-bold text-2xl relative flex-1 ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}
 						onClick={() => {
@@ -94,7 +107,6 @@ export type dropdownProps = {
 	/**
 	 * Specifies that the user is required to select a value before submitting the form
 	 * @default false
-	 * @deprecated
 	 */
 	required?: boolean
 	/**
