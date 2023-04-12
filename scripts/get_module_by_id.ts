@@ -1,13 +1,11 @@
 import { gql } from 'graphql-request'
 
-export const getModuleByID = (courseID) => {
-	return gql`{
-		module (
-			input:{
-    			id: "${courseID}"
-  			}
-		) {
-			id,
+export const getModuleByIDUnenrolled = gql`
+	query UnEnrolledModuleHomePage($moduleID: ID!) {
+		module(input: { id: $moduleID }) {
+			moduleNumber
+			moduleName
+			id
 			members {
 				role
 				plan {
@@ -17,28 +15,53 @@ export const getModuleByID = (courseID) => {
 					}
 				}
 			}
-			moduleName,
-			moduleNumber,
-			description,
+			description
 			parentModules {
-				id,
-				moduleName,
+				id
+				moduleName
 				moduleNumber
 			}
-			objectives,
-			collections{
-				id,
-				name,
-				lessons{
-					id,
-					name,
+			objectives
+			collections {
+				id
+				name
+				lessons {
+					id
+					name
 					content {
-					id,
-					type,
-					link
-					},
+						id
+						type
+						link
+					}
 				}
 			}
 		}
-	}`
-}
+	}
+`
+
+export const getModuleByIDEnrolled = gql`
+	query ModuleHomePageLessonProgress($moduleID: ID!, $planID: ID!) {
+		lessonsByModuleEnrollment(planID: $planID, moduleID: $moduleID) {
+			id
+			name
+			position
+			collection {
+				id
+				name
+				position
+				module {
+					id
+					moduleName
+				}
+			}
+			lessonProgress {
+				status
+				completed
+				updatedAt
+				enrollment {
+					id
+				}
+			}
+		}
+	}
+`

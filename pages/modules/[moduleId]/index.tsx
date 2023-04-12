@@ -3,56 +3,102 @@ import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
-import { getModuleByID } from '@/scripts/get_module_by_id'
+import { getModuleByIDUnenrolled } from '@/scripts/get_module_by_id'
 import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { useContext } from 'react'
+import GlobalUserContext from '@/contexts/global_user_context'
+import { Module as ModuleType } from '../../../types'
+import { useProgress } from '@/hooks/use_progress'
+import Loader from '@/components/util/loader'
+import * as React from 'react'
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
+	const { user } = useContext(GlobalUserContext)
+	const { data: session, status } = useSession()
 	setLoading(true)
 
 	const router = useRouter()
 	const { moduleId } = router.query
 
-	const { data: session, status } = useSession()
-	const { data, error } = useSWR(
+	const { data: moduleData, error: moduleError } = useSWR(
 		status !== 'loading'
-			? { query: getModuleByID(moduleId), token: session.idToken }
+			? {
+					query: getModuleByIDUnenrolled,
+					token: session.idToken,
+					variables: {
+						moduleID: moduleId as string,
+					},
+			  }
 			: null,
 		gqlFetcher
-	)
+	) as {
+		data: {
+			module: ModuleType[]
+		}
+		error: Error
+	}
 
-	if (status === 'loading') return
-	if (error) {
-		console.log(error)
+	const [{ collectionID, lessonID }, loading, progressError, self] =
+		useProgress({
+			moduleID: moduleId as string,
+			planID: user.plan.id,
+		})
+
+	if (status === 'loading')
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
+
+	if (moduleError) {
 		setLoading(false)
 		return (
-			<p>
+			<h3>
 				There was an issue loading this page. Please check your internet
 				connection and try again...
-			</p>
+			</h3>
 		)
 	}
 
-	if (!data || !data?.module) {
-		return
+	if (!moduleData) {
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
 	}
 
-	const moduleData = data.module[0]
-	const instructors = moduleData.members?.filter(
+	if (progressError) {
+		console.error(progressError)
+	}
+
+	const mod = moduleData.module[0]
+	const instructors = mod.members?.filter(
 		(member) => member.role === 'TEACHER'
 	)
 
 	setLoading(false)
 
+	const isStarted = !self
+		? false
+		: self
+				.map((lesson) => lesson)
+				.some((lesson) =>
+					lesson.lessonProgress
+						.map((progress) => progress)
+						.some((progress) => progress.status !== 0)
+				)
+
 	return (
 		<section className="stdcontainer">
 			<header>
-				<h1>{moduleData.moduleName}</h1>
+				<h1>{mod.moduleName}</h1>
 				<div className="flex flex-row gap-2">
-					<figcaption>MODULE {moduleData.moduleNumber}</figcaption>
+					<figcaption>MODULE {mod.moduleNumber}</figcaption>
 					<figcaption>/</figcaption>
 					<figcaption>
 						Instructed by{' '}
@@ -77,10 +123,12 @@ const Module = () => {
 
 			<div className="my-4">
 				<Link
-					href={`/modules/${moduleData.id}/collections/${moduleData.collections[0].id}/lessons/${moduleData.collections[0].lessons[0].id}`}
+					href={`/modules/${mod.id}/collections/${collectionID}/lessons/${lessonID}`}
 					passHref
 				>
-					<Button>RESUME MODULE</Button>
+					<Button>
+						{isStarted ? 'RESUME MODULE' : 'START MODULE'}
+					</Button>
 				</Link>
 			</div>
 
@@ -91,8 +139,7 @@ const Module = () => {
 					<h2>Description</h2>
 				</header>
 				<p className="mt-0">
-					{moduleData.description ??
-						'No description has been provided.'}
+					{mod.description ?? 'No description has been provided.'}
 				</p>
 			</section>
 
@@ -101,7 +148,7 @@ const Module = () => {
 					<h2>Requirements</h2>
 				</header>
 				<ul className="mt-0 mb-0">
-					{moduleData.parentModules.map((parentModule, index) => {
+					{mod.parentModules.map((parentModule, index) => {
 						return (
 							<li key={index}>
 								<Link
@@ -117,8 +164,8 @@ const Module = () => {
 						)
 					})}
 				</ul>
-				{moduleData.parentModules.length === 0 && (
-					<p className="mt-0">No prior requirments necessary.</p>
+				{mod.parentModules.length === 0 && (
+					<p className="mt-0">No prior requirements necessary.</p>
 				)}
 			</section>
 
@@ -127,11 +174,11 @@ const Module = () => {
 					<h2>Objectives</h2>
 				</header>
 				<ul className="mt-0 mb-0">
-					{moduleData.objectives.map((objective, index) => {
+					{mod.objectives.map((objective, index) => {
 						return <li key={index}>{objective}</li>
 					})}
 				</ul>
-				{moduleData.objectives.length === 0 && (
+				{mod.objectives.length === 0 && (
 					<p className="mt-0">
 						No module objectives have been provided.
 					</p>

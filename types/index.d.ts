@@ -76,11 +76,29 @@ export type ThreadType = {
 	topics: [string]
 }
 
-type Lesson = {
+export type Lesson = {
 	id: string
 	name?: string
 	position?: Nullable<number>
 	collection?: Collection
+	lessonProgress?: Array<LessonProgress>
+}
+
+export type LessonProgress = {
+	id: string
+	status?: number
+	completed?: boolean
+	createAt?: Date
+	updatedAt?: Date
+	enrollment?: ModuleEnrollment
+	lesson?: Lesson
+}
+
+export type LessonByModuleEnrollment = Pick<
+	Lesson,
+	'id' | 'name' | 'position' | 'collection'
+> & {
+	lessonProgress: Array<LessonProgress>
 }
 
 type Nullable<T> = T | null
