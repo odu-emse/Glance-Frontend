@@ -1,87 +1,132 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export const Select: React.FC<dropdownProps> = ({
-																									options,
-																									handle = () => null,
-																									label,
-																									disabled = false,
+	options,
+	handle = () => null,
+	label,
+	disabled = false,
 	required = false,
-																									name,
-																									id,
-																									autoFocus = false,
-																								}) => {
+	name,
+	id,
+	autoFocus = false,
+}) => {
 	// if a list of dropdownOptions are passed in as options, find the element with the selected property set to true or use the first element in the array
-	const defaultSelectedFromObject = options.filter((option: string | dropdownOption) => typeof option === 'string' ? option : option.selected)[0] || options[0];
-	const defaultSelectedFromStrings = options.length > 0 && (typeof options[0] === 'string' ? options[0] : options[0]);
-	const [open, setOpen] = React.useState(autoFocus);
-	const [selected, setSelected] = React.useState<string | dropdownOption>(defaultSelectedFromObject || defaultSelectedFromStrings);
+	const defaultSelectedFromObject =
+		options.filter((option: string | dropdownOption) =>
+			typeof option === 'string' ? option : option.selected
+		)[0] || options[0]
+	const defaultSelectedFromStrings =
+		options.length > 0 &&
+		(typeof options[0] === 'string' ? options[0] : options[0])
+	const [open, setOpen] = React.useState(autoFocus)
+	const [selected, setSelected] = React.useState<string | dropdownOption>(
+		defaultSelectedFromObject || defaultSelectedFromStrings
+	)
 	return (
-			<div className='max-w-md' id={id}>
-				<label className={`items-center flex ${label ? 'gap-x-7' : 'gap-0'} font-medium text-gray-900`} title={name}>
-					{label && (
-						<span className='sans text-royalblue capitalize flex-none font-semibold'>
-					{label}
+		<div className="max-w-md" id={id}>
+			<label
+				className={`items-center flex ${
+					label ? 'gap-x-7' : 'gap-0'
+				} font-medium text-gray-900`}
+				title={name}
+			>
+				{label && (
+					<span className="sans text-royalblue capitalize flex-none font-semibold">
+						{label}
 					</span>
-					)}
-					<select hidden={true} required={required}>
-						{options.length > 0 &&
-							options.map((option: string | dropdownOption, optionIndex) => (
+				)}
+				<select hidden={true} required={required}>
+					{options.length > 0 &&
+						options.map(
+							(option: string | dropdownOption, optionIndex) => (
 								<option
 									key={optionIndex}
-									value={typeof option === 'string' ? option : option.value}
-									selected={typeof option === 'string' ? false : option.selected}
+									value={
+										typeof option === 'string'
+											? option
+											: option.value
+									}
+									selected={
+										typeof option === 'string'
+											? false
+											: option.selected
+									}
 								>
-									{typeof option === 'string' ? option : option.label}
+									{typeof option === 'string'
+										? option
+										: option.label}
 								</option>
-							))}
-					</select>
-					<div
-						className={`w-full p-3 border border-royalblue ${open && 'border-b-0'} focus:ring-0 ml-1 focus:outline-dashed focus:outline-royalblue sans capitalize font-bold text-2xl relative flex-1 ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-						onClick={() => {
-							if (!disabled) setOpen(!open);
-						}}
-						aria-expanded={open}
-					>
-						{/*	if a list of strings are passed in as options, display the first element in the array */}
-						{/*	if a list of dropdownOptions are passed in as options, display the first element's label property */}
-						{typeof selected === 'string' ? selected : (
-							<span className='flex items-center justify-between'>
-							{selected.icon}
-								<span className='ml-2'>
-								{selected.label}
-							</span>
-						</span>
+							)
 						)}
-						<ul
-							className={`${open ? 'block' : 'hidden'} list-none ml-0 absolute top-full left-0 my-0 outline outline-1 outline-royalblue outline-offset-0 w-full px-0 py-1.5 shadow-lg transition-all`}>
-							{options.length > 0 &&
-								options.map((option: string | dropdownOption, optionIndex) => (
-									<li key={optionIndex}
-											className='cursor-pointer hover:underline hover:bg-wgray my-0 p-3'
-											onClick={(e) => {
-												const element = window.getSelection()
-												console.log(element)
-												setSelected(option);
-												handle(e);
-												setOpen(false);
-											}}
-											value={typeof option === 'string' ? option : option.label}
+				</select>
+				<div
+					className={`w-full p-3 border border-royalblue ${
+						open && 'border-b-0'
+					} focus:ring-0 ml-1 focus:outline-dashed focus:outline-royalblue sans capitalize font-bold text-2xl relative flex-1 ${
+						disabled ? 'cursor-not-allowed' : 'cursor-pointer'
+					}`}
+					onClick={() => {
+						if (!disabled) setOpen(!open)
+					}}
+					aria-expanded={open}
+				>
+					{/*	if a list of strings are passed in as options, display the first element in the array */}
+					{/*	if a list of dropdownOptions are passed in as options, display the first element's label property */}
+					{typeof selected === 'string' ? (
+						selected
+					) : (
+						<span className="flex items-center justify-between">
+							{selected.icon}
+							<span className="ml-2">{selected.label}</span>
+						</span>
+					)}
+					<ul
+						className={`${
+							open ? 'block' : 'hidden'
+						} list-none ml-0 absolute top-full left-0 my-0 outline outline-1 outline-royalblue outline-offset-0 w-full px-0 py-1.5 shadow-lg transition-all`}
+					>
+						{options.length > 0 &&
+							options.map(
+								(
+									option: string | dropdownOption,
+									optionIndex
+								) => (
+									<li
+										key={optionIndex}
+										className="cursor-pointer hover:underline hover:bg-wgray my-0 p-3"
+										onClick={(e) => {
+											const element =
+												window.getSelection()
+											console.log(element)
+											setSelected(option)
+											handle(e)
+											setOpen(false)
+										}}
+										value={
+											typeof option === 'string'
+												? option
+												: option.label
+										}
 									>
-										{typeof option === 'string' ? option : (
-											<span className='flex items-center justify-between'>
-											{option.icon}
-												<span className='ml-2'>{option.label}</span>
-										</span>
+										{typeof option === 'string' ? (
+											option
+										) : (
+											<span className="flex items-center justify-between">
+												{option.icon}
+												<span className="ml-2">
+													{option.label}
+												</span>
+											</span>
 										)}
 									</li>
-								))
-							}
-						</ul>
-					</div>
-				</label>
-			</div>
-	);
-};
+								)
+							)}
+					</ul>
+				</div>
+			</label>
+		</div>
+	)
+}
 
 export type dropdownProps = {
 	/**

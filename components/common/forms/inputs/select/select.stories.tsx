@@ -2,7 +2,7 @@ import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Select } from './select'
 import type { dropdownProps } from './select'
-import { FaBell, FaHamburger, FaTrash } from 'react-icons/fa';
+import { FaBell, FaHamburger, FaTrash } from 'react-icons/fa'
 
 export default {
 	title: 'Common/Forms/Inputs/Select',
@@ -49,7 +49,7 @@ Tertiary.args = {
 		{
 			label: 'Popularity',
 			value: 'popularity',
-			icon: <FaHamburger />
+			icon: <FaHamburger />,
 		},
 		{
 			label: 'Latest',
