@@ -2,6 +2,7 @@ import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Select } from './select'
 import type { dropdownProps } from './select'
+import { FaBell, FaHamburger, FaTrash } from 'react-icons/fa';
 
 export default {
 	title: 'Common/Forms/Inputs/Select',
@@ -15,11 +16,11 @@ const Template: ComponentStory<typeof Select> = (args: dropdownProps) => {
 export const Primary = Template.bind({})
 Primary.storyName = 'Default'
 Primary.args = {
-	options: ['Relevance', 'Popularity', 'Latest'],
+	options: ['Video', 'PDF', 'Quiz', 'Audio'],
 	handle: (event: React.ChangeEvent<HTMLSelectElement>) => {
 		console.log(event.target.value)
 	},
-	label: 'Sort by',
+	label: 'Assignment Type',
 	multiple: false,
 	size: 1,
 	required: false,
@@ -43,14 +44,18 @@ Tertiary.args = {
 		{
 			label: 'Relevance',
 			value: 'relevance',
+			icon: <FaBell />,
 		},
 		{
 			label: 'Popularity',
 			value: 'popularity',
+			icon: <FaHamburger />
 		},
 		{
 			label: 'Latest',
 			value: 'latest',
+			icon: <FaTrash />,
+			selected: true,
 		},
 	],
 }
