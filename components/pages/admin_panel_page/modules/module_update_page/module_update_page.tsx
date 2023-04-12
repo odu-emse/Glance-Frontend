@@ -1,47 +1,48 @@
 import { ModuleRequirement } from '@/components/common/admin_panel/module_requirement_editor/module_requirement_editor'
 import { Button } from '@/components/common/button/button'
 import { useState } from 'react'
-import { mutate } from "swr"
+import { mutate } from 'swr'
 import { gql } from 'graphql-request'
 
 export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 	console.log('details', moduleDetails)
 
 	const [isEditMode, setEditMode] = useState(false)
-	const [updatedModule, setUpdatedModule] = useState({description:"", objectives:""})
+	const [updatedModule, setUpdatedModule] = useState({
+		description: '',
+		objectives: '',
+	})
 
-	
-    const runMutation = (moduleID, updatedModule) => {
-        mutate(async () => {
-            fetch('http://localhost:4000/graphql', {
-                method: "POST",
-                body: JSON.stringify({
-                    query: gql`
-                        mutation UpdateModule($input: UpdateModule!){
-                            updateModule(input: $input){
-                                id
-                            }
-                        }
-                    `,
-                    variables: {
-                        input: {
-							id: moduleID,
-							...updatedModule
+	const runMutation = (moduleID, updatedModule) => {
+		mutate(async () => {
+			fetch('http://localhost:4000/graphql', {
+				method: 'POST',
+				body: JSON.stringify({
+					query: gql`
+						mutation UpdateModule($input: UpdateModule!) {
+							updateModule(input: $input) {
+								id
+							}
 						}
-                    }
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-        }, false)
-    }
-
+					`,
+					variables: {
+						input: {
+							id: moduleID,
+							...updatedModule,
+						},
+					},
+				}),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+		}, false)
+	}
 
 	return (
 		<div>
 			{moduleDetails.map((module, index) => (
-				<div>
+				<div key={index}>
 					<span
 						className="text-royalblue font-bold text-3xl uppercase"
 						key={index}
@@ -50,7 +51,10 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 					</span>
 
 					<div className="flex flex-row items-center gap-3">
-						<span className="text-gray text-sm uppercase">Module {module.moduleNumber} / Instructed by "instructorName"</span>
+						<span className="text-gray text-sm uppercase">
+							Module {module.moduleNumber} / Instructed by
+							instructor_name
+						</span>
 					</div>
 				</div>
 			))}
@@ -59,8 +63,13 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
 				<Button size="small">
 					<p>Resume Module</p>
 				</Button>
-				<Button onClick={() => {setEditMode(!isEditMode)
-                                          runMutation(moduleDetails[0].id, updatedModule) }} size="small">
+				<Button
+					onClick={() => {
+						setEditMode(!isEditMode)
+						runMutation(moduleDetails[0].id, updatedModule)
+					}}
+					size="small"
+				>
 					<p>{isEditMode ? 'Save Changes' : 'Edit Page'}</p>
 				</Button>
 			</div>
@@ -86,19 +95,18 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
 						placeholder="Describe module here..."
-						onChange={e => {
-							let updatedValue = {description:e.target.value}
-							setUpdatedModule(updatedModule => ({
+						onChange={(e) => {
+							const updatedValue = { description: e.target.value }
+							setUpdatedModule((updatedModule) => ({
 								...updatedModule,
-								...updatedValue
-							})
-							)
-						  } }
+								...updatedValue,
+							}))
+						}}
 					></textarea>
 				) : (
 					<div>
 						{moduleDetails.map((module, index) => (
-							<div>{module.description}</div>
+							<div key={index}>{module.description}</div>
 						))}
 					</div>
 				)}
@@ -135,20 +143,19 @@ export const ModuleUpdate = ({ moduleDetails }: ModuleUpdateProps) => {
                         ease-in-out
                     "
 						placeholder="Add objectives here..."
-						onChange={e => {
-							let updatedValue = {objectives:e.target.value}
-							setUpdatedModule(updatedModule => ({
+						onChange={(e) => {
+							const updatedValue = { objectives: e.target.value }
+							setUpdatedModule((updatedModule) => ({
 								...updatedModule,
-								...updatedValue
-							})
-							)
-						  } }
+								...updatedValue,
+							}))
+						}}
 					></textarea>
 				) : (
 					<ul className="my-0">
 						{moduleDetails.map((module, index) =>
 							module.objectives.map((objective: string) => (
-								<li>{objective}</li>
+								<li key={index}>{objective}</li>
 							))
 						)}
 					</ul>
@@ -163,9 +170,9 @@ export type ModuleUpdateProps = {
 }
 
 export type moduleType = {
-	id : string,
-	moduleName : string
-	moduleNumber : number
-	description : string
-	objectives : Array<string>
+	id: string
+	moduleName: string
+	moduleNumber: number
+	description: string
+	objectives: Array<string>
 }
