@@ -23,9 +23,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
 				style={{
 					overflow: 'visible',
 				}}
-				className={`h-full bg-white transition-all drop-shadow-lg p-0`}
+				className={`h-full bg-white transition-all drop-shadow-lg p-0 `}
 			>
-				<div className="flex flex-col grow">
+				<div className="flex flex-col grow pt-7">
 					<SidebarItem
 						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
 						collapsed={!open}
