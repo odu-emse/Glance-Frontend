@@ -5,7 +5,7 @@ export const QuizQuestion = ({
 	question,
 	questionType,
 	options,
-	updateAnswer
+	updateAnswer,
 }) => {
 	const [selectedOption, setSelectedOption] = useState(null)
 
