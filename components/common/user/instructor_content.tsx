@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Input } from '@/common/forms/inputs/input/input'
-import { TextArea } from '@/common/forms/inputs/text_area/text_area'
 import { InstructorProfile, User } from '@/types/index'
+import EditableField from '@/common/user/editable_field';
 
 interface StudentContentProps {
 	user: User
@@ -26,229 +26,200 @@ function InstructorContent({
 					<h4 className="m-0 uppercase font-bold">
 						Contact Information:
 					</h4>
-					{!isEditMode ? (
-						<>
-							<h4 className="uppercase my-1">{user.email}</h4>
-							<h4 className="my-1">{user?.phoneNumber}</h4>
-						</>
-					) : (
-						<>
-							<Input
-								label={null}
-								name={'email'}
-								onChange={null}
-								type={'email'}
-								defaultValue={user.email}
-							/>
-							<Input
-								label={null}
-								name={'phoneNumber'}
-								onChange={null}
-								type={'text'}
-								defaultValue={user.phoneNumber}
-							/>
-						</>
-					)}
+					<EditableField type={"text"} inputDetails={{
+						type: 'email',
+						placeholder: 'EMAIL:',
+						defaultValue: user.email,
+						label: null,
+						name: 'email',
+						onChange: (e) => {
+							setUpdatedProfile((prevState) => ({
+								...prevState,
+								email: e,
+							}))
+						},
+					}} isEditing={isEditMode} header={null} />
+					<EditableField type={"text"} inputDetails={{
+						type: 'tel',
+						placeholder: 'PHONE:',
+						defaultValue: user.phoneNumber,
+						label: null,
+						name: 'phoneNumber',
+						onChange: (e) => {
+							setUpdatedProfile((prevState) => ({
+								...prevState,
+								phoneNumber: e,
+							}))
+						},
+					}} isEditing={isEditMode} header={null} />
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Socials</h4>
-					{!isEditMode ? (
-						<>
-							<h4 className="uppercase my-1">
-								{user?.social?.twitter}
-							</h4>
-							<h4 className="my-1">{user?.social?.facebook}</h4>
-							<h4 className="my-1">{user?.social?.linkedin}</h4>
-							<h4 className="my-1">{user?.social?.github}</h4>
-							<h4 className="my-1">{user?.social?.portfolio}</h4>
-						</>
-					) : (
-						<div className="flex flex-col gap-2 mt-2">
-							<Input
-								type="url"
-								placeholder="GITHUB:"
-								defaultValue={user.social?.github}
-								label={'GITHUB:'}
-								name={'github'}
-								onChange={(e: string) => {
-									setUpdatedProfile((prevState) => ({
-										...prevState,
-										social: {
-											...prevState?.social,
-											github: e,
-										},
-									}))
-								}}
-								className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
-							/>
-							<Input
-								type="text"
-								placeholder="TWITTER:"
-								defaultValue={user.social?.twitter}
-								label="TWITTER:"
-								name={'twitter'}
-								onChange={(e: string) => {
-									setUpdatedProfile((prevState) => ({
-										...prevState,
-										social: {
-											...prevState?.social,
-											twitter: e,
-										},
-									}))
-								}}
-								className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
-							/>
-							<Input
-								type="url"
-								placeholder="LINKEDIN:"
-								defaultValue={user.social?.linkedin}
-								label="LINKEDIN:"
-								name={'linkedin'}
-								onChange={(e: string) => {
-									setUpdatedProfile((prevState) => ({
-										...prevState,
-										social: {
-											...prevState?.social,
-											linkedin: e,
-										},
-									}))
-								}}
-								className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
-							/>
-							<Input
-								type="text"
-								placeholder="FACEBOOK:"
-								defaultValue={user.social?.facebook}
-								label="FACEBOOK:"
-								name={'facebook'}
-								onChange={(e: string) => {
-									setUpdatedProfile((prevState) => ({
-										...prevState,
-										social: {
-											...prevState?.social,
-											facebook: e,
-										},
-									}))
-								}}
-								className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
-							/>
-							<Input
-								type="url"
-								placeholder="PORTFOLIO:"
-								defaultValue={user.social?.portfolio}
-								label="PORTFOLIO:"
-								name={'portfolio'}
-								onChange={(e: string) => {
-									setUpdatedProfile((prevState) => ({
+					<EditableField type={'text'} inputDetails={{
+						type: 'url',
+						placeholder: 'GITHUB:',
+						defaultValue: user.social?.github || '',
+						name: 'github',
+						onChange: (e) => {
+							setUpdatedProfile((prevState) => ({
+								...prevState,
+								social: {
+									...prevState?.social,
+									github: e,
+								},
+							}));
+						},
+					}} isEditing={isEditMode} header={`Github: ${user.social?.github}`} />
+					<EditableField type={'text'} inputDetails={{
+						type: 'url',
+						placeholder: 'TWITTER:',
+						defaultValue: user.social?.twitter || '',
+						name: 'twitter',
+						onChange: (e) => {
+							setUpdatedProfile((prevState) => ({
+									...prevState,
+									social: {
+										...prevState?.social,
+										twitter: e,
+									},
+								})
+							);
+						},
+					}} isEditing={isEditMode} header={`Twitter: ${user.social?.twitter}`} />
+					<EditableField type={'text'} inputDetails={{
+						type: 'url',
+						placeholder: 'LINKEDIN:',
+						defaultValue: user.social?.linkedin || '',
+						name: 'linkedin',
+						onChange: (e) => {
+							setUpdatedProfile((prevState) => ({
+									...prevState,
+									social: {
+										...prevState?.social,
+										linkedin: e,
+									},
+								})
+							);
+						},
+					}} isEditing={isEditMode} header={`LinkedIn: ${user.social?.linkedin}`} />
+					<EditableField type={'text'} inputDetails={{
+						type: 'url',
+						placeholder: 'FACEBOOK:',
+						defaultValue: user.social?.facebook || '',
+						name: 'facebook',
+						onChange: (e) => {
+							setUpdatedProfile((prevState) => ({
+									...prevState,
+									social: {
+										...prevState?.social,
+										facebook: e,
+									},
+								})
+							);
+						},
+					}} isEditing={isEditMode} header={`Facebook: ${user.social?.facebook}`} />
+					<EditableField
+						type={'text'}
+						inputDetails={{
+							type: 'url',
+							placeholder: 'PORTFOLIO:',
+							defaultValue: user.social?.portfolio || '',
+							name: 'portfolio',
+							onChange: (e) => {
+								setUpdatedProfile((prevState) => ({
 										...prevState,
 										social: {
 											...prevState?.social,
 											portfolio: e,
 										},
-									}))
-								}}
-								className="border-royalblue focus:border-royalblue border px-1 my-1 bg-white"
-							/>
-						</div>
-					)}
+									})
+								);
+							},
+						}}
+						isEditing={isEditMode}
+						header={`Portfolio: ${user.social?.portfolio}`} />
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Office location</h4>
-					{!isEditMode ? (
-						<>
-							<h4 className="uppercase my-1">
-								{instructorDetails.officeLocation}
-							</h4>
-						</>
-					) : (
-						<>
-							<Input
-								label={null}
-								name={'officeLocation'}
-								onChange={null}
-								type={'text'}
-								defaultValue={instructorDetails.officeLocation}
-							/>
-						</>
-					)}
+					<EditableField
+						type={"text"}
+						inputDetails={{
+						type: 'text',
+						placeholder: 'OFFICE LOCATION:',
+						defaultValue: instructorDetail.officeLocation,
+						label: null,
+						name: 'officeLocation',
+						onChange: (e) => {
+							setInstructorDetail((prevState) => ({
+								...prevState,
+								officeLocation: e,
+							}))
+						}
+					}}
+						isEditing={isEditMode} />
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Office hours</h4>
-					{!isEditMode ? (
-						<>
-							<h4 className="uppercase my-1">
-								{instructorDetails.officeHours}
-							</h4>
-						</>
-					) : (
-						<>
-							<Input
-								label={null}
-								name={'officeHours'}
-								onChange={null}
-								type={'text'}
-								defaultValue={instructorDetails.officeHours}
-							/>
-						</>
-					)}
+					<EditableField
+						type={"text"}
+						inputDetails={{
+							type: 'text',
+							placeholder: 'OFFICE HOURS:',
+							defaultValue: instructorDetail.officeHours,
+							label: null,
+							name: 'officeHours',
+							onChange: (e) => {
+								setInstructorDetail((prevState) => ({
+									...prevState,
+									officeHours: e,
+								}))
+							}
+						}}
+						isEditing={isEditMode} />
 				</div>
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Biography</h4>
-				{!isEditMode ? (
-					<>
-						<h4 className="uppercase my-1">
-							{instructorDetails.background}
-						</h4>
-					</>
-				) : (
-					<>
-						<TextArea
-							label={null}
-							name={'background'}
-							handle={null}
-							defaultValue={instructorDetails.background}
-						/>
-					</>
-				)}
+				<EditableField type={"area"} inputDetails={{
+					placeholder: "Write something about yourself...",
+					defaultValue: instructorDetail.background,
+					name: "background",
+					className: 'border-royalblue focus:border-royalblue rounded-none font-normal',
+					handle: (e) => {
+						setInstructorDetail((prevState) => ({
+								...prevState,
+								background: e.target.value,
+							})
+						)}
+				}} isEditing={isEditMode} />
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Contact Policy</h4>
-				{!isEditMode ? (
-					<>
-						<h4 className="uppercase my-1">
-							{instructorDetails.contactPolicy}
-						</h4>
-					</>
-				) : (
-					<>
-						<TextArea
-							label={null}
-							name={'contactPolicy'}
-							handle={null}
-							defaultValue={instructorDetails.contactPolicy}
-						/>
-					</>
-				)}
+				<EditableField type={"area"} inputDetails={{
+					defaultValue: instructorDetail.contactPolicy,
+					name: "contactPolicy",
+					className: 'border-royalblue focus:border-royalblue rounded-none font-normal',
+					handle: (e) => {
+						setInstructorDetail((prevState) => ({
+								...prevState,
+								contactPolicy: e.target.value,
+							})
+						)}
+				}} isEditing={isEditMode} />
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Research Interests</h4>
-				{!isEditMode ? (
-					<>
-						<h4 className="uppercase my-1">
-							{instructorDetails.researchInterest}
-						</h4>
-					</>
-				) : (
-					<>
-						<TextArea
-							label={null}
-							name={'researchInterest'}
-							handle={null}
-							defaultValue={instructorDetails.researchInterest}
-						/>
-					</>
-				)}
+				<EditableField type={"area"} inputDetails={{
+					defaultValue: instructorDetail.researchInterest,
+					name: "researchInterest",
+					className: 'border-royalblue focus:border-royalblue rounded-none font-normal',
+					handle: (e) => {
+						setInstructorDetail((prevState) => ({
+								...prevState,
+								researchInterest: e.target.value,
+							})
+						)}
+				}} isEditing={isEditMode} />
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Publications</h4>
