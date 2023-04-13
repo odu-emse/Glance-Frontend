@@ -2,8 +2,8 @@ import React from 'react'
 import { Button } from '@/common/button/button'
 import Link from 'next/link'
 import { Session } from 'next-auth'
-import { UserAccount } from '@/common/community/threads/thread/thread';
-import { User } from '@/types/index';
+import { UserAccount } from '@/common/community/threads/thread/thread'
+import { User } from '@/types/index'
 
 interface AccountSidebarProps {
 	verifyEdit: (openID: string) => boolean
@@ -31,8 +31,8 @@ interface AccountSidebarProps {
 	userOpenID: string
 	contextAccount:
 		| (Omit<UserAccount & { openID: string; biography?: string }, 'id'> & {
-		id: string
-	})
+				id: string
+		  })
 		| null
 	updatedProfile: User
 	setInstructorMode: React.Dispatch<React.SetStateAction<boolean>>
@@ -40,18 +40,18 @@ interface AccountSidebarProps {
 }
 
 function AccountSidebar({
-													verifyEdit,
-													isEditMode,
-													sessionUser,
-													setEditMode,
-													setUpdatedProfile,
-													updateSocial,
-													userOpenID,
-													contextAccount,
-													updatedProfile,
-													setInstructorMode,
-													instructorMode
-												}: AccountSidebarProps) {
+	verifyEdit,
+	isEditMode,
+	sessionUser,
+	setEditMode,
+	setUpdatedProfile,
+	updateSocial,
+	userOpenID,
+	contextAccount,
+	updatedProfile,
+	setInstructorMode,
+	instructorMode,
+}: AccountSidebarProps) {
 	return (
 		<aside className="flex-none flex-col mr-8 mx-6">
 			<div className="relative h-48 w-48 mb-5 rounded-full overflow-clip mx-auto group">
@@ -71,25 +71,25 @@ function AccountSidebar({
 				{verifyEdit(sessionUser.openId) ? (
 					!isEditMode ? (
 						<div className="flex flex-col gap-1 w-full">
-						<Button
-							onClick={() => setEditMode(!isEditMode)}
-							size="large"
-							className="w-full"
-						>
-							Edit Profile
-						</Button>
-								<Button
-									onClick={() => {
-										setInstructorMode(!instructorMode);
-									}}
-									size='large'
-									className='w-full'
-									variant='secondary'
-								>
-							{!instructorMode ?
-									"View Instructor Profile"
-								: "View Student Profile"}
-								</Button>
+							<Button
+								onClick={() => setEditMode(!isEditMode)}
+								size="large"
+								className="w-full"
+							>
+								Edit Profile
+							</Button>
+							<Button
+								onClick={() => {
+									setInstructorMode(!instructorMode)
+								}}
+								size="large"
+								className="w-full"
+								variant="secondary"
+							>
+								{!instructorMode
+									? 'View Instructor Profile'
+									: 'View Student Profile'}
+							</Button>
 						</div>
 					) : (
 						<div className="flex flex-col gap-1 w-full">

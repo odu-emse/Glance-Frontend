@@ -1,6 +1,9 @@
 import React from 'react'
-import { Input, InputProps } from '@/common/forms/inputs/input/input';
-import { TextArea, TextAreaProps } from '@/common/forms/inputs/text_area/text_area';
+import { Input, InputProps } from '@/common/forms/inputs/input/input'
+import {
+	TextArea,
+	TextAreaProps,
+} from '@/common/forms/inputs/text_area/text_area'
 
 interface EditableFieldProps {
 	type: 'text' | 'area'
@@ -9,7 +12,12 @@ interface EditableFieldProps {
 	header?: string | null
 }
 
-function EditableField({ type, isEditing, inputDetails, header }: EditableFieldProps) {
+function EditableField({
+	type,
+	isEditing,
+	inputDetails,
+	header,
+}: EditableFieldProps) {
 	if (type === 'text') {
 		const details = inputDetails as InputProps
 		if (isEditing) {
@@ -25,9 +33,12 @@ function EditableField({ type, isEditing, inputDetails, header }: EditableFieldP
 				/>
 			)
 		}
-		return <h4 className="my-1 uppercase">{header ? header : inputDetails.defaultValue}</h4>
-	}
-	else {
+		return (
+			<h4 className="my-1 uppercase">
+				{header ? header : inputDetails.defaultValue}
+			</h4>
+		)
+	} else {
 		const details = inputDetails as TextAreaProps
 		if (isEditing) {
 			return (
@@ -41,7 +52,11 @@ function EditableField({ type, isEditing, inputDetails, header }: EditableFieldP
 				/>
 			)
 		}
-		return <h4 className="my-1 uppercase">{header ? header : inputDetails.defaultValue}</h4>
+		return (
+			<h4 className="my-1 uppercase">
+				{header ? header : inputDetails.defaultValue}
+			</h4>
+		)
 	}
 }
 
