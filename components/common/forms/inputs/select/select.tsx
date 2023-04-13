@@ -22,6 +22,7 @@ export const Select: React.FC<dropdownProps> = ({
 	const [selected, setSelected] = React.useState<string | dropdownOption>(
 		defaultSelectedFromObject || defaultSelectedFromStrings
 	)
+	const selectRef = React.useRef<HTMLSelectElement>(null)
 	return (
 		<div className="max-w-md" id={id}>
 			<label
@@ -35,7 +36,7 @@ export const Select: React.FC<dropdownProps> = ({
 						{label}
 					</span>
 				)}
-				<select hidden={true} required={required}>
+				<select hidden={true} required={required} ref={selectRef}>
 					{options.length > 0 &&
 						options.map((option, optionIndex) => (
 							<option
@@ -46,9 +47,7 @@ export const Select: React.FC<dropdownProps> = ({
 										: option.value
 								}
 								selected={
-									typeof option === 'string'
-										? false
-										: option.selected
+									selected === option || typeof option === 'string' ? false : option.selected
 								}
 							>
 								{typeof option === 'string'
@@ -89,8 +88,6 @@ export const Select: React.FC<dropdownProps> = ({
 									key={optionIndex}
 									className="cursor-pointer hover:underline hover:bg-wgray my-0 p-3"
 									onClick={(e) => {
-										const element = window.getSelection()
-										console.log(element)
 										setSelected(option)
 										handle(e)
 										setOpen(false)
