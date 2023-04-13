@@ -15,7 +15,7 @@ const UserProfilePage = () => {
 	const router = useRouter()
 	const { data: sessionUser } = useSession()
 	const { user: account } = useContext(GlobalUserContext)
-	const [instructorMode, setInstructorMode] = useState(true)
+	const [instructorMode, setInstructorMode] = useState(false)
 
 	const { user: userID } = router.query
 
@@ -150,6 +150,8 @@ const UserProfilePage = () => {
 			instructorDetails={
 				data.user[0]?.instructorProfile as InstructorProfile
 			}
+			setInstructorMode={setInstructorMode}
+			instructorMode={instructorMode}
 		/>
 	)
 }
