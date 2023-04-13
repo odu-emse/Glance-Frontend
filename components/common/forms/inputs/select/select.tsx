@@ -47,7 +47,10 @@ export const Select: React.FC<dropdownProps> = ({
 										: option.value
 								}
 								selected={
-									selected === option || typeof option === 'string' ? false : option.selected
+									selected === option ||
+									typeof option === 'string'
+										? false
+										: option.selected
 								}
 							>
 								{typeof option === 'string'
