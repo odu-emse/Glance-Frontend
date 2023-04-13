@@ -16,9 +16,10 @@ export const UserProfile = ({
 	contextAccount,
 	isInstructor,
 	instructorDetails,
+	setInstructorMode,
+	instructorMode,
 }: UserProfileProps) => {
-	const [updatedProfile, setUpdatedProfile] = useState<User | null>(null)
-
+	const [updatedProfile, setUpdatedProfile] = useState<User | null>(user)
 	const [isEditMode, setEditMode] = useState(false)
 
 	return (
@@ -29,24 +30,26 @@ export const UserProfile = ({
 			<div className="flex flex-col md:flex-row mt-3">
 				<AccountSidebar
 					verifyEdit={verifyEdit}
-					isEditMode={isEditMode}
 					sessionUser={sessionUser}
-					setEditMode={setEditMode}
-					setUpdatedProfile={setUpdatedProfile}
 					updateSocial={updateSocial}
 					userOpenID={userOpenID}
 					contextAccount={contextAccount}
+					isEditMode={isEditMode}
+					setEditMode={setEditMode}
 					updatedProfile={updatedProfile}
+					setUpdatedProfile={setUpdatedProfile}
+					instructorMode={instructorMode}
+					setInstructorMode={setInstructorMode}
 				/>
 				{!isInstructor ? (
 					<StudentContent
-						user={user}
+						user={updatedProfile}
 						setUpdatedProfile={setUpdatedProfile}
 						isEditMode={isEditMode}
 					/>
 				) : (
 					<InstructorContent
-						user={user}
+						user={updatedProfile}
 						isEditMode={isEditMode}
 						setUpdatedProfile={setUpdatedProfile}
 						instructorDetails={instructorDetails}
@@ -58,9 +61,27 @@ export const UserProfile = ({
 }
 
 export type UserProfileProps = {
+	/**
+	 * The user account coming from the DB
+	 */
 	user: User
+	/**
+	 * The user account coming from the session
+	 */
 	sessionUser: Session
+	/**
+	 * Function to verify if the user is allowed to edit the profile
+	 * @param userToEdit
+	 * @returns boolean - true if the user is allowed to edit the profile
+	 */
 	verifyEdit: (userToEdit: string) => boolean
+	/**
+	 * Function to update the social media links, user biography, and phone number
+	 * @param openID - the user's openID from the session
+	 * @param accountID - the user's accountID from the DB
+	 * @param socialInput - the social media links
+	 * @param userInput - the user's biography and phone number
+	 */
 	updateSocial: (
 		openID: string,
 		accountID: string,
@@ -78,12 +99,32 @@ export type UserProfileProps = {
 			phoneNumber?: string | null
 		}
 	) => void
+	/**
+	 * The user's openID from the session
+	 */
 	userOpenID: string
+	/**
+	 * The user's account from context with the ID field required
+	 */
 	contextAccount:
 		| (Omit<UserAccount & { openID: string; biography?: string }, 'id'> & {
 				id: string
 		  })
 		| null
+	/**
+	 * Boolean to determine if the user is an instructor
+	 */
 	isInstructor: boolean
+	/**
+	 * The instructor profile data from the DB
+	 */
 	instructorDetails: InstructorProfile
+	/**
+	 * Function to turn on and off instructor mode
+	 */
+	setInstructorMode: React.Dispatch<React.SetStateAction<boolean>>
+	/**
+	 * Boolean to determine if the user is in instructor mode or student mode
+	 */
+	instructorMode: boolean
 }
