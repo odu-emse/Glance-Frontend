@@ -38,18 +38,18 @@ export type User = {
 }
 
 export interface InstructorProfile {
-	id: string;
-	account?: Nullable<User>;
-	title?: Nullable<string>;
-	officeLocation?: Nullable<string>;
-	officeHours?: Nullable<string>;
-	contactPolicy?: Nullable<string>;
-	phone?: Nullable<string>;
-	background?: Nullable<string>;
-	researchInterest?: Nullable<string>;
-	selectedPapersAndPublications?: Nullable<Nullable<string>[]>;
-	personalWebsite?: Nullable<string>;
-	philosophy?: Nullable<string>;
+	id: string
+	account?: Nullable<User>
+	title?: Nullable<string>
+	officeLocation?: Nullable<string>
+	officeHours?: Nullable<string>
+	contactPolicy?: Nullable<string>
+	phone?: Nullable<string>
+	background?: Nullable<string>
+	researchInterest?: Nullable<string>
+	selectedPapersAndPublications?: Nullable<Nullable<string>[]>
+	personalWebsite?: Nullable<string>
+	philosophy?: Nullable<string>
 }
 
 export type Social = {

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import useSWR from 'swr'
@@ -6,7 +6,7 @@ import { gql } from 'graphql-request'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { InstructorProfile, User } from '@/types/index';
+import { InstructorProfile, User } from '@/types/index'
 import { UserProfile } from '@/pages/user/user_profile/user_profile'
 import Loader from '@/components/util/loader'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
@@ -147,7 +147,9 @@ const UserProfilePage = () => {
 			userOpenID={userID as string}
 			verifyEdit={verifyEdit}
 			isInstructor={instructorMode}
-			instructorDetails={data.user[0]?.instructorProfile as InstructorProfile}
+			instructorDetails={
+				data.user[0]?.instructorProfile as InstructorProfile
+			}
 		/>
 	)
 }

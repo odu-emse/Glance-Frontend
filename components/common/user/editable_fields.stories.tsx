@@ -1,6 +1,6 @@
 import * as React from 'react'
 import type { Meta, StoryFn } from '@storybook/react'
-import EditableField from '@/common/user/editable_field';
+import EditableField from '@/common/user/editable_field'
 
 export default {
 	title: 'common/Editable Field',
@@ -23,6 +23,7 @@ Default.args = {
 		onChange: (e: string) => {
 			console.log(e)
 		},
-		className: 'border-royalblue focus:border-royalblue border px-1 my-1 bg-white'
-	}
+		className:
+			'border-royalblue focus:border-royalblue border px-1 my-1 bg-white',
+	},
 }

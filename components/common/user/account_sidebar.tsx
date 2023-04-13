@@ -1,14 +1,14 @@
-import React from 'react';
-import { Button } from '@/common/button/button';
-import Link from 'next/link';
-import { Session } from 'next-auth';
+import React from 'react'
+import { Button } from '@/common/button/button'
+import Link from 'next/link'
+import { Session } from 'next-auth'
 
 interface AccountSidebarProps {
-	verifyEdit: (openID: string) => boolean;
-	isEditMode: boolean;
-	sessionUser: Session;
-	setEditMode: (isEditMode: boolean) => void;
-	setUpdatedProfile: (updatedProfile: any) => void;
+	verifyEdit: (openID: string) => boolean
+	isEditMode: boolean
+	sessionUser: Session
+	setEditMode: (isEditMode: boolean) => void
+	setUpdatedProfile: (updatedProfile: any) => void
 	updateSocial: (
 		openID: string,
 		accountID: string,
@@ -25,13 +25,23 @@ interface AccountSidebarProps {
 			biography?: string | null
 			phoneNumber?: string | null
 		}
-	) => void;
-	userOpenID: string;
-	contextAccount: any;
-	updatedProfile: any;
+	) => void
+	userOpenID: string
+	contextAccount: any
+	updatedProfile: any
 }
 
-function AccountSidebar({verifyEdit, isEditMode, sessionUser, setEditMode, setUpdatedProfile, updateSocial, userOpenID, contextAccount, updatedProfile} : AccountSidebarProps) {
+function AccountSidebar({
+	verifyEdit,
+	isEditMode,
+	sessionUser,
+	setEditMode,
+	setUpdatedProfile,
+	updateSocial,
+	userOpenID,
+	contextAccount,
+	updatedProfile,
+}: AccountSidebarProps) {
 	return (
 		<aside className="flex-none flex-col mr-8 mx-6">
 			<div className="relative h-48 w-48 mb-5 rounded-full overflow-clip mx-auto group">
@@ -69,8 +79,7 @@ function AccountSidebar({verifyEdit, isEditMode, sessionUser, setEditMode, setUp
 										{
 											id: contextAccount.id,
 											openID: userOpenID as string,
-											biography:
-											updatedProfile.biography,
+											biography: updatedProfile.biography,
 										}
 									)
 									setEditMode(!isEditMode)
@@ -103,36 +112,28 @@ function AccountSidebar({verifyEdit, isEditMode, sessionUser, setEditMode, setUp
 			<div className="flex flex-col items-start justify-center">
 				{!isEditMode ? (
 					<>
-						<Link
-							href={`/users/${userOpenID}/settings#plan`}
-						>
+						<Link href={`/users/${userOpenID}/settings#plan`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 									Plan of study
 								</h4>
 							</a>
 						</Link>
-						<Link
-							href={`/users/${userOpenID}/settings#watched`}
-						>
+						<Link href={`/users/${userOpenID}/settings#watched`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 									Watched Threads
 								</h4>
 							</a>
 						</Link>
-						<Link
-							href={`/users/${userOpenID}/settings#feedback`}
-						>
+						<Link href={`/users/${userOpenID}/settings#feedback`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 									Module Reviews
 								</h4>
 							</a>
 						</Link>
-						<Link
-							href={`/users/${userOpenID}/settings#connection`}
-						>
+						<Link href={`/users/${userOpenID}/settings#connection`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 									Connections
@@ -142,18 +143,14 @@ function AccountSidebar({verifyEdit, isEditMode, sessionUser, setEditMode, setUp
 					</>
 				) : (
 					<>
-						<Link
-							href={`/users/${userOpenID}/settings#privacy`}
-						>
+						<Link href={`/users/${userOpenID}/settings#privacy`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 									Privacy Settings
 								</h4>
 							</a>
 						</Link>
-						<Link
-							href={`/users/${userOpenID}/settings#connection`}
-						>
+						<Link href={`/users/${userOpenID}/settings#connection`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
 									Connection Settings
@@ -173,7 +170,7 @@ function AccountSidebar({verifyEdit, isEditMode, sessionUser, setEditMode, setUp
 				)}
 			</div>
 		</aside>
-	);
+	)
 }
 
-export default AccountSidebar;
+export default AccountSidebar

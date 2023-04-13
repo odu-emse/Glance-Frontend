@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { useState } from 'react'
-import { InstructorProfile, User } from '@/types/index';
+import { InstructorProfile, User } from '@/types/index'
 import { Session } from 'next-auth'
 import { UserAccount } from '@/common/community/threads/thread/thread'
-import AccountSidebar from '@/common/user/account_sidebar';
-import StudentContent from '@/common/user/student_content';
-import InstructorContent from '@/common/user/instructor_content';
+import AccountSidebar from '@/common/user/account_sidebar'
+import StudentContent from '@/common/user/student_content'
+import InstructorContent from '@/common/user/instructor_content'
 
 export const UserProfile = ({
 	user,
@@ -38,14 +38,20 @@ export const UserProfile = ({
 					contextAccount={contextAccount}
 					updatedProfile={updatedProfile}
 				/>
-				{
-					!isInstructor ? <StudentContent
+				{!isInstructor ? (
+					<StudentContent
 						user={user}
 						setUpdatedProfile={setUpdatedProfile}
 						isEditMode={isEditMode}
-					/> : <InstructorContent user={user} isEditMode={isEditMode} setUpdatedProfile={setUpdatedProfile} instructorDetails={instructorDetails} />
-				}
-
+					/>
+				) : (
+					<InstructorContent
+						user={user}
+						isEditMode={isEditMode}
+						setUpdatedProfile={setUpdatedProfile}
+						instructorDetails={instructorDetails}
+					/>
+				)}
 			</div>
 		</div>
 	)
