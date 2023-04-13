@@ -37,27 +37,25 @@ export const Select: React.FC<dropdownProps> = ({
 				)}
 				<select hidden={true} required={required}>
 					{options.length > 0 &&
-						options.map(
-							(option, optionIndex) => (
-								<option
-									key={optionIndex}
-									value={
-										typeof option === 'string'
-											? option
-											: option.value
-									}
-									selected={
-										typeof option === 'string'
-											? false
-											: option.selected
-									}
-								>
-									{typeof option === 'string'
+						options.map((option, optionIndex) => (
+							<option
+								key={optionIndex}
+								value={
+									typeof option === 'string'
 										? option
-										: option.label}
-								</option>
-							)
-						)}
+										: option.value
+								}
+								selected={
+									typeof option === 'string'
+										? false
+										: option.selected
+								}
+							>
+								{typeof option === 'string'
+									? option
+									: option.label}
+							</option>
+						))}
 				</select>
 				<div
 					className={`w-full p-3 border border-royalblue ${
@@ -86,41 +84,35 @@ export const Select: React.FC<dropdownProps> = ({
 						} list-none ml-0 absolute top-full left-0 my-0 outline outline-1 outline-royalblue outline-offset-0 w-full px-0 py-1.5 shadow-lg transition-all`}
 					>
 						{options.length > 0 &&
-							options.map(
-								(
-									option,
-									optionIndex,
-								) => (
-									<li
-										key={optionIndex}
-										className="cursor-pointer hover:underline hover:bg-wgray my-0 p-3"
-										onClick={(e) => {
-											const element =
-												window.getSelection()
-											console.log(element)
-											setSelected(option)
-											handle(e)
-											setOpen(false)
-										}}
-										value={
-											typeof option === 'string'
-												? option
-												: option.label
-										}
-									>
-										{typeof option === 'string' ? (
-											option
-										) : (
-											<span className="flex items-center justify-between">
-												{option.icon}
-												<span className="ml-2">
-													{option.label}
-												</span>
+							options.map((option, optionIndex) => (
+								<li
+									key={optionIndex}
+									className="cursor-pointer hover:underline hover:bg-wgray my-0 p-3"
+									onClick={(e) => {
+										const element = window.getSelection()
+										console.log(element)
+										setSelected(option)
+										handle(e)
+										setOpen(false)
+									}}
+									value={
+										typeof option === 'string'
+											? option
+											: option.label
+									}
+								>
+									{typeof option === 'string' ? (
+										option
+									) : (
+										<span className="flex items-center justify-between">
+											{option.icon}
+											<span className="ml-2">
+												{option.label}
 											</span>
-										)}
-									</li>
-								)
-							)}
+										</span>
+									)}
+								</li>
+							))}
 					</ul>
 				</div>
 			</label>
