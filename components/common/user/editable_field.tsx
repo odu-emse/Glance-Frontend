@@ -1,59 +1,47 @@
 import React from 'react'
-import { Input } from '@/common/forms/inputs/input/input'
-import { TextArea } from '@/common/forms/inputs/text_area/text_area'
+import { Input, InputProps } from '@/common/forms/inputs/input/input';
+import { TextArea, TextAreaProps } from '@/common/forms/inputs/text_area/text_area';
 
 interface EditableFieldProps {
 	type: 'text' | 'area'
-	inputDetails: {
-		type:
-			| 'text'
-			| 'email'
-			| 'password'
-			| 'url'
-			| 'number'
-			| 'search'
-			| 'tel'
-			| 'file'
-		placeholder: string
-		defaultValue: string
-		label?: string
-		name: string
-		onChange: (e: string | React.ChangeEvent<HTMLTextAreaElement>) => void
-		className?: string
-	}
+	inputDetails: TextAreaProps | InputProps
 	isEditing: boolean
+	header?: string | null
 }
 
-function EditableField({ type, isEditing, inputDetails }: EditableFieldProps) {
+function EditableField({ type, isEditing, inputDetails, header }: EditableFieldProps) {
 	if (type === 'text') {
+		const details = inputDetails as InputProps
 		if (isEditing) {
 			return (
 				<Input
-					type={inputDetails.type}
-					placeholder={inputDetails.placeholder}
-					defaultValue={inputDetails.defaultValue}
-					label={inputDetails.label || null}
-					name={inputDetails.name}
-					onChange={inputDetails.onChange}
-					className={inputDetails.className}
+					type={details.type}
+					placeholder={details.placeholder}
+					defaultValue={details.defaultValue}
+					label={details.label || null}
+					name={details.name}
+					onChange={details.onChange}
+					className={details.className}
 				/>
 			)
 		}
-		return <h4 className="my-1 uppercase">{inputDetails.defaultValue}</h4>
-	} else {
+		return <h4 className="my-1 uppercase">{header ? header : inputDetails.defaultValue}</h4>
+	}
+	else {
+		const details = inputDetails as TextAreaProps
 		if (isEditing) {
 			return (
 				<TextArea
-					placeholder={inputDetails.placeholder}
-					defaultValue={inputDetails.defaultValue}
-					label={inputDetails.label || null}
-					name={inputDetails.name}
-					handle={inputDetails.onChange}
-					className={inputDetails.className}
+					placeholder={details.placeholder}
+					defaultValue={details.defaultValue}
+					label={details.label || null}
+					name={details.name}
+					handle={details.handle}
+					className={details.className}
 				/>
 			)
 		}
-		return <p className="my-1 uppercase">{inputDetails.defaultValue}</p>
+		return <h4 className="my-1 uppercase">{header ? header : inputDetails.defaultValue}</h4>
 	}
 }
 
