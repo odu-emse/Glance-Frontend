@@ -38,7 +38,7 @@ export const Select: React.FC<dropdownProps> = ({
 				<select hidden={true} required={required}>
 					{options.length > 0 &&
 						options.map(
-							(option: string | dropdownOption, optionIndex) => (
+							(option, optionIndex) => (
 								<option
 									key={optionIndex}
 									value={
@@ -88,8 +88,8 @@ export const Select: React.FC<dropdownProps> = ({
 						{options.length > 0 &&
 							options.map(
 								(
-									option: string | dropdownOption,
-									optionIndex
+									option,
+									optionIndex,
 								) => (
 									<li
 										key={optionIndex}
@@ -132,7 +132,7 @@ export type dropdownProps = {
 	/**
 	 * The options to be displayed in the dropdown
 	 */
-	options: dropdownOption[] | string[]
+	options: (dropdownOption | string)[]
 	/**
 	 * The function to be called when the select value changes
 	 * @param event
