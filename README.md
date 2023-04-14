@@ -29,5 +29,5 @@ Please keep your branches up to date with the upstream branch.
 
 ## Style Guide
 
-The front end is disctated by the style guide. You can access this document here: 
+The front end is disctated by the style guide. You can access this document here:
 [Glance EMSE Style Guide](https://www.figma.com/file/vTRSf0PF69Gc6w3VC6UKnJ/Style-Guide?node-id=0%3A1&t=Wjq1q3ai1KiWNRsh-1)
