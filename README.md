@@ -1,4 +1,6 @@
-# GLANCE LOGO
+<p align="center">
+  <img src="https://github.com/odu-emse/frontend/blob/4081a38098aca17665812c3cbc3d672b6a06e717/public/images/GLANCE_1.png" alt="GLANCE. Education at a glance." width="500px" height="auto"/>
+</p>
 
 ---
 
