@@ -1,6 +1,6 @@
 import MarkdownContainer from '@/components/common/community/threads/markdown/markdown_container'
 
-const TEXTContent = ({ data }) => {
+const TextContent = ({ data }) => {
 	//console.log("t",data)
 	let text = ''
 	for (let i = 0; i < data.length; i++) {
@@ -16,4 +16,4 @@ const TEXTContent = ({ data }) => {
 	)
 }
 
-export default TEXTContent
+export default TextContent
