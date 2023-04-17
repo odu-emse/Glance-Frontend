@@ -21,10 +21,10 @@ function StudentContent({
 					Contact Information:
 				</h4>
 				{!isEditMode ? (
-					<>
-						<h4 className="uppercase my-1">{user.email}</h4>
+					<div className="ml-3 mt-3.5 mb-5">
+						<h4 className="uppercase my-1">{user?.email}</h4>
 						<h4 className="my-1">{user?.phoneNumber}</h4>
-					</>
+					</div>
 				) : (
 					<div className="flex flex-row items-center">
 						<p className=" w-1/2 m-3">
@@ -63,10 +63,11 @@ function StudentContent({
 				<h4 className="my-1 uppercase font-bold">Socials:</h4>
 				<EditableField
 					type={'text'}
+					platform={'github'}
 					inputDetails={{
 						type: 'url',
 						placeholder: 'GITHUB:',
-						defaultValue: user.social?.github || '',
+						defaultValue: user?.social?.github || '',
 						name: 'github',
 						onChange: (e) => {
 							setUpdatedProfile((prevState) => ({
@@ -79,14 +80,15 @@ function StudentContent({
 						},
 					}}
 					isEditing={isEditMode}
-					header={`Github: ${user.social?.github}`}
+					header={user?.social?.github}
 				/>
 				<EditableField
 					type={'text'}
+					platform={'twitter'}
 					inputDetails={{
 						type: 'url',
 						placeholder: 'TWITTER:',
-						defaultValue: user.social?.twitter || '',
+						defaultValue: user?.social?.twitter || '',
 						name: 'twitter',
 						onChange: (e) => {
 							setUpdatedProfile((prevState) => ({
@@ -99,14 +101,15 @@ function StudentContent({
 						},
 					}}
 					isEditing={isEditMode}
-					header={`Twitter: ${user.social?.twitter}`}
+					header={user?.social?.twitter}
 				/>
 				<EditableField
 					type={'text'}
+					platform={'linkedin'}
 					inputDetails={{
 						type: 'url',
 						placeholder: 'LINKEDIN:',
-						defaultValue: user.social?.linkedin || '',
+						defaultValue: user?.social?.linkedin || '',
 						name: 'linkedin',
 						onChange: (e) => {
 							setUpdatedProfile((prevState) => ({
@@ -119,14 +122,15 @@ function StudentContent({
 						},
 					}}
 					isEditing={isEditMode}
-					header={`LinkedIn: ${user.social?.linkedin}`}
+					header={user?.social?.linkedin}
 				/>
 				<EditableField
 					type={'text'}
+					platform={'facebook'}
 					inputDetails={{
 						type: 'url',
 						placeholder: 'FACEBOOK:',
-						defaultValue: user.social?.facebook || '',
+						defaultValue: user?.social?.facebook || '',
 						name: 'facebook',
 						onChange: (e) => {
 							setUpdatedProfile((prevState) => ({
@@ -139,14 +143,15 @@ function StudentContent({
 						},
 					}}
 					isEditing={isEditMode}
-					header={`Facebook: ${user.social?.facebook}`}
+					header={user?.social?.facebook}
 				/>
 				<EditableField
 					type={'text'}
+					platform={'url'}
 					inputDetails={{
 						type: 'url',
 						placeholder: 'PORTFOLIO:',
-						defaultValue: user.social?.portfolio || '',
+						defaultValue: user?.social?.portfolio || '',
 						name: 'portfolio',
 						onChange: (e) => {
 							setUpdatedProfile((prevState) => ({
@@ -159,7 +164,7 @@ function StudentContent({
 						},
 					}}
 					isEditing={isEditMode}
-					header={`Portfolio: ${user.social?.portfolio}`}
+					header={user?.social?.portfolio}
 				/>
 			</div>
 
