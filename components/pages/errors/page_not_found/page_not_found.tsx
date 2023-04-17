@@ -25,7 +25,7 @@ export const PageNotFound: React.FC<
 					className="max-w-[37.5rem] pt-6 flex align-center text-center"
 					style={{
 						fontWeight: 300,
-						fontSize: "1.25rem",
+						fontSize: '1.25rem',
 						color: 'black',
 					}}
 				>
@@ -39,13 +39,13 @@ export const PageNotFound: React.FC<
 			</div>
 
 			<div className="flex flex-col items-center align-center justify-center absolute bottom-4">
-					<div className="flex flex-row items-center gap-2">
+				<div className="flex flex-row items-center gap-2">
 					<Logo width={30} height={30} fillColor="20449b" />
 					<h1
 						style={{
 							fontWeight: 700,
 							fontSize: '2.25rem',
-							flexShrink: 0
+							flexShrink: 0,
 						}}
 						className="text-royalblue"
 					>

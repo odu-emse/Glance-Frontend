@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const Logo = ({ width, height, fillColor = "fff" }) => {
+export const Logo = ({ width, height, fillColor = 'fff' }) => {
 	return (
 		<svg
 			id="Layer_2"

@@ -3,14 +3,16 @@ import { version } from 'package.json'
 export const DynamicVersion = ({
 	backendVersion,
 	isLight,
-	modifyCSS
+	modifyCSS,
 }: DynamicVersionProps) => {
 	const frontendVersion = version
 
 	return (
 		<span
-			className={`sans font-bold ${!modifyCSS && 'absolute' } bottom-1 left-3 gap-4 sans text-4xl ${
-				isLight && 'text-white' 
+			className={`sans font-bold ${
+				!modifyCSS && 'absolute'
+			} bottom-1 left-3 gap-4 sans text-4xl ${
+				isLight && 'text-white'
 			} ${modifyCSS}`}
 		>
 			<small className="m-0 p-0">API Version {backendVersion}</small>
