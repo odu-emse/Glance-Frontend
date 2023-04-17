@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Input } from '@/common/forms/inputs/input/input'
 import { InstructorProfile, User } from '@/types/index'
 import EditableField from '@/common/user/editable_field'
+import { EditableFieldList } from '@/common/user/editable_field_list';
 
 interface StudentContentProps {
 	user: User
@@ -42,7 +43,7 @@ function InstructorContent({
 							},
 						}}
 						isEditing={isEditMode}
-						header={null}
+						header={user.email}
 					/>
 					<EditableField
 						type={'text'}
@@ -60,13 +61,15 @@ function InstructorContent({
 							},
 						}}
 						isEditing={isEditMode}
-						header={null}
+						header={user.phoneNumber}
 					/>
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Socials</h4>
 					<EditableField
 						type={'text'}
+						platform={'github'}
+						headerURL={"https://youtube.com"}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'GITHUB:',
@@ -83,10 +86,12 @@ function InstructorContent({
 							},
 						}}
 						isEditing={isEditMode}
-						header={`Github: ${user.social?.github}`}
+						header={`@${user.social?.github}`}
 					/>
 					<EditableField
 						type={'text'}
+						platform={'twitter'}
+						headerURL={"https://youtube.com"}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'TWITTER:',
@@ -103,10 +108,12 @@ function InstructorContent({
 							},
 						}}
 						isEditing={isEditMode}
-						header={`Twitter: ${user.social?.twitter}`}
+						header={`@${user.social?.twitter}`}
 					/>
 					<EditableField
 						type={'text'}
+						platform={'linkedin'}
+						headerURL={"https://youtube.com"}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'LINKEDIN:',
@@ -123,10 +130,12 @@ function InstructorContent({
 							},
 						}}
 						isEditing={isEditMode}
-						header={`LinkedIn: ${user.social?.linkedin}`}
+						header={`@${user.social?.linkedin}`}
 					/>
 					<EditableField
 						type={'text'}
+						platform={'facebook'}
+						headerURL={"https://youtube.com"}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'FACEBOOK:',
@@ -143,10 +152,12 @@ function InstructorContent({
 							},
 						}}
 						isEditing={isEditMode}
-						header={`Facebook: ${user.social?.facebook}`}
+						header={`@${user.social?.facebook}`}
 					/>
 					<EditableField
 						type={'text'}
+						platform={"url"}
+						headerURL={"https://youtube.com"}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'PORTFOLIO:',
@@ -163,13 +174,14 @@ function InstructorContent({
 							},
 						}}
 						isEditing={isEditMode}
-						header={`Portfolio: ${user.social?.portfolio}`}
+						header={user.social?.portfolio}
 					/>
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Office location</h4>
 					<EditableField
 						type={'text'}
+						isHeader={false}
 						inputDetails={{
 							type: 'text',
 							placeholder: 'OFFICE LOCATION:',
@@ -183,26 +195,18 @@ function InstructorContent({
 								}))
 							},
 						}}
+						header={instructorDetail.officeLocation}
 						isEditing={isEditMode}
 					/>
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Office hours</h4>
-					<EditableField
-						type={'text'}
-						inputDetails={{
-							type: 'text',
-							placeholder: 'OFFICE HOURS:',
-							defaultValue: instructorDetail.officeHours,
-							label: null,
-							name: 'officeHours',
-							onChange: (e) => {
-								setInstructorDetail((prevState) => ({
-									...prevState,
-									officeHours: e,
-								}))
-							},
-						}}
+
+					<EditableFieldList
+						listData={instructorDetail.officeHours}
+						handleUpdate={setInstructorDetail}
+						mutableData={instructorDetail}
+						persistentData={instructorDetails}
 						isEditing={isEditMode}
 					/>
 				</div>
@@ -224,6 +228,7 @@ function InstructorContent({
 							}))
 						},
 					}}
+					header={instructorDetail.background}
 					isEditing={isEditMode}
 				/>
 			</div>
@@ -243,6 +248,7 @@ function InstructorContent({
 							}))
 						},
 					}}
+					header={instructorDetail.contactPolicy}
 					isEditing={isEditMode}
 				/>
 			</div>
@@ -262,16 +268,17 @@ function InstructorContent({
 							}))
 						},
 					}}
+					header={instructorDetail.researchInterest}
 					isEditing={isEditMode}
 				/>
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Publications</h4>
 				{!isEditMode ? (
-					<ul className="ml-0 list-none m-0">
+					<ul className="ml-3 list-none m-0">
 						{instructorDetails.selectedPapersAndPublications?.map(
 							(publication, index) => (
-								<li key={index} className="sans my-1">
+								<li key={index} className="sans my-4">
 									{publication}
 								</li>
 							)
