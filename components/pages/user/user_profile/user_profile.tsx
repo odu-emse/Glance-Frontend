@@ -19,16 +19,19 @@ export const UserProfile = ({
 	setInstructorMode,
 	instructorMode,
 }: UserProfileProps) => {
-	const [updatedProfile, setUpdatedProfile] = useState<User | null>(user)
+	const [updatedProfile, setUpdatedProfile] = useState<User & {
+		instructorProfile?: InstructorProfile
+	} | null>(user)
 	const [isEditMode, setEditMode] = useState(false)
 
 	return (
 		<div className="m-11">
 			<h1 className="ml-6 mb-5">
-				{user.firstName} {user.lastName}
+				{updatedProfile?.firstName} {updatedProfile?.lastName}
 			</h1>
 			<div className="flex flex-col md:flex-row mt-3">
 				<AccountSidebar
+					defaultUserData={user}
 					verifyEdit={verifyEdit}
 					sessionUser={sessionUser}
 					updateSocial={updateSocial}
@@ -40,6 +43,7 @@ export const UserProfile = ({
 					setUpdatedProfile={setUpdatedProfile}
 					instructorMode={instructorMode}
 					setInstructorMode={setInstructorMode}
+					isInstructor={!!instructorDetails}
 				/>
 				{!isInstructor ? (
 					<StudentContent
