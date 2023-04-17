@@ -19,9 +19,12 @@ export const UserProfile = ({
 	setInstructorMode,
 	instructorMode,
 }: UserProfileProps) => {
-	const [updatedProfile, setUpdatedProfile] = useState<User & {
-		instructorProfile?: InstructorProfile
-	} | null>(user)
+	const [updatedProfile, setUpdatedProfile] = useState<
+		| (User & {
+				instructorProfile?: InstructorProfile
+		  })
+		| null
+	>(user)
 	const [isEditMode, setEditMode] = useState(false)
 
 	return (

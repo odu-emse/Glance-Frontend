@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Input } from '@/common/forms/inputs/input/input'
 import { InstructorProfile, User } from '@/types/index'
 import EditableField from '@/common/user/editable_field'
-import { EditableFieldList } from '@/common/user/editable_field_list';
+import { EditableFieldList } from '@/common/user/editable_field_list'
 
 interface StudentContentProps {
 	user: User
@@ -69,7 +69,7 @@ function InstructorContent({
 					<EditableField
 						type={'text'}
 						platform={'github'}
-						headerURL={"https://youtube.com"}
+						headerURL={'https://youtube.com'}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'GITHUB:',
@@ -91,7 +91,7 @@ function InstructorContent({
 					<EditableField
 						type={'text'}
 						platform={'twitter'}
-						headerURL={"https://youtube.com"}
+						headerURL={'https://youtube.com'}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'TWITTER:',
@@ -113,7 +113,7 @@ function InstructorContent({
 					<EditableField
 						type={'text'}
 						platform={'linkedin'}
-						headerURL={"https://youtube.com"}
+						headerURL={'https://youtube.com'}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'LINKEDIN:',
@@ -135,7 +135,7 @@ function InstructorContent({
 					<EditableField
 						type={'text'}
 						platform={'facebook'}
-						headerURL={"https://youtube.com"}
+						headerURL={'https://youtube.com'}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'FACEBOOK:',
@@ -156,8 +156,8 @@ function InstructorContent({
 					/>
 					<EditableField
 						type={'text'}
-						platform={"url"}
-						headerURL={"https://youtube.com"}
+						platform={'url'}
+						headerURL={'https://youtube.com'}
 						inputDetails={{
 							type: 'url',
 							placeholder: 'PORTFOLIO:',

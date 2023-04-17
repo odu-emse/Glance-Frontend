@@ -6,11 +6,11 @@ import { UserAccount } from '@/common/community/threads/thread/thread'
 import { User } from '@/types/index'
 
 interface AccountSidebarProps {
-	verifyEdit: (openID: string) => boolean,
-	isEditMode: boolean,
-	sessionUser: Session,
-	setEditMode: (isEditMode: boolean) => void,
-	setUpdatedProfile: React.Dispatch<React.SetStateAction<User>>,
+	verifyEdit: (openID: string) => boolean
+	isEditMode: boolean
+	sessionUser: Session
+	setEditMode: (isEditMode: boolean) => void
+	setUpdatedProfile: React.Dispatch<React.SetStateAction<User>>
 	updateSocial: (
 		openID: string,
 		accountID: string,
@@ -27,35 +27,35 @@ interface AccountSidebarProps {
 			biography?: string | null
 			phoneNumber?: string | null
 		}
-	) => void,
-	userOpenID: string,
+	) => void
+	userOpenID: string
 	contextAccount:
 		| (Omit<UserAccount & { openID: string; biography?: string }, 'id'> & {
-		id: string
-	})
-		| null,
-	updatedProfile: User,
-	setInstructorMode: React.Dispatch<React.SetStateAction<boolean>>,
-	instructorMode: boolean,
-	isInstructor: true | false,
+				id: string
+		  })
+		| null
+	updatedProfile: User
+	setInstructorMode: React.Dispatch<React.SetStateAction<boolean>>
+	instructorMode: boolean
+	isInstructor: true | false
 	defaultUserData: User
 }
 
 function AccountSidebar({
-													verifyEdit,
-													isEditMode,
-													sessionUser,
-													setEditMode,
-													setUpdatedProfile,
-													updateSocial,
-													userOpenID,
-													contextAccount,
-													updatedProfile,
-													setInstructorMode,
-													instructorMode,
-													isInstructor,
-													defaultUserData
-												}: AccountSidebarProps) {
+	verifyEdit,
+	isEditMode,
+	sessionUser,
+	setEditMode,
+	setUpdatedProfile,
+	updateSocial,
+	userOpenID,
+	contextAccount,
+	updatedProfile,
+	setInstructorMode,
+	instructorMode,
+	isInstructor,
+	defaultUserData,
+}: AccountSidebarProps) {
 	return (
 		<aside className="flex-none flex-col mr-8 mx-6">
 			<div className="relative h-48 w-48 mb-5 rounded-full overflow-clip mx-auto group">
@@ -64,7 +64,11 @@ function AccountSidebar({
 				</div>
 				<img
 					className="w-full"
-					src={verifyEdit(sessionUser.openId) ? sessionUser.user.image : updatedProfile.picURL}
+					src={
+						verifyEdit(sessionUser.openId)
+							? sessionUser.user.image
+							: updatedProfile.picURL
+					}
 					alt="The profile picture of the current user"
 					referrerPolicy="no-referrer"
 				/>
@@ -80,27 +84,24 @@ function AccountSidebar({
 								size="large"
 								className="w-full"
 							>
-
 								{!instructorMode
-									? 'Edit Profile':
-									'Edit Instructor Profile'
-								}
+									? 'Edit Profile'
+									: 'Edit Instructor Profile'}
 							</Button>
-							{
-								isInstructor && (
-							<Button
-								onClick={() => {
-									setInstructorMode(!instructorMode)
-								}}
-								size="large"
-								className="w-full"
-								variant="secondary"
-							>
-								{!instructorMode
-									? 'View Instructor Profile'
-									: 'View Student Profile'}
-							</Button>)
-							}
+							{isInstructor && (
+								<Button
+									onClick={() => {
+										setInstructorMode(!instructorMode)
+									}}
+									size="large"
+									className="w-full"
+									variant="secondary"
+								>
+									{!instructorMode
+										? 'View Instructor Profile'
+										: 'View Student Profile'}
+								</Button>
+							)}
 						</div>
 					) : (
 						<div className="flex flex-col gap-1 w-full">

@@ -1,54 +1,60 @@
-import React from 'react';
-import { Input, InputProps } from '@/common/forms/inputs/input/input';
+import React from 'react'
+import { Input, InputProps } from '@/common/forms/inputs/input/input'
 import {
 	TextArea,
 	TextAreaProps,
-} from '@/common/forms/inputs/text_area/text_area';
-import { FaFacebook, FaGithub, FaLink, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import Link from 'next/link';
+} from '@/common/forms/inputs/text_area/text_area'
+import {
+	FaFacebook,
+	FaGithub,
+	FaLink,
+	FaLinkedin,
+	FaTwitter,
+} from 'react-icons/fa'
+import Link from 'next/link'
 
 interface EditableFieldProps {
 	/**
 	 * The type of input field to display
 	 */
-	type: 'text' | 'area';
+	type: 'text' | 'area'
 	/**
 	 * The details of the input field
 	 */
-	inputDetails: TextAreaProps | InputProps;
+	inputDetails: TextAreaProps | InputProps
 	/**
 	 * Whether the field is in edit mode
 	 */
-	isEditing: boolean;
+	isEditing: boolean
 	/**
 	 * The header to display when not in edit mode
 	 */
-	header?: string | null;
+	header?: string | null
 	/*
 	 * The platform to display an icon for
 	 */
-	platform?: string;
+	platform?: string
 	/**
 	 * The url to link the header to
 	 */
-	headerURL?: string | null;
+	headerURL?: string | null
 	/**
 	 * determines whether the text displayed will be uppercase with a h4 tag or lowercase with a p tag
 	 */
-	isHeader?: boolean;
+	isHeader?: boolean
 }
 
 function EditableField({
-												 type,
-												 isEditing,
-												 inputDetails,
-												 header,
-												 platform = null,
-												 headerURL = null,
-												 isHeader = true,
-											 }: EditableFieldProps) {
+	type,
+	isEditing,
+	inputDetails,
+	header,
+	platform = null,
+	headerURL = null,
+	isHeader = true,
+}: EditableFieldProps) {
 	if (type === 'text') {
-		const details = inputDetails as InputProps;
+		const details = inputDetails as InputProps
 		if (isEditing) {
 			return (
 				<Input
@@ -60,13 +66,13 @@ function EditableField({
 					onChange={details.onChange}
 					className={details.className}
 				/>
-			);
+			)
 		}
 		return (
-			<div className='flex gap-3 items-center ml-3'>
+			<div className="flex gap-3 items-center ml-3">
 				{headerURL ? (
 					<Link href={headerURL}>
-						<a className='cursor-pointer flex gap-3 items-center no-underline'>
+						<a className="cursor-pointer flex gap-3 items-center no-underline">
 							<IconSwitch platform={platform} />
 							<h4 className={`my-1 sans text-royalblue`}>
 								{header}
@@ -88,10 +94,10 @@ function EditableField({
 					</>
 				)}
 			</div>
-		);
+		)
 	}
 	if (type === 'area') {
-		const details = inputDetails as TextAreaProps;
+		const details = inputDetails as TextAreaProps
 		if (isEditing) {
 			return (
 				<TextArea
@@ -102,41 +108,31 @@ function EditableField({
 					handle={details.handle}
 					className={details.className}
 				/>
-			);
+			)
 		}
 		return (
-			<p className='my-3.5 sans ml-3'>
+			<p className="my-3.5 sans ml-3">
 				{header ? header : details.defaultValue}
 			</p>
-		);
+		)
 	}
 }
 
 const IconSwitch = ({ platform }: { platform: string | null }) => {
 	switch (platform) {
 		case 'facebook':
-			return (
-				<FaFacebook />
-			);
+			return <FaFacebook />
 		case 'github':
-			return (
-				<FaGithub />
-			);
+			return <FaGithub />
 		case 'linkedin':
-			return (
-				<FaLinkedin />
-			);
+			return <FaLinkedin />
 		case 'twitter':
-			return (
-				<FaTwitter />
-			);
+			return <FaTwitter />
 		case 'url':
-			return (
-				<FaLink />
-			);
+			return <FaLink />
 		default:
-			return null;
+			return null
 	}
-};
+}
 
-export default EditableField;
+export default EditableField
