@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const Logo = ({ width, height }) => {
+export const Logo = ({ width, height, fillColor = "fff" }) => {
 	return (
 		<svg
 			id="Layer_2"
@@ -10,7 +10,7 @@ export const Logo = ({ width, height }) => {
 			height={height}
 		>
 			<defs>
-				<style>{`.cls-1{fill:#fff;}`}</style>
+				<style>{`.cls-1{fill:#${fillColor};}`}</style>
 			</defs>
 			<g id="Layer_2-2">
 				<path
