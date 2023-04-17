@@ -13,11 +13,11 @@ import RequestFailed from '@/pages/errors/request_failed/request_failed'
 
 const UserProfilePage = () => {
 	const router = useRouter()
+	const { user: userID, instructor: isInstructor }  = router.query
 	const { data: sessionUser } = useSession()
 	const { user: account } = useContext(GlobalUserContext)
-	const [instructorMode, setInstructorMode] = useState(false)
+	const [instructorMode, setInstructorMode] = useState(isInstructor === 'true')
 
-	const { user: userID } = router.query
 
 	const verifyEdit = (userToEdit: string): boolean => {
 		return userID === userToEdit
