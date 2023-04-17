@@ -4,12 +4,29 @@ import {
 	TextArea,
 	TextAreaProps,
 } from '@/common/forms/inputs/text_area/text_area'
+import { FaFacebook, FaGithub, FaLink, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 interface EditableFieldProps {
+	/**
+	 * The type of input field to display
+	 */
 	type: 'text' | 'area'
+	/**
+	 * The details of the input field
+	 */
 	inputDetails: TextAreaProps | InputProps
+	/**
+	 * Whether the field is in edit mode
+	 */
 	isEditing: boolean
+	/**
+	 * The header to display when not in edit mode
+	 */
 	header?: string | null
+	/*
+	 * The platform to display an icon for
+	 */
+	platform?: string
 }
 
 function EditableField({
@@ -17,6 +34,7 @@ function EditableField({
 	isEditing,
 	inputDetails,
 	header,
+	platform = 'url',
 }: EditableFieldProps) {
 	if (type === 'text') {
 		const details = inputDetails as InputProps
@@ -34,11 +52,15 @@ function EditableField({
 			)
 		}
 		return (
-			<h4 className="my-1 uppercase">
-				{header ? header : inputDetails.defaultValue}
+			<div className="flex gap-3 items-center ml-3">
+				<IconSwitch platform={platform} />
+			<h4 className="my-1 sans text-royalblue">
+				{platform !== 'url' && "@"}{header}
 			</h4>
+			</div>
 		)
-	} else {
+	}
+	if (type === 'area'){
 		const details = inputDetails as TextAreaProps
 		if (isEditing) {
 			return (
@@ -53,10 +75,37 @@ function EditableField({
 			)
 		}
 		return (
-			<h4 className="my-1 uppercase">
-				{header ? header : inputDetails.defaultValue}
-			</h4>
+			<p className="my-3.5 sans ml-3">
+				{header ? header : details.defaultValue}
+			</p>
 		)
+	}
+}
+
+const IconSwitch = ({ platform } : {platform: string}) => {
+	switch (platform) {
+		case 'facebook':
+			return (
+				<FaFacebook />
+			)
+		case 'github':
+			return (
+				<FaGithub />
+			)
+		case 'linkedin':
+			return (
+				<FaLinkedin />
+			)
+		case 'twitter':
+			return (
+				<FaTwitter />
+			)
+		case 'url':
+			return (
+				<FaLink />
+			)
+		default:
+			return null
 	}
 }
 
