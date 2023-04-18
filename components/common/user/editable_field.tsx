@@ -68,11 +68,12 @@ function EditableField({
 				/>
 			)
 		}
+		if(!details.defaultValue || typeof details.defaultValue === 'undefined') return null
 		return (
 			<div className="flex gap-3 items-center ml-3">
 				{headerURL ? (
 					<Link href={headerURL}>
-						<a className="cursor-pointer flex gap-3 items-center no-underline">
+						<a className="cursor-pointer flex gap-3 items-center no-underline" target="_blank">
 							<IconSwitch platform={platform} />
 							<h4 className={`my-1 sans text-royalblue`}>
 								{header}
@@ -110,9 +111,10 @@ function EditableField({
 				/>
 			)
 		}
+		if(!details.defaultValue || typeof details.defaultValue === 'undefined') return null
 		return (
 			<p className="my-3.5 sans ml-3">
-				{header ? header : details.defaultValue}
+				{details.defaultValue}
 			</p>
 		)
 	}
