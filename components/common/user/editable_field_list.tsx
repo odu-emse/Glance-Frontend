@@ -30,7 +30,7 @@ export const EditableFieldList = ({
 						return (
 							<li
 								key={index}
-								className='flex justify-between'
+								className='flex justify-between gap-1'
 							>
 								<Input
 									{...inputDetails}
@@ -91,19 +91,21 @@ export const EditableFieldList = ({
 									setIsAddingEntry(false);
 									setAddEntryData(null);
 								}}
+								size="small"
 							>Add</Button>
 							<Button
 								onClick={() => {
 									setIsAddingEntry(false);
 									setAddEntryData(null);
 								}}
+								size="small"
 							>Cancel</Button>
 
 						</div>
 					)}
 					<Button className='sans my-1' onClick={() => {
 						setIsAddingEntry(true);
-					}}>Add entry</Button>
+					}} size="small">Add entry</Button>
 				</>
 			}
 		</ul>
