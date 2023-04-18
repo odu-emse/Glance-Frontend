@@ -3,14 +3,14 @@ import { Button } from '@/common/button/button'
 import Link from 'next/link'
 import { Session } from 'next-auth'
 import { UserAccount } from '@/common/community/threads/thread/thread'
-import { InstructorProfile, User } from '@/types/index';
+import { InstructorProfile, User } from '@/types/index'
 
 interface AccountSidebarProps {
-	verifyEdit: (openID: string) => boolean,
-	isEditMode: boolean,
-	sessionUser: Session,
-	setEditMode: (isEditMode: boolean) => void,
-	setUpdatedProfile: React.Dispatch<React.SetStateAction<User>>,
+	verifyEdit: (openID: string) => boolean
+	isEditMode: boolean
+	sessionUser: Session
+	setEditMode: (isEditMode: boolean) => void
+	setUpdatedProfile: React.Dispatch<React.SetStateAction<User>>
 	updateSocial: (
 		openID: string,
 		accountID: string,
@@ -28,37 +28,37 @@ interface AccountSidebarProps {
 			phoneNumber?: string | null
 		},
 		instructorInput?: InstructorProfile
-	) => void,
-	userOpenID: string,
+	) => void
+	userOpenID: string
 	contextAccount:
 		| (Omit<UserAccount & { openID: string; biography?: string }, 'id'> & {
-		id: string
-	})
-		| null,
-	updatedProfile: User,
-	setInstructorMode: React.Dispatch<React.SetStateAction<boolean>>,
-	instructorMode: boolean,
-	isInstructor: true | false,
-	defaultUserData: User,
+				id: string
+		  })
+		| null
+	updatedProfile: User
+	setInstructorMode: React.Dispatch<React.SetStateAction<boolean>>
+	instructorMode: boolean
+	isInstructor: true | false
+	defaultUserData: User
 	instructorDetails: InstructorProfile
 }
 
 function AccountSidebar({
-													verifyEdit,
-													isEditMode,
-													sessionUser,
-													setEditMode,
-													setUpdatedProfile,
-													updateSocial,
-													userOpenID,
-													contextAccount,
-													updatedProfile,
-													setInstructorMode,
-													instructorMode,
-													isInstructor,
-													defaultUserData,
-													instructorDetails
-												}: AccountSidebarProps) {
+	verifyEdit,
+	isEditMode,
+	sessionUser,
+	setEditMode,
+	setUpdatedProfile,
+	updateSocial,
+	userOpenID,
+	contextAccount,
+	updatedProfile,
+	setInstructorMode,
+	instructorMode,
+	isInstructor,
+	defaultUserData,
+	instructorDetails,
+}: AccountSidebarProps) {
 	return (
 		<aside className="flex-none flex-col md:mr-8 md:mx-6 mx-0">
 			<div className="relative h-48 w-48 mb-5 rounded-full overflow-clip mx-auto group">

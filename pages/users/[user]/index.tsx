@@ -71,15 +71,18 @@ const UserProfilePage = () => {
 							id
 							biography
 						}
-						updateInstructorProfile(id: $accountID, input: $instructorInput) {
-								title
-								officeHours
-								officeLocation
-								contactPolicy
-								phone
-								background
-								researchInterest
-								selectedPapersAndPublications
+						updateInstructorProfile(
+							id: $accountID
+							input: $instructorInput
+						) {
+							title
+							officeHours
+							officeLocation
+							contactPolicy
+							phone
+							background
+							researchInterest
+							selectedPapersAndPublications
 						}
 					}
 				`,

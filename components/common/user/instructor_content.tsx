@@ -20,7 +20,7 @@ function InstructorContent({
 	setUpdatedProfile,
 	instructorDetails,
 	setUpdatedInstructorProfile,
-														 immutableInstructorDetails,
+	immutableInstructorDetails,
 }: StudentContentProps) {
 	return (
 		<div className="md:mx-10 mt-3 w-full">
@@ -187,7 +187,8 @@ function InstructorContent({
 						inputDetails={{
 							type: 'text',
 							placeholder: 'OFFICE LOCATION:',
-							defaultValue: immutableInstructorDetails.officeLocation,
+							defaultValue:
+								immutableInstructorDetails.officeLocation,
 							label: null,
 							name: 'officeLocation',
 							onChange: (e) => {
