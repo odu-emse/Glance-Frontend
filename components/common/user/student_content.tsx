@@ -81,6 +81,7 @@ function StudentContent({
 					}}
 					isEditing={isEditMode}
 					header={`@${user?.social?.github}`}
+					headerURL={`https://github.com/${user?.social?.github}`}
 				/>
 				<EditableField
 					type={'text'}
@@ -102,6 +103,7 @@ function StudentContent({
 					}}
 					isEditing={isEditMode}
 					header={`@${user?.social?.twitter}`}
+					headerURL={`https://twitter.com/${user?.social?.twitter}`}
 				/>
 				<EditableField
 					type={'text'}
@@ -123,6 +125,7 @@ function StudentContent({
 					}}
 					isEditing={isEditMode}
 					header={`@${user?.social?.linkedin}`}
+					headerURL={`https://linkedin.com/${user?.social?.linkedin}`}
 				/>
 				<EditableField
 					type={'text'}
@@ -144,6 +147,7 @@ function StudentContent({
 					}}
 					isEditing={isEditMode}
 					header={`@${user?.social?.facebook}`}
+					headerURL={`https://facebook.com/${user?.social?.facebook}`}
 				/>
 				<EditableField
 					type={'text'}
@@ -164,7 +168,8 @@ function StudentContent({
 						},
 					}}
 					isEditing={isEditMode}
-					header={`@${user?.social?.portfolio}`}
+					header={`${user?.social?.portfolio}`}
+					headerURL={`${user?.social?.portfolio}`}
 				/>
 			</div>
 
