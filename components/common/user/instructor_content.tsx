@@ -201,13 +201,18 @@ function InstructorContent({
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Office hours</h4>
-
 					<EditableFieldList
 						listData={instructorDetail.officeHours}
 						handleUpdate={setInstructorDetail}
 						mutableData={instructorDetail}
 						persistentData={instructorDetails}
 						isEditing={isEditMode}
+						inputDetails={{
+							type: 'text',
+							placeholder: null,
+							name: 'officeHours',
+							label: null,
+						}}
 					/>
 				</div>
 			</div>
@@ -254,74 +259,10 @@ function InstructorContent({
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Research Interests</h4>
-				<EditableField
-					type={'area'}
-					inputDetails={{
-						defaultValue: instructorDetail.researchInterest,
-						name: 'researchInterest',
-						className:
-							'border-royalblue focus:border-royalblue rounded-none font-normal',
-						handle: (e) => {
-							setInstructorDetail((prevState) => ({
-								...prevState,
-								researchInterest: e.target.value,
-							}))
-						},
-					}}
-					header={instructorDetail.researchInterest}
-					isEditing={isEditMode}
-				/>
+
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Publications</h4>
-				{!isEditMode ? (
-					<ul className="ml-3 list-none m-0">
-						{instructorDetails.selectedPapersAndPublications?.map(
-							(publication, index) => (
-								<li key={index} className="sans my-4">
-									{publication}
-								</li>
-							)
-						)}
-					</ul>
-				) : (
-					<div>
-						{instructorDetails.selectedPapersAndPublications?.map(
-							(publication, index) => (
-								<div
-									key={index}
-									className="flex justify-between"
-								>
-									<Input
-										label={null}
-										name={'publication'}
-										onChange={null}
-										type={'text'}
-										defaultValue={publication}
-									/>
-									<button
-										className="bg-red-500 text-white px-2 py-1 rounded-md"
-										onClick={() => {
-											const newPublications =
-												instructorDetails.selectedPapersAndPublications?.filter(
-													(pub, i) => i !== index
-												)
-											setInstructorDetail(
-												(prevState) => ({
-													...prevState,
-													selectedPapersAndPublications:
-														newPublications,
-												})
-											)
-										}}
-									>
-										X
-									</button>
-								</div>
-							)
-						)}
-					</div>
-				)}
 			</div>
 		</div>
 	)
