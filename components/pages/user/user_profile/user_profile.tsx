@@ -29,7 +29,7 @@ export const UserProfile = ({
 
 	return (
 		<div className="m-11">
-			<h1 className="ml-6 mb-5">
+			<h1 className="md:ml-6 ml-0 mb-5">
 				{updatedProfile?.firstName} {updatedProfile?.lastName}
 			</h1>
 			<div className="flex flex-col md:flex-row mt-3">

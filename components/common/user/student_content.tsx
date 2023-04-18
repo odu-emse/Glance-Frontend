@@ -15,7 +15,7 @@ function StudentContent({
 	setUpdatedProfile,
 }: StudentContentProps) {
 	return (
-		<div className="mx-10">
+		<div className="md:mx-10 w-full">
 			<div className="mb-3">
 				<h4 className="m-0 uppercase font-bold">
 					Contact Information:

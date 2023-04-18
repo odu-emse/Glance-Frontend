@@ -21,8 +21,8 @@ function InstructorContent({
 		...instructorDetails,
 	})
 	return (
-		<div className="mx-10 w-full">
-			<div className="grid grid-cols-2 grid-rows-2 gap-4">
+		<div className="md:mx-10 mt-3 w-full">
+			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-1">
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">
 						Contact Information:

@@ -57,7 +57,7 @@ function AccountSidebar({
 	defaultUserData,
 }: AccountSidebarProps) {
 	return (
-		<aside className="flex-none flex-col mr-8 mx-6">
+		<aside className="flex-none flex-col md:mr-8 md:mx-6 mx-0">
 			<div className="relative h-48 w-48 mb-5 rounded-full overflow-clip mx-auto group">
 				<div className="opacity-0 group-hover:opacity-100 w-full h-full z-10 absolute left-0 transition-opacity top-0 uppercase font-black text-white text-xl tracking-wider flex justify-center items-center">
 					<span className="cursor-pointer">Edit</span>
