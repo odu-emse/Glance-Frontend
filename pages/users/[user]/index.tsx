@@ -6,17 +6,19 @@ import { gql } from 'graphql-request'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { User } from '@/types/index'
+import { InstructorProfile, User } from '@/types/index'
 import { UserProfile } from '@/pages/user/user_profile/user_profile'
 import Loader from '@/components/util/loader'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
 
 const UserProfilePage = () => {
 	const router = useRouter()
+	const { user: userID, instructor: isInstructor } = router.query
 	const { data: sessionUser } = useSession()
 	const { user: account } = useContext(GlobalUserContext)
-
-	const { user: userID } = router.query
+	const [instructorMode, setInstructorMode] = useState(
+		isInstructor === 'true'
+	)
 
 	const verifyEdit = (userToEdit: string): boolean => {
 		return userID === userToEdit
@@ -39,15 +41,20 @@ const UserProfilePage = () => {
 			openID: string
 			biography?: string | null
 			phoneNumber?: string | null
-		}
+		},
+		instructorInput?: InstructorProfile
 	) => {
+		// we need to remove this field since the API knows users aren't allowed to edit this field,
+		// but we need to track it in the state
+		delete instructorInput.id
 		mutateSocial(async () => {
 			await client.request(
 				gql`
-					mutation UpdateSocial(
+					mutation UpdateUserProfile(
 						$accountID: ID!
 						$socialInput: SocialInput!
 						$userInput: UpdateUser!
+						$instructorInput: InstructorProfileInput!
 					) {
 						updateUserSocial(
 							userId: $accountID
@@ -64,12 +71,26 @@ const UserProfilePage = () => {
 							id
 							biography
 						}
+						updateInstructorProfile(
+							id: $accountID
+							input: $instructorInput
+						) {
+							title
+							officeHours
+							officeLocation
+							contactPolicy
+							phone
+							background
+							researchInterest
+							selectedPapersAndPublications
+						}
 					}
 				`,
 				{
 					accountID,
 					socialInput,
 					userInput,
+					instructorInput,
 				}
 			)
 		}).catch((err) => {
@@ -98,6 +119,16 @@ const UserProfilePage = () => {
                         portfolio
                         facebook
                         twitter
+                    }
+										instructorProfile {
+											id
+											title
+											background
+											contactPolicy
+											officeHours
+											officeLocation
+											researchInterest
+											selectedPapersAndPublications
                     }
                 }
             }
@@ -132,6 +163,12 @@ const UserProfilePage = () => {
 			updateSocial={updateSocial}
 			userOpenID={userID as string}
 			verifyEdit={verifyEdit}
+			isInstructor={instructorMode}
+			instructorDetails={
+				data.user[0]?.instructorProfile as InstructorProfile
+			}
+			setInstructorMode={setInstructorMode}
+			instructorMode={instructorMode}
 		/>
 	)
 }
