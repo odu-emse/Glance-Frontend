@@ -259,7 +259,6 @@ function InstructorContent({
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Research Interests</h4>
-
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Publications</h4>
