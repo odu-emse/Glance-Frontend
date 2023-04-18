@@ -259,9 +259,35 @@ function InstructorContent({
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Research Interests</h4>
+				<EditableFieldList
+					listData={instructorDetail.researchInterest}
+					handleUpdate={setInstructorDetail}
+					mutableData={instructorDetail}
+					persistentData={instructorDetails}
+					isEditing={isEditMode}
+					inputDetails={{
+						type: 'text',
+						placeholder: null,
+						name: 'researchInterest',
+						label: null,
+					}}
+				/>
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Publications</h4>
+				<EditableFieldList
+					listData={instructorDetail.selectedPapersAndPublications}
+					handleUpdate={setInstructorDetail}
+					mutableData={instructorDetail}
+					persistentData={instructorDetails}
+					isEditing={isEditMode}
+					inputDetails={{
+						type: 'text',
+						placeholder: null,
+						name: 'selectedPapersAndPublications',
+						label: null,
+					}}
+				/>
 			</div>
 		</div>
 	)
