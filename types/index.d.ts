@@ -44,12 +44,9 @@ export interface InstructorProfile {
 	officeLocation?: Nullable<string>
 	officeHours?: Nullable<Nullable<string>[]>
 	contactPolicy?: Nullable<string>
-	phone?: Nullable<string>
 	background?: Nullable<string>
 	researchInterest?: Nullable<Nullable<string>[]>
 	selectedPapersAndPublications?: Nullable<Nullable<string>[]>
-	personalWebsite?: Nullable<string>
-	philosophy?: Nullable<string>
 }
 
 export type Social = {

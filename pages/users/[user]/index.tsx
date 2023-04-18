@@ -41,15 +41,20 @@ const UserProfilePage = () => {
 			openID: string
 			biography?: string | null
 			phoneNumber?: string | null
-		}
+		},
+		instructorInput?: InstructorProfile
 	) => {
+		// we need to remove this field since the API knows users aren't allowed to edit this field,
+		// but we need to track it in the state
+		delete instructorInput.id
 		mutateSocial(async () => {
 			await client.request(
 				gql`
-					mutation UpdateSocial(
+					mutation UpdateUserProfile(
 						$accountID: ID!
 						$socialInput: SocialInput!
 						$userInput: UpdateUser!
+						$instructorInput: InstructorProfileInput!
 					) {
 						updateUserSocial(
 							userId: $accountID
@@ -66,12 +71,23 @@ const UserProfilePage = () => {
 							id
 							biography
 						}
+						updateInstructorProfile(id: $accountID, input: $instructorInput) {
+								title
+								officeHours
+								officeLocation
+								contactPolicy
+								phone
+								background
+								researchInterest
+								selectedPapersAndPublications
+						}
 					}
 				`,
 				{
 					accountID,
 					socialInput,
 					userInput,
+					instructorInput,
 				}
 			)
 		}).catch((err) => {
@@ -108,9 +124,6 @@ const UserProfilePage = () => {
 											contactPolicy
 											officeHours
 											officeLocation
-											personalWebsite
-											philosophy
-											phone
 											researchInterest
 											selectedPapersAndPublications
                     }
