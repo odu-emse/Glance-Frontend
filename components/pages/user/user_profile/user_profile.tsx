@@ -25,6 +25,9 @@ export const UserProfile = ({
 		  })
 		| null
 	>(user)
+	const [updatedInstructorProfile, setUpdatedInstructorProfile] = useState<
+		InstructorProfile | null
+	>(instructorDetails)
 	const [isEditMode, setEditMode] = useState(false)
 
 	return (
@@ -46,6 +49,7 @@ export const UserProfile = ({
 					setUpdatedProfile={setUpdatedProfile}
 					instructorMode={instructorMode}
 					setInstructorMode={setInstructorMode}
+					instructorDetails={updatedInstructorProfile}
 					isInstructor={!!instructorDetails}
 				/>
 				{!isInstructor ? (
@@ -59,7 +63,9 @@ export const UserProfile = ({
 						user={updatedProfile}
 						isEditMode={isEditMode}
 						setUpdatedProfile={setUpdatedProfile}
-						instructorDetails={instructorDetails}
+						instructorDetails={updatedInstructorProfile}
+						setUpdatedInstructorProfile={setUpdatedInstructorProfile}
+						immutableInstructorDetails={instructorDetails}
 					/>
 				)}
 			</div>

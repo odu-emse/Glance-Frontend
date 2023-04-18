@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Input } from '@/common/forms/inputs/input/input'
+import React from 'react'
 import { InstructorProfile, User } from '@/types/index'
 import EditableField from '@/common/user/editable_field'
 import { EditableFieldList } from '@/common/user/editable_field_list'
@@ -9,6 +8,10 @@ interface StudentContentProps {
 	isEditMode: boolean
 	setUpdatedProfile: React.Dispatch<React.SetStateAction<User | null>>
 	instructorDetails: InstructorProfile
+	setUpdatedInstructorProfile: React.Dispatch<
+		React.SetStateAction<InstructorProfile | null>
+	>
+	immutableInstructorDetails: InstructorProfile
 }
 
 function InstructorContent({
@@ -16,10 +19,9 @@ function InstructorContent({
 	isEditMode,
 	setUpdatedProfile,
 	instructorDetails,
+	setUpdatedInstructorProfile,
+														 immutableInstructorDetails,
 }: StudentContentProps) {
-	const [instructorDetail, setInstructorDetail] = useState({
-		...instructorDetails,
-	})
 	return (
 		<div className="md:mx-10 mt-3 w-full">
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-1">
@@ -185,27 +187,27 @@ function InstructorContent({
 						inputDetails={{
 							type: 'text',
 							placeholder: 'OFFICE LOCATION:',
-							defaultValue: instructorDetail.officeLocation,
+							defaultValue: immutableInstructorDetails.officeLocation,
 							label: null,
 							name: 'officeLocation',
 							onChange: (e) => {
-								setInstructorDetail((prevState) => ({
+								setUpdatedInstructorProfile((prevState) => ({
 									...prevState,
 									officeLocation: e,
 								}))
 							},
 						}}
-						header={instructorDetail.officeLocation}
+						header={immutableInstructorDetails.officeLocation}
 						isEditing={isEditMode}
 					/>
 				</div>
 				<div className="col-span-1 row-span-1">
 					<h4 className="m-0 uppercase font-bold">Office hours</h4>
 					<EditableFieldList
-						listData={instructorDetail.officeHours}
-						handleUpdate={setInstructorDetail}
-						mutableData={instructorDetail}
-						persistentData={instructorDetails}
+						listData={instructorDetails.officeHours}
+						handleUpdate={setUpdatedInstructorProfile}
+						mutableData={instructorDetails}
+						persistentData={immutableInstructorDetails}
 						isEditing={isEditMode}
 						inputDetails={{
 							type: 'text',
@@ -222,18 +224,18 @@ function InstructorContent({
 					type={'area'}
 					inputDetails={{
 						placeholder: 'Write something about yourself...',
-						defaultValue: instructorDetail.background,
+						defaultValue: immutableInstructorDetails.background,
 						name: 'background',
 						className:
 							'border-royalblue focus:border-royalblue rounded-none font-normal',
 						handle: (e) => {
-							setInstructorDetail((prevState) => ({
+							setUpdatedInstructorProfile((prevState) => ({
 								...prevState,
 								background: e.target.value,
 							}))
 						},
 					}}
-					header={instructorDetail.background}
+					header={immutableInstructorDetails.background}
 					isEditing={isEditMode}
 				/>
 			</div>
@@ -242,28 +244,28 @@ function InstructorContent({
 				<EditableField
 					type={'area'}
 					inputDetails={{
-						defaultValue: instructorDetail.contactPolicy,
+						defaultValue: immutableInstructorDetails.contactPolicy,
 						name: 'contactPolicy',
 						className:
 							'border-royalblue focus:border-royalblue rounded-none font-normal',
 						handle: (e) => {
-							setInstructorDetail((prevState) => ({
+							setUpdatedInstructorProfile((prevState) => ({
 								...prevState,
 								contactPolicy: e.target.value,
 							}))
 						},
 					}}
-					header={instructorDetail.contactPolicy}
+					header={immutableInstructorDetails.contactPolicy}
 					isEditing={isEditMode}
 				/>
 			</div>
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Research Interests</h4>
 				<EditableFieldList
-					listData={instructorDetail.researchInterest}
-					handleUpdate={setInstructorDetail}
-					mutableData={instructorDetail}
-					persistentData={instructorDetails}
+					listData={instructorDetails.researchInterest}
+					handleUpdate={setUpdatedInstructorProfile}
+					mutableData={instructorDetails}
+					persistentData={immutableInstructorDetails}
 					isEditing={isEditMode}
 					inputDetails={{
 						type: 'text',
@@ -276,10 +278,10 @@ function InstructorContent({
 			<div className="w-full my-4">
 				<h4 className="m-0 uppercase font-bold">Publications</h4>
 				<EditableFieldList
-					listData={instructorDetail.selectedPapersAndPublications}
-					handleUpdate={setInstructorDetail}
-					mutableData={instructorDetail}
-					persistentData={instructorDetails}
+					listData={instructorDetails.selectedPapersAndPublications}
+					handleUpdate={setUpdatedInstructorProfile}
+					mutableData={instructorDetails}
+					persistentData={immutableInstructorDetails}
 					isEditing={isEditMode}
 					inputDetails={{
 						type: 'text',
