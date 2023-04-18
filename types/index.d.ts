@@ -37,6 +37,18 @@ export type User = {
 	createdThreads?: Array<ThreadType | null> | null
 }
 
+export interface InstructorProfile {
+	id: string
+	account?: Nullable<User>
+	title?: Nullable<string>
+	officeLocation?: Nullable<string>
+	officeHours?: Nullable<Nullable<string>[]>
+	contactPolicy?: Nullable<string>
+	background?: Nullable<string>
+	researchInterest?: Nullable<Nullable<string>[]>
+	selectedPapersAndPublications?: Nullable<Nullable<string>[]>
+}
+
 export type Social = {
 	id: string
 	github?: string | null
