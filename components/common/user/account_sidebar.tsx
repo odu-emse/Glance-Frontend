@@ -150,7 +150,7 @@ function AccountSidebar({
 			</div>
 
 			<div className="flex flex-col items-start justify-center">
-				{!isEditMode ? (
+				{!instructorMode ? (
 					<>
 						<Link href={`/users/${userOpenID}/settings#plan`}>
 							<a>
@@ -183,26 +183,31 @@ function AccountSidebar({
 					</>
 				) : (
 					<>
-						<Link href={`/users/${userOpenID}/settings#privacy`}>
+						<Link href={`/users/${userOpenID}/settings#instructed`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-									Privacy Settings
+									My Modules
+								</h4>
+							</a>
+						</Link>
+						<Link href={`/users/${userOpenID}/settings#watched`}>
+							<a>
+								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
+									Watched Threads
+								</h4>
+							</a>
+						</Link>
+						<Link href={`/users/${userOpenID}/`}>
+							<a>
+								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
+									Publications
 								</h4>
 							</a>
 						</Link>
 						<Link href={`/users/${userOpenID}/settings#connection`}>
 							<a>
 								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-									Connection Settings
-								</h4>
-							</a>
-						</Link>
-						<Link
-							href={`/users/${userOpenID}/settings#notification`}
-						>
-							<a>
-								<h4 className="uppercase my-2 font-bold text-royalblue underline cursor-pointer">
-									Notification Settings
+									Connections
 								</h4>
 							</a>
 						</Link>
