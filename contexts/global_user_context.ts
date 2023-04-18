@@ -12,6 +12,9 @@ const GlobalUserContext = createContext({
 	user:
 		| (Omit<UserAccount & { openID: string; biography?: string }, 'id'> & {
 				id: string
+				plan: {
+					id: string
+				}
 		  })
 		| null
 	setUser: (

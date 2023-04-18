@@ -17,15 +17,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
 	handle,
 }) => {
 	return (
-		<div className={`${open ? 'w-64' : 'w-1/12'} relative h-full`}>
+		<div className={`${open ? 'flex-none' : 'w-1/12'} relative`}>
 			<aside
 				id="sidePanel"
 				style={{
 					overflow: 'visible',
 				}}
-				className={`h-full bg-white transition-all drop-shadow-lg p-0`}
+				className={`h-full bg-white transition-all drop-shadow-lg p-0 `}
 			>
-				<div className="flex flex-col grow">
+				<div className="flex flex-col grow pt-7">
 					<SidebarItem
 						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
 						collapsed={!open}

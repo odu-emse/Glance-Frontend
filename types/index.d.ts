@@ -94,19 +94,36 @@ export type ThreadType = {
 	comments?: Array<ThreadType | null> | null
 	upvotes?: Array<User | null>
 	usersWatching?: Array<User | null>
-	parentLesson?: Nullable<Lesson>
 	createdAt?: Date
 	updatedAt?: Date
 	parentThread?: Nullable<ThreadType>
 	parentThreadID?: Nullable<string>
+	topics: [string]
 }
 
-type Lesson = {
+export type Lesson = {
 	id: string
 	name?: string
-	threads?: Nullable<Nullable<ThreadType>[]>
 	position?: Nullable<number>
 	collection?: Collection
+	lessonProgress?: Array<LessonProgress>
+}
+
+export type LessonProgress = {
+	id: string
+	status?: number
+	completed?: boolean
+	createAt?: Date
+	updatedAt?: Date
+	enrollment?: ModuleEnrollment
+	lesson?: Lesson
+}
+
+export type LessonByModuleEnrollment = Pick<
+	Lesson,
+	'id' | 'name' | 'position' | 'collection'
+> & {
+	lessonProgress: Array<LessonProgress>
 }
 
 type Nullable<T> = T | null

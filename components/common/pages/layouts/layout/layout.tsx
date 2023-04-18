@@ -149,7 +149,7 @@ export const Layout = ({ children }) => {
 						open={open}
 						icon={null}
 					/>
-					<main className="grow overflow-y-auto">
+					<main className="flex-1 grow overflow-y-auto">
 						<GlobalLoadingContext.Provider
 							value={{ isLoading, setLoading }}
 						>
