@@ -10,6 +10,7 @@ export const getModuleByIDUnenrolled = gql`
 				role
 				plan {
 					student {
+						openID
 						firstName
 						lastName
 					}
