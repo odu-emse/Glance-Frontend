@@ -10,10 +10,13 @@ import Loader from '@/components/util/loader';
 import { LearningPath } from '@/types/index';
 import GlobalUserContext from '@/contexts/global_user_context';
 import { Button } from '@/common/button/button';
+import { FaMinus, FaPlus } from 'react-icons/fa';
 
 function PathIndexPage() {
 	const router = useRouter();
 	const { user: account } = useContext(GlobalUserContext);
+	const [collapseSection, setCollapseSection] = React.useState(0);
+	const sectionRef = React.useRef(null);
 	const { path_id } = router.query;
 	const { data, error } = useSWR({
 		query: getLPbyPlanID(account.plan.id),
@@ -44,29 +47,73 @@ function PathIndexPage() {
 						{LP.course.sections.map((section, index) => {
 							return (
 								<li key={index}>
-									<h3>{section.name}</h3>
-									<ul className='list-none'>
-										{section.collections.map((collection, index) => {
-											return (
-												<li key={index}>
-													<h4>{collection.name}</h4>
-													<ul className='list-none divide-y'>
-														{collection.modules.map((module, index) => {
-															return (
-																<li key={index}>
-																	<div className='flex gap-2 items-center justify-start'>
-																	<h5>{module.moduleName}</h5>
-																	<h6>{module.moduleNumber}</h6>
-																	</div>
-																	<p className="sans">{module.description}</p>
-																</li>
-															);
-														})}
-													</ul>
-												</li>
-											);
-										})}
-									</ul>
+									<div className='flex gap-1 items-center justify-start mb-2.5 cursor-pointer' onClick={() => setCollapseSection(collapseSection === index ? null : index)}
+											ref={sectionRef}
+									>
+										{collapseSection !== index ? (
+											<FaPlus />) : (<FaMinus />)
+										}
+										<h3
+											className='cursor-pointer mb-0'
+										>{section.name}</h3>
+									</div>
+									{collapseSection === index && (
+										<ul className='list-none'>
+											{section.collections.map((collection, index) => {
+												return (
+													<li key={index}>
+														<h4>{collection.name}</h4>
+														<ul className='list-none divide-y'>
+															{collection.modules.map((module, index) => {
+																return (
+																	<li key={index}>
+																		<div className='flex gap-2 items-center justify-start'>
+																			<h5>{module.moduleName}</h5>
+																			<h6>{module.moduleNumber}</h6>
+																		</div>
+																		<p className='sans'>{module.description}</p>
+																		<div className='my-3'>
+																			{module.parentModules.length > 0 && (
+																				<>
+																					<h5 className="sans">Recommended to complete first</h5>
+																					<div className='flex gap-1'>
+																						{module.parentModules.map((parentModule, index) => {
+																							return (
+																								<div className='flex gap-2 bg-wgray rounded px-2 py-1 sans text-sm' key={index}>
+																									<h5>{parentModule.moduleName}</h5>
+																									<h6>{parentModule.moduleNumber}</h6>
+																								</div>
+																							);
+																						})}
+																					</div>
+																				</>
+																			)
+																			}
+																		</div>
+																		<div className='my-3'>
+																			{module.subModules.length > 0 && <>
+																				<h5 className="sans">Possible next steps...</h5>
+																				<div className='flex gap-1'>
+																					{module.subModules.map((subModule, index) => {
+																						return (
+																							<div className='flex gap-2 bg-wgray rounded px-2 py-1 sans text-sm' key={index}>
+																								<h5>{subModule.moduleName}</h5>
+																								<h6>{subModule.moduleNumber}</h6>
+																							</div>
+																						);
+																					})}
+																				</div>
+																			</>}
+																		</div>
+																	</li>
+																);
+															})}
+														</ul>
+													</li>
+												);
+											})}
+										</ul>
+									)}
 								</li>
 							);
 						})}
