@@ -4,7 +4,7 @@ import { Layout } from '@/common/pages/layouts/layout/layout';
 import { useRouter } from 'next/router';
 import gql_fetcher from '@/utils/gql_fetcher';
 import useSWR from 'swr';
-import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
+import getLPbyPlanID from '@/scripts/get_lp_by_plan_id';
 import RequestFailed from '@/pages/errors/request_failed/request_failed';
 import Loader from '@/components/util/loader';
 import { LearningPath } from '@/types/index';
@@ -35,8 +35,8 @@ function PathIndexPage() {
 	return (
 		<section className='stdcontainer'>
 			<div className='flex gap-4 items-center justify-start my-4'>
-			<Button onClick={() => router.back()}>Back</Button>
-			<h1>Path to {LP.course.name}</h1>
+				<Button onClick={() => router.back()}>Back</Button>
+				<h1>Path to {LP.course.name}</h1>
 			</div>
 			<div className='flex gap-1 items-start'>
 				<div className='flex-none w-2/3'>
@@ -72,24 +72,28 @@ function PathIndexPage() {
 						})}
 					</ul>
 				</div>
-				<aside className='flex-1 w-1/3'>
-					<Button>
+				<aside className='flex-1 w-1/3 flex flex-col gap-3 border border-r-0 border-gray-300 relative h-screen overflow-y-scroll bg-white transition-all p-3'>
+					<Button className='w-fit mx-auto'>
 						Edit Learning Path
 					</Button>
-					<div className='flex gap-1'>
-						<h5>Hours satisfied:</h5>
+					<div className='flex gap-1 items-center'>
+						<h4>Hours satisfied:</h4>
 						<time className={`${LP.hoursSatisfies < LP.course.carnegieHours ? 'text-red-500' : 'text-royalblue'}`}>
-						{LP.hoursSatisfies}
+							{LP.hoursSatisfies}
 						</time>
 					</div>
-					<span className='text-sm py-1 rounded-md bg-wgray sans font-semibold px-2 inline-block my-3'>{LP.status}</span>
+					<div className='flex gap-1 items-center'>
+						<h4>Status:</h4>
+						<span className='text-sm py-1 rounded-md bg-wgray sans font-semibold px-2 inline-block w-fit'>{LP.status}</span>
+					</div>
 					<div className=''>
 						<h3>Learning outcomes</h3>
-						<ul className='m-0 list-inside'>
+						<ul className='mt-0'>
 							{LP.learningOutcomes.map((lo, index) => {
 								return (
 									<li
 										key={index}
+										className="sans"
 									>
 										{lo}
 									</li>
