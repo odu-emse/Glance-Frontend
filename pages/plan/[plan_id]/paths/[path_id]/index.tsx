@@ -23,17 +23,26 @@ function PathIndexPage() {
 	}, gql_fetcher) as {
 		data: { learningPath: Array<LearningPath> },
 		error: Error
-	};
+	}
 
-	if (error) return <RequestFailed title={'An error occurred'} subtitle={'While retrieving your Learning Paths'} />;
+	if (error)
+		return (
+			<RequestFailed
+				title={'An error occurred'}
+				subtitle={'While retrieving your Learning Paths'}
+			/>
+		)
 
-	if (!data) return (
-		<div className='flex justify-center items-center stdcontainer h-screen'>
-			<Loader textColor='royalblue' />
-		</div>
-	);
+	if (!data)
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
 
-	const LP = data.learningPath[0].paths.filter(path => path.id === path_id as string)[0];
+	const LP = data.learningPath[0].paths.filter(
+		(path) => path.id === (path_id as string)
+	)[0]
 
 	return (
 		<section className='stdcontainer'>
@@ -41,9 +50,9 @@ function PathIndexPage() {
 				<Button onClick={() => router.back()}>Back</Button>
 				<h1>Path to {LP.course.name}</h1>
 			</div>
-			<div className='flex gap-1 items-start'>
-				<div className='flex-none w-2/3'>
-					<ul className='list-none m-0'>
+			<div className="flex gap-1 items-start">
+				<div className="flex-none w-2/3">
+					<ul className="list-none m-0">
 						{LP.course.sections.map((section, index) => {
 							return (
 								<li key={index}>
@@ -115,7 +124,7 @@ function PathIndexPage() {
 										</ul>
 									)}
 								</li>
-							);
+							)
 						})}
 					</ul>
 				</div>
@@ -152,11 +161,11 @@ function PathIndexPage() {
 				</aside>
 			</div>
 		</section>
-	);
+	)
 }
 
 PathIndexPage.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>;
-};
+	return <Layout>{page}</Layout>
+}
 
-export default PathIndexPage;
+export default PathIndexPage
