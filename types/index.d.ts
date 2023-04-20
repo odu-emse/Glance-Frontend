@@ -120,11 +120,11 @@ export type LessonProgress = {
 }
 
 export interface Course {
-	id: string;
-	name: string;
-	moduleIDs?: Nullable<Nullable<string>[]>;
-	required: boolean;
-	carnegieHours: number;
+	id: string
+	name: string
+	moduleIDs?: Nullable<Nullable<string>[]>
+	required: boolean
+	carnegieHours: number
 }
 
 export type LessonByModuleEnrollment = Pick<
@@ -135,48 +135,48 @@ export type LessonByModuleEnrollment = Pick<
 }
 
 export enum PathStatus {
-	DRAFT = "DRAFT",
-	LIVE = "LIVE"
+	DRAFT = 'DRAFT',
+	LIVE = 'LIVE',
 }
 
 export interface LearningPath {
-	id: string;
-	createdAt: Date;
-	plan: PlanOfStudy;
-	planID: string;
-	paths: Path[];
+	id: string
+	createdAt: Date
+	plan: PlanOfStudy
+	planID: string
+	paths: Path[]
 }
 
 export interface Path {
-	id: string;
-	createdAt: Date;
-	updatedAt: Date;
-	course: CoursePath;
-	status: PathStatus;
-	hoursSatisfies: number;
-	learningOutcomes: string[];
+	id: string
+	createdAt: Date
+	updatedAt: Date
+	course: CoursePath
+	status: PathStatus
+	hoursSatisfies: number
+	learningOutcomes: string[]
 }
 
-export interface CoursePath extends Course{
-	id: string;
-	sections: SectionPath[];
+export interface CoursePath extends Course {
+	id: string
+	sections: SectionPath[]
 }
 
 export interface SectionPath {
-	id: string;
+	id: string
 	name: string
-	collections: CollectionPath[];
+	collections: CollectionPath[]
 }
 
 export interface CollectionPath {
-	id: string;
+	id: string
 	name: string
-	modules: ModulePath[];
+	modules: ModulePath[]
 }
 
 export interface ModulePath extends Module {
-	id: string;
-	enrollmentID?: Nullable<string>;
+	id: string
+	enrollmentID?: Nullable<string>
 }
 
 type Nullable<T> = T | null
