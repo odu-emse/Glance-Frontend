@@ -119,11 +119,64 @@ export type LessonProgress = {
 	lesson?: Lesson
 }
 
+export interface Course {
+	id: string;
+	name: string;
+	moduleIDs?: Nullable<Nullable<string>[]>;
+	required: boolean;
+	carnegieHours: number;
+}
+
 export type LessonByModuleEnrollment = Pick<
 	Lesson,
 	'id' | 'name' | 'position' | 'collection'
 > & {
 	lessonProgress: Array<LessonProgress>
+}
+
+export enum PathStatus {
+	DRAFT = "DRAFT",
+	LIVE = "LIVE"
+}
+
+export interface LearningPath {
+	id: string;
+	createdAt: Date;
+	plan: PlanOfStudy;
+	planID: string;
+	paths: Path[];
+}
+
+export interface Path {
+	id: string;
+	createdAt: Date;
+	updatedAt: Date;
+	course: CoursePath;
+	status: PathStatus;
+	hoursSatisfies: number;
+	learningOutcomes: string[];
+}
+
+export interface CoursePath extends Course{
+	id: string;
+	sections: SectionPath[];
+}
+
+export interface SectionPath {
+	id: string;
+	name: string
+	collections: CollectionPath[];
+}
+
+export interface CollectionPath {
+	id: string;
+	name: string
+	modules: ModulePath[];
+}
+
+export interface ModulePath extends Module {
+	id: string;
+	enrollmentID?: Nullable<string>;
 }
 
 type Nullable<T> = T | null
