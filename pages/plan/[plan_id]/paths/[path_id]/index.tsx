@@ -1,32 +1,31 @@
 /* eslint-disable camelcase */
-import React, { useContext } from 'react'
-import { Layout } from '@/common/pages/layouts/layout/layout'
-import { useRouter } from 'next/router'
-import gql_fetcher from '@/utils/gql_fetcher'
-import useSWR from 'swr'
-import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
-import RequestFailed from '@/pages/errors/request_failed/request_failed'
-import Loader from '@/components/util/loader'
-import { LearningPath } from '@/types/index'
-import GlobalUserContext from '@/contexts/global_user_context'
-import { Button } from '@/common/button/button'
-import { FaMinus, FaPlus } from 'react-icons/fa'
+import React, { useContext } from 'react';
+import { Layout } from '@/common/pages/layouts/layout/layout';
+import { useRouter } from 'next/router';
+import gql_fetcher from '@/utils/gql_fetcher';
+import useSWR from 'swr';
+import getLPbyPlanID from '@/scripts/get_lp_by_plan_id';
+import RequestFailed from '@/pages/errors/request_failed/request_failed';
+import Loader from '@/components/util/loader';
+import { CollectionPath, LearningPath, Module, Path, SectionPath } from '@/types/index';
+import GlobalUserContext from '@/contexts/global_user_context';
+import { Button } from '@/common/button/button';
+import { FaMinus, FaPlus } from 'react-icons/fa';
+import Link from 'next/link';
 
 function PathIndexPage() {
-	const router = useRouter()
-	const { user: account } = useContext(GlobalUserContext)
-	const [collapseSection, setCollapseSection] = React.useState(0)
-	const sectionRef = React.useRef(null)
-	const { path_id } = router.query
+	const router = useRouter();
+	const { user: account } = useContext(GlobalUserContext);
+	const [collapseSection, setCollapseSection] = React.useState(0);
+	const sectionRef = React.useRef(null);
+	const { path_id } = router.query;
 	const { data, error } = useSWR(
-		{
-			query: getLPbyPlanID(account.plan.id),
-		},
-		gql_fetcher
+		getLPbyPlanID(account.plan.id, path_id as string),
+		gql_fetcher,
 	) as {
 		data: { learningPath: Array<LearningPath> }
 		error: Error
-	}
+	};
 
 	if (error)
 		return (
@@ -34,18 +33,16 @@ function PathIndexPage() {
 				title={'An error occurred'}
 				subtitle={'While retrieving your Learning Paths'}
 			/>
-		)
+		);
 
 	if (!data)
 		return (
-			<div className="flex justify-center items-center stdcontainer h-screen">
-				<Loader textColor="royalblue" />
+			<div className='flex justify-center items-center stdcontainer h-screen'>
+				<Loader textColor='royalblue' />
 			</div>
-		)
+		);
 
-	const LP = data.learningPath[0].paths.filter(
-		(path) => path.id === (path_id as string)
-	)[0]
+	const LP = data.learningPath[0].paths[0];
 
 	return (
 		<section className="stdcontainer">
@@ -257,11 +254,11 @@ function PathIndexPage() {
 				</aside>
 			</div>
 		</section>
-	)
+	);
 }
 
 PathIndexPage.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>
-}
+	return <Layout>{page}</Layout>;
+};
 
-export default PathIndexPage
+export default PathIndexPage;
