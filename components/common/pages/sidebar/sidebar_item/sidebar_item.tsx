@@ -17,7 +17,9 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 	return (
 		<Link href={href} passHref>
 			<div
-				className={`py-1 my-2 mx-2 rounded cursor-pointer hover:bg-wgray flex gap-2 ${collapsed ? 'justify-center' : ''}`} 
+				className={`py-1 my-2 mx-2 rounded cursor-pointer hover:bg-wgray flex gap-2 ${
+					collapsed ? 'justify-center' : ''
+				}`}
 				style={{
 					fontFamily: 'Montserrat, sans-serif',
 					// ...collapsed ? { justifyContent: 'center' } : {}
