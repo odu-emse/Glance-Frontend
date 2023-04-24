@@ -2,11 +2,11 @@ import * as React from 'react'
 import { SidebarItem } from './sidebar_item/sidebar_item'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { PlanOfStudy } from '../../svg/plan_of_study'
-import { Modules } from '../../svg/modules';
-import { Communities } from '../../svg/communities';
-import { GradeBook } from '../../svg/gradebook';
+import { Modules } from '../../svg/modules'
+import { Communities } from '../../svg/communities'
+import { GradeBook } from '../../svg/gradebook'
 
-type IconType = React.ReactNode;
+type IconType = React.ReactNode
 
 export type SidebarProps = {
 	userSession: any
@@ -37,24 +37,29 @@ export const Sidebar: React.FC<SidebarProps> = ({
 						svgIcon={<PlanOfStudy width={20} height={20} />}
 						collapsed={!open}
 						value="PLAN OF STUDY"
-						href={`/plan/${userSession.openId}`} icon={''}					/>
+						href={`/plan/${userSession.openId}`}
+						icon={''}
+					/>
 					<SidebarItem
 						svgIcon={<Modules width={20} height={20} />}
 						collapsed={!open}
 						value="MODULES"
-						href="/modules" icon={''}	
+						href="/modules"
+						icon={''}
 					/>
 					<SidebarItem
 						svgIcon={<Communities width={20} height={20} />}
 						collapsed={!open}
 						value="COMMUNITIES"
-						href="/communities" icon={''}	
+						href="/communities"
+						icon={''}
 					/>
 					<SidebarItem
 						svgIcon={<GradeBook width={20} height={20} />}
 						collapsed={!open}
 						value="GRADES"
-						href="/grades" icon={''}	
+						href="/grades"
+						icon={''}
 					/>
 				</div>
 				<div>
@@ -64,13 +69,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
 								value="ACCOUNT"
 								href={`/users/${userSession.openId}/settings`}
 								collapsed={!open}
-								icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png" svgIcon={''}							/>
+								icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
+								svgIcon={''}
+							/>
 							<SidebarItem
 								value={userSession.user.name}
 								href={`/users/${userSession.openId}`}
 								collapsed={!open}
-								icon={userSession.user.image} 
-								svgIcon={''}	
+								icon={userSession.user.image}
+								svgIcon={''}
 							/>
 						</>
 					)}
