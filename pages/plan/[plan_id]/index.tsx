@@ -9,6 +9,8 @@ import Loader from '@/components/util/loader'
 import { LearningPath } from '@/types/index'
 import Link from 'next/link'
 import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
+import { Button } from '@/common/button/button';
+import { Anchor } from '@/common/links/anchor/anchor';
 
 function PlanOfStudyIndexPage() {
 	const { data: session } = useSession()
@@ -46,7 +48,7 @@ function PlanOfStudyIndexPage() {
 				</h2>
 			</div>
 			<div className="grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-7">
-				<PlanOfStudyPanel title={'My Paths'}>
+				<PlanOfStudyPanel title={'My Paths'} buttonPath={`/plan/${session.openId}/paths/create`} buttonValue="Create new">
 					<ul className="m-0 list-none divide-y">
 						{data.learningPath[0].paths.map((path, index) => {
 							return (
@@ -82,13 +84,25 @@ function PlanOfStudyIndexPage() {
 const PlanOfStudyPanel = ({
 	title,
 	children,
+	buttonValue,
+	buttonPath,
 }: {
 	title: string
 	children?: React.ReactNode[] | React.ReactNode
+	buttonValue?: string
+	buttonPath?: string
 }) => {
 	return (
 		<div className="col-span-1 row-span-1 h-64 border border-wgray rounded-sm p-3">
+			<div className='flex justify-between items-center'>
 			<h3>{title}</h3>
+				{buttonValue && (
+				<Anchor
+					path={buttonPath}
+					className="bg-royalblue text-white px-3 py-1.5 sans uppercase no-underline"
+				>Create new</Anchor>
+				)}
+			</div>
 			<>
 				{Array.isArray(children)
 					? children.map((child, index) => (
