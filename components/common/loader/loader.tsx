@@ -1,5 +1,5 @@
-import React from 'react';
-import Loader from '@/components/util/loader';
+import React from 'react'
+import Loader from '@/components/util/loader'
 
 function Loading() {
 	return (
@@ -9,4 +9,4 @@ function Loading() {
 	)
 }
 
-export default Loading;
+export default Loading

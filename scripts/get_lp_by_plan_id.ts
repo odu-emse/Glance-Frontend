@@ -64,7 +64,7 @@ export default function getLPbyPlanID(
 						id
 						moduleName
 						moduleNumber
-          }
+					}
 					subModules {
 						id
 						moduleName
@@ -72,8 +72,8 @@ export default function getLPbyPlanID(
 					}
 				}
 				collection(input: {}) {
-						id
-						name
+					id
+					name
 				}
 				lesson(input: {}) {
 					id

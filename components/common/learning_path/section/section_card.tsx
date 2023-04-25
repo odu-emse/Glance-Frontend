@@ -1,29 +1,37 @@
-import React from 'react';
-import { Module, SectionPath } from '@/types/index';
-import SectionCardTitle from '@/common/learning_path/section/section_card_title';
-import CollectionCard from '@/common/learning_path/collection/collection_card';
+import React from 'react'
+import { Module, SectionPath } from '@/types/index'
+import SectionCardTitle from '@/common/learning_path/section/section_card_title'
+import CollectionCard from '@/common/learning_path/collection/collection_card'
 
 const SectionCard = ({
-											 section,
-											 sectionIndex,
-											 collapseIndex,
-											 handleCollapse,
-											 sectionPointer,
-											 editMode,
-											 sectionsData
-										 }: {
-	section: SectionPath,
-	sectionIndex: number,
-	collapseIndex: number,
-	handleCollapse: React.Dispatch<React.SetStateAction<number | null>>,
-	sectionPointer: React.MutableRefObject<HTMLDivElement>,
-	editMode: boolean,
+	section,
+	sectionIndex,
+	collapseIndex,
+	handleCollapse,
+	sectionPointer,
+	editMode,
+	sectionsData,
+}: {
+	section: SectionPath
+	sectionIndex: number
+	collapseIndex: number
+	handleCollapse: React.Dispatch<React.SetStateAction<number | null>>
+	sectionPointer: React.MutableRefObject<HTMLDivElement>
+	editMode: boolean
 	sectionsData: Array<Module>
 }) => {
-	if(editMode){
+	if (editMode) {
 		return (
 			<li key={sectionIndex}>
-				<SectionCardTitle sectionPointer={sectionPointer} sectionIndex={sectionIndex} section={section} collapseIndex={collapseIndex} handleCollapse={handleCollapse} editMode={editMode} data={sectionsData} />
+				<SectionCardTitle
+					sectionPointer={sectionPointer}
+					sectionIndex={sectionIndex}
+					section={section}
+					collapseIndex={collapseIndex}
+					handleCollapse={handleCollapse}
+					editMode={editMode}
+					data={sectionsData}
+				/>
 				<ul className="list-none">
 					{section.collections.map((collection, index) => {
 						return (
@@ -39,7 +47,15 @@ const SectionCard = ({
 	}
 	return (
 		<li key={sectionIndex}>
-			<SectionCardTitle sectionPointer={sectionPointer} sectionIndex={sectionIndex} section={section} collapseIndex={collapseIndex} handleCollapse={handleCollapse} editMode={editMode} data={sectionsData} />
+			<SectionCardTitle
+				sectionPointer={sectionPointer}
+				sectionIndex={sectionIndex}
+				section={section}
+				collapseIndex={collapseIndex}
+				handleCollapse={handleCollapse}
+				editMode={editMode}
+				data={sectionsData}
+			/>
 			{collapseIndex === sectionIndex && (
 				<ul className="list-none">
 					{section.collections.map((collection, index) => {
@@ -56,4 +72,4 @@ const SectionCard = ({
 	)
 }
 
-export default SectionCard;
+export default SectionCard

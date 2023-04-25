@@ -1,7 +1,7 @@
-import { Module } from '@/types/index';
-import Link from 'next/link';
-import React from 'react';
-import ModuleTagList from '@/common/learning_path/module/module_tag_list';
+import { Module } from '@/types/index'
+import Link from 'next/link'
+import React from 'react'
+import ModuleTagList from '@/common/learning_path/module/module_tag_list'
 
 const ModuleCard = ({ module }: { module: Module }) => {
 	return (
@@ -44,4 +44,4 @@ const ModuleCard = ({ module }: { module: Module }) => {
 	)
 }
 
-export default ModuleCard;
+export default ModuleCard
