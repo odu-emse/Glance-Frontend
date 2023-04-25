@@ -1,5 +1,5 @@
-import { getSectionByIDEnrolled } from 'scripts/get_module_by_id';
-import { ModuleBySectionEnrollment } from '../types';
+import { getSectionByIDEnrolled } from 'scripts/get_module_by_id'
+import { ModuleBySectionEnrollment } from '../types'
 import useSWR from 'swr'
 import gql_fetcher from '@/utils/gql_fetcher'
 
@@ -84,8 +84,7 @@ export const useProgress = ({
 			[],
 		]
 
-
-	console.log(data);
+	console.log(data)
 
 	const { modulesBySectionEnrollment } = data
 

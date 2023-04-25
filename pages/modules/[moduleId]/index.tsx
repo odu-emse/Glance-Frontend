@@ -3,7 +3,7 @@ import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
-import { getSectionByIDUnenrolled } from '@/scripts/get_module_by_id';
+import { getSectionByIDUnenrolled } from '@/scripts/get_module_by_id'
 import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
@@ -12,7 +12,7 @@ import GlobalUserContext from '@/contexts/global_user_context'
 import { useProgress } from '@/hooks/use_progress'
 import Loader from '@/components/util/loader'
 import * as React from 'react'
-import { Section } from '@/types/graphql';
+import { Section } from '@/types/graphql'
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
