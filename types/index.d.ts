@@ -1,3 +1,5 @@
+import { ModuleProgress, Section } from '@/types/graphql';
+
 export type Module = {
 	id: string
 	moduleNumber?: number
@@ -127,11 +129,12 @@ export interface Course {
 	carnegieHours: number
 }
 
-export type LessonByModuleEnrollment = Pick<
-	Lesson,
-	'id' | 'name' | 'position' | 'collection'
+export type ModuleBySectionEnrollment = Pick<
+	Module,
+	'id' | 'name' | 'position'
 > & {
-	lessonProgress: Array<LessonProgress>
+	moduleProgress: Array<ModuleProgress>
+	collection: Collection
 }
 
 export enum PathStatus {
