@@ -6,17 +6,12 @@ import gql_fetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
-import {
-	Collection,
-	Course,
-	LearningPath, Lesson,
-	Module,
-} from '@/types/index';
+import { Collection, Course, LearningPath, Lesson, Module } from '@/types/index'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { Button } from '@/common/button/button'
-import LPSidebar from '@/common/learning_path/sidebar/sidebar';
-import SectionCard from '@/common/learning_path/section/section_card';
-import Loading from '@/common/loader/loader';
+import LPSidebar from '@/common/learning_path/sidebar/sidebar'
+import SectionCard from '@/common/learning_path/section/section_card'
+import Loading from '@/common/loader/loader'
 
 function PathIndexPage() {
 	const router = useRouter()
@@ -47,10 +42,7 @@ function PathIndexPage() {
 			/>
 		)
 
-	if (!data)
-		return (
-			<Loading />
-		)
+	if (!data) return <Loading />
 
 	const LP = data.learningPath[0].paths[0]
 
@@ -77,7 +69,12 @@ function PathIndexPage() {
 						))}
 					</ul>
 				</div>
-				<LPSidebar LP={LP} editMode={editMode} toggleEdit={setEditMode} triggerSave={function handle() {}} />
+				<LPSidebar
+					LP={LP}
+					editMode={editMode}
+					toggleEdit={setEditMode}
+					triggerSave={function handle() {}}
+				/>
 			</div>
 		</section>
 	)
