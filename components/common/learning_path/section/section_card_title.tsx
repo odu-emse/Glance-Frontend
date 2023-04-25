@@ -1,32 +1,32 @@
-import { Module, SectionPath } from '@/types/index';
-import React from 'react';
-import { FaMinus, FaPlus } from 'react-icons/fa';
+import { Module, SectionPath } from '@/types/index'
+import React from 'react'
+import { FaMinus, FaPlus } from 'react-icons/fa'
 
 const SectionCardTitle = ({
-														section,
-														sectionIndex,
-														collapseIndex,
-														handleCollapse,
-														sectionPointer,
-														editMode,
-														data
-													} : {
-	section: SectionPath,
-	sectionIndex: number,
-	collapseIndex: number,
-	handleCollapse: React.Dispatch<React.SetStateAction<number | null>>,
-	sectionPointer: React.MutableRefObject<HTMLDivElement>,
-	editMode: boolean,
+	section,
+	sectionIndex,
+	collapseIndex,
+	handleCollapse,
+	sectionPointer,
+	editMode,
+	data,
+}: {
+	section: SectionPath
+	sectionIndex: number
+	collapseIndex: number
+	handleCollapse: React.Dispatch<React.SetStateAction<number | null>>
+	sectionPointer: React.MutableRefObject<HTMLDivElement>
+	editMode: boolean
 	data: Array<Module>
 }) => {
-	if(editMode){
+	if (editMode) {
 		return (
-			<div
-				className="flex gap-1 items-center justify-start mb-2.5 cursor-pointer"
-			>
+			<div className="flex gap-1 items-center justify-start mb-2.5 cursor-pointer">
 				<select className="text-royalblue sans uppercase font-bold">
 					{data.map((module, index) => (
-						<option key={index} value={module.id}>{module.moduleName}</option>
+						<option key={index} value={module.id}>
+							{module.moduleName}
+						</option>
 					))}
 				</select>
 			</div>
@@ -48,4 +48,4 @@ const SectionCardTitle = ({
 	)
 }
 
-export default SectionCardTitle;
+export default SectionCardTitle

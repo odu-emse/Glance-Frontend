@@ -1,6 +1,6 @@
-import { CollectionPath } from '@/types/index';
-import React from 'react';
-import ModuleCard from '@/common/learning_path/module/module_card';
+import { CollectionPath } from '@/types/index'
+import React from 'react'
+import ModuleCard from '@/common/learning_path/module/module_card'
 
 const CollectionCard = ({ collection }: { collection: CollectionPath }) => {
 	return (
@@ -15,4 +15,4 @@ const CollectionCard = ({ collection }: { collection: CollectionPath }) => {
 	)
 }
 
-export default CollectionCard;
+export default CollectionCard

@@ -1,13 +1,13 @@
-import { Module } from '@/types/index';
-import Link from 'next/link';
-import React from 'react';
+import { Module } from '@/types/index'
+import Link from 'next/link'
+import React from 'react'
 
 const ModuleTagList = ({
-												 title,
-												 listData,
-												 elementName,
-												 elementLink,
-											 }: {
+	title,
+	listData,
+	elementName,
+	elementLink,
+}: {
 	title: string
 	listData: Array<Module | string>
 	elementName: string
