@@ -1,10 +1,10 @@
 import { gql } from 'graphql-request'
 
-export const getModuleByIDUnenrolled = gql`
-	query UnEnrolledModuleHomePage($moduleID: ID!) {
-		module(input: { id: $moduleID }) {
-			moduleNumber
-			moduleName
+export const getSectionByIDUnenrolled = gql`
+	query UnEnrolledSectionHomePage($sectionID: ID!) {
+		section(input: { id: $sectionID }) {
+			sectionNumber
+			sectionName
 			id
 			members {
 				role
@@ -16,16 +16,16 @@ export const getModuleByIDUnenrolled = gql`
 				}
 			}
 			description
-			parentModules {
+			parentSections {
 				id
-				moduleName
-				moduleNumber
+				sectionName
+				sectionNumber
 			}
 			objectives
 			collections {
 				id
 				name
-				lessons {
+				modules {
 					id
 					name
 					content {
@@ -39,9 +39,9 @@ export const getModuleByIDUnenrolled = gql`
 	}
 `
 
-export const getModuleByIDEnrolled = gql`
-	query ModuleHomePageLessonProgress($moduleID: ID!, $planID: ID!) {
-		lessonsByModuleEnrollment(planID: $planID, moduleID: $moduleID) {
+export const getSectionByIDEnrolled = gql`
+	query SectionHomePageLessonProgress($sectionID: ID!, $planID: ID!) {
+		modulesBySectionEnrollment(planID: $planID, sectionID: $sectionID) {
 			id
 			name
 			position
@@ -49,12 +49,12 @@ export const getModuleByIDEnrolled = gql`
 				id
 				name
 				position
-				module {
+				section {
 					id
-					moduleName
+					sectionName
 				}
 			}
-			lessonProgress {
+			moduleProgress {
 				status
 				completed
 				updatedAt

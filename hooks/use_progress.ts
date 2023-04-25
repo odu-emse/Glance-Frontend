@@ -1,5 +1,5 @@
-import { getModuleByIDEnrolled } from 'scripts/get_module_by_id'
-import { Lesson, LessonByModuleEnrollment, LessonProgress } from '../types'
+import { getSectionByIDEnrolled } from 'scripts/get_module_by_id';
+import { ModuleBySectionEnrollment } from '../types';
 import useSWR from 'swr'
 import gql_fetcher from '@/utils/gql_fetcher'
 
@@ -13,10 +13,10 @@ import gql_fetcher from '@/utils/gql_fetcher'
  * If the lesson is the last lesson in the last collection, it will return null.
  */
 export const useProgress = ({
-	moduleID,
+	sectionID,
 	planID,
 }: {
-	moduleID: string
+	sectionID: string
 	planID: string
 }): [
 	data: {
@@ -25,13 +25,13 @@ export const useProgress = ({
 	},
 	loading: boolean,
 	error: Error,
-	self: LessonByModuleEnrollment[]
+	self: ModuleBySectionEnrollment[]
 ] => {
 	const { data, isValidating, error } = useSWR(
 		{
-			query: getModuleByIDEnrolled,
+			query: getSectionByIDEnrolled,
 			variables: {
-				moduleID,
+				sectionID,
 				planID,
 			},
 		},
@@ -47,7 +47,7 @@ export const useProgress = ({
 		}
 	) as {
 		data: {
-			lessonsByModuleEnrollment: LessonByModuleEnrollment[]
+			modulesBySectionEnrollment: ModuleBySectionEnrollment[]
 		}
 		isValidating: boolean
 		error: Error
@@ -61,7 +61,7 @@ export const useProgress = ({
 			},
 			true,
 			null,
-			data?.lessonsByModuleEnrollment ?? [],
+			data?.modulesBySectionEnrollment ?? [],
 		]
 	if (error)
 		return [
@@ -84,10 +84,13 @@ export const useProgress = ({
 			[],
 		]
 
-	const { lessonsByModuleEnrollment } = data
+
+	console.log(data);
+
+	const { modulesBySectionEnrollment } = data
 
 	// sort the data by the collection position
-	const progresses = lessonsByModuleEnrollment.sort(
+	const progresses = modulesBySectionEnrollment.sort(
 		(a, b) => a.collection.position - b.collection.position
 	)
 
@@ -97,9 +100,9 @@ export const useProgress = ({
 	 * if they are not, return the first lesson in the next collection
 	 */
 	const lessonsLeft = progresses
-		.filter((lesson: Lesson) => {
-			const lessonProgress = lesson.lessonProgress.filter(
-				(progress: LessonProgress) => progress.completed
+		.filter((module) => {
+			const lessonProgress = module.moduleProgress.filter(
+				(progress) => progress.completed
 			)
 			return lessonProgress.length === 0
 		})
@@ -108,7 +111,7 @@ export const useProgress = ({
 	const nextCollection = lessonsLeft[0]?.collection
 
 	const nextLesson = lessonsLeft.filter(
-		(lesson: Lesson) => lesson.collection.id === nextCollection.id
+		(lesson) => lesson.collection.id === nextCollection.id
 	)[0]
 
 	return [
@@ -118,6 +121,6 @@ export const useProgress = ({
 		},
 		false,
 		null,
-		lessonsByModuleEnrollment,
+		modulesBySectionEnrollment,
 	]
 }
