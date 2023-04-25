@@ -1,4 +1,4 @@
-import { ModuleProgress, Section } from '@/types/graphql';
+import { ModuleProgress, Section } from '@/types/graphql'
 
 export type Module = {
 	id: string
