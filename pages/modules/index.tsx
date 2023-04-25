@@ -42,14 +42,14 @@ const ModulesPage = () => {
 	return (
 		<section className="stdcontainer">
 			<header>
-				<h1>Modules</h1>
+				<h1>Sections</h1>
 			</header>
 			<div>
-				{data.user[0].plan.modules.map((enrollment, index) => {
+				{data.user[0].plan.sections.map((enrollment, index) => {
 					return (
 						<div className="mb-4" key={index}>
 							<ModuleItem
-								data={enrollment.module}
+								data={enrollment.section}
 								role={enrollment.role}
 							/>
 						</div>

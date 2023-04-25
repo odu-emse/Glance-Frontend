@@ -15,12 +15,12 @@ export const ModuleItem = ({ data, role }) => {
 							fontFamily: 'Microgramma, sans-serif',
 						}}
 					>
-						<p className="p-0 m-0">MODULE {data.moduleNumber}</p>
+						<p className="p-0 m-0">MODULE {data.sectionNumber}</p>
 						<p className="p-0 m-0">//</p>
 						<p className="p-0 m-0">{role}</p>
 					</div>
 					<div>
-						<h2>{data.moduleName}</h2>
+						<h2>{data.sectionName}</h2>
 					</div>
 				</div>
 				<div className="hidden md:block">
