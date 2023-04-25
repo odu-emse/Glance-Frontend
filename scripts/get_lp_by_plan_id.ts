@@ -52,6 +52,37 @@ export default function getLPbyPlanID(
 						}
 					}
 				}
+				module(input: {}) {
+					id
+					moduleName
+					moduleNumber
+					description
+					intro
+					keywords
+					objectives
+					parentModules {
+						id
+						moduleName
+						moduleNumber
+          }
+					subModules {
+						id
+						moduleName
+						moduleNumber
+					}
+				}
+				collection(input: {}) {
+						id
+						name
+				}
+				lesson(input: {}) {
+					id
+					name
+				}
+				course(input: {}) {
+					id
+					name
+				}
 			}
 		`
 	} else {
