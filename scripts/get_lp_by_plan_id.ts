@@ -139,3 +139,47 @@ export default function getLPbyPlanID(
 		variables: { planID, pathID },
 	}
 }
+
+export const getLearningPathForResumption = gql`
+	query LearningPath($planID: ID!) {
+		learningPath(
+			planID: $planID
+		) {
+			paths{
+				id
+				createdAt
+				status
+				learningOutcomes
+				hoursSatisfies
+				course{
+					id
+					name
+					carnegieHours
+					required
+					sections{
+						id
+						name
+						collections{
+							id
+							name
+							modules{
+								id
+								name
+								moduleProgress{
+									status
+									completed
+									enrollment{
+										id
+										role
+									}
+								}
+								objectives
+								hours
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`
