@@ -36,15 +36,6 @@ export const useProgress = ({
 			},
 		},
 		gql_fetcher,
-		{
-			revalidateOnFocus: false,
-			revalidateIfStale: false,
-			revalidateOnReconnect: false,
-			refreshWhenHidden: false,
-			revalidateOnMount: false,
-			errorRetryCount: 1,
-			shouldRetryOnError: false,
-		}
 	) as {
 		data: {
 			modulesBySectionEnrollment: ModuleBySectionEnrollment[]
@@ -89,37 +80,60 @@ export const useProgress = ({
 	const { modulesBySectionEnrollment } = data
 
 	// sort the data by the collection position
-	const progresses = modulesBySectionEnrollment.sort(
-		(a, b) => a.collection.position - b.collection.position
+	const sortedProgresses = modulesBySectionEnrollment.map(
+		(value) => {
+			const moduleCollections = value.collections.sort(
+				(a, b) => a.position - b.position
+			)
+			return {
+				...value,
+				collections: moduleCollections
+			}
+		}
 	)
+
+	console.log(sortedProgresses);
 
 	/**
 	 * find out if the completed lessons are in the same collection
 	 * if they are, return the next lesson in the collection
 	 * if they are not, return the first lesson in the next collection
 	 */
-	const lessonsLeft = progresses
-		.filter((module) => {
-			const lessonProgress = module.moduleProgress.filter(
+
+	const modulesLeft = sortedProgresses
+		.filter((progress) => {
+			const moduleProgresses = progress.moduleProgress.filter(
 				(progress) => progress.completed
 			)
-			return lessonProgress.length === 0
+			return moduleProgresses.length === 0
 		})
-		.sort((a, b) => a.collection.position - b.collection.position)
+		// .sort((a, b) => a.position - b.position)
 
-	const nextCollection = lessonsLeft[0]?.collection
+	console.log(modulesLeft);
 
-	const nextLesson = lessonsLeft.filter(
-		(lesson) => lesson.collection.id === nextCollection.id
-	)[0]
+
+	// const nextCollection = lessonsLeft[0]?.collection
+
+	// const nextLesson = lessonsLeft.filter(
+	// 	(lesson) => lesson.collection.id === nextCollection.id
+	// )[0]
 
 	return [
 		{
-			collectionID: nextCollection.id,
-			lessonID: nextLesson.id,
+			collectionID: null,
+			lessonID: null,
 		},
 		false,
 		null,
 		modulesBySectionEnrollment,
 	]
+	// return [
+	// 	{
+	// 		collectionID: nextCollection.id,
+	// 		lessonID: nextLesson.id,
+	// 	},
+	// 	false,
+	// 	null,
+	// 	modulesBySectionEnrollment,
+	// ]
 }

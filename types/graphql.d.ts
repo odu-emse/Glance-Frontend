@@ -704,82 +704,37 @@ export interface IMutation {
 }
 
 export interface IQuery {
-	refresh(
-		token?: Nullable<string>
-	): Nullable<string> | Promise<Nullable<string>>
-	thread(input?: Nullable<IThreadByParams>): Thread[] | Promise<Thread[]>
-	directMessages(
-		receiverID: string
-	): DirectMessageResponse[] | Promise<DirectMessageResponse[]>
-	groups(userID: string): Group[] | Promise<Group[]>
-	groupMessages(
-		groupID: string
-	): DirectMessageResponse[] | Promise<DirectMessageResponse[]>
-	plan(
-		studentID: string
-	): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>
-	plans(): Nullable<PlanOfStudy[]> | Promise<Nullable<PlanOfStudy[]>>
-	planByID(id: string): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>
-	planByParams(
-		input?: Nullable<PlanFields>
-	): Nullable<PlanOfStudy[]> | Promise<Nullable<PlanOfStudy[]>>
-	section(
-		input: SectionFields,
-		memberRole?: Nullable<UserRole>
-	): Nullable<Section[]> | Promise<Nullable<Section[]>>
-	course(
-		input: CourseFields
-	): Nullable<Course[]> | Promise<Nullable<Course[]>>
-	assignment(
-		input: AssignmentFields
-	): Nullable<Assignment[]> | Promise<Nullable<Assignment[]>>
-	sectionFeedback(
-		input: ModFeedbackFields
-	): Nullable<SectionFeedback[]> | Promise<Nullable<SectionFeedback[]>>
-	assignmentResult(
-		input: AssignmentResFields
-	): Nullable<AssignmentResult[]> | Promise<Nullable<AssignmentResult[]>>
-	sectionEnrollment(
-		input: ModEnrollmentFields
-	): Nullable<SectionEnrollment[]> | Promise<Nullable<SectionEnrollment[]>>
-	modulesBySectionEnrollment(
-		planID: string,
-		SectionID: string
-	): Nullable<Module[]> | Promise<Nullable<Module[]>>
-	collection(
-		input?: Nullable<CollectionFields>
-	):
-		| Nullable<Nullable<Collection>[]>
-		| Promise<Nullable<Nullable<Collection>[]>>
-	module(
-		input?: Nullable<ModuleFields>
-	): Nullable<Module[]> | Promise<Nullable<Module[]>>
-	content(
-		input?: Nullable<ContentFields>
-	): Nullable<Content[]> | Promise<Nullable<Content[]>>
-	learningPath(
-		planID: string,
-		pathID?: Nullable<string>
-	): LearningPath[] | Promise<LearningPath[]>
-	progress(
-		args: ProgressArgs
-	): Nullable<Progress>[] | Promise<Nullable<Progress>[]>
-	quiz(args: QuizFields): Quiz[] | Promise<Quiz[]>
-	quizInstance(
-		args: QuizInstanceFields
-	): QuizInstance[] | Promise<QuizInstance[]>
-	question(args: QuestionFields): Question[] | Promise<Question[]>
-	answer(args: AnswerFields): Answer[] | Promise<Answer[]>
-	quizResult(args: QuizResultFields): QuizResult[] | Promise<QuizResult[]>
-	user(input?: Nullable<UserFields>): User[] | Promise<User[]>
-	socials(): Social[] | Promise<Social[]>
-	social(id: string): Nullable<Social> | Promise<Nullable<Social>>
-	socialsByParam(
-		input?: Nullable<SocialFields>
-	): Nullable<Social[]> | Promise<Nullable<Social[]>>
-	instructorProfile(
-		id: string
-	): Nullable<InstructorProfile> | Promise<Nullable<InstructorProfile>>
+	refresh(token?: Nullable<string>): Nullable<string> | Promise<Nullable<string>>;
+	thread(input?: Nullable<IThreadByParams>): Thread[] | Promise<Thread[]>;
+	directMessages(receiverID: string): DirectMessageResponse[] | Promise<DirectMessageResponse[]>;
+	groups(userID: string): Group[] | Promise<Group[]>;
+	groupMessages(groupID: string): DirectMessageResponse[] | Promise<DirectMessageResponse[]>;
+	plan(studentID: string): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>;
+	plans(): Nullable<PlanOfStudy[]> | Promise<Nullable<PlanOfStudy[]>>;
+	planByID(id: string): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>;
+	planByParams(input?: Nullable<PlanFields>): Nullable<PlanOfStudy[]> | Promise<Nullable<PlanOfStudy[]>>;
+	section(input: SectionFields, memberRole?: Nullable<UserRole>): Nullable<Section[]> | Promise<Nullable<Section[]>>;
+	course(input: CourseFields): Nullable<Course[]> | Promise<Nullable<Course[]>>;
+	assignment(input: AssignmentFields): Nullable<Assignment[]> | Promise<Nullable<Assignment[]>>;
+	sectionFeedback(input: ModFeedbackFields): Nullable<SectionFeedback[]> | Promise<Nullable<SectionFeedback[]>>;
+	assignmentResult(input: AssignmentResFields): Nullable<AssignmentResult[]> | Promise<Nullable<AssignmentResult[]>>;
+	sectionEnrollment(input: ModEnrollmentFields): Nullable<SectionEnrollment[]> | Promise<Nullable<SectionEnrollment[]>>;
+	modulesBySectionEnrollment(planID: string, sectionID: string): Nullable<Module[]> | Promise<Nullable<Module[]>>;
+	collection(input?: Nullable<CollectionFields>): Nullable<Nullable<Collection>[]> | Promise<Nullable<Nullable<Collection>[]>>;
+	module(input?: Nullable<ModuleFields>): Nullable<Module[]> | Promise<Nullable<Module[]>>;
+	content(input?: Nullable<ContentFields>): Nullable<Content[]> | Promise<Nullable<Content[]>>;
+	learningPath(planID: string, pathID?: Nullable<string>): LearningPath[] | Promise<LearningPath[]>;
+	progress(args: ProgressArgs): Nullable<Progress>[] | Promise<Nullable<Progress>[]>;
+	quiz(args: QuizFields): Quiz[] | Promise<Quiz[]>;
+	quizInstance(args: QuizInstanceFields): QuizInstance[] | Promise<QuizInstance[]>;
+	question(args: QuestionFields): Question[] | Promise<Question[]>;
+	answer(args: AnswerFields): Answer[] | Promise<Answer[]>;
+	quizResult(args: QuizResultFields): QuizResult[] | Promise<QuizResult[]>;
+	user(input?: Nullable<UserFields>): User[] | Promise<User[]>;
+	socials(): Social[] | Promise<Social[]>;
+	social(id: string): Nullable<Social> | Promise<Nullable<Social>>;
+	socialsByParam(input?: Nullable<SocialFields>): Nullable<Social[]> | Promise<Nullable<Social[]>>;
+	instructorProfile(id: string): Nullable<InstructorProfile> | Promise<Nullable<InstructorProfile>>;
 }
 
 export interface Thread {
@@ -914,27 +869,29 @@ export interface Section {
 }
 
 export interface Collection {
-	id: string
-	name: string
-	createdAt: Date
-	updatedAt: Date
-	modules?: Nullable<Nullable<Module>[]>
-	section: Section
-	sectionID: string
-	position?: Nullable<number>
+	id: string;
+	name: string;
+	createdAt: Date;
+	updatedAt: Date;
+	modules?: Nullable<Nullable<Module>[]>;
+	moduleIDs?: Nullable<string[]>;
+	section: Section;
+	sectionID: string;
+	position?: Nullable<number>;
 }
 
 export interface Module {
-	id: string
-	name: string
-	content?: Nullable<Nullable<Content>[]>
-	threads?: Nullable<Nullable<Thread>[]>
-	collection?: Nullable<Collection>
-	position?: Nullable<number>
-	quizzes?: Nullable<Quiz[]>
-	moduleProgress?: Nullable<Nullable<ModuleProgress>[]>
-	objectives: string[]
-	hours: number
+	id: string;
+	name: string;
+	content?: Nullable<Nullable<Content>[]>;
+	threads?: Nullable<Nullable<Thread>[]>;
+	collections?: Nullable<Nullable<Collection>[]>;
+	collectionIDs?: Nullable<string[]>;
+	position?: Nullable<number>;
+	quizzes?: Nullable<Quiz[]>;
+	moduleProgress?: Nullable<Nullable<ModuleProgress>[]>;
+	objectives: string[];
+	hours: number;
 }
 
 export interface Content {
