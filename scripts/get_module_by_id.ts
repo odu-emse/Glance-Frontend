@@ -45,20 +45,26 @@ export const getSectionByIDEnrolled = gql`
 			id
 			name
 			position
-			collection {
+			__typename
+			collections {
+				__typename
 				id
 				name
 				position
 				section {
+					__typename
 					id
 					sectionName
 				}
 			}
 			moduleProgress {
+				__typename
+				id
 				status
 				completed
 				updatedAt
 				enrollment {
+					__typename
 					id
 				}
 			}

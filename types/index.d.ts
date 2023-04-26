@@ -1,4 +1,4 @@
-import { ModuleProgress, Section } from '@/types/graphql'
+import { ModuleProgress, Collection } from '@/types/graphql';
 
 export type Module = {
 	id: string
@@ -77,17 +77,6 @@ export type ModuleEnrollment = {
 	inactivePlan?: PlanOfStudy | null
 }
 
-export type Collection = {
-	id: string
-	name?: string
-	createdAt?: Date
-	updatedAt?: Date
-	lessons?: Nullable<Nullable<Lesson>[]>
-	module?: Module
-	moduleID?: string
-	position?: Nullable<number>
-}
-
 export type ThreadType = {
 	id: string
 	title?: string | null
@@ -134,7 +123,7 @@ export type ModuleBySectionEnrollment = Pick<
 	'id' | 'name' | 'position'
 > & {
 	moduleProgress: Array<ModuleProgress>
-	collection: Collection
+	collections: Array<Collection>
 }
 
 export enum PathStatus {
