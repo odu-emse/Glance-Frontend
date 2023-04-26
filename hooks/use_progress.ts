@@ -35,7 +35,7 @@ export const useProgress = ({
 				planID,
 			},
 		},
-		gql_fetcher,
+		gql_fetcher
 	) as {
 		data: {
 			modulesBySectionEnrollment: ModuleBySectionEnrollment[]
@@ -80,19 +80,17 @@ export const useProgress = ({
 	const { modulesBySectionEnrollment } = data
 
 	// sort the data by the collection position
-	const sortedProgresses = modulesBySectionEnrollment.map(
-		(value) => {
-			const moduleCollections = value.collections.sort(
-				(a, b) => a.position - b.position
-			)
-			return {
-				...value,
-				collections: moduleCollections
-			}
+	const sortedProgresses = modulesBySectionEnrollment.map((value) => {
+		const moduleCollections = value.collections.sort(
+			(a, b) => a.position - b.position
+		)
+		return {
+			...value,
+			collections: moduleCollections,
 		}
-	)
+	})
 
-	console.log(sortedProgresses);
+	console.log(sortedProgresses)
 
 	/**
 	 * find out if the completed lessons are in the same collection
@@ -100,17 +98,15 @@ export const useProgress = ({
 	 * if they are not, return the first lesson in the next collection
 	 */
 
-	const modulesLeft = sortedProgresses
-		.filter((progress) => {
-			const moduleProgresses = progress.moduleProgress.filter(
-				(progress) => progress.completed
-			)
-			return moduleProgresses.length === 0
-		})
-		// .sort((a, b) => a.position - b.position)
+	const modulesLeft = sortedProgresses.filter((progress) => {
+		const moduleProgresses = progress.moduleProgress.filter(
+			(progress) => progress.completed
+		)
+		return moduleProgresses.length === 0
+	})
+	// .sort((a, b) => a.position - b.position)
 
-	console.log(modulesLeft);
-
+	console.log(modulesLeft)
 
 	// const nextCollection = lessonsLeft[0]?.collection
 
