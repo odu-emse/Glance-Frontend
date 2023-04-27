@@ -6,22 +6,31 @@ import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
-
-import { getUserByOpenID } from '@/scripts/get_user_by_open_id'
 import { ModuleItem } from '@/components/pages/modules/module/lessons/lesson/module_item/module_item'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
+import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id';
+import GlobalUserContext from '@/contexts/global_user_context';
+import { Module } from '@/types/graphql';
 
 const ModulesPage = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
+	const {user} = useContext(GlobalUserContext)
 	setLoading(true)
 
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
 		status !== 'loading'
-			? { query: getUserByOpenID(session.openId), token: session.idToken }
+			? { query: getListOfModulesForLearningPath, variables: {
+				planID: user.plan.id
+				} , token: session.idToken }
 			: null,
 		gqlFetcher
-	)
+	) as {
+		data: {
+			modulesFromLearningPath: Array<Module>
+		}
+		error: Error
+	}
 
 	if (status === 'loading') return
 	if (error) {
@@ -35,22 +44,22 @@ const ModulesPage = () => {
 		)
 	}
 
-	if (!data || !data?.user) return
+	if (!data) return
 
 	setLoading(false)
 
 	return (
 		<section className="stdcontainer">
 			<header>
-				<h1>Sections</h1>
+				<h1>Modules</h1>
 			</header>
 			<div>
-				{data.user[0].plan.sections.map((enrollment, index) => {
+				{data.modulesFromLearningPath.map((enrollment, index) => {
 					return (
 						<div className="mb-4" key={index}>
 							<ModuleItem
-								data={enrollment.section}
-								role={enrollment.role}
+								data={enrollment}
+								role={"STUDENT"}
 							/>
 						</div>
 					)

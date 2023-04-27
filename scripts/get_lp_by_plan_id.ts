@@ -181,3 +181,21 @@ export const getLearningPathForResumption = gql`
 		}
 	}
 `
+
+export const getListOfModulesForLearningPath = gql`
+	query ModulesByLearningPath($planID: ID!) {
+		modulesFromLearningPath(planID: $planID){
+			id
+			name
+			collections{
+				id
+				name
+				section{
+					id
+					sectionName
+					sectionNumber
+				}
+			}
+		}
+	}
+`
