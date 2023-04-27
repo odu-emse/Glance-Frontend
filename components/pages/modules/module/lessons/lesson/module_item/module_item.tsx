@@ -17,7 +17,7 @@ export const ModuleItem = ({ data, role } : ModuleItemProps) => {
 					>
 						<p className="p-0 m-0">SECTION {data.collections[0].section.sectionNumber}</p>
 						<p className="p-0 m-0">//</p>
-						<p className="p-0 m-0">MODULE {5}</p>
+						<p className="p-0 m-0">MODULE {data.prefix && data.prefix}{data.number}</p>
 					</div>
 					<div>
 						<h2>{data.name}</h2>
