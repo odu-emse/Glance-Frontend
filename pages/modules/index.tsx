@@ -8,7 +8,7 @@ import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { Module } from '@/types/graphql'
-import ModuleSidebar from '@/common/module_sidebar/module_sidebar';
+import ModuleSidebar from '@/common/module_sidebar/module_sidebar'
 
 const ModulesPage = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -59,19 +59,38 @@ const ModulesPage = () => {
 				<h1>Modules</h1>
 			</header>
 			<div className="flex gap-3">
-				<div className={`${expanded ? "w-2/3" : "w-full"} flex-none transition-all`}>
-				{data.modulesFromLearningPath.map((enrollment, index) => {
-					return (
-						<div className="mb-4" key={index} onClick={() => setSelection(enrollment.id)}>
-							<ModuleItem data={enrollment} role={'STUDENT'} expanded={expanded} handleExpansion={setExpanded} selected={enrollment.id === selection && expanded} />
-						</div>
-					)
-				})}
+				<div
+					className={`${
+						expanded ? 'w-2/3' : 'w-full'
+					} flex-none transition-all`}
+				>
+					{data.modulesFromLearningPath.map((enrollment, index) => {
+						return (
+							<div
+								className="mb-4"
+								key={index}
+								onClick={() => setSelection(enrollment.id)}
+							>
+								<ModuleItem
+									data={enrollment}
+									role={'STUDENT'}
+									expanded={expanded}
+									handleExpansion={setExpanded}
+									selected={
+										enrollment.id === selection && expanded
+									}
+								/>
+							</div>
+						)
+					})}
 				</div>
 				{expanded && (
-					<ModuleSidebar data={
-						data.modulesFromLearningPath.find((enrollment) => enrollment.id === selection)
-					} handleExpansion={setExpanded} />
+					<ModuleSidebar
+						data={data.modulesFromLearningPath.find(
+							(enrollment) => enrollment.id === selection
+						)}
+						handleExpansion={setExpanded}
+					/>
 				)}
 			</div>
 		</section>
