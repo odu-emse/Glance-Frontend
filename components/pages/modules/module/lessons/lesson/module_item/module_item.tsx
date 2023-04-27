@@ -1,8 +1,8 @@
 import Link from 'next/link'
-
 import { HiChevronRight } from 'react-icons/hi'
+import { Module } from '@/types/graphql';
 
-export const ModuleItem = ({ data, role }) => {
+export const ModuleItem = ({ data, role } : ModuleItemProps) => {
 	// Use the link below once DB schema is updated
 	// const link = `/modules/${data.id}/sections/${data?.headSection}/lessons/${data?.sections[data?.headSection]?.headLesson}`
 	return (
@@ -10,22 +10,22 @@ export const ModuleItem = ({ data, role }) => {
 			<div className="stdcontainer shadow cursor-pointer flex justify-center items-center w-full">
 				<div className="flex grow flex-col gap-1">
 					<div
-						className="flex flex-row gap-2"
+						className="flex flex-row gap-2 sans"
 						style={{
 							fontFamily: 'Microgramma, sans-serif',
 						}}
 					>
-						<p className="p-0 m-0">MODULE {data.sectionNumber}</p>
+						<p className="p-0 m-0">SECTION {data.collections[0].section.sectionNumber}</p>
 						<p className="p-0 m-0">//</p>
-						<p className="p-0 m-0">{role}</p>
+						<p className="p-0 m-0">MODULE {5}</p>
 					</div>
 					<div>
-						<h2>{data.sectionName}</h2>
+						<h2>{data.name}</h2>
 					</div>
 				</div>
 				<div className="hidden md:block">
 					<span
-						className="w-12 h-12 block bg-royalblue text-white rounded-full flex justify-center items-center"
+						className="w-12 h-12 bg-royalblue text-white rounded-full flex justify-center items-center"
 						style={{
 							fontSize: '24px',
 						}}
@@ -39,24 +39,6 @@ export const ModuleItem = ({ data, role }) => {
 }
 
 export type ModuleItemProps = {
-	/**
-	 * Boolean that determines if the course module is completed or not
-	 * @type boolean
-	 * @default false
-	 */
-	data: {
-		id: String
-		moduleName: String
-		moduleNumber: Number
-		intro: String
-		createdAt: String
-		description: String
-		duration: Number
-		keywords: Array<String>
-		numSlides: Number
-		feedback: String | null
-		parentModules: Array<any> | null
-		members: Array<any> | null
-	}
+	data: Module
 	role: String
 }
