@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { HiChevronRight } from 'react-icons/hi'
-import { Module } from '@/types/graphql';
+import { Module } from '@/types/graphql'
 
-export const ModuleItem = ({ data, role } : ModuleItemProps) => {
+export const ModuleItem = ({ data, role }: ModuleItemProps) => {
 	// Use the link below once DB schema is updated
 	// const link = `/modules/${data.id}/sections/${data?.headSection}/lessons/${data?.sections[data?.headSection]?.headLesson}`
 	return (
@@ -15,9 +15,14 @@ export const ModuleItem = ({ data, role } : ModuleItemProps) => {
 							fontFamily: 'Microgramma, sans-serif',
 						}}
 					>
-						<p className="p-0 m-0">SECTION {data.collections[0].section.sectionNumber}</p>
+						<p className="p-0 m-0">
+							SECTION {data.collections[0].section.sectionNumber}
+						</p>
 						<p className="p-0 m-0">//</p>
-						<p className="p-0 m-0">MODULE {data.prefix && data.prefix}{data.number}</p>
+						<p className="p-0 m-0">
+							MODULE {data.prefix && data.prefix}
+							{data.number}
+						</p>
 					</div>
 					<div>
 						<h2>{data.name}</h2>

@@ -184,7 +184,7 @@ export const getLearningPathForResumption = gql`
 
 export const getListOfModulesForLearningPath = gql`
 	query ModulesByLearningPath($planID: ID!) {
-		modulesFromLearningPath(planID: $planID){
+		modulesFromLearningPath(planID: $planID) {
 			id
 			name
 			number
@@ -192,10 +192,10 @@ export const getListOfModulesForLearningPath = gql`
 			objectives
 			hours
 			description
-			collections{
+			collections {
 				id
 				name
-				section{
+				section {
 					id
 					sectionName
 					sectionNumber
