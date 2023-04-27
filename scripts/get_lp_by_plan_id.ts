@@ -200,6 +200,12 @@ export const getListOfModulesForLearningPath = gql`
 					sectionName
 					sectionNumber
 				}
+				modules {
+					id
+					name
+					number
+					prefix
+				}
 			}
 		}
 	}
