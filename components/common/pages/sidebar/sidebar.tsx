@@ -60,12 +60,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
 								collapsed={!open}
 								icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
 							/>
-							<SidebarItem
-								value={userSession.user.name}
-								href={`/users/${userSession.openId}`}
-								collapsed={!open}
-								icon={userSession.user.image}
-							/>
 						</>
 					)}
 				</div>
