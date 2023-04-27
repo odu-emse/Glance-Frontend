@@ -1,7 +1,4 @@
 import React, { useContext } from 'react'
-
-// import ModuleItem from '@/components/modules/ModuleListItem'
-// import Layout from '@/components/Layout'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
@@ -11,11 +8,15 @@ import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { Module } from '@/types/graphql'
+import ModuleSidebar from '@/common/module_sidebar/module_sidebar';
 
 const ModulesPage = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
 	const { user } = useContext(GlobalUserContext)
+	const [expanded, setExpanded] = React.useState<boolean>(false)
 	setLoading(true)
+
+	const [selection, setSelection] = React.useState<string>(null)
 
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
@@ -57,14 +58,21 @@ const ModulesPage = () => {
 			<header>
 				<h1>Modules</h1>
 			</header>
-			<div>
+			<div className="flex gap-3">
+				<div className={`${expanded ? "w-2/3" : "w-full"} flex-none transition-all`}>
 				{data.modulesFromLearningPath.map((enrollment, index) => {
 					return (
-						<div className="mb-4" key={index}>
-							<ModuleItem data={enrollment} role={'STUDENT'} />
+						<div className="mb-4" key={index} onClick={() => setSelection(enrollment.id)}>
+							<ModuleItem data={enrollment} role={'STUDENT'} expanded={expanded} handleExpansion={setExpanded} selected={enrollment.id === selection && expanded} />
 						</div>
 					)
 				})}
+				</div>
+				{expanded && (
+					<ModuleSidebar data={
+						data.modulesFromLearningPath.find((enrollment) => enrollment.id === selection)
+					} handleExpansion={setExpanded} />
+				)}
 			</div>
 		</section>
 	)
