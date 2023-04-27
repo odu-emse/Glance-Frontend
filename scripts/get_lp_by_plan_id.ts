@@ -187,6 +187,11 @@ export const getListOfModulesForLearningPath = gql`
 		modulesFromLearningPath(planID: $planID){
 			id
 			name
+			number
+			prefix
+			objectives
+			hours
+			description
 			collections{
 				id
 				name

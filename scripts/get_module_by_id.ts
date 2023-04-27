@@ -39,6 +39,49 @@ export const getSectionByIDUnenrolled = gql`
 	}
 `
 
+export const getModuleByID = gql`
+	query InternalModuleHomePage($moduleID: ID!) {
+		module(input: { id: $moduleID }) {
+			id
+			name
+			number
+			prefix
+			objectives
+			hours
+			description
+			instructor {
+				id
+				title
+				account {
+					id
+					openID
+					email
+					firstName
+					lastName
+				}
+			}
+			moduleProgress{
+				id
+				status
+				completed
+				enrollment{
+					id
+				}
+			}
+			collections{
+				id
+				name
+				modules{
+					id
+					name
+					number
+					prefix
+				}
+			}
+		}
+	}
+`
+
 export const getSectionByIDEnrolled = gql`
 	query SectionHomePageLessonProgress($sectionID: ID!, $planID: ID!) {
 		modulesBySectionEnrollment(planID: $planID, sectionID: $sectionID) {
