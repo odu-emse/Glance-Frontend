@@ -13,6 +13,7 @@ import { Module as ModuleType } from '../../../types'
 import { useProgress } from '@/hooks/use_progress'
 import Loader from '@/components/util/loader'
 import * as React from 'react'
+import modulesStories from '@/components/pages/admin_panel_page/modules/modules.stories'
 
 const Module = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -106,7 +107,7 @@ const Module = () => {
 							return (
 								<span key={instructor.id}>
 									<Link
-										href={`/users/${instructor.id}`}
+										href={`/users/${instructor.plan.student.openID}?instructor=true`}
 										passHref
 									>
 										<a>

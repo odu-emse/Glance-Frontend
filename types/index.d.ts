@@ -29,8 +29,33 @@ export type User = {
 	isAdmin?: boolean | null
 	isActive?: boolean | null
 	plan?: PlanOfStudy | null
+	dob: string
+	biography: string | null
+	phoneNumber: string | null
+	social?: Social | null
 	watchedThreads?: Array<ThreadType | null> | null
 	createdThreads?: Array<ThreadType | null> | null
+}
+
+export interface InstructorProfile {
+	id: string
+	account?: Nullable<User>
+	title?: Nullable<string>
+	officeLocation?: Nullable<string>
+	officeHours?: Nullable<Nullable<string>[]>
+	contactPolicy?: Nullable<string>
+	background?: Nullable<string>
+	researchInterest?: Nullable<Nullable<string>[]>
+	selectedPapersAndPublications?: Nullable<Nullable<string>[]>
+}
+
+export type Social = {
+	id: string
+	github?: string | null
+	linkedin?: string | null
+	portfolio?: string | null
+	facebook?: string | null
+	twitter?: string | null
 }
 
 export type PlanOfStudy = {
