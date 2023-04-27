@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { useState } from 'react'
-import { Input, InputProps } from './input'
+import { Input, InputProps } from './Oldinput'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-	title: 'Common/Forms/Inputs/Inputs',
+	title: 'Common/Forms/Inputs/Old_Input',
 	component: Input,
 	argTypes: {
 		onChange: {
