@@ -1,14 +1,31 @@
-
+import  { useState } from 'react'
 import { Button } from '@/components/common/button/button'
 import { TextArea } from '@/components/common/forms/inputs/text_area/text_area'
 import * as React from 'react'
+import { MdOutlineCancel } from 'react-icons/md';
 
-export const ThreadCreation: React.FC<ThreadCreationProps> = ({
+export const ThreadCreation = () => {
+    const [tags, setTags] = useState([]);
+    const [newTag, setNewTag] = useState('');
+  
+    function handleTagInput(event) {
+      setNewTag(event.target.value);
+    }
 
-}): React.ReactElement => {
-	
-	return (
-		<div>
+  
+    function handleAddTag() {
+      if (newTag.trim() !== '') {
+        setTags([...tags, newTag.trim()]);
+        setNewTag('');
+      }
+    }
+  
+    function handleRemoveTag(removeTag) {
+      setTags(tags.filter(tag => tag !== removeTag));
+    }
+
+    return(
+        <div>
             <h1 className="mb-6">Create Thread
             </h1>
             <div className="">
@@ -25,31 +42,52 @@ export const ThreadCreation: React.FC<ThreadCreationProps> = ({
             type="text"
             className="block min-h-[auto] w-full rounded border border-gray-200 "
             id="searchRequirements"
-            placeholder="what do you know about EMSE"
+            placeholder="E.G., What is Systems Engineering to you?"
             />
+            
             </div>
             <div className="my-7">
-            <h3
-            className='mb-0'
-            style={{
-                fontWeight: 400,
-                fontSize: '20px',
-            }}
-            >
-                Tags
-            </h3>
-            <label className="sans"
-             style={{
-                fontSize: '12px',
-                fontWeight: 400,
-            }}
-            >Add up to 5 tags to describe what your thread is about.</label>
-            <input
-            type="text"
-            className="block min-h-[auto] w-full rounded border border-gray-200 "
-            id="searchRequirements"
-            placeholder="Type your tag here..."
-            />
+                <h3
+                className='mb-0'
+                style={{
+                    fontWeight: 400,
+                    fontSize: '20px',
+                }}
+                >
+                    Tags
+                </h3>
+                <label className="sans"
+                style={{
+                    fontSize: '12px',
+                    fontWeight: 400,
+                }}
+                >
+                    Add up to 5 tags to describe what your thread is about.
+                </label>
+                <div className="flex flex-wrap gap-2 p-1 bg-gray-100 rounded-sm">
+                    {tags.map((tag, index) => (
+                        <div 
+                        key={index} 
+                        className="bg-gray-300 px-2 py-1 rounded-md flex items-center">
+                        <span className="mr-2 p-0 sans">{tag}</span>
+                        <span onClick={() => handleRemoveTag(tag)} ><MdOutlineCancel/></span>
+                        </div>
+                    ))}
+                    <input 
+                    type="text" 
+                    placeholder="Add your tags here..." 
+                    value={newTag} 
+                    onChange={handleTagInput} 
+                    className="flex-1 block min-h-[auto] w-full rounded-sm border border-gray-200" />
+                    
+                    <Button
+                    label="Button"
+                    size="small"
+                    onClick={handleAddTag}
+                    >
+                    Add
+                    </Button>
+                </div>   
             </div>
 
             <TextArea
@@ -65,11 +103,11 @@ export const ThreadCreation: React.FC<ThreadCreationProps> = ({
             >
             Publish
             </Button>
-            </div>
+            </div>          
         </div>
+    )
+}	
 
-	)
-}
 
 export type ThreadCreationProps = {
 	
