@@ -8,21 +8,25 @@ import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
 import { ModuleItem } from '@/components/pages/modules/module/lessons/lesson/module_item/module_item'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
-import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id';
-import GlobalUserContext from '@/contexts/global_user_context';
-import { Module } from '@/types/graphql';
+import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id'
+import GlobalUserContext from '@/contexts/global_user_context'
+import { Module } from '@/types/graphql'
 
 const ModulesPage = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
-	const {user} = useContext(GlobalUserContext)
+	const { user } = useContext(GlobalUserContext)
 	setLoading(true)
 
 	const { data: session, status } = useSession()
 	const { data, error } = useSWR(
 		status !== 'loading'
-			? { query: getListOfModulesForLearningPath, variables: {
-				planID: user.plan.id
-				} , token: session.idToken }
+			? {
+					query: getListOfModulesForLearningPath,
+					variables: {
+						planID: user.plan.id,
+					},
+					token: session.idToken,
+			  }
 			: null,
 		gqlFetcher
 	) as {
@@ -57,10 +61,7 @@ const ModulesPage = () => {
 				{data.modulesFromLearningPath.map((enrollment, index) => {
 					return (
 						<div className="mb-4" key={index}>
-							<ModuleItem
-								data={enrollment}
-								role={"STUDENT"}
-							/>
+							<ModuleItem data={enrollment} role={'STUDENT'} />
 						</div>
 					)
 				})}

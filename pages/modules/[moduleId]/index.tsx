@@ -3,7 +3,7 @@ import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
-import { getModuleByID } from '@/scripts/get_module_by_id';
+import { getModuleByID } from '@/scripts/get_module_by_id'
 import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
@@ -74,7 +74,6 @@ const ModuleIndexPage = () => {
 
 	const moduleData = data.module[0]
 
-
 	setLoading(false)
 
 	// const isStarted = !self
@@ -92,23 +91,25 @@ const ModuleIndexPage = () => {
 			<header>
 				<h1>{moduleData.name}</h1>
 				<div className="flex flex-row gap-2">
-					<figcaption>MODULE {moduleData.prefix && moduleData.prefix}{moduleData.number}</figcaption>
+					<figcaption>
+						MODULE {moduleData.prefix && moduleData.prefix}
+						{moduleData.number}
+					</figcaption>
 					<figcaption>/</figcaption>
 					<figcaption>
 						Instructed by{' '}
-								<div className="inline-block">
-									<Link
-										href={`/users/${moduleData.instructor?.account.openID}?instructor=true`}
-										passHref
-									>
-										<a>
-											{moduleData.instructor?.title}{' '}
-											{moduleData.instructor?.account.firstName}{' '}
-											{moduleData.instructor?.account.lastName}
-										</a>
-									</Link>
-								</div>
-
+						<div className="inline-block">
+							<Link
+								href={`/users/${moduleData.instructor?.account.openID}?instructor=true`}
+								passHref
+							>
+								<a>
+									{moduleData.instructor?.title}{' '}
+									{moduleData.instructor?.account.firstName}{' '}
+									{moduleData.instructor?.account.lastName}
+								</a>
+							</Link>
+						</div>
 					</figcaption>
 				</div>
 			</header>
@@ -131,9 +132,7 @@ const ModuleIndexPage = () => {
 				<header className="mb-0">
 					<h2>Credit hours</h2>
 				</header>
-				<p className="mt-0">
-					{moduleData.hours} hours
-				</p>
+				<p className="mt-0">{moduleData.hours} hours</p>
 			</section>
 
 			<section>
@@ -141,7 +140,8 @@ const ModuleIndexPage = () => {
 					<h2>Description</h2>
 				</header>
 				<p className="mt-0">
-					{moduleData.description ?? 'No description has been provided.'}
+					{moduleData.description ??
+						'No description has been provided.'}
 				</p>
 			</section>
 
@@ -150,25 +150,29 @@ const ModuleIndexPage = () => {
 					<h2>Recommended Modules</h2>
 				</header>
 				<ul className="mt-0 mb-0">
-					{
-						moduleData.collections.map((collection, collectionIndex) => {
-							return collection.modules.filter((mod) => mod.id !== moduleData.id).map((module, moduleIndex) => {
-								return (
-									<li key={moduleIndex}>
-										<Link
-											href={`/modules/${module.id}`}
-											passHref
-										>
-											<a>
-												{module.name} (MODULE{' '}
-												{module.prefix && module.prefix}{module.number})
-											</a>
-										</Link>
-									</li>
-								)
-							})
-						})
-					}
+					{moduleData.collections.map(
+						(collection, collectionIndex) => {
+							return collection.modules
+								.filter((mod) => mod.id !== moduleData.id)
+								.map((module, moduleIndex) => {
+									return (
+										<li key={moduleIndex}>
+											<Link
+												href={`/modules/${module.id}`}
+												passHref
+											>
+												<a>
+													{module.name} (MODULE{' '}
+													{module.prefix &&
+														module.prefix}
+													{module.number})
+												</a>
+											</Link>
+										</li>
+									)
+								})
+						}
+					)}
 				</ul>
 			</section>
 

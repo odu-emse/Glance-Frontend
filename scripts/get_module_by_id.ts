@@ -60,18 +60,18 @@ export const getModuleByID = gql`
 					lastName
 				}
 			}
-			moduleProgress{
+			moduleProgress {
 				id
 				status
 				completed
-				enrollment{
+				enrollment {
 					id
 				}
 			}
-			collections{
+			collections {
 				id
 				name
-				modules{
+				modules {
 					id
 					name
 					number
