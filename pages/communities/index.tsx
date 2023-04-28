@@ -166,7 +166,7 @@ const Index = ({}) => {
 								FILTER
 							</Button>
 							<Link href="/communities/create" passHref>
-									<Button>NEW THREAD</Button>
+								<Button>NEW THREAD</Button>
 							</Link>
 
 							{isSorted && (
