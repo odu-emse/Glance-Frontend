@@ -16,7 +16,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 }) => {
 	return (
 		<Link href={href} passHref>
-			<div
+			<a
 				className="px-4 py-1 mx-1 my-2 rounded cursor-pointer hover:bg-wgray flex gap-2"
 				style={{
 					fontFamily: 'Montserrat, sans-serif',
@@ -25,7 +25,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 			>
 				<img src={icon} className="aspect-square w-8 h-8" />
 				{!collapsed ? <p className="m-0 p-0">{value}</p> : null}
-			</div>
+			</a>
 		</Link>
 	)
 }
