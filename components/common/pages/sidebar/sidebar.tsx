@@ -1,10 +1,17 @@
 import * as React from 'react'
 import { SidebarItem } from './sidebar_item/sidebar_item'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { PlanOfStudy } from '../../svg/plan_of_study'
+import { Modules } from '../../svg/modules'
+import { Communities } from '../../svg/communities'
+import { GradeBook } from '../../svg/gradebook'
+
+type IconType = React.ReactNode
 
 export type SidebarProps = {
 	userSession: any
 	isLoading: boolean
+	svgIcon: IconType
 	icon: string
 	open: boolean
 	handle: (open: boolean) => void
@@ -25,49 +32,35 @@ export const Sidebar: React.FC<SidebarProps> = ({
 				}}
 				className={`h-full bg-white transition-all drop-shadow-lg p-0 `}
 			>
-				<div className="flex flex-col grow pt-7">
+				<div className="flex flex-col grow pt-7 ">
 					<SidebarItem
-						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
+						svgIcon={<PlanOfStudy width={20} height={20} />}
 						collapsed={!open}
 						value="PLAN OF STUDY"
 						href={`/plan/${userSession.openId}`}
+						icon={''}
 					/>
 					<SidebarItem
-						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
+						svgIcon={<Modules width={20} height={20} />}
 						collapsed={!open}
 						value="MODULES"
 						href="/modules"
+						icon={''}
 					/>
 					<SidebarItem
-						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
+						svgIcon={<Communities width={20} height={20} />}
 						collapsed={!open}
 						value="COMMUNITIES"
 						href="/communities"
+						icon={''}
 					/>
 					<SidebarItem
-						icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
+						svgIcon={<GradeBook width={20} height={20} />}
 						collapsed={!open}
 						value="GRADES"
 						href="/grades"
+						icon={''}
 					/>
-				</div>
-				<div>
-					{!isLoading && userSession && (
-						<>
-							<SidebarItem
-								value="ACCOUNT"
-								href={`/users/${userSession.openId}/settings`}
-								collapsed={!open}
-								icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
-							/>
-							<SidebarItem
-								value={userSession.user.name}
-								href={`/users/${userSession.openId}`}
-								collapsed={!open}
-								icon={userSession.user.image}
-							/>
-						</>
-					)}
 				</div>
 				<button
 					id="closeButton"
