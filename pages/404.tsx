@@ -12,9 +12,7 @@ const NotFound = () => {
 			<h1>404</h1>
 			<p>The resource was not found</p>
 			<Link className="underline text-blue-500" href="/">
-				<Button onClick={() => router.back()}>
-					Back
-				</Button>
+				<Button onClick={() => router.back()}>Back</Button>
 			</Link>
 			<DynamicVersion backendVersion={'0.3.0'} isLight={false} />
 		</div>
