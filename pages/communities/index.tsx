@@ -13,6 +13,7 @@ import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/wat
 import Loader from '@/components/util/loader'
 import { Button } from '@/common/button/button'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const Index = ({}) => {
 	const { data: session } = useSession()
@@ -164,6 +165,10 @@ const Index = ({}) => {
 							<Button onClick={() => setIsFiltered(!isFiltered)}>
 								FILTER
 							</Button>
+							<Link href="/communities/create" passHref>
+									<Button>NEW THREAD</Button>
+							</Link>
+
 							{isSorted && (
 								<div className="flex flex-col absolute bg-white top-11 left-0 border border-royalblue rounded-sm px-2 py-1 w-fit">
 									<ul className="list-none ml-0 my-0 sans uppercase text-sm">
