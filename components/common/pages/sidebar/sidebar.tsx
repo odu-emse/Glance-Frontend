@@ -51,18 +51,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
 						href="/grades"
 					/>
 				</div>
-				<div>
-					{!isLoading && userSession && (
-						<>
-							<SidebarItem
-								value="ACCOUNT"
-								href={`/users/${userSession.openId}/settings`}
-								collapsed={!open}
-								icon="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png"
-							/>
-						</>
-					)}
-				</div>
 				<button
 					id="closeButton"
 					className="absolute bottom-7 -right-4 p-2 rounded-md text-red border bg-royalblue"
