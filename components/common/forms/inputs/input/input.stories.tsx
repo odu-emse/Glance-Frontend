@@ -125,3 +125,15 @@ Search.args = {
 	type: 'search',
 	// options: ['Items', 'Items1']
 }
+export const Radio = Template.bind({})
+Radio.args = {
+	type: 'radio',
+	name: 'radio',
+	content: 'Choice1',
+}
+export const Checkbox = Template.bind({})
+Checkbox.args = {
+	type: 'checkbox',
+	name: 'checkbox',
+	content: 'Choice1',
+}
