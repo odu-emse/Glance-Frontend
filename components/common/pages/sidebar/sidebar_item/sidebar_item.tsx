@@ -4,6 +4,7 @@ import Link from 'next/link'
 export type SidebarItemProps = {
 	value: string
 	href: string
+	svgIcon: React.ReactNode
 	icon: string
 	collapsed: boolean
 }
@@ -11,19 +12,20 @@ export type SidebarItemProps = {
 export const SidebarItem: React.FC<SidebarItemProps> = ({
 	value,
 	href,
+	svgIcon,
 	icon,
 	collapsed,
 }) => {
 	return (
 		<Link href={href} passHref>
 			<div
-				className="px-4 py-1 mx-1 my-2 rounded cursor-pointer hover:bg-wgray flex gap-2"
+				className="px-4 py-1 mx-1 my-2 rounded cursor-pointer hover:bg-wgray flex gap-2 items-center"
 				style={{
 					fontFamily: 'Montserrat, sans-serif',
 					// ...collapsed ? { justifyContent: 'center' } : {}
 				}}
 			>
-				<img src={icon} className="aspect-square w-8 h-8" />
+				{svgIcon}
 				{!collapsed ? <p className="m-0 p-0">{value}</p> : null}
 			</div>
 		</Link>
