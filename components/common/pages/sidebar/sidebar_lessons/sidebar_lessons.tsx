@@ -2,7 +2,13 @@ import * as React from 'react'
 import Link from 'next/link'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
-export const SidebarLessons = ({ open, handle, data, property, url }): React.ReactElement => {
+export const SidebarLessons = ({
+	open,
+	handle,
+	data,
+	property,
+	url,
+}): React.ReactElement => {
 	const lessons = [
 		'Operations Research',
 		'Supply Chain Management',
@@ -30,25 +36,26 @@ export const SidebarLessons = ({ open, handle, data, property, url }): React.Rea
 						LESSONS OVERVIEW
 					</h6>
 					{data.map((item, index) => {
-						console.log(item);
+						console.log(item)
 						return (
-						<div
-							key={index}
-							className="font-lora flex my-3"
-							style={{
-								fontWeight: 700,
-								fontSize: '16px',
-							}}
-						>
-							<Link
-								href={`/modules/${item[url]}/view`}
-								role="lesson link"
-								className="font-lora text-royalblue"
+							<div
+								key={index}
+								className="font-lora flex my-3"
+								style={{
+									fontWeight: 700,
+									fontSize: '16px',
+								}}
 							>
-								{item[property]}
-							</Link>
-						</div>
-					)})}
+								<Link
+									href={`/modules/${item[url]}/view`}
+									role="lesson link"
+									className="font-lora text-royalblue"
+								>
+									{item[property]}
+								</Link>
+							</div>
+						)
+					})}
 				</div>
 				<button
 					id="closeButton"
