@@ -13,31 +13,35 @@ import { useContext } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import { gql } from 'graphql-request'
 import { SidebarLessons } from '@/components/common/pages/sidebar/sidebar_lessons/sidebar_lessons'
-import { getModuleByIDForFlow } from '@/scripts/get_module_by_id';
-import Loading from '@/common/loader/loader';
-import RequestFailed from '@/pages/errors/request_failed/request_failed';
-import { Collection, Module } from '@/types/graphql';
-import GlobalUserContext from '@/contexts/global_user_context';
+import { getModuleByIDForFlow } from '@/scripts/get_module_by_id'
+import Loading from '@/common/loader/loader'
+import RequestFailed from '@/pages/errors/request_failed/request_failed'
+import { Collection, Module } from '@/types/graphql'
+import GlobalUserContext from '@/contexts/global_user_context'
 
 const ModuleSection = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
-	const {user} = useContext(GlobalUserContext)
+	const { user } = useContext(GlobalUserContext)
 	// setLoading(true)
 
 	const router = useRouter()
 	const { moduleId, lessonId, collectionId } = router.query
 
-	const { data, error } = useSWR({ query: getModuleByIDForFlow, variables: { moduleID: moduleId, planID: user.plan.id }},
+	const { data, error } = useSWR(
+		{
+			query: getModuleByIDForFlow,
+			variables: { moduleID: moduleId, planID: user.plan.id },
+		},
 		gqlFetcher
 	) as {
 		data: {
 			moduleFlowFromLearningPath: {
-			nextModule: Module
-			currentModule: Module
-			previousModule: Module
-			nextCollection: Collection
-			currentCollection: Collection
-			previousCollection: Collection
+				nextModule: Module
+				currentModule: Module
+				previousModule: Module
+				nextCollection: Collection
+				currentCollection: Collection
+				previousCollection: Collection
 			}
 		}
 		error: Error
@@ -62,35 +66,54 @@ const ModuleSection = () => {
 	 *
 	 */
 
-	console.log(data);
+	console.log(data)
 
-	const primaryContent = data.moduleFlowFromLearningPath.currentModule.content.find(v => v.primary)
+	const primaryContent =
+		data.moduleFlowFromLearningPath.currentModule.content.find(
+			(v) => v.primary
+		)
 
 	return (
 		<section className="flex">
 			<div className="SectionContent stdcontainer grow flex-col">
 				<header>
 					<h4 className="mb-6">
-						<Link href={`/modules/${data.moduleFlowFromLearningPath.currentCollection.id}`} passHref>
+						<Link
+							href={`/modules/${data.moduleFlowFromLearningPath.currentCollection.id}`}
+							passHref
+						>
 							<a
 								title={`Return to the home page of "${data.moduleFlowFromLearningPath.currentCollection.name}"`}
 							>
-								Collection {data.moduleFlowFromLearningPath.currentCollection.name}
+								Collection{' '}
+								{
+									data.moduleFlowFromLearningPath
+										.currentCollection.name
+								}
 							</a>
 						</Link>
 						&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
 						{data.moduleFlowFromLearningPath.currentCollection.name}
 					</h4>
-					<h3>{data.moduleFlowFromLearningPath.currentModule.name}</h3>
+					<h3>
+						{data.moduleFlowFromLearningPath.currentModule.name}
+					</h3>
 				</header>
 
 				<div className="flex h-4/5 gap-2 my-2">
 					{/* Section content  */}
-					<ContentLoader type={primaryContent.type} data={data.moduleFlowFromLearningPath.currentModule.content} />
+					<ContentLoader
+						type={primaryContent.type}
+						data={
+							data.moduleFlowFromLearningPath.currentModule
+								.content
+						}
+					/>
 				</div>
 				{/* Previous and Next buttons */}
 				<div className="w-full flex justify-between items-center">
-					{data.moduleFlowFromLearningPath.previousModule !== null && (
+					{data.moduleFlowFromLearningPath.previousModule !==
+						null && (
 						<Link
 							href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/collections/${data.moduleFlowFromLearningPath.previousCollection?.id}/lessons/${data.moduleFlowFromLearningPath.previousModule.id}`}
 							passHref

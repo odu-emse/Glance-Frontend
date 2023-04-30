@@ -13,7 +13,7 @@ import { useProgress } from '@/hooks/use_progress'
 import Loader from '@/components/util/loader'
 import * as React from 'react'
 import { Module } from '@/types/graphql'
-import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id';
+import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id'
 
 const ModuleIndexPage = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -73,7 +73,9 @@ const ModuleIndexPage = () => {
 		)
 	}
 
-	const moduleData = data.modulesFromLearningPath.find((v) => v.id === moduleId)
+	const moduleData = data.modulesFromLearningPath.find(
+		(v) => v.id === moduleId
+	)
 
 	console.log(moduleData)
 
@@ -118,10 +120,7 @@ const ModuleIndexPage = () => {
 			</header>
 
 			<div className="my-4">
-				<Link
-					href={`/modules/${moduleData.id}/view`}
-					passHref
-				>
+				<Link href={`/modules/${moduleData.id}/view`} passHref>
 					<Button>
 						{/*{isStarted ? 'RESUME MODULE' : 'START MODULE'}*/}
 						Start Module

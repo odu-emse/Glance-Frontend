@@ -37,7 +37,7 @@ export const getModuleByID = gql`
 					name
 					number
 					prefix
-				},
+				}
 				section {
 					id
 				}
@@ -47,22 +47,22 @@ export const getModuleByID = gql`
 `
 
 export const getModuleByIDForFlow = gql`
-	query ModuleFlow($planID: ID! $moduleID: ID!){
-		moduleFlowFromLearningPath(planID: $planID, moduleID: $moduleID){
-			nextModule{
+	query ModuleFlow($planID: ID!, $moduleID: ID!) {
+		moduleFlowFromLearningPath(planID: $planID, moduleID: $moduleID) {
+			nextModule {
 				id
 				name
 			}
-			previousModule{
+			previousModule {
 				id
 				name
 			}
-			currentModule{
+			currentModule {
 				id
 				name
 				number
 				prefix
-				content{
+				content {
 					id
 					type
 					link
@@ -70,9 +70,9 @@ export const getModuleByIDForFlow = gql`
 				}
 				objectives
 				hours
-				instructor{
+				instructor {
 					title
-					account{
+					account {
 						openID
 						firstName
 						lastName
@@ -80,23 +80,23 @@ export const getModuleByIDForFlow = gql`
 					}
 				}
 			}
-			currentCollection{
+			currentCollection {
 				id
 				name
-				modules{
+				modules {
 					id
 					name
 				}
 			}
-			nextCollection{
+			nextCollection {
 				id
 				name
-				modules{
+				modules {
 					id
 					name
 				}
 			}
-			currentSection{
+			currentSection {
 				id
 				sectionName
 			}
