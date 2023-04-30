@@ -13,6 +13,7 @@ import { useProgress } from '@/hooks/use_progress'
 import Loader from '@/components/util/loader'
 import * as React from 'react'
 import { Module } from '@/types/graphql'
+import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id';
 
 const ModuleIndexPage = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -26,17 +27,17 @@ const ModuleIndexPage = () => {
 	const { data, error } = useSWR(
 		status !== 'loading'
 			? {
-					query: getModuleByID,
+					query: getListOfModulesForLearningPath,
 					token: session.idToken,
 					variables: {
-						moduleID: moduleId as string,
+						planID: user.plan.id,
 					},
 			  }
 			: null,
 		gqlFetcher
 	) as {
 		data: {
-			module: Module[]
+			modulesFromLearningPath: Module[]
 		}
 		error: Error
 	}
@@ -72,7 +73,9 @@ const ModuleIndexPage = () => {
 		)
 	}
 
-	const moduleData = data.module[0]
+	const moduleData = data.modulesFromLearningPath.find((v) => v.id === moduleId)
+
+	console.log(moduleData)
 
 	setLoading(false)
 
@@ -116,7 +119,7 @@ const ModuleIndexPage = () => {
 
 			<div className="my-4">
 				<Link
-					href={`/modules/${moduleData.id}/collections/1/lessons/2`}
+					href={`/modules/${moduleData.id}/view`}
 					passHref
 				>
 					<Button>
