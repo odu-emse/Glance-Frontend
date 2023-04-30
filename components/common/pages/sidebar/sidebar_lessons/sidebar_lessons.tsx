@@ -9,14 +9,6 @@ export const SidebarLessons = ({
 	property,
 	url,
 }): React.ReactElement => {
-	const lessons = [
-		'Operations Research',
-		'Supply Chain Management',
-		'Linear Regression',
-		'Nonlinear Algebra',
-		'OR Quiz 1',
-	]
-
 	return (
 		<div className="relative">
 			<aside
@@ -35,9 +27,7 @@ export const SidebarLessons = ({
 					>
 						LESSONS OVERVIEW
 					</h6>
-					{data.map((item, index) => {
-						console.log(item)
-						return (
+					{data.map((item, index) => (
 							<div
 								key={index}
 								className="font-lora flex my-3"
@@ -55,7 +45,7 @@ export const SidebarLessons = ({
 								</Link>
 							</div>
 						)
-					})}
+					)}
 				</div>
 				<button
 					id="closeButton"
