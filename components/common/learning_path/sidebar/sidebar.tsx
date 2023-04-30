@@ -1,4 +1,4 @@
-import { Path } from '@/types/index'
+import { Path } from '@/types/graphql'
 import React from 'react'
 import { Button } from '@/common/button/button'
 

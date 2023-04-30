@@ -6,7 +6,7 @@ import gql_fetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
-import { Collection, Course, LearningPath, Lesson, Module } from '@/types/index'
+import { Collection, Course, LearningPath, Section, Module } from '@/types/graphql'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { Button } from '@/common/button/button'
 import LPSidebar from '@/common/learning_path/sidebar/sidebar'
@@ -27,7 +27,7 @@ function PathIndexPage() {
 		data: {
 			learningPath: Array<LearningPath>
 			module: Array<Module>
-			lesson: Array<Lesson>
+			section: Array<Section>
 			collection: Array<Collection>
 			course: Array<Course>
 		}

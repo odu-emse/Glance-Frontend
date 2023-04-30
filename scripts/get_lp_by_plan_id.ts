@@ -30,22 +30,10 @@ export default function getLPbyPlanID(
 									name
 									modules {
 										id
-										moduleName
-										moduleNumber
+										name
+										number
 										description
-										intro
-										keywords
 										objectives
-										parentModules {
-											id
-											moduleName
-											moduleNumber
-										}
-										subModules {
-											id
-											moduleName
-											moduleNumber
-										}
 									}
 								}
 							}
@@ -54,34 +42,22 @@ export default function getLPbyPlanID(
 				}
 				module(input: {}) {
 					id
-					moduleName
-					moduleNumber
+					name
+					number
 					description
-					intro
-					keywords
 					objectives
-					parentModules {
-						id
-						moduleName
-						moduleNumber
-					}
-					subModules {
-						id
-						moduleName
-						moduleNumber
-					}
 				}
 				collection(input: {}) {
-					id
-					name
-				}
-				lesson(input: {}) {
 					id
 					name
 				}
 				course(input: {}) {
 					id
 					name
+				}
+				section(input: {}) {
+					id
+					sectionName
 				}
 			}
 		`
@@ -109,22 +85,10 @@ export default function getLPbyPlanID(
 									name
 									modules {
 										id
-										moduleName
-										moduleNumber
+										name
+										number
 										description
-										intro
-										keywords
 										objectives
-										parentModules {
-											id
-											moduleName
-											moduleNumber
-										}
-										subModules {
-											id
-											moduleName
-											moduleNumber
-										}
 									}
 								}
 							}

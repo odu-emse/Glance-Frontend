@@ -6,7 +6,7 @@ import gql_fetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
 import Loader from '@/components/util/loader'
-import { LearningPath } from '@/types/index'
+import { LearningPath } from '@/types/graphql'
 import Link from 'next/link'
 import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
 
