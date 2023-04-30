@@ -145,15 +145,10 @@ export const getLearningPathForResumption = gql`
 		learningPath(planID: $planID) {
 			paths {
 				id
-				createdAt
 				status
-				learningOutcomes
-				hoursSatisfies
 				course {
 					id
 					name
-					carnegieHours
-					required
 					sections {
 						id
 						name

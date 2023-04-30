@@ -1,44 +1,5 @@
 import { gql } from 'graphql-request'
 
-export const getSectionByIDUnenrolled = gql`
-	query UnEnrolledSectionHomePage($sectionID: ID!) {
-		section(input: { id: $sectionID }) {
-			sectionNumber
-			sectionName
-			id
-			members {
-				role
-				plan {
-					student {
-						firstName
-						lastName
-					}
-				}
-			}
-			description
-			parentSections {
-				id
-				sectionName
-				sectionNumber
-			}
-			objectives
-			collections {
-				id
-				name
-				modules {
-					id
-					name
-					content {
-						id
-						type
-						link
-					}
-				}
-			}
-		}
-	}
-`
-
 export const getModuleByID = gql`
 	query InternalModuleHomePage($moduleID: ID!) {
 		module(input: { id: $moduleID }) {
@@ -76,40 +37,68 @@ export const getModuleByID = gql`
 					name
 					number
 					prefix
+				},
+				section {
+					id
 				}
 			}
 		}
 	}
 `
 
-export const getSectionByIDEnrolled = gql`
-	query SectionHomePageLessonProgress($sectionID: ID!, $planID: ID!) {
-		modulesBySectionEnrollment(planID: $planID, sectionID: $sectionID) {
-			id
-			name
-			position
-			__typename
-			collections {
-				__typename
+export const getModuleByIDForFlow = gql`
+	query ModuleFlow($planID: ID! $moduleID: ID!){
+		moduleFlowFromLearningPath(planID: $planID, moduleID: $moduleID){
+			nextModule{
 				id
 				name
-				position
-				section {
-					__typename
+			}
+			previousModule{
+				id
+				name
+			}
+			currentModule{
+				id
+				name
+				number
+				prefix
+				content{
 					id
-					sectionName
+					type
+					link
+					primary
+				}
+				objectives
+				hours
+				instructor{
+					title
+					account{
+						openID
+						firstName
+						lastName
+						email
+					}
 				}
 			}
-			moduleProgress {
-				__typename
+			currentCollection{
 				id
-				status
-				completed
-				updatedAt
-				enrollment {
-					__typename
+				name
+				modules{
 					id
+					name
 				}
+			}
+			nextCollection{
+				id
+				name
+				modules{
+					id
+					name
+				}
+			}
+			currentSection{
+				id
+				sectionName
 			}
 		}
 	}
