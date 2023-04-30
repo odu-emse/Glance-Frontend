@@ -1,4 +1,4 @@
-import { CollectionPath } from '@/types/index'
+import { CollectionPath } from '@/types/graphql'
 import React from 'react'
 import ModuleCard from '@/common/learning_path/module/module_card'
 

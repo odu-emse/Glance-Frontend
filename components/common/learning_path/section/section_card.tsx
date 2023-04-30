@@ -1,5 +1,5 @@
 import React from 'react'
-import { Module, SectionPath } from '@/types/index'
+import { Module, SectionPath } from '@/types/graphql'
 import SectionCardTitle from '@/common/learning_path/section/section_card_title'
 import CollectionCard from '@/common/learning_path/collection/collection_card'
 
