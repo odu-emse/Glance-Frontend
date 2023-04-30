@@ -165,6 +165,17 @@ export const getListOfModulesForLearningPath = gql`
 			objectives
 			hours
 			description
+			instructor {
+				id
+				title
+				account {
+					id
+					openID
+					email
+					firstName
+					lastName
+				}
+			}
 			collections {
 				id
 				name
