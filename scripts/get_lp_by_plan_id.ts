@@ -31,11 +31,11 @@ export default function getLPbyPlanID(
 								objectives
 								description
 								duration
-								parentSections{
+								parentSections {
 									id
 									sectionName
 								}
-								subSections{
+								subSections {
 									id
 									sectionName
 								}

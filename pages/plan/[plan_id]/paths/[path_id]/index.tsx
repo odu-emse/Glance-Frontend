@@ -6,7 +6,13 @@ import gql_fetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
-import { Collection, Course, LearningPath, Section, Module } from '@/types/graphql'
+import {
+	Collection,
+	Course,
+	LearningPath,
+	Section,
+	Module,
+} from '@/types/graphql'
 import GlobalUserContext from '@/contexts/global_user_context'
 import { Button } from '@/common/button/button'
 import LPSidebar from '@/common/learning_path/sidebar/sidebar'
@@ -50,7 +56,10 @@ function PathIndexPage() {
 		<section className="stdcontainer">
 			<div className="flex gap-4 items-center justify-start my-4">
 				<Button onClick={() => router.back()}>Back</Button>
-				<h1>Path to {LP.course.name} - {`${LP.course.prefix} ${LP.course.number}`}</h1>
+				<h1>
+					Path to {LP.course.name} -{' '}
+					{`${LP.course.prefix} ${LP.course.number}`}
+				</h1>
 			</div>
 			<div className="flex gap-1 items-start">
 				<div className="flex-none w-2/3">
