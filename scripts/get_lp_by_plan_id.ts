@@ -20,11 +20,25 @@ export default function getLPbyPlanID(
 						course {
 							id
 							name
+							prefix
+							number
 							carnegieHours
 							required
 							sections {
 								id
 								name
+								keywords
+								objectives
+								description
+								duration
+								parentSections{
+									id
+									sectionName
+								}
+								subSections{
+									id
+									sectionName
+								}
 								collections {
 									id
 									name

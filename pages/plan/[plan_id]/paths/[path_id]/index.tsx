@@ -50,7 +50,7 @@ function PathIndexPage() {
 		<section className="stdcontainer">
 			<div className="flex gap-4 items-center justify-start my-4">
 				<Button onClick={() => router.back()}>Back</Button>
-				<h1>Path to {LP.course.name}</h1>
+				<h1>Path to {LP.course.name} - {`${LP.course.prefix} ${LP.course.number}`}</h1>
 			</div>
 			<div className="flex gap-1 items-start">
 				<div className="flex-none w-2/3">
