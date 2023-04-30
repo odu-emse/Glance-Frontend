@@ -28,24 +28,23 @@ export const SidebarLessons = ({
 						LESSONS OVERVIEW
 					</h6>
 					{data.map((item, index) => (
-							<div
-								key={index}
-								className="font-lora flex my-3"
-								style={{
-									fontWeight: 700,
-									fontSize: '16px',
-								}}
+						<div
+							key={index}
+							className="font-lora flex my-3"
+							style={{
+								fontWeight: 700,
+								fontSize: '16px',
+							}}
+						>
+							<Link
+								href={`/modules/${item[url]}/view`}
+								role="lesson link"
+								className="font-lora text-royalblue"
 							>
-								<Link
-									href={`/modules/${item[url]}/view`}
-									role="lesson link"
-									className="font-lora text-royalblue"
-								>
-									{item[property]}
-								</Link>
-							</div>
-						)
-					)}
+								{item[property]}
+							</Link>
+						</div>
+					))}
 				</div>
 				<button
 					id="closeButton"
