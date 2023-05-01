@@ -106,14 +106,22 @@ const ModuleSection = () => {
 							<Button>Previous</Button>
 						</Link>
 					)}
-					{!data.moduleFlowFromLearningPath.previousModule && data.moduleFlowFromLearningPath.previousCollection && (
-						<Link
-							href={`/modules/${data.moduleFlowFromLearningPath.previousCollection.modules[data.moduleFlowFromLearningPath.previousCollection.modules.length - 1].id}/view`}
-							passHref
-						>
-							<Button>Previous collection</Button>
-						</Link>
-					)}
+					{!data.moduleFlowFromLearningPath.previousModule &&
+						data.moduleFlowFromLearningPath.previousCollection && (
+							<Link
+								href={`/modules/${
+									data.moduleFlowFromLearningPath
+										.previousCollection.modules[
+										data.moduleFlowFromLearningPath
+											.previousCollection.modules.length -
+											1
+									].id
+								}/view`}
+								passHref
+							>
+								<Button>Previous collection</Button>
+							</Link>
+						)}
 					<div className="grow"></div>
 					{data.moduleFlowFromLearningPath.nextModule !== null && (
 						<Link
@@ -125,10 +133,7 @@ const ModuleSection = () => {
 					)}
 					{!data.moduleFlowFromLearningPath.nextModule &&
 					!data.moduleFlowFromLearningPath.nextCollection ? (
-						<Link
-							href={`/modules`}
-							passHref
-						>
+						<Link href={`/modules`} passHref>
 							<Button>Return to modules</Button>
 						</Link>
 					) : null}
