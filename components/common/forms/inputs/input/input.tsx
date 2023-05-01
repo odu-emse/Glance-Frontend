@@ -14,6 +14,9 @@ export const Input = ({
 	className = '',
 	length,
 	content,
+	min,
+	max,
+	value,
 	checked = false,
 }: InputProps) => {
 	const [isChecked, setIsChecked] = useState(checked)
@@ -31,13 +34,14 @@ export const Input = ({
 			: 'w-full'
 	const classes = [
 		className,
-		'block bg-transparent appearance-none focus:outline-none focus:ring-0 peer',
+		'block appearance-none focus:outline-none focus:ring-0 peer',
 		error ? 'border-red-500 focus:border-red-600' : 'border-wgray',
 		disabled
 			? 'cursor-not-allowed'
 			: 'focus:border-royalblue hover:border-royalblue',
 		length ? `${inputLength}` : '',
 		type === 'radio' || type === 'checkbox' ? 'sr-only' : 'border-2',
+		type === 'range' ? 'h-1 cursor-ew-resize' : '',
 	].join(' ')
 
 	return (
@@ -65,6 +69,9 @@ export const Input = ({
 					checked={isChecked}
 					required={required}
 					disabled={disabled}
+					min={type === 'range' ? min : undefined}
+					max={type === 'range' ? max : undefined}
+					value={type === 'range' ? value : undefined}
 					onChange={(event) => {
 						if (type === 'checkbox' || type === 'radio') {
 							handleInputChange()
@@ -151,6 +158,7 @@ export type InputProps = {
 		| 'file'
 		| 'radio'
 		| 'checkbox'
+		| 'range'
 	/**
 	 * The disabled attribute is used to indicate weather the input element is disabled or not.
 	 */
@@ -183,4 +191,16 @@ export type InputProps = {
 	 * A boolean determines whether the input box is checked or not
 	 */
 	checked?: boolean
+	/**
+	 * The `min` attribute is used to specify the minimum value for a range slider
+	 */
+	min?: number
+	/**
+	 * The `max` attribute is used to specify the maximum value for a range slider
+	 */
+	max?: number
+	/**
+	 * The `value` attribute is used to define the initial value of a range slider
+	 */
+	value?: number
 }
