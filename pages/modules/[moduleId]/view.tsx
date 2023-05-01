@@ -98,13 +98,20 @@ const ModuleSection = () => {
 				</div>
 				{/* Previous and Next buttons */}
 				<div className="w-full flex justify-between items-center">
-					{data.moduleFlowFromLearningPath.previousModule !==
-						null && (
+					{data.moduleFlowFromLearningPath.previousModule && (
 						<Link
 							href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
 							passHref
 						>
 							<Button>Previous</Button>
+						</Link>
+					)}
+					{!data.moduleFlowFromLearningPath.previousModule && data.moduleFlowFromLearningPath.previousCollection && (
+						<Link
+							href={`/modules/${data.moduleFlowFromLearningPath.previousCollection.modules[data.moduleFlowFromLearningPath.previousCollection.modules.length - 1].id}/view`}
+							passHref
+						>
+							<Button>Previous collection</Button>
 						</Link>
 					)}
 					<div className="grow"></div>
@@ -119,10 +126,10 @@ const ModuleSection = () => {
 					{!data.moduleFlowFromLearningPath.nextModule &&
 					!data.moduleFlowFromLearningPath.nextCollection ? (
 						<Link
-							href={`/sections/${data.moduleFlowFromLearningPath.currentSection.id}`}
+							href={`/modules`}
 							passHref
 						>
-							<Button>Return to section</Button>
+							<Button>Return to modules</Button>
 						</Link>
 					) : null}
 				</div>
@@ -130,6 +137,7 @@ const ModuleSection = () => {
 			{/* Section sidebar */}
 			<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
 				<SidebarLessons
+					currentModule={moduleId as string}
 					open={true}
 					handle={() => console.log('toggled')}
 					data={
