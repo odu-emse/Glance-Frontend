@@ -1,5 +1,5 @@
-import { getModuleByIDEnrolled } from 'scripts/get_module_by_id'
-import { Lesson, LessonByModuleEnrollment, LessonProgress } from '../types'
+import { getSectionByIDEnrolled } from 'scripts/get_module_by_id'
+import { ModuleBySectionEnrollment } from '../types'
 import useSWR from 'swr'
 import gql_fetcher from '@/utils/gql_fetcher'
 
@@ -13,10 +13,10 @@ import gql_fetcher from '@/utils/gql_fetcher'
  * If the lesson is the last lesson in the last collection, it will return null.
  */
 export const useProgress = ({
-	moduleID,
+	sectionID,
 	planID,
 }: {
-	moduleID: string
+	sectionID: string
 	planID: string
 }): [
 	data: {
@@ -25,29 +25,20 @@ export const useProgress = ({
 	},
 	loading: boolean,
 	error: Error,
-	self: LessonByModuleEnrollment[]
+	self: ModuleBySectionEnrollment[]
 ] => {
 	const { data, isValidating, error } = useSWR(
 		{
-			query: getModuleByIDEnrolled,
+			query: getSectionByIDEnrolled,
 			variables: {
-				moduleID,
+				sectionID,
 				planID,
 			},
 		},
-		gql_fetcher,
-		{
-			revalidateOnFocus: false,
-			revalidateIfStale: false,
-			revalidateOnReconnect: false,
-			refreshWhenHidden: false,
-			revalidateOnMount: false,
-			errorRetryCount: 1,
-			shouldRetryOnError: false,
-		}
+		gql_fetcher
 	) as {
 		data: {
-			lessonsByModuleEnrollment: LessonByModuleEnrollment[]
+			modulesBySectionEnrollment: ModuleBySectionEnrollment[]
 		}
 		isValidating: boolean
 		error: Error
@@ -61,7 +52,7 @@ export const useProgress = ({
 			},
 			true,
 			null,
-			data?.lessonsByModuleEnrollment ?? [],
+			data?.modulesBySectionEnrollment ?? [],
 		]
 	if (error)
 		return [
@@ -84,40 +75,61 @@ export const useProgress = ({
 			[],
 		]
 
-	const { lessonsByModuleEnrollment } = data
+	console.log(data)
+
+	const { modulesBySectionEnrollment } = data
 
 	// sort the data by the collection position
-	const progresses = lessonsByModuleEnrollment.sort(
-		(a, b) => a.collection.position - b.collection.position
-	)
+	const sortedProgresses = modulesBySectionEnrollment.map((value) => {
+		const moduleCollections = value.collections.sort(
+			(a, b) => a.position - b.position
+		)
+		return {
+			...value,
+			collections: moduleCollections,
+		}
+	})
+
+	console.log(sortedProgresses)
 
 	/**
 	 * find out if the completed lessons are in the same collection
 	 * if they are, return the next lesson in the collection
 	 * if they are not, return the first lesson in the next collection
 	 */
-	const lessonsLeft = progresses
-		.filter((lesson: Lesson) => {
-			const lessonProgress = lesson.lessonProgress.filter(
-				(progress: LessonProgress) => progress.completed
-			)
-			return lessonProgress.length === 0
-		})
-		.sort((a, b) => a.collection.position - b.collection.position)
 
-	const nextCollection = lessonsLeft[0]?.collection
+	const modulesLeft = sortedProgresses.filter((progress) => {
+		const moduleProgresses = progress.moduleProgress.filter(
+			(progress) => progress.completed
+		)
+		return moduleProgresses.length === 0
+	})
+	// .sort((a, b) => a.position - b.position)
 
-	const nextLesson = lessonsLeft.filter(
-		(lesson: Lesson) => lesson.collection.id === nextCollection.id
-	)[0]
+	console.log(modulesLeft)
+
+	// const nextCollection = lessonsLeft[0]?.collection
+
+	// const nextLesson = lessonsLeft.filter(
+	// 	(lesson) => lesson.collection.id === nextCollection.id
+	// )[0]
 
 	return [
 		{
-			collectionID: nextCollection.id,
-			lessonID: nextLesson.id,
+			collectionID: null,
+			lessonID: null,
 		},
 		false,
 		null,
-		lessonsByModuleEnrollment,
+		modulesBySectionEnrollment,
 	]
+	// return [
+	// 	{
+	// 		collectionID: nextCollection.id,
+	// 		lessonID: nextLesson.id,
+	// 	},
+	// 	false,
+	// 	null,
+	// 	modulesBySectionEnrollment,
+	// ]
 }

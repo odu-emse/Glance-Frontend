@@ -1,10 +1,43 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
+import GlobalUserContext from '@/contexts/global_user_context'
+import gql_fetcher from '@/utils/gql_fetcher'
+import useSWR from 'swr'
+import RequestFailed from '@/pages/errors/request_failed/request_failed'
+import Loader from '@/components/util/loader'
+import { LearningPath } from '@/types/graphql'
+import Link from 'next/link'
+import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
+import { Button } from '@/common/button/button'
+import { Anchor } from '@/common/links/anchor/anchor'
 
 function PlanOfStudyIndexPage() {
-	const panelCount = ['Modules', 'Communities', 'Grades', 'Account']
 	const { data: session } = useSession()
+	const { user: account } = useContext(GlobalUserContext)
+	const { data, error } = useSWR(
+		account !== null ? getLPbyPlanID(account.plan.id) : null,
+		gql_fetcher
+	) as {
+		data: { learningPath: Array<LearningPath> }
+		error: Error
+	}
+
+	if (error)
+		return (
+			<RequestFailed
+				title={'An error occurred'}
+				subtitle={'While retrieving your Learning Paths'}
+			/>
+		)
+
+	if (!data)
+		return (
+			<div className="flex justify-center items-center stdcontainer h-screen">
+				<Loader textColor="royalblue" />
+			</div>
+		)
+
 	return (
 		<section className="flex flex-col stdcontainer">
 			<div className="flex flex-col mb-5">
@@ -15,25 +48,74 @@ function PlanOfStudyIndexPage() {
 				</h2>
 			</div>
 			<div className="grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-7">
-				{panelCount.map((panel, index) => (
-					<PlanOfStudyPanel
-						key={index}
-						title={panel}
-						body={
-							'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quasi, quo? A accusamus, debitis distinctio eos, est ipsam labore mollitia necessitatibus nemo odio odit perferendis quaerat quam quis repellendus sunt?'
-						}
-					/>
-				))}
+				<PlanOfStudyPanel
+					title={'My Paths'}
+					buttonPath={`/plan/${session.openId}/paths/create`}
+					buttonValue="Create new"
+				>
+					<ul className="m-0 list-none divide-y">
+						{data.learningPath[0].paths.map((path, index) => {
+							return (
+								<li
+									key={index}
+									className="flex justify-between items-center gap-1 my-1 sans"
+								>
+									<p className="">{path.course.name}</p>
+									<span className="text-sm py-1 rounded-md bg-wgray font-semibold px-2">
+										{path.status}
+									</span>
+									<time className="">
+										{path.hoursSatisfies} hours
+									</time>
+									<Link
+										href={`/plan/${session.openId}/paths/${path.id}`}
+									>
+										<a className="text-royalblue">View</a>
+									</Link>
+								</li>
+							)
+						})}
+					</ul>
+				</PlanOfStudyPanel>
+				<PlanOfStudyPanel title={'Most recent modules'} />
+				<PlanOfStudyPanel title={'my latest threads'} />
+				<PlanOfStudyPanel title={'most recent assignments'} />
 			</div>
 		</section>
 	)
 }
 
-const PlanOfStudyPanel = ({ title, body }) => {
+const PlanOfStudyPanel = ({
+	title,
+	children,
+	buttonValue,
+	buttonPath,
+}: {
+	title: string
+	children?: React.ReactNode[] | React.ReactNode
+	buttonValue?: string
+	buttonPath?: string
+}) => {
 	return (
 		<div className="col-span-1 row-span-1 h-64 border border-wgray rounded-sm p-3">
-			<h3>{title}</h3>
-			<p>{body}</p>
+			<div className="flex justify-between items-center">
+				<h3>{title}</h3>
+				{buttonValue && (
+					<Anchor
+						path={buttonPath}
+						className="bg-royalblue text-white px-3 py-1.5 sans uppercase no-underline"
+					>
+						Create new
+					</Anchor>
+				)}
+			</div>
+			<>
+				{Array.isArray(children)
+					? children.map((child, index) => (
+							<div key={index}>{child}</div>
+					  ))
+					: children}
+			</>
 		</div>
 	)
 }

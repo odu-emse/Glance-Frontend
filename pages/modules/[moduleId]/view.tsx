@@ -1,41 +1,38 @@
 import { useRouter } from 'next/router'
-import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { Layout } from '@/components/common/pages/layouts/layout/layout'
 import { Button } from '@/components/common/button/button'
-
 import { ContentLoader } from '@/components/pages/modules/module/lessons/lesson/content_type/content_loader'
-
 import useSWR from 'swr'
 import gqlFetcher from '@/utils/gql_fetcher'
-import { getLessonByID } from '@/scripts/get_lesson_by_id'
 import { useContext } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
-import { gql } from 'graphql-request'
 import { SidebarLessons } from '@/components/common/pages/sidebar/sidebar_lessons/sidebar_lessons'
 import { getModuleByIDForFlow } from '@/scripts/get_module_by_id'
 import Loading from '@/common/loader/loader'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
-import { Collection, Module } from '@/types/graphql'
+import { Collection, Module, Section } from '@/types/graphql'
 import GlobalUserContext from '@/contexts/global_user_context'
 
 const ModuleSection = () => {
-	const { setLoading } = useContext(GlobalLoadingContext)
 	const { user } = useContext(GlobalUserContext)
-	// setLoading(true)
 
 	const router = useRouter()
-	const { moduleId, lessonId, collectionId } = router.query
+	const { moduleId } = router.query
 
 	const { data, error } = useSWR(
 		{
 			query: getModuleByIDForFlow,
-			variables: { moduleID: moduleId, planID: user.plan.id },
+			variables: {
+				moduleID: moduleId,
+				planID: user.plan.id,
+			},
 		},
 		gqlFetcher
 	) as {
 		data: {
 			moduleFlowFromLearningPath: {
+				currentSection: Section
 				nextModule: Module
 				currentModule: Module
 				previousModule: Module
@@ -48,7 +45,6 @@ const ModuleSection = () => {
 	}
 
 	if (error) {
-		setLoading(false)
 		return (
 			<RequestFailed
 				title="Failed to load module"
@@ -59,19 +55,10 @@ const ModuleSection = () => {
 
 	if (!data) return <Loading />
 
-	/**
-	 * 1. get current collection
-	 * 2. get next collection
-	 * 3. get next module in the next collection
-	 *
-	 */
-
-	console.log(data)
-
 	const primaryContent =
 		data.moduleFlowFromLearningPath.currentModule.content.find(
 			(v) => v.primary
-		)
+		) || data.moduleFlowFromLearningPath.currentModule.content[0]
 
 	return (
 		<section className="flex">
@@ -79,16 +66,15 @@ const ModuleSection = () => {
 				<header>
 					<h4 className="mb-6">
 						<Link
-							href={`/modules/${data.moduleFlowFromLearningPath.currentCollection.id}`}
+							href={`/sections/${data.moduleFlowFromLearningPath.currentSection.id}`}
 							passHref
 						>
 							<a
-								title={`Return to the home page of "${data.moduleFlowFromLearningPath.currentCollection.name}"`}
+								title={`Return to the home page of "${data.moduleFlowFromLearningPath.currentSection.sectionName}"`}
 							>
-								Collection{' '}
 								{
 									data.moduleFlowFromLearningPath
-										.currentCollection.name
+										.currentSection.sectionName
 								}
 							</a>
 						</Link>
@@ -115,7 +101,7 @@ const ModuleSection = () => {
 					{data.moduleFlowFromLearningPath.previousModule !==
 						null && (
 						<Link
-							href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/collections/${data.moduleFlowFromLearningPath.previousCollection?.id}/lessons/${data.moduleFlowFromLearningPath.previousModule.id}`}
+							href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
 							passHref
 						>
 							<Button>Previous</Button>
@@ -124,20 +110,34 @@ const ModuleSection = () => {
 					<div className="grow"></div>
 					{data.moduleFlowFromLearningPath.nextModule !== null && (
 						<Link
-							href={`/modules/${data.moduleFlowFromLearningPath.nextModule.id}/collections/${data.moduleFlowFromLearningPath.nextCollection.id}/lessons/${data.moduleFlowFromLearningPath.nextModule.id}`}
+							href={`/modules/${data.moduleFlowFromLearningPath.nextModule.id}/view`}
 							passHref
 						>
 							<Button>Next</Button>
 						</Link>
 					)}
+					{!data.moduleFlowFromLearningPath.nextModule &&
+					!data.moduleFlowFromLearningPath.nextCollection ? (
+						<Link
+							href={`/sections/${data.moduleFlowFromLearningPath.currentSection.id}`}
+							passHref
+						>
+							<Button>Return to section</Button>
+						</Link>
+					) : null}
 				</div>
 			</div>
 			{/* Section sidebar */}
 			<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
-				{/* <ModuleNavigation data={data} selected={lessonId} /> */}
 				<SidebarLessons
 					open={true}
 					handle={() => console.log('toggled')}
+					data={
+						data.moduleFlowFromLearningPath.currentCollection
+							.modules
+					}
+					property={'name'}
+					url={'id'}
 				/>
 			</aside>
 		</section>

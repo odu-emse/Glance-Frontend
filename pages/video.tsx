@@ -1,4 +1,4 @@
-import VideoPlayer from '@/components/videoPlayer/VideoPlayer'
+import { VideoPlayer } from '@/components/common/content_types/video/video_player/video_player'
 
 const video = () => {
 	return (
