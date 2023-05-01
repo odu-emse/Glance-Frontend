@@ -8,6 +8,7 @@ export const SidebarLessons = ({
 	data,
 	property,
 	url,
+	currentModule,
 }): React.ReactElement => {
 	return (
 		<div className="relative">
@@ -25,12 +26,12 @@ export const SidebarLessons = ({
 							fontSize: '16px',
 						}}
 					>
-						LESSONS OVERVIEW
+						COLLECTION OVERVIEW
 					</h6>
 					{data.map((item, index) => (
 						<div
 							key={index}
-							className="font-lora flex my-3"
+							className="font-lora flex my-3 "
 							style={{
 								fontWeight: 700,
 								fontSize: '16px',
@@ -39,9 +40,16 @@ export const SidebarLessons = ({
 							<Link
 								href={`/modules/${item[url]}/view`}
 								role="lesson link"
-								className="font-lora text-royalblue"
 							>
-								{item[property]}
+								<a
+									className={`font-lora ${
+										currentModule === item.id
+											? 'text-royalblue'
+											: 'text-black'
+									}`}
+								>
+									{item[property]}
+								</a>
 							</Link>
 						</div>
 					))}
@@ -67,4 +75,5 @@ export const SidebarLessons = ({
 export type SidebarLessonsProps = {
 	handle: (open: boolean) => void
 	open: boolean
+	currentModule: string
 }
