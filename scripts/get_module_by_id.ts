@@ -57,6 +57,14 @@ export const getModuleByIDForFlow = gql`
 				id
 				name
 			}
+			previousCollection {
+				id
+				name
+				modules {
+					id
+					name
+				}
+			}
 			currentModule {
 				id
 				name
