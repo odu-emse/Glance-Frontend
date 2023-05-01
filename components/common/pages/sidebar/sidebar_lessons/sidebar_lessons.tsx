@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 export const SidebarLessons = ({
-																 open,
-																 handle,
-																 data,
-																 property,
-																 url,
-																 currentModule
-															 }): React.ReactElement => {
+	open,
+	handle,
+	data,
+	property,
+	url,
+	currentModule,
+}): React.ReactElement => {
 	return (
 		<div className="relative">
 			<aside
@@ -31,7 +31,7 @@ export const SidebarLessons = ({
 					{data.map((item, index) => (
 						<div
 							key={index}
-							className='font-lora flex my-3 '
+							className="font-lora flex my-3 "
 							style={{
 								fontWeight: 700,
 								fontSize: '16px',
@@ -41,8 +41,14 @@ export const SidebarLessons = ({
 								href={`/modules/${item[url]}/view`}
 								role="lesson link"
 							>
-								<a className={`font-lora ${currentModule === item.id ? 'text-royalblue' : 'text-black'}`}>
-								{item[property]}
+								<a
+									className={`font-lora ${
+										currentModule === item.id
+											? 'text-royalblue'
+											: 'text-black'
+									}`}
+								>
+									{item[property]}
 								</a>
 							</Link>
 						</div>
