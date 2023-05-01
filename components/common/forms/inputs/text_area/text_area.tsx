@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import useAutosizeTextArea from './use_autosize_text_area'
-import { IoSend } from 'react-icons/io5'
 
 export const TextArea: React.FC<TextAreaProps> = ({
 	handle = () => null,
@@ -9,7 +8,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
 	id = 'text-area',
 	role = 'textbox',
 	name = 'text-area',
-	rows = 1,
+	rows = 2,
 	placeholder = '',
 	disabled = false,
 	maxLength = 1000,
@@ -18,6 +17,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
 	wrap = 'soft',
 	autofocus = false,
 	label = '',
+	onChange,
 	defaultValue = '',
 	className = '',
 	icon = true,
@@ -25,19 +25,19 @@ export const TextArea: React.FC<TextAreaProps> = ({
 	const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
 	useAutosizeTextArea(textAreaRef.current, value)
-
 	const classes = [
 		className,
-		'w-full bg-white placeholder:italic border border-slate-400 shadow-md rounded-md py-2 pl-3 pr-10 focus:outline-2 focus:outline-dashed focus:ring-0 disabled:opacity-50 disabled:cursor-not-allowed',
+		'w-full bg-white placeholder:italic border border-2 border-wgray shadow-md focus:outline-none focus:ring-0 peer rounded-sm py-2 pl-3 pr-10 disabled:opacity-50 disabled:cursor-not-allowed',
 		value.length === maxLength
-			? 'border-red-400 focus:border-red-500 focus:outline-red-400 focus:ring-red-400'
-			: ' focus:outline-blue-400',
+			? 'border-red-400 focus:border-red-500 hover:border-red-400'
+			: 'focus:border-royalblue',
+		!disabled && value.length !== maxLength ? 'hover:border-royalblue' : '',
 	].join(' ')
 
 	return (
 		<div>
 			<label htmlFor={id} className="">
-				{label && label}
+				{label && <h2>{label.toUpperCase()}</h2>}
 				<div className="relative">
 					<textarea
 						id={id}
@@ -55,6 +55,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
 						wrap={wrap}
 						autoFocus={autofocus}
 						className={classes}
+						// onChange={(event) => onChange(event.target.value)}
 					/>
 					{icon && (
 						<span
@@ -62,9 +63,9 @@ export const TextArea: React.FC<TextAreaProps> = ({
 								disabled ? 'opacity-50' : ''
 							}`}
 						>
-							<button type="button" aria-label="send">
+							{/* <button type="button" aria-label="send">
 								<IoSend size={20} className="mr-1" />
-							</button>
+							</button> */}
 						</span>
 					)}
 				</div>
@@ -147,4 +148,9 @@ export type TextAreaProps = {
 	 * A boolean that determines whether the text area should have an icon inside of it or not shown at all
 	 */
 	icon?: boolean
+	/**
+	 * The on Change event handler for the input. This is used to update the value of the input.
+	 * @param value The value of the input event for the textarea.
+	 */
+	onChange: (e: string) => void
 }
