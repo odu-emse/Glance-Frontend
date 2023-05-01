@@ -50,6 +50,7 @@ export const SidebarLessons = ({
 					id="closeButton"
 					className="absolute bottom-7 -left-4 p-2 rounded-md text-red border bg-royalblue"
 					onClick={() => handle(!open)}
+					aria-label="closeButton"
 				>
 					{open ? (
 						<IoIosArrowForward color="white" />
