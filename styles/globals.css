@@ -191,3 +191,7 @@ li {
 	padding: 1rem 1.5rem;
 	border-radius: 0px;
 }
+
+.contentLoader{
+	height: 550px;
+}

@@ -7,4 +7,5 @@ export const ContentLoader = ({ type, data }) => {
 		ssr: false,
 	})
 	return <Content data={data} />
+		
 }
