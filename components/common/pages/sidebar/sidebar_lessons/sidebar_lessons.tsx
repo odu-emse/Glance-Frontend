@@ -25,7 +25,7 @@ export const SidebarLessons = ({
 							fontSize: '16px',
 						}}
 					>
-						LESSONS OVERVIEW
+						MODULES OVERVIEW
 					</h6>
 					{data.map((item, index) => (
 						<div
