@@ -154,7 +154,6 @@ const ModuleSection = () => {
 				/>
 			</aside>
 		</section>
-		
 	)
 }
 
