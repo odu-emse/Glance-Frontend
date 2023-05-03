@@ -5,13 +5,10 @@ import React from 'react'
 
 export const ModuleItem = ({
 	data,
-	role,
 	expanded,
 	handleExpansion,
 	selected,
 }: ModuleItemProps) => {
-	// Use the link below once DB schema is updated
-	// const link = `/modules/${data.id}/sections/${data?.headSection}/lessons/${data?.sections[data?.headSection]?.headLesson}`
 	return (
 		<div
 			className={`px-5 py-4 rounded-md shadow cursor-pointer flex justify-center items-center w-full border-2 ${
@@ -25,6 +22,10 @@ export const ModuleItem = ({
 				<div className="flex flex-row gap-1 sans text-sm sans uppercase items-center">
 					<p className="p-0 m-0">
 						SECTION {data.collections[0].section.sectionNumber}
+					</p>
+					<span>/</span>
+					<p className="p-0 m-0">
+						{data.collections[0].name}
 					</p>
 					<span>/</span>
 					<p className="p-0 m-0">
