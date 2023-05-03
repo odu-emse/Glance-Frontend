@@ -27,9 +27,7 @@ function QuizHeader({ data }: { data: Quiz }) {
 			</div>
 			<hr className="border border-black" />
 
-			<h3
-				className="uppercase mt-6 tracking-wider text-black font-light"
-			>
+			<h3 className="uppercase mt-6 tracking-wider text-black font-light">
 				INSTRUCTIONS
 			</h3>
 			<p>{data.instructions}</p>

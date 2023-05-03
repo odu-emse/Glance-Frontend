@@ -56,9 +56,7 @@ function QuizResultPage() {
 			<h1>module quiz result</h1>
 			<QuizHeader data={quizDetails} />
 			<hr className="border border-black" />
-			<h3
-				className="uppercase mt-3.5 text-black font-light"
-			>
+			<h3 className="uppercase mt-3.5 text-black font-light">
 				Attempt history
 			</h3>
 			<QuizAttemptList

@@ -15,24 +15,12 @@ function QuizAttemptList({
 		<div>
 			<div className="grid grid-cols-5 border-y border-wgray mt-3 mb-1.5 pb-1.5 items-center">
 				<span />
-				<h3
-					className="uppercase mt-3.5 text-black font-light"
-				>
+				<h3 className="uppercase mt-3.5 text-black font-light">
 					Attempt
 				</h3>
-				<h3
-					className="uppercase mt-3.5 text-black font-light"
-				>
-					Date
-				</h3>
-				<h3
-					className="uppercase mt-3.5 text-black font-light"
-				>
-					time
-				</h3>
-				<h3
-					className="uppercase mt-3.5 text-black font-light"
-				>
+				<h3 className="uppercase mt-3.5 text-black font-light">Date</h3>
+				<h3 className="uppercase mt-3.5 text-black font-light">time</h3>
+				<h3 className="uppercase mt-3.5 text-black font-light">
 					Score
 				</h3>
 			</div>
