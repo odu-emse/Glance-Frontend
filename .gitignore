@@ -21,3 +21,4 @@ build-storybook.log
 .env.*
 !.env.example
 data
+public/videos/
