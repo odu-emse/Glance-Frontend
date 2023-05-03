@@ -9,7 +9,7 @@ const VideoContent = ({ data }) => {
 	for (let i = 0; i < data.length; i++) {
 		if (data[i].type === 'VIDEO') {
 			videolink = data[i].link
-		} else if (data[i].type === 'CAPTIONS') {
+		} else if (data[i].type === 'CAPTION') {
 			videoCaptions = data[i].link
 		} else if (data[i].type === 'TRANSCRIPT') {
 			videoTranscript = data[i].link

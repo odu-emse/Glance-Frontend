@@ -1,66 +1,109 @@
 import * as React from 'react'
-import { RiH5 } from 'react-icons/ri'
-// import { BiSearch } from 'react-icons/bi'
-// import { dropdownOption } from '../select/select'
+import { BiSearch } from 'react-icons/bi'
+import { dropdownOption } from '../select/select'
 
 export const Input = ({
 	label,
 	name,
 	role,
 	onChange,
+	description,
 	required = false,
 	type,
-	// ariaLabel,
+	ariaLabel,
+	defaultValue,
 	disabled = false,
-	description,
 	error = false,
+	options,
 	placeholder = 'Enter here',
 	className = '',
-	length,
+	icon = false,
 }: InputProps) => {
-	const inputLength =
-		length === 'short'
-			? 'w-1/6'
-			: length === 'normal'
-			? 'w-1/3'
-			: length === 'long'
-			? 'w-1/2'
-			: 'w-full'
 	const classes = [
 		className,
-		'block rounded-sm border-2 text-gray-900 bg-transparent appearance-none focus:outline-none focus:ring-0 peer',
-		error ? 'border-red-500 focus:border-red-600' : 'border-wgray',
-		disabled
-			? 'cursor-not-allowed'
-			: 'focus:border-royalblue hover:border-royalblue',
-		length ? `${inputLength}` : 'w-full',
+		'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent appearance-none dark:text-white focus:outline-none focus:ring-0 peer',
+		className.includes('border') ? '' : 'border-0 border-b-2',
+		error
+			? 'border-red-500 dark:border-red-400 focus:border-red-600 dark:focus:border-red-500'
+			: 'dark:focus:border-blue-500 focus:border-blue-600 dark:border-gray-600 border-gray-300',
+		disabled ? 'cursor-not-allowed' : '',
 	].join(' ')
 	return (
 		<>
-			<div>
-				{label && (
-					<h2 className="font-medium mb-1">
-						<label htmlFor={name}> {label.toUpperCase()}</label>
-					</h2>
-				)}
+			<div className="relative z-0 w-full group">
 				<input
 					type={type}
 					name={name}
 					id={name}
 					placeholder={placeholder}
 					role={role}
-					aria-label={type}
+					aria-label={ariaLabel}
 					className={classes}
 					required={required}
-					disabled={disabled}
+					defaultValue={defaultValue}
 					onChange={(event) => onChange(event.target.value)}
+					disabled={disabled}
 				/>
+				{options &&
+					options.map((option, optionIndex) => (
+						<option
+							key={optionIndex}
+							value={
+								typeof option === 'string'
+									? option
+									: option.value
+							}
+							selected={
+								typeof option === 'string'
+									? false
+									: option.selected
+							}
+							disabled={
+								typeof option === 'string'
+									? false
+									: option.disabled
+							}
+						>
+							{typeof option === 'string' ? (
+								option
+							) : (
+								<>
+									{option.icon && option.icon}
+									{option.label}
+								</>
+							)}
+						</option>
+					))}
+
+				<label
+					htmlFor={name}
+					className={`peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 ${
+						error
+							? 'peer-focus:dark:text-red-500 peer-focus:text-red-600'
+							: 'peer-focus:dark:text-blue-500 peer-focus:text-blue-600'
+					}`}
+				>
+					{label}
+				</label>
+				{type === 'search' && icon && (
+					<button
+						type="submit"
+						className="absolute right-0 top-0 bottom-0 px-3 py-2.5 text-gray-500 dark:text-gray-400 focus:ring-blue-600 dark:focus:ring-blue-500 focus:outline-none"
+					>
+						<span className="sr-only">Search</span>
+						<BiSearch size={24} />
+					</button>
+				)}
 				{description && (
 					<p
 						id="helper-text-explanation"
-						className={`my-0 ${error ? 'text-red-600' : ''}`}
+						className={`mt-2 text-sm ${
+							error
+								? 'text-red-600 dark:text-red-500'
+								: 'text-gray-500 dark:text-gray-400'
+						}`}
 					>
-						{error ? `Wrong ${type}` : 'This is a test message'}
+						{description}
 					</p>
 				)}
 			</div>
@@ -107,6 +150,10 @@ export type InputProps = {
 		| 'number'
 		| 'file'
 	/**
+	 * The default value of the input. This is used to set the value of the input when the page is first loaded.
+	 */
+	defaultValue?: string
+	/**
 	 * The disabled attribute is used to indicate weather the input element is disabled or not.
 	 */
 	disabled?: boolean
@@ -118,6 +165,8 @@ export type InputProps = {
 	 * The aria-label attribute is used to provide a label for the input element. This is used to provide additional context to the user, under the input element. This is just supplementary information, so its visual hierarchy should not interfere with the input element's.
 	 */
 	ariaLabel?: string
+
+	options?: dropdownOption[] | string[]
 	/**
 	 * The placeholder value is used to provide a placeholder for the input element. This is used to provide additional context to the user, under the input element.
 	 */
@@ -127,7 +176,7 @@ export type InputProps = {
 	 */
 	className?: string
 	/**
-	 * An enum that specifies the size of the toggle switch
+	 * The icon boolean is used to determine weather or not to render the search icon on the input element.
 	 */
-	length: 'short' | 'normal' | 'long' | 'full'
+	icon?: boolean
 }

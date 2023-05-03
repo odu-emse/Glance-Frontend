@@ -1,3 +1,5 @@
+import { ModuleProgress, Collection } from '@/types/graphql'
+
 export type Module = {
 	id: string
 	moduleNumber?: number
@@ -75,17 +77,6 @@ export type ModuleEnrollment = {
 	inactivePlan?: PlanOfStudy | null
 }
 
-export type Collection = {
-	id: string
-	name?: string
-	createdAt?: Date
-	updatedAt?: Date
-	lessons?: Nullable<Nullable<Lesson>[]>
-	module?: Module
-	moduleID?: string
-	position?: Nullable<number>
-}
-
 export type ThreadType = {
 	id: string
 	title?: string | null
@@ -119,11 +110,65 @@ export type LessonProgress = {
 	lesson?: Lesson
 }
 
-export type LessonByModuleEnrollment = Pick<
-	Lesson,
-	'id' | 'name' | 'position' | 'collection'
+export interface Course {
+	id: string
+	name: string
+	moduleIDs?: Nullable<Nullable<string>[]>
+	required: boolean
+	carnegieHours: number
+}
+
+export type ModuleBySectionEnrollment = Pick<
+	Module,
+	'id' | 'name' | 'position'
 > & {
-	lessonProgress: Array<LessonProgress>
+	moduleProgress: Array<ModuleProgress>
+	collections: Array<Collection>
+}
+
+export enum PathStatus {
+	DRAFT = 'DRAFT',
+	LIVE = 'LIVE',
+}
+
+export interface LearningPath {
+	id: string
+	createdAt: Date
+	plan: PlanOfStudy
+	planID: string
+	paths: Path[]
+}
+
+export interface Path {
+	id: string
+	createdAt: Date
+	updatedAt: Date
+	course: CoursePath
+	status: PathStatus
+	hoursSatisfies: number
+	learningOutcomes: string[]
+}
+
+export interface CoursePath extends Course {
+	id: string
+	sections: SectionPath[]
+}
+
+export interface SectionPath {
+	id: string
+	name: string
+	collections: CollectionPath[]
+}
+
+export interface CollectionPath {
+	id: string
+	name: string
+	modules: ModulePath[]
+}
+
+export interface ModulePath extends Module {
+	id: string
+	enrollmentID?: Nullable<string>
 }
 
 type Nullable<T> = T | null

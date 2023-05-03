@@ -1,16 +1,16 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { Module } from '@/types/graphql'
 
-export const SidebarLessons = ({ open, handle }): React.ReactElement => {
-	const lessons = [
-		'Operations Research',
-		'Supply Chain Management',
-		'Linear Regression',
-		'Nonlinear Algebra',
-		'OR Quiz 1',
-	]
-
+export const SidebarLessons = ({
+	open,
+	handle,
+	data,
+	property,
+	url,
+	currentModule,
+}: SidebarLessonsProps): React.ReactElement => {
 	return (
 		<div className="relative">
 			<aside
@@ -27,9 +27,9 @@ export const SidebarLessons = ({ open, handle }): React.ReactElement => {
 							fontSize: '16px',
 						}}
 					>
-						LESSONS OVERVIEW
+						COLLECTION OVERVIEW
 					</h6>
-					{lessons.map((lesson, index) => (
+					{data.map((item, index) => (
 						<div
 							key={index}
 							className="font-lora flex my-3"
@@ -39,11 +39,18 @@ export const SidebarLessons = ({ open, handle }): React.ReactElement => {
 							}}
 						>
 							<Link
-								href={`/lesson`}
+								href={`/modules/${item[url]}/view`}
 								role="lesson link"
-								className="font-lora text-royalblue"
 							>
-								{lesson}
+								<a
+									className={`font-lora ${
+										currentModule === item.id
+											? 'text-royalblue'
+											: 'text-black'
+									}`}
+								>
+									{`${item[property]}`}
+								</a>
 							</Link>
 						</div>
 					))}
@@ -52,6 +59,7 @@ export const SidebarLessons = ({ open, handle }): React.ReactElement => {
 					id="closeButton"
 					className="absolute bottom-7 -left-4 p-2 rounded-md text-red border bg-royalblue"
 					onClick={() => handle(!open)}
+					aria-label="closeButton"
 				>
 					{open ? (
 						<IoIosArrowForward color="white" />
@@ -68,4 +76,8 @@ export const SidebarLessons = ({ open, handle }): React.ReactElement => {
 export type SidebarLessonsProps = {
 	handle: (open: boolean) => void
 	open: boolean
+	currentModule: string
+	data: Module[]
+	property: keyof Module
+	url: keyof Module
 }

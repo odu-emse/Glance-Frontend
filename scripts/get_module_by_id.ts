@@ -1,67 +1,112 @@
 import { gql } from 'graphql-request'
 
-export const getModuleByIDUnenrolled = gql`
-	query UnEnrolledModuleHomePage($moduleID: ID!) {
+export const getModuleByID = gql`
+	query InternalModuleHomePage($moduleID: ID!) {
 		module(input: { id: $moduleID }) {
-			moduleNumber
-			moduleName
 			id
-			members {
-				role
-				plan {
-					student {
-						openID
-						firstName
-						lastName
-					}
+			name
+			number
+			prefix
+			objectives
+			hours
+			description
+			instructor {
+				id
+				title
+				account {
+					id
+					openID
+					email
+					firstName
+					lastName
 				}
 			}
-			description
-			parentModules {
+			moduleProgress {
 				id
-				moduleName
-				moduleNumber
+				status
+				completed
+				enrollment {
+					id
+				}
 			}
-			objectives
 			collections {
 				id
 				name
-				lessons {
+				modules {
 					id
 					name
-					content {
-						id
-						type
-						link
-					}
+					number
+					prefix
+				}
+				section {
+					id
 				}
 			}
 		}
 	}
 `
 
-export const getModuleByIDEnrolled = gql`
-	query ModuleHomePageLessonProgress($moduleID: ID!, $planID: ID!) {
-		lessonsByModuleEnrollment(planID: $planID, moduleID: $moduleID) {
-			id
-			name
-			position
-			collection {
+export const getModuleByIDForFlow = gql`
+	query ModuleFlow($planID: ID!, $moduleID: ID!) {
+		moduleFlowFromLearningPath(planID: $planID, moduleID: $moduleID) {
+			nextModule {
 				id
 				name
-				position
-				module {
+			}
+			previousModule {
+				id
+				name
+			}
+			previousCollection {
+				id
+				name
+				modules {
 					id
-					moduleName
+					name
 				}
 			}
-			lessonProgress {
-				status
-				completed
-				updatedAt
-				enrollment {
+			currentModule {
+				id
+				name
+				number
+				prefix
+				content {
 					id
+					type
+					link
+					primary
 				}
+				objectives
+				hours
+				instructor {
+					title
+					account {
+						openID
+						firstName
+						lastName
+						email
+					}
+				}
+			}
+			currentCollection {
+				id
+				name
+				modules {
+					id
+					name
+				}
+			}
+			nextCollection {
+				id
+				name
+				modules {
+					id
+					name
+				}
+			}
+			currentSection {
+				id
+				sectionName
 			}
 		}
 	}
