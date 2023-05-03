@@ -105,6 +105,7 @@ const QuizContent = ({ data }) => {
 			)
 		})
 		.then(() => {
+			localStorage.removeItem('quizInstanceId')
 			router.push(`/modules/${moduleId as string}/result?instanceId=${instanceId}`)
 		})
 		.catch((error) => {
