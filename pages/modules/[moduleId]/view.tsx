@@ -86,7 +86,7 @@ const ModuleSection = () => {
 					</h3>
 				</header>
 
-				<div className="flex h-4/5 gap-2 my-2">
+				<div className="my-5 contentLoader">
 					{/* Section content  */}
 					<ContentLoader
 						type={primaryContent.type}
@@ -98,8 +98,7 @@ const ModuleSection = () => {
 				</div>
 				{/* Previous and Next buttons */}
 				<div className="w-full flex justify-between items-center">
-					{data.moduleFlowFromLearningPath.previousModule !==
-						null && (
+					{data.moduleFlowFromLearningPath.previousModule && (
 						<Link
 							href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
 							passHref
@@ -107,6 +106,22 @@ const ModuleSection = () => {
 							<Button>Previous</Button>
 						</Link>
 					)}
+					{!data.moduleFlowFromLearningPath.previousModule &&
+						data.moduleFlowFromLearningPath.previousCollection && (
+							<Link
+								href={`/modules/${
+									data.moduleFlowFromLearningPath
+										.previousCollection.modules[
+										data.moduleFlowFromLearningPath
+											.previousCollection.modules.length -
+											1
+									].id
+								}/view`}
+								passHref
+							>
+								<Button>Previous collection</Button>
+							</Link>
+						)}
 					<div className="grow"></div>
 					{data.moduleFlowFromLearningPath.nextModule !== null && (
 						<Link
@@ -118,11 +133,8 @@ const ModuleSection = () => {
 					)}
 					{!data.moduleFlowFromLearningPath.nextModule &&
 					!data.moduleFlowFromLearningPath.nextCollection ? (
-						<Link
-							href={`/sections/${data.moduleFlowFromLearningPath.currentSection.id}`}
-							passHref
-						>
-							<Button>Return to section</Button>
+						<Link href={`/modules`} passHref>
+							<Button>Return to modules</Button>
 						</Link>
 					) : null}
 				</div>
@@ -130,6 +142,7 @@ const ModuleSection = () => {
 			{/* Section sidebar */}
 			<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
 				<SidebarLessons
+					currentModule={moduleId as string}
 					open={true}
 					handle={() => console.log('toggled')}
 					data={

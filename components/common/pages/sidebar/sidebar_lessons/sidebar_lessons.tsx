@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { Module } from '@/types/graphql'
 
 export const SidebarLessons = ({
 	open,
@@ -8,7 +9,8 @@ export const SidebarLessons = ({
 	data,
 	property,
 	url,
-}): React.ReactElement => {
+	currentModule,
+}: SidebarLessonsProps): React.ReactElement => {
 	return (
 		<div className="relative">
 			<aside
@@ -25,7 +27,7 @@ export const SidebarLessons = ({
 							fontSize: '16px',
 						}}
 					>
-						MODULES OVERVIEW
+						COLLECTION OVERVIEW
 					</h6>
 					{data.map((item, index) => (
 						<div
@@ -39,9 +41,16 @@ export const SidebarLessons = ({
 							<Link
 								href={`/modules/${item[url]}/view`}
 								role="lesson link"
-								className="font-lora text-royalblue"
 							>
-								{item[property]}
+								<a
+									className={`font-lora ${
+										currentModule === item.id
+											? 'text-royalblue'
+											: 'text-black'
+									}`}
+								>
+									{`${item[property]}`}
+								</a>
 							</Link>
 						</div>
 					))}
@@ -67,4 +76,8 @@ export const SidebarLessons = ({
 export type SidebarLessonsProps = {
 	handle: (open: boolean) => void
 	open: boolean
+	currentModule: string
+	data: Module[]
+	property: keyof Module
+	url: keyof Module
 }

@@ -100,7 +100,7 @@ const ModuleSection = () => {
 					</h3>
 				</header>
 
-				<div className="flex h-4/5 gap-2 my-2">
+				<div className="my-5 contentLoader">
 					{/* Section content  */}
 					<ContentLoader
 						type={primaryContent.type}
