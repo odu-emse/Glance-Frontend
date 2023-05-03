@@ -38,13 +38,14 @@ function QuizResultPage() {
 
 	if (!data) return <Loading />
 
-	const result = data.quizResult[0]
+	const quizDetails = data.quizResult[0].quizInstance.quiz
+	const result = data.quizResult
 
 	if (attemptId) {
 		return (
 			<section className="stdcontainer">
 				<h1>module quiz attempt</h1>
-				<QuizHeader data={result.quizInstance.quiz} />
+				<QuizHeader data={quizDetails} />
 				<hr className="border border-black" />
 			</section>
 		)
@@ -53,7 +54,7 @@ function QuizResultPage() {
 	return (
 		<section className="stdcontainer">
 			<h1>module quiz result</h1>
-			<QuizHeader data={result.quizInstance.quiz} />
+			<QuizHeader data={quizDetails} />
 			<hr className="border border-black" />
 			<h2
 				className="uppercase mt-3.5 text-black"

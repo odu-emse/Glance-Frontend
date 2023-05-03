@@ -7,13 +7,16 @@ function QuizAttemptRow({
 	moduleId,
 	instanceId,
 	result,
+	row
 }: {
 	moduleId: string
 	instanceId: string
 	result: QuizResult
+	row: number
 }) {
 	return (
 		<div className="grid grid-cols-5 items-center">
+			{row === 0 ? (
 			<h2
 				className="uppercase mt-3.5 text-black"
 				style={{
@@ -22,11 +25,11 @@ function QuizAttemptRow({
 				}}
 			>
 				Latest
-			</h2>
+			</h2>) : <span />}
 			<Link
 				href={`/modules/${moduleId}/result?instanceId=${instanceId}&attemptId=${result.id}`}
 			>
-				<a>Attempt 1</a>
+				<a>Attempt {row + 1}</a>
 			</Link>
 			<p>{moment(result.submittedAt).format('MM/DD/YYYY hh:mm A')}</p>
 			<p>XX minutes</p>

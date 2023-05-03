@@ -9,7 +9,7 @@ function QuizAttemptList({
 }: {
 	moduleId: string
 	instanceId: string
-	result: QuizResult
+	result: QuizResult[]
 }) {
 	return (
 		<div>
@@ -52,11 +52,14 @@ function QuizAttemptList({
 					Score
 				</h2>
 			</div>
+			{result.sort((a, b) => new Date(b.submittedAt).valueOf() - new Date(a.submittedAt).valueOf()).map((result, index) => (
 			<QuizAttemptRow
+				key={index}
+				row={index}
 				moduleId={moduleId}
 				instanceId={instanceId}
 				result={result}
-			/>
+			/>))}
 		</div>
 	)
 }
