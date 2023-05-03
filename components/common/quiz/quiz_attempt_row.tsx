@@ -17,15 +17,11 @@ function QuizAttemptRow({
 	return (
 		<div className="grid grid-cols-5 items-center">
 			{row === 0 ? (
-				<h2
-					className="uppercase mt-3.5 text-black"
-					style={{
-						fontFamily: 'Microgramma',
-						fontWeight: 400,
-					}}
+				<h3
+					className="uppercase mt-3.5 text-black font-light"
 				>
 					Latest
-				</h2>
+				</h3>
 			) : (
 				<span />
 			)}

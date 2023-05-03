@@ -15,42 +15,26 @@ function QuizAttemptList({
 		<div>
 			<div className="grid grid-cols-5 border-y border-wgray mt-3 mb-1.5 pb-1.5 items-center">
 				<span />
-				<h2
-					className="uppercase mt-3.5 text-black"
-					style={{
-						fontFamily: 'Microgramma',
-						fontWeight: 400,
-					}}
+				<h3
+					className="uppercase mt-3.5 text-black font-light"
 				>
 					Attempt
-				</h2>
-				<h2
-					className="uppercase mt-3.5 text-black"
-					style={{
-						fontFamily: 'Microgramma',
-						fontWeight: 400,
-					}}
+				</h3>
+				<h3
+					className="uppercase mt-3.5 text-black font-light"
 				>
 					Date
-				</h2>
-				<h2
-					className="uppercase mt-3.5 text-black"
-					style={{
-						fontFamily: 'Microgramma',
-						fontWeight: 400,
-					}}
+				</h3>
+				<h3
+					className="uppercase mt-3.5 text-black font-light"
 				>
 					time
-				</h2>
-				<h2
-					className="uppercase mt-3.5 text-black"
-					style={{
-						fontFamily: 'Microgramma',
-						fontWeight: 400,
-					}}
+				</h3>
+				<h3
+					className="uppercase mt-3.5 text-black font-light"
 				>
 					Score
-				</h2>
+				</h3>
 			</div>
 			{result
 				.sort(

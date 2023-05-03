@@ -56,15 +56,11 @@ function QuizResultPage() {
 			<h1>module quiz result</h1>
 			<QuizHeader data={quizDetails} />
 			<hr className="border border-black" />
-			<h2
-				className="uppercase mt-3.5 text-black"
-				style={{
-					fontFamily: 'Microgramma',
-					fontWeight: 400,
-				}}
+			<h3
+				className="uppercase mt-3.5 text-black font-light"
 			>
 				Attempt history
-			</h2>
+			</h3>
 			<QuizAttemptList
 				result={result}
 				moduleId={moduleId as string}

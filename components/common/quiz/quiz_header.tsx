@@ -27,15 +27,11 @@ function QuizHeader({ data }: { data: Quiz }) {
 			</div>
 			<hr className="border border-black" />
 
-			<h2
-				className="uppercase mt-6 tracking-wider text-black"
-				style={{
-					fontFamily: 'Microgramma',
-					fontWeight: 400,
-				}}
+			<h3
+				className="uppercase mt-6 tracking-wider text-black font-light"
 			>
 				INSTRUCTIONS
-			</h2>
+			</h3>
 			<p>{data.instructions}</p>
 		</div>
 	)
