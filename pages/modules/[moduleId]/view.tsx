@@ -96,28 +96,19 @@ const ModuleSection = () => {
 							{data.moduleFlowFromLearningPath.currentModule.name}
 						</h3>
 					</header>
-				<div className="my-5 contentLoader">
-					{/* Section content  */}
-					<ContentLoader
-						type={primaryContent.type}
-						data={
-							data.moduleFlowFromLearningPath.currentModule
-								.content
-						}
-					/>
-				</div>
-				{/* Previous and Next buttons */}
-				<div className="w-full flex justify-between items-center">
-					{data.moduleFlowFromLearningPath.previousModule && (
-						<Link
-							href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
-							passHref
-						>
-							<Button>Previous</Button>
-						</Link>
-					)}
-					{!data.moduleFlowFromLearningPath.previousModule &&
-						data.moduleFlowFromLearningPath.previousCollection && (
+					<div className="my-5 contentLoader">
+						{/* Section content  */}
+						<ContentLoader
+							type={primaryContent.type}
+							data={
+								data.moduleFlowFromLearningPath.currentModule
+									.content
+							}
+						/>
+					</div>
+					{/* Previous and Next buttons */}
+					<div className="w-full flex justify-between items-center">
+						{data.moduleFlowFromLearningPath.previousModule && (
 							<Link
 								href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
 								passHref
@@ -125,6 +116,16 @@ const ModuleSection = () => {
 								<Button>Previous</Button>
 							</Link>
 						)}
+						{!data.moduleFlowFromLearningPath.previousModule &&
+							data.moduleFlowFromLearningPath
+								.previousCollection && (
+								<Link
+									href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
+									passHref
+								>
+									<Button>Previous</Button>
+								</Link>
+							)}
 						{!data.moduleFlowFromLearningPath.previousModule &&
 							data.moduleFlowFromLearningPath
 								.previousCollection && (
