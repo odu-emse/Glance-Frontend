@@ -7,7 +7,7 @@ const PDFContent = ({ data }) => {
 	}
 
 	return (
-		<div className="flex flex-col w-3/4">
+		<div className="flex flex-col w-auto h-full">
 			<object
 				data={pdfLink}
 				type="application/pdf"
