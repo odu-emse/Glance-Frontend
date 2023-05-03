@@ -7,7 +7,7 @@ function QuizAttemptRow({
 	moduleId,
 	instanceId,
 	result,
-	row
+	row,
 }: {
 	moduleId: string
 	instanceId: string
@@ -17,15 +17,18 @@ function QuizAttemptRow({
 	return (
 		<div className="grid grid-cols-5 items-center">
 			{row === 0 ? (
-			<h2
-				className="uppercase mt-3.5 text-black"
-				style={{
-					fontFamily: 'Microgramma',
-					fontWeight: 400,
-				}}
-			>
-				Latest
-			</h2>) : <span />}
+				<h2
+					className="uppercase mt-3.5 text-black"
+					style={{
+						fontFamily: 'Microgramma',
+						fontWeight: 400,
+					}}
+				>
+					Latest
+				</h2>
+			) : (
+				<span />
+			)}
 			<Link
 				href={`/modules/${moduleId}/result?instanceId=${instanceId}&attemptId=${result.id}`}
 			>
