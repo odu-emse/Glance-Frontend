@@ -18,10 +18,8 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 }) => {
 	return (
 		<Link href={href} passHref>
-			<div
-				className={`py-1 my-2 mx-2 rounded cursor-pointer hover:bg-wgray flex gap-2 ${
-					collapsed ? 'justify-center' : ''
-				}`}
+			<a
+				className="px-4 py-1 mx-1 my-2 rounded cursor-pointer hover:bg-wgray flex gap-2"
 				style={{
 					fontFamily: 'Montserrat, sans-serif',
 					// ...collapsed ? { justifyContent: 'center' } : {}
@@ -29,7 +27,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 			>
 				{svgIcon}
 				{!collapsed ? <p className="m-0 p-0">{value}</p> : null}
-			</div>
+			</a>
 		</Link>
 	)
 }
