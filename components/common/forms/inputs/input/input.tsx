@@ -1,7 +1,4 @@
-import * as React from 'react'
-import { RiH5 } from 'react-icons/ri'
-// import { BiSearch } from 'react-icons/bi'
-// import { dropdownOption } from '../select/select'
+import React, { useState } from 'react'
 
 export const Input = ({
 	label,
@@ -10,14 +7,23 @@ export const Input = ({
 	onChange,
 	required = false,
 	type,
-	// ariaLabel,
 	disabled = false,
 	description,
 	error = false,
 	placeholder = 'Enter here',
 	className = '',
 	length,
+	content,
+	min,
+	max,
+	value,
+	checked = false,
 }: InputProps) => {
+	const [isChecked, setIsChecked] = useState(checked)
+	const inputShape = type === 'radio' ? 'rounded-full' : 'rounded-sm'
+	const handleInputChange = () => {
+		if (!disabled) setIsChecked(!isChecked)
+	}
 	const inputLength =
 		length === 'short'
 			? 'w-1/6'
@@ -28,16 +34,25 @@ export const Input = ({
 			: 'w-full'
 	const classes = [
 		className,
-		'block rounded-sm border-2 text-gray-900 bg-transparent appearance-none focus:outline-none focus:ring-0 peer',
+		'block appearance-none focus:outline-none focus:ring-0 peer',
 		error ? 'border-red-500 focus:border-red-600' : 'border-wgray',
 		disabled
 			? 'cursor-not-allowed'
 			: 'focus:border-royalblue hover:border-royalblue',
-		length ? `${inputLength}` : 'w-full',
+		length ? `${inputLength}` : '',
+		type === 'radio' || type === 'checkbox' ? 'sr-only' : 'border-2',
+		type === 'range' ? 'h-1 cursor-ew-resize' : '',
 	].join(' ')
+
 	return (
 		<>
-			<div>
+			<div
+				className={` ${
+					type === 'radio' || type === 'checkbox'
+						? 'flex items-center'
+						: ''
+				}`}
+			>
 				{label && (
 					<h2 className="font-medium mb-1">
 						<label htmlFor={name}> {label.toUpperCase()}</label>
@@ -51,10 +66,45 @@ export const Input = ({
 					role={role}
 					aria-label={type}
 					className={classes}
+					checked={isChecked}
 					required={required}
 					disabled={disabled}
-					onChange={(event) => onChange(event.target.value)}
+					min={type === 'range' ? min : undefined}
+					max={type === 'range' ? max : undefined}
+					value={type === 'range' ? value : undefined}
+					onChange={(event) => {
+						if (type === 'checkbox' || type === 'radio') {
+							handleInputChange()
+						}
+						onChange(event.target.value)
+					}}
+					// onChange={handleInputChange}
 				/>
+				{type === 'radio' || type === 'checkbox' ? (
+					<div
+						className={`flex items-center w-4 h-4 ${inputShape} border ${
+							disabled ? '' : 'cursor-pointer'
+						} ${
+							isChecked
+								? 'bg-white border-royalblue'
+								: 'bg-white border-wgray' // Change the color of the custom checkbox/radio based on isChecked state
+						}`}
+						onClick={handleInputChange}
+					>
+						{isChecked && (
+							<div
+								className={`w-3 h-3 mx-auto my-auto bg-royalblue ${
+									type === 'radio'
+										? 'rounded-full'
+										: 'rounded'
+								}`}
+							></div>
+						)}
+					</div>
+				) : null}
+				{type === 'radio' || type === 'checkbox' ? (
+					<label className="ml-1">{content}</label>
+				) : null}
 				{description && (
 					<p
 						id="helper-text-explanation"
@@ -106,6 +156,9 @@ export type InputProps = {
 		| 'tel'
 		| 'number'
 		| 'file'
+		| 'radio'
+		| 'checkbox'
+		| 'range'
 	/**
 	 * The disabled attribute is used to indicate weather the input element is disabled or not.
 	 */
@@ -127,7 +180,27 @@ export type InputProps = {
 	 */
 	className?: string
 	/**
-	 * An enum that specifies the size of the toggle switch
+	 * An enum that specifies the length of the input field
 	 */
 	length: 'short' | 'normal' | 'long' | 'full'
+	/**
+	 * Content string for radio input
+	 */
+	content?: string
+	/**
+	 * A boolean determines whether the input box is checked or not
+	 */
+	checked?: boolean
+	/**
+	 * The `min` attribute is used to specify the minimum value for a range slider
+	 */
+	min?: number
+	/**
+	 * The `max` attribute is used to specify the maximum value for a range slider
+	 */
+	max?: number
+	/**
+	 * The `value` attribute is used to define the initial value of a range slider
+	 */
+	value?: number
 }
