@@ -1,8 +1,12 @@
 import { Button } from '@/components/common/button/button'
+import Head from 'next/head'
 
 const CreateThread = () => {
 	return (
 		<div className="flex flex-col">
+			<Head>
+				<title>Create a new Thread | GLANCE</title>
+			</Head>
 			<input type="text" placeholder="An eye catching title..." />
 			<select name="aaa" id="">
 				<option value="a">Hello 0</option>

@@ -13,6 +13,7 @@ import Loading from '@/common/loader/loader'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
 import { Collection, Module, Section } from '@/types/graphql'
 import GlobalUserContext from '@/contexts/global_user_context'
+import Head from 'next/head'
 
 const ModuleSection = () => {
 	const { user } = useContext(GlobalUserContext)
@@ -61,99 +62,121 @@ const ModuleSection = () => {
 		) || data.moduleFlowFromLearningPath.currentModule.content[0]
 
 	return (
-		<section className="flex">
-			<div className="SectionContent stdcontainer grow flex-col">
-				<header>
-					<h4 className="mb-6">
-						<Link
-							href={`/sections/${data.moduleFlowFromLearningPath.currentSection.id}`}
-							passHref
-						>
-							<a
-								title={`Return to the home page of "${data.moduleFlowFromLearningPath.currentSection.sectionName}"`}
-							>
-								{
-									data.moduleFlowFromLearningPath
-										.currentSection.sectionName
-								}
-							</a>
-						</Link>
-						&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
-						{data.moduleFlowFromLearningPath.currentCollection.name}
-					</h4>
-					<h3>
-						{data.moduleFlowFromLearningPath.currentModule.name}
-					</h3>
-				</header>
-
-				<div className="my-5 contentLoader">
-					{/* Section content  */}
-					<ContentLoader
-						type={primaryContent.type}
-						data={
-							data.moduleFlowFromLearningPath.currentModule
-								.content
-						}
-					/>
-				</div>
-				{/* Previous and Next buttons */}
-				<div className="w-full flex justify-between items-center">
-					{data.moduleFlowFromLearningPath.previousModule && (
-						<Link
-							href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
-							passHref
-						>
-							<Button>Previous</Button>
-						</Link>
-					)}
-					{!data.moduleFlowFromLearningPath.previousModule &&
-						data.moduleFlowFromLearningPath.previousCollection && (
+		<div>
+			<Head>
+				<title>
+					{data.moduleFlowFromLearningPath.currentModule.name} |
+					GLANCE
+				</title>
+			</Head>
+			<section className="flex">
+				<div className="SectionContent stdcontainer grow flex-col">
+					<header>
+						<h4 className="mb-6">
 							<Link
-								href={`/modules/${
-									data.moduleFlowFromLearningPath
-										.previousCollection.modules[
-										data.moduleFlowFromLearningPath
-											.previousCollection.modules.length -
-											1
-									].id
-								}/view`}
+								href={`/sections/${data.moduleFlowFromLearningPath.currentSection.id}`}
 								passHref
 							>
-								<Button>Previous collection</Button>
+								<a
+									title={`Return to the home page of "${data.moduleFlowFromLearningPath.currentSection.sectionName}"`}
+								>
+									{
+										data.moduleFlowFromLearningPath
+											.currentSection.sectionName
+									}
+								</a>
+							</Link>
+							&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
+							{
+								data.moduleFlowFromLearningPath
+									.currentCollection.name
+							}
+						</h4>
+						<h3>
+							{data.moduleFlowFromLearningPath.currentModule.name}
+						</h3>
+					</header>
+					<div className="my-5 contentLoader">
+						{/* Section content  */}
+						<ContentLoader
+							type={primaryContent.type}
+							data={
+								data.moduleFlowFromLearningPath.currentModule
+									.content
+							}
+						/>
+					</div>
+					{/* Previous and Next buttons */}
+					<div className="w-full flex justify-between items-center">
+						{data.moduleFlowFromLearningPath.previousModule && (
+							<Link
+								href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
+								passHref
+							>
+								<Button>Previous</Button>
 							</Link>
 						)}
-					<div className="grow"></div>
-					{data.moduleFlowFromLearningPath.nextModule !== null && (
-						<Link
-							href={`/modules/${data.moduleFlowFromLearningPath.nextModule.id}/view`}
-							passHref
-						>
-							<Button>Next</Button>
-						</Link>
-					)}
-					{!data.moduleFlowFromLearningPath.nextModule &&
-					!data.moduleFlowFromLearningPath.nextCollection ? (
-						<Link href={`/modules`} passHref>
-							<Button>Return to modules</Button>
-						</Link>
-					) : null}
+						{!data.moduleFlowFromLearningPath.previousModule &&
+							data.moduleFlowFromLearningPath
+								.previousCollection && (
+								<Link
+									href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
+									passHref
+								>
+									<Button>Previous</Button>
+								</Link>
+							)}
+						{!data.moduleFlowFromLearningPath.previousModule &&
+							data.moduleFlowFromLearningPath
+								.previousCollection && (
+								<Link
+									href={`/modules/${
+										data.moduleFlowFromLearningPath
+											.previousCollection.modules[
+											data.moduleFlowFromLearningPath
+												.previousCollection.modules
+												.length - 1
+										].id
+									}/view`}
+									passHref
+								>
+									<Button>Previous collection</Button>
+								</Link>
+							)}
+						<div className="grow"></div>
+						{data.moduleFlowFromLearningPath.nextModule !==
+							null && (
+							<Link
+								href={`/modules/${data.moduleFlowFromLearningPath.nextModule.id}/view`}
+								passHref
+							>
+								<Button>Next</Button>
+							</Link>
+						)}
+						{!data.moduleFlowFromLearningPath.nextModule &&
+						!data.moduleFlowFromLearningPath.nextCollection ? (
+							<Link href={`/modules`} passHref>
+								<Button>Return to modules</Button>
+							</Link>
+						) : null}
+					</div>
 				</div>
-			</div>
-			{/* Section sidebar */}
-			<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
-				<SidebarLessons
-					currentModule={moduleId as string}
-					open={true}
-					handle={() => console.log('toggled')}
-					data={
-						data.moduleFlowFromLearningPath.currentCollection
-							.modules
-					}
-					property={'name'}
-					url={'id'}
-				/>
-			</aside>
-		</section>
+				{/* Section sidebar */}
+				<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
+					<SidebarLessons
+						currentModule={moduleId as string}
+						open={true}
+						handle={() => console.log('toggled')}
+						data={
+							data.moduleFlowFromLearningPath.currentCollection
+								.modules
+						}
+						property={'name'}
+						url={'id'}
+					/>
+				</aside>
+			</section>
+		</div>
 	)
 }
 

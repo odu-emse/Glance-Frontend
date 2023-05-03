@@ -11,6 +11,7 @@ import Link from 'next/link'
 import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
 import { Button } from '@/common/button/button'
 import { Anchor } from '@/common/links/anchor/anchor'
+import Head from 'next/head'
 
 function PlanOfStudyIndexPage() {
 	const { data: session } = useSession()
@@ -39,49 +40,57 @@ function PlanOfStudyIndexPage() {
 		)
 
 	return (
-		<section className="flex flex-col stdcontainer">
-			<div className="flex flex-col mb-5">
-				<h1 className="mb-3">plan of study</h1>
-				<h2 className="">
-					Hi, <span className="uppercase">{session.user.name}</span>!
-					Check out...
-				</h2>
-			</div>
-			<div className="grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-7">
-				<PlanOfStudyPanel
-					title={'My Paths'}
-					buttonPath={`/plan/${session.openId}/paths/create`}
-					buttonValue="Create new"
-				>
-					<ul className="m-0 list-none divide-y">
-						{data.learningPath[0].paths.map((path, index) => {
-							return (
-								<li
-									key={index}
-									className="flex justify-between items-center gap-1 my-1 sans"
-								>
-									<p className="">{path.course.name}</p>
-									<span className="text-sm py-1 rounded-md bg-wgray font-semibold px-2">
-										{path.status}
-									</span>
-									<time className="">
-										{path.hoursSatisfies} hours
-									</time>
-									<Link
-										href={`/plan/${session.openId}/paths/${path.id}`}
+		<div>
+			<Head>
+				<title>Plan of Study | GLANCE</title>
+			</Head>
+			<section className="flex flex-col stdcontainer">
+				<div className="flex flex-col mb-5">
+					<h1 className="mb-3">plan of study</h1>
+					<h2 className="">
+						Hi,{' '}
+						<span className="uppercase">{session.user.name}</span>!
+						Check out...
+					</h2>
+				</div>
+				<div className="grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-7">
+					<PlanOfStudyPanel
+						title={'My Paths'}
+						buttonPath={`/plan/${session.openId}/paths/create`}
+						buttonValue="Create new"
+					>
+						<ul className="m-0 list-none divide-y">
+							{data.learningPath[0].paths.map((path, index) => {
+								return (
+									<li
+										key={index}
+										className="flex justify-between items-center gap-1 my-1 sans"
 									>
-										<a className="text-royalblue">View</a>
-									</Link>
-								</li>
-							)
-						})}
-					</ul>
-				</PlanOfStudyPanel>
-				<PlanOfStudyPanel title={'Most recent modules'} />
-				<PlanOfStudyPanel title={'my latest threads'} />
-				<PlanOfStudyPanel title={'most recent assignments'} />
-			</div>
-		</section>
+										<p className="">{path.course.name}</p>
+										<span className="text-sm py-1 rounded-md bg-wgray font-semibold px-2">
+											{path.status}
+										</span>
+										<time className="">
+											{path.hoursSatisfies} hours
+										</time>
+										<Link
+											href={`/plan/${session.openId}/paths/${path.id}`}
+										>
+											<a className="text-royalblue">
+												View
+											</a>
+										</Link>
+									</li>
+								)
+							})}
+						</ul>
+					</PlanOfStudyPanel>
+					<PlanOfStudyPanel title={'Most recent modules'} />
+					<PlanOfStudyPanel title={'my latest threads'} />
+					<PlanOfStudyPanel title={'most recent assignments'} />
+				</div>
+			</section>
+		</div>
 	)
 }
 
