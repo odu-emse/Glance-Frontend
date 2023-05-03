@@ -5,15 +5,15 @@ import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import { Button } from '@/components/common/button/button'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { Quiz, QuizInstance } from '@/types/graphql';
-import { getQuizById } from '@/scripts/get_quiz_by_id';
-import { createQuizInstance } from '@/scripts/create_quiz_instance';
-import { useRouter } from 'next/router';
-import QuizHeader from '@/common/quiz/quiz_header';
+import { Quiz, QuizInstance } from '@/types/graphql'
+import { getQuizById } from '@/scripts/get_quiz_by_id'
+import { createQuizInstance } from '@/scripts/create_quiz_instance'
+import { useRouter } from 'next/router'
+import QuizHeader from '@/common/quiz/quiz_header'
 
 const QuizContent = ({ data }) => {
 	const router = useRouter()
-	const {moduleId} = router.query
+	const { moduleId } = router.query
 	const [answers, setAnswers] = useState([])
 	const { user } = useContext(GlobalUserContext)
 
@@ -74,9 +74,9 @@ const QuizContent = ({ data }) => {
 	const { data: quizResponse } = useSWR(
 		instanceId
 			? {
-				query: createQuizInstance,
-				variables: { id: instanceId },
-			}
+					query: createQuizInstance,
+					variables: { id: instanceId },
+			  }
 			: null,
 		gqlFetcher
 	) as {
@@ -138,7 +138,7 @@ const QuizContent = ({ data }) => {
 									text: answer.text,
 								}))}
 								updateAnswer={updateAnswer}
-								questionType={""}
+								questionType={''}
 							/>
 						)
 					)}

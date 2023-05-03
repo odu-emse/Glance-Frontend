@@ -1,17 +1,15 @@
-import { gql } from 'graphql-request';
+import { gql } from 'graphql-request'
 
-export const getQuizById =  gql`
+export const getQuizById = gql`
 	query getQuizById($quizID: ID!) {
-		quiz(args: {
-			id: $quizID,
-		}){
+		quiz(args: { id: $quizID }) {
 			numQuestions
 			id
 			totalPoints
 			dueAt
 			timeLimit
 			minScore
-			instances{
+			instances {
 				id
 			}
 			instructions

@@ -1,19 +1,17 @@
-import { gql } from 'graphql-request';
+import { gql } from 'graphql-request'
 
 export const getQuizInstanceByID = gql`
 	query getQuizInstanceByID($instanceID: ID!) {
-		quizResult(args:{
-			quizInstance: $instanceID
-		}){
+		quizResult(args: { quizInstance: $instanceID }) {
 			id
 			score
 			submittedAt
-			student{
+			student {
 				id
 			}
-			quizInstance{
+			quizInstance {
 				id
-				quiz{
+				quiz {
 					numQuestions
 					id
 					totalPoints

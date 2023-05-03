@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
 export const QuizQuestion = ({
-															 questionNumber,
-															 question,
-															 questionType,
-															 options,
-															 updateAnswer,
-														 }) => {
+	questionNumber,
+	question,
+	questionType,
+	options,
+	updateAnswer,
+}) => {
 	const [selectedOption, setSelectedOption] = useState(null)
 
 	const handleChange = (e) => {
