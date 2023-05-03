@@ -200,7 +200,9 @@ const ThreadID = () => {
 	return (
 		<div>
 			<Head>
-			<title>{threadData.thread[0].title} | Communitites | GLANCE</title>
+				<title>
+					{threadData.thread[0].title} | Communitites | GLANCE
+				</title>
 			</Head>
 			<section className="px-8 mb-4">
 				<div className="mx-3">

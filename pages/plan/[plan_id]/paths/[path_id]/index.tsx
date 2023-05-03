@@ -56,7 +56,7 @@ function PathIndexPage() {
 	return (
 		<div>
 			<Head>
-			<title>Learning Path | GLANCE</title>
+				<title>Learning Path | GLANCE</title>
 			</Head>
 			<section className="stdcontainer">
 				<div className="flex gap-4 items-center justify-start my-4">

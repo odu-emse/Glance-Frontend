@@ -10,7 +10,7 @@ const SettingsPage = (props) => {
 	return (
 		<div className="m-11">
 			<Head>
-			<title>Settings | GLANCE</title>
+				<title>Settings | GLANCE</title>
 			</Head>
 			<h1>Settings</h1>
 			<Button className="mt-5" onClick={() => history.back()}>

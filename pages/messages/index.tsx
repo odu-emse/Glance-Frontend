@@ -6,7 +6,7 @@ const Index = () => {
 	return (
 		<>
 			<Head>
-			<title>Messages | GLANCE</title>
+				<title>Messages | GLANCE</title>
 			</Head>
 			<div className="flex">
 				<div className=" flex w-1/4 h-screen">

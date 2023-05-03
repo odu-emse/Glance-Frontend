@@ -55,8 +55,8 @@ function CreateLearningPathPage() {
 	return (
 		<div>
 			<Head>
-        	<title>Create Learning Path | GLANCE</title>
-      		</Head>
+				<title>Create Learning Path | GLANCE</title>
+			</Head>
 			<section className="stdcontainer">
 				<h1>Create Learning Path</h1>
 				<div className="">
@@ -72,8 +72,9 @@ function CreateLearningPathPage() {
 										event.target.selectedIndex
 									].text,
 									sections: [],
-									carnegieHours: courseGetter(event.target.value)
-										?.carnegieHours,
+									carnegieHours: courseGetter(
+										event.target.value
+									)?.carnegieHours,
 									required: courseGetter(event.target.value)
 										?.required,
 								},
@@ -90,7 +91,10 @@ function CreateLearningPathPage() {
 					<h2>Modules</h2>
 					<div className="flex flex-col">
 						{data?.module.map((module, moduleIndex) => (
-							<span className="flex items-center" key={moduleIndex}>
+							<span
+								className="flex items-center"
+								key={moduleIndex}
+							>
 								<input
 									type={'checkbox'}
 									value={module.id}
@@ -155,7 +159,10 @@ function CreateLearningPathPage() {
 					<h2>Lessons</h2>
 					<div className="flex flex-col">
 						{data?.lesson.map((lesson, lessonIndex) => (
-							<span className="flex items-center" key={lessonIndex}>
+							<span
+								className="flex items-center"
+								key={lessonIndex}
+							>
 								<input
 									type={'checkbox'}
 									value={lesson.id}

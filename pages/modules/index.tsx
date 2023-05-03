@@ -57,7 +57,7 @@ const ModulesPage = () => {
 	return (
 		<div>
 			<Head>
-			<title>Modules | GLANCE</title>
+				<title>Modules | GLANCE</title>
 			</Head>
 			<section className="stdcontainer">
 				<header>
@@ -69,25 +69,30 @@ const ModulesPage = () => {
 							expanded ? 'w-2/3' : 'w-full'
 						} flex-none transition-all`}
 					>
-						{data.modulesFromLearningPath.map((enrollment, index) => {
-							return (
-								<div
-									className="mb-4"
-									key={index}
-									onClick={() => setSelection(enrollment.id)}
-								>
-									<ModuleItem
-										data={enrollment}
-										role={'STUDENT'}
-										expanded={expanded}
-										handleExpansion={setExpanded}
-										selected={
-											enrollment.id === selection && expanded
+						{data.modulesFromLearningPath.map(
+							(enrollment, index) => {
+								return (
+									<div
+										className="mb-4"
+										key={index}
+										onClick={() =>
+											setSelection(enrollment.id)
 										}
-									/>
-								</div>
-							)
-						})}
+									>
+										<ModuleItem
+											data={enrollment}
+											role={'STUDENT'}
+											expanded={expanded}
+											handleExpansion={setExpanded}
+											selected={
+												enrollment.id === selection &&
+												expanded
+											}
+										/>
+									</div>
+								)
+							}
+						)}
 					</div>
 					{expanded && (
 						<ModuleSidebar

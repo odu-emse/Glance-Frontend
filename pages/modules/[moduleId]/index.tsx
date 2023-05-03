@@ -95,7 +95,7 @@ const ModuleIndexPage = () => {
 	return (
 		<div>
 			<Head>
-			<title>{moduleData.name} | GLANCE</title>
+				<title>{moduleData.name} | GLANCE</title>
 			</Head>
 			<section className="stdcontainer">
 				<header>
@@ -115,8 +115,14 @@ const ModuleIndexPage = () => {
 								>
 									<a>
 										{moduleData.instructor?.title}{' '}
-										{moduleData.instructor?.account.firstName}{' '}
-										{moduleData.instructor?.account.lastName}
+										{
+											moduleData.instructor?.account
+												.firstName
+										}{' '}
+										{
+											moduleData.instructor?.account
+												.lastName
+										}
 									</a>
 								</Link>
 							</div>

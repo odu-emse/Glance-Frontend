@@ -33,7 +33,10 @@ export const UserProfile = ({
 	return (
 		<div className="m-11">
 			<Head>
-			<title>{updatedProfile.firstName} {updatedProfile.lastName} | Profile | GLANCE</title>
+				<title>
+					{updatedProfile.firstName} {updatedProfile.lastName} |
+					Profile | GLANCE
+				</title>
 			</Head>
 			<h1 className="md:ml-6 ml-0 mb-5">
 				{updatedProfile?.firstName} {updatedProfile?.lastName}

@@ -64,7 +64,10 @@ const ModuleSection = () => {
 	return (
 		<div>
 			<Head>
-			<title>{data.moduleFlowFromLearningPath.currentModule.name} | GLANCE</title>
+				<title>
+					{data.moduleFlowFromLearningPath.currentModule.name} |
+					GLANCE
+				</title>
 			</Head>
 			<section className="flex">
 				<div className="SectionContent stdcontainer grow flex-col">
@@ -84,7 +87,10 @@ const ModuleSection = () => {
 								</a>
 							</Link>
 							&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
-							{data.moduleFlowFromLearningPath.currentCollection.name}
+							{
+								data.moduleFlowFromLearningPath
+									.currentCollection.name
+							}
 						</h4>
 						<h3>
 							{data.moduleFlowFromLearningPath.currentModule.name}
@@ -112,14 +118,15 @@ const ModuleSection = () => {
 							</Link>
 						)}
 						{!data.moduleFlowFromLearningPath.previousModule &&
-							data.moduleFlowFromLearningPath.previousCollection && (
+							data.moduleFlowFromLearningPath
+								.previousCollection && (
 								<Link
 									href={`/modules/${
 										data.moduleFlowFromLearningPath
 											.previousCollection.modules[
 											data.moduleFlowFromLearningPath
-												.previousCollection.modules.length -
-												1
+												.previousCollection.modules
+												.length - 1
 										].id
 									}/view`}
 									passHref
@@ -128,7 +135,8 @@ const ModuleSection = () => {
 								</Link>
 							)}
 						<div className="grow"></div>
-						{data.moduleFlowFromLearningPath.nextModule !== null && (
+						{data.moduleFlowFromLearningPath.nextModule !==
+							null && (
 							<Link
 								href={`/modules/${data.moduleFlowFromLearningPath.nextModule.id}/view`}
 								passHref

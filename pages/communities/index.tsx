@@ -126,7 +126,7 @@ const Index = ({}) => {
 	return (
 		<div className="mx-8 flex">
 			<Head>
-			<title>Communitites | GLANCE</title>
+				<title>Communitites | GLANCE</title>
 			</Head>
 			<div className="m-10 grow flex-1">
 				<div className="flex my-2 items-center">

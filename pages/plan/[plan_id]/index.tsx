@@ -42,13 +42,14 @@ function PlanOfStudyIndexPage() {
 	return (
 		<div>
 			<Head>
-        	<title>Plan of Study | GLANCE</title>
-      		</Head>
+				<title>Plan of Study | GLANCE</title>
+			</Head>
 			<section className="flex flex-col stdcontainer">
 				<div className="flex flex-col mb-5">
 					<h1 className="mb-3">plan of study</h1>
 					<h2 className="">
-						Hi, <span className="uppercase">{session.user.name}</span>!
+						Hi,{' '}
+						<span className="uppercase">{session.user.name}</span>!
 						Check out...
 					</h2>
 				</div>
@@ -75,7 +76,9 @@ function PlanOfStudyIndexPage() {
 										<Link
 											href={`/plan/${session.openId}/paths/${path.id}`}
 										>
-											<a className="text-royalblue">View</a>
+											<a className="text-royalblue">
+												View
+											</a>
 										</Link>
 									</li>
 								)
@@ -88,7 +91,6 @@ function PlanOfStudyIndexPage() {
 				</div>
 			</section>
 		</div>
-		
 	)
 }
 
