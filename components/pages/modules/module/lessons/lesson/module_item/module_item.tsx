@@ -24,9 +24,7 @@ export const ModuleItem = ({
 						SECTION {data.collections[0].section.sectionNumber}
 					</p>
 					<span>/</span>
-					<p className="p-0 m-0">
-						{data.collections[0].name}
-					</p>
+					<p className="p-0 m-0">{data.collections[0].name}</p>
 					<span>/</span>
 					<p className="p-0 m-0">
 						MODULE {data.prefix && data.prefix}
