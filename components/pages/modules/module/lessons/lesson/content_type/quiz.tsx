@@ -104,13 +104,17 @@ const QuizContent = ({ data }) => {
 				}
 			)
 		})
-		.then(() => {
-			localStorage.removeItem('quizInstanceId')
-			router.push(`/modules/${moduleId as string}/result?instanceId=${instanceId}`)
-		})
-		.catch((error) => {
-			console.error('Error while submitting quiz:', error)
-		})
+			.then(() => {
+				localStorage.removeItem('quizInstanceId')
+				router.push(
+					`/modules/${
+						moduleId as string
+					}/result?instanceId=${instanceId}`
+				)
+			})
+			.catch((error) => {
+				console.error('Error while submitting quiz:', error)
+			})
 	}
 
 	if (error) {
