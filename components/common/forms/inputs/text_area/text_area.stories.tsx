@@ -40,7 +40,7 @@ Primary.args = {
 	id: 'text-area',
 	role: 'textbox',
 	name: 'text-area',
-	rows: 1,
+	rows: 2,
 	placeholder: 'This is a placeholder text for the text area component.',
 	disabled: false,
 	maxLength: 1000,
