@@ -13,6 +13,7 @@ import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/wat
 import Loader from '@/components/util/loader'
 import { Button } from '@/common/button/button'
 import { useState } from 'react'
+import Head from 'next/head'
 
 const Index = ({}) => {
 	const { data: session } = useSession()
@@ -124,6 +125,9 @@ const Index = ({}) => {
 
 	return (
 		<div className="mx-8 flex">
+			<Head>
+			<title>Communitites | GLANCE</title>
+			</Head>
 			<div className="m-10 grow flex-1">
 				<div className="flex my-2 items-center">
 					<img

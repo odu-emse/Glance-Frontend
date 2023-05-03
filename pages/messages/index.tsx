@@ -1,9 +1,13 @@
 import { BubbleMessage } from '@/components/common/chat/bubble_message/bubble_message'
 import { ChatHistory } from '@/components/common/chat/chat_history/chat_history'
+import Head from 'next/head'
 
 const Index = () => {
 	return (
 		<>
+			<Head>
+			<title>Messages | GLANCE</title>
+			</Head>
 			<div className="flex">
 				<div className=" flex w-1/4 h-screen">
 					<ChatHistory

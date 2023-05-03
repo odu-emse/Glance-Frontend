@@ -6,6 +6,7 @@ import { UserAccount } from '@/common/community/threads/thread/thread'
 import AccountSidebar from '@/common/user/account_sidebar'
 import StudentContent from '@/common/user/student_content'
 import InstructorContent from '@/common/user/instructor_content'
+import Head from 'next/head'
 
 export const UserProfile = ({
 	user,
@@ -31,6 +32,9 @@ export const UserProfile = ({
 
 	return (
 		<div className="m-11">
+			<Head>
+			<title>{updatedProfile.firstName} {updatedProfile.lastName} | Profile | GLANCE</title>
+			</Head>
 			<h1 className="md:ml-6 ml-0 mb-5">
 				{updatedProfile?.firstName} {updatedProfile?.lastName}
 			</h1>

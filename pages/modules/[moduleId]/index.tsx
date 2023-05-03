@@ -14,6 +14,7 @@ import Loader from '@/components/util/loader'
 import * as React from 'react'
 import { Module } from '@/types/graphql'
 import { getListOfModulesForLearningPath } from '@/scripts/get_lp_by_plan_id'
+import Head from 'next/head'
 
 const ModuleIndexPage = () => {
 	const { setLoading } = useContext(GlobalLoadingContext)
@@ -92,108 +93,113 @@ const ModuleIndexPage = () => {
 	// 			)
 
 	return (
-		<section className="stdcontainer">
-			<header>
-				<h1>{moduleData.name}</h1>
-				<div className="flex flex-row gap-2">
-					<figcaption>
-						MODULE {moduleData.prefix && moduleData.prefix}
-						{moduleData.number}
-					</figcaption>
-					<figcaption>/</figcaption>
-					<figcaption>
-						Instructed by{' '}
-						<div className="inline-block">
-							<Link
-								href={`/users/${moduleData.instructor?.account.openID}?instructor=true`}
-								passHref
-							>
-								<a>
-									{moduleData.instructor?.title}{' '}
-									{moduleData.instructor?.account.firstName}{' '}
-									{moduleData.instructor?.account.lastName}
-								</a>
-							</Link>
-						</div>
-					</figcaption>
+		<div>
+			<Head>
+			<title>{moduleData.name} | GLANCE</title>
+			</Head>
+			<section className="stdcontainer">
+				<header>
+					<h1>{moduleData.name}</h1>
+					<div className="flex flex-row gap-2">
+						<figcaption>
+							MODULE {moduleData.prefix && moduleData.prefix}
+							{moduleData.number}
+						</figcaption>
+						<figcaption>/</figcaption>
+						<figcaption>
+							Instructed by{' '}
+							<div className="inline-block">
+								<Link
+									href={`/users/${moduleData.instructor?.account.openID}?instructor=true`}
+									passHref
+								>
+									<a>
+										{moduleData.instructor?.title}{' '}
+										{moduleData.instructor?.account.firstName}{' '}
+										{moduleData.instructor?.account.lastName}
+									</a>
+								</Link>
+							</div>
+						</figcaption>
+					</div>
+				</header>
+
+				<div className="my-4">
+					<Link href={`/modules/${moduleData.id}/view`} passHref>
+						<Button>
+							{/*{isStarted ? 'RESUME MODULE' : 'START MODULE'}*/}
+							Start Module
+						</Button>
+					</Link>
 				</div>
-			</header>
 
-			<div className="my-4">
-				<Link href={`/modules/${moduleData.id}/view`} passHref>
-					<Button>
-						{/*{isStarted ? 'RESUME MODULE' : 'START MODULE'}*/}
-						Start Module
-					</Button>
-				</Link>
-			</div>
+				<hr />
 
-			<hr />
+				<section>
+					<header className="mb-0">
+						<h2>Credit hours</h2>
+					</header>
+					<p className="mt-0">{moduleData.hours} hours</p>
+				</section>
 
-			<section>
-				<header className="mb-0">
-					<h2>Credit hours</h2>
-				</header>
-				<p className="mt-0">{moduleData.hours} hours</p>
-			</section>
-
-			<section>
-				<header className="mb-0">
-					<h2>Description</h2>
-				</header>
-				<p className="mt-0">
-					{moduleData.description ??
-						'No description has been provided.'}
-				</p>
-			</section>
-
-			<section>
-				<header className="mb-0">
-					<h2>Recommended Modules</h2>
-				</header>
-				<ul className="mt-0 mb-0">
-					{moduleData.collections.map(
-						(collection, collectionIndex) => {
-							return collection.modules
-								.filter((mod) => mod.id !== moduleData.id)
-								.map((module, moduleIndex) => {
-									return (
-										<li key={moduleIndex}>
-											<Link
-												href={`/modules/${module.id}`}
-												passHref
-											>
-												<a>
-													{module.name} (MODULE{' '}
-													{module.prefix &&
-														module.prefix}
-													{module.number})
-												</a>
-											</Link>
-										</li>
-									)
-								})
-						}
-					)}
-				</ul>
-			</section>
-
-			<section>
-				<header className="mb-0">
-					<h2>Objectives</h2>
-				</header>
-				<ul className="mt-0 mb-0">
-					{moduleData.objectives.map((objective, index) => {
-						return <li key={index}>{objective}</li>
-					})}
-				</ul>
-				{moduleData.objectives.length === 0 && (
+				<section>
+					<header className="mb-0">
+						<h2>Description</h2>
+					</header>
 					<p className="mt-0">
-						No section objectives have been provided.
+						{moduleData.description ??
+							'No description has been provided.'}
 					</p>
-				)}
+				</section>
+
+				<section>
+					<header className="mb-0">
+						<h2>Recommended Modules</h2>
+					</header>
+					<ul className="mt-0 mb-0">
+						{moduleData.collections.map(
+							(collection, collectionIndex) => {
+								return collection.modules
+									.filter((mod) => mod.id !== moduleData.id)
+									.map((module, moduleIndex) => {
+										return (
+											<li key={moduleIndex}>
+												<Link
+													href={`/modules/${module.id}`}
+													passHref
+												>
+													<a>
+														{module.name} (MODULE{' '}
+														{module.prefix &&
+															module.prefix}
+														{module.number})
+													</a>
+												</Link>
+											</li>
+										)
+									})
+							}
+						)}
+					</ul>
+				</section>
+
+				<section>
+					<header className="mb-0">
+						<h2>Objectives</h2>
+					</header>
+					<ul className="mt-0 mb-0">
+						{moduleData.objectives.map((objective, index) => {
+							return <li key={index}>{objective}</li>
+						})}
+					</ul>
+					{moduleData.objectives.length === 0 && (
+						<p className="mt-0">
+							No section objectives have been provided.
+						</p>
+					)}
+				</section>
 			</section>
-		</section>
+		</div>
 	)
 }
 

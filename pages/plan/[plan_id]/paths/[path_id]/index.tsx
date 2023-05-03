@@ -18,6 +18,7 @@ import { Button } from '@/common/button/button'
 import LPSidebar from '@/common/learning_path/sidebar/sidebar'
 import SectionCard from '@/common/learning_path/section/section_card'
 import Loading from '@/common/loader/loader'
+import Head from 'next/head'
 
 function PathIndexPage() {
 	const router = useRouter()
@@ -53,39 +54,44 @@ function PathIndexPage() {
 	const LP = data.learningPath[0].paths[0]
 
 	return (
-		<section className="stdcontainer">
-			<div className="flex gap-4 items-center justify-start my-4">
-				<Button onClick={() => router.back()}>Back</Button>
-				<h1>
-					Path to {LP.course.name} -{' '}
-					{`${LP.course.prefix} ${LP.course.number}`}
-				</h1>
-			</div>
-			<div className="flex gap-1 items-start">
-				<div className="flex-none w-2/3">
-					<ul className="list-none m-0">
-						{LP.course.sections.map((section, index) => (
-							<SectionCard
-								section={section}
-								key={index}
-								collapseIndex={collapseSection}
-								sectionIndex={index}
-								handleCollapse={setCollapseSection}
-								sectionPointer={sectionRef}
-								editMode={editMode}
-								sectionsData={data.module}
-							/>
-						))}
-					</ul>
+		<div>
+			<Head>
+			<title>Learning Path | GLANCE</title>
+			</Head>
+			<section className="stdcontainer">
+				<div className="flex gap-4 items-center justify-start my-4">
+					<Button onClick={() => router.back()}>Back</Button>
+					<h1>
+						Path to {LP.course.name} -{' '}
+						{`${LP.course.prefix} ${LP.course.number}`}
+					</h1>
 				</div>
-				<LPSidebar
-					LP={LP}
-					editMode={editMode}
-					toggleEdit={setEditMode}
-					triggerSave={function handle() {}}
-				/>
-			</div>
-		</section>
+				<div className="flex gap-1 items-start">
+					<div className="flex-none w-2/3">
+						<ul className="list-none m-0">
+							{LP.course.sections.map((section, index) => (
+								<SectionCard
+									section={section}
+									key={index}
+									collapseIndex={collapseSection}
+									sectionIndex={index}
+									handleCollapse={setCollapseSection}
+									sectionPointer={sectionRef}
+									editMode={editMode}
+									sectionsData={data.module}
+								/>
+							))}
+						</ul>
+					</div>
+					<LPSidebar
+						LP={LP}
+						editMode={editMode}
+						toggleEdit={setEditMode}
+						triggerSave={function handle() {}}
+					/>
+				</div>
+			</section>
+		</div>
 	)
 }
 

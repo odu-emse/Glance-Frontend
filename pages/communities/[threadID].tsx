@@ -13,6 +13,7 @@ import GlobalUserContext from '@/contexts/global_user_context'
 import { ThreadType } from '../../types'
 import 'katex/dist/katex.min.css'
 import MarkdownContainer from '@/common/community/threads/markdown/markdown_container'
+import Head from 'next/head'
 
 const ThreadID = () => {
 	const router = useRouter()
@@ -197,39 +198,44 @@ const ThreadID = () => {
 	}
 
 	return (
-		<section className="px-8 mb-4">
-			<div className="mx-3">
-				<Button
-					className="mt-6 ml-4 bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-					onClick={() => history.back()}
-				>
-					Back
-				</Button>
-				<div className="flex items-center my-3 justify-between">
-					<h1>Communities</h1>
-					<Button onClick={() => watchThread(threadID, user.id)}>
-						<FaBell />
-						{isCurrentUserWatching ? 'Unwatch' : 'Watch'}
+		<div>
+			<Head>
+			<title>{threadData.thread[0].title} | Communitites | GLANCE</title>
+			</Head>
+			<section className="px-8 mb-4">
+				<div className="mx-3">
+					<Button
+						className="mt-6 ml-4 bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+						onClick={() => history.back()}
+					>
+						Back
 					</Button>
+					<div className="flex items-center my-3 justify-between">
+						<h1>Communities</h1>
+						<Button onClick={() => watchThread(threadID, user.id)}>
+							<FaBell />
+							{isCurrentUserWatching ? 'Unwatch' : 'Watch'}
+						</Button>
+					</div>
 				</div>
-			</div>
-			<div className="m-3 mt-8 h-fit">
-				<h2>{threadData.thread[0].title}</h2>
-				<p className="ml-4 mb-14">
-					<MarkdownContainer>
-						{threadData.thread[0].body}
-					</MarkdownContainer>
-				</p>
-				<ThreadTextArea
-					onSubmit={addCommentToThread}
-					threadID={threadID}
-					userID={user.id}
-				/>
-			</div>
-			<div className="">
-				<CommentsHierarchy thread={sortedThread} />
-			</div>
-		</section>
+				<div className="m-3 mt-8 h-fit">
+					<h2>{threadData.thread[0].title}</h2>
+					<p className="ml-4 mb-14">
+						<MarkdownContainer>
+							{threadData.thread[0].body}
+						</MarkdownContainer>
+					</p>
+					<ThreadTextArea
+						onSubmit={addCommentToThread}
+						threadID={threadID}
+						userID={user.id}
+					/>
+				</div>
+				<div className="">
+					<CommentsHierarchy thread={sortedThread} />
+				</div>
+			</section>
+		</div>
 	)
 }
 

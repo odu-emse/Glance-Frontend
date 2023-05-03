@@ -2,12 +2,16 @@ import React from 'react'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { Button } from '@/common/button/button'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 const SettingsPage = (props) => {
 	const router = useRouter()
 	const { user } = router.query
 	return (
 		<div className="m-11">
+			<Head>
+			<title>Settings | GLANCE</title>
+			</Head>
 			<h1>Settings</h1>
 			<Button className="mt-5" onClick={() => history.back()}>
 				Back
