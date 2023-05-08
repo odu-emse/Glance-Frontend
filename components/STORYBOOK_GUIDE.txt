@@ -1,0 +1,170 @@
+By: Joel DeSante
+Created: 5 / 1 / 2023
+Last Updated: 5 / 1 / 2023 
+
+
+----------     STORYBOOK GUIDE     ----------
+
+This guide is a reference / set of rules for you to follow when creating and maintaining components for the Glance Frontend project.
+Please review these rules when setting up a component. If your pull request has been returned then this is a great place to look to find
+a resolution.
+
+
+1. TABLE OF CONTENTS
+
+    1. Contents
+    2. What is the file structure of the components library?
+    3. How should folders and files be named?
+    4. How should the components be named?
+    5. How do I know where to put a component?
+
+
+2. WHAT IS THE FILE STRUCTURE OF THE COMPONENTS LIBRARY?
+
+For the context of this section the entire components library is contained within the `/components` directory.
+
+
+2a. EVERYTHING SHOULD HAVE A NAMESPACE
+The component directory is organized into a variety of "namespaces". In this case, when I refering to a namespace, I simply am reffering
+to a folder (also known as a directory) which contains components.
+
+For example, the `common` folder is a namespace that contains all of the components which will be used throughout the ENTIRE application. 
+Common, in this project, means that the component within it is intended for general purpose use. Things like buttons and text inputs which
+are expected to be used by almost all aspects of the application live in this name space.
+
+All components should have at least ONE namespace.
+
+
+2b. COMPONENTS ALWAYS HAVE THEIR OWN NAMESPACE
+
+So, you will organize components into namespaces like `common`. But, components and storybook stories should nevr just exist on thier own with
+other unrelated stories. Each component should have its OWN namespace (and thus its own folder). 
+
+For example, let's say I am creating a button component. I will have the following files which contain code:
+
+- button.stories.tsx    (Storybook Story)
+- button.tsx            (The actual React component)
+
+These files should exist in the file structure like such:
+
+/components/common/button/button.stories.tsx
+/components/common/button/button.tsx
+
+You see? In this case, the button has TWO namespaces. Common and Button (written as Common/Button). Common is the top level name space and
+Button is a sub namespace.
+
+You can take this even further. Lets say we have a video player which is very complex. Maybe it has a series of sub-components that it depends
+on to work correctly...
+
+You might do the following:
+
+components/
+ |-> common/
+      |-> video_player/
+           |-> video_player.tsx
+           |-> video_player.stories.tsx
+           |-> play_button/
+           |    |-> play_button.tsx
+           |    |-> play_button.stories.tsx
+           |-> volume_control/
+                |-> volume_control.tsx
+                |-> volume_control.stories.tsx
+
+
+Do you see how the structure is logically laid out? The video player component has a set of very specific components that WILL NOT be used
+anywhere else except for inside the video player component. There for, we put the components withing the video player namespace.
+
+
+3. HOW SHOULD FOLDERS AND FILES BE NAMED?
+
+Please use the snake case naming convention for all folders and files! This convention does NOT apply to the components name within the code
+it only applies to the physical name of the files and folders on the file system.
+
+Example:
+
+this_is_snake_case (GOOD!)
+
+this_IS_not_it     (BAD!)
+
+DO NOT USE CAPITAL LETTERS, ALL LOWERCASE PLEASE!
+
+
+4. HOW SHOULD COMPONENTS BE NAMED
+
+The components themselves should be named using uppercase cammel case.
+
+Examples:
+Button
+VideoPlayer
+InformationCard
+
+The first letter should be capitalized!
+
+To be clear, this is what you should be using for the names of components in stories and the code. This also applies to the namespaces in the
+title of the stories.
+
+For example, the button component should have a storybook title like such:
+
+Common/Button/Button
+^      ^      ^
+|      |      |
+|      |      This is the name of the component.
+|      This is the components namespace
+This is a namespace
+
+
+If the name of a component has two or more words in it, such as video player, you would write it like such:
+
+In the code the component would be written as: `VideoPlayer`
+In the storybook story title it should be written as: `Common/Video Player/Video Player` (using spaces)
+
+Something to note... If multiple components are under a single namespace, make sure the title is spelled exactly the same, otherwise the components
+may not appear in the correct location in storybook.
+
+Ex.
+
+Common/Video Player/Video Player
+Common/Video Player/Play Button/Play Button
+Common/Video Player/Volume Control/Volume Control
+^____^ ^__________^ 
+  |         |
+ Notice how the namespace titles are spelled the same. This is good.
+
+
+5. HOW DO I KNOW WHERE TO PUT A COMPONENT
+
+As described in one of the above sections. Components are divided up into namespaces. 
+Any new component which you create will need to exist in the proper namespace.
+
+To determine which namespace you should place your component you will need to first determine its purpose.
+
+Generally speaking... if a component is to be used in multiple places through out the application then it should exist within the `common` 
+namespace.
+
+Components which are related but not directly dependant on eachother (like form inputs) can also share a namespace. For example, form inputs
+like textarea, input, checkbox, etc could all be grouped in a form namespace under the common namespace.
+
+Ex.
+
+common
+ |-> form
+      |-> range_slider
+      |-> check_box
+      |-> text_area
+
+
+Componets that are to be used as part of very specific components of the interface and not in a general sense should exist in a namespace
+outside of `common`. For example a sidebar which only appears on the module view page might be within the `module_view` namespace rather than
+the `common` one.
+
+Ex.
+
+common
+ |-> button
+ |-> form
+      |-> range_slider
+      |-> check_box
+      |-> text_area
+ |-> etc...
+module_view
+ |-> sidebar
