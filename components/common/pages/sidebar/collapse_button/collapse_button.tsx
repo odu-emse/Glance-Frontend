@@ -6,13 +6,9 @@ export type CollapseButtonProps = {
 	open: boolean
 }
 
-export const CollapseButton: React.FC<CollapseButtonProps> = ({
-	open
-}) => {
+export const CollapseButton: React.FC<CollapseButtonProps> = ({ open }) => {
 	return (
-		<button
-			className="p-2 rounded-md text-red border bg-royalblue"
-		>
+		<button className="p-2 rounded-md text-red border bg-royalblue">
 			{open ? (
 				<IoIosArrowBack color="white" />
 			) : (

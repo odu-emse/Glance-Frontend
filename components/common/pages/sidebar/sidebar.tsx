@@ -51,8 +51,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
 					href="/grades"
 				/>
 			</div>
-			<div 
-				className="absolute -right-4 bottom-8" 
+			<div
+				className="absolute -right-4 bottom-8"
 				onClick={() => handle(!open)}
 			>
 				<CollapseButton open={open} />
