@@ -1,6 +1,6 @@
 import * as React from 'react'
 import moment from 'moment'
-import { User } from '@/types/graphql';
+import { User } from '@/types/graphql'
 
 export const BubbleMessage = ({
 	message,
@@ -16,7 +16,12 @@ export const BubbleMessage = ({
 								{message.length > 0 &&
 									message.map(
 										(
-											{ body, author, recipient, createdAt },
+											{
+												body,
+												author,
+												recipient,
+												createdAt,
+											},
 											index
 										) => (
 											<>
@@ -51,7 +56,11 @@ export const BubbleMessage = ({
 													<div className="w-50 h-50 px-2 opacity-50">
 														<span className="block text-xs text-slate-500">
 															<span>// </span>
-															{moment(createdAt).utcOffset(-480).format('hh:mm A')}
+															{moment(createdAt)
+																.utcOffset(-480)
+																.format(
+																	'hh:mm A'
+																)}
 														</span>
 													</div>
 												</li>
