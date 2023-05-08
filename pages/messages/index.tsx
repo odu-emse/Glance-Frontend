@@ -11,13 +11,15 @@ import Loading from '@/common/loader/loader'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
 import { DirectMessageResponse } from '@/types/graphql'
 import { MessageInput } from '@/common/message_input/message_input'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 const DirectMessageHomePage = () => {
 	const { user } = useContext(GlobalUserContext)
 	const router = useRouter()
-	const {selected: selectedID} = router.query
-	const [selected, setSelected] = useState<string>(selectedID as string ?? null)
+	const { selected: selectedID } = router.query
+	const [selected, setSelected] = useState<string>(
+		(selectedID as string) ?? null
+	)
 	const [message, setMessage] = useState<string | null>(null)
 	const { data, error } = useSWR(
 		{
@@ -124,14 +126,13 @@ const DirectMessageHomePage = () => {
 				}
 			)
 		})
-		.then(() => {
-			setMessage(null)
-		}).finally(
-			() => router.reload()
-		)
-		.catch((error) => {
-			console.error('Error while sending message:', error)
-		})
+			.then(() => {
+				setMessage(null)
+			})
+			.finally(() => router.reload())
+			.catch((error) => {
+				console.error('Error while sending message:', error)
+			})
 	}
 
 	if (error || conversationError)
@@ -163,11 +164,15 @@ const DirectMessageHomePage = () => {
 				<div className=" w-full flex flex-col justify-between h-[calc(100vh_-_4rem)]">
 					{selected !== null && conversation ? (
 						<>
-						<BubbleMessage
-							currentUserID={user.id}
-							message={conversation.directMessages}
-						/>
-						<MessageInput message={null} handleSubmit={handleSendMessage} recipientID={selected} />
+							<BubbleMessage
+								currentUserID={user.id}
+								message={conversation.directMessages}
+							/>
+							<MessageInput
+								message={null}
+								handleSubmit={handleSendMessage}
+								recipientID={selected}
+							/>
 						</>
 					) : (
 						<div className="flex flex-col justify-center items-center h-full">

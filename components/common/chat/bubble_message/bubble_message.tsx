@@ -8,77 +8,65 @@ export const BubbleMessage = ({
 }: BubbleMessageProps) => {
 	return (
 		<div className="container w-full h-[calc(100vh_-_5rem)] overflow-y-scroll">
-				<div className="relative w-full p-6 pb-0 overflow-y-auto h-full">
-					<ul className="space-y-2">
-						{message.length > 0 &&
-							message.map(
-								(
-									{
-										body,
-										author,
-										recipient,
-										createdAt,
-									},
-									index
-								) => (
-									<>
-										<li
-											className={`flex items-center left-li ${
-												author.id ===
-												currentUserID
-													? 'flex-row-reverse'
-													: 'justify-start'
-											}`}
-											key={index}
+			<div className="relative w-full p-6 pb-0 overflow-y-auto h-full">
+				<ul className="space-y-2">
+					{message.length > 0 &&
+						message.map(
+							({ body, author, recipient, createdAt }, index) => (
+								<>
+									<li
+										className={`flex items-center left-li ${
+											author.id === currentUserID
+												? 'flex-row-reverse'
+												: 'justify-start'
+										}`}
+										key={index}
+									>
+										<div className="w-50 h-50 px-2">
+											<img
+												src={author.picURL}
+												alt="User profile picture"
+												className="shadow-lg rounded-full max-w-full h-8 aspect-square"
+											/>
+										</div>
+										<div
+											className={`relative max-w-xl px-4 py-2 text-white ${
+												recipient.id === currentUserID
+													? 'bg-blue-300'
+													: 'bg-gray-300'
+											} rounded shadow`}
 										>
-											<div className="w-50 h-50 px-2">
-												<img
-													src={author.picURL}
-													alt="User profile picture"
-													className="shadow-lg rounded-full max-w-full h-8 aspect-square"
-												/>
-											</div>
-											<div
-												className={`relative max-w-xl px-4 py-2 text-white ${
-													recipient.id ===
-													currentUserID
-														? 'bg-blue-300'
-														: 'bg-gray-300'
-												} rounded shadow`}
-											>
-												<span className="block">
-													{body}
-												</span>
-											</div>
-											<div className="w-50 h-50 px-2 opacity-50">
+											<span className="block">
+												{body}
+											</span>
+										</div>
+										<div className="w-50 h-50 px-2 opacity-50">
+											<span className="block text-xs text-slate-500">
+												<span>// </span>
+												{moment(createdAt)
+													.utcOffset(-480)
+													.format('hh:mm A')}
+											</span>
+										</div>
+									</li>
+									{message[index + 1] && (
+										<li className="flex justify-center right-li">
+											<div className="w-50 h-50 px-2 t-100">
 												<span className="block text-xs text-slate-500">
-													<span>// </span>
-													{moment(createdAt)
-														.utcOffset(-480)
-														.format(
-															'hh:mm A'
-														)}
+													{/* {moment */}
+													{/*	.unix(timestamp1) */}
+													{/*	.format( */}
+													{/*		'dddd, MMMM Do, hh:mm a' */}
+													{/*	)} */}
 												</span>
 											</div>
 										</li>
-										{message[index + 1] && (
-											<li className="flex justify-center right-li">
-												<div className="w-50 h-50 px-2 t-100">
-													<span className="block text-xs text-slate-500">
-														{/* {moment */}
-														{/*	.unix(timestamp1) */}
-														{/*	.format( */}
-														{/*		'dddd, MMMM Do, hh:mm a' */}
-														{/*	)} */}
-													</span>
-												</div>
-											</li>
-										)}
-									</>
-								)
-							)}
-					</ul>
-				</div>
+									)}
+								</>
+							)
+						)}
+				</ul>
+			</div>
 		</div>
 	)
 }
