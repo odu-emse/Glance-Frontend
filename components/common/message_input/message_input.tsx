@@ -4,7 +4,7 @@ import { MdAttachFile, MdKeyboardVoice } from 'react-icons/md'
 import { BiImageAdd } from 'react-icons/bi'
 import { RiFileGifFill } from 'react-icons/ri'
 import { IoSendSharp } from 'react-icons/io5'
-import { Input } from '@/common/forms/inputs/input/input';
+import { Input } from '@/common/forms/inputs/input/input'
 
 export const MessageInput: React.FC<MessageInputProps> = ({
 	message,
@@ -129,23 +129,32 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 						<FaDollarSign size={20} className="mr-1" />
 					</button>
 				</div>
-				<form onSubmit={(event) => {
-					event.preventDefault()
-					handleSubmit(userInput, recipientID)
-				}}
-				className="w-full flex"
+				<form
+					onSubmit={(event) => {
+						event.preventDefault()
+						handleSubmit(userInput, recipientID)
+					}}
+					className="w-full flex"
 				>
 					<div className="w-full">
-						<Input label={null} name={"message"} onChange={
-							(e) => setUserInput(e)
-						} type={"text"} length={null} className="w-full" />
+						<Input
+							label={null}
+							name={'message'}
+							onChange={(e) => setUserInput(e)}
+							type={'text'}
+							length={null}
+							className="w-full"
+						/>
 					</div>
 					<div className="flex gap-4">
 						<button className="flex items-center justify-center">
 							<MdKeyboardVoice size={20} className="mr-1" />
 						</button>
 
-						<button className="flex items-center justify-center" type="submit">
+						<button
+							className="flex items-center justify-center"
+							type="submit"
+						>
 							<IoSendSharp size={20} className="mr-1" />
 						</button>
 					</div>

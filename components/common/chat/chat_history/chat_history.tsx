@@ -26,11 +26,10 @@ export const ChatHistory = ({
 					>
 						<div
 							className={`${
-									messages[messageIndex].newNotification ===
-									true
-										? ' rounded-full mx-1 bg-blue-500 h-2.5 w-5 flex items-center justify-center'
-										: ''
-								}`}
+								messages[messageIndex].newNotification === true
+									? ' rounded-full mx-1 bg-blue-500 h-2.5 w-5 flex items-center justify-center'
+									: ''
+							}`}
 						></div>
 						<div className="w-1/4">
 							<img

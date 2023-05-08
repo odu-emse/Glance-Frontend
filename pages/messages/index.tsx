@@ -3,7 +3,7 @@ import { ChatHistory } from '@/components/common/chat/chat_history/chat_history'
 import Head from 'next/head'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import useSWR from 'swr'
-import gqlFetcher, { client } from '@/utils/gql_fetcher';
+import gqlFetcher, { client } from '@/utils/gql_fetcher'
 import { gql } from 'graphql-request'
 import { useContext, useState } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
@@ -94,10 +94,10 @@ const DirectMessageHomePage = () => {
 		error: Error
 	}
 
-	const {mutate} = useSWR({}, gqlFetcher)
+	const { mutate } = useSWR({}, gqlFetcher)
 
 	const handleSendMessage = (message: string, recipientID: string) => {
-		console.log(message, recipientID);
+		console.log(message, recipientID)
 		mutate(async () => {
 			await client.request(
 				gql`
@@ -107,8 +107,8 @@ const DirectMessageHomePage = () => {
 						$senderID: ID!
 					) {
 						createDirectMessage(
-							receiverID: $receiverID, 
-							message: $message, 
+							receiverID: $receiverID
+							message: $message
 							senderID: $senderID
 						)
 					}
@@ -119,8 +119,7 @@ const DirectMessageHomePage = () => {
 					message,
 				}
 			)
-		})
-		.catch((error) => {
+		}).catch((error) => {
 			console.error('Error while sending message:', error)
 		})
 	}
@@ -154,11 +153,15 @@ const DirectMessageHomePage = () => {
 				<div className=" w-full flex flex-col justify-between h-[calc(100vh_-_4rem)]">
 					{selected !== null && conversation ? (
 						<>
-						<BubbleMessage
-							currentUserID={user.id}
-							message={conversation.directMessages}
-						/>
-						<MessageInput message={null} handleSubmit={handleSendMessage} recipientID={selected} />
+							<BubbleMessage
+								currentUserID={user.id}
+								message={conversation.directMessages}
+							/>
+							<MessageInput
+								message={null}
+								handleSubmit={handleSendMessage}
+								recipientID={selected}
+							/>
 						</>
 					) : (
 						<div className="flex flex-col justify-center items-center h-full">
