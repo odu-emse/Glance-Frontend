@@ -1,5 +1,6 @@
 import * as React from 'react'
 import moment from 'moment'
+import { User } from '@/types/graphql';
 
 export const BubbleMessage = ({
 	message,
@@ -15,13 +16,13 @@ export const BubbleMessage = ({
 								{message.length > 0 &&
 									message.map(
 										(
-											{ message, user, timestamp },
+											{ body, author, recipient, createdAt },
 											index
 										) => (
 											<>
 												<li
 													className={`flex items-center left-li ${
-														user.id ===
+														author.id ===
 														currentUserID
 															? 'flex-row-reverse'
 															: 'justify-start'
@@ -30,29 +31,27 @@ export const BubbleMessage = ({
 												>
 													<div className="w-50 h-50 px-2">
 														<img
-															src={user.image}
+															src={author.picURL}
 															alt="User profile picture"
 															className="shadow-lg rounded-full max-w-full h-8 aspect-square"
 														/>
 													</div>
 													<div
 														className={`relative max-w-xl px-4 py-2 text-white ${
-															user.id ===
+															recipient.id ===
 															currentUserID
 																? 'bg-blue-300'
 																: 'bg-gray-300'
 														} rounded shadow`}
 													>
 														<span className="block">
-															{message}
+															{body}
 														</span>
 													</div>
 													<div className="w-50 h-50 px-2 opacity-50">
 														<span className="block text-xs text-slate-500">
 															<span>// </span>
-															{moment(
-																timestamp
-															).format('hh:mm A')}
+															{moment(createdAt).utcOffset(-480).format('hh:mm A')}
 														</span>
 													</div>
 												</li>
@@ -83,13 +82,11 @@ export const BubbleMessage = ({
 
 export type BubbleMessageProps = {
 	message: MessageProps
-	currentUserID: string | number
+	currentUserID: string
 }
 export type MessageProps = {
-	user: {
-		id: string | number
-		image: string
-	}
-	message: string
-	timestamp: number
+	author: User
+	recipient: User
+	body: string
+	createdAt: Date
 }[]

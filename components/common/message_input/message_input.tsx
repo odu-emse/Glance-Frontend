@@ -29,7 +29,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 				</div>
 			</div>
 
-			<div className="flex justify-between items-center my-2 text-stone-900 w-full shadow-lg px-4 border-t">
+			<div className="flex justify-between items-center mt-2 text-stone-900 w-full shadow-lg px-4 border-t">
 				<div className="flex gap-4">
 					<button
 						className="flex items-center justify-center "
