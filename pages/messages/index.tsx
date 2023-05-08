@@ -3,7 +3,7 @@ import { ChatHistory } from '@/components/common/chat/chat_history/chat_history'
 import Head from 'next/head'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import useSWR from 'swr'
-import gqlFetcher from '@/utils/gql_fetcher'
+import gqlFetcher, { client } from '@/utils/gql_fetcher';
 import { gql } from 'graphql-request'
 import { useContext, useState } from 'react'
 import GlobalUserContext from '@/contexts/global_user_context'
@@ -94,6 +94,37 @@ const DirectMessageHomePage = () => {
 		error: Error
 	}
 
+	const {mutate} = useSWR({}, gqlFetcher)
+
+	const handleSendMessage = (message: string, recipientID: string) => {
+		console.log(message, recipientID);
+		mutate(async () => {
+			await client.request(
+				gql`
+					mutation SendMessage(
+						$receiverID: ID!
+						$message: String!
+						$senderID: ID!
+					) {
+						createDirectMessage(
+							receiverID: $receiverID, 
+							message: $message, 
+							senderID: $senderID
+						)
+					}
+				`,
+				{
+					receiverID: recipientID,
+					senderID: user.id,
+					message,
+				}
+			)
+		})
+		.catch((error) => {
+			console.error('Error while sending message:', error)
+		})
+	}
+
 	if (error || conversationError)
 		return (
 			<RequestFailed
@@ -122,10 +153,13 @@ const DirectMessageHomePage = () => {
 				</div>
 				<div className=" w-full flex flex-col justify-between h-[calc(100vh_-_4rem)]">
 					{selected !== null && conversation ? (
+						<>
 						<BubbleMessage
 							currentUserID={user.id}
 							message={conversation.directMessages}
 						/>
+						<MessageInput message={null} handleSubmit={handleSendMessage} recipientID={selected} />
+						</>
 					) : (
 						<div className="flex flex-col justify-center items-center h-full">
 							<h4 className="text-2xl font-bold sans uppercase">
@@ -133,7 +167,6 @@ const DirectMessageHomePage = () => {
 							</h4>
 						</div>
 					)}
-					<MessageInput message={null} />
 				</div>
 			</div>
 		</>

@@ -15,7 +15,7 @@ export const ChatHistory = ({
 			{messages?.length &&
 				messages.map((message, messageIndex) => (
 					<div
-						className={`flex flex-row py-4 px-2 justify-center items-center border-b-2 relative before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-royalblue before:bg-opacity-25 before:transition-opacity before:block
+						className={`flex flex-row gap-1 py-4 px-2 justify-center items-center border-b-2 relative before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-royalblue before:bg-opacity-25 before:transition-opacity before:block
 						 ${
 								selected === message.recipient.id
 									? ' before:opacity-100'
@@ -25,8 +25,7 @@ export const ChatHistory = ({
 						onClick={() => handleSelect(message.recipient.id)}
 					>
 						<div
-							className={`
-                                ${
+							className={`${
 									messages[messageIndex].newNotification ===
 									true
 										? ' rounded-full mx-1 bg-blue-500 h-2.5 w-5 flex items-center justify-center'
@@ -37,11 +36,11 @@ export const ChatHistory = ({
 							<img
 								src={message.recipient.picURL}
 								className="object-cover w-12 rounded-full aspect-square"
-								alt=""
+								alt="The profile picture of the user you are sending a message to."
 							/>
 						</div>
 						<div className="w-full">
-							<div className="flex flex-col gap-3">
+							<div className="flex flex-col">
 								<div className="text-lg font-semibold">
 									{message.recipient.firstName}{' '}
 									{message.recipient.lastName}
@@ -54,14 +53,14 @@ export const ChatHistory = ({
 							</div>
 						</div>
 						<div className="flex flex-row">
-							<button className="flex items-center justify-center px-4 cursor-pointer">
+							<button className="flex items-center justify-center px-0.5 cursor-pointer">
 								<FaTrash
 									size={20}
 									className="mr-1"
 									onClick={handle}
 								/>
 							</button>
-							<button className="flex items-center justify-center px-4 cursor-pointer">
+							<button className="flex items-center justify-center px-0.5 cursor-pointer">
 								<FaArchive
 									size={20}
 									className="mr-1"
