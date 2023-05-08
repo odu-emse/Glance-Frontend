@@ -11,10 +11,14 @@ import Loading from '@/common/loader/loader'
 import RequestFailed from '@/pages/errors/request_failed/request_failed'
 import { DirectMessageResponse } from '@/types/graphql'
 import { MessageInput } from '@/common/message_input/message_input'
+import { useRouter } from 'next/router';
 
 const DirectMessageHomePage = () => {
 	const { user } = useContext(GlobalUserContext)
-	const [selected, setSelected] = useState<string>(null)
+	const router = useRouter()
+	const {selected: selectedID} = router.query
+	const [selected, setSelected] = useState<string>(selectedID as string ?? null)
+	const [message, setMessage] = useState<string | null>(null)
 	const { data, error } = useSWR(
 		{
 			query: gql`
@@ -120,6 +124,11 @@ const DirectMessageHomePage = () => {
 				}
 			)
 		})
+		.then(() => {
+			setMessage(null)
+		}).finally(
+			() => router.reload()
+		)
 		.catch((error) => {
 			console.error('Error while sending message:', error)
 		})
@@ -158,7 +167,7 @@ const DirectMessageHomePage = () => {
 							currentUserID={user.id}
 							message={conversation.directMessages}
 						/>
-						<MessageInput message={null} handleSubmit={handleSendMessage} recipientID={selected} />
+						<MessageInput message={null} handleSubmit={handleSendMessage} recipientID={selected} userInput={message} handleUserInput={setMessage} />
 						</>
 					) : (
 						<div className="flex flex-col justify-center items-center h-full">

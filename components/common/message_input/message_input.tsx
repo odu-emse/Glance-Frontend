@@ -7,12 +7,13 @@ import { IoSendSharp } from 'react-icons/io5'
 import { Input } from '@/common/forms/inputs/input/input';
 
 export const MessageInput: React.FC<MessageInputProps> = ({
-	message,
-	handleSubmit,
-	recipientID,
-}): React.ReactElement => {
+																														message,
+																														handleSubmit,
+																														recipientID,
+																														userInput,
+																														handleUserInput
+																													}): React.ReactElement => {
 	const [isClicked, setIsClicked] = React.useState<null | number>(null)
-	const [userInput, setUserInput] = React.useState<string>('')
 
 	return (
 		<div className="grid grid-cols-1">
@@ -137,8 +138,8 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 				>
 					<div className="w-full">
 						<Input label={null} name={"message"} onChange={
-							(e) => setUserInput(e)
-						} type={"text"} length={null} className="w-full" />
+							(e) => handleUserInput(e)
+						} type={"text"} length={"full"}   />
 					</div>
 					<div className="flex gap-4">
 						<button className="flex items-center justify-center">
@@ -156,9 +157,11 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 }
 
 type MessageInputProps = {
-	message: hintMessage[]
-	handleSubmit: (message: string, recipientID: string) => void
-	recipientID: string
+	message: hintMessage[],
+	handleSubmit: (message: string, recipientID: string) => void,
+	recipientID: string,
+	userInput: string,
+	handleUserInput: (value: (((prevState: string) => string) | string)) => void
 }
 type hintMessage = {
 	messages: string
