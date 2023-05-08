@@ -13,21 +13,19 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 	value,
 	href,
 	svgIcon,
-	icon,
 	collapsed,
 }) => {
 	return (
 		<Link href={href} passHref>
-			<a
-				className="px-4 py-1 mx-1 my-2 rounded cursor-pointer hover:bg-wgray flex gap-2"
-				style={{
-					fontFamily: 'Montserrat, sans-serif',
-					// ...collapsed ? { justifyContent: 'center' } : {}
-				}}
+			<div
+				className="hover:bg-wgray h-[48px] min-w-[48px] flex items-center cursor-pointer"
+				title={value}
 			>
-				{svgIcon}
-				{!collapsed ? <p className="m-0 p-0">{value}</p> : null}
-			</a>
+				<span className={`flex items-center w-full gap-2 p-4 sans`}>
+					{svgIcon}
+					{!collapsed ? <p className="m-0 p-0">{value}</p> : null}
+				</span>
+			</div>
 		</Link>
 	)
 }
