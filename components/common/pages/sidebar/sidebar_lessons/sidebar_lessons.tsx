@@ -12,12 +12,13 @@ export const SidebarLessons = ({
 	currentModule,
 }: SidebarLessonsProps): React.ReactElement => {
 	return (
-		<div className="relative">
+		<div className={`${open ? 'flex-none' : 'w-1/12'} relative`}>
 			<aside
 				id="sidePanel"
-				className={`absolute ${
+				
+				className={` absolute ${
 					open ? 'right-0' : '-right-full'
-				} top-0 h-screen w-72 bg-white transition-all drop-shadow-lg p-0`}
+				} top-0 right-0 h-full w-72 bg-white transition-all drop-shadow-lg p-0`}
 			>
 				<div className="ml-8 mt-10">
 					<h6

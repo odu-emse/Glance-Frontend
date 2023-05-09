@@ -69,7 +69,7 @@ const ModuleSection = () => {
 					GLANCE
 				</title>
 			</Head>
-			<section className="flex">
+			<section className="flex h-screen">
 				<div className="SectionContent stdcontainer grow flex-col">
 					<header>
 						<h4 className="mb-6">
@@ -106,6 +106,7 @@ const ModuleSection = () => {
 							}
 						/>
 					</div>
+					<img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" />
 					{/* Previous and Next buttons */}
 					<div className="w-full flex justify-between items-center">
 						{data.moduleFlowFromLearningPath.previousModule && (
@@ -162,7 +163,8 @@ const ModuleSection = () => {
 					</div>
 				</div>
 				{/* Section sidebar */}
-				<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
+				<div className="SectionSidebar flex bg-white h-[calc(100%_-_4rem)] w-1/4"
+				>
 					<SidebarLessons
 						currentModule={moduleId as string}
 						open={true}
@@ -174,7 +176,7 @@ const ModuleSection = () => {
 						property={'name'}
 						url={'id'}
 					/>
-				</aside>
+				</div>
 			</section>
 		</div>
 	)
