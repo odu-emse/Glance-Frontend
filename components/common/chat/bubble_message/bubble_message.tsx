@@ -1,6 +1,6 @@
 import * as React from 'react'
 import moment from 'moment'
-import { DirectMessageResponse } from '@/types/graphql';
+import { DirectMessageResponse } from '@/types/graphql'
 
 export const BubbleMessage = ({
 	messages,
@@ -42,23 +42,23 @@ export const BubbleMessage = ({
 										</div>
 										<div className="w-50 h-50 px-2 opacity-50">
 											<span className="block text-xs text-slate-500">
-												{
-													author.id === currentUserID ? (
-														<>
+												{author.id === currentUserID ? (
+													<>
 														{moment(createdAt)
 															.utcOffset(-480)
-																.format('hh:mm A')}
-															<span className="inline-block -scale-x--1 -scale-y-1 align-middle">//</span>
-														</>
-													) : (
-														<>
-															<span>//</span>
-															{moment(createdAt)
-																.utcOffset(-480)
-																.format('hh:mm A')}
-														</>
-													)
-												}
+															.format('hh:mm A')}
+														<span className="inline-block -scale-x--1 -scale-y-1 align-middle">
+															//
+														</span>
+													</>
+												) : (
+													<>
+														<span>//</span>
+														{moment(createdAt)
+															.utcOffset(-480)
+															.format('hh:mm A')}
+													</>
+												)}
 											</span>
 										</div>
 									</li>
