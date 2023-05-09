@@ -1,108 +1,214 @@
 import { BubbleMessage } from '@/components/common/chat/bubble_message/bubble_message'
 import { ChatHistory } from '@/components/common/chat/chat_history/chat_history'
 import Head from 'next/head'
+import { Layout } from '@/common/pages/layouts/layout/layout'
+import useSWR from 'swr'
+import gqlFetcher, { client } from '@/utils/gql_fetcher'
+import { gql } from 'graphql-request'
+import { useContext, useState } from 'react'
+import GlobalUserContext from '@/contexts/global_user_context'
+import Loading from '@/common/loader/loader'
+import RequestFailed from '@/pages/errors/request_failed/request_failed'
+import { DirectMessageResponse } from '@/types/graphql'
+import { MessageInput } from '@/common/message_input/message_input'
+import { useRouter } from 'next/router'
 
-const Index = () => {
+const DirectMessageHomePage = () => {
+	const { user } = useContext(GlobalUserContext)
+	const router = useRouter()
+	const { selected: selectedID } = router.query
+	const [selected, setSelected] = useState<string>(
+		(selectedID as string) ?? null
+	)
+	const [message, setMessage] = useState<string | null>(null)
+	const { data, error } = useSWR(
+		{
+			query: gql`
+				query GetSentMessages($userID: ID!) {
+					sentMessages(senderID: $userID) {
+						id
+						body
+						createdAt
+						author {
+							id
+							firstName
+							lastName
+							picURL
+						}
+						recipient {
+							... on User {
+								id
+								firstName
+								lastName
+								picURL
+								__typename
+							}
+							... on Group {
+								id
+								name
+								public
+								__typename
+							}
+						}
+					}
+				}
+			`,
+			variables: {
+				userID: user.id,
+			},
+		},
+		gqlFetcher
+	) as {
+		data: {
+			sentMessages: Array<DirectMessageResponse>
+		}
+		error: Error
+	}
+
+	const { data: conversation, error: conversationError } = useSWR(
+		() =>
+			selected !== null
+				? {
+						query: gql`
+							query GetConversation(
+								$senderID: ID!
+								$recipientID: ID!
+							) {
+								directMessages(
+									receiverID: $recipientID
+									senderID: $senderID
+								) {
+									createdAt
+									author {
+										firstName
+										lastName
+										id
+										picURL
+									}
+									recipient {
+										... on User {
+											id
+											firstName
+											lastName
+											picURL
+											__typename
+										}
+										... on Group {
+											id
+											name
+											public
+											__typename
+										}
+									}
+									body
+								}
+							}
+						`,
+						variables: {
+							senderID: user.id,
+							recipientID: selected,
+						},
+				  }
+				: null,
+		gqlFetcher
+	) as {
+		data: {
+			directMessages: Array<DirectMessageResponse>
+		}
+		error: Error
+	}
+
+	const { mutate } = useSWR({}, gqlFetcher)
+
+	const handleSendMessage = (message: string, recipientID: string) => {
+		console.log(message, recipientID)
+		mutate(async () => {
+			await client.request(
+				gql`
+					mutation SendMessage(
+						$receiverID: ID!
+						$message: String!
+						$senderID: ID!
+					) {
+						createDirectMessage(
+							receiverID: $receiverID
+							message: $message
+							senderID: $senderID
+						)
+					}
+				`,
+				{
+					receiverID: recipientID,
+					senderID: user.id,
+					message,
+				}
+			)
+		})
+			.then(() => {
+				setMessage(null)
+			})
+			.finally(() => router.reload())
+			.catch((error) => {
+				console.error('Error while sending message:', error)
+			})
+	}
+
+	if (error || conversationError)
+		return (
+			<RequestFailed
+				title={'Message retrieval failed'}
+				subtitle={
+					'There was an error while fetching your messages. Please try again shortly!'
+				}
+			/>
+		)
+
+	if (!data) return <Loading />
+
 	return (
 		<>
 			<Head>
 				<title>Messages | GLANCE</title>
 			</Head>
 			<div className="flex">
-				<div className=" flex w-1/4 h-screen">
+				<div className=" flex w-1/4 h-[calc(100vh_-_4rem)]">
 					<ChatHistory
-						handle={() => {}}
-						messages={[
-							{
-								image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								name: 'AVantika',
-								newNotification: false,
-								selected: false,
-								timestamp: 1664376815,
-							},
-							{
-								image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								name: 'AVantika',
-								newNotification: true,
-								selected: false,
-								timestamp: 1748347589,
-							},
-							{
-								image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								name: 'AVantika',
-								newNotification: false,
-								selected: false,
-								timestamp: 1231211842,
-							},
-							{
-								image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								name: 'AVantika',
-								newNotification: false,
-								selected: false,
-								timestamp: 1748347589,
-							},
-							{
-								image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								name: 'AVantika',
-								newNotification: false,
-								selected: false,
-								timestamp: 1341465382,
-							},
-							{
-								image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								name: 'AVantika',
-								newNotification: false,
-								selected: false,
-								timestamp: 1034500193,
-							},
-						]}
+						handle={() => null}
+						messages={data.sentMessages}
+						handleSelect={(id: string) => setSelected(id)}
+						selected={selected}
 					/>
 				</div>
-				<div className=" w-full ">
-					<BubbleMessage
-						currentUserID={1}
-						message={[
-							{
-								message: 'HiI',
-								timestamp: 1664376815,
-								user: {
-									id: 1,
-									image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								},
-							},
-							{
-								message: 'How are you',
-								timestamp: 1664376815,
-								user: {
-									id: 2,
-									image: 'https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=320&amp;h=320&amp;q=80',
-								},
-							},
-							{
-								message: 'I am fine',
-								timestamp: 1664376815,
-								user: {
-									id: 1,
-									image: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
-								},
-							},
-							{
-								message: 'How do you do',
-								timestamp: 1664376815,
-								user: {
-									id: 2,
-									image: 'https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=320&amp;h=320&amp;q=80',
-								},
-							},
-						]}
-					/>
-					{/*
-					FIXME: Replace this with a component
-					ALMP-559 
-					<MessageInput /> */}
+				<div className=" w-full flex flex-col justify-between h-[calc(100vh_-_4rem)]">
+					{selected !== null && conversation ? (
+						<>
+							<BubbleMessage
+								currentUserID={user.id}
+								messages={conversation.directMessages}
+							/>
+							<MessageInput
+								userInput={message}
+								handleUserInput={setMessage}
+								message={null}
+								handleSubmit={handleSendMessage}
+								recipientID={selected}
+							/>
+						</>
+					) : (
+						<div className="flex flex-col justify-center items-center h-full">
+							<h4 className="text-2xl font-bold sans uppercase">
+								Select a conversation to view
+							</h4>
+						</div>
+					)}
 				</div>
 			</div>
 		</>
 	)
 }
-export default Index
+
+DirectMessageHomePage.getLayout = (page: any) => {
+	return <Layout>{page}</Layout>
+}
+
+export default DirectMessageHomePage

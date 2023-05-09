@@ -96,19 +96,16 @@ export interface CoursePathInput {
 
 export interface SectionPathInput {
 	id: string
-	name: string
 	collections: CollectionPathInput[]
 }
 
 export interface CollectionPathInput {
 	id: string
-	name: string
 	modules: ModulePathInput[]
 }
 
 export interface ModulePathInput {
 	id: string
-	enrollmentID?: Nullable<string>
 }
 
 export interface CreateContentArgs {
@@ -540,6 +537,11 @@ export interface IMutation {
 		message: string,
 		senderID: string
 	): boolean | Promise<boolean>
+	createGroup(
+		name: string,
+		members: string[],
+		publicGroup?: Nullable<boolean>
+	): Group | Promise<Group>
 	addPlan(input?: Nullable<PlanInput>): PlanOfStudy | Promise<PlanOfStudy>
 	updatePlan(
 		id: string,
@@ -724,11 +726,15 @@ export interface IQuery {
 	): Nullable<string> | Promise<Nullable<string>>
 	thread(input?: Nullable<IThreadByParams>): Thread[] | Promise<Thread[]>
 	directMessages(
-		receiverID: string
+		receiverID: string,
+		senderID: string
 	): DirectMessageResponse[] | Promise<DirectMessageResponse[]>
 	groups(userID: string): Group[] | Promise<Group[]>
 	groupMessages(
 		groupID: string
+	): DirectMessageResponse[] | Promise<DirectMessageResponse[]>
+	sentMessages(
+		senderID: string
 	): DirectMessageResponse[] | Promise<DirectMessageResponse[]>
 	plan(
 		studentID: string
@@ -856,6 +862,7 @@ export interface Group {
 	members: User[]
 	public: boolean
 	messages: DirectMessageResponse[]
+	__typename?: string
 }
 
 export interface PlanOfStudy {
@@ -995,6 +1002,16 @@ export interface ModuleFlow {
 	currentSection?: Nullable<Section>
 }
 
+export interface SimpleModuleFlow {
+	previousModule?: Nullable<ModulePath>
+	previousCollection?: Nullable<CollectionPath>
+	nextModule?: Nullable<ModulePath>
+	nextCollection?: Nullable<CollectionPath>
+	currentModule?: Nullable<ModulePath>
+	currentCollection?: Nullable<CollectionPath>
+	currentSection?: Nullable<SectionPath>
+}
+
 export interface SimpleLearningPath {
 	id: string
 	createdAt: Date
@@ -1062,8 +1079,8 @@ export interface Path {
 export interface CoursePath {
 	id: string
 	name: string
-	prefix?: string
-	number?: number
+	prefix?: Nullable<string>
+	number?: Nullable<number>
 	required: boolean
 	carnegieHours: number
 	sections: SectionPath[]
@@ -1230,6 +1247,7 @@ export interface User {
 	watchedThreads?: Nullable<Thread[]>
 	watchedThreadIDs?: Nullable<string[]>
 	createdThreads?: Nullable<Thread[]>
+	__typename?: Nullable<string>
 }
 
 export interface Token {

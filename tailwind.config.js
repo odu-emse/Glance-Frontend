@@ -38,6 +38,9 @@ module.exports = {
 			borderRadius: {
 				DEFAULT: '1px',
 			},
+			scale: {
+				'-1': '-1',
+			},
 		},
 	},
 	plugins: [require('flowbite/plugin')],

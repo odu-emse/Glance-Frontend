@@ -4,9 +4,14 @@ import { MdAttachFile, MdKeyboardVoice } from 'react-icons/md'
 import { BiImageAdd } from 'react-icons/bi'
 import { RiFileGifFill } from 'react-icons/ri'
 import { IoSendSharp } from 'react-icons/io5'
+import { Input } from '@/common/forms/inputs/input/input'
 
 export const MessageInput: React.FC<MessageInputProps> = ({
 	message,
+	handleSubmit,
+	recipientID,
+	userInput,
+	handleUserInput,
 }): React.ReactElement => {
 	const [isClicked, setIsClicked] = React.useState<null | number>(null)
 
@@ -29,7 +34,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 				</div>
 			</div>
 
-			<div className="flex justify-between items-center my-2 text-stone-900 w-full shadow-lg px-4 border-t">
+			<div className="flex justify-between items-center mt-2 text-stone-900 w-full shadow-lg px-4 border-t">
 				<div className="flex gap-4">
 					<button
 						className="flex items-center justify-center "
@@ -125,26 +130,35 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 						<FaDollarSign size={20} className="mr-1" />
 					</button>
 				</div>
-				<div className="w-full">
-					<label htmlFor="add-comment" className="sr-only">
-						Add your comment to the post
-					</label>
-					<input
-						type="text"
-						className="border-transparent bg-transparent focus:border-blue-300 px-5 py-2 w-full"
-						placeholder="Type custom inquiry here"
-						id="add-comment"
-					/>
-				</div>
-				<div className="flex gap-4">
-					<button className="flex items-center justify-center">
-						<MdKeyboardVoice size={20} className="mr-1" />
-					</button>
+				<form
+					onSubmit={(event) => {
+						event.preventDefault()
+						handleSubmit(userInput, recipientID)
+					}}
+					className="w-full flex"
+				>
+					<div className="w-full">
+						<Input
+							label={null}
+							name={'message'}
+							onChange={(e) => handleUserInput(e)}
+							type={'text'}
+							length={'full'}
+						/>
+					</div>
+					<div className="flex gap-4">
+						<button className="flex items-center justify-center">
+							<MdKeyboardVoice size={20} className="mr-1" />
+						</button>
 
-					<button className="flex items-center justify-center">
-						<IoSendSharp size={20} className="mr-1" />
-					</button>
-				</div>
+						<button
+							className="flex items-center justify-center"
+							type="submit"
+						>
+							<IoSendSharp size={20} className="mr-1" />
+						</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	)
@@ -152,6 +166,10 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 
 type MessageInputProps = {
 	message: hintMessage[]
+	handleSubmit: (message: string, recipientID: string) => void
+	recipientID: string
+	userInput: string
+	handleUserInput: (value: ((prevState: string) => string) | string) => void
 }
 type hintMessage = {
 	messages: string
