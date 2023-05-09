@@ -36,10 +36,19 @@ const DirectMessageHomePage = () => {
 							picURL
 						}
 						recipient {
-							id
-							firstName
-							lastName
-							picURL
+							... on User {
+								id
+								firstName
+								lastName
+								picURL
+								__typename
+							}
+							... on Group {
+								id
+								name
+								public
+								__typename
+							}
 						}
 					}
 				}
@@ -77,10 +86,19 @@ const DirectMessageHomePage = () => {
 										picURL
 									}
 									recipient {
-										firstName
-										lastName
-										id
-										picURL
+										... on User {
+											id
+											firstName
+											lastName
+											picURL
+											__typename
+										}
+										... on Group {
+											id
+											name
+											public
+											__typename
+										}
 									}
 									body
 								}
@@ -166,9 +184,11 @@ const DirectMessageHomePage = () => {
 						<>
 							<BubbleMessage
 								currentUserID={user.id}
-								message={conversation.directMessages}
+								messages={conversation.directMessages}
 							/>
 							<MessageInput
+								userInput={message}
+								handleUserInput={setMessage}
 								message={null}
 								handleSubmit={handleSendMessage}
 								recipientID={selected}

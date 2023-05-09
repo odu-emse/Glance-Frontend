@@ -1,17 +1,17 @@
 import * as React from 'react'
 import moment from 'moment'
-import { User } from '@/types/graphql'
+import { DirectMessageResponse } from '@/types/graphql';
 
 export const BubbleMessage = ({
-	message,
+	messages,
 	currentUserID,
 }: BubbleMessageProps) => {
 	return (
 		<div className="container w-full h-[calc(100vh_-_5rem)] overflow-y-scroll">
 			<div className="relative w-full p-6 pb-0 overflow-y-auto h-full">
 				<ul className="space-y-2">
-					{message.length > 0 &&
-						message.map(
+					{messages.length > 0 &&
+						messages.map(
 							({ body, author, recipient, createdAt }, index) => (
 								<>
 									<li
@@ -31,7 +31,7 @@ export const BubbleMessage = ({
 										</div>
 										<div
 											className={`relative max-w-xl px-4 py-2 text-white ${
-												recipient.id === currentUserID
+												author.id === currentUserID
 													? 'bg-blue-300'
 													: 'bg-gray-300'
 											} rounded shadow`}
@@ -42,26 +42,26 @@ export const BubbleMessage = ({
 										</div>
 										<div className="w-50 h-50 px-2 opacity-50">
 											<span className="block text-xs text-slate-500">
-												<span>// </span>
-												{moment(createdAt)
-													.utcOffset(-480)
-													.format('hh:mm A')}
+												{
+													author.id === currentUserID ? (
+														<>
+														{moment(createdAt)
+															.utcOffset(-480)
+																.format('hh:mm A')}
+															<span className="inline-block -scale-x--1 -scale-y-1 align-middle">//</span>
+														</>
+													) : (
+														<>
+															<span>//</span>
+															{moment(createdAt)
+																.utcOffset(-480)
+																.format('hh:mm A')}
+														</>
+													)
+												}
 											</span>
 										</div>
 									</li>
-									{message[index + 1] && (
-										<li className="flex justify-center right-li">
-											<div className="w-50 h-50 px-2 t-100">
-												<span className="block text-xs text-slate-500">
-													{/* {moment */}
-													{/*	.unix(timestamp1) */}
-													{/*	.format( */}
-													{/*		'dddd, MMMM Do, hh:mm a' */}
-													{/*	)} */}
-												</span>
-											</div>
-										</li>
-									)}
 								</>
 							)
 						)}
@@ -72,12 +72,6 @@ export const BubbleMessage = ({
 }
 
 export type BubbleMessageProps = {
-	message: MessageProps
+	messages: DirectMessageResponse[]
 	currentUserID: string
 }
-export type MessageProps = {
-	author: User
-	recipient: User
-	body: string
-	createdAt: Date
-}[]
