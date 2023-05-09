@@ -71,7 +71,7 @@ export const Layout = ({ children }) => {
 			<GlobalUserContext.Provider
 				value={{ user: data.user[0] || null, setUser }}
 			>
-				<nav className="flex bg-royalblue stdcontainer-sharp justify-between h-16 sticky">
+				<nav className="flex bg-royalblue stdcontainer-sharp justify-between h-16">
 					<div className="flex items-center gap-1">
 						<Logo width={25} height={25} />
 						<h4
@@ -85,7 +85,7 @@ export const Layout = ({ children }) => {
 						</h4>
 					</div>
 					<div
-						className={'flex gap-2 items-center relative'}
+						className={'relative flex gap-2 items-center '}
 						onClick={() => setAccountVisible(true)}
 					>
 						<figcaption className={'text-xs/[16px]'}>
@@ -103,7 +103,7 @@ export const Layout = ({ children }) => {
 						<div
 							className={`${
 								isAccountVisible ? 'flex' : 'hidden'
-							} right-0.5 top-12 absolute border border-black items-end justify-end flex-col w-56 float-right mr-5`}
+							} right-0.5 top-12 absolute border z-50 border-black bg-white items-end justify-end flex-col w-56 float-right mr-5 `}
 						>
 							<figcaption
 								onClick={() =>

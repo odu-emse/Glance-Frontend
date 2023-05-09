@@ -246,6 +246,7 @@ const Index = ({}) => {
 							)}
 						</div>
 					</div>
+					
 				</div>
 				<div className="m-2">
 					{data.threads
@@ -330,6 +331,7 @@ const Index = ({}) => {
 						.map((thread, threadMapIndex) => {
 							return (
 								<div className="my-4" key={threadMapIndex}>
+									
 									<Thread
 										body={thread.body}
 										id={thread.id}
@@ -341,11 +343,14 @@ const Index = ({}) => {
 										upvotesProp={thread.upvotes}
 										topics={thread.topics}
 									/>
+				
 								</div>
+							
 							)
 						})}
 				</div>
 			</div>
+			
 			<WatchedThreadSidebar
 				open={openWatchedThreads}
 				handle={setOpenWatchedThreads}
@@ -372,6 +377,7 @@ const Index = ({}) => {
 						}
 					/>
 				</div>
+			
 				<div className="border border-black w-full my-14"></div>
 				<div className="mb-10">
 					<WatchedSidebarList
