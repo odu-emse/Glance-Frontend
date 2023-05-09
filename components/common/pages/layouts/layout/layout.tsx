@@ -88,12 +88,16 @@ export const Layout = ({ children }) => {
 						className={'flex gap-2 items-center relative'}
 						onClick={() => setAccountVisible(true)}
 					>
-						<figcaption className={'text-xs/[16px]'}>
-							<span className={'text-gray-400'}>Hello,</span>{' '}
-							<span className={'font-bold text-white'}>
+						<p className={'sans capitalize'}
+						style={{
+							fontSize: '12px'
+						}}>
+							<span className={'text-gray-100'}>Hello, </span>
+							<span className={'font-bold text-white'}
+							>
 								{session.user.name}
 							</span>
-						</figcaption>
+						</p>
 						<img
 							src={session.user.image}
 							alt={'profile image'}
@@ -167,6 +171,7 @@ export const Layout = ({ children }) => {
 								{' '}
 								{/* Totally unneeded but it makes me happy to have this display so here it is... */}
 								{children}
+
 							</div>
 						</GlobalLoadingContext.Provider>
 					</main>
