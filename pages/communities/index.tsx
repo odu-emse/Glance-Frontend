@@ -346,6 +346,7 @@ const Index = ({}) => {
 						})}
 				</div>
 			</div>
+
 			<WatchedThreadSidebar
 				open={openWatchedThreads}
 				handle={setOpenWatchedThreads}
@@ -372,6 +373,7 @@ const Index = ({}) => {
 						}
 					/>
 				</div>
+
 				<div className="border border-black w-full my-14"></div>
 				<div className="mb-10">
 					<WatchedSidebarList
