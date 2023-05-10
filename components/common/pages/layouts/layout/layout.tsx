@@ -88,12 +88,17 @@ export const Layout = ({ children }) => {
 						className={'relative flex gap-2 items-center '}
 						onClick={() => setAccountVisible(true)}
 					>
-						<figcaption className={'text-xs/[16px]'}>
-							<span className={'text-gray-400'}>Hello,</span>{' '}
+						<p
+							className={'sans capitalize'}
+							style={{
+								fontSize: '12px',
+							}}
+						>
+							<span className={'text-gray-100'}>Hello, </span>
 							<span className={'font-bold text-white'}>
 								{session.user.name}
 							</span>
-						</figcaption>
+						</p>
 						<img
 							src={session.user.image}
 							alt={'profile image'}
