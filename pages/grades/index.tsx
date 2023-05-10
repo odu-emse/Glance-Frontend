@@ -16,8 +16,8 @@ const GradebookPage = () => {
 	const { user } = useContext(GlobalUserContext)
 
 	setLoading(true)
-	
-    const { data: session, status } = useSession()
+
+	const { data: session, status } = useSession()
 
 	setLoading(false)
 
@@ -30,9 +30,7 @@ const GradebookPage = () => {
 				<header>
 					<h1>GRADEBOOK</h1>
 				</header>
-				<div className="flex gap-3">
-                    Hello
-				</div>
+				<div className="flex gap-3">Hello</div>
 			</section>
 		</div>
 	)
