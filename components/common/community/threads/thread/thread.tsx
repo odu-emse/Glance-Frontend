@@ -10,6 +10,8 @@ import { gql } from 'graphql-request'
 import { TextArea } from '@/common/forms/inputs/text_area/text_area'
 import { ThreadType } from '../../../../../types'
 import MarkdownContainer from '@/common/community/threads/markdown/markdown_container'
+import { Button } from '@/components/common/button/button'
+import router, { Router } from 'next/router'
 
 export const Thread: React.FC<ThreadProps> = ({
 	title,
@@ -164,12 +166,15 @@ export const Thread: React.FC<ThreadProps> = ({
 					<MarkdownContainer>{body.slice(0, 150)}</MarkdownContainer>
 				</p>
 				{viewCutOff && (
-					<Link href={`/communities/${id}`}>
-						<h2 className="w-2/3 mx-auto text-center font-bold shadow bg-royalblue text-white hover:bg-blue-600 uppercase px-[1em] py-[0.25em] cursor-pointer mb-2">
+					<Button 
+					onClick={() => router.push(`/communities/${id}`)}
+					>
+						<h2 className="text-white cursor-pointer my-1">
 							{`View Thread (${commentCount} comments)`}
 						</h2>
-					</Link>
+					</Button>
 				)}
+				
 				<div className="flex flex-row justify-end gap-4">
 					<button
 						className="group relative text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"

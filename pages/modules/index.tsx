@@ -51,9 +51,7 @@ const ModulesPage = () => {
 	}
 
 	if (!data) return
-
 	setLoading(false)
-
 	return (
 		<div>
 			<Head>
