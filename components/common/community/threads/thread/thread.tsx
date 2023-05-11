@@ -166,15 +166,13 @@ export const Thread: React.FC<ThreadProps> = ({
 					<MarkdownContainer>{body.slice(0, 150)}</MarkdownContainer>
 				</p>
 				{viewCutOff && (
-					<Button 
-					onClick={() => router.push(`/communities/${id}`)}
-					>
+					<Button onClick={() => router.push(`/communities/${id}`)}>
 						<h2 className="text-white cursor-pointer my-1">
 							{`View Thread (${commentCount} comments)`}
 						</h2>
 					</Button>
 				)}
-				
+
 				<div className="flex flex-row justify-end gap-4">
 					<button
 						className="group relative text-sm rounded-full px-4 py-2 bg-gray-100 hover:bg-gray-200"
