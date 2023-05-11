@@ -5,7 +5,7 @@ import { PlanOfStudy } from '../../svg/plan_of_study'
 import { Modules } from '../../svg/modules'
 import { Communities } from '../../svg/communities'
 import { GradeBook } from '../../svg/gradebook'
-import { ChatBubble } from '@/common/svg/chat_bubble';
+import { ChatBubble } from '@/common/svg/chat_bubble'
 
 type IconType = React.ReactNode
 

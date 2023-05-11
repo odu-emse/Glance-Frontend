@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import io from 'socket.io-client'
-import { Button } from '@/common/button/button';
+import { Button } from '@/common/button/button'
 let socket
 
 function HotlineHomePage() {
@@ -23,27 +23,29 @@ function HotlineHomePage() {
 			console.log('connected')
 		})
 
-		socket.on('update-input', msg => {
+		socket.on('update-input', (msg) => {
 			setInput(msg)
 		})
 	}
 
-	return <form
-		onSubmit={e => {
-			e.preventDefault()
-			if (input) {
-				socket.emit('message', input)
-				setInput('')
-			}
-		}}
-	>
-		<input
-		placeholder="Type something"
-		value={input}
-		onChange={onChangeHandler}
-	/>
-		<Button type={"submit"}>Send</Button>
-	</form>
+	return (
+		<form
+			onSubmit={(e) => {
+				e.preventDefault()
+				if (input) {
+					socket.emit('message', input)
+					setInput('')
+				}
+			}}
+		>
+			<input
+				placeholder="Type something"
+				value={input}
+				onChange={onChangeHandler}
+			/>
+			<Button type={'submit'}>Send</Button>
+		</form>
+	)
 }
 
-export default HotlineHomePage;
+export default HotlineHomePage
