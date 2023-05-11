@@ -2,6 +2,7 @@ import React from 'react'
 import type { Module } from '@/types/graphql'
 import { FaTimes } from 'react-icons/fa'
 import { Button } from '@/common/button/button'
+import router from 'next/router'
 
 function ModuleSidebar({
 	data,
@@ -71,7 +72,13 @@ function ModuleSidebar({
 					<Button variant={'secondary'} size="small">
 						View Community
 					</Button>
-					<Button size="small">Open module</Button>
+					
+					<Button 
+					size="small"
+					onClick={()=> router.push(`/modules/${data.id}`)}
+					>
+						Open Module
+					</Button>
 				</div>
 			</div>
 		</aside>
