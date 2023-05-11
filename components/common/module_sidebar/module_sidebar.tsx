@@ -72,10 +72,10 @@ function ModuleSidebar({
 					<Button variant={'secondary'} size="small">
 						View Community
 					</Button>
-					
-					<Button 
-					size="small"
-					onClick={()=> router.push(`/modules/${data.id}`)}
+
+					<Button
+						size="small"
+						onClick={() => router.push(`/modules/${data.id}`)}
 					>
 						Open Module
 					</Button>
