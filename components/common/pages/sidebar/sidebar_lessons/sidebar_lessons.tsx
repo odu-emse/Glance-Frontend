@@ -15,7 +15,6 @@ export const SidebarLessons = ({
 		<div className={`${open ? 'flex-none' : 'w-1/12'} relative`}>
 			<aside
 				id="sidePanel"
-				
 				className={` absolute ${
 					open ? 'right-0' : '-right-full'
 				} top-0 right-0 h-full w-72 bg-white transition-all drop-shadow-lg p-0`}

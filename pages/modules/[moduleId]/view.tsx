@@ -163,8 +163,7 @@ const ModuleSection = () => {
 					</div>
 				</div>
 				{/* Section sidebar */}
-				<div className="SectionSidebar flex bg-white h-[calc(100%_-_4rem)] w-1/4"
-				>
+				<div className="SectionSidebar flex bg-white h-[calc(100%_-_4rem)] w-1/4">
 					<SidebarLessons
 						currentModule={moduleId as string}
 						open={true}
