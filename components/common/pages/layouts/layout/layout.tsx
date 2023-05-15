@@ -83,7 +83,7 @@ export const Layout = ({ children }) => {
 								fontWeight: 700,
 								fontSize: '24px',
 							}}
-							className="text-white"
+							className="text-white cursor-pointer"
 						>
 							GLANCE
 						</h4>
