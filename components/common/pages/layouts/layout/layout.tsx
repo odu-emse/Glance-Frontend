@@ -85,7 +85,7 @@ export const Layout = ({ children }) => {
 						</h4>
 					</div>
 					<div
-						className={'relative flex gap-2 items-center '}
+						className={'relative flex gap-2 items-center cursor-pointer'}
 						onClick={() => setAccountVisible(true)}
 					>
 						<p
@@ -108,7 +108,7 @@ export const Layout = ({ children }) => {
 						<div
 							className={`${
 								isAccountVisible ? 'flex' : 'hidden'
-							} right-0.5 top-12 absolute border z-50 border-black bg-white items-end justify-end flex-col w-56 float-right mr-5 `}
+							} right-0.5 top-12 absolute border z-50 border-black bg-white items-end justify-end flex-col w-56 float-right mr-5`}
 						>
 							<figcaption
 								onClick={() =>
