@@ -85,7 +85,9 @@ export const Layout = ({ children }) => {
 						</h4>
 					</div>
 					<div
-						className={'relative flex gap-2 items-center cursor-pointer'}
+						className={
+							'relative flex gap-2 items-center cursor-pointer'
+						}
 						onClick={() => setAccountVisible(true)}
 					>
 						<p
