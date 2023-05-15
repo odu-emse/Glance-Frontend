@@ -24,7 +24,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 	handle,
 }) => {
 	return (
-		<div className="border-r-[1px] border-r-wgray-500 relative">
+		<div className="border-r-[1px] border-r-wgray relative">
 			<div className="pt-12">
 				<SidebarItem
 					svgIcon={<PlanOfStudy width={20} height={20} />}

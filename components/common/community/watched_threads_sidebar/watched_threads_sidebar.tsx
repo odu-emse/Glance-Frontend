@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { CollapseButton } from '../../pages/sidebar/collapse_button/collapse_button'
 
 export type WatchedThreadsSidebarProps = {
 	open: boolean
@@ -13,24 +14,14 @@ const WatchedThreadSidebar: React.FC<WatchedThreadsSidebarProps> = ({
 	children,
 }) => {
 	return (
-		<aside
-			id="sidePanel"
-			style={{
-				overflowY: 'visible',
-			}}
-			className={`${
-				open ? 'flex-none' : 'w-3'
-			} border-l border-gray-300 relative h-screen overflow-y-scroll bg-white transition-all p-3 pt-14`}
-		>
+		<div className={`border-l-[1px] border-wgray relative p-4 ${ open ? 'w-[300px]' : ''}`}>
 			{open && children}
-			<button
-				id="closeButton"
-				className="absolute bottom-7 -left-4 p-2 rounded-md text-red border bg-blue-500"
+			<div
+				className="absolute -left-4 bottom-8"
 				onClick={() => handle(!open)}
 			>
-				{open ? <IoIosArrowForward /> : <IoIosArrowBack />}
-			</button>
-		</aside>
+			</div>
+		</div>
 	)
 }
 

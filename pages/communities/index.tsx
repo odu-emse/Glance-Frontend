@@ -13,6 +13,7 @@ import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/wat
 import Loader from '@/components/util/loader'
 import { Button } from '@/common/button/button'
 import { useState } from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 
 const Index = ({}) => {
@@ -124,273 +125,279 @@ const Index = ({}) => {
 	)
 
 	return (
-		<div className="mx-8 flex">
+		<>
 			<Head>
 				<title>Communitites | GLANCE</title>
 			</Head>
-			<div className="m-10 grow flex-1">
-				<div className="flex my-2 items-center">
-					<img
-						src={
-							session?.user.image ||
-							'https://i.pinimg.com/custom_covers/222x/85498161615209203_1636332751.jpg'
-						}
-						alt="profile image"
-						className="shadow-lg rounded-full max-w-full h-4 align-middle border-none"
-					/>
-					<small className="pl-2 font-bold">
-						{session?.user.name}
-					</small>
-					<small>
-						<span className="px-1 font-bold">&bull;</span>
-						{session?.user.email}
-					</small>
-				</div>
-				<div className="flex items-center justify-between">
-					<h1 className="text-lg font-semibold flex-none">
-						Communities
-					</h1>
-					<div className="flex flex-row gap-1">
-						<Input
-							defaultValue=""
-							label={null}
-							name="floating_search"
-							onChange={setSearchQuery}
-							role="search"
-							type="search"
-							placeholder="Search threads..."
-							className="w-2/3 md:w-72"
-						/>
-						<div className="flex gap-2 w-fit relative">
-							<Button onClick={() => setIsSorted(!isSorted)}>
-								SORT
-							</Button>
-							<Button onClick={() => setIsFiltered(!isFiltered)}>
-								FILTER
-							</Button>
-							{isSorted && (
-								<div className="flex flex-col absolute bg-white top-11 left-0 border border-royalblue rounded-sm px-2 py-1 w-fit">
-									<ul className="list-none ml-0 my-0 sans uppercase text-sm">
-										<li
-											className="hover:underline cursor-pointer text-royalblue"
-											onClick={() =>
-												setSortType('newest')
-											}
-										>
-											Newest
-										</li>
-										<li
-											className="hover:underline cursor-pointer text-royalblue"
-											onClick={() =>
-												setSortType('oldest')
-											}
-										>
-											Oldest
-										</li>
-										<li
-											className="hover:underline cursor-pointer text-royalblue"
-											onClick={() =>
-												setSortType('mostWatched')
-											}
-										>
-											Most Watched
-										</li>
-										<li
-											className="hover:underline cursor-pointer text-royalblue"
-											onClick={() =>
-												setSortType('mostActive')
-											}
-										>
-											Most Active in the past 7 days
-										</li>
-									</ul>
-								</div>
-							)}
-							{isFiltered && (
-								<div className="flex flex-col absolute bg-white top-11 right-0 border border-royalblue rounded-sm px-2 py-1 w-fit">
-									<div className="text-sm">
-										<h4 className="font-medium uppercase">
-											Topics
-										</h4>
-										<ul className="list-none ml-0 my-0">
+			<div className="flex h-screen">
+				<section className="stdcontainer">
+					<header>
+						<div className="flex my-2 items-center">
+							<img
+								src={
+									session?.user.image ||
+									'https://i.pinimg.com/custom_covers/222x/85498161615209203_1636332751.jpg'
+								}
+								alt="profile image"
+								className="shadow-lg rounded-full max-w-full h-4 align-middle border-none"
+							/>
+							<small className="pl-2 font-bold">
+								{session?.user.name}
+							</small>
+							<small>
+								<span className="px-1 font-bold">&bull;</span>
+								{session?.user.email}
+							</small>
+						</div>
+						<div className="flex justify-between items-center">
+							<h1>Communities</h1>
+							<Link href="/communities/create" passHref>
+								<Button>CREATE THREAD</Button>
+							</Link>
+						</div>
+					</header>
+					<div className="flex gap-3">
+						<div className="flex flex-row gap-1">
+							<Input
+								defaultValue=""
+								label={null}
+								name="floating_search"
+								onChange={setSearchQuery}
+								role="search"
+								type="search"
+								placeholder="Search threads..."
+								className="w-2/3 md:w-72"
+							/>
+							<div className="flex gap-2 w-fit relative">
+								<Button onClick={() => setIsSorted(!isSorted)}>
+									SORT
+								</Button>
+								<Button onClick={() => setIsFiltered(!isFiltered)}>
+									FILTER
+								</Button>
+								{isSorted && (
+									<div className="flex flex-col absolute bg-white top-11 left-0 border border-royalblue rounded-sm px-2 py-1 w-fit">
+										<ul className="list-none ml-0 my-0 sans uppercase text-sm">
 											<li
-												className="hover:underline cursor-pointer text-royalblue uppercase sans"
-												onClick={() => {
-													setFilterType({
-														label: 'all',
-														value: '',
-													})
-												}}
+												className="hover:underline cursor-pointer text-royalblue"
+												onClick={() =>
+													setSortType('newest')
+												}
 											>
-												Reset
+												Newest
 											</li>
-											{[...threadTopicSet].map(
-												(topic) => (
-													<li
-														className="hover:underline cursor-pointer text-royalblue uppercase sans"
-														onClick={() => {
-															setFilterType({
-																label: 'topic',
-																value: topic,
-															})
-														}}
-														key={topic}
-													>
-														{topic}
-													</li>
-												)
-											)}
+											<li
+												className="hover:underline cursor-pointer text-royalblue"
+												onClick={() =>
+													setSortType('oldest')
+												}
+											>
+												Oldest
+											</li>
+											<li
+												className="hover:underline cursor-pointer text-royalblue"
+												onClick={() =>
+													setSortType('mostWatched')
+												}
+											>
+												Most Watched
+											</li>
+											<li
+												className="hover:underline cursor-pointer text-royalblue"
+												onClick={() =>
+													setSortType('mostActive')
+												}
+											>
+												Most Active in the past 7 days
+											</li>
 										</ul>
 									</div>
-								</div>
-							)}
+								)}
+								{isFiltered && (
+									<div className="flex flex-col absolute bg-white top-11 right-0 border border-royalblue rounded-sm px-2 py-1 w-fit">
+										<div className="text-sm">
+											<h4 className="font-medium uppercase">
+												Topics
+											</h4>
+											<ul className="list-none ml-0 my-0">
+												<li
+													className="hover:underline cursor-pointer text-royalblue uppercase sans"
+													onClick={() => {
+														setFilterType({
+															label: 'all',
+															value: '',
+														})
+													}}
+												>
+													Reset
+												</li>
+												{[...threadTopicSet].map(
+													(topic) => (
+														<li
+															className="hover:underline cursor-pointer text-royalblue uppercase sans"
+															onClick={() => {
+																setFilterType({
+																	label: 'topic',
+																	value: topic,
+																})
+															}}
+															key={topic}
+														>
+															{topic}
+														</li>
+													)
+												)}
+											</ul>
+										</div>
+									</div>
+								)}
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="m-2">
-					{data.threads
-						.filter((v) => {
-							if (
-								filterType.label === 'all' &&
-								searchQuery === ''
-							) {
-								return v.title !== null
-							}
-							if (
-								filterType.label === 'topic' &&
-								searchQuery === ''
-							) {
-								return v.topics?.includes(filterType.value)
-							}
-							if (
-								filterType.label === 'topic' &&
-								searchQuery.length > 0
-							) {
-								return (
-									v.topics?.includes(filterType.value) &&
-									(v.title
-										?.toLowerCase()
-										.includes(searchQuery.toLowerCase()) ||
+					<div className="flex gap-3">
+						{data.threads
+							.filter((v) => {
+								if (
+									filterType.label === 'all' &&
+									searchQuery === ''
+								) {
+									return v.title !== null
+								}
+								if (
+									filterType.label === 'topic' &&
+									searchQuery === ''
+								) {
+									return v.topics?.includes(filterType.value)
+								}
+								if (
+									filterType.label === 'topic' &&
+									searchQuery.length > 0
+								) {
+									return (
+										v.topics?.includes(filterType.value) &&
+										(v.title
+											?.toLowerCase()
+											.includes(searchQuery.toLowerCase()) ||
+											v.body
+												?.toLowerCase()
+												.includes(
+													searchQuery.toLowerCase()
+												) ||
+											v.topics?.some((topic) =>
+												topic
+													.toLowerCase()
+													.includes(
+														searchQuery.toLowerCase()
+													)
+											))
+									)
+								}
+								if (searchQuery === '') return v.title !== null
+								else if (searchQuery.length > 0)
+									return (
+										v.title
+											?.toLowerCase()
+											.includes(searchQuery.toLowerCase()) ||
 										v.body
 											?.toLowerCase()
-											.includes(
-												searchQuery.toLowerCase()
-											) ||
+											.includes(searchQuery.toLowerCase()) ||
 										v.topics?.some((topic) =>
 											topic
 												.toLowerCase()
-												.includes(
-													searchQuery.toLowerCase()
-												)
-										))
-								)
-							}
-							if (searchQuery === '') return v.title !== null
-							else if (searchQuery.length > 0)
-								return (
-									v.title
-										?.toLowerCase()
-										.includes(searchQuery.toLowerCase()) ||
-									v.body
-										?.toLowerCase()
-										.includes(searchQuery.toLowerCase()) ||
-									v.topics?.some((topic) =>
-										topic
-											.toLowerCase()
-											.includes(searchQuery.toLowerCase())
+												.includes(searchQuery.toLowerCase())
+										)
 									)
-								)
-							else return v.title !== null
-						})
-						.sort((a, b) => {
-							if (sortType === 'newest')
+								else return v.title !== null
+							})
+							.sort((a, b) => {
+								if (sortType === 'newest')
+									return (
+										new Date(b.updatedAt).valueOf() -
+										new Date(a.updatedAt).valueOf()
+									)
+								else if (sortType === 'oldest')
+									return (
+										new Date(a.updatedAt).valueOf() -
+										new Date(b.updatedAt).valueOf()
+									)
+								else if (sortType === 'mostWatched')
+									return (
+										b.usersWatching?.length ||
+										0 - a.usersWatching?.length ||
+										0
+									)
+								else if (sortType === 'mostActive')
+									return (
+										b.comments?.length ||
+										0 - a.comments?.length ||
+										0
+									)
+								else return 0
+							})
+							.map((thread, threadMapIndex) => {
 								return (
-									new Date(b.updatedAt).valueOf() -
-									new Date(a.updatedAt).valueOf()
+									<div className="my-4" key={threadMapIndex}>
+										<Thread
+											body={thread.body}
+											id={thread.id}
+											title={thread.title}
+											userProfile={thread.author}
+											commentCount={thread.comments.length}
+											viewCutOff={true}
+											showAuthor={false}
+											upvotesProp={thread.upvotes}
+											topics={thread.topics}
+										/>
+									</div>
 								)
-							else if (sortType === 'oldest')
-								return (
-									new Date(a.updatedAt).valueOf() -
-									new Date(b.updatedAt).valueOf()
-								)
-							else if (sortType === 'mostWatched')
-								return (
-									b.usersWatching?.length ||
-									0 - a.usersWatching?.length ||
-									0
-								)
-							else if (sortType === 'mostActive')
-								return (
-									b.comments?.length ||
-									0 - a.comments?.length ||
-									0
-								)
-							else return 0
-						})
-						.map((thread, threadMapIndex) => {
-							return (
-								<div className="my-4" key={threadMapIndex}>
-									<Thread
-										body={thread.body}
-										id={thread.id}
-										title={thread.title}
-										userProfile={thread.author}
-										commentCount={thread.comments.length}
-										viewCutOff={true}
-										showAuthor={false}
-										upvotesProp={thread.upvotes}
-										topics={thread.topics}
-									/>
-								</div>
-							)
-						})}
+							})}
+					</div>
+				</section>
+
+				<div className="flex h-[calc(100%_-_4rem)]">
+						<WatchedThreadSidebar open={openWatchedThreads} handle={setOpenWatchedThreads}>
+						<div className="mt-8">
+							<div className="mb-8">
+								<WatchedSidebarList
+									title={'Most Active'}
+									threads={
+										data.mostActive
+											.filter(
+												(v) =>
+													!!v.title &&
+													new Date().valueOf() >=
+														new Date(
+															moment(v.updatedAt)
+																.subtract(7, 'days')
+																.toDate()
+														).valueOf()
+											)
+											.sort( (a, b) => b.comments.length - a.comments.length ) || []
+									}
+								/>
+							</div>
+
+							<div>
+								<WatchedSidebarList
+									title={'Most Watched'}
+									threads={
+										data.mostWatched
+											.filter((v) => !!v.title)
+											.sort(
+												(a, b) =>
+													b.usersWatching.length -
+													a.usersWatching.length
+											) || []
+									}
+								/>
+							</div>
+						</div>
+						</WatchedThreadSidebar>
 				</div>
+
+				
 			</div>
-
-			<WatchedThreadSidebar
-				open={openWatchedThreads}
-				handle={setOpenWatchedThreads}
-			>
-				<div className="mb-10">
-					<WatchedSidebarList
-						title={'Most Active'}
-						threads={
-							data.mostActive
-								.filter(
-									(v) =>
-										!!v.title &&
-										new Date().valueOf() >=
-											new Date(
-												moment(v.updatedAt)
-													.subtract(7, 'days')
-													.toDate()
-											).valueOf()
-								)
-								.sort(
-									(a, b) =>
-										b.comments.length - a.comments.length
-								) || []
-						}
-					/>
-				</div>
-
-				<div className="border border-black w-full my-14"></div>
-				<div className="mb-10">
-					<WatchedSidebarList
-						title={'Most Watched'}
-						threads={
-							data.mostWatched
-								.filter((v) => !!v.title)
-								.sort(
-									(a, b) =>
-										b.usersWatching.length -
-										a.usersWatching.length
-								) || []
-						}
-					/>
-				</div>
-			</WatchedThreadSidebar>
-		</div>
+		</>
 	)
 }
 
