@@ -14,13 +14,16 @@ const WatchedThreadSidebar: React.FC<WatchedThreadsSidebarProps> = ({
 	children,
 }) => {
 	return (
-		<div className={`border-l-[1px] border-wgray relative p-4 ${ open ? 'w-[300px]' : ''}`}>
+		<div
+			className={`border-l-[1px] border-wgray relative p-4 ${
+				open ? 'w-[300px]' : ''
+			}`}
+		>
 			{open && children}
 			<div
 				className="absolute -left-4 bottom-8"
 				onClick={() => handle(!open)}
-			>
-			</div>
+			></div>
 		</div>
 	)
 }

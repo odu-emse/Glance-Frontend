@@ -172,7 +172,9 @@ const Index = ({}) => {
 								<Button onClick={() => setIsSorted(!isSorted)}>
 									SORT
 								</Button>
-								<Button onClick={() => setIsFiltered(!isFiltered)}>
+								<Button
+									onClick={() => setIsFiltered(!isFiltered)}
+								>
 									FILTER
 								</Button>
 								{isSorted && (
@@ -277,7 +279,9 @@ const Index = ({}) => {
 										v.topics?.includes(filterType.value) &&
 										(v.title
 											?.toLowerCase()
-											.includes(searchQuery.toLowerCase()) ||
+											.includes(
+												searchQuery.toLowerCase()
+											) ||
 											v.body
 												?.toLowerCase()
 												.includes(
@@ -297,14 +301,20 @@ const Index = ({}) => {
 									return (
 										v.title
 											?.toLowerCase()
-											.includes(searchQuery.toLowerCase()) ||
+											.includes(
+												searchQuery.toLowerCase()
+											) ||
 										v.body
 											?.toLowerCase()
-											.includes(searchQuery.toLowerCase()) ||
+											.includes(
+												searchQuery.toLowerCase()
+											) ||
 										v.topics?.some((topic) =>
 											topic
 												.toLowerCase()
-												.includes(searchQuery.toLowerCase())
+												.includes(
+													searchQuery.toLowerCase()
+												)
 										)
 									)
 								else return v.title !== null
@@ -342,7 +352,9 @@ const Index = ({}) => {
 											id={thread.id}
 											title={thread.title}
 											userProfile={thread.author}
-											commentCount={thread.comments.length}
+											commentCount={
+												thread.comments.length
+											}
 											viewCutOff={true}
 											showAuthor={false}
 											upvotesProp={thread.upvotes}
@@ -355,7 +367,10 @@ const Index = ({}) => {
 				</section>
 
 				<div className="flex h-[calc(100%_-_4rem)]">
-						<WatchedThreadSidebar open={openWatchedThreads} handle={setOpenWatchedThreads}>
+					<WatchedThreadSidebar
+						open={openWatchedThreads}
+						handle={setOpenWatchedThreads}
+					>
 						<div className="mt-8">
 							<div className="mb-8">
 								<WatchedSidebarList
@@ -368,11 +383,18 @@ const Index = ({}) => {
 													new Date().valueOf() >=
 														new Date(
 															moment(v.updatedAt)
-																.subtract(7, 'days')
+																.subtract(
+																	7,
+																	'days'
+																)
 																.toDate()
 														).valueOf()
 											)
-											.sort( (a, b) => b.comments.length - a.comments.length ) || []
+											.sort(
+												(a, b) =>
+													b.comments.length -
+													a.comments.length
+											) || []
 									}
 								/>
 							</div>
@@ -392,10 +414,8 @@ const Index = ({}) => {
 								/>
 							</div>
 						</div>
-						</WatchedThreadSidebar>
+					</WatchedThreadSidebar>
 				</div>
-
-				
 			</div>
 		</>
 	)

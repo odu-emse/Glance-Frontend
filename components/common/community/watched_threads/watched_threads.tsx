@@ -40,13 +40,19 @@ export const WatchedSidebarList = ({
 		<>
 			<h4 className="uppercase mb-2">{title}</h4>
 			<div>
-				{
-					threads.map((thread, threadIndex) => (
-						<Link key={threadIndex} href={`/communities/${thread.id}`} passHref>
-							<a>{thread.title.length > 30 ? `${thread.title.substring(0, 30)}...` : thread.title }</a>
-						</Link>
-					))
-				}
+				{threads.map((thread, threadIndex) => (
+					<Link
+						key={threadIndex}
+						href={`/communities/${thread.id}`}
+						passHref
+					>
+						<a>
+							{thread.title.length > 30
+								? `${thread.title.substring(0, 30)}...`
+								: thread.title}
+						</a>
+					</Link>
+				))}
 			</div>
 		</>
 	)
