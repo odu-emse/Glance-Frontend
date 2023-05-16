@@ -20,7 +20,7 @@ export const Button = ({
 			themeOverride={{
 				primaryBackground: '#204498',
 				primaryHoverBackground: '#1b3a82',
-				borderRadius: '3px'
+				borderRadius: '2px'
 			}}
 		>
 			{children}
