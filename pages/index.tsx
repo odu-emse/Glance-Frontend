@@ -2,9 +2,7 @@
 import { Button } from '@/components/common/button/button'
 import Head from 'next/head'
 import { useSession } from 'next-auth/react'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { Logo } from '@/components/common/svg/logo'
 import { signIn } from 'next-auth/react'
 import { DynamicVersion } from '@/components/common/version/dynamic_version'
@@ -56,8 +54,7 @@ const Index = () => {
 				</h5>
 
 				<Button
-					variant="white"
-					className="m-5"
+					variant="secondary"
 					onClick={() => signIn()}
 				>
 					LOGIN

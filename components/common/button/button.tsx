@@ -1,62 +1,25 @@
+import { Button as InstructureButton } from '@instructure/ui'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import Loader from '../../util/loader'
 
 export const Button = ({
-	variant = 'primary',
-	shape = 'regular',
-	loading,
-	size,
+	variant = 'primary',	
+	size = 'medium',
+	disabled = false,
 	children,
-	disabled,
-	type,
-	className,
 	onClick,
-	...props
 }: ButtonProps) => {
-	const classes = [
-		'flex flex-row items-center justify-center gap-1',
-		'px-[1em] py-[0.5em]',
-		'font-bold',
-		'uppercase',
-		'sans',
-		className,
-		size === 1 && 'w-full',
-
-		shape === 'regular' && 'rounded',
-		shape === 'pill' && 'rounded-full',
-
-		size === 'small' && 'text-sm',
-		size === 'large' && 'text-lg',
-
-		disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
-
-		variant === 'primary' &&
-			'shadow bg-royalblue text-white hover:bg-blue-600',
-		variant === 'secondary' &&
-			'shadow bg-wgray text-gray-700 hover:bg-gray-200',
-		variant === 'transparent' && 'bg-transparent text-black',
-		variant === 'white' &&
-			'shadow bg-white text-midnight hover:bg-gray-100',
-	].join(' ')
 
 	return (
-		<button
-			type={type}
+		<InstructureButton 
+			color={variant}
 			disabled={disabled}
-			className={classes}
 			onClick={onClick}
-			{...props}
+			margin='small'
+			size={size}
 		>
-			{loading ? (
-				<Loader
-					textColor={`${
-						variant === 'primary' ? 'blue-700' : 'blue-200'
-					}`}
-				/>
-			) : null}
 			{children}
-		</button>
+		</InstructureButton>
 	)
 }
 
@@ -64,19 +27,11 @@ type ButtonProps = {
 	/**
 	 * A boolean that determines whether the button is the principal call/action on the page
 	 */
-	variant?: 'primary' | 'secondary' | 'transparent' | 'white'
-	/**
-	 * An enum that determines the shape of the button
-	 */
-	shape?: 'regular' | 'pill'
-	/**
-	 * A boolean that determines whether the button is representing a loading state
-	 */
-	loading?: boolean
+	variant?: 'primary' | 'secondary'
 	/**
 	 * An enum that defines the button's size
 	 */
-	size?: 'small' | 'base' | 'large' | 1
+	size: 'small' | 'medium' | 'large'
 	/**
 	 * An enum that defines the button's type
 	 */
@@ -103,19 +58,11 @@ Button.propTypes = {
 	/**
 	 * Is this the principal call to action on the page?
 	 */
-	variant: PropTypes.oneOf(['primary', 'secondary', 'transparent']),
-	/**
-	 * Is this the principal call to action on the page?
-	 */
-	shape: PropTypes.oneOf(['regular', 'pill']),
-	/**
-	 * Is the button representing a loading state?
-	 */
-	loading: PropTypes.bool,
+	variant: PropTypes.oneOf(['primary', 'secondary']),
 	/**
 	 * How large should the button be?
 	 */
-	size: PropTypes.oneOf(['small', 'base', 'large', 1]),
+	size: PropTypes.oneOf(['small', 'medium', 'large']),
 	/**
 	 * Button contents
 	 */
@@ -135,18 +82,12 @@ Button.propTypes = {
 	/**
 	 * What type of button is this?
 	 */
-	type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
-	/**
-	 *  Indicates the className - based on selection of a property named 'size', className is atlered
-	 */
-	className: PropTypes.string,
+	//type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
 }
 
 Button.defaultProps = {
 	variant: 'primary',
-	shape: 'regular',
-	loading: false,
-	size: 'base',
+	size: 'medium',
 	onClick: undefined,
 	children: 'Click Here',
 	disabled: false,

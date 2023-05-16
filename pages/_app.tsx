@@ -2,7 +2,7 @@ import React from 'react'
 import { SessionProvider } from 'next-auth/react'
 import '../styles/globals.css'
 import Head from 'next/head'
-import { InstUISettingsProvider, canvas } from '@instructure/ui'
+import { canvas, InstUISettingsProvider } from '@instructure/ui'
 
 const isServerSideRendered = () => {
 	return typeof window === 'undefined'
@@ -34,7 +34,10 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
 					media={'(prefers-color-scheme: dark)'}
 				/>
 			</Head>
-			<InstUISettingsProvider theme={canvas}>
+			<InstUISettingsProvider theme={{
+				...canvas,
+				colors: {}
+			}}>
 				<SessionProvider session={session}>
 					{getLayout(<Component {...pageProps} />)}
 				</SessionProvider>
