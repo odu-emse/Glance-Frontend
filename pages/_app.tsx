@@ -36,7 +36,9 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
 			</Head>
 			<InstUISettingsProvider theme={{
 				...canvas,
-				colors: {}
+				colors: {
+					backgroundBrand: "red"
+				}
 			}}>
 				<SessionProvider session={session}>
 					{getLayout(<Component {...pageProps} />)}

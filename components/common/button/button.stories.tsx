@@ -3,7 +3,7 @@ import { ComponentStory } from '@storybook/react'
 import { Button } from './button'
 
 export default {
-	title: 'Common/Button/Button',
+	title: 'Common/Buttons/Button',
 	component: Button,
 }
 

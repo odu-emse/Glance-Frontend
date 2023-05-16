@@ -17,6 +17,11 @@ export const Button = ({
 			onClick={onClick}
 			margin='small'
 			size={size}
+			themeOverride={{
+				primaryBackground: '#204498',
+				primaryHoverBackground: '#1b3a82',
+				borderRadius: '3px'
+			}}
 		>
 			{children}
 		</InstructureButton>
