@@ -72,14 +72,17 @@ export const Layout = ({ children }) => {
 				value={{ user: data.user[0] || null, setUser }}
 			>
 				<nav className="flex bg-royalblue stdcontainer-sharp justify-between h-16">
-					<div className="flex items-center gap-1">
+					<div
+						className="flex items-center gap-1 cursor-default"
+						onClick={() => router.push('/modules')}
+					>
 						<Logo width={25} height={25} />
 						<h4
 							style={{
 								fontWeight: 700,
 								fontSize: '24px',
 							}}
-							className="text-white"
+							className="text-white cursor-pointer"
 						>
 							GLANCE
 						</h4>
