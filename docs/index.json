@@ -1,1 +1,1209 @@
-{"v":4,"entries":{"common-admin-panel-content-area--docs":{"id":"common-admin-panel-content-area--docs","title":"Common/Admin Panel/Content Area","name":"Docs","importPath":"./components/common/admin_panel/content_area.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-admin-panel-content-area--standard":{"id":"common-admin-panel-content-area--standard","title":"Common/Admin Panel/Content Area","name":"Upload","importPath":"./components/common/admin_panel/content_area.stories.tsx","tags":["story"],"type":"story"},"common-button-button--docs":{"id":"common-button-button--docs","title":"Common/Button/Button","name":"Docs","importPath":"./components/common/button/button.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-button-button--primary":{"id":"common-button-button--primary","title":"Common/Button/Button","name":"Primary","importPath":"./components/common/button/button.stories.tsx","tags":["story"],"type":"story"},"common-button-button--secondary":{"id":"common-button-button--secondary","title":"Common/Button/Button","name":"Secondary","importPath":"./components/common/button/button.stories.tsx","tags":["story"],"type":"story"},"common-button-button--large":{"id":"common-button-button--large","title":"Common/Button/Button","name":"Large","importPath":"./components/common/button/button.stories.tsx","tags":["story"],"type":"story"},"common-button-button--small":{"id":"common-button-button--small","title":"Common/Button/Button","name":"Small","importPath":"./components/common/button/button.stories.tsx","tags":["story"],"type":"story"},"common-button-button--width":{"id":"common-button-button--width","title":"Common/Button/Button","name":"Width","importPath":"./components/common/button/button.stories.tsx","tags":["story"],"type":"story"},"common-charts-line-chart--docs":{"id":"common-charts-line-chart--docs","title":"Common/Charts/Line Chart","name":"Docs","importPath":"./components/common/charts/line/line.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-charts-line-chart--simple":{"id":"common-charts-line-chart--simple","title":"Common/Charts/Line Chart","name":"Simple","importPath":"./components/common/charts/line/line.stories.tsx","tags":["story"],"type":"story"},"common-charts-pie-chart--docs":{"id":"common-charts-pie-chart--docs","title":"Common/Charts/Pie Chart","name":"Docs","importPath":"./components/common/charts/pie/pie.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-charts-pie-chart--simple":{"id":"common-charts-pie-chart--simple","title":"Common/Charts/Pie Chart","name":"Simple","importPath":"./components/common/charts/pie/pie.stories.tsx","tags":["story"],"type":"story"},"common-charts-radar-chart--docs":{"id":"common-charts-radar-chart--docs","title":"Common/Charts/Radar Chart","name":"Docs","importPath":"./components/common/charts/radar/radar.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-charts-radar-chart--single-children-radar":{"id":"common-charts-radar-chart--single-children-radar","title":"Common/Charts/Radar Chart","name":"Single Children Radar","importPath":"./components/common/charts/radar/radar.stories.tsx","tags":["story"],"type":"story"},"common-charts-radar-chart--multiple-children-radar":{"id":"common-charts-radar-chart--multiple-children-radar","title":"Common/Charts/Radar Chart","name":"Multiple Children Radar","importPath":"./components/common/charts/radar/radar.stories.tsx","tags":["story"],"type":"story"},"common-chat-bubble-message--docs":{"id":"common-chat-bubble-message--docs","title":"Common/Chat/Bubble Message","name":"Docs","importPath":"./components/common/chat/bubble_message/bubble_message.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-chat-bubble-message--primary":{"id":"common-chat-bubble-message--primary","title":"Common/Chat/Bubble Message","name":"Default Conversation Bubble","importPath":"./components/common/chat/bubble_message/bubble_message.stories.tsx","tags":["story"],"type":"story"},"common-chat-bubble-message--secondary":{"id":"common-chat-bubble-message--secondary","title":"Common/Chat/Bubble Message","name":"One Sided Conversation Bubble","importPath":"./components/common/chat/bubble_message/bubble_message.stories.tsx","tags":["story"],"type":"story"},"common-chat-chat-history--docs":{"id":"common-chat-chat-history--docs","title":"Common/Chat/Chat History","name":"Docs","importPath":"./components/common/chat/chat_history/chat_history.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-chat-chat-history--primary":{"id":"common-chat-chat-history--primary","title":"Common/Chat/Chat History","name":"Primary","importPath":"./components/common/chat/chat_history/chat_history.stories.tsx","tags":["story"],"type":"story"},"common-community-social-card--docs":{"id":"common-community-social-card--docs","title":"Common/Community/Social Card","name":"Docs","importPath":"./components/common/community/social_card/social_card.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-community-social-card--primary":{"id":"common-community-social-card--primary","title":"Common/Community/Social Card","name":"Primary","importPath":"./components/common/community/social_card/social_card.stories.tsx","tags":["story"],"type":"story"},"common-community-social-card--secondary":{"id":"common-community-social-card--secondary","title":"Common/Community/Social Card","name":"Longer Content","importPath":"./components/common/community/social_card/social_card.stories.tsx","tags":["story"],"type":"story"},"common-community-social-card--ta":{"id":"common-community-social-card--ta","title":"Common/Community/Social Card","name":"TA user","importPath":"./components/common/community/social_card/social_card.stories.tsx","tags":["story"],"type":"story"},"common-community-social-card--prof":{"id":"common-community-social-card--prof","title":"Common/Community/Social Card","name":"Professor user","importPath":"./components/common/community/social_card/social_card.stories.tsx","tags":["story"],"type":"story"},"common-community-thread-comments-hierarchy--docs":{"id":"common-community-thread-comments-hierarchy--docs","title":"Common/Community/Thread/Comments Hierarchy","name":"Docs","importPath":"./components/common/community/threads/comments/comments_hierarchy.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-community-thread-comments-hierarchy--sample":{"id":"common-community-thread-comments-hierarchy--sample","title":"Common/Community/Thread/Comments Hierarchy","name":"Default","importPath":"./components/common/community/threads/comments/comments_hierarchy.stories.tsx","tags":["story"],"type":"story"},"common-community-thread-thread--docs":{"id":"common-community-thread-thread--docs","title":"Common/Community/Thread/Thread","name":"Docs","importPath":"./components/common/community/threads/thread/thread.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-community-thread-thread--sample":{"id":"common-community-thread-thread--sample","title":"Common/Community/Thread/Thread","name":"Default","importPath":"./components/common/community/threads/thread/thread.stories.tsx","tags":["story"],"type":"story"},"common-community-thread-thread--comment":{"id":"common-community-thread-thread--comment","title":"Common/Community/Thread/Thread","name":"Thread without title","importPath":"./components/common/community/threads/thread/thread.stories.tsx","tags":["story"],"type":"story"},"common-community-thread-thread--multiple-threads":{"id":"common-community-thread-thread--multiple-threads","title":"Common/Community/Thread/Thread","name":"List of threads","importPath":"./components/common/community/threads/thread/thread.stories.tsx","tags":["story"],"type":"story"},"common-community-thread-thread-text-area--docs":{"id":"common-community-thread-thread-text-area--docs","title":"Common/Community/Thread/Thread Text Area","name":"Docs","importPath":"./components/common/community/threads/thread_text_area/thread_text_area.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-community-thread-thread-text-area--default":{"id":"common-community-thread-thread-text-area--default","title":"Common/Community/Thread/Thread Text Area","name":"Default","importPath":"./components/common/community/threads/thread_text_area/thread_text_area.stories.tsx","tags":["story"],"type":"story"},"common-community-watchedthreads--docs":{"id":"common-community-watchedthreads--docs","title":"Common/Community/WatchedThreads","name":"Docs","importPath":"./components/common/community/watched_threads/watched_threads.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-community-watchedthreads--default":{"id":"common-community-watchedthreads--default","title":"Common/Community/WatchedThreads","name":"Default","importPath":"./components/common/community/watched_threads/watched_threads.stories.tsx","tags":["story"],"type":"story"},"common-community-watchedthreadssidebar--docs":{"id":"common-community-watchedthreadssidebar--docs","title":"Common/Community/WatchedThreadsSidebar","name":"Docs","importPath":"./components/common/community/watched_threads_sidebar/watched_threads_sidebar.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-community-watchedthreadssidebar--default":{"id":"common-community-watchedthreadssidebar--default","title":"Common/Community/WatchedThreadsSidebar","name":"Default","importPath":"./components/common/community/watched_threads_sidebar/watched_threads_sidebar.stories.tsx","tags":["story"],"type":"story"},"common-content-types-video-chip--docs":{"id":"common-content-types-video-chip--docs","title":"Common/Content Types/Video Chip","name":"Docs","importPath":"./components/common/content_types/video/video_chip/video_chip.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-content-types-video-chip--sample":{"id":"common-content-types-video-chip--sample","title":"Common/Content Types/Video Chip","name":"Sample","importPath":"./components/common/content_types/video/video_chip/video_chip.stories.tsx","tags":["story"],"type":"story"},"common-content-types-video-comment-tick--docs":{"id":"common-content-types-video-comment-tick--docs","title":"Common/Content Types/Video Comment Tick","name":"Docs","importPath":"./components/common/content_types/video/video_comment_tick/video_comment_tick.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-content-types-video-comment-tick--sample":{"id":"common-content-types-video-comment-tick--sample","title":"Common/Content Types/Video Comment Tick","name":"Sample","importPath":"./components/common/content_types/video/video_comment_tick/video_comment_tick.stories.tsx","tags":["story"],"type":"story"},"common-content-types-video--docs":{"id":"common-content-types-video--docs","title":"Common/Content Types/Video","name":"Docs","importPath":"./components/common/content_types/video/video_player/video_player.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-content-types-video--sample":{"id":"common-content-types-video--sample","title":"Common/Content Types/Video","name":"Sample","importPath":"./components/common/content_types/video/video_player/video_player.stories.tsx","tags":["story"],"type":"story"},"common-forms-form--docs":{"id":"common-forms-form--docs","title":"Common/Forms/Form","name":"Docs","importPath":"./components/common/forms/form/form.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-forms-form--default":{"id":"common-forms-form--default","title":"Common/Forms/Form","name":"Default","importPath":"./components/common/forms/form/form.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-old-input--docs":{"id":"common-forms-inputs-old-input--docs","title":"Common/Forms/Inputs/Old_Input","name":"Docs","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-forms-inputs-old-input--default":{"id":"common-forms-inputs-old-input--default","title":"Common/Forms/Inputs/Old_Input","name":"Default","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-old-input--email":{"id":"common-forms-inputs-old-input--email","title":"Common/Forms/Inputs/Old_Input","name":"Email","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-old-input--descriptive":{"id":"common-forms-inputs-old-input--descriptive","title":"Common/Forms/Inputs/Old_Input","name":"Descriptive","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-old-input--disabled":{"id":"common-forms-inputs-old-input--disabled","title":"Common/Forms/Inputs/Old_Input","name":"Disabled","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-old-input--error-state":{"id":"common-forms-inputs-old-input--error-state","title":"Common/Forms/Inputs/Old_Input","name":"Error State","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-old-input--error-state-with-description":{"id":"common-forms-inputs-old-input--error-state-with-description","title":"Common/Forms/Inputs/Old_Input","name":"Error State With Description","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-old-input--search":{"id":"common-forms-inputs-old-input--search","title":"Common/Forms/Inputs/Old_Input","name":"Search","importPath":"./components/common/forms/inputs/input/Oldinput.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--docs":{"id":"common-forms-inputs-inputs--docs","title":"Common/Forms/Inputs/Inputs","name":"Docs","importPath":"./components/common/forms/inputs/input/input.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-forms-inputs-inputs--default":{"id":"common-forms-inputs-inputs--default","title":"Common/Forms/Inputs/Inputs","name":"Default","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--email":{"id":"common-forms-inputs-inputs--email","title":"Common/Forms/Inputs/Inputs","name":"Email","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--descriptive":{"id":"common-forms-inputs-inputs--descriptive","title":"Common/Forms/Inputs/Inputs","name":"Descriptive","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--disabled":{"id":"common-forms-inputs-inputs--disabled","title":"Common/Forms/Inputs/Inputs","name":"Disabled","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--error-state":{"id":"common-forms-inputs-inputs--error-state","title":"Common/Forms/Inputs/Inputs","name":"Error State","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--error-state-with-description":{"id":"common-forms-inputs-inputs--error-state-with-description","title":"Common/Forms/Inputs/Inputs","name":"Error State With Description","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--search":{"id":"common-forms-inputs-inputs--search","title":"Common/Forms/Inputs/Inputs","name":"Search","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--radio":{"id":"common-forms-inputs-inputs--radio","title":"Common/Forms/Inputs/Inputs","name":"Radio","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--checkbox":{"id":"common-forms-inputs-inputs--checkbox","title":"Common/Forms/Inputs/Inputs","name":"Checkbox","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--numerical-input":{"id":"common-forms-inputs-inputs--numerical-input","title":"Common/Forms/Inputs/Inputs","name":"Numerical Input","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-inputs--range-slider":{"id":"common-forms-inputs-inputs--range-slider","title":"Common/Forms/Inputs/Inputs","name":"Range Slider","importPath":"./components/common/forms/inputs/input/input.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-lesson-link--docs":{"id":"common-forms-inputs-lesson-link--docs","title":"Common/Forms/Inputs/Lesson Link","name":"Docs","importPath":"./components/common/forms/inputs/lesson_link/lesson_link.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-forms-inputs-lesson-link--primary":{"id":"common-forms-inputs-lesson-link--primary","title":"Common/Forms/Inputs/Lesson Link","name":"Primary","importPath":"./components/common/forms/inputs/lesson_link/lesson_link.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-select--docs":{"id":"common-forms-inputs-select--docs","title":"Common/Forms/Inputs/Select","name":"Docs","importPath":"./components/common/forms/inputs/select/select.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-forms-inputs-select--primary":{"id":"common-forms-inputs-select--primary","title":"Common/Forms/Inputs/Select","name":"Default","importPath":"./components/common/forms/inputs/select/select.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-select--secondary":{"id":"common-forms-inputs-select--secondary","title":"Common/Forms/Inputs/Select","name":"No label","importPath":"./components/common/forms/inputs/select/select.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-select--tertiary":{"id":"common-forms-inputs-select--tertiary","title":"Common/Forms/Inputs/Select","name":"With options as objects","importPath":"./components/common/forms/inputs/select/select.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-text-area--docs":{"id":"common-forms-inputs-text-area--docs","title":"Common/Forms/Inputs/Text Area","name":"Docs","importPath":"./components/common/forms/inputs/text_area/text_area.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-forms-inputs-text-area--primary":{"id":"common-forms-inputs-text-area--primary","title":"Common/Forms/Inputs/Text Area","name":"Default","importPath":"./components/common/forms/inputs/text_area/text_area.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-text-area--disabled":{"id":"common-forms-inputs-text-area--disabled","title":"Common/Forms/Inputs/Text Area","name":"Disabled TextArea","importPath":"./components/common/forms/inputs/text_area/text_area.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-text-area--with-label":{"id":"common-forms-inputs-text-area--with-label","title":"Common/Forms/Inputs/Text Area","name":"TextArea with a label on the top","importPath":"./components/common/forms/inputs/text_area/text_area.stories.tsx","tags":["story"],"type":"story"},"common-forms-inputs-text-area--max-length":{"id":"common-forms-inputs-text-area--max-length","title":"Common/Forms/Inputs/Text Area","name":"Specific Max Length","importPath":"./components/common/forms/inputs/text_area/text_area.stories.tsx","tags":["story"],"type":"story"},"common-information-card--docs":{"id":"common-information-card--docs","title":"Common/Information Card","name":"Docs","importPath":"./components/common/information_card/information_card.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-information-card--default":{"id":"common-information-card--default","title":"Common/Information Card","name":"Default","importPath":"./components/common/information_card/information_card.stories.tsx","tags":["story"],"type":"story"},"common-information-card--primary":{"id":"common-information-card--primary","title":"Common/Information Card","name":"Primary","importPath":"./components/common/information_card/information_card.stories.tsx","tags":["story"],"type":"story"},"common-information-card--secondary":{"id":"common-information-card--secondary","title":"Common/Information Card","name":"Secondary","importPath":"./components/common/information_card/information_card.stories.tsx","tags":["story"],"type":"story"},"common-links-anchor--docs":{"id":"common-links-anchor--docs","title":"Common/Links/Anchor","name":"Docs","importPath":"./components/common/links/anchor/anchor.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-links-anchor--primary":{"id":"common-links-anchor--primary","title":"Common/Links/Anchor","name":"Primary","importPath":"./components/common/links/anchor/anchor.stories.tsx","tags":["story"],"type":"story"},"common-message-input--docs":{"id":"common-message-input--docs","title":"Common/Message Input","name":"Docs","importPath":"./components/common/message_input/message_input.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-message-input--primary":{"id":"common-message-input--primary","title":"Common/Message Input","name":"Primary","importPath":"./components/common/message_input/message_input.stories.tsx","tags":["story"],"type":"story"},"common-modulecard--docs":{"id":"common-modulecard--docs","title":"Common/ModuleCard","name":"Docs","importPath":"./components/common/module_card/module_card.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-modulecard--primary":{"id":"common-modulecard--primary","title":"Common/ModuleCard","name":"first module card","importPath":"./components/common/module_card/module_card.stories.tsx","tags":["story"],"type":"story"},"common-modulecard--secondary":{"id":"common-modulecard--secondary","title":"Common/ModuleCard","name":"second module card","importPath":"./components/common/module_card/module_card.stories.tsx","tags":["story"],"type":"story"},"common-modulecard--tertiary":{"id":"common-modulecard--tertiary","title":"Common/ModuleCard","name":"third module card","importPath":"./components/common/module_card/module_card.stories.tsx","tags":["story"],"type":"story"},"common-pages-active-modules--docs":{"id":"common-pages-active-modules--docs","title":"Common/Pages/Active Modules","name":"Docs","importPath":"./components/common/pages/active_modules/active_modules.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-active-modules--default":{"id":"common-pages-active-modules--default","title":"Common/Pages/Active Modules","name":"Default","importPath":"./components/common/pages/active_modules/active_modules.stories.tsx","tags":["story"],"type":"story"},"common-pages-admin-panel-modulecard--docs":{"id":"common-pages-admin-panel-modulecard--docs","title":"Common/Pages/Admin Panel/ModuleCard","name":"Docs","importPath":"./components/common/pages/admin_panel/module_card/module_card.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-admin-panel-modulecard--default":{"id":"common-pages-admin-panel-modulecard--default","title":"Common/Pages/Admin Panel/ModuleCard","name":"Default","importPath":"./components/common/pages/admin_panel/module_card/module_card.stories.tsx","tags":["story"],"type":"story"},"common-pages-admin-panel-module-page-editor-lesson--docs":{"id":"common-pages-admin-panel-module-page-editor-lesson--docs","title":"Common/Pages/Admin Panel/Module Page Editor/Lesson","name":"Docs","importPath":"./components/common/pages/admin_panel/module_page_editor/lesson/lesson.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-admin-panel-module-page-editor-lesson--default":{"id":"common-pages-admin-panel-module-page-editor-lesson--default","title":"Common/Pages/Admin Panel/Module Page Editor/Lesson","name":"Default","importPath":"./components/common/pages/admin_panel/module_page_editor/lesson/lesson.stories.tsx","tags":["story"],"type":"story"},"common-pages-admin-panel-module-page-editor-section--docs":{"id":"common-pages-admin-panel-module-page-editor-section--docs","title":"Common/Pages/Admin Panel/Module Page Editor/Section","name":"Docs","importPath":"./components/common/pages/admin_panel/module_page_editor/section/section.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-admin-panel-module-page-editor-section--default":{"id":"common-pages-admin-panel-module-page-editor-section--default","title":"Common/Pages/Admin Panel/Module Page Editor/Section","name":"Default","importPath":"./components/common/pages/admin_panel/module_page_editor/section/section.stories.tsx","tags":["story"],"type":"story"},"common-pages-admin-panel-module-section-editor--docs":{"id":"common-pages-admin-panel-module-section-editor--docs","title":"Common/Pages/Admin Panel/Module Section Editor","name":"Docs","importPath":"./components/common/pages/admin_panel/module_section_editor/module_section_editor.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-admin-panel-module-section-editor--default":{"id":"common-pages-admin-panel-module-section-editor--default","title":"Common/Pages/Admin Panel/Module Section Editor","name":"Default","importPath":"./components/common/pages/admin_panel/module_section_editor/module_section_editor.stories.tsx","tags":["story"],"type":"story"},"common-pages-layouts-layout--docs":{"id":"common-pages-layouts-layout--docs","title":"Common/Pages/Layouts/Layout","name":"Docs","importPath":"./components/common/pages/layouts/layout/layout.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-layouts-layout--primary":{"id":"common-pages-layouts-layout--primary","title":"Common/Pages/Layouts/Layout","name":"Primary","importPath":"./components/common/pages/layouts/layout/layout.stories.tsx","tags":["story"],"type":"story"},"common-pages-module-list--docs":{"id":"common-pages-module-list--docs","title":"Common/Pages/Module List","name":"Docs","importPath":"./components/common/pages/module_list/module_list.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-module-list--default":{"id":"common-pages-module-list--default","title":"Common/Pages/Module List","name":"Default","importPath":"./components/common/pages/module_list/module_list.stories.tsx","tags":["story"],"type":"story"},"common-pages-layouts-left-sidebar--docs":{"id":"common-pages-layouts-left-sidebar--docs","title":"Common/Pages/Layouts/Left Sidebar","name":"Docs","importPath":"./components/common/pages/sidebar/leftsidebar.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-layouts-left-sidebar--default":{"id":"common-pages-layouts-left-sidebar--default","title":"Common/Pages/Layouts/Left Sidebar","name":"Default","importPath":"./components/common/pages/sidebar/leftsidebar.stories.tsx","tags":["story"],"type":"story"},"common-pages-layouts-sidebar-item--docs":{"id":"common-pages-layouts-sidebar-item--docs","title":"Common/Pages/Layouts/Sidebar Item","name":"Docs","importPath":"./components/common/pages/sidebar/sidebar_item/sidebar_item.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-pages-layouts-sidebar-item--default":{"id":"common-pages-layouts-sidebar-item--default","title":"Common/Pages/Layouts/Sidebar Item","name":"Default","importPath":"./components/common/pages/sidebar/sidebar_item/sidebar_item.stories.tsx","tags":["story"],"type":"story"},"common-sidebar-sidebar--docs":{"id":"common-sidebar-sidebar--docs","title":"Common/Sidebar/Sidebar","name":"Docs","importPath":"./components/common/pages/sidebar/sidebar_lessons/sidebar_lessons.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-sidebar-sidebar--default":{"id":"common-sidebar-sidebar--default","title":"Common/Sidebar/Sidebar","name":"Default","importPath":"./components/common/pages/sidebar/sidebar_lessons/sidebar_lessons.stories.tsx","tags":["story"],"type":"story"},"common-panel--docs":{"id":"common-panel--docs","title":"Common/Panel","name":"Docs","importPath":"./components/common/panel/panel.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-panel--text":{"id":"common-panel--text","title":"Common/Panel","name":"Text","importPath":"./components/common/panel/panel.stories.tsx","tags":["story"],"type":"story"},"common-panel--chart":{"id":"common-panel--chart","title":"Common/Panel","name":"Chart","importPath":"./components/common/panel/panel.stories.tsx","tags":["story"],"type":"story"},"common-panel--list":{"id":"common-panel--list","title":"Common/Panel","name":"List","importPath":"./components/common/panel/panel.stories.tsx","tags":["story"],"type":"story"},"common-quiz--docs":{"id":"common-quiz--docs","title":"Common/Quiz","name":"Docs","importPath":"./components/common/quiz/quiz_questions.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-quiz--default":{"id":"common-quiz--default","title":"Common/Quiz","name":"Default","importPath":"./components/common/quiz/quiz_questions.stories.tsx","tags":["story"],"type":"story"},"common-tabspanel--docs":{"id":"common-tabspanel--docs","title":"Common/TabsPanel","name":"Docs","importPath":"./components/common/tabs_panel/tabs_panel.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-tabspanel--course":{"id":"common-tabspanel--course","title":"Common/TabsPanel","name":"Course","importPath":"./components/common/tabs_panel/tabs_panel.stories.tsx","tags":["story"],"type":"story"},"common-toggle-switch--docs":{"id":"common-toggle-switch--docs","title":"common/Toggle Switch","name":"Docs","importPath":"./components/common/toggle/toggle.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-toggle-switch--default":{"id":"common-toggle-switch--default","title":"common/Toggle Switch","name":"Default","importPath":"./components/common/toggle/toggle.stories.tsx","tags":["story"],"type":"story"},"common-editable-field--docs":{"id":"common-editable-field--docs","title":"common/Editable Field","name":"Docs","importPath":"./components/common/user/editable_fields.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-editable-field--default":{"id":"common-editable-field--default","title":"common/Editable Field","name":"Default","importPath":"./components/common/user/editable_fields.stories.tsx","tags":["story"],"type":"story"},"common-version-dynamic-version--docs":{"id":"common-version-dynamic-version--docs","title":"Common/Version/Dynamic Version","name":"Docs","importPath":"./components/common/version/dynamic_version.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-version-dynamic-version--default":{"id":"common-version-dynamic-version--default","title":"Common/Version/Dynamic Version","name":"Default","importPath":"./components/common/version/dynamic_version.stories.tsx","tags":["story"],"type":"story"},"pages-admin-panel-lesson-page--docs":{"id":"pages-admin-panel-lesson-page--docs","title":"Pages/Admin Panel/Lesson Page","name":"Docs","importPath":"./components/pages/admin_panel_page/lesson_page/lessonpage.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-admin-panel-lesson-page--primary":{"id":"pages-admin-panel-lesson-page--primary","title":"Pages/Admin Panel/Lesson Page","name":"Default","importPath":"./components/pages/admin_panel_page/lesson_page/lessonpage.stories.tsx","tags":["story"],"type":"story"},"pages-admin-panel-modules--docs":{"id":"pages-admin-panel-modules--docs","title":"Pages/Admin Panel/Modules","name":"Docs","importPath":"./components/pages/admin_panel_page/modules/modules.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-admin-panel-modules--default":{"id":"pages-admin-panel-modules--default","title":"Pages/Admin Panel/Modules","name":"Default","importPath":"./components/pages/admin_panel_page/modules/modules.stories.tsx","tags":["story"],"type":"story"},"pages-communities-main-main-community--docs":{"id":"pages-communities-main-main-community--docs","title":"Pages/Communities/Main/Main Community","name":"Docs","importPath":"./components/pages/communities/Main/main_community.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-communities-main-main-community--primary":{"id":"pages-communities-main-main-community--primary","title":"Pages/Communities/Main/Main Community","name":"Default","importPath":"./components/pages/communities/Main/main_community.stories.tsx","tags":["story"],"type":"story"},"pages-communities-thread-thread-creation--docs":{"id":"pages-communities-thread-thread-creation--docs","title":"Pages/Communities/Thread/Thread Creation","name":"Docs","importPath":"./components/pages/communities/ThreadCreation/thread_page.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-communities-thread-thread-creation--primary":{"id":"pages-communities-thread-thread-creation--primary","title":"Pages/Communities/Thread/Thread Creation","name":"Default","importPath":"./components/pages/communities/ThreadCreation/thread_page.stories.tsx","tags":["story"],"type":"story"},"organisms-community-page--docs":{"id":"organisms-community-page--docs","title":"Organisms/Community Page","name":"Docs","importPath":"./components/pages/community_page/community_page.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"organisms-community-page--primary":{"id":"organisms-community-page--primary","title":"Organisms/Community Page","name":"empty Page","importPath":"./components/pages/community_page/community_page.stories.tsx","tags":["story"],"type":"story"},"organisms-community-page--secondary":{"id":"organisms-community-page--secondary","title":"Organisms/Community Page","name":"default page","importPath":"./components/pages/community_page/community_page.stories.tsx","tags":["story"],"type":"story"},"pages-errors-page-not-found--docs":{"id":"pages-errors-page-not-found--docs","title":"Pages/Errors/Page Not Found","name":"Docs","importPath":"./components/pages/errors/page_not_found/page_not_found.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-errors-page-not-found--primary":{"id":"pages-errors-page-not-found--primary","title":"Pages/Errors/Page Not Found","name":"Default","importPath":"./components/pages/errors/page_not_found/page_not_found.stories.tsx","tags":["story"],"type":"story"},"pages-errors-request-failed--docs":{"id":"pages-errors-request-failed--docs","title":"Pages/Errors/Request Failed","name":"Docs","importPath":"./components/pages/errors/request_failed/request_failed.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-errors-request-failed--primary":{"id":"pages-errors-request-failed--primary","title":"Pages/Errors/Request Failed","name":"Default","importPath":"./components/pages/errors/request_failed/request_failed.stories.tsx","tags":["story"],"type":"story"},"pages-login-login--docs":{"id":"pages-login-login--docs","title":"Pages/Login/Login","name":"Docs","importPath":"./components/pages/login/login.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-login-login--primary":{"id":"pages-login-login--primary","title":"Pages/Login/Login","name":"Default","importPath":"./components/pages/login/login.stories.tsx","tags":["story"],"type":"story"},"common-module-flow-module-item--docs":{"id":"common-module-flow-module-item--docs","title":"Common/Module Flow/Module Item","name":"Docs","importPath":"./components/pages/modules/module/lessons/lesson/module_item/module_item.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"common-module-flow-module-item--primary":{"id":"common-module-flow-module-item--primary","title":"Common/Module Flow/Module Item","name":"First module item","importPath":"./components/pages/modules/module/lessons/lesson/module_item/module_item.stories.tsx","tags":["story"],"type":"story"},"pages-user-user-profile--docs":{"id":"pages-user-user-profile--docs","title":"Pages/User/User Profile","name":"Docs","importPath":"./components/pages/user/user_profile/user_profile.stories.tsx","type":"docs","tags":["docs","autodocs"],"storiesImports":[]},"pages-user-user-profile--primary":{"id":"pages-user-user-profile--primary","title":"Pages/User/User Profile","name":"User Profile - logged out","importPath":"./components/pages/user/user_profile/user_profile.stories.tsx","tags":["story"],"type":"story"},"pages-user-user-profile--secondary":{"id":"pages-user-user-profile--secondary","title":"Pages/User/User Profile","name":"User Profile - logged in","importPath":"./components/pages/user/user_profile/user_profile.stories.tsx","tags":["story"],"type":"story"}}}
+{
+	"v": 4,
+	"entries": {
+		"common-admin-panel-content-area--docs": {
+			"id": "common-admin-panel-content-area--docs",
+			"title": "Common/Admin Panel/Content Area",
+			"name": "Docs",
+			"importPath": "./components/common/admin_panel/content_area.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-admin-panel-content-area--standard": {
+			"id": "common-admin-panel-content-area--standard",
+			"title": "Common/Admin Panel/Content Area",
+			"name": "Upload",
+			"importPath": "./components/common/admin_panel/content_area.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-button-button--docs": {
+			"id": "common-button-button--docs",
+			"title": "Common/Button/Button",
+			"name": "Docs",
+			"importPath": "./components/common/button/button.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-button-button--primary": {
+			"id": "common-button-button--primary",
+			"title": "Common/Button/Button",
+			"name": "Primary",
+			"importPath": "./components/common/button/button.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-button-button--secondary": {
+			"id": "common-button-button--secondary",
+			"title": "Common/Button/Button",
+			"name": "Secondary",
+			"importPath": "./components/common/button/button.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-button-button--large": {
+			"id": "common-button-button--large",
+			"title": "Common/Button/Button",
+			"name": "Large",
+			"importPath": "./components/common/button/button.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-button-button--small": {
+			"id": "common-button-button--small",
+			"title": "Common/Button/Button",
+			"name": "Small",
+			"importPath": "./components/common/button/button.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-button-button--width": {
+			"id": "common-button-button--width",
+			"title": "Common/Button/Button",
+			"name": "Width",
+			"importPath": "./components/common/button/button.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-charts-line-chart--docs": {
+			"id": "common-charts-line-chart--docs",
+			"title": "Common/Charts/Line Chart",
+			"name": "Docs",
+			"importPath": "./components/common/charts/line/line.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-charts-line-chart--simple": {
+			"id": "common-charts-line-chart--simple",
+			"title": "Common/Charts/Line Chart",
+			"name": "Simple",
+			"importPath": "./components/common/charts/line/line.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-charts-pie-chart--docs": {
+			"id": "common-charts-pie-chart--docs",
+			"title": "Common/Charts/Pie Chart",
+			"name": "Docs",
+			"importPath": "./components/common/charts/pie/pie.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-charts-pie-chart--simple": {
+			"id": "common-charts-pie-chart--simple",
+			"title": "Common/Charts/Pie Chart",
+			"name": "Simple",
+			"importPath": "./components/common/charts/pie/pie.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-charts-radar-chart--docs": {
+			"id": "common-charts-radar-chart--docs",
+			"title": "Common/Charts/Radar Chart",
+			"name": "Docs",
+			"importPath": "./components/common/charts/radar/radar.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-charts-radar-chart--single-children-radar": {
+			"id": "common-charts-radar-chart--single-children-radar",
+			"title": "Common/Charts/Radar Chart",
+			"name": "Single Children Radar",
+			"importPath": "./components/common/charts/radar/radar.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-charts-radar-chart--multiple-children-radar": {
+			"id": "common-charts-radar-chart--multiple-children-radar",
+			"title": "Common/Charts/Radar Chart",
+			"name": "Multiple Children Radar",
+			"importPath": "./components/common/charts/radar/radar.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-chat-bubble-message--docs": {
+			"id": "common-chat-bubble-message--docs",
+			"title": "Common/Chat/Bubble Message",
+			"name": "Docs",
+			"importPath": "./components/common/chat/bubble_message/bubble_message.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-chat-bubble-message--primary": {
+			"id": "common-chat-bubble-message--primary",
+			"title": "Common/Chat/Bubble Message",
+			"name": "Default Conversation Bubble",
+			"importPath": "./components/common/chat/bubble_message/bubble_message.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-chat-bubble-message--secondary": {
+			"id": "common-chat-bubble-message--secondary",
+			"title": "Common/Chat/Bubble Message",
+			"name": "One Sided Conversation Bubble",
+			"importPath": "./components/common/chat/bubble_message/bubble_message.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-chat-chat-history--docs": {
+			"id": "common-chat-chat-history--docs",
+			"title": "Common/Chat/Chat History",
+			"name": "Docs",
+			"importPath": "./components/common/chat/chat_history/chat_history.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-chat-chat-history--primary": {
+			"id": "common-chat-chat-history--primary",
+			"title": "Common/Chat/Chat History",
+			"name": "Primary",
+			"importPath": "./components/common/chat/chat_history/chat_history.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-social-card--docs": {
+			"id": "common-community-social-card--docs",
+			"title": "Common/Community/Social Card",
+			"name": "Docs",
+			"importPath": "./components/common/community/social_card/social_card.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-community-social-card--primary": {
+			"id": "common-community-social-card--primary",
+			"title": "Common/Community/Social Card",
+			"name": "Primary",
+			"importPath": "./components/common/community/social_card/social_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-social-card--secondary": {
+			"id": "common-community-social-card--secondary",
+			"title": "Common/Community/Social Card",
+			"name": "Longer Content",
+			"importPath": "./components/common/community/social_card/social_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-social-card--ta": {
+			"id": "common-community-social-card--ta",
+			"title": "Common/Community/Social Card",
+			"name": "TA user",
+			"importPath": "./components/common/community/social_card/social_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-social-card--prof": {
+			"id": "common-community-social-card--prof",
+			"title": "Common/Community/Social Card",
+			"name": "Professor user",
+			"importPath": "./components/common/community/social_card/social_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-thread-comments-hierarchy--docs": {
+			"id": "common-community-thread-comments-hierarchy--docs",
+			"title": "Common/Community/Thread/Comments Hierarchy",
+			"name": "Docs",
+			"importPath": "./components/common/community/threads/comments/comments_hierarchy.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-community-thread-comments-hierarchy--sample": {
+			"id": "common-community-thread-comments-hierarchy--sample",
+			"title": "Common/Community/Thread/Comments Hierarchy",
+			"name": "Default",
+			"importPath": "./components/common/community/threads/comments/comments_hierarchy.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-thread-thread--docs": {
+			"id": "common-community-thread-thread--docs",
+			"title": "Common/Community/Thread/Thread",
+			"name": "Docs",
+			"importPath": "./components/common/community/threads/thread/thread.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-community-thread-thread--sample": {
+			"id": "common-community-thread-thread--sample",
+			"title": "Common/Community/Thread/Thread",
+			"name": "Default",
+			"importPath": "./components/common/community/threads/thread/thread.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-thread-thread--comment": {
+			"id": "common-community-thread-thread--comment",
+			"title": "Common/Community/Thread/Thread",
+			"name": "Thread without title",
+			"importPath": "./components/common/community/threads/thread/thread.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-thread-thread--multiple-threads": {
+			"id": "common-community-thread-thread--multiple-threads",
+			"title": "Common/Community/Thread/Thread",
+			"name": "List of threads",
+			"importPath": "./components/common/community/threads/thread/thread.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-thread-thread-text-area--docs": {
+			"id": "common-community-thread-thread-text-area--docs",
+			"title": "Common/Community/Thread/Thread Text Area",
+			"name": "Docs",
+			"importPath": "./components/common/community/threads/thread_text_area/thread_text_area.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-community-thread-thread-text-area--default": {
+			"id": "common-community-thread-thread-text-area--default",
+			"title": "Common/Community/Thread/Thread Text Area",
+			"name": "Default",
+			"importPath": "./components/common/community/threads/thread_text_area/thread_text_area.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-watchedthreads--docs": {
+			"id": "common-community-watchedthreads--docs",
+			"title": "Common/Community/WatchedThreads",
+			"name": "Docs",
+			"importPath": "./components/common/community/watched_threads/watched_threads.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-community-watchedthreads--default": {
+			"id": "common-community-watchedthreads--default",
+			"title": "Common/Community/WatchedThreads",
+			"name": "Default",
+			"importPath": "./components/common/community/watched_threads/watched_threads.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-community-watchedthreadssidebar--docs": {
+			"id": "common-community-watchedthreadssidebar--docs",
+			"title": "Common/Community/WatchedThreadsSidebar",
+			"name": "Docs",
+			"importPath": "./components/common/community/watched_threads_sidebar/watched_threads_sidebar.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-community-watchedthreadssidebar--default": {
+			"id": "common-community-watchedthreadssidebar--default",
+			"title": "Common/Community/WatchedThreadsSidebar",
+			"name": "Default",
+			"importPath": "./components/common/community/watched_threads_sidebar/watched_threads_sidebar.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-content-types-video-chip--docs": {
+			"id": "common-content-types-video-chip--docs",
+			"title": "Common/Content Types/Video Chip",
+			"name": "Docs",
+			"importPath": "./components/common/content_types/video/video_chip/video_chip.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-content-types-video-chip--sample": {
+			"id": "common-content-types-video-chip--sample",
+			"title": "Common/Content Types/Video Chip",
+			"name": "Sample",
+			"importPath": "./components/common/content_types/video/video_chip/video_chip.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-content-types-video-comment-tick--docs": {
+			"id": "common-content-types-video-comment-tick--docs",
+			"title": "Common/Content Types/Video Comment Tick",
+			"name": "Docs",
+			"importPath": "./components/common/content_types/video/video_comment_tick/video_comment_tick.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-content-types-video-comment-tick--sample": {
+			"id": "common-content-types-video-comment-tick--sample",
+			"title": "Common/Content Types/Video Comment Tick",
+			"name": "Sample",
+			"importPath": "./components/common/content_types/video/video_comment_tick/video_comment_tick.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-content-types-video--docs": {
+			"id": "common-content-types-video--docs",
+			"title": "Common/Content Types/Video",
+			"name": "Docs",
+			"importPath": "./components/common/content_types/video/video_player/video_player.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-content-types-video--sample": {
+			"id": "common-content-types-video--sample",
+			"title": "Common/Content Types/Video",
+			"name": "Sample",
+			"importPath": "./components/common/content_types/video/video_player/video_player.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-form--docs": {
+			"id": "common-forms-form--docs",
+			"title": "Common/Forms/Form",
+			"name": "Docs",
+			"importPath": "./components/common/forms/form/form.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-forms-form--default": {
+			"id": "common-forms-form--default",
+			"title": "Common/Forms/Form",
+			"name": "Default",
+			"importPath": "./components/common/forms/form/form.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-old-input--docs": {
+			"id": "common-forms-inputs-old-input--docs",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Docs",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-forms-inputs-old-input--default": {
+			"id": "common-forms-inputs-old-input--default",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Default",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-old-input--email": {
+			"id": "common-forms-inputs-old-input--email",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Email",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-old-input--descriptive": {
+			"id": "common-forms-inputs-old-input--descriptive",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Descriptive",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-old-input--disabled": {
+			"id": "common-forms-inputs-old-input--disabled",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Disabled",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-old-input--error-state": {
+			"id": "common-forms-inputs-old-input--error-state",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Error State",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-old-input--error-state-with-description": {
+			"id": "common-forms-inputs-old-input--error-state-with-description",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Error State With Description",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-old-input--search": {
+			"id": "common-forms-inputs-old-input--search",
+			"title": "Common/Forms/Inputs/Old_Input",
+			"name": "Search",
+			"importPath": "./components/common/forms/inputs/input/Oldinput.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--docs": {
+			"id": "common-forms-inputs-inputs--docs",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Docs",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-forms-inputs-inputs--default": {
+			"id": "common-forms-inputs-inputs--default",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Default",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--email": {
+			"id": "common-forms-inputs-inputs--email",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Email",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--descriptive": {
+			"id": "common-forms-inputs-inputs--descriptive",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Descriptive",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--disabled": {
+			"id": "common-forms-inputs-inputs--disabled",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Disabled",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--error-state": {
+			"id": "common-forms-inputs-inputs--error-state",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Error State",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--error-state-with-description": {
+			"id": "common-forms-inputs-inputs--error-state-with-description",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Error State With Description",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--search": {
+			"id": "common-forms-inputs-inputs--search",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Search",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--radio": {
+			"id": "common-forms-inputs-inputs--radio",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Radio",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--checkbox": {
+			"id": "common-forms-inputs-inputs--checkbox",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Checkbox",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--numerical-input": {
+			"id": "common-forms-inputs-inputs--numerical-input",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Numerical Input",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-inputs--range-slider": {
+			"id": "common-forms-inputs-inputs--range-slider",
+			"title": "Common/Forms/Inputs/Inputs",
+			"name": "Range Slider",
+			"importPath": "./components/common/forms/inputs/input/input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-lesson-link--docs": {
+			"id": "common-forms-inputs-lesson-link--docs",
+			"title": "Common/Forms/Inputs/Lesson Link",
+			"name": "Docs",
+			"importPath": "./components/common/forms/inputs/lesson_link/lesson_link.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-forms-inputs-lesson-link--primary": {
+			"id": "common-forms-inputs-lesson-link--primary",
+			"title": "Common/Forms/Inputs/Lesson Link",
+			"name": "Primary",
+			"importPath": "./components/common/forms/inputs/lesson_link/lesson_link.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-select--docs": {
+			"id": "common-forms-inputs-select--docs",
+			"title": "Common/Forms/Inputs/Select",
+			"name": "Docs",
+			"importPath": "./components/common/forms/inputs/select/select.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-forms-inputs-select--primary": {
+			"id": "common-forms-inputs-select--primary",
+			"title": "Common/Forms/Inputs/Select",
+			"name": "Default",
+			"importPath": "./components/common/forms/inputs/select/select.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-select--secondary": {
+			"id": "common-forms-inputs-select--secondary",
+			"title": "Common/Forms/Inputs/Select",
+			"name": "No label",
+			"importPath": "./components/common/forms/inputs/select/select.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-select--tertiary": {
+			"id": "common-forms-inputs-select--tertiary",
+			"title": "Common/Forms/Inputs/Select",
+			"name": "With options as objects",
+			"importPath": "./components/common/forms/inputs/select/select.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-text-area--docs": {
+			"id": "common-forms-inputs-text-area--docs",
+			"title": "Common/Forms/Inputs/Text Area",
+			"name": "Docs",
+			"importPath": "./components/common/forms/inputs/text_area/text_area.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-forms-inputs-text-area--primary": {
+			"id": "common-forms-inputs-text-area--primary",
+			"title": "Common/Forms/Inputs/Text Area",
+			"name": "Default",
+			"importPath": "./components/common/forms/inputs/text_area/text_area.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-text-area--disabled": {
+			"id": "common-forms-inputs-text-area--disabled",
+			"title": "Common/Forms/Inputs/Text Area",
+			"name": "Disabled TextArea",
+			"importPath": "./components/common/forms/inputs/text_area/text_area.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-text-area--with-label": {
+			"id": "common-forms-inputs-text-area--with-label",
+			"title": "Common/Forms/Inputs/Text Area",
+			"name": "TextArea with a label on the top",
+			"importPath": "./components/common/forms/inputs/text_area/text_area.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-forms-inputs-text-area--max-length": {
+			"id": "common-forms-inputs-text-area--max-length",
+			"title": "Common/Forms/Inputs/Text Area",
+			"name": "Specific Max Length",
+			"importPath": "./components/common/forms/inputs/text_area/text_area.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-information-card--docs": {
+			"id": "common-information-card--docs",
+			"title": "Common/Information Card",
+			"name": "Docs",
+			"importPath": "./components/common/information_card/information_card.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-information-card--default": {
+			"id": "common-information-card--default",
+			"title": "Common/Information Card",
+			"name": "Default",
+			"importPath": "./components/common/information_card/information_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-information-card--primary": {
+			"id": "common-information-card--primary",
+			"title": "Common/Information Card",
+			"name": "Primary",
+			"importPath": "./components/common/information_card/information_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-information-card--secondary": {
+			"id": "common-information-card--secondary",
+			"title": "Common/Information Card",
+			"name": "Secondary",
+			"importPath": "./components/common/information_card/information_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-links-anchor--docs": {
+			"id": "common-links-anchor--docs",
+			"title": "Common/Links/Anchor",
+			"name": "Docs",
+			"importPath": "./components/common/links/anchor/anchor.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-links-anchor--primary": {
+			"id": "common-links-anchor--primary",
+			"title": "Common/Links/Anchor",
+			"name": "Primary",
+			"importPath": "./components/common/links/anchor/anchor.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-message-input--docs": {
+			"id": "common-message-input--docs",
+			"title": "Common/Message Input",
+			"name": "Docs",
+			"importPath": "./components/common/message_input/message_input.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-message-input--primary": {
+			"id": "common-message-input--primary",
+			"title": "Common/Message Input",
+			"name": "Primary",
+			"importPath": "./components/common/message_input/message_input.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-modulecard--docs": {
+			"id": "common-modulecard--docs",
+			"title": "Common/ModuleCard",
+			"name": "Docs",
+			"importPath": "./components/common/module_card/module_card.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-modulecard--primary": {
+			"id": "common-modulecard--primary",
+			"title": "Common/ModuleCard",
+			"name": "first module card",
+			"importPath": "./components/common/module_card/module_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-modulecard--secondary": {
+			"id": "common-modulecard--secondary",
+			"title": "Common/ModuleCard",
+			"name": "second module card",
+			"importPath": "./components/common/module_card/module_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-modulecard--tertiary": {
+			"id": "common-modulecard--tertiary",
+			"title": "Common/ModuleCard",
+			"name": "third module card",
+			"importPath": "./components/common/module_card/module_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-active-modules--docs": {
+			"id": "common-pages-active-modules--docs",
+			"title": "Common/Pages/Active Modules",
+			"name": "Docs",
+			"importPath": "./components/common/pages/active_modules/active_modules.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-active-modules--default": {
+			"id": "common-pages-active-modules--default",
+			"title": "Common/Pages/Active Modules",
+			"name": "Default",
+			"importPath": "./components/common/pages/active_modules/active_modules.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-admin-panel-modulecard--docs": {
+			"id": "common-pages-admin-panel-modulecard--docs",
+			"title": "Common/Pages/Admin Panel/ModuleCard",
+			"name": "Docs",
+			"importPath": "./components/common/pages/admin_panel/module_card/module_card.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-admin-panel-modulecard--default": {
+			"id": "common-pages-admin-panel-modulecard--default",
+			"title": "Common/Pages/Admin Panel/ModuleCard",
+			"name": "Default",
+			"importPath": "./components/common/pages/admin_panel/module_card/module_card.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-admin-panel-module-page-editor-lesson--docs": {
+			"id": "common-pages-admin-panel-module-page-editor-lesson--docs",
+			"title": "Common/Pages/Admin Panel/Module Page Editor/Lesson",
+			"name": "Docs",
+			"importPath": "./components/common/pages/admin_panel/module_page_editor/lesson/lesson.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-admin-panel-module-page-editor-lesson--default": {
+			"id": "common-pages-admin-panel-module-page-editor-lesson--default",
+			"title": "Common/Pages/Admin Panel/Module Page Editor/Lesson",
+			"name": "Default",
+			"importPath": "./components/common/pages/admin_panel/module_page_editor/lesson/lesson.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-admin-panel-module-page-editor-section--docs": {
+			"id": "common-pages-admin-panel-module-page-editor-section--docs",
+			"title": "Common/Pages/Admin Panel/Module Page Editor/Section",
+			"name": "Docs",
+			"importPath": "./components/common/pages/admin_panel/module_page_editor/section/section.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-admin-panel-module-page-editor-section--default": {
+			"id": "common-pages-admin-panel-module-page-editor-section--default",
+			"title": "Common/Pages/Admin Panel/Module Page Editor/Section",
+			"name": "Default",
+			"importPath": "./components/common/pages/admin_panel/module_page_editor/section/section.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-admin-panel-module-section-editor--docs": {
+			"id": "common-pages-admin-panel-module-section-editor--docs",
+			"title": "Common/Pages/Admin Panel/Module Section Editor",
+			"name": "Docs",
+			"importPath": "./components/common/pages/admin_panel/module_section_editor/module_section_editor.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-admin-panel-module-section-editor--default": {
+			"id": "common-pages-admin-panel-module-section-editor--default",
+			"title": "Common/Pages/Admin Panel/Module Section Editor",
+			"name": "Default",
+			"importPath": "./components/common/pages/admin_panel/module_section_editor/module_section_editor.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-layouts-layout--docs": {
+			"id": "common-pages-layouts-layout--docs",
+			"title": "Common/Pages/Layouts/Layout",
+			"name": "Docs",
+			"importPath": "./components/common/pages/layouts/layout/layout.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-layouts-layout--primary": {
+			"id": "common-pages-layouts-layout--primary",
+			"title": "Common/Pages/Layouts/Layout",
+			"name": "Primary",
+			"importPath": "./components/common/pages/layouts/layout/layout.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-module-list--docs": {
+			"id": "common-pages-module-list--docs",
+			"title": "Common/Pages/Module List",
+			"name": "Docs",
+			"importPath": "./components/common/pages/module_list/module_list.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-module-list--default": {
+			"id": "common-pages-module-list--default",
+			"title": "Common/Pages/Module List",
+			"name": "Default",
+			"importPath": "./components/common/pages/module_list/module_list.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-layouts-left-sidebar--docs": {
+			"id": "common-pages-layouts-left-sidebar--docs",
+			"title": "Common/Pages/Layouts/Left Sidebar",
+			"name": "Docs",
+			"importPath": "./components/common/pages/sidebar/leftsidebar.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-layouts-left-sidebar--default": {
+			"id": "common-pages-layouts-left-sidebar--default",
+			"title": "Common/Pages/Layouts/Left Sidebar",
+			"name": "Default",
+			"importPath": "./components/common/pages/sidebar/leftsidebar.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-pages-layouts-sidebar-item--docs": {
+			"id": "common-pages-layouts-sidebar-item--docs",
+			"title": "Common/Pages/Layouts/Sidebar Item",
+			"name": "Docs",
+			"importPath": "./components/common/pages/sidebar/sidebar_item/sidebar_item.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-pages-layouts-sidebar-item--default": {
+			"id": "common-pages-layouts-sidebar-item--default",
+			"title": "Common/Pages/Layouts/Sidebar Item",
+			"name": "Default",
+			"importPath": "./components/common/pages/sidebar/sidebar_item/sidebar_item.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-sidebar-sidebar--docs": {
+			"id": "common-sidebar-sidebar--docs",
+			"title": "Common/Sidebar/Sidebar",
+			"name": "Docs",
+			"importPath": "./components/common/pages/sidebar/sidebar_lessons/sidebar_lessons.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-sidebar-sidebar--default": {
+			"id": "common-sidebar-sidebar--default",
+			"title": "Common/Sidebar/Sidebar",
+			"name": "Default",
+			"importPath": "./components/common/pages/sidebar/sidebar_lessons/sidebar_lessons.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-panel--docs": {
+			"id": "common-panel--docs",
+			"title": "Common/Panel",
+			"name": "Docs",
+			"importPath": "./components/common/panel/panel.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-panel--text": {
+			"id": "common-panel--text",
+			"title": "Common/Panel",
+			"name": "Text",
+			"importPath": "./components/common/panel/panel.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-panel--chart": {
+			"id": "common-panel--chart",
+			"title": "Common/Panel",
+			"name": "Chart",
+			"importPath": "./components/common/panel/panel.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-panel--list": {
+			"id": "common-panel--list",
+			"title": "Common/Panel",
+			"name": "List",
+			"importPath": "./components/common/panel/panel.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-quiz--docs": {
+			"id": "common-quiz--docs",
+			"title": "Common/Quiz",
+			"name": "Docs",
+			"importPath": "./components/common/quiz/quiz_questions.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-quiz--default": {
+			"id": "common-quiz--default",
+			"title": "Common/Quiz",
+			"name": "Default",
+			"importPath": "./components/common/quiz/quiz_questions.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-tabspanel--docs": {
+			"id": "common-tabspanel--docs",
+			"title": "Common/TabsPanel",
+			"name": "Docs",
+			"importPath": "./components/common/tabs_panel/tabs_panel.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-tabspanel--course": {
+			"id": "common-tabspanel--course",
+			"title": "Common/TabsPanel",
+			"name": "Course",
+			"importPath": "./components/common/tabs_panel/tabs_panel.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-toggle-switch--docs": {
+			"id": "common-toggle-switch--docs",
+			"title": "common/Toggle Switch",
+			"name": "Docs",
+			"importPath": "./components/common/toggle/toggle.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-toggle-switch--default": {
+			"id": "common-toggle-switch--default",
+			"title": "common/Toggle Switch",
+			"name": "Default",
+			"importPath": "./components/common/toggle/toggle.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-editable-field--docs": {
+			"id": "common-editable-field--docs",
+			"title": "common/Editable Field",
+			"name": "Docs",
+			"importPath": "./components/common/user/editable_fields.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-editable-field--default": {
+			"id": "common-editable-field--default",
+			"title": "common/Editable Field",
+			"name": "Default",
+			"importPath": "./components/common/user/editable_fields.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-version-dynamic-version--docs": {
+			"id": "common-version-dynamic-version--docs",
+			"title": "Common/Version/Dynamic Version",
+			"name": "Docs",
+			"importPath": "./components/common/version/dynamic_version.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-version-dynamic-version--default": {
+			"id": "common-version-dynamic-version--default",
+			"title": "Common/Version/Dynamic Version",
+			"name": "Default",
+			"importPath": "./components/common/version/dynamic_version.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-admin-panel-lesson-page--docs": {
+			"id": "pages-admin-panel-lesson-page--docs",
+			"title": "Pages/Admin Panel/Lesson Page",
+			"name": "Docs",
+			"importPath": "./components/pages/admin_panel_page/lesson_page/lessonpage.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-admin-panel-lesson-page--primary": {
+			"id": "pages-admin-panel-lesson-page--primary",
+			"title": "Pages/Admin Panel/Lesson Page",
+			"name": "Default",
+			"importPath": "./components/pages/admin_panel_page/lesson_page/lessonpage.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-admin-panel-modules--docs": {
+			"id": "pages-admin-panel-modules--docs",
+			"title": "Pages/Admin Panel/Modules",
+			"name": "Docs",
+			"importPath": "./components/pages/admin_panel_page/modules/modules.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-admin-panel-modules--default": {
+			"id": "pages-admin-panel-modules--default",
+			"title": "Pages/Admin Panel/Modules",
+			"name": "Default",
+			"importPath": "./components/pages/admin_panel_page/modules/modules.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-communities-main-main-community--docs": {
+			"id": "pages-communities-main-main-community--docs",
+			"title": "Pages/Communities/Main/Main Community",
+			"name": "Docs",
+			"importPath": "./components/pages/communities/Main/main_community.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-communities-main-main-community--primary": {
+			"id": "pages-communities-main-main-community--primary",
+			"title": "Pages/Communities/Main/Main Community",
+			"name": "Default",
+			"importPath": "./components/pages/communities/Main/main_community.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-communities-thread-thread-creation--docs": {
+			"id": "pages-communities-thread-thread-creation--docs",
+			"title": "Pages/Communities/Thread/Thread Creation",
+			"name": "Docs",
+			"importPath": "./components/pages/communities/ThreadCreation/thread_page.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-communities-thread-thread-creation--primary": {
+			"id": "pages-communities-thread-thread-creation--primary",
+			"title": "Pages/Communities/Thread/Thread Creation",
+			"name": "Default",
+			"importPath": "./components/pages/communities/ThreadCreation/thread_page.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"organisms-community-page--docs": {
+			"id": "organisms-community-page--docs",
+			"title": "Organisms/Community Page",
+			"name": "Docs",
+			"importPath": "./components/pages/community_page/community_page.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"organisms-community-page--primary": {
+			"id": "organisms-community-page--primary",
+			"title": "Organisms/Community Page",
+			"name": "empty Page",
+			"importPath": "./components/pages/community_page/community_page.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"organisms-community-page--secondary": {
+			"id": "organisms-community-page--secondary",
+			"title": "Organisms/Community Page",
+			"name": "default page",
+			"importPath": "./components/pages/community_page/community_page.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-errors-page-not-found--docs": {
+			"id": "pages-errors-page-not-found--docs",
+			"title": "Pages/Errors/Page Not Found",
+			"name": "Docs",
+			"importPath": "./components/pages/errors/page_not_found/page_not_found.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-errors-page-not-found--primary": {
+			"id": "pages-errors-page-not-found--primary",
+			"title": "Pages/Errors/Page Not Found",
+			"name": "Default",
+			"importPath": "./components/pages/errors/page_not_found/page_not_found.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-errors-request-failed--docs": {
+			"id": "pages-errors-request-failed--docs",
+			"title": "Pages/Errors/Request Failed",
+			"name": "Docs",
+			"importPath": "./components/pages/errors/request_failed/request_failed.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-errors-request-failed--primary": {
+			"id": "pages-errors-request-failed--primary",
+			"title": "Pages/Errors/Request Failed",
+			"name": "Default",
+			"importPath": "./components/pages/errors/request_failed/request_failed.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-login-login--docs": {
+			"id": "pages-login-login--docs",
+			"title": "Pages/Login/Login",
+			"name": "Docs",
+			"importPath": "./components/pages/login/login.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-login-login--primary": {
+			"id": "pages-login-login--primary",
+			"title": "Pages/Login/Login",
+			"name": "Default",
+			"importPath": "./components/pages/login/login.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"common-module-flow-module-item--docs": {
+			"id": "common-module-flow-module-item--docs",
+			"title": "Common/Module Flow/Module Item",
+			"name": "Docs",
+			"importPath": "./components/pages/modules/module/lessons/lesson/module_item/module_item.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"common-module-flow-module-item--primary": {
+			"id": "common-module-flow-module-item--primary",
+			"title": "Common/Module Flow/Module Item",
+			"name": "First module item",
+			"importPath": "./components/pages/modules/module/lessons/lesson/module_item/module_item.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-user-user-profile--docs": {
+			"id": "pages-user-user-profile--docs",
+			"title": "Pages/User/User Profile",
+			"name": "Docs",
+			"importPath": "./components/pages/user/user_profile/user_profile.stories.tsx",
+			"type": "docs",
+			"tags": ["docs", "autodocs"],
+			"storiesImports": []
+		},
+		"pages-user-user-profile--primary": {
+			"id": "pages-user-user-profile--primary",
+			"title": "Pages/User/User Profile",
+			"name": "User Profile - logged out",
+			"importPath": "./components/pages/user/user_profile/user_profile.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		},
+		"pages-user-user-profile--secondary": {
+			"id": "pages-user-user-profile--secondary",
+			"title": "Pages/User/User Profile",
+			"name": "User Profile - logged in",
+			"importPath": "./components/pages/user/user_profile/user_profile.stories.tsx",
+			"tags": ["story"],
+			"type": "story"
+		}
+	}
+}

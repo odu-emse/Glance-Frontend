@@ -39,11 +39,11 @@ module.exports = {
 				DEFAULT: '1px',
 			},
 			gridTemplateRows: {
-				'layout': 'auto 1fr'
+				layout: 'auto 1fr',
 			},
 			gridTemplateColumns: {
-				'layout': 'auto 1fr auto'
-			}
+				layout: 'auto 1fr auto',
+			},
 		},
 	},
 	plugins: [require('flowbite/plugin')],

@@ -3,24 +3,23 @@ import * as PropTypes from 'prop-types'
 import * as React from 'react'
 
 export const Button = ({
-	variant = 'primary',	
+	variant = 'primary',
 	size = 'medium',
 	disabled = false,
 	children,
 	onClick,
 }: ButtonProps) => {
-
 	return (
-		<InstructureButton 
+		<InstructureButton
 			color={variant}
 			disabled={disabled}
 			onClick={onClick}
-			margin='small'
+			margin="small"
 			size={size}
 			themeOverride={{
 				primaryBackground: '#204498',
 				primaryHoverBackground: '#1b3a82',
-				borderRadius: '2px'
+				borderRadius: '2px',
 			}}
 		>
 			{children}

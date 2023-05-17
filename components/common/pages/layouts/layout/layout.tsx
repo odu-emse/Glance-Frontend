@@ -72,20 +72,32 @@ export const Layout = ({ rightSidebar = null, children }) => {
 		<GlobalUserContext.Provider
 			value={{ user: data.user[0] || null, setUser }}
 		>
-			<div className='grid grid-cols-layout grid-rows-layout'>
-
-				{ /* Navigation */ }
-				<div className='col-span-full row-span-1 row-start-1 sticky top-0'>
-					<TopBar isAccountVisible={isAccountVisible} session={session} setAccountVisible={setAccountVisible} />
+			<div className="grid grid-cols-layout grid-rows-layout">
+				{/* Navigation */}
+				<div className="col-span-full row-span-1 row-start-1 sticky top-0">
+					<TopBar
+						isAccountVisible={isAccountVisible}
+						session={session}
+						setAccountVisible={setAccountVisible}
+					/>
 				</div>
 
-				<aside className='col-span-1 col-start-1 row-span-1 row-start-2 border-r'>
-					<nav className='sticky top-[64px]'>
-						<Sidebar open={open} userSession={session} isLoading={isLoading} handle={setOpen} />
+				<aside className="col-span-1 col-start-1 row-span-1 row-start-2 border-r">
+					<nav className="sticky top-[64px]">
+						<Sidebar
+							open={open}
+							userSession={session}
+							isLoading={isLoading}
+							handle={setOpen}
+						/>
 					</nav>
 				</aside>
 
-				<main className={`col-start-2 ${ rightSidebar ? 'col-end-3' : 'col-end-4' } row-span-1 row-start-2 stdcontainer`}>
+				<main
+					className={`col-start-2 ${
+						rightSidebar ? 'col-end-3' : 'col-end-4'
+					} row-span-1 row-start-2 stdcontainer`}
+				>
 					<GlobalLoadingContext.Provider
 						value={{ isLoading, setLoading }}
 					>
@@ -107,13 +119,11 @@ export const Layout = ({ rightSidebar = null, children }) => {
 					</GlobalLoadingContext.Provider>
 				</main>
 
-				{ rightSidebar &&
-					<aside className='col-span-1 col-start-3 row-span-1 row-start-2 border-l'>
-						<div className='sticky top-[64px]'>
-							{ rightSidebar }
-						</div>
+				{rightSidebar && (
+					<aside className="col-span-1 col-start-3 row-span-1 row-start-2 border-l">
+						<div className="sticky top-[64px]">{rightSidebar}</div>
 					</aside>
-				}
+				)}
 			</div>
 		</GlobalUserContext.Provider>
 	)
