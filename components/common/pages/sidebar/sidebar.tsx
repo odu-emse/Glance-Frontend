@@ -52,10 +52,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
 				/>
 			</div>
 			<div
-				className="absolute -right-4 bottom-8"
+				className="absolute -right-7 bottom-6"
 				onClick={() => handle(!open)}
 			>
 				<CollapseButton open={open} />
+				
 			</div>
 		</div>
 	)
