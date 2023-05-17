@@ -9,7 +9,7 @@ import Loader from '@/components/util/loader'
 import { LearningPath } from '@/types/graphql'
 import Link from 'next/link'
 import getLPbyPlanID from '@/scripts/get_lp_by_plan_id'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import { Anchor } from '@/common/links/anchor/anchor'
 import Head from 'next/head'
 

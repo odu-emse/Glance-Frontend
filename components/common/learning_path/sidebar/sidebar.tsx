@@ -1,6 +1,6 @@
 import { Path } from '@/types/graphql'
 import React from 'react'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 
 const LPSidebar = ({
 	LP,

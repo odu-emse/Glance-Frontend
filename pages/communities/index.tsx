@@ -11,7 +11,7 @@ import { ThreadType, User } from '../../types'
 import moment from 'moment'
 import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar'
 import Loader from '@/components/util/loader'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import { useState } from 'react'
 import Head from 'next/head'
 

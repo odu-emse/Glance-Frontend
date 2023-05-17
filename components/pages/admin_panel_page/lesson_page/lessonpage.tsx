@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Select } from 'components/common/forms/inputs/select/select'
 import { ContentArea } from 'components/common/admin_panel/content_area'
-import { Button } from 'components/common/button/button'
+import { Button } from '@/components/common/button/button'
 
 export const Lessonpage: React.FC<lessonpageProps> = ({
 	lessonName,

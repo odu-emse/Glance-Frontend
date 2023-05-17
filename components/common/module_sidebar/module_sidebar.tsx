@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Module } from '@/types/graphql'
 import { FaTimes } from 'react-icons/fa'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import router from 'next/router'
 
 function ModuleSidebar({

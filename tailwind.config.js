@@ -38,6 +38,12 @@ module.exports = {
 			borderRadius: {
 				DEFAULT: '1px',
 			},
+			gridTemplateRows: {
+				layout: 'auto 1fr',
+			},
+			gridTemplateColumns: {
+				layout: 'auto 1fr auto',
+			},
 		},
 	},
 	plugins: [require('flowbite/plugin')],

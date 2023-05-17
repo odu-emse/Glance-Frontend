@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import { useRouter } from 'next/router'
 
 const RequestFailed = ({ title, subtitle }: RequestFailedProps) => {
