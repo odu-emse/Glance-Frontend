@@ -34,12 +34,14 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
 					media={'(prefers-color-scheme: dark)'}
 				/>
 			</Head>
-			<InstUISettingsProvider theme={{
-				...canvas,
-				colors: {
-					backgroundBrand: "red"
-				}
-			}}>
+			<InstUISettingsProvider
+				theme={{
+					...canvas,
+					colors: {
+						backgroundBrand: 'red',
+					},
+				}}
+			>
 				<SessionProvider session={session}>
 					{getLayout(<Component {...pageProps} />)}
 				</SessionProvider>
