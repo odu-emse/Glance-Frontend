@@ -5,7 +5,6 @@ export type SidebarItemProps = {
 	value: string
 	href: string
 	svgIcon: React.ReactNode
-	icon: string
 	collapsed: boolean
 }
 

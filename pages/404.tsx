@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import { DynamicVersion } from '@/components/common/version/dynamic_version'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'

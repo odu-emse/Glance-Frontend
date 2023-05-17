@@ -1,5 +1,5 @@
 import { Thread } from '@/components/common/community/threads/thread/thread'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import { Layout } from '@/common/pages/layouts/layout/layout'
 const ThreadPage = () => {
 	return (

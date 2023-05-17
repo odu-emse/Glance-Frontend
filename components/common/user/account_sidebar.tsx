@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import Link from 'next/link'
 import { Session } from 'next-auth'
 import { UserAccount } from '@/common/community/threads/thread/thread'

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { SidebarItem } from './sidebar_item/sidebar_item'
-import { PlanOfStudy } from '../../svg/plan_of_study'
-import { Modules } from '../../svg/modules'
-import { Communities } from '../../svg/communities'
-import { GradeBook } from '../../svg/gradebook'
+import { PlanOfStudy } from '../../../../svg/plan_of_study'
+import { Modules } from '../../../../svg/modules'
+import { Communities } from '../../../../svg/communities'
+import { GradeBook } from '../../../../svg/gradebook'
 import { CollapseButton } from './collapse_button/collapse_button'
 
 type IconType = React.ReactNode
@@ -11,8 +11,6 @@ type IconType = React.ReactNode
 export type SidebarProps = {
 	userSession: any
 	isLoading: boolean
-	svgIcon: IconType
-	icon: string
 	open: boolean
 	handle: (open: boolean) => void
 }

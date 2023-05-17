@@ -1,5 +1,5 @@
 import { Layout } from '@/common/pages/layouts/layout/layout'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import { useRouter } from 'next/router'
 import { gql } from 'graphql-request'
 import gqlFetcher, { client } from '@/utils/gql_fetcher'
