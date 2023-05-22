@@ -56,7 +56,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
 				onClick={() => handle(!open)}
 			>
 				<CollapseButton open={open} />
-				
 			</div>
 		</div>
 	)
