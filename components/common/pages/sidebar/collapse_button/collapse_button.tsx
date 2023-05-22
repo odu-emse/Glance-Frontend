@@ -8,7 +8,7 @@ export type CollapseButtonProps = {
 
 export const CollapseButton: React.FC<CollapseButtonProps> = ({ open }) => {
 	return (
-		<div className="p-3 rounded-md text-red cursor-pointer">
+		<div className="m-3 rounded-md text-red cursor-pointer">
 			{open ? (
 				<button className="p-2 rounded-md border bg-royalblue"><IoIosArrowBack color="white" /></button>
 			) : (
