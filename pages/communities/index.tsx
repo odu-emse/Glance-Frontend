@@ -8,7 +8,6 @@ import { WatchedSidebarList } from '@/common/community/watched_threads/watched_t
 import { Layout } from '@/common/pages/layouts/layout/layout'
 import { useSession } from 'next-auth/react'
 import { ThreadType, User } from '../../types'
-import moment from 'moment'
 import WatchedThreadSidebar from '@/common/community/watched_threads_sidebar/watched_threads_sidebar'
 import Loader from '@/components/util/loader'
 import { Button } from '@/components/common/button/button'
@@ -124,11 +123,11 @@ const Index = ({}) => {
 	)
 
 	return (
-		<div className="mx-8 flex">
+		<>
 			<Head>
 				<title>Communitites | GLANCE</title>
 			</Head>
-			<div className="m-10 grow flex-1">
+			<div className="mt-8 grow flex-1">
 				<div className="flex my-2 items-center">
 					<img
 						src={
@@ -152,7 +151,7 @@ const Index = ({}) => {
 					</h1>
 					<div className="flex flex-row gap-1">
 						<Input
-							defaultValue=""
+							defaultValue="a"
 							label={null}
 							name="floating_search"
 							onChange={setSearchQuery}
@@ -346,56 +345,31 @@ const Index = ({}) => {
 						})}
 				</div>
 			</div>
-
-			<WatchedThreadSidebar
-				open={openWatchedThreads}
-				handle={setOpenWatchedThreads}
-			>
-				<div className="mb-10">
-					<WatchedSidebarList
-						title={'Most Active'}
-						threads={
-							data.mostActive
-								.filter(
-									(v) =>
-										!!v.title &&
-										new Date().valueOf() >=
-											new Date(
-												moment(v.updatedAt)
-													.subtract(7, 'days')
-													.toDate()
-											).valueOf()
-								)
-								.sort(
-									(a, b) =>
-										b.comments.length - a.comments.length
-								) || []
-						}
-					/>
-				</div>
-
-				<div className="border border-black w-full my-14"></div>
-				<div className="mb-10">
-					<WatchedSidebarList
-						title={'Most Watched'}
-						threads={
-							data.mostWatched
-								.filter((v) => !!v.title)
-								.sort(
-									(a, b) =>
-										b.usersWatching.length -
-										a.usersWatching.length
-								) || []
-						}
-					/>
-				</div>
-			</WatchedThreadSidebar>
-		</div>
+		</>
 	)
 }
 
 Index.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>
+	return <Layout rightSidebar={
+		<WatchedThreadSidebar
+			open={true}
+			handle={() => {}}
+		>
+			<div className="mb-4">
+				<WatchedSidebarList
+					title={'Most Active'}
+					threads={[]}
+				/>
+			</div>
+
+			<div className="mb-4">
+				<WatchedSidebarList
+					title={'Most Watched'}
+					threads={[]}
+				/>
+			</div>
+		</WatchedThreadSidebar>
+	}>{page}</Layout>
 }
 
 export default Index

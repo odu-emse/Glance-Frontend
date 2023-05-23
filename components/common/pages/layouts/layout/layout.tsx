@@ -9,14 +9,18 @@ import gqlFetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import { gql } from 'graphql-request'
 import { TopBar } from './top_bar/top_bar'
+import { CollapseButton } from './sidebar/collapse_button/collapse_button'
 
-export const Layout = ({ rightSidebar = null, children }) => {
+export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, children }) => {
 	const router = useRouter()
 	const [isLoading, setLoading] = useState(false)
-	const [open, setOpen] = useState(true)
 	const [isAccountVisible, setAccountVisible] = useState(false)
 	const { data: session, status } = useSession()
 	const { setUser } = useContext(GlobalUserContext)
+
+	// Sidebar
+	const [leftSidebarCollapsed, setLeftSidebarCollapsed] = useState(false)
+	const [rightSidebarCollapsed, setRightSidebarCollapsed] = useState(false)
 
 	const { data, error } = useSWR(
 		session
@@ -83,15 +87,36 @@ export const Layout = ({ rightSidebar = null, children }) => {
 				</div>
 
 				<aside className="col-span-1 col-start-1 row-span-1 row-start-2 border-r">
-					<nav className="sticky top-[64px]">
+					<nav className="sticky top-[64px] h-[calc(100vh-64px)]">
 						<Sidebar
-							open={open}
+							open={!leftSidebarCollapsed}
 							userSession={session}
 							isLoading={isLoading}
-							handle={setOpen}
 						/>
+						<div
+							className="absolute -right-4 bottom-8"
+							onClick={() => { setLeftSidebarCollapsed(!leftSidebarCollapsed) }}
+						>
+							<CollapseButton open={!leftSidebarCollapsed} />
+						</div>
 					</nav>
 				</aside>
+
+				{rightSidebar && (
+					<aside className="col-span-1 col-start-3 row-span-1 row-start-2 border-l">
+						<div className="sticky top-[64px] h-[calc(100vh-64px)]">
+							{rightSidebar}
+							{rightSidebarCollapsable && (
+								<div 
+									className="absolute -left-4 bottom-8" 
+									onClick={() => { setRightSidebarCollapsed(!rightSidebarCollapsed) }}
+								>
+									<CollapseButton open={!!rightSidebarCollapsed} />
+								</div>
+							)}
+						</div>
+					</aside>
+				)}
 
 				<main
 					className={`col-start-2 ${
@@ -118,12 +143,6 @@ export const Layout = ({ rightSidebar = null, children }) => {
 						</div>
 					</GlobalLoadingContext.Provider>
 				</main>
-
-				{rightSidebar && (
-					<aside className="col-span-1 col-start-3 row-span-1 row-start-2 border-l">
-						<div className="sticky top-[64px]">{rightSidebar}</div>
-					</aside>
-				)}
 			</div>
 		</GlobalUserContext.Provider>
 	)

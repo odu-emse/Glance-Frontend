@@ -12,14 +12,12 @@ export type SidebarProps = {
 	userSession: any
 	isLoading: boolean
 	open: boolean
-	handle: (open: boolean) => void
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
 	userSession,
 	isLoading,
-	open,
-	handle,
+	open
 }) => {
 	return (
 		<div className="relative">
@@ -48,12 +46,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
 					value="GRADES"
 					href="/grades"
 				/>
-			</div>
-			<div
-				className="absolute -right-4 bottom-8"
-				onClick={() => handle(!open)}
-			>
-				<CollapseButton open={open} />
 			</div>
 		</div>
 	)
