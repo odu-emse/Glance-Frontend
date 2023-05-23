@@ -350,7 +350,7 @@ const Index = ({}) => {
 }
 
 Index.getLayout = function getLayout(page) {
-	return <Layout rightSidebar={
+	return <Layout rightSidebarCollapsable={false} rightSidebar={
 		<WatchedThreadSidebar
 			open={true}
 			handle={() => {}}
