@@ -17,7 +17,7 @@ export type SidebarProps = {
 export const Sidebar: React.FC<SidebarProps> = ({
 	userSession,
 	isLoading,
-	open
+	open,
 }) => {
 	return (
 		<div className="relative">

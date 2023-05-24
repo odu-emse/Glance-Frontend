@@ -11,7 +11,11 @@ import { gql } from 'graphql-request'
 import { TopBar } from './top_bar/top_bar'
 import { CollapseButton } from './sidebar/collapse_button/collapse_button'
 
-export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, children }) => {
+export const Layout = ({
+	rightSidebar = null,
+	rightSidebarCollapsable = true,
+	children,
+}) => {
 	const router = useRouter()
 	const [isLoading, setLoading] = useState(false)
 	const [isAccountVisible, setAccountVisible] = useState(false)
@@ -95,7 +99,9 @@ export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, ch
 						/>
 						<div
 							className="absolute -right-4 bottom-8"
-							onClick={() => { setLeftSidebarCollapsed(!leftSidebarCollapsed) }}
+							onClick={() => {
+								setLeftSidebarCollapsed(!leftSidebarCollapsed)
+							}}
 						>
 							<CollapseButton open={!leftSidebarCollapsed} />
 						</div>
@@ -107,11 +113,17 @@ export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, ch
 						<div className="sticky top-[64px] h-[calc(100vh-64px)]">
 							{rightSidebar}
 							{rightSidebarCollapsable && (
-								<div 
-									className="absolute -left-4 bottom-8" 
-									onClick={() => { setRightSidebarCollapsed(!rightSidebarCollapsed) }}
+								<div
+									className="absolute -left-4 bottom-8"
+									onClick={() => {
+										setRightSidebarCollapsed(
+											!rightSidebarCollapsed
+										)
+									}}
 								>
-									<CollapseButton open={!!rightSidebarCollapsed} />
+									<CollapseButton
+										open={!!rightSidebarCollapsed}
+									/>
 								</div>
 							)}
 						</div>

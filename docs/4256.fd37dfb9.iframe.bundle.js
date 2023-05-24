@@ -324,12 +324,10 @@
 											throw new Error(
 												`Failed to load stylesheet: ${href}`
 											)
-										return res
-											.text()
-											.then((text) => ({
-												href,
-												content: text,
-											}))
+										return res.text().then((text) => ({
+											href,
+											content: text,
+										}))
 									})
 									.catch((err) => {
 										throw markAssetError(err)
@@ -3208,33 +3206,31 @@
 						const route =
 							_removeTrailingSlash.removeTrailingSlash(pathname)
 						yield Promise.all([
-							_this.pageLoader
-								._isSsg(route)
-								.then(
-									(isSsg) =>
-										!!isSsg &&
-										fetchNextData({
-											dataHref:
-												(null == data
-													? void 0
-													: data.dataHref) ||
-												_this.pageLoader.getDataHref({
-													href: url,
-													asPath: resolvedAs,
-													locale,
-												}),
-											isServerRender: !1,
-											parseJSON: !0,
-											inflightCache: _this.sdc,
-											persistCache: !_this.isPreview,
-											isPrefetch: !0,
-											unstable_skipClientCache:
-												options.unstable_skipClientCache ||
-												(options.priority &&
-													!!process.env
-														.__NEXT_OPTIMISTIC_CLIENT_CACHE),
-										}).then(() => !1)
-								),
+							_this.pageLoader._isSsg(route).then(
+								(isSsg) =>
+									!!isSsg &&
+									fetchNextData({
+										dataHref:
+											(null == data
+												? void 0
+												: data.dataHref) ||
+											_this.pageLoader.getDataHref({
+												href: url,
+												asPath: resolvedAs,
+												locale,
+											}),
+										isServerRender: !1,
+										parseJSON: !0,
+										inflightCache: _this.sdc,
+										persistCache: !_this.isPreview,
+										isPrefetch: !0,
+										unstable_skipClientCache:
+											options.unstable_skipClientCache ||
+											(options.priority &&
+												!!process.env
+													.__NEXT_OPTIMISTIC_CLIENT_CACHE),
+									}).then(() => !1)
+							),
 							_this.pageLoader[
 								options.priority ? 'loadPage' : 'prefetch'
 							](route),

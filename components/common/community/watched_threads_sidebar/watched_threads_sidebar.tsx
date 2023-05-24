@@ -12,11 +12,7 @@ const WatchedThreadSidebar: React.FC<WatchedThreadsSidebarProps> = ({
 	handle,
 	children,
 }) => {
-	return (
-		<aside className={ 'px-3 pt-12' }>
-			{open && children}
-		</aside>
-	)
+	return <aside className={'px-3 pt-12'}>{open && children}</aside>
 }
 
 export default WatchedThreadSidebar
