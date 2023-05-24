@@ -127,7 +127,7 @@ export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, ch
 						value={{ isLoading, setLoading }}
 					>
 						{isLoading === true && (
-							<div className="flex justify-center items-center stdcontainer h-32">
+							<div className="flex justify-center items-center stdcontainer h-screen">
 								<Loader textColor="royalblue" />
 							</div>
 						)}
