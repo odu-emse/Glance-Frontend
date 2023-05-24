@@ -14,7 +14,7 @@ import {
 	Module,
 } from '@/types/graphql'
 import GlobalUserContext from '@/contexts/global_user_context'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 import LPSidebar from '@/common/learning_path/sidebar/sidebar'
 import SectionCard from '@/common/learning_path/section/section_card'
 import Loading from '@/common/loader/loader'

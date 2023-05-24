@@ -1,7 +1,7 @@
 import React from 'react'
 import { Input, InputProps } from '@/common/forms/inputs/input/input'
 import { InstructorProfile } from '@/types/index'
-import { Button } from '@/common/button/button'
+import { Button } from '@/components/common/button/button'
 
 interface EditableFieldListProps {
 	listData: Array<string> | []
