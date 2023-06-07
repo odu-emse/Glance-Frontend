@@ -120,7 +120,7 @@ const ModuleSection = () => {
 							data.moduleFlowFromLearningPath
 								.previousCollection && (
 								<Link
-									href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
+									href={`/modules/${data.moduleFlowFromLearningPath.previousModule?.id ?? ""}/view`}
 									passHref
 								>
 									<Button>Previous</Button>
@@ -161,27 +161,27 @@ const ModuleSection = () => {
 						) : null}
 					</div>
 				</div>
-				{/* Section sidebar */}
-				<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
-					<SidebarLessons
-						currentModule={moduleId as string}
-						open={true}
-						handle={() => console.log('toggled')}
-						data={
-							data.moduleFlowFromLearningPath.currentCollection
-								.modules
-						}
-						property={'name'}
-						url={'id'}
-					/>
-				</aside>
 			</section>
 		</div>
 	)
 }
 
 ModuleSection.getLayout = function getLayout(page) {
-	return <Layout>{page}</Layout>
+	return <Layout rightSidebarCollapsable={false} rightSidebar={
+		<aside className="SectionSidebar">
+			<SidebarLessons
+				currentModule={/*moduleId as string*/ "100"}
+				open={true}
+				handle={() => console.log('toggled')}
+				data={
+					[] /*data.moduleFlowFromLearningPath.currentCollection
+						.modules*/
+				}
+				property={'name'}
+				url={'id'}
+			/>
+		</aside>
+	} >{page}</Layout>
 }
 
 export default ModuleSection
