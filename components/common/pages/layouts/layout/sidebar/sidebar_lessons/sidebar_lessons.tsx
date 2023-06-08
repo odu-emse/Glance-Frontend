@@ -12,11 +12,12 @@ export const SidebarLessons = ({
 	currentModule,
 }: SidebarLessonsProps): React.ReactElement => {
 	return (
-		<div>
+		<div className='mx-3 mt-10'>
 			<h6>COLLECTION OVERVIEW</h6>
 			{data.map((item, index) => (
 				<div key={index}>
-					<Link href={`/modules/${item[url]}/view`} role="lesson link">
+					<p>AAAA</p>
+					<Link href={`/modules/${item[url]}/view`} role="lesson link" passHref>
 						<a>
 							{ `${item[property]}` }
 						</a>

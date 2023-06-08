@@ -99,7 +99,7 @@ const ModuleSection = () => {
 					<div className="my-5 contentLoader">
 						{/* Section content  */}
 						<ContentLoader
-							type={primaryContent.type}
+							type={primaryContent?.type}
 							data={
 								data.moduleFlowFromLearningPath.currentModule
 									.content
@@ -167,21 +167,21 @@ const ModuleSection = () => {
 }
 
 ModuleSection.getLayout = function getLayout(page) {
-	return <Layout rightSidebarCollapsable={false} rightSidebar={
+	return <Layout rightSidebarCollapsable={false} /*rightSidebar={
 		<aside className="SectionSidebar">
 			<SidebarLessons
-				currentModule={/*moduleId as string*/ "100"}
-				open={true}
+				currentModule={moduleId as string}
+				open={false}
 				handle={() => console.log('toggled')}
 				data={
-					[] /*data.moduleFlowFromLearningPath.currentCollection
-						.modules*/
+					[] data.moduleFlowFromLearningPath.currentCollection
+						.modules
 				}
 				property={'name'}
 				url={'id'}
 			/>
 		</aside>
-	} >{page}</Layout>
+	}*/ >{page}</Layout>
 }
 
 export default ModuleSection
