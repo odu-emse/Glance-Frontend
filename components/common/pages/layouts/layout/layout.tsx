@@ -12,37 +12,38 @@ import { TopBar } from './top_bar/top_bar'
 import { CollapseButton } from './sidebar/collapse_button/collapse_button'
 
 export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, children }) => {
+
 	const router = useRouter()
+
 	const [isLoading, setLoading] = useState(false)
 	const [isAccountVisible, setAccountVisible] = useState(false)
-	const { data: session, status } = useSession()
-	const { setUser } = useContext(GlobalUserContext)
+	const { data: session, status: sessionStatus } = useSession()
+	const userContext = useContext(GlobalUserContext)
 
 	// Sidebar
 	const [leftSidebarCollapsed, setLeftSidebarCollapsed] = useState(false)
 	const [rightSidebarCollapsed, setRightSidebarCollapsed] = useState(false)
 
-	const { data, error } = useSWR(
-		session
-			? {
-					query: gql`
-			query {
-				user(input: {
-					openID: "${session.openId}"
-				}){
-					id
-					plan {
+	const { data: userProfile, error: userProfileError } = useSWR(
+		session ? {
+			query: `
+				query {
+					user(input: {
+						openID: "${session.openId}"
+					}){
+						id
+						isAdmin
+						plan {
 							id
+						}
 					}
 				}
-			}
-		`,
-			  }
-			: null,
+			`,
+		} : null,
 		gqlFetcher
 	)
 
-	if (status === 'loading') {
+	if (sessionStatus === 'loading') {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
 				<Loader textColor="royalblue" />
@@ -50,7 +51,7 @@ export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, ch
 		)
 	}
 
-	if (error) {
+	if (userProfileError) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
 				<h1>Error loading user data</h1>
@@ -62,7 +63,7 @@ export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, ch
 		router.push('/', '/', { shallow: true })
 	}
 
-	if (!data) {
+	if (!userProfile) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
 				<Loader textColor="royalblue" />
@@ -70,12 +71,8 @@ export const Layout = ({ rightSidebar = null, rightSidebarCollapsable = true, ch
 		)
 	}
 
-	console.log(rightSidebar)
-
 	return (
-		<GlobalUserContext.Provider
-			value={{ user: data.user[0] || null, setUser }}
-		>
+		<GlobalUserContext.Provider value={{ user: userProfile.user[0] || null }}>
 			<div className="grid grid-cols-layout grid-rows-layout">
 				{/* Navigation */}
 				<div className="col-span-full row-span-1 row-start-1 sticky top-0">
