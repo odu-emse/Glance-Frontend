@@ -73,19 +73,19 @@ const ModuleSection = () => {
 				<div className="SectionContent stdcontainer grow flex-col">
 					<header>
 						<h4 className="mb-6">
-							<Link
-								href={`/sections/${data.moduleFlowFromLearningPath.currentSection.id}`}
+							{/* <Link
+								href=''
 								passHref
 							>
 								<a
 									title={`Return to the home page of "${data.moduleFlowFromLearningPath.currentSection.sectionName}"`}
-								>
+								> */}
 									{
 										data.moduleFlowFromLearningPath
 											.currentSection.sectionName
 									}
-								</a>
-							</Link>
+								{/* </a>
+							</Link> */}
 							&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
 							{
 								data.moduleFlowFromLearningPath
@@ -99,7 +99,7 @@ const ModuleSection = () => {
 					<div className="my-5 contentLoader">
 						{/* Section content  */}
 						<ContentLoader
-							type={primaryContent?.type}
+							type={primaryContent.type}
 							data={
 								data.moduleFlowFromLearningPath.currentModule
 									.content
@@ -120,7 +120,7 @@ const ModuleSection = () => {
 							data.moduleFlowFromLearningPath
 								.previousCollection && (
 								<Link
-									href={`/modules/${data.moduleFlowFromLearningPath.previousModule?.id ?? ""}/view`}
+									href={`/modules/${data.moduleFlowFromLearningPath.previousModule.id}/view`}
 									passHref
 								>
 									<Button>Previous</Button>
@@ -161,27 +161,27 @@ const ModuleSection = () => {
 						) : null}
 					</div>
 				</div>
+				{/* Section sidebar */}
+				<aside className="SectionSidebar bg-white h-full w-1/4 sticky top-0">
+					<SidebarLessons
+						currentModule={moduleId as string}
+						open={true}
+						handle={() => console.log('toggled')}
+						data={
+							data.moduleFlowFromLearningPath.currentCollection
+								.modules
+						}
+						property={'name'}
+						url={'id'}
+					/>
+				</aside>
 			</section>
 		</div>
 	)
 }
 
 ModuleSection.getLayout = function getLayout(page) {
-	return <Layout rightSidebarCollapsable={false} /*rightSidebar={
-		<aside className="SectionSidebar">
-			<SidebarLessons
-				currentModule={moduleId as string}
-				open={false}
-				handle={() => console.log('toggled')}
-				data={
-					[] data.moduleFlowFromLearningPath.currentCollection
-						.modules
-				}
-				property={'name'}
-				url={'id'}
-			/>
-		</aside>
-	}*/ >{page}</Layout>
+	return <Layout>{page}</Layout>
 }
 
 export default ModuleSection
