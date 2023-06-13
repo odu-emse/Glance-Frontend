@@ -80,11 +80,11 @@ const ModuleSection = () => {
 								<a
 									title={`Return to the home page of "${data.moduleFlowFromLearningPath.currentSection.sectionName}"`}
 								> */}
-									{
-										data.moduleFlowFromLearningPath
-											.currentSection.sectionName
-									}
-								{/* </a>
+							{
+								data.moduleFlowFromLearningPath.currentSection
+									.sectionName
+							}
+							{/* </a>
 							</Link> */}
 							&nbsp;&nbsp;<strong>//</strong>&nbsp;&nbsp;
 							{

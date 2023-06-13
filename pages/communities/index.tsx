@@ -350,26 +350,30 @@ const Index = ({}) => {
 }
 
 Index.getLayout = function getLayout(page) {
-	return <Layout rightSidebarCollapsable={false} rightSidebar={
-		<WatchedThreadSidebar
-			open={true}
-			handle={() => {}}
-		>
-			<div className="mb-4">
-				<WatchedSidebarList
-					title={'Most Active'}
-					threads={[]}
-				/>
-			</div>
+	return (
+		<Layout
+			rightSidebarCollapsable={false}
+			rightSidebar={
+				<WatchedThreadSidebar open={true} handle={() => {}}>
+					<div className="mb-4">
+						<WatchedSidebarList
+							title={'Most Active'}
+							threads={[]}
+						/>
+					</div>
 
-			<div className="mb-4">
-				<WatchedSidebarList
-					title={'Most Watched'}
-					threads={[]}
-				/>
-			</div>
-		</WatchedThreadSidebar>
-	}>{page}</Layout>
+					<div className="mb-4">
+						<WatchedSidebarList
+							title={'Most Watched'}
+							threads={[]}
+						/>
+					</div>
+				</WatchedThreadSidebar>
+			}
+		>
+			{page}
+		</Layout>
+	)
 }
 
 export default Index
