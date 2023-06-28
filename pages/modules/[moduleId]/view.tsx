@@ -120,7 +120,10 @@ const ModuleSection = () => {
 							data.moduleFlowFromLearningPath
 								.previousCollection && (
 								<Link
-									href={`/modules/${data.moduleFlowFromLearningPath.previousModule?.id ?? ""}/view`}
+									href={`/modules/${
+										data.moduleFlowFromLearningPath
+											.previousModule?.id ?? ''
+									}/view`}
 									passHref
 								>
 									<Button>Previous</Button>
@@ -167,7 +170,9 @@ const ModuleSection = () => {
 }
 
 ModuleSection.getLayout = function getLayout(page) {
-	return <Layout rightSidebarCollapsable={false} /*rightSidebar={
+	return (
+		<Layout
+			rightSidebarCollapsable={false} /*rightSidebar={
 		<aside className="SectionSidebar">
 			<SidebarLessons
 				currentModule={moduleId as string}
@@ -181,7 +186,11 @@ ModuleSection.getLayout = function getLayout(page) {
 				url={'id'}
 			/>
 		</aside>
-	}*/ >{page}</Layout>
+	}*/
+		>
+			{page}
+		</Layout>
+	)
 }
 
 export default ModuleSection
