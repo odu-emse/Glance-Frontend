@@ -7,9 +7,6 @@ import { Logo } from '@/components/common/svg/logo'
 import { signIn } from 'next-auth/react'
 import { DynamicVersion } from '@/components/common/version/dynamic_version'
 
-// background: rgb(32,68,152);
-// background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
-
 const Index = () => {
 	const { status } = useSession()
 	const { push } = useRouter()
