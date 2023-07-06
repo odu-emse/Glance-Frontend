@@ -1,44 +1,54 @@
 import { useContext, useState } from 'react'
 import GlobalLoadingContext from '@/contexts/global_loading_context'
 import Loader from '@/components/util/loader'
-import { Sidebar } from '../../sidebar/sidebar'
+import { Sidebar } from './sidebar/sidebar'
 import { useSession, signOut } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import GlobalUserContext from '@/contexts/global_user_context'
 import gqlFetcher from '@/utils/gql_fetcher'
 import useSWR from 'swr'
 import { gql } from 'graphql-request'
-import { Logo } from '@/components/common/svg/logo'
+import { TopBar } from './top_bar/top_bar'
+import { CollapseButton } from './sidebar/collapse_button/collapse_button'
 
-export const Layout = ({ children }) => {
+export const Layout = ({
+	rightSidebar = null,
+	rightSidebarCollapsable = true,
+	children,
+}) => {
 	const router = useRouter()
-	const [isLoading, setLoading] = useState(false)
-	const [open, setOpen] = useState(true)
-	const [isAccountVisible, setAccountVisible] = useState(false)
-	const { data: session, status } = useSession()
-	const { setUser } = useContext(GlobalUserContext)
 
-	const { data, error } = useSWR(
+	const [isLoading, setLoading] = useState(false)
+	const [isAccountVisible, setAccountVisible] = useState(false)
+	const { data: session, status: sessionStatus } = useSession()
+	const userContext = useContext(GlobalUserContext)
+
+	// Sidebar
+	const [leftSidebarCollapsed, setLeftSidebarCollapsed] = useState(false)
+	const [rightSidebarCollapsed, setRightSidebarCollapsed] = useState(false)
+
+	const { data: userProfile, error: userProfileError } = useSWR(
 		session
 			? {
-					query: gql`
-			query {
-				user(input: {
-					openID: "${session.openId}"
-				}){
-					id
-					plan {
+					query: `
+				query {
+					user(input: {
+						openID: "${session.openId}"
+					}){
+						id
+						isAdmin
+						plan {
 							id
+						}
 					}
 				}
-			}
-		`,
+			`,
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	)
 
-	if (status === 'loading') {
+	if (sessionStatus === 'loading') {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
 				<Loader textColor="royalblue" />
@@ -46,7 +56,7 @@ export const Layout = ({ children }) => {
 		)
 	}
 
-	if (error) {
+	if (userProfileError) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
 				<h1>Error loading user data</h1>
@@ -58,7 +68,7 @@ export const Layout = ({ children }) => {
 		router.push('/', '/', { shallow: true })
 	}
 
-	if (!data) {
+	if (!userProfile) {
 		return (
 			<div className="flex justify-center items-center stdcontainer h-screen">
 				<Loader textColor="royalblue" />
@@ -67,111 +77,85 @@ export const Layout = ({ children }) => {
 	}
 
 	return (
-		<section className="h-screen">
-			<GlobalUserContext.Provider
-				value={{ user: data.user[0] || null, setUser }}
-			>
-				<nav className="flex bg-royalblue stdcontainer-sharp justify-between h-16 sticky">
-					<div className="flex items-center gap-1">
-						<Logo width={25} height={25} />
-						<h4
-							style={{
-								fontWeight: 700,
-								fontSize: '24px',
-							}}
-							className="text-white"
-						>
-							GLANCE
-						</h4>
-					</div>
-					<div
-						className={'flex gap-2 items-center relative'}
-						onClick={() => setAccountVisible(true)}
-					>
-						<figcaption className={'text-xs/[16px]'}>
-							<span className={'text-gray-400'}>Hello,</span>{' '}
-							<span className={'font-bold text-white'}>
-								{session.user.name}
-							</span>
-						</figcaption>
-						<img
-							src={session.user.image}
-							alt={'profile image'}
-							className="rounded-full w-8 h-8 border"
-							referrerPolicy="no-referrer"
+		<GlobalUserContext.Provider
+			value={{ user: userProfile.user[0] || null }}
+		>
+			<div className="grid grid-cols-layout grid-rows-layout">
+				{/* Navigation */}
+				<div className="col-span-full row-span-1 row-start-1 sticky top-0">
+					<TopBar
+						isAccountVisible={isAccountVisible}
+						session={session}
+						setAccountVisible={setAccountVisible}
+					/>
+				</div>
+
+				<aside className="col-span-1 col-start-1 row-span-1 row-start-2 border-r">
+					<nav className="sticky top-[64px] h-[calc(100vh-64px)]">
+						<Sidebar
+							open={!leftSidebarCollapsed}
+							userSession={session}
+							isLoading={isLoading}
 						/>
 						<div
-							className={`${
-								isAccountVisible ? 'flex' : 'hidden'
-							} right-0.5 top-12 absolute border border-black items-end justify-end flex-col w-56 float-right mr-5`}
+							className="absolute -right-4 bottom-8"
+							onClick={() => {
+								setLeftSidebarCollapsed(!leftSidebarCollapsed)
+							}}
 						>
-							<figcaption
-								onClick={() =>
-									router.push(`/users/${session.openId}`)
-								}
-								className={
-									'text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200'
-								}
-							>
-								View Profile{' '}
-							</figcaption>
-							<figcaption
-								onClick={() =>
-									router.push(
-										`/users/${session.openId}/settings`
-									)
-								}
-								className={
-									'text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200'
-								}
-							>
-								Account Settings
-							</figcaption>
-							<figcaption
-								onClick={() => signOut()}
-								className={
-									'text-sm text-royalblue pt-1 pb-1 pr-2 w-full text-right hover:bg-gray-200'
-								}
-							>
-								Log out
-							</figcaption>
+							<CollapseButton open={!leftSidebarCollapsed} />
 						</div>
-					</div>
-				</nav>
-				<div
-					className="flex h-[calc(100%_-_4rem)]"
-					onClick={() => setAccountVisible(false)}
-				>
-					<Sidebar
-						isLoading={isLoading}
-						userSession={session}
-						handle={setOpen}
-						open={open}
-						icon={null}
-					/>
-					<main className="grow overflow-y-auto">
-						<GlobalLoadingContext.Provider
-							value={{ isLoading, setLoading }}
-						>
-							{isLoading === true && (
-								<div className="flex justify-center items-center stdcontainer h-32">
-									<Loader textColor="royalblue" />
+					</nav>
+				</aside>
+
+				{rightSidebar && (
+					<aside className="col-span-1 col-start-3 row-span-1 row-start-2 border-l">
+						<div className="sticky top-[64px] h-[calc(100vh-64px)]">
+							{rightSidebar}
+							{rightSidebarCollapsable && (
+								<div
+									className="absolute -left-4 bottom-8"
+									onClick={() => {
+										setRightSidebarCollapsed(
+											!rightSidebarCollapsed,
+										)
+									}}
+								>
+									<CollapseButton
+										open={!!rightSidebarCollapsed}
+									/>
 								</div>
 							)}
+						</div>
+					</aside>
+				)}
 
-							<div
-								style={{
-									display: isLoading ? 'none' : 'block',
-								}}
-							>
-								{' '}
-								{/* Totally unneeded but it makes me happy to have this display so here it is... */}
-								{children}
+				<main
+					className={`col-start-2 ${
+						rightSidebar ? 'col-end-3' : 'col-end-4'
+					} row-span-1 row-start-2 stdcontainer`}
+				>
+					<GlobalLoadingContext.Provider
+						value={{ isLoading, setLoading }}
+					>
+						{isLoading === true && (
+							<div className="flex justify-center items-center stdcontainer h-32">
+								<Loader textColor="royalblue" />
 							</div>
-						</GlobalLoadingContext.Provider>
-					</main>
-				</div>
-			</GlobalUserContext.Provider>
-		</section>
+						)}
+
+						<div
+							style={{
+								display: isLoading ? 'none' : 'block',
+							}}
+						>
+							{' '}
+							{/* Totally unneeded but it makes me happy to have this display so here it is... */}
+							{children}
+						</div>
+					</GlobalLoadingContext.Provider>
+				</main>
+			</div>
+		</GlobalUserContext.Provider>
 	)
 }

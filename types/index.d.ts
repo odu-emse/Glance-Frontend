@@ -1,3 +1,5 @@
+import { ModuleProgress, Collection } from '@/types/graphql'
+
 export type Module = {
 	id: string
 	moduleNumber?: number
@@ -29,8 +31,33 @@ export type User = {
 	isAdmin?: boolean | null
 	isActive?: boolean | null
 	plan?: PlanOfStudy | null
+	dob: string
+	biography: string | null
+	phoneNumber: string | null
+	social?: Social | null
 	watchedThreads?: Array<ThreadType | null> | null
 	createdThreads?: Array<ThreadType | null> | null
+}
+
+export interface InstructorProfile {
+	id: string
+	account?: Nullable<User>
+	title?: Nullable<string>
+	officeLocation?: Nullable<string>
+	officeHours?: Nullable<Nullable<string>[]>
+	contactPolicy?: Nullable<string>
+	background?: Nullable<string>
+	researchInterest?: Nullable<Nullable<string>[]>
+	selectedPapersAndPublications?: Nullable<Nullable<string>[]>
+}
+
+export type Social = {
+	id: string
+	github?: string | null
+	linkedin?: string | null
+	portfolio?: string | null
+	facebook?: string | null
+	twitter?: string | null
 }
 
 export type PlanOfStudy = {
@@ -50,17 +77,6 @@ export type ModuleEnrollment = {
 	inactivePlan?: PlanOfStudy | null
 }
 
-export type Collection = {
-	id: string
-	name?: string
-	createdAt?: Date
-	updatedAt?: Date
-	lessons?: Nullable<Nullable<Lesson>[]>
-	module?: Module
-	moduleID?: string
-	position?: Nullable<number>
-}
-
 export type ThreadType = {
 	id: string
 	title?: string | null
@@ -69,19 +85,90 @@ export type ThreadType = {
 	comments?: Array<ThreadType | null> | null
 	upvotes?: Array<User | null>
 	usersWatching?: Array<User | null>
-	parentLesson?: Nullable<Lesson>
 	createdAt?: Date
 	updatedAt?: Date
 	parentThread?: Nullable<ThreadType>
 	parentThreadID?: Nullable<string>
+	topics: [string]
 }
 
-type Lesson = {
+export type Lesson = {
 	id: string
 	name?: string
-	threads?: Nullable<Nullable<ThreadType>[]>
 	position?: Nullable<number>
 	collection?: Collection
+	lessonProgress?: Array<LessonProgress>
+}
+
+export type LessonProgress = {
+	id: string
+	status?: number
+	completed?: boolean
+	createAt?: Date
+	updatedAt?: Date
+	enrollment?: ModuleEnrollment
+	lesson?: Lesson
+}
+
+export interface Course {
+	id: string
+	name: string
+	moduleIDs?: Nullable<Nullable<string>[]>
+	required: boolean
+	carnegieHours: number
+}
+
+export type ModuleBySectionEnrollment = Pick<
+	Module,
+	'id' | 'name' | 'position'
+> & {
+	moduleProgress: Array<ModuleProgress>
+	collections: Array<Collection>
+}
+
+export enum PathStatus {
+	DRAFT = 'DRAFT',
+	LIVE = 'LIVE',
+}
+
+export interface LearningPath {
+	id: string
+	createdAt: Date
+	plan: PlanOfStudy
+	planID: string
+	paths: Path[]
+}
+
+export interface Path {
+	id: string
+	createdAt: Date
+	updatedAt: Date
+	course: CoursePath
+	status: PathStatus
+	hoursSatisfies: number
+	learningOutcomes: string[]
+}
+
+export interface CoursePath extends Course {
+	id: string
+	sections: SectionPath[]
+}
+
+export interface SectionPath {
+	id: string
+	name: string
+	collections: CollectionPath[]
+}
+
+export interface CollectionPath {
+	id: string
+	name: string
+	modules: ModulePath[]
+}
+
+export interface ModulePath extends Module {
+	id: string
+	enrollmentID?: Nullable<string>
 }
 
 type Nullable<T> = T | null

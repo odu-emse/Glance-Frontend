@@ -39,7 +39,7 @@ describe('Panel.tsx', function () {
 						repellendus repudiandae sed! Esse officiis qui tempore
 						unde? Doloribus, repellat.
 					</div>
-				</Text>
+				</Text>,
 			)
 			expect(cy.get('section.rounded')).to.exist
 			expect(cy.get('section.rounded').children('div#test-id')).to.exist
@@ -56,7 +56,7 @@ describe('Panel.tsx', function () {
 						repellendus repudiandae sed! Esse officiis qui tempore
 						unde? Doloribus, repellat.
 					</div>
-				</Text>
+				</Text>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -66,19 +66,19 @@ describe('Panel.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should render the addtiniaonal class text-underline-offset auto to the section', () => {
 			cy.mount(<Text className={className} />)
 			cy.get('section').should(
 				'have.class',
-				'underline underline-offset-auto'
+				'underline underline-offset-auto',
 			)
 			cy.get('section').should(
 				'have.css',
 				'text-underline-offset',
-				'auto'
+				'auto',
 			)
 		})
 		it('should change the title name and render title component with large text and font-weight of 700', () => {
@@ -94,18 +94,18 @@ describe('Panel.tsx', function () {
 			cy.mount(<Text size={fullSize} />)
 			cy.get('section').should(
 				'have.class',
-				'rounded bg-gray-100 shadow-md p-1 md:p-4'
+				'rounded bg-gray-100 shadow-md p-1 md:p-4',
 			)
 			cy.get('section').should('have.css', 'border-radius', '4px')
 			cy.get('section').should(
 				'have.css',
 				'background-color',
-				'rgb(243, 244, 246)'
+				'rgb(243, 244, 246)',
 			)
 			cy.get('section').should(
 				'have.css',
 				'box-shadow',
-				'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px'
+				'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px',
 			)
 			cy.get('section').should('have.css', 'padding', '16px')
 			cy.get('section').should('have.css', 'width', '1920px')
@@ -167,7 +167,7 @@ describe('Panel.tsx', function () {
 							height={100}
 						/>
 					</div>
-				</Chart>
+				</Chart>,
 			)
 			expect(cy.get('section.rounded')).to.exist
 			cy.get('section.rounded').children('div#test-id').should('exist')
@@ -216,7 +216,7 @@ describe('Panel.tsx', function () {
 							height={100}
 						/>
 					</div>
-				</Chart>
+				</Chart>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -226,7 +226,7 @@ describe('Panel.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should respect panel width with charts', () => {
@@ -263,7 +263,7 @@ describe('Panel.tsx', function () {
 							height={100}
 						/>
 					</div>
-				</Chart>
+				</Chart>,
 			)
 			cy.get('section.rounded')
 				.children('div#test-id')
@@ -282,7 +282,7 @@ describe('Panel.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should render strings of the pass-in children of unordered list object and show their li css properties', () => {

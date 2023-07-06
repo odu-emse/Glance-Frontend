@@ -6,6 +6,7 @@ on:
 
 jobs:
     build-storybook:
+        needs: [format, lint]
         runs-on: ubuntu-latest
         steps:
           - name: Checkout

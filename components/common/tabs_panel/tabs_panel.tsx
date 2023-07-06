@@ -69,7 +69,7 @@ export const TabsPanel = ({ moduleInfo }: TabsProps) => {
 											</div>
 										</div>
 									</li>
-								)
+								),
 							)}
 						</ul>
 					</div>

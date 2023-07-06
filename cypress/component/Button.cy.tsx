@@ -26,7 +26,7 @@ describe('Button.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('should render loading icon when loading prop is true', function () {

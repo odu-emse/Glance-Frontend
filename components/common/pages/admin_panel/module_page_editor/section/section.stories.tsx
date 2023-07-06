@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof ModuleSection>
 
 const Template: ComponentStory<typeof ModuleSection> = (
-	args: ModuleSectionProps
+	args: ModuleSectionProps,
 ) => <ModuleSection {...args} />
 
 export const Default: ComponentStory<typeof ModuleSection> = Template.bind({})

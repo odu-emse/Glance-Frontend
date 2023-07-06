@@ -1,36 +1,6 @@
 import { ThreadType } from '../../../../types'
 import Link from 'next/link'
 
-export const WatchedThreads = ({
-	threads,
-	title = 'Watched Threads',
-}: {
-	threads: Array<ThreadType>
-	title?: string
-}) => {
-	return (
-		<>
-			<h1 className="font-bold text-2xl py-1">{title}</h1>
-			{threads.map((thread, threadIndex) => (
-				<Link
-					key={threadIndex}
-					href={`/communities/modules/${thread.parentLesson.collection.module.id}/threads/${thread.id}`}
-					role="thread link"
-					className="text-blue-800 flex py-1 text-lg"
-				>
-					{thread.parentLesson.collection.module.moduleName.length >
-					30
-						? `${thread.parentLesson.collection.module.moduleName.substring(
-								0,
-								30
-						  )}...`
-						: thread.parentLesson.collection.module.moduleName}
-				</Link>
-			))}
-		</>
-	)
-}
-
 export const WatchedSidebarList = ({
 	title,
 	threads,

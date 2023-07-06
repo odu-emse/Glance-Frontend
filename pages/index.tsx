@@ -2,14 +2,10 @@
 import { Button } from '@/components/common/button/button'
 import Head from 'next/head'
 import { useSession } from 'next-auth/react'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { Logo } from '@/components/common/svg/logo'
 import { signIn } from 'next-auth/react'
-
-// background: rgb(32,68,152);
-// background: linear-gradient(0deg, rgba(32,68,152,1) 0%, rgba(32,68,152,0.7) 100%);
+import { DynamicVersion } from '@/components/common/version/dynamic_version'
 
 const Index = () => {
 	const { status } = useSession()
@@ -54,19 +50,11 @@ const Index = () => {
 					Education At A Glance
 				</h5>
 
-				<Button
-					variant="white"
-					className="m-5"
-					onClick={() => signIn()}
-				>
+				<Button variant="secondary" onClick={() => signIn()}>
 					LOGIN
 				</Button>
 
-				<span className="sans font-bold absolute bottom-1 left-3 gap-4 sans text-white text-sm">
-					<small className="m-0 p-0">API Version 0.3.5</small>
-					<span className="mx-1">&bull;</span>
-					<small className="m-0 p-0">FE Version 0.3.0</small>
-				</span>
+				<DynamicVersion backendVersion={'0.3.0'} isLight={true} />
 			</div>
 		</>
 	)

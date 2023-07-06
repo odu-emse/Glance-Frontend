@@ -23,7 +23,7 @@ describe('Input.tsx', function () {
 			<form onSubmit={(e) => e.preventDefault()}>
 				<Default required={true} onChange={(e) => console.log(e)} />
 				<button type="submit">Submit</button>
-			</form>
+			</form>,
 		)
 		cy.get('button').click()
 		cy.get('input:invalid').should('have.length', 1)
@@ -42,7 +42,7 @@ describe('Input.tsx', function () {
 				<form>
 					<Email onChange={(e) => console.log(e)} />
 					<button type="submit">Submit</button>
-				</form>
+				</form>,
 			)
 			cy.get('input').type('invalidEmail.com')
 			cy.get('button').click()
@@ -53,7 +53,7 @@ describe('Input.tsx', function () {
 				<form onSubmit={(e) => e.preventDefault()}>
 					<Email onChange={(e) => console.log(e)} />
 					<button type="submit">Submit</button>
-				</form>
+				</form>,
 			)
 			cy.get('input').type('dpapp001@odu.edu')
 			cy.get('button').click()
@@ -66,7 +66,7 @@ describe('Input.tsx', function () {
 					name="email-input"
 					label="Email address"
 					ariaLabel="Email address input field"
-				/>
+				/>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -76,7 +76,7 @@ describe('Input.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should have a label that matches the prop passed in', function () {
@@ -89,13 +89,13 @@ describe('Input.tsx', function () {
 			cy.get('label').should(
 				'have.css',
 				'transform',
-				'matrix(1, 0, 0, 1, 0, 0)'
+				'matrix(1, 0, 0, 1, 0, 0)',
 			)
 			cy.get('input').type('test')
 			cy.get('label').should(
 				'have.css',
 				'transform',
-				'matrix(0.75, 0, 0, 0.75, 0, -24)'
+				'matrix(0.75, 0, 0, 0.75, 0, -24)',
 			)
 		})
 	})
@@ -111,7 +111,7 @@ describe('Input.tsx', function () {
 					name="email-input"
 					label="Email address"
 					ariaLabel="Email address input field"
-				/>
+				/>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -121,7 +121,7 @@ describe('Input.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should have disabled cursor when hovering over element', function () {
@@ -142,7 +142,7 @@ describe('Input.tsx', function () {
 					name="error-input"
 					label="Example"
 					ariaLabel="input field"
-				/>
+				/>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -152,7 +152,7 @@ describe('Input.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should have a red border by default', function () {
@@ -163,7 +163,7 @@ describe('Input.tsx', function () {
 		it('should have a default border color when error is false', function () {
 			const def = 'rgb(209, 213, 219)'
 			cy.mount(
-				<ErrorState error={false} onChange={(e) => console.log(e)} />
+				<ErrorState error={false} onChange={(e) => console.log(e)} />,
 			)
 			cy.get('input').should('have.css', 'border-color', def)
 		})
@@ -180,7 +180,7 @@ describe('Input.tsx', function () {
 					name="input"
 					label="Example"
 					ariaLabel="input field"
-				/>
+				/>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -190,7 +190,7 @@ describe('Input.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should have a red border color by default', function () {
@@ -225,7 +225,7 @@ describe('Input.tsx', function () {
 							veniam veritatis voluptas, voluptatibus.
 						</span>
 					}
-				/>
+				/>,
 			)
 			cy.get('p').children('span').should('have.class', 'text-blue-500')
 		})
@@ -246,7 +246,7 @@ describe('Input.tsx', function () {
 					name="search-input"
 					label="Search"
 					ariaLabel="Search input field"
-				/>
+				/>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -256,7 +256,7 @@ describe('Input.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should render search icon with submit button', function () {
@@ -264,7 +264,7 @@ describe('Input.tsx', function () {
 			cy.get('input').should(
 				'have.attr',
 				'aria-label',
-				'Search box input field'
+				'Search box input field',
 			)
 			cy.get('button').should('have.attr', 'type', 'submit')
 			cy.get('button').children().should('have.length', '2')
@@ -293,7 +293,7 @@ describe('Input.tsx', function () {
 					name="email-input"
 					label="Email address"
 					ariaLabel="Email address input field"
-				/>
+				/>,
 			)
 			cy.checkA11y(
 				undefined,
@@ -303,14 +303,14 @@ describe('Input.tsx', function () {
 						values: ['wcag2a', 'wcag2aa', 'section508'],
 					},
 				},
-				terminalLog
+				terminalLog,
 			)
 		})
 		it('should have a default description', function () {
 			cy.mount(<Descriptive />)
 			cy.get('p').should(
 				'have.text',
-				'For more information on how your data is stored and accessed throughout the application, please visit our Privacy Policy.'
+				'For more information on how your data is stored and accessed throughout the application, please visit our Privacy Policy.',
 			)
 		})
 		it('should respect markup passed in as description', function () {
@@ -325,7 +325,7 @@ describe('Input.tsx', function () {
 							veniam veritatis voluptas, voluptatibus.
 						</span>
 					}
-				/>
+				/>,
 			)
 			cy.get('p').children('span').should('have.class', 'text-blue-500')
 		})

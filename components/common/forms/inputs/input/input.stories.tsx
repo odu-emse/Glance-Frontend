@@ -4,7 +4,7 @@ import { Input, InputProps } from './input'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-	title: 'Common/Forms/Inputs/Input',
+	title: 'Common/Forms/Inputs/Inputs',
 	component: Input,
 	argTypes: {
 		onChange: {
@@ -124,4 +124,29 @@ Search.args = {
 	role: 'search',
 	type: 'search',
 	// options: ['Items', 'Items1']
+}
+export const Radio = Template.bind({})
+Radio.args = {
+	type: 'radio',
+	name: 'radio',
+	content: 'Choice1',
+}
+export const Checkbox = Template.bind({})
+Checkbox.args = {
+	type: 'checkbox',
+	name: 'checkbox',
+	content: 'Choice1',
+}
+export const NumericalInput = Template.bind({})
+NumericalInput.args = {
+	type: 'number',
+	label: 'Type in your age',
+	name: 'number',
+}
+export const RangeSlider = Template.bind({})
+RangeSlider.args = {
+	type: 'range',
+	name: 'range',
+	min: 10,
+	max: 50,
 }

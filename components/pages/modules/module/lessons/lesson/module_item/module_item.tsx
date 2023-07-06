@@ -1,62 +1,62 @@
 import Link from 'next/link'
-
 import { HiChevronRight } from 'react-icons/hi'
+import { Module } from '@/types/graphql'
+import React from 'react'
 
-export const ModuleItem = ({ data, role }) => {
-	// Use the link below once DB schema is updated
-	// const link = `/modules/${data.id}/sections/${data?.headSection}/lessons/${data?.sections[data?.headSection]?.headLesson}`
+export const ModuleItem = ({
+	data,
+	expanded,
+	handleExpansion,
+	selected,
+}: ModuleItemProps) => {
 	return (
-		<Link href={`/modules/${data.id}`} passHref>
-			<div className="stdcontainer shadow cursor-pointer flex justify-center items-center w-full">
-				<div className="flex grow flex-col gap-1">
-					<div
-						className="flex flex-row gap-2"
-						style={{
-							fontFamily: 'Microgramma, sans-serif',
-						}}
-					>
-						<p className="p-0 m-0">MODULE {data.moduleNumber}</p>
-						<p className="p-0 m-0">//</p>
-						<p className="p-0 m-0">{role}</p>
-					</div>
-					<div>
-						<h2>{data.moduleName}</h2>
-					</div>
+		<div
+			className={`px-5 py-4 rounded-md shadow cursor-pointer flex justify-center items-center w-full border-2 ${
+				selected ? 'border-royalblue' : 'border-transparent'
+			}`}
+		>
+			<div
+				className="flex grow flex-col gap-1"
+				onClick={() => handleExpansion(!expanded)}
+			>
+				<div className="flex flex-row gap-1 sans text-sm sans uppercase items-center">
+					<p className="p-0 m-0">
+						SECTION {data.collections[0].section.sectionNumber}
+					</p>
+					<span>/</span>
+					<p className="p-0 m-0">{data.collections[0].name}</p>
+					<span>/</span>
+					<p className="p-0 m-0">
+						MODULE {data.prefix && data.prefix}
+						{data.number}
+					</p>
 				</div>
-				<div className="hidden md:block">
+				<div>
+					<h2 className="sans leading-5 text-royalblue font-semibold">
+						{data.name}
+					</h2>
+				</div>
+			</div>
+			<Link href={`/modules/${data.id}`} passHref>
+				<a className="block">
 					<span
-						className="w-12 h-12 block bg-royalblue text-white rounded-full flex justify-center items-center"
+						className="w-12 h-12 bg-royalblue text-white rounded-full flex justify-center items-center"
 						style={{
 							fontSize: '24px',
 						}}
 					>
 						<HiChevronRight />
 					</span>
-				</div>
-			</div>
-		</Link>
+				</a>
+			</Link>
+		</div>
 	)
 }
 
 export type ModuleItemProps = {
-	/**
-	 * Boolean that determines if the course module is completed or not
-	 * @type boolean
-	 * @default false
-	 */
-	data: {
-		id: String
-		moduleName: String
-		moduleNumber: Number
-		intro: String
-		createdAt: String
-		description: String
-		duration: Number
-		keywords: Array<String>
-		numSlides: Number
-		feedback: String | null
-		parentModules: Array<any> | null
-		members: Array<any> | null
-	}
+	data: Module
 	role: String
+	expanded: boolean
+	handleExpansion: React.Dispatch<React.SetStateAction<boolean>>
+	selected: boolean
 }

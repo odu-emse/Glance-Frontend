@@ -41,7 +41,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	const mouseTimeout = useRef<any>()
 
 	const handleTimeUpdate = (
-		event: SyntheticEvent<HTMLVideoElement, Event>
+		event: SyntheticEvent<HTMLVideoElement, Event>,
 	) => {
 		if (!progressBar.current) return
 
@@ -138,7 +138,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 							(card.timestamp / videoPlayer.current!.duration) *
 								100,
 							0,
-							100
+							100,
 						) + '%',
 				}}
 			>

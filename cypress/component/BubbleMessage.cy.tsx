@@ -55,7 +55,7 @@ describe('BubbleMessage.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('should render messages at the left', () => {
@@ -64,11 +64,11 @@ describe('BubbleMessage.tsx', function () {
 		cy.get('div').should('have.class', 'w-50 h-50 px-2')
 		cy.get('img').should(
 			'have.class',
-			'shadow-lg rounded-full max-w-full h-8 align-middle border-none'
+			'shadow-lg rounded-full max-w-full h-8 align-middle border-none',
 		)
 		cy.get('div').should(
 			'have.class',
-			'relative max-w-xl px-4 py-2 text-white bg-blue-300 bg-gray-300 rounded shadow'
+			'relative max-w-xl px-4 py-2 text-white bg-blue-300 bg-gray-300 rounded shadow',
 		)
 		cy.get('div').should('have.class', 'w-50 h-50 px-2 opacity-50')
 		cy.get('span').should('have.class', 'block text-xs text-slate-500')

@@ -1,5 +1,4 @@
 const PDFContent = ({ data }) => {
-	//console.log("p",data)
 	let pdfLink = ''
 	for (let i = 0; i < data.length; i++) {
 		if (data[i].type === 'PDF') {
@@ -8,7 +7,7 @@ const PDFContent = ({ data }) => {
 	}
 
 	return (
-		<div className="flex flex-col w-3/4">
+		<div className="flex flex-col w-auto h-full">
 			<object
 				data={pdfLink}
 				type="application/pdf"

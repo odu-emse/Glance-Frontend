@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"types": ["cypress", "node"],
-		"target": "es5",
+		"target": "es2016",
 		"lib": ["es5", "dom"],
 		"allowJs": true,
 		"skipLibCheck": true,
@@ -23,7 +23,8 @@
 			"@/utils/*": ["utils/*"],
 			"@/contexts/*": ["contexts/*"],
 			"@/hooks/*": ["hooks/*"],
-			"@/scripts/*": ["scripts/*"]
+			"@/scripts/*": ["scripts/*"],
+			"@/types/*": ["types/*"]
 		}
 	},
 	"include": [

@@ -19,7 +19,7 @@ describe('Form.tsx', function () {
 				allowPrevious={allowPrevious}
 				previousLabel={previousLabel}
 				proceedLabel={proceedLabel}
-			/>
+			/>,
 		)
 		expect(cy.get('form')).to.exist
 	})
@@ -29,7 +29,7 @@ describe('Form.tsx', function () {
 				allowPrevious={allowPrevious}
 				previousLabel={previousLabel}
 				proceedLabel={proceedLabel}
-			/>
+			/>,
 		)
 		cy.checkA11y(
 			undefined,
@@ -39,7 +39,7 @@ describe('Form.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 
@@ -49,7 +49,7 @@ describe('Form.tsx', function () {
 				allowPrevious={allowPrevious}
 				previousLabel={previousLabel}
 				proceedLabel={proceedLabel}
-			/>
+			/>,
 		)
 		cy.get('button').should('have.class', 'bg-blue-700')
 		cy.get('button').should('have.class', 'text-white')
@@ -61,7 +61,7 @@ describe('Form.tsx', function () {
 				allowPrevious={allowPrevious}
 				previousLabel={previousLabel}
 				proceedLabel={proceedLabel}
-			/>
+			/>,
 		)
 		cy.get('button').should('have.class', 'hover:bg-blue-600')
 		cy.get('button').should('have.class', 'text-white')
@@ -73,7 +73,7 @@ describe('Form.tsx', function () {
 				allowPrevious={true}
 				previousLabel={previousLabel}
 				proceedLabel={proceedLabel}
-			/>
+			/>,
 		)
 		cy.get('button').should('have.class', 'focus:outline-blue-500')
 		cy.get('button').each(($el) => {
@@ -87,7 +87,7 @@ describe('Form.tsx', function () {
 				allowPrevious={true}
 				previousLabel={previousLabel}
 				proceedLabel={proceedLabel}
-			/>
+			/>,
 		)
 		cy.get('button').each(($el) => {
 			cy.wrap($el)
@@ -129,7 +129,7 @@ describe('Form.tsx', function () {
 				.siblings('label')
 				.should(
 					'have.class',
-					'peer-focus:dark:text-blue-500 peer-focus:text-blue-600'
+					'peer-focus:dark:text-blue-500 peer-focus:text-blue-600',
 				)
 		})
 	})
@@ -145,11 +145,11 @@ describe('Form.tsx', function () {
 						.should(
 							'have.css',
 							'transform',
-							'matrix(0.75, 0, 0, 0.75, 0, -24)'
+							'matrix(0.75, 0, 0, 0.75, 0, -24)',
 						)
 						.and(
 							'have.class',
-							'transform -translate-y-6 scale-75 top-3 -z-10'
+							'transform -translate-y-6 scale-75 top-3 -z-10',
 						)
 				})
 		})
@@ -166,7 +166,7 @@ describe('Form.tsx', function () {
 				allowPrevious={true}
 				previousLabel={'Previous!'}
 				proceedLabel={proceedLabel}
-			/>
+			/>,
 		)
 		cy.get('button.bg-gray-300').as('secondaryButton')
 		cy.get('@secondaryButton').should('have.attr', 'type', 'reset')
@@ -179,7 +179,7 @@ describe('Form.tsx', function () {
 				allowPrevious={allowPrevious}
 				previousLabel={previousLabel}
 				proceedLabel={'Next!'}
-			/>
+			/>,
 		)
 		cy.get('button.bg-blue-700').as('primaryButton')
 		cy.get('@primaryButton').should('have.attr', 'type', 'submit')
