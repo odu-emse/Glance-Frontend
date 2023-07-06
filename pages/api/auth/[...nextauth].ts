@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
+import { GraphQLClient } from 'graphql-request'
 
 export const authOptions = {
 	// Configure one or more authentication providers
@@ -24,8 +25,39 @@ export const authOptions = {
 		// ...add more providers here
 	],
 	callbacks: {
-		async signIn(data) {
-			console.log(data);
+		async signIn({ user, account, profile }) {
+
+			const client = new GraphQLClient(process.env.NEXT_PUBLIC_API_URL, {});
+
+			// Check if the user already exists
+			try {
+				const doesUserExist = await client.request(`
+					query { 
+						user(input: { openID: "${user.id}" }) {
+							id
+						}
+					}
+				`);
+			} catch(e) {
+				// User does not exist!!!! Create me!
+				// FIXME:User lastname
+				client.request(`
+					mutation {
+						createUser(input: {
+							openID: "${user.id}"
+							email: "${user.email}"
+							picURL: "${user.image}"
+							firstName: "${profile.given_name}"
+							lastName: "${profile.family_name}"
+							middleName: ""
+						}) {
+							id
+						}
+					}
+				`);
+			}
+
+			return true;
 		},
 		async jwt({ token, account }) {
 			// Persist the OAuth access_token to the token right after signin
