@@ -26,8 +26,10 @@ export const authOptions = {
 	],
 	callbacks: {
 		async signIn({ user, account, profile }) {
-
-			const client = new GraphQLClient(process.env.NEXT_PUBLIC_API_URL, {});
+			const client = new GraphQLClient(
+				process.env.NEXT_PUBLIC_API_URL,
+				{},
+			)
 
 			// Check if the user already exists
 			try {
@@ -37,8 +39,8 @@ export const authOptions = {
 							id
 						}
 					}
-				`);
-			} catch(e) {
+				`)
+			} catch (e) {
 				// User does not exist!!!! Create me!
 				// FIXME:User lastname
 				client.request(`
@@ -54,10 +56,10 @@ export const authOptions = {
 							id
 						}
 					}
-				`);
+				`)
 			}
 
-			return true;
+			return true
 		},
 		async jwt({ token, account }) {
 			// Persist the OAuth access_token to the token right after signin
