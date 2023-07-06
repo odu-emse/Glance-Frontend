@@ -5,31 +5,31 @@
 		'./components/common/pages/admin_panel/module_card/module_card.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { O: () => ModuleCard })
 			var _Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_extends_js__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/extends.js'
+						'./node_modules/@babel/runtime/helpers/esm/extends.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_icons_bi__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/react-icons/bi/index.esm.js'
+						'./node_modules/react-icons/bi/index.esm.js',
 					),
 				react_icons_ri__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/react-icons/ri/index.esm.js'
+						'./node_modules/react-icons/ri/index.esm.js',
 					),
 				_dnd_kit_sortable__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@dnd-kit/sortable/dist/sortable.esm.js'
+						'./node_modules/@dnd-kit/sortable/dist/sortable.esm.js',
 					),
 				_dnd_kit_utilities__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/@dnd-kit/utilities/dist/utilities.esm.js'
+						'./node_modules/@dnd-kit/utilities/dist/utilities.esm.js',
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				ModuleCard = function ModuleCard(_ref) {
@@ -49,7 +49,7 @@
 						style = {
 							transform:
 								_dnd_kit_utilities__WEBPACK_IMPORTED_MODULE_2__.ux.Transform.toString(
-									transform
+									transform,
 								),
 							transition,
 						}
@@ -63,7 +63,7 @@
 							{
 								className:
 									'border-solid border-gray bg-gray-200  hover:bg-gray-100 rounded flex justify-between border',
-							}
+							},
 						),
 						__jsx(
 							'div',
@@ -71,7 +71,7 @@
 							__jsx(
 								'p',
 								{ className: 'text-2xl py-2' },
-								moduleName
+								moduleName,
 							),
 							__jsx(
 								'div',
@@ -79,28 +79,28 @@
 								__jsx(
 									'p',
 									{ className: 'uppercase pr-2' },
-									instructorName
+									instructorName,
 								),
 								__jsx(
 									'p',
 									{ className: 'uppercase px-2' },
 									registeredUsers,
-									' Registered Users'
-								)
-							)
+									' Registered Users',
+								),
+							),
 						),
 						__jsx(
 							'div',
 							{ className: 'flex gap-3 items-center m-2' },
 							__jsx(
 								react_icons_bi__WEBPACK_IMPORTED_MODULE_4__.aJk,
-								{ size: 25 }
+								{ size: 25 },
 							),
 							__jsx(
 								react_icons_ri__WEBPACK_IMPORTED_MODULE_5__.Ehm,
-								{ size: 25 }
-							)
-						)
+								{ size: 25 },
+							),
+						),
 					)
 				}
 			;(ModuleCard.displayName = 'ModuleCard'),
@@ -187,7 +187,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -199,14 +199,14 @@
 					_Default$parameters2$,
 					_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 						__webpack_require__(
-							'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+							'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 						),
 					react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					_module_card__WEBPACK_IMPORTED_MODULE_2__ =
 						__webpack_require__(
-							'./components/common/pages/admin_panel/module_card/module_card.tsx'
+							'./components/common/pages/admin_panel/module_card/module_card.tsx',
 						),
 					__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 				function ownKeys(object, enumerableOnly) {
@@ -217,7 +217,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -228,20 +228,20 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0,
-									_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0,
+										_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -249,8 +249,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -264,7 +264,7 @@
 				var Template = function Template(args) {
 					return __jsx(
 						_module_card__WEBPACK_IMPORTED_MODULE_2__.O,
-						args
+						args,
 					)
 				}
 				Template.displayName = 'Template'
@@ -287,7 +287,7 @@
 											Default.parameters) ||
 										void 0 === _Default$parameters
 										? void 0
-										: _Default$parameters.docs
+										: _Default$parameters.docs,
 								),
 								{},
 								{
@@ -305,11 +305,11 @@
 													_Default$parameters2.docs) ||
 											void 0 === _Default$parameters2$
 											? void 0
-											: _Default$parameters2$.source
+											: _Default$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

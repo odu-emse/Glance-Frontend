@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof QuizQuestion>
 
 const Template: ComponentStory<typeof QuizQuestion> = (
-	args: QuizQuestionProps
+	args: QuizQuestionProps,
 ) => <QuizQuestion {...args} />
 
 export const Default = Template.bind({})

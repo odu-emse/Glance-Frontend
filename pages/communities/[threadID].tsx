@@ -97,7 +97,7 @@ const ThreadID = () => {
 			revalidateOnMount: true,
 			refreshWhenHidden: true,
 			revalidateOnFocus: true,
-		}
+		},
 	) as {
 		data: {
 			thread: Array<ThreadType>
@@ -129,7 +129,7 @@ const ThreadID = () => {
 				{
 					threadID,
 					userID,
-				}
+				},
 			)
 		}, false).catch((err) => {
 			console.log(err)
@@ -158,7 +158,7 @@ const ThreadID = () => {
 					threadID: threadId,
 					commentBody,
 					commentAuthor: author,
-				}
+				},
 			)
 		}, false)
 			.then(() => window.location.reload())
@@ -184,12 +184,12 @@ const ThreadID = () => {
 	}
 
 	const isCurrentUserWatching = threadData.thread[0].usersWatching.some(
-		(acc) => acc.id === user.id
+		(acc) => acc.id === user.id,
 	)
 
 	const sortedComments = threadData.thread[0].comments.sort(
 		(a, b) =>
-			new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf()
+			new Date(b.updatedAt).valueOf() - new Date(a.updatedAt).valueOf(),
 	)
 
 	const sortedThread = {

@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -63,7 +63,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				function _objectDestructuringEmpty(obj) {
 					if (null == obj)
@@ -76,18 +76,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -108,7 +108,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -127,7 +127,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -362,7 +362,7 @@
 		'./components/pages/errors/page_not_found/page_not_found.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -370,17 +370,17 @@
 					default: () => page_not_found_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				objectDestructuringEmpty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js'
+					'./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js',
 				),
 				button_button = __webpack_require__(
-					'./components/common/button/button.tsx'
+					'./components/common/button/button.tsx',
 				),
 				esm = __webpack_require__(
-					'./node_modules/react-icons/lib/esm/index.js'
+					'./node_modules/react-icons/lib/esm/index.js',
 				),
 				__jsx = react.createElement,
 				Link = function Link(_ref) {
@@ -413,27 +413,27 @@
 											'menuitem' === role
 												? 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 justify-start transition-all'
 												: 'text-gray-300 hover:bg-gray-700 hover:text-white text-sm font-medium uppercase tracking-widest list-none transition-all',
-											' \n\t\t\t\t\t'
+											' \n\t\t\t\t\t',
 										)
 										.concat(
 											'logo' === role
 												? 'px-0.5 py-0.5'
 												: 'sm:px-3 sm:py-4',
-											'\n\t\t\t\t\t'
+											'\n\t\t\t\t\t',
 										)
 										.concat(className && className, ' ')
 										.concat(
 											active
 												? 'bg-gray-900 text-white px-3 py-4 text-sm font-medium border-l-4 '.concat(
-														activeClassName
+														activeClassName,
 												  )
 												: '',
-											' '
+											' ',
 										)
 										.concat(
 											extended || 'menuitem' === role
 												? ''
-												: 'flex items-center justify-center'
+												: 'flex items-center justify-center',
 										),
 									role,
 								},
@@ -449,10 +449,10 @@
 											className: ''.concat(
 												extended
 													? 'opacity-50'
-													: 'opacity-100'
+													: 'opacity-100',
 											),
 										},
-										icon
+										icon,
 									),
 									__jsx(
 										'span',
@@ -460,13 +460,13 @@
 											className:
 												'xxs:text-xxs xs:text-xs sm:text-base',
 										},
-										extended && label
-									)
+										extended && label,
+									),
 								),
 								'menuitem' === role && label,
-								children || null
-							)
-						)
+								children || null,
+							),
+						),
 					)
 				}
 			;(Link.displayName = 'Link'),
@@ -640,7 +640,7 @@
 							page_not_found_jsx(
 								'h1',
 								{ className: 'font-semibold text-7xl' },
-								'404 - Not Found!'
+								'404 - Not Found!',
 							),
 							page_not_found_jsx(
 								Link,
@@ -652,9 +652,9 @@
 								page_not_found_jsx(
 									button_button.z,
 									null,
-									'Return Home'
-								)
-							)
+									'Return Home',
+								),
+							),
 						)
 					)
 				}
@@ -687,10 +687,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -706,13 +704,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -742,7 +743,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -760,17 +761,17 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/react-icons/lib/esm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				w_: () => GenIcon,
@@ -799,7 +800,7 @@
 									for (var p in (s = arguments[i]))
 										Object.prototype.hasOwnProperty.call(
 											s,
-											p
+											p,
 										) && (t[p] = s[p])
 								return t
 							}),
@@ -825,7 +826,7 @@
 							e.indexOf(p[i]) < 0 &&
 								Object.prototype.propertyIsEnumerable.call(
 									s,
-									p[i]
+									p[i],
 								) &&
 								(t[p[i]] = s[p[i]])
 					}
@@ -838,7 +839,7 @@
 						return react.createElement(
 							node.tag,
 							__assign({ key: i }, node.attr),
-							Tree2Element(node.child)
+							Tree2Element(node.child),
 						)
 					})
 				)
@@ -848,7 +849,7 @@
 					return react.createElement(
 						IconBase,
 						__assign({ attr: __assign({}, data.attr) }, props),
-						Tree2Element(data.child)
+						Tree2Element(data.child),
 					)
 				}
 			}
@@ -885,17 +886,17 @@
 												color:
 													props.color || conf.color,
 											},
-											conf.style
+											conf.style,
 										),
-										props.style
+										props.style,
 									),
 									height: computedSize,
 									width: computedSize,
 									xmlns: 'http://www.w3.org/2000/svg',
-								}
+								},
 							),
 							title && react.createElement('title', null, title),
-							props.children
+							props.children,
 						)
 					)
 				}
@@ -905,7 +906,7 @@
 							null,
 							function (conf) {
 								return elem(conf)
-							}
+							},
 					  )
 					: elem(DefaultContext)
 			}

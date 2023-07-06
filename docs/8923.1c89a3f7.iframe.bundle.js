@@ -6,7 +6,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -14,11 +14,11 @@
 						getScrollAreaStyles: () => getScrollAreaStyles,
 					})
 				var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					_storybook_theming__WEBPACK_IMPORTED_MODULE_1__ =
 						__webpack_require__(
-							'./node_modules/@storybook/theming/dist/index.mjs'
+							'./node_modules/@storybook/theming/dist/index.mjs',
 						),
 					hsResizeObserverDummyAnimation = _storybook_theming__WEBPACK_IMPORTED_MODULE_1__.F4`0%{z-index:0}to{z-index:-1}`,
 					getScrollAreaStyles = (theme) => ({
@@ -440,7 +440,7 @@
 					GlobalScrollAreaStyles_default = () =>
 						react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 							_storybook_theming__WEBPACK_IMPORTED_MODULE_1__.xB,
-							{ styles: getScrollAreaStyles }
+							{ styles: getScrollAreaStyles },
 						)
 			},
 	},

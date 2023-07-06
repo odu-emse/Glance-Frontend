@@ -70,10 +70,10 @@ const useThreadData = (threadId: string, usrprofileId: string | number) => {
 				id: threadId,
 			},
 		},
-		gqlFetcher
+		gqlFetcher,
 	)
 	const isUpvoted = data?.thread[0].upvotes.some(
-		(upvote) => upvote.id === usrprofileId
+		(upvote) => upvote.id === usrprofileId,
 	)
 
 	return { data, error, isUpvoted }

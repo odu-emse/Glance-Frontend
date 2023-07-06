@@ -6,17 +6,17 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.d(__webpack_exports__, {
 					F: () => ModuleLesson,
 				})
 				var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					react_icons_bs__WEBPACK_IMPORTED_MODULE_1__ =
 						__webpack_require__(
-							'./node_modules/react-icons/bs/index.esm.js'
+							'./node_modules/react-icons/bs/index.esm.js',
 						),
 					__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 					ModuleLesson = function ModuleLesson(_ref) {
@@ -30,8 +30,8 @@
 								null,
 								__jsx(
 									react_icons_bs__WEBPACK_IMPORTED_MODULE_1__.hPW,
-									{ size: 25 }
-								)
+									{ size: 25 },
+								),
 							),
 							__jsx(
 								'div',
@@ -39,8 +39,8 @@
 								'Lesson ',
 								lessonId,
 								' : ',
-								lessonName
-							)
+								lessonName,
+							),
 						)
 					}
 				;(ModuleLesson.displayName = 'ModuleLesson'),
@@ -99,17 +99,17 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.d(__webpack_exports__, {
 					q: () => ModuleSection,
 				})
 				var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					react_icons_rx__WEBPACK_IMPORTED_MODULE_1__ =
 						__webpack_require__(
-							'./node_modules/react-icons/rx/index.esm.js'
+							'./node_modules/react-icons/rx/index.esm.js',
 						),
 					__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 					ModuleSection = function ModuleSection(_ref) {
@@ -129,8 +129,8 @@
 									isClicked
 										? react_icons_rx__WEBPACK_IMPORTED_MODULE_1__.jX5
 										: react_icons_rx__WEBPACK_IMPORTED_MODULE_1__.h2L,
-									{ size: 25 }
-								)
+									{ size: 25 },
+								),
 							),
 							__jsx(
 								'div',
@@ -141,8 +141,8 @@
 									},
 									key: sectionId,
 								},
-								sectionName
-							)
+								sectionName,
+							),
 						)
 					}
 				;(ModuleSection.displayName = 'ModuleSection'),
@@ -201,7 +201,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -212,16 +212,16 @@
 					_Default$parameters2,
 					_Default$parameters2$,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					lesson = __webpack_require__(
-						'./components/common/pages/admin_panel/module_page_editor/lesson/lesson.tsx'
+						'./components/common/pages/admin_panel/module_page_editor/lesson/lesson.tsx',
 					),
 					section = __webpack_require__(
-						'./components/common/pages/admin_panel/module_page_editor/section/section.tsx'
+						'./components/common/pages/admin_panel/module_page_editor/section/section.tsx',
 					),
 					__jsx = react.createElement,
 					ModuleSectionEditor = function ModuleSectionEditor() {
@@ -245,8 +245,8 @@
 									__jsx(section.q, {
 										sectionId: 1,
 										sectionName: 'Section 1',
-									})
-								)
+									}),
+								),
 							),
 							__jsx(
 								'div',
@@ -257,8 +257,8 @@
 											lessonName:
 												'Introduction to Dynamic Web Content',
 									  })
-									: ''
-							)
+									: '',
+							),
 						)
 					}
 				ModuleSectionEditor.__docgenInfo = {
@@ -275,7 +275,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -286,19 +286,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -306,8 +306,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -321,7 +321,7 @@
 				var Template = function Template(args) {
 					return module_section_editor_stories_jsx(
 						ModuleSectionEditor,
-						args
+						args,
 					)
 				}
 				Template.displayName = 'Template'
@@ -339,7 +339,7 @@
 											Default.parameters) ||
 										void 0 === _Default$parameters
 										? void 0
-										: _Default$parameters.docs
+										: _Default$parameters.docs,
 								),
 								{},
 								{
@@ -357,11 +357,11 @@
 													_Default$parameters2.docs) ||
 											void 0 === _Default$parameters2$
 											? void 0
-											: _Default$parameters2$.source
+											: _Default$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

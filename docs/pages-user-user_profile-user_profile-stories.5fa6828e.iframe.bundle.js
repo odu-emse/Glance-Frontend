@@ -4,7 +4,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function _extends() {
@@ -17,7 +17,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -30,17 +30,17 @@
 		'./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => _toConsumableArray,
 			})
 			var arrayLikeToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js',
 			)
 			var unsupportedIterableToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js',
 			)
 			function _toConsumableArray(arr) {
 				return (
@@ -59,7 +59,7 @@
 					(0, unsupportedIterableToArray.Z)(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -68,19 +68,19 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -101,7 +101,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -120,7 +120,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -355,7 +355,7 @@
 		'./components/pages/user/user_profile/user_profile.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -365,11 +365,11 @@
 					default: () => user_profile_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				button_button = __webpack_require__(
-					'./components/common/button/button.tsx'
+					'./components/common/button/button.tsx',
 				),
 				next_link = __webpack_require__('./node_modules/next/link.js'),
 				link_default = __webpack_require__.n(next_link),
@@ -405,7 +405,7 @@
 								: updatedProfile.picURL,
 							alt: 'The profile picture of the current user',
 							referrerPolicy: 'no-referrer',
-						})
+						}),
 					),
 					__jsx(
 						'div',
@@ -423,7 +423,7 @@
 											{
 												onClick: function onClick() {
 													console.log(
-														'Saving changes'
+														'Saving changes',
 													),
 														updateSocial(
 															userOpenID,
@@ -436,14 +436,14 @@
 																biography:
 																	updatedProfile.biography,
 															},
-															instructorDetails
+															instructorDetails,
 														),
 														setEditMode(!isEditMode)
 												},
 												size: 'large',
 												className: 'w-full',
 											},
-											'Save Changes'
+											'Save Changes',
 										),
 										__jsx(
 											button_button.z,
@@ -451,15 +451,15 @@
 												onClick: function onClick() {
 													setEditMode(!isEditMode),
 														setUpdatedProfile(
-															defaultUserData
+															defaultUserData,
 														)
 												},
 												size: 'large',
 												className: 'w-full',
 												variant: 'secondary',
 											},
-											'Discard Changes'
-										)
+											'Discard Changes',
+										),
 								  )
 								: __jsx(
 										'div',
@@ -472,7 +472,7 @@
 											{
 												onClick: function onClick() {
 													return setEditMode(
-														!isEditMode
+														!isEditMode,
 													)
 												},
 												size: 'large',
@@ -480,7 +480,7 @@
 											},
 											instructorMode
 												? 'Edit Instructor Profile'
-												: 'Edit Profile'
+												: 'Edit Profile',
 										),
 										isInstructor &&
 											__jsx(
@@ -489,7 +489,7 @@
 													onClick:
 														function onClick() {
 															setInstructorMode(
-																!instructorMode
+																!instructorMode,
 															)
 														},
 													size: 'large',
@@ -498,14 +498,14 @@
 												},
 												instructorMode
 													? 'View Student Profile'
-													: 'View Instructor Profile'
-											)
+													: 'View Instructor Profile',
+											),
 								  )
 							: __jsx(
 									button_button.z,
 									{ size: 'large', className: 'w-full' },
-									'Message'
-							  )
+									'Message',
+							  ),
 					),
 					__jsx(
 						'div',
@@ -522,7 +522,7 @@
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/settings#instructed'
+												'/settings#instructed',
 											),
 										},
 										__jsx(
@@ -534,16 +534,16 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'My Modules'
-											)
-										)
+												'My Modules',
+											),
+										),
 									),
 									__jsx(
 										link_default(),
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/settings#watched'
+												'/settings#watched',
 											),
 										},
 										__jsx(
@@ -555,16 +555,16 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'Watched Threads'
-											)
-										)
+												'Watched Threads',
+											),
+										),
 									),
 									__jsx(
 										link_default(),
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/'
+												'/',
 											),
 										},
 										__jsx(
@@ -576,16 +576,16 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'Publications'
-											)
-										)
+												'Publications',
+											),
+										),
 									),
 									__jsx(
 										link_default(),
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/settings#connection'
+												'/settings#connection',
 											),
 										},
 										__jsx(
@@ -597,10 +597,10 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'Connections'
-											)
-										)
-									)
+												'Connections',
+											),
+										),
+									),
 							  )
 							: __jsx(
 									react.Fragment,
@@ -610,7 +610,7 @@
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/settings#plan'
+												'/settings#plan',
 											),
 										},
 										__jsx(
@@ -622,16 +622,16 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'Plan of study'
-											)
-										)
+												'Plan of study',
+											),
+										),
 									),
 									__jsx(
 										link_default(),
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/settings#watched'
+												'/settings#watched',
 											),
 										},
 										__jsx(
@@ -643,16 +643,16 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'Watched Threads'
-											)
-										)
+												'Watched Threads',
+											),
+										),
 									),
 									__jsx(
 										link_default(),
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/settings#feedback'
+												'/settings#feedback',
 											),
 										},
 										__jsx(
@@ -664,16 +664,16 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'Module Reviews'
-											)
-										)
+												'Module Reviews',
+											),
+										),
 									),
 									__jsx(
 										link_default(),
 										{
 											href: '/users/'.concat(
 												userOpenID,
-												'/settings#connection'
+												'/settings#connection',
 											),
 										},
 										__jsx(
@@ -685,12 +685,12 @@
 													className:
 														'uppercase my-2 font-bold text-royalblue underline cursor-pointer',
 												},
-												'Connections'
-											)
-										)
-									)
-							  )
-					)
+												'Connections',
+											),
+										),
+									),
+							  ),
+					),
 				)
 			}
 			;(AccountSidebar.displayName = 'AccountSidebar'),
@@ -1127,7 +1127,7 @@
 						})
 			} catch (__react_docgen_typescript_loader_error) {}
 			var editable_field = __webpack_require__(
-					'./components/common/user/editable_field.tsx'
+					'./components/common/user/editable_field.tsx',
 				),
 				student_content_jsx = react.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -1136,10 +1136,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1155,13 +1153,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -1195,7 +1196,7 @@
 						student_content_jsx(
 							'h4',
 							{ className: 'm-0 uppercase font-bold' },
-							'Contact Information:'
+							'Contact Information:',
 						),
 						isEditMode
 							? student_content_jsx(
@@ -1208,9 +1209,9 @@
 										student_content_jsx(
 											link_default(),
 											{ href: '/settings' },
-											'Settings'
+											'Settings',
 										),
-										' to change your preferred contact information.Check the contact methods you’d prefer to be visible to others on your profile.'
+										' to change your preferred contact information.Check the contact methods you’d prefer to be visible to others on your profile.',
 									),
 									student_content_jsx(
 										'span',
@@ -1235,9 +1236,9 @@
 												'clip-rule': 'evenodd',
 												d: 'M64.5143 44.6474C65.048 45.1927 65.154 46.0259 64.771 46.687C64.7512 46.7204 64.7308 46.7531 64.7098 46.7852C64.688 46.8166 64.6657 46.848 64.6426 46.8775C64.6189 46.9076 64.5952 46.937 64.5696 46.9652C64.5571 46.9789 64.5446 46.9927 64.5314 47.0064C64.5189 47.0201 64.5058 47.0339 64.4919 47.047C64.1721 47.3618 63.7384 47.5399 63.2869 47.5399C63.1401 47.5399 62.9921 47.5209 62.8453 47.4823L52.9168 44.849C51.0655 45.4885 49.0779 45.8361 47.0121 45.8361C42.7862 45.8361 38.9006 44.3869 35.8305 41.9606C31.6836 38.6833 29.0241 33.6237 29.0241 27.9462C29.0241 19.6218 34.7406 12.6254 42.4828 10.6284C43.93 10.2547 45.4477 10.0563 47.0121 10.0563C56.9465 10.0563 65 18.0659 65 27.9462C65 31.5292 63.9391 34.8699 62.1128 37.6701C62.1654 38.2114 62.2549 38.8325 62.3971 39.5381C62.79 41.4939 63.3705 42.818 63.8206 43.6244C64.0464 44.0283 64.2412 44.3051 64.3662 44.4681C64.4294 44.5499 64.4748 44.6029 64.4985 44.6298C64.5064 44.6383 64.5117 44.6448 64.5143 44.6474Z',
 												fill: 'black',
-											})
-										)
-									)
+											}),
+										),
+									),
 							  )
 							: student_content_jsx(
 									'div',
@@ -1245,14 +1246,16 @@
 									student_content_jsx(
 										'h4',
 										{ className: 'uppercase my-1' },
-										null == user ? void 0 : user.email
+										null == user ? void 0 : user.email,
 									),
 									student_content_jsx(
 										'h4',
 										{ className: 'my-1' },
-										null == user ? void 0 : user.phoneNumber
-									)
-							  )
+										null == user
+											? void 0
+											: user.phoneNumber,
+									),
+							  ),
 					),
 					student_content_jsx(
 						'div',
@@ -1260,7 +1263,7 @@
 						student_content_jsx(
 							'h4',
 							{ className: 'my-1 uppercase font-bold' },
-							'Socials:'
+							'Socials:',
 						),
 						student_content_jsx(editable_field.Z, {
 							type: 'text',
@@ -1286,12 +1289,12 @@
 														{},
 														null == prevState
 															? void 0
-															: prevState.social
+															: prevState.social,
 													),
 													{},
-													{ github: e }
+													{ github: e },
 												),
-											}
+											},
 										)
 									})
 								},
@@ -1302,14 +1305,14 @@
 									null === (_user$social2 = user.social) ||
 									void 0 === _user$social2
 									? void 0
-									: _user$social2.github
+									: _user$social2.github,
 							),
 							headerURL: 'https://github.com/'.concat(
 								null == user ||
 									null === (_user$social3 = user.social) ||
 									void 0 === _user$social3
 									? void 0
-									: _user$social3.github
+									: _user$social3.github,
 							),
 						}),
 						student_content_jsx(editable_field.Z, {
@@ -1336,12 +1339,12 @@
 														{},
 														null == prevState
 															? void 0
-															: prevState.social
+															: prevState.social,
 													),
 													{},
-													{ twitter: e }
+													{ twitter: e },
 												),
-											}
+											},
 										)
 									})
 								},
@@ -1352,14 +1355,14 @@
 									null === (_user$social5 = user.social) ||
 									void 0 === _user$social5
 									? void 0
-									: _user$social5.twitter
+									: _user$social5.twitter,
 							),
 							headerURL: 'https://twitter.com/'.concat(
 								null == user ||
 									null === (_user$social6 = user.social) ||
 									void 0 === _user$social6
 									? void 0
-									: _user$social6.twitter
+									: _user$social6.twitter,
 							),
 						}),
 						student_content_jsx(editable_field.Z, {
@@ -1386,12 +1389,12 @@
 														{},
 														null == prevState
 															? void 0
-															: prevState.social
+															: prevState.social,
 													),
 													{},
-													{ linkedin: e }
+													{ linkedin: e },
 												),
-											}
+											},
 										)
 									})
 								},
@@ -1402,14 +1405,14 @@
 									null === (_user$social8 = user.social) ||
 									void 0 === _user$social8
 									? void 0
-									: _user$social8.linkedin
+									: _user$social8.linkedin,
 							),
 							headerURL: 'https://linkedin.com/'.concat(
 								null == user ||
 									null === (_user$social9 = user.social) ||
 									void 0 === _user$social9
 									? void 0
-									: _user$social9.linkedin
+									: _user$social9.linkedin,
 							),
 						}),
 						student_content_jsx(editable_field.Z, {
@@ -1436,12 +1439,12 @@
 														{},
 														null == prevState
 															? void 0
-															: prevState.social
+															: prevState.social,
 													),
 													{},
-													{ facebook: e }
+													{ facebook: e },
 												),
-											}
+											},
 										)
 									})
 								},
@@ -1452,14 +1455,14 @@
 									null === (_user$social11 = user.social) ||
 									void 0 === _user$social11
 									? void 0
-									: _user$social11.facebook
+									: _user$social11.facebook,
 							),
 							headerURL: 'https://facebook.com/'.concat(
 								null == user ||
 									null === (_user$social12 = user.social) ||
 									void 0 === _user$social12
 									? void 0
-									: _user$social12.facebook
+									: _user$social12.facebook,
 							),
 						}),
 						student_content_jsx(editable_field.Z, {
@@ -1486,12 +1489,12 @@
 														{},
 														null == prevState
 															? void 0
-															: prevState.social
+															: prevState.social,
 													),
 													{},
-													{ portfolio: e }
+													{ portfolio: e },
 												),
-											}
+											},
 										)
 									})
 								},
@@ -1502,16 +1505,16 @@
 									null === (_user$social14 = user.social) ||
 									void 0 === _user$social14
 									? void 0
-									: _user$social14.portfolio
+									: _user$social14.portfolio,
 							),
 							headerURL: ''.concat(
 								null == user ||
 									null === (_user$social15 = user.social) ||
 									void 0 === _user$social15
 									? void 0
-									: _user$social15.portfolio
+									: _user$social15.portfolio,
 							),
-						})
+						}),
 					),
 					student_content_jsx(
 						'div',
@@ -1519,7 +1522,7 @@
 						student_content_jsx(
 							'h4',
 							{ className: 'font-bold uppercase my-1' },
-							'Biography'
+							'Biography',
 						),
 						student_content_jsx(editable_field.Z, {
 							type: 'area',
@@ -1535,14 +1538,14 @@
 										return _objectSpread(
 											_objectSpread({}, prevState),
 											{},
-											{ biography: e.target.value }
+											{ biography: e.target.value },
 										)
 									})
 								},
 							},
 							isEditing: isEditMode,
-						})
-					)
+						}),
+					),
 				)
 			}
 			;(StudentContent.displayName = 'StudentContent'),
@@ -1629,16 +1632,16 @@
 						})
 			} catch (__react_docgen_typescript_loader_error) {}
 			var toConsumableArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js'
+					'./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				slicedToArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 				),
 				input = __webpack_require__(
-					'./components/common/forms/inputs/input/input.tsx'
+					'./components/common/forms/inputs/input/input.tsx',
 				),
 				editable_field_list_jsx = react.createElement
 			function editable_field_list_ownKeys(object, enumerableOnly) {
@@ -1647,10 +1650,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1662,14 +1663,14 @@
 					i % 2
 						? editable_field_list_ownKeys(
 								Object(source),
-								!0
+								!0,
 						  ).forEach(function (key) {
 								;(0, defineProperty.Z)(target, key, source[key])
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: editable_field_list_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -1678,10 +1679,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -1699,7 +1700,7 @@
 					_React$useState3 = react.useState(!1),
 					_React$useState4 = (0, slicedToArray.Z)(
 						_React$useState3,
-						2
+						2,
 					),
 					isAddingEntry = _React$useState4[0],
 					setIsAddingEntry = _React$useState4[1]
@@ -1725,16 +1726,16 @@
 														defaultValue: item,
 														onChange:
 															function onChange(
-																e
+																e,
 															) {
 																return handleUpdate(
 																	function (
-																		prev
+																		prev,
 																	) {
 																		return editable_field_list_objectSpread(
 																			editable_field_list_objectSpread(
 																				{},
-																				prev
+																				prev,
 																			),
 																			{},
 																			(0,
@@ -1747,21 +1748,21 @@
 																				].map(
 																					function (
 																						item,
-																						i
+																						i,
 																					) {
 																						return i ===
 																							index
 																							? e
 																							: item
-																					}
-																				)
-																			)
+																					},
+																				),
+																			),
 																		)
-																	}
+																	},
 																)
 															},
-													}
-												)
+													},
+												),
 											),
 											editable_field_list_jsx(
 												button_button.z,
@@ -1772,12 +1773,12 @@
 														function onClick() {
 															handleUpdate(
 																function (
-																	prev
+																	prev,
 																) {
 																	return editable_field_list_objectSpread(
 																		editable_field_list_objectSpread(
 																			{},
-																			prev
+																			prev,
 																		),
 																		{},
 																		(0,
@@ -1790,22 +1791,22 @@
 																			].filter(
 																				function (
 																					item,
-																					i
+																					i,
 																				) {
 																					return (
 																						i !==
 																						index
 																					)
-																				}
-																			)
-																		)
+																				},
+																			),
+																		),
 																	)
-																}
+																},
 															)
 														},
 												},
-												'X'
-											)
+												'X',
+											),
 									  )
 									: editable_field_list_jsx(
 											'li',
@@ -1813,7 +1814,7 @@
 												key: index,
 												className: 'sans my-1',
 											},
-											item
+											item,
 									  )
 						  })
 						: null,
@@ -1841,7 +1842,7 @@
 													return editable_field_list_objectSpread(
 														editable_field_list_objectSpread(
 															{},
-															prev
+															prev,
 														),
 														{},
 														(0, defineProperty.Z)(
@@ -1853,11 +1854,11 @@
 																	mutableData[
 																		inputDetails
 																			.name
-																	]
+																	],
 																),
-																[addEntryData]
-															)
-														)
+																[addEntryData],
+															),
+														),
 													)
 												}),
 													setIsAddingEntry(!1),
@@ -1865,7 +1866,7 @@
 											},
 											size: 'small',
 										},
-										'Add'
+										'Add',
 									),
 									editable_field_list_jsx(
 										button_button.z,
@@ -1876,8 +1877,8 @@
 											},
 											size: 'small',
 										},
-										'Cancel'
-									)
+										'Cancel',
+									),
 								),
 							editable_field_list_jsx(
 								button_button.z,
@@ -1888,9 +1889,9 @@
 									},
 									size: 'small',
 								},
-								'Add entry'
-							)
-						)
+								'Add entry',
+							),
+						),
 				)
 			}
 			;(EditableFieldList.displayName = 'EditableFieldList'),
@@ -2029,10 +2030,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -2044,14 +2043,14 @@
 					i % 2
 						? instructor_content_ownKeys(
 								Object(source),
-								!0
+								!0,
 						  ).forEach(function (key) {
 								;(0, defineProperty.Z)(target, key, source[key])
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: instructor_content_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -2060,10 +2059,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -2101,7 +2100,7 @@
 							instructor_content_jsx(
 								'h4',
 								{ className: 'm-0 uppercase font-bold' },
-								'Contact Information:'
+								'Contact Information:',
 							),
 							instructor_content_jsx(editable_field.Z, {
 								type: 'text',
@@ -2116,10 +2115,10 @@
 											return instructor_content_objectSpread(
 												instructor_content_objectSpread(
 													{},
-													prevState
+													prevState,
 												),
 												{},
-												{ email: e }
+												{ email: e },
 											)
 										})
 									},
@@ -2140,17 +2139,17 @@
 											return instructor_content_objectSpread(
 												instructor_content_objectSpread(
 													{},
-													prevState
+													prevState,
 												),
 												{},
-												{ phoneNumber: e }
+												{ phoneNumber: e },
 											)
 										})
 									},
 								},
 								isEditing: isEditMode,
 								header: user.phoneNumber,
-							})
+							}),
 						),
 						instructor_content_jsx(
 							'div',
@@ -2158,7 +2157,7 @@
 							instructor_content_jsx(
 								'h4',
 								{ className: 'm-0 uppercase font-bold' },
-								'Socials'
+								'Socials',
 							),
 							instructor_content_jsx(editable_field.Z, {
 								type: 'text',
@@ -2179,7 +2178,7 @@
 											return instructor_content_objectSpread(
 												instructor_content_objectSpread(
 													{},
-													prevState
+													prevState,
 												),
 												{},
 												{
@@ -2188,12 +2187,12 @@
 															{},
 															null == prevState
 																? void 0
-																: prevState.social
+																: prevState.social,
 														),
 														{},
-														{ github: e }
+														{ github: e },
 													),
-												}
+												},
 											)
 										})
 									},
@@ -2203,7 +2202,7 @@
 									null === (_user$social2 = user.social) ||
 										void 0 === _user$social2
 										? void 0
-										: _user$social2.github
+										: _user$social2.github,
 								),
 							}),
 							instructor_content_jsx(editable_field.Z, {
@@ -2225,7 +2224,7 @@
 											return instructor_content_objectSpread(
 												instructor_content_objectSpread(
 													{},
-													prevState
+													prevState,
 												),
 												{},
 												{
@@ -2234,12 +2233,12 @@
 															{},
 															null == prevState
 																? void 0
-																: prevState.social
+																: prevState.social,
 														),
 														{},
-														{ twitter: e }
+														{ twitter: e },
 													),
-												}
+												},
 											)
 										})
 									},
@@ -2249,7 +2248,7 @@
 									null === (_user$social4 = user.social) ||
 										void 0 === _user$social4
 										? void 0
-										: _user$social4.twitter
+										: _user$social4.twitter,
 								),
 							}),
 							instructor_content_jsx(editable_field.Z, {
@@ -2271,7 +2270,7 @@
 											return instructor_content_objectSpread(
 												instructor_content_objectSpread(
 													{},
-													prevState
+													prevState,
 												),
 												{},
 												{
@@ -2280,12 +2279,12 @@
 															{},
 															null == prevState
 																? void 0
-																: prevState.social
+																: prevState.social,
 														),
 														{},
-														{ linkedin: e }
+														{ linkedin: e },
 													),
-												}
+												},
 											)
 										})
 									},
@@ -2295,7 +2294,7 @@
 									null === (_user$social6 = user.social) ||
 										void 0 === _user$social6
 										? void 0
-										: _user$social6.linkedin
+										: _user$social6.linkedin,
 								),
 							}),
 							instructor_content_jsx(editable_field.Z, {
@@ -2317,7 +2316,7 @@
 											return instructor_content_objectSpread(
 												instructor_content_objectSpread(
 													{},
-													prevState
+													prevState,
 												),
 												{},
 												{
@@ -2326,12 +2325,12 @@
 															{},
 															null == prevState
 																? void 0
-																: prevState.social
+																: prevState.social,
 														),
 														{},
-														{ facebook: e }
+														{ facebook: e },
 													),
-												}
+												},
 											)
 										})
 									},
@@ -2341,7 +2340,7 @@
 									null === (_user$social8 = user.social) ||
 										void 0 === _user$social8
 										? void 0
-										: _user$social8.facebook
+										: _user$social8.facebook,
 								),
 							}),
 							instructor_content_jsx(editable_field.Z, {
@@ -2363,7 +2362,7 @@
 											return instructor_content_objectSpread(
 												instructor_content_objectSpread(
 													{},
-													prevState
+													prevState,
 												),
 												{},
 												{
@@ -2372,12 +2371,12 @@
 															{},
 															null == prevState
 																? void 0
-																: prevState.social
+																: prevState.social,
 														),
 														{},
-														{ portfolio: e }
+														{ portfolio: e },
 													),
-												}
+												},
 											)
 										})
 									},
@@ -2388,7 +2387,7 @@
 									void 0 === _user$social10
 										? void 0
 										: _user$social10.portfolio,
-							})
+							}),
 						),
 						instructor_content_jsx(
 							'div',
@@ -2396,7 +2395,7 @@
 							instructor_content_jsx(
 								'h4',
 								{ className: 'm-0 uppercase font-bold' },
-								'Office location'
+								'Office location',
 							),
 							instructor_content_jsx(editable_field.Z, {
 								type: 'text',
@@ -2409,23 +2408,23 @@
 									label: null,
 									name: 'officeLocation',
 									onChange: function onChange(e) {
-										setUpdatedInstructorProfile(function (
-											prevState
-										) {
-											return instructor_content_objectSpread(
-												instructor_content_objectSpread(
+										setUpdatedInstructorProfile(
+											function (prevState) {
+												return instructor_content_objectSpread(
+													instructor_content_objectSpread(
+														{},
+														prevState,
+													),
 													{},
-													prevState
-												),
-												{},
-												{ officeLocation: e }
-											)
-										})
+													{ officeLocation: e },
+												)
+											},
+										)
 									},
 								},
 								header: immutableInstructorDetails.officeLocation,
 								isEditing: isEditMode,
-							})
+							}),
 						),
 						instructor_content_jsx(
 							'div',
@@ -2433,7 +2432,7 @@
 							instructor_content_jsx(
 								'h4',
 								{ className: 'm-0 uppercase font-bold' },
-								'Office hours'
+								'Office hours',
 							),
 							instructor_content_jsx(EditableFieldList, {
 								listData: instructorDetails.officeHours,
@@ -2447,8 +2446,8 @@
 									name: 'officeHours',
 									label: null,
 								},
-							})
-						)
+							}),
+						),
 					),
 					instructor_content_jsx(
 						'div',
@@ -2456,7 +2455,7 @@
 						instructor_content_jsx(
 							'h4',
 							{ className: 'm-0 uppercase font-bold' },
-							'Biography'
+							'Biography',
 						),
 						instructor_content_jsx(editable_field.Z, {
 							type: 'area',
@@ -2469,23 +2468,23 @@
 								className:
 									'border-royalblue focus:border-royalblue rounded-none font-normal',
 								handle: function handle(e) {
-									setUpdatedInstructorProfile(function (
-										prevState
-									) {
-										return instructor_content_objectSpread(
-											instructor_content_objectSpread(
+									setUpdatedInstructorProfile(
+										function (prevState) {
+											return instructor_content_objectSpread(
+												instructor_content_objectSpread(
+													{},
+													prevState,
+												),
 												{},
-												prevState
-											),
-											{},
-											{ background: e.target.value }
-										)
-									})
+												{ background: e.target.value },
+											)
+										},
+									)
 								},
 							},
 							header: immutableInstructorDetails.background,
 							isEditing: isEditMode,
-						})
+						}),
 					),
 					instructor_content_jsx(
 						'div',
@@ -2493,7 +2492,7 @@
 						instructor_content_jsx(
 							'h4',
 							{ className: 'm-0 uppercase font-bold' },
-							'Contact Policy'
+							'Contact Policy',
 						),
 						instructor_content_jsx(editable_field.Z, {
 							type: 'area',
@@ -2504,23 +2503,26 @@
 								className:
 									'border-royalblue focus:border-royalblue rounded-none font-normal',
 								handle: function handle(e) {
-									setUpdatedInstructorProfile(function (
-										prevState
-									) {
-										return instructor_content_objectSpread(
-											instructor_content_objectSpread(
+									setUpdatedInstructorProfile(
+										function (prevState) {
+											return instructor_content_objectSpread(
+												instructor_content_objectSpread(
+													{},
+													prevState,
+												),
 												{},
-												prevState
-											),
-											{},
-											{ contactPolicy: e.target.value }
-										)
-									})
+												{
+													contactPolicy:
+														e.target.value,
+												},
+											)
+										},
+									)
 								},
 							},
 							header: immutableInstructorDetails.contactPolicy,
 							isEditing: isEditMode,
-						})
+						}),
 					),
 					instructor_content_jsx(
 						'div',
@@ -2528,7 +2530,7 @@
 						instructor_content_jsx(
 							'h4',
 							{ className: 'm-0 uppercase font-bold' },
-							'Research Interests'
+							'Research Interests',
 						),
 						instructor_content_jsx(EditableFieldList, {
 							listData: instructorDetails.researchInterest,
@@ -2542,7 +2544,7 @@
 								name: 'researchInterest',
 								label: null,
 							},
-						})
+						}),
 					),
 					instructor_content_jsx(
 						'div',
@@ -2550,7 +2552,7 @@
 						instructor_content_jsx(
 							'h4',
 							{ className: 'm-0 uppercase font-bold' },
-							'Publications'
+							'Publications',
 						),
 						instructor_content_jsx(EditableFieldList, {
 							listData:
@@ -2565,8 +2567,8 @@
 								name: 'selectedPapersAndPublications',
 								label: null,
 							},
-						})
-					)
+						}),
+					),
 				)
 			}
 			;(InstructorContent.displayName = 'InstructorContent'),
@@ -2752,8 +2754,8 @@
 								updatedProfile.firstName,
 								' ',
 								updatedProfile.lastName,
-								' | Profile | GLANCE'
-							)
+								' | Profile | GLANCE',
+							),
 						),
 						user_profile_jsx(
 							'h1',
@@ -2764,7 +2766,7 @@
 							' ',
 							null == updatedProfile
 								? void 0
-								: updatedProfile.lastName
+								: updatedProfile.lastName,
 						),
 						user_profile_jsx(
 							'div',
@@ -2800,8 +2802,8 @@
 										user: updatedProfile,
 										setUpdatedProfile,
 										isEditMode,
-								  })
-						)
+								  }),
+						),
 					)
 				}
 			;(UserProfile.displayName = 'UserProfile'),
@@ -3179,10 +3181,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -3194,14 +3194,14 @@
 					i % 2
 						? user_profile_stories_ownKeys(
 								Object(source),
-								!0
+								!0,
 						  ).forEach(function (key) {
 								;(0, defineProperty.Z)(target, key, source[key])
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: user_profile_stories_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -3210,10 +3210,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -3265,7 +3265,7 @@
 					openID,
 					accountID,
 					socialInput,
-					userInput
+					userInput,
 				) {},
 				verifyEdit: function verifyEdit() {
 					return !1
@@ -3291,7 +3291,7 @@
 					verifyEdit: function verifyEdit() {
 						return !0
 					},
-				}
+				},
 			)),
 				(Secondary.storyName = 'User Profile - logged in'),
 				(Primary.parameters = user_profile_stories_objectSpread(
@@ -3306,7 +3306,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -3324,11 +3324,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = user_profile_stories_objectSpread(
 					user_profile_stories_objectSpread({}, Secondary.parameters),
@@ -3342,7 +3342,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -3360,20 +3360,20 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/next/head.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			module.exports = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/head.js'
+				'./node_modules/next/dist/shared/lib/head.js',
 			)
 		},
 	},

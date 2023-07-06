@@ -4,7 +4,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function _arrayLikeToArray(arr, len) {
@@ -20,7 +20,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function _extends() {
@@ -33,7 +33,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -46,14 +46,14 @@
 		'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => _slicedToArray,
 			})
 			var unsupportedIterableToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js',
 			)
 			function _slicedToArray(arr, i) {
 				return (
@@ -109,7 +109,7 @@
 					(0, unsupportedIterableToArray.Z)(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -119,7 +119,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				__webpack_require__.d(__webpack_exports__, {
@@ -127,7 +127,7 @@
 				})
 				var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js',
 					)
 				function _unsupportedIterableToArray(o, minLen) {
 					if (o) {
@@ -135,7 +135,7 @@
 							return (0,
 							_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 								o,
-								minLen
+								minLen,
 							)
 						var n = Object.prototype.toString.call(o).slice(8, -1)
 						return (
@@ -146,12 +146,12 @@
 								? Array.from(o)
 								: 'Arguments' === n ||
 								  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-										n
+										n,
 								  )
 								? (0,
 								  _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 										o,
-										minLen
+										minLen,
 								  )
 								: void 0
 						)
@@ -161,7 +161,7 @@
 		'./components/common/chat/chat_history/chat_history.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -173,19 +173,19 @@
 				_Primary$parameters2,
 				_Primary$parameters2$,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				slicedToArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 				),
 				moment = __webpack_require__('./node_modules/moment/moment.js'),
 				moment_default = __webpack_require__.n(moment),
 				index_esm = __webpack_require__(
-					'./node_modules/react-icons/fa/index.esm.js'
+					'./node_modules/react-icons/fa/index.esm.js',
 				),
 				__jsx = react.createElement,
 				ChatHistory = function ChatHistory(_ref) {
@@ -194,7 +194,7 @@
 						_React$useState = react.useState(null !== 0 ? 0 : null),
 						_React$useState2 = (0, slicedToArray.Z)(
 							_React$useState,
-							2
+							2,
 						),
 						isChecked = _React$useState2[0],
 						setIsChecked = _React$useState2[1]
@@ -213,7 +213,7 @@
 											'flex flex-row py-4 px-2 justify-center items-center border-b-2 relative before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-blue-100 before:transition-opacity before:block\n\t\t\t\t\t\t '.concat(
 												isChecked === messageIndex
 													? ' before:opacity-100'
-													: ' before:opacity-0'
+													: ' before:opacity-0',
 											),
 										key: messageIndex,
 										onClick: function onClick() {
@@ -227,7 +227,7 @@
 													messages[messageIndex]
 														.newNotification
 													? ' rounded-full mx-1 bg-blue-500 h-2.5 w-5 flex items-center justify-center'
-													: ''
+													: '',
 											),
 									}),
 									__jsx(
@@ -238,7 +238,7 @@
 											className:
 												'object-cover h-12 w-12 rounded-full aspect-square',
 											alt: '',
-										})
+										}),
 									),
 									__jsx(
 										'div',
@@ -255,7 +255,7 @@
 													className:
 														'text-lg font-semibold',
 												},
-												message.name
+												message.name,
 											),
 											__jsx(
 												'span',
@@ -264,10 +264,10 @@
 														'text-gray-500 text-xs',
 												},
 												moment_default()(
-													message.timestamp
-												).fromNow()
-											)
-										)
+													message.timestamp,
+												).fromNow(),
+											),
+										),
 									),
 									__jsx(
 										'div',
@@ -282,7 +282,7 @@
 												size: 20,
 												className: 'mr-1',
 												onClick: handle,
-											})
+											}),
 										),
 										__jsx(
 											'button',
@@ -294,11 +294,11 @@
 												size: 20,
 												className: 'mr-1',
 												onClick: handle,
-											})
-										)
-									)
+											}),
+										),
+									),
 								)
-							})
+							}),
 					)
 				}
 			;(ChatHistory.displayName = 'ChatHistory'),
@@ -414,10 +414,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -433,13 +431,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -458,8 +459,8 @@
 						{ className: 'w-1/4' },
 						chat_history_stories_jsx(
 							ChatHistory,
-							(0, esm_extends.Z)({}, args, { handle: onHandle })
-						)
+							(0, esm_extends.Z)({}, args, { handle: onHandle }),
+						),
 					)
 				}
 			Template.displayName = 'Template'
@@ -522,7 +523,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -540,17 +541,17 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/moment/locale sync recursive ^\\.\\/.*$': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var map = {
 				'./af': './node_modules/moment/locale/af.js',

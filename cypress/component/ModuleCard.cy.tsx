@@ -42,7 +42,7 @@ describe('ModuleCard.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 
@@ -51,7 +51,7 @@ describe('ModuleCard.tsx', function () {
 		cy.get('div.statusColorCode').should(
 			'have.css',
 			'background-color',
-			'rgb(164, 202, 254)'
+			'rgb(164, 202, 254)',
 		)
 	})
 })

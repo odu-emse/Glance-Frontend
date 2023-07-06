@@ -156,7 +156,7 @@ try {
 					title: 'Apply outlines to the preview',
 					onClick: s,
 				},
-				r.createElement(b, { icon: 'outline' })
+				r.createElement(b, { icon: 'outline' }),
 			)
 		)
 	})
@@ -172,7 +172,7 @@ try {
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

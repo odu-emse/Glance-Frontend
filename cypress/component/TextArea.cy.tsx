@@ -28,7 +28,7 @@ describe('TextArea.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('should render component ', () => {
@@ -44,7 +44,7 @@ describe('TextArea.tsx', function () {
 		cy.get('textarea').should('have.class', 'disabled:cursor-not-allowed')
 		cy.get('span').should(
 			'have.class',
-			'absolute right-2 bottom-2 flex items-center opacity-50'
+			'absolute right-2 bottom-2 flex items-center opacity-50',
 		)
 		cy.get('textarea').trigger('mouseover', { force: true })
 		cy.get('textarea').should('have.css', 'cursor', 'not-allowed')

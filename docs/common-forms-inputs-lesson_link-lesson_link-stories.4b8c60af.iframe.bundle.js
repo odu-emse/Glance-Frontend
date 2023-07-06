@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -63,7 +63,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -74,16 +74,16 @@
 					_Primary$parameters2,
 					_Primary$parameters2$,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					slicedToArray = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 					),
 					index_esm = __webpack_require__(
-						'./node_modules/react-icons/ai/index.esm.js'
+						'./node_modules/react-icons/ai/index.esm.js',
 					),
 					__jsx = react.createElement,
 					LessonLink = function LessonLink(_ref) {
@@ -91,11 +91,11 @@
 							url = _ref.url,
 							checked = _ref.checked,
 							_React$useState = react.useState(
-								null != checked && checked
+								null != checked && checked,
 							),
 							_React$useState2 = (0, slicedToArray.Z)(
 								_React$useState,
-								2
+								2,
 							),
 							isChecked = _React$useState2[0],
 							setIsChecked = _React$useState2[1]
@@ -124,15 +124,15 @@
 										isChecked
 											? index_esm.mny
 											: index_esm.KP3,
-										null
-									)
+										null,
+									),
 								),
 								__jsx(
 									'a',
 									{ className: 'hover:underline', href: url },
-									label
-								)
-							)
+									label,
+								),
+							),
 						)
 					}
 				;(LessonLink.displayName = 'LessonLink'),
@@ -211,7 +211,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -222,19 +222,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -242,8 +242,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -274,7 +274,7 @@
 											Primary.parameters) ||
 										void 0 === _Primary$parameters
 										? void 0
-										: _Primary$parameters.docs
+										: _Primary$parameters.docs,
 								),
 								{},
 								{
@@ -292,17 +292,17 @@
 													_Primary$parameters2.docs) ||
 											void 0 === _Primary$parameters2$
 											? void 0
-											: _Primary$parameters2$.source
+											: _Primary$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 		'./node_modules/react-icons/lib/esm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				w_: () => GenIcon,
@@ -331,7 +331,7 @@
 									for (var p in (s = arguments[i]))
 										Object.prototype.hasOwnProperty.call(
 											s,
-											p
+											p,
 										) && (t[p] = s[p])
 								return t
 							}),
@@ -357,7 +357,7 @@
 							e.indexOf(p[i]) < 0 &&
 								Object.prototype.propertyIsEnumerable.call(
 									s,
-									p[i]
+									p[i],
 								) &&
 								(t[p[i]] = s[p[i]])
 					}
@@ -370,7 +370,7 @@
 						return react.createElement(
 							node.tag,
 							__assign({ key: i }, node.attr),
-							Tree2Element(node.child)
+							Tree2Element(node.child),
 						)
 					})
 				)
@@ -380,7 +380,7 @@
 					return react.createElement(
 						IconBase,
 						__assign({ attr: __assign({}, data.attr) }, props),
-						Tree2Element(data.child)
+						Tree2Element(data.child),
 					)
 				}
 			}
@@ -417,17 +417,17 @@
 												color:
 													props.color || conf.color,
 											},
-											conf.style
+											conf.style,
 										),
-										props.style
+										props.style,
 									),
 									height: computedSize,
 									width: computedSize,
 									xmlns: 'http://www.w3.org/2000/svg',
-								}
+								},
 							),
 							title && react.createElement('title', null, title),
-							props.children
+							props.children,
 						)
 					)
 				}
@@ -437,7 +437,7 @@
 							null,
 							function (conf) {
 								return elem(conf)
-							}
+							},
 					  )
 					: elem(DefaultContext)
 			}

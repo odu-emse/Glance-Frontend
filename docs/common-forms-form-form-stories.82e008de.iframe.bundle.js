@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,18 +62,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -94,7 +94,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -113,7 +113,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -348,11 +348,11 @@
 		'./components/common/forms/inputs/input/input.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { I: () => Input })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				Input = function Input(_ref) {
@@ -409,7 +409,7 @@
 											? 'w-1/3'
 											: 'long' === length
 											? 'w-1/2'
-											: 'w-full'
+											: 'w-full',
 								  )
 								: '',
 							'radio' === type || 'checkbox' === type
@@ -426,7 +426,7 @@
 								className: ' '.concat(
 									'radio' === type || 'checkbox' === type
 										? 'flex items-center'
-										: ''
+										: '',
 								),
 							},
 							label &&
@@ -437,8 +437,8 @@
 										'label',
 										{ htmlFor: name },
 										' ',
-										label.toUpperCase()
-									)
+										label.toUpperCase(),
+									),
 								),
 							__jsx('input', {
 								type,
@@ -469,18 +469,18 @@
 												'flex items-center w-4 h-4 '
 													.concat(
 														inputShape,
-														' border '
+														' border ',
 													)
 													.concat(
 														disabled
 															? ''
 															: 'cursor-pointer',
-														' '
+														' ',
 													)
 													.concat(
 														isChecked
 															? 'bg-white border-royalblue'
-															: 'bg-white border-wgray'
+															: 'bg-white border-wgray',
 													),
 											onClick: handleInputChange,
 										},
@@ -490,9 +490,9 @@
 													'w-3 h-3 mx-auto my-auto bg-royalblue '.concat(
 														'radio' === type
 															? 'rounded-full'
-															: 'rounded'
+															: 'rounded',
 													),
-											})
+											}),
 								  )
 								: null,
 							'radio' === type || 'checkbox' === type
@@ -504,14 +504,14 @@
 									{
 										id: 'helper-text-explanation',
 										className: 'my-0 '.concat(
-											error ? 'text-red-600' : ''
+											error ? 'text-red-600' : '',
 										),
 									},
 									error
 										? 'Wrong '.concat(type)
-										: 'This is a test message'
-								)
-						)
+										: 'This is a test message',
+								),
+						),
 					)
 				}
 			Input.__docgenInfo = {
@@ -872,7 +872,7 @@
 		'./components/common/forms/form/form.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -880,14 +880,14 @@
 					default: () => form_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				slicedToArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				button_button = __webpack_require__(
-					'./components/common/button/button.tsx'
+					'./components/common/button/button.tsx',
 				),
 				__jsx = react.createElement,
 				Form = function Form(_ref) {
@@ -916,14 +916,14 @@
 								__jsx(
 									button_button.z,
 									{ type: 'reset', variant: 'secondary' },
-									previousLabel
+									previousLabel,
 								),
 							__jsx(
 								button_button.z,
 								{ type: 'submit', variant: 'primary' },
-								proceedLabel
-							)
-						)
+								proceedLabel,
+							),
+						),
 					)
 				}
 			;(Form.displayName = 'Form'),
@@ -1024,7 +1024,7 @@
 				_Default$parameters2,
 				_Default$parameters2$,
 				input = __webpack_require__(
-					'./components/common/forms/inputs/input/input.tsx'
+					'./components/common/forms/inputs/input/input.tsx',
 				),
 				form_stories_jsx = react.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -1033,10 +1033,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1052,13 +1050,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -1096,8 +1097,8 @@
 									_objectSpread(
 										_objectSpread({}, formData),
 										{},
-										{ firstName: s }
-									)
+										{ firstName: s },
+									),
 								)
 							},
 							defaultValue: formData.firstName,
@@ -1112,13 +1113,13 @@
 									_objectSpread(
 										_objectSpread({}, formData),
 										{},
-										{ lastName: s }
-									)
+										{ lastName: s },
+									),
 								)
 							},
 							defaultValue: formData.lastName,
 							options: [],
-						})
+						}),
 					),
 					form_stories_jsx(input.I, {
 						label: 'Email',
@@ -1129,8 +1130,8 @@
 								_objectSpread(
 									_objectSpread({}, formData),
 									{},
-									{ email: s }
-								)
+									{ email: s },
+								),
 							)
 						},
 						defaultValue: formData.email,
@@ -1148,8 +1149,8 @@
 									_objectSpread(
 										_objectSpread({}, formData),
 										{},
-										{ password: s }
-									)
+										{ password: s },
+									),
 								)
 							},
 							defaultValue: formData.password,
@@ -1164,14 +1165,14 @@
 									_objectSpread(
 										_objectSpread({}, formData),
 										{},
-										{ passwordConfirmation: s }
-									)
+										{ passwordConfirmation: s },
+									),
 								)
 							},
 							defaultValue: formData.passwordConfirmation,
 							options: [],
-						})
-					)
+						}),
+					),
 				)
 			}
 			Template.displayName = 'Template'
@@ -1189,7 +1190,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -1207,11 +1208,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

@@ -5,25 +5,25 @@
 		'./components/common/admin_panel/content_area.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { v: () => ContentArea })
 			var _Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_objectDestructuringEmpty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js'
+						'./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_dropzone__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/react-dropzone/dist/es/index.js'
+						'./node_modules/react-dropzone/dist/es/index.js',
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				ContentArea = function ContentArea(_ref) {
 					;(0,
 					_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_objectDestructuringEmpty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
-						_ref
+						_ref,
 					)
 					var _useDropzone = (0,
 						react_dropzone__WEBPACK_IMPORTED_MODULE_2__.uI)(),
@@ -37,7 +37,7 @@
 								file.path,
 								' - ',
 								file.size,
-								' bytes'
+								' bytes',
 							)
 						})
 					return __jsx(
@@ -82,7 +82,7 @@
 												'stroke-linejoin': 'round',
 												'stroke-width': '2',
 												d: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12',
-											})
+											}),
 										),
 										__jsx(
 											'p',
@@ -93,26 +93,26 @@
 											__jsx(
 												'span',
 												{ className: 'font-semibold' },
-												'Click to upload'
+												'Click to upload',
 											),
 											' ',
-											'or drag and drop'
-										)
+											'or drag and drop',
+										),
 									),
 									__jsx('input', {
 										id: 'dropzone-file',
 										type: 'file',
 										className: 'hidden',
-									})
-								)
-							)
+									}),
+								),
+							),
 						),
 						__jsx(
 							'aside',
 							null,
 							__jsx('h4', null, 'Uploaded Files:'),
-							__jsx('ul', null, files)
-						)
+							__jsx('ul', null, files),
+						),
 					)
 				}
 			;(ContentArea.displayName = 'ContentArea'),
@@ -174,7 +174,7 @@
 		'./components/common/admin_panel/content_area.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -186,14 +186,14 @@
 				_Standard$parameters3,
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_content_area__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./components/common/admin_panel/content_area.tsx'
+						'./components/common/admin_panel/content_area.tsx',
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -202,10 +202,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -217,18 +215,25 @@
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
 								;(0,
-								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(target, key, source[key])
+								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -258,7 +263,7 @@
 										Standard.parameters) ||
 									void 0 === _Standard$parameters
 									? void 0
-									: _Standard$parameters.docs
+									: _Standard$parameters.docs,
 							),
 							{},
 							{
@@ -276,11 +281,11 @@
 												_Standard$parameters2.docs) ||
 										void 0 === _Standard$parameters3
 										? void 0
-										: _Standard$parameters3.source
+										: _Standard$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,16 +62,16 @@
 		'./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => _toConsumableArray,
 			})
 			var arrayLikeToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js',
 			)
 			var unsupportedIterableToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js',
 			)
 			function _toConsumableArray(arr) {
 				return (
@@ -90,7 +90,7 @@
 					(0, unsupportedIterableToArray.Z)(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -99,18 +99,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -131,7 +131,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -150,7 +150,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -385,13 +385,13 @@
 		'./components/common/forms/inputs/text_area/text_area.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { K: () => TextArea })
 			var react = __webpack_require__('./node_modules/react/index.js')
 			const use_autosize_text_area = function useAutosizeTextArea(
 				textAreaRef,
-				value
+				value,
 			) {
 				;(0, react.useEffect)(
 					function () {
@@ -401,7 +401,7 @@
 							textAreaRef.style.height = scrollHeight + 'px'
 						}
 					},
-					[textAreaRef, value]
+					[textAreaRef, value],
 				)
 			}
 			var __jsx = react.createElement,
@@ -494,9 +494,9 @@
 									__jsx('span', {
 										className:
 											'absolute right-2 bottom-2 flex items-center '.concat(
-												disabled ? 'opacity-50' : ''
+												disabled ? 'opacity-50' : '',
 											),
-									})
+									}),
 							),
 							value.length === maxLength &&
 								__jsx(
@@ -506,9 +506,9 @@
 											'text-xs px-2 bg-gray-100 ml-auto mr-0 block w-fit',
 									},
 									'Maximum characters: ',
-									maxLength
-								)
-						)
+									maxLength,
+								),
+						),
 					)
 				}
 			;(TextArea.displayName = 'TextArea'),
@@ -767,7 +767,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -778,22 +778,22 @@
 					_Primary$parameters2,
 					_Primary$parameters2$,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					toConsumableArray = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js',
 					),
 					button_button = __webpack_require__(
-						'./components/common/button/button.tsx'
+						'./components/common/button/button.tsx',
 					),
 					text_area = __webpack_require__(
-						'./components/common/forms/inputs/text_area/text_area.tsx'
+						'./components/common/forms/inputs/text_area/text_area.tsx',
 					),
 					index_esm = __webpack_require__(
-						'./node_modules/react-icons/md/index.esm.js'
+						'./node_modules/react-icons/md/index.esm.js',
 					),
 					__jsx = react.createElement,
 					ThreadCreation = function ThreadCreation() {
@@ -819,7 +819,7 @@
 											fontSize: '20px',
 										},
 									},
-									'Title'
+									'Title',
 								),
 								__jsx('input', {
 									type: 'text',
@@ -828,7 +828,7 @@
 									id: 'searchRequirements',
 									placeholder:
 										'E.G., What is Systems Engineering to you?',
-								})
+								}),
 							),
 							__jsx(
 								'div',
@@ -842,7 +842,7 @@
 											fontSize: '20px',
 										},
 									},
-									'Tags'
+									'Tags',
 								),
 								__jsx(
 									'label',
@@ -853,7 +853,7 @@
 											fontWeight: 400,
 										},
 									},
-									'Add up to 5 tags to describe what your thread is about.'
+									'Add up to 5 tags to describe what your thread is about.',
 								),
 								__jsx(
 									'div',
@@ -872,7 +872,7 @@
 											__jsx(
 												'span',
 												{ className: 'mr-2 p-0 sans' },
-												tag
+												tag,
 											),
 											__jsx(
 												'span',
@@ -880,25 +880,25 @@
 													onClick:
 														function onClick() {
 															return (function handleRemoveTag(
-																removeTag
+																removeTag,
 															) {
 																setTags(
 																	tags.filter(
 																		function (
-																			tag
+																			tag,
 																		) {
 																			return (
 																				tag !==
 																				removeTag
 																			)
-																		}
-																	)
+																		},
+																	),
 																)
 															})(tag)
 														},
 												},
-												__jsx(index_esm.xg7, null)
-											)
+												__jsx(index_esm.xg7, null),
+											),
 										)
 									}),
 									__jsx('input', {
@@ -906,7 +906,7 @@
 										placeholder: 'Add your tags here...',
 										value: newTag,
 										onChange: function handleTagInput(
-											event
+											event,
 										) {
 											setNewTag(event.target.value)
 										},
@@ -924,17 +924,17 @@
 														[].concat(
 															(0,
 															toConsumableArray.Z)(
-																tags
+																tags,
 															),
-															[newTag.trim()]
-														)
+															[newTag.trim()],
+														),
 													),
 													setNewTag(''))
 											},
 										},
-										'Add'
-									)
-								)
+										'Add',
+									),
+								),
 							),
 							__jsx(text_area.K, {
 								className:
@@ -950,9 +950,9 @@
 								__jsx(
 									button_button.z,
 									{ className: 'my-7' },
-									'Publish'
-								)
-							)
+									'Publish',
+								),
+							),
 						)
 					}
 				;(ThreadCreation.displayName = 'ThreadCreation'),
@@ -970,7 +970,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -981,19 +981,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -1001,8 +1001,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -1032,7 +1032,7 @@
 											Primary.parameters) ||
 										void 0 === _Primary$parameters
 										? void 0
-										: _Primary$parameters.docs
+										: _Primary$parameters.docs,
 								),
 								{},
 								{
@@ -1050,17 +1050,17 @@
 													_Primary$parameters2.docs) ||
 											void 0 === _Primary$parameters2$
 											? void 0
-											: _Primary$parameters2$.source
+											: _Primary$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 		'./node_modules/react-icons/lib/esm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				w_: () => GenIcon,
@@ -1089,7 +1089,7 @@
 									for (var p in (s = arguments[i]))
 										Object.prototype.hasOwnProperty.call(
 											s,
-											p
+											p,
 										) && (t[p] = s[p])
 								return t
 							}),
@@ -1115,7 +1115,7 @@
 							e.indexOf(p[i]) < 0 &&
 								Object.prototype.propertyIsEnumerable.call(
 									s,
-									p[i]
+									p[i],
 								) &&
 								(t[p[i]] = s[p[i]])
 					}
@@ -1128,7 +1128,7 @@
 						return react.createElement(
 							node.tag,
 							__assign({ key: i }, node.attr),
-							Tree2Element(node.child)
+							Tree2Element(node.child),
 						)
 					})
 				)
@@ -1138,7 +1138,7 @@
 					return react.createElement(
 						IconBase,
 						__assign({ attr: __assign({}, data.attr) }, props),
-						Tree2Element(data.child)
+						Tree2Element(data.child),
 					)
 				}
 			}
@@ -1175,17 +1175,17 @@
 												color:
 													props.color || conf.color,
 											},
-											conf.style
+											conf.style,
 										),
-										props.style
+										props.style,
 									),
 									height: computedSize,
 									width: computedSize,
 									xmlns: 'http://www.w3.org/2000/svg',
-								}
+								},
 							),
 							title && react.createElement('title', null, title),
-							props.children
+							props.children,
 						)
 					)
 				}
@@ -1195,7 +1195,7 @@
 							null,
 							function (conf) {
 								return elem(conf)
-							}
+							},
 					  )
 					: elem(DefaultContext)
 			}

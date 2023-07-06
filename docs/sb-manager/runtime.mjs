@@ -45,12 +45,12 @@ var import_qs = __toESM(require_lib(), 1),
 					scope.addEventListener(
 						'message',
 						this.handleEvent.bind(this),
-						!1
+						!1,
 					),
 				config.page !== 'manager' && config.page !== 'preview')
 			)
 				throw new Error(
-					`postmsg-channel: "config.page" cannot be "${config.page}"`
+					`postmsg-channel: "config.page" cannot be "${config.page}"`,
 				)
 		}
 		setHandler(handler) {
@@ -85,7 +85,7 @@ var import_qs = __toESM(require_lib(), 1),
 						maxDepth,
 						space,
 						lazyEval,
-					}).filter(([k, v]) => typeof v < 'u')
+					}).filter(([k, v]) => typeof v < 'u'),
 				),
 				stringifyOptions = {
 					...defaultEventOptions,
@@ -98,7 +98,7 @@ var import_qs = __toESM(require_lib(), 1),
 				}),
 				data = stringify(
 					{ key: KEY, event, refId: query.refId },
-					stringifyOptions
+					stringifyOptions,
 				)
 			return frames.length
 				? (this.buffer.length && this.flush(),
@@ -125,8 +125,8 @@ var import_qs = __toESM(require_lib(), 1),
 			if (this.config.page === 'manager') {
 				let list = Array.from(
 					document.querySelectorAll(
-						'iframe[data-is-storybook][data-is-loaded]'
-					)
+						'iframe[data-is-storybook][data-is-loaded]',
+					),
 				)
 					.filter((e) => {
 						try {
@@ -149,7 +149,7 @@ var import_qs = __toESM(require_lib(), 1),
 		getCurrentFrames() {
 			return this.config.page === 'manager'
 				? Array.from(
-						document.querySelectorAll('[data-is-storybook="true"]')
+						document.querySelectorAll('[data-is-storybook="true"]'),
 				  ).map((e) => e.contentWindow)
 				: scope && scope.parent
 				? [scope.parent]
@@ -158,7 +158,7 @@ var import_qs = __toESM(require_lib(), 1),
 		getLocalFrame() {
 			return this.config.page === 'manager'
 				? Array.from(
-						document.querySelectorAll('#storybook-preview-iframe')
+						document.querySelectorAll('#storybook-preview-iframe'),
 				  ).map((e) => e.contentWindow)
 				: scope && scope.parent
 				? [scope.parent]
@@ -177,7 +177,7 @@ var import_qs = __toESM(require_lib(), 1),
 								? '<span style="color: #37D5D3; background: black"> manager </span>'
 								: '<span style="color: #1EA7FD; background: black"> preview </span>',
 						eventString = Object.values(dist_exports3).includes(
-							event.type
+							event.type,
 						)
 							? `<span style="color: #FF4785">${event.type}</span>`
 							: `<span style="color: #FFAE00">${event.type}</span>`
@@ -190,7 +190,7 @@ var import_qs = __toESM(require_lib(), 1),
 						!event.source)
 					) {
 						pretty.error(
-							`${pageString} received ${eventString} but was unable to determine the source of the event`
+							`${pageString} received ${eventString} but was unable to determine the source of the event`,
 						)
 						return
 					}
@@ -199,7 +199,7 @@ var import_qs = __toESM(require_lib(), 1),
 						location.origin !== event.source
 							? message
 							: `${message} <span style="color: gray">(on ${location.origin} from ${event.source})</span>`,
-						...event.args
+						...event.args,
 					),
 						this.handler(event)
 				}
@@ -210,7 +210,7 @@ var import_qs = __toESM(require_lib(), 1),
 	},
 	getEventSourceUrl = (event) => {
 		let frames = Array.from(
-				document.querySelectorAll('iframe[data-is-storybook]')
+				document.querySelectorAll('iframe[data-is-storybook]'),
 			),
 			[frame, ...remainder] = frames.filter((element) => {
 				try {
@@ -229,7 +229,7 @@ var import_qs = __toESM(require_lib(), 1),
 			let src = frame.getAttribute('src'),
 				{ protocol, host, pathname } = new URL(
 					src,
-					document.location.toString()
+					document.location.toString(),
 				)
 			return `${protocol}//${host}${pathname}`
 		}

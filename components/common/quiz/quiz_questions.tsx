@@ -12,7 +12,7 @@ export const QuizQuestion = ({
 	const handleChange = (e) => {
 		setSelectedOption(e.target.value)
 		const selectedAnswer = options.find(
-			(option) => option.text === e.target.value
+			(option) => option.text === e.target.value,
 		)
 		updateAnswer(questionNumber, selectedAnswer.id)
 	}

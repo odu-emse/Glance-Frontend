@@ -20,7 +20,7 @@ function QuizResultPage() {
 			query: getQuizInstanceByID,
 			variables: { instanceID: instanceId },
 		},
-		gqlFetcher
+		gqlFetcher,
 	) as {
 		data: {
 			quizResult: Array<QuizResult>

@@ -73,7 +73,7 @@ try {
 	function re(e) {
 		if (e === void 0)
 			throw new ReferenceError(
-				"this hasn't been initialised - super() hasn't been called"
+				"this hasn't been initialised - super() hasn't been called",
 			)
 		return e
 	}
@@ -116,7 +116,7 @@ try {
 		try {
 			return (
 				Boolean.prototype.valueOf.call(
-					Reflect.construct(Boolean, [], function () {})
+					Reflect.construct(Boolean, [], function () {}),
 				),
 				!0
 			)
@@ -145,7 +145,7 @@ try {
 				if (r === null || !ne(r)) return r
 				if (typeof r != 'function')
 					throw new TypeError(
-						'Super expression must either be null or a function'
+						'Super expression must either be null or a function',
 					)
 				if (typeof t < 'u') {
 					if (t.has(r)) return t.get(r)
@@ -639,7 +639,7 @@ To pass a single animation please supply them in simple values, e.g. animation('
 			}
 		if (t.match(ue)) {
 			var r = parseFloat(
-				(parseInt('' + t[7] + t[8], 16) / 255).toFixed(2)
+				(parseInt('' + t[7] + t[8], 16) / 255).toFixed(2),
 			)
 			return {
 				red: parseInt('' + t[1] + t[2], 16),
@@ -656,7 +656,7 @@ To pass a single animation please supply them in simple values, e.g. animation('
 			}
 		if (t.match(ce)) {
 			var a = parseFloat(
-				(parseInt('' + t[4] + t[4], 16) / 255).toFixed(2)
+				(parseInt('' + t[4] + t[4], 16) / 255).toFixed(2),
 			)
 			return {
 				red: parseInt('' + t[1] + t[1], 16),
@@ -939,7 +939,7 @@ To pass a single animation please supply them in simple values, e.g. animation('
 				alpha: _(
 					0,
 					1,
-					+(a * 100 - parseFloat(e) * 100).toFixed(2) / 100
+					+(a * 100 - parseFloat(e) * 100).toFixed(2) / 100,
 				),
 			})
 		return w(n)
@@ -1085,7 +1085,7 @@ To pass a single animation please supply them in simple values, e.g. animation('
 	var He = (e) =>
 			typeof e != 'string'
 				? (Y.warn(
-						`Color passed to theme object should be a string. Instead ${e}(${typeof e}) was passed.`
+						`Color passed to theme object should be a string. Instead ${e}(${typeof e}) was passed.`,
 				  ),
 				  !1)
 				: !0,
@@ -1139,7 +1139,7 @@ To pass a single animation please supply them in simple values, e.g. animation('
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

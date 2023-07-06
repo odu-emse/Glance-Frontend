@@ -5,28 +5,28 @@
 		'./components/common/charts/pie/pie.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				R: () => PieComponent,
 			})
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/ResponsiveContainer.js'
+					'./node_modules/recharts/es6/component/ResponsiveContainer.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/recharts/es6/chart/PieChart.js'
+					'./node_modules/recharts/es6/chart/PieChart.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/recharts/es6/polar/Pie.js'
+					'./node_modules/recharts/es6/polar/Pie.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/Tooltip.js'
+					'./node_modules/recharts/es6/component/Tooltip.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/Legend.js'
+					'./node_modules/recharts/es6/component/Legend.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				PieComponent = function PieComponent(_ref) {
@@ -77,7 +77,7 @@
 							tooltip &&
 								__jsx(
 									recharts__WEBPACK_IMPORTED_MODULE_4__.u,
-									null
+									null,
 								),
 							legend &&
 								__jsx(recharts__WEBPACK_IMPORTED_MODULE_5__.D, {
@@ -93,8 +93,8 @@
 									iconType: legendConfig.iconType
 										? legendConfig.iconType
 										: 'circle',
-								})
-						)
+								}),
+						),
 					)
 				}
 			;(PieComponent.displayName = 'PieComponent'),
@@ -421,7 +421,7 @@
 		'./components/common/charts/pie/pie.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -433,13 +433,13 @@
 				_Simple$parameters2$d,
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_pie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./components/common/charts/pie/pie.tsx'
+					'./components/common/charts/pie/pie.tsx',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -448,10 +448,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -463,18 +461,25 @@
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
 								;(0,
-								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(target, key, source[key])
+								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -506,7 +511,7 @@
 				return __jsx(
 					'div',
 					{ className: 'w-full h-96' },
-					__jsx(_pie__WEBPACK_IMPORTED_MODULE_2__.R, args)
+					__jsx(_pie__WEBPACK_IMPORTED_MODULE_2__.R, args),
 				)
 			}
 			Template.displayName = 'Template'
@@ -540,7 +545,7 @@
 									(_Simple$parameters = Simple.parameters) ||
 									void 0 === _Simple$parameters
 									? void 0
-									: _Simple$parameters.docs
+									: _Simple$parameters.docs,
 							),
 							{},
 							{
@@ -558,11 +563,11 @@
 												_Simple$parameters2.docs) ||
 										void 0 === _Simple$parameters2$d
 										? void 0
-										: _Simple$parameters2$d.source
+										: _Simple$parameters2$d.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

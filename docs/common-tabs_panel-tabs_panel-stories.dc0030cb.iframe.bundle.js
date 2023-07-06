@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _arrayLikeToArray(arr, len) {
 				;(null == len || len > arr.length) && (len = arr.length)
@@ -20,13 +20,13 @@
 		'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => _slicedToArray,
 			})
 			var unsupportedIterableToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js',
 			)
 			function _slicedToArray(arr, i) {
 				return (
@@ -82,7 +82,7 @@
 					(0, unsupportedIterableToArray.Z)(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -92,14 +92,14 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.d(__webpack_exports__, {
 					Z: () => _unsupportedIterableToArray,
 				})
 				var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js',
 					)
 				function _unsupportedIterableToArray(o, minLen) {
 					if (o) {
@@ -107,7 +107,7 @@
 							return (0,
 							_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 								o,
-								minLen
+								minLen,
 							)
 						var n = Object.prototype.toString.call(o).slice(8, -1)
 						return (
@@ -118,12 +118,12 @@
 								? Array.from(o)
 								: 'Arguments' === n ||
 								  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-										n
+										n,
 								  )
 								? (0,
 								  _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 										o,
-										minLen
+										minLen,
 								  )
 								: void 0
 						)
@@ -133,7 +133,7 @@
 		'./components/common/tabs_panel/tabs_panel.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -144,14 +144,14 @@
 				_Course$parameters2,
 				_Course$parameters2$d,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				slicedToArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 				),
 				index_esm = __webpack_require__(
-					'./node_modules/react-icons/bs/index.esm.js'
+					'./node_modules/react-icons/bs/index.esm.js',
 				),
 				__jsx = react.createElement,
 				TabsPanel = function TabsPanel(_ref) {
@@ -159,7 +159,7 @@
 						_React$useState = react.useState(0),
 						_React$useState2 = (0, slicedToArray.Z)(
 							_React$useState,
-							2
+							2,
 						),
 						index = _React$useState2[0],
 						setIndex = _React$useState2[1],
@@ -192,14 +192,14 @@
 													index === modIndex
 														? 'before:w-7 before:bg-slate-600 text-slate-800'
 														: '',
-													' before:w-5 before:hidden md:before:block before:bg-slate-500 before:h-1 before:mr-2 flex items-center pt-1 cursor-pointer'
+													' before:w-5 before:hidden md:before:block before:bg-slate-500 before:h-1 before:mr-2 flex items-center pt-1 cursor-pointer',
 												),
 											key: modIndex,
 										},
-										mod.title
+										mod.title,
 									)
-								})
-							)
+								}),
+							),
 						),
 						__jsx(
 							'div',
@@ -211,20 +211,20 @@
 									'div',
 									{ className: 'flex-[3] ' },
 									__jsx('p', null, 'Type'),
-									__jsx('hr', null)
+									__jsx('hr', null),
 								),
 								__jsx(
 									'div',
 									{ className: 'flex-1' },
 									__jsx('p', null, 'Average'),
-									__jsx('hr', null)
+									__jsx('hr', null),
 								),
 								__jsx(
 									'div',
 									{ className: 'flex-1 ' },
 									__jsx('p', null, 'Action'),
-									__jsx('hr', null)
-								)
+									__jsx('hr', null),
+								),
 							),
 							__jsx(
 								'div',
@@ -258,8 +258,8 @@
 															__jsx(
 																'span',
 																null,
-																value.type
-															)
+																value.type,
+															),
 														),
 														__jsx(
 															'div',
@@ -271,8 +271,8 @@
 																'span',
 																null,
 																value.average,
-																'%'
-															)
+																'%',
+															),
 														),
 														__jsx(
 															'div',
@@ -290,27 +290,27 @@
 																			''
 																				.concat(
 																					'pt-1.5',
-																					' '
+																					' ',
 																				)
 																				.concat(
-																					text
+																					text,
 																				),
 																	},
 																	__jsx(
 																		index_esm.y_S,
-																		null
-																	)
-																)
-															)
-														)
-													)
+																		null,
+																	),
+																),
+															),
+														),
+													),
 												)
-											}
-										)
-									)
-								)
-							)
-						)
+											},
+										),
+									),
+								),
+							),
+						),
 					)
 				}
 			;(TabsPanel.displayName = 'TabsPanel'),
@@ -414,10 +414,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -433,13 +431,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -453,7 +454,7 @@
 				return tabs_panel_stories_jsx(
 					'div',
 					{ className: 'w-2/4 mx-auto' },
-					tabs_panel_stories_jsx(TabsPanel, args)
+					tabs_panel_stories_jsx(TabsPanel, args),
 				)
 			}
 			Template.displayName = 'Template'
@@ -506,7 +507,7 @@
 									(_Course$parameters = Course.parameters) ||
 									void 0 === _Course$parameters
 									? void 0
-									: _Course$parameters.docs
+									: _Course$parameters.docs,
 							),
 							{},
 							{
@@ -524,17 +525,17 @@
 												_Course$parameters2.docs) ||
 										void 0 === _Course$parameters2$d
 										? void 0
-										: _Course$parameters2$d.source
+										: _Course$parameters2$d.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/react-icons/lib/esm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				w_: () => GenIcon,
@@ -563,7 +564,7 @@
 									for (var p in (s = arguments[i]))
 										Object.prototype.hasOwnProperty.call(
 											s,
-											p
+											p,
 										) && (t[p] = s[p])
 								return t
 							}),
@@ -589,7 +590,7 @@
 							e.indexOf(p[i]) < 0 &&
 								Object.prototype.propertyIsEnumerable.call(
 									s,
-									p[i]
+									p[i],
 								) &&
 								(t[p[i]] = s[p[i]])
 					}
@@ -602,7 +603,7 @@
 						return react.createElement(
 							node.tag,
 							__assign({ key: i }, node.attr),
-							Tree2Element(node.child)
+							Tree2Element(node.child),
 						)
 					})
 				)
@@ -612,7 +613,7 @@
 					return react.createElement(
 						IconBase,
 						__assign({ attr: __assign({}, data.attr) }, props),
-						Tree2Element(data.child)
+						Tree2Element(data.child),
 					)
 				}
 			}
@@ -649,17 +650,17 @@
 												color:
 													props.color || conf.color,
 											},
-											conf.style
+											conf.style,
 										),
-										props.style
+										props.style,
 									),
 									height: computedSize,
 									width: computedSize,
 									xmlns: 'http://www.w3.org/2000/svg',
-								}
+								},
 							),
 							title && react.createElement('title', null, title),
-							props.children
+							props.children,
 						)
 					)
 				}
@@ -669,7 +670,7 @@
 							null,
 							function (conf) {
 								return elem(conf)
-							}
+							},
 					  )
 					: elem(DefaultContext)
 			}

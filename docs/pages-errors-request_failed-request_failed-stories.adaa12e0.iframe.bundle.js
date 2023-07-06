@@ -4,19 +4,19 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -37,7 +37,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -56,7 +56,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -291,7 +291,7 @@
 		'./components/pages/errors/request_failed/request_failed.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -300,14 +300,14 @@
 					default: () => request_failed_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				button_button = __webpack_require__(
-					'./components/common/button/button.tsx'
+					'./components/common/button/button.tsx',
 				),
 				next_router = __webpack_require__(
-					'./node_modules/next/router.js'
+					'./node_modules/next/router.js',
 				),
 				__jsx = react.createElement,
 				RequestFailed = function RequestFailed(_ref) {
@@ -324,7 +324,7 @@
 						__jsx(
 							'h3',
 							{ className: 'text-lg font-semibold' },
-							subtitle
+							subtitle,
 						),
 						__jsx(
 							button_button.z,
@@ -334,8 +334,8 @@
 									return router.reload()
 								},
 							},
-							'Try again'
-						)
+							'Try again',
+						),
 					)
 				}
 			;(RequestFailed.displayName = 'RequestFailed'),
@@ -398,10 +398,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -417,13 +415,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -459,7 +460,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -477,17 +478,17 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/next/dist/client/router.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -505,7 +506,7 @@
 				}),
 				(exports.useRouter = function useRouter() {
 					return _react.default.useContext(
-						_routerContext.RouterContext
+						_routerContext.RouterContext,
 					)
 				}),
 				(exports.createRouter = function createRouter(...args) {
@@ -527,7 +528,7 @@
 										Array.isArray(scopedRouter[property])
 											? []
 											: {},
-										scopedRouter[property]
+										scopedRouter[property],
 								  ))
 						return (
 							(instance.events = _router.default.events),
@@ -540,28 +541,28 @@
 					}),
 				(exports.default = void 0)
 			var _interop_require_default = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 				).Z,
 				_react = _interop_require_default(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_router = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/router.js'
-					)
+						'./node_modules/next/dist/shared/lib/router/router.js',
+					),
 				),
 				_routerContext = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router-context.js'
+					'./node_modules/next/dist/shared/lib/router-context.js',
 				),
 				_isError = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/lib/is-error.js'
-					)
+						'./node_modules/next/dist/lib/is-error.js',
+					),
 				),
 				_withRouter = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/client/with-router.js'
-					)
+						'./node_modules/next/dist/client/with-router.js',
+					),
 				)
 			const singletonRouter = {
 					router: null,
@@ -599,7 +600,7 @@
 			function getRouter() {
 				if (!singletonRouter.router) {
 					throw new Error(
-						'No router instance found.\nYou should only use "next/router" on the client side of your app.\n'
+						'No router instance found.\nYou should only use "next/router" on the client side of your app.\n',
 					)
 				}
 				return singletonRouter.router
@@ -635,12 +636,12 @@
 									_singletonRouter[eventField](...args)
 								} catch (err) {
 									console.error(
-										`Error when running the Router event: ${eventField}`
+										`Error when running the Router event: ${eventField}`,
 									),
 										console.error(
 											_isError.default(err)
 												? `${err.message}\n${err.stack}`
-												: err + ''
+												: err + '',
 										)
 								}
 						})
@@ -661,7 +662,7 @@
 		'./node_modules/next/dist/client/with-router.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -671,8 +672,8 @@
 							ComposedComponent,
 							Object.assign(
 								{ router: _router.useRouter() },
-								props
-							)
+								props,
+							),
 						)
 					}
 					;(WithRouterWrapper.getInitialProps =
@@ -684,10 +685,10 @@
 				})
 			var _react = (0,
 				__webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 				).Z)(__webpack_require__('./node_modules/react/index.js')),
 				_router = __webpack_require__(
-					'./node_modules/next/dist/client/router.js'
+					'./node_modules/next/dist/client/router.js',
 				)
 			;('function' == typeof exports.default ||
 				('object' == typeof exports.default &&
@@ -702,10 +703,10 @@
 		'./node_modules/next/router.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			module.exports = __webpack_require__(
-				'./node_modules/next/dist/client/router.js'
+				'./node_modules/next/dist/client/router.js',
 			)
 		},
 	},

@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -63,7 +63,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				function _objectDestructuringEmpty(obj) {
 					if (null == obj)
@@ -75,7 +75,7 @@
 			},
 		'./node_modules/attr-accept/dist/es/index.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			exports.Z = function (file, acceptedFiles) {
 				if (file && acceptedFiles) {
@@ -100,14 +100,14 @@
 		'./node_modules/react-dropzone/dist/es/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				uI: () => useDropzone,
 			})
 			var react = __webpack_require__('./node_modules/react/index.js'),
 				prop_types = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				prop_types_default = __webpack_require__.n(prop_types)
 			function __awaiter(thisArg, _arguments, P, generator) {
@@ -140,8 +140,8 @@
 					step(
 						(generator = generator.apply(
 							thisArg,
-							_arguments || []
-						)).next()
+							_arguments || [],
+						)).next(),
 					)
 				})
 			}
@@ -172,7 +172,7 @@
 						return (function step(op) {
 							if (f)
 								throw new TypeError(
-									'Generator is already executing.'
+									'Generator is already executing.',
 								)
 							for (; g && ((g = 0), op[0] && (_ = 0)), _; )
 								try {
@@ -431,7 +431,7 @@
 									Promise.all(
 										handles.map(function (h) {
 											return h.getFile()
-										})
+										}),
 									),
 								]
 							case 1:
@@ -455,7 +455,7 @@
 									? ((items = fromList(dt.items).filter(
 											function (item) {
 												return 'file' === item.kind
-											}
+											},
 									  )),
 									  'drop' !== type
 											? [2, items]
@@ -463,8 +463,8 @@
 													4,
 													Promise.all(
 														items.map(
-															toFilePromises
-														)
+															toFilePromises,
+														),
 													),
 											  ])
 									: [3, 2]
@@ -476,7 +476,7 @@
 									noIgnoredFiles(
 										fromList(dt.files).map(function (file) {
 											return toFileWithPath(file)
-										})
+										}),
 									),
 								]
 						}
@@ -509,7 +509,7 @@
 					return __spreadArray(
 						__spreadArray([], __read(acc), !1),
 						__read(Array.isArray(files) ? flatten(files) : [files]),
-						!1
+						!1,
 					)
 				}, [])
 			}
@@ -563,7 +563,7 @@
 														[
 															4,
 															Promise.all(
-																entries
+																entries,
 															),
 														]
 													)
@@ -583,7 +583,7 @@
 													return [3, 6]
 												case 5:
 													;(items = Promise.all(
-														batch.map(fromEntry)
+														batch.map(fromEntry),
 													)),
 														entries.push(items),
 														readEntries(),
@@ -592,12 +592,12 @@
 													return [2]
 											}
 										})
-									}
+									},
 								)
 							},
 							function (err) {
 								reject(err)
-							}
+							},
 						)
 					})()
 				})
@@ -612,13 +612,13 @@
 									function (file) {
 										var fwp = toFileWithPath(
 											file,
-											entry.fullPath
+											entry.fullPath,
 										)
 										resolve(fwp)
 									},
 									function (err) {
 										reject(err)
-									}
+									},
 								)
 							}),
 						]
@@ -626,7 +626,7 @@
 				})
 			}
 			var es = __webpack_require__(
-				'./node_modules/attr-accept/dist/es/index.js'
+				'./node_modules/attr-accept/dist/es/index.js',
 			)
 			function _toConsumableArray(arr) {
 				return (
@@ -644,7 +644,7 @@
 					_unsupportedIterableToArray(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -655,10 +655,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -674,13 +672,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -738,7 +739,7 @@
 					_unsupportedIterableToArray(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -782,7 +783,7 @@
 						}
 					},
 				getTooLargeRejectionErr = function getTooLargeRejectionErr(
-					maxSize
+					maxSize,
 				) {
 					return {
 						code: 'file-too-large',
@@ -792,7 +793,7 @@
 					}
 				},
 				getTooSmallRejectionErr = function getTooSmallRejectionErr(
-					minSize
+					minSize,
 				) {
 					return {
 						code: 'file-too-small',
@@ -846,7 +847,7 @@
 									'Files' === type ||
 									'application/x-moz-file' === type
 								)
-							}
+							},
 					  )
 					: !!event.target && !!event.target.files
 			}
@@ -924,7 +925,7 @@
 					es_unsupportedIterableToArray(arr) ||
 					(function es_nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -968,7 +969,7 @@
 					es_unsupportedIterableToArray(arr, i) ||
 					(function es_nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -1003,10 +1004,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1016,21 +1015,24 @@
 				for (var i = 1; i < arguments.length; i++) {
 					var source = null != arguments[i] ? arguments[i] : {}
 					i % 2
-						? es_ownKeys(Object(source), !0).forEach(function (
-								key
-						  ) {
-								es_defineProperty(target, key, source[key])
-						  })
+						? es_ownKeys(Object(source), !0).forEach(
+								function (key) {
+									es_defineProperty(target, key, source[key])
+								},
+						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: es_ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -1055,7 +1057,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -1075,7 +1077,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -1084,7 +1086,7 @@
 			var Dropzone = (0, react.forwardRef)(function (_ref, ref) {
 				var children = _ref.children,
 					_useDropzone = useDropzone(
-						_objectWithoutProperties(_ref, _excluded)
+						_objectWithoutProperties(_ref, _excluded),
 					),
 					open = _useDropzone.open,
 					props = _objectWithoutProperties(_useDropzone, _excluded2)
@@ -1094,7 +1096,7 @@
 						function () {
 							return { open }
 						},
-						[open]
+						[open],
 					),
 					react.createElement(
 						react.Fragment,
@@ -1103,9 +1105,9 @@
 							es_objectSpread(
 								es_objectSpread({}, props),
 								{},
-								{ open }
-							)
-						)
+								{ open },
+							),
+						),
 					)
 				)
 			})
@@ -1123,7 +1125,7 @@
 										2,
 										getDataTransferFiles(
 											evt.dataTransfer,
-											evt.type
+											evt.type,
 										),
 								  ]
 								: (function isChangeEvt(value) {
@@ -1163,8 +1165,8 @@
 					children: prop_types_default().func,
 					accept: prop_types_default().objectOf(
 						prop_types_default().arrayOf(
-							prop_types_default().string
-						)
+							prop_types_default().string,
+						),
 					),
 					multiple: prop_types_default().bool,
 					preventDropOnDocument: prop_types_default().bool,
@@ -1206,7 +1208,7 @@
 							: {},
 					_defaultProps$props = es_objectSpread(
 						es_objectSpread({}, defaultProps),
-						props
+						props,
 					),
 					accept = _defaultProps$props.accept,
 					disabled = _defaultProps$props.disabled,
@@ -1242,14 +1244,14 @@
 										.reduce(function (a, _ref6) {
 											var _ref7 = _slicedToArray(
 													_ref6,
-													2
+													2,
 												),
 												mimeType = _ref7[0],
 												ext = _ref7[1]
 											return [].concat(
 												_toConsumableArray(a),
 												[mimeType],
-												_toConsumableArray(ext)
+												_toConsumableArray(ext),
 											)
 										}, [])
 										.filter(function (v) {
@@ -1258,7 +1260,7 @@
 										.join(',')
 							})(accept)
 						},
-						[accept]
+						[accept],
 					),
 					pickerTypes = (0, react.useMemo)(
 						function () {
@@ -1272,33 +1274,33 @@
 														var _ref3 =
 																_slicedToArray(
 																	_ref2,
-																	2
+																	2,
 																),
 															mimeType = _ref3[0],
 															ext = _ref3[1],
 															ok = !0
 														return (
 															isMIMEType(
-																mimeType
+																mimeType,
 															) ||
 																(console.warn(
 																	'Skipped "'.concat(
 																		mimeType,
-																		'" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types.'
-																	)
+																		'" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types.',
+																	),
 																),
 																(ok = !1)),
 															(Array.isArray(
-																ext
+																ext,
 															) &&
 																ext.every(
-																	isExt
+																	isExt,
 																)) ||
 																(console.warn(
 																	'Skipped "'.concat(
 																		mimeType,
-																		'" because an invalid file extension was provided.'
-																	)
+																		'" because an invalid file extension was provided.',
+																	),
 																),
 																(ok = !1)),
 															ok
@@ -1306,35 +1308,34 @@
 													})
 													.reduce(function (
 														agg,
-														_ref4
+														_ref4,
 													) {
 														var _ref5 =
 																_slicedToArray(
 																	_ref4,
-																	2
+																	2,
 																),
 															mimeType = _ref5[0],
 															ext = _ref5[1]
 														return _objectSpread(
 															_objectSpread(
 																{},
-																agg
+																agg,
 															),
 															{},
 															_defineProperty(
 																{},
 																mimeType,
-																ext
-															)
+																ext,
+															),
 														)
-													},
-													{}),
+													}, {}),
 											},
 									  ]
 									: accept
 							})(accept)
 						},
-						[accept]
+						[accept],
 					),
 					onFileDialogOpenCb = (0, react.useMemo)(
 						function () {
@@ -1342,7 +1343,7 @@
 								? onFileDialogOpen
 								: noop
 						},
-						[onFileDialogOpen]
+						[onFileDialogOpen],
 					),
 					onFileDialogCancelCb = (0, react.useMemo)(
 						function () {
@@ -1350,13 +1351,13 @@
 								? onFileDialogCancel
 								: noop
 						},
-						[onFileDialogCancel]
+						[onFileDialogCancel],
 					),
 					rootRef = (0, react.useRef)(null),
 					inputRef = (0, react.useRef)(null),
 					_useReducer2 = es_slicedToArray(
 						(0, react.useReducer)(reducer, initialState),
-						2
+						2,
 					),
 					state = _useReducer2[0],
 					dispatch = _useReducer2[1],
@@ -1368,7 +1369,7 @@
 							useFsAccessApi &&
 							(function canUseFileSystemAccessAPI() {
 								return 'showOpenFilePicker' in window
-							})()
+							})(),
 					),
 					onWindowFocus = function onWindowFocus() {
 						!fsAccessApiWorksRef.current &&
@@ -1388,7 +1389,7 @@
 								window.removeEventListener(
 									'focus',
 									onWindowFocus,
-									!1
+									!1,
 								)
 							}
 						)
@@ -1398,7 +1399,7 @@
 						isFileDialogActive,
 						onFileDialogCancelCb,
 						fsAccessApiWorksRef,
-					]
+					],
 				)
 				var dragTargetsRef = (0, react.useRef)([]),
 					onDocumentDrop = function onDocumentDrop(event) {
@@ -1414,27 +1415,27 @@
 								(document.addEventListener(
 									'dragover',
 									onDocumentDragOver,
-									!1
+									!1,
 								),
 								document.addEventListener(
 									'drop',
 									onDocumentDrop,
-									!1
+									!1,
 								)),
 							function () {
 								preventDropOnDocument &&
 									(document.removeEventListener(
 										'dragover',
-										onDocumentDragOver
+										onDocumentDragOver,
 									),
 									document.removeEventListener(
 										'drop',
-										onDocumentDrop
+										onDocumentDrop,
 									))
 							}
 						)
 					},
-					[rootRef, preventDropOnDocument]
+					[rootRef, preventDropOnDocument],
 				),
 					(0, react.useEffect)(
 						function () {
@@ -1446,13 +1447,13 @@
 								function () {}
 							)
 						},
-						[rootRef, autoFocus, disabled]
+						[rootRef, autoFocus, disabled],
 					)
 				var onErrCb = (0, react.useCallback)(
 						function (e) {
 							onError ? onError(e) : console.error(e)
 						},
-						[onError]
+						[onError],
 					),
 					onDragEnterCb = (0, react.useCallback)(
 						function (event) {
@@ -1461,9 +1462,9 @@
 								stopPropagation(event),
 								(dragTargetsRef.current = [].concat(
 									es_toConsumableArray(
-										dragTargetsRef.current
+										dragTargetsRef.current,
 									),
-									[event.target]
+									[event.target],
 								)),
 								isEvtWithFiles(event) &&
 									Promise.resolve(getFilesFromEvent(event))
@@ -1476,7 +1477,7 @@
 													isDragAccept =
 														fileCount > 0 &&
 														(function allFilesAccepted(
-															_ref
+															_ref,
 														) {
 															var files =
 																	_ref.files,
@@ -1505,29 +1506,29 @@
 																) &&
 																files.every(
 																	function (
-																		file
+																		file,
 																	) {
 																		var accepted =
 																				_slicedToArray(
 																					fileAccepted(
 																						file,
-																						accept
+																						accept,
 																					),
-																					1
+																					1,
 																				)[0],
 																			sizeMatch =
 																				_slicedToArray(
 																					fileMatchSize(
 																						file,
 																						minSize,
-																						maxSize
+																						maxSize,
 																					),
-																					1
+																					1,
 																				)[0],
 																			customErrors =
 																				validator
 																					? validator(
-																							file
+																							file,
 																					  )
 																					: null
 																		return (
@@ -1535,7 +1536,7 @@
 																			sizeMatch &&
 																			!customErrors
 																		)
-																	}
+																	},
 																)
 															)
 														})({
@@ -1574,7 +1575,7 @@
 							multiple,
 							maxFiles,
 							validator,
-						]
+						],
 					),
 					onDragOverCb = (0, react.useCallback)(
 						function (event) {
@@ -1590,7 +1591,7 @@
 								hasFiles && onDragOver && onDragOver(event), !1
 							)
 						},
-						[onDragOver, noDragEventsBubbling]
+						[onDragOver, noDragEventsBubbling],
 					),
 					onDragLeaveCb = (0, react.useCallback)(
 						function (event) {
@@ -1603,7 +1604,7 @@
 											rootRef.current &&
 											rootRef.current.contains(target)
 										)
-									}
+									},
 								),
 								targetIdx = targets.indexOf(event.target)
 							;-1 !== targetIdx && targets.splice(targetIdx, 1),
@@ -1619,7 +1620,7 @@
 										onDragLeave &&
 										onDragLeave(event))
 						},
-						[rootRef, onDragLeave, noDragEventsBubbling]
+						[rootRef, onDragLeave, noDragEventsBubbling],
 					),
 					setFiles = (0, react.useCallback)(
 						function (files, event) {
@@ -1628,13 +1629,13 @@
 							files.forEach(function (file) {
 								var _fileAccepted2 = es_slicedToArray(
 										fileAccepted(file, acceptAttr),
-										2
+										2,
 									),
 									accepted = _fileAccepted2[0],
 									acceptError = _fileAccepted2[1],
 									_fileMatchSize2 = es_slicedToArray(
 										fileMatchSize(file, minSize, maxSize),
-										2
+										2,
 									),
 									sizeMatch = _fileMatchSize2[0],
 									sizeError = _fileMatchSize2[1],
@@ -1675,7 +1676,7 @@
 									onDrop(
 										acceptedFiles,
 										fileRejections,
-										event
+										event,
 									),
 								fileRejections.length > 0 &&
 									onDropRejected &&
@@ -1695,7 +1696,7 @@
 							onDropAccepted,
 							onDropRejected,
 							validator,
-						]
+						],
 					),
 					onDropCb = (0, react.useCallback)(
 						function (event) {
@@ -1720,7 +1721,7 @@
 							setFiles,
 							onErrCb,
 							noDragEventsBubbling,
-						]
+						],
 					),
 					openFileDialog = (0, react.useCallback)(
 						function () {
@@ -1764,8 +1765,8 @@
 														  inputRef.current.click())
 														: onErrCb(
 																new Error(
-																	'Cannot open the file picker because the https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API is not supported and no <input> was provided.'
-																)
+																	'Cannot open the file picker because the https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API is not supported and no <input> was provided.',
+																),
 														  ))
 											: (onFileDialogCancelCb(e),
 											  dispatch({ type: 'closeDialog' }))
@@ -1786,7 +1787,7 @@
 							onErrCb,
 							pickerTypes,
 							multiple,
-						]
+						],
 					),
 					onKeyDownCb = (0, react.useCallback)(
 						function (event) {
@@ -1798,7 +1799,7 @@
 									13 !== event.keyCode) ||
 									(event.preventDefault(), openFileDialog()))
 						},
-						[rootRef, openFileDialog]
+						[rootRef, openFileDialog],
 					),
 					onFocusCb = (0, react.useCallback)(function () {
 						dispatch({ type: 'focus' })
@@ -1822,7 +1823,7 @@
 													userAgent.indexOf('MSIE') ||
 												-1 !==
 													userAgent.indexOf(
-														'Trident/'
+														'Trident/',
 													)
 											)
 										})(userAgent) ||
@@ -1837,13 +1838,13 @@
 									? openFileDialog()
 									: setTimeout(openFileDialog, 0))
 						},
-						[noClick, openFileDialog]
+						[noClick, openFileDialog],
 					),
 					composeHandler = function composeHandler(fn) {
 						return disabled ? null : fn
 					},
 					composeKeyboardHandler = function composeKeyboardHandler(
-						fn
+						fn,
 					) {
 						return noKeyboard ? null : composeHandler(fn)
 					},
@@ -1877,7 +1878,7 @@
 									onDrop = _ref2.onDrop,
 									rest = _objectWithoutProperties(
 										_ref2,
-										_excluded3
+										_excluded3,
 									)
 								return es_objectSpread(
 									es_objectSpread(
@@ -1887,50 +1888,50 @@
 													composeKeyboardHandler(
 														composeEventHandlers(
 															onKeyDown,
-															onKeyDownCb
-														)
+															onKeyDownCb,
+														),
 													),
 												onFocus: composeKeyboardHandler(
 													composeEventHandlers(
 														onFocus,
-														onFocusCb
-													)
+														onFocusCb,
+													),
 												),
 												onBlur: composeKeyboardHandler(
 													composeEventHandlers(
 														onBlur,
-														onBlurCb
-													)
+														onBlurCb,
+													),
 												),
 												onClick: composeHandler(
 													composeEventHandlers(
 														onClick,
-														onClickCb
-													)
+														onClickCb,
+													),
 												),
 												onDragEnter: composeDragHandler(
 													composeEventHandlers(
 														onDragEnter,
-														onDragEnterCb
-													)
+														onDragEnterCb,
+													),
 												),
 												onDragOver: composeDragHandler(
 													composeEventHandlers(
 														onDragOver,
-														onDragOverCb
-													)
+														onDragOverCb,
+													),
 												),
 												onDragLeave: composeDragHandler(
 													composeEventHandlers(
 														onDragLeave,
-														onDragLeaveCb
-													)
+														onDragLeaveCb,
+													),
 												),
 												onDrop: composeDragHandler(
 													composeEventHandlers(
 														onDrop,
-														onDropCb
-													)
+														onDropCb,
+													),
 												),
 												role:
 													'string' == typeof role &&
@@ -1939,13 +1940,13 @@
 														: 'presentation',
 											},
 											refKey,
-											rootRef
+											rootRef,
 										),
 										disabled || noKeyboard
 											? {}
-											: { tabIndex: 0 }
+											: { tabIndex: 0 },
 									),
-									rest
+									rest,
 								)
 							}
 						},
@@ -1962,14 +1963,13 @@
 							noKeyboard,
 							noDrag,
 							disabled,
-						]
+						],
 					),
 					onInputElementClick = (0, react.useCallback)(function (
-						event
+						event,
 					) {
 						event.stopPropagation()
-					},
-					[]),
+					}, []),
 					getInputProps = (0, react.useMemo)(
 						function () {
 							return function () {
@@ -1987,7 +1987,7 @@
 									onClick = _ref3.onClick,
 									rest = _objectWithoutProperties(
 										_ref3,
-										_excluded4
+										_excluded4,
 									)
 								return es_objectSpread(
 									es_objectSpread(
@@ -2001,26 +2001,26 @@
 												onChange: composeHandler(
 													composeEventHandlers(
 														onChange,
-														onDropCb
-													)
+														onDropCb,
+													),
 												),
 												onClick: composeHandler(
 													composeEventHandlers(
 														onClick,
-														onInputElementClick
-													)
+														onInputElementClick,
+													),
 												),
 												tabIndex: -1,
 											},
 											refKey,
-											inputRef
-										)
+											inputRef,
+										),
 									),
-									rest
+									rest,
 								)
 							}
 						},
-						[inputRef, accept, multiple, onDropCb, disabled]
+						[inputRef, accept, multiple, onDropCb, disabled],
 					)
 				return es_objectSpread(
 					es_objectSpread({}, state),
@@ -2032,7 +2032,7 @@
 						rootRef,
 						inputRef,
 						open: composeHandler(openFileDialog),
-					}
+					},
 				)
 			}
 			function reducer(state, action) {
@@ -2041,25 +2041,25 @@
 						return es_objectSpread(
 							es_objectSpread({}, state),
 							{},
-							{ isFocused: !0 }
+							{ isFocused: !0 },
 						)
 					case 'blur':
 						return es_objectSpread(
 							es_objectSpread({}, state),
 							{},
-							{ isFocused: !1 }
+							{ isFocused: !1 },
 						)
 					case 'openDialog':
 						return es_objectSpread(
 							es_objectSpread({}, initialState),
 							{},
-							{ isFileDialogActive: !0 }
+							{ isFileDialogActive: !0 },
 						)
 					case 'closeDialog':
 						return es_objectSpread(
 							es_objectSpread({}, state),
 							{},
-							{ isFileDialogActive: !1 }
+							{ isFileDialogActive: !1 },
 						)
 					case 'setDraggedFiles':
 						return es_objectSpread(
@@ -2069,7 +2069,7 @@
 								isDragActive: action.isDragActive,
 								isDragAccept: action.isDragAccept,
 								isDragReject: action.isDragReject,
-							}
+							},
 						)
 					case 'setFiles':
 						return es_objectSpread(
@@ -2078,7 +2078,7 @@
 							{
 								acceptedFiles: action.acceptedFiles,
 								fileRejections: action.fileRejections,
-							}
+							},
 						)
 					case 'reset':
 						return es_objectSpread({}, initialState)

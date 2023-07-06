@@ -30,7 +30,7 @@ const ModulesPage = () => {
 					token: session.idToken,
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	) as {
 		data: {
 			modulesFromLearningPath: Array<Module>
@@ -89,13 +89,13 @@ const ModulesPage = () => {
 										/>
 									</div>
 								)
-							}
+							},
 						)}
 					</div>
 					{expanded && (
 						<ModuleSidebar
 							data={data.modulesFromLearningPath.find(
-								(enrollment) => enrollment.id === selection
+								(enrollment) => enrollment.id === selection,
 							)}
 							handleExpansion={setExpanded}
 						/>

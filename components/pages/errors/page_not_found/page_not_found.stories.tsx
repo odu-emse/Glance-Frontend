@@ -10,7 +10,7 @@ export default {
 } as ComponentMeta<typeof PageNotFound>
 
 const Template: ComponentStory<typeof PageNotFound> = (
-	args: PageNotFoundProps
+	args: PageNotFoundProps,
 ) => {
 	return <PageNotFound {...args} />
 }

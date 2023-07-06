@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,24 +62,24 @@
 		'./node_modules/next/dist/client/add-base-path.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.addBasePath = function addBasePath(path, required) {
 					if (process.env.__NEXT_MANUAL_CLIENT_BASE_PATH && !required)
 						return path
 					return _normalizeTrailingSlash.normalizePathTrailingSlash(
-						_addPathPrefix.addPathPrefix(path, basePath)
+						_addPathPrefix.addPathPrefix(path, basePath),
 					)
 				})
 			var _addPathPrefix = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/add-path-prefix.js'
+					'./node_modules/next/dist/shared/lib/router/utils/add-path-prefix.js',
 				),
 				_normalizeTrailingSlash = __webpack_require__(
-					'./node_modules/next/dist/client/normalize-trailing-slash.js'
+					'./node_modules/next/dist/client/normalize-trailing-slash.js',
 				)
 			const basePath = process.env.__NEXT_ROUTER_BASEPATH || ''
 			;('function' == typeof exports.default ||
@@ -95,22 +95,22 @@
 		'./node_modules/next/dist/client/add-locale.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.addLocale = void 0)
 			var _normalizeTrailingSlash = __webpack_require__(
-				'./node_modules/next/dist/client/normalize-trailing-slash.js'
+				'./node_modules/next/dist/client/normalize-trailing-slash.js',
 			)
 			;(exports.addLocale = (path, ...args) =>
 				process.env.__NEXT_I18N_SUPPORT
 					? _normalizeTrailingSlash.normalizePathTrailingSlash(
 							__webpack_require__(
-								'./node_modules/next/dist/shared/lib/router/utils/add-locale.js'
-							).addLocale(path, ...args)
+								'./node_modules/next/dist/shared/lib/router/utils/add-locale.js',
+							).addLocale(path, ...args),
 					  )
 					: path),
 				('function' == typeof exports.default ||
@@ -126,17 +126,17 @@
 		'./node_modules/next/dist/client/detect-domain-locale.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.detectDomainLocale = void 0)
 			;(exports.detectDomainLocale = (...args) => {
 				if (process.env.__NEXT_I18N_SUPPORT)
 					return __webpack_require__(
-						'./node_modules/next/dist/shared/lib/i18n/detect-domain-locale.js'
+						'./node_modules/next/dist/shared/lib/i18n/detect-domain-locale.js',
 					).D(...args)
 			}),
 				('function' == typeof exports.default ||
@@ -152,17 +152,17 @@
 		'./node_modules/next/dist/client/has-base-path.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.hasBasePath = function hasBasePath(path) {
 					return _pathHasPrefix.pathHasPrefix(path, basePath)
 				})
 			var _pathHasPrefix = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js'
+				'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js',
 			)
 			const basePath = process.env.__NEXT_ROUTER_BASEPATH || ''
 			;('function' == typeof exports.default ||
@@ -178,10 +178,10 @@
 		'./node_modules/next/dist/client/remove-base-path.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.removeBasePath = function removeBasePath(path) {
@@ -195,7 +195,7 @@
 					return path
 				})
 			var _hasBasePath = __webpack_require__(
-				'./node_modules/next/dist/client/has-base-path.js'
+				'./node_modules/next/dist/client/has-base-path.js',
 			)
 			const basePath = process.env.__NEXT_ROUTER_BASEPATH || ''
 			;('function' == typeof exports.default ||
@@ -211,10 +211,10 @@
 		'./node_modules/next/dist/client/remove-locale.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.removeLocale = function removeLocale(path, locale) {
@@ -236,7 +236,7 @@
 					return path
 				})
 			var _parsePath = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js'
+				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js',
 			)
 			;('function' == typeof exports.default ||
 				('object' == typeof exports.default &&
@@ -251,10 +251,10 @@
 		'./node_modules/next/dist/client/route-loader.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.markAssetError = markAssetError),
@@ -263,7 +263,7 @@
 				}),
 				(exports.getClientBuildManifest = getClientBuildManifest),
 				(exports.createRouteLoader = function createRouteLoader(
-					assetPrefix
+					assetPrefix,
 				) {
 					const entrypoints = new Map(),
 						loadedScripts = new Map(),
@@ -280,13 +280,13 @@
 											src.toString(),
 											(prom = (function appendScript(
 												src,
-												script
+												script,
 											) {
 												return new Promise(
 													(resolve, reject) => {
 														;((script =
 															document.createElement(
-																'script'
+																'script',
 															)).onload =
 															resolve),
 															(script.onerror =
@@ -294,19 +294,19 @@
 																	reject(
 																		markAssetError(
 																			new Error(
-																				`Failed to load script: ${src}`
-																			)
-																		)
+																				`Failed to load script: ${src}`,
+																			),
+																		),
 																	)),
 															(script.crossOrigin =
 																process.env.__NEXT_CROSS_ORIGIN),
 															(script.src = src),
 															document.body.appendChild(
-																script
+																script,
 															)
-													}
+													},
 												)
-											})(src))
+											})(src)),
 									  ),
 									  prom))
 							)
@@ -322,7 +322,7 @@
 									.then((res) => {
 										if (!res.ok)
 											throw new Error(
-												`Failed to load stylesheet: ${href}`
+												`Failed to load stylesheet: ${href}`,
 											)
 										return res.text().then((text) => ({
 											href,
@@ -331,7 +331,7 @@
 									})
 									.catch((err) => {
 										throw markAssetError(err)
-									}))
+									})),
 							),
 							prom)
 						)
@@ -351,7 +351,7 @@
 													exports,
 												exports,
 											}),
-											(err) => ({ error: err })
+											(err) => ({ error: err }),
 										)
 								: Promise.resolve(void 0)
 							).then((input) => {
@@ -376,33 +376,33 @@
 													? []
 													: Promise.all(
 															scripts.map(
-																maybeExecuteScript
-															)
+																maybeExecuteScript,
+															),
 													  ),
 												Promise.all(
-													css.map(fetchStyleSheet)
+													css.map(fetchStyleSheet),
 												),
-											])
+											]),
 										)
 										.then((res) =>
 											this.whenEntrypoint(route).then(
 												(entrypoint) => ({
 													entrypoint,
 													styles: res[1],
-												})
-											)
+												}),
+											),
 										),
 									MS_MAX_IDLE_DELAY,
 									markAssetError(
 										new Error(
-											`Route did not complete loading: ${route}`
-										)
-									)
+											`Route did not complete loading: ${route}`,
+										),
+									),
 								)
 									.then(({ entrypoint, styles }) => {
 										const res = Object.assign(
 											{ styles },
-											entrypoint
+											entrypoint,
 										)
 										return 'error' in entrypoint
 											? entrypoint
@@ -412,7 +412,7 @@
 										if (prefetch) throw err
 										return { error: err }
 									})
-									.finally(() => {})
+									.finally(() => {}),
 							)
 						},
 						prefetch(route) {
@@ -429,23 +429,23 @@
 																(function prefetchViaDom(
 																	href,
 																	as,
-																	link
+																	link,
 																) {
 																	return new Promise(
 																		(
 																			res,
-																			rej
+																			rej,
 																		) => {
 																			const selector = `\n      link[rel="prefetch"][href^="${href}"],\n      link[rel="preload"][href^="${href}"],\n      script[src^="${href}"]`
 																			if (
 																				document.querySelector(
-																					selector
+																					selector,
 																				)
 																			)
 																				return res()
 																			;(link =
 																				document.createElement(
-																					'link'
+																					'link',
 																				)),
 																				as &&
 																					(link.as =
@@ -461,25 +461,25 @@
 																				(link.href =
 																					href),
 																				document.head.appendChild(
-																					link
+																					link,
 																				)
-																		}
+																		},
 																	)
 																})(
 																	script.toString(),
-																	'script'
-																)
+																	'script',
+																),
 													  )
-													: []
-											)
+													: [],
+											),
 										)
 										.then(() => {
 											_requestIdleCallback.requestIdleCallback(
 												() =>
 													this.loadRoute(
 														route,
-														!0
-													).catch(() => {})
+														!0,
+													).catch(() => {}),
 											)
 										})
 										.catch(() => {})
@@ -488,17 +488,17 @@
 				})
 			;(0,
 			__webpack_require__(
-				'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+				'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 			).Z)(
 				__webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/get-asset-path-from-route.js'
-				)
+					'./node_modules/next/dist/shared/lib/router/utils/get-asset-path-from-route.js',
+				),
 			)
 			var _trustedTypes = __webpack_require__(
-					'./node_modules/next/dist/client/trusted-types.js'
+					'./node_modules/next/dist/client/trusted-types.js',
 				),
 				_requestIdleCallback = __webpack_require__(
-					'./node_modules/next/dist/client/request-idle-callback.js'
+					'./node_modules/next/dist/client/request-idle-callback.js',
 				)
 			const MS_MAX_IDLE_DELAY = 3800
 			function withFuture(key, map, generator) {
@@ -549,7 +549,7 @@
 						_requestIdleCallback.requestIdleCallback(() =>
 							setTimeout(() => {
 								cancelled || reject(err)
-							}, ms)
+							}, ms),
 						)
 				})
 			}
@@ -565,24 +565,24 @@
 					}),
 					MS_MAX_IDLE_DELAY,
 					markAssetError(
-						new Error('Failed to load client build manifest')
-					)
+						new Error('Failed to load client build manifest'),
+					),
 				)
 			}
 			function getFilesForRoute(assetPrefix, route) {
 				return getClientBuildManifest().then((manifest) => {
 					if (!(route in manifest))
 						throw markAssetError(
-							new Error(`Failed to lookup route: ${route}`)
+							new Error(`Failed to lookup route: ${route}`),
 						)
 					const allFiles = manifest[route].map(
-						(entry) => assetPrefix + '/_next/' + encodeURI(entry)
+						(entry) => assetPrefix + '/_next/' + encodeURI(entry),
 					)
 					return {
 						scripts: allFiles
 							.filter((v) => v.endsWith('.js'))
 							.map((v) =>
-								_trustedTypes.__unsafeCreateTrustedScriptURL(v)
+								_trustedTypes.__unsafeCreateTrustedScriptURL(v),
 							),
 						css: allFiles.filter((v) => v.endsWith('.css')),
 					}
@@ -601,21 +601,21 @@
 		'./node_modules/next/dist/client/script.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.handleClientScriptLoad = handleClientScriptLoad),
 				(exports.initScriptLoader = function initScriptLoader(
-					scriptLoaderItems
+					scriptLoaderItems,
 				) {
 					scriptLoaderItems.forEach(handleClientScriptLoad),
 						(function addBeforeInteractiveToCache() {
 							;[
 								...document.querySelectorAll(
-									'[data-nscript="beforeInteractive"]'
+									'[data-nscript="beforeInteractive"]',
 								),
 								...document.querySelectorAll(
-									'[data-nscript="beforePageRender"]'
+									'[data-nscript="beforePageRender"]',
 								),
 							].forEach((script) => {
 								const cacheKey =
@@ -626,25 +626,25 @@
 				}),
 				(exports.default = void 0)
 			var _extends = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_extends.js'
+					'./node_modules/@swc/helpers/lib/_extends.js',
 				).Z,
 				_interop_require_wildcard = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_wildcard.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_wildcard.js',
 				).Z,
 				_object_without_properties_loose = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_object_without_properties_loose.js'
+					'./node_modules/@swc/helpers/lib/_object_without_properties_loose.js',
 				).Z,
 				_react = _interop_require_wildcard(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_headManagerContext = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/head-manager-context.js'
+					'./node_modules/next/dist/shared/lib/head-manager-context.js',
 				),
 				_headManager = __webpack_require__(
-					'./node_modules/next/dist/client/head-manager.js'
+					'./node_modules/next/dist/client/head-manager.js',
 				),
 				_requestIdleCallback = __webpack_require__(
-					'./node_modules/next/dist/client/request-idle-callback.js'
+					'./node_modules/next/dist/client/request-idle-callback.js',
 				)
 			const ScriptCache = new Map(),
 				LoadCache = new Set(),
@@ -717,7 +717,7 @@
 				'lazyOnload' === strategy
 					? window.addEventListener('load', () => {
 							_requestIdleCallback.requestIdleCallback(() =>
-								loadScript(props)
+								loadScript(props),
 							)
 					  })
 					: loadScript(props)
@@ -740,7 +740,7 @@
 						'onError',
 					]),
 					{ updateScripts, scripts, getIsSsr } = _react.useContext(
-						_headManagerContext.HeadManagerContext
+						_headManagerContext.HeadManagerContext,
 					)
 				return (
 					_react.useEffect(() => {
@@ -757,15 +757,15 @@
 							  (function loadLazyScript(props) {
 									'complete' === document.readyState
 										? _requestIdleCallback.requestIdleCallback(
-												() => loadScript(props)
+												() => loadScript(props),
 										  )
 										: window.addEventListener(
 												'load',
 												() => {
 													_requestIdleCallback.requestIdleCallback(
-														() => loadScript(props)
+														() => loadScript(props),
 													)
-												}
+												},
 										  )
 							  })(props)
 					}, [props, strategy]),
@@ -777,7 +777,7 @@
 							  ).concat([
 									_extends(
 										{ id, src, onLoad, onReady, onError },
-										restProps
+										restProps,
 									),
 							  ])),
 							  updateScripts(scripts))
@@ -800,7 +800,7 @@
 		},
 		'./node_modules/next/dist/client/trusted-types.js': (
 			module,
-			exports
+			exports,
 		) => {
 			let policy
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -842,7 +842,7 @@
 		},
 		'./node_modules/next/dist/compiled/path-to-regexp/index.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			function parse(str, options) {
 				void 0 === options && (options = {})
@@ -874,7 +874,7 @@
 														)
 															throw new TypeError(
 																'Pattern cannot start with "?" at ' +
-																	j
+																	j,
 															)
 														for (; j < str.length; )
 															if (
@@ -905,7 +905,7 @@
 																)
 																	throw new TypeError(
 																		'Capturing groups are not allowed at ' +
-																			j
+																			j,
 																	)
 																pattern +=
 																	str[j++]
@@ -916,12 +916,12 @@
 														if (count)
 															throw new TypeError(
 																'Unbalanced pattern at ' +
-																	i
+																	i,
 															)
 														if (!pattern)
 															throw new TypeError(
 																'Missing pattern at ' +
-																	i
+																	i,
 															)
 														tokens.push({
 															type: 'PATTERN',
@@ -959,7 +959,7 @@
 													if (!name)
 														throw new TypeError(
 															'Missing parameter name at ' +
-																i
+																i,
 														)
 													tokens.push({
 														type: 'NAME',
@@ -1028,7 +1028,7 @@
 									' at ' +
 									index +
 									', expected ' +
-									type
+									type,
 							)
 						},
 						consumeText = function () {
@@ -1103,7 +1103,7 @@
 						if ('object' == typeof token)
 							return new RegExp(
 								'^(?:' + token.pattern + ')$',
-								reFlags
+								reFlags,
 							)
 					})
 				return function (data) {
@@ -1122,14 +1122,14 @@
 									throw new TypeError(
 										'Expected "' +
 											token.name +
-											'" to not repeat, but got an array'
+											'" to not repeat, but got an array',
 									)
 								if (0 === value.length) {
 									if (optional) continue
 									throw new TypeError(
 										'Expected "' +
 											token.name +
-											'" to not be empty'
+											'" to not be empty',
 									)
 								}
 								for (var j = 0; j < value.length; j++) {
@@ -1142,7 +1142,7 @@
 												token.pattern +
 												'", but got "' +
 												segment +
-												'"'
+												'"',
 										)
 									path +=
 										token.prefix + segment + token.suffix
@@ -1159,7 +1159,7 @@
 										'Expected "' +
 											token.name +
 											'" to be ' +
-											typeOfMessage
+											typeOfMessage,
 									)
 								}
 							} else {
@@ -1172,7 +1172,7 @@
 											token.pattern +
 											'", but got "' +
 											segment +
-											'"'
+											'"',
 									)
 								path += token.prefix + segment + token.suffix
 							}
@@ -1305,7 +1305,7 @@
 						isEndDelimited =
 							'string' == typeof endToken
 								? delimiter.indexOf(
-										endToken[endToken.length - 1]
+										endToken[endToken.length - 1],
 								  ) > -1
 								: void 0 === endToken
 					strict ||
@@ -1338,14 +1338,14 @@
 							})
 							return new RegExp(
 								'(?:' + parts.join('|') + ')',
-								flags(options)
+								flags(options),
 							)
 					  })(path, keys, options)
 					: (function stringToRegexp(path, keys, options) {
 							return tokensToRegexp(
 								parse(path, options),
 								keys,
-								options
+								options,
 							)
 					  })(path, keys, options)
 			}
@@ -1360,7 +1360,7 @@
 					return regexpToFunction(
 						pathToRegexp(str, keys, options),
 						keys,
-						options
+						options,
 					)
 				}),
 				(exports.regexpToFunction = regexpToFunction),
@@ -1370,7 +1370,7 @@
 		'./node_modules/next/dist/lib/is-error.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.default = isError),
@@ -1380,11 +1380,11 @@
 					return new Error(
 						_isPlainObject.isPlainObject(err)
 							? JSON.stringify(err)
-							: err + ''
+							: err + '',
 					)
 				})
 			var _isPlainObject = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/is-plain-object.js'
+				'./node_modules/next/dist/shared/lib/is-plain-object.js',
 			)
 			function isError(err) {
 				return (
@@ -1397,7 +1397,7 @@
 		},
 		'./node_modules/next/dist/shared/lib/escape-regexp.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.escapeStringRegexp = function escapeStringRegexp(str) {
@@ -1410,12 +1410,12 @@
 		},
 		'./node_modules/next/dist/shared/lib/i18n/detect-domain-locale.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			exports.D = function detectDomainLocale(
 				domainItems,
 				hostname,
-				detectedLocale
+				detectedLocale,
 			) {
 				let domainItem
 				if (domainItems) {
@@ -1435,7 +1435,7 @@
 								: ref1.some(
 										(locale) =>
 											locale.toLowerCase() ===
-											detectedLocale
+											detectedLocale,
 								  ))
 						) {
 							domainItem = item
@@ -1448,12 +1448,12 @@
 		},
 		'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.normalizeLocalePath = function normalizeLocalePath(
 					pathname,
-					locales
+					locales,
 				) {
 					let detectedLocale
 					const pathnameParts = pathname.split('/')
@@ -1468,7 +1468,7 @@
 								((detectedLocale = locale),
 								pathnameParts.splice(1, 1),
 								(pathname = pathnameParts.join('/') || '/'),
-								!0)
+								!0),
 						),
 						{ pathname, detectedLocale }
 					)
@@ -1476,7 +1476,7 @@
 		},
 		'./node_modules/next/dist/shared/lib/is-plain-object.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			function getObjectClassLabel(value) {
 				return Object.prototype.toString.call(value)
@@ -1495,7 +1495,7 @@
 		},
 		'./node_modules/next/dist/shared/lib/mitt.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.default = function mitt() {
@@ -1508,7 +1508,7 @@
 							all[type] &&
 								all[type].splice(
 									all[type].indexOf(handler) >>> 0,
-									1
+									1,
 								)
 						},
 						emit(type, ...evts) {
@@ -1523,7 +1523,7 @@
 			(__unused_webpack_module, exports, __webpack_require__) => {
 				Object.defineProperty(exports, '__esModule', { value: !0 }),
 					(exports.denormalizePagePath = function denormalizePagePath(
-						page
+						page,
 					) {
 						let _page = _normalizePathSep.normalizePathSep(page)
 						return _page.startsWith('/index/') &&
@@ -1534,15 +1534,15 @@
 							: '/'
 					})
 				var _utils = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/index.js'
+						'./node_modules/next/dist/shared/lib/router/utils/index.js',
 					),
 					_normalizePathSep = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/page-path/normalize-path-sep.js'
+						'./node_modules/next/dist/shared/lib/page-path/normalize-path-sep.js',
 					)
 			},
 		'./node_modules/next/dist/shared/lib/page-path/normalize-path-sep.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.normalizePathSep = function normalizePathSep(path) {
@@ -1552,10 +1552,10 @@
 		'./node_modules/next/dist/shared/lib/router/router.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.isLocalURL = isLocalURL),
@@ -1564,100 +1564,100 @@
 				(exports.createKey = createKey),
 				(exports.default = void 0)
 			var _async_to_generator = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_async_to_generator.js'
+					'./node_modules/@swc/helpers/lib/_async_to_generator.js',
 				).Z,
 				_extends = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_extends.js'
+					'./node_modules/@swc/helpers/lib/_extends.js',
 				).Z,
 				_interop_require_default = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 				).Z,
 				_interop_require_wildcard = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_wildcard.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_wildcard.js',
 				).Z,
 				_normalizeTrailingSlash = __webpack_require__(
-					'./node_modules/next/dist/client/normalize-trailing-slash.js'
+					'./node_modules/next/dist/client/normalize-trailing-slash.js',
 				),
 				_removeTrailingSlash = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js'
+					'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js',
 				),
 				_routeLoader = __webpack_require__(
-					'./node_modules/next/dist/client/route-loader.js'
+					'./node_modules/next/dist/client/route-loader.js',
 				),
 				_script = __webpack_require__(
-					'./node_modules/next/dist/client/script.js'
+					'./node_modules/next/dist/client/script.js',
 				),
 				_isError = _interop_require_wildcard(
 					__webpack_require__(
-						'./node_modules/next/dist/lib/is-error.js'
-					)
+						'./node_modules/next/dist/lib/is-error.js',
+					),
 				),
 				_denormalizePagePath = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js'
+					'./node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js',
 				),
 				_normalizeLocalePath = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js'
+					'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js',
 				),
 				_mitt = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/shared/lib/mitt.js'
-					)
+						'./node_modules/next/dist/shared/lib/mitt.js',
+					),
 				),
 				_utils = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/utils.js'
+					'./node_modules/next/dist/shared/lib/utils.js',
 				),
 				_isDynamic = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/is-dynamic.js'
+					'./node_modules/next/dist/shared/lib/router/utils/is-dynamic.js',
 				),
 				_parseRelativeUrl = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js'
+					'./node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js',
 				),
 				_querystring = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/querystring.js'
+					'./node_modules/next/dist/shared/lib/router/utils/querystring.js',
 				),
 				_resolveRewrites = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/resolve-rewrites.js'
-					)
+						'./node_modules/next/dist/shared/lib/router/utils/resolve-rewrites.js',
+					),
 				),
 				_routeMatcher = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/route-matcher.js'
+					'./node_modules/next/dist/shared/lib/router/utils/route-matcher.js',
 				),
 				_routeRegex = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/route-regex.js'
+					'./node_modules/next/dist/shared/lib/router/utils/route-regex.js',
 				),
 				_formatUrl = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/format-url.js'
+					'./node_modules/next/dist/shared/lib/router/utils/format-url.js',
 				),
 				_detectDomainLocale = __webpack_require__(
-					'./node_modules/next/dist/client/detect-domain-locale.js'
+					'./node_modules/next/dist/client/detect-domain-locale.js',
 				),
 				_parsePath = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/parse-path.js'
+					'./node_modules/next/dist/shared/lib/router/utils/parse-path.js',
 				),
 				_addLocale = __webpack_require__(
-					'./node_modules/next/dist/client/add-locale.js'
+					'./node_modules/next/dist/client/add-locale.js',
 				),
 				_removeLocale = __webpack_require__(
-					'./node_modules/next/dist/client/remove-locale.js'
+					'./node_modules/next/dist/client/remove-locale.js',
 				),
 				_removeBasePath = __webpack_require__(
-					'./node_modules/next/dist/client/remove-base-path.js'
+					'./node_modules/next/dist/client/remove-base-path.js',
 				),
 				_addBasePath = __webpack_require__(
-					'./node_modules/next/dist/client/add-base-path.js'
+					'./node_modules/next/dist/client/add-base-path.js',
 				),
 				_hasBasePath = __webpack_require__(
-					'./node_modules/next/dist/client/has-base-path.js'
+					'./node_modules/next/dist/client/has-base-path.js',
 				),
 				_getNextPathnameInfo = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/get-next-pathname-info.js'
+					'./node_modules/next/dist/shared/lib/router/utils/get-next-pathname-info.js',
 				),
 				_formatNextPathnameInfo = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/format-next-pathname-info.js'
+					'./node_modules/next/dist/shared/lib/router/utils/format-next-pathname-info.js',
 				),
 				_compareStates = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/compare-states.js'
+					'./node_modules/next/dist/shared/lib/router/utils/compare-states.js',
 				)
 			function buildCancellationError() {
 				return Object.assign(new Error('Route Cancelled'), {
@@ -1684,7 +1684,7 @@
 					dynamicMatches =
 						(asPathname !== route
 							? _routeMatcher.getRouteMatcher(dynamicRegex)(
-									asPathname
+									asPathname,
 							  )
 							: '') || query
 				interpolatedRoute = route
@@ -1708,11 +1708,11 @@
 											? value
 													.map((segment) =>
 														encodeURIComponent(
-															segment
-														)
+															segment,
+														),
 													)
 													.join('/')
-											: encodeURIComponent(value)
+											: encodeURIComponent(value),
 									) || '/')
 						)
 					}) || (interpolatedRoute = ''),
@@ -1742,7 +1742,7 @@
 					(urlAsStringNoProto.split('?')[0] || '').match(/(\/\/|\\)/)
 				) {
 					console.error(
-						`Invalid href passed to next/router: ${urlAsString}, repeated forward-slashes (//) or backslashes \\ are not valid in the href`
+						`Invalid href passed to next/router: ${urlAsString}, repeated forward-slashes (//) or backslashes \\ are not valid in the href`,
 					)
 					const normalizedUrl =
 						_utils.normalizeRepeatedSlashes(urlAsStringNoProto)
@@ -1756,7 +1756,7 @@
 						urlAsString.startsWith('#')
 							? router.asPath
 							: router.pathname,
-						'http://n'
+						'http://n',
 					)
 				} catch (_) {
 					base = new URL('/', 'http://n')
@@ -1765,7 +1765,7 @@
 					const finalUrl = new URL(urlAsString, base)
 					finalUrl.pathname =
 						_normalizeTrailingSlash.normalizePathTrailingSlash(
-							finalUrl.pathname
+							finalUrl.pathname,
 						)
 					let interpolatedAs = ''
 					if (
@@ -1774,12 +1774,12 @@
 						resolveAs
 					) {
 						const query = _querystring.searchParamsToUrlQuery(
-								finalUrl.searchParams
+								finalUrl.searchParams,
 							),
 							{ result, params } = interpolateAs(
 								finalUrl.pathname,
 								finalUrl.pathname,
-								query
+								query,
 							)
 						result &&
 							(interpolatedAs = _formatUrl.formatWithValidation({
@@ -1829,7 +1829,7 @@
 			}
 			function resolveDynamicRoute(pathname, pages) {
 				const cleanPathname = _removeTrailingSlash.removeTrailingSlash(
-					_denormalizePagePath.denormalizePagePath(pathname)
+					_denormalizePagePath.denormalizePagePath(pathname),
 				)
 				return '/404' === cleanPathname || '/_error' === cleanPathname
 					? pathname
@@ -1870,7 +1870,7 @@
 				}).then((response) =>
 					!response.ok && attempts > 1 && response.status >= 500
 						? fetchRetry(url, attempts - 1, options)
-						: response
+						: response,
 				)
 			}
 			const backgroundCache = {}
@@ -1887,7 +1887,7 @@
 			}) {
 				const { href: cacheKey } = new URL(
 					dataHref,
-					window.location.href
+					window.location.href,
 				)
 				var ref1
 				const getData = (params) =>
@@ -1908,7 +1908,7 @@
 											if (
 												hasMiddleware &&
 												[301, 302, 307, 308].includes(
-													response.status
+													response.status,
 												)
 											)
 												return {
@@ -1939,12 +1939,12 @@
 														text,
 													}
 											const error = new Error(
-												'Failed to load static props'
+												'Failed to load static props',
 											)
 											throw (
 												(isServerRender ||
 													_routeLoader.markAssetError(
-														error
+														error,
 													),
 												error)
 											)
@@ -1957,18 +1957,18 @@
 											response,
 											text,
 										}
-								  })
+								  }),
 						)
 						.then(
 							(data) => (
 								(persistCache &&
 									'no-cache' !==
 										data.response.headers.get(
-											'x-middleware-cache'
+											'x-middleware-cache',
 										)) ||
 									delete inflightCache[cacheKey],
 								data
-							)
+							),
 						)
 						.catch((err) => {
 							throw (delete inflightCache[cacheKey], err)
@@ -1979,12 +1979,12 @@
 								(inflightCache[cacheKey] =
 									Promise.resolve(data)),
 								data
-							)
+							),
 					  )
 					: void 0 !== inflightCache[cacheKey]
 					? inflightCache[cacheKey]
 					: (inflightCache[cacheKey] = getData(
-							isBackground ? { method: 'HEAD' } : {}
+							isBackground ? { method: 'HEAD' } : {},
 					  ))
 			}
 			function tryToParseAsJSON(text) {
@@ -2001,11 +2001,11 @@
 				if (
 					url ===
 					_addBasePath.addBasePath(
-						_addLocale.addLocale(router.asPath, router.locale)
+						_addLocale.addLocale(router.asPath, router.locale),
 					)
 				)
 					throw new Error(
-						`Invariant: attempted to hard navigate to the same URL ${url} ${location.href}`
+						`Invariant: attempted to hard navigate to the same URL ${url} ${location.href}`,
 					)
 				window.location.href = url
 			}
@@ -2017,7 +2017,7 @@
 				return () => {
 					if (cancelled) {
 						const error = new Error(
-							`Abort fetching component for route: "${route}"`
+							`Abort fetching component for route: "${route}"`,
 						)
 						throw ((error.cancelled = !0), error)
 					}
@@ -2042,7 +2042,7 @@
 								JSON.stringify({
 									x: self.pageXOffset,
 									y: self.pageYOffset,
-								})
+								}),
 							)
 						} catch (e) {}
 					return (
@@ -2089,18 +2089,18 @@
 							const parsedAs = _parseRelativeUrl.parseRelativeUrl(
 									_hasBasePath.hasBasePath(as)
 										? _removeBasePath.removeBasePath(as)
-										: as
+										: as,
 								),
 								localePathResult =
 									_normalizeLocalePath.normalizeLocalePath(
 										parsedAs.pathname,
-										_this.locales
+										_this.locales,
 									)
 							localePathResult.detectedLocale &&
 								((nextState.locale =
 									localePathResult.detectedLocale),
 								(parsedAs.pathname = _addBasePath.addBasePath(
-									parsedAs.pathname
+									parsedAs.pathname,
 								)),
 								(as =
 									_formatUrl.formatWithValidation(parsedAs)),
@@ -2108,11 +2108,11 @@
 									_normalizeLocalePath.normalizeLocalePath(
 										_hasBasePath.hasBasePath(url)
 											? _removeBasePath.removeBasePath(
-													url
+													url,
 											  )
 											: url,
-										_this.locales
-									).pathname
+										_this.locales,
+									).pathname,
 								)))
 							let didNavigate = !1
 							var ref
@@ -2122,11 +2122,11 @@
 									: ref.includes(nextState.locale)) ||
 									((parsedAs.pathname = _addLocale.addLocale(
 										parsedAs.pathname,
-										nextState.locale
+										nextState.locale,
 									)),
 									handleHardNavigation({
 										url: _formatUrl.formatWithValidation(
-											parsedAs
+											parsedAs,
 										),
 										router: _this,
 									}),
@@ -2135,7 +2135,7 @@
 								_detectDomainLocale.detectDomainLocale(
 									_this.domainLocales,
 									void 0,
-									nextState.locale
+									nextState.locale,
 								)
 							if (
 								process.env.__NEXT_I18N_SUPPORT &&
@@ -2161,7 +2161,7 @@
 											'/' === asNoBasePath
 												? ''
 												: asNoBasePath
-										}` || '/'
+										}` || '/',
 									)}`,
 									router: _this,
 								}),
@@ -2179,7 +2179,7 @@
 									'routeChangeError',
 									buildCancellationError(),
 									_this._inFlightRoute,
-									routeProps
+									routeProps,
 								),
 							_this.clc(),
 							(_this.clc = null)),
@@ -2189,14 +2189,14 @@
 										? _removeBasePath.removeBasePath(as)
 										: as,
 									options.locale,
-									_this.defaultLocale
-								)
+									_this.defaultLocale,
+								),
 							))
 						const cleanedAs = _removeLocale.removeLocale(
 							_hasBasePath.hasBasePath(as)
 								? _removeBasePath.removeBasePath(as)
 								: as,
-							nextState.locale
+							nextState.locale,
 						)
 						_this._inFlightRoute = as
 						const localeChange = prevLocale !== nextState.locale
@@ -2209,20 +2209,20 @@
 								Router.events.emit(
 									'hashChangeStart',
 									as,
-									routeProps
+									routeProps,
 								),
 								_this.changeState(
 									method,
 									url,
 									as,
-									_extends({}, options, { scroll: !1 })
+									_extends({}, options, { scroll: !1 }),
 								),
 								scroll && _this.scrollToHash(cleanedAs)
 							try {
 								yield _this.set(
 									nextState,
 									_this.components[nextState.route],
-									null
+									null,
 								)
 							} catch (err) {
 								throw (
@@ -2232,7 +2232,7 @@
 											'routeChangeError',
 											err,
 											cleanedAs,
-											routeProps
+											routeProps,
 										),
 									err)
 								)
@@ -2241,7 +2241,7 @@
 								Router.events.emit(
 									'hashChangeComplete',
 									as,
-									routeProps
+									routeProps,
 								),
 								!0
 							)
@@ -2272,7 +2272,7 @@
 						let resolvedAs = as
 						pathname = pathname
 							? _removeTrailingSlash.removeTrailingSlash(
-									_removeBasePath.removeBasePath(pathname)
+									_removeBasePath.removeBasePath(pathname),
 							  )
 							: pathname
 						const isMiddlewareMatch = yield matchesMiddleware({
@@ -2295,15 +2295,15 @@
 									_addBasePath.addBasePath(
 										_addLocale.addLocale(
 											cleanedAs,
-											nextState.locale
+											nextState.locale,
 										),
-										!0
+										!0,
 									),
 									pages,
 									rewrites,
 									query,
 									(p) => resolveDynamicRoute(p, pages),
-									_this.locales
+									_this.locales,
 								)
 								if (rewritesResult.externalDest)
 									return (
@@ -2324,12 +2324,12 @@
 										isMiddlewareMatch ||
 											(url =
 												_formatUrl.formatWithValidation(
-													parsed
+													parsed,
 												)))
 							} else
 								(parsed.pathname = resolveDynamicRoute(
 									pathname,
-									pages
+									pages,
 								)),
 									parsed.pathname !== pathname &&
 										((pathname = parsed.pathname),
@@ -2338,7 +2338,7 @@
 										isMiddlewareMatch ||
 											(url =
 												_formatUrl.formatWithValidation(
-													parsed
+													parsed,
 												)))
 						if (!isLocalURL(as))
 							return (
@@ -2350,23 +2350,23 @@
 							)
 						resolvedAs = _removeLocale.removeLocale(
 							_removeBasePath.removeBasePath(resolvedAs),
-							nextState.locale
+							nextState.locale,
 						)
 						let route =
 								_removeTrailingSlash.removeTrailingSlash(
-									pathname
+									pathname,
 								),
 							routeMatch = !1
 						if (_isDynamic.isDynamicRoute(route)) {
 							const parsedAs =
 									_parseRelativeUrl.parseRelativeUrl(
-										resolvedAs
+										resolvedAs,
 									),
 								asPathname = parsedAs.pathname,
 								routeRegex = _routeRegex.getRouteRegex(route)
 							routeMatch =
 								_routeMatcher.getRouteMatcher(routeRegex)(
-									asPathname
+									asPathname,
 								)
 							const shouldInterpolate = route === asPathname,
 								interpolatedAs = shouldInterpolate
@@ -2377,7 +2377,7 @@
 								(shouldInterpolate && !interpolatedAs.result)
 							) {
 								const missingParams = Object.keys(
-									routeRegex.groups
+									routeRegex.groups,
 								).filter((param) => !query[param])
 								if (
 									missingParams.length > 0 &&
@@ -2386,13 +2386,13 @@
 									throw new Error(
 										(shouldInterpolate
 											? `The provided \`href\` (${url}) value is missing query values (${missingParams.join(
-													', '
+													', ',
 											  )}) to be interpolated properly. `
 											: `The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). `) +
 											'Read more: https://nextjs.org/docs/messages/' +
 											(shouldInterpolate
 												? 'href-interpolation-failed'
-												: 'incompatible-href-as')
+												: 'incompatible-href-as'),
 									)
 							} else
 								shouldInterpolate
@@ -2401,9 +2401,9 @@
 												pathname: interpolatedAs.result,
 												query: omit(
 													query,
-													interpolatedAs.params
+													interpolatedAs.params,
 												),
-											})
+											}),
 									  ))
 									: Object.assign(query, routeMatch)
 						}
@@ -2411,7 +2411,7 @@
 							Router.events.emit(
 								'routeChangeStart',
 								as,
-								routeProps
+								routeProps,
 							)
 						try {
 							var ref2, ref3
@@ -2435,7 +2435,7 @@
 									(query = Object.assign(
 										{},
 										routeInfo.query || {},
-										query
+										query,
 									)),
 								routeMatch &&
 									pathname !== parsed.pathname &&
@@ -2453,22 +2453,22 @@
 												_addLocale.addLocale(
 													new URL(as, location.href)
 														.pathname,
-													nextState.locale
+													nextState.locale,
 												),
-												!0
+												!0,
 										  )
 								if (
 									(_hasBasePath.hasBasePath(rewriteAs) &&
 										(rewriteAs =
 											_removeBasePath.removeBasePath(
-												rewriteAs
+												rewriteAs,
 											)),
 									process.env.__NEXT_I18N_SUPPORT)
 								) {
 									const localeResult =
 										_normalizeLocalePath.normalizeLocalePath(
 											rewriteAs,
-											_this.locales
+											_this.locales,
 										)
 									;(nextState.locale =
 										localeResult.detectedLocale ||
@@ -2479,7 +2479,7 @@
 										_routeRegex.getRouteRegex(pathname),
 									curRouteMatch =
 										_routeMatcher.getRouteMatcher(
-											routeRegex
+											routeRegex,
 										)(rewriteAs)
 								curRouteMatch &&
 									Object.assign(query, curRouteMatch)
@@ -2490,7 +2490,7 @@
 											method,
 											routeInfo.newUrl,
 											routeInfo.newAs,
-											options
+											options,
 									  )
 									: (handleHardNavigation({
 											url: routeInfo.destination,
@@ -2504,7 +2504,7 @@
 									.concat(component.unstable_scriptLoader())
 									.forEach((script) => {
 										_script.handleClientScriptLoad(
-											script.props
+											script.props,
 										)
 									})
 							}
@@ -2524,24 +2524,24 @@
 									) {
 										const parsedHref =
 											_parseRelativeUrl.parseRelativeUrl(
-												destination
+												destination,
 											)
 										parsedHref.pathname =
 											resolveDynamicRoute(
 												parsedHref.pathname,
-												pages
+												pages,
 											)
 										const { url: newUrl, as: newAs } =
 											prepareUrlAs(
 												_this,
 												destination,
-												destination
+												destination,
 											)
 										return _this.change(
 											method,
 											newUrl,
 											newAs,
-											options
+											options,
 										)
 									}
 									return (
@@ -2578,7 +2578,7 @@
 										'type' in routeInfo)
 									)
 										throw new Error(
-											'Unexpected middleware effect on /404'
+											'Unexpected middleware effect on /404',
 										)
 								}
 							}
@@ -2586,7 +2586,7 @@
 							Router.events.emit(
 								'beforeHistoryChange',
 								as,
-								routeProps
+								routeProps,
 							),
 								_this.changeState(method, url, as, options),
 								isQueryUpdating &&
@@ -2634,7 +2634,7 @@
 									!localeChange &&
 									_compareStates.compareRouterStates(
 										upcomingRouterState,
-										_this.state
+										_this.state,
 									)
 								)
 							) {
@@ -2643,7 +2643,7 @@
 										.set(
 											upcomingRouterState,
 											routeInfo,
-											upcomingScrollState
+											upcomingScrollState,
 										)
 										.catch((e) => {
 											if (!e.cancelled) throw e
@@ -2657,7 +2657,7 @@
 												'routeChangeError',
 												error,
 												cleanedAs,
-												routeProps
+												routeProps,
 											),
 										error)
 									)
@@ -2669,7 +2669,7 @@
 										Router.events.emit(
 											'routeChangeComplete',
 											as,
-											routeProps
+											routeProps,
 										)
 								shouldScroll &&
 									/#.+$/.test(as) &&
@@ -2698,7 +2698,7 @@
 										: createKey()),
 							},
 							'',
-							as
+							as,
 						))
 				}
 				handleRouteInfoError(
@@ -2707,7 +2707,7 @@
 					query,
 					as,
 					routeProps,
-					loadErrorFail
+					loadErrorFail,
 				) {
 					var _this = this
 					return _async_to_generator(function* () {
@@ -2718,7 +2718,7 @@
 									'routeChangeError',
 									err,
 									as,
-									routeProps
+									routeProps,
 								),
 								handleHardNavigation({
 									url: as,
@@ -2748,7 +2748,7 @@
 								} catch (gipErr) {
 									console.error(
 										'Error in error page `getInitialProps`: ',
-										gipErr
+										gipErr,
 									),
 										(routeInfo.props = {})
 								}
@@ -2762,7 +2762,7 @@
 								query,
 								as,
 								routeProps,
-								!0
+								!0,
 							)
 						}
 					})()
@@ -2846,19 +2846,19 @@
 										: ref5.type) &&
 								((route =
 									_removeTrailingSlash.removeTrailingSlash(
-										data.effect.resolvedHref
+										data.effect.resolvedHref,
 									)),
 								(pathname = data.effect.resolvedHref),
 								(query = _extends(
 									{},
 									query,
-									data.effect.parsedAs.query
+									data.effect.parsedAs.query,
 								)),
 								(resolvedAs = _removeBasePath.removeBasePath(
 									_normalizeLocalePath.normalizeLocalePath(
 										data.effect.parsedAs.pathname,
-										_this.locales
-									).pathname
+										_this.locales,
+									).pathname,
 								)),
 								(existingInfo = _this.components[route]),
 								routeProps.shallow &&
@@ -2913,11 +2913,11 @@
 																		{
 																			pathname,
 																			query,
-																		}
+																		},
 																	),
 																	asPath: resolvedAs,
 																	locale,
-																}
+																},
 															),
 														isServerRender:
 															_this.isSsr,
@@ -2943,10 +2943,10 @@
 													locales: _this.locales,
 													defaultLocale:
 														_this.defaultLocale,
-												}
+												},
 											),
 										}
-									})
+									}),
 								)
 							if (
 								routeInfo.__N_SSP &&
@@ -2954,7 +2954,7 @@
 							) {
 								const cacheKey = new URL(
 									fetchNextDataParams.dataHref,
-									window.location.href
+									window.location.href,
 								).href
 								delete _this.sdc[cacheKey]
 							}
@@ -2967,7 +2967,7 @@
 											isBackground: !0,
 											persistCache: !1,
 											inflightCache: backgroundCache,
-										})
+										}),
 									).catch(() => {}),
 								routeInfo.__N_RSC &&
 									(flightInfo = {
@@ -2982,32 +2982,32 @@
 																	{
 																		__flight__:
 																			'1',
-																	}
+																	},
 																),
 																pathname:
 																	_isDynamic.isDynamicRoute(
-																		route
+																		route,
 																	)
 																		? interpolateAs(
 																				pathname,
 																				_parseRelativeUrl.parseRelativeUrl(
-																					resolvedAs
+																					resolvedAs,
 																				)
 																					.pathname,
-																				query
+																				query,
 																		  )
 																				.result
 																		: pathname,
-															}
-														)
-													)
+															},
+														),
+													),
 											  )).data
 											: props.__flight__,
 									}),
 								(props.pageProps = Object.assign(
 									{},
 									props.pageProps,
-									flightInfo
+									flightInfo,
 								)),
 								(routeInfo.props = props),
 								(routeInfo.route = route),
@@ -3022,7 +3022,7 @@
 								pathname,
 								query,
 								as,
-								routeProps
+								routeProps,
 							)
 						}
 					})()
@@ -3033,7 +3033,7 @@
 						this.sub(
 							data,
 							this.components['/_app'].Component,
-							resetScroll
+							resetScroll,
 						)
 					)
 				}
@@ -3078,7 +3078,7 @@
 							;(pathname =
 								_normalizeLocalePath.normalizeLocalePath(
 									pathname,
-									_this.locales
+									_this.locales,
 								).pathname),
 								(parsed.pathname = pathname),
 								(url = _formatUrl.formatWithValidation(parsed))
@@ -3087,7 +3087,7 @@
 							const localePathResult =
 								_normalizeLocalePath.normalizeLocalePath(
 									parsedAs.pathname,
-									_this.locales
+									_this.locales,
 								)
 							;(parsedAs.pathname = localePathResult.pathname),
 								(options.locale =
@@ -3117,20 +3117,20 @@
 							const rewritesResult = _resolveRewrites.default(
 								_addBasePath.addBasePath(
 									_addLocale.addLocale(asPath, _this.locale),
-									!0
+									!0,
 								),
 								pages,
 								rewrites,
 								parsed.query,
 								(p) => resolveDynamicRoute(p, pages),
-								_this.locales
+								_this.locales,
 							)
 							if (rewritesResult.externalDest) return
 							;(resolvedAs = _removeLocale.removeLocale(
 								_removeBasePath.removeBasePath(
-									rewritesResult.asPath
+									rewritesResult.asPath,
 								),
-								_this.locale
+								_this.locale,
 							)),
 								rewritesResult.matchedPage &&
 									rewritesResult.resolvedHref &&
@@ -3139,12 +3139,12 @@
 									isMiddlewareMatch ||
 										(url =
 											_formatUrl.formatWithValidation(
-												parsed
+												parsed,
 											)))
 						}
 						;(parsed.pathname = resolveDynamicRoute(
 							parsed.pathname,
-							pages
+							pages,
 						)),
 							_isDynamic.isDynamicRoute(parsed.pathname) &&
 								((pathname = parsed.pathname),
@@ -3153,15 +3153,15 @@
 									query,
 									_routeMatcher.getRouteMatcher(
 										_routeRegex.getRouteRegex(
-											parsed.pathname
-										)
+											parsed.pathname,
+										),
 									)(_parsePath.parsePath(asPath).pathname) ||
-										{}
+										{},
 								),
 								isMiddlewareMatch ||
 									(url =
 										_formatUrl.formatWithValidation(
-											parsed
+											parsed,
 										)))
 						const data = yield withMiddlewareEffects({
 							fetchData: () =>
@@ -3194,7 +3194,7 @@
 								(query = _extends(
 									{},
 									query,
-									data.effect.parsedAs.query
+									data.effect.parsedAs.query,
 								)),
 								(resolvedAs = data.effect.parsedAs.pathname),
 								(url =
@@ -3229,7 +3229,7 @@
 											(options.priority &&
 												!!process.env
 													.__NEXT_OPTIMISTIC_CLIENT_CACHE),
-									}).then(() => !1)
+									}).then(() => !1),
 							),
 							_this.pageLoader[
 								options.priority ? 'loadPage' : 'prefetch'
@@ -3266,7 +3266,7 @@
 								cancelled)
 							) {
 								const err = new Error(
-									'Loading initial props cancelled'
+									'Loading initial props cancelled',
 								)
 								throw ((err.cancelled = !0), err)
 							}
@@ -3337,7 +3337,7 @@
 						domainLocales,
 						isPreview,
 						isRsc,
-					}
+					},
 				) {
 					;(this.sdc = {}),
 						(this.isFirstPopStateEvent = !0),
@@ -3355,7 +3355,7 @@
 											_addBasePath.addBasePath(pathname),
 										query,
 									}),
-									_utils.getURL()
+									_utils.getURL(),
 								)
 							}
 							if (state.__NA) return void window.location.reload()
@@ -3379,12 +3379,12 @@
 										JSON.stringify({
 											x: self.pageXOffset,
 											y: self.pageYOffset,
-										})
+										}),
 									)
 								} catch (e) {}
 								try {
 									const v = sessionStorage.getItem(
-										'__next_scroll_' + key
+										'__next_scroll_' + key,
 									)
 									forcedScroll = JSON.parse(v)
 								} catch (e1) {
@@ -3411,7 +3411,7 @@
 											this.defaultLocale,
 										_h: 0,
 									}),
-									forcedScroll
+									forcedScroll,
 								)
 						})
 					const route =
@@ -3462,7 +3462,7 @@
 							(this.isLocaleDomain =
 								!!_detectDomainLocale.detectDomainLocale(
 									domainLocales,
-									self.location.hostname
+									self.location.hostname,
 								))),
 						(this.state = {
 							route,
@@ -3499,16 +3499,16 @@
 														{
 															pathname:
 																_addBasePath.addBasePath(
-																	pathname1
+																	pathname1,
 																),
 															query: query1,
-														}
+														},
 												  ),
 											asPath,
-											options
+											options,
 										),
 										matches
-									)
+									),
 								)
 						}
 						window.addEventListener('popstate', this.onPopState),
@@ -3520,10 +3520,10 @@
 			}
 			function matchesMiddleware(options) {
 				return Promise.resolve(
-					options.router.pageLoader.getMiddleware()
+					options.router.pageLoader.getMiddleware(),
 				).then((middleware) => {
 					const { pathname: asPathname } = _parsePath.parsePath(
-							options.asPath
+							options.asPath,
 						),
 						cleanedAs = _hasBasePath.hasBasePath(asPathname)
 							? _removeBasePath.removeBasePath(asPathname)
@@ -3533,7 +3533,7 @@
 					return (
 						!!regex &&
 						new RegExp(regex).test(
-							_addLocale.addLocale(cleanedAs, options.locale)
+							_addLocale.addLocale(cleanedAs, options.locale),
 						)
 					)
 				})
@@ -3547,7 +3547,7 @@
 									(function getMiddlewareData(
 										source,
 										response,
-										options
+										options,
 									) {
 										const nextConfig = {
 												basePath:
@@ -3558,26 +3558,26 @@
 												},
 												trailingSlash: Boolean(
 													process.env
-														.__NEXT_TRAILING_SLASH
+														.__NEXT_TRAILING_SLASH,
 												),
 											},
 											rewriteHeader =
 												response.headers.get(
-													'x-nextjs-rewrite'
+													'x-nextjs-rewrite',
 												)
 										let rewriteTarget =
 											rewriteHeader ||
 											response.headers.get(
-												'x-nextjs-matched-path'
+												'x-nextjs-matched-path',
 											)
 										const matchedPath =
 											response.headers.get(
-												'x-matched-path'
+												'x-matched-path',
 											)
 										!matchedPath ||
 											rewriteTarget ||
 											matchedPath.includes(
-												'__next_data_catchall'
+												'__next_data_catchall',
 											) ||
 											matchedPath.includes('/_error') ||
 											matchedPath.includes('/404') ||
@@ -3586,7 +3586,7 @@
 											if (rewriteTarget.startsWith('/')) {
 												const parsedRewriteTarget =
 														_parseRelativeUrl.parseRelativeUrl(
-															rewriteTarget
+															rewriteTarget,
 														),
 													pathnameInfo =
 														_getNextPathnameInfo.getNextPathnameInfo(
@@ -3594,11 +3594,11 @@
 															{
 																nextConfig,
 																parseData: !0,
-															}
+															},
 														)
 												let fsPathname =
 													_removeTrailingSlash.removeTrailingSlash(
-														pathnameInfo.pathname
+														pathnameInfo.pathname,
 													)
 												return Promise.all([
 													options.router.pageLoader.getPageList(),
@@ -3614,37 +3614,37 @@
 														let as =
 															_addLocale.addLocale(
 																pathnameInfo.pathname,
-																pathnameInfo.locale
+																pathnameInfo.locale,
 															)
 														if (
 															_isDynamic.isDynamicRoute(
-																as
+																as,
 															) ||
 															(!rewriteHeader &&
 																pages.includes(
 																	_normalizeLocalePath.normalizeLocalePath(
 																		_removeBasePath.removeBasePath(
-																			as
+																			as,
 																		),
 																		options
 																			.router
-																			.locales
-																	).pathname
+																			.locales,
+																	).pathname,
 																))
 														) {
 															const parsedSource =
 																_getNextPathnameInfo.getNextPathnameInfo(
 																	_parseRelativeUrl.parseRelativeUrl(
-																		source
+																		source,
 																	).pathname,
 																	{
 																		parseData:
 																			!0,
-																	}
+																	},
 																)
 															;(as =
 																_addBasePath.addBasePath(
-																	parsedSource.pathname
+																	parsedSource.pathname,
 																)),
 																(parsedRewriteTarget.pathname =
 																	as)
@@ -3662,11 +3662,11 @@
 																	(path) =>
 																		resolveDynamicRoute(
 																			path,
-																			pages
+																			pages,
 																		),
 																	options
 																		.router
-																		.locales
+																		.locales,
 																)
 															result.matchedPage &&
 																((parsedRewriteTarget.pathname =
@@ -3677,17 +3677,17 @@
 																	parsedRewriteTarget.query,
 																	result
 																		.parsedAs
-																		.query
+																		.query,
 																))
 														} else if (
 															!pages.includes(
-																fsPathname
+																fsPathname,
 															)
 														) {
 															const resolvedPathname =
 																resolveDynamicRoute(
 																	fsPathname,
-																	pages
+																	pages,
 																)
 															resolvedPathname !==
 																fsPathname &&
@@ -3696,35 +3696,35 @@
 														}
 														const resolvedHref =
 															pages.includes(
-																fsPathname
+																fsPathname,
 															)
 																? fsPathname
 																: resolveDynamicRoute(
 																		_normalizeLocalePath.normalizeLocalePath(
 																			_removeBasePath.removeBasePath(
-																				parsedRewriteTarget.pathname
+																				parsedRewriteTarget.pathname,
 																			),
 																			options
 																				.router
-																				.locales
+																				.locales,
 																		)
 																			.pathname,
-																		pages
+																		pages,
 																  )
 														if (
 															_isDynamic.isDynamicRoute(
-																resolvedHref
+																resolvedHref,
 															)
 														) {
 															const matches =
 																_routeMatcher.getRouteMatcher(
 																	_routeRegex.getRouteRegex(
-																		resolvedHref
-																	)
+																		resolvedHref,
+																	),
 																)(as)
 															Object.assign(
 																parsedRewriteTarget.query,
-																matches || {}
+																matches || {},
 															)
 														}
 														return {
@@ -3733,12 +3733,12 @@
 																parsedRewriteTarget,
 															resolvedHref,
 														}
-													}
+													},
 												)
 											}
 											const src =
 													_parsePath.parsePath(
-														source
+														source,
 													),
 												pathname =
 													_formatNextPathnameInfo.formatNextPathnameInfo(
@@ -3750,7 +3750,7 @@
 																	nextConfig,
 																	parseData:
 																		!0,
-																}
+																},
 															),
 															{
 																defaultLocale:
@@ -3758,8 +3758,8 @@
 																		.router
 																		.defaultLocale,
 																buildId: '',
-															}
-														)
+															},
+														),
 													)
 											return Promise.resolve({
 												type: 'redirect-external',
@@ -3768,7 +3768,7 @@
 										}
 										const redirectTarget =
 											response.headers.get(
-												'x-nextjs-redirect'
+												'x-nextjs-redirect',
 											)
 										if (redirectTarget) {
 											if (
@@ -3776,7 +3776,7 @@
 											) {
 												const src =
 														_parsePath.parsePath(
-															redirectTarget
+															redirectTarget,
 														),
 													pathname =
 														_formatNextPathnameInfo.formatNextPathnameInfo(
@@ -3788,7 +3788,7 @@
 																		nextConfig,
 																		parseData:
 																			!0,
-																	}
+																	},
 																),
 																{
 																	defaultLocale:
@@ -3796,8 +3796,8 @@
 																			.router
 																			.defaultLocale,
 																	buildId: '',
-																}
-															)
+																},
+															),
 														)
 												return Promise.resolve({
 													type: 'redirect-internal',
@@ -3814,17 +3814,17 @@
 									})(
 										data.dataHref,
 										data.response,
-										options
+										options,
 									).then((effect) => ({
 										dataHref: data.dataHref,
 										json: data.json,
 										response: data.response,
 										text: data.text,
 										effect,
-									}))
+									})),
 								)
 								.catch((_err) => null)
-						: null
+						: null,
 				)
 			}
 			;(Router.events = _mitt.default()), (exports.default = Router)
@@ -3832,14 +3832,14 @@
 		'./node_modules/next/dist/shared/lib/router/utils/add-locale.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.addLocale = function addLocale(
 					path,
 					locale,
 					defaultLocale,
-					ignorePrefix
+					ignorePrefix,
 				) {
 					if (
 						locale &&
@@ -3847,27 +3847,27 @@
 						(ignorePrefix ||
 							(!_pathHasPrefix.pathHasPrefix(
 								path.toLowerCase(),
-								`/${locale.toLowerCase()}`
+								`/${locale.toLowerCase()}`,
 							) &&
 								!_pathHasPrefix.pathHasPrefix(
 									path.toLowerCase(),
-									'/api'
+									'/api',
 								)))
 					)
 						return _addPathPrefix.addPathPrefix(path, `/${locale}`)
 					return path
 				})
 			var _addPathPrefix = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/add-path-prefix.js'
+					'./node_modules/next/dist/shared/lib/router/utils/add-path-prefix.js',
 				),
 				_pathHasPrefix = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js'
+					'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js',
 				)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/add-path-prefix.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.addPathPrefix = function addPathPrefix(path, prefix) {
@@ -3876,13 +3876,13 @@
 					return `${prefix}${pathname}${query}${hash}`
 				})
 			var _parsePath = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js'
+				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js',
 			)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/add-path-suffix.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.addPathSuffix = function addPathSuffix(path, suffix) {
@@ -3891,17 +3891,17 @@
 					return `${pathname}${suffix}${query}${hash}`
 				})
 			var _parsePath = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js'
+				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js',
 			)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/compare-states.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.compareRouterStates = function compareRouterStates(
 					a,
-					b
+					b,
 				) {
 					const stateKeys = Object.keys(a)
 					if (stateKeys.length !== Object.keys(b).length) return !1
@@ -3936,57 +3936,57 @@
 								info.pathname,
 								info.locale,
 								info.buildId ? void 0 : info.defaultLocale,
-								info.ignorePrefix
+								info.ignorePrefix,
 							)
 							info.buildId &&
 								(pathname = _addPathSuffix.addPathSuffix(
 									_addPathPrefix.addPathPrefix(
 										pathname,
-										`/_next/data/${info.buildId}`
+										`/_next/data/${info.buildId}`,
 									),
 									'/' === info.pathname
 										? 'index.json'
-										: '.json'
+										: '.json',
 								))
 							return (
 								(pathname = _addPathPrefix.addPathPrefix(
 									pathname,
-									info.basePath
+									info.basePath,
 								)),
 								info.trailingSlash
 									? info.buildId || pathname.endsWith('/')
 										? pathname
 										: _addPathSuffix.addPathSuffix(
 												pathname,
-												'/'
+												'/',
 										  )
 									: _removeTrailingSlash.removeTrailingSlash(
-											pathname
+											pathname,
 									  )
 							)
 						})
 				var _removeTrailingSlash = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js'
+						'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js',
 					),
 					_addPathPrefix = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/add-path-prefix.js'
+						'./node_modules/next/dist/shared/lib/router/utils/add-path-prefix.js',
 					),
 					_addPathSuffix = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/add-path-suffix.js'
+						'./node_modules/next/dist/shared/lib/router/utils/add-path-suffix.js',
 					),
 					_addLocale = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/add-locale.js'
+						'./node_modules/next/dist/shared/lib/router/utils/add-locale.js',
 					)
 			},
 		'./node_modules/next/dist/shared/lib/router/utils/format-url.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.formatUrl = formatUrl),
 				(exports.formatWithValidation = function formatWithValidation(
-					url
+					url,
 				) {
 					0
 					return formatUrl(url)
@@ -3994,11 +3994,11 @@
 				(exports.urlObjectKeys = void 0)
 			var querystring = (0,
 			__webpack_require__(
-				'./node_modules/@swc/helpers/lib/_interop_require_wildcard.js'
+				'./node_modules/@swc/helpers/lib/_interop_require_wildcard.js',
 			).Z)(
 				__webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/querystring.js'
-				)
+					'./node_modules/next/dist/shared/lib/router/utils/querystring.js',
+				),
 			)
 			const slashedProtocols = /https?|ftp|gopher|file/
 			function formatUrl(urlObj) {
@@ -4023,7 +4023,7 @@
 					query &&
 						'object' == typeof query &&
 						(query = String(
-							querystring.urlQueryToSearchParams(query)
+							querystring.urlQueryToSearchParams(query),
 						))
 				let search = urlObj.search || (query && `?${query}`) || ''
 				return (
@@ -4063,7 +4063,7 @@
 				Object.defineProperty(exports, '__esModule', { value: !0 }),
 					(exports.default = function getAssetPathFromRoute(
 						route,
-						ext = ''
+						ext = '',
 					) {
 						return (
 							('/' === route
@@ -4079,7 +4079,7 @@
 				Object.defineProperty(exports, '__esModule', { value: !0 }),
 					(exports.getNextPathnameInfo = function getNextPathnameInfo(
 						pathname,
-						options
+						options,
 					) {
 						var _nextConfig
 						const { basePath, i18n, trailingSlash } =
@@ -4096,12 +4096,12 @@
 						basePath &&
 							_pathHasPrefix.pathHasPrefix(
 								info.pathname,
-								basePath
+								basePath,
 							) &&
 							((info.pathname =
 								_removePathPrefix.removePathPrefix(
 									info.pathname,
-									basePath
+									basePath,
 								)),
 							(info.basePath = basePath))
 						if (
@@ -4124,7 +4124,7 @@
 							const pathLocale =
 								_normalizeLocalePath.normalizeLocalePath(
 									info.pathname,
-									i18n.locales
+									i18n.locales,
 								)
 							;(info.locale =
 								null == pathLocale
@@ -4138,19 +4138,19 @@
 						return info
 					})
 				var _normalizeLocalePath = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js'
+						'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js',
 					),
 					_removePathPrefix = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/remove-path-prefix.js'
+						'./node_modules/next/dist/shared/lib/router/utils/remove-path-prefix.js',
 					),
 					_pathHasPrefix = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js'
+						'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js',
 					)
 			},
 		'./node_modules/next/dist/shared/lib/router/utils/index.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				Object.defineProperty(exports, 'getSortedRoutes', {
@@ -4166,15 +4166,15 @@
 					},
 				})
 			var _sortedRoutes = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/sorted-routes.js'
+					'./node_modules/next/dist/shared/lib/router/utils/sorted-routes.js',
 				),
 				_isDynamic = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/is-dynamic.js'
+					'./node_modules/next/dist/shared/lib/router/utils/is-dynamic.js',
 				)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/is-dynamic.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.isDynamicRoute = function isDynamicRoute(route) {
@@ -4187,12 +4187,12 @@
 				Object.defineProperty(exports, '__esModule', { value: !0 }),
 					(exports.parseRelativeUrl = function parseRelativeUrl(
 						url,
-						base
+						base,
 					) {
 						const globalBase = new URL(
 								'undefined' == typeof window
 									? 'http://n'
-									: _utils.getLocationOrigin()
+									: _utils.getLocationOrigin(),
 							),
 							resolvedBase = base
 								? new URL(base, globalBase)
@@ -4200,7 +4200,7 @@
 								? new URL(
 										'undefined' == typeof window
 											? 'http://n'
-											: window.location.href
+											: window.location.href,
 								  )
 								: globalBase,
 							{
@@ -4213,12 +4213,12 @@
 							} = new URL(url, resolvedBase)
 						if (origin !== globalBase.origin)
 							throw new Error(
-								`invariant: invalid relative URL, router received ${url}`
+								`invariant: invalid relative URL, router received ${url}`,
 							)
 						return {
 							pathname,
 							query: _querystring.searchParamsToUrlQuery(
-								searchParams
+								searchParams,
 							),
 							search,
 							hash,
@@ -4226,16 +4226,16 @@
 						}
 					})
 				var _utils = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/utils.js'
+						'./node_modules/next/dist/shared/lib/utils.js',
 					),
 					_querystring = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/querystring.js'
+						'./node_modules/next/dist/shared/lib/router/utils/querystring.js',
 					)
 			},
 		'./node_modules/next/dist/shared/lib/router/utils/parse-url.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.parseUrl = function parseUrl(url) {
@@ -4250,22 +4250,22 @@
 						port: parsedURL.port,
 						protocol: parsedURL.protocol,
 						query: _querystring.searchParamsToUrlQuery(
-							parsedURL.searchParams
+							parsedURL.searchParams,
 						),
 						search: parsedURL.search,
 					}
 				})
 			var _querystring = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/querystring.js'
+					'./node_modules/next/dist/shared/lib/router/utils/querystring.js',
 				),
 				_parseRelativeUrl = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js'
+					'./node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js',
 				)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.pathHasPrefix = function pathHasPrefix(path, prefix) {
@@ -4276,13 +4276,13 @@
 					)
 				})
 			var _parsePath = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js'
+				'./node_modules/next/dist/shared/lib/router/utils/parse-path.js',
 			)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/path-match.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.getPathMatch = function getPathMatch(path, options) {
@@ -4296,10 +4296,10 @@
 							(null == options ? void 0 : options.regexModifier)
 								? new RegExp(
 										options.regexModifier(regexp.source),
-										regexp.flags
+										regexp.flags,
 								  )
 								: regexp,
-							keys
+							keys,
 						)
 					return (pathname, params) => {
 						const res = null != pathname && matcher(pathname)
@@ -4316,10 +4316,10 @@
 					}
 				})
 			var _extends = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_extends.js'
+					'./node_modules/@swc/helpers/lib/_extends.js',
 				).Z,
 				_pathToRegexp = __webpack_require__(
-					'./node_modules/next/dist/compiled/path-to-regexp/index.js'
+					'./node_modules/next/dist/compiled/path-to-regexp/index.js',
 				)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/prepare-destination.js':
@@ -4360,7 +4360,7 @@
 									return (
 										(params[
 											(function getSafeParamName(
-												paramName
+												paramName,
 											) {
 												let newParamName = ''
 												for (
@@ -4384,7 +4384,7 @@
 									)
 								if (value) {
 									const matcher = new RegExp(
-											`^${hasItem.value}$`
+											`^${hasItem.value}$`,
 										),
 										matches = Array.isArray(value)
 											? value.slice(-1)[0].match(matcher)
@@ -4394,7 +4394,7 @@
 											Array.isArray(matches) &&
 												(matches.groups
 													? Object.keys(
-															matches.groups
+															matches.groups,
 													  ).forEach((groupKey) => {
 															params[groupKey] =
 																matches.groups[
@@ -4416,7 +4416,7 @@
 					}),
 					(exports.compileNonPath = compileNonPath),
 					(exports.prepareDestination = function prepareDestination(
-						args
+						args,
 					) {
 						const query = Object.assign({}, args.query)
 						delete query.__nextLocale,
@@ -4424,18 +4424,18 @@
 							delete query.__nextDataReq
 						let escapedDestination = args.destination
 						for (const param of Object.keys(
-							_extends({}, args.params, query)
+							_extends({}, args.params, query),
 						))
 							(segmentName = param),
 								(escapedDestination =
 									escapedDestination.replace(
 										new RegExp(
 											`:${_escapeRegexp.escapeStringRegexp(
-												segmentName
+												segmentName,
 											)}`,
-											'g'
+											'g',
 										),
-										`__ESC_COLON_${segmentName}`
+										`__ESC_COLON_${segmentName}`,
 									))
 						var segmentName
 						const parsedDestination =
@@ -4444,50 +4444,50 @@
 							destPath = unescapeSegments(
 								`${parsedDestination.pathname}${
 									parsedDestination.hash || ''
-								}`
+								}`,
 							),
 							destHostname = unescapeSegments(
-								parsedDestination.hostname || ''
+								parsedDestination.hostname || '',
 							),
 							destPathParamKeys = [],
 							destHostnameParamKeys = []
 						_pathToRegexp.pathToRegexp(destPath, destPathParamKeys),
 							_pathToRegexp.pathToRegexp(
 								destHostname,
-								destHostnameParamKeys
+								destHostnameParamKeys,
 							)
 						const destParams = []
 						destPathParamKeys.forEach((key) =>
-							destParams.push(key.name)
+							destParams.push(key.name),
 						),
 							destHostnameParamKeys.forEach((key) =>
-								destParams.push(key.name)
+								destParams.push(key.name),
 							)
 						const destPathCompiler = _pathToRegexp.compile(
 								destPath,
-								{ validate: !1 }
+								{ validate: !1 },
 							),
 							destHostnameCompiler = _pathToRegexp.compile(
 								destHostname,
-								{ validate: !1 }
+								{ validate: !1 },
 							)
 						for (const [key1, strOrArray] of Object.entries(
-							destQuery
+							destQuery,
 						))
 							Array.isArray(strOrArray)
 								? (destQuery[key1] = strOrArray.map((value) =>
 										compileNonPath(
 											unescapeSegments(value),
-											args.params
-										)
+											args.params,
+										),
 								  ))
 								: (destQuery[key1] = compileNonPath(
 										unescapeSegments(strOrArray),
-										args.params
+										args.params,
 								  ))
 						let newUrl,
 							paramKeys = Object.keys(args.params).filter(
-								(name) => 'nextInternalLocale' !== name
+								(name) => 'nextInternalLocale' !== name,
 							)
 						if (
 							args.appendParamsToQuery &&
@@ -4500,7 +4500,7 @@
 							newUrl = destPathCompiler(args.params)
 							const [pathname, hash] = newUrl.split('#')
 							;(parsedDestination.hostname = destHostnameCompiler(
-								args.params
+								args.params,
 							)),
 								(parsedDestination.pathname = pathname),
 								(parsedDestination.hash = `${hash ? '#' : ''}${
@@ -4510,11 +4510,11 @@
 						} catch (err) {
 							if (
 								err.message.match(
-									/Expected .*? to not repeat, but got an array/
+									/Expected .*? to not repeat, but got an array/,
 								)
 							)
 								throw new Error(
-									'To use a multi-match in the destination you must add `*` at the end of the param name to signify it should repeat. https://nextjs.org/docs/messages/invalid-multi-match'
+									'To use a multi-match in the destination you must add `*` at the end of the param name to signify it should repeat. https://nextjs.org/docs/messages/invalid-multi-match',
 								)
 							throw err
 						}
@@ -4522,22 +4522,22 @@
 							(parsedDestination.query = _extends(
 								{},
 								query,
-								parsedDestination.query
+								parsedDestination.query,
 							)),
 							{ newUrl, destQuery, parsedDestination }
 						)
 					})
 				var _extends = __webpack_require__(
-						'./node_modules/@swc/helpers/lib/_extends.js'
+						'./node_modules/@swc/helpers/lib/_extends.js',
 					).Z,
 					_pathToRegexp = __webpack_require__(
-						'./node_modules/next/dist/compiled/path-to-regexp/index.js'
+						'./node_modules/next/dist/compiled/path-to-regexp/index.js',
 					),
 					_escapeRegexp = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/escape-regexp.js'
+						'./node_modules/next/dist/shared/lib/escape-regexp.js',
 					),
 					_parseUrl = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/parse-url.js'
+						'./node_modules/next/dist/shared/lib/router/utils/parse-url.js',
 					)
 				function compileNonPath(value, params) {
 					if (!value.includes(':')) return value
@@ -4546,19 +4546,19 @@
 							(value = value
 								.replace(
 									new RegExp(`:${key}\\*`, 'g'),
-									`:${key}--ESCAPED_PARAM_ASTERISKS`
+									`:${key}--ESCAPED_PARAM_ASTERISKS`,
 								)
 								.replace(
 									new RegExp(`:${key}\\?`, 'g'),
-									`:${key}--ESCAPED_PARAM_QUESTION`
+									`:${key}--ESCAPED_PARAM_QUESTION`,
 								)
 								.replace(
 									new RegExp(`:${key}\\+`, 'g'),
-									`:${key}--ESCAPED_PARAM_PLUS`
+									`:${key}--ESCAPED_PARAM_PLUS`,
 								)
 								.replace(
 									new RegExp(`:${key}(?!\\w)`, 'g'),
-									`--ESCAPED_PARAM_COLON${key}`
+									`--ESCAPED_PARAM_COLON${key}`,
 								))
 					return (
 						(value = value
@@ -4578,7 +4578,7 @@
 			},
 		'./node_modules/next/dist/shared/lib/router/utils/querystring.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			function stringifyUrlQueryParam(param) {
 				return 'string' == typeof param ||
@@ -4611,12 +4611,12 @@
 									? value.forEach((item) =>
 											result.append(
 												key,
-												stringifyUrlQueryParam(item)
-											)
+												stringifyUrlQueryParam(item),
+											),
 									  )
 									: result.set(
 											key,
-											stringifyUrlQueryParam(value)
+											stringifyUrlQueryParam(value),
 									  )
 							}),
 							result
@@ -4626,10 +4626,10 @@
 					return (
 						searchParamsList.forEach((searchParams) => {
 							Array.from(searchParams.keys()).forEach((key) =>
-								target.delete(key)
+								target.delete(key),
 							),
 								searchParams.forEach((value, key) =>
-									target.append(key, value)
+									target.append(key, value),
 								)
 						}),
 						target
@@ -4641,7 +4641,7 @@
 				Object.defineProperty(exports, '__esModule', { value: !0 }),
 					(exports.removePathPrefix = function removePathPrefix(
 						path,
-						prefix
+						prefix,
 					) {
 						if (_pathHasPrefix.pathHasPrefix(path, prefix)) {
 							const withoutPrefix = path.slice(prefix.length)
@@ -4652,13 +4652,13 @@
 						return path
 					})
 				var _pathHasPrefix = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js'
+					'./node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js',
 				)
 			},
 		'./node_modules/next/dist/shared/lib/router/utils/resolve-rewrites.js':
 			(__unused_webpack_module, exports, __webpack_require__) => {
 				var process = __webpack_require__(
-					'./node_modules/process/browser.js'
+					'./node_modules/process/browser.js',
 				)
 				Object.defineProperty(exports, '__esModule', { value: !0 }),
 					(exports.default = function resolveRewrites(
@@ -4667,7 +4667,7 @@
 						rewrites,
 						query,
 						resolveHref,
-						locales
+						locales,
 					) {
 						let resolvedHref,
 							matchedPage = !1,
@@ -4678,10 +4678,10 @@
 								_removeTrailingSlash.removeTrailingSlash(
 									_normalizeLocalePath.normalizeLocalePath(
 										_removeBasePath.removeBasePath(
-											parsedAs.pathname
+											parsedAs.pathname,
 										),
-										locales
-									).pathname
+										locales,
+									).pathname,
 								)
 						const handleRewrite = (rewrite) => {
 							let params = _pathMatch.getPathMatch(
@@ -4689,7 +4689,7 @@
 									(process.env.__NEXT_TRAILING_SLASH
 										? '(/)?'
 										: ''),
-								{ removeUnnamedParams: !0, strict: !0 }
+								{ removeUnnamedParams: !0, strict: !0 },
 							)(parsedAs.pathname)
 							if (rewrite.has && params) {
 								const hasParams = _prepareDestination.matchHas(
@@ -4710,7 +4710,7 @@
 											}, {}),
 									},
 									rewrite.has,
-									parsedAs.query
+									parsedAs.query,
 								)
 								hasParams
 									? Object.assign(params, hasParams)
@@ -4731,16 +4731,16 @@
 									(asPath = destRes.newUrl),
 									Object.assign(
 										query,
-										destRes.parsedDestination.query
+										destRes.parsedDestination.query,
 									),
 									(fsPathname =
 										_removeTrailingSlash.removeTrailingSlash(
 											_normalizeLocalePath.normalizeLocalePath(
 												_removeBasePath.removeBasePath(
-													asPath
+													asPath,
 												),
-												locales
-											).pathname
+												locales,
+											).pathname,
 										)),
 									pages.includes(fsPathname))
 								)
@@ -4801,28 +4801,28 @@
 						}
 					})
 				var _pathMatch = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/path-match.js'
+						'./node_modules/next/dist/shared/lib/router/utils/path-match.js',
 					),
 					_prepareDestination = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/prepare-destination.js'
+						'./node_modules/next/dist/shared/lib/router/utils/prepare-destination.js',
 					),
 					_removeTrailingSlash = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js'
+						'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js',
 					),
 					_normalizeLocalePath = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js'
+						'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js',
 					),
 					_removeBasePath = __webpack_require__(
-						'./node_modules/next/dist/client/remove-base-path.js'
+						'./node_modules/next/dist/client/remove-base-path.js',
 					),
 					_parseRelativeUrl = __webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js'
+						'./node_modules/next/dist/shared/lib/router/utils/parse-relative-url.js',
 					)
 			},
 		'./node_modules/next/dist/shared/lib/router/utils/route-matcher.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.getRouteMatcher = function getRouteMatcher({
@@ -4837,7 +4837,7 @@
 									return decodeURIComponent(param)
 								} catch (_) {
 									throw new _utils.DecodeError(
-										'failed to decode param'
+										'failed to decode param',
 									)
 								}
 							},
@@ -4860,18 +4860,18 @@
 					}
 				})
 			var _utils = __webpack_require__(
-				'./node_modules/next/dist/shared/lib/utils.js'
+				'./node_modules/next/dist/shared/lib/utils.js',
 			)
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/route-regex.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.getRouteRegex = getRouteRegex),
 				(exports.getNamedRouteRegex = function getNamedRouteRegex(
-					normalizedRoute
+					normalizedRoute,
 				) {
 					const result = getNamedParametrizedRoute(normalizedRoute)
 					return _extends({}, getRouteRegex(normalizedRoute), {
@@ -4881,7 +4881,7 @@
 				}),
 				(exports.getMiddlewareRegex = function getMiddlewareRegex(
 					normalizedRoute,
-					options
+					options,
 				) {
 					const { parameterizedRoute, groups } =
 							getParametrizedRoute(normalizedRoute),
@@ -4897,7 +4897,7 @@
 						re: new RegExp(
 							`^${parameterizedRoute}${
 								catchAll ? '(?:(/.*)?)' : ''
-							}$`
+							}$`,
 						),
 					}
 				}),
@@ -4918,13 +4918,13 @@
 						}
 					})
 			var _extends = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_extends.js'
+					'./node_modules/@swc/helpers/lib/_extends.js',
 				).Z,
 				_escapeRegexp = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/escape-regexp.js'
+					'./node_modules/next/dist/shared/lib/escape-regexp.js',
 				),
 				_removeTrailingSlash = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js'
+					'./node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js',
 				)
 			function getRouteRegex(normalizedRoute) {
 				const { parameterizedRoute, groups } =
@@ -4964,7 +4964,7 @@
 								)
 							}
 							return `/${_escapeRegexp.escapeStringRegexp(
-								segment
+								segment,
 							)}`
 						})
 						.join(''),
@@ -5020,7 +5020,7 @@
 								)
 							}
 							return `/${_escapeRegexp.escapeStringRegexp(
-								segment
+								segment,
 							)}`
 						})
 						.join(''),
@@ -5039,16 +5039,16 @@
 		},
 		'./node_modules/next/dist/shared/lib/router/utils/sorted-routes.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.getSortedRoutes = function getSortedRoutes(
-					normalizedPages
+					normalizedPages,
 				) {
 					const root = new UrlNode()
 					return (
 						normalizedPages.forEach((pagePath) =>
-							root.insert(pagePath)
+							root.insert(pagePath),
 						),
 						root.smoosh()
 					)
@@ -5067,16 +5067,16 @@
 						null !== this.restSlugName &&
 							childrenPaths.splice(
 								childrenPaths.indexOf('[...]'),
-								1
+								1,
 							),
 						null !== this.optionalRestSlugName &&
 							childrenPaths.splice(
 								childrenPaths.indexOf('[[...]]'),
-								1
+								1,
 							)
 					const routes = childrenPaths
 						.map((c) =>
-							this.children.get(c)._smoosh(`${prefix}${c}/`)
+							this.children.get(c)._smoosh(`${prefix}${c}/`),
 						)
 						.reduce((prev, curr) => [...prev, ...curr], [])
 					if (
@@ -5084,14 +5084,14 @@
 							routes.push(
 								...this.children
 									.get('[]')
-									._smoosh(`${prefix}[${this.slugName}]/`)
+									._smoosh(`${prefix}[${this.slugName}]/`),
 							),
 						!this.placeholder)
 					) {
 						const r = '/' === prefix ? '/' : prefix.slice(0, -1)
 						if (null != this.optionalRestSlugName)
 							throw new Error(
-								`You cannot define a route with the same specificity as a optional catch-all route ("${r}" and "${r}[[...${this.optionalRestSlugName}]]").`
+								`You cannot define a route with the same specificity as a optional catch-all route ("${r}" and "${r}[[...${this.optionalRestSlugName}]]").`,
 							)
 						routes.unshift(r)
 					}
@@ -5101,16 +5101,16 @@
 								...this.children
 									.get('[...]')
 									._smoosh(
-										`${prefix}[...${this.restSlugName}]/`
-									)
+										`${prefix}[...${this.restSlugName}]/`,
+									),
 							),
 						null !== this.optionalRestSlugName &&
 							routes.push(
 								...this.children
 									.get('[[...]]')
 									._smoosh(
-										`${prefix}[[...${this.optionalRestSlugName}]]/`
-									)
+										`${prefix}[[...${this.optionalRestSlugName}]]/`,
+									),
 							),
 						routes
 					)
@@ -5120,7 +5120,7 @@
 						return void (this.placeholder = !1)
 					if (isCatchAll)
 						throw new Error(
-							'Catch-all must be the last part of the URL.'
+							'Catch-all must be the last part of the URL.',
 						)
 					let nextSegment = urlPaths[0]
 					if (
@@ -5141,11 +5141,11 @@
 								segmentName.endsWith(']'))
 						)
 							throw new Error(
-								`Segment names may not start or end with extra brackets ('${segmentName}').`
+								`Segment names may not start or end with extra brackets ('${segmentName}').`,
 							)
 						if (segmentName.startsWith('.'))
 							throw new Error(
-								`Segment names may not start with erroneous periods ('${segmentName}').`
+								`Segment names may not start with erroneous periods ('${segmentName}').`,
 							)
 						function handleSlug(previousSlug, nextSlug) {
 							if (
@@ -5153,19 +5153,19 @@
 								previousSlug !== nextSlug
 							)
 								throw new Error(
-									`You cannot use different slug names for the same dynamic path ('${previousSlug}' !== '${nextSlug}').`
+									`You cannot use different slug names for the same dynamic path ('${previousSlug}' !== '${nextSlug}').`,
 								)
 							slugNames.forEach((slug) => {
 								if (slug === nextSlug)
 									throw new Error(
-										`You cannot have the same slug name "${nextSlug}" repeat within a single dynamic path`
+										`You cannot have the same slug name "${nextSlug}" repeat within a single dynamic path`,
 									)
 								if (
 									slug.replace(/\W/g, '') ===
 									nextSegment.replace(/\W/g, '')
 								)
 									throw new Error(
-										`You cannot have the slug names "${slug}" and "${nextSlug}" differ only by non-word symbols within a single dynamic path`
+										`You cannot have the slug names "${slug}" and "${nextSlug}" differ only by non-word symbols within a single dynamic path`,
 									)
 							}),
 								slugNames.push(nextSlug)
@@ -5174,18 +5174,18 @@
 							if (isOptional) {
 								if (null != this.restSlugName)
 									throw new Error(
-										`You cannot use both an required and optional catch-all route at the same level ("[...${this.restSlugName}]" and "${urlPaths[0]}" ).`
+										`You cannot use both an required and optional catch-all route at the same level ("[...${this.restSlugName}]" and "${urlPaths[0]}" ).`,
 									)
 								handleSlug(
 									this.optionalRestSlugName,
-									segmentName
+									segmentName,
 								),
 									(this.optionalRestSlugName = segmentName),
 									(nextSegment = '[[...]]')
 							} else {
 								if (null != this.optionalRestSlugName)
 									throw new Error(
-										`You cannot use both an optional and required catch-all route at the same level ("[[...${this.optionalRestSlugName}]]" and "${urlPaths[0]}").`
+										`You cannot use both an optional and required catch-all route at the same level ("[[...${this.optionalRestSlugName}]]" and "${urlPaths[0]}").`,
 									)
 								handleSlug(this.restSlugName, segmentName),
 									(this.restSlugName = segmentName),
@@ -5194,7 +5194,7 @@
 						else {
 							if (isOptional)
 								throw new Error(
-									`Optional route parameters are not yet supported ("${urlPaths[0]}").`
+									`Optional route parameters are not yet supported ("${urlPaths[0]}").`,
 								)
 							handleSlug(this.slugName, segmentName),
 								(this.slugName = segmentName),

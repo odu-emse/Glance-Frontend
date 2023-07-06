@@ -6,7 +6,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -17,17 +17,17 @@
 					_Primary$parameters2,
 					_Primary$parameters2$,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					next_link = __webpack_require__(
-						'./node_modules/next/link.js'
+						'./node_modules/next/link.js',
 					),
 					link_default = __webpack_require__.n(next_link),
 					index_esm = __webpack_require__(
-						'./node_modules/react-icons/hi/index.esm.js'
+						'./node_modules/react-icons/hi/index.esm.js',
 					),
 					__jsx = react.createElement,
 					ModuleItem = function ModuleItem(_ref) {
@@ -42,7 +42,7 @@
 									'px-5 py-4 rounded-md shadow cursor-pointer flex justify-center items-center w-full border-2 '.concat(
 										selected
 											? 'border-royalblue'
-											: 'border-transparent'
+											: 'border-transparent',
 									),
 							},
 							__jsx(
@@ -64,13 +64,13 @@
 										{ className: 'p-0 m-0' },
 										'SECTION ',
 										data.collections[0].section
-											.sectionNumber
+											.sectionNumber,
 									),
 									__jsx('span', null, '/'),
 									__jsx(
 										'p',
 										{ className: 'p-0 m-0' },
-										data.collections[0].name
+										data.collections[0].name,
 									),
 									__jsx('span', null, '/'),
 									__jsx(
@@ -78,8 +78,8 @@
 										{ className: 'p-0 m-0' },
 										'MODULE ',
 										data.prefix && data.prefix,
-										data.number
-									)
+										data.number,
+									),
 								),
 								__jsx(
 									'div',
@@ -90,9 +90,9 @@
 											className:
 												'sans leading-5 text-royalblue font-semibold',
 										},
-										data.name
-									)
-								)
+										data.name,
+									),
+								),
 							),
 							__jsx(
 								link_default(),
@@ -110,10 +110,10 @@
 												'w-12 h-12 bg-royalblue text-white rounded-full flex justify-center items-center',
 											style: { fontSize: '24px' },
 										},
-										__jsx(index_esm.MOd, null)
-									)
-								)
-							)
+										__jsx(index_esm.MOd, null),
+									),
+								),
+							),
 						)
 					}
 				;(ModuleItem.displayName = 'ModuleItem'),
@@ -222,7 +222,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -233,19 +233,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -253,8 +253,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -299,7 +299,7 @@
 											Primary.parameters) ||
 										void 0 === _Primary$parameters
 										? void 0
-										: _Primary$parameters.docs
+										: _Primary$parameters.docs,
 								),
 								{},
 								{
@@ -317,11 +317,11 @@
 													_Primary$parameters2.docs) ||
 											void 0 === _Primary$parameters2$
 											? void 0
-											: _Primary$parameters2$.source
+											: _Primary$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

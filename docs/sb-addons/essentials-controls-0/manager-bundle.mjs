@@ -40,7 +40,7 @@ try {
 			t || !e || !e.__esModule
 				? ya(r, 'default', { value: e, enumerable: !0 })
 				: r,
-			e
+			e,
 		)
 	)
 	var l = tt(() => {})
@@ -716,9 +716,9 @@ try {
 						.replace(ub, '\\$&')
 						.replace(
 							/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-							'$1.*?'
+							'$1.*?',
 						) +
-					'$'
+					'$',
 			)
 		function hb(e) {
 			if (!ob(e) || ab(e)) return !1
@@ -1334,7 +1334,7 @@ try {
 			vE = Ol(
 				(function () {
 					return arguments
-				})()
+				})(),
 			)
 				? Ol
 				: function (e) {
@@ -2458,7 +2458,7 @@ try {
 							n,
 							a,
 							o,
-							i
+							i,
 						)
 					}
 					return o[y].exports
@@ -2531,7 +2531,7 @@ try {
 										(this.lastItem &&
 											this.isEqual(
 												this.lastItem.key,
-												u
+												u,
 											) &&
 											(this.lastItem = void 0),
 										(s = this.indexOf(u)),
@@ -2561,7 +2561,7 @@ try {
 											s || this,
 											this.list[d].val,
 											this.list[d].key,
-											this
+											this,
 										)
 								}),
 								(i.prototype.indexOf = function (u) {
@@ -2598,7 +2598,7 @@ try {
 											E.numArgs !== P + 1
 										)
 											throw new Error(
-												'Memoizerific functions should always be called with the same number of arguments'
+												'Memoizerific functions should always be called with the same number of arguments',
 											)
 										for (w = 0; w < P; w++) {
 											if (
@@ -2684,7 +2684,7 @@ try {
 					],
 				},
 				{},
-				[3]
+				[3],
 			)(3)
 		})
 	})
@@ -3539,7 +3539,7 @@ try {
 					e.call(
 						this,
 						this._continueWith.bind(this),
-						this._failWith.bind(this)
+						this._failWith.bind(this),
 					)
 		}
 		function zr(e) {
@@ -3870,7 +3870,7 @@ try {
 		}
 		if (Promise === ie)
 			throw new Error(
-				'Please use SynchronousPromise.installGlobally() to install globally'
+				'Please use SynchronousPromise.installGlobally() to install globally',
 			)
 		var N0 = Promise
 		ie.installGlobally = function (e) {
@@ -4040,7 +4040,7 @@ try {
 					'binder',
 					'return function (' +
 						u.join(',') +
-						'){ return binder.apply(this,arguments); }'
+						'){ return binder.apply(this,arguments); }',
 				)(o)),
 				r.prototype)
 			) {
@@ -4300,11 +4300,11 @@ try {
 					n = Gn(t, -1)
 				if (r === '%' && n !== '%')
 					throw new nr(
-						'invalid intrinsic syntax, expected closing `%`'
+						'invalid intrinsic syntax, expected closing `%`',
 					)
 				if (n === '%' && r !== '%')
 					throw new nr(
-						'invalid intrinsic syntax, expected opening `%`'
+						'invalid intrinsic syntax, expected opening `%`',
 					)
 				var a = []
 				return (
@@ -4326,7 +4326,7 @@ try {
 						throw new rr(
 							'intrinsic ' +
 								t +
-								' exists, but is not available. Please file an issue!'
+								' exists, but is not available. Please file an issue!',
 						)
 					return { alias: a, name: n, value: o }
 				}
@@ -4339,7 +4339,7 @@ try {
 				throw new rr('"allowMissing" argument must be a boolean')
 			if (QB(/^%?[^%]*%?$/, t) === null)
 				throw new nr(
-					'`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+					'`%` may not be present anywhere but at the beginning and end of the intrinsic name',
 				)
 			var n = tT(t),
 				a = n.length > 0 ? n[0] : '',
@@ -4363,7 +4363,7 @@ try {
 					m !== E
 				)
 					throw new nr(
-						'property names with quotes must have matching quotes'
+						'property names with quotes must have matching quotes',
 					)
 				if (
 					((g === 'constructor' || !A) && (s = !0),
@@ -4378,7 +4378,7 @@ try {
 							throw new rr(
 								'base intrinsic for ' +
 									t +
-									' exists, but the property is not available.'
+									' exists, but the property is not available.',
 							)
 						return
 					}
@@ -4548,7 +4548,7 @@ try {
 				o.quoteStyle !== 'double'
 			)
 				throw new TypeError(
-					'option "quoteStyle" must be "single" or "double"'
+					'option "quoteStyle" must be "single" or "double"',
 				)
 			if (
 				yt(o, 'maxStringLength') &&
@@ -4557,12 +4557,12 @@ try {
 					: o.maxStringLength !== null)
 			)
 				throw new TypeError(
-					'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`'
+					'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`',
 				)
 			var i = yt(o, 'customInspect') ? o.customInspect : !0
 			if (typeof i != 'boolean' && i !== 'symbol')
 				throw new TypeError(
-					'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`'
+					'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`',
 				)
 			if (
 				yt(o, 'indent') &&
@@ -4571,14 +4571,14 @@ try {
 				!(parseInt(o.indent, 10) === o.indent && o.indent > 0)
 			)
 				throw new TypeError(
-					'option "indent" must be "\\t", an integer > 0, or `null`'
+					'option "indent" must be "\\t", an integer > 0, or `null`',
 				)
 			if (
 				yt(o, 'numericSeparator') &&
 				typeof o.numericSeparator != 'boolean'
 			)
 				throw new TypeError(
-					'option "numericSeparator", if provided, must be `true` or `false`'
+					'option "numericSeparator", if provided, must be `true` or `false`',
 				)
 			var u = o.numericSeparator
 			if (typeof t > 'u') return 'undefined'
@@ -4662,7 +4662,7 @@ try {
 							'] ' +
 							Xe.call(
 								Sh.call('[cause]: ' + g(t.cause), $),
-								', '
+								', ',
 							) +
 							' }'
 					: $.length === 0
@@ -4920,7 +4920,7 @@ try {
 					Mh(
 						e[t],
 						`
-`
+`,
 					) >= 0
 				)
 					return !1
@@ -5025,7 +5025,7 @@ try {
 					assert: function (o) {
 						if (!a.has(o))
 							throw new PT(
-								'Side channel does not contain ' + RT(o)
+								'Side channel does not contain ' + RT(o),
 							)
 					},
 					get: function (o) {
@@ -5098,7 +5098,9 @@ try {
 				for (var e = [], t = 0; t < 256; ++t)
 					e.push(
 						'%' +
-							((t < 16 ? '0' : '') + t.toString(16)).toUpperCase()
+							(
+								(t < 16 ? '0' : '') + t.toString(16)
+							).toUpperCase(),
 					)
 				return e
 			})(),
@@ -5435,8 +5437,8 @@ try {
 									m,
 									E,
 									b,
-									T
-								)
+									T,
+								),
 							)
 					}
 				}
@@ -5457,7 +5459,7 @@ try {
 					t.charset !== 'iso-8859-1'
 				)
 					throw new TypeError(
-						'The charset option must be either utf-8, iso-8859-1, or undefined'
+						'The charset option must be either utf-8, iso-8859-1, or undefined',
 					)
 				var n = Kr.default
 				if (typeof t.format < 'u') {
@@ -5540,7 +5542,7 @@ try {
 				typeof t.commaRoundTrip != 'boolean'
 			)
 				throw new TypeError(
-					'`commaRoundTrip` must be a boolean, or absent'
+					'`commaRoundTrip` must be a boolean, or absent',
 				)
 			var d = s === 'comma' && t && t.commaRoundTrip
 			a || (a = Object.keys(r)), n.sort && a.sort(n.sort)
@@ -5565,8 +5567,8 @@ try {
 							n.formatter,
 							n.encodeValuesOnly,
 							n.charset,
-							y
-						)
+							y,
+						),
 					)
 			}
 			var m = i.join(n.delimiter),
@@ -5651,7 +5653,7 @@ try {
 									y.slice(0, g),
 									Te.decoder,
 									d,
-									'key'
+									'key',
 							  )),
 							  (E = ur.maybeMap(
 									Zh(y.slice(g + 1), r),
@@ -5660,9 +5662,9 @@ try {
 											b,
 											Te.decoder,
 											d,
-											'value'
+											'value',
 										)
-									}
+									},
 							  ))),
 							E &&
 								r.interpretNumericEntities &&
@@ -5754,7 +5756,7 @@ try {
 					t.charset !== 'iso-8859-1'
 				)
 					throw new TypeError(
-						'The charset option must be either utf-8, iso-8859-1, or undefined'
+						'The charset option must be either utf-8, iso-8859-1, or undefined',
 					)
 				var r = typeof t.charset > 'u' ? Te.charset : t.charset
 				return {
@@ -5992,7 +5994,7 @@ try {
 			function A(x) {
 				if (x <= 65535) return String.fromCharCode(x)
 				var S = String.fromCharCode(
-						Math.floor((x - 65536) / 1024) + 55296
+						Math.floor((x - 65536) / 1024) + 55296,
 					),
 					P = String.fromCharCode(((x - 65536) % 1024) + 56320)
 				return S + P
@@ -6425,7 +6427,7 @@ try {
 										? ((_ = '01234567'.indexOf(k)),
 										  a < n &&
 												s.code.isOctalDigit(
-													r.charCodeAt(a)
+													r.charCodeAt(a),
 												) &&
 												((_ =
 													_ * 8 +
@@ -6433,12 +6435,12 @@ try {
 												'0123'.indexOf(k) >= 0 &&
 													a < n &&
 													s.code.isOctalDigit(
-														r.charCodeAt(a)
+														r.charCodeAt(a),
 													) &&
 													(_ =
 														_ * 8 +
 														'01234567'.indexOf(
-															b()
+															b(),
 														))),
 										  (B += String.fromCharCode(_)))
 										: (B += k)
@@ -6643,7 +6645,10 @@ try {
 						;(k = a - 3),
 							w(t.REST),
 							B.push(
-								E({ type: e.RestType, expression: Y() }, [k, o])
+								E({ type: e.RestType, expression: Y() }, [
+									k,
+									o,
+								]),
 							)
 						break
 					} else B.push(Y())
@@ -6721,7 +6726,7 @@ try {
 									expression: B,
 									applications: R,
 								},
-								[k, o]
+								[k, o],
 						  ))
 						: B
 				)
@@ -6753,7 +6758,7 @@ try {
 									name: k.name,
 									expression: Y(),
 								},
-								[Ee, o]
+								[Ee, o],
 							))),
 						i === t.EQUAL
 							? (w(t.EQUAL),
@@ -6782,7 +6787,7 @@ try {
 				return (
 					d.assert(
 						i === t.NAME && u === 'function',
-						"FunctionType should start with 'function'"
+						"FunctionType should start with 'function'",
 					),
 					w(t.NAME),
 					M(t.LPAREN),
@@ -6835,7 +6840,7 @@ try {
 										type: e.BooleanLiteralType,
 										value: u === 'true',
 									},
-									[R, o]
+									[R, o],
 								)
 							)
 						if (((B = m.save()), u === 'function'))
@@ -6885,7 +6890,7 @@ try {
 										expression: J(),
 										prefix: !0,
 									},
-									[R, o]
+									[R, o],
 							  ))
 					: i === t.BANG
 					? ((R = a - 1),
@@ -6896,7 +6901,7 @@ try {
 								expression: J(),
 								prefix: !0,
 							},
-							[R, o]
+							[R, o],
 					  ))
 					: ((R = o),
 					  (B = J()),
@@ -6908,7 +6913,7 @@ try {
 										expression: B,
 										prefix: !1,
 									},
-									[R, o]
+									[R, o],
 							  ))
 							: i === t.QUESTION
 							? (w(t.QUESTION),
@@ -6918,7 +6923,7 @@ try {
 										expression: B,
 										prefix: !1,
 									},
-									[R, o]
+									[R, o],
 							  ))
 							: i === t.LBRACK
 							? (w(t.LBRACK),
@@ -6926,7 +6931,7 @@ try {
 									t.RBRACK,
 									'expected an array-style type declaration (' +
 										u +
-										'[])'
+										'[])',
 							  ),
 							  E(
 									{
@@ -6936,11 +6941,11 @@ try {
 												type: e.NameExpression,
 												name: 'Array',
 											},
-											[R, o]
+											[R, o],
 										),
 										applications: [B],
 									},
-									[R, o]
+									[R, o],
 							  ))
 							: B)
 			}
@@ -7406,7 +7411,7 @@ try {
 							return (
 								t.assert(
 									pe < L.length,
-									'Message reference must be in range'
+									'Message reference must be in range',
 								),
 								L[pe]
 							)
@@ -7425,13 +7430,13 @@ try {
 									((this._tag.type = J(
 										this._title,
 										this._last,
-										this._options.range
+										this._options.range,
 									)),
 									!this._tag.type &&
 										!s(this._title) &&
 										!d(this._title) &&
 										!this.addError(
-											'Missing or invalid tag type'
+											'Missing or invalid tag type',
 										))
 								)
 									return !1
@@ -7447,7 +7452,7 @@ try {
 								this._tag.type = J(
 									this._title,
 									this._last,
-									this._options.range
+									this._options.range,
 								)
 							} catch {}
 						return !0
@@ -7476,7 +7481,7 @@ try {
 								((this._tag.name = me(
 									this._last,
 									X && E(this._title),
-									m(this._title)
+									m(this._title),
 								)),
 								this._tag.name)
 							)
@@ -7485,7 +7490,7 @@ try {
 										_.charAt(_.length - 1) === ']' &&
 										((k = _.substring(
 											1,
-											_.length - 1
+											_.length - 1,
 										).split('=')),
 										k.length > 1 &&
 											(this._tag.default = k
@@ -7511,7 +7516,7 @@ try {
 										(this._tag.type = null)
 								else if (
 									!this.addError(
-										'Missing or invalid tag name'
+										'Missing or invalid tag name',
 									)
 								)
 									return !1
@@ -7537,10 +7542,10 @@ try {
 							Ee >= 0 && pe >= 0
 								? ((this._tag.caption = _.substring(
 										Ee + L.length,
-										pe
+										pe,
 								  ).trim()),
 								  (this._tag.description = _.substring(
-										pe + H.length
+										pe + H.length,
 								  ).trim()))
 								: (this._tag.description = _),
 							!0
@@ -7623,7 +7628,7 @@ try {
 								this._tag.name || (this._tag.name = void 0),
 								!X &&
 									!this.addError(
-										'Missing or invalid tag name'
+										'Missing or invalid tag name',
 									))
 							)
 						)
@@ -7776,7 +7781,7 @@ try {
 									? (pe[_.tags[fe]] = !0)
 									: t.throwError(
 											'Invalid "tags" parameter: ' +
-												_.tags
+												_.tags,
 									  )
 						else t.throwError('Invalid "tags" parameter: ' + _.tags)
 					for (
@@ -7855,7 +7860,7 @@ try {
 					;(u.current = { hsva: d, color: t }), i(d)
 				}
 			},
-			[t, e]
+			[t, e],
 		),
 			oe(
 				function () {
@@ -7864,7 +7869,7 @@ try {
 						e.equal((d = e.fromHsva(o)), u.current.color) ||
 						((u.current = { hsva: o, color: d }), n(d))
 				},
-				[o, e, n]
+				[o, e, n],
 			)
 		var s = de(function (d) {
 			i(function (y) {
@@ -7945,10 +7950,10 @@ try {
 							: t
 					return {
 						left: fr(
-							(a.pageX - (n.left + Ti(e).pageXOffset)) / n.width
+							(a.pageX - (n.left + Ti(e).pageXOffset)) / n.width,
 						),
 						top: fr(
-							(a.pageY - (n.top + Ti(e).pageYOffset)) / n.height
+							(a.pageY - (n.top + Ti(e).pageYOffset)) / n.height,
 						),
 					}
 				}),
@@ -8032,7 +8037,7 @@ try {
 									b,
 								]
 							},
-							[i, o]
+							[i, o],
 						),
 						y = d[0],
 						A = d[1],
@@ -8042,7 +8047,7 @@ try {
 							function () {
 								return g
 							},
-							[g]
+							[g],
 						),
 						h.createElement(
 							'div',
@@ -8054,7 +8059,7 @@ try {
 								onKeyDown: A,
 								tabIndex: 0,
 								role: 'slider',
-							})
+							}),
 						)
 					)
 				})),
@@ -8076,7 +8081,7 @@ try {
 						h.createElement('div', {
 							className: 'react-colorful__pointer-fill',
 							style: { backgroundColor: t },
-						})
+						}),
 					)
 				}),
 				(_e = function (e, t, r) {
@@ -8103,7 +8108,7 @@ try {
 											? _e(
 													parseInt(e[3] + e[3], 16) /
 														255,
-													2
+													2,
 											  )
 											: 1,
 							  }
@@ -8116,9 +8121,9 @@ try {
 											? _e(
 													parseInt(
 														e.substring(6, 8),
-														16
+														16,
 													) / 255,
-													2
+													2,
 											  )
 											: 1,
 							  }
@@ -8130,7 +8135,7 @@ try {
 				(qO = function (e) {
 					var t =
 						/hsla?\(?\s*(-?\d*\.?\d+)(deg|rad|grad|turn)?[,\s]+(-?\d*\.?\d+)%?[,\s]+(-?\d*\.?\d+)%?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-							e
+							e,
 						)
 					return t
 						? LO({
@@ -8171,7 +8176,7 @@ try {
 							a > 0 && a < 200
 								? ((t * r) / 100 / (a <= 100 ? a : 200 - a)) *
 										100
-								: 0
+								: 0,
 						),
 						l: _e(a / 2),
 						a: _e(n, 2),
@@ -8216,7 +8221,7 @@ try {
 				(UO = function (e) {
 					var t =
 						/rgba?\(?\s*(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-							e
+							e,
 						)
 					return t
 						? Gm({
@@ -8288,8 +8293,8 @@ try {
 								className: 'react-colorful__hue-pointer',
 								left: t / 360,
 								color: Oi({ h: t, s: 100, v: 100, a: 1 }),
-							})
-						)
+							}),
+						),
 					)
 				})),
 				(Vm = h.memo(function (e) {
@@ -8331,8 +8336,8 @@ try {
 								top: 1 - t.v / 100,
 								left: t.s / 100,
 								color: Oi(t),
-							})
-						)
+							}),
+						),
 					)
 				})),
 				(Km = function (e, t) {
@@ -8397,7 +8402,7 @@ try {
 							hue: d.h,
 							onChange: y,
 							className: 'react-colorful__last-control',
-						})
+						}),
 					)
 				}),
 				(YO = {
@@ -8451,8 +8456,8 @@ try {
 								className: 'react-colorful__alpha-pointer',
 								left: r.a,
 								color: ua(r),
-							})
-						)
+							}),
+						),
 					)
 				}),
 				(Zm = function (e) {
@@ -8482,7 +8487,7 @@ try {
 							hsva: d,
 							onChange: y,
 							className: 'react-colorful__last-control',
-						})
+						}),
 					)
 				}),
 				(XO = {
@@ -9744,7 +9749,7 @@ try {
 									m === '' && (o(void 0), t(void 0)),
 									g && (o(g), u(g.colorSpace), t(g.value))
 							},
-							[t]
+							[t],
 						),
 						y = de(() => {
 							let A = la.indexOf(i) + 1
@@ -9778,12 +9783,12 @@ try {
 													...mr(u.color),
 													keyword: u.title,
 											  }
-											: mr(u.color)
+											: mr(u.color),
 									)
 									.concat(n)
 									.filter(Boolean)
 									.slice(-27),
-							[e, n]
+							[e, n],
 						),
 						i = de(
 							(u) => {
@@ -9791,7 +9796,7 @@ try {
 									(o.some((s) => pa(s[r]) === pa(u[r])) ||
 										a((s) => s.concat(u)))
 							},
-							[r, o]
+							[r, o],
 						)
 					return { presets: o, addPreset: i }
 				}),
@@ -9851,7 +9856,7 @@ try {
 																	note:
 																		S.keyword ||
 																		S.value,
-																}
+																},
 															),
 													},
 													h.createElement(Sg, {
@@ -9862,16 +9867,16 @@ try {
 																pa(A[g]),
 														onClick: () =>
 															y(S.value),
-													})
-												)
-											)
-										)
+													}),
+												),
+											),
+										),
 								),
 							},
 							h.createElement(Sg, {
 								value: d,
 								style: { margin: 4 },
-							})
+							}),
 						),
 						h.createElement(M4, {
 							id: ke(e),
@@ -9885,7 +9890,7 @@ try {
 									icon: 'markup',
 									onClick: m,
 							  })
-							: null
+							: null,
 					)
 				}),
 				(K4 = _g)
@@ -9979,7 +9984,7 @@ try {
 	function La(e) {
 		if (e === void 0)
 			throw new ReferenceError(
-				"this hasn't been initialised - super() hasn't been called"
+				"this hasn't been initialised - super() hasn't been called",
 			)
 		return e
 	}
@@ -10043,7 +10048,7 @@ try {
 		try {
 			return (
 				Boolean.prototype.valueOf.call(
-					Reflect.construct(Boolean, [], function () {})
+					Reflect.construct(Boolean, [], function () {}),
 				),
 				!0
 			)
@@ -10072,7 +10077,7 @@ try {
 				if (n === null || !Ua(n)) return n
 				if (typeof n != 'function')
 					throw new TypeError(
-						'Super expression must either be null or a function'
+						'Super expression must either be null or a function',
 					)
 				if (typeof t < 'u') {
 					if (t.has(n)) return t.get(n)
@@ -10109,7 +10114,7 @@ try {
 						this,
 						'An error occurred. See https://github.com/styled-components/polished/blob/main/src/internalHelpers/errors.md#' +
 							r +
-							' for more information.'
+							' for more information.',
 					) || this
 			else for (var a, o, i; i < a; i++);
 			return La(n)
@@ -10355,7 +10360,7 @@ try {
 			}
 		if (t.match(v2)) {
 			var r = parseFloat(
-				(parseInt('' + t[7] + t[8], 16) / 255).toFixed(2)
+				(parseInt('' + t[7] + t[8], 16) / 255).toFixed(2),
 			)
 			return {
 				red: parseInt('' + t[1] + t[2], 16),
@@ -10372,7 +10377,7 @@ try {
 			}
 		if (t.match(x2)) {
 			var n = parseFloat(
-				(parseInt('' + t[4] + t[4], 16) / 255).toFixed(2)
+				(parseInt('' + t[4] + t[4], 16) / 255).toFixed(2),
 			)
 			return {
 				red: parseInt('' + t[1] + t[1], 16),
@@ -10633,7 +10638,7 @@ try {
 		if (t === 'transparent') return t
 		var r = pt(t)
 		return dt(
-			Oe({}, r, { lightness: qt(0, 1, r.lightness - parseFloat(e)) })
+			Oe({}, r, { lightness: qt(0, 1, r.lightness - parseFloat(e)) }),
 		)
 	}
 	var q2 = qe(M2),
@@ -10642,7 +10647,7 @@ try {
 		if (t === 'transparent') return t
 		var r = pt(t)
 		return dt(
-			Oe({}, r, { saturation: qt(0, 1, r.saturation - parseFloat(e)) })
+			Oe({}, r, { saturation: qt(0, 1, r.saturation - parseFloat(e)) }),
 		)
 	}
 	var Ck = qe(L2)
@@ -10650,7 +10655,7 @@ try {
 		if (t === 'transparent') return t
 		var r = pt(t)
 		return dt(
-			Oe({}, r, { lightness: qt(0, 1, r.lightness + parseFloat(e)) })
+			Oe({}, r, { lightness: qt(0, 1, r.lightness + parseFloat(e)) }),
 		)
 	}
 	var U2 = qe($2),
@@ -10694,7 +10699,7 @@ try {
 		if (t === 'transparent') return t
 		var r = pt(t)
 		return dt(
-			Oe({}, r, { saturation: qt(0, 1, r.saturation + parseFloat(e)) })
+			Oe({}, r, { saturation: qt(0, 1, r.saturation + parseFloat(e)) }),
 		)
 	}
 	var xk = qe(V2)
@@ -10734,7 +10739,7 @@ try {
 				alpha: qt(
 					0,
 					1,
-					+(n * 100 - parseFloat(e) * 100).toFixed(2) / 100
+					+(n * 100 - parseFloat(e) * 100).toFixed(2) / 100,
 				),
 			})
 		return We(a)
@@ -10806,7 +10811,7 @@ try {
 				t || !e || !e.__esModule
 					? $p(r, 'default', { value: e, enumerable: !0 })
 					: r,
-				e
+				e,
 			)
 		),
 		Zx = Jx((e) => {
@@ -10817,7 +10822,7 @@ try {
 						n = Object.getOwnPropertySymbols
 							? function (a) {
 									return Object.keys(a).concat(
-										Object.getOwnPropertySymbols(a)
+										Object.getOwnPropertySymbols(a),
 									)
 							  }
 							: Object.keys
@@ -10862,7 +10867,7 @@ try {
 											!i(
 												(g = y.next()).value,
 												A.next().value,
-												d
+												d,
 											)
 										)
 											return !1
@@ -10913,7 +10918,7 @@ try {
 						exists: r,
 						eq: n,
 						neq: a,
-					})}`
+					})}`,
 				)
 			if (typeof n < 'u') return (0, Lp.isEqual)(t, n)
 			if (typeof a < 'u') return !(0, Lp.isEqual)(t, a)
@@ -10931,7 +10936,7 @@ try {
 					`Invalid conditional value ${JSON.stringify({
 						arg: n,
 						global: a,
-					})}`
+					})}`,
 				)
 			let o = n ? t[n] : r[a]
 			return eF(e.if, o)
@@ -11098,7 +11103,7 @@ try {
 				'[^\\n]*(?:\\n(?!\\1' +
 				(e === 1 ? Lo : $o) +
 				' )[^\\n]*)*(\\n|$)',
-			'gm'
+			'gm',
 		)
 	}
 	var sd = ud(1),
@@ -11112,7 +11117,7 @@ try {
 				t +
 				' (?!' +
 				t +
-				' ))\\n*|\\s*\\n*$)'
+				' ))\\n*|\\s*\\n*$)',
 		)
 	}
 	var pd = cd(1),
@@ -11136,7 +11141,7 @@ try {
 						.replace(
 							iF,
 							`
-`
+`,
 						)
 						.match(a),
 					A = !1
@@ -11162,7 +11167,7 @@ try {
 										Gp,
 										`
 
-`
+`,
 								  )))
 								: ((s._ = !0), (w = x.replace(Gp, '')))
 						let M = u(w, s)
@@ -11178,7 +11183,7 @@ try {
 					{ key: s.k, start: i.g },
 					i.p.map(function (d, y) {
 						return e('li', { key: y }, u(d, s))
-					})
+					}),
 				),
 		}
 	}
@@ -11238,7 +11243,7 @@ try {
 					.trim()
 					.split(
 						`
-`
+`,
 					)
 					.map(function (d) {
 						return Vp(d, u, s)
@@ -11281,7 +11286,7 @@ try {
 		let n = ''
 		e.split(
 			`
-`
+`,
 		).every(
 			(o) =>
 				!fd.some((i) => i.test(o)) &&
@@ -11289,7 +11294,7 @@ try {
 					o +
 					`
 `),
-				o.trim())
+				o.trim()),
 		)
 		let a = n.trimEnd()
 		return a == '' ? null : [n, a]
@@ -11332,7 +11337,7 @@ try {
 					`
 
 `,
-				r
+				r,
 			)
 		)
 	}
@@ -11375,7 +11380,7 @@ try {
 				wt({}, E, x, {
 					className: nS(E?.className, x.className) || void 0,
 				}),
-				...b
+				...b,
 			)
 		}
 		function a(m) {
@@ -11388,8 +11393,8 @@ try {
 						: `${m.trimEnd().replace(UF, '')}
 
 `,
-					{ _: E }
-				)
+					{ _: E },
+				),
 			)
 			for (
 				;
@@ -11442,26 +11447,25 @@ try {
 									return I === 'style'
 										? U.split(/;\s?/).reduce(function (
 												K,
-												z
+												z,
 										  ) {
 												let he = z.slice(
 													0,
-													z.indexOf(':')
+													z.indexOf(':'),
 												)
 												return (
 													(K[
 														he.replace(
 															/(-[a-z])/g,
 															(re) =>
-																re[1].toUpperCase()
+																re[1].toUpperCase(),
 														)
 													] = z
 														.slice(he.length + 1)
 														.trim()),
 													K
 												)
-										  },
-										  {})
+										  }, {})
 										: I === 'href'
 										? Yt(U)
 										: (U.match(AF) &&
@@ -11513,8 +11517,8 @@ try {
 								wt({}, m.I, {
 									className: m.M ? `lang-${m.M}` : '',
 								}),
-								m.$
-							)
+								m.$,
+							),
 						),
 				},
 				codeFenced: {
@@ -11547,7 +11551,7 @@ try {
 						n(
 							'a',
 							{ key: b.k, href: Yt(m.R) },
-							n('sup', { key: b.k }, m.$)
+							n('sup', { key: b.k }, m.$),
 						),
 				},
 				gfmTask: {
@@ -11607,7 +11611,7 @@ try {
 						n(
 							'a',
 							{ key: b.k, href: Yt(m.R), title: m.N },
-							E(m.$, b)
+							E(m.$, b),
 						),
 				},
 				linkAngleBraceStyleDetector: {
@@ -11700,7 +11704,7 @@ try {
 										href: Yt(u[m.F].R),
 										title: u[m.F].N,
 									},
-									E(m.$, b)
+									E(m.$, b),
 							  )
 							: n('span', { key: b.k }, E(m.P, b)),
 				},
@@ -11722,10 +11726,10 @@ try {
 										return n(
 											'th',
 											{ key: S, style: Kp(m, S) },
-											E(x, b)
+											E(x, b),
 										)
-									})
-								)
+									}),
+								),
 							),
 							n(
 								'tbody',
@@ -11738,12 +11742,12 @@ try {
 											return n(
 												'td',
 												{ key: j, style: Kp(m, j) },
-												E(P, b)
+												E(P, b),
 											)
-										})
+										}),
 									)
-								})
-							)
+								}),
+							),
 						),
 				},
 				tableSeparator: {
@@ -11763,7 +11767,7 @@ try {
 						$: m[0].replace(yF, (E, b) =>
 							t.namedCodesToUnicode[b]
 								? t.namedCodesToUnicode[b]
-								: E
+								: E,
 						),
 					}),
 					h: (m) => m.$,
@@ -11862,12 +11866,12 @@ try {
 								return P.replace(
 									dF,
 									`
-`
+`,
 								)
 									.replace(mF, '')
 									.replace(TF, '    ')
 							})(x),
-							S
+							S,
 						)
 					}
 				)
@@ -11911,10 +11915,10 @@ try {
 								'div',
 								{ id: t.slugify(m.B), key: m.B },
 								m.B,
-								y(d(m.O, { _: !0 }))
+								y(d(m.O, { _: !0 })),
 							)
-						})
-					)
+						}),
+					),
 			  )
 			: g
 	}
@@ -12095,7 +12099,7 @@ try {
 				t || !e || !e.__esModule
 					? Wf(r, 'default', { value: e, enumerable: !0 })
 					: r,
-				e
+				e,
 			)
 		)
 	function Yf() {
@@ -12114,7 +12118,7 @@ try {
 					(this.getServerChannel = () => {
 						if (!this.serverChannel)
 							throw new Error(
-								'Accessing non-existent serverChannel'
+								'Accessing non-existent serverChannel',
 							)
 						return this.serverChannel
 					}),
@@ -12161,7 +12165,7 @@ try {
 									: A.length) !== null && g !== void 0
 								? g
 								: 0
-						})
+						}),
 				  )
 				: u
 		}, [])
@@ -12171,13 +12175,13 @@ try {
 [	 ]{` +
 					Math.min.apply(Math, a) +
 					'}',
-				'g'
+				'g',
 			)
 			n = n.map(function (u) {
 				return u.replace(
 					o,
 					`
-`
+`,
 				)
 			})
 		}
@@ -12194,7 +12198,7 @@ try {
 					(A = String(u)
 						.split(
 							`
-`
+`,
 						)
 						.map(function (g, m) {
 							return m === 0 ? g : '' + y + g
@@ -12220,8 +12224,8 @@ try {
 	var WY = (0, G0.default)(1)((e) =>
 		Object.values(e).reduce(
 			(t, r) => ((t[r.importPath] = t[r.importPath] || r), t),
-			{}
-		)
+			{},
+		),
 	)
 	var JY = Symbol('incompatible')
 	var XY = Symbol('Deeply equal')
@@ -12247,7 +12251,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 					}),
 					a
 				),
-				{}
+				{},
 			)
 		return (
 			Object.keys(t).forEach((a) => {
@@ -12299,7 +12303,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 							: {
 									name: 'object',
 									value: (0, Un.default)(e, (a) =>
-										Vo(a, t, new Set(r))
+										Vo(a, t, new Set(r)),
 									),
 							  })
 				: { name: 'object', value: {} }
@@ -12331,7 +12335,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 					if (o === 'string') return { control: { type: 'color' } }
 					o !== 'enum' &&
 						ve.warn(
-							`Addon controls: Control of type color only supports string, received "${o}" instead`
+							`Addon controls: Control of type color only supports string, received "${o}" instead`,
 						)
 				}
 				if (r.date && r.date.test(t))
@@ -14691,7 +14695,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 								o > 65535 &&
 									((o -= 65536),
 									(i += String.fromCharCode(
-										((o >>> 10) & 1023) | 55296
+										((o >>> 10) & 1023) | 55296,
 									)),
 									(o = 56320 | (o & 1023))),
 								(i += String.fromCharCode(o)),
@@ -14746,7 +14750,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 							'&(?:' +
 								A.join('|') +
 								'|#[xX][\\da-fA-F]+;?|#\\d+;?)',
-							'g'
+							'g',
 						),
 						b = d(r.default)
 					function x(S) {
@@ -15185,7 +15189,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						}).join('')
 					return I(
 						O,
-						(q === 38 ? 'color:#' : 'background-color:#') + J
+						(q === 38 ? 'color:#' : 'background-color:#') + J,
 					)
 				}
 				function x(O, T, q) {
@@ -15215,7 +15219,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							22: function () {
 								return I(
 									O,
-									'font-weight:normal;text-decoration:none;font-style:normal'
+									'font-weight:normal;text-decoration:none;font-style:normal',
 								)
 							},
 							23: function () {
@@ -15415,7 +15419,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								(T.colors = Object.assign(
 									{},
 									d.colors,
-									T.colors
+									T.colors,
 								)),
 							(this.options = Object.assign({}, d, T)),
 							(this.stack = []),
@@ -15443,7 +15447,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 													(q.stickyStack = re(
 														q.stickyStack,
 														te,
-														me
+														me,
 													))
 										}),
 										W.length && Y.push(S(W)),
@@ -15513,7 +15517,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				t || !e || !e.__esModule
 					? um(r, 'default', { value: e, enumerable: !0 })
 					: r,
-				e
+				e,
 			)
 		),
 		U8 = [
@@ -15535,7 +15539,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 	function lm(e) {
 		let t = U8.filter((r) => e[r] !== void 0).reduce(
 			(r, n) => ({ ...r, [n]: e[n] }),
-			{}
+			{},
 		)
 		return (
 			e instanceof CustomEvent &&
@@ -15626,13 +15630,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								if (this instanceof y) {
 									var x = s.apply(
 										this,
-										d.concat(n.call(arguments))
+										d.concat(n.call(arguments)),
 									)
 									return Object(x) === x ? x : this
 								} else
 									return s.apply(
 										u,
-										d.concat(n.call(arguments))
+										d.concat(n.call(arguments)),
 									)
 							},
 							g = Math.max(0, s.length - d.length),
@@ -15647,7 +15651,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							'binder',
 							'return function (' +
 								m.join(',') +
-								'){ return binder.apply(this,arguments); }'
+								'){ return binder.apply(this,arguments); }',
 						)(A)),
 						s.prototype)
 					) {
@@ -15673,7 +15677,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				var r = bi()
 				t.exports = r.call(
 					Function.call,
-					Object.prototype.hasOwnProperty
+					Object.prototype.hasOwnProperty,
 				)
 			},
 		}),
@@ -15687,7 +15691,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					i = function (re) {
 						try {
 							return a(
-								'"use strict"; return (' + re + ').constructor;'
+								'"use strict"; return (' +
+									re +
+									').constructor;',
 							)()
 						} catch {}
 					},
@@ -15948,11 +15954,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							T = M(X, -1)
 						if (O === '%' && T !== '%')
 							throw new n(
-								'invalid intrinsic syntax, expected closing `%`'
+								'invalid intrinsic syntax, expected closing `%`',
 							)
 						if (T === '%' && O !== '%')
 							throw new n(
-								'invalid intrinsic syntax, expected opening `%`'
+								'invalid intrinsic syntax, expected opening `%`',
 							)
 						var q = []
 						return (
@@ -15974,7 +15980,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								throw new o(
 									'intrinsic ' +
 										X +
-										' exists, but is not available. Please file an issue!'
+										' exists, but is not available. Please file an issue!',
 								)
 							return { alias: q, name: T, value: W }
 						}
@@ -15987,7 +15993,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						throw new o('"allowMissing" argument must be a boolean')
 					if (I(/^%?[^%]*%?$/, X) === null)
 						throw new n(
-							'`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+							'`%` may not be present anywhere but at the beginning and end of the intrinsic name',
 						)
 					var T = z(X),
 						q = T.length > 0 ? T[0] : '',
@@ -16011,7 +16017,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							He !== B
 						)
 							throw new n(
-								'property names with quotes must have matching quotes'
+								'property names with quotes must have matching quotes',
 							)
 						if (
 							((Q === 'constructor' || !Me) && (te = !0),
@@ -16026,7 +16032,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 									throw new o(
 										'base intrinsic for ' +
 											X +
-											' exists, but the property is not available.'
+											' exists, but the property is not available.',
 									)
 								return
 							}
@@ -16324,9 +16330,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					.replace($_, '\\$&')
 					.replace(
 						/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-						'$1.*?'
+						'$1.*?',
 					) +
-				'$'
+				'$',
 		)
 	function K_(e) {
 		if (!Dm(e) || N_(e)) return !1
@@ -16694,7 +16700,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						let { name: A } = s,
 							g = s.toString()
 						return g.match(
-							/(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/
+							/(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/,
 						)
 							? `_function_${A}|${(() => {}).toString()}`
 							: `_function_${A}|${bO(AO(u, g))}`
@@ -16761,7 +16767,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								n.length === 0
 									? (t[e] = root)
 									: (t[e] = gO(root, n))
-							}
+							},
 						)),
 					key === '_constructor-name_')
 				)
@@ -16776,8 +16782,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						let t = new Function(
 							`return function ${e.replace(
 								/[^a-zA-Z0-9$_]+/g,
-								''
-							)}(){}`
+								'',
+							)}(){}`,
 						)()
 						Object.setPrototypeOf(value, new t())
 					}
@@ -16792,7 +16798,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							value.match(/_function_([^|]*)\|(.*)/) || [],
 						sourceSanitized = source.replace(
 							/[(\(\))|\\| |\]|`]*$/,
-							''
+							'',
 						)
 					if (!options.lazyEval) return eval(`(${sourceSanitized})`)
 					let result = (...args) => {
@@ -16915,7 +16921,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 		if (!e) return ''
 		if (typeof e == 'string') return e
 		throw new Error(
-			`Description: expected string, got: ${JSON.stringify(e)}`
+			`Description: expected string, got: ${JSON.stringify(e)}`,
 		)
 	}
 	var qm = 'storybook/docs',
@@ -17011,7 +17017,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				h.createElement(da, null),
 				h.createElement(da, { style: { width: '80%' } }),
 				h.createElement(da, { style: { width: '30%' } }),
-				h.createElement(da, { style: { width: '80%' } })
+				h.createElement(da, { style: { width: '80%' } }),
 			),
 		Xi = ({
 			isLoading: e,
@@ -17034,7 +17040,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					className: 'docblock-source sb-unstyled',
 					...i,
 				},
-				n
+				n,
 			)
 			if (typeof a > 'u') return u
 			let s = a ? sn.dark : sn.light
@@ -17397,7 +17403,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						},
 						title: 'Zoom in',
 					},
-					h.createElement(Fe, { icon: 'zoom' })
+					h.createElement(Fe, { icon: 'zoom' }),
 				),
 				h.createElement(
 					nt,
@@ -17408,7 +17414,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						},
 						title: 'Zoom out',
 					},
-					h.createElement(Fe, { icon: 'zoomout' })
+					h.createElement(Fe, { icon: 'zoomout' }),
 				),
 				h.createElement(
 					nt,
@@ -17419,8 +17425,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						},
 						title: 'Reset zoom',
 					},
-					h.createElement(Fe, { icon: 'zoomreset' })
-				)
+					h.createElement(Fe, { icon: 'zoomreset' }),
+				),
 			),
 		eR = N(wa)({
 			position: 'absolute',
@@ -17445,8 +17451,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					{ key: 'left' },
 					e
 						? [1, 2, 3].map((i) => h.createElement(_a, { key: i }))
-						: h.createElement(Z4, { zoom: n, resetZoom: a })
-				)
+						: h.createElement(Z4, { zoom: n, resetZoom: a }),
+				),
 			),
 		Vg = vt({ scale: 1 }),
 		{ window: rR } = ee,
@@ -17520,7 +17526,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								o(new Error(`${E} - ${b}`)),
 							showException: (E) => o(E),
 						},
-						{ autoplay: s, forceInitialArgs: d }
+						{ autoplay: s, forceInitialArgs: d },
 					)
 				return (
 					n(!1),
@@ -17534,7 +17540,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				? h.createElement(
 						'pre',
 						null,
-						h.createElement(Sa, { error: a })
+						h.createElement(Sa, { error: a }),
 				  )
 				: h.createElement(
 						h.Fragment,
@@ -17544,8 +17550,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 									'style',
 									null,
 									`${Hi(
-										e
-									)} { min-height: ${u}; transform: translateZ(0); overflow: auto }`
+										e,
+									)} { min-height: ${u}; transform: translateZ(0); overflow: auto }`,
 							  )
 							: null,
 						r && h.createElement(Zi, null),
@@ -17554,7 +17560,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							id: `${Hi(e)}-inner`,
 							'data-name': i.name,
 							dangerouslySetInnerHTML: { __html: A },
-						})
+						}),
 				  )
 		},
 		uR = ({ story: e, height: t = '500px' }) =>
@@ -17574,8 +17580,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							height: '100%',
 							border: '0 none',
 						},
-					})
-				)
+					}),
+				),
 			),
 		sR = (e) => {
 			let { inline: t } = e
@@ -17584,7 +17590,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				{ id: Hi(e), className: 'sb-story sb-unstyled' },
 				t
 					? h.createElement(iR, { ...e })
-					: h.createElement(uR, { ...e })
+					: h.createElement(uR, { ...e }),
 			)
 		},
 		Zi = () => h.createElement(Oa, null),
@@ -17639,7 +17645,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								minWidth: `calc(100% / ${e} - 20px)`,
 							},
 					  }
-					: {}
+					: {},
 		),
 		Pg = N(Xi)(({ theme: e }) => ({
 			margin: 0,
@@ -17671,7 +17677,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				borderBottomWidth: r && 0,
 				'h3 + &': { marginTop: '16px' },
 			}),
-			({ withToolbar: e }) => e && { paddingTop: 40 }
+			({ withToolbar: e }) => e && { paddingTop: 40 },
 		),
 		pR = (e, t, r) => {
 			switch (!0) {
@@ -17763,10 +17769,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 											$(
 												j.filter(
 													(he) =>
-														he.title !== 'Copied'
-												)
+														he.title !== 'Copied',
+												),
 											),
-										1500
+										1500,
 									)
 							}))
 				}
@@ -17803,16 +17809,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 											h.createElement(
 												'div',
 												{ key: z },
-												K
-											)
+												K,
+											),
 									  )
-									: h.createElement('div', null, n)
-							)
+									: h.createElement('div', null, n),
+							),
 						),
-						h.createElement(Ca, { actionItems: w })
-					)
+						h.createElement(Ca, { actionItems: w }),
+					),
 				),
-				a && A && m
+				a && A && m,
 			)
 		},
 		mR = N(Gi)(() => ({
@@ -17822,7 +17828,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			h.createElement(
 				mR,
 				{ isLoading: !0, withToolbar: !0 },
-				h.createElement(Zi, null)
+				h.createElement(Zi, null),
 			),
 		yR = N.table(({ theme: e }) => ({
 			'&&': {
@@ -17883,11 +17889,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 											h.createElement(
 												'strong',
 												null,
-												'Deprecated'
+												'Deprecated',
 											),
 											': ',
-											e.deprecated
-										)
+											e.deprecated,
+										),
 									),
 								r &&
 									t.map((o) =>
@@ -17900,15 +17906,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 												h.createElement(
 													'code',
 													null,
-													o.name
-												)
+													o.name,
+												),
 											),
 											h.createElement(
 												'td',
 												null,
-												o.description
-											)
-										)
+												o.description,
+											),
+										),
 									),
 								a &&
 									h.createElement(
@@ -17920,17 +17926,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 											h.createElement(
 												'code',
 												null,
-												'Returns'
-											)
+												'Returns',
+											),
 										),
 										h.createElement(
 											'td',
 											null,
-											e.returns.description
-										)
-									)
-							)
-						)
+											e.returns.description,
+										),
+									),
+							),
+						),
 				  )
 		},
 		Wi = 8,
@@ -18004,7 +18010,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			return (
 				t || (r = e.slice(0, Wi)),
 				r.map((n) =>
-					h.createElement(Xg, { key: n, text: n === '' ? '""' : n })
+					h.createElement(Xg, { key: n, text: n === '' ? '""' : n }),
 				)
 			)
 		},
@@ -18027,8 +18033,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							h.createElement(
 								ER,
 								{ onClick: () => u(!i) },
-								i ? 'Show less...' : `Show ${y - Wi} more...`
-							)
+								i ? 'Show less...' : `Show ${y - Wi} more...`,
+							),
 					  )
 					: h.createElement(Ig, null, kg(d))
 			}
@@ -18044,15 +18050,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					tooltip: h.createElement(
 						vR,
 						{ width: FR(n) },
-						h.createElement(Er, { language: 'jsx', format: !1 }, n)
+						h.createElement(Er, { language: 'jsx', format: !1 }, n),
 					),
 				},
 				h.createElement(
 					DR,
 					{ className: 'sbdocs-expandable' },
 					h.createElement('span', null, s),
-					h.createElement(CR, { icon: a ? 'arrowup' : 'arrowdown' })
-				)
+					h.createElement(CR, { icon: a ? 'arrowup' : 'arrowdown' }),
+				),
 			)
 		},
 		qi = ({ value: e, initialExpandedArgs: t }) =>
@@ -18128,7 +18134,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				return h.createElement(
 					Se.Button,
 					{ id: Dr(e), onClick: o },
-					'Set boolean'
+					'Set boolean',
 				)
 			let i = ke(e),
 				u = typeof t == 'string' ? TR(t) : t
@@ -18145,7 +18151,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					onFocus: a,
 				}),
 				h.createElement('span', null, 'False'),
-				h.createElement('span', null, 'True')
+				h.createElement('span', null, 'True'),
 			)
 		},
 		OR = (e) => {
@@ -18155,7 +18161,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				a.setFullYear(
 					parseInt(t, 10),
 					parseInt(r, 10) - 1,
-					parseInt(n, 10)
+					parseInt(n, 10),
 				),
 				a
 			)
@@ -18240,7 +18246,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					onFocus: n,
 					onBlur: a,
 				}),
-				o ? null : h.createElement('div', null, 'invalid')
+				o ? null : h.createElement('div', null, 'invalid'),
 			)
 		},
 		jR = N.label({ display: 'flex' }),
@@ -18268,12 +18274,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						Number.isNaN(P)
 							? m(
 									new Error(
-										`'${S.target.value}' is not a number`
-									)
+										`'${S.target.value}' is not a number`,
+									),
 							  )
 							: (r(P), m(null))
 					},
-					[r, m]
+					[r, m],
 				),
 				b = de(() => {
 					d('0'), r(0), A(!0)
@@ -18290,7 +18296,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					? h.createElement(
 							Se.Button,
 							{ id: Dr(e), onClick: b },
-							'Set number'
+							'Set number',
 					  )
 					: h.createElement(
 							jR,
@@ -18311,7 +18317,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								step: o,
 								onFocus: u,
 								onBlur: i,
-							})
+							}),
 					  )
 			)
 		},
@@ -18334,7 +18340,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						alignItems: 'flex-start',
 						label: { display: 'inline-flex', marginRight: 15 },
 				  }
-				: { label: { display: 'flex' } }
+				: { label: { display: 'flex' } },
 		),
 		$R = N.span({}),
 		UR = N.label({
@@ -18379,9 +18385,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							onChange: s,
 							checked: i?.includes(y),
 						}),
-						h.createElement($R, null, y)
+						h.createElement($R, null, y),
 					)
-				})
+				}),
 			)
 		},
 		zR = N.div(({ isInline: e }) =>
@@ -18392,7 +18398,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						alignItems: 'flex-start',
 						label: { display: 'inline-flex', marginRight: 15 },
 				  }
-				: { label: { display: 'flex' } }
+				: { label: { display: 'flex' } },
 		),
 		HR = N.span({}),
 		GR = N.label({
@@ -18426,9 +18432,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							onChange: (y) => n(t[y.currentTarget.value]),
 							checked: u === o,
 						}),
-						h.createElement(HR, null, u)
+						h.createElement(HR, null, u),
 					)
-				})
+				}),
 			)
 		},
 		WR = {
@@ -18507,12 +18513,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					h.createElement(
 						'option',
 						{ key: 'no-selection', disabled: !0 },
-						Mg
+						Mg,
 					),
 					Object.keys(r).map((u) =>
-						h.createElement('option', { key: u }, u)
-					)
-				)
+						h.createElement('option', { key: u }, u),
+					),
+				),
 			)
 		},
 		KR = ({ name: e, value: t, options: r, onChange: n }) => {
@@ -18531,9 +18537,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					ey,
 					{ id: i, multiple: !0, value: o, onChange: a },
 					Object.keys(r).map((u) =>
-						h.createElement('option', { key: u }, u)
-					)
-				)
+						h.createElement('option', { key: u }, u),
+					),
+				),
 			)
 		},
 		qg = (e) => {
@@ -18675,7 +18681,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				A,
 				y,
 				s,
-				u
+				u,
 			)
 		}
 	}
@@ -18819,9 +18825,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					'[...] ',
 					t.length,
 					' ',
-					t.length === 1 ? 'item' : 'items'
+					t.length === 1 ? 'item' : 'items',
 				),
-				!A && g
+				!A && g,
 			)
 		}
 		renderNotCollapsed() {
@@ -18880,7 +18886,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				h.createElement(
 					'span',
 					{ className: 'rejt-not-collapsed-delimiter', style: z },
-					W
+					W,
 				),
 				!a && O,
 				h.createElement(
@@ -18912,8 +18918,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							beforeUpdateAction: w,
 							logger: M,
 							onSubmitValueParser: I,
-						})
-					)
+						}),
+					),
 				),
 				!X &&
 					a &&
@@ -18930,14 +18936,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							keyPath: r,
 							deep: n,
 							onSubmitValueParser: I,
-						})
+						}),
 					),
 				h.createElement(
 					'span',
 					{ className: 'rejt-not-collapsed-delimiter', style: z },
-					J
+					J,
 				),
-				!X && T
+				!X && T,
 			)
 		}
 		render() {
@@ -18962,10 +18968,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						{ className: 'rejt-name', style: s.name },
 						e,
 						' :',
-						' '
-					)
+						' ',
+					),
 				),
-				u
+				u,
 			)
 		}
 	}
@@ -19087,7 +19093,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					M,
 					' ',
 					w,
-					$
+					$,
 				)),
 					(S = null)
 			} else {
@@ -19098,7 +19104,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						style: b.value,
 						onClick: P ? null : this.handleEditMode,
 					},
-					t
+					t,
 				)
 				let j = De(m, {
 					onClick: o,
@@ -19115,10 +19121,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					{ className: 'rejt-name', style: b.name },
 					e,
 					' :',
-					' '
+					' ',
 				),
 				x,
-				S
+				S,
 			)
 		}
 	}
@@ -19543,9 +19549,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					' ',
 					A.length,
 					' ',
-					A.length === 1 ? 'key' : 'keys'
+					A.length === 1 ? 'key' : 'keys',
 				),
-				!g && m
+				!g && m,
 			)
 		}
 		renderNotCollapsed() {
@@ -19622,7 +19628,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						beforeUpdateAction: w,
 						logger: M,
 						onSubmitValueParser: I,
-					})
+					}),
 				),
 				J = '{',
 				Y = '}'
@@ -19632,13 +19638,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				h.createElement(
 					'span',
 					{ className: 'rejt-not-collapsed-delimiter', style: re },
-					J
+					J,
 				),
 				!O && T,
 				h.createElement(
 					'ul',
 					{ className: 'rejt-not-collapsed-list', style: he },
-					W
+					W,
 				),
 				!O &&
 					o &&
@@ -19654,14 +19660,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							keyPath: r,
 							deep: n,
 							onSubmitValueParser: I,
-						})
+						}),
 					),
 				h.createElement(
 					'span',
 					{ className: 'rejt-not-collapsed-delimiter', style: re },
-					Y
+					Y,
 				),
-				!O && q
+				!O && q,
 			)
 		}
 		render() {
@@ -19686,10 +19692,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						{ className: 'rejt-name', style: s.name },
 						e,
 						' :',
-						' '
-					)
+						' ',
+					),
 				),
-				u
+				u,
 			)
 		}
 	}
@@ -19818,7 +19824,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					'span',
 					{ className: 'rejt-name', style: b.name },
 					e,
-					' : '
+					' : ',
 				),
 				S
 					? h.createElement(
@@ -19827,7 +19833,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							w,
 							' ',
 							$,
-							j
+							j,
 					  )
 					: h.createElement(
 							'span',
@@ -19836,9 +19842,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								style: b.value,
 								onClick: x ? null : this.handleEditMode,
 							},
-							String(t)
+							String(t),
 					  ),
-				!x && !S && M
+				!x && !S && M,
 			)
 		}
 	}
@@ -19956,7 +19962,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								beforeUpdateAction: b,
 								logger: x,
 								onSubmitValueParser: S,
-							})
+							}),
 					  )
 					: P
 			)
@@ -20170,7 +20176,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							d(S)
 						}
 					},
-					[r]
+					[r],
 				),
 				[A, g] = Z(!1),
 				m = de(() => {
@@ -20186,7 +20192,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				return h.createElement(
 					Se.Button,
 					{ id: Dr(e), onClick: m },
-					'Set object'
+					'Set object',
 				)
 			let b = h.createElement(g9, {
 				ref: E,
@@ -20211,7 +20217,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							},
 						},
 						h.createElement(Fe, { icon: i ? 'eyeclose' : 'eye' }),
-						h.createElement('span', null, 'RAW')
+						h.createElement('span', null, 'RAW'),
 					),
 				i
 					? b
@@ -20223,17 +20229,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							cancelButtonElement: h.createElement(
 								Li,
 								{ type: 'button' },
-								'Cancel'
+								'Cancel',
 							),
 							editButtonElement: h.createElement(
 								Li,
 								{ type: 'submit' },
-								'Save'
+								'Save',
 							),
 							addButtonElement: h.createElement(
 								Li,
 								{ type: 'submit', primary: !0 },
-								'Save'
+								'Save',
 							),
 							plusMenuElement: h.createElement(Lg, {
 								icon: 'add',
@@ -20249,7 +20255,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 									  })
 									: h.createElement($g, null),
 							fallback: b,
-					  })
+					  }),
 			)
 		},
 		D9 = N.input(({ theme: e, min: t, max: r, value: n }) => ({
@@ -20263,14 +20269,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					e.base === 'light'
 						? `linear-gradient(to right, 
             ${e.color.green} 0%, ${e.color.green} ${
-								((n - t) / (r - t)) * 100
-						  }%, 
+				((n - t) / (r - t)) * 100
+			}%, 
             ${Ue(0.02, e.input.background)} ${((n - t) / (r - t)) * 100}%, 
             ${Ue(0.02, e.input.background)} 100%)`
 						: `linear-gradient(to right, 
             ${e.color.green} 0%, ${e.color.green} ${
-								((n - t) / (r - t)) * 100
-						  }%, 
+				((n - t) / (r - t)) * 100
+			}%, 
             ${ot(0.02, e.input.background)} ${((n - t) / (r - t)) * 100}%, 
             ${ot(0.02, e.input.background)} 100%)`,
 				boxShadow: `${e.appBorderColor} 0 0 0 1px inset`,
@@ -20316,14 +20322,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					e.base === 'light'
 						? `linear-gradient(to right, 
             ${e.color.green} 0%, ${e.color.green} ${
-								((n - t) / (r - t)) * 100
-						  }%, 
+				((n - t) / (r - t)) * 100
+			}%, 
             ${Ue(0.02, e.input.background)} ${((n - t) / (r - t)) * 100}%, 
             ${Ue(0.02, e.input.background)} 100%)`
 						: `linear-gradient(to right, 
             ${e.color.green} 0%, ${e.color.green} ${
-								((n - t) / (r - t)) * 100
-						  }%, 
+				((n - t) / (r - t)) * 100
+			}%, 
             ${ot(0.02, e.input.background)} ${((n - t) / (r - t)) * 100}%, 
             ${ot(0.02, e.input.background)} 100%)`,
 				boxShadow: `${e.appBorderColor} 0 0 0 1px inset`,
@@ -20358,14 +20364,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					e.base === 'light'
 						? `linear-gradient(to right, 
             ${e.color.green} 0%, ${e.color.green} ${
-								((n - t) / (r - t)) * 100
-						  }%, 
+				((n - t) / (r - t)) * 100
+			}%, 
             ${Ue(0.02, e.input.background)} ${((n - t) / (r - t)) * 100}%, 
             ${Ue(0.02, e.input.background)} 100%)`
 						: `linear-gradient(to right, 
             ${e.color.green} 0%, ${e.color.green} ${
-								((n - t) / (r - t)) * 100
-						  }%, 
+				((n - t) / (r - t)) * 100
+			}%, 
             ${ot(0.02, e.input.background)} ${((n - t) / (r - t)) * 100}%, 
             ${ot(0.02, e.input.background)} 100%)`,
 				boxShadow: `${e.appBorderColor} 0 0 0 1px inset`,
@@ -20445,8 +20451,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					{ numberOFDecimalsPlaces: y, max: a },
 					`${d ? t.toFixed(y) : '--'}`,
 					' / ',
-					a
-				)
+					a,
+				),
 			)
 		},
 		S9 = N.label({ display: 'flex' }),
@@ -20474,7 +20480,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				return h.createElement(
 					Se.Button,
 					{ id: Dr(e), onClick: d },
-					'Set string'
+					'Set string',
 				)
 			let y = typeof t == 'string'
 			return h.createElement(
@@ -20499,8 +20505,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						{ isMaxed: t?.length === o },
 						t?.length ?? 0,
 						' / ',
-						o
-					)
+						o,
+					),
 			)
 		},
 		T9 = N(Se.Input)({ padding: 10 })
@@ -20514,7 +20520,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			function o(i) {
 				if (!i.target.files) return
 				let u = Array.from(i.target.files).map((s) =>
-					URL.createObjectURL(s)
+					URL.createObjectURL(s),
 				)
 				e(u), _9(n)
 			}
@@ -20539,7 +20545,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			h.createElement(
 				cu,
 				{ fallback: h.createElement('div', null) },
-				h.createElement(R9, { ...e })
+				h.createElement(R9, { ...e }),
 			),
 		I9 = {
 			array: Ug,
@@ -20639,7 +20645,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					$9,
 					{ expandable: a },
 					h.createElement(N9, null, i),
-					A ? h.createElement(j9, { title: 'Required' }, '*') : null
+					A ? h.createElement(j9, { title: 'Required' }, '*') : null,
 				),
 				n
 					? null
@@ -20650,7 +20656,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								h.createElement(
 									M9,
 									null,
-									h.createElement(Pn, null, u)
+									h.createElement(Pn, null, u),
 								),
 							s.jsDocTags != null
 								? h.createElement(
@@ -20662,11 +20668,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 											h.createElement(qi, {
 												value: d,
 												initialExpandedArgs: o,
-											})
+											}),
 										),
 										h.createElement(bR, {
 											tags: s.jsDocTags,
-										})
+										}),
 								  )
 								: h.createElement(
 										q9,
@@ -20674,8 +20680,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 										h.createElement(qi, {
 											value: d,
 											initialExpandedArgs: o,
-										})
-								  )
+										}),
+								  ),
 					  ),
 				n
 					? null
@@ -20685,11 +20691,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							h.createElement(qi, {
 								value: y,
 								initialExpandedArgs: o,
-							})
+							}),
 					  ),
 				r
 					? h.createElement('td', null, h.createElement(k9, { ...e }))
-					: null
+					: null,
 			)
 		},
 		U9 = N(Fe)(({ theme: e }) => ({
@@ -20779,14 +20785,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						h.createElement(
 							Hg,
 							{ onClick: (g) => i(!o), tabIndex: 0 },
-							A
+							A,
 						),
 						h.createElement(
 							z9,
 							null,
 							h.createElement(U9, { icon: y }),
-							t
-						)
+							t,
+						),
 					),
 					h.createElement(
 						W9,
@@ -20798,12 +20804,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								tabIndex: -1,
 								style: { outline: 'none' },
 							},
-							A
+							A,
 						),
-						o ? null : d
-					)
+						o ? null : d,
+					),
 				),
-				o ? r : null
+				o ? r : null,
 			)
 		},
 		K9 = N.table(
@@ -20914,7 +20920,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								borderRadius: 0,
 							},
 					  }
-					: {}
+					: {},
 		),
 		Y9 = N(nt)(({ theme: e }) => ({
 			color: e.barTextColor,
@@ -20962,7 +20968,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					n
 						? Object.keys(o).reduce(
 								(i, u) => ({ ...i, [u]: o[u].sort(n) }),
-								{}
+								{},
 						  )
 						: o
 			return {
@@ -20976,7 +20982,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							subsections: a(r.sections[i].subsections),
 						},
 					}),
-					{}
+					{},
 				),
 			}
 		},
@@ -21001,8 +21007,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							target: '_blank',
 							withArrow: !0,
 						},
-						'Read the docs'
-					)
+						'Read the docs',
+					),
 				)
 			let {
 					updateArgs: t,
@@ -21017,9 +21023,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				A = Z9(
 					(0, Kg.default)(
 						s,
-						(b) => !b?.table?.disable && eP(b, d || {}, y || {})
+						(b) => !b?.table?.disable && eP(b, d || {}, y || {}),
 					),
-					i
+					i,
 				)
 			if (
 				A.ungrouped.length === 0 &&
@@ -21037,8 +21043,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							target: '_blank',
 							withArrow: !0,
 						},
-						'Read the docs'
-					)
+						'Read the docs',
+					),
 				)
 			let g = 1
 			t && (g += 1), n || (g += 2)
@@ -21070,7 +21076,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							h.createElement(
 								'th',
 								null,
-								h.createElement('span', null, 'Name')
+								h.createElement('span', null, 'Name'),
 							),
 							n
 								? null
@@ -21080,15 +21086,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 										h.createElement(
 											'span',
 											null,
-											'Description'
-										)
+											'Description',
+										),
 								  ),
 							n
 								? null
 								: h.createElement(
 										'th',
 										null,
-										h.createElement('span', null, 'Default')
+										h.createElement(
+											'span',
+											null,
+											'Default',
+										),
 								  ),
 							t
 								? h.createElement(
@@ -21110,12 +21120,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 													h.createElement(Fe, {
 														icon: 'undo',
 														'aria-hidden': !0,
-													})
-												)
-										)
+													}),
+												),
+										),
 								  )
-								: null
-						)
+								: null,
+						),
 					),
 					h.createElement(
 						'tbody',
@@ -21126,7 +21136,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 								row: b,
 								arg: d && d[b.key],
 								...E,
-							})
+							}),
 						),
 						Object.entries(A.ungroupedSubsections).map(([b, x]) =>
 							h.createElement(
@@ -21144,9 +21154,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 										arg: d && d[S.key],
 										expandable: m,
 										...E,
-									})
-								)
-							)
+									}),
+								),
+							),
 						),
 						Object.entries(A.sections).map(([b, x]) =>
 							h.createElement(
@@ -21163,7 +21173,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 										row: S,
 										arg: d && d[S.key],
 										...E,
-									})
+									}),
 								),
 								Object.entries(x.subsections).map(([S, P]) =>
 									h.createElement(
@@ -21181,14 +21191,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 												arg: d && d[j.key],
 												expandable: m,
 												...E,
-											})
-										)
-									)
-								)
-							)
-						)
-					)
-				)
+											}),
+										),
+									),
+								),
+							),
+						),
+					),
+				),
 			)
 		},
 		py = ({ tabs: e, ...t }) => {
@@ -21211,9 +21221,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 												...o,
 												...t,
 										  })
-										: null
+										: null,
 							)
-						})
+						}),
 				  )
 		},
 		tP = N.div(({ theme: e }) => ({
@@ -21237,8 +21247,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						cancel: !1,
 						withArrow: !0,
 					},
-					'Learn how to add controls'
-				)
+					'Learn how to add controls',
+				),
 			),
 		Tne = N.div(({ theme: e }) => ({
 			marginRight: 30,
@@ -21412,7 +21422,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					e.map(async (a) => {
 						let o = await t.loadStory(a)
 						n((i) => (i[a] === o ? i : { ...i, [a]: o }))
-					})
+					}),
 				)
 			}),
 			e.map((a) => {
@@ -21436,11 +21446,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			}, [e])
 			let o = de(
 					(u) => t.channel.emit(Qt, { storyId: e, updatedArgs: u }),
-					[e]
+					[e],
 				),
 				i = de(
 					(u) => t.channel.emit(Xt, { storyId: e, argNames: u }),
-					[e]
+					[e],
 				)
 			return [n, o, i]
 		},
@@ -21461,7 +21471,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			let { extractArgTypes: a } = t.docs || {}
 			if (!a)
 				throw new Error(
-					'Args unsupported. See Args documentation for your framework.'
+					'Args unsupported. See Args documentation for your framework.',
 				)
 			let o = a(e)
 			return (o = Tt(o, r, n)), o
@@ -21529,7 +21539,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				) {
 					if (Array.isArray(a))
 						throw new Error(
-							'Unexpected subcomponents array. Expected an object whose keys are tab labels and whose values are components.'
+							'Unexpected subcomponents array. Expected an object whose keys are tab labels and whose values are components.',
 						)
 					S = Yi(S, a, y.parameters, i, u)
 				}
@@ -21568,7 +21578,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				let { of: m } = e
 				if ('of' in e && m === void 0)
 					throw new Error(
-						'Unexpected `of={undefined}`, did you mistype a CSF file reference?'
+						'Unexpected `of={undefined}`, did you mistype a CSF file reference?',
 					)
 				;({
 					projectAnnotations: { parameters: r },
@@ -21627,11 +21637,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 		}, [n, t.channel])
 		let i = de(
 				(s) => t.channel.emit(Qt, { storyId: n, updatedArgs: s }),
-				[n, t.channel]
+				[n, t.channel],
 			),
 			u = de(
 				(s) => t.channel.emit(Xt, { storyId: n, argNames: s }),
-				[n, t.channel]
+				[n, t.channel],
 			)
 		return e && [a, i, u]
 	}
@@ -21698,7 +21708,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				{ of: i } = e
 			if ('of' in e && i === void 0)
 				throw new Error(
-					'Unexpected `of={undefined}`, did you mistype a CSF file reference?'
+					'Unexpected `of={undefined}`, did you mistype a CSF file reference?',
 				)
 			if (i) o = [t.resolveOf(i, ['story']).story]
 			else if (o.length === 0)
@@ -21748,7 +21758,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			let { id: r, of: n, meta: a, story: o } = e
 			if ('of' in e && n === void 0)
 				throw new Error(
-					'Unexpected `of={undefined}`, did you mistype a CSF file reference?'
+					'Unexpected `of={undefined}`, did you mistype a CSF file reference?',
 				)
 			if (r)
 				return (
@@ -21816,14 +21826,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 		DP = (
 			{ withSource: e, mdxSource: t, children: r, layout: n, ...a },
 			o,
-			i
+			i,
 		) => {
 			let u = br
 					.toArray(r)
 					.filter(
 						(g) =>
 							g.props &&
-							(g.props.id || g.props.name || g.props.of)
+							(g.props.id || g.props.name || g.props.of),
 					)
 					.map((g) => by(g.props, o)),
 				s = au(u, o),
@@ -21834,7 +21844,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						...(a.of && { of: a.of }),
 					},
 					o,
-					i
+					i,
 				)
 			if (e === 'none') return { isLoading: d, previewProps: a }
 			let A = n
@@ -21866,7 +21876,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				{ children: n, of: a, source: o } = e
 			if ('of' in e && a === void 0)
 				throw new Error(
-					'Unexpected `of={undefined}`, did you mistype a CSF file reference?'
+					'Unexpected `of={undefined}`, did you mistype a CSF file reference?',
 				)
 			let { isLoading: i, previewProps: u } = DP(e, t, r),
 				s,
@@ -21941,7 +21951,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					of: a || s.moduleExport,
 					meta: e.meta,
 					...e.story,
-				})
+				}),
 			)
 		}
 	var { document: Ay } = ee
@@ -21975,7 +21985,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						Ay.getElementById(a) && ou(r, e)
 					},
 				},
-				t
+				t,
 			)
 		},
 		FP = (e) => {
@@ -22001,7 +22011,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							target: r,
 							...a,
 						},
-						n
+						n,
 					)
 			}
 			return h.createElement(Ji, { ...e })
@@ -22019,7 +22029,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					'&:hover svg': { visibility: 'visible' },
 				}),
 			}),
-			{}
+			{},
 		),
 		wP = N.a(() => ({
 			float: 'left',
@@ -22046,9 +22056,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							Ay.getElementById(t) && ou(a, i)
 						},
 					},
-					h.createElement(Fe, { icon: 'link' })
+					h.createElement(Fe, { icon: 'link' }),
 				),
-				r
+				r,
 			)
 		},
 		iu = (e) => {
@@ -22063,7 +22073,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				...e,
 				[t]: (r) => h.createElement(iu, { as: t, ...r }),
 			}),
-			{}
+			{},
 		),
 		_P = (e) => {
 			if (!e.children) return null
@@ -22141,7 +22151,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				}
 				default:
 					throw new Error(
-						`Unrecognized module type resolved from 'useOf', got: ${e.type}`
+						`Unrecognized module type resolved from 'useOf', got: ${e.type}`,
 					)
 			}
 		},
@@ -22151,7 +22161,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			let { notes: i, info: u, docs: s } = o
 			;(i || u) &&
 				be(
-					`Using 'parameters.notes' or 'parameters.info' properties to describe stories is deprecated. See ${ha}`
+					`Using 'parameters.notes' or 'parameters.info' properties to describe stories is deprecated. See ${ha}`,
 				)
 			let { extractComponentDescription: d = IP, description: y } =
 					s || {},
@@ -22172,7 +22182,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			let { of: t, type: r, markdown: n, children: a } = e
 			if ('of' in e && t === void 0)
 				throw new Error(
-					'Unexpected `of={undefined}`, did you mistype a CSF file reference?'
+					'Unexpected `of={undefined}`, did you mistype a CSF file reference?',
 				)
 			let o = Ae(et),
 				i = ru(t || 'meta'),
@@ -22181,15 +22191,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				r || n || a ? (u = NP(e, o)) : (u = kP(i)),
 				r &&
 					be(
-						`Manually specifying description type is deprecated. See ${ha}`
+						`Manually specifying description type is deprecated. See ${ha}`,
 					),
 				n &&
 					be(
-						`The 'markdown' prop on the Description block is deprecated. See ${ha}`
+						`The 'markdown' prop on the Description block is deprecated. See ${ha}`,
 					),
 				a &&
 					be(
-						`The 'children' prop on the Description block is deprecated. See ${ha}`
+						`The 'children' prop on the Description block is deprecated. See ${ha}`,
 					),
 				u ? h.createElement(_P, null, u) : null
 			)
@@ -22217,14 +22227,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						h.Fragment,
 						null,
 						h.createElement(MP, null, o.name),
-						h.createElement(jP, { of: e })
+						h.createElement(jP, { of: e }),
 					),
 				h.createElement(vP, {
 					of: e,
 					withToolbar: i,
 					story: { __forceInitialArgs: n, __primary: a },
 					source: { __forceInitialArgs: n },
-				})
+				}),
 			)
 		}
 	var LP = ({ children: e, disableAnchor: t, ...r }) => {
@@ -22262,8 +22272,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 										of: a.moduleExport,
 										expanded: !0,
 										__forceInitialArgs: !0,
-									})
-							)
+									}),
+							),
 					  )
 			)
 		}
@@ -22292,7 +22302,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						  }),
 					E
 				),
-				{}
+				{},
 			)
 		return h.createElement(
 			h.Fragment,
@@ -22308,13 +22318,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				resetArgs: r,
 				inAddonPanel: !0,
 				sort: u,
-			})
+			}),
 		)
 	}
 	function HP() {
 		let e = an(),
 			t = Object.values(e).filter(
-				(n) => n?.control && !n?.table?.disable
+				(n) => n?.control && !n?.table?.disable,
 			).length,
 			r = t === 0 ? '' : ` (${t})`
 		return h.createElement(h.Fragment, null, 'Controls', r)
@@ -22331,14 +22341,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					: h.createElement(
 							xa,
 							{ key: t, active: r },
-							h.createElement(zP, null)
+							h.createElement(zP, null),
 					  ),
 		})
 	})
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

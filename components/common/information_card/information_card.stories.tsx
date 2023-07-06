@@ -13,7 +13,7 @@ function onHandle() {
 }
 
 const Template: ComponentStory<typeof InformationCard> = (
-	args: InformationProps
+	args: InformationProps,
 ) => <InformationCard {...args} handle={onHandle} />
 
 export const Default = Template.bind({})

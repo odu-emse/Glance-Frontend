@@ -4,16 +4,16 @@
 		'./node_modules/lodash/maxBy.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseExtremum = __webpack_require__(
-					'./node_modules/lodash/_baseExtremum.js'
+					'./node_modules/lodash/_baseExtremum.js',
 				),
 				baseGt = __webpack_require__(
-					'./node_modules/lodash/_baseGt.js'
+					'./node_modules/lodash/_baseGt.js',
 				),
 				baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				)
 			module.exports = function maxBy(array, iteratee) {
 				return array && array.length
@@ -24,13 +24,13 @@
 		'./node_modules/lodash/minBy.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseExtremum = __webpack_require__(
-					'./node_modules/lodash/_baseExtremum.js'
+					'./node_modules/lodash/_baseExtremum.js',
 				),
 				baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				baseLt = __webpack_require__('./node_modules/lodash/_baseLt.js')
 			module.exports = function minBy(array, iteratee) {
@@ -42,7 +42,7 @@
 		'./node_modules/recharts/es6/polar/PolarAngleAxis.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -52,36 +52,36 @@
 					__webpack_require__('./node_modules/lodash/isFunction.js'),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isFunction__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isFunction__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_container_Layer__WEBPACK_IMPORTED_MODULE_6__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/container/Layer.js'
+						'./node_modules/recharts/es6/container/Layer.js',
 					),
 				_shape_Dot__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Dot.js'
+					'./node_modules/recharts/es6/shape/Dot.js',
 				),
 				_shape_Polygon__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/shape/Polygon.js'
+						'./node_modules/recharts/es6/shape/Polygon.js',
 					),
 				_component_Text__WEBPACK_IMPORTED_MODULE_8__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/component/Text.js'
+						'./node_modules/recharts/es6/component/Text.js',
 					),
 				_util_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_util_PolarUtils__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/PolarUtils.js'
+						'./node_modules/recharts/es6/util/PolarUtils.js',
 					)
 			function _typeof(obj) {
 				return (
@@ -112,7 +112,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -126,10 +126,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -145,13 +143,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -166,7 +167,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -193,8 +194,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -218,12 +219,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -262,7 +263,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -277,7 +278,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -287,7 +288,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -300,7 +301,7 @@
 							(function _classCallCheck(instance, Constructor) {
 								if (!(instance instanceof Constructor))
 									throw new TypeError(
-										'Cannot call a class as a function'
+										'Cannot call a class as a function',
 									)
 							})(this, PolarAngleAxis),
 							_super.apply(this, arguments)
@@ -310,20 +311,20 @@
 						(function _createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									_defineProperties(Constructor, staticProps),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -346,7 +347,7 @@
 												cx,
 												cy,
 												radius,
-												data.coordinate
+												data.coordinate,
 											),
 											p2 = (0,
 											_util_PolarUtils__WEBPACK_IMPORTED_MODULE_2__.op)(
@@ -357,7 +358,7 @@
 														? -1
 														: 1) *
 														tickLineSize,
-												data.coordinate
+												data.coordinate,
 											)
 										return {
 											x1: p1.x,
@@ -373,7 +374,7 @@
 										var orientation =
 												this.props.orientation,
 											cos = Math.cos(
-												-data.coordinate * RADIAN
+												-data.coordinate * RADIAN,
 											)
 										return cos > 1e-5
 											? 'outer' === orientation
@@ -401,15 +402,15 @@
 													{},
 													(0,
 													_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__.L6)(
-														this.props
-													)
+														this.props,
+													),
 												),
 												{},
 												{ fill: 'none' },
 												(0,
 												_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__.L6)(
-													axisLine
-												)
+													axisLine,
+												),
 											)
 										if ('circle' === axisLineType)
 											return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
@@ -420,8 +421,8 @@
 															'recharts-polar-angle-axis-line',
 													},
 													props,
-													{ cx, cy, r: radius }
-												)
+													{ cx, cy, r: radius },
+												),
 											)
 										var points = this.props.ticks.map(
 											function (entry) {
@@ -430,9 +431,9 @@
 													cx,
 													cy,
 													radius,
-													entry.coordinate
+													entry.coordinate,
 												)
-											}
+											},
 										)
 										return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 											_shape_Polygon__WEBPACK_IMPORTED_MODULE_5__.m,
@@ -442,8 +443,8 @@
 														'recharts-polar-angle-axis-line',
 												},
 												props,
-												{ points }
-											)
+												{ points },
+											),
 										)
 									},
 								},
@@ -460,11 +461,11 @@
 											stroke = _this$props3.stroke,
 											axisProps = (0,
 											_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__.L6)(
-												this.props
+												this.props,
 											),
 											customTickProps = (0,
 											_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__.L6)(
-												tick
+												tick,
 											),
 											tickLineProps = _objectSpread(
 												_objectSpread({}, axisProps),
@@ -472,92 +473,93 @@
 												{ fill: 'none' },
 												(0,
 												_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__.L6)(
-													tickLine
-												)
+													tickLine,
+												),
 											),
-											items = ticks.map(function (
-												entry,
-												i
-											) {
-												var lineCoord =
-														_this.getTickLineCoord(
-															entry
-														),
-													tickProps = _objectSpread(
-														_objectSpread(
+											items = ticks.map(
+												function (entry, i) {
+													var lineCoord =
+															_this.getTickLineCoord(
+																entry,
+															),
+														tickProps =
 															_objectSpread(
+																_objectSpread(
+																	_objectSpread(
+																		{
+																			textAnchor:
+																				_this.getTickTextAnchor(
+																					entry,
+																				),
+																		},
+																		axisProps,
+																	),
+																	{},
+																	{
+																		stroke: 'none',
+																		fill: stroke,
+																	},
+																	customTickProps,
+																),
+																{},
 																{
-																	textAnchor:
-																		_this.getTickTextAnchor(
-																			entry
-																		),
+																	index: i,
+																	payload:
+																		entry,
+																	x: lineCoord.x2,
+																	y: lineCoord.y2,
 																},
-																axisProps
-															),
-															{},
-															{
-																stroke: 'none',
-																fill: stroke,
-															},
-															customTickProps
-														),
-														{},
-														{
-															index: i,
-															payload: entry,
-															x: lineCoord.x2,
-															y: lineCoord.y2,
-														}
-													)
-												return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
-													_container_Layer__WEBPACK_IMPORTED_MODULE_6__.m,
-													_extends(
-														{
-															className:
-																'recharts-polar-angle-axis-tick',
-															key: 'tick-'.concat(
-																i
-															),
-														},
-														(0,
-														_util_types__WEBPACK_IMPORTED_MODULE_7__.bw)(
-															_this.props,
-															entry,
-															i
-														)
-													),
-													tickLine &&
-														react__WEBPACK_IMPORTED_MODULE_1__.createElement(
-															'line',
-															_extends(
-																{
-																	className:
-																		'recharts-polar-angle-axis-tick-line',
-																},
-																tickLineProps,
-																lineCoord
 															)
+													return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
+														_container_Layer__WEBPACK_IMPORTED_MODULE_6__.m,
+														_extends(
+															{
+																className:
+																	'recharts-polar-angle-axis-tick',
+																key: 'tick-'.concat(
+																	i,
+																),
+															},
+															(0,
+															_util_types__WEBPACK_IMPORTED_MODULE_7__.bw)(
+																_this.props,
+																entry,
+																i,
+															),
 														),
-													tick &&
-														PolarAngleAxis.renderTickItem(
-															tick,
-															tickProps,
-															tickFormatter
-																? tickFormatter(
-																		entry.value,
-																		i
-																  )
-																: entry.value
-														)
-												)
-											})
+														tickLine &&
+															react__WEBPACK_IMPORTED_MODULE_1__.createElement(
+																'line',
+																_extends(
+																	{
+																		className:
+																			'recharts-polar-angle-axis-tick-line',
+																	},
+																	tickLineProps,
+																	lineCoord,
+																),
+															),
+														tick &&
+															PolarAngleAxis.renderTickItem(
+																tick,
+																tickProps,
+																tickFormatter
+																	? tickFormatter(
+																			entry.value,
+																			i,
+																	  )
+																	: entry.value,
+															),
+													)
+												},
+											)
 										return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 											_container_Layer__WEBPACK_IMPORTED_MODULE_6__.m,
 											{
 												className:
 													'recharts-polar-angle-axis-ticks',
 											},
-											items
+											items,
 										)
 									},
 								},
@@ -580,7 +582,7 @@
 													},
 													axisLine &&
 														this.renderAxisLine(),
-													this.renderTicks()
+													this.renderTicks(),
 											  )
 									},
 								},
@@ -591,17 +593,17 @@
 									value: function renderTickItem(
 										option,
 										props,
-										value
+										value,
 									) {
 										return react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(
-											option
+											option,
 										)
 											? react__WEBPACK_IMPORTED_MODULE_1__.cloneElement(
 													option,
-													props
+													props,
 											  )
 											: lodash_isFunction__WEBPACK_IMPORTED_MODULE_0___default()(
-													option
+													option,
 											  )
 											? option(props)
 											: react__WEBPACK_IMPORTED_MODULE_1__.createElement(
@@ -610,11 +612,11 @@
 														className:
 															'recharts-polar-angle-axis-tick-value',
 													}),
-													value
+													value,
 											  )
 									},
 								},
-							]
+							],
 						),
 						PolarAngleAxis
 					)
@@ -639,7 +641,7 @@
 		'./node_modules/recharts/es6/polar/PolarRadiusAxis.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -649,47 +651,47 @@
 					__webpack_require__('./node_modules/lodash/isFunction.js'),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isFunction__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isFunction__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				lodash_minBy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/lodash/minBy.js'
+					'./node_modules/lodash/minBy.js',
 				),
 				lodash_minBy__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						lodash_minBy__WEBPACK_IMPORTED_MODULE_1__
+						lodash_minBy__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				lodash_maxBy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/lodash/maxBy.js'
+					'./node_modules/lodash/maxBy.js',
 				),
 				lodash_maxBy__WEBPACK_IMPORTED_MODULE_2___default =
 					__webpack_require__.n(
-						lodash_maxBy__WEBPACK_IMPORTED_MODULE_2__
+						lodash_maxBy__WEBPACK_IMPORTED_MODULE_2__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_component_Text__WEBPACK_IMPORTED_MODULE_9__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/component/Text.js'
+						'./node_modules/recharts/es6/component/Text.js',
 					),
 				_component_Label__WEBPACK_IMPORTED_MODULE_8__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/component/Label.js'
+						'./node_modules/recharts/es6/component/Label.js',
 					),
 				_container_Layer__WEBPACK_IMPORTED_MODULE_6__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/container/Layer.js'
+						'./node_modules/recharts/es6/container/Layer.js',
 					),
 				_util_PolarUtils__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/PolarUtils.js'
+						'./node_modules/recharts/es6/util/PolarUtils.js',
 					),
 				_util_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_excluded = ['cx', 'cy', 'angle', 'ticks', 'axisLine'],
 				_excluded2 = [
@@ -728,7 +730,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -742,10 +744,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -761,13 +761,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -779,7 +782,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -799,7 +802,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -814,7 +817,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -841,8 +844,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -866,12 +869,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -910,7 +913,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -921,7 +924,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -931,7 +934,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -944,7 +947,7 @@
 						(function _classCallCheck(instance, Constructor) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, PolarRadiusAxis),
 						_super.apply(this, arguments)
@@ -954,13 +957,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -985,7 +988,7 @@
 										cx,
 										cy,
 										coordinate,
-										angle
+										angle,
 									)
 								},
 							},
@@ -1019,7 +1022,7 @@
 												ticks,
 												function (entry) {
 													return entry.coordinate || 0
-												}
+												},
 											)
 									return {
 										cx,
@@ -1031,7 +1034,7 @@
 												ticks,
 												function (entry) {
 													return entry.coordinate || 0
-												}
+												},
 											).coordinate || 0,
 										outerRadius:
 											maxRadiusTick.coordinate || 0,
@@ -1049,36 +1052,36 @@
 										axisLine = _this$props3.axisLine,
 										others = _objectWithoutProperties(
 											_this$props3,
-											_excluded
+											_excluded,
 										),
 										extent = ticks.reduce(
 											function (result, entry) {
 												return [
 													Math.min(
 														result[0],
-														entry.coordinate
+														entry.coordinate,
 													),
 													Math.max(
 														result[1],
-														entry.coordinate
+														entry.coordinate,
 													),
 												]
 											},
-											[1 / 0, -1 / 0]
+											[1 / 0, -1 / 0],
 										),
 										point0 = (0,
 										_util_PolarUtils__WEBPACK_IMPORTED_MODULE_4__.op)(
 											cx,
 											cy,
 											extent[0],
-											angle
+											angle,
 										),
 										point1 = (0,
 										_util_PolarUtils__WEBPACK_IMPORTED_MODULE_4__.op)(
 											cx,
 											cy,
 											extent[1],
-											angle
+											angle,
 										),
 										props = _objectSpread(
 											_objectSpread(
@@ -1086,15 +1089,15 @@
 													{},
 													(0,
 													_util_ReactUtils__WEBPACK_IMPORTED_MODULE_5__.L6)(
-														others
-													)
+														others,
+													),
 												),
 												{},
 												{ fill: 'none' },
 												(0,
 												_util_ReactUtils__WEBPACK_IMPORTED_MODULE_5__.L6)(
-													axisLine
-												)
+													axisLine,
+												),
 											),
 											{},
 											{
@@ -1102,7 +1105,7 @@
 												y1: point0.y,
 												x2: point1.x,
 												y2: point1.y,
-											}
+											},
 										)
 									return react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 										'line',
@@ -1111,8 +1114,8 @@
 												className:
 													'recharts-polar-radius-axis-line',
 											},
-											props
-										)
+											props,
+										),
 									)
 								},
 							},
@@ -1129,21 +1132,21 @@
 										stroke = _this$props4.stroke,
 										others = _objectWithoutProperties(
 											_this$props4,
-											_excluded2
+											_excluded2,
 										),
 										textAnchor = this.getTickTextAnchor(),
 										axisProps = (0,
 										_util_ReactUtils__WEBPACK_IMPORTED_MODULE_5__.L6)(
-											others
+											others,
 										),
 										customTickProps = (0,
 										_util_ReactUtils__WEBPACK_IMPORTED_MODULE_5__.L6)(
-											tick
+											tick,
 										),
 										items = ticks.map(function (entry, i) {
 											var coord =
 													_this.getTickValueCoord(
-														entry
+														entry,
 													),
 												tickProps = _objectSpread(
 													_objectSpread(
@@ -1156,32 +1159,32 @@
 																			.concat(
 																				90 -
 																					angle,
-																				', '
+																				', ',
 																			)
 																			.concat(
 																				coord.x,
-																				', '
+																				', ',
 																			)
 																			.concat(
 																				coord.y,
-																				')'
+																				')',
 																			),
 																},
-																axisProps
+																axisProps,
 															),
 															{},
 															{
 																stroke: 'none',
 																fill: stroke,
 															},
-															customTickProps
+															customTickProps,
 														),
 														{},
 														{ index: i },
-														coord
+														coord,
 													),
 													{},
-													{ payload: entry }
+													{ payload: entry },
 												)
 											return react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 												_container_Layer__WEBPACK_IMPORTED_MODULE_6__.m,
@@ -1195,8 +1198,8 @@
 													_util_types__WEBPACK_IMPORTED_MODULE_7__.bw)(
 														_this.props,
 														entry,
-														i
-													)
+														i,
+													),
 												),
 												PolarRadiusAxis.renderTickItem(
 													tick,
@@ -1204,10 +1207,10 @@
 													tickFormatter
 														? tickFormatter(
 																entry.value,
-																i
+																i,
 														  )
-														: entry.value
-												)
+														: entry.value,
+												),
 											)
 										})
 									return react__WEBPACK_IMPORTED_MODULE_3__.createElement(
@@ -1216,7 +1219,7 @@
 											className:
 												'recharts-polar-radius-axis-ticks',
 										},
-										items
+										items,
 									)
 								},
 							},
@@ -1239,8 +1242,8 @@
 												tick && this.renderTicks(),
 												_component_Label__WEBPACK_IMPORTED_MODULE_8__._.renderCallByParent(
 													this.props,
-													this.getViewBox()
-												)
+													this.getViewBox(),
+												),
 										  )
 										: null
 								},
@@ -1252,17 +1255,17 @@
 								value: function renderTickItem(
 									option,
 									props,
-									value
+									value,
 								) {
 									return react__WEBPACK_IMPORTED_MODULE_3__.isValidElement(
-										option
+										option,
 									)
 										? react__WEBPACK_IMPORTED_MODULE_3__.cloneElement(
 												option,
-												props
+												props,
 										  )
 										: lodash_isFunction__WEBPACK_IMPORTED_MODULE_0___default()(
-												option
+												option,
 										  )
 										? option(props)
 										: react__WEBPACK_IMPORTED_MODULE_3__.createElement(
@@ -1271,11 +1274,11 @@
 													className:
 														'recharts-polar-radius-axis-tick-value',
 												}),
-												value
+												value,
 										  )
 								},
 							},
-						]
+						],
 					),
 					PolarRadiusAxis
 				)
@@ -1301,23 +1304,23 @@
 		'./node_modules/recharts/es6/shape/Polygon.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { m: () => Polygon })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_1__
+						classnames__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					)
 			function _typeof(obj) {
 				return (
@@ -1354,7 +1357,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -1368,7 +1371,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -1388,7 +1391,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -1414,19 +1417,19 @@
 								if (void 0 !== prim) {
 									var res = prim.call(
 										input,
-										hint || 'default'
+										hint || 'default',
 									)
 									if ('object' !== _typeof(res)) return res
 									throw new TypeError(
-										'@@toPrimitive must return a primitive value.'
+										'@@toPrimitive must return a primitive value.',
 									)
 								}
 								return ('string' === hint ? String : Number)(
-									input
+									input,
 								)
 							})(arg, 'string')),
 							'symbol' === _typeof(key) ? key : String(key)),
-							descriptor
+							descriptor,
 						)
 				}
 				var arg, key
@@ -1454,8 +1457,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -1479,12 +1482,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -1531,7 +1534,7 @@
 					})(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -1547,7 +1550,7 @@
 				},
 				getSinglePolygonPath = function getSinglePolygonPath(
 					points,
-					connectNulls
+					connectNulls,
 				) {
 					var segmentPoints = (function getParsedPoints() {
 						var points =
@@ -1567,7 +1570,7 @@
 							}),
 							isValidatePoint(points[0]) &&
 								segmentPoints[segmentPoints.length - 1].push(
-									points[0]
+									points[0],
 								),
 							segmentPoints[segmentPoints.length - 1].length <=
 								0 &&
@@ -1580,7 +1583,7 @@
 							segmentPoints.reduce(function (res, segPoints) {
 								return [].concat(
 									_toConsumableArray(res),
-									_toConsumableArray(segPoints)
+									_toConsumableArray(segPoints),
 								)
 							}, []),
 						])
@@ -1589,15 +1592,14 @@
 							return segPoints.reduce(function (
 								path,
 								point,
-								index
+								index,
 							) {
 								return ''
 									.concat(path)
 									.concat(0 === index ? 'M' : 'L')
 									.concat(point.x, ',')
 									.concat(point.y)
-							},
-							'')
+							}, '')
 						})
 						.join('')
 					return 1 === segmentPoints.length
@@ -1611,7 +1613,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -1621,7 +1623,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -1634,7 +1636,7 @@
 							(function _classCallCheck(instance, Constructor) {
 								if (!(instance instanceof Constructor))
 									throw new TypeError(
-										'Cannot call a class as a function'
+										'Cannot call a class as a function',
 									)
 							})(this, Polygon),
 							_super.apply(this, arguments)
@@ -1644,20 +1646,20 @@
 						(function _createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									_defineProperties(Constructor, staticProps),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -1673,13 +1675,13 @@
 										connectNulls = _this$props.connectNulls,
 										others = _objectWithoutProperties(
 											_this$props,
-											_excluded
+											_excluded,
 										)
 									if (!points || !points.length) return null
 									var layerClass =
 										classnames__WEBPACK_IMPORTED_MODULE_1___default()(
 											'recharts-polygon',
-											className
+											className,
 										)
 									if (
 										baseLinePoints &&
@@ -1691,12 +1693,12 @@
 											rangePath = (function getRanglePath(
 												points,
 												baseLinePoints,
-												connectNulls
+												connectNulls,
 											) {
 												var outerPath =
 													getSinglePolygonPath(
 														points,
-														connectNulls
+														connectNulls,
 													)
 												return ''
 													.concat(
@@ -1704,21 +1706,21 @@
 															outerPath.slice(-1)
 															? outerPath.slice(
 																	0,
-																	-1
+																	-1,
 															  )
 															: outerPath,
-														'L'
+														'L',
 													)
 													.concat(
 														getSinglePolygonPath(
 															baseLinePoints.reverse(),
-															connectNulls
-														).slice(1)
+															connectNulls,
+														).slice(1),
 													)
 											})(
 												points,
 												baseLinePoints,
-												connectNulls
+												connectNulls,
 											)
 										return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 											'g',
@@ -1730,7 +1732,7 @@
 													(0,
 													_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
 														others,
-														!0
+														!0,
 													),
 													{
 														fill:
@@ -1740,8 +1742,8 @@
 																: 'none',
 														stroke: 'none',
 														d: rangePath,
-													}
-												)
+													},
+												),
 											),
 											hasStroke
 												? react__WEBPACK_IMPORTED_MODULE_0__.createElement(
@@ -1751,16 +1753,16 @@
 															(0,
 															_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
 																others,
-																!0
+																!0,
 															),
 															{
 																fill: 'none',
 																d: getSinglePolygonPath(
 																	points,
-																	connectNulls
+																	connectNulls,
 																),
-															}
-														)
+															},
+														),
 												  )
 												: null,
 											hasStroke
@@ -1771,23 +1773,23 @@
 															(0,
 															_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
 																others,
-																!0
+																!0,
 															),
 															{
 																fill: 'none',
 																d: getSinglePolygonPath(
 																	baseLinePoints,
-																	connectNulls
+																	connectNulls,
 																),
-															}
-														)
+															},
+														),
 												  )
-												: null
+												: null,
 										)
 									}
 									var singlePath = getSinglePolygonPath(
 										points,
-										connectNulls
+										connectNulls,
 									)
 									return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 										'path',
@@ -1796,7 +1798,7 @@
 											(0,
 											_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
 												others,
-												!0
+												!0,
 											),
 											{
 												fill:
@@ -1805,8 +1807,8 @@
 														: 'none',
 												className: layerClass,
 												d: singlePath,
-											}
-										)
+											},
+										),
 									)
 								},
 							},

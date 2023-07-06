@@ -2,7 +2,7 @@ import { gql } from 'graphql-request'
 
 export default function getLPbyPlanID(
 	planID: string,
-	pathID: string | null = null
+	pathID: string | null = null,
 ) {
 	let query
 

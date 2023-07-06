@@ -4,7 +4,7 @@
 		'./components/common/charts/radar/radar.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -14,15 +14,15 @@
 					default: () => radar_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				isEqual = __webpack_require__(
-					'./node_modules/lodash/isEqual.js'
+					'./node_modules/lodash/isEqual.js',
 				),
 				isEqual_default = __webpack_require__.n(isEqual),
 				isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				first = __webpack_require__('./node_modules/lodash/first.js'),
@@ -32,42 +32,42 @@
 				last = __webpack_require__('./node_modules/lodash/last.js'),
 				last_default = __webpack_require__.n(last),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isArray_default = __webpack_require__.n(isArray),
 				es6 = __webpack_require__(
-					'./node_modules/react-smooth/es6/index.js'
+					'./node_modules/react-smooth/es6/index.js',
 				),
 				classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				Global = __webpack_require__(
-					'./node_modules/recharts/es6/util/Global.js'
+					'./node_modules/recharts/es6/util/Global.js',
 				),
 				PolarUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/PolarUtils.js'
+					'./node_modules/recharts/es6/util/PolarUtils.js',
 				),
 				ChartUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ChartUtils.js'
+					'./node_modules/recharts/es6/util/ChartUtils.js',
 				),
 				Polygon = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Polygon.js'
+					'./node_modules/recharts/es6/shape/Polygon.js',
 				),
 				Dot = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Dot.js'
+					'./node_modules/recharts/es6/shape/Dot.js',
 				),
 				Layer = __webpack_require__(
-					'./node_modules/recharts/es6/container/Layer.js'
+					'./node_modules/recharts/es6/container/Layer.js',
 				),
 				LabelList = __webpack_require__(
-					'./node_modules/recharts/es6/component/LabelList.js'
+					'./node_modules/recharts/es6/component/LabelList.js',
 				),
 				ReactUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ReactUtils.js'
+					'./node_modules/recharts/es6/util/ReactUtils.js',
 				)
 			function _typeof(obj) {
 				return (
@@ -98,7 +98,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -112,10 +112,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -131,13 +129,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -152,7 +153,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -179,8 +180,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -204,7 +205,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return _assertThisInitialized(self)
 					})(this, result)
@@ -213,7 +214,7 @@
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -249,7 +250,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -260,7 +261,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -270,7 +271,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -283,7 +284,7 @@
 					!(function _classCallCheck(instance, Constructor) {
 						if (!(instance instanceof Constructor))
 							throw new TypeError(
-								'Cannot call a class as a function'
+								'Cannot call a class as a function',
 							)
 					})(this, Radar)
 					for (
@@ -299,11 +300,11 @@
 							_assertThisInitialized(
 								(_this = _super.call.apply(
 									_super,
-									[this].concat(args)
-								))
+									[this].concat(args),
+								)),
 							),
 							'state',
-							{ isAnimationFinished: !1 }
+							{ isAnimationFinished: !1 },
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -313,7 +314,7 @@
 								_this.setState({ isAnimationFinished: !0 }),
 									isFunction_default()(onAnimationEnd) &&
 										onAnimationEnd()
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -324,7 +325,7 @@
 								_this.setState({ isAnimationFinished: !1 }),
 									isFunction_default()(onAnimationStart) &&
 										onAnimationStart()
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -332,7 +333,7 @@
 							function (e) {
 								var onMouseEnter = _this.props.onMouseEnter
 								onMouseEnter && onMouseEnter(_this.props, e)
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -340,7 +341,7 @@
 							function (e) {
 								var onMouseLeave = _this.props.onMouseLeave
 								onMouseLeave && onMouseLeave(_this.props, e)
-							}
+							},
 						),
 						_this
 					)
@@ -349,13 +350,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -374,10 +375,10 @@
 										dot = _this$props.dot,
 										dataKey = _this$props.dataKey,
 										baseProps = (0, ReactUtils.L6)(
-											this.props
+											this.props,
 										),
 										customDotProps = (0, ReactUtils.L6)(
-											dot
+											dot,
 										),
 										dots = points.map(function (entry, i) {
 											var dotProps = _objectSpread(
@@ -385,13 +386,13 @@
 													_objectSpread(
 														{
 															key: 'dot-'.concat(
-																i
+																i,
 															),
 															r: 3,
 														},
-														baseProps
+														baseProps,
 													),
-													customDotProps
+													customDotProps,
 												),
 												{},
 												{
@@ -400,24 +401,24 @@
 													cy: entry.y,
 													index: i,
 													payload: entry,
-												}
+												},
 											)
 											return Radar.renderDotItem(
 												dot,
-												dotProps
+												dotProps,
 											)
 										})
 									return react.createElement(
 										Layer.m,
 										{ className: 'recharts-radar-dots' },
-										dots
+										dots,
 									)
 								},
 							},
 							{
 								key: 'renderPolygonStatically',
 								value: function renderPolygonStatically(
-									points
+									points,
 								) {
 									var radar,
 										_this$props2 = this.props,
@@ -434,22 +435,22 @@
 													_objectSpread(
 														_objectSpread(
 															{},
-															this.props
+															this.props,
 														),
 														{},
-														{ points }
-													)
+														{ points },
+													),
 											  )
 											: isFunction_default()(shape)
 											? shape(
 													_objectSpread(
 														_objectSpread(
 															{},
-															this.props
+															this.props,
 														),
 														{},
-														{ points }
-													)
+														{ points },
+													),
 											  )
 											: react.createElement(
 													Polygon.m,
@@ -457,7 +458,7 @@
 														{},
 														(0, ReactUtils.L6)(
 															this.props,
-															!0
+															!0,
 														),
 														{
 															onMouseEnter:
@@ -472,8 +473,8 @@
 																	? baseLinePoints
 																	: null,
 															connectNulls,
-														}
-													)
+														},
+													),
 											  )),
 										react.createElement(
 											Layer.m,
@@ -482,7 +483,9 @@
 													'recharts-radar-polygon',
 											},
 											radar,
-											dot ? this.renderDots(points) : null
+											dot
+												? this.renderDots(points)
+												: null,
 										)
 									)
 								},
@@ -524,71 +527,76 @@
 													prevPoints &&
 													prevPoints.length /
 														points.length,
-												stepData = points.map(function (
-													entry,
-													index
-												) {
-													var prev =
-														prevPoints &&
-														prevPoints[
-															Math.floor(
-																index *
-																	prevPointsDiffFactor
+												stepData = points.map(
+													function (entry, index) {
+														var prev =
+															prevPoints &&
+															prevPoints[
+																Math.floor(
+																	index *
+																		prevPointsDiffFactor,
+																)
+															]
+														if (prev) {
+															var _interpolatorX =
+																	(0,
+																	DataUtils.k4)(
+																		prev.x,
+																		entry.x,
+																	),
+																_interpolatorY =
+																	(0,
+																	DataUtils.k4)(
+																		prev.y,
+																		entry.y,
+																	)
+															return _objectSpread(
+																_objectSpread(
+																	{},
+																	entry,
+																),
+																{},
+																{
+																	x: _interpolatorX(
+																		t,
+																	),
+																	y: _interpolatorY(
+																		t,
+																	),
+																},
 															)
-														]
-													if (prev) {
-														var _interpolatorX = (0,
+														}
+														var interpolatorX = (0,
 															DataUtils.k4)(
-																prev.x,
-																entry.x
+																entry.cx,
+																entry.x,
 															),
-															_interpolatorY = (0,
+															interpolatorY = (0,
 															DataUtils.k4)(
-																prev.y,
-																entry.y
+																entry.cy,
+																entry.y,
 															)
 														return _objectSpread(
 															_objectSpread(
 																{},
-																entry
+																entry,
 															),
 															{},
 															{
-																x: _interpolatorX(
-																	t
+																x: interpolatorX(
+																	t,
 																),
-																y: _interpolatorY(
-																	t
+																y: interpolatorY(
+																	t,
 																),
-															}
+															},
 														)
-													}
-													var interpolatorX = (0,
-														DataUtils.k4)(
-															entry.cx,
-															entry.x
-														),
-														interpolatorY = (0,
-														DataUtils.k4)(
-															entry.cy,
-															entry.y
-														)
-													return _objectSpread(
-														_objectSpread(
-															{},
-															entry
-														),
-														{},
-														{
-															x: interpolatorX(t),
-															y: interpolatorY(t),
-														}
-													)
-												})
+													},
+												)
 											return _this2.renderPolygonStatically(
-												stepData
+												stepData,
 											)
-										}
+										},
 									)
 								},
 							},
@@ -610,7 +618,7 @@
 										(prevPoints &&
 											isEqual_default()(
 												prevPoints,
-												points
+												points,
 											))
 										? this.renderPolygonStatically(points)
 										: this.renderPolygonWithAnimation()
@@ -631,7 +639,7 @@
 											this.state.isAnimationFinished,
 										layerClass = classnames_default()(
 											'recharts-radar',
-											className
+											className,
 										)
 									return react.createElement(
 										Layer.m,
@@ -641,8 +649,8 @@
 											isAnimationFinished) &&
 											LabelList.e.renderCallByParent(
 												this.props,
-												points
-											)
+												points,
+											),
 									)
 								},
 							},
@@ -652,7 +660,7 @@
 								key: 'getDerivedStateFromProps',
 								value: function getDerivedStateFromProps(
 									nextProps,
-									prevState
+									prevState,
 								) {
 									return nextProps.animationId !==
 										prevState.prevAnimationId
@@ -680,11 +688,11 @@
 												_extends({}, props, {
 													className:
 														'recharts-radar-dot',
-												})
+												}),
 										  )
 								},
 							},
-						]
+						],
 					),
 					Radar
 				)
@@ -716,7 +724,7 @@
 						var name = (0, ChartUtils.F$)(
 								entry,
 								angleAxis.dataKey,
-								i
+								i,
 							),
 							value = (0, ChartUtils.F$)(entry, dataKey),
 							angle = angleAxis.scale(name) + (bandSize || 0),
@@ -737,8 +745,8 @@
 											cx,
 											cy,
 											radius,
-											angle
-										)
+											angle,
+										),
 									),
 									{},
 									{
@@ -749,8 +757,8 @@
 										radius,
 										angle,
 										payload: entry,
-									}
-								)
+									},
+								),
 							)
 					})
 					var baseLinePoints = []
@@ -759,7 +767,7 @@
 							points.forEach(function (point) {
 								if (isArray_default()(point.value)) {
 									var baseValue = first_default()(
-											point.value
+											point.value,
 										),
 										radius = isNil_default()(baseValue)
 											? void 0
@@ -773,9 +781,9 @@
 												cx,
 												cy,
 												radius,
-												point.angle
-											)
-										)
+												point.angle,
+											),
+										),
 									)
 								} else baseLinePoints.push(point)
 							}),
@@ -783,16 +791,16 @@
 					)
 				})
 			var ResponsiveContainer = __webpack_require__(
-					'./node_modules/recharts/es6/component/ResponsiveContainer.js'
+					'./node_modules/recharts/es6/component/ResponsiveContainer.js',
 				),
 				generateCategoricalChart = __webpack_require__(
-					'./node_modules/recharts/es6/chart/generateCategoricalChart.js'
+					'./node_modules/recharts/es6/chart/generateCategoricalChart.js',
 				),
 				PolarAngleAxis = __webpack_require__(
-					'./node_modules/recharts/es6/polar/PolarAngleAxis.js'
+					'./node_modules/recharts/es6/polar/PolarAngleAxis.js',
 				),
 				PolarRadiusAxis = __webpack_require__(
-					'./node_modules/recharts/es6/polar/PolarRadiusAxis.js'
+					'./node_modules/recharts/es6/polar/PolarRadiusAxis.js',
 				),
 				RadarChart = (0, generateCategoricalChart.z)({
 					chartName: 'RadarChart',
@@ -841,7 +849,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -855,10 +863,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -873,24 +879,27 @@
 									PolarGrid_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
-						: PolarGrid_ownKeys(Object(source)).forEach(function (
-								key
-						  ) {
-								Object.defineProperty(
-									target,
-									key,
-									Object.getOwnPropertyDescriptor(source, key)
-								)
-						  })
+						: PolarGrid_ownKeys(Object(source)).forEach(
+								function (key) {
+									Object.defineProperty(
+										target,
+										key,
+										Object.getOwnPropertyDescriptor(
+											source,
+											key,
+										),
+									)
+								},
+						  )
 				}
 				return target
 			}
@@ -903,7 +912,7 @@
 						Object.defineProperty(
 							target,
 							PolarGrid_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -930,8 +939,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -949,7 +958,7 @@
 					} else result = Super.apply(this, arguments)
 					return (function PolarGrid_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -959,12 +968,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function PolarGrid_assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -1003,7 +1012,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== PolarGrid_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -1014,7 +1023,7 @@
 				!(function PolarGrid_inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -1024,7 +1033,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -1037,11 +1046,11 @@
 					return (
 						(function PolarGrid_classCallCheck(
 							instance,
-							Constructor
+							Constructor,
 						) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, PolarGrid),
 						_super.apply(this, arguments)
@@ -1051,18 +1060,18 @@
 					(function PolarGrid_createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								PolarGrid_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								PolarGrid_defineProperties(
 									Constructor,
-									staticProps
+									staticProps,
 								),
 							Object.defineProperty(Constructor, 'prototype', {
 								writable: !1,
@@ -1084,7 +1093,7 @@
 											cx,
 											cy,
 											radius,
-											angle
+											angle,
 										)
 										path += i
 											? 'L '
@@ -1116,7 +1125,7 @@
 									return null
 								var props = PolarGrid_objectSpread(
 									{ stroke: '#ccc' },
-									(0, ReactUtils.L6)(this.props)
+									(0, ReactUtils.L6)(this.props),
 								)
 								return react.createElement(
 									'g',
@@ -1126,13 +1135,13 @@
 												cx,
 												cy,
 												innerRadius,
-												entry
+												entry,
 											),
 											end = (0, PolarUtils.op)(
 												cx,
 												cy,
 												outerRadius,
-												entry
+												entry,
 											)
 										return react.createElement(
 											'line',
@@ -1142,9 +1151,9 @@
 												y1: start.y,
 												x2: end.x,
 												y2: end.y,
-											})
+											}),
 										)
-									})
+									}),
 								)
 							},
 						},
@@ -1153,7 +1162,7 @@
 							value: function renderConcentricCircle(
 								radius,
 								index,
-								extraProps
+								extraProps,
 							) {
 								var _this$props3 = this.props,
 									cx = _this$props3.cx,
@@ -1161,11 +1170,11 @@
 									props = PolarGrid_objectSpread(
 										PolarGrid_objectSpread(
 											{ stroke: '#ccc' },
-											(0, ReactUtils.L6)(this.props)
+											(0, ReactUtils.L6)(this.props),
 										),
 										{},
 										{ fill: 'none' },
-										extraProps
+										extraProps,
 									)
 								return react.createElement(
 									'circle',
@@ -1176,7 +1185,7 @@
 										cx,
 										cy,
 										r: radius,
-									})
+									}),
 								)
 							},
 						},
@@ -1185,16 +1194,16 @@
 							value: function renderConcentricPolygon(
 								radius,
 								index,
-								extraProps
+								extraProps,
 							) {
 								var props = PolarGrid_objectSpread(
 									PolarGrid_objectSpread(
 										{ stroke: '#ccc' },
-										(0, ReactUtils.L6)(this.props)
+										(0, ReactUtils.L6)(this.props),
 									),
 									{},
 									{ fill: 'none' },
-									extraProps
+									extraProps,
 								)
 								return react.createElement(
 									'path',
@@ -1203,7 +1212,7 @@
 											'recharts-polar-grid-concentric-polygon',
 										key: 'path-'.concat(index),
 										d: this.getPolygonPath(radius),
-									})
+									}),
 								)
 							},
 						},
@@ -1221,20 +1230,19 @@
 												className:
 													'recharts-polar-grid-concentric',
 											},
-											polarRadius.map(function (
-												entry,
-												i
-											) {
-												return 'circle' === gridType
-													? _this.renderConcentricCircle(
-															entry,
-															i
-													  )
-													: _this.renderConcentricPolygon(
-															entry,
-															i
-													  )
-											})
+											polarRadius.map(
+												function (entry, i) {
+													return 'circle' === gridType
+														? _this.renderConcentricCircle(
+																entry,
+																i,
+														  )
+														: _this.renderConcentricPolygon(
+																entry,
+																i,
+														  )
+												},
+											),
 									  )
 									: null
 							},
@@ -1251,7 +1259,7 @@
 													'recharts-polar-grid',
 											},
 											this.renderPolarAngles(),
-											this.renderConcentricPath()
+											this.renderConcentricPath(),
 									  )
 							},
 						},
@@ -1275,10 +1283,10 @@
 				_MultipleChildrenRada2,
 				_MultipleChildrenRada3,
 				Tooltip = __webpack_require__(
-					'./node_modules/recharts/es6/component/Tooltip.js'
+					'./node_modules/recharts/es6/component/Tooltip.js',
 				),
 				Legend = __webpack_require__(
-					'./node_modules/recharts/es6/component/Legend.js'
+					'./node_modules/recharts/es6/component/Legend.js',
 				),
 				__jsx = react.createElement,
 				RadarComponent = function RadarComponent(_ref) {
@@ -1315,7 +1323,7 @@
 								children.props.children,
 								function (child) {
 									matrixChildren.push(child)
-								}
+								},
 							),
 						__jsx(
 							ResponsiveContainer.h,
@@ -1353,17 +1361,19 @@
 								(null == matrixChildren
 									? void 0
 									: matrixChildren.length) > 0
-									? matrixChildren.map(function (
-											child,
-											childIndex
-									  ) {
-											return react.cloneElement(child, {
-												key: childIndex,
-												fill: fillColor,
-												stroke: strokeColor,
-												fillOpacity,
-											})
-									  })
+									? matrixChildren.map(
+											function (child, childIndex) {
+												return react.cloneElement(
+													child,
+													{
+														key: childIndex,
+														fill: fillColor,
+														stroke: strokeColor,
+														fillOpacity,
+													},
+												)
+											},
+									  )
 									: react.cloneElement(children, {
 											fill: fillColor,
 											fillOpacity,
@@ -1382,8 +1392,8 @@
 											bottom: 0,
 											left: 150,
 										},
-									})
-							)
+									}),
+							),
 						)
 					)
 				}
@@ -1542,10 +1552,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1560,14 +1568,14 @@
 									;(0, defineProperty.Z)(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: radar_stories_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -1576,10 +1584,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -1608,7 +1616,7 @@
 				return radar_stories_jsx(
 					'div',
 					{ className: 'mx-auto container relative' },
-					radar_stories_jsx(RadarComponent, args)
+					radar_stories_jsx(RadarComponent, args),
 				)
 			}
 			Template.displayName = 'Template'
@@ -1694,14 +1702,14 @@
 						radar_stories_jsx(Radar, {
 							dataKey: 'C',
 							name: 'Average Students Performance',
-						})
+						}),
 					),
-				}
+				},
 			)),
 				(SingleChildrenRadar.parameters = radar_stories_objectSpread(
 					radar_stories_objectSpread(
 						{},
-						SingleChildrenRadar.parameters
+						SingleChildrenRadar.parameters,
 					),
 					{},
 					{
@@ -1713,7 +1721,7 @@
 										SingleChildrenRadar.parameters) ||
 									void 0 === _SingleChildrenRadar$
 									? void 0
-									: _SingleChildrenRadar$.docs
+									: _SingleChildrenRadar$.docs,
 							),
 							{},
 							{
@@ -1731,16 +1739,16 @@
 												_SingleChildrenRadar$2.docs) ||
 										void 0 === _SingleChildrenRadar$3
 										? void 0
-										: _SingleChildrenRadar$3.source
+										: _SingleChildrenRadar$3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(MultipleChildrenRadar.parameters = radar_stories_objectSpread(
 					radar_stories_objectSpread(
 						{},
-						MultipleChildrenRadar.parameters
+						MultipleChildrenRadar.parameters,
 					),
 					{},
 					{
@@ -1752,7 +1760,7 @@
 										MultipleChildrenRadar.parameters) ||
 									void 0 === _MultipleChildrenRada
 									? void 0
-									: _MultipleChildrenRada.docs
+									: _MultipleChildrenRada.docs,
 							),
 							{},
 							{
@@ -1770,20 +1778,20 @@
 												_MultipleChildrenRada2.docs) ||
 										void 0 === _MultipleChildrenRada3
 										? void 0
-										: _MultipleChildrenRada3.source
+										: _MultipleChildrenRada3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/lodash/first.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			module.exports = __webpack_require__(
-				'./node_modules/lodash/head.js'
+				'./node_modules/lodash/head.js',
 			)
 		},
 		'./node_modules/lodash/head.js': (module) => {

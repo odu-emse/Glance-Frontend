@@ -5,7 +5,7 @@
 		'./node_modules/react-icons/md/index.esm.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				D6S: () => MdSend,
@@ -15,7 +15,7 @@
 				xg7: () => MdOutlineCancel,
 			})
 			var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-				'./node_modules/react-icons/lib/esm/index.js'
+				'./node_modules/react-icons/lib/esm/index.js',
 			)
 			function MdSend(props) {
 				return (0, _lib__WEBPACK_IMPORTED_MODULE_0__.w_)({

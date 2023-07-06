@@ -10,7 +10,7 @@ export default {
 }
 
 const Template: ComponentStory<typeof ThreadCreation> = (
-	args: ThreadCreationProps
+	args: ThreadCreationProps,
 ) => <ThreadCreation {...args} />
 
 export const Primary: ComponentStory<typeof ThreadCreation> = Template.bind({})

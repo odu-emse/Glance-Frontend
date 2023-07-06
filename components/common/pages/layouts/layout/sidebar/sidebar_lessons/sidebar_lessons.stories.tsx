@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof SidebarLessons>
 
 const Template: ComponentStory<typeof SidebarLessons> = (
-	args: SidebarLessonsProps
+	args: SidebarLessonsProps,
 ) => {
 	const [open, setOpen] = React.useState(true)
 	return (

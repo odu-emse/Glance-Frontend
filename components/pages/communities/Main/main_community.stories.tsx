@@ -12,7 +12,7 @@ export default {
 } as ComponentMeta<typeof MainCommunity>
 
 const Template: ComponentStory<typeof MainCommunity> = (
-	args: MainCommunityProps
+	args: MainCommunityProps,
 ) => {
 	const { data, error } = useSWR(
 		{
@@ -24,7 +24,7 @@ const Template: ComponentStory<typeof MainCommunity> = (
 				}
 			`,
 		},
-		gqlFetcher
+		gqlFetcher,
 	)
 	if (error) return <p>Failed to load content...</p>
 	if (!data) return <p>Loading...</p>

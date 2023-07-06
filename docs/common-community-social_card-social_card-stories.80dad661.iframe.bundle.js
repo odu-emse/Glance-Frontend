@@ -4,33 +4,33 @@
 		'./components/common/community/social_card/social_card.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { X: () => SocialCard })
 			var _Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 					),
 				moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/moment/moment.js'
+					'./node_modules/moment/moment.js',
 				),
 				moment__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_icons_ai__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/react-icons/ai/index.esm.js'
+						'./node_modules/react-icons/ai/index.esm.js',
 					),
 				react_icons_fa__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/react-icons/fa/index.esm.js'
+						'./node_modules/react-icons/fa/index.esm.js',
 					),
 				react_icons_md__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/react-icons/md/index.esm.js'
+						'./node_modules/react-icons/md/index.esm.js',
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				SocialCard = function SocialCard(_ref) {
@@ -44,7 +44,7 @@
 						_React$useState2 = (0,
 						_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_2__.Z)(
 							_React$useState,
-							2
+							2,
 						),
 						isClicked = _React$useState2[0],
 						setIsClicked = _React$useState2[1]
@@ -88,7 +88,7 @@
 													'shadow-lg rounded-full max-w-full h-12 align-middle border-none',
 												onClick: function onClick() {
 													return setIsClicked(
-														!isClicked
+														!isClicked,
 													)
 												},
 											}),
@@ -106,7 +106,7 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'view profile'
+														'view profile',
 													),
 													__jsx(
 														'a',
@@ -115,7 +115,7 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'Send message'
+														'Send message',
 													),
 													__jsx(
 														'a',
@@ -124,7 +124,7 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'Unfriend'
+														'Unfriend',
 													),
 													__jsx(
 														'a',
@@ -133,10 +133,10 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'Block user'
-													)
-												)
-										)
+														'Block user',
+													),
+												),
+										),
 									),
 									__jsx(
 										'div',
@@ -153,13 +153,13 @@
 													className:
 														'text-slate-500 role',
 												},
-												user.role
+												user.role,
 											),
 											' ',
 											'- ',
 											user.firstName,
 											' ',
-											user.lastName
+											user.lastName,
 										),
 										__jsx(
 											'div',
@@ -174,9 +174,9 @@
 											' ',
 											user.department,
 											' - ',
-											user.office
-										)
-									)
+											user.office,
+										),
+									),
 								),
 								__jsx(
 									'div',
@@ -187,7 +187,7 @@
 											{
 												size: 38,
 												className: 'text-yellow-400',
-											}
+											},
 										),
 									'Advisor' === user.role &&
 										__jsx(
@@ -195,7 +195,7 @@
 											{
 												size: 38,
 												className: 'text-yellow-400',
-											}
+											},
 										),
 									'TA' === user.role &&
 										__jsx(
@@ -203,9 +203,9 @@
 											{
 												size: 38,
 												className: 'text-yellow-400',
-											}
-										)
-								)
+											},
+										),
+								),
 							),
 							__jsx(
 								'div',
@@ -216,8 +216,8 @@
 										className:
 											' break-words text-sm text-neutral-600 ',
 									},
-									content
-								)
+									content,
+								),
 							),
 							__jsx(
 								'div',
@@ -242,14 +242,14 @@
 											},
 											__jsx(
 												react_icons_ai__WEBPACK_IMPORTED_MODULE_4__.L7p,
-												{ size: 20, className: 'mr-1' }
+												{ size: 20, className: 'mr-1' },
 											),
 											__jsx(
 												'span',
 												{ className: '' },
 												likes,
-												' Likes'
-											)
+												' Likes',
+											),
 										),
 										__jsx(
 											'div',
@@ -259,17 +259,17 @@
 											},
 											__jsx(
 												react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.llv,
-												{ size: 20, className: 'mr-1' }
+												{ size: 20, className: 'mr-1' },
 											),
 											__jsx(
 												'span',
 												{ className: '' },
 												comments,
-												' comments'
-											)
-										)
-									)
-								)
+												' comments',
+											),
+										),
+									),
+								),
 							),
 							__jsx(
 								'div',
@@ -286,7 +286,7 @@
 											htmlFor: 'add-comment',
 											className: 'sr-only',
 										},
-										'Add your comment to the post'
+										'Add your comment to the post',
 									),
 									__jsx('input', {
 										type: 'text',
@@ -294,7 +294,7 @@
 											'border-transparent bg-transparent px-5 py-2 w-full',
 										placeholder: 'Add Comment...',
 										id: 'add-comment',
-									})
+									}),
 								),
 								__jsx(
 									'div',
@@ -308,8 +308,8 @@
 										},
 										__jsx(
 											react_icons_md__WEBPACK_IMPORTED_MODULE_5__._b$,
-											{ size: 20, className: 'mr-1' }
-										)
+											{ size: 20, className: 'mr-1' },
+										),
 									),
 									__jsx(
 										'button',
@@ -320,12 +320,12 @@
 										},
 										__jsx(
 											react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.sr,
-											{ size: 20, className: 'mr-1' }
-										)
-									)
-								)
-							)
-						)
+											{ size: 20, className: 'mr-1' },
+										),
+									),
+								),
+							),
+						),
 					)
 				}
 			;(SocialCard.displayName = 'SocialCard'),
@@ -395,7 +395,7 @@
 		'./components/common/community/social_card/social_card.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -420,13 +420,13 @@
 				_Prof$parameters2$doc,
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_social_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./components/common/community/social_card/social_card.tsx'
+					'./components/common/community/social_card/social_card.tsx',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -435,10 +435,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -450,18 +448,25 @@
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
 								;(0,
-								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(target, key, source[key])
+								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -500,7 +505,7 @@
 					{
 						content:
 							'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae error iure officiis exercitationem, commodi ab reiciendis eum ex veritatis placeat amet architecto itaque cumque blanditiis numquam repellat, necessitatibus natus nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae error iure officiis exercitationem, commodi ab reiciendis eum ex veritatis placeat amet architecto itaque cumque blanditiis numquam repellat, necessitatibus natus nihil!',
-					}
+					},
 				))
 			var TA = Template.bind({})
 			;(TA.storyName = 'TA user'),
@@ -512,9 +517,9 @@
 						user: _objectSpread(
 							_objectSpread({}, Secondary.args.user),
 							{},
-							{ role: 'TA' }
+							{ role: 'TA' },
 						),
-					}
+					},
 				))
 			var Prof = Template.bind({})
 			;(Prof.storyName = 'Professor user'),
@@ -525,9 +530,9 @@
 						user: _objectSpread(
 							_objectSpread({}, Secondary.args.user),
 							{},
-							{ role: 'Prof' }
+							{ role: 'Prof' },
 						),
-					}
+					},
 				)),
 				(Primary.parameters = _objectSpread(
 					_objectSpread({}, Primary.parameters),
@@ -541,7 +546,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -559,11 +564,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = _objectSpread(
 					_objectSpread({}, Secondary.parameters),
@@ -577,7 +582,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -595,11 +600,11 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(TA.parameters = _objectSpread(
 					_objectSpread({}, TA.parameters),
@@ -611,7 +616,7 @@
 								null === (_TA$parameters = TA.parameters) ||
 									void 0 === _TA$parameters
 									? void 0
-									: _TA$parameters.docs
+									: _TA$parameters.docs,
 							),
 							{},
 							{
@@ -628,11 +633,11 @@
 												_TA$parameters2.docs) ||
 										void 0 === _TA$parameters2$docs
 										? void 0
-										: _TA$parameters2$docs.source
+										: _TA$parameters2$docs.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Prof.parameters = _objectSpread(
 					_objectSpread({}, Prof.parameters),
@@ -644,7 +649,7 @@
 								null === (_Prof$parameters = Prof.parameters) ||
 									void 0 === _Prof$parameters
 									? void 0
-									: _Prof$parameters.docs
+									: _Prof$parameters.docs,
 							),
 							{},
 							{
@@ -661,17 +666,17 @@
 												_Prof$parameters2.docs) ||
 										void 0 === _Prof$parameters2$doc
 										? void 0
-										: _Prof$parameters2$doc.source
+										: _Prof$parameters2$doc.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/moment/locale sync recursive ^\\.\\/.*$': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var map = {
 				'./af': './node_modules/moment/locale/af.js',

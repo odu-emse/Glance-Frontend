@@ -29,7 +29,7 @@ const QuizContent = ({ data }) => {
 			query: getQuizById,
 			variables: { quizID: data[0].link },
 		},
-		gqlFetcher
+		gqlFetcher,
 	) as {
 		data: {
 			quiz: Array<Quiz>
@@ -39,7 +39,7 @@ const QuizContent = ({ data }) => {
 	const { mutate } = useSWR({}, gqlFetcher)
 
 	const [instanceId, setInstanceId] = useState(
-		() => localStorage.getItem('quizInstanceId') || null
+		() => localStorage.getItem('quizInstanceId') || null,
 	)
 
 	useEffect(() => {
@@ -60,7 +60,7 @@ const QuizContent = ({ data }) => {
 						}
 					}
 				`,
-				{ id: data[0].link }
+				{ id: data[0].link },
 			)
 
 			// Extract the id from the response and update the state
@@ -78,7 +78,7 @@ const QuizContent = ({ data }) => {
 					variables: { id: instanceId },
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	) as {
 		data: {
 			quizInstance: Array<QuizInstance>
@@ -101,7 +101,7 @@ const QuizContent = ({ data }) => {
 						quizInstance: instanceId,
 						answers,
 					},
-				}
+				},
 			)
 		})
 			.then(() => {
@@ -109,7 +109,7 @@ const QuizContent = ({ data }) => {
 				router.push(
 					`/modules/${
 						moduleId as string
-					}/result?instanceId=${instanceId}`
+					}/result?instanceId=${instanceId}`,
 				)
 			})
 			.catch((error) => {
@@ -144,7 +144,7 @@ const QuizContent = ({ data }) => {
 								updateAnswer={updateAnswer}
 								questionType={''}
 							/>
-						)
+						),
 					)}
 					<div className="mt-6">
 						<Button onClick={() => submitQuiz(instanceId, answers)}>

@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -63,17 +63,17 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.d(__webpack_exports__, {
 					q: () => ModuleSection,
 				})
 				var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					react_icons_rx__WEBPACK_IMPORTED_MODULE_1__ =
 						__webpack_require__(
-							'./node_modules/react-icons/rx/index.esm.js'
+							'./node_modules/react-icons/rx/index.esm.js',
 						),
 					__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 					ModuleSection = function ModuleSection(_ref) {
@@ -93,8 +93,8 @@
 									isClicked
 										? react_icons_rx__WEBPACK_IMPORTED_MODULE_1__.jX5
 										: react_icons_rx__WEBPACK_IMPORTED_MODULE_1__.h2L,
-									{ size: 25 }
-								)
+									{ size: 25 },
+								),
 							),
 							__jsx(
 								'div',
@@ -105,8 +105,8 @@
 									},
 									key: sectionId,
 								},
-								sectionName
-							)
+								sectionName,
+							),
 						)
 					}
 				;(ModuleSection.displayName = 'ModuleSection'),
@@ -165,7 +165,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -177,13 +177,13 @@
 					_Default$parameters2$,
 					_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 						__webpack_require__(
-							'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+							'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 						),
 					react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-						'./components/common/pages/admin_panel/module_page_editor/section/section.tsx'
+						'./components/common/pages/admin_panel/module_page_editor/section/section.tsx',
 					),
 					__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 				function ownKeys(object, enumerableOnly) {
@@ -194,7 +194,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -205,20 +205,20 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0,
-									_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0,
+										_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -226,8 +226,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -256,7 +256,7 @@
 											Default.parameters) ||
 										void 0 === _Default$parameters
 										? void 0
-										: _Default$parameters.docs
+										: _Default$parameters.docs,
 								),
 								{},
 								{
@@ -274,11 +274,11 @@
 													_Default$parameters2.docs) ||
 											void 0 === _Default$parameters2$
 											? void 0
-											: _Default$parameters2$.source
+											: _Default$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

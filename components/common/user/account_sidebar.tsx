@@ -27,7 +27,7 @@ interface AccountSidebarProps {
 			biography?: string | null
 			phoneNumber?: string | null
 		},
-		instructorInput?: InstructorProfile
+		instructorInput?: InstructorProfile,
 	) => void
 	userOpenID: string
 	contextAccount:
@@ -116,7 +116,7 @@ function AccountSidebar({
 											openID: userOpenID as string,
 											biography: updatedProfile.biography,
 										},
-										instructorDetails
+										instructorDetails,
 									)
 									setEditMode(!isEditMode)
 								}}

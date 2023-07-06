@@ -47,7 +47,7 @@ describe('Accordion.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 
@@ -56,14 +56,14 @@ describe('Accordion.tsx', function () {
 
 		cy.get('button').should(
 			'have.class',
-			'flex items-center justify-between w-80 p-5 font-medium text-left border border-b-0 border-gray-400 rounded-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:border-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-400 dark:bg-gray-800 text-black dark:text-white'
+			'flex items-center justify-between w-80 p-5 font-medium text-left border border-b-0 border-gray-400 rounded-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:border-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-400 dark:bg-gray-800 text-black dark:text-white',
 		)
 	})
 	it('should render component moduleIdentifier with list of lessons', () => {
 		cy.mount(<Topic1 />)
 		cy.get('p').should(
 			'have.class',
-			'mb-2 text-gray-900 dark:text-gray-400'
+			'mb-2 text-gray-900 dark:text-gray-400',
 		)
 	})
 })

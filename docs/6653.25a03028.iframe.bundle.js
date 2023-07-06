@@ -5,7 +5,7 @@
 		'./node_modules/react-icons/go/index.esm.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				KhA: () => GoArrowUp,
@@ -13,7 +13,7 @@
 				lzP: () => GoLinkExternal,
 			})
 			var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-				'./node_modules/react-icons/lib/esm/index.js'
+				'./node_modules/react-icons/lib/esm/index.js',
 			)
 			function GoArrowUp(props) {
 				return (0, _lib__WEBPACK_IMPORTED_MODULE_0__.w_)({
