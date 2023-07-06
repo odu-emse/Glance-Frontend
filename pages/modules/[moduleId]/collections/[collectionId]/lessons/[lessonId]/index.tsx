@@ -32,7 +32,7 @@ const ModuleSection = () => {
 			query: getModuleByIDForFlow,
 			variables: { moduleID: moduleId, planID: user.plan.id },
 		},
-		gqlFetcher
+		gqlFetcher,
 	) as {
 		data: {
 			moduleFlowFromLearningPath: {
@@ -70,7 +70,7 @@ const ModuleSection = () => {
 
 	const primaryContent =
 		data.moduleFlowFromLearningPath.currentModule.content.find(
-			(v) => v.primary
+			(v) => v.primary,
 		)
 
 	return (

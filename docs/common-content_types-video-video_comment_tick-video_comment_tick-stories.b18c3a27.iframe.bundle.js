@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -63,13 +63,13 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.d(__webpack_exports__, {
 					N: () => VideoCommentTick,
 				})
 				var __jsx = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					).createElement,
 					VideoCommentTick = function VideoCommentTick(_ref) {
 						var icon = _ref.icon
@@ -86,9 +86,9 @@
 							__jsx('img', {
 								src: icon,
 								className: ['object-cover w-full h-full'].join(
-									' '
+									' ',
 								),
-							})
+							}),
 						)
 					}
 				;(VideoCommentTick.displayName = 'VideoCommentTick'),
@@ -133,7 +133,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -145,14 +145,14 @@
 					_Sample$parameters2$d,
 					_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 						__webpack_require__(
-							'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+							'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 						),
 					react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					_video_comment_tick__WEBPACK_IMPORTED_MODULE_2__ =
 						__webpack_require__(
-							'./components/common/content_types/video/video_comment_tick/video_comment_tick.tsx'
+							'./components/common/content_types/video/video_comment_tick/video_comment_tick.tsx',
 						),
 					__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 				function ownKeys(object, enumerableOnly) {
@@ -163,7 +163,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -174,20 +174,20 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0,
-									_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0,
+										_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -195,8 +195,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -211,7 +211,7 @@
 				var Template = function Template(args) {
 					return __jsx(
 						_video_comment_tick__WEBPACK_IMPORTED_MODULE_2__.N,
-						args
+						args,
 					)
 				}
 				Template.displayName = 'Template'
@@ -229,7 +229,7 @@
 											Sample.parameters) ||
 										void 0 === _Sample$parameters
 										? void 0
-										: _Sample$parameters.docs
+										: _Sample$parameters.docs,
 								),
 								{},
 								{
@@ -247,11 +247,11 @@
 													_Sample$parameters2.docs) ||
 											void 0 === _Sample$parameters2$d
 											? void 0
-											: _Sample$parameters2$d.source
+											: _Sample$parameters2$d.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

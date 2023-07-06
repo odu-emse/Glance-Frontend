@@ -78,7 +78,7 @@ Primary.args = {
 			openID: string
 			biography?: string | null
 			phoneNumber?: string | null
-		}
+		},
 	): void {},
 	verifyEdit(): boolean {
 		return false

@@ -271,6 +271,6 @@ var createModuleInfo = (m) => ({
 	}),
 	definitions = Object.keys(Keys).reduce(
 		(acc, key) => ((acc[key] = createModuleInfo(key)), acc),
-		{}
+		{},
 	)
 export { definitions }

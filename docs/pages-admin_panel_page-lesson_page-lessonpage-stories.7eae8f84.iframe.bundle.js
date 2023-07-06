@@ -5,25 +5,25 @@
 		'./components/common/admin_panel/content_area.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { v: () => ContentArea })
 			var _Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_objectDestructuringEmpty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js'
+						'./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_dropzone__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/react-dropzone/dist/es/index.js'
+						'./node_modules/react-dropzone/dist/es/index.js',
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				ContentArea = function ContentArea(_ref) {
 					;(0,
 					_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_objectDestructuringEmpty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
-						_ref
+						_ref,
 					)
 					var _useDropzone = (0,
 						react_dropzone__WEBPACK_IMPORTED_MODULE_2__.uI)(),
@@ -37,7 +37,7 @@
 								file.path,
 								' - ',
 								file.size,
-								' bytes'
+								' bytes',
 							)
 						})
 					return __jsx(
@@ -82,7 +82,7 @@
 												'stroke-linejoin': 'round',
 												'stroke-width': '2',
 												d: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12',
-											})
+											}),
 										),
 										__jsx(
 											'p',
@@ -93,26 +93,26 @@
 											__jsx(
 												'span',
 												{ className: 'font-semibold' },
-												'Click to upload'
+												'Click to upload',
 											),
 											' ',
-											'or drag and drop'
-										)
+											'or drag and drop',
+										),
 									),
 									__jsx('input', {
 										id: 'dropzone-file',
 										type: 'file',
 										className: 'hidden',
-									})
-								)
-							)
+									}),
+								),
+							),
 						),
 						__jsx(
 							'aside',
 							null,
 							__jsx('h4', null, 'Uploaded Files:'),
-							__jsx('ul', null, files)
-						)
+							__jsx('ul', null, files),
+						),
 					)
 				}
 			;(ContentArea.displayName = 'ContentArea'),
@@ -174,18 +174,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -206,7 +206,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -225,7 +225,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -460,11 +460,11 @@
 		'./components/common/forms/inputs/select/select.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { P: () => Select })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				Select = function Select(_ref) {
@@ -501,7 +501,7 @@
 							{
 								className:
 									'bg-gray-50 text-gray-900 text-sm w-28 w-fit py-3 border-0 focus:ring-0 ml-1 focus:outline-dashed focus:outline-blue-500 '.concat(
-										disabled ? 'cursor-not-allowed' : ''
+										disabled ? 'cursor-not-allowed' : '',
 									),
 								onChange: handle,
 								disabled,
@@ -535,11 +535,11 @@
 													react__WEBPACK_IMPORTED_MODULE_0__.Fragment,
 													null,
 													option.icon && option.icon,
-													option.label
-											  )
+													option.label,
+											  ),
 									)
-								})
-						)
+								}),
+						),
 					)
 				}
 			;(Select.displayName = 'Select'),
@@ -678,7 +678,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -689,19 +689,19 @@
 					_Primary$parameters2,
 					_Primary$parameters2$,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					select_select = __webpack_require__(
-						'./components/common/forms/inputs/select/select.tsx'
+						'./components/common/forms/inputs/select/select.tsx',
 					),
 					content_area = __webpack_require__(
-						'./components/common/admin_panel/content_area.tsx'
+						'./components/common/admin_panel/content_area.tsx',
 					),
 					button_button = __webpack_require__(
-						'./components/common/button/button.tsx'
+						'./components/common/button/button.tsx',
 					),
 					__jsx = react.createElement,
 					Lessonpage = function Lessonpage(_ref) {
@@ -724,8 +724,8 @@
 									sectionNumber,
 									' : ',
 									lessonName,
-									' '
-								)
+									' ',
+								),
 							),
 							__jsx(
 								'div',
@@ -741,12 +741,12 @@
 										{ label: 'Video', value: 'video' },
 									],
 									size: 1,
-								})
+								}),
 							),
 							__jsx(
 								'div',
 								{ className: 'content-area' },
-								__jsx(content_area.v, null)
+								__jsx(content_area.v, null),
 							),
 							__jsx(
 								'div',
@@ -754,14 +754,14 @@
 								__jsx(
 									button_button.z,
 									{ size: 'small', className: 'mx-2' },
-									__jsx('p', null, 'Confirm')
+									__jsx('p', null, 'Confirm'),
 								),
 								__jsx(
 									button_button.z,
 									{ size: 'small', className: 'mx-2' },
-									__jsx('p', null, 'Cancel')
-								)
-							)
+									__jsx('p', null, 'Cancel'),
+								),
+							),
 						)
 					}
 				Lessonpage.__docgenInfo = {
@@ -811,7 +811,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -822,19 +822,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -842,8 +842,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -876,7 +876,7 @@
 											Primary.parameters) ||
 										void 0 === _Primary$parameters
 										? void 0
-										: _Primary$parameters.docs
+										: _Primary$parameters.docs,
 								),
 								{},
 								{
@@ -894,11 +894,11 @@
 													_Primary$parameters2.docs) ||
 											void 0 === _Primary$parameters2$
 											? void 0
-											: _Primary$parameters2$.source
+											: _Primary$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

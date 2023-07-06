@@ -19,7 +19,7 @@
 				module.exports,
 				module,
 				module.exports,
-				__webpack_require__
+				__webpack_require__,
 			),
 			(module.loaded = !0),
 			module.exports
@@ -41,7 +41,7 @@
 					)
 						(!1 & priority || notFulfilled >= priority) &&
 						Object.keys(__webpack_require__.O).every((key) =>
-							__webpack_require__.O[key](chunkIds[j])
+							__webpack_require__.O[key](chunkIds[j]),
 						)
 							? chunkIds.splice(j--, 1)
 							: ((fulfilled = !1),
@@ -95,7 +95,7 @@
 				current = getProto(current)
 			)
 				Object.getOwnPropertyNames(current).forEach(
-					(key) => (def[key] = () => value[key])
+					(key) => (def[key] = () => value[key]),
 				)
 			return (
 				(def.default = () => value), __webpack_require__.d(ns, def), ns
@@ -117,8 +117,8 @@
 					(promises, key) => (
 						__webpack_require__.f[key](chunkId, promises), promises
 					),
-					[]
-				)
+					[],
+				),
 			)),
 		(__webpack_require__.u = (chunkId) =>
 			(({
@@ -174,7 +174,7 @@
 				9704: 'common-charts-line-line-stories',
 				9799: 'common-forms-inputs-select-select-stories',
 				9890: 'common-panel-panel-stories',
-			}[chunkId] || chunkId) +
+			})[chunkId] || chunkId) +
 			'.' +
 			{
 				138: 'f87fb680',
@@ -264,7 +264,7 @@
 				9799: '1d1b7aef',
 				9890: 'd84cb2ff',
 			}[chunkId] +
-			'.iframe.bundle.js')),
+			'.iframe.bundle.js'),
 		(__webpack_require__.g = (function () {
 			if ('object' == typeof globalThis) return globalThis
 			try {
@@ -324,12 +324,12 @@
 							type: 'timeout',
 							target: script,
 						}),
-						12e4
+						12e4,
 					)
 				;(script.onerror = onScriptComplete.bind(null, script.onerror)),
 					(script.onload = onScriptComplete.bind(
 						null,
-						script.onload
+						script.onload,
 					)),
 					needAttach && document.head.appendChild(script)
 			}
@@ -353,7 +353,7 @@
 			;(__webpack_require__.f.j = (chunkId, promises) => {
 				var installedChunkData = __webpack_require__.o(
 					installedChunks,
-					chunkId
+					chunkId,
 				)
 					? installedChunks[chunkId]
 					: void 0
@@ -363,7 +363,7 @@
 						var promise = new Promise(
 							(resolve, reject) =>
 								(installedChunkData = installedChunks[chunkId] =
-									[resolve, reject])
+									[resolve, reject]),
 						)
 						promises.push((installedChunkData[2] = promise))
 						var url =
@@ -376,7 +376,7 @@
 								if (
 									__webpack_require__.o(
 										installedChunks,
-										chunkId
+										chunkId,
 									) &&
 									(0 !==
 										(installedChunkData =
@@ -408,7 +408,7 @@
 								}
 							},
 							'chunk-' + chunkId,
-							chunkId
+							chunkId,
 						)
 					} else installedChunks[chunkId] = 0
 			}),
@@ -444,7 +444,7 @@
 			chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0)),
 				(chunkLoadingGlobal.push = webpackJsonpCallback.bind(
 					null,
-					chunkLoadingGlobal.push.bind(chunkLoadingGlobal)
+					chunkLoadingGlobal.push.bind(chunkLoadingGlobal),
 				))
 		})(),
 		(__webpack_require__.nc = void 0)

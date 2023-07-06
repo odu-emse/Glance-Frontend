@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _extends() {
 				return (
@@ -74,7 +74,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -87,11 +87,11 @@
 		'./components/common/forms/inputs/input/input.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { I: () => Input })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				Input = function Input(_ref) {
@@ -148,7 +148,7 @@
 											? 'w-1/3'
 											: 'long' === length
 											? 'w-1/2'
-											: 'w-full'
+											: 'w-full',
 								  )
 								: '',
 							'radio' === type || 'checkbox' === type
@@ -165,7 +165,7 @@
 								className: ' '.concat(
 									'radio' === type || 'checkbox' === type
 										? 'flex items-center'
-										: ''
+										: '',
 								),
 							},
 							label &&
@@ -176,8 +176,8 @@
 										'label',
 										{ htmlFor: name },
 										' ',
-										label.toUpperCase()
-									)
+										label.toUpperCase(),
+									),
 								),
 							__jsx('input', {
 								type,
@@ -208,18 +208,18 @@
 												'flex items-center w-4 h-4 '
 													.concat(
 														inputShape,
-														' border '
+														' border ',
 													)
 													.concat(
 														disabled
 															? ''
 															: 'cursor-pointer',
-														' '
+														' ',
 													)
 													.concat(
 														isChecked
 															? 'bg-white border-royalblue'
-															: 'bg-white border-wgray'
+															: 'bg-white border-wgray',
 													),
 											onClick: handleInputChange,
 										},
@@ -229,9 +229,9 @@
 													'w-3 h-3 mx-auto my-auto bg-royalblue '.concat(
 														'radio' === type
 															? 'rounded-full'
-															: 'rounded'
+															: 'rounded',
 													),
-											})
+											}),
 								  )
 								: null,
 							'radio' === type || 'checkbox' === type
@@ -243,14 +243,14 @@
 									{
 										id: 'helper-text-explanation',
 										className: 'my-0 '.concat(
-											error ? 'text-red-600' : ''
+											error ? 'text-red-600' : '',
 										),
 									},
 									error
 										? 'Wrong '.concat(type)
-										: 'This is a test message'
-								)
-						)
+										: 'This is a test message',
+								),
+						),
 					)
 				}
 			Input.__docgenInfo = {
@@ -611,7 +611,7 @@
 		'./components/common/forms/inputs/input/input.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -663,17 +663,17 @@
 				_RangeSlider$paramete3,
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_extends_js__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/extends.js'
+						'./node_modules/@babel/runtime/helpers/esm/extends.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./components/common/forms/inputs/input/input.tsx'
+					'./components/common/forms/inputs/input/input.tsx',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -682,10 +682,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -697,18 +695,25 @@
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
 								;(0,
-								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(target, key, source[key])
+								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -729,7 +734,7 @@
 						null !== (_args$defaultValue = args.defaultValue) &&
 							void 0 !== _args$defaultValue
 							? _args$defaultValue
-							: ''
+							: '',
 					)[0],
 					_useState2 = (0,
 					react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
@@ -756,13 +761,13 @@
 										  }
 										: function (prev) {
 												return []
-										  }
+										  },
 								)
 							},
 							options,
 							defaultValue: value,
-						}
-					)
+						},
+					),
 				)
 			}
 			Template.displayName = 'Template'
@@ -797,23 +802,23 @@
 								className:
 									'font-medium text-blue-600 hover:underline dark:text-blue-500',
 							},
-							'Privacy Policy'
+							'Privacy Policy',
 						),
-						'.'
+						'.',
 					),
-				}
+				},
 			)
 			var Disabled = Template.bind({})
 			Disabled.args = _objectSpread(
 				_objectSpread({}, Email.args),
 				{},
-				{ disabled: !0 }
+				{ disabled: !0 },
 			)
 			var ErrorState = Template.bind({})
 			ErrorState.args = _objectSpread(
 				_objectSpread({}, Email.args),
 				{},
-				{ error: !0 }
+				{ error: !0 },
 			)
 			var ErrorStateWithDescription = Template.bind({})
 			ErrorStateWithDescription.args = _objectSpread(
@@ -823,7 +828,7 @@
 					error: !0,
 					description:
 						'The error occurred while we were processing your request. Please try again and contact your system administrator if this issue persists.',
-				}
+				},
 			)
 			var Search = Template.bind({})
 			Search.args = {
@@ -865,7 +870,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -883,11 +888,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Email.parameters = _objectSpread(
 					_objectSpread({}, Email.parameters),
@@ -900,7 +905,7 @@
 									(_Email$parameters = Email.parameters) ||
 									void 0 === _Email$parameters
 									? void 0
-									: _Email$parameters.docs
+									: _Email$parameters.docs,
 							),
 							{},
 							{
@@ -918,11 +923,11 @@
 												_Email$parameters2.docs) ||
 										void 0 === _Email$parameters2$do
 										? void 0
-										: _Email$parameters2$do.source
+										: _Email$parameters2$do.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Descriptive.parameters = _objectSpread(
 					_objectSpread({}, Descriptive.parameters),
@@ -936,7 +941,7 @@
 										Descriptive.parameters) ||
 									void 0 === _Descriptive$paramete
 									? void 0
-									: _Descriptive$paramete.docs
+									: _Descriptive$paramete.docs,
 							),
 							{},
 							{
@@ -954,11 +959,11 @@
 												_Descriptive$paramete2.docs) ||
 										void 0 === _Descriptive$paramete3
 										? void 0
-										: _Descriptive$paramete3.source
+										: _Descriptive$paramete3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Disabled.parameters = _objectSpread(
 					_objectSpread({}, Disabled.parameters),
@@ -972,7 +977,7 @@
 										Disabled.parameters) ||
 									void 0 === _Disabled$parameters
 									? void 0
-									: _Disabled$parameters.docs
+									: _Disabled$parameters.docs,
 							),
 							{},
 							{
@@ -990,11 +995,11 @@
 												_Disabled$parameters2.docs) ||
 										void 0 === _Disabled$parameters3
 										? void 0
-										: _Disabled$parameters3.source
+										: _Disabled$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(ErrorState.parameters = _objectSpread(
 					_objectSpread({}, ErrorState.parameters),
@@ -1008,7 +1013,7 @@
 										ErrorState.parameters) ||
 									void 0 === _ErrorState$parameter
 									? void 0
-									: _ErrorState$parameter.docs
+									: _ErrorState$parameter.docs,
 							),
 							{},
 							{
@@ -1026,11 +1031,11 @@
 												_ErrorState$parameter2.docs) ||
 										void 0 === _ErrorState$parameter3
 										? void 0
-										: _ErrorState$parameter3.source
+										: _ErrorState$parameter3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(ErrorStateWithDescription.parameters = _objectSpread(
 					_objectSpread({}, ErrorStateWithDescription.parameters),
@@ -1044,7 +1049,7 @@
 										ErrorStateWithDescription.parameters) ||
 									void 0 === _ErrorStateWithDescri
 									? void 0
-									: _ErrorStateWithDescri.docs
+									: _ErrorStateWithDescri.docs,
 							),
 							{},
 							{
@@ -1062,11 +1067,11 @@
 												_ErrorStateWithDescri2.docs) ||
 										void 0 === _ErrorStateWithDescri3
 										? void 0
-										: _ErrorStateWithDescri3.source
+										: _ErrorStateWithDescri3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Search.parameters = _objectSpread(
 					_objectSpread({}, Search.parameters),
@@ -1079,7 +1084,7 @@
 									(_Search$parameters = Search.parameters) ||
 									void 0 === _Search$parameters
 									? void 0
-									: _Search$parameters.docs
+									: _Search$parameters.docs,
 							),
 							{},
 							{
@@ -1097,11 +1102,11 @@
 												_Search$parameters2.docs) ||
 										void 0 === _Search$parameters2$d
 										? void 0
-										: _Search$parameters2$d.source
+										: _Search$parameters2$d.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Radio.parameters = _objectSpread(
 					_objectSpread({}, Radio.parameters),
@@ -1114,7 +1119,7 @@
 									(_Radio$parameters = Radio.parameters) ||
 									void 0 === _Radio$parameters
 									? void 0
-									: _Radio$parameters.docs
+									: _Radio$parameters.docs,
 							),
 							{},
 							{
@@ -1132,11 +1137,11 @@
 												_Radio$parameters2.docs) ||
 										void 0 === _Radio$parameters2$do
 										? void 0
-										: _Radio$parameters2$do.source
+										: _Radio$parameters2$do.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Checkbox.parameters = _objectSpread(
 					_objectSpread({}, Checkbox.parameters),
@@ -1150,7 +1155,7 @@
 										Checkbox.parameters) ||
 									void 0 === _Checkbox$parameters
 									? void 0
-									: _Checkbox$parameters.docs
+									: _Checkbox$parameters.docs,
 							),
 							{},
 							{
@@ -1168,11 +1173,11 @@
 												_Checkbox$parameters2.docs) ||
 										void 0 === _Checkbox$parameters3
 										? void 0
-										: _Checkbox$parameters3.source
+										: _Checkbox$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(NumericalInput.parameters = _objectSpread(
 					_objectSpread({}, NumericalInput.parameters),
@@ -1186,7 +1191,7 @@
 										NumericalInput.parameters) ||
 									void 0 === _NumericalInput$param
 									? void 0
-									: _NumericalInput$param.docs
+									: _NumericalInput$param.docs,
 							),
 							{},
 							{
@@ -1204,11 +1209,11 @@
 												_NumericalInput$param2.docs) ||
 										void 0 === _NumericalInput$param3
 										? void 0
-										: _NumericalInput$param3.source
+										: _NumericalInput$param3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(RangeSlider.parameters = _objectSpread(
 					_objectSpread({}, RangeSlider.parameters),
@@ -1222,7 +1227,7 @@
 										RangeSlider.parameters) ||
 									void 0 === _RangeSlider$paramete
 									? void 0
-									: _RangeSlider$paramete.docs
+									: _RangeSlider$paramete.docs,
 							),
 							{},
 							{
@@ -1240,11 +1245,11 @@
 												_RangeSlider$paramete2.docs) ||
 										void 0 === _RangeSlider$paramete3
 										? void 0
-										: _RangeSlider$paramete3.source
+										: _RangeSlider$paramete3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

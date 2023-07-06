@@ -5,18 +5,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -37,7 +37,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -56,7 +56,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -291,47 +291,47 @@
 		'./components/common/community/threads/thread/thread.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { j: () => Thread })
 			var taggedTemplateLiteral = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
 				),
 				asyncToGenerator = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js'
+					'./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js',
 				),
 				regenerator = __webpack_require__(
-					'./node_modules/@babel/runtime/regenerator/index.js'
+					'./node_modules/@babel/runtime/regenerator/index.js',
 				),
 				regenerator_default = __webpack_require__.n(regenerator),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				index_esm = __webpack_require__(
-					'./node_modules/react-icons/go/index.esm.js'
+					'./node_modules/react-icons/go/index.esm.js',
 				),
 				tb_index_esm = __webpack_require__(
-					'./node_modules/react-icons/tb/index.esm.js'
+					'./node_modules/react-icons/tb/index.esm.js',
 				),
 				esm = __webpack_require__(
-					'./node_modules/react-icons/lib/esm/index.js'
+					'./node_modules/react-icons/lib/esm/index.js',
 				),
 				next_link = __webpack_require__('./node_modules/next/link.js'),
 				link_default = __webpack_require__.n(next_link),
 				global_user_context = __webpack_require__(
-					'./contexts/global_user_context.ts'
+					'./contexts/global_user_context.ts',
 				),
 				dist = __webpack_require__('./node_modules/swr/dist/index.mjs'),
 				gql_fetcher = __webpack_require__('./utils/gql_fetcher.ts'),
 				build_esm = __webpack_require__(
-					'./node_modules/graphql-request/build/esm/index.js'
+					'./node_modules/graphql-request/build/esm/index.js',
 				),
 				text_area = __webpack_require__(
-					'./components/common/forms/inputs/text_area/text_area.tsx'
+					'./components/common/forms/inputs/text_area/text_area.tsx',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				objectWithoutProperties = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
+					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js',
 				),
 				_excluded = ['node'],
 				_excluded2 = ['node'],
@@ -348,7 +348,7 @@
 						_ref.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref,
-							_excluded
+							_excluded,
 						)
 						return __jsx('p', props)
 					},
@@ -356,7 +356,7 @@
 						_ref2.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref2,
-							_excluded2
+							_excluded2,
 						)
 						return __jsx('p', props)
 					},
@@ -364,7 +364,7 @@
 						_ref3.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref3,
-							_excluded3
+							_excluded3,
 						)
 						return __jsx('p', props)
 					},
@@ -372,7 +372,7 @@
 						_ref4.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref4,
-							_excluded4
+							_excluded4,
 						)
 						return __jsx('p', props)
 					},
@@ -380,7 +380,7 @@
 						_ref5.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref5,
-							_excluded5
+							_excluded5,
 						)
 						return __jsx('p', props)
 					},
@@ -388,7 +388,7 @@
 						_ref6.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref6,
-							_excluded6
+							_excluded6,
 						)
 						return __jsx('p', props)
 					},
@@ -396,56 +396,56 @@
 						_ref7.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref7,
-							_excluded7
+							_excluded7,
 						)
 						return __jsx(
 							'strong',
 							(0, esm_extends.Z)(
 								{ className: 'font-bold' },
-								props
-							)
+								props,
+							),
 						)
 					},
 					ol: function ol(_ref8) {
 						_ref8.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref8,
-							_excluded8
+							_excluded8,
 						)
 						return __jsx(
 							'ol',
 							(0, esm_extends.Z)(
 								{ className: 'list-decimal ml-4' },
-								props
-							)
+								props,
+							),
 						)
 					},
 					ul: function ul(_ref9) {
 						_ref9.node
 						var props = (0, objectWithoutProperties.Z)(
 							_ref9,
-							_excluded9
+							_excluded9,
 						)
 						return __jsx(
 							'ul',
 							(0, esm_extends.Z)(
 								{ className: 'list-disc ml-4' },
-								props
-							)
+								props,
+							),
 						)
 					},
 				},
 				remark_gfm = __webpack_require__(
-					'./node_modules/remark-gfm/index.js'
+					'./node_modules/remark-gfm/index.js',
 				),
 				remark_math = __webpack_require__(
-					'./node_modules/remark-math/index.js'
+					'./node_modules/remark-math/index.js',
 				),
 				rehype_katex = __webpack_require__(
-					'./node_modules/rehype-katex/index.js'
+					'./node_modules/rehype-katex/index.js',
 				),
 				react_markdown = __webpack_require__(
-					'./node_modules/react-markdown/lib/react-markdown.js'
+					'./node_modules/react-markdown/lib/react-markdown.js',
 				),
 				markdown_container_jsx = react.createElement,
 				MarkdownContainer = function MarkdownContainer(_ref) {
@@ -457,7 +457,7 @@
 							remarkPlugins: [remark_gfm.Z, remark_math.Z],
 							rehypePlugins: [rehype_katex.Z],
 						},
-						children
+						children,
 					)
 				}
 			;(MarkdownContainer.displayName = 'MarkdownContainer'),
@@ -487,7 +487,7 @@
 				_templateObject2,
 				_templateObject3,
 				button_button = __webpack_require__(
-					'./components/common/button/button.tsx'
+					'./components/common/button/button.tsx',
 				),
 				router = __webpack_require__('./node_modules/next/router.js'),
 				router_default = __webpack_require__.n(router),
@@ -530,12 +530,12 @@
 						_useState5 = (0, react.useState)(
 							(null == upvotesProp
 								? void 0
-								: upvotesProp.length) || 0
+								: upvotesProp.length) || 0,
 						),
 						upvotes = _useState5[0],
 						setUpvotes = _useState5[1],
 						user = (0, react.useContext)(
-							global_user_context.Z
+							global_user_context.Z,
 						).user,
 						currentThread = (0, react.createRef)(),
 						mutate = (0, dist.ZP)({}, gql_fetcher.Z).mutate
@@ -545,13 +545,13 @@
 								var _initialIsUpvoted = upvotesProp.some(
 									function (upvote) {
 										return upvote.id === user.id
-									}
+									},
 								)
 								setIsUpvoted(_initialIsUpvoted),
 									setUpvotes(upvotesProp.length)
 							}
 						},
-						[user.id, upvotesProp]
+						[user.id, upvotesProp],
 					)
 					var url
 					return thread_jsx(
@@ -591,15 +591,15 @@
 											},
 											userProfile.firstName,
 											' ',
-											userProfile.lastName
-										)
-									)
+											userProfile.lastName,
+										),
+									),
 								),
 							title &&
 								thread_jsx(
 									'h4',
 									{ className: 'font-bold uppercase' },
-									title
+									title,
 								),
 							topics.length > 0 &&
 								thread_jsx(
@@ -616,9 +616,9 @@
 													'bg-wgray inline-block w-fit py-1 px-2 uppercase text-sm',
 												key: topicIndex,
 											},
-											topic
+											topic,
 										)
-									})
+									}),
 								),
 							thread_jsx(
 								'p',
@@ -626,8 +626,8 @@
 								thread_jsx(
 									markdown_container,
 									null,
-									body.slice(0, 150)
-								)
+									body.slice(0, 150),
+								),
 							),
 							viewCutOff &&
 								thread_jsx(
@@ -635,7 +635,7 @@
 									{
 										onClick: function onClick() {
 											return router_default().push(
-												'/communities/'.concat(id)
+												'/communities/'.concat(id),
 											)
 										},
 									},
@@ -647,9 +647,9 @@
 										},
 										'View Thread ('.concat(
 											commentCount,
-											' comments)'
-										)
-									)
+											' comments)',
+										),
+									),
 								),
 							thread_jsx(
 								'div',
@@ -671,14 +671,14 @@
 													.writeText(
 														''
 															.concat(url, '#')
-															.concat(id)
+															.concat(id),
 													)
 													.then(function () {
 														return setIsClicked(!0)
 													})
 													.catch(function () {
 														return console.log(
-															'error'
+															'error',
 														)
 													})
 										},
@@ -691,8 +691,8 @@
 												className:
 													"absolute hidden group-hover:flex -left-2 -top-2 -translate-y-full w-16 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700",
 											},
-											'Copied!'
-										)
+											'Copied!',
+										),
 								),
 								thread_jsx(
 									'button',
@@ -703,7 +703,7 @@
 											return setAddComment(!addComment)
 										},
 									},
-									thread_jsx(index_esm.T3Y, { size: 18 })
+									thread_jsx(index_esm.T3Y, { size: 18 }),
 								),
 								thread_jsx(
 									'button',
@@ -711,7 +711,7 @@
 										onClick: function onClick() {
 											return isUpvoted
 												? (function downvoteThread(
-														threadId
+														threadId,
 												  ) {
 														mutate(
 															(0,
@@ -720,7 +720,7 @@
 																	function _callee2() {
 																		return regenerator_default().wrap(
 																			function _callee2$(
-																				_context2
+																				_context2,
 																			) {
 																				for (;;)
 																					switch (
@@ -740,13 +740,13 @@
 																													[
 																														'\n          mutation DownvoteThread($input: ID!){\n\t\t\tdownvoteThread(id: $input, userID: "',
 																														'"){\n                  id\n              }\n          }\n\t\t\t',
-																													]
+																													],
 																												)),
-																										user.id
+																										user.id,
 																									),
 																									{
 																										input: threadId,
-																									}
+																									},
 																								)
 																							)
 																						case 2:
@@ -754,30 +754,32 @@
 																							return _context2.stop()
 																					}
 																			},
-																			_callee2
+																			_callee2,
 																		)
-																	}
-																)
+																	},
+																),
 															),
-															!1
+															!1,
 														)
 															.then(function () {
 																setIsUpvoted(
-																	!isUpvoted
+																	!isUpvoted,
 																),
 																	setUpvotes(
 																		upvotes -
-																			1
+																			1,
 																	)
 															})
-															.catch(function (
-																err
-															) {
-																console.log(err)
-															})
+															.catch(
+																function (err) {
+																	console.log(
+																		err,
+																	)
+																},
+															)
 												  })(id)
 												: (function upvoteThread(
-														threadId
+														threadId,
 												  ) {
 														mutate(
 															(0,
@@ -786,7 +788,7 @@
 																	function _callee() {
 																		return regenerator_default().wrap(
 																			function _callee$(
-																				_context
+																				_context,
 																			) {
 																				for (;;)
 																					switch (
@@ -806,13 +808,13 @@
 																													[
 																														'\n          mutation UpvoteThread($input: ID!){\n              upvoteThread(id: $input, userID: "',
 																														'"){\n                  id\n              }\n          }\n\t\t\t',
-																													]
+																													],
 																												)),
-																										user.id
+																										user.id,
 																									),
 																									{
 																										input: threadId,
-																									}
+																									},
 																								)
 																							)
 																						case 2:
@@ -820,27 +822,29 @@
 																							return _context.stop()
 																					}
 																			},
-																			_callee
+																			_callee,
 																		)
-																	}
-																)
+																	},
+																),
 															),
-															!1
+															!1,
 														)
 															.then(function () {
 																setIsUpvoted(
-																	!isUpvoted
+																	!isUpvoted,
 																),
 																	setUpvotes(
 																		upvotes +
-																			1
+																			1,
 																	)
 															})
-															.catch(function (
-																err
-															) {
-																console.log(err)
-															})
+															.catch(
+																function (err) {
+																	console.log(
+																		err,
+																	)
+																},
+															)
 												  })(id)
 										},
 										className:
@@ -850,10 +854,10 @@
 										'span',
 										{
 											className: ''.concat(
-												upvotes <= 0 ? 'hidden' : ''
+												upvotes <= 0 ? 'hidden' : '',
 											),
 										},
-										upvotes
+										upvotes,
 									),
 									thread_jsx(
 										esm.Pd.Provider,
@@ -867,11 +871,11 @@
 											null,
 											thread_jsx(index_esm.KhA, {
 												size: 18,
-											})
-										)
-									)
-								)
-							)
+											}),
+										),
+									),
+								),
+							),
 						),
 						addComment &&
 							thread_jsx(
@@ -894,7 +898,7 @@
 											!(function addCommentToThread(
 												threadId,
 												commentBody,
-												author
+												author,
 											) {
 												mutate(
 													(0, asyncToGenerator.Z)(
@@ -902,7 +906,7 @@
 															function _callee3() {
 																return regenerator_default().wrap(
 																	function _callee3$(
-																		_context3
+																		_context3,
 																	) {
 																		for (;;)
 																			switch (
@@ -921,8 +925,8 @@
 																										taggedTemplateLiteral.Z)(
 																											[
 																												'\n\t\t\t\t\tmutation AddCommentToThread(\n\t\t\t\t\t\t$threadID: ID!\n\t\t\t\t\t\t$commentBody: String!\n\t\t\t\t\t\t$commentAuthor: ID!\n\t\t\t\t\t) {\n\t\t\t\t\t\taddCommentToThread(\n\t\t\t\t\t\t\tparentThreadID: $threadID\n\t\t\t\t\t\t\tdata: { body: $commentBody, author: $commentAuthor }\n\t\t\t\t\t\t) {\n\t\t\t\t\t\t\tid\n\t\t\t\t\t\t\tbody\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t',
-																											]
-																										))
+																											],
+																										)),
 																							),
 																							{
 																								threadID:
@@ -930,7 +934,7 @@
 																								commentBody,
 																								commentAuthor:
 																									author,
-																							}
+																							},
 																						)
 																					)
 																				case 2:
@@ -938,28 +942,28 @@
 																					return _context3.stop()
 																			}
 																	},
-																	_callee3
+																	_callee3,
 																)
-															}
-														)
+															},
+														),
 													),
-													!1
+													!1,
 												).catch(function (err) {
 													console.log(err)
 												})
 											})(
 												currentThread.current.id,
 												commentBody,
-												user.id
+												user.id,
 											),
 												setAddComment(!1),
 												setCommentBody(null)
 										},
 									},
-									'Post Comment'
-								)
+									'Post Comment',
+								),
 							),
-						thread_jsx('div', { className: 'ml-12' }, children)
+						thread_jsx('div', { className: 'ml-12' }, children),
 					)
 				}
 			Thread.__docgenInfo = {
@@ -1096,13 +1100,13 @@
 		'./components/common/forms/inputs/text_area/text_area.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { K: () => TextArea })
 			var react = __webpack_require__('./node_modules/react/index.js')
 			const use_autosize_text_area = function useAutosizeTextArea(
 				textAreaRef,
-				value
+				value,
 			) {
 				;(0, react.useEffect)(
 					function () {
@@ -1112,7 +1116,7 @@
 							textAreaRef.style.height = scrollHeight + 'px'
 						}
 					},
-					[textAreaRef, value]
+					[textAreaRef, value],
 				)
 			}
 			var __jsx = react.createElement,
@@ -1205,9 +1209,9 @@
 									__jsx('span', {
 										className:
 											'absolute right-2 bottom-2 flex items-center '.concat(
-												disabled ? 'opacity-50' : ''
+												disabled ? 'opacity-50' : '',
 											),
-									})
+									}),
 							),
 							value.length === maxLength &&
 								__jsx(
@@ -1217,9 +1221,9 @@
 											'text-xs px-2 bg-gray-100 ml-auto mr-0 block w-fit',
 									},
 									'Maximum characters: ',
-									maxLength
-								)
-						)
+									maxLength,
+								),
+						),
 					)
 				}
 			;(TextArea.displayName = 'TextArea'),
@@ -1477,20 +1481,20 @@
 		'./contexts/global_user_context.ts': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => __WEBPACK_DEFAULT_EXPORT__,
 			})
 			const __WEBPACK_DEFAULT_EXPORT__ = (0,
 			__webpack_require__('./node_modules/react/index.js').createContext)(
-				{ user: null, setUser: function setUser(user) {} }
+				{ user: null, setUser: function setUser(user) {} },
 			)
 		},
 		'./utils/gql_fetcher.ts': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				L: () => client,
@@ -1498,16 +1502,16 @@
 			})
 			var graphql_request__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/graphql-request/build/esm/index.js'
+						'./node_modules/graphql-request/build/esm/index.js',
 					),
 				client = new graphql_request__WEBPACK_IMPORTED_MODULE_0__.g6(
 					'http://localhost:4000/graphql',
-					{ headers: {} }
+					{ headers: {} },
 				)
 			const __WEBPACK_DEFAULT_EXPORT__ = function gqlFetcher(args) {
 				return new graphql_request__WEBPACK_IMPORTED_MODULE_0__.g6(
 					'http://localhost:4000/graphql',
-					{ headers: { authorization: args.token } }
+					{ headers: { authorization: args.token } },
 				).request(args.query, args.variables || {})
 			}
 		},

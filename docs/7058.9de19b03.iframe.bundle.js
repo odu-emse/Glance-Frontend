@@ -6,7 +6,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -19,7 +19,7 @@
 					})
 				var _chunk_RDJSMFWU_mjs__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/@storybook/components/dist/chunk-RDJSMFWU.mjs'
+						'./node_modules/@storybook/components/dist/chunk-RDJSMFWU.mjs',
 					)
 			},
 	},

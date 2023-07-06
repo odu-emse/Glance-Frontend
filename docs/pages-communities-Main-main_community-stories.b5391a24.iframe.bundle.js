@@ -5,21 +5,21 @@
 		'./components/common/community/watched_threads/watched_threads.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				U: () => WatchedSidebarList,
 				Y: () => WatchedThreads,
 			})
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/next/link.js'
+					'./node_modules/next/link.js',
 				),
 				next_link__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						next_link__WEBPACK_IMPORTED_MODULE_1__
+						next_link__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				WatchedThreads = function WatchedThreads(_ref) {
@@ -35,7 +35,7 @@
 						__jsx(
 							'h1',
 							{ className: 'font-bold text-2xl py-1' },
-							title
+							title,
 						),
 						threads.map(function (thread, threadIndex) {
 							return __jsx(
@@ -46,7 +46,7 @@
 										.concat(
 											thread.parentLesson.collection
 												.module.id,
-											'/threads/'
+											'/threads/',
 										)
 										.concat(thread.id),
 									role: 'thread link',
@@ -58,14 +58,14 @@
 									? ''.concat(
 											thread.parentLesson.collection.module.moduleName.substring(
 												0,
-												30
+												30,
 											),
-											'...'
+											'...',
 									  )
 									: thread.parentLesson.collection.module
-											.moduleName
+											.moduleName,
 							)
-						})
+						}),
 					)
 				},
 				WatchedSidebarList = function WatchedSidebarList(_ref2) {
@@ -77,7 +77,7 @@
 						__jsx(
 							'h4',
 							{ className: 'text-2xl uppercase mb-2.5' },
-							title
+							title,
 						),
 						__jsx(
 							'div',
@@ -100,15 +100,15 @@
 											? ''.concat(
 													thread.title.substring(
 														0,
-														30
+														30,
 													),
-													'...'
+													'...',
 											  )
-											: thread.title
-									)
+											: thread.title,
+									),
 								)
-							})
-						)
+							}),
+						),
 					)
 				}
 			;(WatchedThreads.__docgenInfo = {
@@ -223,11 +223,11 @@
 		'./components/common/forms/inputs/input/input.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { I: () => Input })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				Input = function Input(_ref) {
@@ -284,7 +284,7 @@
 											? 'w-1/3'
 											: 'long' === length
 											? 'w-1/2'
-											: 'w-full'
+											: 'w-full',
 								  )
 								: '',
 							'radio' === type || 'checkbox' === type
@@ -301,7 +301,7 @@
 								className: ' '.concat(
 									'radio' === type || 'checkbox' === type
 										? 'flex items-center'
-										: ''
+										: '',
 								),
 							},
 							label &&
@@ -312,8 +312,8 @@
 										'label',
 										{ htmlFor: name },
 										' ',
-										label.toUpperCase()
-									)
+										label.toUpperCase(),
+									),
 								),
 							__jsx('input', {
 								type,
@@ -344,18 +344,18 @@
 												'flex items-center w-4 h-4 '
 													.concat(
 														inputShape,
-														' border '
+														' border ',
 													)
 													.concat(
 														disabled
 															? ''
 															: 'cursor-pointer',
-														' '
+														' ',
 													)
 													.concat(
 														isChecked
 															? 'bg-white border-royalblue'
-															: 'bg-white border-wgray'
+															: 'bg-white border-wgray',
 													),
 											onClick: handleInputChange,
 										},
@@ -365,9 +365,9 @@
 													'w-3 h-3 mx-auto my-auto bg-royalblue '.concat(
 														'radio' === type
 															? 'rounded-full'
-															: 'rounded'
+															: 'rounded',
 													),
-											})
+											}),
 								  )
 								: null,
 							'radio' === type || 'checkbox' === type
@@ -379,14 +379,14 @@
 									{
 										id: 'helper-text-explanation',
 										className: 'my-0 '.concat(
-											error ? 'text-red-600' : ''
+											error ? 'text-red-600' : '',
 										),
 									},
 									error
 										? 'Wrong '.concat(type)
-										: 'This is a test message'
-								)
-						)
+										: 'This is a test message',
+								),
+						),
 					)
 				}
 			Input.__docgenInfo = {
@@ -747,18 +747,18 @@
 		'./components/common/pages/module_list/module_list.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { I: () => ModuleList })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/next/link.js'
+					'./node_modules/next/link.js',
 				),
 				next_link__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						next_link__WEBPACK_IMPORTED_MODULE_1__
+						next_link__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				ModuleList = function ModuleList(_ref) {
@@ -769,7 +769,7 @@
 						__jsx(
 							'h1',
 							{ className: 'font-semibold text-2xl py-1' },
-							'Your Modules'
+							'Your Modules',
 						),
 						modules.map(function (module, moduleIndex) {
 							return __jsx(
@@ -778,7 +778,7 @@
 									key: moduleIndex,
 									href: '/communities/modules/'.concat(
 										module.id,
-										'/'
+										'/',
 									),
 									role: 'thread link',
 									className:
@@ -787,11 +787,11 @@
 								module.moduleName.length > 30
 									? ''.concat(
 											module.moduleName.substring(0, 30),
-											'...'
+											'...',
 									  )
-									: module.moduleName
+									: module.moduleName,
 							)
-						})
+						}),
 					)
 				}
 			ModuleList.__docgenInfo = {
@@ -862,7 +862,7 @@
 		'./components/pages/communities/Main/main_community.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -870,26 +870,26 @@
 					default: () => main_community_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				taggedTemplateLiteral = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				thread_thread = __webpack_require__(
-					'./components/common/community/threads/thread/thread.tsx'
+					'./components/common/community/threads/thread/thread.tsx',
 				),
 				watched_threads = __webpack_require__(
-					'./components/common/community/watched_threads/watched_threads.tsx'
+					'./components/common/community/watched_threads/watched_threads.tsx',
 				),
 				input = __webpack_require__(
-					'./components/common/forms/inputs/input/input.tsx'
+					'./components/common/forms/inputs/input/input.tsx',
 				),
 				module_list = __webpack_require__(
-					'./components/common/pages/module_list/module_list.tsx'
+					'./components/common/pages/module_list/module_list.tsx',
 				),
 				__jsx = react.createElement,
 				MainCommunity = function MainCommunity(_ref) {
@@ -903,7 +903,7 @@
 							__jsx(
 								'p',
 								{ className: 'text-3xl font-semibold' },
-								'This is the name of the module'
+								'This is the name of the module',
 							),
 							__jsx(
 								'div',
@@ -917,7 +917,7 @@
 								__jsx(
 									'small',
 									{ className: 'pl-2 font-bold' },
-									'joeldesante'
+									'joeldesante',
 								),
 								__jsx(
 									'small',
@@ -925,10 +925,10 @@
 									__jsx(
 										'span',
 										{ className: 'px-1 font-bold' },
-										'•'
+										'•',
 									),
-									'jdsante@odu.edu'
-								)
+									'jdsante@odu.edu',
+								),
 							),
 							__jsx(
 								'div',
@@ -939,7 +939,7 @@
 										className:
 											'text-lg font-semibold flex-none pr-20',
 									},
-									'Recent Threads'
+									'Recent Threads',
 								),
 								__jsx(input.I, {
 									defaultValue: '',
@@ -949,7 +949,7 @@
 									role: 'search',
 									type: 'search',
 									options: [],
-								})
+								}),
 							),
 							__jsx(
 								'div',
@@ -969,10 +969,10 @@
 												picURL: 'https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-4-470x470.png',
 												lastName: 'desante',
 											},
-										})
+										}),
 									)
-								})
-							)
+								}),
+							),
 						),
 						__jsx(
 							'aside',
@@ -999,7 +999,7 @@
 											moduleName: 'Module 4',
 										},
 									],
-								})
+								}),
 							),
 							__jsx(
 								'div',
@@ -1084,9 +1084,9 @@
 											},
 										},
 									],
-								})
-							)
-						)
+								}),
+							),
+						),
 					)
 				}
 			;(MainCommunity.displayName = 'MainCommunity'),
@@ -1126,7 +1126,7 @@
 				dist = __webpack_require__('./node_modules/swr/dist/index.mjs'),
 				gql_fetcher = __webpack_require__('./utils/gql_fetcher.ts'),
 				esm = __webpack_require__(
-					'./node_modules/graphql-request/build/esm/index.js'
+					'./node_modules/graphql-request/build/esm/index.js',
 				),
 				main_community_stories_jsx = react.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -1135,10 +1135,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1154,13 +1152,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -1179,25 +1180,25 @@
 									(_templateObject = (0,
 									taggedTemplateLiteral.Z)([
 										'\n                {\n                    thread(input: {}) {\n                        updatedAt\n                    }\n                }\n            ',
-									]))
+									])),
 							),
 						},
-						gql_fetcher.Z
+						gql_fetcher.Z,
 					),
 					data = _useSWR.data
 				return _useSWR.error
 					? main_community_stories_jsx(
 							'p',
 							null,
-							'Failed to load content...'
+							'Failed to load content...',
 					  )
 					: data
 					? main_community_stories_jsx(
 							MainCommunity,
 							(0, esm_extends.Z)(
 								{ threads: data.thread.sort() },
-								args
-							)
+								args,
+							),
 					  )
 					: main_community_stories_jsx('p', null, 'Loading...')
 			}
@@ -1217,7 +1218,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -1235,11 +1236,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

@@ -5,7 +5,7 @@
 		'./components/common/community/threads/thread/thread.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -25,24 +25,24 @@
 				_MultipleThreads$para2,
 				_MultipleThreads$para3,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				objectWithoutProperties = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
+					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js',
 				),
 				taggedTemplateLiteral = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
 				),
 				react =
 					(__webpack_require__(
-						'./node_modules/@babel/runtime/regenerator/index.js'
+						'./node_modules/@babel/runtime/regenerator/index.js',
 					),
 					__webpack_require__('./node_modules/react/index.js')),
 				thread_thread = __webpack_require__(
-					'./components/common/community/threads/thread/thread.tsx'
+					'./components/common/community/threads/thread/thread.tsx',
 				),
 				mockData = [
 					{
@@ -1249,7 +1249,7 @@
 				dist = __webpack_require__('./node_modules/swr/dist/index.mjs'),
 				gql_fetcher = __webpack_require__('./utils/gql_fetcher.ts'),
 				esm = __webpack_require__(
-					'./node_modules/graphql-request/build/esm/index.js'
+					'./node_modules/graphql-request/build/esm/index.js',
 				),
 				_excluded = ['upvotes', 'title', 'storyName', 'userProfile'],
 				__jsx = react.createElement
@@ -1259,10 +1259,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1278,13 +1276,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -1312,7 +1313,7 @@
 						})(storyName),
 						_useThreadData = (function useThreadData(
 							threadId,
-							usrprofileId
+							usrprofileId,
 						) {
 							var _useSWR = (0, dist.ZP)(
 									{
@@ -1323,24 +1324,25 @@
 													'\n        {\n          thread(input: { id: "',
 													'" }) {\n            id\n            title\n            body\n            upvotes {\n              openID\n              id\n            }\n          }\n        }\n        ',
 												])),
-											threadId
+											threadId,
 										),
 										variables: { id: threadId },
 									},
-									gql_fetcher.Z
+									gql_fetcher.Z,
 								),
 								data = _useSWR.data,
 								error = _useSWR.error,
 								isUpvoted =
 									null == data
 										? void 0
-										: data.thread[0].upvotes.some(function (
-												upvote
-										  ) {
-												return (
-													upvote.id === usrprofileId
-												)
-										  })
+										: data.thread[0].upvotes.some(
+												function (upvote) {
+													return (
+														upvote.id ===
+														usrprofileId
+													)
+												},
+										  )
 							return { data, error, isUpvoted }
 						})(threadId, userProfile.id),
 						data = _useThreadData.data,
@@ -1355,7 +1357,7 @@
 									? void 0
 									: _data$thread[0]
 							},
-							[data]
+							[data],
 						)
 					return thread
 						? error
@@ -1370,7 +1372,7 @@
 											upvotes || thread.upvotes.length,
 										userProfile,
 										isUpvoted,
-									})
+									}),
 							  )
 						: __jsx('p', null, 'Loading...')
 				}
@@ -1408,10 +1410,10 @@
 							(0, esm_extends.Z)(
 								{ key: threadIndex },
 								args,
-								thread
-							)
+								thread,
+							),
 						)
-					})
+					}),
 				)
 			}.bind({})
 			;(MultipleThreads.storyName = 'List of threads'),
@@ -1427,7 +1429,7 @@
 									(_Sample$parameters = Sample.parameters) ||
 									void 0 === _Sample$parameters
 									? void 0
-									: _Sample$parameters.docs
+									: _Sample$parameters.docs,
 							),
 							{},
 							{
@@ -1445,11 +1447,11 @@
 												_Sample$parameters2.docs) ||
 										void 0 === _Sample$parameters2$d
 										? void 0
-										: _Sample$parameters2$d.source
+										: _Sample$parameters2$d.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Comment.parameters = _objectSpread(
 					_objectSpread({}, Comment.parameters),
@@ -1463,7 +1465,7 @@
 										Comment.parameters) ||
 									void 0 === _Comment$parameters
 									? void 0
-									: _Comment$parameters.docs
+									: _Comment$parameters.docs,
 							),
 							{},
 							{
@@ -1481,11 +1483,11 @@
 												_Comment$parameters2.docs) ||
 										void 0 === _Comment$parameters2$
 										? void 0
-										: _Comment$parameters2$.source
+										: _Comment$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(MultipleThreads.parameters = _objectSpread(
 					_objectSpread({}, MultipleThreads.parameters),
@@ -1499,7 +1501,7 @@
 										MultipleThreads.parameters) ||
 									void 0 === _MultipleThreads$para
 									? void 0
-									: _MultipleThreads$para.docs
+									: _MultipleThreads$para.docs,
 							),
 							{},
 							{
@@ -1517,11 +1519,11 @@
 												_MultipleThreads$para2.docs) ||
 										void 0 === _MultipleThreads$para3
 										? void 0
-										: _MultipleThreads$para3.source
+										: _MultipleThreads$para3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

@@ -59,7 +59,7 @@ export const AssignmentPanel = ({
 							? moduleInformation.software.map(
 									(software, sfwIndex) => (
 										<li key={sfwIndex}>{software}</li>
-									)
+									),
 							  )
 							: null}
 					</ul>
@@ -89,7 +89,7 @@ export const AssignmentPanel = ({
 											{mod.moduleTitle} -{' '}
 											{mod.assignmentTitle}
 										</li>
-									)
+									),
 							  )
 							: null}
 					</ul>

@@ -5,7 +5,7 @@
 		'./components/common/charts/line/line.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -13,58 +13,58 @@
 					default: () => line_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				ResponsiveContainer = __webpack_require__(
-					'./node_modules/recharts/es6/component/ResponsiveContainer.js'
+					'./node_modules/recharts/es6/component/ResponsiveContainer.js',
 				),
 				generateCategoricalChart = __webpack_require__(
-					'./node_modules/recharts/es6/chart/generateCategoricalChart.js'
+					'./node_modules/recharts/es6/chart/generateCategoricalChart.js',
 				),
 				isEqual = __webpack_require__(
-					'./node_modules/lodash/isEqual.js'
+					'./node_modules/lodash/isEqual.js',
 				),
 				isEqual_default = __webpack_require__.n(isEqual),
 				isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				isNil = __webpack_require__('./node_modules/lodash/isNil.js'),
 				isNil_default = __webpack_require__.n(isNil),
 				es6 = __webpack_require__(
-					'./node_modules/react-smooth/es6/index.js'
+					'./node_modules/react-smooth/es6/index.js',
 				),
 				classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				Curve = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Curve.js'
+					'./node_modules/recharts/es6/shape/Curve.js',
 				),
 				Dot = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Dot.js'
+					'./node_modules/recharts/es6/shape/Dot.js',
 				),
 				Layer = __webpack_require__(
-					'./node_modules/recharts/es6/container/Layer.js'
+					'./node_modules/recharts/es6/container/Layer.js',
 				),
 				LabelList = __webpack_require__(
-					'./node_modules/recharts/es6/component/LabelList.js'
+					'./node_modules/recharts/es6/component/LabelList.js',
 				),
 				ErrorBar = __webpack_require__(
-					'./node_modules/recharts/es6/cartesian/ErrorBar.js'
+					'./node_modules/recharts/es6/cartesian/ErrorBar.js',
 				),
 				DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				ReactUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ReactUtils.js'
+					'./node_modules/recharts/es6/util/ReactUtils.js',
 				),
 				Global = __webpack_require__(
-					'./node_modules/recharts/es6/util/Global.js'
+					'./node_modules/recharts/es6/util/Global.js',
 				),
 				ChartUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ChartUtils.js'
+					'./node_modules/recharts/es6/util/ChartUtils.js',
 				),
 				_excluded = ['type', 'layout', 'connectNulls', 'ref']
 			function _typeof(obj) {
@@ -92,7 +92,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -112,7 +112,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -128,7 +128,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -142,10 +142,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -161,13 +159,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -203,7 +204,7 @@
 					})(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -223,7 +224,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -250,8 +251,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -275,7 +276,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return _assertThisInitialized(self)
 					})(this, result)
@@ -284,7 +285,7 @@
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -320,7 +321,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -331,7 +332,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -341,7 +342,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -354,7 +355,7 @@
 					!(function _classCallCheck(instance, Constructor) {
 						if (!(instance instanceof Constructor))
 							throw new TypeError(
-								'Cannot call a class as a function'
+								'Cannot call a class as a function',
 							)
 					})(this, Line)
 					for (
@@ -370,23 +371,22 @@
 							_assertThisInitialized(
 								(_this = _super.call.apply(
 									_super,
-									[this].concat(args)
-								))
+									[this].concat(args),
+								)),
 							),
 							'state',
-							{ isAnimationFinished: !0, totalLength: 0 }
+							{ isAnimationFinished: !0, totalLength: 0 },
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
 							'getStrokeDasharray',
 							function (length, totalLength, lines) {
 								for (
-									var lineLength = lines.reduce(function (
-											pre,
-											next
-										) {
-											return pre + next
-										}),
+									var lineLength = lines.reduce(
+											function (pre, next) {
+												return pre + next
+											},
+										),
 										count = Math.floor(length / lineLength),
 										remainLength = length % lineLength,
 										restLength = totalLength - length,
@@ -399,9 +399,9 @@
 									if (sum + lines[i] > remainLength) {
 										remainLines = [].concat(
 											_toConsumableArray(
-												lines.slice(0, i)
+												lines.slice(0, i),
 											),
-											[remainLength - sum]
+											[remainLength - sum],
 										)
 										break
 									}
@@ -412,28 +412,28 @@
 								return []
 									.concat(
 										_toConsumableArray(
-											Line.repeat(lines, count)
+											Line.repeat(lines, count),
 										),
 										_toConsumableArray(remainLines),
-										emptyLines
+										emptyLines,
 									)
 									.map(function (line) {
 										return ''.concat(line, 'px')
 									})
 									.join(', ')
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
 							'id',
-							(0, DataUtils.EL)('recharts-line-')
+							(0, DataUtils.EL)('recharts-line-'),
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
 							'pathRef',
 							function (node) {
 								_this.mainCurve = node
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -442,7 +442,7 @@
 								_this.setState({ isAnimationFinished: !0 }),
 									_this.props.onAnimationEnd &&
 										_this.props.onAnimationEnd()
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -451,7 +451,7 @@
 								_this.setState({ isAnimationFinished: !1 }),
 									_this.props.onAnimationStart &&
 										_this.props.onAnimationStart()
-							}
+							},
 						),
 						_this
 					)
@@ -460,13 +460,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -507,7 +507,7 @@
 								key: 'renderErrorBar',
 								value: function renderErrorBar(
 									needClip,
-									clipPathId
+									clipPathId,
 								) {
 									if (
 										this.props.isAnimationActive &&
@@ -522,12 +522,12 @@
 										children = _this$props.children,
 										errorBarItems = (0, ReactUtils.NN)(
 											children,
-											ErrorBar.W
+											ErrorBar.W,
 										)
 									if (!errorBarItems) return null
 									function dataPointFormatter(
 										dataPoint,
-										dataKey
+										dataKey,
 									) {
 										return {
 											x: dataPoint.x,
@@ -535,7 +535,7 @@
 											value: dataPoint.value,
 											errorVal: (0, ChartUtils.F$)(
 												dataPoint.payload,
-												dataKey
+												dataKey,
 											),
 										}
 									}
@@ -543,7 +543,7 @@
 										clipPath: needClip
 											? 'url(#clipPath-'.concat(
 													clipPathId,
-													')'
+													')',
 											  )
 											: null,
 									}
@@ -559,7 +559,7 @@
 												layout,
 												dataPointFormatter,
 											})
-										})
+										}),
 									)
 								},
 							},
@@ -567,7 +567,7 @@
 								key: 'renderDots',
 								value: function renderDots(
 									needClip,
-									clipPathId
+									clipPathId,
 								) {
 									if (
 										this.props.isAnimationActive &&
@@ -579,11 +579,11 @@
 										points = _this$props2.points,
 										dataKey = _this$props2.dataKey,
 										lineProps = (0, ReactUtils.L6)(
-											this.props
+											this.props,
 										),
 										customDotProps = (0, ReactUtils.L6)(
 											dot,
-											!0
+											!0,
 										),
 										dots = points.map(function (entry, i) {
 											var dotProps = _objectSpread(
@@ -591,13 +591,13 @@
 													_objectSpread(
 														{
 															key: 'dot-'.concat(
-																i
+																i,
 															),
 															r: 3,
 														},
-														lineProps
+														lineProps,
 													),
-													customDotProps
+													customDotProps,
 												),
 												{},
 												{
@@ -607,18 +607,18 @@
 													cy: entry.y,
 													index: i,
 													payload: entry.payload,
-												}
+												},
 											)
 											return Line.renderDotItem(
 												dot,
-												dotProps
+												dotProps,
 											)
 										}),
 										dotsProps = {
 											clipPath: needClip
 												? 'url(#clipPath-'.concat(
 														clipPathId,
-														')'
+														')',
 												  )
 												: null,
 										}
@@ -630,9 +630,9 @@
 												key: 'dots',
 											},
 											dotsProps,
-											{ role: 'img' }
+											{ role: 'img' },
 										),
-										dots
+										dots,
 									)
 								},
 							},
@@ -642,7 +642,7 @@
 									points,
 									needClip,
 									clipPathId,
-									props
+									props,
 								) {
 									var _this$props3 = this.props,
 										type = _this$props3.type,
@@ -653,7 +653,7 @@
 											(_this$props3.ref,
 											_objectWithoutProperties(
 												_this$props3,
-												_excluded
+												_excluded,
 											)),
 										curveProps = _objectSpread(
 											_objectSpread(
@@ -661,8 +661,8 @@
 													{},
 													(0, ReactUtils.L6)(
 														others,
-														!0
-													)
+														!0,
+													),
 												),
 												{},
 												{
@@ -672,21 +672,21 @@
 													clipPath: needClip
 														? 'url(#clipPath-'.concat(
 																clipPathId,
-																')'
+																')',
 														  )
 														: null,
 													points,
 												},
-												props
+												props,
 											),
 											{},
-											{ type, layout, connectNulls }
+											{ type, layout, connectNulls },
 										)
 									return react.createElement(
 										Curve.H,
 										_extends({}, curveProps, {
 											pathRef: this.pathRef,
-										})
+										}),
 									)
 								},
 							},
@@ -694,7 +694,7 @@
 								key: 'renderCurveWithAnimation',
 								value: function renderCurveWithAnimation(
 									needClip,
-									clipPathId
+									clipPathId,
 								) {
 									var _this2 = this,
 										_this$props4 = this.props,
@@ -741,12 +741,12 @@
 													stepData = points.map(
 														function (
 															entry,
-															index
+															index,
 														) {
 															var prevPointIndex =
 																Math.floor(
 																	index *
-																		prevPointsDiffFactor
+																		prevPointsDiffFactor,
 																)
 															if (
 																prevPoints[
@@ -761,28 +761,28 @@
 																		(0,
 																		DataUtils.k4)(
 																			prev.x,
-																			entry.x
+																			entry.x,
 																		),
 																	interpolatorY =
 																		(0,
 																		DataUtils.k4)(
 																			prev.y,
-																			entry.y
+																			entry.y,
 																		)
 																return _objectSpread(
 																	_objectSpread(
 																		{},
-																		entry
+																		entry,
 																	),
 																	{},
 																	{
 																		x: interpolatorX(
-																			t
+																			t,
 																		),
 																		y: interpolatorY(
-																			t
+																			t,
 																		),
-																	}
+																	},
 																)
 															}
 															if (
@@ -793,54 +793,54 @@
 																		DataUtils.k4)(
 																			2 *
 																				width,
-																			entry.x
+																			entry.x,
 																		),
 																	_interpolatorY =
 																		(0,
 																		DataUtils.k4)(
 																			height /
 																				2,
-																			entry.y
+																			entry.y,
 																		)
 																return _objectSpread(
 																	_objectSpread(
 																		{},
-																		entry
+																		entry,
 																	),
 																	{},
 																	{
 																		x: _interpolatorX(
-																			t
+																			t,
 																		),
 																		y: _interpolatorY(
-																			t
+																			t,
 																		),
-																	}
+																	},
 																)
 															}
 															return _objectSpread(
 																_objectSpread(
 																	{},
-																	entry
+																	entry,
 																),
 																{},
 																{
 																	x: entry.x,
 																	y: entry.y,
-																}
+																},
 															)
-														}
+														},
 													)
 												return _this2.renderCurveStatically(
 													stepData,
 													needClip,
-													clipPathId
+													clipPathId,
 												)
 											}
 											var currentStrokeDasharray,
 												curLength = (0, DataUtils.k4)(
 													0,
-													totalLength
+													totalLength,
 												)(t)
 											if (strokeDasharray) {
 												var lines = ''
@@ -853,14 +853,14 @@
 													_this2.getStrokeDasharray(
 														curLength,
 														totalLength,
-														lines
+														lines,
 													)
 											} else
 												currentStrokeDasharray = ''
 													.concat(curLength, 'px ')
 													.concat(
 														totalLength - curLength,
-														'px'
+														'px',
 													)
 											return _this2.renderCurveStatically(
 												points,
@@ -869,9 +869,9 @@
 												{
 													strokeDasharray:
 														currentStrokeDasharray,
-												}
+												},
 											)
-										}
+										},
 									)
 								},
 							},
@@ -879,7 +879,7 @@
 								key: 'renderCurve',
 								value: function renderCurve(
 									needClip,
-									clipPathId
+									clipPathId,
 								) {
 									var _this$props5 = this.props,
 										points = _this$props5.points,
@@ -894,16 +894,16 @@
 										((!prevPoints && totalLength > 0) ||
 											!isEqual_default()(
 												prevPoints,
-												points
+												points,
 											))
 										? this.renderCurveWithAnimation(
 												needClip,
-												clipPathId
+												clipPathId,
 										  )
 										: this.renderCurveStatically(
 												points,
 												needClip,
-												clipPathId
+												clipPathId,
 										  )
 								},
 							},
@@ -931,7 +931,7 @@
 										hasSinglePoint = 1 === points.length,
 										layerClass = classnames_default()(
 											'recharts-line',
-											className
+											className,
 										),
 										needClip =
 											(xAxis &&
@@ -951,7 +951,7 @@
 														'clipPath',
 														{
 															id: 'clipPath-'.concat(
-																clipPathId
+																clipPathId,
 															),
 														},
 														react.createElement(
@@ -961,31 +961,31 @@
 																y: top,
 																width,
 																height,
-															}
-														)
-													)
+															},
+														),
+													),
 											  )
 											: null,
 										!hasSinglePoint &&
 											this.renderCurve(
 												needClip,
-												clipPathId
+												clipPathId,
 											),
 										this.renderErrorBar(
 											needClip,
-											clipPathId
+											clipPathId,
 										),
 										(hasSinglePoint || dot) &&
 											this.renderDots(
 												needClip,
-												clipPathId
+												clipPathId,
 											),
 										(!isAnimationActive ||
 											isAnimationFinished) &&
 											LabelList.e.renderCallByParent(
 												this.props,
-												points
-											)
+												points,
+											),
 									)
 								},
 							},
@@ -995,7 +995,7 @@
 								key: 'getDerivedStateFromProps',
 								value: function getDerivedStateFromProps(
 									nextProps,
-									prevState
+									prevState,
 								) {
 									return nextProps.animationId !==
 										prevState.prevAnimationId
@@ -1019,9 +1019,9 @@
 												lines.length % 2 != 0
 													? [].concat(
 															_toConsumableArray(
-																lines
+																lines,
 															),
-															[0]
+															[0],
 													  )
 													: lines,
 											result = [],
@@ -1031,7 +1031,7 @@
 									)
 										result = [].concat(
 											_toConsumableArray(result),
-											_toConsumableArray(linesUnit)
+											_toConsumableArray(linesUnit),
 										)
 									return result
 								},
@@ -1043,24 +1043,24 @@
 									if (react.isValidElement(option))
 										dotItem = react.cloneElement(
 											option,
-											props
+											props,
 										)
 									else if (isFunction_default()(option))
 										dotItem = option(props)
 									else {
 										var className = classnames_default()(
 											'recharts-line-dot',
-											option ? option.className : ''
+											option ? option.className : '',
 										)
 										dotItem = react.createElement(
 											Dot.o,
-											_extends({}, props, { className })
+											_extends({}, props, { className }),
 										)
 									}
 									return dotItem
 								},
 							},
-						]
+						],
 					),
 					Line
 				)
@@ -1132,7 +1132,7 @@
 							}),
 							layout,
 						},
-						offset
+						offset,
 					)
 				})
 			var XAxis = function XAxis() {
@@ -1179,7 +1179,7 @@
 				_Simple$parameters2,
 				_Simple$parameters2$d,
 				CartesianUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/CartesianUtils.js'
+					'./node_modules/recharts/es6/util/CartesianUtils.js',
 				),
 				LineChart = (0, generateCategoricalChart.z)({
 					chartName: 'LineChart',
@@ -1191,10 +1191,10 @@
 					formatAxisMap: CartesianUtils.t9,
 				}),
 				Tooltip = __webpack_require__(
-					'./node_modules/recharts/es6/component/Tooltip.js'
+					'./node_modules/recharts/es6/component/Tooltip.js',
 				),
 				Legend = __webpack_require__(
-					'./node_modules/recharts/es6/component/Legend.js'
+					'./node_modules/recharts/es6/component/Legend.js',
 				),
 				__jsx = react.createElement,
 				LineComponent = function LineComponent(_ref) {
@@ -1258,8 +1258,8 @@
 									iconType: legendConfig.iconType
 										? legendConfig.iconType
 										: 'circle',
-								})
-						)
+								}),
+						),
 					)
 				}
 			;(LineComponent.displayName = 'LineComponent'),
@@ -1640,10 +1640,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1658,14 +1656,14 @@
 									;(0, defineProperty.Z)(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: line_stories_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -1674,10 +1672,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -1707,7 +1705,7 @@
 				return line_stories_jsx(
 					'div',
 					{ className: 'w-full h-96' },
-					line_stories_jsx(LineComponent, args)
+					line_stories_jsx(LineComponent, args),
 				)
 			}
 			Template.displayName = 'Template'
@@ -1741,7 +1739,7 @@
 									(_Simple$parameters = Simple.parameters) ||
 									void 0 === _Simple$parameters
 									? void 0
-									: _Simple$parameters.docs
+									: _Simple$parameters.docs,
 							),
 							{},
 							{
@@ -1759,11 +1757,11 @@
 												_Simple$parameters2.docs) ||
 										void 0 === _Simple$parameters2$d
 										? void 0
-										: _Simple$parameters2$d.source
+										: _Simple$parameters2$d.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

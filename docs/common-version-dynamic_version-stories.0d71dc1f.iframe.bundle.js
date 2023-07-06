@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./components/common/version/dynamic_version.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -70,7 +70,7 @@
 					default: () => dynamic_version_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js')
 			const package_namespaceObject_i8 = '0.3.5'
@@ -87,22 +87,22 @@
 						{
 							className:
 								'sans font-bold absolute bottom-1 left-3 gap-4 sans text-sm '.concat(
-									isLight && 'text-white'
+									isLight && 'text-white',
 								),
 						},
 						__jsx(
 							'small',
 							{ className: 'm-0 p-0' },
 							'API Version ',
-							backendVersion
+							backendVersion,
 						),
 						__jsx('span', { className: 'mx-1' }, '•'),
 						__jsx(
 							'small',
 							{ className: 'm-0 p-0' },
 							'FE Version ',
-							frontendVersion
-						)
+							frontendVersion,
+						),
 					)
 				}
 			;(DynamicVersion.displayName = 'DynamicVersion'),
@@ -161,10 +161,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -180,13 +178,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -215,7 +216,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -233,11 +234,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

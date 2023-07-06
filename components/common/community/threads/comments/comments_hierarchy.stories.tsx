@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof CommentsHierarchy>
 
 const Template: ComponentStory<typeof CommentsHierarchy> = (
-	args: CommentsHierarchyProps
+	args: CommentsHierarchyProps,
 ) => {
 	const { data, error } = useSWR(
 		{
@@ -40,7 +40,7 @@ const Template: ComponentStory<typeof CommentsHierarchy> = (
 				}
 			`,
 		},
-		gqlFetcher
+		gqlFetcher,
 	)
 
 	if (!data) return <p>Loading...</p>

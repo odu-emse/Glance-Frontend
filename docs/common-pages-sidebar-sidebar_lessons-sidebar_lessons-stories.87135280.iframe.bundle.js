@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _arrayLikeToArray(arr, len) {
 				;(null == len || len > arr.length) && (len = arr.length)
@@ -20,7 +20,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _extends() {
 				return (
@@ -32,7 +32,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -45,13 +45,13 @@
 		'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => _slicedToArray,
 			})
 			var unsupportedIterableToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js',
 			)
 			function _slicedToArray(arr, i) {
 				return (
@@ -107,7 +107,7 @@
 					(0, unsupportedIterableToArray.Z)(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -117,14 +117,14 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.d(__webpack_exports__, {
 					Z: () => _unsupportedIterableToArray,
 				})
 				var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js',
 					)
 				function _unsupportedIterableToArray(o, minLen) {
 					if (o) {
@@ -132,7 +132,7 @@
 							return (0,
 							_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 								o,
-								minLen
+								minLen,
 							)
 						var n = Object.prototype.toString.call(o).slice(8, -1)
 						return (
@@ -143,12 +143,12 @@
 								? Array.from(o)
 								: 'Arguments' === n ||
 								  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-										n
+										n,
 								  )
 								? (0,
 								  _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 										o,
-										minLen
+										minLen,
 								  )
 								: void 0
 						)
@@ -159,7 +159,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -170,23 +170,23 @@
 					_Default$parameters2,
 					_Default$parameters2$,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					esm_extends = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/extends.js'
+						'./node_modules/@babel/runtime/helpers/esm/extends.js',
 					),
 					slicedToArray = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					next_link = __webpack_require__(
-						'./node_modules/next/link.js'
+						'./node_modules/next/link.js',
 					),
 					link_default = __webpack_require__.n(next_link),
 					index_esm = __webpack_require__(
-						'./node_modules/react-icons/io/index.esm.js'
+						'./node_modules/react-icons/io/index.esm.js',
 					),
 					__jsx = react.createElement,
 					SidebarLessons = function SidebarLessons(_ref) {
@@ -205,7 +205,7 @@
 									id: 'sidePanel',
 									className: 'absolute '.concat(
 										open ? 'right-0' : '-right-full',
-										' top-0 h-screen w-72 bg-white transition-all drop-shadow-lg p-0'
+										' top-0 h-screen w-72 bg-white transition-all drop-shadow-lg p-0',
 									),
 								},
 								__jsx(
@@ -220,7 +220,7 @@
 												fontSize: '16px',
 											},
 										},
-										'COLLECTION OVERVIEW'
+										'COLLECTION OVERVIEW',
 									),
 									data.map(function (item, index) {
 										return __jsx(
@@ -239,7 +239,7 @@
 												{
 													href: '/modules/'.concat(
 														item[url],
-														'/view'
+														'/view',
 													),
 													role: 'lesson link',
 												},
@@ -251,14 +251,14 @@
 																currentModule ===
 																	item.id
 																	? 'text-royalblue'
-																	: 'text-black'
+																	: 'text-black',
 															),
 													},
-													''.concat(item[property])
-												)
-											)
+													''.concat(item[property]),
+												),
+											),
 										)
-									})
+									}),
 								),
 								__jsx(
 									'button',
@@ -273,13 +273,13 @@
 									},
 									__jsx(
 										open ? index_esm.hjJ : index_esm.u1R,
-										{ color: 'white' }
-									)
-								)
+										{ color: 'white' },
+									),
+								),
 							),
 							__jsx('div', {
 								className: 'w-[200px] pointer-events-none',
-							})
+							}),
 						)
 					}
 				;(SidebarLessons.displayName = 'SidebarLessons'),
@@ -445,7 +445,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -456,19 +456,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -476,8 +476,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -492,7 +492,7 @@
 					var _React$useState = react.useState(!0),
 						_React$useState2 = (0, slicedToArray.Z)(
 							_React$useState,
-							2
+							2,
 						),
 						open = _React$useState2[0],
 						setOpen = _React$useState2[1]
@@ -509,15 +509,15 @@
 									return setOpen(!open)
 								},
 							},
-							open ? 'Close panel' : 'Open panel'
+							open ? 'Close panel' : 'Open panel',
 						),
 						sidebar_lessons_stories_jsx(
 							SidebarLessons,
 							(0, esm_extends.Z)({}, args, {
 								handle: setOpen,
 								open,
-							})
-						)
+							}),
+						),
 					)
 				}
 				Template.displayName = 'Template'
@@ -535,7 +535,7 @@
 											Default.parameters) ||
 										void 0 === _Default$parameters
 										? void 0
-										: _Default$parameters.docs
+										: _Default$parameters.docs,
 								),
 								{},
 								{
@@ -553,11 +553,11 @@
 													_Default$parameters2.docs) ||
 											void 0 === _Default$parameters2$
 											? void 0
-											: _Default$parameters2$.source
+											: _Default$parameters2$.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

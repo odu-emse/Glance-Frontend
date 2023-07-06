@@ -25,7 +25,7 @@ export const useProgress = ({
 	},
 	loading: boolean,
 	error: Error,
-	self: ModuleBySectionEnrollment[]
+	self: ModuleBySectionEnrollment[],
 ] => {
 	const { data, isValidating, error } = useSWR(
 		{
@@ -35,7 +35,7 @@ export const useProgress = ({
 				planID,
 			},
 		},
-		gql_fetcher
+		gql_fetcher,
 	) as {
 		data: {
 			modulesBySectionEnrollment: ModuleBySectionEnrollment[]
@@ -82,7 +82,7 @@ export const useProgress = ({
 	// sort the data by the collection position
 	const sortedProgresses = modulesBySectionEnrollment.map((value) => {
 		const moduleCollections = value.collections.sort(
-			(a, b) => a.position - b.position
+			(a, b) => a.position - b.position,
 		)
 		return {
 			...value,
@@ -100,7 +100,7 @@ export const useProgress = ({
 
 	const modulesLeft = sortedProgresses.filter((progress) => {
 		const moduleProgresses = progress.moduleProgress.filter(
-			(progress) => progress.completed
+			(progress) => progress.completed,
 		)
 		return moduleProgresses.length === 0
 	})

@@ -37,7 +37,7 @@ try {
 			t || !e || !e.__esModule
 				? K(s, 'default', { value: e, enumerable: !0 })
 				: s,
-			e
+			e,
 		)
 	)
 	var d = D(() => {})
@@ -83,7 +83,7 @@ try {
 							o,
 							i,
 							g,
-							l
+							l,
 						)
 					}
 					return g[a].exports
@@ -156,7 +156,7 @@ try {
 										(this.lastItem &&
 											this.isEqual(
 												this.lastItem.key,
-												n
+												n,
 											) &&
 											(this.lastItem = void 0),
 										(r = this.indexOf(n)),
@@ -186,7 +186,7 @@ try {
 											r || this,
 											this.list[u].val,
 											this.list[u].key,
-											this
+											this,
 										)
 								}),
 								(l.prototype.indexOf = function (n) {
@@ -223,7 +223,7 @@ try {
 											p.numArgs !== I + 1
 										)
 											throw new Error(
-												'Memoizerific functions should always be called with the same number of arguments'
+												'Memoizerific functions should always be called with the same number of arguments',
 											)
 										for (k = 0; k < I; k++) {
 											if (
@@ -309,7 +309,7 @@ try {
 					],
 				},
 				{},
-				[3]
+				[3],
 			)(3)
 		})
 	})
@@ -363,7 +363,7 @@ try {
 									: h.length) !== null && c !== void 0
 								? c
 								: 0
-						})
+						}),
 				  )
 				: n
 		}, [])
@@ -373,13 +373,13 @@ try {
 [	 ]{` +
 					Math.min.apply(Math, i) +
 					'}',
-				'g'
+				'g',
 			)
 			o = o.map(function (n) {
 				return n.replace(
 					g,
 					`
-`
+`,
 				)
 			})
 		}
@@ -396,7 +396,7 @@ try {
 					(h = String(n)
 						.split(
 							`
-`
+`,
 						)
 						.map(function (c, S) {
 							return S === 0 ? c : '' + a + c
@@ -618,7 +618,7 @@ try {
 			}),
 			({ theme: e }) => ({
 				boxShadow: `${e.appBorderColor} 0 0 0 1px inset`,
-			})
+			}),
 		),
 		re = (0, F.default)(1e3)((e, t, s, o, i, g) => ({
 			id: e || t,
@@ -632,7 +632,7 @@ try {
 		})),
 		me = (0, F.default)(10)((e, t, s) => {
 			let o = e.map(({ name: i, value: g }) =>
-				re(null, i, g, !0, s, g === t)
+				re(null, i, g, !0, s, g === t),
 			)
 			return t !== 'transparent'
 				? [
@@ -642,7 +642,7 @@ try {
 							'transparent',
 							null,
 							s,
-							!1
+							!1,
 						),
 						...o,
 				  ]
@@ -657,13 +657,13 @@ try {
 				l = V(() => U(g, e.values, e.default), [e, g])
 			Array.isArray(e) &&
 				M.warn(
-					'Addon Backgrounds api has changed in Storybook 6.0. Please refer to the migration guide: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md'
+					'Addon Backgrounds api has changed in Storybook 6.0. Please refer to the migration guide: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md',
 				)
 			let n = W(
 				(r) => {
 					i({ [O]: { ...o[O], value: r } })
 				},
-				[e, o, i]
+				[e, o, i],
 			)
 			return e.disable
 				? null
@@ -682,7 +682,7 @@ try {
 											l,
 											({ selected: u }) => {
 												l !== u && n(u), r()
-											}
+											},
 										),
 									}),
 								onVisibleChange: s,
@@ -694,9 +694,9 @@ try {
 									title: 'Change the background of the preview',
 									active: l !== 'transparent' || t,
 								},
-								b.createElement(H, { icon: 'photo' })
-							)
-						)
+								b.createElement(H, { icon: 'photo' }),
+							),
+						),
 				  )
 		}),
 		he = w(function () {
@@ -712,7 +712,7 @@ try {
 					title: 'Apply a grid to the preview',
 					onClick: () => t({ [O]: { ...e[O], grid: !o } }),
 				},
-				b.createElement(H, { icon: 'grid' })
+				b.createElement(H, { icon: 'grid' }),
 			)
 		})
 	z.register(R, () => {
@@ -726,14 +726,14 @@ try {
 					L,
 					null,
 					b.createElement(pe, null),
-					b.createElement(he, null)
+					b.createElement(he, null),
 				),
 		})
 	})
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

@@ -25,7 +25,7 @@ var require_markdown = __commonJS({
 							/((?:^|[^\\])(?:\\{2})*)/.source +
 								'(?:' +
 								pattern +
-								')'
+								')',
 						)
 					)
 				}
@@ -37,14 +37,14 @@ var require_markdown = __commonJS({
 							/__/g,
 							function () {
 								return tableCell
-							}
+							},
 						),
 					tableLine =
 						/\|?[ \t]*:?-{3,}:?[ \t]*(?:\|[ \t]*:?-{3,}:?[ \t]*)+\|?(?:\n|\r\n?)/
 							.source
 				;(Prism2.languages.markdown = Prism2.languages.extend(
 					'markup',
-					{}
+					{},
 				)),
 					Prism2.languages.insertBefore('markdown', 'prolog', {
 						'front-matter-block': {
@@ -73,7 +73,7 @@ var require_markdown = __commonJS({
 									'(?:' +
 									tableRow +
 									')*',
-								'm'
+								'm',
 							),
 							inside: {
 								'table-data-rows': {
@@ -83,7 +83,7 @@ var require_markdown = __commonJS({
 											tableLine +
 											')(?:' +
 											tableRow +
-											')*$'
+											')*$',
 									),
 									lookbehind: !0,
 									inside: {
@@ -96,7 +96,7 @@ var require_markdown = __commonJS({
 								},
 								'table-line': {
 									pattern: RegExp(
-										'^(' + tableRow + ')' + tableLine + '$'
+										'^(' + tableRow + ')' + tableLine + '$',
 									),
 									lookbehind: !0,
 									inside: { punctuation: /\||:?-{3,}:?/ },
@@ -178,7 +178,7 @@ var require_markdown = __commonJS({
 						bold: {
 							pattern: createInline(
 								/\b__(?:(?!_)<inner>|_(?:(?!_)<inner>)+_)+__\b|\*\*(?:(?!\*)<inner>|\*(?:(?!\*)<inner>)+\*)+\*\*/
-									.source
+									.source,
 							),
 							lookbehind: !0,
 							greedy: !0,
@@ -194,7 +194,7 @@ var require_markdown = __commonJS({
 						italic: {
 							pattern: createInline(
 								/\b_(?:(?!_)<inner>|__(?:(?!_)<inner>)+__)+_\b|\*(?:(?!\*)<inner>|\*\*(?:(?!\*)<inner>)+\*\*)+\*/
-									.source
+									.source,
 							),
 							lookbehind: !0,
 							greedy: !0,
@@ -209,7 +209,7 @@ var require_markdown = __commonJS({
 						},
 						strike: {
 							pattern: createInline(
-								/(~~?)(?:(?!~)<inner>)+\2/.source
+								/(~~?)(?:(?!~)<inner>)+\2/.source,
 							),
 							lookbehind: !0,
 							greedy: !0,
@@ -232,7 +232,7 @@ var require_markdown = __commonJS({
 						url: {
 							pattern: createInline(
 								/!?\[(?:(?!\])<inner>)+\](?:\([^\s)]+(?:[\t ]+"(?:\\.|[^"\\])*")?\)|[ \t]?\[(?:(?!\])<inner>)+\])/
-									.source
+									.source,
 							),
 							lookbehind: !0,
 							greedy: !0,
@@ -259,23 +259,23 @@ var require_markdown = __commonJS({
 							},
 						},
 					}),
-					['url', 'bold', 'italic', 'strike'].forEach(function (
-						token
-					) {
-						;[
-							'url',
-							'bold',
-							'italic',
-							'strike',
-							'code-snippet',
-						].forEach(function (inside) {
-							token !== inside &&
-								(Prism2.languages.markdown[
-									token
-								].inside.content.inside[inside] =
-									Prism2.languages.markdown[inside])
-						})
-					}),
+					['url', 'bold', 'italic', 'strike'].forEach(
+						function (token) {
+							;[
+								'url',
+								'bold',
+								'italic',
+								'strike',
+								'code-snippet',
+							].forEach(function (inside) {
+								token !== inside &&
+									(Prism2.languages.markdown[
+										token
+									].inside.content.inside[inside] =
+										Prism2.languages.markdown[inside])
+							})
+						},
+					),
 					Prism2.hooks.add('after-tokenize', function (env) {
 						if (
 							env.language !== 'markdown' &&
@@ -340,7 +340,7 @@ var require_markdown = __commonJS({
 								env.content = Prism2.highlight(
 									textContent(env.content.value),
 									grammar,
-									codeLang
+									codeLang,
 								)
 							else if (
 								codeLang &&
@@ -365,16 +365,16 @@ var require_markdown = __commonJS({
 														Prism2.languages[
 															codeLang
 														],
-														codeLang
+														codeLang,
 													))
-										}
+										},
 									)
 							}
 						}
 					})
 				var tagPattern = RegExp(
 						Prism2.languages.markup.tag.pattern.source,
-						'gi'
+						'gi',
 					),
 					KNOWN_ENTITY_NAMES = {
 						amp: '&',
@@ -398,7 +398,7 @@ var require_markdown = __commonJS({
 										code[1] === 'x'
 											? (value = parseInt(
 													code.slice(2),
-													16
+													16,
 											  ))
 											: (value = Number(code.slice(1))),
 										fromCodePoint(value)
@@ -407,7 +407,7 @@ var require_markdown = __commonJS({
 									var known = KNOWN_ENTITY_NAMES[code]
 									return known || m
 								}
-							}
+							},
 						)),
 						text
 					)
@@ -443,7 +443,7 @@ var require_yaml = __commonJS({
 							function () {
 								return /[^\s\x00-\x08\x0e-\x1f,[\]{}\x7f-\x84\x86-\x9f\ud800-\udfff\ufffe\uffff]/
 									.source
-							}
+							},
 						),
 					string = /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'/
 						.source
@@ -466,8 +466,8 @@ var require_yaml = __commonJS({
 								/<<prop>>/g,
 								function () {
 									return properties
-								}
-							)
+								},
+							),
 						),
 						lookbehind: !0,
 						alias: 'string',
@@ -481,7 +481,7 @@ var require_yaml = __commonJS({
 								})
 								.replace(/<<key>>/g, function () {
 									return '(?:' + plainKey + '|' + string + ')'
-								})
+								}),
 						),
 						lookbehind: !0,
 						greedy: !0,
@@ -495,7 +495,7 @@ var require_yaml = __commonJS({
 					datetime: {
 						pattern: createValuePattern(
 							/\d{4}-\d\d?-\d\d?(?:[tT]|[ \t]+)\d\d?:\d{2}:\d{2}(?:\.\d*)?(?:[ \t]*(?:Z|[-+]\d\d?(?::\d{2})?))?|\d{4}-\d{2}-\d{2}|\d\d?:\d{2}(?::\d{2}(?:\.\d*)?)?/
-								.source
+								.source,
 						),
 						lookbehind: !0,
 						alias: 'number',
@@ -519,7 +519,7 @@ var require_yaml = __commonJS({
 						pattern: createValuePattern(
 							/[+-]?(?:0x[\da-f]+|0o[0-7]+|(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?|\.inf|\.nan)/
 								.source,
-							'i'
+							'i',
 						),
 						lookbehind: !0,
 					},
@@ -551,12 +551,12 @@ var require_typescript = __commonJS({
 						},
 						builtin:
 							/\b(?:Array|Function|Promise|any|boolean|console|never|number|string|symbol|unknown)\b/,
-					}
+					},
 				)),
 					Prism2.languages.typescript.keyword.push(
 						/\b(?:abstract|declare|is|keyof|readonly|require)\b/,
 						/\b(?:asserts|infer|interface|module|namespace|type)\b(?=\s*(?:[{_$a-zA-Z\xA0-\uFFFF]|$))/,
-						/\btype\b(?=\s*(?:[\{*]|$))/
+						/\btype\b(?=\s*(?:[\{*]|$))/,
 					),
 					delete Prism2.languages.typescript.parameter,
 					delete Prism2.languages.typescript['literal-property']
@@ -621,11 +621,11 @@ var require_jsx = __commonJS({
 				;(spread = re(spread).source),
 					(Prism2.languages.jsx = Prism2.languages.extend(
 						'markup',
-						javascript
+						javascript,
 					)),
 					(Prism2.languages.jsx.tag.pattern = re(
 						/<\/?(?:[\w.:-]+(?:<S>+(?:[\w.:$-]+(?:=(?:"(?:\\[\s\S]|[^\\"])*"|'(?:\\[\s\S]|[^\\'])*'|[^\s{'"/>=]+|<BRACES>))?|<SPREAD>))*<S>*\/?)?>/
-							.source
+							.source,
 					)),
 					(Prism2.languages.jsx.tag.inside.tag.pattern =
 						/^<\/?[^\s>\/]*/),
@@ -644,7 +644,7 @@ var require_jsx = __commonJS({
 								inside: Prism2.languages.jsx,
 							},
 						},
-						Prism2.languages.jsx.tag
+						Prism2.languages.jsx.tag,
 					),
 					Prism2.languages.insertBefore(
 						'inside',
@@ -662,7 +662,7 @@ var require_jsx = __commonJS({
 								},
 							},
 						},
-						Prism2.languages.jsx.tag
+						Prism2.languages.jsx.tag,
 					)
 				var stringifyToken = function (token) {
 						return token
@@ -693,7 +693,7 @@ var require_jsx = __commonJS({
 													.tagName ===
 													stringifyToken(
 														token.content[0]
-															.content[1]
+															.content[1],
 													) &&
 											  openedTags.pop()
 											: token.content[
@@ -702,7 +702,7 @@ var require_jsx = __commonJS({
 											  openedTags.push({
 													tagName: stringifyToken(
 														token.content[0]
-															.content[1]
+															.content[1],
 													),
 													openedBraces: 0,
 											  })
@@ -729,7 +729,7 @@ var require_jsx = __commonJS({
 									(typeof tokens[i + 1] == 'string' ||
 										tokens[i + 1].type === 'plain-text') &&
 									((plainText += stringifyToken(
-										tokens[i + 1]
+										tokens[i + 1],
 									)),
 									tokens.splice(i + 1, 1)),
 									i > 0 &&
@@ -745,7 +745,7 @@ var require_jsx = __commonJS({
 										'plain-text',
 										plainText,
 										null,
-										plainText
+										plainText,
 									))
 							}
 							token.content &&
@@ -771,11 +771,11 @@ var require_tsx = __commonJS({
 				Prism.register(refractorTypescript),
 				(function (Prism2) {
 					var typescript = Prism2.util.clone(
-						Prism2.languages.typescript
+						Prism2.languages.typescript,
 					)
 					;(Prism2.languages.tsx = Prism2.languages.extend(
 						'jsx',
-						typescript
+						typescript,
 					)),
 						delete Prism2.languages.tsx.parameter,
 						delete Prism2.languages.tsx['literal-property']
@@ -785,7 +785,7 @@ var require_tsx = __commonJS({
 							'(?:' +
 							tag.pattern.source +
 							')',
-						tag.pattern.flags
+						tag.pattern.flags,
 					)),
 						(tag.lookbehind = !0)
 				})(Prism)
@@ -870,7 +870,7 @@ var require_javascript = __commonJS({
 								/(?:\d+(?:_\d+)*(?:\.(?:\d+(?:_\d+)*)?)?|\.\d+(?:_\d+)*)(?:[Ee][+-]?\d+(?:_\d+)*)?/
 									.source) +
 							')' +
-							/(?![\w$])/.source
+							/(?![\w$])/.source,
 					),
 					lookbehind: !0,
 				},
@@ -978,12 +978,12 @@ var require_javascript = __commonJS({
 				Prism.languages.markup &&
 					(Prism.languages.markup.tag.addInlined(
 						'script',
-						'javascript'
+						'javascript',
 					),
 					Prism.languages.markup.tag.addAttribute(
 						/on(?:abort|blur|change|click|composition(?:end|start|update)|dblclick|error|focus(?:in|out)?|key(?:down|up)|load|mouse(?:down|enter|leave|move|out|over|up)|reset|resize|scroll|select|slotchange|submit|unload|wheel)/
 							.source,
-						'javascript'
+						'javascript',
 					)),
 				(Prism.languages.js = Prism.languages.javascript)
 		}
@@ -1023,7 +1023,7 @@ var require_css = __commonJS({
 								'|' +
 								/(?:[^\\\r\n()"']|\\[\s\S])*/.source +
 								')\\)',
-							'i'
+							'i',
 						),
 						greedy: !0,
 						inside: {
@@ -1039,7 +1039,7 @@ var require_css = __commonJS({
 						pattern: RegExp(
 							`(^|[{}\\s])[^{}\\s](?:[^{};"'\\s]|\\s+(?![\\s{])|` +
 								string.source +
-								')*(?=\\s*\\{)'
+								')*(?=\\s*\\{)',
 						),
 						lookbehind: !0,
 					},
@@ -1144,7 +1144,7 @@ var require_markup = __commonJS({
 					env.type === 'entity' &&
 						(env.attributes.title = env.content.value.replace(
 							/&amp;/,
-							'&'
+							'&',
 						))
 				}),
 				Object.defineProperty(
@@ -1177,9 +1177,9 @@ var require_markup = __commonJS({
 										/__/g,
 										function () {
 											return tagName
-										}
+										},
 									),
-									'i'
+									'i',
 								),
 								lookbehind: !0,
 								greedy: !0,
@@ -1188,10 +1188,10 @@ var require_markup = __commonJS({
 								Prism.languages.insertBefore(
 									'markup',
 									'cdata',
-									def
+									def,
 								)
 						},
-					}
+					},
 				),
 				Object.defineProperty(
 					Prism.languages.markup.tag,
@@ -1208,7 +1208,7 @@ var require_markup = __commonJS({
 										')' +
 										/\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))/
 											.source,
-									'i'
+									'i',
 								),
 								lookbehind: !0,
 								inside: {
@@ -1238,7 +1238,7 @@ var require_markup = __commonJS({
 								},
 							})
 						},
-					}
+					},
 				),
 				(Prism.languages.html = Prism.languages.markup),
 				(Prism.languages.mathml = Prism.languages.markup),
@@ -1268,7 +1268,7 @@ var require_immutable = __commonJS({
 	require_schema = __commonJS({
 		'../../node_modules/property-information/lib/util/schema.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			module.exports = Schema
@@ -1284,7 +1284,7 @@ var require_immutable = __commonJS({
 	require_merge = __commonJS({
 		'../../node_modules/property-information/lib/util/merge.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			var xtend = require_immutable(),
@@ -1308,7 +1308,7 @@ var require_immutable = __commonJS({
 				return new Schema(
 					xtend.apply(null, property),
 					xtend.apply(null, normal),
-					space
+					space,
 				)
 			}
 		},
@@ -1316,7 +1316,7 @@ var require_immutable = __commonJS({
 	require_normalize = __commonJS({
 		'../../node_modules/property-information/normalize.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			module.exports = normalize
@@ -1328,7 +1328,7 @@ var require_immutable = __commonJS({
 	require_info = __commonJS({
 		'../../node_modules/property-information/lib/util/info.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			module.exports = Info
@@ -1369,7 +1369,7 @@ var require_immutable = __commonJS({
 	require_defined_info = __commonJS({
 		'../../node_modules/property-information/lib/util/defined-info.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			var Info = require_info(),
@@ -1400,7 +1400,7 @@ var require_immutable = __commonJS({
 						mark(
 							this,
 							check,
-							(mask & types[check]) === types[check]
+							(mask & types[check]) === types[check],
 						)
 			}
 			function mark(values, key, value) {
@@ -1411,7 +1411,7 @@ var require_immutable = __commonJS({
 	require_create = __commonJS({
 		'../../node_modules/property-information/lib/util/create.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			var normalize = require_normalize(),
@@ -1433,7 +1433,7 @@ var require_immutable = __commonJS({
 						prop,
 						transform(attributes, prop),
 						props[prop],
-						space
+						space,
 					)),
 						mustUseProperty.indexOf(prop) !== -1 &&
 							(info.mustUseProperty = !0),
@@ -1447,7 +1447,7 @@ var require_immutable = __commonJS({
 	require_xlink = __commonJS({
 		'../../node_modules/property-information/lib/xlink.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			var create = require_create()
@@ -1486,7 +1486,7 @@ var require_immutable = __commonJS({
 	require_case_sensitive_transform = __commonJS({
 		'../../node_modules/property-information/lib/util/case-sensitive-transform.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			module.exports = caseSensitiveTransform
@@ -1500,7 +1500,7 @@ var require_immutable = __commonJS({
 	require_case_insensitive_transform = __commonJS({
 		'../../node_modules/property-information/lib/util/case-insensitive-transform.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			var caseSensitiveTransform = require_case_sensitive_transform()
@@ -1508,7 +1508,7 @@ var require_immutable = __commonJS({
 			function caseInsensitiveTransform(attributes, property) {
 				return caseSensitiveTransform(
 					attributes,
-					property.toLowerCase()
+					property.toLowerCase(),
 				)
 			}
 		},
@@ -1516,7 +1516,7 @@ var require_immutable = __commonJS({
 	require_xmlns = __commonJS({
 		'../../node_modules/property-information/lib/xmlns.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			var create = require_create(),
@@ -1963,7 +1963,7 @@ var require_immutable = __commonJS({
 	require_hast_util_parse_selector = __commonJS({
 		'../../node_modules/hast-util-parse-selector/index.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			module.exports = parse
@@ -1984,7 +1984,7 @@ var require_immutable = __commonJS({
 						(match = search.exec(value)),
 						(subvalue = value.slice(
 							start,
-							match ? match.index : value.length
+							match ? match.index : value.length,
 						)),
 						subvalue &&
 							(previous
@@ -2092,7 +2092,7 @@ var require_immutable = __commonJS({
 							addProperty(
 								node.properties,
 								property,
-								properties[property]
+								properties[property],
 							)
 					return (
 						addChild(node.children, children),
@@ -2128,7 +2128,7 @@ var require_immutable = __commonJS({
 						(properties[property] = parsePrimitives(
 							info,
 							property,
-							result
+							result,
 						)))
 				}
 			}
@@ -2167,7 +2167,7 @@ var require_immutable = __commonJS({
 				}
 				if (typeof value != 'object' || !('type' in value))
 					throw new Error(
-						'Expected node, nodes, or string, got `' + value + '`'
+						'Expected node, nodes, or string, got `' + value + '`',
 					)
 				nodes.push(value)
 			}
@@ -2234,7 +2234,7 @@ var require_immutable = __commonJS({
 	require_character_entities_legacy = __commonJS({
 		'../../node_modules/parse-entities/node_modules/character-entities-legacy/index.json'(
 			exports,
-			module
+			module,
 		) {
 			module.exports = {
 				AElig: '\xC6',
@@ -2349,7 +2349,7 @@ var require_immutable = __commonJS({
 	require_character_reference_invalid = __commonJS({
 		'../../node_modules/character-reference-invalid/index.json'(
 			exports,
-			module
+			module,
 		) {
 			module.exports = {
 				0: '\uFFFD',
@@ -2440,7 +2440,7 @@ var require_immutable = __commonJS({
 	require_character_entities = __commonJS({
 		'../../node_modules/parse-entities/node_modules/character-entities/index.json'(
 			exports,
-			module
+			module,
 		) {
 			module.exports = {
 				AEli: '\xC6',
@@ -4891,52 +4891,52 @@ var require_immutable = __commonJS({
 														settings.attribute
 															? ((following =
 																	value.charCodeAt(
-																		end
+																		end,
 																	)),
 															  following ===
 															  equalsTo
 																	? (warning(
 																			reason,
-																			diff
+																			diff,
 																	  ),
 																	  (entity =
 																			null))
 																	: alphanumerical(
-																			following
+																			following,
 																	  )
 																	? (entity =
 																			null)
 																	: warning(
 																			reason,
-																			diff
+																			diff,
 																	  ))
 															: warning(
 																	reason,
-																	diff
+																	diff,
 															  ))),
 										  (reference = entity))
 										: (terminated ||
 												warning(
 													numericNotTerminated,
-													diff
+													diff,
 												),
 										  (reference = parseInt(
 												characters,
-												bases[type]
+												bases[type],
 										  )),
 										  prohibited(reference)
 												? (warning(
 														numericProhibited,
-														diff
+														diff,
 												  ),
 												  (reference =
 														fromCharCode(
-															replacementCharacter
+															replacementCharacter,
 														)))
 												: reference in invalid
 												? (warning(
 														numericDisallowed,
-														diff
+														diff,
 												  ),
 												  (reference =
 														invalid[reference]))
@@ -4944,13 +4944,13 @@ var require_immutable = __commonJS({
 												  disallowed(reference) &&
 														warning(
 															numericDisallowed,
-															diff
+															diff,
 														),
 												  reference > 65535 &&
 														((reference -= 65536),
 														(output += fromCharCode(
 															(reference >>> 10) |
-																55296
+																55296,
 														)),
 														(reference =
 															56320 |
@@ -4959,7 +4959,7 @@ var require_immutable = __commonJS({
 												  (reference =
 														output +
 														fromCharCode(
-															reference
+															reference,
 														))))
 									: type !== name &&
 									  warning(numericEmpty, diff)),
@@ -4976,7 +4976,7 @@ var require_immutable = __commonJS({
 											referenceContext,
 											reference,
 											{ start: prev, end: next },
-											value.slice(start - 1, end)
+											value.slice(start - 1, end),
 										),
 								  (prev = next))
 								: ((characters = value.slice(start - 1, end)),
@@ -5000,7 +5000,7 @@ var require_immutable = __commonJS({
 							warningContext,
 							messages[code],
 							position,
-							code
+							code,
 						)
 				}
 				function flush() {
@@ -5033,7 +5033,7 @@ var require_immutable = __commonJS({
 	require_prism_core = __commonJS({
 		'../../node_modules/refractor/node_modules/prismjs/components/prism-core.js'(
 			exports,
-			module
+			module,
 		) {
 			var _self =
 					typeof window < 'u'
@@ -5057,7 +5057,7 @@ var require_immutable = __commonJS({
 										? new Token(
 												tokens.type,
 												encode(tokens.content),
-												tokens.alias
+												tokens.alias,
 										  )
 										: Array.isArray(tokens)
 										? tokens.map(encode)
@@ -5095,7 +5095,7 @@ var require_immutable = __commonJS({
 												o.hasOwnProperty(key) &&
 													(clone[key] = deepClone(
 														o[key],
-														visited
+														visited,
 													))
 											return clone
 										case 'Array':
@@ -5105,16 +5105,15 @@ var require_immutable = __commonJS({
 													? visited[id]
 													: ((clone = []),
 													  (visited[id] = clone),
-													  o.forEach(function (
-															v,
-															i
-													  ) {
-															clone[i] =
-																deepClone(
-																	v,
-																	visited
-																)
-													  }),
+													  o.forEach(
+															function (v, i) {
+																clone[i] =
+																	deepClone(
+																		v,
+																		visited,
+																	)
+															},
+													  ),
 													  clone)
 											)
 										default:
@@ -5133,10 +5132,10 @@ var require_immutable = __commonJS({
 									;(element.className =
 										element.className.replace(
 											RegExp(lang, 'gi'),
-											''
+											'',
 										)),
 										element.classList.add(
-											'language-' + language
+											'language-' + language,
 										)
 								},
 								currentScript: function () {
@@ -5148,12 +5147,12 @@ var require_immutable = __commonJS({
 									} catch (err) {
 										var src =
 											(/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(
-												err.stack
+												err.stack,
 											) || [])[1]
 										if (src) {
 											var scripts =
 												document.getElementsByTagName(
-													'script'
+													'script',
 												)
 											for (var i in scripts)
 												if (scripts[i].src == src)
@@ -5165,7 +5164,7 @@ var require_immutable = __commonJS({
 								isActive: function (
 									element,
 									className,
-									defaultActivation
+									defaultActivation,
 								) {
 									for (
 										var no = 'no-' + className;
@@ -5196,7 +5195,7 @@ var require_immutable = __commonJS({
 									inside,
 									before,
 									insert,
-									root
+									root,
 								) {
 									root = root || _.languages
 									var grammar = root[inside],
@@ -5206,7 +5205,7 @@ var require_immutable = __commonJS({
 											if (token == before)
 												for (var newToken in insert)
 													insert.hasOwnProperty(
-														newToken
+														newToken,
 													) &&
 														(ret[newToken] =
 															insert[newToken])
@@ -5222,7 +5221,7 @@ var require_immutable = __commonJS({
 												value === old &&
 													key != inside &&
 													(this[key] = ret)
-											}
+											},
 										),
 										ret
 									)
@@ -5244,7 +5243,7 @@ var require_immutable = __commonJS({
 														property,
 														callback,
 														null,
-														visited
+														visited,
 												  ))
 												: propertyType === 'Array' &&
 												  !visited[objId(property)] &&
@@ -5254,7 +5253,7 @@ var require_immutable = __commonJS({
 														property,
 														callback,
 														i,
-														visited
+														visited,
 												  ))
 										}
 								},
@@ -5266,7 +5265,7 @@ var require_immutable = __commonJS({
 							highlightAllUnder: function (
 								container,
 								async,
-								callback
+								callback,
 							) {
 								var env = {
 									callback,
@@ -5277,12 +5276,12 @@ var require_immutable = __commonJS({
 								_.hooks.run('before-highlightall', env),
 									(env.elements = Array.prototype.slice.apply(
 										env.container.querySelectorAll(
-											env.selector
-										)
+											env.selector,
+										),
 									)),
 									_.hooks.run(
 										'before-all-elements-highlight',
-										env
+										env,
 									)
 								for (
 									var i = 0, element;
@@ -5292,13 +5291,13 @@ var require_immutable = __commonJS({
 									_.highlightElement(
 										element,
 										async === !0,
-										env.callback
+										env.callback,
 									)
 							},
 							highlightElement: function (
 								element,
 								async,
-								callback
+								callback,
 							) {
 								var language = _.util.getLanguage(element),
 									grammar = _.languages[language]
@@ -5310,7 +5309,7 @@ var require_immutable = __commonJS({
 								var code = element.textContent,
 									env = { element, language, grammar, code }
 								function insertHighlightedCode(
-									highlightedCode
+									highlightedCode,
 								) {
 									;(env.highlightedCode = highlightedCode),
 										_.hooks.run('before-insert', env),
@@ -5339,7 +5338,7 @@ var require_immutable = __commonJS({
 									!env.grammar)
 								) {
 									insertHighlightedCode(
-										_.util.encode(env.code)
+										_.util.encode(env.code),
 									)
 									return
 								}
@@ -5353,15 +5352,15 @@ var require_immutable = __commonJS({
 												language: env.language,
 												code: env.code,
 												immediateClose: !0,
-											})
+											}),
 										)
 								} else
 									insertHighlightedCode(
 										_.highlight(
 											env.code,
 											env.grammar,
-											env.language
-										)
+											env.language,
+										),
 									)
 							},
 							highlight: function (text, grammar, language) {
@@ -5373,17 +5372,17 @@ var require_immutable = __commonJS({
 									throw new Error(
 										'The language "' +
 											env.language +
-											'" has no grammar.'
+											'" has no grammar.',
 									)
 								return (
 									(env.tokens = _.tokenize(
 										env.code,
-										env.grammar
+										env.grammar,
 									)),
 									_.hooks.run('after-tokenize', env),
 									Token.stringify(
 										_.util.encode(env.tokens),
-										env.language
+										env.language,
 									)
 								)
 							},
@@ -5402,7 +5401,7 @@ var require_immutable = __commonJS({
 										tokenList,
 										grammar,
 										tokenList.head,
-										0
+										0,
 									),
 									toArray(tokenList)
 								)
@@ -5458,7 +5457,7 @@ var require_immutable = __commonJS({
 							(Array.isArray(aliases)
 								? Array.prototype.push.apply(
 										env.classes,
-										aliases
+										aliases,
 								  )
 								: env.classes.push(aliases)),
 							_.hooks.run('wrap', env)
@@ -5470,7 +5469,7 @@ var require_immutable = __commonJS({
 								'="' +
 								(env.attributes[name] || '').replace(
 									/"/g,
-									'&quot;'
+									'&quot;',
 								) +
 								'"'
 						return (
@@ -5503,7 +5502,7 @@ var require_immutable = __commonJS({
 						grammar,
 						startNode,
 						startPos,
-						rematch
+						rematch,
 					) {
 						for (var token in grammar)
 							if (
@@ -5533,7 +5532,7 @@ var require_immutable = __commonJS({
 											.match(/[imsuy]*$/)[0]
 										patternObj.pattern = RegExp(
 											patternObj.pattern.source,
-											flags + 'g'
+											flags + 'g',
 										)
 									}
 									for (
@@ -5559,7 +5558,7 @@ var require_immutable = __commonJS({
 														pattern,
 														pos,
 														text,
-														lookbehind
+														lookbehind,
 													)),
 													!match ||
 														match.index >=
@@ -5610,7 +5609,7 @@ var require_immutable = __commonJS({
 													pattern,
 													0,
 													str,
-													lookbehind
+													lookbehind,
 												)),
 												!match)
 											)
@@ -5619,7 +5618,7 @@ var require_immutable = __commonJS({
 												matchStr = match[0],
 												before = str.slice(0, from),
 												after = str.slice(
-													from + matchStr.length
+													from + matchStr.length,
 												),
 												reach = pos + str.length
 											rematch &&
@@ -5630,36 +5629,36 @@ var require_immutable = __commonJS({
 												((removeFrom = addAfter(
 													tokenList,
 													removeFrom,
-													before
+													before,
 												)),
 												(pos += before.length)),
 												removeRange(
 													tokenList,
 													removeFrom,
-													removeCount
+													removeCount,
 												)
 											var wrapped = new Token(
 												token,
 												inside
 													? _.tokenize(
 															matchStr,
-															inside
+															inside,
 													  )
 													: matchStr,
 												alias,
-												matchStr
+												matchStr,
 											)
 											if (
 												((currentNode = addAfter(
 													tokenList,
 													removeFrom,
-													wrapped
+													wrapped,
 												)),
 												after &&
 													addAfter(
 														tokenList,
 														currentNode,
-														after
+														after,
 													),
 												removeCount > 1)
 											) {
@@ -5673,7 +5672,7 @@ var require_immutable = __commonJS({
 													grammar,
 													currentNode.prev,
 													pos,
-													nestedRematch
+													nestedRematch,
 												),
 													rematch &&
 														nestedRematch.reach >
@@ -5740,12 +5739,12 @@ var require_immutable = __commonJS({
 												_.highlight(
 													code,
 													_.languages[lang2],
-													lang2
-												)
+													lang2,
+												),
 											),
 												immediateClose && _self2.close()
 										},
-										!1
+										!1,
 									)),
 							_
 						)
@@ -5762,15 +5761,15 @@ var require_immutable = __commonJS({
 						(readyState === 'interactive' && script && script.defer)
 							? document.addEventListener(
 									'DOMContentLoaded',
-									highlightAutomaticallyCallback
+									highlightAutomaticallyCallback,
 							  )
 							: window.requestAnimationFrame
 							? window.requestAnimationFrame(
-									highlightAutomaticallyCallback
+									highlightAutomaticallyCallback,
 							  )
 							: window.setTimeout(
 									highlightAutomaticallyCallback,
-									16
+									16,
 							  )
 					}
 					return _
@@ -5822,7 +5821,7 @@ var require_immutable = __commonJS({
 					throw new Error(
 						'Expected `function` for `grammar`, got `' +
 							grammar +
-							'`'
+							'`',
 					)
 				refract.languages[grammar.displayName] === void 0 &&
 					grammar(refract)
@@ -5851,20 +5850,22 @@ var require_immutable = __commonJS({
 					grammar
 				if (typeof value != 'string')
 					throw new Error(
-						'Expected `string` for `value`, got `' + value + '`'
+						'Expected `string` for `value`, got `' + value + '`',
 					)
 				if (refract.util.type(name) === 'Object')
 					(grammar = name), (name = null)
 				else {
 					if (typeof name != 'string')
 						throw new Error(
-							'Expected `string` for `name`, got `' + name + '`'
+							'Expected `string` for `name`, got `' + name + '`',
 						)
 					if (own.call(refract.languages, name))
 						grammar = refract.languages[name]
 					else
 						throw new Error(
-							'Unknown language: `' + name + '` is not registered'
+							'Unknown language: `' +
+								name +
+								'` is not registered',
 						)
 				}
 				return sup.call(this, value, grammar, name)
@@ -5874,7 +5875,7 @@ var require_immutable = __commonJS({
 					throw new Error(
 						'Expected `string` for `language`, got `' +
 							language +
-							'`'
+							'`',
 					)
 				return own.call(refract.languages, language)
 			}
@@ -5899,7 +5900,7 @@ var require_immutable = __commonJS({
 							content: refract.Token.stringify(
 								value.content,
 								language,
-								parent
+								parent,
 							),
 							tag: 'span',
 							classes: ['token', value.type],
@@ -5913,7 +5914,7 @@ var require_immutable = __commonJS({
 					  h(
 							env.tag + '.' + env.classes.join('.'),
 							attributes(env.attributes),
-							env.content
+							env.content,
 					  ))
 			}
 			function stringifyAll(values, language) {
@@ -5932,7 +5933,7 @@ var require_immutable = __commonJS({
 						(result[index] = refract.Token.stringify(
 							value,
 							language,
-							result
+							result,
 						))
 				return result
 			}
@@ -6043,7 +6044,7 @@ var require_bash = __commonJS({
 						inside: {
 							environment: {
 								pattern: RegExp(
-									'(^|[\\s;|&]|[<>]\\()' + envVars
+									'(^|[\\s;|&]|[<>]\\()' + envVars,
 								),
 								lookbehind: !0,
 								alias: 'constant',
@@ -6176,7 +6177,7 @@ var require_js_extras = __commonJS({
 								'(\\.\\s*)' +
 									Prism2.languages.javascript[
 										'function-variable'
-									].pattern.source
+									].pattern.source,
 							),
 							lookbehind: !0,
 							alias: [
@@ -6186,13 +6187,13 @@ var require_js_extras = __commonJS({
 								'property-access',
 							],
 						},
-					}
+					},
 				),
 					Prism2.languages.insertBefore('javascript', 'function', {
 						method: {
 							pattern: RegExp(
 								'(\\.\\s*)' +
-									Prism2.languages.javascript.function.source
+									Prism2.languages.javascript.function.source,
 							),
 							lookbehind: !0,
 							alias: ['function', 'property-access'],
@@ -6217,14 +6218,14 @@ var require_js_extras = __commonJS({
 							return /(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*/
 								.source
 						}),
-						flags
+						flags,
 					)
 				}
 				Prism2.languages.insertBefore('javascript', 'keyword', {
 					imports: {
 						pattern: withId(
 							/(\bimport\b\s*)(?:<ID>(?:\s*,\s*(?:\*\s*as\s+<ID>|\{[^{}]*\}))?|\*\s*as\s+<ID>|\{[^{}]*\})(?=\s*\bfrom\b)/
-								.source
+								.source,
 						),
 						lookbehind: !0,
 						inside: Prism2.languages.javascript,
@@ -6232,7 +6233,7 @@ var require_js_extras = __commonJS({
 					exports: {
 						pattern: withId(
 							/(\bexport\b\s*)(?:\*(?:\s*as\s+<ID>)?(?=\s*\bfrom\b)|\{[^{}]*\})/
-								.source
+								.source,
 						),
 						lookbehind: !0,
 						inside: Prism2.languages.javascript,
@@ -6249,7 +6250,7 @@ var require_js_extras = __commonJS({
 							alias: 'control-flow',
 						},
 						{ pattern: /\bnull\b/, alias: ['null', 'nil'] },
-						{ pattern: /\bundefined\b/, alias: 'nil' }
+						{ pattern: /\bundefined\b/, alias: 'nil' },
 					),
 					Prism2.languages.insertBefore('javascript', 'operator', {
 						spread: { pattern: /\.{3}/, alias: 'operator' },
@@ -6467,7 +6468,7 @@ var require_graphql = __commonJS({
 								currentIndex += 2
 								var definitionEnd = findClosingBracket(
 									/^\($/,
-									/^\)$/
+									/^\)$/,
 								)
 								if (definitionEnd === -1) continue
 								for (
@@ -6494,7 +6495,7 @@ var require_graphql = __commonJS({
 							) {
 								var mutationEnd = findClosingBracket(
 									/^\{$/,
-									/^\}$/
+									/^\}$/,
 								)
 								if (mutationEnd === -1) continue
 								for (
@@ -6505,7 +6506,7 @@ var require_graphql = __commonJS({
 									var varToken = validTokens[i]
 									varToken.type === 'variable' &&
 										inputVariables.indexOf(
-											varToken.content
+											varToken.content,
 										) >= 0 &&
 										addAlias(varToken, 'variable-input')
 								}
@@ -6670,13 +6671,13 @@ function _objectSpread(target) {
 			: Object.getOwnPropertyDescriptors
 			? Object.defineProperties(
 					target,
-					Object.getOwnPropertyDescriptors(source)
+					Object.getOwnPropertyDescriptors(source),
 			  )
 			: ownKeys(Object(source)).forEach(function (key) {
 					Object.defineProperty(
 						target,
 						key,
-						Object.getOwnPropertyDescriptor(source, key)
+						Object.getOwnPropertyDescriptor(source, key),
 					)
 			  })
 	}
@@ -6895,7 +6896,7 @@ function createStyleObject(classNames) {
 	return classNamesCombinations.reduce(function (styleObject, className) {
 		return _objectSpread(
 			_objectSpread({}, styleObject),
-			stylesheet[className]
+			stylesheet[className],
 		)
 	}, elementStyle)
 }
@@ -6937,7 +6938,7 @@ function createElement(_ref) {
 			props = _objectSpread(
 				_objectSpread({}, properties),
 				{},
-				{ className: createClassNameString(properties.className) }
+				{ className: createClassNameString(properties.className) },
 			)
 		else {
 			var allStylesheetSelectors = Object.keys(stylesheet).reduce(
@@ -6950,7 +6951,7 @@ function createElement(_ref) {
 							classes
 						)
 					},
-					[]
+					[],
 				),
 				startingClassName =
 					properties.className &&
@@ -6962,7 +6963,7 @@ function createElement(_ref) {
 					startingClassName.concat(
 						properties.className.filter(function (className2) {
 							return !allStylesheetSelectors.includes(className2)
-						})
+						}),
 					)
 			props = _objectSpread(
 				_objectSpread({}, properties),
@@ -6972,16 +6973,16 @@ function createElement(_ref) {
 					style: createStyleObject(
 						properties.className,
 						Object.assign({}, properties.style, style),
-						stylesheet
+						stylesheet,
 					),
-				}
+				},
 			)
 		}
 		var children = childrenCreator(node.children)
 		return import_react3.default.createElement(
 			TagName,
 			_extends({ key }, props),
-			children
+			children,
 		)
 	}
 }
@@ -7032,13 +7033,13 @@ function _objectSpread2(target) {
 			: Object.getOwnPropertyDescriptors
 			? Object.defineProperties(
 					target,
-					Object.getOwnPropertyDescriptors(source)
+					Object.getOwnPropertyDescriptors(source),
 			  )
 			: ownKeys2(Object(source)).forEach(function (key) {
 					Object.defineProperty(
 						target,
 						key,
-						Object.getOwnPropertyDescriptor(source, key)
+						Object.getOwnPropertyDescriptor(source, key),
 					)
 			  })
 	}
@@ -7064,8 +7065,8 @@ function getAllLineNumbers(_ref) {
 			''.concat(
 				number,
 				`
-`
-			)
+`,
+			),
 		)
 	})
 }
@@ -7088,7 +7089,7 @@ function AllLineNumbers(_ref2) {
 `),
 			style: numberStyle,
 			startingLineNumber,
-		})
+		}),
 	)
 }
 function getEmWidthOfNumber(num) {
@@ -7113,7 +7114,7 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
 function assembleLineNumberStyles(
 	lineNumberStyle,
 	lineNumber,
-	largestLineNumber
+	largestLineNumber,
 ) {
 	var defaultLineNumberStyle = {
 			display: 'inline-block',
@@ -7128,7 +7129,7 @@ function assembleLineNumberStyles(
 				: lineNumberStyle,
 		assembledStyle = _objectSpread2(
 			_objectSpread2({}, defaultLineNumberStyle),
-			customLineNumberStyle
+			customLineNumberStyle,
 		)
 	return assembledStyle
 }
@@ -7153,7 +7154,7 @@ function createLineElement(_ref3) {
 		var inlineLineNumberStyle = assembleLineNumberStyles(
 			lineNumberStyle,
 			lineNumber,
-			largestLineNumber
+			largestLineNumber,
 		)
 		children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle))
 	}
@@ -7162,7 +7163,7 @@ function createLineElement(_ref3) {
 			(properties.style = _objectSpread2(
 				_objectSpread2({}, properties.style),
 				{},
-				{ display: 'flex' }
+				{ display: 'flex' },
 			)),
 		{ type: 'element', tagName: 'span', properties, children }
 	)
@@ -7187,7 +7188,7 @@ function flattenCodeTree(tree) {
 				createLineElement({
 					children: [node],
 					className: _toConsumableArray(new Set(className)),
-				})
+				}),
 			)
 		else if (node.children) {
 			var classNames = className.concat(node.properties.className)
@@ -7207,7 +7208,7 @@ function processLines(
 	startingLineNumber,
 	largestLineNumber,
 	lineNumberStyle,
-	wrapLongLines
+	wrapLongLines,
 ) {
 	var _ref4,
 		tree = flattenCodeTree(codeTree.value),
@@ -7234,10 +7235,10 @@ function processLines(
 			var inlineLineNumberStyle = assembleLineNumberStyles(
 				lineNumberStyle,
 				lineNumber2,
-				largestLineNumber
+				largestLineNumber,
 			)
 			children2.unshift(
-				getInlineLineNumber(lineNumber2, inlineLineNumberStyle)
+				getInlineLineNumber(lineNumber2, inlineLineNumberStyle),
 			)
 		}
 		return children2
@@ -7266,7 +7267,7 @@ function processLines(
 							value: ''.concat(
 								text,
 								`
-`
+`,
 							),
 						}
 					if (i === 0) {
@@ -7276,7 +7277,7 @@ function processLines(
 									createLineElement({
 										children: [newChild],
 										className: node.properties.className,
-									})
+									}),
 								),
 							_line = createLine(_children, lineNumber2)
 						newTree.push(_line)
@@ -7300,7 +7301,7 @@ function processLines(
 								_line2 = createLine(
 									_children2,
 									lineNumber2,
-									node.properties.className
+									node.properties.className,
 								)
 							newTree.push(_line2)
 						}
@@ -7309,7 +7310,7 @@ function processLines(
 							_line3 = createLine(
 								_children3,
 								lineNumber2,
-								node.properties.className
+								node.properties.className,
 							)
 						newTree.push(_line3)
 					}
@@ -7388,14 +7389,14 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
 							style: _objectSpread2(
 								_objectSpread2(
 									{},
-									style['code[class*="language-"]']
+									style['code[class*="language-"]'],
 								),
 								style[
 									'code[class*="language-'.concat(
 										language,
-										'"]'
+										'"]',
 									)
-								]
+								],
 							),
 					  }
 					: _ref7$codeTagProps,
@@ -7465,12 +7466,12 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
 				? (codeTagProps.style = _objectSpread2(
 						_objectSpread2({}, codeTagProps.style),
 						{},
-						{ whiteSpace: 'pre-wrap' }
+						{ whiteSpace: 'pre-wrap' },
 				  ))
 				: (codeTagProps.style = _objectSpread2(
 						_objectSpread2({}, codeTagProps.style),
 						{},
-						{ whiteSpace: 'pre' }
+						{ whiteSpace: 'pre' },
 				  )),
 			!astGenerator)
 		)
@@ -7478,7 +7479,11 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
 				PreTag,
 				preProps,
 				allLineNumbers,
-				import_react2.default.createElement(CodeTag, codeTagProps, code)
+				import_react2.default.createElement(
+					CodeTag,
+					codeTagProps,
+					code,
+				),
 			)
 		;((wrapLines === void 0 && renderer) || wrapLongLines) &&
 			(wrapLines = !0),
@@ -7501,7 +7506,7 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
 				startingLineNumber,
 				largestLineNumber,
 				lineNumberStyle,
-				wrapLongLines
+				wrapLongLines,
 			)
 		return import_react2.default.createElement(
 			PreTag,
@@ -7510,8 +7515,8 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
 				CodeTag,
 				codeTagProps,
 				!showInlineLineNumbers && allLineNumbers,
-				renderer({ rows, stylesheet: style, useInlineStyles })
-			)
+				renderer({ rows, stylesheet: style, useInlineStyles }),
+			),
 		)
 	}
 }
@@ -7563,7 +7568,7 @@ var prism_light_default = SyntaxHighlighter,
 				outline: '0 none',
 			},
 		}),
-		({ disabled }) => disabled && { cursor: 'not-allowed', opacity: 0.5 }
+		({ disabled }) => disabled && { cursor: 'not-allowed', opacity: 0.5 },
 	)
 ActionButton.displayName = 'ActionButton'
 var ActionBar = ({ actionItems, ...props }) =>
@@ -7574,15 +7579,15 @@ var ActionBar = ({ actionItems, ...props }) =>
 				import_react4.default.createElement(
 					ActionButton,
 					{ key: index, className, onClick, disabled },
-					title
-				)
-			)
+					title,
+				),
+			),
 		),
 	GlobalScrollAreaStyles = (0, import_react5.lazy)(() =>
-		import('./GlobalScrollAreaStyles-XIHNDKUY-IPHQ3X5E.mjs')
+		import('./GlobalScrollAreaStyles-XIHNDKUY-IPHQ3X5E.mjs'),
 	),
 	OverlayScrollbars = (0, import_react5.lazy)(() =>
-		import('./OverlayScrollbars-VAV6LJAB-ZCK6WCDR.mjs')
+		import('./OverlayScrollbars-VAV6LJAB-ZCK6WCDR.mjs'),
 	),
 	Scroller = ({ horizontal, vertical, ...props }) =>
 		import_react5.default.createElement(
@@ -7596,7 +7601,7 @@ var ActionBar = ({ actionItems, ...props }) =>
 			import_react5.default.createElement(OverlayScrollbars, {
 				options: { scrollbars: { autoHide: 'leave' } },
 				...props,
-			})
+			}),
 		),
 	ScrollArea = emotion_styled_browser_esm_default(Scroller)(
 		({ vertical }) =>
@@ -7606,7 +7611,7 @@ var ActionBar = ({ actionItems, ...props }) =>
 		({ horizontal }) =>
 			horizontal
 				? { overflowX: 'auto', width: '100%' }
-				: { overflowX: 'hidden' }
+				: { overflowX: 'hidden' },
 	)
 ScrollArea.defaultProps = { horizontal: !1, vertical: !1 }
 var { navigator, document: document2, window: globalWindow } = scope
@@ -7624,8 +7629,8 @@ prism_light_default.registerLanguage('graphql', graphql_default)
 var themedSyntax = (0, import_memoizerific.default)(2)((theme) =>
 		Object.entries(theme.code || {}).reduce(
 			(acc, [key, val]) => ({ ...acc, [`* .${key}`]: val }),
-			{}
-		)
+			{},
+		),
 	),
 	copyToClipboard = createCopyToClipboardFunction()
 function createCopyToClipboardFunction() {
@@ -7663,17 +7668,17 @@ var Wrapper = emotion_styled_browser_esm_default.div(
 							content: 'attr(data-line-number)',
 						},
 				  }
-				: {}
+				: {},
 	),
 	UnstyledScroller = ({ children, className }) =>
 		import_react.default.createElement(
 			ScrollArea,
 			{ horizontal: !0, vertical: !0, className },
-			children
+			children,
 		),
 	Scroller2 = emotion_styled_browser_esm_default(UnstyledScroller)(
 		{ position: 'relative' },
-		({ theme }) => themedSyntax(theme)
+		({ theme }) => themedSyntax(theme),
 	),
 	Pre = emotion_styled_browser_esm_default.pre(({ theme, padded }) => ({
 		display: 'flex',
@@ -7712,7 +7717,7 @@ var Wrapper = emotion_styled_browser_esm_default.div(
 				stylesheet,
 				useInlineStyles,
 				key: `code-segement${i}`,
-			})
+			}),
 		),
 	wrapRenderer = (renderer, showLineNumbers) =>
 		showLineNumbers
@@ -7749,12 +7754,12 @@ var Wrapper = emotion_styled_browser_esm_default.div(
 								setCopied(!0),
 									globalWindow.setTimeout(
 										() => setCopied(!1),
-										1500
+										1500,
 									)
 							})
 							.catch(logger.error)
 				},
-				[highlightableCode]
+				[highlightableCode],
 			),
 			renderer = wrapRenderer(rest.renderer, showLineNumbers)
 		return import_react.default.createElement(
@@ -7777,8 +7782,8 @@ var Wrapper = emotion_styled_browser_esm_default.div(
 						...rest,
 						renderer,
 					},
-					highlightableCode
-				)
+					highlightableCode,
+				),
 			),
 			copyable
 				? import_react.default.createElement(ActionBar, {
@@ -7786,7 +7791,7 @@ var Wrapper = emotion_styled_browser_esm_default.div(
 							{ title: copied ? 'Copied' : 'Copy', onClick },
 						],
 				  })
-				: null
+				: null,
 		)
 	},
 	syntaxhighlighter_default = SyntaxHighlighter2

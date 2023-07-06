@@ -29,7 +29,7 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 		useSensor(PointerSensor),
 		useSensor(KeyboardSensor, {
 			coordinateGetter: sortableKeyboardCoordinates,
-		})
+		}),
 	)
 	const { data, error } = useSWR(
 		{
@@ -71,7 +71,7 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 				}
 			`,
 		},
-		gqlFetcher
+		gqlFetcher,
 	)
 
 	if (error) {
@@ -105,7 +105,7 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 								moduleName={mod.moduleName}
 								instructorName={
 									mod.members.filter(
-										(member) => member.role === 'TEACHER'
+										(member) => member.role === 'TEACHER',
 									)[0]?.plan.student.firstName
 								}
 								registeredUsers={50}
@@ -139,10 +139,10 @@ export const Modules = ({ modules = [] }: ModuleProps) => {
 		if (active.id !== over.id) {
 			setItems((items) => {
 				const oldIndex = items.findIndex(
-					(item) => active.id === item.module.id
+					(item) => active.id === item.module.id,
 				)
 				const newIndex = items.findIndex(
-					(item) => over.id === item.module.id
+					(item) => over.id === item.module.id,
 				)
 				return arrayMove(items, oldIndex, newIndex)
 			})

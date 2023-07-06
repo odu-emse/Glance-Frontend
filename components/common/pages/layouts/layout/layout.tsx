@@ -45,7 +45,7 @@ export const Layout = ({
 			`,
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	)
 
 	if (sessionStatus === 'loading') {
@@ -117,7 +117,7 @@ export const Layout = ({
 									className="absolute -left-4 bottom-8"
 									onClick={() => {
 										setRightSidebarCollapsed(
-											!rightSidebarCollapsed
+											!rightSidebarCollapsed,
 										)
 									}}
 								>

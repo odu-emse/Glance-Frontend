@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,18 +62,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -94,7 +94,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -113,7 +113,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -348,13 +348,13 @@
 		'./components/common/forms/inputs/text_area/text_area.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { K: () => TextArea })
 			var react = __webpack_require__('./node_modules/react/index.js')
 			const use_autosize_text_area = function useAutosizeTextArea(
 				textAreaRef,
-				value
+				value,
 			) {
 				;(0, react.useEffect)(
 					function () {
@@ -364,7 +364,7 @@
 							textAreaRef.style.height = scrollHeight + 'px'
 						}
 					},
-					[textAreaRef, value]
+					[textAreaRef, value],
 				)
 			}
 			var __jsx = react.createElement,
@@ -457,9 +457,9 @@
 									__jsx('span', {
 										className:
 											'absolute right-2 bottom-2 flex items-center '.concat(
-												disabled ? 'opacity-50' : ''
+												disabled ? 'opacity-50' : '',
 											),
-									})
+									}),
 							),
 							value.length === maxLength &&
 								__jsx(
@@ -469,9 +469,9 @@
 											'text-xs px-2 bg-gray-100 ml-auto mr-0 block w-fit',
 									},
 									'Maximum characters: ',
-									maxLength
-								)
-						)
+									maxLength,
+								),
+						),
 					)
 				}
 			;(TextArea.displayName = 'TextArea'),
@@ -729,13 +729,13 @@
 		'./components/util/loader.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => __WEBPACK_DEFAULT_EXPORT__,
 			})
 			var __jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Loader = function Loader(_ref) {
 					var textColor = _ref.textColor,
@@ -750,7 +750,7 @@
 							className: 'inline text-'
 								.concat(textColor || 'white', ' animate-spin ')
 								.concat(
-									pageLoader ? 'w-8 h-8 mr-3' : 'w-4 h-4'
+									pageLoader ? 'w-8 h-8 mr-3' : 'w-4 h-4',
 								),
 							viewBox: '0 0 100 100',
 							fill: 'none',
@@ -763,7 +763,7 @@
 						__jsx('path', {
 							d: 'M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z',
 							fill: 'currentColor',
-						})
+						}),
 					)
 				}
 			;(Loader.displayName = 'Loader'),
@@ -834,7 +834,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -845,19 +845,19 @@
 					_Default$parameters2,
 					_Default$parameters2$,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					button_button = __webpack_require__(
-						'./components/common/button/button.tsx'
+						'./components/common/button/button.tsx',
 					),
 					text_area = __webpack_require__(
-						'./components/common/forms/inputs/text_area/text_area.tsx'
+						'./components/common/forms/inputs/text_area/text_area.tsx',
 					),
 					loader = __webpack_require__(
-						'./components/util/loader.tsx'
+						'./components/util/loader.tsx',
 					),
 					__jsx = react.createElement,
 					ThreadTextArea = function ThreadTextArea(_ref) {
@@ -900,7 +900,7 @@
 												onSubmit(
 													threadID,
 													commentBody,
-													userID
+													userID,
 												)
 										},
 									},
@@ -909,9 +909,9 @@
 												textColor: 'royalblue',
 												pageLoader: !1,
 										  })
-										: 'Post'
-								)
-							)
+										: 'Post',
+								),
+							),
 						)
 					}
 				;(ThreadTextArea.displayName = 'ThreadTextArea'),
@@ -967,7 +967,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -978,19 +978,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -998,8 +998,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -1027,7 +1027,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -1045,11 +1045,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)
 			},
 	},

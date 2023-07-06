@@ -5,7 +5,7 @@
 		'./components/common/message_input/message_input.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -16,26 +16,26 @@
 				_Primary$parameters2,
 				_Primary$parameters2$,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				slicedToArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 				),
 				index_esm = __webpack_require__(
-					'./node_modules/react-icons/fa/index.esm.js'
+					'./node_modules/react-icons/fa/index.esm.js',
 				),
 				md_index_esm = __webpack_require__(
-					'./node_modules/react-icons/md/index.esm.js'
+					'./node_modules/react-icons/md/index.esm.js',
 				),
 				bi_index_esm = __webpack_require__(
-					'./node_modules/react-icons/bi/index.esm.js'
+					'./node_modules/react-icons/bi/index.esm.js',
 				),
 				ri_index_esm = __webpack_require__(
-					'./node_modules/react-icons/ri/index.esm.js'
+					'./node_modules/react-icons/ri/index.esm.js',
 				),
 				io5_index_esm = __webpack_require__(
-					'./node_modules/react-icons/io5/index.esm.js'
+					'./node_modules/react-icons/io5/index.esm.js',
 				),
 				__jsx = react.createElement,
 				MessageInput = function MessageInput(_ref) {
@@ -43,7 +43,7 @@
 						_React$useState = react.useState(null),
 						_React$useState2 = (0, slicedToArray.Z)(
 							_React$useState,
-							2
+							2,
 						),
 						isClicked = _React$useState2[0],
 						setIsClicked = _React$useState2[1]
@@ -77,11 +77,11 @@
 													className:
 														'py-2.5 px-5 mr-2 mb-2 text-xs font-medium text-gray-600 focus:outline-none bg-transparent rounded-full border-2 border-blue-300 hover:bg-gray-100 hover:text-gray-600 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700',
 												},
-												item.messages
+												item.messages,
 											)
-										})
-								)
-							)
+										}),
+								),
+							),
 						),
 						__jsx(
 							'div',
@@ -98,13 +98,13 @@
 										className:
 											'flex items-center justify-center ',
 										onClick: function onClick() {
-											return setIsClicked(function (
-												prevState
-											) {
-												return null !== prevState
-													? null
-													: 1
-											})
+											return setIsClicked(
+												function (prevState) {
+													return null !== prevState
+														? null
+														: 1
+												},
+											)
 										},
 									},
 									__jsx(md_index_esm._b$, {
@@ -128,10 +128,10 @@
 														type: 'file',
 														className:
 															'text-sm text-grey-500 file:mr-5 file:py-2 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:cursor-pointer hover:file:bg-amber-50 hover:file:text-amber-700',
-													})
-												)
-											)
-										)
+													}),
+												),
+											),
+										),
 								),
 								__jsx(
 									'button',
@@ -139,13 +139,13 @@
 										className:
 											'flex items-center justify-center  ',
 										onClick: function onClick() {
-											return setIsClicked(function (
-												prevState
-											) {
-												return null !== prevState
-													? null
-													: 2
-											})
+											return setIsClicked(
+												function (prevState) {
+													return null !== prevState
+														? null
+														: 2
+												},
+											)
 										},
 									},
 									__jsx(bi_index_esm.Zw4, {
@@ -169,10 +169,10 @@
 														type: 'file',
 														className:
 															'text-sm text-grey-500 file:mr-5 file:py-2 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:cursor-pointer hover:file:bg-amber-50 hover:file:text-amber-700 ',
-													})
-												)
-											)
-										)
+													}),
+												),
+											),
+										),
 								),
 								__jsx(
 									'button',
@@ -180,13 +180,13 @@
 										className:
 											'flex items-center justify-center  ',
 										onClick: function onClick() {
-											return setIsClicked(function (
-												prevState
-											) {
-												return null !== prevState
-													? null
-													: 3
-											})
+											return setIsClicked(
+												function (prevState) {
+													return null !== prevState
+														? null
+														: 3
+												},
+											)
 										},
 									},
 									__jsx(ri_index_esm.xup, {
@@ -210,10 +210,10 @@
 														type: 'file',
 														className:
 															'text-sm text-grey-500 file:mr-5 file:py-2 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:cursor-pointer hover:file:bg-amber-50 hover:file:text-amber-700 ',
-													})
-												)
-											)
-										)
+													}),
+												),
+											),
+										),
 								),
 								__jsx(
 									'button',
@@ -224,8 +224,8 @@
 									__jsx(index_esm.RcD, {
 										size: 20,
 										className: 'mr-1',
-									})
-								)
+									}),
+								),
 							),
 							__jsx(
 								'div',
@@ -236,7 +236,7 @@
 										htmlFor: 'add-comment',
 										className: 'sr-only',
 									},
-									'Add your comment to the post'
+									'Add your comment to the post',
 								),
 								__jsx('input', {
 									type: 'text',
@@ -244,7 +244,7 @@
 										'border-transparent bg-transparent focus:border-blue-300 px-5 py-2 w-full',
 									placeholder: 'Type custom inquiry here',
 									id: 'add-comment',
-								})
+								}),
 							),
 							__jsx(
 								'div',
@@ -258,7 +258,7 @@
 									__jsx(md_index_esm.HYj, {
 										size: 20,
 										className: 'mr-1',
-									})
+									}),
 								),
 								__jsx(
 									'button',
@@ -269,10 +269,10 @@
 									__jsx(io5_index_esm.VzJ, {
 										size: 20,
 										className: 'mr-1',
-									})
-								)
-							)
-						)
+									}),
+								),
+							),
+						),
 					)
 				}
 			;(MessageInput.displayName = 'MessageInput'),
@@ -312,10 +312,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -331,13 +329,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -372,7 +373,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -390,11 +391,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

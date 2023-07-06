@@ -37,7 +37,7 @@ const SectionCardTitle = ({
 			className="flex gap-1 items-center justify-start mb-2.5 cursor-pointer"
 			onClick={() =>
 				handleCollapse(
-					collapseIndex === sectionIndex ? null : sectionIndex
+					collapseIndex === sectionIndex ? null : sectionIndex,
 				)
 			}
 			ref={sectionPointer}

@@ -16,7 +16,7 @@ export const BubbleMessage = ({
 									message.map(
 										(
 											{ message, user, timestamp },
-											index
+											index,
 										) => (
 											<>
 												<li
@@ -51,7 +51,7 @@ export const BubbleMessage = ({
 														<span className="block text-xs text-slate-500">
 															<span>// </span>
 															{moment(
-																timestamp
+																timestamp,
 															).format('hh:mm A')}
 														</span>
 													</div>
@@ -70,7 +70,7 @@ export const BubbleMessage = ({
 													</li>
 												)}
 											</>
-										)
+										),
 									)}
 							</ul>
 						</div>

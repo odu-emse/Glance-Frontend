@@ -5,31 +5,31 @@
 		'./components/common/pages/admin_panel/module_card/module_card.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { O: () => ModuleCard })
 			var _Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_extends_js__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/extends.js'
+						'./node_modules/@babel/runtime/helpers/esm/extends.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_icons_bi__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/react-icons/bi/index.esm.js'
+						'./node_modules/react-icons/bi/index.esm.js',
 					),
 				react_icons_ri__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/react-icons/ri/index.esm.js'
+						'./node_modules/react-icons/ri/index.esm.js',
 					),
 				_dnd_kit_sortable__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@dnd-kit/sortable/dist/sortable.esm.js'
+						'./node_modules/@dnd-kit/sortable/dist/sortable.esm.js',
 					),
 				_dnd_kit_utilities__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/@dnd-kit/utilities/dist/utilities.esm.js'
+						'./node_modules/@dnd-kit/utilities/dist/utilities.esm.js',
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				ModuleCard = function ModuleCard(_ref) {
@@ -49,7 +49,7 @@
 						style = {
 							transform:
 								_dnd_kit_utilities__WEBPACK_IMPORTED_MODULE_2__.ux.Transform.toString(
-									transform
+									transform,
 								),
 							transition,
 						}
@@ -63,7 +63,7 @@
 							{
 								className:
 									'border-solid border-gray bg-gray-200  hover:bg-gray-100 rounded flex justify-between border',
-							}
+							},
 						),
 						__jsx(
 							'div',
@@ -71,7 +71,7 @@
 							__jsx(
 								'p',
 								{ className: 'text-2xl py-2' },
-								moduleName
+								moduleName,
 							),
 							__jsx(
 								'div',
@@ -79,28 +79,28 @@
 								__jsx(
 									'p',
 									{ className: 'uppercase pr-2' },
-									instructorName
+									instructorName,
 								),
 								__jsx(
 									'p',
 									{ className: 'uppercase px-2' },
 									registeredUsers,
-									' Registered Users'
-								)
-							)
+									' Registered Users',
+								),
+							),
 						),
 						__jsx(
 							'div',
 							{ className: 'flex gap-3 items-center m-2' },
 							__jsx(
 								react_icons_bi__WEBPACK_IMPORTED_MODULE_4__.aJk,
-								{ size: 25 }
+								{ size: 25 },
 							),
 							__jsx(
 								react_icons_ri__WEBPACK_IMPORTED_MODULE_5__.Ehm,
-								{ size: 25 }
-							)
-						)
+								{ size: 25 },
+							),
+						),
 					)
 				}
 			;(ModuleCard.displayName = 'ModuleCard'),
@@ -186,7 +186,7 @@
 		'./components/pages/admin_panel_page/modules/modules.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -198,24 +198,24 @@
 				_Default$parameters2,
 				_Default$parameters2$,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				taggedTemplateLiteral = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
 				),
 				module_card = __webpack_require__(
-					'./components/common/pages/admin_panel/module_card/module_card.tsx'
+					'./components/common/pages/admin_panel/module_card/module_card.tsx',
 				),
 				core_esm = __webpack_require__(
-					'./node_modules/@dnd-kit/core/dist/core.esm.js'
+					'./node_modules/@dnd-kit/core/dist/core.esm.js',
 				),
 				sortable_esm = __webpack_require__(
-					'./node_modules/@dnd-kit/sortable/dist/sortable.esm.js'
+					'./node_modules/@dnd-kit/sortable/dist/sortable.esm.js',
 				),
 				gql_fetcher = __webpack_require__('./utils/gql_fetcher.ts'),
 				esm = __webpack_require__(
-					'./node_modules/graphql-request/build/esm/index.js'
+					'./node_modules/graphql-request/build/esm/index.js',
 				),
 				dist = __webpack_require__('./node_modules/swr/dist/index.mjs'),
 				__jsx = react.createElement,
@@ -232,7 +232,7 @@
 							(0, core_esm.VT)(core_esm.we),
 							(0, core_esm.VT)(core_esm.Lg, {
 								coordinateGetter: sortable_esm.is,
-							})
+							}),
 						),
 						_useSWR = (0, dist.ZP)(
 							{
@@ -241,10 +241,10 @@
 										(_templateObject = (0,
 										taggedTemplateLiteral.Z)([
 											'\n\t\t\t\t{\n\t\t\t\t\tmodule(input: {}) {\n\t\t\t\t\t\tid\n\t\t\t\t\t\tmoduleName\n\t\t\t\t\t\tdescription\n\t\t\t\t\t\tmembers {\n\t\t\t\t\t\t\trole\n\t\t\t\t\t\t\tplan {\n\t\t\t\t\t\t\t\tstudent {\n\t\t\t\t\t\t\t\t\tfirstName\n\t\t\t\t\t\t\t\t\tlastName\n\t\t\t\t\t\t\t\t\temail\n\t\t\t\t\t\t\t\t\tpicURL\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tcollections {\n\t\t\t\t\t\t\tlessons {\n\t\t\t\t\t\t\t\tthreads {\n\t\t\t\t\t\t\t\t\ttitle\n\t\t\t\t\t\t\t\t\tauthor {\n\t\t\t\t\t\t\t\t\t\temail\n\t\t\t\t\t\t\t\t\t\tfirstName\n\t\t\t\t\t\t\t\t\t\tlastName\n\t\t\t\t\t\t\t\t\t\tpicURL\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tbody\n\t\t\t\t\t\t\t\t\tupvotes {\n\t\t\t\t\t\t\t\t\t\tid\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t',
-										]))
+										])),
 								),
 							},
-							gql_fetcher.Z
+							gql_fetcher.Z,
 						),
 						data = _useSWR.data,
 						error = _useSWR.error
@@ -259,7 +259,7 @@
 							__jsx(
 								'h1',
 								{ className: 'text-2xl m-3 py-2' },
-								'Your Modules'
+								'Your Modules',
 							),
 							__jsx(
 								core_esm.LB,
@@ -275,7 +275,7 @@
 																active.id ===
 																item.module.id
 															)
-														}
+														},
 													),
 													newIndex = items.findIndex(
 														function (item) {
@@ -283,15 +283,18 @@
 																over.id ===
 																item.module.id
 															)
-														}
+														},
 													)
-												return (0,
-												sortable_esm.Rp)(items, oldIndex, newIndex)
+												return (0, sortable_esm.Rp)(
+													items,
+													oldIndex,
+													newIndex,
+												)
 											})
 										setActive(null)
 									},
 									onDragStart: function handleOnDragStart(
-										event
+										event,
 									) {
 										var active = event.active
 										setActive(
@@ -299,7 +302,7 @@
 												return (
 													active.id === item.module.id
 												)
-											})
+											}),
 										)
 									},
 									collisionDetection: core_esm.pE,
@@ -321,13 +324,13 @@
 														(_mod$members$filter$ =
 															mod.members.filter(
 																function (
-																	member
+																	member,
 																) {
 																	return (
 																		'TEACHER' ===
 																		member.role
 																	)
-																}
+																},
 															)[0]) ||
 													void 0 ===
 														_mod$members$filter$
@@ -336,9 +339,9 @@
 																.plan.student
 																.firstName,
 												registeredUsers: 50,
-											})
+											}),
 										)
-									})
+									}),
 								),
 								__jsx(
 									core_esm.y9,
@@ -352,9 +355,9 @@
 												instructorName: 'Joeal',
 												registeredUsers: 50,
 										  })
-										: null
-								)
-							)
+										: null,
+								),
+							),
 						)
 					)
 				}
@@ -408,10 +411,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -427,13 +428,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -534,7 +538,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -552,17 +556,17 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./utils/gql_fetcher.ts': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				L: () => client,
@@ -570,16 +574,16 @@
 			})
 			var graphql_request__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/graphql-request/build/esm/index.js'
+						'./node_modules/graphql-request/build/esm/index.js',
 					),
 				client = new graphql_request__WEBPACK_IMPORTED_MODULE_0__.g6(
 					'http://localhost:4000/graphql',
-					{ headers: {} }
+					{ headers: {} },
 				)
 			const __WEBPACK_DEFAULT_EXPORT__ = function gqlFetcher(args) {
 				return new graphql_request__WEBPACK_IMPORTED_MODULE_0__.g6(
 					'http://localhost:4000/graphql',
-					{ headers: { authorization: args.token } }
+					{ headers: { authorization: args.token } },
 				).request(args.query, args.variables || {})
 			}
 		},

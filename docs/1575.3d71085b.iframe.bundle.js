@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./node_modules/react-icons/bs/index.esm.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				YZq: () => BsFillClockFill,
@@ -72,7 +72,7 @@
 				y_S: () => BsBoxArrowUpRight,
 			})
 			var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-				'./node_modules/react-icons/lib/esm/index.js'
+				'./node_modules/react-icons/lib/esm/index.js',
 			)
 			function BsFillBellFill(props) {
 				return (0, _lib__WEBPACK_IMPORTED_MODULE_0__.w_)({

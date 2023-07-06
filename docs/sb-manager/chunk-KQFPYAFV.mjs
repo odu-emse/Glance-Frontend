@@ -10,7 +10,7 @@ var __create = Object.create,
 				mod ||
 					(0, cb[__getOwnPropNames(cb)[0]])(
 						(mod = { exports: {} }).exports,
-						mod
+						mod,
 					),
 				mod.exports
 			)
@@ -34,7 +34,7 @@ var __create = Object.create,
 			isNodeMode || !mod || !mod.__esModule
 				? __defProp(target, 'default', { value: mod, enumerable: !0 })
 				: target,
-			mod
+			mod,
 		)
 	)
 export { __commonJS, __toESM }

@@ -35,7 +35,7 @@ const ModuleIndexPage = () => {
 					},
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	) as {
 		data: {
 			modulesFromLearningPath: Module[]
@@ -75,7 +75,7 @@ const ModuleIndexPage = () => {
 	}
 
 	const moduleData = data.modulesFromLearningPath.find(
-		(v) => v.id === moduleId
+		(v) => v.id === moduleId,
 	)
 
 	console.log(moduleData)
@@ -184,7 +184,7 @@ const ModuleIndexPage = () => {
 											</li>
 										)
 									})
-							}
+							},
 						)}
 					</ul>
 				</section>

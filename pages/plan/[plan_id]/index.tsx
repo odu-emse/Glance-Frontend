@@ -18,7 +18,7 @@ function PlanOfStudyIndexPage() {
 	const { user: account } = useContext(GlobalUserContext)
 	const { data, error } = useSWR(
 		account !== null ? getLPbyPlanID(account.plan.id) : null,
-		gql_fetcher
+		gql_fetcher,
 	) as {
 		data: { learningPath: Array<LearningPath> }
 		error: Error

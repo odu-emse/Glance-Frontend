@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function _taggedTemplateLiteral(strings, raw) {
@@ -14,7 +14,7 @@
 					Object.freeze(
 						Object.defineProperties(strings, {
 							raw: { value: Object.freeze(raw) },
-						})
+						}),
 					)
 				)
 			}
@@ -24,7 +24,7 @@
 		},
 		'./node_modules/cross-fetch/dist/browser-ponyfill.js': function (
 			module,
-			exports
+			exports,
 		) {
 			var global = 'undefined' != typeof self ? self : this,
 				__self__ = (function () {
@@ -70,7 +70,7 @@
 									return (
 										obj &&
 										viewClasses.indexOf(
-											Object.prototype.toString.call(obj)
+											Object.prototype.toString.call(obj),
 										) > -1
 									)
 								}
@@ -80,7 +80,7 @@
 							/[^a-z0-9\-#$%&'*+.^_`|~]/i.test(name))
 						)
 							throw new TypeError(
-								'Invalid character in header field name'
+								'Invalid character in header field name',
 							)
 						return name.toLowerCase()
 					}
@@ -120,7 +120,7 @@
 										function (name) {
 											this.append(name, headers[name])
 										},
-										this
+										this,
 								  )
 					}
 					function consumed(body) {
@@ -161,12 +161,12 @@
 											? (this._bodyBlob = body)
 											: support.formData &&
 											  FormData.prototype.isPrototypeOf(
-													body
+													body,
 											  )
 											? (this._bodyFormData = body)
 											: support.searchParams &&
 											  URLSearchParams.prototype.isPrototypeOf(
-													body
+													body,
 											  )
 											? (this._bodyText = body.toString())
 											: support.arrayBuffer &&
@@ -175,7 +175,7 @@
 													return (
 														obj &&
 														DataView.prototype.isPrototypeOf(
-															obj
+															obj,
 														)
 													)
 											  })(body)
@@ -186,35 +186,35 @@
 											  ])))
 											: support.arrayBuffer &&
 											  (ArrayBuffer.prototype.isPrototypeOf(
-													body
+													body,
 											  ) ||
 													isArrayBufferView(body))
 											? (this._bodyArrayBuffer =
 													bufferClone(body))
 											: (this._bodyText = body =
 													Object.prototype.toString.call(
-														body
+														body,
 													))
 										: (this._bodyText = ''),
 									this.headers.get('content-type') ||
 										('string' == typeof body
 											? this.headers.set(
 													'content-type',
-													'text/plain;charset=UTF-8'
+													'text/plain;charset=UTF-8',
 											  )
 											: this._bodyBlob &&
 											  this._bodyBlob.type
 											? this.headers.set(
 													'content-type',
-													this._bodyBlob.type
+													this._bodyBlob.type,
 											  )
 											: support.searchParams &&
 											  URLSearchParams.prototype.isPrototypeOf(
-													body
+													body,
 											  ) &&
 											  this.headers.set(
 													'content-type',
-													'application/x-www-form-urlencoded;charset=UTF-8'
+													'application/x-www-form-urlencoded;charset=UTF-8',
 											  ))
 							}),
 							support.blob &&
@@ -225,24 +225,24 @@
 										return Promise.resolve(this._bodyBlob)
 									if (this._bodyArrayBuffer)
 										return Promise.resolve(
-											new Blob([this._bodyArrayBuffer])
+											new Blob([this._bodyArrayBuffer]),
 										)
 									if (this._bodyFormData)
 										throw new Error(
-											'could not read FormData body as blob'
+											'could not read FormData body as blob',
 										)
 									return Promise.resolve(
-										new Blob([this._bodyText])
+										new Blob([this._bodyText]),
 									)
 								}),
 								(this.arrayBuffer = function () {
 									return this._bodyArrayBuffer
 										? consumed(this) ||
 												Promise.resolve(
-													this._bodyArrayBuffer
+													this._bodyArrayBuffer,
 												)
 										: this.blob().then(
-												readBlobAsArrayBuffer
+												readBlobAsArrayBuffer,
 										  )
 								})),
 							(this.text = function () {
@@ -260,21 +260,21 @@
 											for (
 												var view = new Uint8Array(buf),
 													chars = new Array(
-														view.length
+														view.length,
 													),
 													i = 0;
 												i < view.length;
 												i++
 											)
 												chars[i] = String.fromCharCode(
-													view[i]
+													view[i],
 												)
 											return chars.join('')
-										})(this._bodyArrayBuffer)
+										})(this._bodyArrayBuffer),
 									)
 								if (this._bodyFormData)
 									throw new Error(
-										'could not read FormData body as text'
+										'could not read FormData body as text',
 									)
 								return Promise.resolve(this._bodyText)
 							}),
@@ -314,7 +314,7 @@
 						}),
 						(Headers.prototype.forEach = function (
 							callback,
-							thisArg
+							thisArg,
 						) {
 							for (var name in this.map)
 								this.map.hasOwnProperty(name) &&
@@ -322,7 +322,7 @@
 										thisArg,
 										this.map[name],
 										name,
-										this
+										this,
 									)
 						}),
 						(Headers.prototype.keys = function () {
@@ -400,7 +400,7 @@
 								body)
 						)
 							throw new TypeError(
-								'Body not allowed for GET or HEAD requests'
+								'Body not allowed for GET or HEAD requests',
 							)
 						this._initBody(body)
 					}
@@ -421,7 +421,7 @@
 												.replace(/\+/g, ' ')
 										form.append(
 											decodeURIComponent(name),
-											decodeURIComponent(value)
+											decodeURIComponent(value),
 										)
 									}
 								}),
@@ -483,7 +483,7 @@
 							this.stack = error.stack
 						}),
 							(exports.DOMException.prototype = Object.create(
-								Error.prototype
+								Error.prototype,
 							)),
 							(exports.DOMException.prototype.constructor =
 								exports.DOMException)
@@ -495,8 +495,8 @@
 								return reject(
 									new exports.DOMException(
 										'Aborted',
-										'AbortError'
-									)
+										'AbortError',
+									),
 								)
 							var xhr = new XMLHttpRequest()
 							function abortXhr() {
@@ -527,7 +527,7 @@
 															.trim()
 														headers.append(
 															key,
-															value
+															value,
 														)
 													}
 												}),
@@ -545,20 +545,20 @@
 							}),
 								(xhr.onerror = function () {
 									reject(
-										new TypeError('Network request failed')
+										new TypeError('Network request failed'),
 									)
 								}),
 								(xhr.ontimeout = function () {
 									reject(
-										new TypeError('Network request failed')
+										new TypeError('Network request failed'),
 									)
 								}),
 								(xhr.onabort = function () {
 									reject(
 										new exports.DOMException(
 											'Aborted',
-											'AbortError'
-										)
+											'AbortError',
+										),
 									)
 								}),
 								xhr.open(request.method, request.url, !0),
@@ -575,19 +575,19 @@
 								request.signal &&
 									(request.signal.addEventListener(
 										'abort',
-										abortXhr
+										abortXhr,
 									),
 									(xhr.onreadystatechange = function () {
 										4 === xhr.readyState &&
 											request.signal.removeEventListener(
 												'abort',
-												abortXhr
+												abortXhr,
 											)
 									})),
 								xhr.send(
 									void 0 === request._bodyInit
 										? null
-										: request._bodyInit
+										: request._bodyInit,
 								)
 						})
 					}
@@ -628,16 +628,16 @@
 		'./node_modules/extract-files/public/extractFiles.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var defaultIsExtractableFile = __webpack_require__(
-				'./node_modules/extract-files/public/isExtractableFile.js'
+				'./node_modules/extract-files/public/isExtractableFile.js',
 			)
 			module.exports = function extractFiles(
 				value,
 				path,
-				isExtractableFile
+				isExtractableFile,
 			) {
 				var clone
 				void 0 === path && (path = ''),
@@ -662,14 +662,14 @@
 							value,
 							function (file, i) {
 								return addFile(['' + prefix + i], file), null
-							}
+							},
 						)
 					else if (Array.isArray(value))
 						clone = value.map(function (child, i) {
 							var result = extractFiles(
 								child,
 								'' + prefix + i,
-								isExtractableFile
+								isExtractableFile,
 							)
 							return result.files.forEach(addFile), result.clone
 						})
@@ -678,7 +678,7 @@
 							var result = extractFiles(
 								value[i],
 								'' + prefix + i,
-								isExtractableFile
+								isExtractableFile,
 							)
 							result.files.forEach(addFile),
 								(clone[i] = result.clone)
@@ -691,11 +691,11 @@
 		'./node_modules/extract-files/public/isExtractableFile.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var ReactNativeFile = __webpack_require__(
-				'./node_modules/extract-files/public/ReactNativeFile.js'
+				'./node_modules/extract-files/public/ReactNativeFile.js',
 			)
 			module.exports = function isExtractableFile(value) {
 				return (
@@ -712,7 +712,7 @@
 		'./node_modules/graphql-request/build/esm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -724,16 +724,16 @@
 				stringify: JSON.stringify,
 			}
 			var isExtractableFile = __webpack_require__(
-					'./node_modules/extract-files/public/isExtractableFile.js'
+					'./node_modules/extract-files/public/isExtractableFile.js',
 				),
 				isExtractableFile_default =
 					__webpack_require__.n(isExtractableFile),
 				extractFiles = __webpack_require__(
-					'./node_modules/extract-files/public/extractFiles.js'
+					'./node_modules/extract-files/public/extractFiles.js',
 				),
 				extractFiles_default = __webpack_require__.n(extractFiles),
 				browser = __webpack_require__(
-					'./node_modules/form-data/lib/browser.js'
+					'./node_modules/form-data/lib/browser.js',
 				),
 				browser_default = __webpack_require__.n(browser)
 			const isExtractableFileEnhanced = (value) =>
@@ -745,19 +745,19 @@
 					query,
 					variables,
 					operationName,
-					jsonSerializer = defaultJsonSerializer
+					jsonSerializer = defaultJsonSerializer,
 				) => {
 					const { clone, files } = extractFiles_default()(
 						{ query, variables, operationName },
 						'',
-						isExtractableFileEnhanced
+						isExtractableFileEnhanced,
 					)
 					if (0 === files.size) {
 						if (!Array.isArray(query))
 							return jsonSerializer.stringify(clone)
 						if (void 0 !== variables && !Array.isArray(variables))
 							throw new Error(
-								'Cannot create request body with given variable type, array expected'
+								'Cannot create request body with given variable type, array expected',
 							)
 						const payload = query.reduce(
 							(accu, currentQuery, index) => (
@@ -769,7 +769,7 @@
 								}),
 								accu
 							),
-							[]
+							[],
 						)
 						return jsonSerializer.stringify(payload)
 					}
@@ -798,7 +798,7 @@
 					throw new Error(
 						null != message
 							? message
-							: 'Unexpected invariant triggered.'
+							: 'Unexpected invariant triggered.',
 					)
 			}
 			const LineRegExp = /\r\n|[\n\r]/g
@@ -858,15 +858,15 @@
 			}
 			function printPrefixedLines(lines) {
 				const existingLines = lines.filter(
-						([_, line]) => void 0 !== line
+						([_, line]) => void 0 !== line,
 					),
 					padLen = Math.max(
-						...existingLines.map(([prefix]) => prefix.length)
+						...existingLines.map(([prefix]) => prefix.length),
 					)
 				return existingLines
 					.map(
 						([prefix, line]) =>
-							prefix.padStart(padLen) + (line ? ' ' + line : '')
+							prefix.padStart(padLen) + (line ? ' ' + line : ''),
 					)
 					.join('\n')
 			}
@@ -905,7 +905,7 @@
 								? nodes
 								: nodes
 								? [nodes]
-								: void 0
+								: void 0,
 						))
 					const nodeLocations = undefinedIfEmpty(
 						null === (_this$nodes = this.nodes) ||
@@ -913,7 +913,7 @@
 							? void 0
 							: _this$nodes
 									.map((node) => node.loc)
-									.filter((loc) => null != loc)
+									.filter((loc) => null != loc),
 					)
 					;(this.source =
 						null != source
@@ -932,19 +932,19 @@
 						(this.locations =
 							positions && source
 								? positions.map((pos) =>
-										getLocation(source, pos)
+										getLocation(source, pos),
 								  )
 								: null == nodeLocations
 								? void 0
 								: nodeLocations.map((loc) =>
-										getLocation(loc.source, loc.start)
+										getLocation(loc.source, loc.start),
 								  ))
 					const originalExtensions = (function isObjectLike(value) {
 						return 'object' == typeof value && null !== value
 					})(
 						null == originalError
 							? void 0
-							: originalError.extensions
+							: originalError.extensions,
 					)
 						? null == originalError
 							? void 0
@@ -994,8 +994,8 @@
 										(location = node.loc).source,
 										getLocation(
 											location.source,
-											location.start
-										)
+											location.start,
+										),
 									))
 					else if (this.source && this.locations)
 						for (const location of this.locations)
@@ -1240,14 +1240,14 @@
 				}
 				return lines
 					.map((line, i) =>
-						0 === i ? line : line.slice(commonIndent)
+						0 === i ? line : line.slice(commonIndent),
 					)
 					.slice(
 						null !== (_firstNonEmptyLine2 = firstNonEmptyLine) &&
 							void 0 !== _firstNonEmptyLine2
 							? _firstNonEmptyLine2
 							: 0,
-						lastNonEmptyLine + 1
+						lastNonEmptyLine + 1,
 					)
 			}
 			function leadingWhitespace(str) {
@@ -1367,7 +1367,7 @@
 						0,
 						0,
 						0,
-						0
+						0,
 					)
 					;(this.source = source),
 						(this.lastToken = startOfFileToken),
@@ -1461,35 +1461,35 @@
 								lexer,
 								tokenKind_TokenKind.BANG,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 36:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.DOLLAR,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 38:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.AMP,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 40:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.PAREN_L,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 41:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.PAREN_R,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 46:
 							if (
@@ -1500,7 +1500,7 @@
 									lexer,
 									tokenKind_TokenKind.SPREAD,
 									position,
-									position + 3
+									position + 3,
 								)
 							break
 						case 58:
@@ -1508,56 +1508,56 @@
 								lexer,
 								tokenKind_TokenKind.COLON,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 61:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.EQUALS,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 64:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.AT,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 91:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.BRACKET_L,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 93:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.BRACKET_R,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 123:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.BRACE_L,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 124:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.PIPE,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 125:
 							return createToken(
 								lexer,
 								tokenKind_TokenKind.BRACE_R,
 								position,
-								position + 1
+								position + 1,
 							)
 						case 34:
 							return 34 === body.charCodeAt(position + 1) &&
@@ -1577,19 +1577,19 @@
 							  isSupplementaryCodePoint(body, position)
 							? `Unexpected character: ${printCodePointAt(
 									lexer,
-									position
+									position,
 							  )}.`
 							: `Invalid character: ${printCodePointAt(
 									lexer,
-									position
-							  )}.`
+									position,
+							  )}.`,
 					)
 				}
 				return createToken(
 					lexer,
 					tokenKind_TokenKind.EOF,
 					bodyLength,
-					bodyLength
+					bodyLength,
 				)
 			}
 			function readComment(lexer, start) {
@@ -1610,7 +1610,7 @@
 					tokenKind_TokenKind.COMMENT,
 					start,
 					position,
-					body.slice(start + 1, position)
+					body.slice(start + 1, position),
 				)
 			}
 			function readNumber(lexer, start, firstCode) {
@@ -1628,8 +1628,8 @@
 							position,
 							`Invalid number, unexpected digit after 0: ${printCodePointAt(
 								lexer,
-								position
-							)}.`
+								position,
+							)}.`,
 						)
 				} else
 					(position = readDigits(lexer, position, code)),
@@ -1654,8 +1654,8 @@
 						position,
 						`Invalid number, expected digit but got: ${printCodePointAt(
 							lexer,
-							position
-						)}.`
+							position,
+						)}.`,
 					)
 				return createToken(
 					lexer,
@@ -1664,7 +1664,7 @@
 						: tokenKind_TokenKind.INT,
 					start,
 					position,
-					body.slice(start, position)
+					body.slice(start, position),
 				)
 			}
 			function readDigits(lexer, start, firstCode) {
@@ -1674,8 +1674,8 @@
 						start,
 						`Invalid number, expected digit but got: ${printCodePointAt(
 							lexer,
-							start
-						)}.`
+							start,
+						)}.`,
 					)
 				const body = lexer.source.body
 				let position = start + 1
@@ -1698,7 +1698,7 @@
 								tokenKind_TokenKind.STRING,
 								start,
 								position + 1,
-								value
+								value,
 							)
 						)
 					if (92 !== code) {
@@ -1711,8 +1711,8 @@
 									position,
 									`Invalid character within String: ${printCodePointAt(
 										lexer,
-										position
-									)}.`
+										position,
+									)}.`,
 								)
 							position += 2
 						}
@@ -1723,11 +1723,11 @@
 								? 123 === body.charCodeAt(position + 2)
 									? readEscapedUnicodeVariableWidth(
 											lexer,
-											position
+											position,
 									  )
 									: readEscapedUnicodeFixedWidth(
 											lexer,
-											position
+											position,
 									  )
 								: readEscapedCharacter(lexer, position)
 						;(value += escape.value),
@@ -1738,7 +1738,7 @@
 				throw syntaxError(
 					lexer.source,
 					position,
-					'Unterminated string.'
+					'Unterminated string.',
 				)
 			}
 			function readEscapedUnicodeVariableWidth(lexer, position) {
@@ -1761,8 +1761,8 @@
 					position,
 					`Invalid Unicode escape sequence: "${body.slice(
 						position,
-						position + size
-					)}".`
+						position + size,
+					)}".`,
 				)
 			}
 			function readEscapedUnicodeFixedWidth(lexer, position) {
@@ -1787,8 +1787,8 @@
 					position,
 					`Invalid Unicode escape sequence: "${body.slice(
 						position,
-						position + 6
-					)}".`
+						position + 6,
+					)}".`,
 				)
 			}
 			function read16BitHexCode(body, position) {
@@ -1833,8 +1833,8 @@
 					position,
 					`Invalid character escape sequence: "${body.slice(
 						position,
-						position + 2
-					)}".`
+						position + 2,
+					)}".`,
 				)
 			}
 			function readBlockString(lexer, start) {
@@ -1859,7 +1859,7 @@
 							tokenKind_TokenKind.BLOCK_STRING,
 							start,
 							position + 3,
-							dedentBlockStringLines(blockLines).join('\n')
+							dedentBlockStringLines(blockLines).join('\n'),
 						)
 						return (
 							(lexer.line += blockLines.length - 1),
@@ -1882,8 +1882,8 @@
 										position,
 										`Invalid character within String: ${printCodePointAt(
 											lexer,
-											position
-										)}.`
+											position,
+										)}.`,
 									)
 								position += 2
 							}
@@ -1905,7 +1905,7 @@
 				throw syntaxError(
 					lexer.source,
 					position,
-					'Unterminated string.'
+					'Unterminated string.',
 				)
 			}
 			function readName(lexer, start) {
@@ -1921,7 +1921,7 @@
 					tokenKind_TokenKind.NAME,
 					start,
 					position,
-					body.slice(start, position)
+					body.slice(start, position),
 				)
 			}
 			function devAssert(condition, message) {
@@ -1943,7 +1943,7 @@
 					case 'object':
 						return (function formatObjectValue(
 							value,
-							previouslySeenValues
+							previouslySeenValues,
 						) {
 							if (null === value) return 'null'
 							if (previouslySeenValues.includes(value))
@@ -1962,26 +1962,26 @@
 							} else if (Array.isArray(value))
 								return (function formatArray(
 									array,
-									seenValues
+									seenValues,
 								) {
 									if (0 === array.length) return '[]'
 									if (seenValues.length > MAX_RECURSIVE_DEPTH)
 										return '[Array]'
 									const len = Math.min(
 											MAX_ARRAY_LENGTH,
-											array.length
+											array.length,
 										),
 										remaining = array.length - len,
 										items = []
 									for (let i = 0; i < len; ++i)
 										items.push(
-											formatValue(array[i], seenValues)
+											formatValue(array[i], seenValues),
 										)
 									1 === remaining
 										? items.push('... 1 more item')
 										: remaining > 1 &&
 										  items.push(
-												`... ${remaining} more items`
+												`... ${remaining} more items`,
 										  )
 									return '[' + items.join(', ') + ']'
 								})(value, seenValues)
@@ -2018,7 +2018,7 @@
 									([key, value]) =>
 										key +
 										': ' +
-										formatValue(value, seenValues)
+										formatValue(value, seenValues),
 								)
 								return '{ ' + properties.join(', ') + ' }'
 							})(value, seenValues)
@@ -2034,12 +2034,14 @@
 				constructor(
 					body,
 					name = 'GraphQL request',
-					locationOffset = { line: 1, column: 1 }
+					locationOffset = { line: 1, column: 1 },
 				) {
 					'string' == typeof body ||
 						devAssert(
 							!1,
-							`Body must be a string. Received: ${inspect(body)}.`
+							`Body must be a string. Received: ${inspect(
+								body,
+							)}.`,
 						),
 						(this.body = body),
 						(this.name = name),
@@ -2047,12 +2049,12 @@
 						this.locationOffset.line > 0 ||
 							devAssert(
 								!1,
-								'line in locationOffset is 1-indexed and must be positive.'
+								'line in locationOffset is 1-indexed and must be positive.',
 							),
 						this.locationOffset.column > 0 ||
 							devAssert(
 								!1,
-								'column in locationOffset is 1-indexed and must be positive.'
+								'column in locationOffset is 1-indexed and must be positive.',
 							)
 				}
 				get [Symbol.toStringTag]() {
@@ -2083,7 +2085,7 @@
 						definitions: this.many(
 							tokenKind_TokenKind.SOF,
 							this.parseDefinition,
-							tokenKind_TokenKind.EOF
+							tokenKind_TokenKind.EOF,
 						),
 					})
 				}
@@ -2117,7 +2119,7 @@
 							throw syntaxError(
 								this._lexer.source,
 								this._lexer.token.start,
-								'Unexpected description, descriptions are supported only on type definitions.'
+								'Unexpected description, descriptions are supported only on type definitions.',
 							)
 						switch (keywordToken.value) {
 							case 'query':
@@ -2161,7 +2163,7 @@
 				}
 				parseOperationType() {
 					const operationToken = this.expectToken(
-						tokenKind_TokenKind.NAME
+						tokenKind_TokenKind.NAME,
 					)
 					switch (operationToken.value) {
 						case 'query':
@@ -2177,7 +2179,7 @@
 					return this.optionalMany(
 						tokenKind_TokenKind.PAREN_L,
 						this.parseVariableDefinition,
-						tokenKind_TokenKind.PAREN_R
+						tokenKind_TokenKind.PAREN_R,
 					)
 				}
 				parseVariableDefinition() {
@@ -2188,7 +2190,7 @@
 							(this.expectToken(tokenKind_TokenKind.COLON),
 							this.parseTypeReference()),
 						defaultValue: this.expectOptionalToken(
-							tokenKind_TokenKind.EQUALS
+							tokenKind_TokenKind.EQUALS,
 						)
 							? this.parseConstValueLiteral()
 							: void 0,
@@ -2211,7 +2213,7 @@
 						selections: this.many(
 							tokenKind_TokenKind.BRACE_L,
 							this.parseSelection,
-							tokenKind_TokenKind.BRACE_R
+							tokenKind_TokenKind.BRACE_R,
 						),
 					})
 				}
@@ -2247,7 +2249,7 @@
 					return this.optionalMany(
 						tokenKind_TokenKind.PAREN_L,
 						item,
-						tokenKind_TokenKind.PAREN_R
+						tokenKind_TokenKind.PAREN_R,
 					)
 				}
 				parseArgument(isConst = !1) {
@@ -2369,7 +2371,7 @@
 							if (isConst) {
 								if (
 									(this.expectToken(
-										tokenKind_TokenKind.DOLLAR
+										tokenKind_TokenKind.DOLLAR,
 									),
 									this._lexer.token.kind ===
 										tokenKind_TokenKind.NAME)
@@ -2378,7 +2380,7 @@
 									throw syntaxError(
 										this._lexer.source,
 										token.start,
-										`Unexpected variable "$${varName}" in constant value.`
+										`Unexpected variable "$${varName}" in constant value.`,
 									)
 								}
 								throw this.unexpected(token)
@@ -2409,7 +2411,7 @@
 						values: this.any(
 							tokenKind_TokenKind.BRACKET_L,
 							() => this.parseValueLiteral(isConst),
-							tokenKind_TokenKind.BRACKET_R
+							tokenKind_TokenKind.BRACKET_R,
 						),
 					})
 				}
@@ -2419,7 +2421,7 @@
 						fields: this.any(
 							tokenKind_TokenKind.BRACE_L,
 							() => this.parseObjectField(isConst),
-							tokenKind_TokenKind.BRACE_R
+							tokenKind_TokenKind.BRACE_R,
 						),
 					})
 				}
@@ -2498,7 +2500,7 @@
 						operationTypes = this.many(
 							tokenKind_TokenKind.BRACE_L,
 							this.parseOperationTypeDefinition,
-							tokenKind_TokenKind.BRACE_R
+							tokenKind_TokenKind.BRACE_R,
 						)
 					return this.node(start, {
 						kind: kinds_Kind.SCHEMA_DEFINITION,
@@ -2552,7 +2554,7 @@
 					return this.expectOptionalKeyword('implements')
 						? this.delimitedMany(
 								tokenKind_TokenKind.AMP,
-								this.parseNamedType
+								this.parseNamedType,
 						  )
 						: []
 				}
@@ -2560,7 +2562,7 @@
 					return this.optionalMany(
 						tokenKind_TokenKind.BRACE_L,
 						this.parseFieldDefinition,
-						tokenKind_TokenKind.BRACE_R
+						tokenKind_TokenKind.BRACE_R,
 					)
 				}
 				parseFieldDefinition() {
@@ -2584,7 +2586,7 @@
 					return this.optionalMany(
 						tokenKind_TokenKind.PAREN_L,
 						this.parseInputValueDef,
-						tokenKind_TokenKind.PAREN_R
+						tokenKind_TokenKind.PAREN_R,
 					)
 				}
 				parseInputValueDef() {
@@ -2642,7 +2644,7 @@
 					return this.expectOptionalToken(tokenKind_TokenKind.EQUALS)
 						? this.delimitedMany(
 								tokenKind_TokenKind.PIPE,
-								this.parseNamedType
+								this.parseNamedType,
 						  )
 						: []
 				}
@@ -2665,7 +2667,7 @@
 					return this.optionalMany(
 						tokenKind_TokenKind.BRACE_L,
 						this.parseEnumValueDefinition,
-						tokenKind_TokenKind.BRACE_R
+						tokenKind_TokenKind.BRACE_R,
 					)
 				}
 				parseEnumValueDefinition() {
@@ -2690,8 +2692,8 @@
 							this._lexer.source,
 							this._lexer.token.start,
 							`${getTokenDesc(
-								this._lexer.token
-							)} is reserved and cannot be used for an enum value.`
+								this._lexer.token,
+							)} is reserved and cannot be used for an enum value.`,
 						)
 					return this.parseName()
 				}
@@ -2714,7 +2716,7 @@
 					return this.optionalMany(
 						tokenKind_TokenKind.BRACE_L,
 						this.parseInputValueDef,
-						tokenKind_TokenKind.BRACE_R
+						tokenKind_TokenKind.BRACE_R,
 					)
 				}
 				parseTypeSystemExtension() {
@@ -2745,7 +2747,7 @@
 						operationTypes = this.optionalMany(
 							tokenKind_TokenKind.BRACE_L,
 							this.parseOperationTypeDefinition,
-							tokenKind_TokenKind.BRACE_R
+							tokenKind_TokenKind.BRACE_R,
 						)
 					if (0 === directives.length && 0 === operationTypes.length)
 						throw this.unexpected()
@@ -2877,7 +2879,7 @@
 				parseDirectiveLocations() {
 					return this.delimitedMany(
 						tokenKind_TokenKind.PIPE,
-						this.parseDirectiveLocation
+						this.parseDirectiveLocation,
 					)
 				}
 				parseDirectiveLocation() {
@@ -2886,7 +2888,7 @@
 					if (
 						Object.prototype.hasOwnProperty.call(
 							DirectiveLocation,
-							name.value
+							name.value,
 						)
 					)
 						return name
@@ -2898,7 +2900,7 @@
 							(node.loc = new Location(
 								startToken,
 								this._lexer.lastToken,
-								this._lexer.source
+								this._lexer.source,
 							)),
 						node
 					)
@@ -2913,8 +2915,8 @@
 						this._lexer.source,
 						token.start,
 						`Expected ${getTokenKindDesc(
-							kind
-						)}, found ${getTokenDesc(token)}.`
+							kind,
+						)}, found ${getTokenDesc(token)}.`,
 					)
 				}
 				expectOptionalToken(kind) {
@@ -2932,7 +2934,9 @@
 						throw syntaxError(
 							this._lexer.source,
 							token.start,
-							`Expected "${value}", found ${getTokenDesc(token)}.`
+							`Expected "${value}", found ${getTokenDesc(
+								token,
+							)}.`,
 						)
 					this.advanceLexer()
 				}
@@ -2949,7 +2953,7 @@
 					return syntaxError(
 						this._lexer.source,
 						token.start,
-						`Unexpected ${getTokenDesc(token)}.`
+						`Unexpected ${getTokenDesc(token)}.`,
 					)
 				}
 				any(openKind, parseFn, closeKind) {
@@ -2996,7 +3000,7 @@
 						throw syntaxError(
 							this._lexer.source,
 							token.start,
-							`Document contains more that ${maxTokens} tokens. Parsing aborted.`
+							`Document contains more that ${maxTokens} tokens. Parsing aborted.`,
 						)
 				}
 			}
@@ -3208,13 +3212,13 @@
 				return (function visit(
 					root,
 					visitor,
-					visitorKeys = QueryDocumentKeys
+					visitorKeys = QueryDocumentKeys,
 				) {
 					const enterLeaveMap = new Map()
 					for (const kind of Object.values(kinds_Kind))
 						enterLeaveMap.set(
 							kind,
-							getEnterLeaveForKind(visitor, kind)
+							getEnterLeaveForKind(visitor, kind),
 						)
 					let stack,
 						key,
@@ -3253,7 +3257,7 @@
 								} else {
 									node = Object.defineProperties(
 										{},
-										Object.getOwnPropertyDescriptors(node)
+										Object.getOwnPropertyDescriptors(node),
 									)
 									for (const [editKey, editValue] of edits)
 										node[editKey] = editValue
@@ -3278,12 +3282,12 @@
 							isNode(node) ||
 								devAssert(
 									!1,
-									`Invalid AST Node: ${inspect(node)}.`
+									`Invalid AST Node: ${inspect(node)}.`,
 								)
 							const visitFn = isLeaving
 								? null ===
 										(_enterLeaveMap$get = enterLeaveMap.get(
-											node.kind
+											node.kind,
 										)) || void 0 === _enterLeaveMap$get
 									? void 0
 									: _enterLeaveMap$get.leave
@@ -3303,7 +3307,7 @@
 												key,
 												parent,
 												path,
-												ancestors
+												ancestors,
 										  )),
 								result === BREAK)
 							)
@@ -3365,7 +3369,7 @@
 						const varDefs = wrap(
 								'(',
 								join(node.variableDefinitions, ', '),
-								')'
+								')',
 							),
 							prefix = join(
 								[
@@ -3373,7 +3377,7 @@
 									join([node.name, varDefs]),
 									join(node.directives, ' '),
 								],
-								' '
+								' ',
 							)
 						return (
 							('query' === prefix ? '' : prefix + ' ') +
@@ -3407,11 +3411,11 @@
 									wrap(
 										'(\n',
 										indent(join(args, '\n')),
-										'\n)'
+										'\n)',
 									)),
 							join(
 								[argsLine, join(directives, ' '), selectionSet],
-								' '
+								' ',
 							)
 						)
 					},
@@ -3430,7 +3434,7 @@
 								join(directives, ' '),
 								selectionSet,
 							],
-							' '
+							' ',
 						),
 				},
 				FragmentDefinition: {
@@ -3444,11 +3448,11 @@
 						`fragment ${name}${wrap(
 							'(',
 							join(variableDefinitions, ', '),
-							')'
+							')',
 						)} on ${typeCondition} ${wrap(
 							'',
 							join(directives, ' '),
-							' '
+							' ',
 						)}` + selectionSet,
 				},
 				IntValue: { leave: ({ value }) => value },
@@ -3459,7 +3463,7 @@
 							? (function printBlockString(value, options) {
 									const escapedValue = value.replace(
 											/"""/g,
-											'\\"""'
+											'\\"""',
 										),
 										lines =
 											escapedValue.split(/\r\n|[\n\r]/g),
@@ -3472,8 +3476,8 @@
 													(line) =>
 														0 === line.length ||
 														isWhiteSpace(
-															line.charCodeAt(0)
-														)
+															line.charCodeAt(0),
+														),
 												),
 										hasTrailingTripleQuotes =
 											escapedValue.endsWith('\\"""'),
@@ -3513,7 +3517,7 @@
 							: (function printString(str) {
 									return `"${str.replace(
 										escapedRegExp,
-										escapedReplacer
+										escapedReplacer,
 									)}"`
 							  })(value),
 				},
@@ -3547,7 +3551,7 @@
 								join(directives, ' '),
 								block(operationTypes),
 							],
-							' '
+							' ',
 						),
 				},
 				OperationTypeDefinition: {
@@ -3575,7 +3579,7 @@
 								join(directives, ' '),
 								block(fields),
 							],
-							' '
+							' ',
 						),
 				},
 				FieldDefinition: {
@@ -3610,7 +3614,7 @@
 								wrap('= ', defaultValue),
 								join(directives, ' '),
 							],
-							' '
+							' ',
 						),
 				},
 				InterfaceTypeDefinition: {
@@ -3630,7 +3634,7 @@
 								join(directives, ' '),
 								block(fields),
 							],
-							' '
+							' ',
 						),
 				},
 				UnionTypeDefinition: {
@@ -3643,7 +3647,7 @@
 								join(directives, ' '),
 								wrap('= ', join(types, ' | ')),
 							],
-							' '
+							' ',
 						),
 				},
 				EnumTypeDefinition: {
@@ -3656,7 +3660,7 @@
 								join(directives, ' '),
 								block(values),
 							],
-							' '
+							' ',
 						),
 				},
 				EnumValueDefinition: {
@@ -3674,7 +3678,7 @@
 								join(directives, ' '),
 								block(fields),
 							],
-							' '
+							' ',
 						),
 				},
 				DirectiveDefinition: {
@@ -3703,14 +3707,14 @@
 								join(directives, ' '),
 								block(operationTypes),
 							],
-							' '
+							' ',
 						),
 				},
 				ScalarTypeExtension: {
 					leave: ({ name, directives }) =>
 						join(
 							['extend scalar', name, join(directives, ' ')],
-							' '
+							' ',
 						),
 				},
 				ObjectTypeExtension: {
@@ -3723,7 +3727,7 @@
 								join(directives, ' '),
 								block(fields),
 							],
-							' '
+							' ',
 						),
 				},
 				InterfaceTypeExtension: {
@@ -3736,7 +3740,7 @@
 								join(directives, ' '),
 								block(fields),
 							],
-							' '
+							' ',
 						),
 				},
 				UnionTypeExtension: {
@@ -3748,7 +3752,7 @@
 								join(directives, ' '),
 								wrap('= ', join(types, ' | ')),
 							],
-							' '
+							' ',
 						),
 				},
 				EnumTypeExtension: {
@@ -3760,7 +3764,7 @@
 								join(directives, ' '),
 								block(values),
 							],
-							' '
+							' ',
 						),
 				},
 				InputObjectTypeExtension: {
@@ -3772,7 +3776,7 @@
 								join(directives, ' '),
 								block(fields),
 							],
-							' '
+							' ',
 						),
 				},
 			}
@@ -3806,7 +3810,7 @@
 							null == maybeArray
 								? void 0
 								: maybeArray.some((str) =>
-										str.includes('\n')
+										str.includes('\n'),
 								  )) &&
 					void 0 !== _maybeArray$some &&
 					_maybeArray$some
@@ -3816,7 +3820,7 @@
 					let operationName
 					const operationDefinitions = document.definitions.filter(
 						(definition) =>
-							'OperationDefinition' === definition.kind
+							'OperationDefinition' === definition.kind,
 					)
 					return (
 						1 === operationDefinitions.length &&
@@ -3831,11 +3835,11 @@
 						try {
 							const parsedDocument = (function parse(
 								source,
-								options
+								options,
 							) {
 								return new Parser(
 									source,
-									options
+									options,
 								).parseDocument()
 							})(document)
 							operationName = extractOperationName(parsedDocument)
@@ -3849,8 +3853,8 @@
 				constructor(response, request) {
 					super(
 						`${ClientError.extractMessage(
-							response
-						)}: ${JSON.stringify({ response, request })}`
+							response,
+						)}: ${JSON.stringify({ response, request })}`,
 					),
 						Object.setPrototypeOf(this, ClientError.prototype),
 						(this.response = response),
@@ -3866,7 +3870,7 @@
 				}
 			}
 			var browser_ponyfill = __webpack_require__(
-					'./node_modules/cross-fetch/dist/browser-ponyfill.js'
+					'./node_modules/cross-fetch/dist/browser-ponyfill.js',
 				),
 				browser_ponyfill_default =
 					__webpack_require__.n(browser_ponyfill)
@@ -3918,7 +3922,7 @@
 								query,
 								variables,
 								operationName,
-								fetchOptions.jsonSerializer
+								fetchOptions.jsonSerializer,
 						  )),
 						  'string' == typeof body &&
 								(headers['Content-Type'] = 'application/json'))
@@ -3927,7 +3931,7 @@
 									const params_ = params,
 										search = [
 											`query=${encodeURIComponent(
-												cleanQuery(params_.query)
+												cleanQuery(params_.query),
 											)}`,
 										]
 									return (
@@ -3935,15 +3939,15 @@
 											search.push(
 												`variables=${encodeURIComponent(
 													params_.jsonSerializer.stringify(
-														params_.variables
-													)
-												)}`
+														params_.variables,
+													),
+												)}`,
 											),
 										params_.operationName &&
 											search.push(
 												`operationName=${encodeURIComponent(
-													params_.operationName
-												)}`
+													params_.operationName,
+												)}`,
 											),
 										search.join('&')
 									)
@@ -3953,7 +3957,7 @@
 									!Array.isArray(params.variables)
 								)
 									throw new Error(
-										'Cannot create query with given variable type, array expected'
+										'Cannot create query with given variable type, array expected',
 									)
 								const params_ = params,
 									payload = params.query.reduce(
@@ -3964,16 +3968,16 @@
 													? params_.jsonSerializer.stringify(
 															params_.variables[
 																index
-															]
+															],
 													  )
 													: void 0,
 											}),
 											acc
 										),
-										[]
+										[],
 									)
 								return `query=${encodeURIComponent(
-									params_.jsonSerializer.stringify(payload)
+									params_.jsonSerializer.stringify(payload),
 								)}`
 						  })({
 								query,
@@ -3993,7 +3997,7 @@
 									url,
 									operationName,
 									variables,
-								})
+								}),
 							),
 							{ url: urlNew, ...initNew } = result
 						;(urlResolved = urlNew), (initResolved = initNew)
@@ -4014,7 +4018,7 @@
 								rawRequestOptions = ((
 									queryOrOptions,
 									variables,
-									requestHeaders
+									requestHeaders,
 								) =>
 									queryOrOptions.query
 										? queryOrOptions
@@ -4026,7 +4030,7 @@
 										  })(
 									queryOrOptions,
 									variables,
-									requestHeaders
+									requestHeaders,
 								),
 								{
 									headers,
@@ -4040,7 +4044,7 @@
 							void 0 !== rawRequestOptions.signal &&
 								(fetchOptions.signal = rawRequestOptions.signal)
 							const { operationName } = resolveRequestDocument(
-								rawRequestOptions.query
+								rawRequestOptions.query,
 							)
 							return makeRequest({
 								url,
@@ -4049,7 +4053,7 @@
 								headers: {
 									...resolveHeaders(callOrIdentity(headers)),
 									...resolveHeaders(
-										rawRequestOptions.requestHeaders
+										rawRequestOptions.requestHeaders,
 									),
 								},
 								operationName,
@@ -4063,7 +4067,7 @@
 										responseMiddleware &&
 											responseMiddleware(response),
 										response
-									)
+									),
 								)
 								.catch((error) => {
 									throw (
@@ -4083,7 +4087,7 @@
 						requestOptions = ((
 							documentOrOptions,
 							variables,
-							requestHeaders
+							requestHeaders,
 						) =>
 							documentOrOptions.document
 								? documentOrOptions
@@ -4095,7 +4099,7 @@
 								  })(
 							documentOrOptions,
 							variables,
-							requestHeaders
+							requestHeaders,
 						),
 						{
 							headers,
@@ -4109,7 +4113,7 @@
 					void 0 !== requestOptions.signal &&
 						(fetchOptions.signal = requestOptions.signal)
 					const { query, operationName } = resolveRequestDocument(
-						requestOptions.document
+						requestOptions.document,
 					)
 					return makeRequest({
 						url,
@@ -4130,7 +4134,7 @@
 								responseMiddleware &&
 									responseMiddleware(response),
 								response.data
-							)
+							),
 						)
 						.catch((error) => {
 							throw (
@@ -4143,7 +4147,7 @@
 				batchRequests(documentsOrOptions, requestHeaders) {
 					const batchRequestOptions = ((
 							documentsOrOptions,
-							requestHeaders
+							requestHeaders,
 						) =>
 							documentsOrOptions.documents
 								? documentsOrOptions
@@ -4157,10 +4161,10 @@
 						(fetchOptions.signal = batchRequestOptions.signal)
 					const queries = batchRequestOptions.documents.map(
 							({ document }) =>
-								resolveRequestDocument(document).query
+								resolveRequestDocument(document).query,
 						),
 						variables = batchRequestOptions.documents.map(
-							({ variables }) => variables
+							({ variables }) => variables,
 						)
 					return makeRequest({
 						url: this.url,
@@ -4169,7 +4173,7 @@
 						headers: {
 							...resolveHeaders(callOrIdentity(headers)),
 							...resolveHeaders(
-								batchRequestOptions.requestHeaders
+								batchRequestOptions.requestHeaders,
 							),
 						},
 						operationName: void 0,
@@ -4184,16 +4188,16 @@
 							(response) => (
 								this.requestConfig.responseMiddleware &&
 									this.requestConfig.responseMiddleware(
-										response
+										response,
 									),
 								response.data
-							)
+							),
 						)
 						.catch((error) => {
 							throw (
 								(this.requestConfig.responseMiddleware &&
 									this.requestConfig.responseMiddleware(
-										error
+										error,
 									),
 								error)
 							)
@@ -4218,13 +4222,13 @@
 			const makeRequest = async (params) => {
 				const { query, variables, fetchOptions } = params,
 					fetcher = createHttpMethodFetcher(
-						(params.method ?? 'post').toUpperCase()
+						(params.method ?? 'post').toUpperCase(),
 					)
 				const isBatchingQuery = Array.isArray(params.query),
 					response = await fetcher(params),
 					result = await getResult(
 						response,
-						fetchOptions.jsonSerializer ?? defaultJsonSerializer
+						fetchOptions.jsonSerializer ?? defaultJsonSerializer,
 					),
 					successfullyReceivedData = Array.isArray(result)
 						? !result.some(({ data }) => !data)
@@ -4260,7 +4264,7 @@
 						status: response.status,
 						headers: response.headers,
 					},
-					{ query, variables }
+					{ query, variables },
 				)
 			}
 			const getResult = async (response, jsonSerializer) => {
@@ -4280,7 +4284,7 @@
 							contentType
 								.toLowerCase()
 								.startsWith(
-									'application/graphql-response+json'
+									'application/graphql-response+json',
 								))
 							? jsonSerializer.parse(await response.text())
 							: response.text()
@@ -4294,18 +4298,18 @@
 							`${accumulator}${chunk}${
 								index in variables ? variables[index] : ''
 							}`,
-						''
+						'',
 					)
 		},
 		'./node_modules/swr/dist/index.mjs': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { ZP: () => useSWR })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-				'./node_modules/react/index.js'
+				'./node_modules/react/index.js',
 			)
 			function __awaiter(thisArg, _arguments, P, generator) {
 				return new (P || (P = Promise))(function (resolve, reject) {
@@ -4337,8 +4341,8 @@
 					step(
 						(generator = generator.apply(
 							thisArg,
-							_arguments || []
-						)).next()
+							_arguments || [],
+						)).next(),
 					)
 				})
 			}
@@ -4369,7 +4373,7 @@
 						return (function step(op) {
 							if (f)
 								throw new TypeError(
-									'Generator is already executing.'
+									'Generator is already executing.',
 								)
 							for (; _; )
 								try {
@@ -4591,7 +4595,7 @@
 					!IS_SERVER &&
 					navigatorConnection &&
 					(['slow-2g', '2g'].includes(
-						navigatorConnection.effectiveType
+						navigatorConnection.effectiveType,
 					) ||
 						navigatorConnection.saveData),
 				serialize = function (key) {
@@ -4621,7 +4625,7 @@
 					error,
 					isValidating,
 					revalidate,
-					broadcast
+					broadcast,
 				) {
 					void 0 === broadcast && (broadcast = !0)
 					var _a = SWRGlobalState.get(cache),
@@ -4683,7 +4687,7 @@
 													'boolean' == typeof _opts
 														? { revalidate: _opts }
 														: _opts || {})
-													.populateCache
+													.populateCache,
 											) || options.populateCache),
 										(revalidate =
 											!1 !== options.revalidate),
@@ -4711,7 +4715,7 @@
 												UNDEFINED,
 												UNDEFINED,
 												revalidate,
-												!0
+												!0,
 											),
 										]
 									if (
@@ -4723,17 +4727,17 @@
 										(rollbackData = cache.get(key)),
 										hasCustomOptimisticData &&
 											((optimisticData = isFunction(
-												customOptimisticData
+												customOptimisticData,
 											)
 												? customOptimisticData(
-														rollbackData
+														rollbackData,
 												  )
 												: customOptimisticData),
 											cache.set(key, optimisticData),
 											broadcastState(
 												cache,
 												key,
-												optimisticData
+												optimisticData,
 											)),
 										isFunction(data))
 									)
@@ -4772,15 +4776,15 @@
 												(isFunction(populateCache) &&
 													(data = populateCache(
 														data,
-														rollbackData
+														rollbackData,
 													)),
 												cache.set(key, data)),
 											cache.set(
 												keyInfo,
 												mergeObjects(
 													cache.get(keyInfo),
-													{ error }
-												)
+													{ error },
+												),
 											)),
 										(MUTATION[key][1] = getTimestamp()),
 										[
@@ -4792,7 +4796,7 @@
 												error,
 												UNDEFINED,
 												revalidate,
-												!!populateCache
+												!!populateCache,
 											),
 										]
 									)
@@ -4829,9 +4833,9 @@
 										revalidateAllKeys.bind(
 											UNDEFINED,
 											EVENT_REVALIDATORS,
-											0
-										)
-									)
+											0,
+										),
+									),
 								),
 								releaseReconnect_1 = opts.initReconnect(
 									setTimeout.bind(
@@ -4839,9 +4843,9 @@
 										revalidateAllKeys.bind(
 											UNDEFINED,
 											EVENT_REVALIDATORS,
-											1
-										)
-									)
+											1,
+										),
+									),
 								)
 							unmount = function () {
 								releaseFocus_1 && releaseFocus_1(),
@@ -4866,7 +4870,7 @@
 							__,
 							config,
 							revalidate,
-							opts
+							opts,
 						) {
 							var maxRetryCount = config.errorRetryCount,
 								currentRetryCount = opts.retryCount,
@@ -4903,7 +4907,7 @@
 						mutate,
 						fallback: {},
 					},
-					preset
+					preset,
 				),
 				mergeConfigs = function (a, b) {
 					var v = mergeObjects(a, b)
@@ -4943,9 +4947,9 @@
 								extendedConfig = mergeConfigs(
 									(0,
 									react__WEBPACK_IMPORTED_MODULE_0__.useContext)(
-										SWRConfigContext
+										SWRConfigContext,
 									),
-									value
+									value,
 								),
 								provider = value && value.provider,
 								cacheContext = (0,
@@ -4955,12 +4959,12 @@
 											? initCache(
 													provider(
 														extendedConfig.cache ||
-															cache
+															cache,
 													),
-													value
+													value,
 											  )
 											: UNDEFINED
-									}
+									},
 								)[0]
 							return (
 								cacheContext &&
@@ -4976,12 +4980,12 @@
 									SWRConfigContext.Provider,
 									mergeObjects(props, {
 										value: extendedConfig,
-									})
+									}),
 								)
 							)
 						},
 						'default',
-						{ value: defaultConfig }
+						{ value: defaultConfig },
 					),
 					(hook = function (_key, fetcher, config) {
 						var cache = config.cache,
@@ -5023,7 +5027,7 @@
 							patchFetchInfo = function (info) {
 								return cache.set(
 									keyInfo,
-									mergeObjects(cache.get(keyInfo), info)
+									mergeObjects(cache.get(keyInfo), info),
 								)
 							},
 							cached = cache.get(key),
@@ -5052,11 +5056,11 @@
 							_c = (function (state, unmountedRef) {
 								var rerender = (0,
 									react__WEBPACK_IMPORTED_MODULE_0__.useState)(
-										{}
+										{},
 									)[1],
 									stateRef = (0,
 									react__WEBPACK_IMPORTED_MODULE_0__.useRef)(
-										state
+										state,
 									),
 									stateDependenciesRef = (0,
 									react__WEBPACK_IMPORTED_MODULE_0__.useRef)({
@@ -5083,7 +5087,7 @@
 												!unmountedRef.current &&
 												rerender({})
 										},
-										[]
+										[],
 									)
 								return (
 									useIsomorphicLayoutEffect(function () {
@@ -5175,11 +5179,11 @@
 																			{
 																				isValidating:
 																					!1,
-																			}
+																			},
 																		),
 																			isCurrentKeyMounted() &&
 																				setState(
-																					newState
+																					newState,
 																				)
 																	}),
 																patchFetchInfo({
@@ -5209,11 +5213,11 @@
 																		stateRef
 																			.current
 																			.error,
-																		!0
+																		!0,
 																	),
 																	config.loadingTimeout &&
 																		!cache.get(
-																			key
+																			key,
 																		) &&
 																		setTimeout(
 																			function () {
@@ -5221,17 +5225,17 @@
 																					isCurrentKeyMounted() &&
 																					getConfig().onLoadingSlow(
 																						key,
-																						config
+																						config,
 																					)
 																			},
-																			config.loadingTimeout
+																			config.loadingTimeout,
 																		),
 																	(FETCH[
 																		key
 																	] = [
 																		currentFetcher.apply(
 																			void 0,
-																			fnArgs
+																			fnArgs,
 																		),
 																		getTimestamp(),
 																	])),
@@ -5250,7 +5254,7 @@
 																shouldStartNewRequest &&
 																	setTimeout(
 																		cleanupState,
-																		config.dedupingInterval
+																		config.dedupingInterval,
 																	),
 																FETCH[key] &&
 																FETCH[
@@ -5259,7 +5263,7 @@
 																	? (patchFetchInfo(
 																			{
 																				error: UNDEFINED,
-																			}
+																			},
 																	  ),
 																	  (newState.error =
 																			UNDEFINED),
@@ -5268,7 +5272,7 @@
 																				key
 																			]),
 																	  !isUndefined(
-																			mutationInfo
+																			mutationInfo,
 																	  ) &&
 																	  (startAt <=
 																			mutationInfo[0] ||
@@ -5280,7 +5284,7 @@
 																			  shouldStartNewRequest &&
 																					isCurrentKeyMounted() &&
 																					getConfig().onDiscarded(
-																						key
+																						key,
 																					),
 																			  [
 																					2,
@@ -5290,7 +5294,7 @@
 																					stateRef
 																						.current
 																						.data,
-																					newData
+																					newData,
 																			  )
 																					? (newState.data =
 																							stateRef.current.data)
@@ -5298,20 +5302,20 @@
 																							newData),
 																			  compare(
 																					cache.get(
-																						key
+																						key,
 																					),
-																					newData
+																					newData,
 																			  ) ||
 																					cache.set(
 																						key,
-																						newData
+																						newData,
 																					),
 																			  shouldStartNewRequest &&
 																					isCurrentKeyMounted() &&
 																					getConfig().onSuccess(
 																						newData,
 																						key,
-																						config
+																						config,
 																					),
 																			  [
 																					3,
@@ -5320,7 +5324,7 @@
 																	: (shouldStartNewRequest &&
 																			isCurrentKeyMounted() &&
 																			getConfig().onDiscarded(
-																				key
+																				key,
 																			),
 																	  [2, !1])
 															)
@@ -5333,7 +5337,7 @@
 																	(patchFetchInfo(
 																		{
 																			error: err_1,
-																		}
+																		},
 																	),
 																	(newState.error =
 																		err_1),
@@ -5342,16 +5346,16 @@
 																		(getConfig().onError(
 																			err_1,
 																			key,
-																			config
+																			config,
 																		),
 																		(('boolean' ==
 																			typeof config.shouldRetryOnError &&
 																			config.shouldRetryOnError) ||
 																			(isFunction(
-																				config.shouldRetryOnError
+																				config.shouldRetryOnError,
 																			) &&
 																				config.shouldRetryOnError(
-																					err_1
+																					err_1,
 																				))) &&
 																			isActive() &&
 																			getConfig().onErrorRetry(
@@ -5365,7 +5369,7 @@
 																							0) +
 																						1,
 																					dedupe: !0,
-																				}
+																				},
 																			))),
 																[3, 4]
 															)
@@ -5380,17 +5384,17 @@
 																		key,
 																		newState.data,
 																		newState.error,
-																		!1
+																		!1,
 																	),
 																[2, !0]
 															)
 													}
-												}
+												},
 											)
-										}
+										},
 									)
 								},
-								[key]
+								[key],
 							),
 							boundMutate = (0,
 							react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(
@@ -5399,9 +5403,9 @@
 									cache,
 									function () {
 										return keyRef.current
-									}
+									},
 								),
-								[]
+								[],
 							)
 						if (
 							(useIsomorphicLayoutEffect(function () {
@@ -5414,7 +5418,7 @@
 										var keyChanged = key !== keyRef.current,
 											softRevalidate = revalidate.bind(
 												UNDEFINED,
-												WITH_DEDUPE
+												WITH_DEDUPE,
 											),
 											nextFocusRevalidatedAt = 0,
 											unsubUpdate = subscribeCallback(
@@ -5423,7 +5427,7 @@
 												function (
 													updatedData,
 													updatedError,
-													updatedIsValidating
+													updatedIsValidating,
 												) {
 													setState(
 														mergeObjects(
@@ -5435,15 +5439,15 @@
 															compare(
 																stateRef.current
 																	.data,
-																updatedData
+																updatedData,
 															)
 																? UNDEFINED
 																: {
 																		data: updatedData,
-																  }
-														)
+																  },
+														),
 													)
-												}
+												},
 											),
 											unsubEvents = subscribeCallback(
 												key,
@@ -5468,7 +5472,7 @@
 															softRevalidate()
 													else if (2 == type)
 														return revalidate()
-												}
+												},
 											)
 										return (
 											(unmountedRef.current = !1),
@@ -5492,14 +5496,14 @@
 										)
 									}
 								},
-								[key, revalidate]
+								[key, revalidate],
 							),
 							useIsomorphicLayoutEffect(
 								function () {
 									var timer
 									function next() {
 										var interval = isFunction(
-											refreshInterval
+											refreshInterval,
 										)
 											? refreshInterval(data)
 											: refreshInterval
@@ -5507,7 +5511,7 @@
 											-1 !== timer &&
 											(timer = setTimeout(
 												execute,
-												interval
+												interval,
 											))
 									}
 									function execute() {
@@ -5533,11 +5537,11 @@
 									refreshWhenHidden,
 									refreshWhenOffline,
 									revalidate,
-								]
+								],
 							),
 							(0,
 							react__WEBPACK_IMPORTED_MODULE_0__.useDebugValue)(
-								data
+								data,
 							),
 							suspense && isUndefined(data) && key)
 						)
@@ -5572,8 +5576,8 @@
 								defaultConfig,
 								(0,
 								react__WEBPACK_IMPORTED_MODULE_0__.useContext)(
-									SWRConfigContext
-								)
+									SWRConfigContext,
+								),
 							),
 							_a = (function (args) {
 								return isFunction(args[1])

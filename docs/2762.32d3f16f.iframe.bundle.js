@@ -4,12 +4,12 @@
 		'./components/common/forms/inputs/input/input.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { I: () => Input })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				Input = function Input(_ref) {
@@ -66,7 +66,7 @@
 											? 'w-1/3'
 											: 'long' === length
 											? 'w-1/2'
-											: 'w-full'
+											: 'w-full',
 								  )
 								: '',
 							'radio' === type || 'checkbox' === type
@@ -83,7 +83,7 @@
 								className: ' '.concat(
 									'radio' === type || 'checkbox' === type
 										? 'flex items-center'
-										: ''
+										: '',
 								),
 							},
 							label &&
@@ -94,8 +94,8 @@
 										'label',
 										{ htmlFor: name },
 										' ',
-										label.toUpperCase()
-									)
+										label.toUpperCase(),
+									),
 								),
 							__jsx('input', {
 								type,
@@ -126,18 +126,18 @@
 												'flex items-center w-4 h-4 '
 													.concat(
 														inputShape,
-														' border '
+														' border ',
 													)
 													.concat(
 														disabled
 															? ''
 															: 'cursor-pointer',
-														' '
+														' ',
 													)
 													.concat(
 														isChecked
 															? 'bg-white border-royalblue'
-															: 'bg-white border-wgray'
+															: 'bg-white border-wgray',
 													),
 											onClick: handleInputChange,
 										},
@@ -147,9 +147,9 @@
 													'w-3 h-3 mx-auto my-auto bg-royalblue '.concat(
 														'radio' === type
 															? 'rounded-full'
-															: 'rounded'
+															: 'rounded',
 													),
-											})
+											}),
 								  )
 								: null,
 							'radio' === type || 'checkbox' === type
@@ -161,14 +161,14 @@
 									{
 										id: 'helper-text-explanation',
 										className: 'my-0 '.concat(
-											error ? 'text-red-600' : ''
+											error ? 'text-red-600' : '',
 										),
 									},
 									error
 										? 'Wrong '.concat(type)
-										: 'This is a test message'
-								)
-						)
+										: 'This is a test message',
+								),
+						),
 					)
 				}
 			Input.__docgenInfo = {
@@ -529,14 +529,14 @@
 		'./components/common/forms/inputs/text_area/text_area.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { K: () => TextArea })
 			var react = __webpack_require__('./node_modules/react/index.js')
 			const use_autosize_text_area = function useAutosizeTextArea(
 				textAreaRef,
-				value
+				value,
 			) {
 				;(0, react.useEffect)(
 					function () {
@@ -546,7 +546,7 @@
 							textAreaRef.style.height = scrollHeight + 'px'
 						}
 					},
-					[textAreaRef, value]
+					[textAreaRef, value],
 				)
 			}
 			var __jsx = react.createElement,
@@ -639,9 +639,9 @@
 									__jsx('span', {
 										className:
 											'absolute right-2 bottom-2 flex items-center '.concat(
-												disabled ? 'opacity-50' : ''
+												disabled ? 'opacity-50' : '',
 											),
-									})
+									}),
 							),
 							value.length === maxLength &&
 								__jsx(
@@ -651,9 +651,9 @@
 											'text-xs px-2 bg-gray-100 ml-auto mr-0 block w-fit',
 									},
 									'Maximum characters: ',
-									maxLength
-								)
-						)
+									maxLength,
+								),
+						),
 					)
 				}
 			;(TextArea.displayName = 'TextArea'),
@@ -911,33 +911,33 @@
 		'./components/common/user/editable_field.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => __WEBPACK_DEFAULT_EXPORT__,
 			})
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_common_forms_inputs_input_input__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./components/common/forms/inputs/input/input.tsx'
+						'./components/common/forms/inputs/input/input.tsx',
 					),
 				_common_forms_inputs_text_area_text_area__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./components/common/forms/inputs/text_area/text_area.tsx'
+						'./components/common/forms/inputs/text_area/text_area.tsx',
 					),
 				react_icons_fa__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/react-icons/fa/index.esm.js'
+						'./node_modules/react-icons/fa/index.esm.js',
 					),
 				next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/next/link.js'
+					'./node_modules/next/link.js',
 				),
 				next_link__WEBPACK_IMPORTED_MODULE_3___default =
 					__webpack_require__.n(
-						next_link__WEBPACK_IMPORTED_MODULE_3__
+						next_link__WEBPACK_IMPORTED_MODULE_3__,
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function EditableField(_ref) {
@@ -965,7 +965,7 @@
 									name: details.name,
 									onChange: details.onChange,
 									className: details.className,
-								}
+								},
 						  )
 						: details.defaultValue &&
 						  void 0 !== details.defaultValue
@@ -990,9 +990,9 @@
 														className:
 															'my-1 sans text-royalblue',
 													},
-													header
-												)
-											)
+													header,
+												),
+											),
 									  )
 									: __jsx(
 											react__WEBPACK_IMPORTED_MODULE_0__.Fragment,
@@ -1005,7 +1005,7 @@
 															className:
 																'my-1 sans text-black uppercase',
 														},
-														header
+														header,
 												  )
 												: __jsx(
 														'p',
@@ -1013,9 +1013,9 @@
 															className:
 																'my-1 sans text-black font-normal',
 														},
-														header
-												  )
-									  )
+														header,
+												  ),
+									  ),
 						  )
 						: null
 				}
@@ -1031,14 +1031,14 @@
 									name: _details.name,
 									handle: _details.handle,
 									className: _details.className,
-								}
+								},
 						  )
 						: _details.defaultValue &&
 						  void 0 !== _details.defaultValue
 						? __jsx(
 								'p',
 								{ className: 'my-3.5 sans ml-3' },
-								_details.defaultValue
+								_details.defaultValue,
 						  )
 						: null
 				}
@@ -1048,27 +1048,27 @@
 					case 'facebook':
 						return __jsx(
 							react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.Am9,
-							null
+							null,
 						)
 					case 'github':
 						return __jsx(
 							react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.hJX,
-							null
+							null,
 						)
 					case 'linkedin':
 						return __jsx(
 							react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.ltd,
-							null
+							null,
 						)
 					case 'twitter':
 						return __jsx(
 							react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.fWC,
-							null
+							null,
 						)
 					case 'url':
 						return __jsx(
 							react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.gjK,
-							null
+							null,
 						)
 					default:
 						return null
@@ -1224,25 +1224,25 @@
 		'./node_modules/next/dist/client/get-domain-locale.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.getDomainLocale = function getDomainLocale(
 					path,
 					locale,
 					locales,
-					domainLocales
+					domainLocales,
 				) {
 					if (process.env.__NEXT_I18N_SUPPORT) {
 						const normalizeLocalePath = __webpack_require__(
-								'./node_modules/next/dist/client/normalize-locale-path.js'
+								'./node_modules/next/dist/client/normalize-locale-path.js',
 							).normalizeLocalePath,
 							detectDomainLocale = __webpack_require__(
-								'./node_modules/next/dist/client/detect-domain-locale.js'
+								'./node_modules/next/dist/client/detect-domain-locale.js',
 							).detectDomainLocale,
 							target =
 								locale ||
@@ -1251,7 +1251,7 @@
 							domain = detectDomainLocale(
 								domainLocales,
 								void 0,
-								target
+								target,
 							)
 						if (domain) {
 							const proto = `http${domain.http ? '' : 's'}://`,
@@ -1279,40 +1279,40 @@
 		'./node_modules/next/dist/client/link.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.default = void 0)
 			var _interop_require_default = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 				).Z,
 				_object_without_properties_loose = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_object_without_properties_loose.js'
+					'./node_modules/@swc/helpers/lib/_object_without_properties_loose.js',
 				).Z,
 				_react = _interop_require_default(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_router = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/router.js'
+					'./node_modules/next/dist/shared/lib/router/router.js',
 				),
 				_addLocale = __webpack_require__(
-					'./node_modules/next/dist/client/add-locale.js'
+					'./node_modules/next/dist/client/add-locale.js',
 				),
 				_routerContext = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router-context.js'
+					'./node_modules/next/dist/shared/lib/router-context.js',
 				),
 				_appRouterContext = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/app-router-context.js'
+					'./node_modules/next/dist/shared/lib/app-router-context.js',
 				),
 				_useIntersection = __webpack_require__(
-					'./node_modules/next/dist/client/use-intersection.js'
+					'./node_modules/next/dist/client/use-intersection.js',
 				),
 				_getDomainLocale = __webpack_require__(
-					'./node_modules/next/dist/client/get-domain-locale.js'
+					'./node_modules/next/dist/client/get-domain-locale.js',
 				),
 				_addBasePath = __webpack_require__(
-					'./node_modules/next/dist/client/add-base-path.js'
+					'./node_modules/next/dist/client/add-base-path.js',
 				)
 			const hasUseTransition = void 0 !== _react.default.useTransition,
 				prefetched = {}
@@ -1330,262 +1330,269 @@
 					href + '%' + as + (curLocale ? '%' + curLocale : '')
 				] = !0
 			}
-			var _default = _react.default.forwardRef(function LinkComponent(
-				props,
-				forwardedRef
-			) {
-				let children
-				const {
-						href: hrefProp,
-						as: asProp,
-						children: childrenProp,
-						prefetch: prefetchProp,
-						passHref,
-						replace,
-						soft,
-						shallow,
-						scroll,
-						locale,
-						onClick,
-						onMouseEnter,
-						onTouchStart,
-						legacyBehavior = !0 !== Boolean(void 0),
-					} = props,
-					restProps = _object_without_properties_loose(props, [
-						'href',
-						'as',
-						'children',
-						'prefetch',
-						'passHref',
-						'replace',
-						'soft',
-						'shallow',
-						'scroll',
-						'locale',
-						'onClick',
-						'onMouseEnter',
-						'onTouchStart',
-						'legacyBehavior',
-					])
-				;(children = childrenProp),
-					!legacyBehavior ||
-						('string' != typeof children &&
-							'number' != typeof children) ||
-						(children = _react.default.createElement(
-							'a',
-							null,
-							children
-						))
-				const p = !1 !== prefetchProp,
-					[, startTransition] = hasUseTransition
-						? _react.default.useTransition()
-						: []
-				let router = _react.default.useContext(
-					_routerContext.RouterContext
-				)
-				const appRouter = _react.default.useContext(
-					_appRouterContext.AppRouterContext
-				)
-				appRouter && (router = appRouter)
-				const { href, as } = _react.default.useMemo(() => {
-						const [resolvedHref, resolvedAs] = _router.resolveHref(
-							router,
-							hrefProp,
-							!0
-						)
-						return {
-							href: resolvedHref,
-							as: asProp
-								? _router.resolveHref(router, asProp)
-								: resolvedAs || resolvedHref,
-						}
-					}, [router, hrefProp, asProp]),
-					previousHref = _react.default.useRef(href),
-					previousAs = _react.default.useRef(as)
-				let child
-				legacyBehavior &&
-					(child = _react.default.Children.only(children))
-				const childRef = legacyBehavior
-						? child && 'object' == typeof child && child.ref
-						: forwardedRef,
-					[setIntersectionRef, isVisible, resetVisible] =
-						_useIntersection.useIntersection({
-							rootMargin: '200px',
-						}),
-					setRef = _react.default.useCallback(
-						(el) => {
-							;(previousAs.current === as &&
-								previousHref.current === href) ||
-								(resetVisible(),
-								(previousAs.current = as),
-								(previousHref.current = href)),
-								setIntersectionRef(el),
-								childRef &&
-									('function' == typeof childRef
-										? childRef(el)
-										: 'object' == typeof childRef &&
-										  (childRef.current = el))
-						},
-						[as, childRef, href, resetVisible, setIntersectionRef]
+			var _default = _react.default.forwardRef(
+				function LinkComponent(props, forwardedRef) {
+					let children
+					const {
+							href: hrefProp,
+							as: asProp,
+							children: childrenProp,
+							prefetch: prefetchProp,
+							passHref,
+							replace,
+							soft,
+							shallow,
+							scroll,
+							locale,
+							onClick,
+							onMouseEnter,
+							onTouchStart,
+							legacyBehavior = !0 !== Boolean(void 0),
+						} = props,
+						restProps = _object_without_properties_loose(props, [
+							'href',
+							'as',
+							'children',
+							'prefetch',
+							'passHref',
+							'replace',
+							'soft',
+							'shallow',
+							'scroll',
+							'locale',
+							'onClick',
+							'onMouseEnter',
+							'onTouchStart',
+							'legacyBehavior',
+						])
+					;(children = childrenProp),
+						!legacyBehavior ||
+							('string' != typeof children &&
+								'number' != typeof children) ||
+							(children = _react.default.createElement(
+								'a',
+								null,
+								children,
+							))
+					const p = !1 !== prefetchProp,
+						[, startTransition] = hasUseTransition
+							? _react.default.useTransition()
+							: []
+					let router = _react.default.useContext(
+						_routerContext.RouterContext,
 					)
-				_react.default.useEffect(() => {
-					const shouldPrefetch =
-							isVisible && p && _router.isLocalURL(href),
-						curLocale =
-							void 0 !== locale
-								? locale
-								: router && router.locale,
-						isPrefetched =
-							prefetched[
-								href +
-									'%' +
-									as +
-									(curLocale ? '%' + curLocale : '')
-							]
-					shouldPrefetch &&
-						!isPrefetched &&
-						prefetch(router, href, as, { locale: curLocale })
-				}, [as, href, isVisible, locale, p, router])
-				const childProps = {
-					ref: setRef,
-					onClick: (e) => {
-						legacyBehavior ||
-							'function' != typeof onClick ||
-							onClick(e),
-							legacyBehavior &&
-								child.props &&
-								'function' == typeof child.props.onClick &&
-								child.props.onClick(e),
-							e.defaultPrevented ||
-								(function linkClicked(
-									e,
-									router,
-									href,
-									as,
-									replace,
-									soft,
-									shallow,
-									scroll,
-									locale,
-									startTransition
-								) {
-									const { nodeName } = e.currentTarget
-									if (
-										'A' === nodeName.toUpperCase() &&
-										((function isModifiedEvent(event) {
-											const { target } =
-												event.currentTarget
-											return (
-												(target &&
-													'_self' !== target) ||
-												event.metaKey ||
-												event.ctrlKey ||
-												event.shiftKey ||
-												event.altKey ||
-												(event.nativeEvent &&
-													2 ===
-														event.nativeEvent.which)
-											)
-										})(e) ||
-											!_router.isLocalURL(href))
-									)
-										return
-									e.preventDefault()
-									const navigate = () => {
-										'softPush' in router &&
-										'softReplace' in router
-											? router[
-													soft
-														? replace
-															? 'softReplace'
-															: 'softPush'
-														: replace
-														? 'replace'
-														: 'push'
-											  ](href)
-											: router[
-													replace ? 'replace' : 'push'
-											  ](href, as, {
-													shallow,
-													locale,
-													scroll,
-											  })
-									}
-									startTransition
-										? startTransition(navigate)
-										: navigate()
-								})(
-									e,
-									router,
-									href,
-									as,
-									replace,
-									soft,
-									shallow,
-									scroll,
-									locale,
-									appRouter ? startTransition : void 0
-								)
-					},
-					onMouseEnter: (e) => {
-						legacyBehavior ||
-							'function' != typeof onMouseEnter ||
-							onMouseEnter(e),
-							legacyBehavior &&
-								child.props &&
-								'function' == typeof child.props.onMouseEnter &&
-								child.props.onMouseEnter(e),
-							_router.isLocalURL(href) &&
-								prefetch(router, href, as, { priority: !0 })
-					},
-					onTouchStart: (e) => {
-						legacyBehavior ||
-							'function' != typeof onTouchStart ||
-							onTouchStart(e),
-							legacyBehavior &&
-								child.props &&
-								'function' == typeof child.props.onTouchStart &&
-								child.props.onTouchStart(e),
-							_router.isLocalURL(href) &&
-								prefetch(router, href, as, { priority: !0 })
-					},
-				}
-				if (
-					!legacyBehavior ||
-					passHref ||
-					('a' === child.type && !('href' in child.props))
-				) {
-					const curLocale =
-							void 0 !== locale
-								? locale
-								: router && router.locale,
-						localeDomain =
-							router &&
-							router.isLocaleDomain &&
-							_getDomainLocale.getDomainLocale(
+					const appRouter = _react.default.useContext(
+						_appRouterContext.AppRouterContext,
+					)
+					appRouter && (router = appRouter)
+					const { href, as } = _react.default.useMemo(() => {
+							const [resolvedHref, resolvedAs] =
+								_router.resolveHref(router, hrefProp, !0)
+							return {
+								href: resolvedHref,
+								as: asProp
+									? _router.resolveHref(router, asProp)
+									: resolvedAs || resolvedHref,
+							}
+						}, [router, hrefProp, asProp]),
+						previousHref = _react.default.useRef(href),
+						previousAs = _react.default.useRef(as)
+					let child
+					legacyBehavior &&
+						(child = _react.default.Children.only(children))
+					const childRef = legacyBehavior
+							? child && 'object' == typeof child && child.ref
+							: forwardedRef,
+						[setIntersectionRef, isVisible, resetVisible] =
+							_useIntersection.useIntersection({
+								rootMargin: '200px',
+							}),
+						setRef = _react.default.useCallback(
+							(el) => {
+								;(previousAs.current === as &&
+									previousHref.current === href) ||
+									(resetVisible(),
+									(previousAs.current = as),
+									(previousHref.current = href)),
+									setIntersectionRef(el),
+									childRef &&
+										('function' == typeof childRef
+											? childRef(el)
+											: 'object' == typeof childRef &&
+											  (childRef.current = el))
+							},
+							[
 								as,
-								curLocale,
-								router.locales,
-								router.domainLocales
-							)
-					childProps.href =
-						localeDomain ||
-						_addBasePath.addBasePath(
-							_addLocale.addLocale(
-								as,
-								curLocale,
-								router && router.defaultLocale
-							)
+								childRef,
+								href,
+								resetVisible,
+								setIntersectionRef,
+							],
 						)
-				}
-				return legacyBehavior
-					? _react.default.cloneElement(child, childProps)
-					: _react.default.createElement(
-							'a',
-							Object.assign({}, restProps, childProps),
-							children
-					  )
-			})
+					_react.default.useEffect(() => {
+						const shouldPrefetch =
+								isVisible && p && _router.isLocalURL(href),
+							curLocale =
+								void 0 !== locale
+									? locale
+									: router && router.locale,
+							isPrefetched =
+								prefetched[
+									href +
+										'%' +
+										as +
+										(curLocale ? '%' + curLocale : '')
+								]
+						shouldPrefetch &&
+							!isPrefetched &&
+							prefetch(router, href, as, { locale: curLocale })
+					}, [as, href, isVisible, locale, p, router])
+					const childProps = {
+						ref: setRef,
+						onClick: (e) => {
+							legacyBehavior ||
+								'function' != typeof onClick ||
+								onClick(e),
+								legacyBehavior &&
+									child.props &&
+									'function' == typeof child.props.onClick &&
+									child.props.onClick(e),
+								e.defaultPrevented ||
+									(function linkClicked(
+										e,
+										router,
+										href,
+										as,
+										replace,
+										soft,
+										shallow,
+										scroll,
+										locale,
+										startTransition,
+									) {
+										const { nodeName } = e.currentTarget
+										if (
+											'A' === nodeName.toUpperCase() &&
+											((function isModifiedEvent(event) {
+												const { target } =
+													event.currentTarget
+												return (
+													(target &&
+														'_self' !== target) ||
+													event.metaKey ||
+													event.ctrlKey ||
+													event.shiftKey ||
+													event.altKey ||
+													(event.nativeEvent &&
+														2 ===
+															event.nativeEvent
+																.which)
+												)
+											})(e) ||
+												!_router.isLocalURL(href))
+										)
+											return
+										e.preventDefault()
+										const navigate = () => {
+											'softPush' in router &&
+											'softReplace' in router
+												? router[
+														soft
+															? replace
+																? 'softReplace'
+																: 'softPush'
+															: replace
+															? 'replace'
+															: 'push'
+												  ](href)
+												: router[
+														replace
+															? 'replace'
+															: 'push'
+												  ](href, as, {
+														shallow,
+														locale,
+														scroll,
+												  })
+										}
+										startTransition
+											? startTransition(navigate)
+											: navigate()
+									})(
+										e,
+										router,
+										href,
+										as,
+										replace,
+										soft,
+										shallow,
+										scroll,
+										locale,
+										appRouter ? startTransition : void 0,
+									)
+						},
+						onMouseEnter: (e) => {
+							legacyBehavior ||
+								'function' != typeof onMouseEnter ||
+								onMouseEnter(e),
+								legacyBehavior &&
+									child.props &&
+									'function' ==
+										typeof child.props.onMouseEnter &&
+									child.props.onMouseEnter(e),
+								_router.isLocalURL(href) &&
+									prefetch(router, href, as, { priority: !0 })
+						},
+						onTouchStart: (e) => {
+							legacyBehavior ||
+								'function' != typeof onTouchStart ||
+								onTouchStart(e),
+								legacyBehavior &&
+									child.props &&
+									'function' ==
+										typeof child.props.onTouchStart &&
+									child.props.onTouchStart(e),
+								_router.isLocalURL(href) &&
+									prefetch(router, href, as, { priority: !0 })
+						},
+					}
+					if (
+						!legacyBehavior ||
+						passHref ||
+						('a' === child.type && !('href' in child.props))
+					) {
+						const curLocale =
+								void 0 !== locale
+									? locale
+									: router && router.locale,
+							localeDomain =
+								router &&
+								router.isLocaleDomain &&
+								_getDomainLocale.getDomainLocale(
+									as,
+									curLocale,
+									router.locales,
+									router.domainLocales,
+								)
+						childProps.href =
+							localeDomain ||
+							_addBasePath.addBasePath(
+								_addLocale.addLocale(
+									as,
+									curLocale,
+									router && router.defaultLocale,
+								),
+							)
+					}
+					return legacyBehavior
+						? _react.default.cloneElement(child, childProps)
+						: _react.default.createElement(
+								'a',
+								Object.assign({}, restProps, childProps),
+								children,
+						  )
+				},
+			)
 			;(exports.default = _default),
 				('function' == typeof exports.default ||
 					('object' == typeof exports.default &&
@@ -1600,18 +1607,18 @@
 		'./node_modules/next/dist/client/normalize-locale-path.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.normalizeLocalePath = void 0)
 			;(exports.normalizeLocalePath = (pathname, locales) =>
 				process.env.__NEXT_I18N_SUPPORT
 					? __webpack_require__(
-							'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js'
+							'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js',
 					  ).normalizeLocalePath(pathname, locales)
 					: { pathname, detectedLocale: void 0 }),
 				('function' == typeof exports.default ||
@@ -1627,10 +1634,10 @@
 		'./node_modules/next/link.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			module.exports = __webpack_require__(
-				'./node_modules/next/dist/client/link.js'
+				'./node_modules/next/dist/client/link.js',
 			)
 		},
 	},

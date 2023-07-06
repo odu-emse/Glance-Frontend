@@ -4,33 +4,33 @@
 		'./components/common/community/social_card/social_card.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { X: () => SocialCard })
 			var _Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 					),
 				moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/moment/moment.js'
+					'./node_modules/moment/moment.js',
 				),
 				moment__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_icons_ai__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/react-icons/ai/index.esm.js'
+						'./node_modules/react-icons/ai/index.esm.js',
 					),
 				react_icons_fa__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/react-icons/fa/index.esm.js'
+						'./node_modules/react-icons/fa/index.esm.js',
 					),
 				react_icons_md__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/react-icons/md/index.esm.js'
+						'./node_modules/react-icons/md/index.esm.js',
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				SocialCard = function SocialCard(_ref) {
@@ -44,7 +44,7 @@
 						_React$useState2 = (0,
 						_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_2__.Z)(
 							_React$useState,
-							2
+							2,
 						),
 						isClicked = _React$useState2[0],
 						setIsClicked = _React$useState2[1]
@@ -88,7 +88,7 @@
 													'shadow-lg rounded-full max-w-full h-12 align-middle border-none',
 												onClick: function onClick() {
 													return setIsClicked(
-														!isClicked
+														!isClicked,
 													)
 												},
 											}),
@@ -106,7 +106,7 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'view profile'
+														'view profile',
 													),
 													__jsx(
 														'a',
@@ -115,7 +115,7 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'Send message'
+														'Send message',
 													),
 													__jsx(
 														'a',
@@ -124,7 +124,7 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'Unfriend'
+														'Unfriend',
 													),
 													__jsx(
 														'a',
@@ -133,10 +133,10 @@
 															className:
 																'block px-4 py-3 text-xs text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white',
 														},
-														'Block user'
-													)
-												)
-										)
+														'Block user',
+													),
+												),
+										),
 									),
 									__jsx(
 										'div',
@@ -153,13 +153,13 @@
 													className:
 														'text-slate-500 role',
 												},
-												user.role
+												user.role,
 											),
 											' ',
 											'- ',
 											user.firstName,
 											' ',
-											user.lastName
+											user.lastName,
 										),
 										__jsx(
 											'div',
@@ -174,9 +174,9 @@
 											' ',
 											user.department,
 											' - ',
-											user.office
-										)
-									)
+											user.office,
+										),
+									),
 								),
 								__jsx(
 									'div',
@@ -187,7 +187,7 @@
 											{
 												size: 38,
 												className: 'text-yellow-400',
-											}
+											},
 										),
 									'Advisor' === user.role &&
 										__jsx(
@@ -195,7 +195,7 @@
 											{
 												size: 38,
 												className: 'text-yellow-400',
-											}
+											},
 										),
 									'TA' === user.role &&
 										__jsx(
@@ -203,9 +203,9 @@
 											{
 												size: 38,
 												className: 'text-yellow-400',
-											}
-										)
-								)
+											},
+										),
+								),
 							),
 							__jsx(
 								'div',
@@ -216,8 +216,8 @@
 										className:
 											' break-words text-sm text-neutral-600 ',
 									},
-									content
-								)
+									content,
+								),
 							),
 							__jsx(
 								'div',
@@ -242,14 +242,14 @@
 											},
 											__jsx(
 												react_icons_ai__WEBPACK_IMPORTED_MODULE_4__.L7p,
-												{ size: 20, className: 'mr-1' }
+												{ size: 20, className: 'mr-1' },
 											),
 											__jsx(
 												'span',
 												{ className: '' },
 												likes,
-												' Likes'
-											)
+												' Likes',
+											),
 										),
 										__jsx(
 											'div',
@@ -259,17 +259,17 @@
 											},
 											__jsx(
 												react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.llv,
-												{ size: 20, className: 'mr-1' }
+												{ size: 20, className: 'mr-1' },
 											),
 											__jsx(
 												'span',
 												{ className: '' },
 												comments,
-												' comments'
-											)
-										)
-									)
-								)
+												' comments',
+											),
+										),
+									),
+								),
 							),
 							__jsx(
 								'div',
@@ -286,7 +286,7 @@
 											htmlFor: 'add-comment',
 											className: 'sr-only',
 										},
-										'Add your comment to the post'
+										'Add your comment to the post',
 									),
 									__jsx('input', {
 										type: 'text',
@@ -294,7 +294,7 @@
 											'border-transparent bg-transparent px-5 py-2 w-full',
 										placeholder: 'Add Comment...',
 										id: 'add-comment',
-									})
+									}),
 								),
 								__jsx(
 									'div',
@@ -308,8 +308,8 @@
 										},
 										__jsx(
 											react_icons_md__WEBPACK_IMPORTED_MODULE_5__._b$,
-											{ size: 20, className: 'mr-1' }
-										)
+											{ size: 20, className: 'mr-1' },
+										),
 									),
 									__jsx(
 										'button',
@@ -320,12 +320,12 @@
 										},
 										__jsx(
 											react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.sr,
-											{ size: 20, className: 'mr-1' }
-										)
-									)
-								)
-							)
-						)
+											{ size: 20, className: 'mr-1' },
+										),
+									),
+								),
+							),
+						),
 					)
 				}
 			;(SocialCard.displayName = 'SocialCard'),
@@ -395,12 +395,12 @@
 		'./components/common/forms/inputs/input/input.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { I: () => Input })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				Input = function Input(_ref) {
@@ -457,7 +457,7 @@
 											? 'w-1/3'
 											: 'long' === length
 											? 'w-1/2'
-											: 'w-full'
+											: 'w-full',
 								  )
 								: '',
 							'radio' === type || 'checkbox' === type
@@ -474,7 +474,7 @@
 								className: ' '.concat(
 									'radio' === type || 'checkbox' === type
 										? 'flex items-center'
-										: ''
+										: '',
 								),
 							},
 							label &&
@@ -485,8 +485,8 @@
 										'label',
 										{ htmlFor: name },
 										' ',
-										label.toUpperCase()
-									)
+										label.toUpperCase(),
+									),
 								),
 							__jsx('input', {
 								type,
@@ -517,18 +517,18 @@
 												'flex items-center w-4 h-4 '
 													.concat(
 														inputShape,
-														' border '
+														' border ',
 													)
 													.concat(
 														disabled
 															? ''
 															: 'cursor-pointer',
-														' '
+														' ',
 													)
 													.concat(
 														isChecked
 															? 'bg-white border-royalblue'
-															: 'bg-white border-wgray'
+															: 'bg-white border-wgray',
 													),
 											onClick: handleInputChange,
 										},
@@ -538,9 +538,9 @@
 													'w-3 h-3 mx-auto my-auto bg-royalblue '.concat(
 														'radio' === type
 															? 'rounded-full'
-															: 'rounded'
+															: 'rounded',
 													),
-											})
+											}),
 								  )
 								: null,
 							'radio' === type || 'checkbox' === type
@@ -552,14 +552,14 @@
 									{
 										id: 'helper-text-explanation',
 										className: 'my-0 '.concat(
-											error ? 'text-red-600' : ''
+											error ? 'text-red-600' : '',
 										),
 									},
 									error
 										? 'Wrong '.concat(type)
-										: 'This is a test message'
-								)
-						)
+										: 'This is a test message',
+								),
+						),
 					)
 				}
 			Input.__docgenInfo = {
@@ -920,7 +920,7 @@
 		'./components/pages/community_page/community_page.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -937,44 +937,44 @@
 				_Secondary$parameters2,
 				_Secondary$parameters3,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				taggedTemplateLiteral = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+					'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
 				),
 				moment = __webpack_require__('./node_modules/moment/moment.js'),
 				moment_default = __webpack_require__.n(moment),
 				input = __webpack_require__(
-					'./components/common/forms/inputs/input/input.tsx'
+					'./components/common/forms/inputs/input/input.tsx',
 				),
 				social_card = __webpack_require__(
-					'./components/common/community/social_card/social_card.tsx'
+					'./components/common/community/social_card/social_card.tsx',
 				),
 				index_esm = __webpack_require__(
-					'./node_modules/react-icons/ai/index.esm.js'
+					'./node_modules/react-icons/ai/index.esm.js',
 				),
 				bi_index_esm = __webpack_require__(
-					'./node_modules/react-icons/bi/index.esm.js'
+					'./node_modules/react-icons/bi/index.esm.js',
 				),
 				ri_index_esm = __webpack_require__(
-					'./node_modules/react-icons/ri/index.esm.js'
+					'./node_modules/react-icons/ri/index.esm.js',
 				),
 				gr_index_esm = __webpack_require__(
-					'./node_modules/react-icons/gr/index.esm.js'
+					'./node_modules/react-icons/gr/index.esm.js',
 				),
 				cg_index_esm = __webpack_require__(
-					'./node_modules/react-icons/cg/index.esm.js'
+					'./node_modules/react-icons/cg/index.esm.js',
 				),
 				go_index_esm = __webpack_require__(
-					'./node_modules/react-icons/go/index.esm.js'
+					'./node_modules/react-icons/go/index.esm.js',
 				),
 				md_index_esm = __webpack_require__(
-					'./node_modules/react-icons/md/index.esm.js'
+					'./node_modules/react-icons/md/index.esm.js',
 				),
 				gql_fetcher = __webpack_require__('./utils/gql_fetcher.ts'),
 				esm = __webpack_require__(
-					'./node_modules/graphql-request/build/esm/index.js'
+					'./node_modules/graphql-request/build/esm/index.js',
 				),
 				dist = __webpack_require__('./node_modules/swr/dist/index.mjs'),
 				__jsx = react.createElement,
@@ -992,10 +992,10 @@
 										(_templateObject = (0,
 										taggedTemplateLiteral.Z)([
 											'\n\t\t\t\t{\n\t\t\t\t\tthread(input: {}) {\n\t\t\t\t\t\tid\n\t\t\t\t\t\ttitle\n\t\t\t\t\t\tbody\n\t\t\t\t\t\tauthor {\n\t\t\t\t\t\t\tpicURL\n\t\t\t\t\t\t\tcreatedAt\n\t\t\t\t\t\t\tfirstName\n\t\t\t\t\t\t\tlastName\n\t\t\t\t\t\t\tinstructorProfile {\n\t\t\t\t\t\t\t\ttitle\n\t\t\t\t\t\t\t\tofficeLocation\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tupvotes {\n\t\t\t\t\t\t\tid\n\t\t\t\t\t\t}\n\t\t\t\t\t\tcomments {\n\t\t\t\t\t\t\tid\n\t\t\t\t\t\t\ttitle\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\tTODO: Uncomment this when the backend is ready (see ALMP-632)\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\tauthor {\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\tpicURL\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\tcreatedAt\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\tfirstName\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\tlastName\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\tinstructorProfile {\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\t\ttitle\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\t\tofficeLocation\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t#\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tcreatedAt\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t',
-										]))
+										])),
 								),
 							},
-							gql_fetcher.Z
+							gql_fetcher.Z,
 						),
 						data = _useSWR.data,
 						error = _useSWR.error
@@ -1030,7 +1030,7 @@
 													className:
 														'text-center md:text-left text-gray-400 text-6xl tracking-widest border',
 												},
-												'Feed'
+												'Feed',
 											),
 											__jsx(
 												'div',
@@ -1049,8 +1049,8 @@
 													{ className: 'items-end' },
 													__jsx(md_index_esm.D6S, {
 														size: 30,
-													})
-												)
+													}),
+												),
 											),
 											__jsx(
 												'button',
@@ -1062,82 +1062,85 @@
 															'flex justify-end text-gray-400 items-center text-xs tracking-tight',
 													},
 													'Sort by Relevance ',
-													__jsx(index_esm.cuw, null)
-												)
+													__jsx(index_esm.cuw, null),
+												),
 											),
 											__jsx(
 												'div',
 												null,
 												data.thread.length > 0 &&
-													data.thread.map(function (
-														_ref2,
-														index
-													) {
-														_ref2.data1
-														var _author$instructorPro,
-															_author$instructorPro2,
-															author =
-																_ref2.author,
-															createdAt =
-																_ref2.createdAt,
-															upvotes =
-																_ref2.upvotes,
-															comments =
-																(_ref2.instructorProfile,
-																_ref2.comments),
-															body = _ref2.body
-														return __jsx(
-															react.Fragment,
-															null,
-															__jsx(
-																social_card.X,
-																{
-																	timestamp:
-																		moment_default()(
-																			createdAt
-																		).unix(),
-																	content:
-																		body,
-																	likes: upvotes,
-																	comments:
-																		comments.length,
-																	user: {
-																		firstName:
-																			author.firstName,
-																		lastName:
-																			author.lastName,
-																		role:
-																			null !==
-																				(_author$instructorPro =
-																					author.instructorProfile) &&
-																			void 0 !==
-																				_author$instructorPro &&
-																			_author$instructorPro.title
-																				? author
-																						.instructorProfile
-																						.title
-																				: 'advisor',
-																		image: author.picURL,
-																		title: '',
-																		office:
-																			null !==
-																				(_author$instructorPro2 =
-																					author.instructorProfile) &&
-																			void 0 !==
-																				_author$instructorPro2 &&
-																			_author$instructorPro2.officeLocation
-																				? author
-																						.officeLocation
-																						.title
-																				: 'ESB 2101',
-																		department:
-																			'',
+													data.thread.map(
+														function (
+															_ref2,
+															index,
+														) {
+															_ref2.data1
+															var _author$instructorPro,
+																_author$instructorPro2,
+																author =
+																	_ref2.author,
+																createdAt =
+																	_ref2.createdAt,
+																upvotes =
+																	_ref2.upvotes,
+																comments =
+																	(_ref2.instructorProfile,
+																	_ref2.comments),
+																body =
+																	_ref2.body
+															return __jsx(
+																react.Fragment,
+																null,
+																__jsx(
+																	social_card.X,
+																	{
+																		timestamp:
+																			moment_default()(
+																				createdAt,
+																			).unix(),
+																		content:
+																			body,
+																		likes: upvotes,
+																		comments:
+																			comments.length,
+																		user: {
+																			firstName:
+																				author.firstName,
+																			lastName:
+																				author.lastName,
+																			role:
+																				null !==
+																					(_author$instructorPro =
+																						author.instructorProfile) &&
+																				void 0 !==
+																					_author$instructorPro &&
+																				_author$instructorPro.title
+																					? author
+																							.instructorProfile
+																							.title
+																					: 'advisor',
+																			image: author.picURL,
+																			title: '',
+																			office:
+																				null !==
+																					(_author$instructorPro2 =
+																						author.instructorProfile) &&
+																				void 0 !==
+																					_author$instructorPro2 &&
+																				_author$instructorPro2.officeLocation
+																					? author
+																							.officeLocation
+																							.title
+																					: 'ESB 2101',
+																			department:
+																				'',
+																		},
+																		key: index,
 																	},
-																	key: index,
-																}
+																),
 															)
-														)
-													})
+														},
+													),
 											),
 											__jsx(
 												'div',
@@ -1153,9 +1156,9 @@
 														null,
 														__jsx(
 															gr_index_esm.ZMl,
-															{ size: 30 }
-														)
-													)
+															{ size: 30 },
+														),
+													),
 												),
 												__jsx(
 													'div',
@@ -1165,9 +1168,9 @@
 														null,
 														__jsx(
 															cg_index_esm.Bhn,
-															{ size: 30 }
-														)
-													)
+															{ size: 30 },
+														),
+													),
 												),
 												__jsx(
 													'div',
@@ -1177,9 +1180,9 @@
 														null,
 														__jsx(
 															bi_index_esm.UsY,
-															{ size: 30 }
-														)
-													)
+															{ size: 30 },
+														),
+													),
 												),
 												__jsx(
 													'div',
@@ -1189,9 +1192,9 @@
 														null,
 														__jsx(
 															bi_index_esm.Goc,
-															{ size: 30 }
-														)
-													)
+															{ size: 30 },
+														),
+													),
 												),
 												__jsx(
 													'div',
@@ -1201,8 +1204,8 @@
 														null,
 														__jsx(index_esm.eRs, {
 															size: 30,
-														})
-													)
+														}),
+													),
 												),
 												__jsx(
 													'div',
@@ -1212,12 +1215,12 @@
 														null,
 														__jsx(
 															ri_index_esm.A_l,
-															{ size: 30 }
-														)
-													)
-												)
-											)
-										)
+															{ size: 30 },
+														),
+													),
+												),
+											),
+										),
 									),
 									__jsx(
 										'div',
@@ -1247,7 +1250,7 @@
 													role: inputProps.role,
 													type: inputProps.type,
 													options: [],
-												})
+												}),
 											),
 											__jsx(
 												'div',
@@ -1258,7 +1261,7 @@
 														className:
 															'text-gray-700 ',
 													},
-													'Groups'
+													'Groups',
 												),
 												__jsx(
 													'div',
@@ -1276,7 +1279,7 @@
 															? groupsProps.map(
 																	function (
 																		group,
-																		groupIndex
+																		groupIndex,
 																	) {
 																		return __jsx(
 																			'li',
@@ -1290,12 +1293,12 @@
 																				{
 																					alt: ''.concat(
 																						group.groupsName,
-																						' logo'
+																						' logo',
 																					),
 																					className:
 																						'w-12 h-12 rounded-full p-1',
 																					src: group.groupsProfileImage,
-																				}
+																				},
 																			),
 																			__jsx(
 																				'div',
@@ -1309,7 +1312,7 @@
 																						className:
 																							'',
 																					},
-																					group.groupsName
+																					group.groupsName,
 																				),
 																				__jsx(
 																					'p',
@@ -1319,9 +1322,9 @@
 																					},
 																					''.concat(
 																						group.groupsMemberCount,
-																						' members'
-																					)
-																				)
+																						' members',
+																					),
+																				),
 																			),
 																			__jsx(
 																				'button',
@@ -1330,15 +1333,15 @@
 																					index_esm.jbg,
 																					{
 																						size: 30,
-																					}
-																				)
-																			)
+																					},
+																				),
+																			),
 																		)
-																	}
+																	},
 															  )
-															: null
-													)
-												)
+															: null,
+													),
+												),
 											),
 											__jsx(
 												'div',
@@ -1355,7 +1358,7 @@
 															className:
 																'text-gray-700 mb-2',
 														},
-														'Polls & Surveys'
+														'Polls & Surveys',
 													),
 													__jsx(
 														'div',
@@ -1373,7 +1376,7 @@
 																? pollSurveysProps.map(
 																		function (
 																			poll,
-																			pollIndex
+																			pollIndex,
 																		) {
 																			return __jsx(
 																				'li',
@@ -1394,7 +1397,7 @@
 																							className:
 																								'',
 																						},
-																						poll.pollSurveyName
+																						poll.pollSurveyName,
 																					),
 																					__jsx(
 																						'p',
@@ -1408,35 +1411,35 @@
 																						1 ===
 																							poll.timestamp
 																							? 'minute'
-																							: 'minutes'
-																					)
+																							: 'minutes',
+																					),
 																				),
 																				__jsx(
 																					'button',
 																					null,
 																					poll.pollSurveyName.endsWith(
-																						'poll'
+																						'poll',
 																					)
 																						? __jsx(
 																								bi_index_esm.zZK,
 																								{
 																									size: 30,
-																								}
+																								},
 																						  )
 																						: __jsx(
 																								go_index_esm.lzP,
 																								{
 																									size: 30,
-																								}
-																						  )
-																				)
+																								},
+																						  ),
+																				),
 																			)
-																		}
+																		},
 																  )
-																: null
-														)
-													)
-												)
+																: null,
+														),
+													),
+												),
 											),
 											__jsx(
 												'div',
@@ -1453,7 +1456,7 @@
 															className:
 																'text-gray-700 mb-2',
 														},
-														'Popular challenges'
+														'Popular challenges',
 													),
 													__jsx(
 														'div',
@@ -1471,7 +1474,7 @@
 																? challengesProps.map(
 																		function (
 																			challenge,
-																			challengeIndex
+																			challengeIndex,
 																		) {
 																			return __jsx(
 																				'li',
@@ -1492,7 +1495,7 @@
 																							className:
 																								'',
 																						},
-																						challenge.challengesName
+																						challenge.challengesName,
 																					),
 																					__jsx(
 																						'p',
@@ -1506,8 +1509,8 @@
 																						1 ===
 																							challenge.challengesUserCount
 																							? 'user'
-																							: 'users'
-																					)
+																							: 'users',
+																					),
 																				),
 																				__jsx(
 																					'button',
@@ -1516,16 +1519,16 @@
 																						index_esm.Lfi,
 																						{
 																							size: 30,
-																						}
-																					)
-																				)
+																						},
+																					),
+																				),
 																			)
-																		}
+																		},
 																  )
-																: null
-														)
-													)
-												)
+																: null,
+														),
+													),
+												),
 											),
 											__jsx(
 												'div',
@@ -1542,7 +1545,7 @@
 															className:
 																'text-gray-700 mb-2',
 														},
-														'Most Recent Chats'
+														'Most Recent Chats',
 													),
 													__jsx(
 														'div',
@@ -1557,7 +1560,7 @@
 																? contactProps.map(
 																		function (
 																			contact,
-																			contactIndex
+																			contactIndex,
 																		) {
 																			return __jsx(
 																				'li',
@@ -1578,16 +1581,16 @@
 																							alt: ''
 																								.concat(
 																									contact.contactFirstName,
-																									' '
+																									' ',
 																								)
 																								.concat(
 																									contact.contactLastName,
-																									' avatar'
+																									' avatar',
 																								),
 																							className:
 																								'w-12 h-12 rounded-full p-1',
 																							src: contact.contactProfileImage,
-																						}
+																						},
 																					),
 																					__jsx(
 																						'span',
@@ -1601,10 +1604,10 @@
 																										  contact.contactStatus
 																										? 'bg-red-500'
 																										: 'bg-gray-500',
-																									'\n                              '
+																									'\n                              ',
 																								),
-																						}
-																					)
+																						},
+																					),
 																				),
 																				__jsx(
 																					'div',
@@ -1625,8 +1628,8 @@
 																									' ',
 																						contact.contactFirstName +
 																							' ' +
-																							contact.contactLastName
-																					)
+																							contact.contactLastName,
+																					),
 																				),
 																				__jsx(
 																					'button',
@@ -1635,20 +1638,20 @@
 																						md_index_esm.D6S,
 																						{
 																							size: 30,
-																						}
-																					)
-																				)
+																						},
+																					),
+																				),
 																			)
-																		}
+																		},
 																  )
-																: null
-														)
-													)
-												)
-											)
-										)
-									)
-								)
+																: null,
+														),
+													),
+												),
+											),
+										),
+									),
+								),
 						  ))
 						: __jsx('div', null, 'Loading...')
 				}
@@ -1731,10 +1734,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -1750,13 +1751,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -1944,7 +1948,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -1962,11 +1966,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = _objectSpread(
 					_objectSpread({}, Secondary.parameters),
@@ -1980,7 +1984,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -1998,17 +2002,17 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./utils/gql_fetcher.ts': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -2017,23 +2021,23 @@
 			})
 			var graphql_request__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/graphql-request/build/esm/index.js'
+						'./node_modules/graphql-request/build/esm/index.js',
 					),
 				client = new graphql_request__WEBPACK_IMPORTED_MODULE_0__.g6(
 					'http://localhost:4000/graphql',
-					{ headers: {} }
+					{ headers: {} },
 				)
 			const __WEBPACK_DEFAULT_EXPORT__ = function gqlFetcher(args) {
 				return new graphql_request__WEBPACK_IMPORTED_MODULE_0__.g6(
 					'http://localhost:4000/graphql',
-					{ headers: { authorization: args.token } }
+					{ headers: { authorization: args.token } },
 				).request(args.query, args.variables || {})
 			}
 		},
 		'./node_modules/moment/locale sync recursive ^\\.\\/.*$': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var map = {
 				'./af': './node_modules/moment/locale/af.js',

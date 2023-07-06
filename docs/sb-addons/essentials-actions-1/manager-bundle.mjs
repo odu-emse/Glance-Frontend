@@ -232,7 +232,7 @@ try {
 				t || !e || !e.__esModule
 					? se(r, 'default', { value: e, enumerable: !0 })
 					: r,
-				e
+				e,
 			)
 		),
 		mt = le({
@@ -589,14 +589,14 @@ try {
 				return a.createElement(
 					Ve.Provider,
 					{ value: o },
-					a.createElement(e, { ...n })
+					a.createElement(e, { ...n }),
 				)
 			},
 		yt = ({ expanded: e, styles: t }) =>
 			a.createElement(
 				'span',
 				{ style: { ...t.base, ...(e ? t.expanded : t.collapsed) } },
-				'\u25B6'
+				'\u25B6',
 			),
 		Ot = k((e) => {
 			e = {
@@ -638,15 +638,15 @@ try {
 								a.createElement(
 									'span',
 									{ style: l.treeNodePlaceholder },
-									'\xA0'
+									'\xA0',
 								),
-					a.createElement(c, { ...e })
+					a.createElement(c, { ...e }),
 				),
 				a.createElement(
 					'ol',
 					{ role: 'group', style: l.treeNodeChildNodesContainer },
-					t ? n : void 0
-				)
+					t ? n : void 0,
+				),
 			)
 		}),
 		Q = '$',
@@ -656,7 +656,7 @@ try {
 	}
 	var vt = (e) =>
 			Array.from({ length: e }, (t, r) =>
-				[Q].concat(Array.from({ length: r }, () => '*')).join('.')
+				[Q].concat(Array.from({ length: r }, () => '*')).join('.'),
 			),
 		Tt = (e, t, r, n, o) => {
 			let i = []
@@ -723,9 +723,9 @@ try {
 								dataIterator: r,
 								nodeRenderer: i,
 								...E,
-							})
+							}),
 					  )
-					: null
+					: null,
 			)
 		}),
 		We = k(
@@ -755,11 +755,11 @@ try {
 								depth: 0,
 								path: Q,
 								nodeRenderer: n,
-							})
-						)
+							}),
+						),
 					)
 				)
-			}
+			},
 		),
 		ce = ({ name: e, dimmed: t = !1, styles: r = {} }) => {
 			let n = _('ObjectName'),
@@ -775,13 +775,13 @@ try {
 						'span',
 						{ style: n('objectValueNumber') },
 						String(e),
-						'n'
+						'n',
 					)
 				case 'number':
 					return a.createElement(
 						'span',
 						{ style: n('objectValueNumber') },
-						String(e)
+						String(e),
 					)
 				case 'string':
 					return a.createElement(
@@ -789,26 +789,26 @@ try {
 						{ style: n('objectValueString') },
 						'"',
 						e,
-						'"'
+						'"',
 					)
 				case 'boolean':
 					return a.createElement(
 						'span',
 						{ style: n('objectValueBoolean') },
-						String(e)
+						String(e),
 					)
 				case 'undefined':
 					return a.createElement(
 						'span',
 						{ style: n('objectValueUndefined') },
-						'undefined'
+						'undefined',
 					)
 				case 'object':
 					return e === null
 						? a.createElement(
 								'span',
 								{ style: n('objectValueNull') },
-								'null'
+								'null',
 						  )
 						: e instanceof Date
 						? a.createElement('span', null, e.toString())
@@ -816,7 +816,7 @@ try {
 						? a.createElement(
 								'span',
 								{ style: n('objectValueRegExp') },
-								e.toString()
+								e.toString(),
 						  )
 						: Array.isArray(e)
 						? a.createElement('span', null, `Array(${e.length})`)
@@ -826,7 +826,7 @@ try {
 							? a.createElement(
 									'span',
 									null,
-									`Buffer[${e.length}]`
+									`Buffer[${e.length}]`,
 							  )
 							: a.createElement('span', null, e.constructor.name)
 						: a.createElement('span', null, 'Object')
@@ -837,20 +837,20 @@ try {
 						a.createElement(
 							'span',
 							{ style: n('objectValueFunctionPrefix') },
-							'\u0192\xA0'
+							'\u0192\xA0',
 						),
 						a.createElement(
 							'span',
 							{ style: n('objectValueFunctionName') },
 							e.name,
-							'()'
-						)
+							'()',
+						),
 					)
 				case 'symbol':
 					return a.createElement(
 						'span',
 						{ style: n('objectValueSymbol') },
-						e.toString()
+						e.toString(),
 					)
 				default:
 					return a.createElement('span', null)
@@ -888,11 +888,11 @@ try {
 					o = r
 						.slice(0, n)
 						.map((u, s) =>
-							a.createElement(G, { key: s, object: u })
+							a.createElement(G, { key: s, object: u }),
 						)
 				r.length > n &&
 					o.push(
-						a.createElement('span', { key: 'ellipsis' }, '\u2026')
+						a.createElement('span', { key: 'ellipsis' }, '\u2026'),
 					)
 				let i = r.length
 				return a.createElement(
@@ -901,15 +901,15 @@ try {
 					a.createElement(
 						'span',
 						{ style: t.objectDescription },
-						i === 0 ? '' : `(${i})\xA0`
+						i === 0 ? '' : `(${i})\xA0`,
 					),
 					a.createElement(
 						'span',
 						{ style: t.preview },
 						'[',
 						He(o, ', '),
-						']'
-					)
+						']',
+					),
 				)
 			} else {
 				let n = t.objectMaxProperties,
@@ -922,7 +922,7 @@ try {
 							(s = a.createElement(
 								'span',
 								{ key: 'ellipsis' },
-								'\u2026'
+								'\u2026',
 							))
 						let l = oe(r, u)
 						if (
@@ -933,8 +933,8 @@ try {
 									a.createElement(ce, { name: u || '""' }),
 									':\xA0',
 									a.createElement(G, { object: l }),
-									s
-								)
+									s,
+								),
 							),
 							s)
 						)
@@ -947,15 +947,15 @@ try {
 					a.createElement(
 						'span',
 						{ style: t.objectDescription },
-						i === 'Object' ? '' : `${i} `
+						i === 'Object' ? '' : `${i} `,
 					),
 					a.createElement(
 						'span',
 						{ style: t.preview },
 						'{',
 						He(o, ', '),
-						'}'
-					)
+						'}',
+					),
 				)
 			}
 		},
@@ -966,7 +966,7 @@ try {
 						null,
 						a.createElement(ce, { name: e }),
 						a.createElement('span', null, ': '),
-						a.createElement(ie, { data: t })
+						a.createElement(ie, { data: t }),
 				  )
 				: a.createElement(ie, { data: t }),
 		St = ({ name: e, data: t, isNonenumerable: r = !1 }) => {
@@ -978,7 +978,7 @@ try {
 					? a.createElement(ce, { name: e, dimmed: r })
 					: a.createElement(ie, { data: e }),
 				a.createElement('span', null, ': '),
-				a.createElement(G, { object: n })
+				a.createElement(G, { object: n }),
 			)
 		},
 		At = (e, t) =>
@@ -1063,7 +1063,7 @@ try {
 						i !== null &&
 						Object.keys(i).reduce(
 							(s, l) => (s.includes(l) || s.push(l), s),
-							n
+							n,
 						),
 					n
 				)
@@ -1091,7 +1091,7 @@ try {
 								a.createElement(
 									'td',
 									{ style: { ...n.td, ...o.none } },
-									i
+									i,
 								),
 								t.map((s) => {
 									let l = r[u]
@@ -1109,17 +1109,17 @@ try {
 												},
 												a.createElement(G, {
 													object: l[s],
-												})
+												}),
 										  )
 										: a.createElement('td', {
 												key: s,
 												style: { ...n.td, ...o.solid },
 										  })
-								})
-							)
-						)
-					)
-				)
+								}),
+							),
+						),
+					),
+				),
 			)
 		},
 		It = (e) =>
@@ -1135,7 +1135,7 @@ try {
 						alignItems: 'center',
 					},
 				},
-				e.children
+				e.children,
 			),
 		Dt = ({ sortAscending: e }) => {
 			let t = _('TableInspectorSortIcon'),
@@ -1168,8 +1168,8 @@ try {
 					a.createElement(
 						It,
 						null,
-						a.createElement(Dt, { sortAscending: e })
-					)
+						a.createElement(Dt, { sortAscending: e }),
+					),
 			)
 		},
 		Mt = ({
@@ -1204,7 +1204,7 @@ try {
 									sortAscending: i,
 									onClick: s,
 								},
-								e
+								e,
 							),
 							t.map((f) =>
 								a.createElement(
@@ -1216,12 +1216,12 @@ try {
 										sortAscending: i,
 										onClick: u.bind(null, f),
 									},
-									f
-								)
-							)
-						)
-					)
-				)
+									f,
+								),
+							),
+						),
+					),
+				),
 			)
 		},
 		Pt = ({ data: e, columns: t }) => {
@@ -1267,7 +1267,7 @@ try {
 					? (E = p.map((h, y) =>
 							typeof h == 'object' && h !== null
 								? [h[i], y]
-								: [void 0, y]
+								: [void 0, y],
 					  ))
 					: o && (E = f.map((h, y) => [f[y], y])),
 				E !== void 0)
@@ -1309,7 +1309,7 @@ try {
 					onTHClick: c,
 					onIndexTHClick: l,
 				}),
-				a.createElement(Lt, { rows: f, columns: d, rowsData: p })
+				a.createElement(Lt, { rows: f, columns: d, rowsData: p }),
 			)
 		},
 		Bt = ue(Pt),
@@ -1338,22 +1338,22 @@ try {
 									a.createElement(
 										'span',
 										{ style: r.htmlAttributeName },
-										i.name
+										i.name,
 									),
 									'="',
 									a.createElement(
 										'span',
 										{ style: r.htmlAttributeValue },
-										i.value
+										i.value,
 									),
-									'"'
-								)
+									'"',
+								),
 							)
 						}
 						return n
 					}
 				})(),
-				'>'
+				'>',
 			),
 		Ue = ({ tagName: e, isChildNode: t = !1, styles: r }) =>
 			a.createElement(
@@ -1361,7 +1361,7 @@ try {
 				{ style: Object.assign({}, r.base, t && r.offsetLeft) },
 				'</',
 				a.createElement('span', { style: r.tagName }, e),
-				'>'
+				'>',
 			),
 		Ht = {
 			1: 'ELEMENT_NODE',
@@ -1395,7 +1395,7 @@ try {
 							a.createElement(Ue, {
 								tagName: t.tagName,
 								styles: n.htmlCloseTag,
-							})
+							}),
 					)
 				case Node.TEXT_NODE:
 					return a.createElement('span', null, t.textContent)
@@ -1403,7 +1403,7 @@ try {
 					return a.createElement(
 						'span',
 						null,
-						'<![CDATA[' + t.textContent + ']]>'
+						'<![CDATA[' + t.textContent + ']]>',
 					)
 				case Node.COMMENT_NODE:
 					return a.createElement(
@@ -1411,7 +1411,7 @@ try {
 						{ style: n.htmlComment },
 						'<!--',
 						t.textContent,
-						'-->'
+						'-->',
 					)
 				case Node.PROCESSING_INSTRUCTION_NODE:
 					return a.createElement('span', null, t.nodeName)
@@ -1424,7 +1424,7 @@ try {
 						t.publicId ? ` PUBLIC "${t.publicId}"` : '',
 						!t.publicId && t.systemId ? ' SYSTEM' : '',
 						t.systemId ? ` "${t.systemId}"` : '',
-						'>'
+						'>',
 					)
 				case Node.DOCUMENT_NODE:
 					return a.createElement('span', null, t.nodeName)
@@ -1548,7 +1548,7 @@ try {
 	function fe(e) {
 		if (e === void 0)
 			throw new ReferenceError(
-				"this hasn't been initialised - super() hasn't been called"
+				"this hasn't been initialised - super() hasn't been called",
 			)
 		return e
 	}
@@ -1591,7 +1591,7 @@ try {
 		try {
 			return (
 				Boolean.prototype.valueOf.call(
-					Reflect.construct(Boolean, [], function () {})
+					Reflect.construct(Boolean, [], function () {}),
 				),
 				!0
 			)
@@ -1620,7 +1620,7 @@ try {
 				if (n === null || !de(n)) return n
 				if (typeof n != 'function')
 					throw new TypeError(
-						'Super expression must either be null or a function'
+						'Super expression must either be null or a function',
 					)
 				if (typeof t < 'u') {
 					if (t.has(n)) return t.get(n)
@@ -1654,7 +1654,7 @@ try {
 						this,
 						'An error occurred. See https://github.com/styled-components/polished/blob/main/src/internalHelpers/errors.md#' +
 							r +
-							' for more information.'
+							' for more information.',
 					) || this
 			else for (var o, i, u; u < o; u++);
 			return fe(n)
@@ -1900,7 +1900,7 @@ try {
 			}
 		if (t.match(Xt)) {
 			var r = parseFloat(
-				(parseInt('' + t[7] + t[8], 16) / 255).toFixed(2)
+				(parseInt('' + t[7] + t[8], 16) / 255).toFixed(2),
 			)
 			return {
 				red: parseInt('' + t[1] + t[2], 16),
@@ -1917,7 +1917,7 @@ try {
 			}
 		if (t.match(Kt)) {
 			var n = parseFloat(
-				(parseInt('' + t[4] + t[4], 16) / 255).toFixed(2)
+				(parseInt('' + t[4] + t[4], 16) / 255).toFixed(2),
 			)
 			return {
 				red: parseInt('' + t[1] + t[1], 16),
@@ -2184,7 +2184,7 @@ try {
 		if (t === 'transparent') return t
 		var r = x(t)
 		return w(
-			v({}, r, { saturation: F(0, 1, r.saturation - parseFloat(e)) })
+			v({}, r, { saturation: F(0, 1, r.saturation - parseFloat(e)) }),
 		)
 	}
 	var Ks = R(dr)
@@ -2233,7 +2233,7 @@ try {
 		if (t === 'transparent') return t
 		var r = x(t)
 		return w(
-			v({}, r, { saturation: F(0, 1, r.saturation + parseFloat(e)) })
+			v({}, r, { saturation: F(0, 1, r.saturation + parseFloat(e)) }),
 		)
 	}
 	var el = R(yr)
@@ -2271,7 +2271,7 @@ try {
 				alpha: F(
 					0,
 					1,
-					+(n * 100 - parseFloat(e) * 100).toFixed(2) / 100
+					+(n * 100 - parseFloat(e) * 100).toFixed(2) / 100,
 				),
 			})
 		return te(o)
@@ -2301,7 +2301,7 @@ try {
 			a.createElement(
 				Ze,
 				{ horizontal: !0, vertical: !0, className: t },
-				e
+				e,
 			),
 		Nr = M(wr)({ margin: 0, padding: '10px 5px 20px' }),
 		Lr = Fe(({ theme: e, ...t }) =>
@@ -2309,7 +2309,7 @@ try {
 				theme: e.addonActionsTheme || 'chromeLight',
 				table: !1,
 				...t,
-			})
+			}),
 		),
 		Ir = ({ actions: e, onClear: t }) =>
 			a.createElement(
@@ -2331,14 +2331,14 @@ try {
 									showNonenumerable: !1,
 									name: r.data.name,
 									data: r.data.args || r.data,
-								})
-							)
-						)
-					)
+								}),
+							),
+						),
+					),
 				),
 				a.createElement(Xe, {
 					actionItems: [{ title: 'Clear', onClick: t }],
-				})
+				}),
 			),
 		Dr = (e, t) => {
 			try {
@@ -2431,7 +2431,7 @@ try {
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

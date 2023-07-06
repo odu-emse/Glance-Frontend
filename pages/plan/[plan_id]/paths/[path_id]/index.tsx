@@ -29,7 +29,7 @@ function PathIndexPage() {
 	const { path_id } = router.query
 	const { data, error } = useSWR(
 		getLPbyPlanID(account.plan.id, path_id as string),
-		gql_fetcher
+		gql_fetcher,
 	) as {
 		data: {
 			learningPath: Array<LearningPath>

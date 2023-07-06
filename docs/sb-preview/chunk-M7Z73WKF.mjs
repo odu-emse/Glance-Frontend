@@ -21,7 +21,7 @@ var __commonJS = (cb, mod) =>
 			mod ||
 				(0, cb[__getOwnPropNames(cb)[0]])(
 					(mod = { exports: {} }).exports,
-					mod
+					mod,
 				),
 			mod.exports
 		)
@@ -49,7 +49,7 @@ var __toESM = (mod, isNodeMode, target) => (
 		isNodeMode || !mod || !mod.__esModule
 			? __defProp(target, 'default', { value: mod, enumerable: !0 })
 			: target,
-		mod
+		mod,
 	)
 )
 var globals = {

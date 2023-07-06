@@ -27,7 +27,7 @@ const commentGen = (parentComment: ThreadType): Array<ReactNode> | [] => {
 				>
 					{subThreads}
 				</Thread>
-			</div>
+			</div>,
 		)
 	}
 	return threads

@@ -5,7 +5,7 @@
 		'./node_modules/@storybook/components/dist/formatter-S4K5WUZV.mjs': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -13,14 +13,14 @@
 				})
 			var _chunk_NNAAFZ4U_mjs__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/@storybook/components/dist/chunk-NNAAFZ4U.mjs'
+						'./node_modules/@storybook/components/dist/chunk-NNAAFZ4U.mjs',
 					),
 				memoizerific__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/memoizerific/memoizerific.js'
+					'./node_modules/memoizerific/memoizerific.js',
 				),
 				memoizerific__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						memoizerific__WEBPACK_IMPORTED_MODULE_1__
+						memoizerific__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				require_parser_html = (0,
 				_chunk_NNAAFZ4U_mjs__WEBPACK_IMPORTED_MODULE_0__.E)({
@@ -60,16 +60,16 @@
 									Kr.exports =
 										Ne(
 											'object' == typeof globalThis &&
-												globalThis
+												globalThis,
 										) ||
 										Ne(
-											'object' == typeof window && window
+											'object' == typeof window && window,
 										) ||
 										Ne('object' == typeof self && self) ||
 										Ne(
 											'object' ==
 												typeof __webpack_require__.g &&
-												__webpack_require__.g
+												__webpack_require__.g,
 										) ||
 										(function () {
 											return this
@@ -149,7 +149,7 @@
 												return function () {
 													return er.apply(
 														e,
-														arguments
+														arguments,
 													)
 												}
 										  }
@@ -189,7 +189,7 @@
 									du.exports = function (e) {
 										if (Gs(e))
 											throw Vs(
-												"Can't call method on " + e
+												"Can't call method on " + e,
 											)
 										return e
 									}
@@ -370,7 +370,7 @@
 										)
 											return n
 										throw pi(
-											"Can't convert object to primitive value"
+											"Can't convert object to primitive value",
 										)
 									}
 								}),
@@ -500,7 +500,7 @@
 											)
 												return n
 											throw Pi(
-												"Can't convert object to primitive value"
+												"Can't convert object to primitive value",
 											)
 										}
 										return (
@@ -542,7 +542,7 @@
 														get: function () {
 															return 7
 														},
-													}
+													},
 												).a
 											)
 										})
@@ -571,7 +571,7 @@
 												if (Ki(r, u))
 													return Wi(
 														!Hi(zi.f, r, u),
-														r[u]
+														r[u],
 													)
 										  }
 								}),
@@ -586,7 +586,7 @@
 												Object.defineProperty(
 													function () {},
 													'prototype',
-													{ value: 42, writable: !1 }
+													{ value: 42, writable: !1 },
 												).prototype
 											)
 										})
@@ -657,7 +657,7 @@
 													} catch {}
 												if ('get' in n || 'set' in n)
 													throw aa(
-														'Accessors not supported'
+														'Accessors not supported',
 													)
 												return (
 													'value' in n &&
@@ -800,7 +800,7 @@
 														throw qr(
 															'Incompatible receiver, ' +
 																e +
-																' required'
+																' required',
 														)
 													return u
 												}
@@ -826,7 +826,7 @@
 													He(
 														function () {},
 														'length',
-														{ value: 8 }
+														{ value: 8 },
 													).length
 												)
 											}),
@@ -838,7 +838,7 @@
 													'[' +
 													String(r).replace(
 														/^Symbol\(([^)]*)\)/,
-														'$1'
+														'$1',
 													) +
 													']'),
 												u &&
@@ -880,7 +880,7 @@
 													(n.source = La.join(
 														'string' == typeof r
 															? r
-															: ''
+															: '',
 													)),
 												e
 											)
@@ -892,7 +892,7 @@
 												Ra(this)
 											)
 										},
-										'toString'
+										'toString',
 									)
 								}),
 								jt = S((o2, Mt) => {
@@ -1128,7 +1128,7 @@
 														? (c =
 																(a = To(
 																	i,
-																	f
+																	f,
 																)) && a.value)
 														: (c = i[f]),
 													!Oo(
@@ -1139,7 +1139,7 @@
 																		? '.'
 																		: '#') +
 																	f,
-														e.forced
+														e.forced,
 													) && void 0 !== c)
 												) {
 													if (typeof F == typeof c)
@@ -1160,7 +1160,7 @@
 											global: !0,
 											forced: kr.globalThis !== kr,
 										},
-										{ globalThis: kr }
+										{ globalThis: kr },
 									)
 								}),
 								mn = S(() => {
@@ -1179,7 +1179,7 @@
 									Fn.exports = function (e) {
 										if (e > 9007199254740991)
 											throw Ro(
-												'Maximum allowed index exceeded'
+												'Maximum allowed index exceeded',
 											)
 										return e
 									}
@@ -1206,7 +1206,7 @@
 												: function () {
 														return e.apply(
 															r,
-															arguments
+															arguments,
 														)
 												  }
 										)
@@ -1240,7 +1240,7 @@
 																	l,
 																	h,
 																	c,
-																	s - 1
+																	s - 1,
 																) - 1))
 														: (Go(c + 1),
 														  (e[c] = l)),
@@ -1267,7 +1267,7 @@
 											We(
 												(function () {
 													return arguments
-												})()
+												})(),
 											)
 									qn.exports = zo
 										? We
@@ -1280,7 +1280,7 @@
 													: 'string' ==
 													  typeof (u = (function (
 															e,
-															r
+															r,
 													  ) {
 															try {
 																return e[r]
@@ -1400,12 +1400,12 @@
 														r,
 														arguments.length > 1
 															? arguments[1]
-															: void 0
+															: void 0,
 													)),
 													D
 												)
 											},
-										}
+										},
 									)
 								}),
 								Ur = S(($2, Hn) => {
@@ -1524,7 +1524,7 @@
 										else {
 											if (!(a = GD(e)))
 												throw VD(
-													$D(e) + ' is not iterable'
+													$D(e) + ' is not iterable',
 												)
 											if (MD(a)) {
 												for (
@@ -1587,12 +1587,12 @@
 														function (n, D) {
 															QD(u, n, D)
 														},
-														{ AS_ENTRIES: !0 }
+														{ AS_ENTRIES: !0 },
 													),
 													u
 												)
 											},
-										}
+										},
 									)
 								}),
 								Dc = S((W2, Os) => {
@@ -1625,7 +1625,7 @@
 													!(r.indexOf(n) >= 0) &&
 														Object.prototype.propertyIsEnumerable.call(
 															e,
-															n
+															n,
 														) &&
 														(u[n] = e[n])
 										}
@@ -1644,7 +1644,7 @@
 												return (
 													e &&
 														(r = (0, e[Xr(e)[0]])(
-															(e = 0)
+															(e = 0),
 														)),
 													r
 												)
@@ -1657,7 +1657,7 @@
 															(r = {
 																exports: {},
 															}).exports,
-															r
+															r,
 														),
 													r.exports
 												)
@@ -1682,7 +1682,7 @@
 															enumerable:
 																!(n = rl(
 																	r,
-																	D
+																	D,
 																)) ||
 																n.enumerable,
 														})
@@ -1693,7 +1693,7 @@
 												Je({}, '__esModule', {
 													value: !0,
 												}),
-												e
+												e,
 											),
 										q = Ee({
 											'<define:process>'() {
@@ -1702,7 +1702,7 @@
 										}),
 										Es = I({
 											'node_modules/angular-html-parser/lib/compiler/src/chars.js'(
-												e
+												e,
 											) {
 												function u(f) {
 													return (
@@ -1713,7 +1713,7 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.$EOF = 0),
 													(e.$BSPACE = 8),
@@ -1809,7 +1809,7 @@
 															)
 														}),
 													(e.isNewLine = function s(
-														f
+														f,
 													) {
 														return (
 															f === e.$LF ||
@@ -1827,13 +1827,13 @@
 										}),
 										sl = I({
 											'node_modules/angular-html-parser/lib/compiler/src/aot/static_symbol.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = class {
 													constructor(n, D, s) {
@@ -1845,8 +1845,8 @@
 														if (this.members.length)
 															throw new Error(
 																`Illegal state: symbol without members expected, but got ${JSON.stringify(
-																	this
-																)}.`
+																	this,
+																)}.`,
 															)
 													}
 												}
@@ -1860,24 +1860,24 @@
 																(s = s || [])
 																	.length
 																	? `.${s.join(
-																			'.'
+																			'.',
 																	  )}`
 																	: ''
 															}`,
 															c =
 																this.cache.get(
-																	f
+																	f,
 																)
 														return (
 															c ||
 																((c = new r(
 																	n,
 																	D,
-																	s
+																	s,
 																)),
 																this.cache.set(
 																	f,
-																	c
+																	c,
 																)),
 															c
 														)
@@ -1887,13 +1887,13 @@
 										}),
 										il = I({
 											'node_modules/angular-html-parser/lib/compiler/src/util.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = /-+([a-z0-9])/g
 												function s(o, E, p) {
@@ -1906,7 +1906,7 @@
 																	.trim(),
 																o
 																	.slice(
-																		A + 1
+																		A + 1,
 																	)
 																	.trim(),
 														  ]
@@ -1921,7 +1921,7 @@
 																	null !==
 																		o &&
 																	Object.getPrototypeOf(
-																		o
+																		o,
 																	) === w
 																)
 														  })(o)
@@ -1945,7 +1945,7 @@
 																			arguments.length,
 																		p =
 																			new Array(
-																				E
+																				E,
 																			),
 																		A = 0;
 																	A < E;
@@ -1956,7 +1956,7 @@
 																			A
 																		]
 																return p[1].toUpperCase()
-															}
+															},
 														)
 													}),
 													(e.splitAtColon =
@@ -1969,12 +1969,12 @@
 														}),
 													(e.visitValue = i),
 													(e.isDefined = function f(
-														o
+														o,
 													) {
 														return null != o
 													}),
 													(e.noUndefined = function c(
-														o
+														o,
 													) {
 														return void 0 === o
 															? null
@@ -1983,19 +1983,19 @@
 												;(e.ValueTransformer = class {
 													visitArray(o, E) {
 														return o.map((p) =>
-															i(p, this, E)
+															i(p, this, E),
 														)
 													}
 													visitStringMap(o, E) {
 														let p = {}
 														return (
 															Object.keys(
-																o
+																o,
 															).forEach((A) => {
 																p[A] = i(
 																	o[A],
 																	this,
-																	E
+																	E,
 																)
 															}),
 															p
@@ -2012,7 +2012,7 @@
 														assertSync: (o) => {
 															if (_(o))
 																throw new Error(
-																	'Illegal state: value cannot be a promise'
+																	'Illegal state: value cannot be a promise',
 																)
 															return o
 														},
@@ -2027,12 +2027,12 @@
 													}),
 													(e.error = function a(o) {
 														throw new Error(
-															`Internal Error: ${o}`
+															`Internal Error: ${o}`,
 														)
 													}),
 													(e.syntaxError = function l(
 														o,
-														E
+														E,
 													) {
 														let p = Error(o)
 														return (
@@ -2044,7 +2044,7 @@
 												var h = 'ngSyntaxError',
 													C = 'ngParseErrors'
 												;(e.isSyntaxError = function d(
-													o
+													o,
 												) {
 													return o[h]
 												}),
@@ -2056,11 +2056,11 @@
 														function T(o) {
 															return o.replace(
 																/([.*+?^=!:${}()|[\]\/\\])/g,
-																'\\$1'
+																'\\$1',
 															)
 														})
 												var w = Object.getPrototypeOf(
-													{}
+													{},
 												)
 												function _(o) {
 													return (
@@ -2084,7 +2084,7 @@
 														) {
 															let P =
 																o.charCodeAt(
-																	p + 1
+																	p + 1,
 																)
 															P >= 56320 &&
 																P <= 57343 &&
@@ -2100,7 +2100,7 @@
 														A <= 127
 															? (E +=
 																	String.fromCharCode(
-																		A
+																		A,
 																	))
 															: A <= 2047
 															? (E +=
@@ -2111,7 +2111,7 @@
 																			192,
 																		(63 &
 																			A) |
-																			128
+																			128,
 																	))
 															: A <= 65535
 															? (E +=
@@ -2125,7 +2125,7 @@
 																			128,
 																		(63 &
 																			A) |
-																			128
+																			128,
 																	))
 															: A <= 2097151 &&
 															  (E +=
@@ -2144,13 +2144,13 @@
 																			128,
 																		(63 &
 																			A) |
-																			128
+																			128,
 																	))
 													}
 													return E
 												}),
 													(e.stringify = function R(
-														o
+														o,
 													) {
 														if (
 															'string' == typeof o
@@ -2162,7 +2162,7 @@
 																o
 																	.map(R)
 																	.join(
-																		', '
+																		', ',
 																	) +
 																']'
 															)
@@ -2187,7 +2187,7 @@
 															return 'function' ==
 																typeof o &&
 																o.hasOwnProperty(
-																	'__forward_ref__'
+																	'__forward_ref__',
 																)
 																? o()
 																: o
@@ -2201,7 +2201,7 @@
 															(this.minor = E[1]),
 															(this.patch =
 																E.slice(2).join(
-																	'.'
+																	'.',
 																))
 													}
 												}
@@ -2226,13 +2226,13 @@
 										}),
 										al = I({
 											'node_modules/angular-html-parser/lib/compiler/src/compile_metadata.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = sl(),
 													u = il(),
@@ -2276,7 +2276,7 @@
 																r.StaticSymbol
 																? A.filePath
 																: `./${u.stringify(
-																		A
+																		A,
 																  )}`
 														}),
 													(e.viewClassName =
@@ -2288,13 +2288,19 @@
 													(e.rendererTypeName =
 														function F(p) {
 															return `RenderType_${i(
-																{ reference: p }
+																{
+																	reference:
+																		p,
+																},
 															)}`
 														}),
 													(e.hostViewClassName =
 														function a(p) {
 															return `HostView_${i(
-																{ reference: p }
+																{
+																	reference:
+																		p,
+																},
 															)}`
 														}),
 													(e.componentFactoryName =
@@ -2315,7 +2321,7 @@
 													(p[(p.Injectable = 3)] =
 														'Injectable'),
 													(e.tokenName = function C(
-														p
+														p,
 													) {
 														return null != p.value
 															? D(p.value)
@@ -2388,7 +2394,7 @@
 															J && 2 != J.length)
 														)
 															throw new Error(
-																"'interpolation' should have a start and an end symbol."
+																"'interpolation' should have a start and an end symbol.",
 															)
 														;(this.interpolation =
 															J),
@@ -2443,12 +2449,12 @@
 															Wr = {}
 														null != K &&
 															Object.keys(
-																K
+																K,
 															).forEach((Z) => {
 																let ie = K[Z],
 																	Ce =
 																		Z.match(
-																			n
+																			n,
 																		)
 																null === Ce
 																	? (Wr[Z] =
@@ -2469,7 +2475,7 @@
 															let ie =
 																u.splitAtColon(
 																	Z,
-																	[Z, Z]
+																	[Z, Z],
 																)
 															Yr[ie[0]] = ie[1]
 														})
@@ -2479,7 +2485,7 @@
 																let ie =
 																	u.splitAtColon(
 																		Z,
-																		[Z, Z]
+																		[Z, Z],
 																	)
 																Qr[ie[0]] =
 																	ie[1]
@@ -2762,66 +2768,66 @@
 													}
 													addDirective(p) {
 														this.directivesSet.has(
-															p.reference
+															p.reference,
 														) ||
 															(this.directivesSet.add(
-																p.reference
+																p.reference,
 															),
 															this.directives.push(
-																p
+																p,
 															))
 													}
 													addExportedDirective(p) {
 														this.exportedDirectivesSet.has(
-															p.reference
+															p.reference,
 														) ||
 															(this.exportedDirectivesSet.add(
-																p.reference
+																p.reference,
 															),
 															this.exportedDirectives.push(
-																p
+																p,
 															))
 													}
 													addPipe(p) {
 														this.pipesSet.has(
-															p.reference
+															p.reference,
 														) ||
 															(this.pipesSet.add(
-																p.reference
+																p.reference,
 															),
 															this.pipes.push(p))
 													}
 													addExportedPipe(p) {
 														this.exportedPipesSet.has(
-															p.reference
+															p.reference,
 														) ||
 															(this.exportedPipesSet.add(
-																p.reference
+																p.reference,
 															),
 															this.exportedPipes.push(
-																p
+																p,
 															))
 													}
 													addModule(p) {
 														this.modulesSet.has(
-															p.reference
+															p.reference,
 														) ||
 															(this.modulesSet.add(
-																p.reference
+																p.reference,
 															),
 															this.modules.push(
-																p
+																p,
 															))
 													}
 													addEntryComponent(p) {
 														this.entryComponentsSet.has(
-															p.componentType
+															p.componentType,
 														) ||
 															(this.entryComponentsSet.add(
-																p.componentType
+																p.componentType,
 															),
 															this.entryComponents.push(
-																p
+																p,
 															))
 													}
 												}
@@ -2836,7 +2842,7 @@
 												function k(p) {
 													return p.replace(
 														/(\w+:\/\/[\w:-]+)?(\/+)?/,
-														'ng:///'
+														'ng:///',
 													)
 												}
 												;(e.ProviderMeta = class {
@@ -2873,9 +2879,9 @@
 																	  r.StaticSymbol
 																		? `${A.type.reference.filePath}.${A.type.reference.name}.html`
 																		: `${i(
-																				p
+																				p,
 																		  )}/${i(
-																				A.type
+																				A.type,
 																		  )}.html`
 																	: P.templateUrl),
 																A.type
@@ -2889,7 +2895,7 @@
 														function t(p, A) {
 															let P =
 																p.moduleUrl.split(
-																	/\/\\/g
+																	/\/\\/g,
 																)
 															return k(
 																`css/${A}${
@@ -2897,36 +2903,36 @@
 																		P.length -
 																			1
 																	]
-																}.ngstyle.js`
+																}.ngstyle.js`,
 															)
 														}),
 													(e.ngModuleJitUrl =
 														function o(p) {
 															return k(
 																`${i(
-																	p.type
-																)}/module.ngfactory.js`
+																	p.type,
+																)}/module.ngfactory.js`,
 															)
 														}),
 													(e.templateJitUrl =
 														function E(p, A) {
 															return k(
 																`${i(p)}/${i(
-																	A.type
-																)}.ngfactory.js`
+																	A.type,
+																)}.ngfactory.js`,
 															)
 														})
 											},
 										}),
 										Be = I({
 											'node_modules/angular-html-parser/lib/compiler/src/parse_util.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Es(),
 													u = al(),
@@ -2935,7 +2941,7 @@
 															a,
 															l,
 															h,
-															C
+															C,
 														) {
 															;(this.file = a),
 																(this.offset =
@@ -2966,7 +2972,7 @@
 																	(C--,
 																	a++,
 																	l.charCodeAt(
-																		C
+																		C,
 																	) == r.$LF)
 																) {
 																	d--
@@ -2974,12 +2980,12 @@
 																		.substr(
 																			0,
 																			C -
-																				1
+																				1,
 																		)
 																		.lastIndexOf(
 																			String.fromCharCode(
-																				r.$LF
-																			)
+																				r.$LF,
+																			),
 																		)
 																	m =
 																		w > 0
@@ -2994,7 +3000,7 @@
 															) {
 																let T =
 																	l.charCodeAt(
-																		C
+																		C,
 																	)
 																C++,
 																	a--,
@@ -3007,7 +3013,7 @@
 																this.file,
 																C,
 																d,
-																m
+																m,
 															)
 														}
 														getContext(a, l) {
@@ -3056,12 +3062,12 @@
 																	before: h.substring(
 																		C,
 																		this
-																			.offset
+																			.offset,
 																	),
 																	after: h.substring(
 																		this
 																			.offset,
-																		d + 1
+																		d + 1,
 																	),
 																}
 															}
@@ -3096,7 +3102,7 @@
 															return this.start.file.content.substring(
 																this.start
 																	.offset,
-																this.end.offset
+																this.end.offset,
 															)
 														}
 													}
@@ -3106,12 +3112,12 @@
 															new D('', ''),
 															0,
 															0,
-															0
+															0,
 														)),
 													(e.EMPTY_SOURCE_SPAN =
 														new s(
 															e.EMPTY_PARSE_LOCATION,
-															e.EMPTY_PARSE_LOCATION
+															e.EMPTY_PARSE_LOCATION,
 														)),
 													((a = i =
 														e.ParseErrorLevel ||
@@ -3137,7 +3143,7 @@
 														let a =
 															this.span.start.getContext(
 																100,
-																3
+																3,
 															)
 														return a
 															? `${this.msg} ("${
@@ -3164,15 +3170,15 @@
 														function c(a, l) {
 															let h =
 																	u.identifierModuleUrl(
-																		l
+																		l,
 																	),
 																C =
 																	null != h
 																		? `in ${a} ${u.identifierName(
-																				l
+																				l,
 																		  )} in ${h}`
 																		: `in ${a} ${u.identifierName(
-																				l
+																				l,
 																		  )}`,
 																d = new D('', C)
 															return new s(
@@ -3180,35 +3186,35 @@
 																	d,
 																	-1,
 																	-1,
-																	-1
+																	-1,
 																),
 																new n(
 																	d,
 																	-1,
 																	-1,
-																	-1
-																)
+																	-1,
+																),
 															)
 														}),
 													(e.r3JitTypeSourceSpan =
 														function F(a, l, h) {
 															let d = new D(
 																'',
-																`in ${a} ${l} in ${h}`
+																`in ${a} ${l} in ${h}`,
 															)
 															return new s(
 																new n(
 																	d,
 																	-1,
 																	-1,
-																	-1
+																	-1,
 																),
 																new n(
 																	d,
 																	-1,
 																	-1,
-																	-1
-																)
+																	-1,
+																),
 															)
 														})
 											},
@@ -3216,12 +3222,12 @@
 										ol = I({
 											'src/utils/front-matter/parse.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = new RegExp(
 													'^(?<startDelimiter>-{3}|\\+{3})(?<language>[^\\n]*)\\n(?:|(?<value>.*?)\\n)(?<endDelimiter>\\k<startDelimiter>|\\.{3})[^\\S\\n]*(?:\\n|$)',
-													's'
+													's',
 												)
 												r.exports = function n(D) {
 													let s = D.match(u)
@@ -3250,13 +3256,13 @@
 															endDelimiter: F,
 															raw: l.replace(
 																/\n$/,
-																''
+																'',
 															),
 														},
 														content:
 															l.replace(
 																/[^\n]/g,
-																' '
+																' ',
 															) +
 															D.slice(l.length),
 													}
@@ -3273,12 +3279,12 @@
 										Dl = I({
 											'src/common/parser-create-error.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function u(
 														n,
-														D
+														D,
 													) {
 														let s = new SyntaxError(
 															n +
@@ -3286,7 +3292,7 @@
 																D.start.line +
 																':' +
 																D.start.column +
-																')'
+																')',
 														)
 														return (s.loc = D), s
 													})
@@ -3296,12 +3302,12 @@
 									function ll(e) {
 										if ('string' != typeof e)
 											throw new TypeError(
-												'Expected a string'
+												'Expected a string',
 											)
 										return e
 											.replace(
 												/[|\\{}()[\]^$+*?.]/g,
-												'\\$&'
+												'\\$&',
 											)
 											.replace(/-/g, '\\x2d')
 									}
@@ -3314,7 +3320,7 @@
 										gs = I({
 											'node_modules/semver/internal/debug.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u =
@@ -3322,7 +3328,7 @@
 													Te.env &&
 													Te.env.NODE_DEBUG &&
 													/\bsemver\b/i.test(
-														Te.env.NODE_DEBUG
+														Te.env.NODE_DEBUG,
 													)
 														? function () {
 																for (
@@ -3330,7 +3336,7 @@
 																			arguments.length,
 																		D =
 																			new Array(
-																				n
+																				n,
 																			),
 																		s = 0;
 																	s < n;
@@ -3342,7 +3348,7 @@
 																		]
 																return console.error(
 																	'SEMVER',
-																	...D
+																	...D,
 																)
 														  }
 														: () => {}
@@ -3352,7 +3358,7 @@
 										Fs = I({
 											'node_modules/semver/internal/constants.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var D =
@@ -3370,7 +3376,7 @@
 										hl = I({
 											'node_modules/semver/internal/re.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var {
@@ -3390,20 +3396,22 @@
 															(s[h] = a),
 															(D[h] = new RegExp(
 																a,
-																l ? 'g' : void 0
+																l
+																	? 'g'
+																	: void 0,
 															))
 													}
 												c(
 													'NUMERICIDENTIFIER',
-													'0|[1-9]\\d*'
+													'0|[1-9]\\d*',
 												),
 													c(
 														'NUMERICIDENTIFIERLOOSE',
-														'[0-9]+'
+														'[0-9]+',
 													),
 													c(
 														'NONNUMERICIDENTIFIER',
-														'\\d*[a-zA-Z-][a-zA-Z0-9-]*'
+														'\\d*[a-zA-Z-][a-zA-Z0-9-]*',
 													),
 													c(
 														'MAINVERSION',
@@ -3422,7 +3430,7 @@
 																i
 																	.NUMERICIDENTIFIER
 															]
-														})`
+														})`,
 													),
 													c(
 														'MAINVERSIONLOOSE',
@@ -3441,7 +3449,7 @@
 																i
 																	.NUMERICIDENTIFIERLOOSE
 															]
-														})`
+														})`,
 													),
 													c(
 														'PRERELEASEIDENTIFIER',
@@ -3455,7 +3463,7 @@
 																i
 																	.NONNUMERICIDENTIFIER
 															]
-														})`
+														})`,
 													),
 													c(
 														'PRERELEASEIDENTIFIERLOOSE',
@@ -3469,7 +3477,7 @@
 																i
 																	.NONNUMERICIDENTIFIER
 															]
-														})`
+														})`,
 													),
 													c(
 														'PRERELEASE',
@@ -3483,7 +3491,7 @@
 																i
 																	.PRERELEASEIDENTIFIER
 															]
-														})*))`
+														})*))`,
 													),
 													c(
 														'PRERELEASELOOSE',
@@ -3497,11 +3505,11 @@
 																i
 																	.PRERELEASEIDENTIFIERLOOSE
 															]
-														})*))`
+														})*))`,
 													),
 													c(
 														'BUILDIDENTIFIER',
-														'[0-9A-Za-z-]+'
+														'[0-9A-Za-z-]+',
 													),
 													c(
 														'BUILD',
@@ -3509,17 +3517,17 @@
 															s[i.BUILDIDENTIFIER]
 														}(?:\\.${
 															s[i.BUILDIDENTIFIER]
-														})*))`
+														})*))`,
 													),
 													c(
 														'FULLPLAIN',
 														`v?${s[i.MAINVERSION]}${
 															s[i.PRERELEASE]
-														}?${s[i.BUILD]}?`
+														}?${s[i.BUILD]}?`,
 													),
 													c(
 														'FULL',
-														`^${s[i.FULLPLAIN]}$`
+														`^${s[i.FULLPLAIN]}$`,
 													),
 													c(
 														'LOOSEPLAIN',
@@ -3530,11 +3538,11 @@
 															]
 														}${
 															s[i.PRERELEASELOOSE]
-														}?${s[i.BUILD]}?`
+														}?${s[i.BUILD]}?`,
 													),
 													c(
 														'LOOSE',
-														`^${s[i.LOOSEPLAIN]}$`
+														`^${s[i.LOOSEPLAIN]}$`,
 													),
 													c('GTLT', '((?:<|>)?=?)'),
 													c(
@@ -3544,7 +3552,7 @@
 																i
 																	.NUMERICIDENTIFIERLOOSE
 															]
-														}|x|X|\\*`
+														}|x|X|\\*`,
 													),
 													c(
 														'XRANGEIDENTIFIER',
@@ -3553,7 +3561,7 @@
 																i
 																	.NUMERICIDENTIFIER
 															]
-														}|x|X|\\*`
+														}|x|X|\\*`,
 													),
 													c(
 														'XRANGEPLAIN',
@@ -3574,7 +3582,7 @@
 															]
 														})(?:${
 															s[i.PRERELEASE]
-														})?${s[i.BUILD]}?)?)?`
+														})?${s[i.BUILD]}?)?)?`,
 													),
 													c(
 														'XRANGEPLAINLOOSE',
@@ -3595,13 +3603,13 @@
 															]
 														})(?:${
 															s[i.PRERELEASELOOSE]
-														})?${s[i.BUILD]}?)?)?`
+														})?${s[i.BUILD]}?)?)?`,
 													),
 													c(
 														'XRANGE',
 														`^${s[i.GTLT]}\\s*${
 															s[i.XRANGEPLAIN]
-														}$`
+														}$`,
 													),
 													c(
 														'XRANGELOOSE',
@@ -3610,16 +3618,16 @@
 																i
 																	.XRANGEPLAINLOOSE
 															]
-														}$`
+														}$`,
 													),
 													c(
 														'COERCE',
-														`(^|[^\\d])(\\d{1,${u}})(?:\\.(\\d{1,${u}}))?(?:\\.(\\d{1,${u}}))?(?:$|[^\\d])`
+														`(^|[^\\d])(\\d{1,${u}})(?:\\.(\\d{1,${u}}))?(?:\\.(\\d{1,${u}}))?(?:$|[^\\d])`,
 													),
 													c(
 														'COERCERTL',
 														s[i.COERCE],
-														!0
+														!0,
 													),
 													c('LONETILDE', '(?:~>?)'),
 													c(
@@ -3627,7 +3635,7 @@
 														`(\\s*)${
 															s[i.LONETILDE]
 														}\\s+`,
-														!0
+														!0,
 													),
 													(e.tildeTrimReplace =
 														'$1~'),
@@ -3635,7 +3643,7 @@
 														'TILDE',
 														`^${s[i.LONETILDE]}${
 															s[i.XRANGEPLAIN]
-														}$`
+														}$`,
 													),
 													c(
 														'TILDELOOSE',
@@ -3644,7 +3652,7 @@
 																i
 																	.XRANGEPLAINLOOSE
 															]
-														}$`
+														}$`,
 													),
 													c('LONECARET', '(?:\\^)'),
 													c(
@@ -3652,7 +3660,7 @@
 														`(\\s*)${
 															s[i.LONECARET]
 														}\\s+`,
-														!0
+														!0,
 													),
 													(e.caretTrimReplace =
 														'$1^'),
@@ -3660,7 +3668,7 @@
 														'CARET',
 														`^${s[i.LONECARET]}${
 															s[i.XRANGEPLAIN]
-														}$`
+														}$`,
 													),
 													c(
 														'CARETLOOSE',
@@ -3669,19 +3677,19 @@
 																i
 																	.XRANGEPLAINLOOSE
 															]
-														}$`
+														}$`,
 													),
 													c(
 														'COMPARATORLOOSE',
 														`^${s[i.GTLT]}\\s*(${
 															s[i.LOOSEPLAIN]
-														})$|^$`
+														})$|^$`,
 													),
 													c(
 														'COMPARATOR',
 														`^${s[i.GTLT]}\\s*(${
 															s[i.FULLPLAIN]
-														})$|^$`
+														})$|^$`,
 													),
 													c(
 														'COMPARATORTRIM',
@@ -3690,7 +3698,7 @@
 														}\\s*(${
 															s[i.LOOSEPLAIN]
 														}|${s[i.XRANGEPLAIN]})`,
-														!0
+														!0,
 													),
 													(e.comparatorTrimReplace =
 														'$1$2$3'),
@@ -3700,7 +3708,7 @@
 															s[i.XRANGEPLAIN]
 														})\\s+-\\s+(${
 															s[i.XRANGEPLAIN]
-														})\\s*$`
+														})\\s*$`,
 													),
 													c(
 														'HYPHENRANGELOOSE',
@@ -3714,26 +3722,26 @@
 																i
 																	.XRANGEPLAINLOOSE
 															]
-														})\\s*$`
+														})\\s*$`,
 													),
 													c(
 														'STAR',
-														'(<|>)?=?\\s*\\*'
+														'(<|>)?=?\\s*\\*',
 													),
 													c(
 														'GTE0',
-														'^\\s*>=\\s*0\\.0\\.0\\s*$'
+														'^\\s*>=\\s*0\\.0\\.0\\s*$',
 													),
 													c(
 														'GTE0PRE',
-														'^\\s*>=\\s*0\\.0\\.0-0\\s*$'
+														'^\\s*>=\\s*0\\.0\\.0-0\\s*$',
 													)
 											},
 										}),
 										pl = I({
 											'node_modules/semver/internal/parse-options.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = [
@@ -3748,12 +3756,14 @@
 															: u
 																	.filter(
 																		(s) =>
-																			D[s]
+																			D[
+																				s
+																			],
 																	)
 																	.reduce(
 																		(
 																			s,
-																			i
+																			i,
 																		) => (
 																			(s[
 																				i
@@ -3761,7 +3771,7 @@
 																				!0),
 																			s
 																		),
-																		{}
+																		{},
 																	)
 														: {}
 											},
@@ -3769,7 +3779,7 @@
 										fl = I({
 											'node_modules/semver/internal/identifiers.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = /^[0-9]+$/,
@@ -3796,7 +3806,7 @@
 													compareIdentifiers: n,
 													rcompareIdentifiers: (
 														s,
-														i
+														i,
 													) => n(i, s),
 												}
 											},
@@ -3804,7 +3814,7 @@
 										dl = I({
 											'node_modules/semver/classes/semver.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = gs(),
@@ -3835,11 +3845,11 @@
 																typeof a
 															)
 																throw new TypeError(
-																	`Invalid Version: ${a}`
+																	`Invalid Version: ${a}`,
 																)
 															if (a.length > n)
 																throw new TypeError(
-																	`version is longer than ${n} characters`
+																	`version is longer than ${n} characters`,
 																)
 															u('SemVer', a, l),
 																(this.options =
@@ -3859,11 +3869,11 @@
 																		: s[
 																				i
 																					.FULL
-																		  ]
+																		  ],
 																)
 															if (!h)
 																throw new TypeError(
-																	`Invalid Version: ${a}`
+																	`Invalid Version: ${a}`,
 																)
 															if (
 																((this.raw = a),
@@ -3879,7 +3889,7 @@
 																		0)
 															)
 																throw new TypeError(
-																	'Invalid major version'
+																	'Invalid major version',
 																)
 															if (
 																this.minor >
@@ -3887,7 +3897,7 @@
 																this.minor < 0
 															)
 																throw new TypeError(
-																	'Invalid minor version'
+																	'Invalid minor version',
 																)
 															if (
 																this.patch >
@@ -3895,21 +3905,21 @@
 																this.patch < 0
 															)
 																throw new TypeError(
-																	'Invalid patch version'
+																	'Invalid patch version',
 																)
 															h[4]
 																? (this.prerelease =
 																		h[4]
 																			.split(
-																				'.'
+																				'.',
 																			)
 																			.map(
 																				(
-																					C
+																					C,
 																				) => {
 																					if (
 																						/^[0-9]+$/.test(
-																							C
+																							C,
 																						)
 																					) {
 																						let d =
@@ -3923,14 +3933,14 @@
 																							return d
 																					}
 																					return C
-																				}
+																				},
 																			))
 																: (this.prerelease =
 																		[]),
 																(this.build =
 																	h[5]
 																		? h[5].split(
-																				'.'
+																				'.',
 																		  )
 																		: []),
 																this.format()
@@ -3941,7 +3951,7 @@
 																this.prerelease
 																	.length &&
 																	(this.version += `-${this.prerelease.join(
-																		'.'
+																		'.',
 																	)}`),
 																this.version
 															)
@@ -3957,7 +3967,7 @@
 																		.version,
 																	this
 																		.options,
-																	a
+																	a,
 																),
 																!(
 																	a instanceof
@@ -3974,17 +3984,17 @@
 																	return 0
 																a = new F(
 																	a,
-																	this.options
+																	this.options,
 																)
 															}
 															return a.version ===
 																this.version
 																? 0
 																: this.compareMain(
-																		a
+																		a,
 																  ) ||
 																		this.comparePre(
-																			a
+																			a,
 																		)
 														}
 														compareMain(a) {
@@ -3993,21 +4003,21 @@
 																	F ||
 																	(a = new F(
 																		a,
-																		this.options
+																		this.options,
 																	)),
 																c(
 																	this.major,
-																	a.major
+																	a.major,
 																) ||
 																	c(
 																		this
 																			.minor,
-																		a.minor
+																		a.minor,
 																	) ||
 																	c(
 																		this
 																			.patch,
-																		a.patch
+																		a.patch,
 																	)
 															)
 														}
@@ -4017,7 +4027,7 @@
 																	F ||
 																	(a = new F(
 																		a,
-																		this.options
+																		this.options,
 																	)),
 																this.prerelease
 																	.length &&
@@ -4057,7 +4067,7 @@
 																		'prerelease compare',
 																		l,
 																		h,
-																		C
+																		C,
 																	),
 																	void 0 ===
 																		h &&
@@ -4076,7 +4086,7 @@
 																if (h !== C)
 																	return c(
 																		h,
-																		C
+																		C,
 																	)
 															} while (++l)
 														}
@@ -4084,7 +4094,7 @@
 															a instanceof F ||
 																(a = new F(
 																	a,
-																	this.options
+																	this.options,
 																))
 															let l = 0
 															do {
@@ -4102,7 +4112,7 @@
 																		'prerelease compare',
 																		l,
 																		h,
-																		C
+																		C,
 																	),
 																	void 0 ===
 																		h &&
@@ -4121,7 +4131,7 @@
 																if (h !== C)
 																	return c(
 																		h,
-																		C
+																		C,
 																	)
 															} while (++l)
 														}
@@ -4135,7 +4145,7 @@
 																			.major++,
 																		this.inc(
 																			'pre',
-																			l
+																			l,
 																		)
 																	break
 																case 'preminor':
@@ -4145,18 +4155,18 @@
 																			.minor++,
 																		this.inc(
 																			'pre',
-																			l
+																			l,
 																		)
 																	break
 																case 'prepatch':
 																	;(this.prerelease.length = 0),
 																		this.inc(
 																			'patch',
-																			l
+																			l,
 																		),
 																		this.inc(
 																			'pre',
-																			l
+																			l,
 																		)
 																	break
 																case 'prerelease':
@@ -4166,11 +4176,11 @@
 																			.length &&
 																		this.inc(
 																			'patch',
-																			l
+																			l,
 																		),
 																		this.inc(
 																			'pre',
-																			l
+																			l,
 																		)
 																	break
 																case 'major':
@@ -4249,7 +4259,7 @@
 																		;-1 ===
 																			h &&
 																			this.prerelease.push(
-																				0
+																				0,
 																			)
 																	}
 																	l &&
@@ -4257,11 +4267,11 @@
 																		c(
 																			this
 																				.prerelease[0],
-																			l
+																			l,
 																		)
 																			? isNaN(
 																					this
-																						.prerelease[1]
+																						.prerelease[1],
 																			  ) &&
 																			  (this.prerelease =
 																					[
@@ -4276,7 +4286,7 @@
 																	break
 																default:
 																	throw new Error(
-																		`invalid increment argument: ${a}`
+																		`invalid increment argument: ${a}`,
 																	)
 															}
 															return (
@@ -4293,20 +4303,20 @@
 										Hr = I({
 											'node_modules/semver/functions/compare.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = dl()
 												r.exports = (D, s, i) =>
 													new u(D, i).compare(
-														new u(s, i)
+														new u(s, i),
 													)
 											},
 										}),
 										El = I({
 											'node_modules/semver/functions/lt.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = Hr()
@@ -4317,7 +4327,7 @@
 										Cl = I({
 											'node_modules/semver/functions/gte.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = Hr()
@@ -4334,9 +4344,9 @@
 																let [s, i] = D
 																return Object.assign(
 																	{ [n]: s },
-																	i
+																	i,
 																)
-															}
+															},
 														))
 											},
 										}),
@@ -4348,7 +4358,7 @@
 										Fl = I({
 											'node_modules/outdent/lib/index.js'(
 												e,
-												r
+												r,
 											) {
 												function u() {
 													for (
@@ -4368,7 +4378,7 @@
 																	get: u,
 																	set: u,
 																	has: function (
-																		g
+																		g,
 																	) {
 																		return !1
 																	},
@@ -4379,7 +4389,7 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.outdent = void 0)
 												var s =
@@ -4408,7 +4418,7 @@
 														'(\\r\\n|\\r|\\n).{0,' +
 															j +
 															'}',
-														'g'
+														'g',
 													)
 													N && (g = g.slice(1))
 													var k = R.newline,
@@ -4420,39 +4430,41 @@
 															'string' ==
 															typeof k,
 														E = g.length
-													return g.map(function (
-														A,
-														P
-													) {
-														return (
-															(A = A.replace(
-																x,
-																'$1'
-															)),
-															0 === P &&
-																$ &&
+													return g.map(
+														function (A, P) {
+															return (
 																(A = A.replace(
-																	c,
-																	''
+																	x,
+																	'$1',
 																)),
-															P === E - 1 &&
-																t &&
-																(A = A.replace(
-																	F,
-																	''
-																)),
-															o &&
-																(A = A.replace(
-																	/\r\n|\n|\r/g,
-																	function (
-																		M
-																	) {
-																		return k
-																	}
-																)),
-															A
-														)
-													})
+																0 === P &&
+																	$ &&
+																	(A =
+																		A.replace(
+																			c,
+																			'',
+																		)),
+																P === E - 1 &&
+																	t &&
+																	(A =
+																		A.replace(
+																			F,
+																			'',
+																		)),
+																o &&
+																	(A =
+																		A.replace(
+																			/\r\n|\n|\r/g,
+																			function (
+																				M,
+																			) {
+																				return k
+																			},
+																		)),
+																A
+															)
+														},
+													)
 												}
 												var w = (function T(g) {
 													var N = n(),
@@ -4472,16 +4484,16 @@
 																		]
 																if (
 																	(function m(
-																		g
+																		g,
 																	) {
 																		return (
 																			i(
 																				g,
-																				'raw'
+																				'raw',
 																			) &&
 																			i(
 																				g,
-																				'length'
+																				'length',
 																			)
 																		)
 																	})(O)
@@ -4493,17 +4505,17 @@
 																				x[0] ===
 																					w) &&
 																			h.test(
-																				$[0]
+																				$[0],
 																			) &&
 																			a.test(
-																				$[1]
+																				$[1],
 																			),
 																		o = t
 																			? R
 																			: N,
 																		E =
 																			o.get(
-																				$
+																				$,
 																			)
 																	if (
 																		(E ||
@@ -4511,11 +4523,11 @@
 																				C(
 																					$,
 																					t,
-																					g
+																					g,
 																				)),
 																			o.set(
 																				$,
-																				E
+																				E,
 																			)),
 																		0 ===
 																			x.length)
@@ -4524,7 +4536,7 @@
 																	var p =
 																		(function d(
 																			g,
-																			N
+																			N,
 																		) {
 																			for (
 																				var R =
@@ -4552,9 +4564,9 @@
 																			E,
 																			t
 																				? x.slice(
-																						1
+																						1,
 																				  )
-																				: x
+																				: x,
 																		)
 																	return p
 																}
@@ -4562,23 +4574,23 @@
 																	f(
 																		f(
 																			{},
-																			g
+																			g,
 																		),
-																		O || {}
-																	)
+																		O || {},
+																	),
 																)
 															},
 															{
 																string: function (
-																	O
+																	O,
 																) {
 																	return C(
 																		[O],
 																		!1,
-																		g
+																		g,
 																	)[0]
 																},
-															}
+															},
 														)
 													return _
 												})({
@@ -4595,7 +4607,7 @@
 															Object.defineProperty(
 																w,
 																'__esModule',
-																{ value: !0 }
+																{ value: !0 },
 															),
 															(w.default = w),
 															(w.outdent = w)
@@ -5040,13 +5052,13 @@
 																	: {},
 																h = D.split(
 																	'-',
-																	1
+																	1,
 																)[0],
 																C = c
 																	.flatMap(
 																		(g) =>
 																			g.languages ||
-																			[]
+																			[],
 																	)
 																	.filter(m),
 																d = n(
@@ -5054,7 +5066,7 @@
 																		{},
 																		...c.map(
 																			(
-																				g
+																				g,
 																			) => {
 																				let {
 																					options:
@@ -5062,23 +5074,25 @@
 																				} =
 																					g
 																				return N
-																			}
+																			},
 																		),
-																		s
+																		s,
 																	),
-																	'name'
+																	'name',
 																)
 																	.filter(
 																		(g) =>
 																			m(
-																				g
+																				g,
 																			) &&
-																			T(g)
+																			T(
+																				g,
+																			),
 																	)
 																	.sort(
 																		(
 																			g,
-																			N
+																			N,
 																		) =>
 																			g.name ===
 																			N.name
@@ -5086,11 +5100,11 @@
 																				: g.name <
 																				  N.name
 																				? -1
-																				: 1
+																				: 1,
 																	)
 																	.map(
 																		function w(
-																			g
+																			g,
 																		) {
 																			if (
 																				l
@@ -5106,19 +5120,19 @@
 																			} = g
 																			return JD(
 																				g,
-																				KD
+																				KD,
 																			)
-																		}
+																		},
 																	)
 																	.map(
 																		(g) => {
 																			;(g =
 																				Object.assign(
 																					{},
-																					g
+																					g,
 																				)),
 																				Array.isArray(
-																					g.default
+																					g.default,
 																				) &&
 																					(g.default =
 																						1 ===
@@ -5130,49 +5144,49 @@
 																									.value
 																							: g.default
 																									.filter(
-																										m
+																										m,
 																									)
 																									.sort(
 																										(
 																											R,
-																											j
+																											j,
 																										) =>
 																											u.compare(
 																												j.since,
-																												R.since
-																											)
+																												R.since,
+																											),
 																									)[0]
 																									.value),
 																				Array.isArray(
-																					g.choices
+																					g.choices,
 																				) &&
 																					((g.choices =
 																						g.choices.filter(
 																							(
-																								R
+																								R,
 																							) =>
 																								m(
-																									R
+																									R,
 																								) &&
 																								T(
-																									R
-																								)
+																									R,
+																								),
 																						)),
 																					'parser' ===
 																						g.name &&
 																						(function f(
 																							c,
 																							F,
-																							a
+																							a,
 																						) {
 																							let l =
 																								new Set(
 																									c.choices.map(
 																										(
-																											h
+																											h,
 																										) =>
-																											h.value
-																									)
+																											h.value,
+																									),
 																								)
 																							for (let h of F)
 																								if (
@@ -5181,22 +5195,22 @@
 																									for (let C of h.parsers)
 																										if (
 																											!l.has(
-																												C
+																												C,
 																											)
 																										) {
 																											l.add(
-																												C
+																												C,
 																											)
 																											let d =
 																													a.find(
 																														(
-																															T
+																															T,
 																														) =>
 																															T.parsers &&
 																															T
 																																.parsers[
 																																C
-																															]
+																															],
 																													),
 																												m =
 																													h.name
@@ -5208,20 +5222,20 @@
 																														value: C,
 																														description:
 																															m,
-																													}
+																													},
 																												)
 																										}
 																						})(
 																							g,
 																							C,
-																							c
+																							c,
 																						))
 																			let N =
 																				Object.fromEntries(
 																					c
 																						.filter(
 																							(
-																								R
+																								R,
 																							) =>
 																								R.defaultOptions &&
 																								void 0 !==
@@ -5229,11 +5243,11 @@
 																										.defaultOptions[
 																										g
 																											.name
-																									]
+																									],
 																						)
 																						.map(
 																							(
-																								R
+																								R,
 																							) => [
 																								R.name,
 																								R
@@ -5241,21 +5255,21 @@
 																									g
 																										.name
 																								],
-																							]
-																						)
+																							],
+																						),
 																				)
 																			return Object.assign(
 																				Object.assign(
 																					{},
-																					g
+																					g,
 																				),
 																				{},
 																				{
 																					pluginDefaults:
 																						N,
-																				}
+																				},
 																			)
-																		}
+																		},
 																	)
 															return {
 																languages: C,
@@ -5271,7 +5285,7 @@
 																	(g.since &&
 																		u.gte(
 																			h,
-																			g.since
+																			g.since,
 																		))
 																)
 															}
@@ -5285,7 +5299,7 @@
 																	(g.deprecated &&
 																		u.lt(
 																			h,
-																			g.deprecated
+																			g.deprecated,
 																		))
 																)
 															}
@@ -5296,7 +5310,7 @@
 										_l = I({
 											'src/utils/is-non-empty-array.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function u(n) {
@@ -5315,7 +5329,7 @@
 									function Tl(e) {
 										if ('string' != typeof e)
 											throw new TypeError(
-												`Expected a \`string\`, got \`${typeof e}\``
+												`Expected a \`string\`, got \`${typeof e}\``,
 											)
 										return e.replace(
 											(function Sl() {
@@ -5330,10 +5344,10 @@
 													].join('|')
 												return new RegExp(
 													r,
-													e ? void 0 : 'g'
+													e ? void 0 : 'g',
 												)
 											})(),
-											''
+											'',
 										)
 									}
 									var Bl = Ee({
@@ -5373,7 +5387,7 @@
 										Nl = I({
 											'node_modules/emoji-regex/index.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function () {
@@ -5422,14 +5436,14 @@
 																	enumerable:
 																		!0,
 															  }),
-														e
+														e,
 													))
 											},
 										}),
 										Il = I({
 											'src/utils/get-string-width.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = (ql(), ds(As)).default,
@@ -5492,12 +5506,12 @@
 										_s = I({
 											'src/utils/text/skip-inline-comment.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function u(
 														n,
-														D
+														D,
 													) {
 														if (!1 === D) return !1
 														if (
@@ -5514,12 +5528,12 @@
 																if (
 																	'*' ===
 																		n.charAt(
-																			s
+																			s,
 																		) &&
 																	'/' ===
 																		n.charAt(
 																			s +
-																				1
+																				1,
 																		)
 																)
 																	return s + 2
@@ -5530,7 +5544,7 @@
 										Ss = I({
 											'src/utils/text/skip-trailing-comment.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var {
@@ -5550,13 +5564,13 @@
 										ys = I({
 											'src/utils/text/skip-newline.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function u(
 														n,
 														D,
-														s
+														s,
 													) {
 														let i = s && s.backwards
 														if (!1 === D) return !1
@@ -5565,7 +5579,7 @@
 															if (
 																'\r' ===
 																	n.charAt(
-																		D - 1
+																		D - 1,
 																	) &&
 																'\n' === f
 															)
@@ -5583,7 +5597,7 @@
 																'\r' === f &&
 																'\n' ===
 																	n.charAt(
-																		D + 1
+																		D + 1,
 																	)
 															)
 																return D + 2
@@ -5603,7 +5617,7 @@
 										Rl = I({
 											'src/utils/text/get-next-non-space-non-comment-character-index-with-start-index.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var u = _s(),
@@ -5657,7 +5671,7 @@
 															B.backwards
 																? y - 1
 																: y,
-															B
+															B,
 														)
 													return b !== C(v, b, B)
 												}
@@ -5720,12 +5734,12 @@
 														G =
 															(
 																v.match(
-																	L.regex
+																	L.regex,
 																) || []
 															).length >
 															(
 																v.match(
-																	U.regex
+																	U.regex,
 																) || []
 															).length
 																? U
@@ -5748,11 +5762,11 @@
 																	: ne ||
 																	  (B &&
 																	  /^[^\n\r"'0-7\\bfnrt-vx\u2028\u2029]$/.test(
-																			W
+																			W,
 																	  )
 																			? W
 																			: '\\' +
-																			  W)
+																			  W),
 														)
 													return y + U + y
 												}
@@ -5789,10 +5803,10 @@
 																				typeof v.value
 																					? ''
 																					: String(
-																							v.value
+																							v.value,
 																					  ))) ||
 																			v.operator ||
-																			''
+																			'',
 																	)
 																return (
 																	B.length >
@@ -5800,7 +5814,7 @@
 																		(B =
 																			B.slice(
 																				0,
-																				19
+																				19,
 																			) +
 																			'…'),
 																	y +
@@ -5832,7 +5846,7 @@
 																				U.toLowerCase() ===
 																				v
 																			)
-																		}
+																		},
 																	) ||
 																	B.find(
 																		(L) => {
@@ -5843,13 +5857,13 @@
 																				L
 																			return (
 																				Array.isArray(
-																					U
+																					U,
 																				) &&
 																				U.includes(
-																					v
+																					v,
 																				)
 																			)
-																		}
+																		},
 																	) ||
 																	B.find(
 																		(L) => {
@@ -5860,13 +5874,13 @@
 																				L
 																			return (
 																				Array.isArray(
-																					U
+																					U,
 																				) &&
 																				U.includes(
-																					`.${v}`
+																					`.${v}`,
 																				)
 																			)
-																		}
+																		},
 																	)
 															return (
 																b &&
@@ -5879,24 +5893,24 @@
 															let B = v.match(
 																new RegExp(
 																	`(${u(
-																		y
+																		y,
 																	)})+`,
-																	'g'
-																)
+																	'g',
+																),
 															)
 															return null === B
 																? 0
 																: B.reduce(
 																		(
 																			b,
-																			L
+																			L,
 																		) =>
 																			Math.max(
 																				b,
 																				L.length /
-																					y.length
+																					y.length,
 																			),
-																		0
+																		0,
 																  )
 														},
 													getMinNotPresentContinuousCount:
@@ -5904,10 +5918,10 @@
 															let B = v.match(
 																new RegExp(
 																	`(${u(
-																		y
+																		y,
 																	)})+`,
-																	'g'
-																)
+																	'g',
+																),
 															)
 															if (null === B)
 																return 0
@@ -5940,7 +5954,7 @@
 													getNextNonSpaceNonCommentCharacter:
 														function O(v, y, B) {
 															return v.charAt(
-																_(v, y, B)
+																_(v, y, B),
 															)
 														},
 													skip: function T(v) {
@@ -5965,13 +5979,13 @@
 																) {
 																	if (
 																		!v.test(
-																			W
+																			W,
 																		)
 																	)
 																		return G
 																} else if (
 																	!v.includes(
-																		W
+																		W,
 																	)
 																)
 																	return G
@@ -5996,7 +6010,7 @@
 													isNextLineEmpty: function j(
 														v,
 														y,
-														B
+														B,
 													) {
 														return R(v, B(y))
 													},
@@ -6040,7 +6054,7 @@
 														},
 													hasSpaces: function x(
 														v,
-														y
+														y,
 													) {
 														let B =
 															arguments.length >
@@ -6055,14 +6069,14 @@
 																B.backwards
 																	? y - 1
 																	: y,
-																B
+																B,
 															) !== y
 														)
 													},
 													getAlignmentSize: k,
 													getIndentSize: function $(
 														v,
-														y
+														y,
 													) {
 														let B =
 															v.lastIndexOf('\n')
@@ -6072,18 +6086,18 @@
 																	v
 																		.slice(
 																			B +
-																				1
+																				1,
 																		)
 																		.match(
-																			/^[\t ]*/
+																			/^[\t ]*/,
 																		)[0],
-																	y
+																	y,
 															  )
 													},
 													getPreferredQuote: t,
 													printString: function o(
 														v,
-														y
+														y,
 													) {
 														let B = v.slice(1, -1)
 														return E(
@@ -6102,7 +6116,7 @@
 																		B,
 																		y.singleQuote
 																			? "'"
-																			: '"'
+																			: '"',
 																  ).quote,
 															!(
 																'css' ===
@@ -6112,7 +6126,7 @@
 																'scss' ===
 																	y.parser ||
 																y.__embeddedInHtml
-															)
+															),
 														)
 													},
 													printNumber: function p(v) {
@@ -6120,23 +6134,23 @@
 															.toLowerCase()
 															.replace(
 																/^([+-]?[\d.]+e)(?:\+|(-))?0*(\d)/,
-																'$1$2$3'
+																'$1$2$3',
 															)
 															.replace(
 																/^([+-]?[\d.]+)e[+-]?0+$/,
-																'$1'
+																'$1',
 															)
 															.replace(
 																/^([+-])?\./,
-																'$10.'
+																'$10.',
 															)
 															.replace(
 																/(\.\d+?)0+(?=e|$)/,
-																'$1'
+																'$1',
 															)
 															.replace(
 																/\.(?=e|$)/,
-																''
+																'',
 															)
 													},
 													makeString: E,
@@ -6178,15 +6192,15 @@
 															let y =
 																new WeakMap()
 															return function (
-																B
+																B,
 															) {
 																return (
 																	y.has(B) ||
 																		y.set(
 																			B,
 																			Symbol(
-																				v
-																			)
+																				v,
+																			),
 																		),
 																	y.get(B)
 																)
@@ -6198,7 +6212,7 @@
 										Pl = I({
 											'vendors/html-tag-names.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													htmlTagNames: [
@@ -6357,7 +6371,7 @@
 										Ts = I({
 											'src/language-html/utils/array-to-map.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function u(n) {
@@ -6372,7 +6386,7 @@
 										kl = I({
 											'src/language-html/utils/html-tag-names.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var { htmlTagNames: u } = Pl(),
@@ -6383,7 +6397,7 @@
 										Ll = I({
 											'vendors/html-element-attributes.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													htmlElementAttributes: {
@@ -6906,12 +6920,12 @@
 										$l = I({
 											'src/language-html/utils/map-object.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function u(
 														n,
-														D
+														D,
 													) {
 														let s =
 															Object.create(null)
@@ -6927,7 +6941,7 @@
 										Ml = I({
 											'src/language-html/utils/html-elements-attributes.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var {
@@ -6941,7 +6955,7 @@
 										jl = I({
 											'src/language-html/utils/is-unknown-namespace.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = function u(n) {
@@ -6953,7 +6967,7 @@
 																'html',
 																'svg',
 															].includes(
-																n.namespace
+																n.namespace,
 															)
 														)
 													})
@@ -6962,15 +6976,15 @@
 										Ul = I({
 											'src/language-html/pragma.js'(
 												e,
-												r
+												r,
 											) {
 												q(),
 													(r.exports = {
 														hasPragma: function u(
-															D
+															D,
 														) {
 															return /^\s*<!--\s*@(?:format|prettier)\s*-->/.test(
-																D
+																D,
 															)
 														},
 														insertPragma:
@@ -6979,7 +6993,7 @@
 																	'\x3c!-- @format --\x3e\n\n' +
 																	D.replace(
 																		/^\s*\n/,
-																		''
+																		'',
 																	)
 																)
 															},
@@ -7007,13 +7021,13 @@
 																[
 																	...n,
 																	...Object.keys(
-																		i
+																		i,
 																	),
-																]
+																],
 															))
 																this.setProperty(
 																	f,
-																	i[f]
+																	i[f],
 																)
 														}
 														setProperty(i, f) {
@@ -7023,11 +7037,11 @@
 																		(f =
 																			f.map(
 																				(
-																					c
+																					c,
 																				) =>
 																					this.createChild(
-																						c
-																					)
+																						c,
+																					),
 																			)),
 																	!n.has(i))
 																)
@@ -7043,7 +7057,7 @@
 																			!1,
 																		configurable:
 																			!0,
-																	}
+																	},
 																)
 															}
 														}
@@ -7056,8 +7070,8 @@
 																		F,
 																		(l) =>
 																			l.map(
-																				i
-																			)
+																				i,
+																			),
 																	)
 																	f !== F &&
 																		(f ||
@@ -7066,11 +7080,11 @@
 																					{
 																						parent: this
 																							.parent,
-																					}
+																					},
 																				)),
 																		f.setProperty(
 																			c,
-																			a
+																			a,
 																		))
 																}
 															}
@@ -7096,7 +7110,7 @@
 																		c[
 																			F
 																		].walk(
-																			i
+																			i,
 																		)
 															}
 															i(this)
@@ -7109,41 +7123,41 @@
 															return (
 																f.setProperty(
 																	'parent',
-																	this
+																	this,
 																),
 																f
 															)
 														}
 														insertChildBefore(
 															i,
-															f
+															f,
 														) {
 															this.children.splice(
 																this.children.indexOf(
-																	i
+																	i,
 																),
 																0,
 																this.createChild(
-																	f
-																)
+																	f,
+																),
 															)
 														}
 														removeChild(i) {
 															this.children.splice(
 																this.children.indexOf(
-																	i
+																	i,
 																),
-																1
+																1,
 															)
 														}
 														replaceChild(i, f) {
 															this.children[
 																this.children.indexOf(
-																	i
+																	i,
 																)
 															] =
 																this.createChild(
-																	f
+																	f,
 																)
 														}
 														clone() {
@@ -7184,7 +7198,7 @@
 																? void 0
 																: i.children[
 																		this.parent.children.indexOf(
-																			this
+																			this,
 																		) - 1
 																  ]
 														}
@@ -7198,7 +7212,7 @@
 																? void 0
 																: i.children[
 																		this.parent.children.indexOf(
-																			this
+																			this,
 																		) + 1
 																  ]
 														}
@@ -7224,15 +7238,15 @@
 																	(i) => [
 																		i.fullName,
 																		i.value,
-																	]
-																)
+																	],
+																),
 															)
 														}
 													}
 												function s(i, f) {
 													let c = i.map(f)
 													return c.some(
-														(F, a) => F !== i[a]
+														(F, a) => F !== i[a],
 													)
 														? c
 														: i
@@ -7243,7 +7257,7 @@
 										Vl = I({
 											'src/language-html/conditional-comment.js'(
 												e,
-												r
+												r,
 											) {
 												q()
 												var { ParseSourceSpan: u } =
@@ -7254,7 +7268,7 @@
 															parse: function s(
 																c,
 																F,
-																a
+																a,
 															) {
 																let [
 																		,
@@ -7267,11 +7281,11 @@
 																		l.length,
 																	m =
 																		c.sourceSpan.start.moveBy(
-																			d
+																			d,
 																		),
 																	T =
 																		m.moveBy(
-																			C.length
+																			C.length,
 																		),
 																	[w, g] =
 																		(() => {
@@ -7280,7 +7294,7 @@
 																					!0,
 																					F(
 																						C,
-																						m
+																						m,
 																					)
 																						.children,
 																				]
@@ -7294,7 +7308,7 @@
 																							sourceSpan:
 																								new u(
 																									m,
-																									T
+																									T,
 																								),
 																						},
 																					],
@@ -7309,19 +7323,19 @@
 																		.trim()
 																		.replace(
 																			/\s+/g,
-																			' '
+																			' ',
 																		),
 																	sourceSpan:
 																		c.sourceSpan,
 																	startSourceSpan:
 																		new u(
 																			c.sourceSpan.start,
-																			m
+																			m,
 																		),
 																	endSourceSpan:
 																		new u(
 																			T,
-																			c.sourceSpan.end
+																			c.sourceSpan.end,
 																		),
 																}
 															},
@@ -7331,7 +7345,7 @@
 															parse: function i(
 																c,
 																F,
-																a
+																a,
 															) {
 																let [, l] = a
 																return {
@@ -7340,7 +7354,7 @@
 																		.trim()
 																		.replace(
 																			/\s+/g,
-																			' '
+																			' ',
 																		),
 																	sourceSpan:
 																		c.sourceSpan,
@@ -7350,7 +7364,7 @@
 														{
 															regex: /^<!\s*\[endif]$/,
 															parse: function f(
-																c
+																c,
 															) {
 																return {
 																	type: 'ieConditionalEndComment',
@@ -7370,13 +7384,13 @@
 																} of n) {
 																	let h =
 																		c.value.match(
-																			a
+																			a,
 																		)
 																	if (h)
 																		return l(
 																			c,
 																			F,
-																			h
+																			h,
 																		)
 																}
 															return null
@@ -7389,7 +7403,7 @@
 												q(),
 													(r.exports = {
 														locStart: function u(
-															D
+															D,
 														) {
 															return D.sourceSpan
 																.start.offset
@@ -7403,7 +7417,7 @@
 										}),
 										Ze = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ml_parser/tags.js'(
-												e
+												e,
 											) {
 												var c
 												function u(c) {
@@ -7412,7 +7426,7 @@
 													let F = c.indexOf(':', 1)
 													if (-1 == F)
 														throw new Error(
-															`Unsupported format "${c}" expecting ":namespace:name"`
+															`Unsupported format "${c}" expecting ":namespace:name"`,
 														)
 													return [
 														c.slice(1, F),
@@ -7423,7 +7437,7 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													((c =
 														e.TagContentType ||
@@ -7445,7 +7459,7 @@
 															)
 														}),
 													(e.isNgContent = function D(
-														c
+														c,
 													) {
 														return (
 															'ng-content' ===
@@ -7460,7 +7474,7 @@
 															)
 														}),
 													(e.getNsPrefix = function i(
-														c
+														c,
 													) {
 														return null === c
 															? null
@@ -9639,13 +9653,13 @@
 										}),
 										Bs = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ml_parser/html_tags.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var n,
 													D,
@@ -9686,7 +9700,7 @@
 																			(this.closedByChildren[
 																				h
 																			] =
-																				!0)
+																				!0),
 																	),
 																(this.isVoid =
 																	a),
@@ -9719,67 +9733,67 @@
 																		base: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		meta: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		area: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		embed: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		link: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		img: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		input: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		param: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		hr: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		br: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		source: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		track: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		wbr: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		p: new u(
 																			{
@@ -9814,7 +9828,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		thead: new u(
 																			{
@@ -9823,7 +9837,7 @@
 																						'tbody',
 																						'tfoot',
 																					],
-																			}
+																			},
 																		),
 																		tbody: new u(
 																			{
@@ -9834,7 +9848,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		tfoot: new u(
 																			{
@@ -9844,7 +9858,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		tr: new u(
 																			{
@@ -9854,7 +9868,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		td: new u(
 																			{
@@ -9865,7 +9879,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		th: new u(
 																			{
@@ -9876,24 +9890,24 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		col: new u(
 																			{
 																				isVoid: !0,
-																			}
+																			},
 																		),
 																		svg: new u(
 																			{
 																				implicitNamespacePrefix:
 																					'svg',
-																			}
+																			},
 																		),
 																		math: new u(
 																			{
 																				implicitNamespacePrefix:
 																					'math',
-																			}
+																			},
 																		),
 																		li: new u(
 																			{
@@ -9903,7 +9917,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		dt: new u(
 																			{
@@ -9912,7 +9926,7 @@
 																						'dt',
 																						'dd',
 																					],
-																			}
+																			},
 																		),
 																		dd: new u(
 																			{
@@ -9923,7 +9937,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		rb: new u(
 																			{
@@ -9936,7 +9950,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		rt: new u(
 																			{
@@ -9949,7 +9963,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		rtc: new u(
 																			{
@@ -9961,7 +9975,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		rp: new u(
 																			{
@@ -9974,7 +9988,7 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		optgroup:
 																			new u(
@@ -9985,7 +9999,7 @@
 																						],
 																					closedByParent:
 																						!0,
-																				}
+																				},
 																			),
 																		option: new u(
 																			{
@@ -9996,20 +10010,20 @@
 																					],
 																				closedByParent:
 																					!0,
-																			}
+																			},
 																		),
 																		pre: new u(
 																			{
 																				ignoreFirstLf:
 																					!0,
-																			}
+																			},
 																		),
 																		listing:
 																			new u(
 																				{
 																					ignoreFirstLf:
 																						!0,
-																				}
+																				},
 																			),
 																		style: new u(
 																			{
@@ -10017,7 +10031,7 @@
 																					r
 																						.TagContentType
 																						.RAW_TEXT,
-																			}
+																			},
 																		),
 																		script: new u(
 																			{
@@ -10025,7 +10039,7 @@
 																					r
 																						.TagContentType
 																						.RAW_TEXT,
-																			}
+																			},
 																		),
 																		title: new u(
 																			{
@@ -10033,7 +10047,7 @@
 																					r
 																						.TagContentType
 																						.ESCAPABLE_RAW_TEXT,
-																			}
+																			},
 																		),
 																		textarea:
 																			new u(
@@ -10044,7 +10058,7 @@
 																							.ESCAPABLE_RAW_TEXT,
 																					ignoreFirstLf:
 																						!0,
-																				}
+																				},
 																			),
 																	})),
 																D[i] || n
@@ -10054,13 +10068,13 @@
 										}),
 										Hl = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ast_path.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												e.AstPath = class {
 													constructor(u) {
@@ -10093,7 +10107,7 @@
 															u &&
 															this.path[
 																this.path.indexOf(
-																	u
+																	u,
 																) - 1
 															]
 														)
@@ -10101,7 +10115,7 @@
 													childOf(u) {
 														return this.path[
 															this.path.indexOf(
-																u
+																u,
 															) + 1
 														]
 													}
@@ -10129,13 +10143,13 @@
 										}),
 										bs = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ml_parser/ast.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Hl()
 												e.Text = class {
@@ -10149,7 +10163,7 @@
 													visit(d, m) {
 														return d.visitText(
 															this,
-															m
+															m,
 														)
 													}
 												}
@@ -10164,7 +10178,7 @@
 													visit(d, m) {
 														return d.visitCdata(
 															this,
-															m
+															m,
 														)
 													}
 												}
@@ -10175,7 +10189,7 @@
 														T,
 														w,
 														g,
-														N
+														N,
 													) {
 														;(this.switchValue = d),
 															(this.type = m),
@@ -10189,7 +10203,7 @@
 													visit(d, m) {
 														return d.visitExpansion(
 															this,
-															m
+															m,
 														)
 													}
 												}
@@ -10208,7 +10222,7 @@
 													visit(d, m) {
 														return d.visitExpansionCase(
 															this,
-															m
+															m,
 														)
 													}
 												}
@@ -10249,7 +10263,7 @@
 													visit(d, m) {
 														return d.visitAttribute(
 															this,
-															m
+															m,
 														)
 													}
 												}
@@ -10300,7 +10314,7 @@
 													visit(d, m) {
 														return d.visitElement(
 															this,
-															m
+															m,
 														)
 													}
 												}
@@ -10316,7 +10330,7 @@
 													visit(d, m) {
 														return d.visitComment(
 															this,
-															m
+															m,
 														)
 													}
 												}
@@ -10333,16 +10347,16 @@
 															? (N) =>
 																	d.visit(
 																		N,
-																		T
+																		T,
 																	) ||
 																	N.visit(
 																		d,
-																		T
+																		T,
 																	)
 															: (N) =>
 																	N.visit(
 																		d,
-																		T
+																		T,
 																	)
 													return (
 														m.forEach((N) => {
@@ -10363,7 +10377,7 @@
 													visit(d, m) {
 														return d.visitDocType(
 															this,
-															m
+															m,
 														)
 													}
 												}),
@@ -10376,9 +10390,9 @@
 															(T) => {
 																T(d.attrs),
 																	T(
-																		d.children
+																		d.children,
 																	)
-															}
+															},
 														)
 													}
 													visitAttribute(d, m) {}
@@ -10391,7 +10405,7 @@
 															m,
 															(T) => {
 																T(d.cases)
-															}
+															},
 														)
 													}
 													visitExpansionCase(d, m) {}
@@ -10405,13 +10419,13 @@
 																		a(
 																			w,
 																			N,
-																			d
-																		)
+																			d,
+																		),
 																	)
 															}),
 															Array.prototype.concat.apply(
 																[],
-																T
+																T,
 															)
 														)
 													}
@@ -10441,7 +10455,7 @@
 																				.children
 																				.length -
 																				1
-																		]
+																		],
 																  ).end)),
 														{ start: m, end: T }
 													)
@@ -10449,7 +10463,7 @@
 												;(e.RecursiveVisitor = l),
 													(e.findNode = function C(
 														d,
-														m
+														m,
 													) {
 														let T = []
 														return (
@@ -10457,7 +10471,7 @@
 																new (class extends l {
 																	visit(
 																		g,
-																		N
+																		N,
 																	) {
 																		let R =
 																			h(g)
@@ -10471,11 +10485,11 @@
 																		)
 																			return !0
 																		T.push(
-																			g
+																			g,
 																		)
 																	}
 																})(),
-																d
+																d,
 															),
 															new r.AstPath(T, m)
 														)
@@ -10484,24 +10498,24 @@
 										}),
 										zl = I({
 											'node_modules/angular-html-parser/lib/compiler/src/assertions.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.assertArrayOfStrings =
 														function r(D, s) {
 															if (null != s) {
 																if (
 																	!Array.isArray(
-																		s
+																		s,
 																	)
 																)
 																	throw new Error(
-																		`Expected '${D}' to be an array of strings.`
+																		`Expected '${D}' to be an array of strings.`,
 																	)
 																for (
 																	let i = 0;
@@ -10516,7 +10530,7 @@
 																		]
 																	)
 																		throw new Error(
-																			`Expected '${D}' to be an array of strings.`
+																			`Expected '${D}' to be an array of strings.`,
 																		)
 															}
 														})
@@ -10532,12 +10546,12 @@
 														if (
 															null != s &&
 															(!Array.isArray(
-																s
+																s,
 															) ||
 																2 != s.length)
 														)
 															throw new Error(
-																`Expected '${D}' to be an array, [start, end].`
+																`Expected '${D}' to be an array, [start, end].`,
 															)
 														if (null != s) {
 															let i = s[0],
@@ -10548,7 +10562,7 @@
 																	c.test(f)
 																)
 																	throw new Error(
-																		`['${i}', '${f}'] contains unusable interpolation symbol.`
+																		`['${i}', '${f}'] contains unusable interpolation symbol.`,
 																	)
 															})
 														}
@@ -10557,13 +10571,13 @@
 										}),
 										Wl = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ml_parser/interpolation_config.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = zl(),
 													u = class {
@@ -10575,11 +10589,11 @@
 															return n
 																? (r.assertInterpolationSymbols(
 																		'interpolation',
-																		n
+																		n,
 																  ),
 																  new u(
 																		n[0],
-																		n[1]
+																		n[1],
 																  ))
 																: e.DEFAULT_INTERPOLATION_CONFIG
 														}
@@ -10591,13 +10605,13 @@
 										}),
 										Yl = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ml_parser/lexer.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var s,
 													t,
@@ -10686,7 +10700,7 @@
 													(e.tokenize = function F(
 														t,
 														o,
-														E
+														E,
 													) {
 														let p =
 															arguments.length >
@@ -10698,10 +10712,10 @@
 														return new d(
 															new u.ParseSourceFile(
 																t,
-																o
+																o,
 															),
 															E,
-															p
+															p,
 														).tokenize()
 													})
 												var a = /\r\n?/g
@@ -10710,7 +10724,7 @@
 														t === r.$EOF
 															? 'EOF'
 															: String.fromCharCode(
-																	t
+																	t,
 															  )
 													}"`
 												}
@@ -10751,9 +10765,9 @@
 																	E.leadingTriviaChars.map(
 																		(A) =>
 																			A.codePointAt(
-																				0
+																				0,
 																			) ||
-																			0
+																			0,
 																	)),
 																(this._canSelfClose =
 																	E.canSelfClose ||
@@ -10773,26 +10787,26 @@
 																E.escapedString
 																	? new k(
 																			t,
-																			p
+																			p,
 																	  )
 																	: new x(
 																			t,
-																			p
+																			p,
 																	  )
 															try {
 																this._cursor.init()
 															} catch (A) {
 																this.handleError(
-																	A
+																	A,
 																)
 															}
 														}
 														_processCarriageReturns(
-															t
+															t,
 														) {
 															return t.replace(
 																a,
-																'\n'
+																'\n',
 															)
 														}
 														tokenize() {
@@ -10807,56 +10821,56 @@
 																try {
 																	if (
 																		this._attemptCharCode(
-																			r.$LT
+																			r.$LT,
 																		)
 																	)
 																		if (
 																			this._attemptCharCode(
-																				r.$BANG
+																				r.$BANG,
 																			)
 																		)
 																			this._attemptStr(
-																				'[CDATA['
+																				'[CDATA[',
 																			)
 																				? this._consumeCdata(
-																						t
+																						t,
 																				  )
 																				: this._attemptStr(
-																						'--'
+																						'--',
 																				  )
 																				? this._consumeComment(
-																						t
+																						t,
 																				  )
 																				: this._attemptStrCaseInsensitive(
-																						'doctype'
+																						'doctype',
 																				  )
 																				? this._consumeDocType(
-																						t
+																						t,
 																				  )
 																				: this._consumeBogusComment(
-																						t
+																						t,
 																				  )
 																		else if (
 																			this._attemptCharCode(
-																				r.$SLASH
+																				r.$SLASH,
 																			)
 																		)
 																			this._consumeTagClose(
-																				t
+																				t,
 																			)
 																		else {
 																			let o =
 																				this._cursor.clone()
 																			this._attemptCharCode(
-																				r.$QUESTION
+																				r.$QUESTION,
 																			)
 																				? ((this._cursor =
 																						o),
 																				  this._consumeBogusComment(
-																						t
+																						t,
 																				  ))
 																				: this._consumeTagOpen(
-																						t
+																						t,
 																				  )
 																		}
 																	else
@@ -10866,20 +10880,20 @@
 																			this._consumeText()
 																} catch (o) {
 																	this.handleError(
-																		o
+																		o,
 																	)
 																}
 															}
 															return (
 																this._beginToken(
-																	s.EOF
+																	s.EOF,
 																),
 																this._endToken(
-																	[]
+																	[],
 																),
 																new c(
 																	(function O(
-																		t
+																		t,
 																	) {
 																		let E,
 																			o =
@@ -10906,15 +10920,15 @@
 																				: ((E =
 																						A),
 																				  o.push(
-																						E
+																						E,
 																				  ))
 																		}
 																		return o
 																	})(
 																		this
-																			.tokens
+																			.tokens,
 																	),
-																	this.errors
+																	this.errors,
 																)
 															)
 														}
@@ -10932,14 +10946,14 @@
 																		t ===
 																			r.$EQ ||
 																		r.isAsciiLetter(
-																			t
+																			t,
 																		) ||
 																		r.isDigit(
-																			t
+																			t,
 																		)
 																	)
 																})(
-																	this._cursor.peek()
+																	this._cursor.peek(),
 																) &&
 																this._isInExpansionForm()
 															)
@@ -10998,8 +11012,8 @@
 																	'Programming error - attempted to end a token when there was no start to the token',
 																	this._currentTokenType,
 																	this._cursor.getSpan(
-																		o
-																	)
+																		o,
+																	),
 																)
 															if (
 																null ===
@@ -11011,8 +11025,8 @@
 																	null,
 																	this._cursor.getSpan(
 																		this
-																			._currentTokenStart
-																	)
+																			._currentTokenStart,
+																	),
 																)
 															let E = new i(
 																this._currentTokenType,
@@ -11021,12 +11035,12 @@
 																	this
 																		._currentTokenStart,
 																	this
-																		._leadingTriviaCodePoints
-																)
+																		._leadingTriviaCodePoints,
+																),
 															)
 															return (
 																this.tokens.push(
-																	E
+																	E,
 																),
 																(this._currentTokenStart =
 																	null),
@@ -11042,7 +11056,7 @@
 															let E = new f(
 																t,
 																this._currentTokenType,
-																o
+																o,
 															)
 															return (
 																(this._currentTokenStart =
@@ -11060,8 +11074,8 @@
 																		this._createError(
 																			t.msg,
 																			this._cursor.getSpan(
-																				t.cursor
-																			)
+																				t.cursor,
+																			),
 																		)),
 																!(
 																	t instanceof
@@ -11070,7 +11084,7 @@
 															)
 																throw t
 															this.errors.push(
-																t.error
+																t.error,
 															)
 														}
 														_attemptCharCode(t) {
@@ -11082,12 +11096,12 @@
 															)
 														}
 														_attemptCharCodeCaseInsensitive(
-															t
+															t,
 														) {
 															return (
 																!!(function j(
 																	t,
-																	o
+																	o,
 																) {
 																	return (
 																		_(t) ==
@@ -11095,7 +11109,7 @@
 																	)
 																})(
 																	this._cursor.peek(),
-																	t
+																	t,
 																) &&
 																(this._cursor.advance(),
 																!0)
@@ -11106,16 +11120,16 @@
 																this._cursor.clone()
 															if (
 																!this._attemptCharCode(
-																	t
+																	t,
 																)
 															)
 																throw this._createError(
 																	l(
-																		this._cursor.peek()
+																		this._cursor.peek(),
 																	),
 																	this._cursor.getSpan(
-																		o
-																	)
+																		o,
+																	),
 																)
 														}
 														_attemptStr(t) {
@@ -11135,8 +11149,8 @@
 																if (
 																	!this._attemptCharCode(
 																		t.charCodeAt(
-																			p
-																		)
+																			p,
+																		),
 																	)
 																)
 																	return (
@@ -11147,7 +11161,7 @@
 															return !0
 														}
 														_attemptStrCaseInsensitive(
-															t
+															t,
 														) {
 															for (
 																let o = 0;
@@ -11157,8 +11171,8 @@
 																if (
 																	!this._attemptCharCodeCaseInsensitive(
 																		t.charCodeAt(
-																			o
-																		)
+																			o,
+																		),
 																	)
 																)
 																	return !1
@@ -11169,44 +11183,44 @@
 																this._cursor.clone()
 															if (
 																!this._attemptStr(
-																	t
+																	t,
 																)
 															)
 																throw this._createError(
 																	l(
-																		this._cursor.peek()
+																		this._cursor.peek(),
 																	),
 																	this._cursor.getSpan(
-																		o
-																	)
+																		o,
+																	),
 																)
 														}
 														_requireStrCaseInsensitive(
-															t
+															t,
 														) {
 															let o =
 																this._cursor.clone()
 															if (
 																!this._attemptStrCaseInsensitive(
-																	t
+																	t,
 																)
 															)
 																throw this._createError(
 																	l(
-																		this._cursor.peek()
+																		this._cursor.peek(),
 																	),
 																	this._cursor.getSpan(
-																		o
-																	)
+																		o,
+																	),
 																)
 														}
 														_attemptCharCodeUntilFn(
-															t
+															t,
 														) {
 															for (
 																;
 																!t(
-																	this._cursor.peek()
+																	this._cursor.peek(),
 																);
 
 															)
@@ -11214,13 +11228,13 @@
 														}
 														_requireCharCodeUntilFn(
 															t,
-															o
+															o,
 														) {
 															let E =
 																this._cursor.clone()
 															if (
 																(this._attemptCharCodeUntilFn(
-																	t
+																	t,
 																),
 																this._cursor
 																	.clone()
@@ -11229,11 +11243,11 @@
 															)
 																throw this._createError(
 																	l(
-																		this._cursor.peek()
+																		this._cursor.peek(),
 																	),
 																	this._cursor.getSpan(
-																		E
-																	)
+																		E,
+																	),
 																)
 														}
 														_attemptUntilChar(t) {
@@ -11255,7 +11269,7 @@
 															{
 																let o =
 																	String.fromCodePoint(
-																		this._cursor.peek()
+																		this._cursor.peek(),
 																	)
 																return (
 																	this._cursor.advance(),
@@ -11269,14 +11283,14 @@
 															if (
 																(this._cursor.advance(),
 																!this._attemptCharCode(
-																	r.$HASH
+																	r.$HASH,
 																))
 															) {
 																let o =
 																	this._cursor.clone()
 																if (
 																	(this._attemptCharCodeUntilFn(
-																		N
+																		N,
 																	),
 																	this._cursor.peek() !=
 																		r.$SEMICOLON)
@@ -11288,7 +11302,7 @@
 																	)
 																let E =
 																	this._cursor.getChars(
-																		o
+																		o,
 																	)
 																this._cursor.advance()
 																let p =
@@ -11300,37 +11314,37 @@
 																	throw this._createError(
 																		h(E),
 																		this._cursor.getSpan(
-																			t
-																		)
+																			t,
+																		),
 																	)
 																return p
 															}
 															{
 																let o =
 																		this._attemptCharCode(
-																			r.$x
+																			r.$x,
 																		) ||
 																		this._attemptCharCode(
-																			r.$X
+																			r.$X,
 																		),
 																	E =
 																		this._cursor.clone()
 																if (
 																	(this._attemptCharCodeUntilFn(
-																		g
+																		g,
 																	),
 																	this._cursor.peek() !=
 																		r.$SEMICOLON)
 																)
 																	throw this._createError(
 																		l(
-																			this._cursor.peek()
+																			this._cursor.peek(),
 																		),
-																		this._cursor.getSpan()
+																		this._cursor.getSpan(),
 																	)
 																let p =
 																	this._cursor.getChars(
-																		E
+																		E,
 																	)
 																this._cursor.advance()
 																try {
@@ -11339,19 +11353,19 @@
 																			p,
 																			o
 																				? 16
-																				: 10
+																				: 10,
 																		)
 																	return String.fromCharCode(
-																		A
+																		A,
 																	)
 																} catch {
 																	throw this._createError(
 																		h(
 																			this._cursor.getChars(
-																				t
-																			)
+																				t,
+																			),
 																		),
-																		this._cursor.getSpan()
+																		this._cursor.getSpan(),
 																	)
 																}
 															}
@@ -11360,7 +11374,7 @@
 															this._beginToken(
 																t
 																	? s.ESCAPABLE_RAW_TEXT
-																	: s.RAW_TEXT
+																	: s.RAW_TEXT,
 															)
 															let E = []
 															for (;;) {
@@ -11375,114 +11389,114 @@
 																	break
 																E.push(
 																	this._readChar(
-																		t
-																	)
+																		t,
+																	),
 																)
 															}
 															return this._endToken(
 																[
 																	this._processCarriageReturns(
 																		E.join(
-																			''
-																		)
+																			'',
+																		),
 																	),
-																]
+																],
 															)
 														}
 														_consumeComment(t) {
 															this._beginToken(
 																s.COMMENT_START,
-																t
+																t,
 															),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._consumeRawText(
 																	!1,
 																	() =>
 																		this._attemptStr(
-																			'--\x3e'
-																		)
+																			'--\x3e',
+																		),
 																),
 																this._beginToken(
-																	s.COMMENT_END
+																	s.COMMENT_END,
 																),
 																this._requireStr(
-																	'--\x3e'
+																	'--\x3e',
 																),
 																this._endToken(
-																	[]
+																	[],
 																)
 														}
 														_consumeBogusComment(
-															t
+															t,
 														) {
 															this._beginToken(
 																s.COMMENT_START,
-																t
+																t,
 															),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._consumeRawText(
 																	!1,
 																	() =>
 																		this._cursor.peek() ===
-																		r.$GT
+																		r.$GT,
 																),
 																this._beginToken(
-																	s.COMMENT_END
+																	s.COMMENT_END,
 																),
 																this._cursor.advance(),
 																this._endToken(
-																	[]
+																	[],
 																)
 														}
 														_consumeCdata(t) {
 															this._beginToken(
 																s.CDATA_START,
-																t
+																t,
 															),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._consumeRawText(
 																	!1,
 																	() =>
 																		this._attemptStr(
-																			']]>'
-																		)
+																			']]>',
+																		),
 																),
 																this._beginToken(
-																	s.CDATA_END
+																	s.CDATA_END,
 																),
 																this._requireStr(
-																	']]>'
+																	']]>',
 																),
 																this._endToken(
-																	[]
+																	[],
 																)
 														}
 														_consumeDocType(t) {
 															this._beginToken(
 																s.DOC_TYPE_START,
-																t
+																t,
 															),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._consumeRawText(
 																	!1,
 																	() =>
 																		this._cursor.peek() ===
-																		r.$GT
+																		r.$GT,
 																),
 																this._beginToken(
-																	s.DOC_TYPE_END
+																	s.DOC_TYPE_END,
 																),
 																this._cursor.advance(),
 																this._endToken(
-																	[]
+																	[],
 																)
 														}
 														_consumePrefixAndName() {
@@ -11495,7 +11509,7 @@
 																this._cursor.peek() !==
 																	r.$COLON &&
 																!w(
-																	this._cursor.peek()
+																	this._cursor.peek(),
 																);
 
 															)
@@ -11505,7 +11519,7 @@
 																r.$COLON
 																	? ((o =
 																			this._cursor.getChars(
-																				t
+																				t,
 																			)),
 																	  this._cursor.advance(),
 																	  (E =
@@ -11515,12 +11529,12 @@
 																	T,
 																	'' === o
 																		? 0
-																		: 1
+																		: 1,
 																),
 																[
 																	o,
 																	this._cursor.getChars(
-																		E
+																		E,
 																	),
 																]
 															)
@@ -11538,21 +11552,21 @@
 															try {
 																if (
 																	!r.isAsciiLetter(
-																		this._cursor.peek()
+																		this._cursor.peek(),
 																	)
 																)
 																	throw this._createError(
 																		l(
-																			this._cursor.peek()
+																			this._cursor.peek(),
 																		),
 																		this._cursor.getSpan(
-																			t
-																		)
+																			t,
+																		),
 																	)
 																for (
 																	p =
 																		this._consumeTagOpenStart(
-																			t
+																			t,
 																		),
 																		E =
 																			p
@@ -11561,7 +11575,7 @@
 																			p
 																				.parts[1],
 																		this._attemptCharCodeUntilFn(
-																			m
+																			m,
 																		);
 																	this._cursor.peek() !==
 																		r.$SLASH &&
@@ -11573,14 +11587,14 @@
 																		this._consumeAttributeName()
 																	if (
 																		(this._attemptCharCodeUntilFn(
-																			m
+																			m,
 																		),
 																		this._attemptCharCode(
-																			r.$EQ
+																			r.$EQ,
 																		))
 																	) {
 																		this._attemptCharCodeUntilFn(
-																			m
+																			m,
 																		)
 																		let H =
 																			this._consumeAttributeValue()
@@ -11595,7 +11609,7 @@
 																			name: X,
 																		})
 																	this._attemptCharCodeUntilFn(
-																		m
+																		m,
 																	)
 																}
 																this._consumeTagOpenEnd()
@@ -11612,12 +11626,12 @@
 																				A),
 																		this._beginToken(
 																			s.TEXT,
-																			t
+																			t,
 																		),
 																		void this._endToken(
 																			[
 																				'<',
-																			]
+																			],
 																		)
 																	)
 																throw V
@@ -11641,11 +11655,11 @@
 																		._fullNameStack
 																		.length >
 																		0,
-																	M
+																	M,
 																)
 															this._handleFullNameStackForTagOpen(
 																E,
-																o
+																o,
 															),
 																z ===
 																D.TagContentType
@@ -11653,7 +11667,7 @@
 																	? this._consumeRawTextWithTagClose(
 																			E,
 																			o,
-																			!1
+																			!1,
 																	  )
 																	: z ===
 																			D
@@ -11662,48 +11676,48 @@
 																	  this._consumeRawTextWithTagClose(
 																			E,
 																			o,
-																			!0
+																			!0,
 																	  )
 														}
 														_consumeRawTextWithTagClose(
 															t,
 															o,
-															E
+															E,
 														) {
 															this._consumeRawText(
 																E,
 																() =>
 																	!!(
 																		this._attemptCharCode(
-																			r.$LT
+																			r.$LT,
 																		) &&
 																		this._attemptCharCode(
-																			r.$SLASH
+																			r.$SLASH,
 																		) &&
 																		(this._attemptCharCodeUntilFn(
-																			m
+																			m,
 																		),
 																		this._attemptStrCaseInsensitive(
 																			t
 																				? `${t}:${o}`
-																				: o
+																				: o,
 																		))
 																	) &&
 																	(this._attemptCharCodeUntilFn(
-																		m
+																		m,
 																	),
 																	this._attemptCharCode(
-																		r.$GT
-																	))
+																		r.$GT,
+																	)),
 															)
 															this._beginToken(
-																s.TAG_CLOSE
+																s.TAG_CLOSE,
 															),
 																this._requireCharCodeUntilFn(
 																	(A) =>
 																		A ===
 																		r.$GT,
-																	3
+																	3,
 																),
 																this._cursor.advance(),
 																this._endToken([
@@ -11712,20 +11726,20 @@
 																]),
 																this._handleFullNameStackForTagClose(
 																	t,
-																	o
+																	o,
 																)
 														}
 														_consumeTagOpenStart(
-															t
+															t,
 														) {
 															this._beginToken(
 																s.TAG_OPEN_START,
-																t
+																t,
 															)
 															let o =
 																this._consumePrefixAndName()
 															return this._endToken(
-																o
+																o,
 															)
 														}
 														_consumeAttributeName() {
@@ -11737,16 +11751,16 @@
 															)
 																throw this._createError(
 																	l(t),
-																	this._cursor.getSpan()
+																	this._cursor.getSpan(),
 																)
 															this._beginToken(
-																s.ATTR_NAME
+																s.ATTR_NAME,
 															)
 															let o =
 																this._consumePrefixAndName()
 															return (
 																this._endToken(
-																	o
+																	o,
 																),
 																o
 															)
@@ -11760,7 +11774,7 @@
 																	r.$DQ
 															) {
 																this._beginToken(
-																	s.ATTR_QUOTE
+																	s.ATTR_QUOTE,
 																)
 																let o =
 																	this._cursor.peek()
@@ -11768,12 +11782,12 @@
 																	this._endToken(
 																		[
 																			String.fromCodePoint(
-																				o
+																				o,
 																			),
-																		]
+																		],
 																	),
 																	this._beginToken(
-																		s.ATTR_VALUE
+																		s.ATTR_VALUE,
 																	)
 																let E = []
 																for (
@@ -11784,47 +11798,47 @@
 																)
 																	E.push(
 																		this._readChar(
-																			!0
-																		)
+																			!0,
+																		),
 																	)
 																;(t =
 																	this._processCarriageReturns(
 																		E.join(
-																			''
-																		)
+																			'',
+																		),
 																	)),
 																	this._endToken(
-																		[t]
+																		[t],
 																	),
 																	this._beginToken(
-																		s.ATTR_QUOTE
+																		s.ATTR_QUOTE,
 																	),
 																	this._cursor.advance(),
 																	this._endToken(
 																		[
 																			String.fromCodePoint(
-																				o
+																				o,
 																			),
-																		]
+																		],
 																	)
 															} else {
 																this._beginToken(
-																	s.ATTR_VALUE
+																	s.ATTR_VALUE,
 																)
 																let o =
 																	this._cursor.clone()
 																this._requireCharCodeUntilFn(
 																	T,
-																	1
+																	1,
 																),
 																	(t =
 																		this._processCarriageReturns(
 																			this._cursor.getChars(
-																				o
-																			)
+																				o,
+																			),
 																		)),
 																	this._endToken(
-																		[t]
+																		[t],
 																	)
 															}
 															return t
@@ -11832,154 +11846,154 @@
 														_consumeTagOpenEnd() {
 															let t =
 																this._attemptCharCode(
-																	r.$SLASH
+																	r.$SLASH,
 																)
 																	? s.TAG_OPEN_END_VOID
 																	: s.TAG_OPEN_END
 															this._beginToken(t),
 																this._requireCharCode(
-																	r.$GT
+																	r.$GT,
 																),
 																this._endToken(
-																	[]
+																	[],
 																)
 														}
 														_consumeTagClose(t) {
 															if (
 																(this._beginToken(
 																	s.TAG_CLOSE,
-																	t
+																	t,
 																),
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																),
 																this
 																	._allowHtmComponentClosingTags &&
 																	this._attemptCharCode(
-																		r.$SLASH
+																		r.$SLASH,
 																	))
 															)
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																),
 																	this._requireCharCode(
-																		r.$GT
+																		r.$GT,
 																	),
 																	this._endToken(
-																		[]
+																		[],
 																	)
 															else {
 																let [o, E] =
 																	this._consumePrefixAndName()
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																),
 																	this._requireCharCode(
-																		r.$GT
+																		r.$GT,
 																	),
 																	this._endToken(
-																		[o, E]
+																		[o, E],
 																	),
 																	this._handleFullNameStackForTagClose(
 																		o,
-																		E
+																		E,
 																	)
 															}
 														}
 														_consumeExpansionFormStart() {
 															this._beginToken(
-																s.EXPANSION_FORM_START
+																s.EXPANSION_FORM_START,
 															),
 																this._requireCharCode(
-																	r.$LBRACE
+																	r.$LBRACE,
 																),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._expansionCaseStack.push(
-																	s.EXPANSION_FORM_START
+																	s.EXPANSION_FORM_START,
 																),
 																this._beginToken(
-																	s.RAW_TEXT
+																	s.RAW_TEXT,
 																)
 															let t =
 																this._readUntil(
-																	r.$COMMA
+																	r.$COMMA,
 																)
 															this._endToken([t]),
 																this._requireCharCode(
-																	r.$COMMA
+																	r.$COMMA,
 																),
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																),
 																this._beginToken(
-																	s.RAW_TEXT
+																	s.RAW_TEXT,
 																)
 															let o =
 																this._readUntil(
-																	r.$COMMA
+																	r.$COMMA,
 																)
 															this._endToken([o]),
 																this._requireCharCode(
-																	r.$COMMA
+																	r.$COMMA,
 																),
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																)
 														}
 														_consumeExpansionCaseStart() {
 															this._beginToken(
-																s.EXPANSION_CASE_VALUE
+																s.EXPANSION_CASE_VALUE,
 															)
 															let t =
 																this._readUntil(
-																	r.$LBRACE
+																	r.$LBRACE,
 																).trim()
 															this._endToken([t]),
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																),
 																this._beginToken(
-																	s.EXPANSION_CASE_EXP_START
+																	s.EXPANSION_CASE_EXP_START,
 																),
 																this._requireCharCode(
-																	r.$LBRACE
+																	r.$LBRACE,
 																),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																),
 																this._expansionCaseStack.push(
-																	s.EXPANSION_CASE_EXP_START
+																	s.EXPANSION_CASE_EXP_START,
 																)
 														}
 														_consumeExpansionCaseEnd() {
 															this._beginToken(
-																s.EXPANSION_CASE_EXP_END
+																s.EXPANSION_CASE_EXP_END,
 															),
 																this._requireCharCode(
-																	r.$RBRACE
+																	r.$RBRACE,
 																),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._attemptCharCodeUntilFn(
-																	m
+																	m,
 																),
 																this._expansionCaseStack.pop()
 														}
 														_consumeExpansionFormEnd() {
 															this._beginToken(
-																s.EXPANSION_FORM_END
+																s.EXPANSION_FORM_END,
 															),
 																this._requireCharCode(
-																	r.$RBRACE
+																	r.$RBRACE,
 																),
 																this._endToken(
-																	[]
+																	[],
 																),
 																this._expansionCaseStack.pop()
 														}
@@ -11988,7 +12002,7 @@
 																this._cursor.clone()
 															this._beginToken(
 																s.TEXT,
-																t
+																t,
 															)
 															let o = []
 															do {
@@ -11997,12 +12011,12 @@
 																this._attemptStr(
 																	this
 																		._interpolationConfig
-																		.start
+																		.start,
 																)
 																	? (o.push(
 																			this
 																				._interpolationConfig
-																				.start
+																				.start,
 																	  ),
 																	  (this._inInterpolation =
 																			!0))
@@ -12013,26 +12027,26 @@
 																	  this._attemptStr(
 																			this
 																				._interpolationConfig
-																				.end
+																				.end,
 																	  )
 																	? (o.push(
 																			this
 																				._interpolationConfig
-																				.end
+																				.end,
 																	  ),
 																	  (this._inInterpolation =
 																			!1))
 																	: o.push(
 																			this._readChar(
-																				!0
-																			)
+																				!0,
+																			),
 																	  )
 															} while (
 																!this._isTextEnd()
 															)
 															this._endToken([
 																this._processCarriageReturns(
-																	o.join('')
+																	o.join(''),
 																),
 															])
 														}
@@ -12057,10 +12071,10 @@
 																this._cursor.clone()
 															return (
 																this._attemptUntilChar(
-																	t
+																	t,
 																),
 																this._cursor.getChars(
-																	o
+																	o,
 																)
 															)
 														}
@@ -12112,7 +12126,7 @@
 																		this._attemptStr(
 																			this
 																				._interpolationConfig
-																				.start
+																				.start,
 																		)
 																return (
 																	(this._cursor =
@@ -12124,12 +12138,12 @@
 														}
 														_handleFullNameStackForTagOpen(
 															t,
-															o
+															o,
 														) {
 															let E =
 																D.mergeNsAndName(
 																	t,
-																	o
+																	o,
 																)
 															;(0 ===
 																this
@@ -12143,17 +12157,17 @@
 																		1
 																] === E) &&
 																this._fullNameStack.push(
-																	E
+																	E,
 																)
 														}
 														_handleFullNameStackForTagClose(
 															t,
-															o
+															o,
 														) {
 															let E =
 																D.mergeNsAndName(
 																	t,
-																	o
+																	o,
 																)
 															0 !==
 																this
@@ -12226,12 +12240,12 @@
 																	(this.state =
 																		Object.assign(
 																			{},
-																			t.state
+																			t.state,
 																		))
 															else {
 																if (!o)
 																	throw new Error(
-																		'Programming error: the range argument must be provided with a file argument.'
+																		'Programming error: the range argument must be provided with a file argument.',
 																	)
 																;(this.file =
 																	t),
@@ -12271,12 +12285,12 @@
 														}
 														advance() {
 															this.advanceState(
-																this.state
+																this.state,
 															)
 														}
 														init() {
 															this.updatePeek(
-																this.state
+																this.state,
 															)
 														}
 														getSpan(t, o) {
@@ -12289,11 +12303,11 @@
 																	t =
 																		t.clone();
 																	this.diff(
-																		t
+																		t,
 																	) > 0 &&
 																	-1 !==
 																		o.indexOf(
-																			t.peek()
+																			t.peek(),
 																		);
 
 																)
@@ -12303,26 +12317,26 @@
 																	t.file,
 																	t.state.offset,
 																	t.state.line,
-																	t.state.column
+																	t.state.column,
 																),
 																new u.ParseLocation(
 																	this.file,
 																	this.state.offset,
 																	this.state.line,
-																	this.state.column
-																)
+																	this.state.column,
+																),
 															)
 														}
 														getChars(t) {
 															return this.input.substring(
 																t.state.offset,
 																this.state
-																	.offset
+																	.offset,
 															)
 														}
 														charAt(t) {
 															return this.input.charCodeAt(
-																t
+																t,
 															)
 														}
 														advanceState(t) {
@@ -12335,22 +12349,22 @@
 																		t),
 																	new $(
 																		'Unexpected character "EOF"',
-																		this
+																		this,
 																	))
 																)
 															let o = this.charAt(
-																t.offset
+																t.offset,
 															)
 															o === r.$LF
 																? (t.line++,
 																  (t.column = 0))
 																: r.isNewLine(
-																		o
+																		o,
 																  ) ||
 																  t.column++,
 																t.offset++,
 																this.updatePeek(
-																	t
+																	t,
 																)
 														}
 														updatePeek(t) {
@@ -12359,7 +12373,7 @@
 																this.end
 																	? r.$EOF
 																	: this.charAt(
-																			t.offset
+																			t.offset,
 																	  )
 														}
 													},
@@ -12370,7 +12384,7 @@
 																  (this.internalState =
 																		Object.assign(
 																			{},
-																			t.internalState
+																			t.internalState,
 																		)))
 																: (super(t, o),
 																  (this.internalState =
@@ -12403,7 +12417,7 @@
 															)
 																(E +=
 																	String.fromCodePoint(
-																		o.peek()
+																		o.peek(),
 																	)),
 																	o.advance()
 															return E
@@ -12422,11 +12436,11 @@
 																		Object.assign(
 																			{},
 																			this
-																				.state
+																				.state,
 																		)),
 																	this.advanceState(
 																		this
-																			.internalState
+																			.internalState,
 																	),
 																	t() ===
 																		r.$n)
@@ -12464,14 +12478,14 @@
 																	if (
 																		(this.advanceState(
 																			this
-																				.internalState
+																				.internalState,
 																		),
 																		t() ===
 																			r.$LBRACE)
 																	) {
 																		this.advanceState(
 																			this
-																				.internalState
+																				.internalState,
 																		)
 																		let o =
 																				this.clone(),
@@ -12484,33 +12498,33 @@
 																		)
 																			this.advanceState(
 																				this
-																					.internalState
+																					.internalState,
 																			),
 																				E++
 																		this.state.peek =
 																			this.decodeHexDigits(
 																				o,
-																				E
+																				E,
 																			)
 																	} else {
 																		let o =
 																			this.clone()
 																		this.advanceState(
 																			this
-																				.internalState
+																				.internalState,
 																		),
 																			this.advanceState(
 																				this
-																					.internalState
+																					.internalState,
 																			),
 																			this.advanceState(
 																				this
-																					.internalState
+																					.internalState,
 																			),
 																			(this.state.peek =
 																				this.decodeHexDigits(
 																					o,
-																					4
+																					4,
 																				))
 																	}
 																else if (
@@ -12518,22 +12532,22 @@
 																) {
 																	this.advanceState(
 																		this
-																			.internalState
+																			.internalState,
 																	)
 																	let o =
 																		this.clone()
 																	this.advanceState(
 																		this
-																			.internalState
+																			.internalState,
 																	),
 																		(this.state.peek =
 																			this.decodeHexDigits(
 																				o,
-																				2
+																				2,
 																			))
 																} else if (
 																	r.isOctalDigit(
-																		t()
+																		t(),
 																	)
 																) {
 																	let o = '',
@@ -12543,7 +12557,7 @@
 																	for (
 																		;
 																		r.isOctalDigit(
-																			t()
+																			t(),
 																		) &&
 																		E < 3;
 
@@ -12552,17 +12566,17 @@
 																			this.clone()),
 																			(o +=
 																				String.fromCodePoint(
-																					t()
+																					t(),
 																				)),
 																			this.advanceState(
 																				this
-																					.internalState
+																					.internalState,
 																			),
 																			E++
 																	;(this.state.peek =
 																		parseInt(
 																			o,
-																			8
+																			8,
 																		)),
 																		(this.internalState =
 																			p.internalState)
@@ -12570,11 +12584,11 @@
 																	r.isNewLine(
 																		this
 																			.internalState
-																			.peek
+																			.peek,
 																	)
 																		? (this.advanceState(
 																				this
-																					.internalState
+																					.internalState,
 																		  ),
 																		  (this.state =
 																				this.internalState))
@@ -12587,11 +12601,11 @@
 																		t
 																			.internalState
 																			.offset,
-																		o
+																		o,
 																	),
 																p = parseInt(
 																	E,
-																	16
+																	16,
 																)
 															if (isNaN(p))
 																throw (
@@ -12599,7 +12613,7 @@
 																		t.internalState),
 																	new $(
 																		'Invalid hexadecimal escape sequence',
-																		t
+																		t,
 																	))
 																)
 															return p
@@ -12617,13 +12631,13 @@
 										}),
 										ls = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ml_parser/parser.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Be(),
 													u = bs(),
@@ -12639,7 +12653,7 @@
 															return new s(
 																a,
 																l,
-																h
+																h,
 															)
 														}
 													}
@@ -12679,7 +12693,7 @@
 																					1
 																						? $ -
 																						  1
-																						: 0
+																						: 0,
 																				),
 																			o = 1;
 																		o < $;
@@ -12694,7 +12708,7 @@
 																			]
 																	return x(
 																		k.toLowerCase(),
-																		...t
+																		...t,
 																	)
 																},
 															T = C
@@ -12702,7 +12716,7 @@
 																		.getTagDefinition
 																: m(
 																		this
-																			.getTagDefinition
+																			.getTagDefinition,
 																  ),
 															w = (x) =>
 																T(x)
@@ -12713,20 +12727,20 @@
 																		x,
 																		k,
 																		$,
-																		t
+																		t,
 																  ) => {
 																		let o =
 																			g(
 																				x,
 																				k,
 																				$,
-																				t
+																				t,
 																			)
 																		return void 0 !==
 																			o
 																			? o
 																			: w(
-																					x
+																					x,
 																			  )
 																  }
 																: w,
@@ -12734,7 +12748,7 @@
 																a,
 																l,
 																N,
-																h
+																h,
 															),
 															j =
 																(h &&
@@ -12749,13 +12763,13 @@
 																T,
 																j,
 																_,
-																C
+																C,
 															).build()
 														return new i(
 															O.rootNodes,
 															R.errors.concat(
-																O.errors
-															)
+																O.errors,
+															),
 														)
 													}
 												}
@@ -12789,7 +12803,7 @@
 															n.TokenType
 																.TAG_OPEN_START
 																? this._consumeStartTag(
-																		this._advance()
+																		this._advance(),
 																  )
 																: this._peek
 																		.type ===
@@ -12797,7 +12811,7 @@
 																		.TAG_CLOSE
 																? (this._closeVoidElement(),
 																  this._consumeEndTag(
-																		this._advance()
+																		this._advance(),
 																  ))
 																: this._peek
 																		.type ===
@@ -12805,7 +12819,7 @@
 																		.CDATA_START
 																? (this._closeVoidElement(),
 																  this._consumeCdata(
-																		this._advance()
+																		this._advance(),
 																  ))
 																: this._peek
 																		.type ===
@@ -12813,7 +12827,7 @@
 																		.COMMENT_START
 																? (this._closeVoidElement(),
 																  this._consumeComment(
-																		this._advance()
+																		this._advance(),
 																  ))
 																: this._peek
 																		.type ===
@@ -12832,26 +12846,26 @@
 																			.ESCAPABLE_RAW_TEXT
 																? (this._closeVoidElement(),
 																  this._consumeText(
-																		this._advance()
+																		this._advance(),
 																  ))
 																: this._peek
 																		.type ===
 																  n.TokenType
 																		.EXPANSION_FORM_START
 																? this._consumeExpansion(
-																		this._advance()
+																		this._advance(),
 																  )
 																: this._peek
 																		.type ===
 																  n.TokenType
 																		.DOC_TYPE_START
 																? this._consumeDocType(
-																		this._advance()
+																		this._advance(),
 																  )
 																: this._advance()
 														return new i(
 															this._rootNodes,
-															this._errors
+															this._errors,
 														)
 													}
 													_advance() {
@@ -12879,11 +12893,11 @@
 														let l = this._advance(),
 															h =
 																this._getText(
-																	l
+																	l,
 																),
 															C = this._advanceIf(
 																n.TokenType
-																	.CDATA_END
+																	.CDATA_END,
 															)
 														this._addToParent(
 															new u.CDATA(
@@ -12892,19 +12906,19 @@
 																	a.sourceSpan.start,
 																	(
 																		C || l
-																	).sourceSpan.end
-																)
-															)
+																	).sourceSpan.end,
+																),
+															),
 														)
 													}
 													_consumeComment(a) {
 														let l = this._advanceIf(
 																n.TokenType
-																	.RAW_TEXT
+																	.RAW_TEXT,
 															),
 															h = this._advanceIf(
 																n.TokenType
-																	.COMMENT_END
+																	.COMMENT_END,
 															),
 															C =
 																null != l
@@ -12917,20 +12931,20 @@
 																		h ||
 																		l ||
 																		a
-																	).sourceSpan.end
+																	).sourceSpan.end,
 																)
 														this._addToParent(
-															new u.Comment(C, d)
+															new u.Comment(C, d),
 														)
 													}
 													_consumeDocType(a) {
 														let l = this._advanceIf(
 																n.TokenType
-																	.RAW_TEXT
+																	.RAW_TEXT,
 															),
 															h = this._advanceIf(
 																n.TokenType
-																	.DOC_TYPE_END
+																	.DOC_TYPE_END,
 															),
 															C =
 																null != l
@@ -12943,10 +12957,10 @@
 																		h ||
 																		l ||
 																		a
-																	).sourceSpan.end
+																	).sourceSpan.end,
 																)
 														this._addToParent(
-															new u.DocType(C, d)
+															new u.DocType(C, d),
 														)
 													}
 													_consumeExpansion(a) {
@@ -12975,13 +12989,13 @@
 																	null,
 																	this._peek
 																		.sourceSpan,
-																	"Invalid ICU message. Missing '}'."
-																)
+																	"Invalid ICU message. Missing '}'.",
+																),
 															)
 														let d =
 															new r.ParseSourceSpan(
 																a.sourceSpan.start,
-																this._peek.sourceSpan.end
+																this._peek.sourceSpan.end,
 															)
 														this._addToParent(
 															new u.Expansion(
@@ -12989,8 +13003,8 @@
 																h.parts[0],
 																C,
 																d,
-																l.sourceSpan
-															)
+																l.sourceSpan,
+															),
 														),
 															this._advance()
 													}
@@ -13008,15 +13022,15 @@
 																		this
 																			._peek
 																			.sourceSpan,
-																		"Invalid ICU message. Missing '{'."
-																	)
+																		"Invalid ICU message. Missing '{'.",
+																	),
 																),
 																null
 															)
 														let l = this._advance(),
 															h =
 																this._collectExpansionExpTokens(
-																	l
+																	l,
 																)
 														if (!h) return null
 														let C = this._advance()
@@ -13024,44 +13038,44 @@
 															new n.Token(
 																n.TokenType.EOF,
 																[],
-																C.sourceSpan
-															)
+																C.sourceSpan,
+															),
 														)
 														let d = new c(
 															h,
 															this.getTagDefinition,
 															this.canSelfClose,
 															this.allowHtmComponentClosingTags,
-															this.isTagNameCaseSensitive
+															this.isTagNameCaseSensitive,
 														).build()
 														if (d.errors.length > 0)
 															return (
 																(this._errors =
 																	this._errors.concat(
-																		d.errors
+																		d.errors,
 																	)),
 																null
 															)
 														let m =
 																new r.ParseSourceSpan(
 																	a.sourceSpan.start,
-																	C.sourceSpan.end
+																	C.sourceSpan.end,
 																),
 															T =
 																new r.ParseSourceSpan(
 																	l.sourceSpan.start,
-																	C.sourceSpan.end
+																	C.sourceSpan.end,
 																)
 														return new u.ExpansionCase(
 															a.parts[0],
 															d.rootNodes,
 															m,
 															a.sourceSpan,
-															T
+															T,
 														)
 													}
 													_collectExpansionExpTokens(
-														a
+														a,
 													) {
 														let l = [],
 															h = [
@@ -13082,7 +13096,7 @@
 																	h.push(
 																		this
 																			._peek
-																			.type
+																			.type,
 																	),
 																this._peek
 																	.type ===
@@ -13094,7 +13108,7 @@
 																		h,
 																		n
 																			.TokenType
-																			.EXPANSION_CASE_EXP_START
+																			.EXPANSION_CASE_EXP_START,
 																	)
 																)
 																	return (
@@ -13102,8 +13116,8 @@
 																			s.create(
 																				null,
 																				a.sourceSpan,
-																				"Invalid ICU message. Missing '}'."
-																			)
+																				"Invalid ICU message. Missing '}'.",
+																			),
 																		),
 																		null
 																	)
@@ -13125,7 +13139,7 @@
 																		h,
 																		n
 																			.TokenType
-																			.EXPANSION_FORM_START
+																			.EXPANSION_FORM_START,
 																	)
 																)
 																	return (
@@ -13133,8 +13147,8 @@
 																			s.create(
 																				null,
 																				a.sourceSpan,
-																				"Invalid ICU message. Missing '}'."
-																			)
+																				"Invalid ICU message. Missing '}'.",
+																			),
 																		),
 																		null
 																	)
@@ -13150,13 +13164,13 @@
 																		s.create(
 																			null,
 																			a.sourceSpan,
-																			"Invalid ICU message. Missing '}'."
-																		)
+																			"Invalid ICU message. Missing '}'.",
+																		),
 																	),
 																	null
 																)
 															l.push(
-																this._advance()
+																this._advance(),
 															)
 														}
 													}
@@ -13173,12 +13187,12 @@
 																	h.children
 																		.length &&
 																this.getTagDefinition(
-																	h.name
+																	h.name,
 																)
 																	.ignoreFirstLf &&
 																(l =
 																	l.substring(
-																		1
+																		1,
 																	))
 														}
 														return l
@@ -13189,8 +13203,8 @@
 															this._addToParent(
 																new u.Text(
 																	l,
-																	a.sourceSpan
-																)
+																	a.sourceSpan,
+																),
 															)
 													}
 													_closeVoidElement() {
@@ -13198,7 +13212,7 @@
 															this._getParentElement()
 														a &&
 															this.getTagDefinition(
-																a.name
+																a.name,
 															).isVoid &&
 															this._elementStack.pop()
 													}
@@ -13215,14 +13229,14 @@
 														)
 															C.push(
 																this._consumeAttr(
-																	this._advance()
-																)
+																	this._advance(),
+																),
 															)
 														let d =
 																this._getElementFullName(
 																	l,
 																	h,
-																	this._getParentElement()
+																	this._getParentElement(),
 																),
 															m = !1
 														if (
@@ -13234,21 +13248,21 @@
 																(m = !0)
 															let R =
 																this.getTagDefinition(
-																	d
+																	d,
 																)
 															this.canSelfClose ||
 																R.canSelfClose ||
 																null !==
 																	D.getNsPrefix(
-																		d
+																		d,
 																	) ||
 																R.isVoid ||
 																this._errors.push(
 																	s.create(
 																		d,
 																		a.sourceSpan,
-																		`Only void and foreign elements can be self closed "${a.parts[1]}"`
-																	)
+																		`Only void and foreign elements can be self closed "${a.parts[1]}"`,
+																	),
 																)
 														} else
 															this._peek.type ===
@@ -13263,14 +13277,14 @@
 															w =
 																new r.ParseSourceSpan(
 																	a.sourceSpan.start,
-																	T
+																	T,
 																),
 															g =
 																new r.ParseSourceSpan(
 																	a.sourceSpan.start.moveBy(
-																		1
+																		1,
 																	),
-																	a.sourceSpan.end
+																	a.sourceSpan.end,
 																),
 															N = new u.Element(
 																d,
@@ -13279,12 +13293,12 @@
 																w,
 																w,
 																void 0,
-																g
+																g,
 															)
 														this._pushElement(N),
 															m &&
 																(this._popElement(
-																	d
+																	d,
 																),
 																(N.endSourceSpan =
 																	w))
@@ -13294,16 +13308,16 @@
 															this._getParentElement()
 														l &&
 															this.getTagDefinition(
-																l.name
+																l.name,
 															).isClosedByChild(
-																a.name
+																a.name,
 															) &&
 															this._elementStack.pop(),
 															this._addToParent(
-																a
+																a,
 															),
 															this._elementStack.push(
-																a
+																a,
 															)
 													}
 													_consumeEndTag(a) {
@@ -13317,7 +13331,7 @@
 																			.parts[0],
 																		a
 																			.parts[1],
-																		this._getParentElement()
+																		this._getParentElement(),
 																  )
 														if (
 															(this._getParentElement() &&
@@ -13325,15 +13339,15 @@
 																	a.sourceSpan),
 															l &&
 																this.getTagDefinition(
-																	l
+																	l,
 																).isVoid)
 														)
 															this._errors.push(
 																s.create(
 																	l,
 																	a.sourceSpan,
-																	`Void elements do not have end tags "${a.parts[1]}"`
-																)
+																	`Void elements do not have end tags "${a.parts[1]}"`,
+																),
 															)
 														else if (
 															!this._popElement(l)
@@ -13343,8 +13357,8 @@
 																s.create(
 																	l,
 																	a.sourceSpan,
-																	h
-																)
+																	h,
+																),
 															)
 														}
 													}
@@ -13365,7 +13379,7 @@
 															if (
 																!a ||
 																(D.getNsPrefix(
-																	h.name
+																	h.name,
 																)
 																	? h.name ==
 																	  a
@@ -13378,13 +13392,13 @@
 																		this
 																			._elementStack
 																			.length -
-																			l
+																			l,
 																	),
 																	!0
 																)
 															if (
 																!this.getTagDefinition(
-																	h.name
+																	h.name,
 																).closedByParent
 															)
 																return !1
@@ -13397,7 +13411,7 @@
 															l =
 																D.mergeNsAndName(
 																	a.parts[0],
-																	a.parts[1]
+																	a.parts[1],
 																),
 															h =
 																a.sourceSpan
@@ -13435,17 +13449,17 @@
 																(d =
 																	new r.ParseSourceSpan(
 																		m,
-																		h
+																		h,
 																	))),
 															new u.Attribute(
 																l,
 																C,
 																new r.ParseSourceSpan(
 																	a.sourceSpan.start,
-																	h
+																	h,
 																),
 																d,
-																a.sourceSpan
+																a.sourceSpan,
 															)
 														)
 													}
@@ -13477,7 +13491,7 @@
 																	this
 																		._elementStack[
 																		l
-																	].name
+																	].name,
 																)
 															)
 																return {
@@ -13505,64 +13519,64 @@
 														null != l
 															? l.children.push(a)
 															: this._rootNodes.push(
-																	a
+																	a,
 															  )
 													}
 													_insertBeforeContainer(
 														a,
 														l,
-														h
+														h,
 													) {
 														if (l) {
 															if (a) {
 																let C =
 																	a.children.indexOf(
-																		l
+																		l,
 																	)
 																a.children[C] =
 																	h
 															} else
 																this._rootNodes.push(
-																	h
+																	h,
 																)
 															h.children.push(l),
 																this._elementStack.splice(
 																	this._elementStack.indexOf(
-																		l
+																		l,
 																	),
 																	0,
-																	h
+																	h,
 																)
 														} else
 															this._addToParent(
-																h
+																h,
 															),
 																this._elementStack.push(
-																	h
+																	h,
 																)
 													}
 													_getElementFullName(
 														a,
 														l,
-														h
+														h,
 													) {
 														return (
 															'' === a &&
 																'' ===
 																	(a =
 																		this.getTagDefinition(
-																			l
+																			l,
 																		)
 																			.implicitNamespacePrefix ||
 																		'') &&
 																null != h &&
 																(a =
 																	D.getNsPrefix(
-																		h.name
+																		h.name,
 																	)),
 															D.mergeNsAndName(
 																a,
-																l
+																l,
 															)
 														)
 													}
@@ -13577,13 +13591,13 @@
 										}),
 										Ql = I({
 											'node_modules/angular-html-parser/lib/compiler/src/ml_parser/html_parser.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Bs(),
 													u = ls(),
@@ -13594,7 +13608,7 @@
 												var D = class extends u.Parser {
 													constructor() {
 														super(
-															r.getHtmlTagDefinition
+															r.getHtmlTagDefinition,
 														)
 													}
 													parse(s, i, f) {
@@ -13614,7 +13628,7 @@
 															i,
 															f,
 															c,
-															F
+															F,
 														)
 													}
 												}
@@ -13623,13 +13637,13 @@
 										}),
 										ws = I({
 											'node_modules/angular-html-parser/lib/angular-html-parser/src/index.js'(
-												e
+												e,
 											) {
 												q(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Ql(),
 													u = Ze()
@@ -13670,7 +13684,7 @@
 																F,
 														},
 														a,
-														l
+														l,
 													)
 												}
 											},
@@ -13726,7 +13740,7 @@
 																O.value) ||
 														('element' === O.type &&
 															'html' ===
-																O.name.toLowerCase())
+																O.name.toLowerCase()),
 												)
 											) {
 												;(n = !0),
@@ -13753,7 +13767,7 @@
 													let k = x.attrs.find(
 															(t) =>
 																'lang' ===
-																t.name
+																t.name,
 														),
 														$ = k && k.value
 													return (
@@ -13789,7 +13803,7 @@
 																				.start
 																				.offset
 																	)
-																}
+																},
 															)
 													for (
 														let o = 0;
@@ -13884,12 +13898,12 @@
 																						O.valueSpan.toString()),
 																				  /["']/.test(
 																						O
-																							.value[0]
+																							.value[0],
 																				  ) &&
 																						(O.value =
 																							O.value.slice(
 																								1,
-																								-1
+																								-1,
 																							)))
 																				: (O.value =
 																						null)
@@ -13900,7 +13914,7 @@
 																			.toString()
 																			.slice(
 																				4,
-																				-3
+																				-3,
 																			)
 																	break
 																case 'text':
@@ -13916,7 +13930,7 @@
 																	let O = C(
 																		f
 																			? _.name
-																			: _.name.toLowerCase()
+																			: _.name.toLowerCase(),
 																	)
 																	!_.namespace ||
 																	_.namespace ===
@@ -13926,7 +13940,7 @@
 																				O)
 																		: (_.tagDefinition =
 																				C(
-																					''
+																					'',
 																				))
 																}
 															})(_),
@@ -13941,16 +13955,16 @@
 																					.tagDefinition
 																					.implicitNamespacePrefix ||
 																			hs(
-																				_
+																				_,
 																			)) &&
 																		(_.name =
 																			g(
 																				_.name,
 																				(
-																					O
+																					O,
 																				) =>
 																					O in
-																					uc
+																					uc,
 																			)),
 																	s)
 																) {
@@ -13960,7 +13974,7 @@
 																				.name
 																		] ||
 																		Object.create(
-																			null
+																			null,
 																		)
 																	for (let x of _.attrs)
 																		x.namespace ||
@@ -13968,7 +13982,7 @@
 																				g(
 																					x.name,
 																					(
-																						k
+																						k,
 																					) =>
 																						_.name in
 																							Vr &&
@@ -13977,7 +13991,7 @@
 																								'*'
 																							] ||
 																							k in
-																								O)
+																								O),
 																				))
 																}
 															})(_),
@@ -13987,12 +14001,12 @@
 																	(_.sourceSpan =
 																		new h(
 																			_.sourceSpan.start,
-																			_.endSourceSpan.end
+																			_.endSourceSpan.end,
 																		))
 															})(_)
 													}
 												})(),
-												d
+												d,
 											),
 											d
 										)
@@ -14031,17 +14045,17 @@
 															.slice(0, d)
 															.replace(
 																/[^\n\r]/g,
-																' '
+																' ',
 															) + h,
 														r,
 														u,
-														!1
+														!1,
 													)
 												w.sourceSpan = new Qe(
 													C,
 													Zl(
-														w.children
-													).sourceSpan.end
+														w.children,
+													).sourceSpan.end,
 												)
 												let g = w.children[0]
 												return (
@@ -14050,13 +14064,13 @@
 														: ((g.sourceSpan =
 																new Qe(
 																	g.sourceSpan.start.moveBy(
-																		d
+																		d,
 																	),
-																	g.sourceSpan.end
+																	g.sourceSpan.end,
 																)),
 														  (g.value =
 																g.value.slice(
-																	d
+																	d,
 																))),
 													w
 												)
@@ -14068,7 +14082,7 @@
 													C &&
 														h.parent.replaceChild(
 															h,
-															C
+															C,
 														)
 												}
 											}),
@@ -14095,7 +14109,7 @@
 													f,
 													Object.assign(
 														{ parser: e },
-														F
+														F,
 													),
 													{
 														canSelfClose: r,
@@ -14107,7 +14121,7 @@
 														isTagNameCaseSensitive:
 															s,
 														getTagContentType: i,
-													}
+													},
 												),
 											hasPragma: tc,
 											astFormat: 'html',
@@ -14137,7 +14151,7 @@
 													e,
 													r,
 													u,
-													n
+													n,
 												) => {
 													if (
 														'html' !==
@@ -14208,16 +14222,16 @@
 									pu.exports =
 										ir(
 											'object' == typeof globalThis &&
-												globalThis
+												globalThis,
 										) ||
 										ir(
-											'object' == typeof window && window
+											'object' == typeof window && window,
 										) ||
 										ir('object' == typeof self && self) ||
 										ir(
 											'object' ==
 												typeof __webpack_require__.g &&
-												__webpack_require__.g
+												__webpack_require__.g,
 										) ||
 										(function () {
 											return this
@@ -14297,7 +14311,7 @@
 												return function () {
 													return Wr.apply(
 														e,
-														arguments
+														arguments,
 													)
 												}
 										  }
@@ -14337,7 +14351,7 @@
 									Nu.exports = function (e) {
 										if (Ko(e))
 											throw Yo(
-												"Can't call method on " + e
+												"Can't call method on " + e,
 											)
 										return e
 									}
@@ -14518,7 +14532,7 @@
 										)
 											return s
 										throw Cl(
-											"Can't convert object to primitive value"
+											"Can't convert object to primitive value",
 										)
 									}
 								}),
@@ -14648,7 +14662,7 @@
 											)
 												return s
 											throw Wl(
-												"Can't convert object to primitive value"
+												"Can't convert object to primitive value",
 											)
 										}
 										return (
@@ -14690,7 +14704,7 @@
 														get: function () {
 															return 7
 														},
-													}
+													},
 												).a
 											)
 										})
@@ -14719,7 +14733,7 @@
 												if (uc(r, t))
 													return tc(
 														!Zl(ec.f, r, t),
-														r[t]
+														r[t],
 													)
 										  }
 								}),
@@ -14734,7 +14748,7 @@
 												Object.defineProperty(
 													function () {},
 													'prototype',
-													{ value: 42, writable: !1 }
+													{ value: 42, writable: !1 },
 												).prototype
 											)
 										})
@@ -14805,7 +14819,7 @@
 													} catch {}
 												if ('get' in s || 'set' in s)
 													throw mc(
-														'Accessors not supported'
+														'Accessors not supported',
 													)
 												return (
 													'value' in s &&
@@ -14948,7 +14962,7 @@
 														throw En(
 															'Incompatible receiver, ' +
 																e +
-																' required'
+																' required',
 														)
 													return t
 												}
@@ -14974,7 +14988,7 @@
 													Ar(
 														function () {},
 														'length',
-														{ value: 8 }
+														{ value: 8 },
 													).length
 												)
 											}),
@@ -14986,7 +15000,7 @@
 													'[' +
 													String(r).replace(
 														/^Symbol\(([^)]*)\)/,
-														'$1'
+														'$1',
 													) +
 													']'),
 												t &&
@@ -15028,7 +15042,7 @@
 													(s.source = Gc.join(
 														'string' == typeof r
 															? r
-															: ''
+															: '',
 													)),
 												e
 											)
@@ -15040,7 +15054,7 @@
 												$c(this)
 											)
 										},
-										'toString'
+										'toString',
 									)
 								}),
 								ei = xe((Z0, Zs) => {
@@ -15276,7 +15290,7 @@
 														? (l =
 																(y = Pp(
 																	u,
-																	i
+																	i,
 																)) && y.value)
 														: (l = u[i]),
 													!jp(
@@ -15287,7 +15301,7 @@
 																		? '.'
 																		: '#') +
 																	i,
-														e.forced
+														e.forced,
 													) && void 0 !== l)
 												) {
 													if (typeof p == typeof l)
@@ -15313,7 +15327,7 @@
 									wi.exports = function (e) {
 										if (e > 9007199254740991)
 											throw Mp(
-												'Maximum allowed index exceeded'
+												'Maximum allowed index exceeded',
 											)
 										return e
 									}
@@ -15340,7 +15354,7 @@
 												: function () {
 														return e.apply(
 															r,
-															arguments
+															arguments,
 														)
 												  }
 										)
@@ -15374,7 +15388,7 @@
 																	h,
 																	g,
 																	l,
-																	n - 1
+																	n - 1,
 																) - 1))
 														: (zp(l + 1),
 														  (e[l] = h)),
@@ -15401,7 +15415,7 @@
 											xr(
 												(function () {
 													return arguments
-												})()
+												})(),
 											)
 									$i.exports = Qp
 										? xr
@@ -15414,7 +15428,7 @@
 													: 'string' ==
 													  typeof (t = (function (
 															e,
-															r
+															r,
 													  ) {
 															try {
 																return e[r]
@@ -15534,12 +15548,12 @@
 														r,
 														arguments.length > 1
 															? arguments[1]
-															: void 0
+															: void 0,
 													)),
 													a
 												)
 											},
-										}
+										},
 									)
 								}),
 								Pn = xe((by, ea) => {
@@ -15658,7 +15672,7 @@
 										else {
 											if (!(y = Xf(e)))
 												throw Kf(
-													Gf(e) + ' is not iterable'
+													Gf(e) + ' is not iterable',
 												)
 											if (Uf(y)) {
 												for (
@@ -15721,12 +15735,12 @@
 														function (s, a) {
 															rD(t, s, a)
 														},
-														{ AS_ENTRIES: !0 }
+														{ AS_ENTRIES: !0 },
 													),
 													t
 												)
 											},
-										}
+										},
 									)
 								}),
 								Ca = xe((Ly, va) => {
@@ -15789,7 +15803,7 @@
 																	(t += p), !0
 																)
 															},
-														}
+														},
 													)
 												},
 												n = {
@@ -15806,7 +15820,7 @@
 											return (
 												Object.getOwnPropertyDescriptor(
 													Sa,
-													'flags'
+													'flags',
 												).get.call(r) !== s || t !== s
 											)
 										}) &&
@@ -15823,7 +15837,7 @@
 											global: !0,
 											forced: kn.globalThis !== kn,
 										},
-										{ globalThis: kn }
+										{ globalThis: kn },
 									)
 								}),
 								Ta = xe(() => {
@@ -15853,12 +15867,14 @@
 														t,
 														s,
 														0,
-														void 0 === r ? 1 : gD(r)
+														void 0 === r
+															? 1
+															: gD(r),
 													)),
 													a
 												)
 											},
-										}
+										},
 									)
 								}),
 								e0 = xe((Uy, jo) => {
@@ -15893,7 +15909,7 @@
 													!(r.indexOf(s) >= 0) &&
 														Object.prototype.propertyIsEnumerable.call(
 															e,
-															s
+															s,
 														) &&
 														(t[s] = e[s])
 										}
@@ -15912,7 +15928,7 @@
 												return (
 													e &&
 														(r = (0, e[Gn(e)[0]])(
-															(e = 0)
+															(e = 0),
 														)),
 													r
 												)
@@ -15925,7 +15941,7 @@
 															(r = {
 																exports: {},
 															}).exports,
-															r
+															r,
 														),
 													r.exports
 												)
@@ -15950,7 +15966,7 @@
 															enumerable:
 																!(s = AD(
 																	r,
-																	a
+																	a,
 																)) ||
 																s.enumerable,
 														})
@@ -15961,7 +15977,7 @@
 												_r({}, '__esModule', {
 													value: !0,
 												}),
-												e
+												e,
 											),
 										ne = ht({
 											'<define:process>'() {
@@ -15975,7 +15991,7 @@
 										}),
 										TD = te({
 											'node_modules/diff/lib/diff/base.js'(
-												e
+												e,
 											) {
 												function r() {}
 												function t(a, n, u, i, l) {
@@ -15995,8 +16011,8 @@
 																		i.slice(
 																			g,
 																			g +
-																				c.count
-																		)
+																				c.count,
+																		),
 																	)),
 																(g += c.count),
 																p &&
@@ -16012,12 +16028,12 @@
 															if (!c.added && l) {
 																var f = u.slice(
 																	h,
-																	h + c.count
+																	h + c.count,
 																)
 																;(f = f.map(
 																	function (
 																		w,
-																		E
+																		E,
 																	) {
 																		var N =
 																			i[
@@ -16028,11 +16044,11 @@
 																			w.length
 																			? N
 																			: w
-																	}
+																	},
 																)),
 																	(c.value =
 																		a.join(
-																			f
+																			f,
 																		))
 															} else
 																c.value =
@@ -16040,8 +16056,8 @@
 																		u.slice(
 																			h,
 																			h +
-																				c.count
-																		)
+																				c.count,
+																		),
 																	)
 															;(h += c.count),
 																c.added ||
@@ -16058,7 +16074,7 @@
 																_.removed) &&
 															a.equals(
 																'',
-																_.value
+																_.value,
 															) &&
 															((n[y - 2].value +=
 																_.value),
@@ -16070,7 +16086,7 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.default = r),
 													(r.prototype = {
@@ -16096,33 +16112,33 @@
 																			function () {
 																				l(
 																					void 0,
-																					N
+																					N,
 																				)
 																			},
-																			0
+																			0,
 																	  ),
 																	  !0)
 																	: N
 															}
 															;(n =
 																this.castInput(
-																	n
+																	n,
 																)),
 																(u =
 																	this.castInput(
-																		u
+																		u,
 																	)),
 																(n =
 																	this.removeEmpty(
 																		this.tokenize(
-																			n
-																		)
+																			n,
+																		),
 																	))
 															var h = (u =
 																	this.removeEmpty(
 																		this.tokenize(
-																			u
-																		)
+																			u,
+																		),
 																	)).length,
 																g = n.length,
 																c = 1,
@@ -16139,7 +16155,7 @@
 																		F[0],
 																		u,
 																		n,
-																		0
+																		0,
 																	)
 															if (
 																F[0].newPos +
@@ -16150,7 +16166,7 @@
 																return y([
 																	{
 																		value: this.join(
-																			u
+																			u,
 																		),
 																		count: u.length,
 																	},
@@ -16212,13 +16228,13 @@
 																								.newPos,
 																							components:
 																								a.components.slice(
-																									0
+																									0,
 																								),
 																						}),
 																				  p.pushComponent(
 																						x.components,
 																						void 0,
-																						!0
+																						!0,
 																				  ))
 																				: ((x =
 																						I)
@@ -16226,14 +16242,14 @@
 																				  p.pushComponent(
 																						x.components,
 																						!0,
-																						void 0
+																						void 0,
 																				  )),
 																			($ =
 																				p.extractCommon(
 																					x,
 																					u,
 																					n,
-																					N
+																					N,
 																				)),
 																			x.newPos +
 																				1 >=
@@ -16248,8 +16264,8 @@
 																					x.components,
 																					u,
 																					n,
-																					p.useLongestToken
-																				)
+																					p.useLongestToken,
+																				),
 																			)
 																		F[N] = x
 																	} else
@@ -16271,7 +16287,7 @@
 																			w() ||
 																				N()
 																		},
-																		0
+																		0,
 																	)
 																})()
 															else
@@ -16318,7 +16334,7 @@
 																n,
 																u,
 																i,
-																l
+																l,
 															) {
 																for (
 																	var p =
@@ -16338,7 +16354,10 @@
 																			h +
 																				1
 																		],
-																		i[g + 1]
+																		i[
+																			g +
+																				1
+																		],
 																	);
 
 																)
@@ -16350,7 +16369,7 @@
 																		n.components.push(
 																			{
 																				count: c,
-																			}
+																			},
 																		),
 																	(n.newPos =
 																		h),
@@ -16359,13 +16378,13 @@
 															},
 														equals: function (
 															n,
-															u
+															u,
 														) {
 															return this.options
 																.comparator
 																? this.options.comparator(
 																		n,
-																		u
+																		u,
 																  )
 																: n === u ||
 																		(this
@@ -16375,7 +16394,7 @@
 																				u.toLowerCase())
 														},
 														removeEmpty: function (
-															n
+															n,
 														) {
 															for (
 																var u = [],
@@ -16388,7 +16407,7 @@
 															return u
 														},
 														castInput: function (
-															n
+															n,
 														) {
 															return n
 														},
@@ -16403,18 +16422,18 @@
 										}),
 										BD = te({
 											'node_modules/diff/lib/diff/array.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.diffArrays = function a(
 														n,
 														u,
-														i
+														i,
 													) {
 														return s.diff(n, u, i)
 													}),
@@ -16437,7 +16456,7 @@
 										Un = te({
 											'src/document/doc-builders.js'(
 												e,
-												r
+												r,
 											) {
 												function t(C) {
 													return {
@@ -16469,7 +16488,7 @@
 														id: o.id,
 														contents: C,
 														break: Boolean(
-															o.shouldBreak
+															o.shouldBreak,
 														),
 														expandedStates:
 															o.expandedStates,
@@ -16524,14 +16543,14 @@
 																Object.assign(
 																	Object.assign(
 																		{},
-																		o
+																		o,
 																	),
 																	{},
 																	{
 																		expandedStates:
 																			C,
-																	}
-																)
+																	},
+																),
 															)
 														},
 													fill: function y(C) {
@@ -16570,7 +16589,7 @@
 													indent: s,
 													indentIfBreak: function g(
 														C,
-														o
+														o,
 													) {
 														return {
 															type: 'indent-if-break',
@@ -16588,18 +16607,18 @@
 																	let S = 0;
 																	S <
 																	Math.floor(
-																		o / d
+																		o / d,
 																	);
 																	++S
 																)
 																	v = s(v)
 																;(v = a(
 																	o % d,
-																	v
+																	v,
 																)),
 																	(v = a(
 																		Number.NEGATIVE_INFINITY,
-																		v
+																		v,
 																	))
 															}
 															return v
@@ -16607,15 +16626,15 @@
 													markAsRoot: function i(C) {
 														return a(
 															{ type: 'root' },
-															C
+															C,
 														)
 													},
 													dedentToRoot: function u(
-														C
+														C,
 													) {
 														return a(
 															Number.NEGATIVE_INFINITY,
-															C
+															C,
 														)
 													},
 													dedent: function l(C) {
@@ -16643,13 +16662,13 @@
 															function t(u) {
 																let i =
 																	u.indexOf(
-																		'\r'
+																		'\r',
 																	)
 																return i >= 0
 																	? '\n' ===
 																	  u.charAt(
 																			i +
-																				1
+																				1,
 																	  )
 																		? 'crlf'
 																		: 'cr'
@@ -16685,8 +16704,8 @@
 																	default:
 																		throw new Error(
 																			`Unexpected "eol" ${JSON.stringify(
-																				i
-																			)}.`
+																				i,
+																			)}.`,
 																		)
 																}
 																let p =
@@ -16699,7 +16718,7 @@
 															function n(u) {
 																return u.replace(
 																	/\r\n?/g,
-																	'\n'
+																	'\n',
 																)
 															},
 													})
@@ -16720,7 +16739,7 @@
 									function _D(e) {
 										if ('string' != typeof e)
 											throw new TypeError(
-												`Expected a \`string\`, got \`${typeof e}\``
+												`Expected a \`string\`, got \`${typeof e}\``,
 											)
 										return e.replace(
 											(function ND() {
@@ -16735,10 +16754,10 @@
 													].join('|')
 												return new RegExp(
 													r,
-													e ? void 0 : 'g'
+													e ? void 0 : 'g',
 												)
 											})(),
-											''
+											'',
 										)
 									}
 									var PD = ht({
@@ -16778,7 +16797,7 @@
 										LD = te({
 											'node_modules/emoji-regex/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function () {
@@ -16827,14 +16846,14 @@
 																	enumerable:
 																		!0,
 															  }),
-														e
+														e,
 													))
 											},
 										}),
 										Oa = te({
 											'src/utils/get-string-width.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = (jD(), ft(ka)).default,
@@ -16870,7 +16889,7 @@
 															'fill' !== o.type
 														)
 															throw new Error(
-																'Expect doc type to be `concat` or `fill`.'
+																'Expect doc type to be `concat` or `fill`.',
 															)
 														return o.parts
 													},
@@ -16884,7 +16903,7 @@
 																(v &&
 																	b.push(
 																		B,
-																		i
+																		i,
 																	),
 																!d ||
 																	!1 !== d(B))
@@ -16903,7 +16922,9 @@
 																		--R
 																	)
 																		b.push(
-																			k[R]
+																			k[
+																				R
+																			],
 																		)
 																} else if (
 																	'if-break' ===
@@ -16911,11 +16932,11 @@
 																)
 																	B.flatContents &&
 																		b.push(
-																			B.flatContents
+																			B.flatContents,
 																		),
 																		B.breakContents &&
 																			b.push(
-																				B.breakContents
+																				B.breakContents,
 																			)
 																else if (
 																	'group' ===
@@ -16937,16 +16958,16 @@
 																				B
 																					.expandedStates[
 																					M
-																				]
+																				],
 																			)
 																	else
 																		b.push(
-																			B.contents
+																			B.contents,
 																		)
 																else
 																	B.contents &&
 																		b.push(
-																			B.contents
+																			B.contents,
 																		)
 														} else v(b.pop())
 													}
@@ -16962,7 +16983,7 @@
 																Array.isArray(B)
 															)
 																return d(
-																	B.map(S)
+																	B.map(S),
 																)
 															if (
 																'concat' ===
@@ -16972,19 +16993,19 @@
 															) {
 																let k =
 																	B.parts.map(
-																		S
+																		S,
 																	)
 																return d(
 																	Object.assign(
 																		Object.assign(
 																			{},
-																			B
+																			B,
 																		),
 																		{},
 																		{
 																			parts: k,
-																		}
-																	)
+																		},
+																	),
 																)
 															}
 															if (
@@ -16994,18 +17015,18 @@
 																let k =
 																		B.breakContents &&
 																		S(
-																			B.breakContents
+																			B.breakContents,
 																		),
 																	M =
 																		B.flatContents &&
 																		S(
-																			B.flatContents
+																			B.flatContents,
 																		)
 																return d(
 																	Object.assign(
 																		Object.assign(
 																			{},
-																			B
+																			B,
 																		),
 																		{},
 																		{
@@ -17013,8 +17034,8 @@
 																				k,
 																			flatContents:
 																				M,
-																		}
-																	)
+																		},
+																	),
 																)
 															}
 															if (
@@ -17024,14 +17045,14 @@
 															) {
 																let k =
 																		B.expandedStates.map(
-																			S
+																			S,
 																		),
 																	M = k[0]
 																return d(
 																	Object.assign(
 																		Object.assign(
 																			{},
-																			B
+																			B,
 																		),
 																		{},
 																		{
@@ -17039,26 +17060,26 @@
 																				M,
 																			expandedStates:
 																				k,
-																		}
-																	)
+																		},
+																	),
 																)
 															}
 															if (B.contents) {
 																let k = S(
-																	B.contents
+																	B.contents,
 																)
 																return d(
 																	Object.assign(
 																		Object.assign(
 																			{},
-																			B
+																			B,
 																		),
 																		{},
 																		{
 																			contents:
 																				k,
-																		}
-																	)
+																		},
+																	),
 																)
 															}
 															return d(B)
@@ -17144,10 +17165,12 @@
 															: Object.assign(
 																	Object.assign(
 																		{},
-																		o
+																		o,
 																	),
 																	{},
-																	{ parts: d }
+																	{
+																		parts: d,
+																	},
 															  )
 													}
 													switch (o.type) {
@@ -17158,28 +17181,28 @@
 														case 'line-suffix':
 														case 'label': {
 															let d = E(
-																o.contents
+																o.contents,
 															)
 															return Object.assign(
 																Object.assign(
 																	{},
-																	o
+																	o,
 																),
 																{},
-																{ contents: d }
+																{ contents: d },
 															)
 														}
 														case 'if-break': {
 															let d = E(
-																	o.breakContents
+																	o.breakContents,
 																),
 																v = E(
-																	o.flatContents
+																	o.flatContents,
 																)
 															return Object.assign(
 																Object.assign(
 																	{},
-																	o
+																	o,
 																),
 																{},
 																{
@@ -17187,7 +17210,7 @@
 																		d,
 																	flatContents:
 																		v,
-																}
+																},
 															)
 														}
 													}
@@ -17201,10 +17224,10 @@
 																	if (
 																		o.parts.every(
 																			(
-																				v
+																				v,
 																			) =>
 																				'' ===
-																				v
+																				v,
 																		)
 																	)
 																		return ''
@@ -17258,7 +17281,7 @@
 															if (!n(o)) return o
 															let d = []
 															for (let v of u(
-																o
+																o,
 															)) {
 																if (!v) continue
 																let [S, ...b] =
@@ -17282,20 +17305,20 @@
 																: 1 === d.length
 																? d[0]
 																: Array.isArray(
-																		o
+																		o,
 																  )
 																? d
 																: Object.assign(
 																		Object.assign(
 																			{},
-																			o
+																			o,
 																		),
 																		{},
 																		{
 																			parts: d,
-																		}
+																		},
 																  )
-														})(d)
+														})(d),
 													)
 												}
 												function P(o) {
@@ -17306,7 +17329,7 @@
 														if (S) {
 															if (n(S)) {
 																v.unshift(
-																	...u(S)
+																	...u(S),
 																)
 																continue
 															}
@@ -17314,7 +17337,7 @@
 																d.length > 0 &&
 																'string' ==
 																	typeof t(
-																		d
+																		d,
 																	) &&
 																'string' ==
 																	typeof S
@@ -17336,7 +17359,7 @@
 																arguments[1]
 															? arguments[1]
 															: s,
-														o.split('\n')
+														o.split('\n'),
 													).parts
 												}
 												function m(o) {
@@ -17353,7 +17376,7 @@
 													findInDoc: y,
 													mapDoc: p,
 													propagateBreaks: function f(
-														o
+														o,
 													) {
 														let d = new Set(),
 															v = []
@@ -17369,10 +17392,10 @@
 																) {
 																	if (
 																		(v.push(
-																			B
+																			B,
 																		),
 																		d.has(
-																			B
+																			B,
 																		))
 																	)
 																		return !1
@@ -17386,7 +17409,7 @@
 																		.break &&
 																	c(v)
 															},
-															!0
+															!0,
 														)
 													},
 													removeLines: function _(o) {
@@ -17398,7 +17421,7 @@
 														},
 													normalizeParts: P,
 													normalizeDoc: function $(
-														o
+														o,
 													) {
 														return p(o, (d) =>
 															Array.isArray(d)
@@ -17407,16 +17430,16 @@
 																? Object.assign(
 																		Object.assign(
 																			{},
-																			d
+																			d,
 																		),
 																		{},
 																		{
 																			parts: P(
-																				d.parts
+																				d.parts,
 																			),
-																		}
+																		},
 																  )
-																: d
+																: d,
 														)
 													},
 													cleanDoc: I,
@@ -17428,7 +17451,7 @@
 																	typeof d &&
 																d.includes('\n')
 																	? T(d)
-																	: d
+																	: d,
 															)
 														},
 													canBreak: function C(o) {
@@ -17440,7 +17463,7 @@
 										qD = te({
 											'src/document/doc-printer.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var y,
@@ -17463,7 +17486,7 @@
 													return _(
 														x,
 														{ type: 'indent' },
-														I
+														I,
 													)
 												}
 												function F(x, I, P) {
@@ -17480,17 +17503,17 @@
 																{
 																	type: 'dedent',
 																},
-																P
+																P,
 														  )
 														: I
 														? 'root' === I.type
 															? Object.assign(
 																	Object.assign(
 																		{},
-																		x
+																		x,
 																	),
 																	{},
-																	{ root: x }
+																	{ root: x },
 															  )
 															: _(
 																	x,
@@ -17502,7 +17525,7 @@
 																				: 'numberAlign',
 																		n: I,
 																	},
-																	P
+																	P,
 															  )
 														: x
 												}
@@ -17511,7 +17534,7 @@
 															'dedent' === I.type
 																? x.queue.slice(
 																		0,
-																		-1
+																		-1,
 																  )
 																: [
 																		...x.queue,
@@ -17528,7 +17551,7 @@
 																	P.useTabs
 																		? o(1)
 																		: d(
-																				P.tabWidth
+																				P.tabWidth,
 																		  )
 																break
 															case 'stringAlign':
@@ -17544,7 +17567,7 @@
 																break
 															default:
 																throw new Error(
-																	`Unexpected type '${k.type}'`
+																	`Unexpected type '${k.type}'`,
 																)
 														}
 													return (
@@ -17552,14 +17575,14 @@
 														Object.assign(
 															Object.assign(
 																{},
-																x
+																x,
 															),
 															{},
 															{
 																value: D,
 																length: T,
 																queue: $,
-															}
+															},
 														)
 													)
 													function o(k) {
@@ -17605,7 +17628,7 @@
 													) {
 														let P = s(x).replace(
 															/[\t ]*$/,
-															''
+															'',
 														)
 														;(I +=
 															s(x).length -
@@ -17680,7 +17703,7 @@
 																			1 ===
 																				v
 																				? s(
-																						d.expandedStates
+																						d.expandedStates,
 																				  )
 																				: d.contents
 																	m.push({
@@ -17717,7 +17740,7 @@
 																		return !0
 																	d.soft ||
 																		(C.push(
-																			' '
+																			' ',
 																		),
 																		P--)
 																	break
@@ -17738,7 +17761,7 @@
 															let P =
 																	I.printWidth,
 																$ = t(
-																	I.endOfLine
+																	I.endOfLine,
 																),
 																D = 0,
 																T = [
@@ -17774,13 +17797,13 @@
 																		$
 																			? b.replace(
 																					/\n/g,
-																					$
+																					$,
 																			  )
 																			: b
 																	m.push(B),
 																		(D +=
 																			a(
-																				B
+																				B,
 																			))
 																} else if (
 																	l(b)
@@ -17806,7 +17829,7 @@
 																	) {
 																		case 'cursor':
 																			m.push(
-																				u.placeholder
+																				u.placeholder,
 																			)
 																			break
 																		case 'indent':
@@ -17814,11 +17837,11 @@
 																				{
 																					ind: f(
 																						v,
-																						I
+																						I,
 																					),
 																					mode: S,
 																					doc: b.contents,
-																				}
+																				},
 																			)
 																			break
 																		case 'align':
@@ -17827,17 +17850,17 @@
 																					ind: F(
 																						v,
 																						b.n,
-																						I
+																						I,
 																					),
 																					mode: S,
 																					doc: b.contents,
-																				}
+																				},
 																			)
 																			break
 																		case 'trim':
 																			D -=
 																				w(
-																					m
+																					m,
 																				)
 																			break
 																		case 'group':
@@ -17855,7 +17878,7 @@
 																									? 1
 																									: 2,
 																								doc: b.contents,
-																							}
+																							},
 																						)
 																						break
 																					}
@@ -17880,18 +17903,18 @@
 																							B,
 																							T,
 																							k,
-																							M
+																							M,
 																						)
 																					)
 																						T.push(
-																							B
+																							B,
 																						)
 																					else if (
 																						b.expandedStates
 																					) {
 																						let R =
 																							s(
-																								b.expandedStates
+																								b.expandedStates,
 																							)
 																						if (
 																							b.break
@@ -17901,7 +17924,7 @@
 																									ind: v,
 																									mode: 1,
 																									doc: R,
-																								}
+																								},
 																							)
 																							break
 																						}
@@ -17925,7 +17948,7 @@
 																										ind: v,
 																										mode: 1,
 																										doc: R,
-																									}
+																									},
 																								)
 																								break
 																							}
@@ -17944,11 +17967,11 @@
 																										L,
 																										T,
 																										k,
-																										M
+																										M,
 																									)
 																								) {
 																									T.push(
-																										L
+																										L,
 																									)
 																									break
 																								}
@@ -17960,7 +17983,7 @@
 																								ind: v,
 																								mode: 1,
 																								doc: b.contents,
-																							}
+																							},
 																						)
 																					break
 																				}
@@ -17970,7 +17993,7 @@
 																					b.id
 																				] =
 																					s(
-																						T
+																						T,
 																					).mode)
 																			break
 																		case 'fill': {
@@ -18010,7 +18033,7 @@
 																						B,
 																						o.length >
 																							0,
-																						!0
+																						!0,
 																					)
 																			if (
 																				1 ===
@@ -18018,10 +18041,10 @@
 																			) {
 																				L
 																					? T.push(
-																							q
+																							q,
 																					  )
 																					: T.push(
-																							J
+																							J,
 																					  )
 																				break
 																			}
@@ -18044,24 +18067,24 @@
 																				L
 																					? T.push(
 																							Q,
-																							q
+																							q,
 																					  )
 																					: T.push(
 																							V,
-																							J
+																							J,
 																					  )
 																				break
 																			}
 																			k.splice(
 																				0,
-																				2
+																				2,
 																			)
 																			let j =
 																				{
 																					ind: v,
 																					mode: S,
 																					doc: n(
-																						k
+																						k,
 																					),
 																				}
 																			E(
@@ -18078,23 +18101,23 @@
 																				B,
 																				o.length >
 																					0,
-																				!0
+																				!0,
 																			)
 																				? T.push(
 																						j,
 																						Q,
-																						q
+																						q,
 																				  )
 																				: L
 																				? T.push(
 																						j,
 																						V,
-																						q
+																						q,
 																				  )
 																				: T.push(
 																						j,
 																						V,
-																						J
+																						J,
 																				  )
 																			break
 																		}
@@ -18118,7 +18141,7 @@
 																						: b.negate
 																						? b.contents
 																						: i(
-																								b.contents
+																								b.contents,
 																						  )
 																				k &&
 																					T.push(
@@ -18126,7 +18149,7 @@
 																							ind: v,
 																							mode: S,
 																							doc: k,
-																						}
+																						},
 																					)
 																			}
 																			if (
@@ -18139,7 +18162,7 @@
 																						? b.flatContents
 																						: b.negate
 																						? i(
-																								b.contents
+																								b.contents,
 																						  )
 																						: b.contents
 																				k &&
@@ -18148,7 +18171,7 @@
 																							ind: v,
 																							mode: S,
 																							doc: k,
-																						}
+																						},
 																					)
 																			}
 																			break
@@ -18159,7 +18182,7 @@
 																					ind: v,
 																					mode: S,
 																					doc: b.contents,
-																				}
+																				},
 																			)
 																			break
 																		case 'line-suffix-boundary':
@@ -18173,7 +18196,7 @@
 																							type: 'line',
 																							hard: !0,
 																						},
-																					}
+																					},
 																				)
 																			break
 																		case 'line':
@@ -18186,7 +18209,7 @@
 																					) {
 																						b.soft ||
 																							(m.push(
-																								' '
+																								' ',
 																							),
 																							(D += 1))
 																						break
@@ -18204,7 +18227,7 @@
 																								mode: S,
 																								doc: b,
 																							},
-																							...o.reverse()
+																							...o.reverse(),
 																						),
 																							(o.length = 0)
 																						break
@@ -18215,23 +18238,23 @@
 																									$,
 																									v
 																										.root
-																										.value
+																										.value,
 																							  ),
 																							  (D =
 																									v
 																										.root
 																										.length))
 																							: (m.push(
-																									$
+																									$,
 																							  ),
 																							  (D = 0))
 																						: ((D -=
 																								w(
-																									m
+																									m,
 																								)),
 																						  m.push(
 																								$ +
-																									v.value
+																									v.value,
 																						  ),
 																						  (D =
 																								v.length))
@@ -18243,7 +18266,7 @@
 																					ind: v,
 																					mode: S,
 																					doc: b.contents,
-																				}
+																				},
 																			)
 																	}
 																0 ===
@@ -18251,36 +18274,36 @@
 																	o.length >
 																		0 &&
 																	(T.push(
-																		...o.reverse()
+																		...o.reverse(),
 																	),
 																	(o.length = 0))
 															}
 															let d = m.indexOf(
-																u.placeholder
+																u.placeholder,
 															)
 															if (-1 !== d) {
 																let v =
 																		m.indexOf(
 																			u.placeholder,
 																			d +
-																				1
+																				1,
 																		),
 																	S = m
 																		.slice(
 																			0,
-																			d
+																			d,
 																		)
 																		.join(
-																			''
+																			'',
 																		),
 																	b = m
 																		.slice(
 																			d +
 																				1,
-																			v
+																			v,
 																		)
 																		.join(
-																			''
+																			'',
 																		)
 																return {
 																	formatted:
@@ -18289,10 +18312,10 @@
 																		m
 																			.slice(
 																				v +
-																					1
+																					1,
 																			)
 																			.join(
-																				''
+																				'',
 																			),
 																	cursorNodeStart:
 																		S.length,
@@ -18323,7 +18346,7 @@
 															if (t(l))
 																i.push(
 																	...a(l)
-																		.parts
+																		.parts,
 																)
 															else {
 																let p = a(l)
@@ -18339,92 +18362,92 @@
 														? Object.assign(
 																Object.assign(
 																	{},
-																	u
+																	u,
 																),
 																{},
 																{
 																	breakContents:
 																		a(
-																			u.breakContents
+																			u.breakContents,
 																		),
 																	flatContents:
 																		a(
-																			u.flatContents
+																			u.flatContents,
 																		),
-																}
+																},
 														  )
 														: 'group' === u.type
 														? Object.assign(
 																Object.assign(
 																	{},
-																	u
+																	u,
 																),
 																{},
 																{
 																	contents: a(
-																		u.contents
+																		u.contents,
 																	),
 																	expandedStates:
 																		u.expandedStates &&
 																		u.expandedStates.map(
-																			a
+																			a,
 																		),
-																}
+																},
 														  )
 														: 'fill' === u.type
 														? {
 																type: 'fill',
 																parts: u.parts.map(
-																	a
+																	a,
 																),
 														  }
 														: u.contents
 														? Object.assign(
 																Object.assign(
 																	{},
-																	u
+																	u,
 																),
 																{},
 																{
 																	contents: a(
-																		u.contents
+																		u.contents,
 																	),
-																}
+																},
 														  )
 														: u
 												}
 												r.exports = {
 													printDocToDebug: function n(
-														u
+														u,
 													) {
 														let i =
 																Object.create(
-																	null
+																	null,
 																),
 															l = new Set()
 														return (function p(
 															h,
 															g,
-															c
+															c,
 														) {
 															if (
 																'string' ==
 																typeof h
 															)
 																return JSON.stringify(
-																	h
+																	h,
 																)
 															if (t(h)) {
 																let f = s(h)
 																	.map(p)
 																	.filter(
-																		Boolean
+																		Boolean,
 																	)
 																return 1 ===
 																	f.length
 																	? f[0]
 																	: `[${f.join(
-																			', '
+																			', ',
 																	  )}]`
 															}
 															if (
@@ -18433,7 +18456,7 @@
 															) {
 																let f =
 																	Array.isArray(
-																		c
+																		c,
 																	) &&
 																	c[g + 1] &&
 																	'break-parent' ===
@@ -18456,7 +18479,7 @@
 																h.type
 															)
 																return Array.isArray(
-																	c
+																	c,
 																) &&
 																	c[g - 1] &&
 																	'line' ===
@@ -18478,7 +18501,7 @@
 																return (
 																	'indent(' +
 																	p(
-																		h.contents
+																		h.contents,
 																	) +
 																	')'
 																)
@@ -18490,29 +18513,29 @@
 																	Number.NEGATIVE_INFINITY
 																	? 'dedentToRoot(' +
 																			p(
-																				h.contents
+																				h.contents,
 																			) +
 																			')'
 																	: h.n < 0
 																	? 'dedent(' +
 																	  p(
-																			h.contents
+																			h.contents,
 																	  ) +
 																	  ')'
 																	: 'root' ===
 																	  h.n.type
 																	? 'markAsRoot(' +
 																	  p(
-																			h.contents
+																			h.contents,
 																	  ) +
 																	  ')'
 																	: 'align(' +
 																	  JSON.stringify(
-																			h.n
+																			h.n,
 																	  ) +
 																	  ', ' +
 																	  p(
-																			h.contents
+																			h.contents,
 																	  ) +
 																	  ')'
 															if (
@@ -18522,12 +18545,12 @@
 																return (
 																	'ifBreak(' +
 																	p(
-																		h.breakContents
+																		h.breakContents,
 																	) +
 																	(h.flatContents
 																		? ', ' +
 																		  p(
-																				h.flatContents
+																				h.flatContents,
 																		  )
 																		: '') +
 																	(h.groupId
@@ -18535,7 +18558,7 @@
 																				? ''
 																				: ', ""') +
 																		  `, { groupId: ${y(
-																				h.groupId
+																				h.groupId,
 																		  )} }`
 																		: '') +
 																	')'
@@ -18547,22 +18570,22 @@
 																let f = []
 																h.negate &&
 																	f.push(
-																		'negate: true'
+																		'negate: true',
 																	),
 																	h.groupId &&
 																		f.push(
 																			`groupId: ${y(
-																				h.groupId
-																			)}`
+																				h.groupId,
+																			)}`,
 																		)
 																let F =
 																	f.length > 0
 																		? `, { ${f.join(
-																				', '
+																				', ',
 																		  )} }`
 																		: ''
 																return `indentIfBreak(${p(
-																	h.contents
+																	h.contents,
 																)}${F})`
 															}
 															if (
@@ -18574,35 +18597,35 @@
 																	'propagated' !==
 																		h.break &&
 																	f.push(
-																		'shouldBreak: true'
+																		'shouldBreak: true',
 																	),
 																	h.id &&
 																		f.push(
 																			`id: ${y(
-																				h.id
-																			)}`
+																				h.id,
+																			)}`,
 																		)
 																let F =
 																	f.length > 0
 																		? `, { ${f.join(
-																				', '
+																				', ',
 																		  )} }`
 																		: ''
 																return h.expandedStates
 																	? `conditionalGroup([${h.expandedStates
 																			.map(
 																				(
-																					_
+																					_,
 																				) =>
 																					p(
-																						_
-																					)
+																						_,
+																					),
 																			)
 																			.join(
-																				','
+																				',',
 																			)}]${F})`
 																	: `group(${p(
-																			h.contents
+																			h.contents,
 																	  )}${F})`
 															}
 															if (
@@ -18611,10 +18634,10 @@
 															)
 																return `fill([${h.parts
 																	.map((f) =>
-																		p(f)
+																		p(f),
 																	)
 																	.join(
-																		', '
+																		', ',
 																	)}])`
 															if (
 																'line-suffix' ===
@@ -18623,7 +18646,7 @@
 																return (
 																	'lineSuffix(' +
 																	p(
-																		h.contents
+																		h.contents,
 																	) +
 																	')'
 																)
@@ -18637,13 +18660,13 @@
 																h.type
 															)
 																return `label(${JSON.stringify(
-																	h.label
+																	h.label,
 																)}, ${p(
-																	h.contents
+																	h.contents,
 																)})`
 															throw new Error(
 																'Unknown doc type ' +
-																	h.type
+																	h.type,
 															)
 														})(a(u))
 														function y(h) {
@@ -18652,14 +18675,14 @@
 																typeof h
 															)
 																return JSON.stringify(
-																	String(h)
+																	String(h),
 																)
 															if (h in i)
 																return i[h]
 															let g =
 																String(h).slice(
 																	7,
-																	-1
+																	-1,
 																) || 'symbol'
 															for (
 																let c = 0;
@@ -18674,12 +18697,12 @@
 																if (!l.has(f))
 																	return (
 																		l.add(
-																			f
+																			f,
 																		),
 																		(i[
 																			h
 																		] = `Symbol.for(${JSON.stringify(
-																			f
+																			f,
 																		)})`)
 																	)
 															}
@@ -18703,12 +18726,12 @@
 									function RD(e) {
 										if ('string' != typeof e)
 											throw new TypeError(
-												'Expected a string'
+												'Expected a string',
 											)
 										return e
 											.replace(
 												/[|\\{}()[\]^$+*?.]/g,
-												'\\$&'
+												'\\$&',
 											)
 											.replace(/-/g, '\\x2d')
 									}
@@ -18721,7 +18744,7 @@
 										qa = te({
 											'node_modules/semver/internal/debug.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t =
@@ -18729,7 +18752,7 @@
 													wt.env &&
 													wt.env.NODE_DEBUG &&
 													/\bsemver\b/i.test(
-														wt.env.NODE_DEBUG
+														wt.env.NODE_DEBUG,
 													)
 														? function () {
 																for (
@@ -18737,7 +18760,7 @@
 																			arguments.length,
 																		a =
 																			new Array(
-																				s
+																				s,
 																			),
 																		n = 0;
 																	n < s;
@@ -18749,7 +18772,7 @@
 																		]
 																return console.error(
 																	'SEMVER',
-																	...a
+																	...a,
 																)
 														  }
 														: () => {}
@@ -18759,7 +18782,7 @@
 										Ma = te({
 											'node_modules/semver/internal/constants.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var a =
@@ -18777,7 +18800,7 @@
 										VD = te({
 											'node_modules/semver/internal/re.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -18797,20 +18820,22 @@
 															(n[g] = y),
 															(a[g] = new RegExp(
 																y,
-																h ? 'g' : void 0
+																h
+																	? 'g'
+																	: void 0,
 															))
 													}
 												l(
 													'NUMERICIDENTIFIER',
-													'0|[1-9]\\d*'
+													'0|[1-9]\\d*',
 												),
 													l(
 														'NUMERICIDENTIFIERLOOSE',
-														'[0-9]+'
+														'[0-9]+',
 													),
 													l(
 														'NONNUMERICIDENTIFIER',
-														'\\d*[a-zA-Z-][a-zA-Z0-9-]*'
+														'\\d*[a-zA-Z-][a-zA-Z0-9-]*',
 													),
 													l(
 														'MAINVERSION',
@@ -18829,7 +18854,7 @@
 																u
 																	.NUMERICIDENTIFIER
 															]
-														})`
+														})`,
 													),
 													l(
 														'MAINVERSIONLOOSE',
@@ -18848,7 +18873,7 @@
 																u
 																	.NUMERICIDENTIFIERLOOSE
 															]
-														})`
+														})`,
 													),
 													l(
 														'PRERELEASEIDENTIFIER',
@@ -18862,7 +18887,7 @@
 																u
 																	.NONNUMERICIDENTIFIER
 															]
-														})`
+														})`,
 													),
 													l(
 														'PRERELEASEIDENTIFIERLOOSE',
@@ -18876,7 +18901,7 @@
 																u
 																	.NONNUMERICIDENTIFIER
 															]
-														})`
+														})`,
 													),
 													l(
 														'PRERELEASE',
@@ -18890,7 +18915,7 @@
 																u
 																	.PRERELEASEIDENTIFIER
 															]
-														})*))`
+														})*))`,
 													),
 													l(
 														'PRERELEASELOOSE',
@@ -18904,11 +18929,11 @@
 																u
 																	.PRERELEASEIDENTIFIERLOOSE
 															]
-														})*))`
+														})*))`,
 													),
 													l(
 														'BUILDIDENTIFIER',
-														'[0-9A-Za-z-]+'
+														'[0-9A-Za-z-]+',
 													),
 													l(
 														'BUILD',
@@ -18916,17 +18941,17 @@
 															n[u.BUILDIDENTIFIER]
 														}(?:\\.${
 															n[u.BUILDIDENTIFIER]
-														})*))`
+														})*))`,
 													),
 													l(
 														'FULLPLAIN',
 														`v?${n[u.MAINVERSION]}${
 															n[u.PRERELEASE]
-														}?${n[u.BUILD]}?`
+														}?${n[u.BUILD]}?`,
 													),
 													l(
 														'FULL',
-														`^${n[u.FULLPLAIN]}$`
+														`^${n[u.FULLPLAIN]}$`,
 													),
 													l(
 														'LOOSEPLAIN',
@@ -18937,11 +18962,11 @@
 															]
 														}${
 															n[u.PRERELEASELOOSE]
-														}?${n[u.BUILD]}?`
+														}?${n[u.BUILD]}?`,
 													),
 													l(
 														'LOOSE',
-														`^${n[u.LOOSEPLAIN]}$`
+														`^${n[u.LOOSEPLAIN]}$`,
 													),
 													l('GTLT', '((?:<|>)?=?)'),
 													l(
@@ -18951,7 +18976,7 @@
 																u
 																	.NUMERICIDENTIFIERLOOSE
 															]
-														}|x|X|\\*`
+														}|x|X|\\*`,
 													),
 													l(
 														'XRANGEIDENTIFIER',
@@ -18960,7 +18985,7 @@
 																u
 																	.NUMERICIDENTIFIER
 															]
-														}|x|X|\\*`
+														}|x|X|\\*`,
 													),
 													l(
 														'XRANGEPLAIN',
@@ -18981,7 +19006,7 @@
 															]
 														})(?:${
 															n[u.PRERELEASE]
-														})?${n[u.BUILD]}?)?)?`
+														})?${n[u.BUILD]}?)?)?`,
 													),
 													l(
 														'XRANGEPLAINLOOSE',
@@ -19002,13 +19027,13 @@
 															]
 														})(?:${
 															n[u.PRERELEASELOOSE]
-														})?${n[u.BUILD]}?)?)?`
+														})?${n[u.BUILD]}?)?)?`,
 													),
 													l(
 														'XRANGE',
 														`^${n[u.GTLT]}\\s*${
 															n[u.XRANGEPLAIN]
-														}$`
+														}$`,
 													),
 													l(
 														'XRANGELOOSE',
@@ -19017,16 +19042,16 @@
 																u
 																	.XRANGEPLAINLOOSE
 															]
-														}$`
+														}$`,
 													),
 													l(
 														'COERCE',
-														`(^|[^\\d])(\\d{1,${t}})(?:\\.(\\d{1,${t}}))?(?:\\.(\\d{1,${t}}))?(?:$|[^\\d])`
+														`(^|[^\\d])(\\d{1,${t}})(?:\\.(\\d{1,${t}}))?(?:\\.(\\d{1,${t}}))?(?:$|[^\\d])`,
 													),
 													l(
 														'COERCERTL',
 														n[u.COERCE],
-														!0
+														!0,
 													),
 													l('LONETILDE', '(?:~>?)'),
 													l(
@@ -19034,7 +19059,7 @@
 														`(\\s*)${
 															n[u.LONETILDE]
 														}\\s+`,
-														!0
+														!0,
 													),
 													(e.tildeTrimReplace =
 														'$1~'),
@@ -19042,7 +19067,7 @@
 														'TILDE',
 														`^${n[u.LONETILDE]}${
 															n[u.XRANGEPLAIN]
-														}$`
+														}$`,
 													),
 													l(
 														'TILDELOOSE',
@@ -19051,7 +19076,7 @@
 																u
 																	.XRANGEPLAINLOOSE
 															]
-														}$`
+														}$`,
 													),
 													l('LONECARET', '(?:\\^)'),
 													l(
@@ -19059,7 +19084,7 @@
 														`(\\s*)${
 															n[u.LONECARET]
 														}\\s+`,
-														!0
+														!0,
 													),
 													(e.caretTrimReplace =
 														'$1^'),
@@ -19067,7 +19092,7 @@
 														'CARET',
 														`^${n[u.LONECARET]}${
 															n[u.XRANGEPLAIN]
-														}$`
+														}$`,
 													),
 													l(
 														'CARETLOOSE',
@@ -19076,19 +19101,19 @@
 																u
 																	.XRANGEPLAINLOOSE
 															]
-														}$`
+														}$`,
 													),
 													l(
 														'COMPARATORLOOSE',
 														`^${n[u.GTLT]}\\s*(${
 															n[u.LOOSEPLAIN]
-														})$|^$`
+														})$|^$`,
 													),
 													l(
 														'COMPARATOR',
 														`^${n[u.GTLT]}\\s*(${
 															n[u.FULLPLAIN]
-														})$|^$`
+														})$|^$`,
 													),
 													l(
 														'COMPARATORTRIM',
@@ -19097,7 +19122,7 @@
 														}\\s*(${
 															n[u.LOOSEPLAIN]
 														}|${n[u.XRANGEPLAIN]})`,
-														!0
+														!0,
 													),
 													(e.comparatorTrimReplace =
 														'$1$2$3'),
@@ -19107,7 +19132,7 @@
 															n[u.XRANGEPLAIN]
 														})\\s+-\\s+(${
 															n[u.XRANGEPLAIN]
-														})\\s*$`
+														})\\s*$`,
 													),
 													l(
 														'HYPHENRANGELOOSE',
@@ -19121,26 +19146,26 @@
 																u
 																	.XRANGEPLAINLOOSE
 															]
-														})\\s*$`
+														})\\s*$`,
 													),
 													l(
 														'STAR',
-														'(<|>)?=?\\s*\\*'
+														'(<|>)?=?\\s*\\*',
 													),
 													l(
 														'GTE0',
-														'^\\s*>=\\s*0\\.0\\.0\\s*$'
+														'^\\s*>=\\s*0\\.0\\.0\\s*$',
 													),
 													l(
 														'GTE0PRE',
-														'^\\s*>=\\s*0\\.0\\.0-0\\s*$'
+														'^\\s*>=\\s*0\\.0\\.0-0\\s*$',
 													)
 											},
 										}),
 										WD = te({
 											'node_modules/semver/internal/parse-options.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = [
@@ -19155,12 +19180,14 @@
 															: t
 																	.filter(
 																		(n) =>
-																			a[n]
+																			a[
+																				n
+																			],
 																	)
 																	.reduce(
 																		(
 																			n,
-																			u
+																			u,
 																		) => (
 																			(n[
 																				u
@@ -19168,7 +19195,7 @@
 																				!0),
 																			n
 																		),
-																		{}
+																		{},
 																	)
 														: {}
 											},
@@ -19176,7 +19203,7 @@
 										HD = te({
 											'node_modules/semver/internal/identifiers.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = /^[0-9]+$/,
@@ -19203,7 +19230,7 @@
 													compareIdentifiers: s,
 													rcompareIdentifiers: (
 														n,
-														u
+														u,
 													) => s(u, n),
 												}
 											},
@@ -19211,7 +19238,7 @@
 										GD = te({
 											'node_modules/semver/classes/semver.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = qa(),
@@ -19242,11 +19269,11 @@
 																typeof y
 															)
 																throw new TypeError(
-																	`Invalid Version: ${y}`
+																	`Invalid Version: ${y}`,
 																)
 															if (y.length > s)
 																throw new TypeError(
-																	`version is longer than ${s} characters`
+																	`version is longer than ${s} characters`,
 																)
 															t('SemVer', y, h),
 																(this.options =
@@ -19266,11 +19293,11 @@
 																		: n[
 																				u
 																					.FULL
-																		  ]
+																		  ],
 																)
 															if (!g)
 																throw new TypeError(
-																	`Invalid Version: ${y}`
+																	`Invalid Version: ${y}`,
 																)
 															if (
 																((this.raw = y),
@@ -19286,7 +19313,7 @@
 																		0)
 															)
 																throw new TypeError(
-																	'Invalid major version'
+																	'Invalid major version',
 																)
 															if (
 																this.minor >
@@ -19294,7 +19321,7 @@
 																this.minor < 0
 															)
 																throw new TypeError(
-																	'Invalid minor version'
+																	'Invalid minor version',
 																)
 															if (
 																this.patch >
@@ -19302,21 +19329,21 @@
 																this.patch < 0
 															)
 																throw new TypeError(
-																	'Invalid patch version'
+																	'Invalid patch version',
 																)
 															g[4]
 																? (this.prerelease =
 																		g[4]
 																			.split(
-																				'.'
+																				'.',
 																			)
 																			.map(
 																				(
-																					c
+																					c,
 																				) => {
 																					if (
 																						/^[0-9]+$/.test(
-																							c
+																							c,
 																						)
 																					) {
 																						let f =
@@ -19330,14 +19357,14 @@
 																							return f
 																					}
 																					return c
-																				}
+																				},
 																			))
 																: (this.prerelease =
 																		[]),
 																(this.build =
 																	g[5]
 																		? g[5].split(
-																				'.'
+																				'.',
 																		  )
 																		: []),
 																this.format()
@@ -19348,7 +19375,7 @@
 																this.prerelease
 																	.length &&
 																	(this.version += `-${this.prerelease.join(
-																		'.'
+																		'.',
 																	)}`),
 																this.version
 															)
@@ -19364,7 +19391,7 @@
 																		.version,
 																	this
 																		.options,
-																	y
+																	y,
 																),
 																!(
 																	y instanceof
@@ -19381,17 +19408,17 @@
 																	return 0
 																y = new p(
 																	y,
-																	this.options
+																	this.options,
 																)
 															}
 															return y.version ===
 																this.version
 																? 0
 																: this.compareMain(
-																		y
+																		y,
 																  ) ||
 																		this.comparePre(
-																			y
+																			y,
 																		)
 														}
 														compareMain(y) {
@@ -19400,21 +19427,21 @@
 																	p ||
 																	(y = new p(
 																		y,
-																		this.options
+																		this.options,
 																	)),
 																l(
 																	this.major,
-																	y.major
+																	y.major,
 																) ||
 																	l(
 																		this
 																			.minor,
-																		y.minor
+																		y.minor,
 																	) ||
 																	l(
 																		this
 																			.patch,
-																		y.patch
+																		y.patch,
 																	)
 															)
 														}
@@ -19424,7 +19451,7 @@
 																	p ||
 																	(y = new p(
 																		y,
-																		this.options
+																		this.options,
 																	)),
 																this.prerelease
 																	.length &&
@@ -19464,7 +19491,7 @@
 																		'prerelease compare',
 																		h,
 																		g,
-																		c
+																		c,
 																	),
 																	void 0 ===
 																		g &&
@@ -19483,7 +19510,7 @@
 																if (g !== c)
 																	return l(
 																		g,
-																		c
+																		c,
 																	)
 															} while (++h)
 														}
@@ -19491,7 +19518,7 @@
 															y instanceof p ||
 																(y = new p(
 																	y,
-																	this.options
+																	this.options,
 																))
 															let h = 0
 															do {
@@ -19509,7 +19536,7 @@
 																		'prerelease compare',
 																		h,
 																		g,
-																		c
+																		c,
 																	),
 																	void 0 ===
 																		g &&
@@ -19528,7 +19555,7 @@
 																if (g !== c)
 																	return l(
 																		g,
-																		c
+																		c,
 																	)
 															} while (++h)
 														}
@@ -19542,7 +19569,7 @@
 																			.major++,
 																		this.inc(
 																			'pre',
-																			h
+																			h,
 																		)
 																	break
 																case 'preminor':
@@ -19552,18 +19579,18 @@
 																			.minor++,
 																		this.inc(
 																			'pre',
-																			h
+																			h,
 																		)
 																	break
 																case 'prepatch':
 																	;(this.prerelease.length = 0),
 																		this.inc(
 																			'patch',
-																			h
+																			h,
 																		),
 																		this.inc(
 																			'pre',
-																			h
+																			h,
 																		)
 																	break
 																case 'prerelease':
@@ -19573,11 +19600,11 @@
 																			.length &&
 																		this.inc(
 																			'patch',
-																			h
+																			h,
 																		),
 																		this.inc(
 																			'pre',
-																			h
+																			h,
 																		)
 																	break
 																case 'major':
@@ -19656,7 +19683,7 @@
 																		;-1 ===
 																			g &&
 																			this.prerelease.push(
-																				0
+																				0,
 																			)
 																	}
 																	h &&
@@ -19664,11 +19691,11 @@
 																		l(
 																			this
 																				.prerelease[0],
-																			h
+																			h,
 																		)
 																			? isNaN(
 																					this
-																						.prerelease[1]
+																						.prerelease[1],
 																			  ) &&
 																			  (this.prerelease =
 																					[
@@ -19683,7 +19710,7 @@
 																	break
 																default:
 																	throw new Error(
-																		`invalid increment argument: ${y}`
+																		`invalid increment argument: ${y}`,
 																	)
 															}
 															return (
@@ -19700,20 +19727,20 @@
 										zn = te({
 											'node_modules/semver/functions/compare.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = GD()
 												r.exports = (a, n, u) =>
 													new t(a, u).compare(
-														new t(n, u)
+														new t(n, u),
 													)
 											},
 										}),
 										UD = te({
 											'node_modules/semver/functions/lt.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = zn()
@@ -19724,7 +19751,7 @@
 										JD = te({
 											'node_modules/semver/functions/gte.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = zn()
@@ -19741,16 +19768,16 @@
 																let [n, u] = a
 																return Object.assign(
 																	{ [s]: n },
-																	u
+																	u,
 																)
-															}
+															},
 														))
 											},
 										}),
 										XD = te({
 											'node_modules/outdent/lib/index.js'(
 												e,
-												r
+												r,
 											) {
 												function t() {
 													for (
@@ -19770,7 +19797,7 @@
 																	get: t,
 																	set: t,
 																	has: function (
-																		E
+																		E,
 																	) {
 																		return !1
 																	},
@@ -19781,7 +19808,7 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.outdent = void 0)
 												var n =
@@ -19810,7 +19837,7 @@
 														'(\\r\\n|\\r|\\n).{0,' +
 															I +
 															'}',
-														'g'
+														'g',
 													)
 													N && (E = E.slice(1))
 													var T = x.newline,
@@ -19822,39 +19849,41 @@
 															'string' ==
 															typeof T,
 														d = E.length
-													return E.map(function (
-														S,
-														b
-													) {
-														return (
-															(S = S.replace(
-																D,
-																'$1'
-															)),
-															0 === b &&
-																m &&
+													return E.map(
+														function (S, b) {
+															return (
 																(S = S.replace(
-																	l,
-																	''
+																	D,
+																	'$1',
 																)),
-															b === d - 1 &&
-																C &&
-																(S = S.replace(
-																	p,
-																	''
-																)),
-															o &&
-																(S = S.replace(
-																	/\r\n|\n|\r/g,
-																	function (
-																		B
-																	) {
-																		return T
-																	}
-																)),
-															S
-														)
-													})
+																0 === b &&
+																	m &&
+																	(S =
+																		S.replace(
+																			l,
+																			'',
+																		)),
+																b === d - 1 &&
+																	C &&
+																	(S =
+																		S.replace(
+																			p,
+																			'',
+																		)),
+																o &&
+																	(S =
+																		S.replace(
+																			/\r\n|\n|\r/g,
+																			function (
+																				B,
+																			) {
+																				return T
+																			},
+																		)),
+																S
+															)
+														},
+													)
 												}
 												var w = (function _(E) {
 													var N = s(),
@@ -19874,16 +19903,16 @@
 																		]
 																if (
 																	(function F(
-																		E
+																		E,
 																	) {
 																		return (
 																			u(
 																				E,
-																				'raw'
+																				'raw',
 																			) &&
 																			u(
 																				E,
-																				'length'
+																				'length',
 																			)
 																		)
 																	})($)
@@ -19895,17 +19924,17 @@
 																				D[0] ===
 																					w) &&
 																			g.test(
-																				m[0]
+																				m[0],
 																			) &&
 																			y.test(
-																				m[1]
+																				m[1],
 																			),
 																		o = C
 																			? x
 																			: N,
 																		d =
 																			o.get(
-																				m
+																				m,
 																			)
 																	if (
 																		(d ||
@@ -19913,11 +19942,11 @@
 																				c(
 																					m,
 																					C,
-																					E
+																					E,
 																				)),
 																			o.set(
 																				m,
-																				d
+																				d,
 																			)),
 																		0 ===
 																			D.length)
@@ -19926,7 +19955,7 @@
 																	var v =
 																		(function f(
 																			E,
-																			N
+																			N,
 																		) {
 																			for (
 																				var x =
@@ -19954,9 +19983,9 @@
 																			d,
 																			C
 																				? D.slice(
-																						1
+																						1,
 																				  )
-																				: D
+																				: D,
 																		)
 																	return v
 																}
@@ -19964,23 +19993,23 @@
 																	i(
 																		i(
 																			{},
-																			E
+																			E,
 																		),
-																		$ || {}
-																	)
+																		$ || {},
+																	),
 																)
 															},
 															{
 																string: function (
-																	$
+																	$,
 																) {
 																	return c(
 																		[$],
 																		!1,
-																		E
+																		E,
 																	)[0]
 																},
-															}
+															},
 														)
 													return P
 												})({
@@ -19997,7 +20026,7 @@
 															Object.defineProperty(
 																w,
 																'__esModule',
-																{ value: !0 }
+																{ value: !0 },
 															),
 															(w.default = w),
 															(w.outdent = w)
@@ -20442,13 +20471,13 @@
 																	: {},
 																g = a.split(
 																	'-',
-																	1
+																	1,
 																)[0],
 																c = l
 																	.flatMap(
 																		(E) =>
 																			E.languages ||
-																			[]
+																			[],
 																	)
 																	.filter(F),
 																f = s(
@@ -20456,7 +20485,7 @@
 																		{},
 																		...l.map(
 																			(
-																				E
+																				E,
 																			) => {
 																				let {
 																					options:
@@ -20464,23 +20493,25 @@
 																				} =
 																					E
 																				return N
-																			}
+																			},
 																		),
-																		n
+																		n,
 																	),
-																	'name'
+																	'name',
 																)
 																	.filter(
 																		(E) =>
 																			F(
-																				E
+																				E,
 																			) &&
-																			_(E)
+																			_(
+																				E,
+																			),
 																	)
 																	.sort(
 																		(
 																			E,
-																			N
+																			N,
 																		) =>
 																			E.name ===
 																			N.name
@@ -20488,11 +20519,11 @@
 																				: E.name <
 																				  N.name
 																				? -1
-																				: 1
+																				: 1,
 																	)
 																	.map(
 																		function w(
-																			E
+																			E,
 																		) {
 																			if (
 																				h
@@ -20508,19 +20539,19 @@
 																			} = E
 																			return Hn(
 																				E,
-																				hD
+																				hD,
 																			)
-																		}
+																		},
 																	)
 																	.map(
 																		(E) => {
 																			;(E =
 																				Object.assign(
 																					{},
-																					E
+																					E,
 																				)),
 																				Array.isArray(
-																					E.default
+																					E.default,
 																				) &&
 																					(E.default =
 																						1 ===
@@ -20532,49 +20563,49 @@
 																									.value
 																							: E.default
 																									.filter(
-																										F
+																										F,
 																									)
 																									.sort(
 																										(
 																											x,
-																											I
+																											I,
 																										) =>
 																											t.compare(
 																												I.since,
-																												x.since
-																											)
+																												x.since,
+																											),
 																									)[0]
 																									.value),
 																				Array.isArray(
-																					E.choices
+																					E.choices,
 																				) &&
 																					((E.choices =
 																						E.choices.filter(
 																							(
-																								x
+																								x,
 																							) =>
 																								F(
-																									x
+																									x,
 																								) &&
 																								_(
-																									x
-																								)
+																									x,
+																								),
 																						)),
 																					'parser' ===
 																						E.name &&
 																						(function i(
 																							l,
 																							p,
-																							y
+																							y,
 																						) {
 																							let h =
 																								new Set(
 																									l.choices.map(
 																										(
-																											g
+																											g,
 																										) =>
-																											g.value
-																									)
+																											g.value,
+																									),
 																								)
 																							for (let g of p)
 																								if (
@@ -20583,22 +20614,22 @@
 																									for (let c of g.parsers)
 																										if (
 																											!h.has(
-																												c
+																												c,
 																											)
 																										) {
 																											h.add(
-																												c
+																												c,
 																											)
 																											let f =
 																													y.find(
 																														(
-																															_
+																															_,
 																														) =>
 																															_.parsers &&
 																															_
 																																.parsers[
 																																c
-																															]
+																															],
 																													),
 																												F =
 																													g.name
@@ -20610,20 +20641,20 @@
 																														value: c,
 																														description:
 																															F,
-																													}
+																													},
 																												)
 																										}
 																						})(
 																							E,
 																							c,
-																							l
+																							l,
 																						))
 																			let N =
 																				Object.fromEntries(
 																					l
 																						.filter(
 																							(
-																								x
+																								x,
 																							) =>
 																								x.defaultOptions &&
 																								void 0 !==
@@ -20631,11 +20662,11 @@
 																										.defaultOptions[
 																										E
 																											.name
-																									]
+																									],
 																						)
 																						.map(
 																							(
-																								x
+																								x,
 																							) => [
 																								x.name,
 																								x
@@ -20643,21 +20674,21 @@
 																									E
 																										.name
 																								],
-																							]
-																						)
+																							],
+																						),
 																				)
 																			return Object.assign(
 																				Object.assign(
 																					{},
-																					E
+																					E,
 																				),
 																				{},
 																				{
 																					pluginDefaults:
 																						N,
-																				}
+																				},
 																			)
-																		}
+																		},
 																	)
 															return {
 																languages: c,
@@ -20673,7 +20704,7 @@
 																	(E.since &&
 																		t.gte(
 																			g,
-																			E.since
+																			E.since,
 																		))
 																)
 															}
@@ -20687,7 +20718,7 @@
 																	(E.deprecated &&
 																		t.lt(
 																			g,
-																			E.deprecated
+																			E.deprecated,
 																		))
 																)
 															}
@@ -20698,7 +20729,7 @@
 										Kn = te({
 											'src/utils/is-non-empty-array.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(s) {
@@ -20758,12 +20789,12 @@
 										Ra = te({
 											'src/utils/text/skip-inline-comment.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(
 														s,
-														a
+														a,
 													) {
 														if (!1 === a) return !1
 														if (
@@ -20780,12 +20811,12 @@
 																if (
 																	'*' ===
 																		s.charAt(
-																			n
+																			n,
 																		) &&
 																	'/' ===
 																		s.charAt(
 																			n +
-																				1
+																				1,
 																		)
 																)
 																	return n + 2
@@ -20796,7 +20827,7 @@
 										$a = te({
 											'src/utils/text/skip-trailing-comment.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -20816,13 +20847,13 @@
 										Va = te({
 											'src/utils/text/skip-newline.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(
 														s,
 														a,
-														n
+														n,
 													) {
 														let u = n && n.backwards
 														if (!1 === a) return !1
@@ -20831,7 +20862,7 @@
 															if (
 																'\r' ===
 																	s.charAt(
-																		a - 1
+																		a - 1,
 																	) &&
 																'\n' === i
 															)
@@ -20849,7 +20880,7 @@
 																'\r' === i &&
 																'\n' ===
 																	s.charAt(
-																		a + 1
+																		a + 1,
 																	)
 															)
 																return a + 2
@@ -20869,7 +20900,7 @@
 										YD = te({
 											'src/utils/text/get-next-non-space-non-comment-character-index-with-start-index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Ra(),
@@ -20923,7 +20954,7 @@
 															Y.backwards
 																? j - 1
 																: j,
-															Y
+															Y,
 														)
 													return ie !== c(V, ie, Y)
 												}
@@ -20986,12 +21017,12 @@
 														W =
 															(
 																V.match(
-																	ee.regex
+																	ee.regex,
 																) || []
 															).length >
 															(
 																V.match(
-																	ce.regex
+																	ce.regex,
 																) || []
 															).length
 																? ce
@@ -21014,11 +21045,11 @@
 																	: de ||
 																	  (Y &&
 																	  /^[^\n\r"'0-7\\bfnrt-vx\u2028\u2029]$/.test(
-																			K
+																			K,
 																	  )
 																			? K
 																			: '\\' +
-																			  K)
+																			  K),
 														)
 													return j + ce + j
 												}
@@ -21055,10 +21086,10 @@
 																				typeof V.value
 																					? ''
 																					: String(
-																							V.value
+																							V.value,
 																					  ))) ||
 																			V.operator ||
-																			''
+																			'',
 																	)
 																return (
 																	Y.length >
@@ -21066,7 +21097,7 @@
 																		(Y =
 																			Y.slice(
 																				0,
-																				19
+																				19,
 																			) +
 																			'…'),
 																	j +
@@ -21090,7 +21121,7 @@
 																ie =
 																	Y.find(
 																		(
-																			ee
+																			ee,
 																		) => {
 																			let {
 																				name: ce,
@@ -21100,11 +21131,11 @@
 																				ce.toLowerCase() ===
 																				V
 																			)
-																		}
+																		},
 																	) ||
 																	Y.find(
 																		(
-																			ee
+																			ee,
 																		) => {
 																			let {
 																				aliases:
@@ -21113,17 +21144,17 @@
 																				ee
 																			return (
 																				Array.isArray(
-																					ce
+																					ce,
 																				) &&
 																				ce.includes(
-																					V
+																					V,
 																				)
 																			)
-																		}
+																		},
 																	) ||
 																	Y.find(
 																		(
-																			ee
+																			ee,
 																		) => {
 																			let {
 																				extensions:
@@ -21132,13 +21163,13 @@
 																				ee
 																			return (
 																				Array.isArray(
-																					ce
+																					ce,
 																				) &&
 																				ce.includes(
-																					`.${V}`
+																					`.${V}`,
 																				)
 																			)
-																		}
+																		},
 																	)
 															return (
 																ie &&
@@ -21151,24 +21182,24 @@
 															let Y = V.match(
 																new RegExp(
 																	`(${t(
-																		j
+																		j,
 																	)})+`,
-																	'g'
-																)
+																	'g',
+																),
 															)
 															return null === Y
 																? 0
 																: Y.reduce(
 																		(
 																			ie,
-																			ee
+																			ee,
 																		) =>
 																			Math.max(
 																				ie,
 																				ee.length /
-																					j.length
+																					j.length,
 																			),
-																		0
+																		0,
 																  )
 														},
 													getMinNotPresentContinuousCount:
@@ -21176,10 +21207,10 @@
 															let Y = V.match(
 																new RegExp(
 																	`(${t(
-																		j
+																		j,
 																	)})+`,
-																	'g'
-																)
+																	'g',
+																),
 															)
 															if (null === Y)
 																return 0
@@ -21212,7 +21243,7 @@
 													getNextNonSpaceNonCommentCharacter:
 														function $(V, j, Y) {
 															return V.charAt(
-																P(V, j, Y)
+																P(V, j, Y),
 															)
 														},
 													skip: function _(V) {
@@ -21239,13 +21270,13 @@
 																) {
 																	if (
 																		!V.test(
-																			K
+																			K,
 																		)
 																	)
 																		return W
 																} else if (
 																	!V.includes(
-																		K
+																		K,
 																	)
 																)
 																	return W
@@ -21270,7 +21301,7 @@
 													isNextLineEmpty: function I(
 														V,
 														j,
-														Y
+														Y,
 													) {
 														return x(V, Y(j))
 													},
@@ -21314,7 +21345,7 @@
 														},
 													hasSpaces: function D(
 														V,
-														j
+														j,
 													) {
 														let Y =
 															arguments.length >
@@ -21329,14 +21360,14 @@
 																Y.backwards
 																	? j - 1
 																	: j,
-																Y
+																Y,
 															) !== j
 														)
 													},
 													getAlignmentSize: T,
 													getIndentSize: function m(
 														V,
-														j
+														j,
 													) {
 														let Y =
 															V.lastIndexOf('\n')
@@ -21344,17 +21375,17 @@
 															? 0
 															: T(
 																	V.slice(
-																		Y + 1
+																		Y + 1,
 																	).match(
-																		/^[\t ]*/
+																		/^[\t ]*/,
 																	)[0],
-																	j
+																	j,
 															  )
 													},
 													getPreferredQuote: C,
 													printString: function o(
 														V,
-														j
+														j,
 													) {
 														let Y = V.slice(1, -1)
 														return d(
@@ -21373,7 +21404,7 @@
 																		Y,
 																		j.singleQuote
 																			? "'"
-																			: '"'
+																			: '"',
 																  ).quote,
 															!(
 																'css' ===
@@ -21383,30 +21414,30 @@
 																'scss' ===
 																	j.parser ||
 																j.__embeddedInHtml
-															)
+															),
 														)
 													},
 													printNumber: function v(V) {
 														return V.toLowerCase()
 															.replace(
 																/^([+-]?[\d.]+e)(?:\+|(-))?0*(\d)/,
-																'$1$2$3'
+																'$1$2$3',
 															)
 															.replace(
 																/^([+-]?[\d.]+)e[+-]?0+$/,
-																'$1'
+																'$1',
 															)
 															.replace(
 																/^([+-])?\./,
-																'$10.'
+																'$10.',
 															)
 															.replace(
 																/(\.\d+?)0+(?=e|$)/,
-																'$1'
+																'$1',
 															)
 															.replace(
 																/\.(?=e|$)/,
-																''
+																'',
 															)
 													},
 													makeString: d,
@@ -21448,15 +21479,15 @@
 															let j =
 																new WeakMap()
 															return function (
-																Y
+																Y,
 															) {
 																return (
 																	j.has(Y) ||
 																		j.set(
 																			Y,
 																			Symbol(
-																				V
-																			)
+																				V,
+																			),
 																		),
 																	j.get(Y)
 																)
@@ -21493,7 +21524,7 @@
 											var s = t >= 0 ? arguments[t] : '/'
 											if ('string' != typeof s)
 												throw new TypeError(
-													'Arguments to path.resolve must be strings'
+													'Arguments to path.resolve must be strings',
 												)
 											s &&
 												((e = s + '/' + e),
@@ -21506,9 +21537,9 @@
 														e.split('/'),
 														function (a) {
 															return !!a
-														}
+														},
 													),
-													!r
+													!r,
 												).join('/')) || '.'
 										)
 									}
@@ -21520,7 +21551,7 @@
 												Zn(e.split('/'), function (s) {
 													return !!s
 												}),
-												!r
+												!r,
 											).join('/')) &&
 												!r &&
 												(e = '.'),
@@ -21536,16 +21567,16 @@
 											Zn(
 												Array.prototype.slice.call(
 													arguments,
-													0
+													0,
 												),
 												function (r, t) {
 													if ('string' != typeof r)
 														throw new TypeError(
-															'Arguments to path.join must be strings'
+															'Arguments to path.join must be strings',
 														)
 													return r
-												}
-											).join('/')
+												},
+											).join('/'),
 										)
 									}
 									function Ua(e, r) {
@@ -21571,7 +21602,7 @@
 												a = t(r.split('/')),
 												n = Math.min(
 													s.length,
-													a.length
+													a.length,
 												),
 												u = n,
 												i = 0;
@@ -21586,7 +21617,7 @@
 										for (i = u; i < s.length; i++)
 											l.push('..')
 										return (l = l.concat(a.slice(u))).join(
-											'/'
+											'/',
 										)
 									}
 									function Ja(e) {
@@ -21597,7 +21628,7 @@
 											? (s &&
 													(s = s.substr(
 														0,
-														s.length - 1
+														s.length - 1,
 													)),
 											  t + s)
 											: '.'
@@ -21609,7 +21640,7 @@
 												t.substr(-1 * r.length) === r &&
 												(t = t.substr(
 													0,
-													t.length - r.length
+													t.length - r.length,
 												)),
 											t
 										)
@@ -21653,7 +21684,7 @@
 														/^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/),
 													(Ir = function (e) {
 														return Na.exec(e).slice(
-															1
+															1,
 														)
 													}),
 													(Ka = {
@@ -21676,7 +21707,7 @@
 										ZD = te({
 											'node-modules-polyfills-commonjs:path'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = (QD(), ft(Wa))
@@ -21720,7 +21751,7 @@
 										for (var s in e)
 											Object.prototype.hasOwnProperty.call(
 												e,
-												s
+												s,
 											) &&
 												r.indexOf(s) < 0 &&
 												(t[s] = e[s])
@@ -21733,7 +21764,7 @@
 											for (
 												s =
 													Object.getOwnPropertySymbols(
-														e
+														e,
 													);
 												a < s.length;
 												a++
@@ -21741,7 +21772,7 @@
 												r.indexOf(s[a]) < 0 &&
 													Object.prototype.propertyIsEnumerable.call(
 														e,
-														s[a]
+														s[a],
 													) &&
 													(t[s[a]] = e[s[a]])
 										}
@@ -21757,7 +21788,7 @@
 													? (s =
 															Object.getOwnPropertyDescriptor(
 																r,
-																t
+																t,
 															))
 													: s
 										if (
@@ -21825,22 +21856,22 @@
 																	? n
 																	: new t(
 																			function (
-																				u
+																				u,
 																			) {
 																				u(
-																					n
+																					n,
 																				)
-																			}
+																			},
 																	  )
 														  })(y.value).then(i, l)
 												}
 												p(
 													(s = s.apply(
 														e,
-														r || []
-													)).next()
+														r || [],
+													)).next(),
 												)
-											}
+											},
 										)
 									}
 									function im(e, r) {
@@ -21875,7 +21906,7 @@
 												return (function l(p) {
 													if (s)
 														throw new TypeError(
-															'Generator is already executing.'
+															'Generator is already executing.',
 														)
 													for (; t; )
 														try {
@@ -21890,14 +21921,14 @@
 																			  ((n =
 																					a.return) &&
 																					n.call(
-																						a
+																						a,
 																					),
 																			  0)
 																			: a.next) &&
 																	!(n =
 																		n.call(
 																			a,
-																			p[1]
+																			p[1],
 																		)).done)
 															)
 																return n
@@ -21988,7 +22019,7 @@
 																		;(t.label =
 																			n[2]),
 																			t.ops.push(
-																				p
+																				p,
 																			)
 																		break
 																	}
@@ -22048,7 +22079,7 @@
 										throw new TypeError(
 											r
 												? 'Object is not iterable.'
-												: 'Symbol.iterator is not defined.'
+												: 'Symbol.iterator is not defined.',
 										)
 									}
 									function Qa(e, r) {
@@ -22121,7 +22152,7 @@
 									function pm(e, r, t) {
 										if (!Symbol.asyncIterator)
 											throw new TypeError(
-												'Symbol.asyncIterator is not defined.'
+												'Symbol.asyncIterator is not defined.',
 											)
 										var a,
 											s = t.apply(e, r || []),
@@ -22148,7 +22179,7 @@
 																f,
 																F,
 															]) > 1 || i(g, c)
-														}
+														},
 													)
 												})
 										}
@@ -22157,7 +22188,7 @@
 												!(function l(g) {
 													g.value instanceof Xt
 														? Promise.resolve(
-																g.value.v
+																g.value.v,
 														  ).then(p, y)
 														: h(n[0][2], g)
 												})(s[g](c))
@@ -22197,7 +22228,7 @@
 														return (t = !t)
 															? {
 																	value: Xt(
-																		e[a](u)
+																		e[a](u),
 																	),
 																	done:
 																		'return' ===
@@ -22213,7 +22244,7 @@
 									function Dm(e) {
 										if (!Symbol.asyncIterator)
 											throw new TypeError(
-												'Symbol.asyncIterator is not defined.'
+												'Symbol.asyncIterator is not defined.',
 											)
 										var t,
 											r = e[Symbol.asyncIterator]
@@ -22239,29 +22270,29 @@
 																n,
 																u,
 																i,
-																l
+																l,
 															) {
 																Promise.resolve(
-																	l
+																	l,
 																).then(
 																	function (
-																		p
+																		p,
 																	) {
 																		n({
 																			value: p,
 																			done: i,
 																		})
 																	},
-																	u
+																	u,
 																)
 															})(
 																i,
 																l,
 																(u = e[n](u))
 																	.done,
-																u.value
+																u.value,
 															)
-														}
+														},
 													)
 												}
 										}
@@ -22272,7 +22303,7 @@
 												? Object.defineProperty(
 														e,
 														'raw',
-														{ value: r }
+														{ value: r },
 												  )
 												: (e.raw = r),
 											e
@@ -22285,7 +22316,7 @@
 											for (var t in e)
 												Object.hasOwnProperty.call(
 													e,
-													t
+													t,
 												) && (r[t] = e[t])
 										return (r.default = e), r
 									}
@@ -22297,14 +22328,14 @@
 									function ym(e, r) {
 										if (!r.has(e))
 											throw new TypeError(
-												'attempted to get private field on non-instance'
+												'attempted to get private field on non-instance',
 											)
 										return r.get(e)
 									}
 									function hm(e, r, t) {
 										if (!r.has(e))
 											throw new TypeError(
-												'attempted to set private field on non-instance'
+												'attempted to set private field on non-instance',
 											)
 										return r.set(e, t), t
 									}
@@ -22347,7 +22378,7 @@
 																Array &&
 																function (
 																	t,
-																	s
+																	s,
 																) {
 																	t.__proto__ =
 																		s
@@ -22355,7 +22386,7 @@
 															function (t, s) {
 																for (var a in s)
 																	s.hasOwnProperty(
-																		a
+																		a,
 																	) &&
 																		(t[a] =
 																			s[
@@ -22382,7 +22413,7 @@
 																			]))
 																			Object.prototype.hasOwnProperty.call(
 																				t,
-																				n
+																				n,
 																			) &&
 																				(r[
 																					n
@@ -22394,7 +22425,7 @@
 																}),
 															Nr.apply(
 																this,
-																arguments
+																arguments,
 															)
 														)
 													})
@@ -22402,22 +22433,22 @@
 										}),
 										Za = te({
 											'node_modules/vnopts/lib/descriptors/api.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.apiDescriptor = {
 														key: (r) =>
 															/^[$_a-zA-Z][$_a-zA-Z0-9]*$/.test(
-																r
+																r,
 															)
 																? r
 																: JSON.stringify(
-																		r
+																		r,
 																  ),
 														value(r) {
 															if (
@@ -22426,7 +22457,7 @@
 																	typeof r
 															)
 																return JSON.stringify(
-																	r
+																	r,
 																)
 															if (
 																Array.isArray(r)
@@ -22434,11 +22465,11 @@
 																return `[${r
 																	.map((s) =>
 																		e.apiDescriptor.value(
-																			s
-																		)
+																			s,
+																		),
 																	)
 																	.join(
-																		', '
+																		', ',
 																	)}]`
 															let t =
 																Object.keys(r)
@@ -22448,18 +22479,18 @@
 																: `{ ${t
 																		.map(
 																			(
-																				s
+																				s,
 																			) =>
 																				`${e.apiDescriptor.key(
-																					s
+																					s,
 																				)}: ${e.apiDescriptor.value(
 																					r[
 																						s
-																					]
-																				)}`
+																					],
+																				)}`,
 																		)
 																		.join(
-																			', '
+																			', ',
 																		)} }`
 														},
 														pair: (r) => {
@@ -22468,7 +22499,7 @@
 																value: s,
 															} = r
 															return e.apiDescriptor.value(
-																{ [t]: s }
+																{ [t]: s },
 															)
 														},
 													})
@@ -22476,24 +22507,24 @@
 										}),
 										vm = te({
 											'node_modules/vnopts/lib/descriptors/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(Et(), ft(vt)).__exportStar(
 														Za(),
-														e
+														e,
 													)
 											},
 										}),
 										kr = te({
 											'scripts/build/shims/chalk.cjs'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = (s) => s
@@ -22508,19 +22539,19 @@
 										}),
 										eo = te({
 											'node_modules/vnopts/lib/handlers/deprecated/common.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = kr()
 												e.commonDeprecatedHandler = (
 													t,
 													s,
-													a
+													a,
 												) => {
 													let { descriptor: n } = a,
 														u = [
@@ -22528,7 +22559,7 @@
 																'string' ==
 																	typeof t
 																	? n.key(t)
-																	: n.pair(t)
+																	: n.pair(t),
 															)} is deprecated`,
 														]
 													return (
@@ -22538,12 +22569,12 @@
 																	'string' ==
 																		typeof s
 																		? n.key(
-																				s
+																				s,
 																		  )
 																		: n.pair(
-																				s
-																		  )
-																)}`
+																				s,
+																		  ),
+																)}`,
 															),
 														u.join('; ') + '.'
 													)
@@ -22552,73 +22583,73 @@
 										}),
 										Cm = te({
 											'node_modules/vnopts/lib/handlers/deprecated/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(Et(), ft(vt)).__exportStar(
 														eo(),
-														e
+														e,
 													)
 											},
 										}),
 										Em = te({
 											'node_modules/vnopts/lib/handlers/invalid/common.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = kr()
 												e.commonInvalidHandler = (
 													t,
 													s,
-													a
+													a,
 												) =>
 													[
 														`Invalid ${r.default.red(
-															a.descriptor.key(t)
+															a.descriptor.key(t),
 														)} value.`,
 														`Expected ${r.default.blue(
 															a.schemas[
 																t
-															].expected(a)
+															].expected(a),
 														)},`,
 														`but received ${r.default.red(
 															a.descriptor.value(
-																s
-															)
+																s,
+															),
 														)}.`,
 													].join(' ')
 											},
 										}),
 										to = te({
 											'node_modules/vnopts/lib/handlers/invalid/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(Et(), ft(vt)).__exportStar(
 														Em(),
-														e
+														e,
 													)
 											},
 										}),
 										Fm = te({
 											'node_modules/vnopts/node_modules/leven/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = [],
@@ -22666,13 +22697,13 @@
 													)
 														(s[p + f] =
 															a.charCodeAt(
-																p + f
+																p + f,
 															)),
 															(t[f] = ++f)
 													for (; F < l; )
 														for (
 															y = n.charCodeAt(
-																p + F
+																p + F,
 															),
 																g = F++,
 																h = F,
@@ -22700,20 +22731,20 @@
 										}),
 										ro = te({
 											'node_modules/vnopts/lib/handlers/unknown/leven.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = kr(),
 													t = Fm()
 												e.levenUnknownHandler = (
 													s,
 													a,
-													n
+													n,
 												) => {
 													let {
 															descriptor: u,
@@ -22725,20 +22756,20 @@
 																u.pair({
 																	key: s,
 																	value: a,
-																})
+																}),
 															)}.`,
 														],
 														y = Object.keys(l)
 															.sort()
 															.find(
 																(h) =>
-																	t(s, h) < 3
+																	t(s, h) < 3,
 															)
 													y &&
 														p.push(
 															`Did you mean ${r.default.blue(
-																u.key(y)
-															)}?`
+																u.key(y),
+															)}?`,
 														),
 														i.warn(p.join(' '))
 												}
@@ -22746,29 +22777,29 @@
 										}),
 										Am = te({
 											'node_modules/vnopts/lib/handlers/unknown/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(Et(), ft(vt)).__exportStar(
 														ro(),
-														e
+														e,
 													)
 											},
 										}),
 										Sm = te({
 											'node_modules/vnopts/lib/handlers/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = (Et(), ft(vt))
 												r.__exportStar(Cm(), e),
@@ -22778,13 +22809,13 @@
 										}),
 										Ft = te({
 											'node_modules/vnopts/lib/schema.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = [
 													'default',
@@ -22806,7 +22837,7 @@
 																u[p],
 																i,
 																s.prototype[p]
-																	.length
+																	.length,
 															))
 													return l
 												}
@@ -22849,7 +22880,7 @@
 																			arguments.length,
 																		p =
 																			new Array(
-																				l
+																				l,
 																			),
 																		y = 0;
 																	y < l;
@@ -22862,12 +22893,12 @@
 																return n(
 																	...p.slice(
 																		0,
-																		i - 1
+																		i - 1,
 																	),
 																	u,
 																	...p.slice(
-																		i - 1
-																	)
+																		i - 1,
+																	),
 																)
 														  }
 														: () => n
@@ -22877,13 +22908,13 @@
 										}),
 										xm = te({
 											'node_modules/vnopts/lib/schemas/alias.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Ft(),
 													t = class extends r.Schema {
@@ -22912,13 +22943,13 @@
 										}),
 										bm = te({
 											'node_modules/vnopts/lib/schemas/any.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Ft(),
 													t = class extends r.Schema {
@@ -22934,13 +22965,13 @@
 										}),
 										Tm = te({
 											'node_modules/vnopts/lib/schemas/array.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = (Et(), ft(vt)),
 													t = Ft(),
@@ -22956,27 +22987,27 @@
 																	[
 																		'valueSchema',
 																		'name',
-																	]
+																	],
 																)
 															super(
 																Object.assign(
 																	{},
 																	l,
-																	{ name: i }
-																)
+																	{ name: i },
+																),
 															),
 																(this._valueSchema =
 																	u)
 														}
 														expected(n) {
 															return `an array of ${this._valueSchema.expected(
-																n
+																n,
 															)}`
 														}
 														validate(n, u) {
 															if (
 																!Array.isArray(
-																	n
+																	n,
 																)
 															)
 																return !1
@@ -22986,13 +23017,13 @@
 																	u.normalizeValidateResult(
 																		this._valueSchema.validate(
 																			l,
-																			u
+																			u,
 																		),
-																		l
+																		l,
 																	)
 																!0 !== p &&
 																	i.push(
-																		p.value
+																		p.value,
 																	)
 															}
 															return (
@@ -23009,15 +23040,15 @@
 																	u.normalizeDeprecatedResult(
 																		this._valueSchema.deprecated(
 																			l,
-																			u
+																			u,
 																		),
-																		l
+																		l,
 																	)
 																!1 !== p &&
 																	i.push(
 																		...p.map(
 																			(
-																				y
+																				y,
 																			) => {
 																				let {
 																					value: h,
@@ -23028,8 +23059,8 @@
 																						h,
 																					],
 																				}
-																			}
-																		)
+																			},
+																		),
 																	)
 															}
 															return i
@@ -23041,12 +23072,12 @@
 																	u.normalizeForwardResult(
 																		this._valueSchema.forward(
 																			l,
-																			u
+																			u,
 																		),
-																		l
+																		l,
 																	)
 																i.push(
-																	...p.map(a)
+																	...p.map(a),
 																)
 															}
 															return i
@@ -23059,18 +23090,18 @@
 																	u.normalizeRedirectResult(
 																		this._valueSchema.redirect(
 																			p,
-																			u
+																			u,
 																		),
-																		p
+																		p,
 																	)
 																'remain' in y &&
 																	i.push(
-																		y.remain
+																		y.remain,
 																	),
 																	l.push(
 																		...y.redirect.map(
-																			a
-																		)
+																			a,
+																		),
 																	)
 															}
 															return 0 ===
@@ -23098,13 +23129,13 @@
 										}),
 										Bm = te({
 											'node_modules/vnopts/lib/schemas/boolean.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Ft(),
 													t = class extends r.Schema {
@@ -23123,7 +23154,7 @@
 										}),
 										eu = te({
 											'node_modules/vnopts/lib/utils.js'(
-												e
+												e,
 											) {
 												function y(c, f) {
 													return 'string' ==
@@ -23147,21 +23178,21 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.recordFromArray =
 														function r(c, f) {
 															let F =
 																Object.create(
-																	null
+																	null,
 																)
 															for (let _ of c) {
 																let w = _[f]
 																if (F[w])
 																	throw new Error(
 																		`Duplicate ${f} ${JSON.stringify(
-																			w
-																		)}`
+																			w,
+																		)}`,
 																	)
 																F[w] = _
 															}
@@ -23175,8 +23206,8 @@
 																if (F.has(w))
 																	throw new Error(
 																		`Duplicate ${f} ${JSON.stringify(
-																			w
-																		)}`
+																			w,
+																		)}`,
 																	)
 																F.set(w, _)
 															}
@@ -23186,12 +23217,12 @@
 														function s() {
 															let c =
 																Object.create(
-																	null
+																	null,
 																)
 															return (f) => {
 																let F =
 																	JSON.stringify(
-																		f
+																		f,
 																	)
 																return (
 																	!!c[F] ||
@@ -23203,7 +23234,7 @@
 														}),
 													(e.partition = function a(
 														c,
-														f
+														f,
 													) {
 														let F = [],
 															_ = []
@@ -23234,13 +23265,13 @@
 															return F !== _
 																? w.indexOf(F) -
 																		w.indexOf(
-																			_
+																			_,
 																		)
 																: 'string' !== F
 																? Number(c) -
 																  Number(f)
 																: c.localeCompare(
-																		f
+																		f,
 																  )
 														}),
 													(e.normalizeDefaultResult =
@@ -23297,7 +23328,7 @@
 																		c
 																	? c.redirect
 																	: c,
-																f
+																f,
 															)
 															return 0 ===
 																F.length
@@ -23323,13 +23354,13 @@
 										}),
 										Nm = te({
 											'node_modules/vnopts/lib/schemas/choice.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Ft(),
 													t = eu(),
@@ -23340,7 +23371,7 @@
 																	t.mapFromArray(
 																		a.choices.map(
 																			(
-																				n
+																				n,
 																			) =>
 																				n &&
 																				'object' ==
@@ -23348,9 +23379,9 @@
 																					? n
 																					: {
 																							value: n,
-																					  }
+																					  },
 																		),
-																		'value'
+																		'value',
 																	))
 														}
 														expected(a) {
@@ -23359,49 +23390,49 @@
 																		n,
 																} = a,
 																u = Array.from(
-																	this._choices.keys()
+																	this._choices.keys(),
 																)
 																	.map((p) =>
 																		this._choices.get(
-																			p
-																		)
+																			p,
+																		),
 																	)
 																	.filter(
 																		(p) =>
-																			!p.deprecated
+																			!p.deprecated,
 																	)
 																	.map(
 																		(p) =>
-																			p.value
+																			p.value,
 																	)
 																	.sort(
-																		t.comparePrimitive
+																		t.comparePrimitive,
 																	)
 																	.map(
-																		n.value
+																		n.value,
 																	),
 																i = u.slice(
 																	0,
-																	-2
+																	-2,
 																),
 																l = u.slice(-2)
 															return i
 																.concat(
 																	l.join(
-																		' or '
-																	)
+																		' or ',
+																	),
 																)
 																.join(', ')
 														}
 														validate(a) {
 															return this._choices.has(
-																a
+																a,
 															)
 														}
 														deprecated(a) {
 															let n =
 																this._choices.get(
-																	a
+																	a,
 																)
 															return (
 																!(
@@ -23415,7 +23446,7 @@
 														forward(a) {
 															let n =
 																this._choices.get(
-																	a
+																	a,
 																)
 															return n
 																? n.forward
@@ -23424,7 +23455,7 @@
 														redirect(a) {
 															let n =
 																this._choices.get(
-																	a
+																	a,
 																)
 															return n
 																? n.redirect
@@ -23436,13 +23467,13 @@
 										}),
 										no = te({
 											'node_modules/vnopts/lib/schemas/number.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Ft(),
 													t = class extends r.Schema {
@@ -23461,13 +23492,13 @@
 										}),
 										wm = te({
 											'node_modules/vnopts/lib/schemas/integer.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = eu(),
 													t = no(),
@@ -23481,9 +23512,9 @@
 																	n.normalizeValidateResult(
 																		super.validate(
 																			a,
-																			n
+																			n,
 																		),
-																		a
+																		a,
 																	) &&
 																r.isInt(a)
 															)
@@ -23494,13 +23525,13 @@
 										}),
 										_m = te({
 											'node_modules/vnopts/lib/schemas/string.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Ft(),
 													t = class extends r.Schema {
@@ -23519,13 +23550,13 @@
 										}),
 										Pm = te({
 											'node_modules/vnopts/lib/schemas/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = (Et(), ft(vt))
 												r.__exportStar(xm(), e),
@@ -23540,13 +23571,13 @@
 										}),
 										Im = te({
 											'node_modules/vnopts/lib/defaults.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Za(),
 													t = eo(),
@@ -23564,13 +23595,13 @@
 										}),
 										km = te({
 											'node_modules/vnopts/lib/normalize.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Im(),
 													t = eu()
@@ -23597,7 +23628,7 @@
 															schemas:
 																t.recordFromArray(
 																	a,
-																	'name'
+																	'name',
 																),
 															normalizeDefaultResult:
 																t.normalizeDefaultResult,
@@ -23637,14 +23668,14 @@
 																		p =
 																			this._applyNormalization(
 																				l,
-																				n
+																				n,
 																			)
 																	u.push(...p)
 																}
 															}
 														i()
 														for (let l of Object.keys(
-															this._utils.schemas
+															this._utils.schemas,
 														)) {
 															let p =
 																this._utils
@@ -23654,8 +23685,8 @@
 																	t.normalizeDefaultResult(
 																		p.default(
 																			this
-																				._utils
-																		)
+																				._utils,
+																		),
 																	)
 																'value' in y &&
 																	u.push({
@@ -23665,7 +23696,7 @@
 														}
 														i()
 														for (let l of Object.keys(
-															this._utils.schemas
+															this._utils.schemas,
 														)) {
 															let p =
 																this._utils
@@ -23675,7 +23706,7 @@
 																	p.postprocess(
 																		n[l],
 																		this
-																			._utils
+																			._utils,
 																	))
 														}
 														return n
@@ -23685,13 +23716,13 @@
 															[i, l] =
 																t.partition(
 																	Object.keys(
-																		a
+																		a,
 																	),
 																	(p) =>
 																		p in
 																		this
 																			._utils
-																			.schemas
+																			.schemas,
 																)
 														for (let p of i) {
 															let y =
@@ -23703,16 +23734,16 @@
 																	y.preprocess(
 																		a[p],
 																		this
-																			._utils
+																			._utils,
 																	),
 																g =
 																	t.normalizeValidateResult(
 																		y.validate(
 																			h,
 																			this
-																				._utils
+																				._utils,
 																		),
-																		h
+																		h,
 																	)
 															if (!0 !== g) {
 																let {
@@ -23723,12 +23754,12 @@
 																			p,
 																			w,
 																			this
-																				._utils
+																				._utils,
 																		)
 																throw 'string' ==
 																	typeof E
 																	? new Error(
-																			E
+																			E,
 																	  )
 																	: E
 															}
@@ -23746,7 +23777,7 @@
 																			: {
 																					[N.key]:
 																						N.value,
-																			  }
+																			  },
 																	)
 																},
 																f = (w) => {
@@ -23760,10 +23791,10 @@
 																				y.deprecated(
 																					E,
 																					this
-																						._utils
+																						._utils,
 																				),
 																				h,
-																				!0
+																				!0,
 																			)
 																	if (
 																		!1 !== x
@@ -23773,15 +23804,15 @@
 																			x
 																		)
 																			this._hasDeprecationWarned(
-																				p
+																				p,
 																			) ||
 																				this._utils.logger.warn(
 																					this._deprecatedHandler(
 																						p,
 																						N,
 																						this
-																							._utils
-																					)
+																							._utils,
+																					),
 																				)
 																		else
 																			for (let {
@@ -23794,7 +23825,7 @@
 																					}
 																				if (
 																					!this._hasDeprecationWarned(
-																						P
+																						P,
 																					)
 																				) {
 																					let $ =
@@ -23810,8 +23841,8 @@
 																							P,
 																							$,
 																							this
-																								._utils
-																						)
+																								._utils,
+																						),
 																					)
 																				}
 																			}
@@ -23819,22 +23850,22 @@
 															t.normalizeForwardResult(
 																y.forward(
 																	h,
-																	this._utils
+																	this._utils,
 																),
-																h
+																h,
 															).forEach(c)
 															let _ =
 																t.normalizeRedirectResult(
 																	y.redirect(
 																		h,
 																		this
-																			._utils
+																			._utils,
 																	),
-																	h
+																	h,
 																)
 															if (
 																(_.redirect.forEach(
-																	c
+																	c,
 																),
 																'remain' in _)
 															) {
@@ -23847,7 +23878,7 @@
 																				],
 																				w,
 																				this
-																					._utils
+																					._utils,
 																		  )
 																		: w),
 																	f({
@@ -23871,11 +23902,11 @@
 																		p,
 																		y,
 																		this
-																			._utils
+																			._utils,
 																	)
 															if (h)
 																for (let g of Object.keys(
-																	h
+																	h,
 																)) {
 																	let c = {
 																		[g]: h[
@@ -23886,11 +23917,11 @@
 																	this._utils
 																		.schemas
 																		? u.push(
-																				c
+																				c,
 																		  )
 																		: Object.assign(
 																				n,
-																				c
+																				c,
 																		  )
 																}
 														}
@@ -23902,13 +23933,13 @@
 										}),
 										Lm = te({
 											'node_modules/vnopts/lib/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = (Et(), ft(vt))
 												r.__exportStar(vm(), e),
@@ -23921,7 +23952,7 @@
 										Om = te({
 											'src/main/options-normalizer.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var u,
@@ -23934,7 +23965,7 @@
 																: `--${g}`,
 														value: (g) =>
 															t.apiDescriptor.value(
-																g
+																g,
 															),
 														pair: (g) => {
 															let {
@@ -23947,10 +23978,10 @@
 																? a.key(c)
 																: '' === f
 																? `${a.key(
-																		c
+																		c,
 																  )} without an argument`
 																: `${a.key(
-																		c
+																		c,
 																  )}=${f}`
 														},
 													},
@@ -23982,19 +24013,19 @@
 																	_.length >
 																		0 &&
 																	!this._flags.includes(
-																		_
+																		_,
 																	)
 																) {
 																	let E =
 																		this._flags.find(
 																			(
-																				N
+																				N,
 																			) =>
 																				f(
 																					N,
-																					_
+																					_,
 																				) <
-																				3
+																				3,
 																		)
 																	if (E)
 																		return (
@@ -24002,17 +24033,17 @@
 																				[
 																					`Unknown flag ${c.yellow(
 																						w.descriptor.value(
-																							_
-																						)
+																							_,
+																						),
 																					)},`,
 																					`did you mean ${c.blue(
 																						w.descriptor.value(
-																							E
-																						)
+																							E,
+																						),
 																					)}?`,
 																				].join(
-																					' '
-																				)
+																					' ',
+																				),
 																			),
 																			E
 																		)
@@ -24042,7 +24073,7 @@
 															? Array.isArray(_)
 																? (T, m) =>
 																		_.includes(
-																			T
+																			T,
 																		)
 																			? {
 																					[T]: m,
@@ -24059,7 +24090,7 @@
 																		} = o,
 																		v = Hn(
 																			o,
-																			vD
+																			vD,
 																		)
 																	return t.levenUnknownHandler(
 																		T,
@@ -24067,14 +24098,14 @@
 																		Object.assign(
 																			Object.assign(
 																				{},
-																				C
+																				C,
 																			),
 																			{},
 																			{
 																				schemas:
 																					v,
-																			}
-																		)
+																			},
+																		),
 																	)
 															  },
 														x = F
@@ -24094,8 +24125,8 @@
 																	t.AnySchema.create(
 																		{
 																			name: '_',
-																		}
-																	)
+																		},
+																	),
 																)
 															for (let E of g)
 																w.push(
@@ -24107,7 +24138,7 @@
 																			F,
 																		levenshteinDistance:
 																			_,
-																	})
+																	}),
 																),
 																	E.alias &&
 																		f &&
@@ -24117,8 +24148,8 @@
 																					name: E.alias,
 																					sourceName:
 																						E.name,
-																				}
-																			)
+																				},
+																			),
 																		)
 															return w
 														})(c, {
@@ -24133,7 +24164,7 @@
 																logger: f,
 																unknown: N,
 																descriptor: x,
-															}
+															},
 														),
 														$ = !1 !== f
 													$ &&
@@ -24174,12 +24205,12 @@
 															{
 																name: E,
 																preprocess: (
-																	P
+																	P,
 																) => (
 																	!1 === P ||
 																		(P =
 																			Array.isArray(
-																				P
+																				P,
 																			)
 																				? P
 																				: [
@@ -24192,11 +24223,11 @@
 																	P.every(
 																		($) =>
 																			'string' ==
-																			typeof $
+																			typeof $,
 																	),
 																expected: () =>
 																	'false or paths to plugin search dir',
-															}
+															},
 														)
 													let x,
 														N = { name: E },
@@ -24225,7 +24256,7 @@
 																				? Object.assign(
 																						Object.assign(
 																							{},
-																							P
+																							P,
 																						),
 																						{},
 																						{
@@ -24236,9 +24267,9 @@
 																										value: P.redirect,
 																									},
 																								},
-																						}
+																						},
 																				  )
-																				: P
+																				: P,
 																	))
 															break
 														case 'boolean':
@@ -24260,13 +24291,13 @@
 																				P.oppositeDescription &&
 																					`no-${P.name}`,
 																			].filter(
-																				Boolean
-																			)
+																				Boolean,
+																			),
 																	))
 															break
 														default:
 															throw new Error(
-																`Unexpected type ${g.type}`
+																`Unexpected type ${g.type}`,
 															)
 													}
 													if (
@@ -24274,28 +24305,30 @@
 															? (N.validate = (
 																	P,
 																	$,
-																	D
+																	D,
 															  ) =>
 																	g.exception(
-																		P
+																		P,
 																	) ||
 																	$.validate(
 																		P,
-																		D
+																		D,
 																	))
 															: (N.validate = (
 																	P,
 																	$,
-																	D
+																	D,
 															  ) =>
 																	void 0 ===
 																		P ||
 																	$.validate(
 																		P,
-																		D
+																		D,
 																	)),
 														g.redirect &&
-															(I.redirect = (P) =>
+															(I.redirect = (
+																P,
+															) =>
 																P
 																	? {
 																			to: {
@@ -24318,17 +24351,17 @@
 														N.preprocess = (
 															$,
 															D,
-															T
+															T,
 														) =>
 															D.preprocess(
 																P(
 																	Array.isArray(
-																		$
+																		$,
 																	)
 																		? s($)
-																		: $
+																		: $,
 																),
-																T
+																T,
 															)
 													}
 													return g.array
@@ -24341,37 +24374,37 @@
 																				? {
 																						preprocess:
 																							(
-																								P
+																								P,
 																							) =>
 																								Array.isArray(
-																									P
+																									P,
 																								)
 																									? P
 																									: [
 																											P,
 																									  ],
 																				  }
-																				: {}
+																				: {},
 																		),
-																		I
+																		I,
 																	),
 																	{},
 																	{
 																		valueSchema:
 																			x.create(
-																				N
+																				N,
 																			),
-																	}
-																)
+																	},
+																),
 														  )
 														: x.create(
 																Object.assign(
 																	Object.assign(
 																		{},
-																		N
+																		N,
 																	),
-																	I
-																)
+																	I,
+																),
 														  )
 												}
 												r.exports = {
@@ -24388,8 +24421,8 @@
 																	{
 																		isCLI: !0,
 																	},
-																	f
-																)
+																	f,
+																),
 															)
 														},
 												}
@@ -24438,7 +24471,7 @@
 													hasSameLocStart: n,
 													hasSameLoc: function i(
 														l,
-														p
+														p,
 													) {
 														return (
 															n(l, p) &&
@@ -24446,7 +24479,7 @@
 																let y = a(l)
 																return (
 																	Number.isInteger(
-																		y
+																		y,
 																	) &&
 																	y === a(p)
 																)
@@ -24464,7 +24497,7 @@
 										qm = te({
 											'scripts/build/shims/babel-highlight.cjs'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = kr(),
@@ -24478,19 +24511,19 @@
 										}),
 										Mm = te({
 											'node_modules/@babel/code-frame/lib/index.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.codeFrameColumns = u),
 													(e.default = function i(
 														l,
 														p,
-														y
+														y,
 													) {
 														let h =
 															arguments.length >
@@ -24506,24 +24539,24 @@
 															if (wt.emitWarning)
 																wt.emitWarning(
 																	c,
-																	'DeprecationWarning'
+																	'DeprecationWarning',
 																)
 															else {
 																;(new Error(
-																	c
+																	c,
 																).name =
 																	'DeprecationWarning'),
 																	console.warn(
 																		new Error(
-																			c
-																		)
+																			c,
+																		),
 																	)
 															}
 														}
 														return (
 															(y = Math.max(
 																y,
-																0
+																0,
 															)),
 															u(
 																l,
@@ -24533,7 +24566,7 @@
 																		line: p,
 																	},
 																},
-																h
+																h,
 															)
 														)
 													})
@@ -24554,7 +24587,7 @@
 																y.forceColor) &&
 															(0,
 															r.shouldHighlight)(
-																y
+																y,
 															),
 														g = (0, r.getChalk)(y),
 														c = (function s(l) {
@@ -24576,7 +24609,7 @@
 														} = (function n(
 															l,
 															p,
-															y
+															y,
 														) {
 															let h =
 																	Object.assign(
@@ -24584,13 +24617,13 @@
 																			column: 0,
 																			line: -1,
 																		},
-																		l.start
+																		l.start,
 																	),
 																g =
 																	Object.assign(
 																		{},
 																		h,
-																		l.end
+																		l.end,
 																	),
 																{
 																	linesAbove:
@@ -24604,11 +24637,11 @@
 																E = g.column,
 																N = Math.max(
 																	F - (c + 1),
-																	0
+																	0,
 																),
 																x = Math.min(
 																	p.length,
-																	w + f
+																	w + f,
 																)
 															;-1 === F &&
 																(N = 0),
@@ -24704,7 +24737,7 @@
 																? (0,
 																  r.default)(
 																		l,
-																		y
+																		y,
 																  )
 																: l
 														)
@@ -24716,7 +24749,7 @@
 																		1 +
 																		D,
 																	C = ` ${` ${T}`.slice(
-																		-x
+																		-x,
 																	)} |`,
 																	o = E[T],
 																	d =
@@ -24728,7 +24761,7 @@
 																	let v = ''
 																	if (
 																		Array.isArray(
-																			o
+																			o,
 																		)
 																	) {
 																		let S =
@@ -24737,11 +24770,11 @@
 																					Math.max(
 																						o[0] -
 																							1,
-																						0
-																					)
+																						0,
+																					),
 																				).replace(
 																					/[^\t]/g,
-																					' '
+																					' ',
 																				),
 																			b =
 																				o[1] ||
@@ -24752,19 +24785,19 @@
 																				c.gutter,
 																				C.replace(
 																					/\d/g,
-																					' '
-																				)
+																					' ',
+																				),
 																			),
 																			' ',
 																			S,
 																			f(
 																				c.marker,
-																				'^'
+																				'^',
 																			).repeat(
-																				b
+																				b,
 																			),
 																		].join(
-																			''
+																			'',
 																		)),
 																			d &&
 																				y.message &&
@@ -24772,17 +24805,17 @@
 																					' ' +
 																					f(
 																						c.message,
-																						y.message
+																						y.message,
 																					))
 																	}
 																	return [
 																		f(
 																			c.marker,
-																			'>'
+																			'>',
 																		),
 																		f(
 																			c.gutter,
-																			C
+																			C,
 																		),
 																		$.length >
 																		0
@@ -24793,7 +24826,7 @@
 																}
 																return ` ${f(
 																	c.gutter,
-																	C
+																	C,
 																)}${
 																	$.length > 0
 																		? ` ${$}`
@@ -24805,7 +24838,7 @@
 														y.message &&
 															!N &&
 															(P = `${' '.repeat(
-																x + 1
+																x + 1,
 															)}${
 																y.message
 															}\n${P}`),
@@ -24830,15 +24863,15 @@
 													for (let f of g.plugins)
 														if (f.parsers)
 															for (let F of i(
-																f.parsers
+																f.parsers,
 															))
 																Object.defineProperty(
 																	c,
 																	F,
 																	l(
 																		f.parsers,
-																		F
-																	)
+																		F,
+																	),
 																)
 													return c
 												}
@@ -24865,12 +24898,12 @@
 														if (
 															Object.prototype.hasOwnProperty.call(
 																c,
-																g.parser
+																g.parser,
 															)
 														)
 															return c[g.parser]
 														throw new t(
-															`Couldn't resolve parser "${g.parser}". Parsers must be explicitly added to the standalone bundle.`
+															`Couldn't resolve parser "${g.parser}". Parsers must be explicitly added to the standalone bundle.`,
 														)
 													}
 												}
@@ -24882,10 +24915,10 @@
 																	{},
 																	Object.fromEntries(
 																		Object.keys(
-																			f
+																			f,
 																		).map(
 																			(
-																				w
+																				w,
 																			) => [
 																				w,
 																				{
@@ -24897,9 +24930,9 @@
 																						]
 																							.parse,
 																				},
-																			]
-																		)
-																	)
+																			],
+																		),
+																	),
 																),
 															_ = y(c, f)
 														try {
@@ -24908,14 +24941,14 @@
 																	(g =
 																		_.preprocess(
 																			g,
-																			c
+																			c,
 																		)),
 																{
 																	text: g,
 																	ast: _.parse(
 																		g,
 																		F,
-																		c
+																		c,
 																	),
 																}
 															)
@@ -24934,7 +24967,7 @@
 																			{
 																				highlightCode:
 																					!0,
-																			}
+																			},
 																		)),
 																	(w.message +=
 																		'\n' +
@@ -24975,27 +25008,27 @@
 															.languages.filter(
 																(_) =>
 																	null !==
-																	_.since
+																	_.since,
 															)
 															.find(
 																(_) =>
 																	(_.extensions &&
 																		_.extensions.some(
 																			(
-																				w
+																				w,
 																			) =>
 																				c.endsWith(
-																					w
-																				)
+																					w,
+																				),
 																		)) ||
 																	(_.filenames &&
 																		_.filenames.some(
 																			(
-																				w
+																				w,
 																			) =>
 																				w.toLowerCase() ===
-																				c
-																		))
+																				c,
+																		)),
 															)
 													return F && F.parsers[0]
 												}
@@ -25010,7 +25043,7 @@
 																	: {},
 															c = Object.assign(
 																{},
-																h
+																h,
 															),
 															f = a({
 																plugins:
@@ -25023,26 +25056,26 @@
 															F = Object.assign(
 																Object.assign(
 																	{},
-																	i
+																	i,
 																),
 																Object.fromEntries(
 																	f
 																		.filter(
 																			(
-																				x
+																				x,
 																			) =>
 																				void 0 !==
-																				x.default
+																				x.default,
 																		)
 																		.map(
 																			(
-																				x
+																				x,
 																			) => [
 																				x.name,
 																				x.default,
-																			]
-																		)
-																)
+																			],
+																		),
+																),
 															)
 														if (!c.parser)
 															if (c.filepath) {
@@ -25050,19 +25083,19 @@
 																	((c.parser =
 																		y(
 																			c.filepath,
-																			c.plugins
+																			c.plugins,
 																		)),
 																	!c.parser)
 																)
 																	throw new s(
-																		`No parser could be inferred for file: ${c.filepath}`
+																		`No parser could be inferred for file: ${c.filepath}`,
 																	)
 															} else
 																(
 																	g.logger ||
 																	console
 																).warn(
-																	"No parser and no filepath given, using 'babel' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred."
+																	"No parser and no filepath given, using 'babel' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred.",
 																),
 																	(c.parser =
 																		'babel')
@@ -25073,15 +25106,15 @@
 																	f.find(
 																		(x) =>
 																			'parser' ===
-																			x.name
+																			x.name,
 																	),
 																],
 																{
 																	passThrough:
 																		!0,
 																	logger: !1,
-																}
-															)
+																},
+															),
 														)
 														;(c.astFormat =
 															_.astFormat),
@@ -25095,7 +25128,7 @@
 															} = h
 															if (!g)
 																throw new Error(
-																	'getPlugin() requires astFormat to be set'
+																	'getPlugin() requires astFormat to be set',
 																)
 															let c =
 																h.plugins.find(
@@ -25104,11 +25137,11 @@
 																		f
 																			.printers[
 																			g
-																		]
+																		],
 																)
 															if (!c)
 																throw new Error(
-																	`Couldn't find plugin for AST format "${g}"`
+																	`Couldn't find plugin for AST format "${g}"`,
 																)
 															return c
 														})(c)
@@ -25121,7 +25154,7 @@
 																	f
 																		.filter(
 																			(
-																				x
+																				x,
 																			) =>
 																				x.pluginDefaults &&
 																				void 0 !==
@@ -25129,11 +25162,11 @@
 																						.pluginDefaults[
 																						w
 																							.name
-																					]
+																					],
 																		)
 																		.map(
 																			(
-																				x
+																				x,
 																			) => [
 																				x.name,
 																				x
@@ -25141,15 +25174,15 @@
 																					w
 																						.name
 																				],
-																			]
-																		)
+																			],
+																		),
 																),
 															N = Object.assign(
 																Object.assign(
 																	{},
-																	F
+																	F,
 																),
-																E
+																E,
 															)
 														for (let [
 															x,
@@ -25171,11 +25204,11 @@
 																	{
 																		passThrough:
 																			Object.keys(
-																				i
+																				i,
 																			),
 																	},
-																	g
-																)
+																	g,
+																),
 															)
 														)
 													},
@@ -25190,12 +25223,12 @@
 													(r.exports = function t(
 														s,
 														a,
-														n
+														n,
 													) {
 														if (Array.isArray(s))
 															return s
 																.map((p) =>
-																	t(p, a, n)
+																	t(p, a, n),
 																)
 																.filter(Boolean)
 														if (
@@ -25223,7 +25256,7 @@
 																(l[p] = t(
 																	y,
 																	a,
-																	s
+																	s,
 																))
 														if (u) {
 															let p = u(s, l, n)
@@ -25238,7 +25271,7 @@
 										Zt = te({
 											'scripts/build/shims/assert.cjs'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = () => {}
@@ -25283,7 +25316,7 @@
 														if (
 															q.canAttachComment &&
 															q.canAttachComment(
-																k
+																k,
 															)
 														) {
 															let V
@@ -25303,7 +25336,7 @@
 															return void R.splice(
 																V + 1,
 																0,
-																k
+																k,
 															)
 														}
 													} else if (w.has(k))
@@ -25312,7 +25345,7 @@
 														(q.getCommentChildNodes &&
 															q.getCommentChildNodes(
 																k,
-																M
+																M,
 															)) ||
 														('object' == typeof k &&
 															Object.entries(k)
@@ -25372,7 +25405,7 @@
 														else {
 															if (!(V <= de))
 																throw new Error(
-																	'Comment location overlaps with node location'
+																	'Comment location overlaps with node location',
 																)
 															;(ie = K), (ce = W)
 														}
@@ -25401,7 +25434,7 @@
 												var x = () => !1
 												var P = (k) =>
 													!/[\S\n\u2028\u2029]/.test(
-														k
+														k,
 													)
 												function $(k, M, R, q) {
 													let {
@@ -25429,8 +25462,8 @@
 																!P(
 																	k.slice(
 																		V(ie),
-																		j
-																	)
+																		j,
+																	),
 																)
 															)
 																break
@@ -25466,8 +25499,8 @@
 																!P(
 																	k.slice(
 																		j,
-																		Q(ie)
-																	)
+																		Q(ie),
+																	),
 																)
 															)
 																break
@@ -25488,7 +25521,7 @@
 															(R.printer
 																.getGapRegex &&
 																R.printer.getGapRegex(
-																	Q
+																	Q,
 																)) ||
 															/^[\s(]*$/,
 														j = R.locStart(L)
@@ -25502,7 +25535,7 @@
 															t.strictEqual(ce, L)
 														let W = M.slice(
 															R.locEnd(ie),
-															j
+															j,
 														)
 														if (!V.test(W)) break
 														j = R.locStart(ie)
@@ -25521,11 +25554,11 @@
 															ie.comments.sort(
 																(ee, ce) =>
 																	R.locStart(
-																		ee
+																		ee,
 																	) -
 																	R.locStart(
-																		ce
-																	)
+																		ce,
+																	),
 															)
 													k.length = 0
 												}
@@ -25535,7 +25568,7 @@
 															!0),
 														M.printer.printComment(
 															k,
-															M
+															M,
 														)
 													)
 												}
@@ -25558,7 +25591,7 @@
 													let J = q.comments || []
 													R &&
 														(J = J.filter(
-															(j) => !R.has(j)
+															(j) => !R.has(j),
 														))
 													let L = q === M.cursorNode
 													if (0 === J.length) {
@@ -25583,7 +25616,7 @@
 																? Q.push(
 																		(function o(
 																			k,
-																			M
+																			M,
 																		) {
 																			let R =
 																					k.getValue(),
@@ -25591,7 +25624,7 @@
 																					[
 																						m(
 																							k,
-																							M
+																							M,
 																						),
 																					],
 																				{
@@ -25606,35 +25639,35 @@
 																			if (
 																				J.isBlockComment &&
 																				J.isBlockComment(
-																					R
+																					R,
 																				)
 																			) {
 																				let ie =
 																					y(
 																						L,
 																						V(
-																							R
-																						)
+																							R,
+																						),
 																					)
 																						? y(
 																								L,
 																								Q(
-																									R
+																									R,
 																								),
 																								{
 																									backwards:
 																										!0,
-																								}
+																								},
 																						  )
 																							? a
 																							: s
 																						: ' '
 																				q.push(
-																					ie
+																					ie,
 																				)
 																			} else
 																				q.push(
-																					a
+																					a,
 																				)
 																			let Y =
 																				h(
@@ -25642,36 +25675,39 @@
 																					g(
 																						L,
 																						V(
-																							R
-																						)
-																					)
+																							R,
+																						),
+																					),
 																				)
 																			return (
 																				!1 !==
 																					Y &&
 																					y(
 																						L,
-																						Y
+																						Y,
 																					) &&
 																					q.push(
-																						a
+																						a,
 																					),
 																				q
 																			)
-																		})(k, M)
+																		})(
+																			k,
+																			M,
+																		),
 																  )
 																: ie &&
 																  V.push(
 																		(function d(
 																			k,
-																			M
+																			M,
 																		) {
 																			let R =
 																					k.getValue(),
 																				q =
 																					m(
 																						k,
-																						M
+																						M,
 																					),
 																				{
 																					printer:
@@ -25684,25 +25720,25 @@
 																				V =
 																					J.isBlockComment &&
 																					J.isBlockComment(
-																						R
+																						R,
 																					)
 																			if (
 																				y(
 																					L,
 																					Q(
-																						R
+																						R,
 																					),
 																					{
 																						backwards:
 																							!0,
-																					}
+																					},
 																				)
 																			) {
 																				let Y =
 																					c(
 																						L,
 																						R,
-																						Q
+																						Q,
 																					)
 																				return i(
 																					[
@@ -25711,7 +25747,7 @@
 																							? a
 																							: '',
 																						q,
-																					]
+																					],
 																				)
 																			}
 																			let j =
@@ -25724,13 +25760,16 @@
 																					(j =
 																						[
 																							i(
-																								j
+																								j,
 																							),
 																							n,
 																						]),
 																				j
 																			)
-																		})(k, M)
+																		})(
+																			k,
+																			M,
+																		),
 																  )
 														}, 'comments'),
 														L &&
@@ -25747,7 +25786,7 @@
 														k,
 														M,
 														R,
-														q
+														q,
 													) {
 														if (!Array.isArray(k))
 															return
@@ -25776,8 +25815,8 @@
 																		N(
 																			M,
 																			W,
-																			q
-																		)
+																			q,
+																		),
 																	),
 																	{},
 																	{
@@ -25791,8 +25830,8 @@
 																			k.length -
 																				1 ===
 																			K,
-																	}
-																)
+																	},
+																),
 															)
 														for (let [
 															W,
@@ -25866,17 +25905,17 @@
 																		(z
 																			? f(
 																					z,
-																					de
+																					de,
 																			  )
 																			: ue
 																			? _(
 																					ue,
-																					de
+																					de,
 																			  )
 																			: F(
 																					Fe ||
 																						se,
-																					de
+																					de,
 																			  ))
 															else if (
 																D(U, Z, ce, W)
@@ -25887,17 +25926,17 @@
 																		(ue
 																			? _(
 																					ue,
-																					de
+																					de,
 																			  )
 																			: z
 																			? f(
 																					z,
-																					de
+																					de,
 																			  )
 																			: F(
 																					Fe ||
 																						se,
-																					de
+																					de,
 																			  ))
 															else if (
 																((de.placement =
@@ -25917,26 +25956,26 @@
 																		T(
 																			J,
 																			U,
-																			Z
+																			Z,
 																		),
 																		J.push(
-																			K
+																			K,
 																		)
 																} else
 																	ue
 																		? _(
 																				ue,
-																				de
+																				de,
 																		  )
 																		: z
 																		? f(
 																				z,
-																				de
+																				de,
 																		  )
 																		: F(
 																				Fe ||
 																					se,
-																				de
+																				de,
 																		  )
 														}
 														if ((T(J, R, q), !j))
@@ -25949,7 +25988,7 @@
 														k,
 														M,
 														R,
-														q
+														q,
 													) {
 														let {
 															leading: J,
@@ -25973,13 +26012,13 @@
 																		!Q.trailing &&
 																		(!q ||
 																			q(
-																				Q
+																				Q,
 																			)) &&
 																		J.push(
 																			m(
 																				k,
-																				M
-																			)
+																				M,
+																			),
 																		)
 																}, 'comments'),
 																0 !== J.length)
@@ -25989,7 +26028,7 @@
 																			a,
 																			l(
 																				a,
-																				J
+																				J,
 																			),
 																	  ])
 																: ''
@@ -26005,7 +26044,7 @@
 																		throw new Error(
 																			'Comment "' +
 																				M.value.trim() +
-																				'" was not printed. Please report this error!'
+																				'" was not printed. Please report this error!',
 																		)
 																	delete M.printed
 																}
@@ -26061,7 +26100,7 @@
 																void 0 !==
 																	arguments[0]
 																? arguments[0]
-																: 0
+																: 0,
 														)
 													}
 													getParentNode() {
@@ -26072,7 +26111,7 @@
 															void 0 !==
 																arguments[0]
 																? arguments[0]
-																: 0) + 1
+																: 0) + 1,
 														)
 													}
 													call(u) {
@@ -26085,7 +26124,7 @@
 																h = new Array(
 																	y > 1
 																		? y - 1
-																		: 0
+																		: 0,
 																),
 																g = 1;
 															g < y;
@@ -26109,16 +26148,16 @@
 																	: 0,
 															l = a(
 																this.stack,
-																i + 1
+																i + 1,
 															),
 															p =
 																this.stack.splice(
-																	l + 1
+																	l + 1,
 																),
 															y = u(this)
 														return (
 															this.stack.push(
-																...p
+																...p,
 															),
 															y
 														)
@@ -26133,7 +26172,7 @@
 																h = new Array(
 																	y > 1
 																		? y - 1
-																		: 0
+																		: 0,
 																),
 																g = 1;
 															g < y;
@@ -26162,7 +26201,7 @@
 																p = new Array(
 																	l > 1
 																		? l - 1
-																		: 0
+																		: 0,
 																),
 																y = 1;
 															y < l;
@@ -26176,10 +26215,10 @@
 																	i[g] = u(
 																		h,
 																		g,
-																		c
+																		c,
 																	)
 																},
-																...p
+																...p,
 															),
 															i
 														)
@@ -26204,7 +26243,7 @@
 															var p =
 																	arguments.length,
 																y = new Array(
-																	p
+																	p,
 																),
 																h = 0;
 															h < p;
@@ -26299,7 +26338,7 @@
 														i,
 														l,
 														p,
-														y
+														y,
 													) {
 														if (
 															p.printer.embed &&
@@ -26314,7 +26353,7 @@
 																		i,
 																		l,
 																		p,
-																		y
+																		y,
 																	) {
 																		let {
 																				stripTrailingHardline:
@@ -26332,9 +26371,9 @@
 																						Object.assign(
 																							Object.assign(
 																								{},
-																								p
+																								p,
 																							),
-																							l
+																							l,
 																						),
 																						{},
 																						{
@@ -26342,17 +26381,17 @@
 																								p.parser,
 																							originalText:
 																								i,
-																						}
+																						},
 																					),
 																					{
 																						passThrough:
 																							!0,
-																					}
+																					},
 																				),
 																			c =
 																				tu().parse(
 																					i,
-																					g
+																					g,
 																				),
 																			{
 																				ast: f,
@@ -26367,18 +26406,18 @@
 																				F,
 																				f,
 																				i,
-																				g
+																				g,
 																			),
 																			(g[
 																				Symbol.for(
-																					'comments'
+																					'comments',
 																				)
 																			] =
 																				F ||
 																				[]),
 																			(g[
 																				Symbol.for(
-																					'tokens'
+																					'tokens',
 																				)
 																			] =
 																				f.tokens ||
@@ -26386,21 +26425,21 @@
 																		let _ =
 																			y(
 																				f,
-																				g
+																				g,
 																			)
 																		return (
 																			a.ensureAllCommentsPrinted(
-																				F
+																				F,
 																			),
 																			h
 																				? 'string' ==
 																				  typeof _
 																					? _.replace(
 																							/(?:\r?\n)*$/,
-																							''
+																							'',
 																					  )
 																					: t(
-																							_
+																							_,
 																					  )
 																				: _
 																		)
@@ -26409,9 +26448,9 @@
 																		g,
 																		p,
 																		y,
-																		c
+																		c,
 																	),
-																p
+																p,
 															)
 													},
 												}
@@ -26452,7 +26491,7 @@
 															(w = a(
 																[s, w],
 																c,
-																g.tabWidth
+																g.tabWidth,
 															)),
 														n(w),
 														w
@@ -26464,11 +26503,11 @@
 															: Array.isArray(x)
 															? _.call(
 																	() => N(I),
-																	...x
+																	...x,
 															  )
 															: _.call(
 																	() => N(I),
-																	x
+																	x,
 															  )
 													}
 													function N(x) {
@@ -26484,7 +26523,7 @@
 															h,
 															g,
 															c,
-															f
+															f,
 														) {
 															let w,
 																E,
@@ -26495,7 +26534,7 @@
 															if (
 																_.hasPrettierIgnore &&
 																_.hasPrettierIgnore(
-																	h
+																	h,
 																)
 															)
 																({
@@ -26504,13 +26543,13 @@
 																		E,
 																} = (function p(
 																	h,
-																	g
+																	g,
 																) {
 																	let {
 																			originalText:
 																				c,
 																			[Symbol.for(
-																				'comments'
+																				'comments',
 																			)]:
 																				f,
 																			locStart:
@@ -26519,11 +26558,11 @@
 																		} = g,
 																		w =
 																			F(
-																				h
+																				h,
 																			),
 																		E =
 																			_(
-																				h
+																				h,
 																			),
 																		N =
 																			new Set()
@@ -26531,18 +26570,18 @@
 																		F(x) >=
 																			w &&
 																			_(
-																				x
+																				x,
 																			) <=
 																				E &&
 																			((x.printed =
 																				!0),
 																			N.add(
-																				x
+																				x,
 																			))
 																	return {
 																		doc: c.slice(
 																			w,
-																			E
+																			E,
 																		),
 																		printedComments:
 																			N,
@@ -26556,7 +26595,7 @@
 																				h,
 																				c,
 																				g,
-																				l
+																				l,
 																			)
 																	} catch (N) {
 																		if (
@@ -26570,20 +26609,20 @@
 																			h,
 																			g,
 																			c,
-																			f
+																			f,
 																		))
 															}
 															return (
 																(!_.willPrintOwnComments ||
 																	!_.willPrintOwnComments(
 																		h,
-																		g
+																		g,
 																	)) &&
 																	(w = u(
 																		h,
 																		w,
 																		g,
-																		E
+																		E,
 																	)),
 																w
 															)
@@ -26648,7 +26687,7 @@
 													) {
 														for (let D of s.getSortedChildNodes(
 															f,
-															_
+															_,
 														)) {
 															let T = l(
 																D,
@@ -26656,7 +26695,7 @@
 																_,
 																w,
 																[f, ...E],
-																N
+																N,
 															)
 															if (T) return T
 														}
@@ -26709,7 +26748,7 @@
 														case '__babel_estree':
 															return (function p(
 																f,
-																F
+																F,
 															) {
 																return (
 																	'DeclareExportDeclaration' !==
@@ -26723,21 +26762,21 @@
 																		'TSExportAssignment' ===
 																			f ||
 																		f.startsWith(
-																			'Declare'
+																			'Declare',
 																		) ||
 																		f.startsWith(
-																			'TSDeclare'
+																			'TSDeclare',
 																		) ||
 																		f.endsWith(
-																			'Statement'
+																			'Statement',
 																		) ||
 																		f.endsWith(
-																			'Declaration'
+																			'Declaration',
 																		))
 																)
 															})(
 																F.type,
-																_ && _.type
+																_ && _.type,
 															)
 														case 'json':
 														case 'json5':
@@ -26756,7 +26795,7 @@
 													calculateRange: function c(
 														f,
 														F,
-														_
+														_,
 													) {
 														let {
 															rangeStart: w,
@@ -26774,7 +26813,7 @@
 																w += I;
 																E > w &&
 																!/\S/.test(
-																	f[E - 1]
+																	f[E - 1],
 																);
 																--E
 															);
@@ -26787,7 +26826,7 @@
 																(C, o) =>
 																	g(F, C, o),
 																[],
-																'rangeStart'
+																'rangeStart',
 															),
 															D = P
 																? $
@@ -26798,10 +26837,10 @@
 																		(C) =>
 																			g(
 																				F,
-																				C
+																				C,
 																			),
 																		[],
-																		'rangeEnd'
+																		'rangeEnd',
 																  )
 														if (!$ || !D)
 															return {
@@ -26825,7 +26864,7 @@
 														) {
 															let C = (function n(
 																f,
-																F
+																F,
 															) {
 																let _ = [
 																		f.node,
@@ -26835,14 +26874,16 @@
 																		[
 																			F.node,
 																			...F.parentNodes,
-																		]
+																		],
 																	)
 																return _.find(
 																	(E) =>
 																		y.has(
-																			E.type
+																			E.type,
 																		) &&
-																		w.has(E)
+																		w.has(
+																			E,
+																		),
 																)
 															})($, D)
 															;(T = C), (m = C)
@@ -26853,7 +26894,7 @@
 															} = (function i(
 																f,
 																F,
-																_
+																_,
 															) {
 																let {
 																		locStart:
@@ -26870,15 +26911,15 @@
 																			x,
 																	}
 																let I = w(
-																	f.node
+																	f.node,
 																)
 																for (let $ of u(
-																	F.parentNodes
+																	F.parentNodes,
 																)) {
 																	if (
 																		!(
 																			w(
-																				$
+																				$,
 																			) >=
 																			I
 																		)
@@ -26887,15 +26928,15 @@
 																	x = $
 																}
 																let P = E(
-																	F.node
+																	F.node,
 																)
 																for (let $ of u(
-																	f.parentNodes
+																	f.parentNodes,
 																)) {
 																	if (
 																		!(
 																			E(
-																				$
+																				$,
 																			) <=
 																			P
 																		)
@@ -26918,11 +26959,11 @@
 															rangeStart:
 																Math.min(
 																	N(T),
-																	N(m)
+																	N(m),
 																),
 															rangeEnd: Math.max(
 																x(T),
-																x(m)
+																x(m),
 															),
 														}
 													},
@@ -26967,11 +27008,11 @@
 																d,
 																C,
 																m,
-																o
+																o,
 															)),
 														(o[
 															Symbol.for(
-																'comments'
+																'comments',
 															)
 														] = d || []),
 														(o[
@@ -27003,7 +27044,7 @@
 															F.findNodeAtOffset(
 																d,
 																C.cursorOffset,
-																C
+																C,
 															)
 														k &&
 															k.node &&
@@ -27015,7 +27056,7 @@
 														B = s(b, C)
 													if (
 														(g.ensureAllCommentsPrinted(
-															S
+															S,
 														),
 														o > 0)
 													) {
@@ -27025,7 +27066,7 @@
 															B.cursorNodeStart &&
 															(B.cursorNodeStart -=
 																B.formatted.indexOf(
-																	k
+																	k,
 																)),
 															(B.formatted =
 																k +
@@ -27038,13 +27079,13 @@
 															B.cursorNodeText
 																? ((k =
 																		C.locStart(
-																			C.cursorNode
+																			C.cursorNode,
 																		)),
 																  (M = v.slice(
 																		k,
 																		C.locEnd(
-																			C.cursorNode
-																		)
+																			C.cursorNode,
+																		),
 																  )),
 																  (R =
 																		C.cursorOffset -
@@ -27078,7 +27119,7 @@
 															if (Y.removed) {
 																if (
 																	Y.value.includes(
-																		w
+																		w,
 																	)
 																)
 																	break
@@ -27118,14 +27159,14 @@
 														Object.assign(
 															Object.assign(
 																{},
-																C
+																C,
 															),
 															{},
 															{
 																cursorOffset: o,
 																rangeStart: d,
 																rangeEnd: v,
-															}
+															},
 														)
 													)
 												}
@@ -27155,10 +27196,10 @@
 																	0,
 																	Math.max(
 																		k,
-																		0
-																	)
+																		0,
+																	),
 																),
-																'\r\n'
+																'\r\n',
 															)
 														;(o -= B(o)),
 															(d -= B(d)),
@@ -27173,7 +27214,7 @@
 															Object.assign(
 																Object.assign(
 																	{},
-																	C
+																	C,
 																),
 																{},
 																{
@@ -27184,8 +27225,8 @@
 																	rangeEnd: v,
 																	endOfLine:
 																		S,
-																}
-															)
+																},
+															),
 														),
 													}
 												}
@@ -27219,7 +27260,7 @@
 																? (S =
 																		(function x(
 																			m,
-																			C
+																			C,
 																		) {
 																			let {
 																					ast: o,
@@ -27227,7 +27268,7 @@
 																				} =
 																					c.parse(
 																						m,
-																						C
+																						C,
 																					),
 																				{
 																					rangeStart:
@@ -27238,35 +27279,35 @@
 																					F.calculateRange(
 																						d,
 																						C,
-																						o
+																						o,
 																					),
 																				b =
 																					d.slice(
 																						v,
-																						S
+																						S,
 																					),
 																				B =
 																					Math.min(
 																						v,
 																						d.lastIndexOf(
 																							'\n',
-																							v
+																							v,
 																						) +
-																							1
+																							1,
 																					),
 																				k =
 																					d
 																						.slice(
 																							B,
-																							v
+																							v,
 																						)
 																						.match(
-																							/^\s*/
+																							/^\s*/,
 																						)[0],
 																				M =
 																					n(
 																						k,
-																						C.tabWidth
+																						C.tabWidth,
 																					),
 																				R =
 																					N(
@@ -27274,7 +27315,7 @@
 																						Object.assign(
 																							Object.assign(
 																								{},
-																								C
+																								C,
 																							),
 																							{},
 																							{
@@ -27291,9 +27332,9 @@
 																										: -1,
 																								endOfLine:
 																									'lf',
-																							}
+																							},
 																						),
-																						M
+																						M,
 																					),
 																				q =
 																					R.formatted.trimEnd(),
@@ -27315,11 +27356,11 @@
 																			let L =
 																				d.slice(
 																					0,
-																					v
+																					v,
 																				) +
 																				q +
 																				d.slice(
-																					S
+																					S,
 																				)
 																			if (
 																				'lf' !==
@@ -27327,7 +27368,7 @@
 																			) {
 																				let Q =
 																					i(
-																						C.endOfLine
+																						C.endOfLine,
 																					)
 																				J >=
 																					0 &&
@@ -27337,14 +27378,14 @@
 																						l(
 																							L.slice(
 																								0,
-																								J
+																								J,
 																							),
-																							'\n'
+																							'\n',
 																						)),
 																					(L =
 																						L.replace(
 																							/\n/g,
-																							Q
+																							Q,
 																						))
 																			}
 																			return {
@@ -27357,7 +27398,7 @@
 																			}
 																		})(
 																			d,
-																			v
+																			v,
 																		))
 																: (!v.requirePragma &&
 																		v.insertPragma &&
@@ -27366,15 +27407,15 @@
 																			.insertPragma &&
 																		!D(
 																			d,
-																			v
+																			v,
 																		) &&
 																		(d =
 																			v.printer.insertPragma(
-																				d
+																				d,
 																			)),
 																  (S = N(
 																		d,
-																		v
+																		v,
 																  ))),
 														  o &&
 																((S.formatted =
@@ -27397,7 +27438,7 @@
 															o &&
 																(S.ast = h(
 																	S.ast,
-																	v
+																	v,
 																)),
 															S
 														)
@@ -27413,13 +27454,13 @@
 															Object.assign(
 																Object.assign(
 																	{},
-																	C
+																	C,
 																),
 																{},
 																{
 																	parser: '__js_expression',
-																}
-															)
+																},
+															),
 														).formatted,
 													printToDoc(m, C) {
 														C = y(C)
@@ -27498,12 +27539,12 @@
 										_t = te({
 											'src/utils/create-language.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function (
 														t,
-														s
+														s,
 													) {
 														let { languageId: a } =
 																t,
@@ -27514,9 +27555,9 @@
 																	linguistLanguageId:
 																		a,
 																},
-																n
+																n,
 															),
-															s(t)
+															s(t),
 														)
 													})
 											},
@@ -27524,7 +27565,7 @@
 										Jm = te({
 											'node_modules/esutils/lib/ast.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(function () {
@@ -27663,7 +27704,7 @@
 										so = te({
 											'node_modules/esutils/lib/code.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(function () {
@@ -27671,21 +27712,21 @@
 														function c(E) {
 															return E <= 65535
 																? String.fromCharCode(
-																		E
+																		E,
 																  )
 																: String.fromCharCode(
 																		Math.floor(
 																			(E -
 																				65536) /
-																				1024
+																				1024,
 																		) +
-																			55296
+																			55296,
 																  ) +
 																		String.fromCharCode(
 																			((E -
 																				65536) %
 																				1024) +
-																				56320
+																				56320,
 																		)
 														}
 														for (
@@ -27713,7 +27754,7 @@
 																	65279,
 																],
 																n = new Array(
-																	128
+																	128,
 																),
 																i = 0;
 															i < 128;
@@ -27791,7 +27832,7 @@
 																		(E >=
 																			5760 &&
 																			a.indexOf(
-																				E
+																				E,
 																			) >=
 																				0)
 																	)
@@ -27816,8 +27857,8 @@
 																		? n[E]
 																		: s.NonAsciiIdentifierStart.test(
 																				c(
-																					E
-																				)
+																					E,
+																				),
 																		  )
 																},
 															isIdentifierPartES5:
@@ -27827,8 +27868,8 @@
 																		? u[E]
 																		: s.NonAsciiIdentifierPart.test(
 																				c(
-																					E
-																				)
+																					E,
+																				),
 																		  )
 																},
 															isIdentifierStartES6:
@@ -27838,8 +27879,8 @@
 																		? n[E]
 																		: t.NonAsciiIdentifierStart.test(
 																				c(
-																					E
-																				)
+																					E,
+																				),
 																		  )
 																},
 															isIdentifierPartES6:
@@ -27849,8 +27890,8 @@
 																		? u[E]
 																		: t.NonAsciiIdentifierPart.test(
 																				c(
-																					E
-																				)
+																					E,
+																				),
 																		  )
 																},
 														}
@@ -27860,7 +27901,7 @@
 										zm = te({
 											'node_modules/esutils/lib/keyword.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(function () {
@@ -28014,10 +28055,10 @@
 																	f.length ||
 																((w =
 																	f.charCodeAt(
-																		0
+																		0,
 																	)),
 																!t.isIdentifierStartES5(
-																	w
+																	w,
 																))
 															)
 																return !1
@@ -28031,10 +28072,10 @@
 																if (
 																	((w =
 																		f.charCodeAt(
-																			F
+																			F,
 																		)),
 																	!t.isIdentifierPartES5(
-																		w
+																		w,
 																	))
 																)
 																	return !1
@@ -28066,7 +28107,7 @@
 																	55296 <=
 																		(w =
 																			f.charCodeAt(
-																				F
+																				F,
 																			)) &&
 																	w <= 56319
 																) {
@@ -28077,7 +28118,7 @@
 																			56320 <=
 																				(E =
 																					f.charCodeAt(
-																						F
+																						F,
 																					)) &&
 																			E <=
 																				57343
@@ -28116,7 +28157,7 @@
 															isIdentifierES5:
 																function g(
 																	f,
-																	F
+																	F,
 																) {
 																	return (
 																		p(f) &&
@@ -28126,7 +28167,7 @@
 															isIdentifierES6:
 																function c(
 																	f,
-																	F
+																	F,
 																) {
 																	return (
 																		h(f) &&
@@ -28139,7 +28180,7 @@
 										}),
 										Xm = te({
 											'node_modules/esutils/lib/utils.js'(
-												e
+												e,
 											) {
 												ne(),
 													(e.ast = Jm()),
@@ -28150,7 +28191,7 @@
 										Pt = te({
 											'src/language-js/utils/is-block-comment.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = new Set([
@@ -28165,12 +28206,12 @@
 										Km = te({
 											'src/language-js/utils/is-node-matches.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function s(
 														a,
-														n
+														n,
 													) {
 														return n.some((u) =>
 															(function t(a, n) {
@@ -28208,7 +28249,7 @@
 																		return !1
 																	a = a.object
 																}
-															})(a, u)
+															})(a, u),
 														)
 													})
 											},
@@ -28216,7 +28257,7 @@
 										Ke = te({
 											'src/language-js/utils/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t =
@@ -28314,7 +28355,7 @@
 															'fakeAsync',
 															'waitForAsync',
 														].includes(
-															O.callee.name
+															O.callee.name,
 														)
 													)
 												}
@@ -28403,14 +28444,14 @@
 													])
 												function fe(O) {
 													return /^(?:\d+|\d+\.\d+)$/.test(
-														O
+														O,
 													)
 												}
 												function he(O) {
 													return O.quasis.some((me) =>
 														me.value.raw.includes(
-															'\n'
-														)
+															'\n',
+														),
 													)
 												}
 												function oe(O) {
@@ -28471,8 +28512,8 @@
 														['*', '/', '%'],
 														['**'],
 													].flatMap((O, me) =>
-														O.map((_e) => [_e, me])
-													)
+														O.map((_e) => [_e, me]),
+													),
 												)
 												function re(O) {
 													return G.get(O)
@@ -28486,16 +28527,16 @@
 														O.this &&
 															me.push(O.this),
 														Array.isArray(
-															O.parameters
+															O.parameters,
 														)
 															? me.push(
-																	...O.parameters
+																	...O.parameters,
 															  )
 															: Array.isArray(
-																	O.params
+																	O.params,
 															  ) &&
 															  me.push(
-																	...O.params
+																	...O.params,
 															  ),
 														O.rest &&
 															me.push(O.rest),
@@ -28514,7 +28555,7 @@
 															((me = [O.source]),
 															O.attributes &&
 																me.push(
-																	O.attributes
+																	O.attributes,
 																)),
 														be.set(O, me),
 														me
@@ -28533,7 +28574,7 @@
 														(O.prettierIgnore ||
 															Me(
 																O,
-																Te.PrettierIgnore
+																Te.PrettierIgnore,
 															))
 													)
 												}
@@ -28558,7 +28599,7 @@
 															return (
 																_e,
 																He,
-																Ge
+																Ge,
 															) =>
 																!(
 																	(O &
@@ -28574,12 +28615,12 @@
 																	(O &
 																		Te.Block &&
 																		!g(
-																			_e
+																			_e,
 																		)) ||
 																	(O &
 																		Te.Line &&
 																		!D(
-																			_e
+																			_e,
 																		)) ||
 																	(O &
 																		Te.First &&
@@ -28593,7 +28634,7 @@
 																	(O &
 																		Te.PrettierIgnore &&
 																		!Ie(
-																			_e
+																			_e,
 																		)) ||
 																	(me &&
 																		!me(_e))
@@ -28611,7 +28652,7 @@
 												function ae(O, me, _e) {
 													if (
 														!Array.isArray(
-															O?.comments
+															O?.comments,
 														)
 													)
 														return []
@@ -28630,7 +28671,7 @@
 													)
 												}
 												var Xe = Symbol(
-													'ifWithoutBlockAndSameLineComment'
+													'ifWithoutBlockAndSameLineComment',
 												)
 												function st(O) {
 													return (
@@ -28652,26 +28693,26 @@
 															_e.this &&
 																O.call(
 																	Ge,
-																	'this'
+																	'this',
 																),
 																Array.isArray(
-																	_e.parameters
+																	_e.parameters,
 																)
 																	? O.each(
 																			Ge,
-																			'parameters'
+																			'parameters',
 																	  )
 																	: Array.isArray(
-																			_e.params
+																			_e.params,
 																	  ) &&
 																	  O.each(
 																			Ge,
-																			'params'
+																			'params',
 																	  ),
 																_e.rest &&
 																	O.call(
 																		Ge,
-																		'rest'
+																		'rest',
 																	)
 														},
 													getCallArguments: Ye,
@@ -28685,24 +28726,24 @@
 																		(He) =>
 																			me(
 																				He,
-																				0
+																				0,
 																			),
-																		'source'
+																		'source',
 																  ),
 																  _e.attributes &&
 																		O.call(
 																			(
-																				He
+																				He,
 																			) =>
 																				me(
 																					He,
-																					1
+																					1,
 																				),
-																			'attributes'
+																			'attributes',
 																		))
 																: O.each(
 																		me,
-																		'arguments'
+																		'arguments',
 																  )
 														},
 													hasRestParameter:
@@ -28716,7 +28757,7 @@
 																(null ===
 																	(me =
 																		s(
-																			_e
+																			_e,
 																		)) ||
 																void 0 === me
 																	? void 0
@@ -28799,7 +28840,7 @@
 																	'expression',
 																]
 															throw new Error(
-																'Unexpected node has no left side.'
+																'Unexpected node has no left side.',
 															)
 														},
 													getParentExportDeclaration:
@@ -28844,12 +28885,12 @@
 																		void 0 ===
 																			_e
 																		? void 0
-																		: _e[0]
+																		: _e[0],
 																) &&
 																F.test(
 																	O
 																		.trailingComments[0]
-																		.value
+																		.value,
 																)
 															)
 														},
@@ -28864,9 +28905,9 @@
 																			a(
 																				O,
 																				y(
-																					_e
-																				)
-																			)
+																					_e,
+																				),
+																			),
 																  )
 														},
 													hasNakedLeftSide:
@@ -28907,22 +28948,22 @@
 														if (Array.isArray(O))
 															return O.some(
 																(He) =>
-																	N(He, me)
+																	N(He, me),
 															)
 														let _e = me(O)
 														return 'boolean' ==
 															typeof _e
 															? _e
 															: Object.values(
-																	O
+																	O,
 															  ).some((He) =>
-																	N(He, me)
+																	N(He, me),
 															  )
 													},
 													hasIgnoreComment:
 														function Je(O) {
 															return Oe(
-																O.getValue()
+																O.getValue(),
 															)
 														},
 													hasNodeIgnoreComment: Oe,
@@ -28934,7 +28975,7 @@
 													isEnabledHackPipeline:
 														function We(O) {
 															return Boolean(
-																O.__isUsingHackPipeline
+																O.__isUsingHackPipeline,
 															)
 														},
 													isLineComment: D,
@@ -28951,12 +28992,12 @@
 																'/*' ===
 																	O.slice(
 																		_e,
-																		_e + 2
+																		_e + 2,
 																	) &&
 																'*/' ===
 																	O.slice(
 																		He,
-																		He + 2
+																		He + 2,
 																	)
 															)
 														},
@@ -28978,7 +29019,7 @@
 																	for (let He of _e.arguments)
 																		if (
 																			b(
-																				He
+																				He,
 																			)
 																		)
 																			return !0
@@ -29015,7 +29056,7 @@
 																	_e.test(
 																		me.tag
 																			.object
-																			.name
+																			.name,
 																	)) ||
 																	('MemberExpression' ===
 																		me.tag
@@ -29050,7 +29091,7 @@
 																				.tag
 																				.object
 																				.object
-																				.name
+																				.name,
 																		)))
 															)
 														},
@@ -29082,7 +29123,7 @@
 															let _e = (Qe) =>
 																	Pe(
 																		Qe,
-																		me + 1
+																		me + 1,
 																	),
 																He =
 																	('Literal' ===
@@ -29133,60 +29174,60 @@
 																	O.type
 																		? O.quasis.every(
 																				(
-																					Qe
+																					Qe,
 																				) =>
 																					!Qe.value.raw.includes(
-																						'\n'
-																					)
+																						'\n',
+																					),
 																		  ) &&
 																		  O.expressions.every(
-																				_e
+																				_e,
 																		  )
 																		: 'ObjectExpression' ===
 																		  O.type
 																		? O.properties.every(
 																				(
-																					Qe
+																					Qe,
 																				) =>
 																					!Qe.computed &&
 																					(Qe.shorthand ||
 																						(Qe.value &&
 																							_e(
-																								Qe.value
-																							)))
+																								Qe.value,
+																							))),
 																		  )
 																		: 'ArrayExpression' ===
 																		  O.type
 																		? O.elements.every(
 																				(
-																					Qe
+																					Qe,
 																				) =>
 																					null ===
 																						Qe ||
 																					_e(
-																						Qe
-																					)
+																						Qe,
+																					),
 																		  )
 																		: tt(O)
 																		? ('ImportExpression' ===
 																				O.type ||
 																				Pe(
 																					O.callee,
-																					me
+																					me,
 																				)) &&
 																		  Ye(
-																				O
+																				O,
 																		  ).every(
-																				_e
+																				_e,
 																		  )
 																		: ue(O)
 																		? Pe(
 																				O.object,
-																				me
+																				me,
 																		  ) &&
 																		  Pe(
 																				O.property,
-																				me
+																				me,
 																		  )
 																		: ('UnaryExpression' ===
 																				O.type &&
@@ -29210,13 +29251,13 @@
 																				])
 																		? Pe(
 																				O.argument,
-																				me
+																				me,
 																		  )
 																		: 'TSNonNullExpression' ===
 																				O.type &&
 																		  Pe(
 																				O.expression,
-																				me
+																				me,
 																		  )))
 															)
 														},
@@ -29226,7 +29267,7 @@
 															('BindExpression' ===
 																O.type &&
 																Boolean(
-																	O.object
+																	O.object,
 																))
 														)
 													},
@@ -29272,7 +29313,7 @@
 															)
 														},
 													isSimpleType: function ie(
-														O
+														O,
 													) {
 														return (
 															!!O &&
@@ -29302,7 +29343,7 @@
 																	(He) => {
 																		if (
 																			Me(
-																				He
+																				He,
 																			)
 																		)
 																			return !1
@@ -29315,7 +29356,7 @@
 																			return !0
 																		if (
 																			ue(
-																				He
+																				He,
 																			)
 																		) {
 																			let Ge =
@@ -29323,7 +29364,7 @@
 																			for (
 																				;
 																				ue(
-																					Ge
+																					Ge,
 																				);
 
 																			)
@@ -29347,7 +29388,7 @@
 																					((Ge =
 																						Ge.object),
 																					Me(
-																						Ge
+																						Ge,
 																					))
 																				)
 																					return !1
@@ -29359,7 +29400,7 @@
 																			)
 																		}
 																		return !1
-																	}
+																	},
 																)
 															)
 														},
@@ -29372,12 +29413,12 @@
 																v(O.key) &&
 																oe(O.key).slice(
 																	1,
-																	-1
+																	-1,
 																) ===
 																	O.key
 																		.value &&
 																((t(
-																	O.key.value
+																	O.key.value,
 																) &&
 																	!(
 																		('babel-ts' ===
@@ -29391,14 +29432,14 @@
 																	)) ||
 																	(fe(
 																		O.key
-																			.value
+																			.value,
 																	) &&
 																		String(
 																			Number(
 																				O
 																					.key
-																					.value
-																			)
+																					.value,
+																			),
 																		) ===
 																			O
 																				.key
@@ -29424,7 +29465,7 @@
 																	('TaggedTemplateExpression' ===
 																		O.type &&
 																		he(
-																			O.quasi
+																			O.quasi,
 																		))) &&
 																!a(me, p(O), {
 																	backwards:
@@ -29434,7 +29475,7 @@
 														},
 													isTestCall: function K(
 														O,
-														me
+														me,
 													) {
 														if (
 															'CallExpression' !==
@@ -29452,11 +29493,11 @@
 															)
 																return b(
 																	O
-																		.arguments[0]
+																		.arguments[0],
 																)
 															if (
 																(function ee(
-																	O
+																	O,
 																) {
 																	return (
 																		'Identifier' ===
@@ -29466,7 +29507,7 @@
 																		/^(?:before|after)(?:Each|All)$/.test(
 																			O
 																				.callee
-																				.name
+																				.name,
 																		) &&
 																		1 ===
 																			O
@@ -29477,7 +29518,7 @@
 															)
 																return k(
 																	O
-																		.arguments[0]
+																		.arguments[0],
 																)
 														} else if (
 															(2 ===
@@ -29491,7 +29532,7 @@
 																	.type ||
 																v(
 																	O
-																		.arguments[0]
+																		.arguments[0],
 																)) &&
 															(function W(O) {
 																return c(O, ce)
@@ -29503,7 +29544,7 @@
 																		.arguments[2] &&
 																	!o(
 																		O
-																			.arguments[2]
+																			.arguments[2],
 																	)
 																) &&
 																((2 ===
@@ -29511,10 +29552,10 @@
 																	.length
 																	? b(
 																			O
-																				.arguments[1]
+																				.arguments[1],
 																	  )
 																	: (function B(
-																			O
+																			O,
 																	  ) {
 																			return (
 																				'FunctionExpression' ===
@@ -29528,17 +29569,17 @@
 																			)
 																	  })(
 																			O
-																				.arguments[1]
+																				.arguments[1],
 																	  ) &&
 																	  ve(
 																			O
-																				.arguments[1]
+																				.arguments[1],
 																	  )
 																			.length <=
 																			1) ||
 																	k(
 																		O
-																			.arguments[1]
+																			.arguments[1],
 																	))
 															)
 														return !1
@@ -29557,7 +29598,7 @@
 															if (
 																!_e.expression ||
 																!M(
-																	_e.expression
+																	_e.expression,
 																)
 															)
 																return !1
@@ -29575,7 +29616,7 @@
 														return (
 															O.filepath &&
 															/\.tsx$/i.test(
-																O.filepath
+																O.filepath,
 															)
 														)
 													},
@@ -29593,13 +29634,13 @@
 																O.static ||
 																h(
 																	O,
-																	O.typeAnnotation
+																	O.typeAnnotation,
 																)
 															)
 														},
 													isNextLineEmpty: (
 														O,
-														me
+														me,
 													) => {
 														let {
 															originalText: _e,
@@ -29613,8 +29654,8 @@
 															let me = s(
 																ae(
 																	O,
-																	Te.Dangling
-																)
+																	Te.Dangling,
+																),
 															)
 															return me && !g(me)
 														},
@@ -29645,7 +29686,7 @@
 														function ye(O) {
 															return (
 																Boolean(
-																	De[O]
+																	De[O],
 																) ||
 																'|' === O ||
 																'^' === O ||
@@ -29654,7 +29695,7 @@
 														},
 													shouldFlatten: function A(
 														O,
-														me
+														me,
 													) {
 														return !(
 															re(me) !== re(O) ||
@@ -29679,13 +29720,13 @@
 																case 'NGPipeExpression':
 																	return le(
 																		O.left,
-																		me
+																		me,
 																	)
 																case 'MemberExpression':
 																case 'OptionalMemberExpression':
 																	return le(
 																		O.object,
-																		me
+																		me,
 																	)
 																case 'TaggedTemplateExpression':
 																	return (
@@ -29695,7 +29736,7 @@
 																				.type &&
 																		le(
 																			O.tag,
-																			me
+																			me,
 																		)
 																	)
 																case 'CallExpression':
@@ -29707,20 +29748,20 @@
 																				.type &&
 																		le(
 																			O.callee,
-																			me
+																			me,
 																		)
 																	)
 																case 'ConditionalExpression':
 																	return le(
 																		O.test,
-																		me
+																		me,
 																	)
 																case 'UpdateExpression':
 																	return (
 																		!O.prefix &&
 																		le(
 																			O.argument,
-																			me
+																			me,
 																		)
 																	)
 																case 'BindExpression':
@@ -29728,21 +29769,21 @@
 																		O.object &&
 																		le(
 																			O.object,
-																			me
+																			me,
 																		)
 																	)
 																case 'SequenceExpression':
 																	return le(
 																		O
 																			.expressions[0],
-																		me
+																		me,
 																	)
 																case 'TSSatisfiesExpression':
 																case 'TSAsExpression':
 																case 'TSNonNullExpression':
 																	return le(
 																		O.expression,
-																		me
+																		me,
 																	)
 																default:
 																	return me(O)
@@ -29761,7 +29802,7 @@
 										jt = te({
 											'src/language-js/print/template-literal.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = lt(),
@@ -29800,7 +29841,7 @@
 												function m(C) {
 													return C.replace(
 														/([\\`]|\${)/g,
-														'\\$1'
+														'\\$1',
 													)
 												}
 												r.exports = {
@@ -29812,14 +29853,14 @@
 																	v.type &&
 																_(
 																	v,
-																	C.getParentNode()
+																	C.getParentNode(),
 																)
 															) {
 																let R =
 																	(function P(
 																		C,
 																		o,
-																		d
+																		d,
 																	) {
 																		let v =
 																				C.getNode(),
@@ -29827,17 +29868,17 @@
 																				v.quasis[0].value.raw
 																					.trim()
 																					.split(
-																						/\s*\|\s*/
+																						/\s*\|\s*/,
 																					)
 																		if (
 																			S.length >
 																				1 ||
 																			S.some(
 																				(
-																					b
+																					b,
 																				) =>
 																					b.length >
-																					0
+																					0,
 																			)
 																		) {
 																			o.__inJestEach =
@@ -29845,7 +29886,7 @@
 																			let b =
 																				C.map(
 																					d,
-																					'expressions'
+																					'expressions',
 																				)
 																			o.__inJestEach =
 																				!1
@@ -29854,7 +29895,7 @@
 																				k =
 																					b.map(
 																						(
-																							L
+																							L,
 																						) =>
 																							'${' +
 																							c(
@@ -29862,7 +29903,7 @@
 																								Object.assign(
 																									Object.assign(
 																										{},
-																										o
+																										o,
 																									),
 																									{},
 																									{
@@ -29870,11 +29911,11 @@
 																											Number.POSITIVE_INFINITY,
 																										endOfLine:
 																											'lf',
-																									}
-																								)
+																									},
+																								),
 																							)
 																								.formatted +
-																							'}'
+																							'}',
 																					),
 																				M =
 																					[
@@ -29894,7 +29935,7 @@
 																			) {
 																				let Q =
 																						t(
-																							M
+																							M,
 																						),
 																					V =
 																						k[
@@ -29902,24 +29943,24 @@
 																								1
 																						]
 																				Q.cells.push(
-																					V
+																					V,
 																				),
 																					V.includes(
-																						'\n'
+																						'\n',
 																					) &&
 																						(Q.hasLineBreak =
 																							!0),
 																					v.quasis[
 																						L
 																					].value.raw.includes(
-																						'\n'
+																						'\n',
 																					) &&
 																						M.push(
 																							{
 																								hasLineBreak:
 																									!1,
 																								cells: [],
-																							}
+																							},
 																						)
 																			}
 																			let R =
@@ -29927,20 +29968,20 @@
 																						S.length,
 																						...M.map(
 																							(
-																								L
+																								L,
 																							) =>
 																								L
 																									.cells
-																									.length
-																						)
+																									.length,
+																						),
 																					),
 																				q =
 																					Array.from(
 																						{
 																							length: R,
-																						}
+																						},
 																					).fill(
-																						0
+																						0,
 																					),
 																				J =
 																					[
@@ -29949,21 +29990,21 @@
 																						},
 																						...M.filter(
 																							(
-																								L
+																								L,
 																							) =>
 																								L
 																									.cells
 																									.length >
-																								0
+																								0,
 																						),
 																					]
 																			for (let {
 																				cells: L,
 																			} of J.filter(
 																				(
-																					Q
+																					Q,
 																				) =>
-																					!Q.hasLineBreak
+																					!Q.hasLineBreak,
 																			))
 																				for (let [
 																					Q,
@@ -29977,8 +30018,8 @@
 																								Q
 																							],
 																							s(
-																								V
-																							)
+																								V,
+																							),
 																						)
 																			return (
 																				B.push(
@@ -29991,14 +30032,14 @@
 																								u,
 																								J.map(
 																									(
-																										L
+																										L,
 																									) =>
 																										n(
 																											' | ',
 																											L.cells.map(
 																												(
 																													Q,
-																													V
+																													V,
 																												) =>
 																													L.hasLineBreak
 																														? Q
@@ -30008,17 +30049,17 @@
 																																	V
 																																] -
 																																	s(
-																																		Q
-																																	)
-																														  )
-																											)
-																										)
-																								)
+																																		Q,
+																																	),
+																														  ),
+																											),
+																										),
+																								),
 																							),
-																						]
+																						],
 																					),
 																					u,
-																					'`'
+																					'`',
 																				),
 																				B
 																			)
@@ -30043,16 +30084,16 @@
 																				Object.assign(
 																					Object.assign(
 																						{},
-																						d
+																						d,
 																					),
 																					{},
 																					{
 																						printWidth:
 																							Number.POSITIVE_INFINITY,
-																					}
-																				)
+																					},
+																				),
 																			)
-																				.formatted
+																				.formatted,
 																	)),
 																B.push(h, '`'),
 																C.each((R) => {
@@ -30060,7 +30101,7 @@
 																		R.getName()
 																	if (
 																		(B.push(
-																			o()
+																			o(),
 																		),
 																		q <
 																			k.length)
@@ -30077,7 +30118,7 @@
 																					L
 																						.value
 																						.raw,
-																					J
+																					J,
 																				),
 																			V =
 																				k[
@@ -30093,20 +30134,20 @@
 																					q
 																				]
 																			;(E(
-																				Y
+																				Y,
 																			) ||
 																				N(
-																					Y
+																					Y,
 																				) ||
 																				'ConditionalExpression' ===
 																					Y.type ||
 																				'SequenceExpression' ===
 																					Y.type ||
 																				x(
-																					Y
+																					Y,
 																				) ||
 																				F(
-																					Y
+																					Y,
 																				)) &&
 																				(V =
 																					[
@@ -30114,7 +30155,7 @@
 																							[
 																								i,
 																								V,
-																							]
+																							],
 																						),
 																						i,
 																					])
@@ -30123,16 +30164,16 @@
 																			0 ===
 																				Q &&
 																			L.value.raw.endsWith(
-																				'\n'
+																				'\n',
 																			)
 																				? y(
 																						Number.NEGATIVE_INFINITY,
-																						V
+																						V,
 																				  )
 																				: g(
 																						V,
 																						Q,
-																						J
+																						J,
 																				  )
 																		B.push(
 																			l([
@@ -30140,7 +30181,7 @@
 																				j,
 																				h,
 																				'}',
-																			])
+																			]),
 																		)
 																	}
 																}, 'quasis'),
@@ -30154,7 +30195,7 @@
 																(d) =>
 																	(function $(
 																		C,
-																		o
+																		o,
 																	) {
 																		let d =
 																				C.getValue(),
@@ -30162,7 +30203,7 @@
 																				o()
 																		return (
 																			E(
-																				d
+																				d,
 																			) &&
 																				(v =
 																					l(
@@ -30171,10 +30212,10 @@
 																								[
 																									i,
 																									v,
-																								]
+																								],
 																							),
 																							i,
-																						]
+																						],
 																					)),
 																			[
 																				'${',
@@ -30184,7 +30225,7 @@
 																			]
 																		)
 																	})(d, o),
-																'expressions'
+																'expressions',
 															)
 														},
 													escapeTemplateCharacters:
@@ -30195,10 +30236,10 @@
 																	? o
 																		? d.replace(
 																				/(\\*)`/g,
-																				'$1$1\\`'
+																				'$1$1\\`',
 																		  )
 																		: m(d)
-																	: d
+																	: d,
 															)
 														},
 													uncookTemplateElementValue:
@@ -30209,7 +30250,7 @@
 										Ym = te({
 											'src/language-js/embed/markdown.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -30227,7 +30268,7 @@
 												r.exports = function i(
 													p,
 													y,
-													h
+													h,
 												) {
 													let c = p
 															.getValue()
@@ -30236,13 +30277,13 @@
 																(w, E) =>
 																	'\\'.repeat(
 																		E.length /
-																			2
-																	) + '`'
+																			2,
+																	) + '`',
 															),
 														f = (function l(p) {
 															let y =
 																p.match(
-																	/^([^\S\n]*)\S/m
+																	/^([^\S\n]*)\S/m,
 																)
 															return null === y
 																? ''
@@ -30253,9 +30294,9 @@
 														(c = c.replace(
 															new RegExp(
 																`^${f}`,
-																'gm'
+																'gm',
 															),
-															''
+															'',
 														))
 													let _ = u(
 														h(
@@ -30268,9 +30309,9 @@
 															{
 																stripTrailingHardline:
 																	!0,
-															}
+															},
 														),
-														!0
+														!0,
 													)
 													return [
 														'`',
@@ -30286,7 +30327,7 @@
 										Qm = te({
 											'src/language-js/embed/css.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { isNonEmptyArray: t } =
@@ -30310,17 +30351,17 @@
 												r.exports = function y(
 													c,
 													f,
-													F
+													F,
 												) {
 													let _ = c.getValue(),
 														w = _.quasis.map(
-															(P) => P.value.raw
+															(P) => P.value.raw,
 														),
 														E = 0
 													return (function h(
 														c,
 														f,
-														F
+														F,
 													) {
 														if (
 															1 ===
@@ -30331,7 +30372,7 @@
 															return '``'
 														let w = (function g(
 															c,
-															f
+															f,
 														) {
 															if (!t(f)) return c
 															let F = 0,
@@ -30341,29 +30382,29 @@
 																		'string' ==
 																			typeof w &&
 																		w.includes(
-																			'@prettier-placeholder'
+																			'@prettier-placeholder',
 																		)
 																			? w
 																					.split(
-																						/@prettier-placeholder-(\d+)-id/
+																						/@prettier-placeholder-(\d+)-id/,
 																					)
 																					.map(
 																						(
 																							E,
-																							N
+																							N,
 																						) =>
 																							N %
 																								2 ==
 																							0
 																								? i(
-																										E
+																										E,
 																								  )
 																								: (F++,
 																								  f[
 																										E
-																								  ])
+																								  ]),
 																					)
-																			: w
+																			: w,
 																)
 															return f.length ===
 																F
@@ -30372,7 +30413,7 @@
 														})(c, F)
 														if (!w)
 															throw new Error(
-																"Couldn't insert all the expressions"
+																"Couldn't insert all the expressions",
 															)
 														return [
 															'`',
@@ -30391,16 +30432,16 @@
 																		  E++ +
 																		  '-id' +
 																		  $,
-																''
+																'',
 															),
 															{ parser: 'scss' },
 															{
 																stripTrailingHardline:
 																	!0,
-															}
+															},
 														),
 														_,
-														p(c, f)
+														p(c, f),
 													)
 												}
 											},
@@ -30408,7 +30449,7 @@
 										Zm = te({
 											'src/language-js/embed/graphql.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -30428,7 +30469,7 @@
 													let y = [],
 														h = !1,
 														g = p.map((c) =>
-															c.trim()
+															c.trim(),
 														)
 													for (let [
 														c,
@@ -30447,7 +30488,7 @@
 												r.exports = function i(
 													p,
 													y,
-													h
+													h,
 												) {
 													let g = p.getValue(),
 														c = g.quasis.length
@@ -30491,13 +30532,13 @@
 																	].trim(),
 															m = I.every((o) =>
 																/^\s*(?:#[^\n\r]*)?$/.test(
-																	o
-																)
+																	o,
+																),
 															)
 														if (
 															!N &&
 															/#[^\n\r]*$/.test(
-																I[P - 1]
+																I[P - 1],
 															)
 														)
 															return null
@@ -30512,23 +30553,23 @@
 																	{
 																		stripTrailingHardline:
 																			!0,
-																	}
+																	},
 															  )),
 															C
 																? ((C = n(
 																		C,
-																		!1
+																		!1,
 																  )),
 																  !E &&
 																		D &&
 																		F.push(
-																			''
+																			'',
 																		),
 																  F.push(C),
 																  !N &&
 																		T &&
 																		F.push(
-																			''
+																			'',
 																		))
 																: !E &&
 																  !N &&
@@ -30548,7 +30589,7 @@
 										ed = te({
 											'src/language-js/embed/html.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -30572,7 +30613,7 @@
 													g,
 													c,
 													f,
-													F
+													F,
 												) {
 													let { parser: _ } = F,
 														w = h.getValue(),
@@ -30588,7 +30629,7 @@
 																			.cooked
 																	: d.value
 																			.cooked +
-																	  N(v)
+																	  N(v),
 															)
 															.join(''),
 														I = i(h, g)
@@ -30599,7 +30640,7 @@
 														return '``'
 													let P = new RegExp(
 															N('(\\d+)'),
-															'g'
+															'g',
 														),
 														$ = 0,
 														D = c(
@@ -30607,7 +30648,7 @@
 															{
 																parser: _,
 																__onHtmlRoot(
-																	d
+																	d,
 																) {
 																	$ =
 																		d
@@ -30618,7 +30659,7 @@
 															{
 																stripTrailingHardline:
 																	!0,
-															}
+															},
 														),
 														T = u(D, (d) => {
 															if (
@@ -30641,16 +30682,16 @@
 																	B &&
 																		((B =
 																			l(
-																				B
+																				B,
 																			)),
 																		f.__embeddedInHtml &&
 																			(B =
 																				B.replace(
 																					/<\/(script)\b/gi,
-																					'<\\/$1'
+																					'<\\/$1',
 																				)),
 																		v.push(
-																			B
+																			B,
 																		))
 																	continue
 																}
@@ -30690,13 +30731,13 @@
 																	$ > 1
 																		? t(
 																				n(
-																					T
-																				)
+																					T,
+																				),
 																		  )
 																		: n(T),
 																	C,
 																	'`',
-															  ]
+															  ],
 													)
 												}
 											},
@@ -30720,7 +30761,7 @@
 																D.getParentNode(),
 															C =
 																D.getParentNode(
-																	1
+																	1,
 																)
 														return (
 															(C &&
@@ -30738,7 +30779,7 @@
 																	(o) =>
 																		'jsx' ===
 																		o.name
-																			.name
+																			.name,
 																)) ||
 															(m &&
 																'TaggedTemplateExpression' ===
@@ -30787,14 +30828,14 @@
 																case 'MemberExpression':
 																	return (
 																		E(
-																			m.object
+																			m.object,
 																		) ||
 																		N(m)
 																	)
 																case 'CallExpression':
 																	return (
 																		E(
-																			m.callee
+																			m.callee,
 																		) ||
 																		('MemberExpression' ===
 																			m
@@ -30809,12 +30850,12 @@
 																					m
 																						.callee
 																						.object
-																						.object
+																						.object,
 																				) ||
 																					N(
 																						m
 																							.callee
-																							.object
+																							.object,
 																					))) ||
 																				('CallExpression' ===
 																					m
@@ -30825,7 +30866,7 @@
 																						m
 																							.callee
 																							.object
-																							.callee
+																							.callee,
 																					))))
 																	)
 																case 'Identifier':
@@ -30842,7 +30883,7 @@
 																	D.getParentNode(),
 																m =
 																	D.getParentNode(
-																		1
+																		1,
 																	)
 															return (
 																m &&
@@ -30877,7 +30918,7 @@
 																			.name &&
 																	'value' ===
 																		m,
-																...F
+																...F,
 															)
 														})(D)
 														? 'css'
@@ -30889,7 +30930,7 @@
 																return (
 																	I(
 																		T,
-																		'GraphQL'
+																		'GraphQL',
 																	) ||
 																	(m &&
 																		(('TaggedTemplateExpression' ===
@@ -30937,7 +30978,7 @@
 																return (
 																	I(
 																		D.getValue(),
-																		'HTML'
+																		'HTML',
 																	) ||
 																	D.match(
 																		(T) =>
@@ -30945,7 +30986,7 @@
 																			T.type,
 																		(
 																			T,
-																			m
+																			m,
 																		) =>
 																			'TaggedTemplateExpression' ===
 																				T.type &&
@@ -30958,7 +30999,7 @@
 																					.tag
 																					.name &&
 																			'quasi' ===
-																				m
+																				m,
 																	)
 																)
 														  })(D)
@@ -30980,7 +31021,7 @@
 																				.name &&
 																		'value' ===
 																			m,
-																	...F
+																	...F,
 																)
 														  })(D)
 														? 'angular'
@@ -31039,7 +31080,7 @@
 												function N(D) {
 													return (
 														/^[A-Z]/.test(
-															D.object.name
+															D.object.name,
 														) &&
 														'extend' ===
 															D.property.name
@@ -31054,14 +31095,14 @@
 															return (
 																C === ` ${T} `
 															)
-														}
+														},
 													)
 												}
 												r.exports = function y(
 													D,
 													T,
 													m,
-													C
+													C,
 												) {
 													let o = D.getValue()
 													if (
@@ -31081,7 +31122,7 @@
 																		null ===
 																		C
 																	)
-																}
+																},
 															)
 														})(o)
 													)
@@ -31103,7 +31144,7 @@
 																T,
 																m,
 																C,
-																{ parser: d }
+																{ parser: d },
 															)
 													}
 												}
@@ -31153,12 +31194,12 @@
 														'DecimalLiteral' ===
 															u.type &&
 															(i.value = Number(
-																i.value
+																i.value,
 															)),
 														'Literal' === u.type &&
 															i.decimal &&
 															(i.decimal = Number(
-																i.decimal
+																i.decimal,
 															)),
 														'EmptyStatement' ===
 															u.type ||
@@ -31221,7 +31262,7 @@
 															u.openingElement.attributes.some(
 																(h) =>
 																	'jsx' ===
-																	h.name.name
+																	h.name.name,
 															))
 													)
 														for (let {
@@ -31247,12 +31288,12 @@
 															'Literal' ===
 																u.value.type &&
 															/["']|&quot;|&apos;/.test(
-																u.value.value
+																u.value.value,
 															) &&
 															(i.value.value =
 																i.value.value.replace(
 																	/["']|&quot;|&apos;/g,
-																	'"'
+																	'"',
 																))
 													let p =
 														u.expression || u.callee
@@ -31283,7 +31324,7 @@
 																		a(
 																			c
 																				.value
-																				.elements[0]
+																				.elements[0],
 																		)
 																	break
 																case 'template':
@@ -31291,7 +31332,7 @@
 																		c.value
 																			.type &&
 																		a(
-																			c.value
+																			c.value,
 																		)
 															}
 													}
@@ -31338,8 +31379,8 @@
 																	].some(
 																		(c) =>
 																			g.value ===
-																			` ${c} `
-																	)
+																			` ${c} `,
+																	),
 															)) ||
 															('CallExpression' ===
 																l.type &&
@@ -31381,7 +31422,7 @@
 											else {
 												if (513 !== t[0])
 													throw new Error(
-														'unable to figure out endianess'
+														'unable to figure out endianess',
 													)
 												Tr = 'LE'
 											}
@@ -31475,7 +31516,7 @@
 										id = te({
 											'node-modules-polyfills-commonjs:os'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = (sd(), ft(io))
@@ -31489,20 +31530,20 @@
 										ad = te({
 											'node_modules/detect-newline/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = (s) => {
 													if ('string' != typeof s)
 														throw new TypeError(
-															'Expected a string'
+															'Expected a string',
 														)
 													let a =
 														s.match(/(?:\r?\n)/g) ||
 														[]
 													if (0 === a.length) return
 													let n = a.filter(
-														(i) => '\r\n' === i
+														(i) => '\r\n' === i,
 													).length
 													return n > a.length - n
 														? '\r\n'
@@ -31517,7 +31558,7 @@
 										}),
 										od = te({
 											'node_modules/jest-docblock/build/index.js'(
-												e
+												e,
 											) {
 												function r() {
 													let N = id()
@@ -31545,7 +31586,7 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.extract = function c(N) {
 														let x = N.match(u)
@@ -31566,24 +31607,24 @@
 															P =
 																(0,
 																t().default)(
-																	x
+																	x,
 																) || r().EOL,
 															D = ' *',
 															m = Object.keys(I),
 															C = m
 																.map((d) =>
-																	E(d, I[d])
+																	E(d, I[d]),
 																)
 																.reduce(
 																	(d, v) =>
 																		d.concat(
-																			v
+																			v,
 																		),
-																	[]
+																	[],
 																)
 																.map(
 																	(d) =>
-																		`${D} ${d}${P}`
+																		`${D} ${d}${P}`,
 																)
 																.join('')
 														if (!x) {
@@ -31593,14 +31634,14 @@
 																1 ===
 																	m.length &&
 																!Array.isArray(
-																	I[m[0]]
+																	I[m[0]],
 																)
 															) {
 																let d = I[m[0]]
 																return `/** ${
 																	E(
 																		m[0],
-																		d
+																		d,
 																	)[0]
 																} */`
 															}
@@ -31610,7 +31651,7 @@
 																.split(P)
 																.map(
 																	(d) =>
-																		`${D} ${d}`
+																		`${D} ${d}`,
 																)
 																.join(P) + P
 														return (
@@ -31628,7 +31669,7 @@
 														let x = N.match(u)
 														return x && x[0]
 															? N.substring(
-																	x[0].length
+																	x[0].length,
 															  )
 															: N
 													})
@@ -31657,11 +31698,11 @@
 														(I = N),
 															(N = N.replace(
 																p,
-																`${x}$1 $2${x}`
+																`${x}$1 $2${x}`,
 															))
 													N = N.replace(
 														l,
-														''
+														'',
 													).trimRight()
 													let D,
 														P = Object.create(null),
@@ -31671,7 +31712,7 @@
 													for (; (D = y.exec(N)); ) {
 														let T = D[2].replace(
 															i,
-															''
+															'',
 														)
 														'string' ==
 															typeof P[D[1]] ||
@@ -31679,7 +31720,7 @@
 															? (P[D[1]] =
 																	g.concat(
 																		P[D[1]],
-																		T
+																		T,
 																	))
 															: (P[D[1]] = T)
 													}
@@ -31692,7 +31733,7 @@
 													return g
 														.concat(x)
 														.map((I) =>
-															`@${N} ${I}`.trim()
+															`@${N} ${I}`.trim(),
 														)
 												}
 											},
@@ -31700,7 +31741,7 @@
 										ld = te({
 											'src/language-js/utils/get-shebang.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(s) {
@@ -31729,7 +31770,7 @@
 													let g = i(h)
 													g &&
 														(h = h.slice(
-															g.length + 1
+															g.length + 1,
 														))
 													let c = a(h),
 														{
@@ -31746,17 +31787,17 @@
 												r.exports = {
 													hasPragma: function p(h) {
 														let g = Object.keys(
-															l(h).pragmas
+															l(h).pragmas,
 														)
 														return (
 															g.includes(
-																'prettier'
+																'prettier',
 															) ||
 															g.includes('format')
 														)
 													},
 													insertPragma: function y(
-														h
+														h,
 													) {
 														let {
 																shebang: g,
@@ -31771,7 +31812,7 @@
 																		{
 																			format: '',
 																		},
-																		f
+																		f,
 																	),
 																comments:
 																	F.trimStart(),
@@ -31793,7 +31834,7 @@
 										cd = te({
 											'src/language-js/utils/is-type-cast-comment.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Pt()
@@ -31802,7 +31843,7 @@
 														t(a) &&
 														'*' === a.value[0] &&
 														/@(?:type|satisfies)\b/.test(
-															a.value
+															a.value,
 														)
 													)
 												}
@@ -31811,7 +31852,7 @@
 										Eo = te({
 											'src/language-js/comments.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -31985,7 +32026,7 @@
 															  ye.type
 															? (M(
 																	ye.finalizer,
-																	A
+																	A,
 															  ),
 															  !0)
 															: 'CatchClause' ===
@@ -32073,9 +32114,9 @@
 															return (
 																l(
 																	t(
-																		re.decorators
+																		re.decorators,
 																	),
-																	A
+																	A,
 																),
 																!0
 															)
@@ -32123,11 +32164,11 @@
 																			? p(
 																					re,
 																					A,
-																					Ce
+																					Ce,
 																			  )
 																			: l(
 																					G,
-																					A
+																					A,
 																			  ),
 																		!0
 																	)
@@ -32162,7 +32203,7 @@
 																	n(
 																		ye,
 																		A,
-																		o
+																		o,
 																	) &&
 																('Property' ===
 																	re.type ||
@@ -32177,12 +32218,12 @@
 																	n(
 																		ye,
 																		G,
-																		o
+																		o,
 																	)) ||
 															('Decorator' ===
 																G?.type &&
 																ee.has(
-																	re?.type
+																	re?.type,
 																))
 														) && (l(G, A), !0)
 													)
@@ -32227,7 +32268,7 @@
 														'=>' ===
 															re.slice(
 																ye,
-																ye + 2
+																ye + 2,
 															) &&
 														(p(G, A), !0)
 													)
@@ -32295,11 +32336,11 @@
 															if (ve.length > 0)
 																return a(
 																	Ce,
-																	o(t(ve))
+																	o(t(ve)),
 																)
 															let ze = a(
 																Ce,
-																o(re.id)
+																o(re.id),
 															)
 															return (
 																!1 !== ze &&
@@ -32569,7 +32610,7 @@
 															  ) &&
 															  (l(
 																	G.constraint,
-																	A
+																	A,
 															  ),
 															  !0))
 													)
@@ -32711,7 +32752,7 @@
 																	.returnType &&
 																!h(
 																	De.value
-																		.typeParameters
+																		.typeParameters,
 																) &&
 																De.value.body
 															)
@@ -32738,14 +32779,14 @@
 																				D(
 																					(ye =
 																						A),
-																					T.Leading
-																				)
+																					T.Leading,
+																				),
 																			) ||
 																				_(
 																					D(
 																						ye,
-																						T.Trailing
-																					)
+																						T.Trailing,
+																					),
 																				))))) ||
 																	(G &&
 																		('JSXSpreadAttribute' ===
@@ -32776,7 +32817,7 @@
 										qt = te({
 											'src/language-js/needs-parens.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = lt(),
@@ -32932,7 +32973,7 @@
 																o.extra
 																	.parenthesized &&
 																/^PRETTIER_HTML_PLACEHOLDER_\d+_\d+_IN_JS$/.test(
-																	o.name
+																	o.name,
 																)) ||
 															('left' === C &&
 																(('async' ===
@@ -32951,10 +32992,10 @@
 																	(d =
 																		D.findAncestor(
 																			(
-																				b
+																				b,
 																			) =>
 																				'ForOfStatement' ===
-																				b.type
+																				b.type,
 																		)) ||
 																void 0 === d
 																	? void 0
@@ -32964,7 +33005,7 @@
 																y(
 																	S,
 																	(b) =>
-																		b === o
+																		b === o,
 																)
 															)
 																return !0
@@ -32985,7 +33026,7 @@
 																			'ForStatement' ===
 																				B.type ||
 																			'ForInStatement' ===
-																				B.type
+																				B.type,
 																	),
 																b = S
 																	? 'ExpressionStatement' ===
@@ -33001,7 +33042,7 @@
 																y(
 																	b,
 																	(B) =>
-																		B === o
+																		B === o,
 																)
 															)
 																return !0
@@ -33025,7 +33066,7 @@
 																	D.findAncestor(
 																		(b) =>
 																			'ExpressionStatement' ===
-																			b.type
+																			b.type,
 																	)) ||
 															void 0 === v
 																? void 0
@@ -33140,7 +33181,7 @@
 																	o,
 																	(S) =>
 																		'ObjectExpression' ===
-																		S.type
+																		S.type,
 																)
 															)
 																return !0
@@ -33207,7 +33248,7 @@
 																('in' ===
 																	o.operator &&
 																	(function N(
-																		D
+																		D,
 																	) {
 																		let T = 0,
 																			m =
@@ -33219,7 +33260,7 @@
 																		) {
 																			let C =
 																				D.getParentNode(
-																					T++
+																					T++,
 																				)
 																			if (
 																				C &&
@@ -33245,7 +33286,7 @@
 															) {
 																let S =
 																	D.getParentNode(
-																		1
+																		1,
 																	)
 																if (
 																	'BinaryExpression' ===
@@ -33303,7 +33344,7 @@
 																		('TSTypeAssertion' ===
 																			o.type ||
 																			_(
-																				o
+																				o,
 																			))
 																	)
 																case 'LogicalExpression':
@@ -33329,7 +33370,7 @@
 																		return !0
 																	let B =
 																			g(
-																				S
+																				S,
 																			),
 																		k =
 																			m.operator,
@@ -33344,7 +33385,7 @@
 																			B &&
 																			!h(
 																				k,
-																				S
+																				S,
 																			)) ||
 																		(M <
 																			B &&
@@ -33355,7 +33396,7 @@
 																			  '-' ===
 																					k
 																			: !!p(
-																					k
+																					k,
 																			  ))
 																	)
 																}
@@ -33513,9 +33554,9 @@
 																('TSTypeAnnotation' ===
 																	m.type &&
 																	D.getParentNode(
-																		1
+																		1,
 																	).type.startsWith(
-																		'TSJSDoc'
+																		'TSJSDoc',
 																	))
 															)
 														case 'TSTypeQuery':
@@ -33581,7 +33622,7 @@
 																'NullableTypeAnnotation' ===
 																m.type
 																	? D.getParentNode(
-																			1
+																			1,
 																	  )
 																	: m
 															return (
@@ -33609,7 +33650,7 @@
 																			'NullableTypeAnnotation' ===
 																				b
 																					.typeAnnotation
-																					.type
+																					.type,
 																	))
 															)
 														}
@@ -33632,7 +33673,7 @@
 															) {
 																let S =
 																	D.getParentNode(
-																		1
+																		1,
 																	)
 																return (
 																	'Program' ===
@@ -33652,7 +33693,7 @@
 														case 'AssignmentExpression': {
 															let S =
 																D.getParentNode(
-																	1
+																	1,
 																)
 															return (
 																('body' === C &&
@@ -33699,7 +33740,7 @@
 																					'ObjectPattern' ===
 																						S.type &&
 																					S.properties.includes(
-																						m
+																						m,
 																					)) ||
 																				'NGChainedExpression' ===
 																					m.type
@@ -33804,7 +33845,7 @@
 														case 'ClassExpression':
 															return (
 																!!s(
-																	o.decorators
+																	o.decorators,
 																) ||
 																('NewExpression' ===
 																	m.type &&
@@ -33815,7 +33856,7 @@
 														case 'OptionalCallExpression': {
 															let S =
 																D.getParentNode(
-																	1
+																	1,
 																)
 															if (
 																('object' ===
@@ -33982,13 +34023,13 @@
 																				l(
 																					T,
 																					(
-																						m
+																						m,
 																					) =>
 																						'FunctionTypeAnnotation' ===
 																							m.type ||
-																						void 0
+																						void 0,
 																				)) ||
-																			void 0
+																			void 0,
 																	)
 																})(o)
 															)
@@ -34013,18 +34054,18 @@
 																	C
 															)
 																return D.callParent(
-																	P
+																	P,
 																)
 															break
 														case 'ObjectProperty':
 															if ('value' === C) {
 																let o =
 																	D.getParentNode(
-																		1
+																		1,
 																	)
 																return (
 																	t(
-																		o.properties
+																		o.properties,
 																	) === m
 																)
 															}
@@ -34033,7 +34074,7 @@
 														case 'LogicalExpression':
 															if ('right' === C)
 																return D.callParent(
-																	P
+																	P,
 																)
 															break
 														case 'ConditionalExpression':
@@ -34042,13 +34083,13 @@
 																C
 															)
 																return D.callParent(
-																	P
+																	P,
 																)
 															break
 														case 'UnaryExpression':
 															if (m.prefix)
 																return D.callParent(
-																	P
+																	P,
 																)
 													}
 													return !1
@@ -34072,7 +34113,7 @@
 																D.call(
 																	(o) =>
 																		$(o, T),
-																	...n(D, m)
+																	...n(D, m),
 																)
 												}
 												r.exports = w
@@ -34081,12 +34122,12 @@
 										Fo = te({
 											'src/language-js/print-preprocess.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(
 														s,
-														a
+														a,
 													) {
 														switch (a.parser) {
 															case 'json':
@@ -34098,12 +34139,12 @@
 																return Object.assign(
 																	Object.assign(
 																		{},
-																		s
+																		s,
 																	),
 																	{},
 																	{
 																		type: a.parser.startsWith(
-																			'__'
+																			'__',
 																		)
 																			? 'JsExpressionRoot'
 																			: 'JsonRoot',
@@ -34112,7 +34153,7 @@
 																			[],
 																		rootMarker:
 																			a.rootMarker,
-																	}
+																	},
 																)
 															default:
 																return s
@@ -34123,7 +34164,7 @@
 										pd = te({
 											'src/language-js/print/html-binding.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -34149,7 +34190,7 @@
 																		case 'NumericLiteral':
 																		case 'StringLiteral':
 																			return l(
-																				p.object
+																				p.object,
 																			)
 																	}
 																	return !1
@@ -34168,7 +34209,7 @@
 																		p.getName() &&
 																	y.__onHtmlBindingRoot(
 																		g,
-																		y
+																		y,
 																	),
 																'File' ===
 																	g.type)
@@ -34186,8 +34227,8 @@
 																						],
 																						c.map(
 																							h,
-																							'params'
-																						)
+																							'params',
+																						),
 																					),
 																				{
 																					params: F,
@@ -34202,9 +34243,9 @@
 																							[
 																								n,
 																								a(
-																									f
+																									f,
 																								),
-																							]
+																							],
 																						),
 																						n,
 																						')',
@@ -34212,7 +34253,7 @@
 																		},
 																		'program',
 																		'body',
-																		0
+																		0,
 																	)
 																if (
 																	y.__isVueBindings
@@ -34226,12 +34267,12 @@
 																				],
 																				c.map(
 																					h,
-																					'params'
-																				)
+																					'params',
+																				),
 																			),
 																		'program',
 																		'body',
-																		0
+																		0,
 																	)
 															}
 														},
@@ -34241,7 +34282,7 @@
 										ru = te({
 											'src/language-js/print/binaryish.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { printComments: t } = et(),
@@ -34283,7 +34324,7 @@
 													let k = []
 													w(
 														B.operator,
-														B.left.operator
+														B.left.operator,
 													)
 														? (k = o.call(
 																(Y) =>
@@ -34292,9 +34333,9 @@
 																		d,
 																		v,
 																		!0,
-																		b
+																		b,
 																	),
-																'left'
+																'left',
 														  ))
 														: k.push(i(d('left')))
 													let L,
@@ -34310,7 +34351,7 @@
 																		v.parser)) &&
 															!f(
 																v.originalText,
-																B.right
+																B.right,
 															),
 														q =
 															'NGPipeExpression' ===
@@ -34334,21 +34375,21 @@
 																				o
 																					.map(
 																						d,
-																						'arguments'
+																						'arguments',
 																					)
 																					.map(
 																						(
-																							Y
+																							Y,
 																						) =>
 																							p(
 																								2,
 																								i(
-																									Y
-																								)
-																							)
-																					)
+																									Y,
+																								),
+																							),
+																					),
 																			),
-																		])
+																		]),
 																  )
 																: ''
 													if (M)
@@ -34368,9 +34409,9 @@
 																				d,
 																				v,
 																				!0,
-																				b
+																				b,
 																			),
-																		'right'
+																		'right',
 																  )
 																: d('right')
 														L = [
@@ -34384,7 +34425,7 @@
 													let Q = o.getParentNode(),
 														V = E(
 															B.left,
-															N.Trailing | N.Line
+															N.Trailing | N.Line,
 														),
 														j =
 															V ||
@@ -34407,7 +34448,7 @@
 																		shouldBreak:
 																			V,
 																  })
-																: L
+																: L,
 														),
 														S && E(B))
 													) {
@@ -34448,7 +34489,7 @@
 																	o.getParentNode(),
 																B =
 																	o.getParentNode(
-																		1
+																		1,
 																	),
 																k =
 																	S !==
@@ -34470,7 +34511,7 @@
 																	v,
 																	d,
 																	!1,
-																	k
+																	k,
 																)
 															if (k) return R
 															if (M) return i(R)
@@ -34532,7 +34573,7 @@
 																		'ThrowStatement' !==
 																			B.type &&
 																		!x(
-																			B
+																			B,
 																		)) ||
 																	'TemplateLiteral' ===
 																		b.type,
@@ -34555,7 +34596,7 @@
 																	w(
 																		S.operator,
 																		S.left
-																			.operator
+																			.operator,
 																	)
 															if (
 																q ||
@@ -34571,33 +34612,33 @@
 																		'string' !=
 																			typeof W &&
 																		!Array.isArray(
-																			W
+																			W,
 																		) &&
 																		'group' ===
-																			W.type
+																			W.type,
 																),
 																j = R.slice(
 																	0,
 																	-1 === V
 																		? 1
-																		: V + 1
+																		: V + 1,
 																),
 																Y = R.slice(
 																	j.length,
 																	Q
 																		? -1
-																		: void 0
+																		: void 0,
 																),
 																ie = Symbol(
 																	'logicalChain-' +
-																		++D
+																		++D,
 																),
 																ee = i(
 																	[
 																		...j,
 																		l(Y),
 																	],
-																	{ id: ie }
+																	{ id: ie },
 																)
 															if (!Q) return ee
 															let ce = s(R)
@@ -34616,7 +34657,7 @@
 										fd = te({
 											'src/language-js/print/angular.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -34650,26 +34691,26 @@
 													printAngular: function p(
 														g,
 														c,
-														f
+														f,
 													) {
 														let F = g.getValue()
 														if (
 															F.type.startsWith(
-																'NG'
+																'NG',
 															)
 														)
 															switch (F.type) {
 																case 'NGRoot':
 																	return [
 																		f(
-																			'node'
+																			'node',
 																		),
 																		u(
-																			F.node
+																			F.node,
 																		)
 																			? ' //' +
 																			  i(
-																					F.node
+																					F.node,
 																			  )[0].value.trimEnd()
 																			: '',
 																	]
@@ -34677,7 +34718,7 @@
 																	return l(
 																		g,
 																		c,
-																		f
+																		f,
 																	)
 																case 'NGChainedExpression':
 																	return a(
@@ -34688,15 +34729,15 @@
 																			],
 																			g.map(
 																				(
-																					_
+																					_,
 																				) =>
 																					(function h(
-																						g
+																						g,
 																					) {
 																						return n(
 																							g.getValue(),
 																							(
-																								c
+																								c,
 																							) => {
 																								switch (
 																									c.type
@@ -34708,10 +34749,10 @@
 																									case 'AssignmentExpression':
 																										return !0
 																								}
-																							}
+																							},
 																						)
 																					})(
-																						_
+																						_,
 																					)
 																						? f()
 																						: [
@@ -34719,9 +34760,9 @@
 																								f(),
 																								')',
 																						  ],
-																				'expressions'
-																			)
-																		)
+																				'expressions',
+																			),
+																		),
 																	)
 																case 'NGEmptyExpression':
 																	return ''
@@ -34735,7 +34776,7 @@
 																	return g.map(
 																		(
 																			_,
-																			w
+																			w,
 																		) => [
 																			0 ===
 																			w
@@ -34743,7 +34784,7 @@
 																				: y(
 																						_.getValue(),
 																						w,
-																						F
+																						F,
 																				  )
 																				? ' '
 																				: [
@@ -34752,20 +34793,20 @@
 																				  ],
 																			f(),
 																		],
-																		'body'
+																		'body',
 																	)
 																case 'NGMicrosyntaxKey':
 																	return /^[$_a-z][\w$]*(?:-[$_a-z][\w$])*$/i.test(
-																		F.name
+																		F.name,
 																	)
 																		? F.name
 																		: JSON.stringify(
-																				F.name
+																				F.name,
 																		  )
 																case 'NGMicrosyntaxExpression':
 																	return [
 																		f(
-																			'expression'
+																			'expression',
 																		),
 																		null ===
 																		F.alias
@@ -34773,7 +34814,7 @@
 																			: [
 																					' as ',
 																					f(
-																						'alias'
+																						'alias',
 																					),
 																			  ],
 																	]
@@ -34786,7 +34827,7 @@
 																			y(
 																				F,
 																				_,
-																				w
+																				w,
 																			) ||
 																			(((1 ===
 																				_ &&
@@ -34825,13 +34866,13 @@
 																						.type)
 																	return [
 																		f(
-																			'key'
+																			'key',
 																		),
 																		E
 																			? ' '
 																			: ': ',
 																		f(
-																			'expression'
+																			'expression',
 																		),
 																	]
 																}
@@ -34839,7 +34880,7 @@
 																	return [
 																		'let ',
 																		f(
-																			'key'
+																			'key',
 																		),
 																		null ===
 																		F.value
@@ -34847,25 +34888,25 @@
 																			: [
 																					' = ',
 																					f(
-																						'value'
+																						'value',
 																					),
 																			  ],
 																	]
 																case 'NGMicrosyntaxAs':
 																	return [
 																		f(
-																			'key'
+																			'key',
 																		),
 																		' as ',
 																		f(
-																			'alias'
+																			'alias',
 																		),
 																	]
 																default:
 																	throw new Error(
 																		`Unknown Angular node type: ${JSON.stringify(
-																			F.type
-																		)}.`
+																			F.type,
+																		)}.`,
 																	)
 															}
 													},
@@ -34875,7 +34916,7 @@
 										Dd = te({
 											'src/language-js/print/jsx.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -34952,29 +34993,29 @@
 													)
 														return [
 															se(
-																'openingElement'
+																'openingElement',
 															),
 															se(
-																'closingElement'
+																'closingElement',
 															),
 														]
 													let ge =
 															'JSXElement' ===
 															fe.type
 																? se(
-																		'openingElement'
+																		'openingElement',
 																  )
 																: se(
-																		'openingFragment'
+																		'openingFragment',
 																  ),
 														he =
 															'JSXElement' ===
 															fe.type
 																? se(
-																		'closingElement'
+																		'closingElement',
 																  )
 																: se(
-																		'closingFragment'
+																		'closingFragment',
 																  )
 													if (
 														1 ===
@@ -34996,7 +35037,7 @@
 															ge,
 															...U.map(
 																se,
-																'children'
+																'children',
 															),
 															he,
 														]
@@ -35007,14 +35048,14 @@
 																	'JSXExpressionContainer' ===
 																		U.type &&
 																	I(
-																		U.expression
+																		U.expression,
 																	) &&
 																	' ' ===
 																		U
 																			.expression
 																			.value &&
 																	!$(
-																		U.expression
+																		U.expression,
 																	)
 																)
 															})(A)
@@ -35023,7 +35064,7 @@
 																		value: ' ',
 																		raw: ' ',
 																  }
-																: A
+																: A,
 														)
 													let we =
 															fe.children.some(E),
@@ -35031,7 +35072,7 @@
 															fe.children.filter(
 																(A) =>
 																	'JSXExpressionContainer' ===
-																	A.type
+																	A.type,
 															).length > 1,
 														Re =
 															'JSXElement' ===
@@ -35059,7 +35100,7 @@
 															Z,
 															se,
 															fe,
-															ge
+															ge,
 														) {
 															let he = []
 															return (
@@ -35067,7 +35108,7 @@
 																	(
 																		we,
 																		ke,
-																		Re
+																		Re,
 																	) => {
 																		let Ne =
 																			we.getValue()
@@ -35077,17 +35118,17 @@
 																		) {
 																			let Pe =
 																				N(
-																					Ne
+																					Ne,
 																				)
 																			if (
 																				ue(
-																					Ne
+																					Ne,
 																				)
 																			) {
 																				let H,
 																					oe =
 																						Pe.split(
-																							ce
+																							ce,
 																						)
 																				if (
 																					'' ===
@@ -35095,11 +35136,11 @@
 																				) {
 																					if (
 																						(he.push(
-																							''
+																							'',
 																						),
 																						oe.shift(),
 																						/\n/.test(
-																							oe[0]
+																							oe[0],
 																						))
 																					) {
 																						let pe =
@@ -35112,19 +35153,19 @@
 																								ge,
 																								oe[1],
 																								Ne,
-																								pe
-																							)
+																								pe,
+																							),
 																						)
 																					} else
 																						he.push(
-																							fe
+																							fe,
 																						)
 																					oe.shift()
 																				}
 																				if (
 																					('' ===
 																						_(
-																							oe
+																							oe,
 																						) &&
 																						(oe.pop(),
 																						(H =
@@ -35141,10 +35182,10 @@
 																						2 ==
 																					1
 																						? he.push(
-																								n
+																								n,
 																						  )
 																						: he.push(
-																								X
+																								X,
 																						  )
 																				if (
 																					void 0 !==
@@ -35152,7 +35193,7 @@
 																				)
 																					if (
 																						/\n/.test(
-																							H
+																							H,
 																						)
 																					) {
 																						let pe =
@@ -35164,15 +35205,15 @@
 																							b(
 																								ge,
 																								_(
-																									he
+																									he,
 																								),
 																								Ne,
-																								pe
-																							)
+																								pe,
+																							),
 																						)
 																					} else
 																						he.push(
-																							fe
+																							fe,
 																						)
 																				else {
 																					let pe =
@@ -35184,35 +35225,35 @@
 																						S(
 																							ge,
 																							_(
-																								he
+																								he,
 																							),
 																							Ne,
-																							pe
-																						)
+																							pe,
+																						),
 																					)
 																				}
 																			} else
 																				/\n/.test(
-																					Pe
+																					Pe,
 																				)
 																					? Pe.match(
-																							/\n/g
+																							/\n/g,
 																					  )
 																							.length >
 																							1 &&
 																					  he.push(
 																							'',
-																							u
+																							u,
 																					  )
 																					: he.push(
 																							'',
-																							fe
+																							fe,
 																					  )
 																		} else {
 																			let Pe =
 																				se()
 																			he.push(
-																				Pe
+																				Pe,
 																			)
 																			let oe =
 																				Re[
@@ -35222,32 +35263,32 @@
 																			if (
 																				oe &&
 																				ue(
-																					oe
+																					oe,
 																				)
 																			) {
 																				let pe =
 																					K(
 																						N(
-																							oe
-																						)
+																							oe,
+																						),
 																					).split(
-																						ce
+																						ce,
 																					)[0]
 																				he.push(
 																					S(
 																						ge,
 																						pe,
 																						Ne,
-																						oe
-																					)
+																						oe,
+																					),
 																				)
 																			} else
 																				he.push(
-																					u
+																					u,
 																				)
 																		}
 																	},
-																	'children'
+																	'children',
 																),
 																he
 															)
@@ -35264,10 +35305,10 @@
 																	fe
 																		.openingElement
 																		.name
-																		.name
+																		.name,
 														),
 														le = fe.children.some(
-															(A) => ue(A)
+															(A) => ue(A),
 														)
 													for (
 														let A = X.length - 2;
@@ -35440,7 +35481,7 @@
 														: (function J(
 																U,
 																Z,
-																se
+																se,
 														  ) {
 																let fe =
 																	U.attributes
@@ -35448,9 +35489,9 @@
 																		0 &&
 																	$(
 																		_(
-																			U.attributes
+																			U.attributes,
 																		),
-																		D.Trailing
+																		D.Trailing,
 																	)
 																return (
 																	(0 ===
@@ -35475,7 +35516,7 @@
 													return (function B(
 														U,
 														Z,
-														se
+														se,
 													) {
 														let fe =
 															U.getParentNode()
@@ -35511,7 +35552,7 @@
 																x,
 																(ke) =>
 																	'JSXExpressionContainer' ===
-																	ke.type
+																	ke.type,
 															),
 															we = m(U, se)
 														return l(
@@ -35525,12 +35566,12 @@
 																	? ''
 																	: g(')'),
 															],
-															{ shouldBreak: he }
+															{ shouldBreak: he },
 														)
 													})(
 														U,
 														t(U, d(U, Z, se), Z),
-														Z
+														Z,
 													)
 												}
 												function Y(U, Z, se) {
@@ -35553,7 +35594,7 @@
 																				t(
 																					ge,
 																					he,
-																					Z
+																					Z,
 																				),
 																			]),
 																			i,
@@ -35563,16 +35604,16 @@
 															'JSXSpreadAttribute' ===
 																fe.type
 																? 'argument'
-																: 'expression'
+																: 'expression',
 														),
 														'}',
 													]
 												}
 												var ce = new RegExp(
-														'([ \n\r\t]+)'
+														'([ \n\r\t]+)',
 													),
 													W = new RegExp(
-														'[^ \n\r\t]'
+														'[^ \n\r\t]',
 													),
 													K = (U) =>
 														U.replace(
@@ -35581,9 +35622,9 @@
 																	ce.source +
 																	'|' +
 																	ce.source +
-																	'$)'
+																	'$)',
 															),
-															''
+															'',
 														)
 												function ue(U) {
 													return (
@@ -35612,7 +35653,7 @@
 															for (
 																let he =
 																	se.children.indexOf(
-																		Z
+																		Z,
 																	);
 																he > 0;
 																he--
@@ -35644,12 +35685,12 @@
 													printJsx: function ie(
 														U,
 														Z,
-														se
+														se,
 													) {
 														let fe = U.getValue()
 														if (
 															fe.type.startsWith(
-																'JSX'
+																'JSX',
 															)
 														)
 															switch (fe.type) {
@@ -35657,7 +35698,7 @@
 																	return (function k(
 																		U,
 																		Z,
-																		se
+																		se,
 																	) {
 																		let fe =
 																				U.getValue(),
@@ -35666,32 +35707,32 @@
 																		if (
 																			(ge.push(
 																				se(
-																					'name'
-																				)
+																					'name',
+																				),
 																			),
 																			fe.value)
 																		) {
 																			let he
 																			if (
 																				I(
-																					fe.value
+																					fe.value,
 																				)
 																			) {
 																				let ke =
 																						N(
-																							fe.value
+																							fe.value,
 																						)
 																							.slice(
 																								1,
-																								-1
+																								-1,
 																							)
 																							.replace(
 																								/&apos;/g,
-																								"'"
+																								"'",
 																							)
 																							.replace(
 																								/&quot;/g,
-																								'"'
+																								'"',
 																							),
 																					{
 																						escaped:
@@ -35702,12 +35743,12 @@
 																						ke,
 																						Z.jsxSingleQuote
 																							? "'"
-																							: '"'
+																							: '"',
 																					)
 																				ke =
 																					ke.replace(
 																						Pe,
-																						Re
+																						Re,
 																					)
 																				let {
 																					leading:
@@ -35719,9 +35760,9 @@
 																						() =>
 																							a(
 																								U,
-																								Z
+																								Z,
 																							),
-																						'value'
+																						'value',
 																					)
 																				he =
 																					[
@@ -35734,67 +35775,67 @@
 																			} else
 																				he =
 																					se(
-																						'value'
+																						'value',
 																					)
 																			ge.push(
 																				'=',
-																				he
+																				he,
 																			)
 																		}
 																		return ge
 																	})(U, Z, se)
 																case 'JSXIdentifier':
 																	return String(
-																		fe.name
+																		fe.name,
 																	)
 																case 'JSXNamespacedName':
 																	return f(
 																		':',
 																		[
 																			se(
-																				'namespace'
+																				'namespace',
 																			),
 																			se(
-																				'name'
+																				'name',
 																			),
-																		]
+																		],
 																	)
 																case 'JSXMemberExpression':
 																	return f(
 																		'.',
 																		[
 																			se(
-																				'object'
+																				'object',
 																			),
 																			se(
-																				'property'
+																				'property',
 																			),
-																		]
+																		],
 																	)
 																case 'JSXSpreadAttribute':
 																case 'JSXSpreadChild':
 																	return Y(
 																		U,
 																		Z,
-																		se
+																		se,
 																	)
 																case 'JSXExpressionContainer':
 																	return (function M(
 																		U,
 																		Z,
-																		se
+																		se,
 																	) {
 																		let fe =
 																				U.getValue(),
 																			ge =
 																				(
 																					he,
-																					we
+																					we,
 																				) =>
 																					'JSXEmptyExpression' ===
 																						he.type ||
 																					(!$(
-																						he
+																						he,
 																					) &&
 																						('ArrayExpression' ===
 																							he.type ||
@@ -35806,14 +35847,14 @@
 																								he.type &&
 																								(ge(
 																									he.argument,
-																									he
+																									he,
 																								) ||
 																									'JSXElement' ===
 																										he
 																											.argument
 																											.type)) ||
 																							x(
-																								he
+																								he,
 																							) ||
 																							'FunctionExpression' ===
 																								he.type ||
@@ -35824,28 +35865,28 @@
 																							'DoExpression' ===
 																								he.type ||
 																							(E(
-																								we
+																								we,
 																							) &&
 																								('ConditionalExpression' ===
 																									he.type ||
 																									P(
-																										he
+																										he,
 																									)))))
 																		return ge(
 																			fe.expression,
 																			U.getParentNode(
-																				0
-																			)
+																				0,
+																			),
 																		)
 																			? l(
 																					[
 																						'{',
 																						se(
-																							'expression'
+																							'expression',
 																						),
 																						c,
 																						'}',
-																					]
+																					],
 																			  )
 																			: l(
 																					[
@@ -35854,14 +35895,14 @@
 																							[
 																								i,
 																								se(
-																									'expression'
+																									'expression',
 																								),
-																							]
+																							],
 																						),
 																						i,
 																						c,
 																						'}',
-																					]
+																					],
 																			  )
 																	})(U, 0, se)
 																case 'JSXFragment':
@@ -35869,24 +35910,24 @@
 																	return V(
 																		U,
 																		Z,
-																		se
+																		se,
 																	)
 																case 'JSXOpeningElement':
 																	return (function R(
 																		U,
 																		Z,
-																		se
+																		se,
 																	) {
 																		let fe =
 																				U.getValue(),
 																			ge =
 																				(fe.name &&
 																					$(
-																						fe.name
+																						fe.name,
 																					)) ||
 																				(fe.typeParameters &&
 																					$(
-																						fe.typeParameters
+																						fe.typeParameters,
 																					))
 																		if (
 																			fe.selfClosing &&
@@ -35899,10 +35940,10 @@
 																			return [
 																				'<',
 																				se(
-																					'name'
+																					'name',
 																				),
 																				se(
-																					'typeParameters'
+																					'typeParameters',
 																				),
 																				' />',
 																			]
@@ -35918,49 +35959,49 @@
 																			I(
 																				fe
 																					.attributes[0]
-																					.value
+																					.value,
 																			) &&
 																			!fe.attributes[0].value.value.includes(
-																				'\n'
+																				'\n',
 																			) &&
 																			!ge &&
 																			!$(
 																				fe
-																					.attributes[0]
+																					.attributes[0],
 																			)
 																		)
 																			return l(
 																				[
 																					'<',
 																					se(
-																						'name'
+																						'name',
 																					),
 																					se(
-																						'typeParameters'
+																						'typeParameters',
 																					),
 																					' ',
 																					...U.map(
 																						se,
-																						'attributes'
+																						'attributes',
 																					),
 																					fe.selfClosing
 																						? ' />'
 																						: '>',
-																				]
+																				],
 																			)
 																		let he =
 																				fe.attributes &&
 																				fe.attributes.some(
 																					(
-																						ke
+																						ke,
 																					) =>
 																						ke.value &&
 																						I(
-																							ke.value
+																							ke.value,
 																						) &&
 																						ke.value.value.includes(
-																							'\n'
-																						)
+																							'\n',
+																						),
 																				),
 																			we =
 																				Z.singleAttributePerLine &&
@@ -35974,10 +36015,10 @@
 																			[
 																				'<',
 																				se(
-																					'name'
+																					'name',
 																				),
 																				se(
-																					'typeParameters'
+																					'typeParameters',
 																				),
 																				p(
 																					U.map(
@@ -35985,67 +36026,67 @@
 																							we,
 																							se(),
 																						],
-																						'attributes'
-																					)
+																						'attributes',
+																					),
 																				),
 																				...q(
 																					fe,
 																					Z,
-																					ge
+																					ge,
 																				),
 																			],
 																			{
 																				shouldBreak:
 																					he,
-																			}
+																			},
 																		)
 																	})(U, Z, se)
 																case 'JSXClosingElement':
 																	return (function L(
 																		U,
 																		Z,
-																		se
+																		se,
 																	) {
 																		let fe =
 																				U.getValue(),
 																			ge =
 																				[]
 																		ge.push(
-																			'</'
+																			'</',
 																		)
 																		let he =
 																			se(
-																				'name'
+																				'name',
 																			)
 																		return (
 																			$(
 																				fe.name,
 																				D.Leading |
-																					D.Line
+																					D.Line,
 																			)
 																				? ge.push(
 																						p(
 																							[
 																								u,
 																								he,
-																							]
+																							],
 																						),
-																						u
+																						u,
 																				  )
 																				: $(
 																						fe.name,
 																						D.Leading |
-																							D.Block
+																							D.Block,
 																				  )
 																				? ge.push(
 																						' ',
-																						he
+																						he,
 																				  )
 																				: ge.push(
-																						he
+																						he,
 																				  ),
 																			ge.push(
-																				'>'
+																				'>',
 																			),
 																			ge
 																		)
@@ -36054,18 +36095,18 @@
 																case 'JSXClosingFragment':
 																	return (function Q(
 																		U,
-																		Z
+																		Z,
 																	) {
 																		let se =
 																				U.getValue(),
 																			fe =
 																				$(
-																					se
+																					se,
 																				),
 																			ge =
 																				$(
 																					se,
-																					D.Line
+																					D.Line,
 																				),
 																			he =
 																				'JSXOpeningFragment' ===
@@ -36084,7 +36125,7 @@
 																				s(
 																					U,
 																					Z,
-																					!0
+																					!0,
 																				),
 																			]),
 																			ge
@@ -36096,20 +36137,20 @@
 																case 'JSXEmptyExpression':
 																	return (function j(
 																		U,
-																		Z
+																		Z,
 																	) {
 																		let se =
 																				U.getValue(),
 																			fe =
 																				$(
 																					se,
-																					D.Line
+																					D.Line,
 																				)
 																		return [
 																			s(
 																				U,
 																				Z,
-																				!fe
+																				!fe,
 																			),
 																			fe
 																				? u
@@ -36118,13 +36159,13 @@
 																	})(U, Z)
 																case 'JSXText':
 																	throw new Error(
-																		'JSXText should be handled by JSXElement'
+																		'JSXText should be handled by JSXElement',
 																	)
 																default:
 																	throw new Error(
 																		`Unknown JSX node type: ${JSON.stringify(
-																			fe.type
-																		)}.`
+																			fe.type,
+																		)}.`,
 																	)
 															}
 													},
@@ -36134,7 +36175,7 @@
 										ct = te({
 											'src/language-js/print/misc.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { isNonEmptyArray: t } =
@@ -36161,19 +36202,19 @@
 															x.id === N
 													return u(
 														w.originalText,
-														N.typeAnnotation
+														N.typeAnnotation,
 													)
 														? [
 																' /*: ',
 																E(
-																	'typeAnnotation'
+																	'typeAnnotation',
 																),
 																' */',
 														  ]
 														: [
 																I ? '' : ': ',
 																E(
-																	'typeAnnotation'
+																	'typeAnnotation',
 																),
 														  ]
 												}
@@ -36207,7 +36248,7 @@
 																			E &&
 																		'VariableDeclarator' ===
 																			w.type &&
-																		w.definite
+																		w.definite,
 																)
 																? '!'
 																: ''
@@ -36217,11 +36258,11 @@
 															let N = _.getValue()
 															return N.typeArguments
 																? E(
-																		'typeArguments'
+																		'typeArguments',
 																  )
 																: N.typeParameters
 																? E(
-																		'typeParameters'
+																		'typeParameters',
 																  )
 																: ''
 														},
@@ -36236,15 +36277,15 @@
 														function g(_, w, E) {
 															let N = _.getValue()
 															return t(
-																N.modifiers
+																N.modifiers,
 															)
 																? [
 																		a(
 																			' ',
 																			_.map(
 																				E,
-																				'modifiers'
-																			)
+																				'modifiers',
+																			),
 																		),
 																		' ',
 																  ]
@@ -36254,7 +36295,7 @@
 													printRestSpread: function f(
 														_,
 														w,
-														E
+														E,
 													) {
 														return [
 															'...',
@@ -36265,7 +36306,7 @@
 													adjustClause: function c(
 														_,
 														w,
-														E
+														E,
 													) {
 														return 'EmptyStatement' ===
 															_.type
@@ -36277,7 +36318,7 @@
 													},
 													printDirective: function F(
 														_,
-														w
+														w,
 													) {
 														let E = _.slice(1, -1)
 														if (
@@ -36296,7 +36337,7 @@
 										er = te({
 											'src/language-js/print/array.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -36341,7 +36382,7 @@
 																(_(C) ||
 																	(w(C) &&
 																		!c(
-																			C.argument
+																			C.argument,
 																		))) &&
 																!c(
 																	C,
@@ -36351,14 +36392,14 @@
 																		!h(
 																			m.originalText,
 																			E(
-																				o
+																				o,
 																			),
 																			{
 																				backwards:
 																					!0,
-																			}
-																		)
-																)
+																			},
+																		),
+																),
 														)
 													)
 												}
@@ -36372,7 +36413,7 @@
 																S.getValue() &&
 																	F(
 																		S.getValue(),
-																		m
+																		m,
 																	) &&
 																	v.push(a)
 														}, C),
@@ -36394,7 +36435,7 @@
 																	d.push(
 																		F(
 																			v.getValue(),
-																			m
+																			m,
 																		)
 																			? [
 																					n,
@@ -36406,10 +36447,10 @@
 																							1
 																					],
 																					f.Leading |
-																						f.Line
+																						f.Line,
 																			  )
 																			? n
-																			: s
+																			: s,
 																	)
 														}, 'elements'),
 														p(d)
@@ -36419,7 +36460,7 @@
 													printArray: function I(
 														T,
 														m,
-														C
+														C,
 													) {
 														let o = T.getValue(),
 															d = [],
@@ -36438,16 +36479,16 @@
 																			v,
 																			t(
 																				T,
-																				m
+																				m,
 																			),
 																			a,
 																			']',
-																		])
+																		]),
 																  )
 																: d.push(v, ']')
 														else {
 															let b = y(
-																	o.elements
+																	o.elements,
 																),
 																B = !(
 																	b &&
@@ -36457,7 +36498,7 @@
 																k = null === b,
 																M =
 																	Symbol(
-																		'array'
+																		'array',
 																	),
 																R =
 																	!m.__inJestEach &&
@@ -36468,7 +36509,7 @@
 																		(
 																			L,
 																			Q,
-																			V
+																			V,
 																		) => {
 																			let j =
 																				L &&
@@ -36506,7 +36547,7 @@
 																					.length >
 																					1
 																			)
-																		}
+																		},
 																	),
 																q = P(o, m),
 																J = B
@@ -36520,10 +36561,10 @@
 																					{
 																						groupId:
 																							M,
-																					}
+																					},
 																			  )
 																			: l(
-																					','
+																					',',
 																			  )
 																		: ''
 																	: ''
@@ -36538,21 +36579,21 @@
 																						T,
 																						m,
 																						C,
-																						J
+																						J,
 																				  )
 																				: [
 																						$(
 																							T,
 																							m,
 																							'elements',
-																							C
+																							C,
 																						),
 																						J,
 																				  ],
 																			t(
 																				T,
 																				m,
-																				!0
+																				!0,
 																			),
 																		]),
 																		a,
@@ -36562,14 +36603,14 @@
 																		shouldBreak:
 																			R,
 																		id: M,
-																	}
-																)
+																	},
+																),
 															)
 														}
 														return (
 															d.push(
 																N(T),
-																x(T, m, C)
+																x(T, m, C),
 															),
 															d
 														)
@@ -36582,7 +36623,7 @@
 										Ao = te({
 											'src/language-js/print/call-arguments.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -36671,14 +36712,14 @@
 																			q.type &&
 																		(q.body.some(
 																			(
-																				J
+																				J,
 																			) =>
 																				'EmptyStatement' !==
-																				J.type
+																				J.type,
 																		) ||
 																			u(
 																				q,
-																				i.Dangling
+																				i.Dangling,
 																			))
 																	)
 																})(q.body)) &&
@@ -36689,7 +36730,7 @@
 																		.type &&
 																	S(
 																		q.body,
-																		!0
+																		!0,
 																	)) ||
 																'ObjectExpression' ===
 																	q.body
@@ -36699,7 +36740,7 @@
 																		.type ||
 																(!J &&
 																	(F(
-																		q.body
+																		q.body,
 																	) ||
 																		'ConditionalExpression' ===
 																			q
@@ -36715,7 +36756,7 @@
 												r.exports = function v(
 													q,
 													J,
-													L
+													L,
 												) {
 													let Q = q.getValue(),
 														V =
@@ -36744,7 +36785,7 @@
 																'ArrayExpression' ===
 																	q[1].type &&
 																!q.some((J) =>
-																	u(J)
+																	u(J),
 																)
 															)
 														})(j)
@@ -36772,11 +36813,11 @@
 																  se.push(
 																		',',
 																		x,
-																		x
+																		x,
 																  ))
 																: se.push(
 																		',',
-																		N
+																		N,
 																  )),
 															ce.push(se)
 													})
@@ -36798,7 +36839,7 @@
 																N,
 																')',
 															],
-															{ shouldBreak: !0 }
+															{ shouldBreak: !0 },
 														)
 													}
 													if (
@@ -36818,7 +36859,7 @@
 																	'ModuleExpression' !==
 																		J.type ||
 																	!(function R(
-																		q
+																		q,
 																	) {
 																		return (
 																			'ObjectExpression' ===
@@ -36829,7 +36870,7 @@
 																					.length &&
 																			w(
 																				q
-																					.properties[0]
+																					.properties[0],
 																			) &&
 																			'Identifier' ===
 																				q
@@ -36844,7 +36885,7 @@
 																			_(
 																				q
 																					.properties[0]
-																					.value
+																					.value,
 																			) &&
 																			'module' ===
 																				q
@@ -36878,11 +36919,11 @@
 															return (
 																!u(
 																	L,
-																	i.Leading
+																	i.Leading,
 																) &&
 																!u(
 																	L,
-																	i.Trailing
+																	i.Trailing,
 																) &&
 																S(L) &&
 																(!Q ||
@@ -36908,13 +36949,13 @@
 															de
 																? ce
 																		.slice(
-																			1
+																			1,
 																		)
 																		.some(C)
 																: ce
 																		.slice(
 																			0,
-																			-1
+																			-1,
 																		)
 																		.some(C)
 														)
@@ -36933,7 +36974,7 @@
 																					{
 																						expandFirstArg:
 																							!0,
-																					}
+																					},
 																				),
 																				ce.length >
 																				1
@@ -36947,7 +36988,7 @@
 																					: '',
 																			],
 																			...ce.slice(
-																				1
+																				1,
 																			),
 																		]),
 																		ue &&
@@ -36957,14 +36998,14 @@
 																				[
 																					...ce.slice(
 																						0,
-																						-1
+																						-1,
 																					),
 																					L(
 																						[],
 																						{
 																							expandLastArg:
 																								!0,
-																						}
+																						},
 																					),
 																				])
 																})
@@ -36990,10 +37031,10 @@
 																				{
 																					shouldBreak:
 																						!0,
-																				}
+																				},
 																			),
 																			...z.slice(
-																				1
+																				1,
 																			),
 																			')',
 																	  ]
@@ -37001,16 +37042,16 @@
 																			'(',
 																			...ce.slice(
 																				0,
-																				-1
+																				-1,
 																			),
 																			P(
 																				s(
-																					z
+																					z,
 																				),
 																				{
 																					shouldBreak:
 																						!0,
-																				}
+																				},
 																			),
 																			')',
 																	  ],
@@ -37030,7 +37071,7 @@
 														: P(Fe, {
 																shouldBreak:
 																	ce.some(
-																		C
+																		C,
 																	) || Y,
 														  })
 												}
@@ -37039,7 +37080,7 @@
 										So = te({
 											'src/language-js/print/member.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -37086,7 +37127,7 @@
 															do {
 																;(w =
 																	g.getParentNode(
-																		E
+																		E,
 																	)),
 																	E++
 															} while (
@@ -37118,14 +37159,14 @@
 																				.property
 																				.type &&
 																		!i(
-																			_
+																			_,
 																		)) ||
 																	(('AssignmentExpression' ===
 																		_.type ||
 																		'VariableDeclarator' ===
 																			_.type) &&
 																		((l(
-																			F.object
+																			F.object,
 																		) &&
 																			F
 																				.object
@@ -37139,7 +37180,7 @@
 																				l(
 																					F
 																						.object
-																						.expression
+																						.expression,
 																				) &&
 																				F
 																					.object
@@ -37163,10 +37204,10 @@
 																					[
 																						t,
 																						x,
-																					]
-																				)
+																					],
+																				),
 																		  ),
-																]
+																],
 															)
 														},
 													printMemberLookup: h,
@@ -37176,7 +37217,7 @@
 										md = te({
 											'src/language-js/print/member-chain.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { printComments: t } = et(),
@@ -37228,7 +37269,7 @@
 												r.exports = function S(
 													b,
 													B,
-													k
+													k,
 												) {
 													let M = b.getParentNode(),
 														R =
@@ -37247,7 +37288,7 @@
 															? !1 !== oe &&
 																	a(
 																		Pe,
-																		oe + 1
+																		oe + 1,
 																	)
 															: _(Ne, B)
 													}
@@ -37263,20 +37304,20 @@
 																			Ne,
 																			[
 																				o(
-																					Ne
+																					Ne,
 																				),
 																				d(
 																					Ne,
 																					B,
-																					k
+																					k,
 																				),
 																				m(
 																					Ne,
 																					B,
-																					k
+																					k,
 																				),
 																			],
-																			B
+																			B,
 																		),
 																		J(Pe)
 																			? N
@@ -37286,7 +37327,7 @@
 															  Ne.call(
 																	(oe) =>
 																		L(oe),
-																	'callee'
+																	'callee',
 															  ))
 															: h(Pe)
 															? (q.unshift({
@@ -37294,7 +37335,7 @@
 																	needsParens:
 																		u(
 																			Ne,
-																			B
+																			B,
 																		),
 																	printed: t(
 																		Ne,
@@ -37302,20 +37343,20 @@
 																			? C(
 																					Ne,
 																					B,
-																					k
+																					k,
 																			  )
 																			: v(
 																					Ne,
 																					B,
-																					k
+																					k,
 																			  ),
-																		B
+																		B,
 																	),
 															  }),
 															  Ne.call(
 																	(oe) =>
 																		L(oe),
-																	'object'
+																	'object',
 															  ))
 															: 'TSNonNullExpression' ===
 															  Pe.type
@@ -37324,13 +37365,13 @@
 																	printed: t(
 																		Ne,
 																		'!',
-																		B
+																		B,
 																	),
 															  }),
 															  Ne.call(
 																	(oe) =>
 																		L(oe),
-																	'expression'
+																	'expression',
 															  ))
 															: q.unshift({
 																	node: Pe,
@@ -37350,7 +37391,7 @@
 														Q.callee &&
 															b.call(
 																(Ne) => L(Ne),
-																'callee'
+																'callee',
 															)
 													let V = [],
 														j = [q[0]],
@@ -37366,7 +37407,7 @@
 																	.computed &&
 																g(
 																	q[Y].node
-																		.property
+																		.property,
 																)));
 														++Y
 													)
@@ -37392,7 +37433,7 @@
 																	.computed &&
 																g(
 																	q[Y].node
-																		.property
+																		.property,
 																)
 															) {
 																j.push(q[Y])
@@ -37410,7 +37451,7 @@
 															j.push(q[Y]),
 															f(
 																q[Y].node,
-																F.Trailing
+																F.Trailing,
 															) &&
 																(V.push(j),
 																(j = []),
@@ -37418,7 +37459,7 @@
 													}
 													function ee(Ne) {
 														return /^[A-Z]|^[$_]+$/.test(
-															Ne
+															Ne,
 														)
 													}
 													j.length > 0 && V.push(j)
@@ -37444,24 +37485,24 @@
 																	('Identifier' ===
 																		H.type &&
 																		(ee(
-																			H.name
+																			H.name,
 																		) ||
 																			(R &&
 																				(function ce(
-																					Ne
+																					Ne,
 																				) {
 																					return (
 																						Ne.length <=
 																						B.tabWidth
 																					)
 																				})(
-																					H.name
+																					H.name,
 																				)) ||
 																			Pe))
 																)
 															}
 															let oe = s(
-																Ne[0]
+																Ne[0],
 															).node
 															return (
 																l(oe) &&
@@ -37470,14 +37511,14 @@
 																		.type &&
 																(ee(
 																	oe.property
-																		.name
+																		.name,
 																) ||
 																	Pe)
 															)
 														})(V)
 													function de(Ne) {
 														let Pe = Ne.map(
-															(oe) => oe.printed
+															(oe) => oe.printed,
 														)
 														return Ne.length > 0 &&
 															s(Ne).needsParens
@@ -37493,27 +37534,27 @@
 																(Ne) =>
 																	f(
 																		Ne.node,
-																		F.Leading
-																	)
+																		F.Leading,
+																	),
 															) ||
 															Z.slice(0, -1).some(
 																(Ne) =>
 																	f(
 																		Ne.node,
-																		F.Trailing
-																	)
+																		F.Trailing,
+																	),
 															) ||
 															(V[U] &&
 																f(
 																	V[U][0]
 																		.node,
-																	F.Leading
+																	F.Leading,
 																))
 													if (V.length <= U && !se)
 														return y(b) ? z : x(z)
 													let Re,
 														fe = s(
-															V[K ? 1 : 0]
+															V[K ? 1 : 0],
 														).node,
 														ge = !i(fe) && J(fe),
 														he = [
@@ -37521,7 +37562,7 @@
 															K
 																? V.slice(
 																		1,
-																		2
+																		2,
 																  ).map(de)
 																: '',
 															ge ? N : '',
@@ -37535,15 +37576,15 @@
 																				E(
 																					N,
 																					Ne.map(
-																						de
-																					)
+																						de,
+																					),
 																				),
-																			])
+																			]),
 																	  )
 															})(
 																V.slice(
-																	K ? 2 : 1
-																)
+																	K ? 2 : 1,
+																),
 															),
 														],
 														we = q
@@ -37562,21 +37603,21 @@
 																	(Ne) =>
 																		!Ne.arguments.every(
 																			(
-																				Pe
+																				Pe,
 																			) =>
 																				c(
 																					Pe,
-																					0
-																				)
-																		)
+																					0,
+																				),
+																		),
 																)) ||
 															Fe.slice(
 																0,
-																-1
+																-1,
 															).some(T) ||
 															(function ke() {
 																let Ne = s(
-																		s(V)
+																		s(V),
 																	).node,
 																	Pe = s(Fe)
 																return (
@@ -37585,15 +37626,15 @@
 																	we
 																		.slice(
 																			0,
-																			-1
+																			-1,
 																		)
 																		.some(
 																			(
-																				oe
+																				oe,
 																			) =>
 																				oe.arguments.some(
-																					p
-																				)
+																					p,
+																				),
 																		)
 																)
 															})()
@@ -37616,7 +37657,7 @@
 										xo = te({
 											'src/language-js/print/call-expression.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -37667,7 +37708,7 @@
 																	!D &&
 																	(function E(
 																		N,
-																		x
+																		x,
 																	) {
 																		if (
 																			'Identifier' !==
@@ -37691,7 +37732,7 @@
 																		) {
 																			let I =
 																				n(
-																					N
+																					N,
 																				)
 																			return (
 																				'ExpressionStatement' ===
@@ -37706,7 +37747,7 @@
 																					(3 ===
 																						I.length &&
 																						p(
-																							I[0]
+																							I[0],
 																						) &&
 																						'ArrayExpression' ===
 																							I[1]
@@ -37719,19 +37760,19 @@
 																		C.length &&
 																		y(
 																			C[0],
-																			x.originalText
+																			x.originalText,
 																		)) ||
 																	(!D &&
 																		h(
 																			P,
-																			$
+																			$,
 																		)))
 															) {
 																let v = []
 																return (
 																	g(N, () => {
 																		v.push(
-																			I()
+																			I(),
 																		)
 																	}),
 																	[
@@ -37739,18 +37780,18 @@
 																			? 'new '
 																			: '',
 																		I(
-																			'callee'
+																			'callee',
 																		),
 																		m,
 																		_(
 																			N,
 																			x,
-																			I
+																			I,
 																		),
 																		'(',
 																		t(
 																			', ',
-																			v
+																			v,
 																		),
 																		')',
 																	]
@@ -37767,7 +37808,7 @@
 																		.type &&
 																u(
 																	P.callee
-																		.trailingComments
+																		.trailingComments,
 																)
 															if (
 																(o &&
@@ -37776,34 +37817,34 @@
 																!T &&
 																	!D &&
 																	l(
-																		P.callee
+																		P.callee,
 																	) &&
 																	!N.call(
 																		(v) =>
 																			a(
 																				v,
-																				x
+																				x,
 																			),
-																		'callee'
+																		'callee',
 																	))
 															)
 																return c(
 																	N,
 																	x,
-																	I
+																	I,
 																)
 															let d = [
 																D ? 'new ' : '',
 																T
 																	? 'import'
 																	: I(
-																			'callee'
+																			'callee',
 																	  ),
 																m,
 																o
 																	? `/*:: ${P.callee.trailingComments[0].value
 																			.slice(
-																				2
+																				2,
 																			)
 																			.trim()} */`
 																	: '',
@@ -37821,7 +37862,7 @@
 										tr = te({
 											'src/language-js/print/assignment.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -37871,14 +37912,14 @@
 													de,
 													ue,
 													Fe,
-													z
+													z,
 												) {
 													let U = (function d(
 															W,
 															K,
 															de,
 															ue,
-															Fe
+															Fe,
 														) {
 															let z =
 																	W.getValue(),
@@ -37895,7 +37936,7 @@
 																		('ExpressionStatement' !==
 																			he.type &&
 																			'VariableDeclaration' !==
-																				he.type)
+																				he.type),
 																)
 															)
 																return Z
@@ -37911,11 +37952,11 @@
 															if (
 																(!Z &&
 																	b(
-																		U.right
+																		U.right,
 																	)) ||
 																g(
 																	K.originalText,
-																	U
+																	U,
 																)
 															)
 																return 'break-after-operator'
@@ -37946,17 +37987,17 @@
 																				2 &&
 																			K.properties.some(
 																				(
-																					de
+																					de,
 																				) =>
 																					$(
-																						de
+																						de,
 																					) &&
 																					(!de.shorthand ||
 																						(de.value &&
 																							'AssignmentPattern' ===
 																								de
 																									.value
-																									.type))
+																									.type)),
 																			)
 																		)
 																	}
@@ -37965,10 +38006,10 @@
 																(function k(W) {
 																	let K =
 																		(function M(
-																			W
+																			W,
 																		) {
 																			return (function R(
-																				W
+																				W,
 																			) {
 																				return (
 																					'TSTypeAliasDeclaration' ===
@@ -37977,7 +38018,7 @@
 																						W.type
 																				)
 																			})(
-																				W
+																				W,
 																			) &&
 																				W.typeParameters &&
 																				W
@@ -37999,12 +38040,12 @@
 																				1 &&
 																			K.some(
 																				(
-																					ue
+																					ue,
 																				) =>
 																					ue[
 																						de
 																					] ||
-																					ue.default
+																					ue.default,
 																			)
 																		)
 																			return !0
@@ -38027,7 +38068,7 @@
 																	)
 																		return !1
 																	let de = L(
-																		K.typeAnnotation
+																		K.typeAnnotation,
 																	)
 																	return (
 																		t(de) &&
@@ -38035,15 +38076,15 @@
 																			1 &&
 																		de.some(
 																			(
-																				ue
+																				ue,
 																			) =>
 																				t(
 																					L(
-																						ue
-																					)
+																						ue,
+																					),
 																				) ||
 																				'TSConditionalType' ===
-																					ue.type
+																					ue.type,
 																		)
 																	)
 																})(z) ||
@@ -38054,7 +38095,7 @@
 																(function ie(
 																	W,
 																	K,
-																	de
+																	de,
 																) {
 																	if (!$(W))
 																		return !1
@@ -38074,16 +38115,16 @@
 																		W,
 																		K,
 																		de,
-																		ue
+																		ue,
 																	) {
 																		let Fe =
 																			W.getValue()
 																		if (
 																			c(
-																				Fe
+																				Fe,
 																			) &&
 																			!D(
-																				Fe
+																				Fe,
 																			)
 																		)
 																			return !0
@@ -38100,16 +38141,16 @@
 																					Fe
 																				return (
 																					c(
-																						Z
+																						Z,
 																					) &&
 																					!D(
-																						Z
+																						Z,
 																					)
 																				)
 																			}
 																			case 'ClassExpression':
 																				return t(
-																					Fe.decorators
+																					Fe.decorators,
 																				)
 																		}
 																		if (ue)
@@ -38126,7 +38167,7 @@
 																				(z =
 																					z.argument),
 																					U.push(
-																						'argument'
+																						'argument',
 																					)
 																			else {
 																				if (
@@ -38137,30 +38178,30 @@
 																				;(z =
 																					z.expression),
 																					U.push(
-																						'expression'
+																						'expression',
 																					)
 																			}
 																		return !(
 																			!f(
-																				z
+																				z,
 																			) &&
 																			!W.call(
 																				() =>
 																					V(
 																						W,
 																						K,
-																						de
+																						de,
 																					),
-																				...U
+																				...U,
 																			)
 																		)
 																	})(
 																		W,
 																		K,
 																		de,
-																		ge
+																		ge,
 																	),
-																Fe
+																Fe,
 															)
 																? 'break-after-operator'
 																: ge ||
@@ -38196,7 +38237,7 @@
 														case 'fluid': {
 															let se =
 																Symbol(
-																	'assignment'
+																	'assignment',
 																)
 															return n([
 																n(ue),
@@ -38293,7 +38334,7 @@
 													)
 														return W.call(
 															z,
-															'expression'
+															'expression',
 														)
 													if (w(Fe)) {
 														if (
@@ -38311,7 +38352,7 @@
 																		Z.length &&
 																		(function Y(
 																			W,
-																			K
+																			K,
 																		) {
 																			let {
 																				printWidth:
@@ -38320,7 +38361,7 @@
 																				K
 																			if (
 																				I(
-																					W
+																					W,
 																				)
 																			)
 																				return !1
@@ -38337,10 +38378,10 @@
 																						.length <=
 																						ue) ||
 																				(P(
-																					W
+																					W,
 																				) &&
 																					!I(
-																						W.argument
+																						W.argument,
 																					))
 																			)
 																				return !0
@@ -38359,10 +38400,10 @@
 																				? Fe.length <=
 																						ue
 																				: f(
-																						W
+																						W,
 																				  )
 																				? x(
-																						W
+																						W,
 																				  )
 																						.length <=
 																				  ue
@@ -38379,23 +38420,23 @@
 																						.length <=
 																						ue &&
 																				  !W.quasis[0].value.raw.includes(
-																						'\n'
+																						'\n',
 																				  )
 																				: F(
-																						W
+																						W,
 																				  )
 																		})(
 																			Z[0],
-																			K
+																			K,
 																		))
 																) ||
 																(function ee(
 																	W,
-																	K
+																	K,
 																) {
 																	let de =
 																		(function ce(
-																			W
+																			W,
 																		) {
 																			return (
 																				(W.typeParameters &&
@@ -38443,8 +38484,8 @@
 																		if (
 																			y(
 																				K(
-																					ue
-																				)
+																					ue,
+																				),
 																			)
 																		)
 																			return !0
@@ -38472,7 +38513,7 @@
 																de,
 																de('id'),
 																' =',
-																'init'
+																'init',
 															)
 														},
 													printAssignmentExpression:
@@ -38488,7 +38529,7 @@
 																	' ',
 																	ue.operator,
 																],
-																'right'
+																'right',
 															)
 														},
 													printAssignment: m,
@@ -38500,7 +38541,7 @@
 										Lr = te({
 											'src/language-js/print/function-parameters.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -38575,12 +38616,12 @@
 																w(
 																	b
 																		.typeAnnotation
-																		.typeAnnotation
+																		.typeAnnotation,
 																)) ||
 															('FunctionTypeParam' ===
 																b.type &&
 																w(
-																	b.typeAnnotation
+																	b.typeAnnotation,
 																)) ||
 															('AssignmentPattern' ===
 																b.type &&
@@ -38618,7 +38659,7 @@
 															S,
 															b,
 															B,
-															k
+															k,
 														) {
 															let M =
 																	v.getValue(),
@@ -38639,8 +38680,8 @@
 																			t(
 																				b.originalText,
 																				ie,
-																				$
-																			)
+																				$,
+																			),
 																	),
 																	')',
 																]
@@ -38654,7 +38695,7 @@
 																	v,
 																	(
 																		ie,
-																		ee
+																		ee,
 																	) => {
 																		let ce =
 																			ee ===
@@ -38663,34 +38704,34 @@
 																		ce &&
 																			M.rest &&
 																			V.push(
-																				'...'
+																				'...',
 																			),
 																			V.push(
-																				S()
+																				S(),
 																			),
 																			!ce &&
 																				(V.push(
-																					','
+																					',',
 																				),
 																				L ||
 																				Q
 																					? V.push(
-																							' '
+																							' ',
 																					  )
 																					: P(
 																							R[
 																								ee
 																							],
-																							b
+																							b,
 																					  )
 																					? V.push(
 																							n,
-																							n
+																							n,
 																					  )
 																					: V.push(
-																							a
+																							a,
 																					  ))
-																	}
+																	},
 																),
 																B)
 															) {
@@ -38708,7 +38749,7 @@
 															}
 															let j = R.every(
 																(ie) =>
-																	!ie.decorators
+																	!ie.decorators,
 															)
 															return (Q && j) || L
 																? [
@@ -38744,7 +38785,7 @@
 																		M.typeParameters &&
 																  f(
 																		R[0]
-																			.typeAnnotation
+																			.typeAnnotation,
 																  ) &&
 																  !M.rest
 																? 'always' ===
@@ -38764,14 +38805,14 @@
 																		]),
 																		p(
 																			!N(
-																				M
+																				M,
 																			) &&
 																				x(
 																					b,
-																					'all'
+																					'all',
 																				)
 																				? ','
-																				: ''
+																				: '',
 																		),
 																		u,
 																		')',
@@ -38782,7 +38823,7 @@
 													shouldGroupFunctionParameters:
 														function d(v, S) {
 															let b = (function o(
-																v
+																v,
 															) {
 																let S
 																return (
@@ -38833,7 +38874,7 @@
 										Or = te({
 											'src/language-js/print/type-annotation.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -38891,7 +38932,7 @@
 																	'NullLiteralTypeAnnotation' ===
 																		M.type ||
 																	'TSNullKeyword' ===
-																		M.type
+																		M.type,
 															).length,
 															k = b.types.some(
 																(M) =>
@@ -38902,7 +38943,7 @@
 																	'GenericTypeAnnotation' ===
 																		M.type ||
 																	'TSTypeReference' ===
-																		M.type
+																		M.type,
 															)
 														if (
 															b.types.length -
@@ -38918,7 +38959,7 @@
 													printOpaqueType: function D(
 														b,
 														B,
-														k
+														k,
 													) {
 														let M = B.semi
 																? ';'
@@ -38930,22 +38971,22 @@
 																'opaque type ',
 																k('id'),
 																k(
-																	'typeParameters'
-																)
+																	'typeParameters',
+																),
 															),
 															R.supertype &&
 																q.push(
 																	': ',
 																	k(
-																		'supertype'
-																	)
+																		'supertype',
+																	),
 																),
 															R.impltype &&
 																q.push(
 																	' = ',
 																	k(
-																		'impltype'
-																	)
+																		'impltype',
+																	),
 																),
 															q.push(M),
 															q
@@ -38954,7 +38995,7 @@
 													printTypeAlias: function T(
 														b,
 														B,
-														k
+														k,
 													) {
 														let M = B.semi
 																? ';'
@@ -38967,8 +39008,8 @@
 																'type ',
 																k('id'),
 																k(
-																	'typeParameters'
-																)
+																	'typeParameters',
+																),
 															)
 														let J =
 															'TSTypeAliasDeclaration' ===
@@ -38982,7 +39023,7 @@
 																k,
 																q,
 																' =',
-																J
+																J,
 															),
 															M,
 														]
@@ -38993,7 +39034,7 @@
 																	b.getValue(),
 																R = b.map(
 																	k,
-																	'types'
+																	'types',
 																),
 																q = [],
 																J = !1
@@ -39004,20 +39045,22 @@
 															)
 																0 === L
 																	? q.push(
-																			R[L]
+																			R[
+																				L
+																			],
 																	  )
 																	: F(
 																			M
 																				.types[
 																				L -
 																					1
-																			]
+																			],
 																	  ) &&
 																	  F(
 																			M
 																				.types[
 																				L
-																			]
+																			],
 																	  )
 																	? q.push([
 																			' & ',
@@ -39025,7 +39068,7 @@
 																				? p(
 																						R[
 																							L
-																						]
+																						],
 																				  )
 																				: R[
 																						L
@@ -39036,13 +39079,13 @@
 																				.types[
 																				L -
 																					1
-																			]
+																			],
 																	  ) ||
 																	  F(
 																			M
 																				.types[
 																				L
-																			]
+																			],
 																	  )
 																	? (L > 1 &&
 																			(J =
@@ -39054,11 +39097,11 @@
 																				? p(
 																						R[
 																							L
-																						]
+																						],
 																				  )
 																				: R[
 																						L
-																				  ]
+																				  ],
 																	  ))
 																	: q.push(
 																			p([
@@ -39067,14 +39110,14 @@
 																				R[
 																					L
 																				],
-																			])
+																			]),
 																	  )
 															return n(q)
 														},
 													printUnionType: function C(
 														b,
 														B,
-														k
+														k,
 													) {
 														let M = b.getValue(),
 															R =
@@ -39098,7 +39141,7 @@
 																	R.type &&
 																	!R.name &&
 																	b.getParentNode(
-																		1
+																		1,
 																	).this !==
 																		R) ||
 																(('TypeAlias' ===
@@ -39109,7 +39152,7 @@
 																		R.type) &&
 																	_(
 																		B.originalText,
-																		M
+																		M,
 																	))
 															),
 															J = $(M),
@@ -39119,7 +39162,7 @@
 																	J ||
 																		(Y = y(
 																			2,
-																			Y
+																			Y,
 																		)),
 																	t(j, Y, B)
 																)
@@ -39130,7 +39173,7 @@
 																q &&
 																!_(
 																	B.originalText,
-																	M
+																	M,
 																),
 															V = [
 																h([
@@ -39172,15 +39215,15 @@
 																R = [],
 																q =
 																	b.getParentNode(
-																		0
+																		0,
 																	),
 																J =
 																	b.getParentNode(
-																		1
+																		1,
 																	),
 																L =
 																	b.getParentNode(
-																		2
+																		2,
 																	),
 																Q =
 																	'TSFunctionType' ===
@@ -39193,10 +39236,10 @@
 																			!q.variance &&
 																			!q.optional &&
 																			c(
-																				q
+																				q,
 																			) ===
 																				c(
-																					M
+																					M,
 																				)) ||
 																		'ObjectTypeCallProperty' ===
 																			q.type ||
@@ -39228,7 +39271,7 @@
 																	k,
 																	B,
 																	!1,
-																	!0
+																	!0,
 																),
 																ie =
 																	M.returnType ||
@@ -39239,13 +39282,13 @@
 																					? ' => '
 																					: ': ',
 																				k(
-																					'returnType'
+																					'returnType',
 																				),
 																				k(
-																					'predicate'
+																					'predicate',
 																				),
 																				k(
-																					'typeAnnotation'
+																					'typeAnnotation',
 																				),
 																		  ]
 																		: '',
@@ -39254,7 +39297,7 @@
 																R.push(
 																	ee
 																		? n(Y)
-																		: Y
+																		: Y,
 																),
 																ie &&
 																	R.push(ie),
@@ -39266,7 +39309,7 @@
 													printTupleType: function d(
 														b,
 														B,
-														k
+														k,
 													) {
 														let M = b.getValue(),
 															R =
@@ -39286,7 +39329,7 @@
 															h(
 																J && E(B, 'all')
 																	? ','
-																	: ''
+																	: '',
 															),
 															s(b, B, !0),
 															L,
@@ -39314,7 +39357,7 @@
 													printJSDocType: function S(
 														b,
 														B,
-														k
+														k,
 													) {
 														let M = b.getValue()
 														return [
@@ -39329,7 +39372,7 @@
 										jr = te({
 											'src/language-js/print/type-parameters.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -39395,22 +39438,22 @@
 																		d.push(
 																			w(
 																				v.readonly,
-																				'readonly'
+																				'readonly',
 																			),
-																			' '
+																			' ',
 																		),
 																  d.push(
 																		'[',
 																		C(
-																			'name'
-																		)
+																			'name',
+																		),
 																  ),
 																  o.constraint &&
 																		d.push(
 																			' in ',
 																			C(
-																				'constraint'
-																			)
+																				'constraint',
+																			),
 																		),
 																  v.nameType &&
 																		d.push(
@@ -39418,51 +39461,51 @@
 																			T.callParent(
 																				() =>
 																					C(
-																						'nameType'
-																					)
-																			)
+																						'nameType',
+																					),
+																			),
 																		),
 																  d.push(']'),
 																  d)
 																: (o.variance &&
 																		d.push(
 																			C(
-																				'variance'
-																			)
+																				'variance',
+																			),
 																		),
 																  o.in &&
 																		d.push(
-																			'in '
+																			'in ',
 																		),
 																  o.out &&
 																		d.push(
-																			'out '
+																			'out ',
 																		),
 																  d.push(
 																		C(
-																			'name'
-																		)
+																			'name',
+																		),
 																  ),
 																  o.bound &&
 																		d.push(
 																			': ',
 																			C(
-																				'bound'
-																			)
+																				'bound',
+																			),
 																		),
 																  o.constraint &&
 																		d.push(
 																			' extends ',
 																			C(
-																				'constraint'
-																			)
+																				'constraint',
+																			),
 																		),
 																  o.default &&
 																		d.push(
 																			' = ',
 																			C(
-																				'default'
-																			)
+																				'default',
+																			),
 																		),
 																  d)
 														},
@@ -39472,13 +39515,13 @@
 															if (!d[o]) return ''
 															if (
 																!Array.isArray(
-																	d[o]
+																	d[o],
 																)
 															)
 																return C(o)
 															let v =
 																	T.getNode(
-																		2
+																		2,
 																	),
 																S = v && y(v),
 																b = T.match(
@@ -39492,7 +39535,7 @@
 																			_(
 																				M[
 																					o
-																				][0]
+																				][0],
 																			)
 																		),
 																	void 0,
@@ -39502,7 +39545,7 @@
 																	(M) =>
 																		'Identifier' ===
 																		M.type,
-																	x
+																	x,
 																)
 															if (
 																0 ===
@@ -39521,7 +39564,7 @@
 																				N(
 																					d[
 																						o
-																					][0]
+																					][0],
 																				)))))
 															)
 																return [
@@ -39530,8 +39573,8 @@
 																		', ',
 																		T.map(
 																			C,
-																			o
-																		)
+																			o,
+																		),
 																	),
 																	$(T, m),
 																	'>',
@@ -39552,7 +39595,7 @@
 																	? ','
 																	: f(
 																			m,
-																			'all'
+																			'all',
 																	  )
 																	? p(',')
 																	: ''
@@ -39568,15 +39611,15 @@
 																			],
 																			T.map(
 																				C,
-																				o
-																			)
+																				o,
+																			),
 																		),
 																	]),
 																	k,
 																	u,
 																	'>',
 																],
-																{ id: I(d) }
+																{ id: I(d) },
 															)
 														},
 													getTypeParametersGroupId: I,
@@ -39586,7 +39629,7 @@
 										rr = te({
 											'src/language-js/print/property.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { printComments: t } = et(),
@@ -39629,7 +39672,7 @@
 																!I.computed &&
 																I.key &&
 																i(I.key) &&
-																!l(I, F)
+																!l(I, F),
 														)
 														h.set(E, x)
 													}
@@ -39639,7 +39682,7 @@
 															(n(N) &&
 																u(a(p(N))) &&
 																String(
-																	N.value
+																	N.value,
 																) === a(p(N)) &&
 																'typescript' !==
 																	F.parser &&
@@ -39655,13 +39698,13 @@
 																'Identifier' ===
 																	N.type
 																	? N.name
-																	: N.value.toString()
+																	: N.value.toString(),
 															),
-															F
+															F,
 														)
 														return f.call(
 															(I) => t(I, x, F),
-															'key'
+															'key',
 														)
 													}
 													return l(w, F) &&
@@ -39675,15 +39718,15 @@
 																	t(
 																		x,
 																		/^\d/.test(
-																			N.value
+																			N.value,
 																		)
 																			? a(
-																					N.value
+																					N.value,
 																			  )
 																			: N.value,
-																		F
+																		F,
 																	),
-																'key'
+																'key',
 														  )
 														: _('key')
 												}
@@ -39691,7 +39734,7 @@
 													printProperty: function c(
 														f,
 														F,
-														_
+														_,
 													) {
 														return f.getValue()
 															.shorthand
@@ -39702,7 +39745,7 @@
 																	_,
 																	g(f, F, _),
 																	':',
-																	'value'
+																	'value',
 															  )
 													},
 													printPropertyKey: g,
@@ -39712,7 +39755,7 @@
 										qr = te({
 											'src/language-js/print/function.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Zt(),
@@ -39798,12 +39841,12 @@
 														fe.body
 															? ke.push(
 																	' ',
-																	se('body')
+																	se('body'),
 															  )
 															: ke.push(
 																	Z.semi
 																		? ';'
-																		: ''
+																		: '',
 															  ),
 														ke
 													)
@@ -39826,7 +39869,7 @@
 																U.typeParameters ||
 																C(
 																	U,
-																	d.Dangling
+																	d.Dangling,
 																) ||
 																'Identifier' !==
 																	Z[0].type ||
@@ -39848,7 +39891,7 @@
 														fe.returnType &&
 														x(
 															se.originalText,
-															fe.returnType
+															fe.returnType,
 														)
 													)
 														return [
@@ -39867,7 +39910,7 @@
 																fe.returnType
 																	? ' '
 																	: ': ',
-																Z('predicate')
+																Z('predicate'),
 															),
 														he
 													)
@@ -39881,7 +39924,7 @@
 															if (
 																N(
 																	U.originalText,
-																	Z
+																	Z,
 																)
 															)
 																return !0
@@ -39899,7 +39942,7 @@
 																			fe),
 																		N(
 																			U.originalText,
-																			se
+																			se,
 																		))
 																	)
 																		return !0
@@ -39911,7 +39954,7 @@
 																	y([
 																		g,
 																		se(
-																			'argument'
+																			'argument',
 																		),
 																	]),
 																	g,
@@ -39925,23 +39968,23 @@
 																	p([
 																		h(
 																			' (',
-																			' '
+																			' ',
 																		),
 																		y([
 																			l,
 																			se(
-																				'argument'
+																				'argument',
 																			),
 																		]),
 																		l,
 																		h(')'),
-																	])
+																	]),
 															  )
 															: he.push(
 																	' ',
 																	se(
-																		'argument'
-																	)
+																		'argument',
+																	),
 															  ))
 													let we = o(fe),
 														ke = n(we),
@@ -39951,7 +39994,7 @@
 														C(fe, d.Dangling) &&
 															he.push(
 																' ',
-																s(U, Z, !0)
+																s(U, Z, !0),
 															),
 														Re || he.push(ge),
 														he
@@ -39962,7 +40005,7 @@
 														U,
 														Z,
 														se,
-														fe
+														fe,
 													) {
 														let ge = U.getValue(),
 															he = !1
@@ -39988,14 +40031,14 @@
 															we.push('declare '),
 															ge.async &&
 																we.push(
-																	'async '
+																	'async ',
 																),
 															ge.generator
 																? we.push(
-																		'function* '
+																		'function* ',
 																  )
 																: we.push(
-																		'function '
+																		'function ',
 																  ),
 															ge.id &&
 																we.push(Z('id'))
@@ -40003,7 +40046,7 @@
 																U,
 																Z,
 																se,
-																he
+																he,
 															),
 															Re = K(U, Z, se),
 															Ne = q(ge, Re)
@@ -40019,7 +40062,7 @@
 																ge.body
 																	? ' '
 																	: '',
-																Z('body')
+																Z('body'),
 															),
 															se.semi &&
 																(ge.declare ||
@@ -40033,7 +40076,7 @@
 															U,
 															Z,
 															se,
-															fe
+															fe,
 														) {
 															let ge =
 																	U.getValue(),
@@ -40047,7 +40090,7 @@
 																			U,
 																			Z,
 																			se,
-																			fe
+																			fe,
 																		) {
 																			let he =
 																				[]
@@ -40055,11 +40098,11 @@
 																				(U.getValue()
 																					.async &&
 																					he.push(
-																						'async '
+																						'async ',
 																					),
 																				W(
 																					U,
-																					Z
+																					Z,
 																				))
 																			)
 																				he.push(
@@ -40067,8 +40110,8 @@
 																						[
 																							'params',
 																							0,
-																						]
-																					)
+																						],
+																					),
 																				)
 																			else {
 																				let ke =
@@ -40079,22 +40122,22 @@
 																						K(
 																							U,
 																							se,
-																							Z
+																							Z,
 																						)
 																				if (
 																					ke
 																				) {
 																					if (
 																						_(
-																							Re
+																							Re,
 																						)
 																					)
 																						throw new w()
 																					Re =
 																						p(
 																							F(
-																								Re
-																							)
+																								Re,
+																							),
 																						)
 																				}
 																				he.push(
@@ -40105,11 +40148,11 @@
 																								se,
 																								Z,
 																								ke,
-																								!0
+																								!0,
 																							),
 																							Re,
-																						]
-																					)
+																						],
+																					),
 																				)
 																			}
 																			let we =
@@ -40118,13 +40161,13 @@
 																					Z,
 																					!0,
 																					(
-																						ke
+																						ke,
 																					) => {
 																						let Re =
 																							u(
 																								Z.originalText,
 																								ke,
-																								M
+																								M,
 																							)
 																						return (
 																							!1 !==
@@ -40133,16 +40176,16 @@
 																								Z.originalText.slice(
 																									Re,
 																									Re +
-																										2
+																										2,
 																								)
 																						)
-																					}
+																					},
 																				)
 																			return (
 																				we &&
 																					he.push(
 																						' ',
-																						we
+																						we,
 																					),
 																				he
 																			)
@@ -40150,14 +40193,14 @@
 																			U,
 																			Z,
 																			se,
-																			fe
+																			fe,
 																		)
 																	if (
 																		0 ===
 																		he.length
 																	)
 																		he.push(
-																			pe
+																			pe,
 																		)
 																	else {
 																		let {
@@ -40167,35 +40210,35 @@
 																				le,
 																		} = a(
 																			U,
-																			Z
+																			Z,
 																		)
 																		he.push(
 																			[
 																				X,
 																				pe,
-																			]
+																			],
 																		),
 																			we.unshift(
-																				le
+																				le,
 																			)
 																	}
 																	;(ke =
 																		ke ||
 																		(ge.returnType &&
 																			E(
-																				ge
+																				ge,
 																			)
 																				.length >
 																				0) ||
 																		ge.typeParameters ||
 																		E(
-																			ge
+																			ge,
 																		).some(
 																			(
-																				X
+																				X,
 																			) =>
 																				'Identifier' !==
-																				X.type
+																				X.type,
 																		)),
 																		'ArrowFunctionExpression' !==
 																			ge
@@ -40206,14 +40249,14 @@
 																			? we.unshift(
 																					se(
 																						'body',
-																						fe
-																					)
+																						fe,
+																					),
 																			  )
 																			: ((ge =
 																					ge.body),
 																			  U.call(
 																					H,
-																					'body'
+																					'body',
 																			  ))
 																})(),
 																he.length > 1)
@@ -40224,7 +40267,7 @@
 																	se,
 																	fe,
 																	ge,
-																	he
+																	he,
 																) {
 																	let we =
 																			U.getName(),
@@ -40232,14 +40275,14 @@
 																			U.getParentNode(),
 																		Re =
 																			v(
-																				ke
+																				ke,
 																			) &&
 																			'callee' ===
 																				we,
 																		Ne =
 																			Boolean(
 																				Z &&
-																					Z.assignmentLayout
+																					Z.assignmentLayout,
 																			),
 																		Pe =
 																			'BlockStatement' !==
@@ -40262,7 +40305,7 @@
 																					Z.assignmentLayout),
 																		H =
 																			Symbol(
-																				'arrow-chain'
+																				'arrow-chain',
 																			)
 																	return (
 																		'SequenceExpression' ===
@@ -40277,11 +40320,11 @@
 																							[
 																								l,
 																								ge,
-																							]
+																							],
 																						),
 																						l,
 																						')',
-																					]
+																					],
 																				)),
 																		p([
 																			p(
@@ -40297,20 +40340,20 @@
 																									' =>',
 																									i,
 																								],
-																								se
+																								se,
 																							),
 																							{
 																								shouldBreak:
 																									fe,
-																							}
+																							},
 																						),
-																					]
+																					],
 																				),
 																				{
 																					id: H,
 																					shouldBreak:
 																						oe,
-																				}
+																				},
 																			),
 																			' =>',
 																			f(
@@ -40319,7 +40362,7 @@
 																							[
 																								i,
 																								ge,
-																							]
+																							],
 																					  )
 																					: [
 																							' ',
@@ -40328,7 +40371,7 @@
 																				{
 																					groupId:
 																						H,
-																				}
+																				},
 																			),
 																			Re
 																				? h(
@@ -40337,7 +40380,7 @@
 																						{
 																							groupId:
 																								H,
-																						}
+																						},
 																				  )
 																				: '',
 																		])
@@ -40348,14 +40391,14 @@
 																	he,
 																	ke,
 																	we,
-																	ge
+																	ge,
 																)
 															let Re = he
 															if (
 																(Re.push(' =>'),
 																!N(
 																	Z.originalText,
-																	ge.body
+																	ge.body,
 																) &&
 																	('ArrayExpression' ===
 																		ge.body
@@ -40369,11 +40412,11 @@
 																				.body
 																				.type ||
 																		I(
-																			ge.body
+																			ge.body,
 																		) ||
 																		P(
 																			ge.body,
-																			Z.originalText
+																			Z.originalText,
 																		) ||
 																		'ArrowFunctionExpression' ===
 																			ge
@@ -40424,7 +40467,7 @@
 																		ge.body,
 																		(H) =>
 																			'ObjectExpression' ===
-																			H.type
+																			H.type,
 																	)
 															return p([
 																...Re,
@@ -40434,14 +40477,14 @@
 																		oe
 																			? h(
 																					'',
-																					'('
+																					'(',
 																			  )
 																			: '',
 																		we,
 																		oe
 																			? h(
 																					'',
-																					')'
+																					')',
 																			  )
 																			: '',
 																	]),
@@ -40450,7 +40493,7 @@
 																				h(
 																					Pe
 																						? ','
-																						: ''
+																						: '',
 																				),
 																				l,
 																		  ]
@@ -40461,7 +40504,7 @@
 													printMethod: function V(
 														U,
 														Z,
-														se
+														se,
 													) {
 														let fe = U.getNode(),
 															{ kind: ge } = fe,
@@ -40476,15 +40519,15 @@
 																		'get' ===
 																			ge ||
 																			'set' ===
-																				ge
+																				ge,
 																  ),
 																  we.push(
 																		ge,
-																		' '
+																		' ',
 																  ))
 																: he.async &&
 																  we.push(
-																		'async '
+																		'async ',
 																  ),
 															he.generator &&
 																we.push('*'),
@@ -40494,35 +40537,35 @@
 																	fe.key
 																		.optional
 																	? '?'
-																	: ''
+																	: '',
 															),
 															fe === he
 																? we.push(
 																		j(
 																			U,
 																			Z,
-																			se
-																		)
+																			se,
+																		),
 																  )
 																: 'FunctionExpression' ===
 																  he.type
 																? we.push(
 																		U.call(
 																			(
-																				ke
+																				ke,
 																			) =>
 																				j(
 																					ke,
 																					Z,
-																					se
+																					se,
 																				),
-																			'value'
-																		)
+																			'value',
+																		),
 																  )
 																: we.push(
 																		se(
-																			'value'
-																		)
+																			'value',
+																		),
 																  ),
 															we
 														)
@@ -40550,7 +40593,7 @@
 										nu = te({
 											'src/language-js/print/decorators.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -40577,8 +40620,8 @@
 														(N) =>
 															s(
 																E.originalText,
-																y(N)
-															)
+																y(N),
+															),
 													)
 												}
 												function _(w) {
@@ -40602,7 +40645,7 @@
 													printDecorators: function f(
 														w,
 														E,
-														N
+														N,
 													) {
 														let x = w.getValue(),
 															{ decorators: I } =
@@ -40628,8 +40671,8 @@
 																a,
 																w.map(
 																	N,
-																	'decorators'
-																)
+																	'decorators',
+																),
 															),
 															a,
 														]
@@ -40642,8 +40685,8 @@
 																	a,
 																	w.map(
 																		N,
-																		'decorators'
-																	)
+																		'decorators',
+																	),
 																),
 																F(x, E) ? n : a,
 															])
@@ -40656,8 +40699,8 @@
 																	w.map(
 																		N,
 																		'declaration',
-																		'decorators'
-																	)
+																		'decorators',
+																	),
 																),
 																n,
 															]
@@ -40670,7 +40713,7 @@
 										nr = te({
 											'src/language-js/print/class.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -40721,7 +40764,7 @@
 														b.typeParameters &&
 														!c(
 															b.typeParameters,
-															f.Trailing | f.Line
+															f.Trailing | f.Line,
 														) &&
 														!(function m(b) {
 															return (
@@ -40732,8 +40775,8 @@
 																	'implements',
 																].filter((B) =>
 																	Boolean(
-																		b[B]
-																	)
+																		b[B],
+																	),
 																).length > 1
 															)
 														})(b)
@@ -40750,7 +40793,7 @@
 														C(R)
 															? g(' ', i, {
 																	groupId: F(
-																		R.typeParameters
+																		R.typeParameters,
 																	),
 															  })
 															: i,
@@ -40762,9 +40805,9 @@
 																i,
 																u(
 																	[',', i],
-																	b.map(k, M)
+																	b.map(k, M),
 																),
-															])
+															]),
 														),
 													]
 												}
@@ -40783,8 +40826,8 @@
 																		p,
 																		')',
 																	],
-																	M
-																)
+																	M,
+																),
 														  )
 														: M
 												}
@@ -40792,7 +40835,7 @@
 													printClass: function $(
 														b,
 														B,
-														k
+														k,
 													) {
 														let M = b.getValue(),
 															R = []
@@ -40800,23 +40843,23 @@
 															R.push('declare '),
 															M.abstract &&
 																R.push(
-																	'abstract '
+																	'abstract ',
 																),
 															R.push('class')
 														let q =
 																(M.id &&
 																	c(
 																		M.id,
-																		f.Trailing
+																		f.Trailing,
 																	)) ||
 																(M.typeParameters &&
 																	c(
 																		M.typeParameters,
-																		f.Trailing
+																		f.Trailing,
 																	)) ||
 																(M.superClass &&
 																	c(
-																		M.superClass
+																		M.superClass,
 																	)) ||
 																t(M.extends) ||
 																t(M.mixins) ||
@@ -40827,19 +40870,19 @@
 															(M.id &&
 																J.push(
 																	' ',
-																	k('id')
+																	k('id'),
 																),
 															J.push(
 																k(
-																	'typeParameters'
-																)
+																	'typeParameters',
+																),
 															),
 															M.superClass)
 														) {
 															let Q = [
 																	d(b, B, k),
 																	k(
-																		'superTypeParameters'
+																		'superTypeParameters',
 																	),
 																],
 																V = b.call(
@@ -40848,15 +40891,15 @@
 																		a(
 																			j,
 																			Q,
-																			B
+																			B,
 																		),
 																	],
-																	'superClass'
+																	'superClass',
 																)
 															q
 																? L.push(
 																		i,
-																		y(V)
+																		y(V),
 																  )
 																: L.push(' ', V)
 														} else
@@ -40865,8 +40908,8 @@
 																	b,
 																	B,
 																	k,
-																	'extends'
-																)
+																	'extends',
+																),
 															)
 														if (
 															(L.push(
@@ -40874,14 +40917,14 @@
 																	b,
 																	B,
 																	k,
-																	'mixins'
+																	'mixins',
 																),
 																o(
 																	b,
 																	B,
 																	k,
-																	'implements'
-																)
+																	'implements',
+																),
 															),
 															q)
 														) {
@@ -40892,16 +40935,16 @@
 																R.push(
 																	y(Q, {
 																		id: D(
-																			M
+																			M,
 																		),
-																	})
+																	}),
 																)
 														} else
 															R.push(...J, ...L)
 														return (
 															R.push(
 																' ',
-																k('body')
+																k('body'),
 															),
 															R
 														)
@@ -40913,44 +40956,44 @@
 																R = []
 															return (
 																t(
-																	M.decorators
+																	M.decorators,
 																) &&
 																	R.push(
 																		P(
 																			b,
 																			B,
-																			k
-																		)
+																			k,
+																		),
 																	),
 																M.accessibility &&
 																	R.push(
 																		M.accessibility +
-																			' '
+																			' ',
 																	),
 																M.readonly &&
 																	R.push(
-																		'readonly '
+																		'readonly ',
 																	),
 																M.declare &&
 																	R.push(
-																		'declare '
+																		'declare ',
 																	),
 																M.static &&
 																	R.push(
-																		'static '
+																		'static ',
 																	),
 																('TSAbstractMethodDefinition' ===
 																	M.type ||
 																	M.abstract) &&
 																	R.push(
-																		'abstract '
+																		'abstract ',
 																	),
 																M.override &&
 																	R.push(
-																		'override '
+																		'override ',
 																	),
 																R.push(
-																	_(b, B, k)
+																	_(b, B, k),
 																),
 																R
 															)
@@ -40965,27 +41008,27 @@
 																	: ''
 															return (
 																t(
-																	M.decorators
+																	M.decorators,
 																) &&
 																	R.push(
 																		P(
 																			b,
 																			B,
-																			k
-																		)
+																			k,
+																		),
 																	),
 																M.accessibility &&
 																	R.push(
 																		M.accessibility +
-																			' '
+																			' ',
 																	),
 																M.declare &&
 																	R.push(
-																		'declare '
+																		'declare ',
 																	),
 																M.static &&
 																	R.push(
-																		'static '
+																		'static ',
 																	),
 																('TSAbstractPropertyDefinition' ===
 																	M.type ||
@@ -40993,21 +41036,21 @@
 																		M.type ||
 																	M.abstract) &&
 																	R.push(
-																		'abstract '
+																		'abstract ',
 																	),
 																M.override &&
 																	R.push(
-																		'override '
+																		'override ',
 																	),
 																M.readonly &&
 																	R.push(
-																		'readonly '
+																		'readonly ',
 																	),
 																M.variance &&
 																	R.push(
 																		k(
-																			'variance'
-																		)
+																			'variance',
+																		),
 																	),
 																('ClassAccessorProperty' ===
 																	M.type ||
@@ -41016,13 +41059,13 @@
 																	'TSAbstractAccessorProperty' ===
 																		M.type) &&
 																	R.push(
-																		'accessor '
+																		'accessor ',
 																	),
 																R.push(
 																	x(b, B, k),
 																	w(b),
 																	N(b),
-																	E(b, B, k)
+																	E(b, B, k),
 																),
 																[
 																	I(
@@ -41031,7 +41074,7 @@
 																		k,
 																		R,
 																		' =',
-																		'value'
+																		'value',
 																	),
 																	q,
 																]
@@ -41049,7 +41092,7 @@
 										bo = te({
 											'src/language-js/print/interface.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { isNonEmptyArray: t } =
@@ -41080,7 +41123,7 @@
 													printInterface: function c(
 														f,
 														F,
-														_
+														_,
 													) {
 														let w = f.getValue(),
 															E = []
@@ -41092,7 +41135,7 @@
 																	w.abstract
 																		? 'abstract '
 																		: '',
-																	g(f, F, _)
+																	g(f, F, _),
 																),
 															E.push('interface')
 														let N = [],
@@ -41103,15 +41146,15 @@
 																' ',
 																_('id'),
 																_(
-																	'typeParameters'
-																)
+																	'typeParameters',
+																),
 															)
 														let I =
 															w.typeParameters &&
 															!l(
 																w.typeParameters,
 																y.Trailing |
-																	y.Line
+																	y.Line,
 															)
 														return (
 															t(w.extends) &&
@@ -41123,9 +41166,9 @@
 																				{
 																					groupId:
 																						h(
-																							w.typeParameters
+																							w.typeParameters,
 																						),
-																				}
+																				},
 																		  )
 																		: a,
 																	'extends ',
@@ -41142,15 +41185,15 @@
 																			],
 																			f.map(
 																				_,
-																				'extends'
-																			)
-																		)
-																	)
+																				'extends',
+																			),
+																		),
+																	),
 																),
 															(w.id &&
 																l(
 																	w.id,
-																	y.Trailing
+																	y.Trailing,
 																)) ||
 															t(w.extends)
 																? I
@@ -41158,9 +41201,9 @@
 																			n([
 																				...N,
 																				u(
-																					x
+																					x,
 																				),
-																			])
+																			]),
 																	  )
 																	: E.push(
 																			n(
@@ -41168,17 +41211,17 @@
 																					[
 																						...N,
 																						...x,
-																					]
-																				)
-																			)
+																					],
+																				),
+																			),
 																	  )
 																: E.push(
 																		...N,
-																		...x
+																		...x,
 																  ),
 															E.push(
 																' ',
-																_('body')
+																_('body'),
 															),
 															n(E)
 														)
@@ -41189,7 +41232,7 @@
 										To = te({
 											'src/language-js/print/module.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { isNonEmptyArray: t } =
@@ -41237,7 +41280,7 @@
 															M.push(' from'),
 														M.push(
 															' ',
-															B('source')
+															B('source'),
 														),
 														M
 													)
@@ -41273,8 +41316,8 @@
 																)
 																	throw new Error(
 																		`Unknown specifier type ${JSON.stringify(
-																			J
-																		)}`
+																			J,
+																		)}`,
 																	)
 																q.push(B())
 															}
@@ -41283,12 +41326,12 @@
 															q.length > 0 &&
 																(R.length > 0 &&
 																	M.push(
-																		', '
+																		', ',
 																	),
 																q.length > 1 ||
 																R.length > 0 ||
 																k.specifiers.some(
-																	(L) => h(L)
+																	(L) => h(L),
 																)
 																	? M.push(
 																			a([
@@ -41303,22 +41346,22 @@
 																								',',
 																								i,
 																							],
-																							q
+																							q,
 																						),
-																					]
+																					],
 																				),
 																				l(
 																					c(
-																						b
+																						b,
 																					)
 																						? ','
-																						: ''
+																						: '',
 																				),
 																				b.bracketSpacing
 																					? i
 																					: s,
 																				'}',
-																			])
+																			]),
 																	  )
 																	: M.push([
 																			'{',
@@ -41349,8 +41392,8 @@
 														!/{\s*}/.test(
 															b.originalText.slice(
 																w(S),
-																w(M)
-															)
+																w(M),
+															),
 														)
 													)
 												}
@@ -41366,8 +41409,8 @@
 																	', ',
 																	S.map(
 																		B,
-																		'assertions'
-																	)
+																		'assertions',
+																	),
 																),
 																b.bracketSpacing
 																	? ' '
@@ -41391,20 +41434,20 @@
 																} = k
 															return (
 																R.push(
-																	'import'
+																	'import',
 																),
 																q &&
 																	'value' !==
 																		q &&
 																	R.push(
 																		' ',
-																		q
+																		q,
 																	),
 																R.push(
 																	m(S, b, B),
 																	T(S, b, B),
 																	o(S, b, B),
-																	M
+																	M,
 																),
 																R
 															)
@@ -41416,7 +41459,7 @@
 																M = []
 															N(k) &&
 																M.push(
-																	x(S, b, B)
+																	x(S, b, B),
 																)
 															let {
 																type: R,
@@ -41425,36 +41468,36 @@
 															} = k
 															return (
 																M.push(
-																	'export'
+																	'export',
 																),
 																(k.default ||
 																	'ExportDefaultDeclaration' ===
 																		R) &&
 																	M.push(
-																		' default'
+																		' default',
 																	),
 																h(
 																	k,
-																	g.Dangling
+																	g.Dangling,
 																) &&
 																	(M.push(
 																		' ',
 																		y(
 																			S,
 																			b,
-																			!0
-																		)
+																			!0,
+																		),
 																	),
 																	f(k) &&
 																		M.push(
-																			p
+																			p,
 																		)),
 																J
 																	? M.push(
 																			' ',
 																			B(
-																				'declaration'
-																			)
+																				'declaration',
+																			),
 																	  )
 																	: M.push(
 																			'type' ===
@@ -41464,22 +41507,22 @@
 																			m(
 																				S,
 																				b,
-																				B
+																				B,
 																			),
 																			T(
 																				S,
 																				b,
-																				B
+																				B,
 																			),
 																			o(
 																				S,
 																				b,
-																				B
-																			)
+																				B,
+																			),
 																	  ),
 																(function D(
 																	S,
-																	b
+																	b,
 																) {
 																	if (!b.semi)
 																		return !1
@@ -41534,24 +41577,24 @@
 																} = k
 															return (
 																R.push(
-																	'export'
+																	'export',
 																),
 																'type' === q &&
 																	R.push(
-																		' type'
+																		' type',
 																	),
 																R.push(' *'),
 																J &&
 																	R.push(
 																		' as ',
 																		B(
-																			'exported'
-																		)
+																			'exported',
+																		),
 																	),
 																R.push(
 																	T(S, b, B),
 																	o(S, b, B),
-																	M
+																	M,
 																),
 																R
 															)
@@ -41571,7 +41614,7 @@
 																R.push(q, ' ')
 															let J =
 																	M.startsWith(
-																		'Import'
+																		'Import',
 																	),
 																L = J
 																	? 'imported'
@@ -41592,11 +41635,11 @@
 																	: V &&
 																	  (Y =
 																			B(
-																				L
+																				L,
 																			)),
 																j &&
 																	!(function v(
-																		S
+																		S,
 																	) {
 																		if (
 																			'ImportSpecifier' !==
@@ -41618,7 +41661,7 @@
 																				B.type ||
 																			!E(
 																				b,
-																				B
+																				B,
 																			)
 																		)
 																			return !1
@@ -41629,10 +41672,10 @@
 																				b.value ===
 																					B.value &&
 																				_(
-																					b
+																					b,
 																				) ===
 																					_(
-																						B
+																						B,
 																					)
 																			)
 																		if (
@@ -41651,7 +41694,7 @@
 																	Y && ie
 																		? ' as '
 																		: '',
-																	ie
+																	ie,
 																),
 																R
 															)
@@ -41662,7 +41705,7 @@
 										uu = te({
 											'src/language-js/print/object.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -41711,7 +41754,7 @@
 													printObject: function T(
 														m,
 														C,
-														o
+														o,
 													) {
 														let S,
 															d = C.semi
@@ -41734,17 +41777,17 @@
 															B.push(
 																'indexers',
 																'callProperties',
-																'internalSlots'
+																'internalSlots',
 															)
 														let k = B.map(
-																(W) => v[W][0]
+																(W) => v[W][0],
 															).sort(
 																(W, K) =>
-																	E(W) - E(K)
+																	E(W) - E(K),
 															)[0],
 															M =
 																m.getParentNode(
-																	0
+																	0,
 																),
 															R =
 																b &&
@@ -41789,7 +41832,7 @@
 																				'ArrayPattern' ===
 																					W
 																						.value
-																						.type)
+																						.type),
 																	)) ||
 																('ObjectPattern' !==
 																	v.type &&
@@ -41797,7 +41840,7 @@
 																	y(
 																		C.originalText,
 																		E(v),
-																		E(k)
+																		E(k),
 																	)),
 															J = R
 																? ';'
@@ -41833,14 +41876,14 @@
 															V.sort(
 																(W, K) =>
 																	W.loc -
-																	K.loc
+																	K.loc,
 															)
 														let j = [],
 															Y = V.map((W) => {
 																let K = [
 																	...j,
 																	n(
-																		W.printed
+																		W.printed,
 																	),
 																]
 																return (
@@ -41861,15 +41904,15 @@
 																				.type) &&
 																		f(
 																			W.node,
-																			_.PrettierIgnore
+																			_.PrettierIgnore,
 																		) &&
 																		j.shift(),
 																	w(
 																		W.node,
-																		C
+																		C,
 																	) &&
 																		j.push(
-																			l
+																			l,
 																		),
 																	K
 																)
@@ -41881,7 +41924,7 @@
 															) {
 																let K = f(
 																	v,
-																	_.Line
+																	_.Line,
 																)
 																W = [
 																	t(m, C, !0),
@@ -41891,10 +41934,10 @@
 																		N(
 																			p(
 																				F(
-																					v
-																				)
-																			)
-																		)
+																					v,
+																				),
+																			),
+																		),
 																	)
 																		? l
 																		: s,
@@ -41921,14 +41964,14 @@
 																			ie.type) &&
 																	f(
 																		ie,
-																		_.PrettierIgnore
+																		_.PrettierIgnore,
 																	))
 															)
 														if (0 === Y.length) {
 															if (
 																!f(
 																	v,
-																	_.Dangling
+																	_.Dangling,
 																)
 															)
 																return [
@@ -41962,10 +42005,10 @@
 																		(',' !==
 																			J ||
 																			c(
-																				C
+																				C,
 																			))
 																		? J
-																		: ''
+																		: '',
 																),
 																C.bracketSpacing
 																	? s
@@ -41989,7 +42032,7 @@
 																		K ||
 																	'rest' ===
 																		K) &&
-																0 === de
+																0 === de,
 														) ||
 															m.match(
 																$,
@@ -42009,7 +42052,7 @@
 																			K ||
 																		'rest' ===
 																			K) &&
-																	0 === de
+																	0 === de,
 															) ||
 															(!q &&
 																m.match(
@@ -42020,7 +42063,7 @@
 																		'AssignmentExpression' ===
 																			W.type ||
 																		'VariableDeclarator' ===
-																			W.type
+																			W.type,
 																))
 															? ce
 															: n(ce, {
@@ -42034,7 +42077,7 @@
 										dd = te({
 											'src/language-js/print/flow.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Zt(),
@@ -42106,7 +42149,7 @@
 													return V
 														? (t.strictEqual(
 																V.type,
-																'DeclareExportDeclaration'
+																'DeclareExportDeclaration',
 														  ),
 														  Q)
 														: ['declare ', Q]
@@ -42115,7 +42158,7 @@
 													printFlow: function q(
 														L,
 														Q,
-														V
+														V,
 													) {
 														let j = L.getValue(),
 															Y = Q.semi
@@ -42126,7 +42169,7 @@
 															case 'DeclareClass':
 																return J(
 																	L,
-																	E(L, Q, V)
+																	E(L, Q, V),
 																)
 															case 'DeclareFunction':
 																return J(L, [
@@ -42136,7 +42179,7 @@
 																		? ' '
 																		: '',
 																	V(
-																		'predicate'
+																		'predicate',
 																	),
 																	Y,
 																])
@@ -42152,7 +42195,7 @@
 																	'module.exports',
 																	': ',
 																	V(
-																		'typeAnnotation'
+																		'typeAnnotation',
 																	),
 																	Y,
 																])
@@ -42165,63 +42208,63 @@
 															case 'DeclareOpaqueType':
 																return J(
 																	L,
-																	N(L, Q, V)
+																	N(L, Q, V),
 																)
 															case 'DeclareInterface':
 																return J(
 																	L,
-																	m(L, Q, V)
+																	m(L, Q, V),
 																)
 															case 'DeclareTypeAlias':
 																return J(
 																	L,
-																	x(L, Q, V)
+																	x(L, Q, V),
 																)
 															case 'DeclareExportDeclaration':
 																return J(
 																	L,
-																	d(L, Q, V)
+																	d(L, Q, V),
 																)
 															case 'DeclareExportAllDeclaration':
 																return J(
 																	L,
-																	v(L, Q, V)
+																	v(L, Q, V),
 																)
 															case 'OpaqueType':
 																return N(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'TypeAlias':
 																return x(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'IntersectionTypeAnnotation':
 																return I(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'UnionTypeAnnotation':
 																return P(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'FunctionTypeAnnotation':
 																return $(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'TupleTypeAnnotation':
 																return D(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'GenericTypeAnnotation':
 																return [
@@ -42230,7 +42273,7 @@
 																		L,
 																		Q,
 																		V,
-																		'typeParameters'
+																		'typeParameters',
 																	),
 																]
 															case 'IndexedAccessType':
@@ -42238,23 +42281,23 @@
 																return T(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'TypeAnnotation':
 																return V(
-																	'typeAnnotation'
+																	'typeAnnotation',
 																)
 															case 'TypeParameter':
 																return C(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'TypeofTypeAnnotation':
 																return [
 																	'typeof ',
 																	V(
-																		'argument'
+																		'argument',
 																	),
 																]
 															case 'ExistsTypeAnnotation':
@@ -42266,13 +42309,13 @@
 															case 'ArrayTypeAnnotation':
 																return [
 																	V(
-																		'elementType'
+																		'elementType',
 																	),
 																	'[]',
 																]
 															case 'BooleanLiteralTypeAnnotation':
 																return String(
-																	j.value
+																	j.value,
 																)
 															case 'EnumDeclaration':
 																return [
@@ -42314,7 +42357,7 @@
 																	ie.push(
 																		'of ',
 																		ee,
-																		' '
+																		' ',
 																	)
 																}
 																if (
@@ -42335,11 +42378,11 @@
 																						L,
 																						Q,
 																						'members',
-																						V
+																						V,
 																					),
 																					j.hasUnknownMembers ||
 																					f(
-																						Q
+																						Q,
 																					)
 																						? ','
 																						: '',
@@ -42360,11 +42403,11 @@
 																			s(
 																				L,
 																				Q,
-																				!0
+																				!0,
 																			),
 																			u,
 																			'}',
-																		])
+																		]),
 																	)
 																} else
 																	ie.push(
@@ -42372,11 +42415,11 @@
 																			'{',
 																			s(
 																				L,
-																				Q
+																				Q,
 																			),
 																			i,
 																			'}',
-																		])
+																		]),
 																	)
 																return ie
 															case 'EnumBooleanMember':
@@ -42388,10 +42431,10 @@
 																	'object' ==
 																	typeof j.init
 																		? V(
-																				'init'
+																				'init',
 																		  )
 																		: String(
-																				j.init
+																				j.init,
 																		  ),
 																]
 															case 'EnumDefaultedMember':
@@ -42411,7 +42454,7 @@
 																		? ': '
 																		: '',
 																	V(
-																		'typeAnnotation'
+																		'typeAnnotation',
 																	),
 																]
 															}
@@ -42420,21 +42463,21 @@
 																return m(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'ClassImplements':
 															case 'InterfaceExtends':
 																return [
 																	V('id'),
 																	V(
-																		'typeParameters'
+																		'typeParameters',
 																	),
 																]
 															case 'NullableTypeAnnotation':
 																return [
 																	'?',
 																	V(
-																		'typeAnnotation'
+																		'typeAnnotation',
 																	),
 																]
 															case 'Variance': {
@@ -42446,7 +42489,7 @@
 																		'plus' ===
 																			ee ||
 																			'minus' ===
-																				ee
+																				ee,
 																	),
 																	'plus' ===
 																	ee
@@ -42458,12 +42501,12 @@
 																return (
 																	j.static &&
 																		ie.push(
-																			'static '
+																			'static ',
 																		),
 																	ie.push(
 																		V(
-																			'value'
-																		)
+																			'value',
+																		),
 																	),
 																	ie
 																)
@@ -42474,7 +42517,7 @@
 																		: '',
 																	j.variance
 																		? V(
-																				'variance'
+																				'variance',
 																		  )
 																		: '',
 																	'[',
@@ -42503,20 +42546,20 @@
 																			: '',
 																		j.variance
 																			? V(
-																					'variance'
+																					'variance',
 																			  )
 																			: '',
 																		B(
 																			L,
 																			Q,
-																			V
+																			V,
 																		),
 																		k(L),
 																		h(j)
 																			? ''
 																			: ': ',
 																		V(
-																			'value'
+																			'value',
 																		),
 																	]
 																)
@@ -42525,7 +42568,7 @@
 																return b(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'ObjectTypeInternalSlot':
 																return [
@@ -42545,39 +42588,39 @@
 																return R(
 																	L,
 																	Q,
-																	V
+																	V,
 																)
 															case 'QualifiedTypeofIdentifier':
 															case 'QualifiedTypeIdentifier':
 																return [
 																	V(
-																		'qualification'
+																		'qualification',
 																	),
 																	'.',
 																	V('id'),
 																]
 															case 'StringLiteralTypeAnnotation':
 																return w(
-																	a(c(j), Q)
+																	a(c(j), Q),
 																)
 															case 'NumberLiteralTypeAnnotation':
 																t.strictEqual(
 																	typeof j.value,
-																	'number'
+																	'number',
 																)
 															case 'BigIntLiteralTypeAnnotation':
 																return j.extra
 																	? n(
 																			j
 																				.extra
-																				.raw
+																				.raw,
 																	  )
 																	: n(j.raw)
 															case 'TypeCastExpression':
 																return [
 																	'(',
 																	V(
-																		'expression'
+																		'expression',
 																	),
 																	M(L, Q, V),
 																	')',
@@ -42588,7 +42631,7 @@
 																	L,
 																	Q,
 																	V,
-																	'params'
+																	'params',
 																)
 																if (
 																	'flow' ===
@@ -42596,21 +42639,21 @@
 																) {
 																	let ce =
 																			F(
-																				j
+																				j,
 																			),
 																		W =
 																			_(
-																				j
+																				j,
 																			),
 																		K =
 																			Q.originalText.lastIndexOf(
 																				'/*',
-																				ce
+																				ce,
 																			),
 																		de =
 																			Q.originalText.indexOf(
 																				'*/',
-																				W
+																				W,
 																			)
 																	if (
 																		-1 !==
@@ -42623,18 +42666,18 @@
 																				.slice(
 																					K +
 																						2,
-																					de
+																					de,
 																				)
 																				.trim()
 																		if (
 																			ue.startsWith(
-																				'::'
+																				'::',
 																			) &&
 																			!ue.includes(
-																				'/*'
+																				'/*',
 																			) &&
 																			!ue.includes(
-																				'*/'
+																				'*/',
 																			)
 																		)
 																			return [
@@ -42689,8 +42732,8 @@
 																throw new Error(
 																	'unprintable type: ' +
 																		JSON.stringify(
-																			j.type
-																		)
+																			j.type,
+																		),
 																)
 														}
 													},
@@ -42700,17 +42743,17 @@
 										gd = te({
 											'src/language-js/utils/is-ts-keyword-type.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(s) {
 														let { type: a } = s
 														return (
 															a.startsWith(
-																'TS'
+																'TS',
 															) &&
 															a.endsWith(
-																'Keyword'
+																'Keyword',
 															)
 														)
 													})
@@ -42719,7 +42762,7 @@
 										Bo = te({
 											'src/language-js/print/ternary.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { hasNewlineInRange: t } =
@@ -42759,13 +42802,13 @@
 															? m('test')
 															: [
 																	m(
-																		'checkType'
+																		'checkType',
 																	),
 																	' ',
 																	'extends',
 																	' ',
 																	m(
-																		'extendsType'
+																		'extendsType',
 																	),
 															  ]
 													return v.type === C.type &&
@@ -42803,7 +42846,7 @@
 													printTernary: function $(
 														D,
 														T,
-														m
+														m,
 													) {
 														let L,
 															Q,
@@ -42836,7 +42879,7 @@
 																	(ue) =>
 																		R[
 																			ue
-																		] === C
+																		] === C,
 																),
 															J =
 																R.type ===
@@ -42847,7 +42890,7 @@
 															;(Q = L || C),
 																(L =
 																	D.getParentNode(
-																		V
+																		V,
 																	)),
 																V++
 														} while (
@@ -42855,7 +42898,7 @@
 															L.type === C.type &&
 															S.every(
 																(ue) =>
-																	L[ue] !== Q
+																	L[ue] !== Q,
 															)
 														)
 														let j = L || R,
@@ -42886,14 +42929,14 @@
 																				]
 																			if (
 																				s(
-																					d
+																					d,
 																				)
 																			)
 																				return !0
 																			'ConditionalExpression' ===
 																				d.type &&
 																				T.push(
-																					d
+																					d,
 																				)
 																		}
 																	}
@@ -42928,7 +42971,7 @@
 																	C.type ||
 																	Fe(B)
 																	? m(v)
-																	: ue(m(v))
+																	: ue(m(v)),
 															)
 														} else {
 															let ue = [
@@ -42950,7 +42993,9 @@
 																	? m(v)
 																	: F(
 																			2,
-																			m(v)
+																			m(
+																				v,
+																			),
 																	  ),
 															]
 															k.push(
@@ -42966,15 +43011,15 @@
 																			Math.max(
 																				0,
 																				T.tabWidth -
-																					2
+																					2,
 																			),
-																			ue
-																	  )
+																			ue,
+																	  ),
 															)
 														}
 														let ee = [
 																...S.map((ue) =>
-																	a(C[ue])
+																	a(C[ue]),
 																),
 																a(b),
 																a(B),
@@ -42986,12 +43031,12 @@
 																		t(
 																			T.originalText,
 																			l(
-																				ue
+																				ue,
 																			),
 																			p(
-																				ue
-																			)
-																		)
+																				ue,
+																			),
+																		),
 																),
 															W =
 																!M &&
@@ -43018,7 +43063,7 @@
 																) {
 																	let d =
 																		D.getParentNode(
-																			o
+																			o,
 																		)
 																	;(n(d) &&
 																		d.callee ===
@@ -43037,14 +43082,14 @@
 																				d.callee ===
 																					C) ||
 																		  (i(
-																				d
+																				d,
 																		  ) &&
 																				d.expression ===
 																					C)
 																		? ((m =
 																				D.getParentNode(
 																					o +
-																						1
+																						1,
 																				)),
 																		  (C =
 																				d))
@@ -43055,7 +43100,7 @@
 																	C !== T &&
 																	m[
 																		I.get(
-																			m.type
+																			m.type,
 																		)
 																	] === C
 																)
@@ -43089,7 +43134,7 @@
 										No = te({
 											'src/language-js/print/statement.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -43155,33 +43200,33 @@
 																		($) =>
 																			F(
 																				$,
-																				I
+																				I,
 																			),
-																		'expression'
+																		'expression',
 																	)
 																)
 															})(o, I)
 																? T.push(b)
 																: l(
 																		S,
-																		p.Leading
+																		p.Leading,
 																  )
 																? T.push(
 																		P([], {
 																			needsSemi:
 																				!0,
-																		})
+																		}),
 																  )
 																: T.push(
 																		';',
-																		b
+																		b,
 																  ),
 																!I.semi &&
 																	m &&
 																	E(S) &&
 																	(function N(
 																		x,
-																		I
+																		I,
 																	) {
 																		let {
 																			type: P,
@@ -43230,7 +43275,7 @@
 																		}
 																		if (
 																			E(
-																				I
+																				I,
 																			) &&
 																			I.variance &&
 																			!I.static &&
@@ -43277,14 +43322,17 @@
 																		return !1
 																	})(
 																		S,
-																		v[d + 1]
+																		v[
+																			d +
+																				1
+																		],
 																	) &&
 																	T.push(';'),
 																S !== C &&
 																	(T.push(t),
 																	y(S, I) &&
 																		T.push(
-																			t
+																			t,
 																		))
 														}, $),
 														T
@@ -43334,7 +43382,7 @@
 														(!!n(P) &&
 															x.call(
 																($) => F($, I),
-																...a(x, P)
+																...a(x, P),
 															))
 													)
 												}
@@ -43360,13 +43408,13 @@
 													printBody: function _(
 														x,
 														I,
-														P
+														P,
 													) {
 														return g(
 															x,
 															I,
 															P,
-															'body'
+															'body',
 														)
 													},
 													printSwitchCaseConsequent:
@@ -43375,7 +43423,7 @@
 																x,
 																I,
 																P,
-																'consequent'
+																'consequent',
 															)
 														},
 												}
@@ -43384,7 +43432,7 @@
 										wo = te({
 											'src/language-js/print/block.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -43415,7 +43463,7 @@
 														E = _.body.some(
 															(I) =>
 																'EmptyStatement' !==
-																I.type
+																I.type,
 														),
 														N = u(_, i.Dangling)
 													if (!w && !E && !N)
@@ -43432,17 +43480,17 @@
 																			E ||
 																			N) &&
 																			(x.push(
-																				a
+																				a,
 																			),
 																			l(
 																				I.getValue(),
-																				f
+																				f,
 																			) &&
 																				x.push(
-																					a
+																					a,
 																				))
 																},
-																'directives'
+																'directives',
 															),
 														E && x.push(y(c, f, F)),
 														N &&
@@ -43462,7 +43510,7 @@
 													printBlock: function h(
 														c,
 														f,
-														F
+														F,
 													) {
 														let _ = c.getValue(),
 															w = []
@@ -43470,7 +43518,7 @@
 															('StaticBlock' ===
 																_.type &&
 																w.push(
-																	'static '
+																	'static ',
 																),
 															'ClassBody' ===
 																_.type &&
@@ -43489,7 +43537,7 @@
 																	c.getParentNode(),
 																x =
 																	c.getParentNode(
-																		1
+																		1,
 																	)
 															'ArrowFunctionExpression' ===
 																N.type ||
@@ -43533,7 +43581,7 @@
 										yd = te({
 											'src/language-js/print/typescript.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -43618,7 +43666,7 @@
 																ee.getValue()
 															if (
 																!K.type.startsWith(
-																	'TS'
+																	'TS',
 																)
 															)
 																return
@@ -43626,7 +43674,7 @@
 																return K.type
 																	.slice(
 																		2,
-																		-7
+																		-7,
 																	)
 																	.toLowerCase()
 															let de = ce.semi
@@ -43652,7 +43700,7 @@
 																			p([
 																				i,
 																				W(
-																					'typeAnnotation'
+																					'typeAnnotation',
 																				),
 																			]),
 																			i,
@@ -43660,17 +43708,17 @@
 																		]),
 																		U = [
 																			h(
-																				'('
+																				'(',
 																			),
 																			p([
 																				i,
 																				W(
-																					'expression'
+																					'expression',
 																				),
 																			]),
 																			i,
 																			h(
-																				')'
+																				')',
 																			),
 																		]
 																	return Fe
@@ -43678,7 +43726,7 @@
 																				[
 																					z,
 																					W(
-																						'expression'
+																						'expression',
 																					),
 																				],
 																				[
@@ -43688,20 +43736,20 @@
 																						{
 																							shouldBreak:
 																								!0,
-																						}
+																						},
 																					),
 																				],
 																				[
 																					z,
 																					W(
-																						'expression'
+																						'expression',
 																					),
 																				],
 																		  ])
 																		: l([
 																				z,
 																				W(
-																					'expression'
+																					'expression',
 																				),
 																		  ])
 																}
@@ -43709,13 +43757,13 @@
 																	return B(
 																		ee,
 																		W,
-																		ce
+																		ce,
 																	)
 																case 'TSExportAssignment':
 																	return [
 																		'export = ',
 																		W(
-																			'expression'
+																			'expression',
 																		),
 																		de,
 																	]
@@ -43723,60 +43771,60 @@
 																	return R(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSInterfaceBody':
 																case 'TSTypeLiteral':
 																	return C(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSTypeAliasDeclaration':
 																	return q(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSQualifiedName':
 																	return a(
 																		'.',
 																		[
 																			W(
-																				'left'
+																				'left',
 																			),
 																			W(
-																				'right'
+																				'right',
 																			),
-																		]
+																		],
 																	)
 																case 'TSAbstractMethodDefinition':
 																case 'TSDeclareMethod':
 																	return d(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSAbstractAccessorProperty':
 																case 'TSAbstractPropertyDefinition':
 																	return o(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSInterfaceHeritage':
 																case 'TSExpressionWithTypeArguments':
 																	return (
 																		ue.push(
 																			W(
-																				'expression'
-																			)
+																				'expression',
+																			),
 																		),
 																		K.typeParameters &&
 																			ue.push(
 																				W(
-																					'typeParameters'
-																				)
+																					'typeParameters',
+																				),
 																			),
 																		ue
 																	)
@@ -43784,32 +43832,32 @@
 																	return T(
 																		ee,
 																		W,
-																		ce
+																		ce,
 																	)
 																case 'TSNamedTupleMember':
 																	return [
 																		W(
-																			'label'
+																			'label',
 																		),
 																		K.optional
 																			? '?'
 																			: '',
 																		': ',
 																		W(
-																			'elementType'
+																			'elementType',
 																		),
 																	]
 																case 'TSRestType':
 																	return [
 																		'...',
 																		W(
-																			'typeAnnotation'
+																			'typeAnnotation',
 																		),
 																	]
 																case 'TSOptionalType':
 																	return [
 																		W(
-																			'typeAnnotation'
+																			'typeAnnotation',
 																		),
 																		'?',
 																	]
@@ -43817,16 +43865,16 @@
 																	return M(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSClassImplements':
 																case 'TSInstantiationExpression':
 																	return [
 																		W(
-																			'expression'
+																			'expression',
 																		),
 																		W(
-																			'typeParameters'
+																			'typeParameters',
 																		),
 																	]
 																case 'TSTypeParameterDeclaration':
@@ -43835,13 +43883,13 @@
 																		ee,
 																		ce,
 																		W,
-																		'params'
+																		'params',
 																	)
 																case 'TSTypeParameter':
 																	return v(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSSatisfiesExpression':
 																case 'TSAsExpression': {
@@ -43852,17 +43900,17 @@
 																			: 'satisfies'
 																	ue.push(
 																		W(
-																			'expression'
+																			'expression',
 																		),
 																		` ${Fe} `,
 																		W(
-																			'typeAnnotation'
-																		)
+																			'typeAnnotation',
+																		),
 																	)
 																	let z =
 																		ee.getParentNode()
 																	return (F(
-																		z
+																		z,
 																	) &&
 																		z.callee ===
 																			K) ||
@@ -43874,7 +43922,7 @@
 																					[
 																						i,
 																						...ue,
-																					]
+																					],
 																				),
 																				i,
 																		  ])
@@ -43883,7 +43931,7 @@
 																case 'TSArrayType':
 																	return [
 																		W(
-																			'elementType'
+																			'elementType',
 																		),
 																		'[]',
 																	]
@@ -43891,31 +43939,31 @@
 																	return (
 																		K.readonly &&
 																			ue.push(
-																				'readonly '
+																				'readonly ',
 																			),
 																		ue.push(
 																			b(
 																				ee,
 																				ce,
-																				W
+																				W,
 																			),
 																			x(
-																				ee
-																			)
+																				ee,
+																			),
 																		),
 																		K.typeAnnotation &&
 																			ue.push(
 																				': ',
 																				W(
-																					'typeAnnotation'
-																				)
+																					'typeAnnotation',
+																				),
 																			),
 																		K.initializer &&
 																			ue.push(
 																				' = ',
 																				W(
-																					'initializer'
-																				)
+																					'initializer',
+																				),
 																			),
 																		ue
 																	)
@@ -43924,28 +43972,28 @@
 																		K.accessibility &&
 																			ue.push(
 																				K.accessibility +
-																					' '
+																					' ',
 																			),
 																		K.export &&
 																			ue.push(
-																				'export '
+																				'export ',
 																			),
 																		K.static &&
 																			ue.push(
-																				'static '
+																				'static ',
 																			),
 																		K.override &&
 																			ue.push(
-																				'override '
+																				'override ',
 																			),
 																		K.readonly &&
 																			ue.push(
-																				'readonly '
+																				'readonly ',
 																			),
 																		ue.push(
 																			W(
-																				'parameter'
-																			)
+																				'parameter',
+																			),
 																		),
 																		ue
 																	)
@@ -43953,10 +44001,10 @@
 																	return [
 																		'typeof ',
 																		W(
-																			'exprName'
+																			'exprName',
 																		),
 																		W(
-																			'typeParameters'
+																			'typeParameters',
 																		),
 																	]
 																case 'TSIndexSignature': {
@@ -43969,10 +44017,10 @@
 																			1
 																				? h(
 																						f(
-																							ce
+																							ce,
 																						)
 																							? ','
-																							: ''
+																							: '',
 																				  )
 																				: '',
 																		U = l([
@@ -43985,8 +44033,8 @@
 																					],
 																					ee.map(
 																						W,
-																						'parameters'
-																					)
+																						'parameters',
+																					),
 																				),
 																			]),
 																			z,
@@ -44020,7 +44068,7 @@
 																			: ']',
 																		K.typeAnnotation
 																			? W(
-																					'typeAnnotation'
+																					'typeAnnotation',
 																			  )
 																			: '',
 																		'ClassBody' ===
@@ -44035,13 +44083,13 @@
 																			? 'asserts '
 																			: '',
 																		W(
-																			'parameterName'
+																			'parameterName',
 																		),
 																		K.typeAnnotation
 																			? [
 																					' is ',
 																					W(
-																						'typeAnnotation'
+																						'typeAnnotation',
 																					),
 																			  ]
 																			: '',
@@ -44049,7 +44097,7 @@
 																case 'TSNonNullExpression':
 																	return [
 																		W(
-																			'expression'
+																			'expression',
 																		),
 																		'!',
 																	]
@@ -44062,14 +44110,14 @@
 																		W(
 																			K.parameter
 																				? 'parameter'
-																				: 'argument'
+																				: 'argument',
 																		),
 																		')',
 																		K.qualifier
 																			? [
 																					'.',
 																					W(
-																						'qualifier'
+																						'qualifier',
 																					),
 																			  ]
 																			: '',
@@ -44077,18 +44125,18 @@
 																			ee,
 																			ce,
 																			W,
-																			'typeParameters'
+																			'typeParameters',
 																		),
 																	]
 																case 'TSLiteralType':
 																	return W(
-																		'literal'
+																		'literal',
 																	)
 																case 'TSIndexedAccessType':
 																	return j(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSConstructSignatureDeclaration':
 																case 'TSCallSignatureDeclaration':
@@ -44098,12 +44146,12 @@
 																			K.type &&
 																			K.abstract &&
 																			ue.push(
-																				'abstract '
+																				'abstract ',
 																			),
 																		'TSCallSignatureDeclaration' !==
 																			K.type &&
 																			ue.push(
-																				'new '
+																				'new ',
 																			),
 																		ue.push(
 																			l(
@@ -44112,9 +44160,9 @@
 																					W,
 																					ce,
 																					!1,
-																					!0
-																				)
-																			)
+																					!0,
+																				),
+																			),
 																		),
 																		K.returnType ||
 																			K.typeAnnotation)
@@ -44127,11 +44175,11 @@
 																				? ' => '
 																				: ': ',
 																			W(
-																				'returnType'
+																				'returnType',
 																			),
 																			W(
-																				'typeAnnotation'
-																			)
+																				'typeAnnotation',
+																			),
 																		)
 																	}
 																	return ue
@@ -44140,14 +44188,14 @@
 																		K.operator,
 																		' ',
 																		W(
-																			'typeAnnotation'
+																			'typeAnnotation',
 																		),
 																	]
 																case 'TSMappedType': {
 																	let Fe = s(
 																		ce.originalText,
 																		E(K),
-																		N(K)
+																		N(K),
 																	)
 																	return l(
 																		[
@@ -44157,28 +44205,28 @@
 																					? n
 																					: i,
 																				W(
-																					'typeParameter'
+																					'typeParameter',
 																				),
 																				K.optional
 																					? c(
 																							K.optional,
-																							'?'
+																							'?',
 																					  )
 																					: '',
 																				K.typeAnnotation
 																					? ': '
 																					: '',
 																				W(
-																					'typeAnnotation'
+																					'typeAnnotation',
 																				),
 																				h(
-																					de
+																					de,
 																				),
 																			]),
 																			t(
 																				ee,
 																				ce,
-																				!0
+																				!0,
 																			),
 																			ce.bracketSpacing
 																				? n
@@ -44188,7 +44236,7 @@
 																		{
 																			shouldBreak:
 																				Fe,
-																		}
+																		},
 																	)
 																}
 																case 'TSMethodSignature': {
@@ -44225,19 +44273,19 @@
 																			? '['
 																			: '',
 																		W(
-																			'key'
+																			'key',
 																		),
 																		K.computed
 																			? ']'
 																			: '',
-																		x(ee)
+																		x(ee),
 																	)
 																	let z = $(
 																			ee,
 																			W,
 																			ce,
 																			!1,
-																			!0
+																			!0,
 																		),
 																		U =
 																			K.returnType
@@ -44249,27 +44297,27 @@
 																			],
 																		se = Z
 																			? W(
-																					U
+																					U,
 																			  )
 																			: '',
 																		fe = D(
 																			K,
-																			se
+																			se,
 																		)
 																	return (
 																		ue.push(
 																			fe
 																				? l(
-																						z
+																						z,
 																				  )
-																				: z
+																				: z,
 																		),
 																		Z &&
 																			ue.push(
 																				': ',
 																				l(
-																					se
-																				)
+																					se,
+																				),
 																			),
 																		l(ue)
 																	)
@@ -44279,12 +44327,12 @@
 																		ue.push(
 																			'export as namespace ',
 																			W(
-																				'id'
-																			)
+																				'id',
+																			),
 																		),
 																		ce.semi &&
 																			ue.push(
-																				';'
+																				';',
 																			),
 																		l(ue)
 																	)
@@ -44292,26 +44340,26 @@
 																	return (
 																		K.declare &&
 																			ue.push(
-																				'declare '
+																				'declare ',
 																			),
 																		K.modifiers &&
 																			ue.push(
 																				I(
 																					ee,
 																					ce,
-																					W
-																				)
+																					W,
+																				),
 																			),
 																		K.const &&
 																			ue.push(
-																				'const '
+																				'const ',
 																			),
 																		ue.push(
 																			'enum ',
 																			W(
-																				'id'
+																				'id',
 																			),
-																			' '
+																			' ',
 																		),
 																		0 ===
 																		K
@@ -44323,12 +44371,12 @@
 																							'{',
 																							t(
 																								ee,
-																								ce
+																								ce,
 																							),
 																							i,
 																							'}',
-																						]
-																					)
+																						],
+																					),
 																			  )
 																			: ue.push(
 																					l(
@@ -44341,25 +44389,25 @@
 																										ee,
 																										ce,
 																										'members',
-																										W
+																										W,
 																									),
 																									f(
 																										ce,
-																										'es5'
+																										'es5',
 																									)
 																										? ','
 																										: '',
-																								]
+																								],
 																							),
 																							t(
 																								ee,
 																								ce,
-																								!0
+																								!0,
 																							),
 																							u,
 																							'}',
-																						]
-																					)
+																						],
+																					),
 																			  ),
 																		ue
 																	)
@@ -44369,21 +44417,21 @@
 																			? ue.push(
 																					'[',
 																					W(
-																						'id'
+																						'id',
 																					),
-																					']'
+																					']',
 																			  )
 																			: ue.push(
 																					W(
-																						'id'
-																					)
+																						'id',
+																					),
 																			  ),
 																		K.initializer &&
 																			ue.push(
 																				' = ',
 																				W(
-																					'initializer'
-																				)
+																					'initializer',
+																				),
 																			),
 																		ue
 																	)
@@ -44391,30 +44439,30 @@
 																	return (
 																		K.isExport &&
 																			ue.push(
-																				'export '
+																				'export ',
 																			),
 																		ue.push(
-																			'import '
+																			'import ',
 																		),
 																		K.importKind &&
 																			'value' !==
 																				K.importKind &&
 																			ue.push(
 																				K.importKind,
-																				' '
+																				' ',
 																			),
 																		ue.push(
 																			W(
-																				'id'
+																				'id',
 																			),
 																			' = ',
 																			W(
-																				'moduleReference'
-																			)
+																				'moduleReference',
+																			),
 																		),
 																		ce.semi &&
 																			ue.push(
-																				';'
+																				';',
 																			),
 																		l(ue)
 																	)
@@ -44422,7 +44470,7 @@
 																	return [
 																		'require(',
 																		W(
-																			'expression'
+																			'expression',
 																		),
 																		')',
 																	]
@@ -44430,7 +44478,7 @@
 																	let Fe =
 																			ee.getParentNode(),
 																		z = g(
-																			K.id
+																			K.id,
 																		),
 																		U =
 																			'TSModuleDeclaration' ===
@@ -44443,28 +44491,28 @@
 																					.type
 																	if (U)
 																		ue.push(
-																			'.'
+																			'.',
 																		)
 																	else {
 																		K.declare &&
 																			ue.push(
-																				'declare '
+																				'declare ',
 																			),
 																			ue.push(
 																				I(
 																					ee,
 																					ce,
-																					W
-																				)
+																					W,
+																				),
 																			)
 																		let se =
 																			ce.originalText.slice(
 																				E(
-																					K
+																					K,
 																				),
 																				E(
-																					K.id
-																				)
+																					K.id,
+																				),
 																			)
 																		;('Identifier' ===
 																			K.id
@@ -44474,40 +44522,40 @@
 																					.id
 																					.name &&
 																			!/namespace|module/.test(
-																				se
+																				se,
 																			)) ||
 																			ue.push(
 																				z ||
 																					/(?:^|\s)module(?:\s|$)/.test(
-																						se
+																						se,
 																					)
 																					? 'module '
-																					: 'namespace '
+																					: 'namespace ',
 																			)
 																	}
 																	return (
 																		ue.push(
 																			W(
-																				'id'
-																			)
+																				'id',
+																			),
 																		),
 																		Z
 																			? ue.push(
 																					W(
-																						'body'
-																					)
+																						'body',
+																					),
 																			  )
 																			: K.body
 																			? ue.push(
 																					' ',
 																					l(
 																						W(
-																							'body'
-																						)
-																					)
+																							'body',
+																						),
+																					),
 																			  )
 																			: ue.push(
-																					de
+																					de,
 																			  ),
 																		ue
 																	)
@@ -44516,61 +44564,61 @@
 																	return P(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSInferType':
 																	return [
 																		'infer',
 																		' ',
 																		W(
-																			'typeParameter'
+																			'typeParameter',
 																		),
 																	]
 																case 'TSIntersectionType':
 																	return J(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSUnionType':
 																	return L(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSFunctionType':
 																	return Q(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSTupleType':
 																	return V(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSTypeReference':
 																	return [
 																		W(
-																			'typeName'
+																			'typeName',
 																		),
 																		S(
 																			ee,
 																			ce,
 																			W,
-																			'typeParameters'
+																			'typeParameters',
 																		),
 																	]
 																case 'TSTypeAnnotation':
 																	return W(
-																		'typeAnnotation'
+																		'typeAnnotation',
 																	)
 																case 'TSEmptyBodyFunctionExpression':
 																	return k(
 																		ee,
 																		ce,
-																		W
+																		W,
 																	)
 																case 'TSJSDocAllType':
 																	return '*'
@@ -44580,19 +44628,19 @@
 																	return Y(
 																		ee,
 																		W,
-																		'?'
+																		'?',
 																	)
 																case 'TSJSDocNonNullableType':
 																	return Y(
 																		ee,
 																		W,
-																		'!'
+																		'!',
 																	)
 																default:
 																	throw new Error(
 																		`Unknown TypeScript node type: ${JSON.stringify(
-																			K.type
-																		)}.`
+																			K.type,
+																		)}.`,
 																	)
 															}
 														},
@@ -44602,7 +44650,7 @@
 										hd = te({
 											'src/language-js/print/comment.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { hasNewline: t } = Ue(),
@@ -44623,14 +44671,14 @@
 												r.exports = {
 													printComment: function y(
 														c,
-														f
+														f,
 													) {
 														let F = c.getValue()
 														if (u(F))
 															return f.originalText
 																.slice(
 																	i(F),
-																	l(F)
+																	l(F),
 																)
 																.trimEnd()
 														if (p(F)) {
@@ -44638,28 +44686,28 @@
 																(function h(c) {
 																	let f =
 																		`*${c.value}*`.split(
-																			'\n'
+																			'\n',
 																		)
 																	return (
 																		f.length >
 																			1 &&
 																		f.every(
 																			(
-																				F
+																				F,
 																			) =>
 																				'*' ===
-																				F.trim()[0]
+																				F.trim()[0],
 																		)
 																	)
 																})(F)
 															) {
 																let E =
 																	(function g(
-																		c
+																		c,
 																	) {
 																		let f =
 																			c.value.split(
-																				'\n'
+																				'\n',
 																			)
 																		return [
 																			'/*',
@@ -44668,7 +44716,7 @@
 																				f.map(
 																					(
 																						F,
-																						_
+																						_,
 																					) =>
 																						0 ===
 																						_
@@ -44678,8 +44726,8 @@
 																							  f.length -
 																									1
 																									? F.trim()
-																									: F.trimStart())
-																				)
+																									: F.trimStart()),
+																				),
 																			),
 																			'*/',
 																		]
@@ -44691,7 +44739,7 @@
 																		{
 																			backwards:
 																				!0,
-																		}
+																		},
 																	)
 																	? [a, E]
 																	: E
@@ -44701,7 +44749,7 @@
 																	'*-/' ===
 																	f.originalText.slice(
 																		_ - 3,
-																		_
+																		_,
 																	)
 															return [
 																'/*',
@@ -44714,8 +44762,8 @@
 														throw new Error(
 															'Not a comment: ' +
 																JSON.stringify(
-																	F
-																)
+																	F,
+																),
 														)
 													},
 												}
@@ -44724,7 +44772,7 @@
 										vd = te({
 											'src/language-js/print/literal.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -44753,7 +44801,7 @@
 												r.exports = {
 													printLiteral: function u(
 														y,
-														h
+														h,
 													) {
 														let g = y.getNode()
 														switch (g.type) {
@@ -44763,25 +44811,25 @@
 																return l(
 																	g.bigint ||
 																		g.extra
-																			.raw
+																			.raw,
 																)
 															case 'NumericLiteral':
 																return s(
-																	g.extra.raw
+																	g.extra.raw,
 																)
 															case 'StringLiteral':
 																return a(
 																	t(
 																		g.extra
 																			.raw,
-																		h
-																	)
+																		h,
+																	),
 																)
 															case 'NullLiteral':
 																return 'null'
 															case 'BooleanLiteral':
 																return String(
-																	g.value
+																	g.value,
 																)
 															case 'DecimalLiteral':
 																return (
@@ -44791,16 +44839,16 @@
 															case 'Literal': {
 																if (g.regex)
 																	return p(
-																		g.regex
+																		g.regex,
 																	)
 																if (g.bigint)
 																	return l(
-																		g.raw
+																		g.raw,
 																	)
 																if (g.decimal)
 																	return (
 																		s(
-																			g.decimal
+																			g.decimal,
 																		) + 'm'
 																	)
 																let {
@@ -44812,7 +44860,7 @@
 																	: 'string' ==
 																	  typeof c
 																	? (function i(
-																			y
+																			y,
 																	  ) {
 																			if (
 																				'expression' !==
@@ -44829,13 +44877,13 @@
 																	  })(y)
 																		? n(
 																				g.raw,
-																				h
+																				h,
 																		  )
 																		: a(
 																				t(
 																					g.raw,
-																					h
-																				)
+																					h,
+																				),
 																		  )
 																	: String(c)
 															}
@@ -44847,7 +44895,7 @@
 										Cd = te({
 											'src/language-js/printer-estree.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -44984,13 +45032,13 @@
 														Ce,
 														Be,
 														ve,
-														ze
+														ze,
 													) {
 														let be = (function re(
 															Ce,
 															Be,
 															ve,
-															ze
+															ze,
 														) {
 															let be =
 																	Ce.getValue(),
@@ -45014,7 +45062,7 @@
 																let Oe = Ie(
 																	Ce,
 																	Be,
-																	ve
+																	ve,
 																)
 																if (
 																	typeof Oe <
@@ -45026,12 +45074,12 @@
 															switch (be.type) {
 																case 'JsExpressionRoot':
 																	return ve(
-																		'node'
+																		'node',
 																	)
 																case 'JsonRoot':
 																	return [
 																		ve(
-																			'node'
+																			'node',
 																		),
 																		u,
 																	]
@@ -45046,13 +45094,13 @@
 																					[
 																						'program',
 																						'interpreter',
-																					]
-																				)
+																					],
+																				),
 																			),
 																		Se.push(
 																			ve(
-																				'program'
-																			)
+																				'program',
+																			),
 																		),
 																		Se
 																	)
@@ -45060,7 +45108,7 @@
 																	return Ae(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'EmptyStatement':
 																	return ''
@@ -45086,10 +45134,10 @@
 																		)
 																			return [
 																				ve(
-																					'expression'
+																					'expression',
 																				),
 																				b(
-																					be.expression
+																					be.expression,
 																				)
 																					? ';'
 																					: '',
@@ -45100,7 +45148,7 @@
 																		Be,
 																		!0,
 																		(
-																			Oe
+																			Oe,
 																		) => {
 																			let {
 																				marker: Je,
@@ -45110,15 +45158,15 @@
 																				Je ===
 																				C
 																			)
-																		}
+																		},
 																	)
 																	return [
 																		ve(
-																			'expression'
+																			'expression',
 																		),
 																		x(
 																			Be,
-																			Ce
+																			Ce,
 																		)
 																			? ''
 																			: Ye,
@@ -45132,7 +45180,7 @@
 																}
 																case 'ParenthesizedExpression':
 																	return E(
-																		be.expression
+																		be.expression,
 																	) ||
 																		('ObjectExpression' !==
 																			be
@@ -45148,9 +45196,9 @@
 																					[
 																						i,
 																						ve(
-																							'expression'
+																							'expression',
 																						),
-																					]
+																					],
 																				),
 																				i,
 																				')',
@@ -45158,7 +45206,7 @@
 																		: [
 																				'(',
 																				ve(
-																					'expression'
+																					'expression',
 																				),
 																				')',
 																		  ]
@@ -45166,29 +45214,29 @@
 																	return oe(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'VariableDeclarator':
 																	return Pe(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'BinaryExpression':
 																case 'LogicalExpression':
 																	return H(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'AssignmentPattern':
 																	return [
 																		ve(
-																			'left'
+																			'left',
 																		),
 																		' = ',
 																		ve(
-																			'right'
+																			'right',
 																		),
 																	]
 																case 'OptionalMemberExpression':
@@ -45196,16 +45244,16 @@
 																	return X(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'MetaProperty':
 																	return [
 																		ve(
-																			'meta'
+																			'meta',
 																		),
 																		'.',
 																		ve(
-																			'property'
+																			'property',
 																		),
 																	]
 																case 'BindExpression':
@@ -45213,8 +45261,8 @@
 																		be.object &&
 																			Se.push(
 																				ve(
-																					'object'
-																				)
+																					'object',
+																				),
 																			),
 																		Se.push(
 																			l(
@@ -45224,11 +45272,11 @@
 																						L(
 																							Ce,
 																							Be,
-																							ve
+																							ve,
 																						),
-																					]
-																				)
-																			)
+																					],
+																				),
+																			),
 																		),
 																		Se
 																	)
@@ -45240,7 +45288,7 @@
 																		Q(
 																			Ce,
 																			Be,
-																			ve
+																			ve,
 																		),
 																	]
 																case 'V8IntrinsicIdentifier':
@@ -45256,7 +45304,7 @@
 																	return j(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'FunctionDeclaration':
 																case 'FunctionExpression':
@@ -45264,56 +45312,56 @@
 																		Ce,
 																		ve,
 																		Be,
-																		ze
+																		ze,
 																	)
 																case 'ArrowFunctionExpression':
 																	return he(
 																		Ce,
 																		Be,
 																		ve,
-																		ze
+																		ze,
 																	)
 																case 'YieldExpression':
 																	return (
 																		Se.push(
-																			'yield'
+																			'yield',
 																		),
 																		be.delegate &&
 																			Se.push(
-																				'*'
+																				'*',
 																			),
 																		be.argument &&
 																			Se.push(
 																				' ',
 																				ve(
-																					'argument'
-																				)
+																					'argument',
+																				),
 																			),
 																		Se
 																	)
 																case 'AwaitExpression':
 																	if (
 																		(Se.push(
-																			'await'
+																			'await',
 																		),
 																		be.argument)
 																	) {
 																		Se.push(
 																			' ',
 																			ve(
-																				'argument'
-																			)
+																				'argument',
+																			),
 																		)
 																		let Ie =
 																			Ce.getParentNode()
 																		if (
 																			(T(
-																				Ie
+																				Ie,
 																			) &&
 																				Ie.callee ===
 																					be) ||
 																			(m(
-																				Ie
+																				Ie,
 																			) &&
 																				Ie.object ===
 																					be)
@@ -45324,19 +45372,19 @@
 																						[
 																							i,
 																							...Se,
-																						]
+																						],
 																					),
 																					i,
 																				]
 																			let Oe =
 																				Ce.findAncestor(
 																					(
-																						Je
+																						Je,
 																					) =>
 																						'AwaitExpression' ===
 																							Je.type ||
 																						'BlockStatement' ===
-																							Je.type
+																							Je.type,
 																				)
 																			if (
 																				!Oe ||
@@ -45344,7 +45392,7 @@
 																					Oe.type
 																			)
 																				return l(
-																					Se
+																					Se,
 																				)
 																		}
 																	}
@@ -45354,19 +45402,19 @@
 																	return ce(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ExportAllDeclaration':
 																	return W(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ImportDeclaration':
 																	return ee(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ImportSpecifier':
 																case 'ExportSpecifier':
@@ -45377,16 +45425,16 @@
 																	return K(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ImportAttribute':
 																	return [
 																		ve(
-																			'key'
+																			'key',
 																		),
 																		': ',
 																		ve(
-																			'value'
+																			'value',
 																		),
 																	]
 																case 'Import':
@@ -45397,19 +45445,19 @@
 																	return le(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ThrowStatement':
 																	return Re(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ReturnStatement':
 																	return ke(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'NewExpression':
 																case 'ImportExpression':
@@ -45418,7 +45466,7 @@
 																	return Ne(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ObjectExpression':
 																case 'ObjectPattern':
@@ -45426,7 +45474,7 @@
 																	return z(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ObjectProperty':
 																case 'Property':
@@ -45438,24 +45486,24 @@
 																		? we(
 																				Ce,
 																				Be,
-																				ve
+																				ve,
 																		  )
 																		: fe(
 																				Ce,
 																				Be,
-																				ve
+																				ve,
 																		  )
 																case 'ObjectMethod':
 																	return we(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'Decorator':
 																	return [
 																		'@',
 																		ve(
-																			'expression'
+																			'expression',
 																		),
 																	]
 																case 'ArrayExpression':
@@ -45464,12 +45512,12 @@
 																	return Fe(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'SequenceExpression': {
 																	let Ie =
 																		Ce.getParentNode(
-																			0
+																			0,
 																		)
 																	if (
 																		'ExpressionStatement' ===
@@ -45483,12 +45531,12 @@
 																			Ce.each(
 																				(
 																					Je,
-																					Te
+																					Te,
 																				) => {
 																					0 ===
 																					Te
 																						? Oe.push(
-																								ve()
+																								ve(),
 																						  )
 																						: Oe.push(
 																								',',
@@ -45496,14 +45544,14 @@
 																									[
 																										n,
 																										ve(),
-																									]
-																								)
+																									],
+																								),
 																						  )
 																				},
-																				'expressions'
+																				'expressions',
 																			),
 																			l(
-																				Oe
+																				Oe,
 																			)
 																		)
 																	}
@@ -45515,9 +45563,9 @@
 																			],
 																			Ce.map(
 																				ve,
-																				'expressions'
-																			)
-																		)
+																				'expressions',
+																			),
+																		),
 																	)
 																}
 																case 'ThisExpression':
@@ -45527,7 +45575,7 @@
 																case 'Directive':
 																	return [
 																		ve(
-																			'value'
+																			'value',
 																		),
 																		Ye,
 																	]
@@ -45535,21 +45583,21 @@
 																	return ie(
 																		be.extra
 																			.raw,
-																		Be
+																		Be,
 																	)
 																case 'UnaryExpression':
 																	return (
 																		Se.push(
-																			be.operator
+																			be.operator,
 																		),
 																		/[a-z]$/.test(
-																			be.operator
+																			be.operator,
 																		) &&
 																			Se.push(
-																				' '
+																				' ',
 																			),
 																		E(
-																			be.argument
+																			be.argument,
 																		)
 																			? Se.push(
 																					l(
@@ -45559,19 +45607,19 @@
 																								[
 																									i,
 																									ve(
-																										'argument'
+																										'argument',
 																									),
-																								]
+																								],
 																							),
 																							i,
 																							')',
-																						]
-																					)
+																						],
+																					),
 																			  )
 																			: Se.push(
 																					ve(
-																						'argument'
-																					)
+																						'argument',
+																					),
 																			  ),
 																		Se
 																	)
@@ -45579,9 +45627,9 @@
 																	return (
 																		Se.push(
 																			ve(
-																				'argument'
+																				'argument',
 																			),
-																			be.operator
+																			be.operator,
 																		),
 																		be.prefix &&
 																			Se.reverse(),
@@ -45591,14 +45639,14 @@
 																	return de(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'VariableDeclaration': {
 																	let je,
 																		Ie =
 																			Ce.map(
 																				ve,
-																				'declarations'
+																				'declarations',
 																			),
 																		Oe =
 																			Ce.getParentNode(),
@@ -45612,22 +45660,22 @@
 																		Te =
 																			be.declarations.some(
 																				(
-																					Me
+																					Me,
 																				) =>
-																					Me.init
+																					Me.init,
 																			)
 																	return (
 																		1 !==
 																			Ie.length ||
 																		E(
 																			be
-																				.declarations[0]
+																				.declarations[0],
 																		)
 																			? Ie.length >
 																					0 &&
 																			  (je =
 																					p(
-																						Ie[0]
+																						Ie[0],
 																					))
 																			: (je =
 																					Ie[0]),
@@ -45644,10 +45692,10 @@
 																				: '',
 																			p(
 																				Ie.slice(
-																					1
+																					1,
 																				).map(
 																					(
-																						Me
+																						Me,
 																					) => [
 																						',',
 																						Te &&
@@ -45655,15 +45703,15 @@
 																							? u
 																							: n,
 																						Me,
-																					]
-																				)
+																					],
+																				),
 																			),
 																		]),
 																		(Je &&
 																			Oe.body !==
 																				be) ||
 																			Se.push(
-																				Ye
+																				Ye,
 																			),
 																		l(Se)
 																	)
@@ -45672,22 +45720,22 @@
 																	return l([
 																		'with (',
 																		ve(
-																			'object'
+																			'object',
 																		),
 																		')',
 																		V(
 																			be.body,
 																			ve(
-																				'body'
-																			)
+																				'body',
+																			),
 																		),
 																	])
 																case 'IfStatement': {
 																	let Ie = V(
 																			be.consequent,
 																			ve(
-																				'consequent'
-																			)
+																				'consequent',
+																			),
 																		),
 																		Oe = l([
 																			'if (',
@@ -45696,9 +45744,9 @@
 																					[
 																						i,
 																						ve(
-																							'test'
+																							'test',
 																						),
-																					]
+																					],
 																				),
 																				i,
 																			]),
@@ -45707,7 +45755,7 @@
 																		])
 																	if (
 																		(Se.push(
-																			Oe
+																			Oe,
 																		),
 																		be.alternate)
 																	) {
@@ -45715,10 +45763,10 @@
 																				E(
 																					be.consequent,
 																					N.Trailing |
-																						N.Line
+																						N.Line,
 																				) ||
 																				$(
-																					be
+																					be,
 																				),
 																			Te =
 																				'BlockStatement' ===
@@ -45729,21 +45777,21 @@
 																		Se.push(
 																			Te
 																				? ' '
-																				: u
+																				: u,
 																		),
 																			E(
 																				be,
-																				N.Dangling
+																				N.Dangling,
 																			) &&
 																				Se.push(
 																					t(
 																						Ce,
 																						Be,
-																						!0
+																						!0,
 																					),
 																					Je
 																						? u
-																						: ' '
+																						: ' ',
 																				),
 																			Se.push(
 																				'else',
@@ -45751,14 +45799,14 @@
 																					V(
 																						be.alternate,
 																						ve(
-																							'alternate'
+																							'alternate',
 																						),
 																						'IfStatement' ===
 																							be
 																								.alternate
-																								.type
-																					)
-																				)
+																								.type,
+																					),
+																				),
 																			)
 																	}
 																	return Se
@@ -45767,13 +45815,13 @@
 																	let Ie = V(
 																			be.body,
 																			ve(
-																				'body'
-																			)
+																				'body',
+																			),
 																		),
 																		Oe = t(
 																			Ce,
 																			Be,
-																			!0
+																			!0,
 																		),
 																		Je = Oe
 																			? [
@@ -45795,26 +45843,26 @@
 																									[
 																										i,
 																										ve(
-																											'init'
+																											'init',
 																										),
 																										';',
 																										n,
 																										ve(
-																											'test'
+																											'test',
 																										),
 																										';',
 																										n,
 																										ve(
-																											'update'
+																											'update',
 																										),
-																									]
+																									],
 																								),
 																								i,
-																							]
+																							],
 																						),
 																						')',
 																						Ie,
-																					]
+																					],
 																				),
 																		  ]
 																		: [
@@ -45823,7 +45871,7 @@
 																					[
 																						'for (;;)',
 																						Ie,
-																					]
+																					],
 																				),
 																		  ]
 																}
@@ -45834,7 +45882,7 @@
 																			p([
 																				i,
 																				ve(
-																					'test'
+																					'test',
 																				),
 																			]),
 																			i,
@@ -45843,26 +45891,26 @@
 																		V(
 																			be.body,
 																			ve(
-																				'body'
-																			)
+																				'body',
+																			),
 																		),
 																	])
 																case 'ForInStatement':
 																	return l([
 																		'for (',
 																		ve(
-																			'left'
+																			'left',
 																		),
 																		' in ',
 																		ve(
-																			'right'
+																			'right',
 																		),
 																		')',
 																		V(
 																			be.body,
 																			ve(
-																				'body'
-																			)
+																				'body',
+																			),
 																		),
 																	])
 																case 'ForOfStatement':
@@ -45873,26 +45921,26 @@
 																			: '',
 																		' (',
 																		ve(
-																			'left'
+																			'left',
 																		),
 																		' of ',
 																		ve(
-																			'right'
+																			'right',
 																		),
 																		')',
 																		V(
 																			be.body,
 																			ve(
-																				'body'
-																			)
+																				'body',
+																			),
 																		),
 																	])
 																case 'DoWhileStatement': {
 																	let Ie = V(
 																		be.body,
 																		ve(
-																			'body'
-																		)
+																			'body',
+																		),
 																	)
 																	return (
 																		(Se = [
@@ -45905,10 +45953,10 @@
 																		be.body
 																			.type
 																			? Se.push(
-																					' '
+																					' ',
 																			  )
 																			: Se.push(
-																					u
+																					u,
 																			  ),
 																		Se.push(
 																			'while (',
@@ -45917,14 +45965,14 @@
 																					[
 																						i,
 																						ve(
-																							'test'
+																							'test',
 																						),
-																					]
+																					],
 																				),
 																				i,
 																			]),
 																			')',
-																			Ye
+																			Ye,
 																		),
 																		Se
 																	)
@@ -45936,40 +45984,40 @@
 																			: '',
 																		'do ',
 																		ve(
-																			'body'
+																			'body',
 																		),
 																	]
 																case 'BreakStatement':
 																	return (
 																		Se.push(
-																			'break'
+																			'break',
 																		),
 																		be.label &&
 																			Se.push(
 																				' ',
 																				ve(
-																					'label'
-																				)
+																					'label',
+																				),
 																			),
 																		Se.push(
-																			Ye
+																			Ye,
 																		),
 																		Se
 																	)
 																case 'ContinueStatement':
 																	return (
 																		Se.push(
-																			'continue'
+																			'continue',
 																		),
 																		be.label &&
 																			Se.push(
 																				' ',
 																				ve(
-																					'label'
-																				)
+																					'label',
+																				),
 																			),
 																		Se.push(
-																			Ye
+																			Ye,
 																		),
 																		Se
 																	)
@@ -45979,30 +46027,30 @@
 																			.type
 																		? [
 																				ve(
-																					'label'
+																					'label',
 																				),
 																				':;',
 																		  ]
 																		: [
 																				ve(
-																					'label'
+																					'label',
 																				),
 																				': ',
 																				ve(
-																					'body'
+																					'body',
 																				),
 																		  ]
 																case 'TryStatement':
 																	return [
 																		'try ',
 																		ve(
-																			'block'
+																			'block',
 																		),
 																		be.handler
 																			? [
 																					' ',
 																					ve(
-																						'handler'
+																						'handler',
 																					),
 																			  ]
 																			: '',
@@ -46010,7 +46058,7 @@
 																			? [
 																					' finally ',
 																					ve(
-																						'finalizer'
+																						'finalizer',
 																					),
 																			  ]
 																			: '',
@@ -46023,33 +46071,33 @@
 																				E(
 																					be.param,
 																					(
-																						Je
+																						Je,
 																					) =>
 																						!v(
-																							Je
+																							Je,
 																						) ||
 																						(Je.leading &&
 																							s(
 																								Be.originalText,
 																								d(
-																									Je
-																								)
+																									Je,
+																								),
 																							)) ||
 																						(Je.trailing &&
 																							s(
 																								Be.originalText,
 																								o(
-																									Je
+																									Je,
 																								),
 																								{
 																									backwards:
 																										!0,
-																								}
-																							))
+																								},
+																							)),
 																				),
 																			Oe =
 																				ve(
-																					'param'
+																					'param',
 																				)
 																		return [
 																			'catch ',
@@ -46060,7 +46108,7 @@
 																							[
 																								i,
 																								Oe,
-																							]
+																							],
 																						),
 																						i,
 																						') ',
@@ -46071,14 +46119,14 @@
 																						') ',
 																				  ],
 																			ve(
-																				'body'
+																				'body',
 																			),
 																		]
 																	}
 																	return [
 																		'catch ',
 																		ve(
-																			'body'
+																			'body',
 																		),
 																	]
 																case 'SwitchStatement':
@@ -46088,7 +46136,7 @@
 																			p([
 																				i,
 																				ve(
-																					'discriminant'
+																					'discriminant',
 																				),
 																			]),
 																			i,
@@ -46107,7 +46155,7 @@
 																								(
 																									Ie,
 																									Oe,
-																									Je
+																									Je,
 																								) => {
 																									let Te =
 																										Ie.getValue()
@@ -46118,16 +46166,16 @@
 																												1 &&
 																										P(
 																											Te,
-																											Be
+																											Be,
 																										)
 																											? u
 																											: '',
 																									]
 																								},
-																								'cases'
-																							)
+																								'cases',
+																							),
 																						),
-																					]
+																					],
 																			  )
 																			: '',
 																		u,
@@ -46138,32 +46186,32 @@
 																		? Se.push(
 																				'case ',
 																				ve(
-																					'test'
+																					'test',
 																				),
-																				':'
+																				':',
 																		  )
 																		: Se.push(
-																				'default:'
+																				'default:',
 																		  ),
 																		E(
 																			be,
-																			N.Dangling
+																			N.Dangling,
 																		) &&
 																			Se.push(
 																				' ',
 																				t(
 																					Ce,
 																					Be,
-																					!0
-																				)
+																					!0,
+																				),
 																			)
 																	let Ie =
 																		be.consequent.filter(
 																			(
-																				Oe
+																				Oe,
 																			) =>
 																				'EmptyStatement' !==
-																				Oe.type
+																				Oe.type,
 																		)
 																	if (
 																		Ie.length >
@@ -46173,7 +46221,7 @@
 																			pe(
 																				Ce,
 																				Be,
-																				ve
+																				ve,
 																			)
 																		Se.push(
 																			1 ===
@@ -46189,8 +46237,8 @@
 																						[
 																							u,
 																							Oe,
-																						]
-																				  )
+																						],
+																				  ),
 																		)
 																	}
 																	return Se
@@ -46205,7 +46253,7 @@
 																	return U(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ClassMethod':
 																case 'ClassPrivateMethod':
@@ -46213,7 +46261,7 @@
 																	return Z(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'ClassProperty':
 																case 'PropertyDefinition':
@@ -46223,43 +46271,43 @@
 																	return se(
 																		Ce,
 																		Be,
-																		ve
+																		ve,
 																	)
 																case 'TemplateElement':
 																	return y(
 																		be.value
-																			.raw
+																			.raw,
 																	)
 																case 'TemplateLiteral':
 																	return ue(
 																		Ce,
 																		ve,
-																		Be
+																		Be,
 																	)
 																case 'TaggedTemplateExpression':
 																	return [
 																		ve(
-																			'tag'
+																			'tag',
 																		),
 																		ve(
-																			'typeParameters'
+																			'typeParameters',
 																		),
 																		ve(
-																			'quasi'
+																			'quasi',
 																		),
 																	]
 																case 'PrivateIdentifier':
 																	return [
 																		'#',
 																		ve(
-																			'name'
+																			'name',
 																		),
 																	]
 																case 'PrivateName':
 																	return [
 																		'#',
 																		ve(
-																			'id'
+																			'id',
 																		),
 																	]
 																case 'InterpreterDirective':
@@ -46267,14 +46315,14 @@
 																		Se.push(
 																			'#!',
 																			be.value,
-																			u
+																			u,
 																		),
 																		P(
 																			be,
-																			Be
+																			Be,
 																		) &&
 																			Se.push(
-																				u
+																				u,
 																			),
 																		Se
 																	)
@@ -46284,11 +46332,11 @@
 																	return '?'
 																case 'ModuleExpression': {
 																	Se.push(
-																		'module {'
+																		'module {',
 																	)
 																	let Ie =
 																		ve(
-																			'body'
+																			'body',
 																		)
 																	return (
 																		Ie &&
@@ -46297,12 +46345,12 @@
 																					[
 																						u,
 																						Ie,
-																					]
+																					],
 																				),
-																				u
+																				u,
 																			),
 																		Se.push(
-																			'}'
+																			'}',
 																		),
 																		Se
 																	)
@@ -46311,8 +46359,8 @@
 																	throw new Error(
 																		'unknown type: ' +
 																			JSON.stringify(
-																				be.type
-																			)
+																				be.type,
+																			),
 																	)
 															}
 														})(Ce, Be, ve, ze)
@@ -46363,7 +46411,7 @@
 																ze &&
 																	ze.needsSemi &&
 																	Ie.unshift(
-																		';'
+																		';',
 																	),
 																1 ===
 																	Ie.length &&
@@ -46390,7 +46438,7 @@
 															Ie.push(
 																' /*',
 																je.value.trimStart(),
-																'*/'
+																'*/',
 															),
 																(je.printed =
 																	!0)
@@ -46443,7 +46491,7 @@
 										Ed = te({
 											'src/language-js/printer-estree-json.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -46510,7 +46558,7 @@
 																	0,
 																	{
 																		type: 'NullLiteral',
-																	}
+																	},
 																)
 													} else {
 														let { key: c } = y
@@ -46524,7 +46572,7 @@
 															  (h.key = {
 																	type: 'StringLiteral',
 																	value: String(
-																		c.value
+																		c.value,
 																	),
 															  })
 													}
@@ -46535,14 +46583,14 @@
 														print: function u(
 															y,
 															h,
-															g
+															g,
 														) {
 															let c = y.getValue()
 															switch (c.type) {
 																case 'JsonRoot':
 																	return [
 																		g(
-																			'node'
+																			'node',
 																		),
 																		t,
 																	]
@@ -46561,7 +46609,7 @@
 																				y.getValue()
 																					? 'null'
 																					: g(),
-																			'elements'
+																			'elements',
 																		)
 																	return [
 																		'[',
@@ -46572,7 +46620,7 @@
 																					',',
 																					t,
 																				],
-																				f
+																				f,
 																			),
 																		]),
 																		t,
@@ -46597,10 +46645,10 @@
 																							],
 																							y.map(
 																								g,
-																								'properties'
-																							)
+																								'properties',
+																							),
 																						),
-																					]
+																					],
 																				),
 																				t,
 																				'}',
@@ -46608,11 +46656,11 @@
 																case 'ObjectProperty':
 																	return [
 																		g(
-																			'key'
+																			'key',
 																		),
 																		': ',
 																		g(
-																			'value'
+																			'value',
 																		),
 																	]
 																case 'UnaryExpression':
@@ -46622,7 +46670,7 @@
 																			? ''
 																			: c.operator,
 																		g(
-																			'argument'
+																			'argument',
 																		),
 																	]
 																case 'NullLiteral':
@@ -46633,22 +46681,22 @@
 																		: 'false'
 																case 'StringLiteral':
 																	return JSON.stringify(
-																		c.value
+																		c.value,
 																	)
 																case 'NumericLiteral':
 																	return i(y)
 																		? JSON.stringify(
 																				String(
-																					c.value
-																				)
+																					c.value,
+																				),
 																		  )
 																		: JSON.stringify(
-																				c.value
+																				c.value,
 																		  )
 																case 'Identifier':
 																	return i(y)
 																		? JSON.stringify(
-																				c.name
+																				c.name,
 																		  )
 																		: c.name
 																case 'TemplateLiteral':
@@ -46659,14 +46707,14 @@
 																case 'TemplateElement':
 																	return JSON.stringify(
 																		c.value
-																			.cooked
+																			.cooked,
 																	)
 																default:
 																	throw new Error(
 																		'unknown type: ' +
 																			JSON.stringify(
-																				c.type
-																			)
+																				c.type,
+																			),
 																	)
 															}
 														},
@@ -46677,7 +46725,7 @@
 										Mt = te({
 											'src/common/common-options.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = 'Common'
@@ -46898,7 +46946,7 @@
 										Ln = te({
 											'node_modules/linguist-languages/data/JavaScript.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'JavaScript',
@@ -46958,7 +47006,7 @@
 										Sd = te({
 											'node_modules/linguist-languages/data/TypeScript.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'TypeScript',
@@ -46987,7 +47035,7 @@
 										xd = te({
 											'node_modules/linguist-languages/data/TSX.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'TSX',
@@ -47007,7 +47055,7 @@
 										wa = te({
 											'node_modules/linguist-languages/data/JSON.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'JSON',
@@ -47065,7 +47113,7 @@
 										bd = te({
 											'node_modules/linguist-languages/data/JSON with Comments.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'JSON with Comments',
@@ -47117,7 +47165,7 @@
 										Td = te({
 											'node_modules/linguist-languages/data/JSON5.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'JSON5',
@@ -47167,7 +47215,7 @@
 																...p.extensions.filter(
 																	(y) =>
 																		'.jsx' !==
-																		y
+																		y,
 																),
 																'.wxs',
 															],
@@ -47269,7 +47317,7 @@
 																p.extensions.filter(
 																	(y) =>
 																		'.jsonl' !==
-																		y
+																		y,
 																),
 														})),
 														t(bd(), (p) => ({
@@ -47333,19 +47381,19 @@
 															(((p.nodes[0] ===
 																i ||
 																(t(
-																	p.nodes[0]
+																	p.nodes[0],
 																) &&
 																	p
 																		.nodes[1] ===
 																		i)) &&
 																(delete l.text,
 																/^\*\s*@(?:format|prettier)\s*$/.test(
-																	i.text
+																	i.text,
 																))) ||
 																('css-root' ===
 																	p.type &&
 																	s(
-																		p.nodes
+																		p.nodes,
 																	) === i)))
 													)
 														return null
@@ -47367,14 +47415,14 @@
 															(l.value =
 																l.value.replace(
 																	/\s+/g,
-																	' '
+																	' ',
 																)),
 														'media-feature' ===
 															i.type &&
 															(l.value =
 																l.value.replace(
 																	/ /g,
-																	''
+																	'',
 																)),
 														(('value-word' ===
 															i.type &&
@@ -47388,7 +47436,7 @@
 																].includes(
 																	l.value
 																		.replace()
-																		.toLowerCase()
+																		.toLowerCase(),
 																))) ||
 															'media-feature' ===
 																i.type ||
@@ -47439,11 +47487,11 @@
 																	return i
 																		.replace(
 																			/'/g,
-																			'"'
+																			'"',
 																		)
 																		.replace(
 																			/\\([^\dA-Fa-f])/g,
-																			'$1'
+																			'$1',
 																		)
 																})(l.value)),
 														'selector-attribute' ===
@@ -47466,7 +47514,7 @@
 																		.trim()
 																		.replace(
 																			/^["']|["']$/g,
-																			''
+																			'',
 																		)),
 																delete l.quoted)),
 														('media-value' ===
@@ -47490,19 +47538,19 @@
 																	(
 																		y,
 																		h,
-																		g
+																		g,
 																	) => {
 																		let c =
 																			Number(
-																				h
+																				h,
 																			)
 																		return Number.isNaN(
-																			c
+																			c,
 																		)
 																			? y
 																			: c +
 																					g.toLowerCase()
-																	}
+																	},
 																)),
 														'selector-tag' ===
 															i.type)
@@ -47533,7 +47581,7 @@
 																	'value-number' ===
 																		h.type &&
 																	'...' ===
-																		h.unit
+																		h.unit,
 															)
 														;-1 !== y &&
 															((l.groups[y].unit =
@@ -47546,7 +47594,7 @@
 																	value: '...',
 																	isColor: !1,
 																	isHex: !1,
-																}
+																},
 															))
 													}
 													return 'value-comma_group' ===
@@ -47556,20 +47604,20 @@
 																('value-atword' ===
 																	y.type &&
 																	y.value.endsWith(
-																		'['
+																		'[',
 																	)) ||
 																('value-word' ===
 																	y.type &&
 																	y.value.startsWith(
-																		']'
-																	))
+																		']',
+																	)),
 														)
 														? {
 																type: 'value-atword',
 																value: i.groups
 																	.map(
 																		(y) =>
-																			y.value
+																			y.value,
 																	)
 																	.join(''),
 																group: {
@@ -47588,7 +47636,7 @@
 										su = te({
 											'src/utils/front-matter/print.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -47609,7 +47657,7 @@
 																		{
 																			stripTrailingHardline:
 																				!0,
-																		}
+																		},
 																  )
 																: ''
 														return s([
@@ -47635,7 +47683,7 @@
 												r.exports = function a(
 													n,
 													u,
-													i
+													i,
 												) {
 													let l = n.getValue()
 													if (
@@ -47651,12 +47699,12 @@
 										_o = te({
 											'src/utils/front-matter/parse.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = new RegExp(
 													'^(?<startDelimiter>-{3}|\\+{3})(?<language>[^\\n]*)\\n(?:|(?<value>.*?)\\n)(?<endDelimiter>\\k<startDelimiter>|\\.{3})[^\\S\\n]*(?:\\n|$)',
-													's'
+													's',
 												)
 												r.exports = function s(a) {
 													let n = a.match(t)
@@ -47685,13 +47733,13 @@
 															endDelimiter: p,
 															raw: h.replace(
 																/\n$/,
-																''
+																'',
 															),
 														},
 														content:
 															h.replace(
 																/[^\n]/g,
-																' '
+																' ',
 															) +
 															a.slice(h.length),
 													}
@@ -47706,11 +47754,11 @@
 												r.exports = {
 													hasPragma: function a(u) {
 														return t.hasPragma(
-															s(u).content
+															s(u).content,
 														)
 													},
 													insertPragma: function n(
-														u
+														u,
 													) {
 														let {
 															frontMatter: i,
@@ -47729,7 +47777,7 @@
 										Pd = te({
 											'src/language-css/utils/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = new Set([
@@ -47768,7 +47816,7 @@
 													for (
 														;
 														(fe = z.getParentNode(
-															++se
+															++se,
 														));
 
 													)
@@ -47867,7 +47915,7 @@
 															var U
 															let Z = a(
 																z,
-																'css-decl'
+																'css-decl',
 															)
 															return null == Z ||
 																null ===
@@ -47880,28 +47928,28 @@
 													maybeToLowerCase:
 														function p(z) {
 															return z.includes(
-																'$'
+																'$',
 															) ||
 																z.includes(
-																	'@'
+																	'@',
 																) ||
 																z.includes(
-																	'#'
+																	'#',
 																) ||
 																z.startsWith(
-																	'%'
+																	'%',
 																) ||
 																z.startsWith(
-																	'--'
+																	'--',
 																) ||
 																z.startsWith(
-																	':--'
+																	':--',
 																) ||
 																(z.includes(
-																	'('
+																	'(',
 																) &&
 																	z.includes(
-																		')'
+																		')',
 																	))
 																? z
 																: z.toLowerCase()
@@ -47911,7 +47959,7 @@
 															var Z
 															let se = a(
 																z,
-																'value-func'
+																'value-func',
 															)
 															return (
 																(null == se ||
@@ -47929,7 +47977,7 @@
 															var U
 															let Z = a(
 																	z,
-																	'css-rule'
+																	'css-rule',
 																),
 																se =
 																	null == Z ||
@@ -47942,10 +47990,10 @@
 															return (
 																se &&
 																(se.startsWith(
-																	':import'
+																	':import',
 																) ||
 																	se.startsWith(
-																		':export'
+																		':export',
 																	))
 															)
 														},
@@ -47953,18 +48001,18 @@
 														function g(z, U) {
 															let Z =
 																	Array.isArray(
-																		U
+																		U,
 																	)
 																		? U
 																		: [U],
 																se = a(
 																	z,
-																	'css-atrule'
+																	'css-atrule',
 																)
 															return (
 																se &&
 																Z.includes(
-																	se.name.toLowerCase()
+																	se.name.toLowerCase(),
 																)
 															)
 														},
@@ -47974,7 +48022,7 @@
 																	z.getValue(),
 																Z = a(
 																	z,
-																	'css-atrule'
+																	'css-atrule',
 																)
 															return (
 																'import' ===
@@ -47991,33 +48039,33 @@
 														function l(z, U) {
 															let Z = a(
 																z,
-																'css-atrule'
+																'css-atrule',
 															)
 															return (
 																Z?.name &&
 																Z.name
 																	.toLowerCase()
 																	.endsWith(
-																		'keyframes'
+																		'keyframes',
 																	) &&
 																[
 																	'from',
 																	'to',
 																].includes(
-																	U.toLowerCase()
+																	U.toLowerCase(),
 																)
 															)
 														},
 													isWideKeywords: function i(
-														z
+														z,
 													) {
 														return u.has(
-															z.toLowerCase()
+															z.toLowerCase(),
 														)
 													},
 													isLastNode: function F(
 														z,
-														U
+														U,
 													) {
 														var Z
 														let se =
@@ -48045,7 +48093,7 @@
 																	'each',
 																	'while',
 																].includes(
-																	z.name
+																	z.name,
 																)
 															)
 														},
@@ -48059,11 +48107,11 @@
 																(('string' ==
 																	typeof U &&
 																	/^@.+:.*$/.test(
-																		U
+																		U,
 																	)) ||
 																	(U.value &&
 																		/^@.+:.*$/.test(
-																			U.value
+																			U.value,
 																		)))
 															)
 														},
@@ -48078,7 +48126,7 @@
 																	'<=',
 																	'>=',
 																].includes(
-																	z.value
+																	z.value,
 																)
 															)
 														},
@@ -48091,7 +48139,7 @@
 																	'==',
 																	'!=',
 																].includes(
-																	z.value
+																	z.value,
 																)
 															)
 														},
@@ -48128,7 +48176,7 @@
 																	'through',
 																	'end',
 																].includes(
-																	z.value
+																	z.value,
 																)
 															)
 														},
@@ -48151,12 +48199,12 @@
 																	'or',
 																	'not',
 																].includes(
-																	z.value
+																	z.value,
 																)
 															)
 														},
 													hasComposesNode: function B(
-														z
+														z,
 													) {
 														var U, Z
 														return (
@@ -48238,20 +48286,20 @@
 																	: U.params) &&
 																/^\(\s*\)$/.test(
 																	z.raws
-																		.params
+																		.params,
 																)
 															)
 														},
 													isTemplatePlaceholderNode:
 														function v(z) {
 															return z.name.startsWith(
-																'prettier-placeholder'
+																'prettier-placeholder',
 															)
 														},
 													isTemplatePropNode:
 														function S(z) {
 															return z.prop.startsWith(
-																'@prettier-placeholder'
+																'@prettier-placeholder',
 															)
 														},
 													isPostcssSimpleVarNode:
@@ -48292,7 +48340,7 @@
 																return !1
 															let se =
 																z.getParentNode(
-																	1
+																	1,
 																)
 															if (
 																!(
@@ -48304,7 +48352,7 @@
 																return !1
 															let fe = a(
 																z,
-																'css-decl'
+																'css-decl',
 															)
 															return !!(
 																(null != fe &&
@@ -48314,7 +48362,7 @@
 																	void 0 !==
 																		U &&
 																	U.startsWith(
-																		'$'
+																		'$',
 																	)) ||
 																q(se) ||
 																'value-func' ===
@@ -48368,7 +48416,7 @@
 																	'and',
 																	'or',
 																].includes(
-																	z.value.toLowerCase()
+																	z.value.toLowerCase(),
 																)
 															)
 														},
@@ -48378,7 +48426,7 @@
 																'value-func' ===
 																	z.type &&
 																t.has(
-																	z.value.toLowerCase()
+																	z.value.toLowerCase(),
 																)
 															)
 														},
@@ -48387,9 +48435,9 @@
 															return /\/\//.test(
 																z
 																	.split(
-																		/[\n\r]/
+																		/[\n\r]/,
 																	)
-																	.pop()
+																	.pop(),
 															)
 														},
 													isAtWordPlaceholderNode:
@@ -48398,7 +48446,7 @@
 																'value-atword' ===
 																	z?.type &&
 																z.value.startsWith(
-																	'prettier-placeholder-'
+																	'prettier-placeholder-',
 																)
 															)
 														},
@@ -48424,7 +48472,7 @@
 																z.groups.some(
 																	(fe) =>
 																		'value-comma_group' !==
-																		fe.type
+																		fe.type,
 																)
 															)
 																return !1
@@ -48434,7 +48482,7 @@
 															) {
 																let fe =
 																		U.groups.indexOf(
-																			z
+																			z,
 																		) - 1,
 																	ge =
 																		U
@@ -48479,12 +48527,12 @@
 										Id = te({
 											'src/utils/line-column-to-index.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function (
 														t,
-														s
+														s,
 													) {
 														let a = 0
 														for (
@@ -48495,7 +48543,7 @@
 															a =
 																s.indexOf(
 																	'\n',
-																	a
+																	a,
 																) + 1
 														return a + t.column
 													})
@@ -48527,7 +48575,8 @@
 													)
 														return t(
 															f,
-															c.source.startOffset
+															c.source
+																.startOffset,
 														)
 													let F =
 														c.nodes && s(c.nodes)
@@ -48571,7 +48620,7 @@
 																1 +
 																c.name.length +
 																c.raws.afterName.match(
-																	/^\s*:?\s*/
+																	/^\s*:?\s*/,
 																)[0].length),
 														'css-atrule' !==
 															c.type &&
@@ -48596,7 +48645,7 @@
 													},
 													calculateLoc: function i(
 														c,
-														f
+														f,
 													) {
 														c.source &&
 															((c.source.startOffset =
@@ -48616,10 +48665,10 @@
 																	? l(
 																			_,
 																			p(
-																				c
+																				c,
 																			),
 																			_.text ||
-																				_.value
+																				_.value,
 																	  )
 																	: i(_, f))
 														}
@@ -48665,7 +48714,7 @@
 																					.slice(
 																						N,
 																						N +
-																							4
+																							4,
 																					)
 																					.toLowerCase()
 																		) {
@@ -48806,7 +48855,7 @@
 																						[
 																							_,
 																							N,
-																						]
+																						],
 																					),
 																				(f =
 																					'initial'),
@@ -48822,16 +48871,16 @@
 																c =
 																	c.slice(
 																		0,
-																		N
+																		N,
 																	) +
 																	c
 																		.slice(
 																			N,
-																			x
+																			x,
 																		)
 																		.replace(
 																			/["'*]/g,
-																			' '
+																			' ',
 																		) +
 																	c.slice(x)
 															return c
@@ -48842,7 +48891,7 @@
 										Ld = te({
 											'src/language-css/utils/is-less-parser.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(s) {
@@ -48857,18 +48906,18 @@
 										Od = te({
 											'src/language-css/utils/is-scss.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(
 														s,
-														a
+														a,
 													) {
 														return 'less' === s ||
 															'scss' === s
 															? 'scss' === s
 															: /(?:\w\s*:\s*[^:}]+|#){|@import[^\n]+(?:url|,)/.test(
-																	a
+																	a,
 															  )
 													})
 											},
@@ -48876,7 +48925,7 @@
 										jd = te({
 											'src/language-css/utils/css-units.evaluate.js'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													em: 'em',
@@ -48940,7 +48989,7 @@
 										qd = te({
 											'src/language-css/utils/print-unit.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = jd()
@@ -48948,7 +48997,7 @@
 													let n = a.toLowerCase()
 													return Object.prototype.hasOwnProperty.call(
 														t,
-														n
+														n,
 													)
 														? t[n]
 														: a
@@ -48958,7 +49007,7 @@
 										Md = te({
 											'src/language-css/printer-postcss.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = lt(),
@@ -49090,16 +49139,16 @@
 																	ae.push(
 																		je.originalText.slice(
 																			Ae(
-																				Xe
+																				Xe,
 																			),
 																			Ee(
-																				Xe
-																			)
-																		)
+																				Xe,
+																			),
+																		),
 																	)
 																} else
 																	ae.push(
-																		Me()
+																		Me(),
 																	)
 																tt !==
 																	Ve.length -
@@ -49116,17 +49165,17 @@
 																				Ve[
 																					tt +
 																						1
-																				]
+																				],
 																			),
 																			{
 																				backwards:
 																					!0,
-																			}
+																			},
 																		) &&
 																		!u(
 																			Ve[
 																				tt
-																			]
+																			],
 																		)) ||
 																	('css-atrule' ===
 																		Ve[
@@ -49146,28 +49195,28 @@
 																			]
 																				.type)
 																		? ae.push(
-																				' '
+																				' ',
 																		  )
 																		: (ae.push(
 																				je.__isHTMLStyleAttribute
 																					? y
-																					: h
+																					: h,
 																		  ),
 																		  i(
 																				je.originalText,
 																				nt.getValue(),
-																				Ee
+																				Ee,
 																		  ) &&
 																				!u(
 																					Ve[
 																						tt
-																					]
+																					],
 																				) &&
 																				ae.push(
-																					h
+																					h,
 																				)))
 															},
-															'nodes'
+															'nodes',
 														),
 														ae
 													)
@@ -49186,12 +49235,12 @@
 																/[A-Za-z]+/g
 																	.source
 															})?`,
-														'g'
+														'g',
 													)
 												function Se(Te, je) {
 													return Te.replace(
 														Be,
-														(Me) => a(Me, je)
+														(Me) => a(Me, je),
 													)
 												}
 												function Ie(Te, je) {
@@ -49210,20 +49259,20 @@
 															!ae && nt
 																? Je(nt) +
 																  m(tt || '')
-																: je
+																: je,
 													)
 												}
 												function Je(Te) {
 													return s(Te).replace(
 														/\.0(?=$|e)/,
-														''
+														'',
 													)
 												}
 												r.exports = {
 													print: function ye(
 														Te,
 														je,
-														Me
+														Me,
 													) {
 														let ae = Te.getValue()
 														if (!ae) return ''
@@ -49242,17 +49291,17 @@
 																let Ve = Ce(
 																		Te,
 																		je,
-																		Me
+																		Me,
 																	),
 																	We =
 																		ae.raws.after.trim()
 																return (
 																	We.startsWith(
-																		';'
+																		';',
 																	) &&
 																		(We =
 																			We.slice(
-																				1
+																				1,
 																			).trim()),
 																	[
 																		Ve,
@@ -49275,11 +49324,11 @@
 																	We =
 																		je.originalText.slice(
 																			Ae(
-																				ae
+																				ae,
 																			),
 																			Ee(
-																				ae
-																			)
+																				ae,
+																			),
 																		)
 																return Ve
 																	? We.trimEnd()
@@ -49288,7 +49337,7 @@
 															case 'css-rule':
 																return [
 																	Me(
-																		'selector'
+																		'selector',
 																	),
 																	ae.important
 																		? ' !important'
@@ -49303,7 +49352,7 @@
 																				H(
 																					ae
 																						.selector
-																						.value
+																						.value,
 																				)
 																					? y
 																					: ' ',
@@ -49318,15 +49367,15 @@
 																								Ce(
 																									Te,
 																									je,
-																									Me
+																									Me,
 																								),
-																							]
+																							],
 																					  )
 																					: '',
 																				h,
 																				'}',
 																				M(
-																					ae
+																					ae,
 																				)
 																					? ';'
 																					: '',
@@ -49348,11 +49397,11 @@
 																	O = W(ae)
 																		? N(
 																				Me(
-																					'value'
-																				)
+																					'value',
+																				),
 																		  )
 																		: Me(
-																				'value'
+																				'value',
 																		  )
 																return (
 																	!st &&
@@ -49360,13 +49409,13 @@
 																		(O = F([
 																			h,
 																			_(
-																				O
+																				O,
 																			),
 																		])),
 																	[
 																		ae.raws.before.replace(
 																			/[\s;]/g,
-																			''
+																			'',
 																		),
 																		('css-atrule' ===
 																			Ve.type &&
@@ -49374,10 +49423,10 @@
 																		o(Te)
 																			? ae.prop
 																			: m(
-																					ae.prop
+																					ae.prop,
 																			  ),
 																		Xe.startsWith(
-																			'//'
+																			'//',
 																		)
 																			? ' '
 																			: '',
@@ -49386,14 +49435,14 @@
 																			? ''
 																			: ' ',
 																		De(
-																			je
+																			je,
 																		) &&
 																		ae.extend &&
 																		ae.selector
 																			? [
 																					'extend(',
 																					Me(
-																						'selector'
+																						'selector',
 																					),
 																					')',
 																			  ]
@@ -49403,7 +49452,7 @@
 																			.important
 																			? ae.raws.important.replace(
 																					/\s*!\s*important/i,
-																					' !important'
+																					' !important',
 																			  )
 																			: ae.important
 																			? ' !important'
@@ -49412,7 +49461,7 @@
 																			.scssDefault
 																			? ae.raws.scssDefault.replace(
 																					/\s*!default/i,
-																					' !default'
+																					' !default',
 																			  )
 																			: ae.scssDefault
 																			? ' !default'
@@ -49421,7 +49470,7 @@
 																			.scssGlobal
 																			? ae.raws.scssGlobal.replace(
 																					/\s*!global/i,
-																					' !global'
+																					' !global',
 																			  )
 																			: ae.scssGlobal
 																			? ' !global'
@@ -49435,15 +49484,15 @@
 																							Ce(
 																								Te,
 																								je,
-																								Me
+																								Me,
 																							),
-																						]
+																						],
 																					),
 																					g,
 																					'}',
 																			  ]
 																			: Z(
-																					ae
+																					ae,
 																			  ) &&
 																			  !Ve
 																					.raws
@@ -49452,7 +49501,7 @@
 																					je
 																						.originalText[
 																						Ee(
-																							ae
+																							ae,
 																						) -
 																							1
 																					]
@@ -49460,10 +49509,10 @@
 																			: je.__isHTMLStyleAttribute &&
 																			  B(
 																					Te,
-																					ae
+																					ae,
 																			  )
 																			? w(
-																					';'
+																					';',
 																			  )
 																			: ';',
 																	]
@@ -49480,7 +49529,7 @@
 																			je
 																				.originalText[
 																				Ee(
-																					ae
+																					ae,
 																				) -
 																					1
 																			]
@@ -49490,7 +49539,7 @@
 																	)
 																		return [
 																			Me(
-																				'selector'
+																				'selector',
 																			),
 																			ae.important
 																				? ' !important'
@@ -49505,7 +49554,7 @@
 																		return [
 																			ae.name,
 																			Me(
-																				'params'
+																				'params',
 																			),
 																			We
 																				? ''
@@ -49520,7 +49569,7 @@
 																			': ',
 																			ae.value
 																				? Me(
-																						'value'
+																						'value',
 																				  )
 																				: '',
 																			ae.raws.between.trim()
@@ -49541,9 +49590,9 @@
 																								Ce(
 																									Te,
 																									je,
-																									Me
+																									Me,
 																								),
-																							]
+																							],
 																						),
 																						g,
 																						'}',
@@ -49558,20 +49607,20 @@
 																	'@',
 																	z(ae) ||
 																	ae.name.endsWith(
-																		':'
+																		':',
 																	)
 																		? ae.name
 																		: m(
-																				ae.name
+																				ae.name,
 																		  ),
 																	ae.params
 																		? [
 																				z(
-																					ae
+																					ae,
 																				)
 																					? ''
 																					: U(
-																							ae
+																							ae,
 																					  )
 																					? '' ===
 																					  ae
@@ -49579,13 +49628,13 @@
 																							.afterName
 																						? ''
 																						: ae.name.endsWith(
-																								':'
+																								':',
 																						  )
 																						? ' '
 																						: /^\s*\n\s*\n/.test(
 																								ae
 																									.raws
-																									.afterName
+																									.afterName,
 																						  )
 																						? [
 																								h,
@@ -49594,13 +49643,13 @@
 																						: /^\s*\n/.test(
 																								ae
 																									.raws
-																									.afterName
+																									.afterName,
 																						  )
 																						? h
 																						: ' '
 																					: ' ',
 																				Me(
-																					'params'
+																					'params',
 																				),
 																		  ]
 																		: '',
@@ -49608,7 +49657,7 @@
 																		? F([
 																				' ',
 																				Me(
-																					'selector'
+																					'selector',
 																				),
 																		  ])
 																		: '',
@@ -49616,13 +49665,13 @@
 																		? c([
 																				' ',
 																				Me(
-																					'value'
+																					'value',
 																				),
 																				k(
-																					ae
+																					ae,
 																				)
 																					? K(
-																							ae
+																							ae,
 																					  )
 																						? ' '
 																						: y
@@ -49635,7 +49684,7 @@
 																	ae.nodes
 																		? [
 																				k(
-																					ae
+																					ae,
 																				)
 																					? ''
 																					: (ae.selector &&
@@ -49649,13 +49698,13 @@
 																							H(
 																								ae
 																									.selector
-																									.value
+																									.value,
 																							)) ||
 																					  (!ae.selector &&
 																							'string' ==
 																								typeof ae.params &&
 																							H(
-																								ae.params
+																								ae.params,
 																							))
 																					? y
 																					: ' ',
@@ -49671,9 +49720,9 @@
 																						Ce(
 																							Te,
 																							je,
-																							Me
+																							Me,
 																						),
-																					]
+																					],
 																				),
 																				g,
 																				'}',
@@ -49688,7 +49737,7 @@
 																return (
 																	Te.each(
 																		(
-																			We
+																			We,
 																		) => {
 																			let Xe =
 																				We.getValue()
@@ -49697,18 +49746,18 @@
 																				'' ===
 																					Xe.value) ||
 																				Ve.push(
-																					Me()
+																					Me(),
 																				)
 																		},
-																		'nodes'
+																		'nodes',
 																	),
 																	c(
 																		F(
 																			p(
 																				y,
-																				Ve
-																			)
-																		)
+																				Ve,
+																			),
+																		),
 																	)
 																)
 															}
@@ -49718,8 +49767,8 @@
 																		' ',
 																		Te.map(
 																			Me,
-																			'nodes'
-																		)
+																			'nodes',
+																		),
 																	),
 																	B(Te, ae)
 																		? ''
@@ -49730,8 +49779,8 @@
 																return Oe(
 																	Se(
 																		ae.value,
-																		je
-																	)
+																		je,
+																	),
 																)
 															case 'media-feature-expression':
 																return ae.nodes
@@ -49739,7 +49788,7 @@
 																			'(',
 																			...Te.map(
 																				Me,
-																				'nodes'
+																				'nodes',
 																			),
 																			')',
 																	  ]
@@ -49749,10 +49798,10 @@
 																	Se(
 																		ae.value.replace(
 																			/ +/g,
-																			' '
+																			' ',
 																		),
-																		je
-																	)
+																		je,
+																	),
 																)
 															case 'media-colon':
 															case 'value-comma':
@@ -49764,20 +49813,20 @@
 															case 'selector-string':
 																return Se(
 																	ae.value,
-																	je
+																	je,
 																)
 															case 'media-url':
 																return Se(
 																	ae.value
 																		.replace(
 																			/^url\(\s+/gi,
-																			'url('
+																			'url(',
 																		)
 																		.replace(
 																			/\s+\)$/g,
-																			')'
+																			')',
 																		),
-																	je
+																	je,
 																)
 															case 'media-unknown':
 															case 'selector-comment':
@@ -49791,12 +49840,12 @@
 																return c([
 																	d(
 																		Te,
-																		'custom-selector'
+																		'custom-selector',
 																	)
 																		? [
 																				D(
 																					Te,
-																					'css-atrule'
+																					'css-atrule',
 																				)
 																					.customSelector,
 																				y,
@@ -49811,15 +49860,15 @@
 																					'extend',
 																					'custom-selector',
 																					'nest',
-																				]
+																				],
 																			)
 																				? y
 																				: h,
 																		],
 																		Te.map(
 																			Me,
-																			'nodes'
-																		)
+																			'nodes',
+																		),
 																	),
 																])
 															case 'selector-selector':
@@ -49827,9 +49876,9 @@
 																	F(
 																		Te.map(
 																			Me,
-																			'nodes'
-																		)
-																	)
+																			'nodes',
+																		),
+																	),
 																)
 															case 'selector-tag': {
 																let Ve =
@@ -49837,7 +49886,7 @@
 																	We =
 																		Ve &&
 																		Ve.nodes.indexOf(
-																			ae
+																			ae,
 																		),
 																	Xe =
 																		We &&
@@ -49862,10 +49911,10 @@
 																		: Oe(
 																				S(
 																					Te,
-																					ae.value
+																					ae.value,
 																				)
 																					? ae.value.toLowerCase()
-																					: ae.value
+																					: ae.value,
 																		  ),
 																]
 															}
@@ -49880,8 +49929,8 @@
 																	Oe(
 																		Se(
 																			ae.value,
-																			je
-																		)
+																			je,
+																		),
 																	),
 																]
 															case 'selector-attribute':
@@ -49909,9 +49958,9 @@
 																		? Ie(
 																				Se(
 																					ae.value.trim(),
-																					je
+																					je,
 																				),
-																				je
+																				je,
 																		  )
 																		: '',
 																	ae.insensitive
@@ -49943,7 +49992,7 @@
 																		ae.value,
 																		B(
 																			Te,
-																			ae
+																			ae,
 																		)
 																			? ''
 																			: ' ',
@@ -49953,15 +50002,15 @@
 																	ae.value
 																		.trim()
 																		.startsWith(
-																			'('
+																			'(',
 																		)
 																		? y
 																		: '',
 																	Oe(
 																		Se(
 																			ae.value.trim(),
-																			je
-																		)
+																			je,
+																		),
 																	) || y,
 																]
 															case 'selector-universal':
@@ -49993,10 +50042,10 @@
 																							],
 																							Te.map(
 																								Me,
-																								'nodes'
-																							)
+																								'nodes',
+																							),
 																						),
-																					]
+																					],
 																				),
 																				g,
 																				')',
@@ -50006,7 +50055,7 @@
 															case 'selector-unknown': {
 																let Ve = D(
 																	Te,
-																	'css-rule'
+																	'css-rule',
 																)
 																if (
 																	Ve &&
@@ -50015,10 +50064,10 @@
 																	return Oe(
 																		Se(
 																			m(
-																				ae.value
+																				ae.value,
 																			),
-																			je
-																		)
+																			je,
+																		),
 																	)
 																let We =
 																	Te.getParentNode()
@@ -50029,7 +50078,7 @@
 																) {
 																	let st =
 																			Ae(
-																				We
+																				We,
 																			),
 																		O =
 																			st +
@@ -50040,13 +50089,13 @@
 																	return je.originalText
 																		.slice(
 																			st,
-																			O
+																			O,
 																		)
 																		.trim()
 																}
 																let Xe =
 																	Te.getParentNode(
-																		1
+																		1,
 																	)
 																if (
 																	'value-paren_group' ===
@@ -50059,17 +50108,17 @@
 																) {
 																	let st =
 																			Ee(
-																				We.open
+																				We.open,
 																			) +
 																			1,
 																		O = Ae(
-																			We.close
+																			We.close,
 																		),
 																		me =
 																			je.originalText
 																				.slice(
 																					st,
-																					O
+																					O,
 																				)
 																				.trim()
 																	return H(me)
@@ -50084,19 +50133,19 @@
 															case 'value-value':
 															case 'value-root':
 																return Me(
-																	'group'
+																	'group',
 																)
 															case 'value-comment':
 																return je.originalText.slice(
 																	Ae(ae),
-																	Ee(ae)
+																	Ee(ae),
 																)
 															case 'value-comma_group': {
 																let Ve =
 																		Te.getParentNode(),
 																	We =
 																		Te.getParentNode(
-																			1
+																			1,
 																		),
 																	Xe = T(Te),
 																	st =
@@ -50106,11 +50155,11 @@
 																		('grid' ===
 																			Xe ||
 																			Xe.startsWith(
-																				'grid-template'
+																				'grid-template',
 																			)),
 																	O = D(
 																		Te,
-																		'css-atrule'
+																		'css-atrule',
 																	),
 																	me =
 																		O &&
@@ -50118,20 +50167,20 @@
 																	_e =
 																		ae.groups.some(
 																			(
-																				at
+																				at,
 																			) =>
 																				ge(
-																					at
-																				)
+																					at,
+																				),
 																		),
 																	He = Te.map(
 																		Me,
-																		'groups'
+																		'groups',
 																	),
 																	Ge = [],
 																	it = C(
 																		Te,
-																		'url'
+																		'url',
 																	),
 																	Qe = !1,
 																	rt = !1
@@ -50144,7 +50193,7 @@
 																) {
 																	var tt
 																	Ge.push(
-																		He[at]
+																		He[at],
 																	)
 																	let Ze =
 																			ae
@@ -50172,20 +50221,20 @@
 																	if (it) {
 																		;(($e &&
 																			Q(
-																				$e
+																				$e,
 																			)) ||
 																			Q(
-																				Le
+																				Le,
 																			)) &&
 																			Ge.push(
-																				' '
+																				' ',
 																			)
 																		continue
 																	}
 																	if (
 																		(d(
 																			Te,
-																			'forward'
+																			'forward',
 																		) &&
 																			'value-word' ===
 																				Le.type &&
@@ -50204,10 +50253,10 @@
 																		('value-word' ===
 																			Le.type &&
 																			Le.value.endsWith(
-																				'-'
+																				'-',
 																			) &&
 																			pe(
-																				$e
+																				$e,
 																			))
 																	)
 																		continue
@@ -50218,11 +50267,11 @@
 																	) {
 																		let $r =
 																				Le.value.lastIndexOf(
-																					'#{'
+																					'#{',
 																				),
 																			Vr =
 																				Le.value.lastIndexOf(
-																					'}'
+																					'}',
 																				)
 																		;-1 !==
 																			$r &&
@@ -50243,28 +50292,28 @@
 																	if (
 																		Qe ||
 																		Ne(
-																			Le
+																			Le,
 																		) ||
 																		Ne(
-																			$e
+																			$e,
 																		) ||
 																		('value-atword' ===
 																			Le.type &&
 																			('' ===
 																				Le.value ||
 																				Le.value.endsWith(
-																					'['
+																					'[',
 																				))) ||
 																		('value-word' ===
 																			$e.type &&
 																			$e.value.startsWith(
-																				']'
+																				']',
 																			)) ||
 																		'~' ===
 																			Le.value ||
 																		(Le.value &&
 																			Le.value.includes(
-																				'\\'
+																				'\\',
 																			) &&
 																			$e &&
 																			'value-comment' !==
@@ -50272,7 +50321,7 @@
 																		(Ze &&
 																			Ze.value &&
 																			Ze.value.indexOf(
-																				'\\'
+																				'\\',
 																			) ===
 																				Ze
 																					.value
@@ -50286,87 +50335,87 @@
 																			Le.value ||
 																		se(
 																			Le,
-																			$e
+																			$e,
 																		) ||
 																		he(
-																			Le
+																			Le,
 																		) ||
 																		we(
-																			Le
+																			Le,
 																		) ||
 																		ke(
-																			$e
+																			$e,
 																		) ||
 																		(we(
-																			$e
+																			$e,
 																		) &&
 																			de(
-																				$e
+																				$e,
 																			)) ||
 																		(ke(
-																			Le
+																			Le,
 																		) &&
 																			de(
-																				$e
+																				$e,
 																			)) ||
 																		('--' ===
 																			Le.value &&
 																			he(
-																				$e
+																				$e,
 																			))
 																	)
 																		continue
 																	let Rr =
 																			j(
-																				Le
+																				Le,
 																			),
 																		ou =
 																			j(
-																				$e
+																				$e,
 																			)
 																	if (
 																		(((Rr &&
 																			he(
-																				$e
+																				$e,
 																			)) ||
 																			(ou &&
 																				ke(
-																					Le
+																					Le,
 																				))) &&
 																			de(
-																				$e
+																				$e,
 																			)) ||
 																		(!Ze &&
 																			L(
-																				Le
+																				Le,
 																			)) ||
 																		(C(
 																			Te,
-																			'calc'
+																			'calc',
 																		) &&
 																			(Q(
-																				Le
+																				Le,
 																			) ||
 																				Q(
-																					$e
+																					$e,
 																				) ||
 																				V(
-																					Le
+																					Le,
 																				) ||
 																				V(
-																					$e
+																					$e,
 																				)) &&
 																			de(
-																				$e
+																				$e,
 																			))
 																	)
 																		continue
 																	let qo =
 																			(Q(
-																				Le
+																				Le,
 																			) ||
 																				V(
-																					Le
+																					Le,
 																				)) &&
 																			0 ===
 																				at &&
@@ -50375,10 +50424,10 @@
 																				$e.isHex) &&
 																			We &&
 																			oe(
-																				We
+																				We,
 																			) &&
 																			!de(
-																				$e
+																				$e,
 																			),
 																		lu =
 																			(sr &&
@@ -50386,71 +50435,71 @@
 																					sr.type) ||
 																			(sr &&
 																				Re(
-																					sr
+																					sr,
 																				)) ||
 																			'value-func' ===
 																				Le.type ||
 																			Re(
-																				Le
+																				Le,
 																			),
 																		cu =
 																			'value-func' ===
 																				$e.type ||
 																			Re(
-																				$e
+																				$e,
 																			) ||
 																			(Ze &&
 																				'value-func' ===
 																					Ze.type) ||
 																			(Ze &&
 																				Re(
-																					Ze
+																					Ze,
 																				))
 																	if (
 																		(J(
-																			$e
+																			$e,
 																		) ||
 																			J(
-																				Le
+																				Le,
 																			) ||
 																			C(
 																				Te,
-																				'calc'
+																				'calc',
 																			) ||
 																			qo ||
 																			!(
 																				(L(
-																					$e
+																					$e,
 																				) &&
 																					!lu) ||
 																				(L(
-																					Le
+																					Le,
 																				) &&
 																					!cu) ||
 																				(Q(
-																					$e
+																					$e,
 																				) &&
 																					!lu) ||
 																				(Q(
-																					Le
+																					Le,
 																				) &&
 																					!cu) ||
 																				V(
-																					$e
+																					$e,
 																				) ||
 																				V(
-																					Le
+																					Le,
 																				)
 																			) ||
 																			!(
 																				de(
-																					$e
+																					$e,
 																				) ||
 																				(Rr &&
 																					(!Ze ||
 																						(Ze &&
 																							j(
-																								Ze
+																								Ze,
 																							))))
 																			)) &&
 																		(('scss' !==
@@ -50461,13 +50510,13 @@
 																			'-' !==
 																				Le.value ||
 																			!le(
-																				$e
+																				$e,
 																			) ||
 																			Ee(
-																				Le
+																				Le,
 																			) !==
 																				Ae(
-																					$e.open
+																					$e.open,
 																				) ||
 																			'(' !==
 																				$e
@@ -50476,7 +50525,7 @@
 																	) {
 																		if (
 																			ge(
-																				Le
+																				Le,
 																			)
 																		) {
 																			if (
@@ -50485,36 +50534,36 @@
 																			) {
 																				Ge.push(
 																					_(
-																						h
-																					)
+																						h,
+																					),
 																				)
 																				continue
 																			}
 																			Ge.push(
-																				h
+																				h,
 																			)
 																			continue
 																		}
 																		if (
 																			me &&
 																			(q(
-																				$e
+																				$e,
 																			) ||
 																				R(
-																					$e
+																					$e,
 																				) ||
 																				ce(
-																					$e
+																					$e,
 																				) ||
 																				Y(
-																					Le
+																					Le,
 																				) ||
 																				ie(
-																					Le
+																					Le,
 																				))
 																		) {
 																			Ge.push(
-																				' '
+																				' ',
 																			)
 																			continue
 																		}
@@ -50524,7 +50573,7 @@
 																				O.name.toLowerCase()
 																		) {
 																			Ge.push(
-																				' '
+																				' ',
 																			)
 																			continue
 																		}
@@ -50542,12 +50591,12 @@
 																					.start
 																					.line
 																				? (Ge.push(
-																						h
+																						h,
 																				  ),
 																				  (rt =
 																						!0))
 																				: Ge.push(
-																						' '
+																						' ',
 																				  )
 																			continue
 																		}
@@ -50555,7 +50604,7 @@
 																			ou
 																		) {
 																			Ge.push(
-																				' '
+																				' ',
 																			)
 																			continue
 																		}
@@ -50565,35 +50614,35 @@
 																					'...' ===
 																						$e.value) ||
 																				(pe(
-																					Le
+																					Le,
 																				) &&
 																					pe(
-																						$e
+																						$e,
 																					) &&
 																					Ee(
-																						Le
+																						Le,
 																					) ===
 																						Ae(
-																							$e
+																							$e,
 																						))
 																			)
 																		) {
 																			if (
 																				pe(
-																					Le
+																					Le,
 																				) &&
 																				le(
-																					$e
+																					$e,
 																				) &&
 																				Ee(
-																					Le
+																					Le,
 																				) ===
 																					Ae(
-																						$e.open
+																						$e.open,
 																					)
 																			) {
 																				Ge.push(
-																					g
+																					g,
 																				)
 																				continue
 																			}
@@ -50601,11 +50650,11 @@
 																				'with' ===
 																					Le.value &&
 																				le(
-																					$e
+																					$e,
 																				)
 																			) {
 																				Ge.push(
-																					' '
+																					' ',
 																				)
 																				continue
 																			}
@@ -50615,15 +50664,15 @@
 																				void 0 !==
 																					tt &&
 																				tt.endsWith(
-																					'#'
+																					'#',
 																				) &&
 																				'{' ===
 																					$e.value &&
 																				le(
-																					$e.group
+																					$e.group,
 																				)) ||
 																				Ge.push(
-																					y
+																					y,
 																				)
 																		}
 																	}
@@ -50631,30 +50680,30 @@
 																return (
 																	_e &&
 																		Ge.push(
-																			E
+																			E,
 																		),
 																	rt &&
 																		Ge.unshift(
-																			h
+																			h,
 																		),
 																	me
 																		? c(
 																				F(
-																					Ge
-																				)
+																					Ge,
+																				),
 																		  )
 																		: v(Te)
 																		? c(
 																				f(
-																					Ge
-																				)
+																					Ge,
+																				),
 																		  )
 																		: c(
 																				F(
 																					f(
-																						Ge
-																					)
-																				)
+																						Ge,
+																					),
+																				),
 																		  )
 																)
 															}
@@ -50687,25 +50736,25 @@
 																					.groups[0]
 																					.type &&
 																			ae.groups[0].groups[0].value.startsWith(
-																				'data:'
+																				'data:',
 																			)))
 																)
 																	return [
 																		ae.open
 																			? Me(
-																					'open'
+																					'open',
 																			  )
 																			: '',
 																		p(
 																			',',
 																			Te.map(
 																				Me,
-																				'groups'
-																			)
+																				'groups',
+																			),
 																		),
 																		ae.close
 																			? Me(
-																					'close'
+																					'close',
 																			  )
 																			: '',
 																	]
@@ -50713,7 +50762,7 @@
 																	let it =
 																			Te.map(
 																				Me,
-																				'groups'
+																				'groups',
 																			),
 																		Qe = []
 																	for (
@@ -50728,20 +50777,24 @@
 																				[
 																					',',
 																					y,
-																				]
+																				],
 																			),
 																			Qe.push(
 																				it[
 																					rt
-																				]
+																				],
 																			)
 																	return c(
-																		F(f(Qe))
+																		F(
+																			f(
+																				Qe,
+																			),
+																		),
 																	)
 																}
 																let We = fe(Te),
 																	Xe = t(
-																		ae.groups
+																		ae.groups,
 																	),
 																	st =
 																		Xe &&
@@ -50749,11 +50802,11 @@
 																			Xe.type,
 																	O = Fe(
 																		ae,
-																		Ve
+																		Ve,
 																	),
 																	me = X(
 																		ae,
-																		Ve
+																		Ve,
 																	),
 																	_e =
 																		me ||
@@ -50765,7 +50818,7 @@
 																		[
 																			ae.open
 																				? Me(
-																						'open'
+																						'open',
 																				  )
 																				: '',
 																			F([
@@ -50777,7 +50830,7 @@
 																					Te.map(
 																						(
 																							it,
-																							Qe
+																							Qe,
 																						) => {
 																							let rt =
 																									it.getValue(),
@@ -50796,7 +50849,7 @@
 																									]
 																							if (
 																								ue(
-																									rt
+																									rt,
 																								) &&
 																								'value-comma_group' ===
 																									rt.type &&
@@ -50816,18 +50869,18 @@
 																									x(
 																										Ze[0]
 																											.contents
-																											.contents
+																											.contents,
 																									)
 																								;(Le[1] =
 																									c(
-																										Le[1]
+																										Le[1],
 																									)),
 																									(Ze =
 																										[
 																											c(
 																												_(
-																													Ze
-																												)
+																													Ze,
+																												),
 																											),
 																										])
 																							}
@@ -50836,12 +50889,12 @@
 																								'value-comma_group' ===
 																									rt.type &&
 																								l(
-																									rt.groups
+																									rt.groups,
 																								)
 																							) {
 																								let Le =
 																									t(
-																										rt.groups
+																										rt.groups,
 																									)
 																								!Le.source &&
 																									Le.close &&
@@ -50851,42 +50904,42 @@
 																										i(
 																											je.originalText,
 																											Le,
-																											Ee
+																											Ee,
 																										) &&
 																										Ze.push(
-																											h
+																											h,
 																										)
 																							}
 																							return Ze
 																						},
-																						'groups'
-																					)
+																						'groups',
+																					),
 																				),
 																			]),
 																			w(
 																				!st &&
 																					A(
 																						je.parser,
-																						je.originalText
+																						je.originalText,
 																					) &&
 																					We &&
 																					re(
-																						je
+																						je,
 																					)
 																					? ','
-																					: ''
+																					: '',
 																			),
 																			g,
 																			ae.close
 																				? Me(
-																						'close'
+																						'close',
 																				  )
 																				: '',
 																		],
 																		{
 																			shouldBreak:
 																				_e,
-																		}
+																		},
 																	)
 																return He
 																	? _(Ge)
@@ -50897,7 +50950,7 @@
 																	ae.value,
 																	d(
 																		Te,
-																		'supports'
+																		'supports',
 																	) && Pe(ae)
 																		? ' '
 																		: '',
@@ -50906,7 +50959,7 @@
 															case 'value-number':
 																return [
 																	Je(
-																		ae.value
+																		ae.value,
 																	),
 																	G(ae.unit),
 																]
@@ -50922,7 +50975,7 @@
 																	We =
 																		Ve &&
 																		Ve.groups.indexOf(
-																			ae
+																			ae,
 																		),
 																	Xe =
 																		We &&
@@ -50938,7 +50991,7 @@
 																			typeof Xe.value &&
 																		'\\' ===
 																			t(
-																				Xe.value
+																				Xe.value,
 																			)) ||
 																	C(Te, 'url')
 																		? ''
@@ -50952,7 +51005,7 @@
 																		ae.value +
 																		ae.raws
 																			.quote,
-																	je
+																	je,
 																)
 															case 'value-atword':
 																return [
@@ -50962,8 +51015,8 @@
 															default:
 																throw new Error(
 																	`Unknown postcss type ${JSON.stringify(
-																		ae.type
-																	)}`
+																		ae.type,
+																	)}`,
 																)
 														}
 													},
@@ -50976,7 +51029,7 @@
 										Rd = te({
 											'src/language-css/options.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Mt()
@@ -50993,7 +51046,7 @@
 										Vd = te({
 											'node_modules/linguist-languages/data/CSS.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'CSS',
@@ -51012,7 +51065,7 @@
 										Wd = te({
 											'node_modules/linguist-languages/data/PostCSS.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'PostCSS',
@@ -51032,7 +51085,7 @@
 										Hd = te({
 											'node_modules/linguist-languages/data/Less.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'Less',
@@ -51052,7 +51105,7 @@
 										Gd = te({
 											'node_modules/linguist-languages/data/SCSS.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'SCSS',
@@ -51121,12 +51174,12 @@
 										Jd = te({
 											'src/language-handlebars/loc.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = {
 														locStart: function t(
-															a
+															a,
 														) {
 															return a.loc.start
 																.offset
@@ -51141,7 +51194,7 @@
 										zd = te({
 											'src/language-handlebars/clean.js'(
 												e,
-												r
+												r,
 											) {
 												function t(s, a) {
 													if ('TextNode' === s.type) {
@@ -51149,7 +51202,7 @@
 														if (!n) return null
 														a.chars = n.replace(
 															/[\t\n\f\r ]+/g,
-															' '
+															' ',
 														)
 													}
 													'AttrNode' === s.type &&
@@ -51169,7 +51222,7 @@
 										Xd = te({
 											'src/language-handlebars/html-void-elements.evaluate.js'(
 												e,
-												r
+												r,
 											) {
 												r.exports = [
 													'area',
@@ -51194,7 +51247,7 @@
 										Kd = te({
 											'src/language-handlebars/utils.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = lt(),
@@ -51217,7 +51270,7 @@
 												function g(x, I) {
 													return h(
 														x.getParentNode(0),
-														I
+														I,
 													)
 												}
 												function F(x, I) {
@@ -51227,7 +51280,7 @@
 															null !==
 																(P =
 																	x.getParentNode(
-																		0
+																		0,
 																	)) &&
 															void 0 !== P
 																? P
@@ -51260,7 +51313,7 @@
 															1 &&
 														void 0 !== arguments[1]
 															? arguments[1]
-															: 1)
+															: 1),
 													)
 												}
 												function w(x) {
@@ -51293,20 +51346,20 @@
 																	x.getValue(),
 																P =
 																	x.getParentNode(
-																		0
+																		0,
 																	)
 															return !!(
 																(g(x, [
 																	'ElementNode',
 																]) &&
 																	t(
-																		P.children
+																		P.children,
 																	) === I) ||
 																(g(x, [
 																	'Block',
 																]) &&
 																	t(
-																		P.body
+																		P.body,
 																	) === I)
 															)
 														},
@@ -51327,7 +51380,7 @@
 															(function l(x) {
 																return (
 																	i.has(
-																		x.toLowerCase()
+																		x.toLowerCase(),
 																	) &&
 																	!n(x[0])
 																)
@@ -51340,18 +51393,19 @@
 																	'string' ==
 																		typeof x.tag &&
 																	!x.tag.startsWith(
-																		':'
+																		':',
 																	) &&
 																	(n(
-																		x.tag[0]
+																		x
+																			.tag[0],
 																	) ||
 																		x.tag.includes(
-																			'.'
+																			'.',
 																		))
 																)
 															})(x) &&
 																x.children.every(
-																	(I) => y(I)
+																	(I) => y(I),
 																))
 														)
 													},
@@ -51362,7 +51416,7 @@
 										Yd = te({
 											'src/language-handlebars/printer-glimmer.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -51409,7 +51463,7 @@
 												function b(H, pe, X) {
 													let Ae =
 														H.getValue().children.every(
-															(Ee) => C(Ee)
+															(Ee) => C(Ee),
 														)
 													return 'ignore' ===
 														pe.htmlWhitespaceSensitivity &&
@@ -51429,7 +51483,7 @@
 													return m(H)
 														? u(
 																[y, '/>'],
-																[' />', y]
+																[' />', y],
 														  )
 														: u([y, '>'], '>')
 												}
@@ -51516,10 +51570,10 @@
 														Ae && le.push(a(Ae)),
 														f(
 															X.program
-																.blockParams
+																.blockParams,
 														) &&
 															le.push(
-																oe(X.program)
+																oe(X.program),
 															),
 														a([
 															R(X),
@@ -51529,7 +51583,7 @@
 																		p,
 																		l(
 																			p,
-																			le
+																			le,
 																		),
 																  ])
 																: '',
@@ -51560,12 +51614,12 @@
 															a(Pe(H, pe)),
 															...(f(
 																le.program
-																	.blockParams
+																	.blockParams,
 															)
 																? [
 																		p,
 																		oe(
-																			le.program
+																			le.program,
 																		),
 																  ]
 																: []),
@@ -51596,7 +51650,7 @@
 															'BlockStatement',
 														]) &&
 														H.program.body.every(
-															(pe) => C(pe)
+															(pe) => C(pe),
 														)
 													)
 												}
@@ -51635,7 +51689,7 @@
 																	.body[0],
 																[
 																	'BlockStatement',
-																]
+																],
 															) &&
 															H.inverse.body[0]
 																.path
@@ -51654,10 +51708,10 @@
 															p,
 															(function z(H) {
 																return H.split(
-																	/[\t\n\f\r ]+/
+																	/[\t\n\f\r ]+/,
 																)
-															})(H)
-														)
+															})(H),
+														),
 													)
 												}
 												function Z(H) {
@@ -51666,7 +51720,7 @@
 															'string' == typeof H
 																? H
 																: '').split(
-															'\n'
+															'\n',
 														).length - 1
 													)
 												}
@@ -51714,7 +51768,7 @@
 													if (X.params.length > 0) {
 														let Ae = H.map(
 															pe,
-															'params'
+															'params',
 														)
 														le.push(...Ae)
 													}
@@ -51740,14 +51794,14 @@
 													print: function d(
 														H,
 														pe,
-														X
+														X,
 													) {
 														let le = H.getValue()
 														if (!le) return ''
 														if (x(H))
 															return pe.originalText.slice(
 																F(le),
-																_(le)
+																_(le),
 															)
 														let Ae = pe.singleQuote
 															? "'"
@@ -51759,14 +51813,14 @@
 																return a(
 																	H.map(
 																		X,
-																		'body'
-																	)
+																		'body',
+																	),
 																)
 															case 'ElementNode': {
 																let Ee = a(
 																		(function S(
 																			H,
-																			pe
+																			pe,
 																		) {
 																			let X =
 																					H.getValue(),
@@ -51777,35 +51831,35 @@
 																						'comments',
 																					].filter(
 																						(
-																							Ee
+																							Ee,
 																						) =>
 																							f(
 																								X[
 																									Ee
-																								]
-																							)
+																								],
+																							),
 																					),
 																				Ae =
 																					le
 																						.flatMap(
 																							(
-																								Ee
+																								Ee,
 																							) =>
 																								X[
 																									Ee
-																								]
+																								],
 																						)
 																						.sort(
-																							v
+																							v,
 																						)
 																			for (let Ee of le)
 																				H.each(
 																					(
-																						De
+																						De,
 																					) => {
 																						let A =
 																							Ae.indexOf(
-																								De.getValue()
+																								De.getValue(),
 																							)
 																						Ae.splice(
 																							A,
@@ -51813,33 +51867,36 @@
 																							[
 																								p,
 																								pe(),
-																							]
+																							],
 																						)
 																					},
-																					Ee
+																					Ee,
 																				)
 																			return (
 																				f(
-																					X.blockParams
+																					X.blockParams,
 																				) &&
 																					Ae.push(
 																						p,
 																						oe(
-																							X
-																						)
+																							X,
+																						),
 																					),
 																				[
 																					'<',
 																					X.tag,
 																					i(
-																						Ae
+																						Ae,
 																					),
 																					B(
-																						X
+																						X,
 																					),
 																				]
 																			)
-																		})(H, X)
+																		})(
+																			H,
+																			X,
+																		),
 																	),
 																	De =
 																		'ignore' ===
@@ -51865,7 +51922,7 @@
 																	? [
 																			Ee,
 																			i(
-																				A
+																				A,
 																			),
 																			De,
 																	  ]
@@ -51877,12 +51934,12 @@
 																				b(
 																					H,
 																					pe,
-																					X
-																				)
+																					X,
+																				),
 																			),
 																			n,
 																			i(
-																				A
+																				A,
 																			),
 																			De,
 																	  ]
@@ -51893,12 +51950,12 @@
 																					b(
 																						H,
 																						pe,
-																						X
-																					)
-																				)
+																						X,
+																					),
+																				),
 																			),
 																			i(
-																				A
+																				A,
 																			),
 																			De,
 																	  ]
@@ -51906,7 +51963,7 @@
 															case 'BlockStatement': {
 																let Ee =
 																	H.getParentNode(
-																		1
+																		1,
 																	)
 																return Ee &&
 																	Ee.inverse &&
@@ -51932,39 +51989,39 @@
 																					.inverse
 																					.body[0]
 																					.path
-																					.parts[0]
+																					.parts[0],
 																			),
 																			de(
 																				H,
 																				X,
-																				pe
+																				pe,
 																			),
 																			ue(
 																				H,
 																				X,
-																				pe
+																				pe,
 																			),
 																	  ]
 																	: [
 																			j(
 																				H,
-																				X
+																				X,
 																			),
 																			a([
 																				de(
 																					H,
 																					X,
-																					pe
+																					pe,
 																				),
 																				ue(
 																					H,
 																					X,
-																					pe
+																					pe,
 																				),
 																				ee(
 																					H,
 																					X,
-																					pe
+																					pe,
 																				),
 																			]),
 																	  ]
@@ -51999,10 +52056,10 @@
 																		le.value
 																			.chars &&
 																	F(
-																		le.value
+																		le.value,
 																	) ===
 																		_(
-																			le.value
+																			le.value,
 																		)
 																)
 																	return le.name
@@ -52011,7 +52068,7 @@
 																				le
 																					.value
 																					.chars,
-																				Ae
+																				Ae,
 																		  )
 																				.quote
 																		: 'ConcatStatement' ===
@@ -52022,27 +52079,27 @@
 																				le.value.parts
 																					.filter(
 																						(
-																							re
+																							re,
 																						) =>
 																							'TextNode' ===
-																							re.type
+																							re.type,
 																					)
 																					.map(
 																						(
-																							re
+																							re,
 																						) =>
-																							re.chars
+																							re.chars,
 																					)
 																					.join(
-																						''
+																						'',
 																					),
-																				Ae
+																				Ae,
 																		  )
 																				.quote
 																		: '',
 																	G =
 																		X(
-																			'value'
+																			'value',
 																		)
 																return [
 																	le.name,
@@ -52053,8 +52110,8 @@
 																	A
 																		? a(
 																				i(
-																					G
-																				)
+																					G,
+																				),
 																		  )
 																		: G,
 																	A,
@@ -52063,15 +52120,15 @@
 															case 'ConcatStatement':
 																return H.map(
 																	X,
-																	'parts'
+																	'parts',
 																)
 															case 'Hash':
 																return l(
 																	p,
 																	H.map(
 																		X,
-																		'pairs'
-																	)
+																		'pairs',
+																	),
 																)
 															case 'HashPair':
 																return [
@@ -52083,11 +52140,11 @@
 																let Ee =
 																		le.chars.replace(
 																			/{{/g,
-																			'\\{{'
+																			'\\{{',
 																		),
 																	De =
 																		(function U(
-																			H
+																			H,
 																		) {
 																			for (
 																				let pe = 0;
@@ -52097,7 +52154,7 @@
 																			) {
 																				let X =
 																					H.getParentNode(
-																						pe
+																						pe,
 																					)
 																				if (
 																					X &&
@@ -52115,10 +52172,10 @@
 																		let Ye =
 																				Ee.trim()
 																					.split(
-																						/\s+/
+																						/\s+/,
 																					)
 																					.join(
-																						' '
+																						' ',
 																					),
 																			Se =
 																				!1,
@@ -52129,16 +52186,16 @@
 																				H,
 																				[
 																					'ConcatStatement',
-																				]
+																				],
 																			) &&
 																				(T(
 																					H,
 																					[
 																						'MustacheStatement',
-																					]
+																					],
 																				) &&
 																					/^\s/.test(
-																						Ee
+																						Ee,
 																					) &&
 																					(Se =
 																						!0),
@@ -52146,10 +52203,10 @@
 																					H,
 																					[
 																						'MustacheStatement',
-																					]
+																					],
 																				) &&
 																					/\s$/.test(
-																						Ee
+																						Ee,
 																					) &&
 																					'' !==
 																						Ye &&
@@ -52170,7 +52227,7 @@
 																}
 																let G =
 																		/^[\t\n\f\r ]*$/.test(
-																			Ee
+																			Ee,
 																		),
 																	re = !N(H),
 																	ye = !E(H)
@@ -52188,7 +52245,7 @@
 																				H,
 																				[
 																					'Template',
-																				]
+																				],
 																			),
 																		Oe =
 																			re &&
@@ -52196,7 +52253,7 @@
 																				H,
 																				[
 																					'Template',
-																				]
+																				],
 																			)
 																	if (G) {
 																		if (
@@ -52210,53 +52267,53 @@
 																				],
 																			nt =
 																				Z(
-																					Ee
+																					Ee,
 																				)
 																		return (
 																			nt &&
 																				(ae =
 																					ge(
-																						nt
+																						nt,
 																					)),
 																			I(
-																				H
+																				H,
 																			) &&
 																				(ae =
 																					ae.map(
 																						(
-																							tt
+																							tt,
 																						) =>
 																							t(
-																								tt
-																							)
+																								tt,
+																							),
 																					)),
 																			ae
 																		)
 																	}
 																	let [Je] =
 																			Ee.match(
-																				Ye
+																				Ye,
 																			),
 																		[Te] =
 																			Ee.match(
-																				Se
+																				Se,
 																			),
 																		je = []
 																	if (Je) {
 																		je = [p]
 																		let ae =
 																			Z(
-																				Je
+																				Je,
 																			)
 																		ae &&
 																			(je =
 																				ge(
-																					ae
+																					ae,
 																				)),
 																			(Ee =
 																				Ee.replace(
 																					Ye,
-																					''
+																					'',
 																				))
 																	}
 																	let Me = []
@@ -52270,38 +52327,38 @@
 																				]
 																			let ae =
 																				Z(
-																					Te
+																					Te,
 																				)
 																			ae &&
 																				(Me =
 																					ge(
-																						ae
+																						ae,
 																					)),
 																				I(
-																					H
+																					H,
 																				) &&
 																					(Me =
 																						Me.map(
 																							(
-																								nt
+																								nt,
 																							) =>
 																								t(
-																									nt
-																								)
+																									nt,
+																								),
 																						))
 																		}
 																		Ee =
 																			Ee.replace(
 																				Se,
-																				''
+																				'',
 																			)
 																	}
 																	return [
 																		...je,
 																		s(
 																			Fe(
-																				Ee
-																			)
+																				Ee,
+																			),
 																		),
 																		...Me,
 																	]
@@ -52309,7 +52366,7 @@
 																let Ce = Z(Ee),
 																	Be =
 																		(function se(
-																			H
+																			H,
 																		) {
 																			H =
 																				'string' ==
@@ -52318,17 +52375,17 @@
 																					: ''
 																			let pe =
 																				(H.match(
-																					/^([^\S\n\r]*[\n\r])+/g
+																					/^([^\S\n\r]*[\n\r])+/g,
 																				) ||
 																					[])[0] ||
 																				''
 																			return Z(
-																				pe
+																				pe,
 																			)
 																		})(Ee),
 																	ve =
 																		(function fe(
-																			H
+																			H,
 																		) {
 																			H =
 																				'string' ==
@@ -52337,12 +52394,12 @@
 																					: ''
 																			let pe =
 																				(H.match(
-																					/([\n\r][^\S\n\r]*)+$/g
+																					/([\n\r][^\S\n\r]*)+$/g,
 																				) ||
 																					[])[0] ||
 																				''
 																			return Z(
-																				pe
+																				pe,
 																			)
 																		})(Ee)
 																if (
@@ -52360,7 +52417,7 @@
 																	? ((Be =
 																			Math.min(
 																				Ce,
-																				2
+																				2,
 																			)),
 																	  (ve = 0))
 																	: (P(H, [
@@ -52370,7 +52427,7 @@
 																			(ve =
 																				Math.max(
 																					ve,
-																					1
+																					1,
 																				)),
 																	  T(H, [
 																			'BlockStatement',
@@ -52379,7 +52436,7 @@
 																			(Be =
 																				Math.max(
 																					Be,
-																					1
+																					1,
 																				)))
 																let ze = '',
 																	be = ''
@@ -52407,22 +52464,22 @@
 																	(Ee =
 																		Ee.replace(
 																			/^[\t\n\f\r ]+/g,
-																			ze
+																			ze,
 																		).replace(
 																			/[\t\n\f\r ]+$/,
-																			be
+																			be,
 																		)),
 																	[
 																		...ge(
-																			Be
+																			Be,
 																		),
 																		s(
 																			Fe(
-																				Ee
-																			)
+																				Ee,
+																			),
 																		),
 																		...ge(
-																			ve
+																			ve,
 																		),
 																	]
 																)
@@ -52434,17 +52491,17 @@
 																		'~' ===
 																		pe.originalText.charAt(
 																			Ee +
-																				2
+																				2,
 																		),
 																	G =
 																		'~' ===
 																		pe.originalText.charAt(
 																			De -
-																				3
+																				3,
 																		),
 																	re =
 																		le.value.includes(
-																			'}}'
+																			'}}',
 																		)
 																			? '--'
 																			: ''
@@ -52468,7 +52525,7 @@
 															case 'BooleanLiteral':
 															case 'NumberLiteral':
 																return String(
-																	le.value
+																	le.value,
 																)
 															case 'CommentStatement':
 																return [
@@ -52479,12 +52536,12 @@
 															case 'StringLiteral':
 																if (
 																	(function we(
-																		H
+																		H,
 																	) {
 																		let pe = 0,
 																			X =
 																				H.getParentNode(
-																					pe
+																					pe,
 																				)
 																		for (
 																			;
@@ -52493,34 +52550,34 @@
 																				X,
 																				[
 																					'SubExpression',
-																				]
+																				],
 																			);
 
 																		)
 																			pe++,
 																				(X =
 																					H.getParentNode(
-																						pe
+																						pe,
 																					))
 																		return !!(
 																			X &&
 																			$(
 																				H.getParentNode(
 																					pe +
-																						1
+																						1,
 																				),
 																				[
 																					'ConcatStatement',
-																				]
+																				],
 																			) &&
 																			$(
 																				H.getParentNode(
 																					pe +
-																						2
+																						2,
 																				),
 																				[
 																					'AttrNode',
-																				]
+																				],
 																			)
 																		)
 																	})(H)
@@ -52531,12 +52588,12 @@
 																			: "'"
 																	return he(
 																		le.value,
-																		Ee
+																		Ee,
 																	)
 																}
 																return he(
 																	le.value,
-																	Ae
+																	Ae,
 																)
 															case 'UndefinedLiteral':
 																return 'undefined'
@@ -52546,8 +52603,8 @@
 																throw new Error(
 																	'unknown glimmer type: ' +
 																		JSON.stringify(
-																			le.type
-																		)
+																			le.type,
+																		),
 																)
 														}
 													},
@@ -52563,7 +52620,7 @@
 										Zd = te({
 											'node_modules/linguist-languages/data/Handlebars.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'Handlebars',
@@ -52587,7 +52644,7 @@
 										eg = te({
 											'src/language-handlebars/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = _t(),
@@ -52615,15 +52672,15 @@
 										tg = te({
 											'src/language-graphql/pragma.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = {
 														hasPragma: function t(
-															a
+															a,
 														) {
 															return /^\s*#[^\S\n]*@(?:format|prettier)\s*(?:\n|$)/.test(
-																a
+																a,
 															)
 														},
 														insertPragma:
@@ -52639,12 +52696,12 @@
 										rg = te({
 											'src/language-graphql/loc.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = {
 														locStart: function t(
-															a
+															a,
 														) {
 															return 'number' ==
 																typeof a.start
@@ -52667,7 +52724,7 @@
 										ng = te({
 											'src/language-graphql/printer-graphql.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -52696,7 +52753,7 @@
 														return ''
 													let T = t(
 														a,
-														P.map($, 'directives')
+														P.map($, 'directives'),
 													)
 													return 'FragmentDefinition' ===
 														D.kind ||
@@ -52713,7 +52770,7 @@
 															p(
 																$.originalText,
 																m.getValue(),
-																c
+																c,
 															)
 															? [d, s]
 															: d
@@ -52725,7 +52782,7 @@
 														{ interfaces: C } = T,
 														o = P.map(
 															(d) => D(d),
-															'interfaces'
+															'interfaces',
 														)
 													for (
 														let d = 0;
@@ -52741,23 +52798,23 @@
 																		v.loc
 																			.end,
 																		S.loc
-																			.start
+																			.start,
 																	),
 																B =
 																	b.includes(
-																		'#'
+																		'#',
 																	),
 																k = b
 																	.replace(
 																		/#.*/g,
-																		''
+																		'',
 																	)
 																	.trim()
 															m.push(
 																',' === k
 																	? ','
 																	: ' &',
-																B ? a : ' '
+																B ? a : ' ',
 															)
 														}
 													}
@@ -52767,19 +52824,19 @@
 													'StringValue' === P.kind &&
 														P.block &&
 														!P.value.includes(
-															'\n'
+															'\n',
 														) &&
 														($.value =
 															$.value.trim())
 												}
 												;(x.ignoredProperties = new Set(
-													['loc', 'comments']
+													['loc', 'comments'],
 												)),
 													(r.exports = {
 														print: function f(
 															P,
 															$,
-															D
+															D,
 														) {
 															let T = P.getValue()
 															if (!T) return ''
@@ -52796,27 +52853,27 @@
 																			(
 																				C,
 																				o,
-																				d
+																				d,
 																			) => {
 																				m.push(
-																					D()
+																					D(),
 																				),
 																					o !==
 																						d.length -
 																							1 &&
 																						(m.push(
-																							s
+																							s,
 																						),
 																						p(
 																							$.originalText,
 																							C.getValue(),
-																							c
+																							c,
 																						) &&
 																							m.push(
-																								s
+																								s,
 																							))
 																			},
-																			'definitions'
+																			'definitions',
 																		),
 																		[
 																			...m,
@@ -52830,12 +52887,12 @@
 																			$
 																				.originalText[
 																				g(
-																					T
+																					T,
 																				)
 																			],
 																		C =
 																			Boolean(
-																				T.name
+																				T.name,
 																			)
 																	return [
 																		m
@@ -52845,19 +52902,19 @@
 																			? [
 																					' ',
 																					D(
-																						'name'
+																						'name',
 																					),
 																			  ]
 																			: '',
 																		m &&
 																		!C &&
 																		y(
-																			T.variableDefinitions
+																			T.variableDefinitions,
 																		)
 																			? ' '
 																			: '',
 																		y(
-																			T.variableDefinitions
+																			T.variableDefinitions,
 																		)
 																			? u(
 																					[
@@ -52869,33 +52926,33 @@
 																									[
 																										l(
 																											'',
-																											', '
+																											', ',
 																										),
 																										n,
 																									],
 																									P.map(
 																										D,
-																										'variableDefinitions'
-																									)
+																										'variableDefinitions',
+																									),
 																								),
-																							]
+																							],
 																						),
 																						n,
 																						')',
-																					]
+																					],
 																			  )
 																			: '',
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		T.selectionSet &&
 																		(m || C)
 																			? ' '
 																			: '',
 																		D(
-																			'selectionSet'
+																			'selectionSet',
 																		),
 																	]
 																}
@@ -52903,10 +52960,10 @@
 																	return [
 																		'fragment ',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		y(
-																			T.variableDefinitions
+																			T.variableDefinitions,
 																		)
 																			? u(
 																					[
@@ -52918,34 +52975,34 @@
 																									[
 																										l(
 																											'',
-																											', '
+																											', ',
 																										),
 																										n,
 																									],
 																									P.map(
 																										D,
-																										'variableDefinitions'
-																									)
+																										'variableDefinitions',
+																									),
 																								),
-																							]
+																							],
 																						),
 																						n,
 																						')',
-																					]
+																					],
 																			  )
 																			: '',
 																		' on ',
 																		D(
-																			'typeCondition'
+																			'typeCondition',
 																		),
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		' ',
 																		D(
-																			'selectionSet'
+																			'selectionSet',
 																		),
 																	]
 																case 'SelectionSet':
@@ -52959,8 +53016,8 @@
 																					P,
 																					$,
 																					D,
-																					'selections'
-																				)
+																					'selections',
+																				),
 																			),
 																		]),
 																		s,
@@ -52971,13 +53028,13 @@
 																		T.alias
 																			? [
 																					D(
-																						'alias'
+																						'alias',
 																					),
 																					': ',
 																			  ]
 																			: '',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		T
 																			.arguments
@@ -52993,7 +53050,7 @@
 																									[
 																										l(
 																											'',
-																											', '
+																											', ',
 																										),
 																										n,
 																									],
@@ -53001,26 +53058,26 @@
 																										P,
 																										$,
 																										D,
-																										'arguments'
-																									)
+																										'arguments',
+																									),
 																								),
-																							]
+																							],
 																						),
 																						n,
 																						')',
-																					]
+																					],
 																			  )
 																			: '',
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		T.selectionSet
 																			? ' '
 																			: '',
 																		D(
-																			'selectionSet'
+																			'selectionSet',
 																		),
 																	])
 																case 'Name':
@@ -53036,10 +53093,10 @@
 																			T.value
 																				.replace(
 																					/"""/g,
-																					'\\$&'
+																					'\\$&',
 																				)
 																				.split(
-																					'\n'
+																					'\n',
 																				)
 																		return (
 																			1 ===
@@ -53048,10 +53105,10 @@
 																					m[0].trim()),
 																			m.every(
 																				(
-																					C
+																					C,
 																				) =>
 																					'' ===
-																					C
+																					C,
 																			) &&
 																				(m.length = 0),
 																			t(
@@ -53060,7 +53117,7 @@
 																					'"""',
 																					...m,
 																					'"""',
-																				]
+																				],
 																			)
 																		)
 																	}
@@ -53069,11 +53126,11 @@
 																		T.value
 																			.replace(
 																				/["\\]/g,
-																				'\\$&'
+																				'\\$&',
 																			)
 																			.replace(
 																				/\n/g,
-																				'\\n'
+																				'\\n',
 																			),
 																		'"',
 																	]
@@ -53087,7 +53144,7 @@
 																	return [
 																		'$',
 																		D(
-																			'name'
+																			'name',
 																		),
 																	]
 																case 'ListValue':
@@ -53099,14 +53156,14 @@
 																				[
 																					l(
 																						'',
-																						', '
+																						', ',
 																					),
 																					n,
 																				],
 																				P.map(
 																					D,
-																					'values'
-																				)
+																					'values',
+																				),
 																			),
 																		]),
 																		n,
@@ -53127,14 +53184,14 @@
 																				[
 																					l(
 																						'',
-																						', '
+																						', ',
 																					),
 																					n,
 																				],
 																				P.map(
 																					D,
-																					'fields'
-																				)
+																					'fields',
+																				),
 																			),
 																		]),
 																		n,
@@ -53146,7 +53203,7 @@
 																					.length >
 																					0
 																				? ' '
-																				: ''
+																				: '',
 																		),
 																		'}',
 																	])
@@ -53154,18 +53211,18 @@
 																case 'Argument':
 																	return [
 																		D(
-																			'name'
+																			'name',
 																		),
 																		': ',
 																		D(
-																			'value'
+																			'value',
 																		),
 																	]
 																case 'Directive':
 																	return [
 																		'@',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		T
 																			.arguments
@@ -53181,7 +53238,7 @@
 																									[
 																										l(
 																											'',
-																											', '
+																											', ',
 																										),
 																										n,
 																									],
@@ -53189,49 +53246,49 @@
 																										P,
 																										$,
 																										D,
-																										'arguments'
-																									)
+																										'arguments',
+																									),
 																								),
-																							]
+																							],
 																						),
 																						n,
 																						')',
-																					]
+																					],
 																			  )
 																			: '',
 																	]
 																case 'NamedType':
 																	return D(
-																		'name'
+																		'name',
 																	)
 																case 'VariableDefinition':
 																	return [
 																		D(
-																			'variable'
+																			'variable',
 																		),
 																		': ',
 																		D(
-																			'type'
+																			'type',
 																		),
 																		T.defaultValue
 																			? [
 																					' = ',
 																					D(
-																						'defaultValue'
+																						'defaultValue',
 																					),
 																			  ]
 																			: '',
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																	]
 																case 'ObjectTypeExtension':
 																case 'ObjectTypeDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53242,7 +53299,7 @@
 																			: '',
 																		'type ',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		T
 																			.interfaces
@@ -53253,14 +53310,14 @@
 																					...N(
 																						P,
 																						$,
-																						D
+																						D,
 																					),
 																			  ]
 																			: '',
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		T.fields
 																			.length >
@@ -53276,10 +53333,10 @@
 																									P,
 																									$,
 																									D,
-																									'fields'
-																								)
+																									'fields',
+																								),
 																							),
-																						]
+																						],
 																					),
 																					s,
 																					'}',
@@ -53289,13 +53346,13 @@
 																case 'FieldDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
 																			: '',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		T
 																			.arguments
@@ -53311,7 +53368,7 @@
 																									[
 																										l(
 																											'',
-																											', '
+																											', ',
 																										),
 																										n,
 																									],
@@ -53319,30 +53376,30 @@
 																										P,
 																										$,
 																										D,
-																										'arguments'
-																									)
+																										'arguments',
+																									),
 																								),
-																							]
+																							],
 																						),
 																						n,
 																						')',
-																					]
+																					],
 																			  )
 																			: '',
 																		': ',
 																		D(
-																			'type'
+																			'type',
 																		),
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																	]
 																case 'DirectiveDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53350,7 +53407,7 @@
 																		'directive ',
 																		'@',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		T
 																			.arguments
@@ -53366,7 +53423,7 @@
 																									[
 																										l(
 																											'',
-																											', '
+																											', ',
 																										),
 																										n,
 																									],
@@ -53374,14 +53431,14 @@
 																										P,
 																										$,
 																										D,
-																										'arguments'
-																									)
+																										'arguments',
+																									),
 																								),
-																							]
+																							],
 																						),
 																						n,
 																						')',
-																					]
+																					],
 																			  )
 																			: '',
 																		T.repeatable
@@ -53392,15 +53449,15 @@
 																			' | ',
 																			P.map(
 																				D,
-																				'locations'
-																			)
+																				'locations',
+																			),
 																		),
 																	]
 																case 'EnumTypeExtension':
 																case 'EnumTypeDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53411,12 +53468,12 @@
 																			: '',
 																		'enum ',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		T.values
 																			.length >
@@ -53432,10 +53489,10 @@
 																									P,
 																									$,
 																									D,
-																									'values'
-																								)
+																									'values',
+																								),
 																							),
-																						]
+																						],
 																					),
 																					s,
 																					'}',
@@ -53445,24 +53502,24 @@
 																case 'EnumValueDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
 																			: '',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																	]
 																case 'InputValueDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? T
@@ -53472,31 +53529,31 @@
 																				: a
 																			: '',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		': ',
 																		D(
-																			'type'
+																			'type',
 																		),
 																		T.defaultValue
 																			? [
 																					' = ',
 																					D(
-																						'defaultValue'
+																						'defaultValue',
 																					),
 																			  ]
 																			: '',
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																	]
 																case 'InputObjectTypeExtension':
 																case 'InputObjectTypeDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53507,12 +53564,12 @@
 																			: '',
 																		'input ',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		T.fields
 																			.length >
@@ -53528,10 +53585,10 @@
 																									P,
 																									$,
 																									D,
-																									'fields'
-																								)
+																									'fields',
+																								),
 																							),
-																						]
+																						],
 																					),
 																					s,
 																					'}',
@@ -53544,7 +53601,7 @@
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		...(T
 																			.operationTypes
@@ -53561,10 +53618,10 @@
 																									P,
 																									$,
 																									D,
-																									'operationTypes'
-																								)
+																									'operationTypes',
+																								),
 																							),
-																						]
+																						],
 																					),
 																					s,
 																					'}',
@@ -53574,7 +53631,7 @@
 																case 'SchemaDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53583,7 +53640,7 @@
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		' {',
 																		T
@@ -53599,10 +53656,10 @@
 																								P,
 																								$,
 																								D,
-																								'operationTypes'
-																							)
+																								'operationTypes',
+																							),
 																						),
-																					]
+																					],
 																			  )
 																			: '',
 																		s,
@@ -53611,18 +53668,18 @@
 																case 'OperationTypeDefinition':
 																	return [
 																		D(
-																			'operation'
+																			'operation',
 																		),
 																		': ',
 																		D(
-																			'type'
+																			'type',
 																		),
 																	]
 																case 'InterfaceTypeExtension':
 																case 'InterfaceTypeDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53633,7 +53690,7 @@
 																			: '',
 																		'interface ',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		T
 																			.interfaces
@@ -53644,14 +53701,14 @@
 																					...N(
 																						P,
 																						$,
-																						D
+																						D,
 																					),
 																			  ]
 																			: '',
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		T.fields
 																			.length >
@@ -53667,10 +53724,10 @@
 																									P,
 																									$,
 																									D,
-																									'fields'
-																								)
+																									'fields',
+																								),
 																							),
-																						]
+																						],
 																					),
 																					s,
 																					'}',
@@ -53681,12 +53738,12 @@
 																	return [
 																		'...',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																	]
 																case 'InlineFragment':
@@ -53696,25 +53753,25 @@
 																			? [
 																					' on ',
 																					D(
-																						'typeCondition'
+																						'typeCondition',
 																					),
 																			  ]
 																			: '',
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																		' ',
 																		D(
-																			'selectionSet'
+																			'selectionSet',
 																		),
 																	]
 																case 'UnionTypeExtension':
 																case 'UnionTypeDefinition':
 																	return u([
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53726,12 +53783,12 @@
 																				: '',
 																			'union ',
 																			D(
-																				'name'
+																				'name',
 																			),
 																			F(
 																				P,
 																				D,
-																				T
+																				T,
 																			),
 																			T
 																				.types
@@ -53741,7 +53798,7 @@
 																						' =',
 																						l(
 																							'',
-																							' '
+																							' ',
 																						),
 																						i(
 																							[
@@ -53749,7 +53806,7 @@
 																									[
 																										a,
 																										'  ',
-																									]
+																									],
 																								),
 																								t(
 																									[
@@ -53758,10 +53815,10 @@
 																									],
 																									P.map(
 																										D,
-																										'types'
-																									)
+																										'types',
+																									),
 																								),
-																							]
+																							],
 																						),
 																				  ]
 																				: '',
@@ -53771,7 +53828,7 @@
 																case 'ScalarTypeDefinition':
 																	return [
 																		D(
-																			'description'
+																			'description',
 																		),
 																		T.description
 																			? s
@@ -53782,18 +53839,18 @@
 																			: '',
 																		'scalar ',
 																		D(
-																			'name'
+																			'name',
 																		),
 																		F(
 																			P,
 																			D,
-																			T
+																			T,
 																		),
 																	]
 																case 'NonNullType':
 																	return [
 																		D(
-																			'type'
+																			'type',
 																		),
 																		'!',
 																	]
@@ -53801,7 +53858,7 @@
 																	return [
 																		'[',
 																		D(
-																			'type'
+																			'type',
 																		),
 																		']',
 																	]
@@ -53809,8 +53866,8 @@
 																	throw new Error(
 																		'unknown graphql type: ' +
 																			JSON.stringify(
-																				T.kind
-																			)
+																				T.kind,
+																			),
 																	)
 															}
 														},
@@ -53829,10 +53886,10 @@
 																	? void 0
 																	: $.some(
 																			(
-																				T
+																				T,
 																			) =>
 																				'prettier-ignore' ===
-																				T.value.trim()
+																				T.value.trim(),
 																	  )
 															},
 														insertPragma: h,
@@ -53851,8 +53908,8 @@
 																throw new Error(
 																	'Not a comment: ' +
 																		JSON.stringify(
-																			$
-																		)
+																			$,
+																		),
 																)
 															},
 														canAttachComment:
@@ -53869,7 +53926,7 @@
 										ug = te({
 											'src/language-graphql/options.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Mt()
@@ -53887,7 +53944,7 @@
 										ig = te({
 											'node_modules/linguist-languages/data/GraphQL.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'GraphQL',
@@ -53907,7 +53964,7 @@
 										ag = te({
 											'src/language-graphql/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = _t(),
@@ -53937,12 +53994,12 @@
 										Po = te({
 											'node_modules/collapse-white-space/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(s) {
 														return String(
-															s
+															s,
 														).replace(/\s+/g, ' ')
 													})
 											},
@@ -53950,12 +54007,12 @@
 										Io = te({
 											'src/language-markdown/loc.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = {
 														locStart: function t(
-															a
+															a,
 														) {
 															return a.position
 																.start.offset
@@ -53970,7 +54027,7 @@
 										og = te({
 											'src/language-markdown/constants.evaluate.js'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													cjkPattern:
@@ -53985,7 +54042,7 @@
 										iu = te({
 											'src/language-markdown/utils.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { getLast: t } = Ue(),
@@ -54027,9 +54084,9 @@
 												function c(E, N) {
 													let [, x, I, P] = N.slice(
 														E.position.start.offset,
-														E.position.end.offset
+														E.position.end.offset,
 													).match(
-														/^\s*(\d+)(\.|\))(\s*)/
+														/^\s*(\d+)(\.|\))(\s*)/,
 													)
 													return {
 														numberText: x,
@@ -54042,12 +54099,12 @@
 														return (function x(
 															I,
 															P,
-															$
+															$,
 														) {
 															let D =
 																Object.assign(
 																	{},
-																	N(I, P, $)
+																	N(I, P, $),
 																)
 															return (
 																D.children &&
@@ -54055,7 +54112,7 @@
 																		D.children.map(
 																			(
 																				T,
-																				m
+																				m,
 																			) =>
 																				x(
 																					T,
@@ -54063,8 +54120,8 @@
 																					[
 																						D,
 																						...$,
-																					]
-																				)
+																					],
+																				),
 																		)),
 																D
 															)
@@ -54072,7 +54129,7 @@
 													},
 													splitText: function g(
 														E,
-														N
+														N,
 													) {
 														let x = 'non-cjk',
 															I = 'cj-letter',
@@ -54086,12 +54143,12 @@
 																	: E.replace(
 																			new RegExp(
 																				`(${n})\n(${n})`,
-																				'g'
+																				'g',
 																			),
-																			'$1$2'
+																			'$1$2',
 																	  )
 															).split(
-																/([\t\n ]+)/
+																/([\t\n ]+)/,
 															)
 														for (let [
 															C,
@@ -54101,7 +54158,7 @@
 																D.push({
 																	type: 'whitespace',
 																	value: /\n/.test(
-																		o
+																		o,
 																	)
 																		? '\n'
 																		: ' ',
@@ -54118,8 +54175,8 @@
 																continue
 															let d = o.split(
 																new RegExp(
-																	`(${n})`
-																)
+																	`(${n})`,
+																),
 															)
 															for (let [
 																v,
@@ -54144,20 +54201,20 @@
 																				kind: x,
 																				hasLeadingPunctuation:
 																					h.test(
-																						S[0]
+																						S[0],
 																					),
 																				hasTrailingPunctuation:
 																					h.test(
 																						t(
-																							S
-																						)
+																							S,
+																						),
 																					),
 																			})
 																		continue
 																	}
 																	m(
 																		h.test(
-																			S
+																			S,
 																		)
 																			? {
 																					type: 'word',
@@ -54172,7 +54229,7 @@
 																					type: 'word',
 																					value: S,
 																					kind: y.test(
-																						S
+																						S,
 																					)
 																						? 'k-letter'
 																						: I,
@@ -54180,7 +54237,7 @@
 																						!1,
 																					hasTrailingPunctuation:
 																						!1,
-																			  }
+																			  },
 																	)
 																}
 														}
@@ -54205,7 +54262,7 @@
 																	  })
 																	: !(function d(
 																			v,
-																			S
+																			S,
 																	  ) {
 																			return (
 																				(o.kind ===
@@ -54219,18 +54276,18 @@
 																			)
 																	  })(
 																			x,
-																			$
+																			$,
 																	  ) &&
 																	  ![
 																			o.value,
 																			C.value,
 																	  ].some(
 																			(
-																				v
+																				v,
 																			) =>
 																				/\u3000/.test(
-																					v
-																				)
+																					v,
+																				),
 																	  ) &&
 																	  D.push({
 																			type: 'whitespace',
@@ -54247,7 +54304,7 @@
 																.end.offset ===
 																N.length &&
 																x.endsWith(
-																	'\n'
+																	'\n',
 																) &&
 																N.endsWith('\n')
 																? x.slice(0, -1)
@@ -54266,15 +54323,17 @@
 																	c(
 																		E
 																			.children[0],
-																		N.originalText
-																	).numberText
+																		N.originalText,
+																	)
+																		.numberText,
 																),
 																I = Number(
 																	c(
 																		E
 																			.children[1],
-																		N.originalText
-																	).numberText
+																		N.originalText,
+																	)
+																		.numberText,
 																)
 															if (
 																0 === x &&
@@ -54285,8 +54344,9 @@
 																	c(
 																		E
 																			.children[2],
-																		N.originalText
-																	).numberText
+																		N.originalText,
+																	)
+																		.numberText,
 																)
 																return (
 																	1 === I &&
@@ -54319,7 +54379,7 @@
 										lg = te({
 											'src/language-markdown/embed.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -54346,7 +54406,7 @@
 													y,
 													h,
 													g,
-													c
+													c,
 												) {
 													let f = y.getValue()
 													if (
@@ -54364,9 +54424,9 @@
 																		3,
 																		s(
 																			f.value,
-																			_
-																		) + 1
-																	)
+																			_,
+																		) + 1,
+																	),
 																),
 																E = {
 																	parser: F,
@@ -54377,13 +54437,13 @@
 															let N = g(
 																l(
 																	f,
-																	c.originalText
+																	c.originalText,
 																),
 																E,
 																{
 																	stripTrailingHardline:
 																		!0,
-																}
+																},
 															)
 															return n([
 																w,
@@ -54412,7 +54472,7 @@
 																	{
 																		stripTrailingHardline:
 																			!0,
-																	}
+																	},
 																),
 																a,
 															]
@@ -54427,7 +54487,7 @@
 																{
 																	stripTrailingHardline:
 																		!0,
-																}
+																},
 															)
 													}
 													return null
@@ -54437,7 +54497,7 @@
 										ko = te({
 											'src/language-markdown/pragma.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = _o(),
@@ -54450,7 +54510,7 @@
 																`{\\s*\\/\\*\\s*${u}\\s*\\*\\/\\s*}`,
 																`\x3c!--.*\r?\n[\\s\\S]*(^|\n)[^\\S\n]*${u}[^\\S\n]*($|\n)[\\s\\S]*\n.*--\x3e`,
 															].join('|'),
-															'm'
+															'm',
 														),
 														l = n.match(i)
 													return 0 === l?.index
@@ -54460,8 +54520,8 @@
 													hasPragma: (n) =>
 														a(
 															t(
-																n
-															).content.trimStart()
+																n,
+															).content.trimStart(),
 														),
 													insertPragma: (n) => {
 														let u = t(n),
@@ -54476,7 +54536,7 @@
 										cg = te({
 											'src/language-markdown/print-preprocess.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = lt(),
@@ -54503,24 +54563,24 @@
 																					1,
 																					N(
 																						D,
-																						$
-																					)
+																						$,
+																					),
 																			  )
 																			: P.push(
-																					$
+																					$,
 																			  ),
 																		P
 																	)
 																},
-																[]
+																[],
 															)
 														return Object.assign(
 															Object.assign(
 																{},
-																x
+																x,
 															),
 															{},
-															{ children: I }
+															{ children: I },
 														)
 													})
 												}
@@ -54547,7 +54607,7 @@
 																		.position
 																		.end,
 																},
-															})
+															}),
 														)
 													})(
 														(w = (function l(w) {
@@ -54560,25 +54620,25 @@
 																	: Object.assign(
 																			Object.assign(
 																				{},
-																				E
+																				E,
 																			),
 																			{},
 																			{
 																				type: 'importExport',
-																			}
-																	  )
+																			},
+																	  ),
 															)
 														})(
 															(w = (function f(
 																w,
-																E
+																E,
 															) {
 																return a(
 																	w,
 																	(
 																		N,
 																		x,
-																		I
+																		I,
 																	) => {
 																		let [
 																			P,
@@ -54612,24 +54672,24 @@
 																				children:
 																					n(
 																						$,
-																						E
+																						E,
 																					),
 																			}
 																		)
-																	}
+																	},
 																)
 															})(
 																(w =
 																	(function _(
 																		w,
-																		E
+																		E,
 																	) {
 																		return a(
 																			w,
 																			(
 																				I,
 																				P,
-																				$
+																				$,
 																			) => {
 																				if (
 																					'list' ===
@@ -54662,14 +54722,14 @@
 																					}
 																					I.isAligned =
 																						x(
-																							I
+																							I,
 																						)
 																				}
 																				return I
-																			}
+																			},
 																		)
 																		function N(
-																			I
+																			I,
 																		) {
 																			return 0 ===
 																				I
@@ -54684,7 +54744,7 @@
 																						1
 																		}
 																		function x(
-																			I
+																			I,
 																		) {
 																			if (
 																				!I.ordered
@@ -54698,7 +54758,7 @@
 																			if (
 																				s(
 																					P,
-																					E.originalText
+																					E.originalText,
 																				)
 																					.leadingSpaces
 																					.length >
@@ -54707,7 +54767,7 @@
 																				return !0
 																			let T =
 																				N(
-																					P
+																					P,
 																				)
 																			return (
 																				-1 !==
@@ -54721,14 +54781,14 @@
 																					  0
 																					: T ===
 																							N(
-																								$
+																								$,
 																							) &&
 																					  (T %
 																							E.tabWidth ==
 																							0 ||
 																							s(
 																								$,
-																								E.originalText
+																								E.originalText,
 																							)
 																								.leadingSpaces
 																								.length >
@@ -54739,14 +54799,14 @@
 																		(w =
 																			(function F(
 																				w,
-																				E
+																				E,
 																			) {
 																				return a(
 																					w,
 																					(
 																						N,
 																						x,
-																						I
+																						I,
 																					) => {
 																						if (
 																							'code' ===
@@ -54762,8 +54822,8 @@
 																										N
 																											.position
 																											.end
-																											.offset
-																									)
+																											.offset,
+																									),
 																								)
 																							if (
 																								((N.isIndented =
@@ -54791,18 +54851,18 @@
 																								}
 																						}
 																						return N
-																					}
+																					},
 																				)
 																			})(
 																				(w =
 																					(function p(
 																						w,
-																						E
+																						E,
 																					) {
 																						return a(
 																							w,
 																							(
-																								N
+																								N,
 																							) =>
 																								'inlineCode' !==
 																									N.type ||
@@ -54812,27 +54872,27 @@
 																									: Object.assign(
 																											Object.assign(
 																												{},
-																												N
+																												N,
 																											),
 																											{},
 																											{
 																												value: N.value.replace(
 																													/\s+/g,
-																													' '
+																													' ',
 																												),
-																											}
-																									  )
+																											},
+																									  ),
 																						)
 																					})(
 																						(w =
 																							(function c(
-																								w
+																								w,
 																							) {
 																								return g(
 																									w,
 																									(
 																										E,
-																										N
+																										N,
 																									) =>
 																										'text' ===
 																											E.type &&
@@ -54840,7 +54900,7 @@
 																											N.type,
 																									(
 																										E,
-																										N
+																										N,
 																									) => ({
 																										type: 'text',
 																										value:
@@ -54855,18 +54915,18 @@
 																													.position
 																													.end,
 																											},
-																									})
+																									}),
 																								)
 																							})(
 																								(w =
 																									(function y(
 																										w,
-																										E
+																										E,
 																									) {
 																										return a(
 																											w,
 																											(
-																												N
+																												N,
 																											) =>
 																												'text' ===
 																													N.type &&
@@ -54875,7 +54935,7 @@
 																												'_' !==
 																													N.value &&
 																												u.test(
-																													N.value
+																													N.value,
 																												) &&
 																												N
 																													.position
@@ -54891,7 +54951,7 @@
 																													? Object.assign(
 																															Object.assign(
 																																{},
-																																N
+																																N,
 																															),
 																															{},
 																															{
@@ -54903,26 +54963,26 @@
 																																	N
 																																		.position
 																																		.end
-																																		.offset
+																																		.offset,
 																																),
-																															}
+																															},
 																													  )
-																													: N
+																													: N,
 																										)
 																									})(
 																										w,
-																										E
-																									))
+																										E,
+																									)),
 																							)),
-																						E
+																						E,
 																					)),
-																				E
+																				E,
 																			)),
-																		E
+																		E,
 																	)),
-																E
-															))
-														))
+																E,
+															)),
+														)),
 													))
 												}
 											},
@@ -54930,7 +54990,7 @@
 										pg = te({
 											'src/language-markdown/clean.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Po(),
@@ -54967,7 +55027,7 @@
 																(l.value =
 																	i.value.replace(
 																		/[\t\n ]+/g,
-																		' '
+																		' ',
 																	)),
 															'wikiLink' ===
 																i.type &&
@@ -54976,7 +55036,7 @@
 																		.trim()
 																		.replace(
 																			/[\t\n]+/g,
-																			' '
+																			' ',
 																		)),
 															('definition' ===
 																i.type ||
@@ -54985,7 +55045,7 @@
 																'imageReference' ===
 																	i.type) &&
 																(l.label = t(
-																	i.label
+																	i.label,
 																)),
 															('definition' ===
 																i.type ||
@@ -54997,7 +55057,7 @@
 																(l.title =
 																	i.title.replace(
 																		/\\(["')])/g,
-																		'$1'
+																		'$1',
 																	)),
 															p &&
 																'root' ===
@@ -55010,7 +55070,7 @@
 																	i ||
 																	(s(
 																		p
-																			.children[0]
+																			.children[0],
 																	) &&
 																		p
 																			.children[1] ===
@@ -55028,7 +55088,7 @@
 										fg = te({
 											'src/language-markdown/printer-markdown.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Po(),
@@ -55112,7 +55172,7 @@
 														ue(oe, H, pe, {
 															processor: (
 																Ee,
-																De
+																De,
 															) => {
 																if (
 																	0 === De &&
@@ -55122,16 +55182,16 @@
 																)
 																	return w(
 																		' '.repeat(
-																			Ae.length
+																			Ae.length,
 																		),
-																		pe()
+																		pe(),
 																	)
 																let A =
 																	' '.repeat(
 																		(function ke(
 																			oe,
 																			H,
-																			pe
+																			pe,
 																		) {
 																			return oe <
 																				H
@@ -55144,8 +55204,8 @@
 																			H.tabWidth -
 																				X.length,
 																			0,
-																			3
-																		)
+																			3,
+																		),
 																	)
 																return [
 																	A,
@@ -55159,7 +55219,7 @@
 													return (function ie(
 														oe,
 														H,
-														pe
+														pe,
 													) {
 														let X = -1
 														for (let le of H.children)
@@ -55177,7 +55237,7 @@
 														H,
 														(pe) =>
 															pe.ordered ===
-															oe.ordered
+															oe.ordered,
 													)
 												}
 												function ee(oe, H) {
@@ -55189,7 +55249,7 @@
 													for (
 														;
 														(le = oe.getParentNode(
-															++X
+															++X,
 														));
 
 													)
@@ -55273,7 +55333,7 @@
 																				A
 																					.start
 																					.index
-																			]
+																			],
 																		),
 																		H.originalText.slice(
 																			A
@@ -55281,14 +55341,14 @@
 																				.offset,
 																			A
 																				.end
-																				.offset
+																				.offset,
 																		),
 																		Fe(
 																			Ae[
 																				A
 																					.end
 																					.index
-																			]
+																			],
 																		),
 																	]
 																if (
@@ -55344,7 +55404,7 @@
 																}
 																;(function Z(
 																	oe,
-																	H
+																	H,
 																) {
 																	let pe =
 																			0 ===
@@ -55353,7 +55413,7 @@
 																				.length,
 																		X =
 																			k.includes(
-																				oe.type
+																				oe.type,
 																			),
 																		le =
 																			'html' ===
@@ -55361,7 +55421,7 @@
 																			M.includes(
 																				H
 																					.parentNode
-																					.type
+																					.type,
 																			)
 																	return (
 																		!pe &&
@@ -55372,11 +55432,11 @@
 																	(De.push(c),
 																	(A &&
 																		q.has(
-																			A.type
+																			A.type,
 																		)) ||
 																		(((function se(
 																			oe,
-																			H
+																			H,
 																		) {
 																			var pe,
 																				X,
@@ -55388,7 +55448,7 @@
 																							.type) ===
 																						oe.type &&
 																					L.has(
-																						oe.type
+																						oe.type,
 																					),
 																				De =
 																					'listItem' ===
@@ -55413,7 +55473,7 @@
 																				G =
 																					'next' ===
 																					U(
-																						H.prevNode
+																						H.prevNode,
 																					),
 																				re =
 																					'html' ===
@@ -55473,21 +55533,21 @@
 																			)
 																		})(
 																			ye,
-																			Be
+																			Be,
 																		) ||
 																			fe(
 																				ye,
-																				Be
+																				Be,
 																			)) &&
 																			De.push(
-																				c
+																				c,
 																			)),
 																	fe(
 																		ye,
-																		Be
+																		Be,
 																	) &&
 																		De.push(
-																			c
+																			c,
 																		)),
 																	De.push(Ce),
 																	(A = ye)
@@ -55502,7 +55562,7 @@
 														: 'paragraph' ===
 																oe.type &&
 														  Array.isArray(
-																oe.children
+																oe.children,
 														  ) &&
 														  1 ===
 																oe.children
@@ -55528,7 +55588,7 @@
 													let H
 													if ('html' === oe.type)
 														H = oe.value.match(
-															/^<!--\s*prettier-ignore(?:-(start|end))?\s*-->$/
+															/^<!--\s*prettier-ignore(?:-(start|end))?\s*-->$/,
 														)
 													else {
 														let pe
@@ -55549,7 +55609,7 @@
 															pe &&
 																(H =
 																	pe.value.match(
-																		/^prettier-ignore(?:-(start|end))?$/
+																		/^prettier-ignore(?:-(start|end))?$/,
 																	))
 													}
 													return (
@@ -55584,9 +55644,9 @@
 													return new RegExp(
 														pe
 															.map(
-																(X) => `\\${X}`
+																(X) => `\\${X}`,
 															)
-															.join('|')
+															.join('|'),
 													).test(oe)
 														? `<${oe}>`
 														: oe
@@ -55608,7 +55668,7 @@
 													if (
 														(oe = oe.replace(
 															/\\(["')])/g,
-															'$1'
+															'$1',
 														)).includes('"') &&
 														oe.includes("'") &&
 														!oe.includes(')')
@@ -55630,13 +55690,13 @@
 													return `${Ae}${(oe = (oe =
 														oe.replace(
 															/\\/,
-															'\\\\'
+															'\\\\',
 														)).replace(
 														new RegExp(
 															`(${Ae})`,
-															'g'
+															'g',
 														),
-														'\\$1'
+														'\\$1',
 													))}${Ae}`
 												}
 												function Ne(oe) {
@@ -55650,7 +55710,7 @@
 													print: function Q(
 														oe,
 														H,
-														pe
+														pe,
 													) {
 														let X = oe.getValue()
 														if (
@@ -55675,9 +55735,9 @@
 																		.offset,
 																	X.position
 																		.end
-																		.offset
+																		.offset,
 																),
-																H
+																H,
 															).map((le) =>
 																'word' ===
 																le.type
@@ -55688,8 +55748,8 @@
 																	: W(
 																			oe,
 																			le.value,
-																			H
-																	  )
+																			H,
+																	  ),
 															)
 														switch (X.type) {
 															case 'front-matter':
@@ -55699,7 +55759,7 @@
 																		.offset,
 																	X.position
 																		.end
-																		.offset
+																		.offset,
 																)
 															case 'root':
 																return 0 ===
@@ -55711,14 +55771,14 @@
 																				de(
 																					oe,
 																					H,
-																					pe
-																				)
+																					pe,
+																				),
 																			),
 																			q.has(
 																				z(
-																					X
+																					X,
 																				)
-																					.type
+																					.type,
 																			)
 																				? ''
 																				: c,
@@ -55731,19 +55791,19 @@
 																	{
 																		postprocessor:
 																			_,
-																	}
+																	},
 																)
 															case 'sentence':
 																return ue(
 																	oe,
 																	H,
-																	pe
+																	pe,
 																)
 															case 'word': {
 																let le = X.value
 																		.replace(
 																			/\*/g,
-																			'\\$&'
+																			'\\$&',
 																		)
 																		.replace(
 																			new RegExp(
@@ -55751,29 +55811,29 @@
 																					`(^|${B})(_+)`,
 																					`(_+)(${B}|$)`,
 																				].join(
-																					'|'
+																					'|',
 																				),
-																				'g'
+																				'g',
 																			),
 																			(
 																				De,
 																				A,
 																				G,
 																				re,
-																				ye
+																				ye,
 																			) =>
 																				(G
 																					? `${A}${G}`
 																					: `${re}${ye}`
 																				).replace(
 																					/_/g,
-																					'\\_'
-																				)
+																					'\\_',
+																				),
 																		),
 																	Ae = (
 																		De,
 																		A,
-																		G
+																		G,
 																	) =>
 																		'sentence' ===
 																			De.type &&
@@ -55781,14 +55841,14 @@
 																	Ee = (
 																		De,
 																		A,
-																		G
+																		G,
 																	) =>
 																		R(
 																			De
 																				.children[
 																				G -
 																					1
-																			]
+																			],
 																		)
 																return (
 																	le !==
@@ -55796,7 +55856,7 @@
 																		(oe.match(
 																			void 0,
 																			Ae,
-																			Ee
+																			Ee,
 																		) ||
 																			oe.match(
 																				void 0,
@@ -55804,24 +55864,24 @@
 																				(
 																					De,
 																					A,
-																					G
+																					G,
 																				) =>
 																					'emphasis' ===
 																						De.type &&
 																					0 ===
 																						G,
-																				Ee
+																				Ee,
 																			)) &&
 																		(le =
 																			le.replace(
 																				/^(\\?[*_])+/,
 																				(
-																					De
+																					De,
 																				) =>
 																					De.replace(
 																						/\\/g,
-																						''
-																					)
+																						'',
+																					),
 																			)),
 																	le
 																)
@@ -55831,7 +55891,7 @@
 																		oe.getParentNode(),
 																	Ae =
 																		le.children.indexOf(
-																			X
+																			X,
 																		),
 																	Ee =
 																		le
@@ -55842,7 +55902,7 @@
 																	De =
 																		Ee &&
 																		/^>|^(?:[*+-]|#{1,6}|\d+[).])$/.test(
-																			Ee.value
+																			Ee.value,
 																		)
 																			? 'never'
 																			: H.proseWrap
@@ -55852,7 +55912,7 @@
 																	{
 																		proseWrap:
 																			De,
-																	}
+																	},
 																)
 															}
 															case 'emphasis': {
@@ -55860,7 +55920,7 @@
 																if (
 																	R(
 																		X
-																			.children[0]
+																			.children[0],
 																	)
 																)
 																	le =
@@ -55876,7 +55936,7 @@
 																			oe.getParentNode(),
 																		Ee =
 																			Ae.children.indexOf(
-																				X
+																				X,
 																			),
 																		De =
 																			Ae
@@ -55900,11 +55960,11 @@
 																				0 &&
 																			'word' ===
 																				s(
-																					De.children
+																					De.children,
 																				)
 																					.type &&
 																			!s(
-																				De.children
+																				De.children,
 																			)
 																				.hasTrailingPunctuation) ||
 																		(A &&
@@ -55923,7 +55983,7 @@
 																				.hasLeadingPunctuation) ||
 																		ce(
 																			oe,
-																			'emphasis'
+																			'emphasis',
 																		)
 																			? '*'
 																			: '_'
@@ -55933,7 +55993,7 @@
 																	ue(
 																		oe,
 																		H,
-																		pe
+																		pe,
 																	),
 																	le,
 																]
@@ -55944,7 +56004,7 @@
 																	ue(
 																		oe,
 																		H,
-																		pe
+																		pe,
 																	),
 																	'**',
 																]
@@ -55954,24 +56014,24 @@
 																	ue(
 																		oe,
 																		H,
-																		pe
+																		pe,
 																	),
 																	'~~',
 																]
 															case 'inlineCode': {
 																let le = a(
 																		X.value,
-																		'`'
+																		'`',
 																	),
 																	Ae =
 																		'`'.repeat(
 																			le ||
-																				1
+																				1,
 																		),
 																	Ee =
 																		le &&
 																		!/^\s/.test(
-																			X.value
+																			X.value,
 																		)
 																			? ' '
 																			: ''
@@ -55992,7 +56052,7 @@
 																			? X.value
 																			: X.value.replace(
 																					/[\t\n]+/g,
-																					' '
+																					' ',
 																			  )),
 																	[
 																		'[[',
@@ -56017,7 +56077,7 @@
 																		return [
 																			'<',
 																			X.url.startsWith(
-																				le
+																				le,
 																			) &&
 																			H.originalText.slice(
 																				X
@@ -56030,11 +56090,11 @@
 																					.start
 																					.offset +
 																					1 +
-																					le.length
+																					le.length,
 																			) !==
 																				le
 																				? X.url.slice(
-																						le.length
+																						le.length,
 																				  )
 																				: X.url,
 																			'>',
@@ -56046,16 +56106,16 @@
 																			ue(
 																				oe,
 																				H,
-																				pe
+																				pe,
 																			),
 																			'](',
 																			he(
 																				X.url,
-																				')'
+																				')',
 																			),
 																			we(
 																				X.title,
-																				H
+																				H,
 																			),
 																			')',
 																		]
@@ -56068,7 +56128,7 @@
 																			X
 																				.position
 																				.end
-																				.offset
+																				.offset,
 																		)
 																}
 															case 'image':
@@ -56078,11 +56138,11 @@
 																	'](',
 																	he(
 																		X.url,
-																		')'
+																		')',
 																	),
 																	we(
 																		X.title,
-																		H
+																		H,
 																	),
 																	')',
 																]
@@ -56094,19 +56154,19 @@
 																		ue(
 																			oe,
 																			H,
-																			pe
-																		)
+																			pe,
+																		),
 																	),
 																]
 															case 'heading':
 																return [
 																	'#'.repeat(
-																		X.depth
+																		X.depth,
 																	) + ' ',
 																	ue(
 																		oe,
 																		H,
-																		pe
+																		pe,
 																	),
 																]
 															case 'code': {
@@ -56115,7 +56175,7 @@
 																) {
 																	let Ee =
 																		' '.repeat(
-																			4
+																			4,
 																		)
 																	return w(
 																		Ee,
@@ -56123,9 +56183,9 @@
 																			Ee,
 																			...P(
 																				X.value,
-																				c
+																				c,
 																			),
-																		]
+																		],
 																	)
 																}
 																let le =
@@ -56138,10 +56198,10 @@
 																				3,
 																				n(
 																					X.value,
-																					le
+																					le,
 																				) +
-																					1
-																			)
+																					1,
+																			),
 																		)
 																return [
 																	Ae,
@@ -56155,9 +56215,9 @@
 																	...P(
 																		v(
 																			X,
-																			H.originalText
+																			H.originalText,
 																		),
-																		c
+																		c,
 																	),
 																	c,
 																	Ae,
@@ -56170,25 +56230,25 @@
 																		'root' ===
 																			le.type &&
 																		s(
-																			le.children
+																			le.children,
 																		) === X
 																			? X.value.trimEnd()
 																			: X.value,
 																	Ee =
 																		/^<!--.*-->$/s.test(
-																			Ae
+																			Ae,
 																		)
 																return P(
 																	Ae,
 																	Ee
 																		? c
-																		: g(h)
+																		: g(h),
 																)
 															}
 															case 'list': {
 																let le = Y(
 																		X,
-																		oe.getParentNode()
+																		oe.getParentNode(),
 																	),
 																	Ae = S(X, H)
 																return ue(
@@ -56199,7 +56259,7 @@
 																		processor:
 																			(
 																				Ee,
-																				De
+																				De,
 																			) => {
 																				let A =
 																						(function re() {
@@ -56226,7 +56286,7 @@
 																								X.hasIndentedCodeblock
 																								? (function j(
 																										oe,
-																										H
+																										H,
 																								  ) {
 																										let pe =
 																											X()
@@ -56236,7 +56296,7 @@
 																												pe >=
 																													4
 																													? 0
-																													: pe
+																													: pe,
 																											)
 																										)
 																										function X() {
@@ -56251,7 +56311,7 @@
 																										}
 																								  })(
 																										ye,
-																										H
+																										H,
 																								  )
 																								: ye
 																						})(),
@@ -56281,42 +56341,42 @@
 																								Ee,
 																								H,
 																								pe,
-																								A
+																								A,
 																							),
 																					  ]
 																					: [
 																							A,
 																							w(
 																								' '.repeat(
-																									A.length
+																									A.length,
 																								),
 																								V(
 																									Ee,
 																									H,
 																									pe,
-																									A
-																								)
+																									A,
+																								),
 																							),
 																					  ]
 																			},
-																	}
+																	},
 																)
 															}
 															case 'thematicBreak': {
 																let le = ee(
 																	oe,
-																	'list'
+																	'list',
 																)
 																return -1 === le
 																	? '---'
 																	: Y(
 																			oe.getParentNode(
-																				le
+																				le,
 																			),
 																			oe.getParentNode(
 																				le +
-																					1
-																			)
+																					1,
+																			),
 																	  ) %
 																			2 ==
 																	  0
@@ -56329,7 +56389,7 @@
 																	ue(
 																		oe,
 																		H,
-																		pe
+																		pe,
 																	),
 																	']',
 																	'full' ===
@@ -56349,7 +56409,7 @@
 																				'',
 																			']',
 																			Ne(
-																				X
+																				X,
 																			),
 																	  ]
 																	: [
@@ -56373,7 +56433,7 @@
 																	E([
 																		le,
 																		he(
-																			X.url
+																			X.url,
 																		),
 																		null ===
 																		X.title
@@ -56383,7 +56443,7 @@
 																					we(
 																						X.title,
 																						H,
-																						!1
+																						!1,
 																					),
 																			  ],
 																	]),
@@ -56395,7 +56455,7 @@
 																	ue(
 																		oe,
 																		H,
-																		pe
+																		pe,
 																	),
 																	']',
 																]
@@ -56438,12 +56498,12 @@
 																		? ue(
 																				oe,
 																				H,
-																				pe
+																				pe,
 																		  )
 																		: N([
 																				w(
 																					' '.repeat(
-																						4
+																						4,
 																					),
 																					ue(
 																						oe,
@@ -56453,7 +56513,7 @@
 																							processor:
 																								(
 																									Ee,
-																									De
+																									De,
 																								) =>
 																									0 ===
 																									De
@@ -56461,11 +56521,11 @@
 																												[
 																													f,
 																													pe(),
-																												]
+																												],
 																										  )
 																										: pe(),
-																						}
-																					)
+																						},
+																					),
 																				),
 																				le &&
 																				'footnoteDefinition' ===
@@ -56479,7 +56539,7 @@
 																return (function K(
 																	oe,
 																	H,
-																	pe
+																	pe,
 																) {
 																	let X =
 																			oe.getValue(),
@@ -56487,21 +56547,21 @@
 																		Ae =
 																			oe.map(
 																				(
-																					ye
+																					ye,
 																				) =>
 																					ye.map(
 																						(
 																							Ce,
-																							Be
+																							Be,
 																						) => {
 																							let ve =
 																									$(
 																										pe(),
-																										H
+																										H,
 																									).formatted,
 																								ze =
 																									u(
-																										ve
+																										ve,
 																									)
 																							return (
 																								(le[
@@ -56512,7 +56572,7 @@
 																											Be
 																										] ||
 																											3,
-																										ze
+																										ze,
 																									)),
 																								{
 																									text: ve,
@@ -56520,12 +56580,12 @@
 																								}
 																							)
 																						},
-																						'children'
+																						'children',
 																					),
-																				'children'
+																				'children',
 																			),
 																		Ee = A(
-																			!1
+																			!1,
 																		)
 																	if (
 																		'never' !==
@@ -56536,28 +56596,28 @@
 																			Ee,
 																		]
 																	let De = A(
-																		!0
+																		!0,
 																	)
 																	return [
 																		l,
 																		N(
 																			F(
 																				De,
-																				Ee
-																			)
+																				Ee,
+																			),
 																		),
 																	]
 																	function A(
-																		ye
+																		ye,
 																	) {
 																		let Ce =
 																			[
 																				re(
 																					Ae[0],
-																					ye
+																					ye,
 																				),
 																				G(
-																					ye
+																					ye,
 																				),
 																			]
 																		return (
@@ -56567,32 +56627,32 @@
 																					p(
 																						x,
 																						Ae.slice(
-																							1
+																							1,
 																						).map(
 																							(
-																								Be
+																								Be,
 																							) =>
 																								re(
 																									Be,
-																									ye
-																								)
-																						)
-																					)
+																									ye,
+																								),
+																						),
+																					),
 																				),
 																			p(
 																				x,
-																				Ce
+																				Ce,
 																			)
 																		)
 																	}
 																	function G(
-																		ye
+																		ye,
 																	) {
 																		return `| ${le
 																			.map(
 																				(
 																					Be,
-																					ve
+																					ve,
 																				) => {
 																					let ze =
 																							X
@@ -56618,24 +56678,24 @@
 																							? '-'
 																							: '-'.repeat(
 																									Be -
-																										2
+																										2,
 																							  )
 																					}${Ye}`
-																				}
+																				},
 																			)
 																			.join(
-																				' | '
+																				' | ',
 																			)} |`
 																	}
 																	function re(
 																		ye,
-																		Ce
+																		Ce,
 																	) {
 																		return `| ${ye
 																			.map(
 																				(
 																					ve,
-																					ze
+																					ze,
 																				) => {
 																					let {
 																						text: be,
@@ -56666,20 +56726,20 @@
 																						  (Oe =
 																								Math.floor(
 																									Se /
-																										2
+																										2,
 																								))
 																					let Je =
 																						Se -
 																						Oe
 																					return `${' '.repeat(
-																						Oe
+																						Oe,
 																					)}${be}${' '.repeat(
-																						Je
+																						Je,
 																					)}`
-																				}
+																				},
 																			)
 																			.join(
-																				' | '
+																				' | ',
 																			)} |`
 																	}
 																})(oe, H, pe)
@@ -56687,7 +56747,7 @@
 																return ue(
 																	oe,
 																	H,
-																	pe
+																	pe,
 																)
 															case 'break':
 																return /\s/.test(
@@ -56697,19 +56757,19 @@
 																			.position
 																			.start
 																			.offset
-																	]
+																	],
 																)
 																	? [
 																			'  ',
 																			g(
-																				h
+																				h,
 																			),
 																	  ]
 																	: ['\\', c]
 															case 'liquidNode':
 																return P(
 																	X.value,
-																	c
+																	c,
 																)
 															case 'importExport':
 																return [
@@ -56732,7 +56792,7 @@
 																		? [
 																				...P(
 																					X.value,
-																					c
+																					c,
 																				),
 																				c,
 																		  ]
@@ -56742,13 +56802,13 @@
 															case 'inlineMath':
 																return H.originalText.slice(
 																	m(X),
-																	C(X)
+																	C(X),
 																)
 															default:
 																throw new Error(
 																	`Unknown markdown type ${JSON.stringify(
-																		X.type
-																	)}`
+																		X.type,
+																	)}`,
 																)
 														}
 													},
@@ -56757,7 +56817,7 @@
 													hasPrettierIgnore:
 														function Re(oe) {
 															let H = Number(
-																oe.getName()
+																oe.getName(),
 															)
 															return (
 																0 !== H &&
@@ -56767,7 +56827,7 @@
 																			.children[
 																			H -
 																				1
-																		]
+																		],
 																	)
 															)
 														},
@@ -56778,7 +56838,7 @@
 										Dg = te({
 											'src/language-markdown/options.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Mt()
@@ -56796,7 +56856,7 @@
 										_a = te({
 											'node_modules/linguist-languages/data/Markdown.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'Markdown',
@@ -56831,7 +56891,7 @@
 										dg = te({
 											'src/language-markdown/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = _t(),
@@ -56855,7 +56915,7 @@
 																l.extensions.filter(
 																	(p) =>
 																		'.mdx' !==
-																		p
+																		p,
 																),
 														})),
 														t(_a(), () => ({
@@ -56913,7 +56973,7 @@
 										yg = te({
 											'src/language-html/constants.evaluate.js'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													CSS_DISPLAY_TAGS: {
@@ -57020,7 +57080,7 @@
 										hg = te({
 											'src/language-html/utils/is-unknown-namespace.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = function t(s) {
@@ -57032,7 +57092,7 @@
 																'html',
 																'svg',
 															].includes(
-																s.namespace
+																s.namespace,
 															)
 														)
 													})
@@ -57041,7 +57101,7 @@
 										Rt = te({
 											'src/language-html/utils/index.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -57079,17 +57139,17 @@
 													_ = (A) =>
 														A.replace(
 															/[\t\n\f\r ]+$/,
-															''
+															'',
 														),
 													N = (A) =>
 														((A) =>
 															A.replace(
 																/^[\t\f\r ]*\n/g,
-																''
+																'',
 															))(_(A)),
 													I = (A) =>
 														A.match(
-															/^[\t\n\f\r ]*/
+															/^[\t\n\f\r ]*/,
 														)[0]
 												function o(A) {
 													return (
@@ -57109,7 +57169,7 @@
 												}
 												function S(A) {
 													return we(A).startsWith(
-														'pre'
+														'pre',
 													)
 												}
 												function q(A) {
@@ -57124,7 +57184,7 @@
 															'select',
 														].includes(A.name) ||
 															(A.cssDisplay.startsWith(
-																'table'
+																'table',
 															) &&
 																'table-cell' !==
 																	A.cssDisplay))
@@ -57221,10 +57281,10 @@
 														? 'html'
 														: (G &&
 																(G.endsWith(
-																	'json'
+																	'json',
 																) ||
 																	G.endsWith(
-																		'importmap'
+																		'importmap',
 																	))) ||
 														  'speculationrules' ===
 																G
@@ -57243,7 +57303,7 @@
 												}
 												function se(A) {
 													return we(A).startsWith(
-														'pre'
+														'pre',
 													)
 												}
 												function we(A) {
@@ -57264,7 +57324,7 @@
 																	let G =
 																		Number.POSITIVE_INFINITY
 																	for (let re of A.split(
-																		'\n'
+																		'\n',
 																	)) {
 																		if (
 																			0 ===
@@ -57273,13 +57333,13 @@
 																			continue
 																		if (
 																			!f.has(
-																				re[0]
+																				re[0],
 																			)
 																		)
 																			return 0
 																		let ye =
 																			I(
-																				re
+																				re,
 																			).length
 																		re.length !==
 																			ye &&
@@ -57297,7 +57357,7 @@
 														? A
 														: A.split('\n')
 																.map((re) =>
-																	re.slice(G)
+																	re.slice(G),
 																)
 																.join('\n')
 												}
@@ -57337,7 +57397,7 @@
 														((A) =>
 															A.replace(
 																/^[\t\n\f\r ]+/,
-																''
+																'',
 															))(_(A)),
 													htmlTrimPreserveIndentation:
 														N,
@@ -57347,7 +57407,7 @@
 														(A) => {
 															let [, G, re, ye] =
 																A.match(
-																	/^([\t\n\f\r ]*)(.*?)([\t\n\f\r ]*)$/s
+																	/^([\t\n\f\r ]*)(.*?)([\t\n\f\r ]*)$/s,
 																)
 															return {
 																leadingWhitespace:
@@ -57366,7 +57426,7 @@
 														},
 													countChars: function Ne(
 														A,
-														G
+														G,
 													) {
 														let re = 0
 														for (
@@ -57379,7 +57439,7 @@
 													},
 													countParents: function fe(
 														A,
-														G
+														G,
 													) {
 														let re = 0
 														for (
@@ -57394,7 +57454,7 @@
 																'object' ==
 																	typeof Ce &&
 																!Array.isArray(
-																	Ce
+																	Ce,
 																) &&
 																G(Ce) &&
 																re++
@@ -57417,28 +57477,28 @@
 																		'script',
 																		'style',
 																	].includes(
-																		A.name
+																		A.name,
 																	) ||
 																		A.children.some(
 																			(
-																				G
+																				G,
 																			) =>
 																				(function ee(
-																					A
+																					A,
 																				) {
 																					return (
 																						A.children &&
 																						A.children.some(
 																							(
-																								G
+																								G,
 																							) =>
 																								'text' !==
-																								G.type
+																								G.type,
 																						)
 																					)
 																				})(
-																					G
-																				)
+																					G,
+																				),
 																		))) ||
 																(A.firstChild &&
 																	A.firstChild ===
@@ -57448,13 +57508,13 @@
 																			.firstChild
 																			.type &&
 																	V(
-																		A.firstChild
+																		A.firstChild,
 																	) &&
 																	(!A
 																		.lastChild
 																		.isTrailingSpaceSensitive ||
 																		j(
-																			A.lastChild
+																			A.lastChild,
 																		)))
 															)
 														},
@@ -57479,7 +57539,7 @@
 														function ie(A) {
 															return A.lastChild
 																? ie(
-																		A.lastChild
+																		A.lastChild,
 																  )
 																: A
 														},
@@ -57492,7 +57552,7 @@
 															) {
 																let ye =
 																	A.prev.value.match(
-																		/^\s*display:\s*([a-z]+)\s*$/
+																		/^\s*display:\s*([a-z]+)\s*$/,
 																	)
 																if (ye)
 																	return ye[1]
@@ -57507,7 +57567,7 @@
 																if (
 																	!(function ge(
 																		A,
-																		G
+																		G,
 																	) {
 																		let re =
 																			A
@@ -57518,7 +57578,7 @@
 																		) {
 																			if (
 																				G(
-																					re
+																					re,
 																				)
 																			)
 																				return !0
@@ -57530,7 +57590,7 @@
 																		A,
 																		(ye) =>
 																			'svg:foreignObject' ===
-																			ye.fullName
+																			ye.fullName,
 																	)
 																)
 																	return 'svg' ===
@@ -57560,7 +57620,7 @@
 																				(!A.namespace ||
 																					re ||
 																					c(
-																						A
+																						A,
 																					)) &&
 																				p[
 																					A
@@ -57599,7 +57659,7 @@
 																  A.name
 																	? (function W(
 																			A,
-																			G
+																			G,
 																	  ) {
 																			let {
 																				lang: re,
@@ -57620,7 +57680,7 @@
 																					  re
 																					? t(
 																							'stylus',
-																							G
+																							G,
 																					  )
 																					: void 0
 																				: 'css'
@@ -57636,7 +57696,7 @@
 																				A
 																					.attrMap
 																					.lang,
-																				G
+																				G,
 																			))
 																	: void 0
 																: A.attrMap
@@ -57649,7 +57709,7 @@
 													isVueNonHtmlBlock: X,
 													isVueScriptTag: function De(
 														A,
-														G
+														G,
 													) {
 														return (
 															pe(A, G) &&
@@ -57662,14 +57722,14 @@
 															return (
 																'#' ===
 																	G.charAt(
-																		0
+																		0,
 																	) ||
 																'slot-scope' ===
 																	G ||
 																'v-slot' ===
 																	G ||
 																G.startsWith(
-																	'v-slot:'
+																	'v-slot:',
 																)
 															)
 														},
@@ -57699,13 +57759,13 @@
 																(function Z(A) {
 																	return (
 																		!de(
-																			A
+																			A,
 																		) &&
 																		'inline-block' !==
 																			A
 																	)
 																})(
-																	A.cssDisplay
+																	A.cssDisplay,
 																) && !o(A)
 															)
 														},
@@ -57740,7 +57800,7 @@
 																						.cssDisplay
 																			) &&
 																				(!!se(
-																					A.parent
+																					A.parent,
 																				) ||
 																					!(
 																						(!A.prev &&
@@ -57749,22 +57809,22 @@
 																									.parent
 																									.type ||
 																								(se(
-																									A
+																									A,
 																								) &&
 																									A.parent) ||
 																								o(
-																									A.parent
+																									A.parent,
 																								) ||
 																								H(
 																									A.parent,
-																									G
+																									G,
 																								) ||
 																								!(function ue(
-																									A
+																									A,
 																								) {
 																									return (
 																										!de(
-																											A
+																											A,
 																										) &&
 																										'inline-block' !==
 																											A
@@ -57772,19 +57832,19 @@
 																								})(
 																									A
 																										.parent
-																										.cssDisplay
+																										.cssDisplay,
 																								))) ||
 																						(A.prev &&
 																							!(function U(
-																								A
+																								A,
 																							) {
 																								return !de(
-																									A
+																									A,
 																								)
 																							})(
 																								A
 																									.prev
-																									.cssDisplay
+																									.cssDisplay,
 																							))
 																					))))
 																	)
@@ -57804,7 +57864,7 @@
 													isPreLikeNode: se,
 													isScriptLikeTag: o,
 													isTextLikeNode: function C(
-														A
+														A,
 													) {
 														return (
 															'text' === A.type ||
@@ -57837,7 +57897,7 @@
 																				.cssDisplay
 																	) &&
 																		(!!se(
-																			A.parent
+																			A.parent,
 																		) ||
 																			!(
 																				(!A.next &&
@@ -57846,22 +57906,22 @@
 																							.parent
 																							.type ||
 																						(se(
-																							A
+																							A,
 																						) &&
 																							A.parent) ||
 																						o(
-																							A.parent
+																							A.parent,
 																						) ||
 																						H(
 																							A.parent,
-																							G
+																							G,
 																						) ||
 																						!(function Fe(
-																							A
+																							A,
 																						) {
 																							return (
 																								!de(
-																									A
+																									A,
 																								) &&
 																								'inline-block' !==
 																									A
@@ -57869,19 +57929,19 @@
 																						})(
 																							A
 																								.parent
-																								.cssDisplay
+																								.cssDisplay,
 																						))) ||
 																				(A.next &&
 																					!(function z(
-																						A
+																						A,
 																					) {
 																						return !de(
-																							A
+																							A,
 																						)
 																					})(
 																						A
 																							.next
-																							.cssDisplay
+																							.cssDisplay,
 																					))
 																			))))
 															)
@@ -57902,7 +57962,7 @@
 																Y(A) ||
 																(A.prev &&
 																	L(
-																		A.prev
+																		A.prev,
 																	)) ||
 																Q(A)
 															)
@@ -57928,7 +57988,7 @@
 																			'text' !==
 																				re.type &&
 																			'interpolation' !==
-																				re.type
+																				re.type,
 																	)) ||
 																(X(A, G) &&
 																	!o(A) &&
@@ -57940,10 +58000,10 @@
 														function Pe(A) {
 															return A.replace(
 																/&apos;/g,
-																"'"
+																"'",
 															).replace(
 																/&quot;/g,
-																'"'
+																'"',
 															)
 														},
 													getTextValueParts:
@@ -57963,23 +58023,23 @@
 																	: l(
 																			Re(
 																				N(
-																					G
-																				)
+																					G,
+																				),
 																			),
-																			n
+																			n,
 																	  )
 																: i(
 																		u(
 																			a,
 																			((
-																				A
+																				A,
 																			) =>
 																				A.split(
-																					/[\t\n\f\r ]+/
+																					/[\t\n\f\r ]+/,
 																				))(
-																				G
-																			)
-																		)
+																				G,
+																			),
+																		),
 																  )
 														},
 												}
@@ -57987,7 +58047,7 @@
 										}),
 										vg = te({
 											'node_modules/angular-html-parser/lib/compiler/src/chars.js'(
-												e
+												e,
 											) {
 												function t(i) {
 													return (
@@ -57998,7 +58058,7 @@
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													),
 													(e.$EOF = 0),
 													(e.$BSPACE = 8),
@@ -58094,7 +58154,7 @@
 															)
 														}),
 													(e.isNewLine = function n(
-														i
+														i,
 													) {
 														return (
 															i === e.$LF ||
@@ -58112,13 +58172,13 @@
 										}),
 										Cg = te({
 											'node_modules/angular-html-parser/lib/compiler/src/aot/static_symbol.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = class {
 													constructor(s, a, n) {
@@ -58130,8 +58190,8 @@
 														if (this.members.length)
 															throw new Error(
 																`Illegal state: symbol without members expected, but got ${JSON.stringify(
-																	this
-																)}.`
+																	this,
+																)}.`,
 															)
 													}
 												}
@@ -58145,24 +58205,24 @@
 																(n = n || [])
 																	.length
 																	? `.${n.join(
-																			'.'
+																			'.',
 																	  )}`
 																	: ''
 															}`,
 															l =
 																this.cache.get(
-																	i
+																	i,
 																)
 														return (
 															l ||
 																((l = new r(
 																	s,
 																	a,
-																	n
+																	n,
 																)),
 																this.cache.set(
 																	i,
-																	l
+																	l,
 																)),
 															l
 														)
@@ -58172,13 +58232,13 @@
 										}),
 										Eg = te({
 											'node_modules/angular-html-parser/lib/compiler/src/util.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = /-+([a-z0-9])/g
 												function n(o, d, v) {
@@ -58191,7 +58251,7 @@
 																	.trim(),
 																o
 																	.slice(
-																		S + 1
+																		S + 1,
 																	)
 																	.trim(),
 														  ]
@@ -58206,7 +58266,7 @@
 																	null !==
 																		o &&
 																	Object.getPrototypeOf(
-																		o
+																		o,
 																	) === w
 																)
 														  })(o)
@@ -58230,7 +58290,7 @@
 																			arguments.length,
 																		v =
 																			new Array(
-																				d
+																				d,
 																			),
 																		S = 0;
 																	S < d;
@@ -58241,7 +58301,7 @@
 																			S
 																		]
 																return v[1].toUpperCase()
-															}
+															},
 														)
 													}),
 													(e.splitAtColon =
@@ -58254,12 +58314,12 @@
 														}),
 													(e.visitValue = u),
 													(e.isDefined = function i(
-														o
+														o,
 													) {
 														return null != o
 													}),
 													(e.noUndefined = function l(
-														o
+														o,
 													) {
 														return void 0 === o
 															? null
@@ -58268,19 +58328,19 @@
 												;(e.ValueTransformer = class {
 													visitArray(o, d) {
 														return o.map((v) =>
-															u(v, this, d)
+															u(v, this, d),
 														)
 													}
 													visitStringMap(o, d) {
 														let v = {}
 														return (
 															Object.keys(
-																o
+																o,
 															).forEach((S) => {
 																v[S] = u(
 																	o[S],
 																	this,
-																	d
+																	d,
 																)
 															}),
 															v
@@ -58297,7 +58357,7 @@
 														assertSync: (o) => {
 															if (P(o))
 																throw new Error(
-																	'Illegal state: value cannot be a promise'
+																	'Illegal state: value cannot be a promise',
 																)
 															return o
 														},
@@ -58312,12 +58372,12 @@
 													}),
 													(e.error = function y(o) {
 														throw new Error(
-															`Internal Error: ${o}`
+															`Internal Error: ${o}`,
 														)
 													}),
 													(e.syntaxError = function h(
 														o,
-														d
+														d,
 													) {
 														let v = Error(o)
 														return (
@@ -58329,7 +58389,7 @@
 												var g = 'ngSyntaxError',
 													c = 'ngParseErrors'
 												;(e.isSyntaxError = function f(
-													o
+													o,
 												) {
 													return o[g]
 												}),
@@ -58341,11 +58401,11 @@
 														function _(o) {
 															return o.replace(
 																/([.*+?^=!:${}()|[\]\/\\])/g,
-																'\\$1'
+																'\\$1',
 															)
 														})
 												var w = Object.getPrototypeOf(
-													{}
+													{},
 												)
 												function P(o) {
 													return (
@@ -58369,7 +58429,7 @@
 														) {
 															let b =
 																o.charCodeAt(
-																	v + 1
+																	v + 1,
 																)
 															b >= 56320 &&
 																b <= 57343 &&
@@ -58385,7 +58445,7 @@
 														S <= 127
 															? (d +=
 																	String.fromCharCode(
-																		S
+																		S,
 																	))
 															: S <= 2047
 															? (d +=
@@ -58396,7 +58456,7 @@
 																			192,
 																		(63 &
 																			S) |
-																			128
+																			128,
 																	))
 															: S <= 65535
 															? (d +=
@@ -58410,7 +58470,7 @@
 																			128,
 																		(63 &
 																			S) |
-																			128
+																			128,
 																	))
 															: S <= 2097151 &&
 															  (d +=
@@ -58429,13 +58489,13 @@
 																			128,
 																		(63 &
 																			S) |
-																			128
+																			128,
 																	))
 													}
 													return d
 												}),
 													(e.stringify = function x(
-														o
+														o,
 													) {
 														if (
 															'string' == typeof o
@@ -58447,7 +58507,7 @@
 																o
 																	.map(x)
 																	.join(
-																		', '
+																		', ',
 																	) +
 																']'
 															)
@@ -58472,7 +58532,7 @@
 															return 'function' ==
 																typeof o &&
 																o.hasOwnProperty(
-																	'__forward_ref__'
+																	'__forward_ref__',
 																)
 																? o()
 																: o
@@ -58510,13 +58570,13 @@
 										}),
 										Fg = te({
 											'node_modules/angular-html-parser/lib/compiler/src/compile_metadata.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = Cg(),
 													t = Eg(),
@@ -58560,7 +58620,7 @@
 																r.StaticSymbol
 																? S.filePath
 																: `./${t.stringify(
-																		S
+																		S,
 																  )}`
 														}),
 													(e.viewClassName =
@@ -58572,13 +58632,19 @@
 													(e.rendererTypeName =
 														function p(v) {
 															return `RenderType_${u(
-																{ reference: v }
+																{
+																	reference:
+																		v,
+																},
 															)}`
 														}),
 													(e.hostViewClassName =
 														function y(v) {
 															return `HostView_${u(
-																{ reference: v }
+																{
+																	reference:
+																		v,
+																},
 															)}`
 														}),
 													(e.componentFactoryName =
@@ -58599,7 +58665,7 @@
 													(v[(v.Injectable = 3)] =
 														'Injectable'),
 													(e.tokenName = function c(
-														v
+														v,
 													) {
 														return null != v.value
 															? a(v.value)
@@ -58672,7 +58738,7 @@
 															Q && 2 != Q.length)
 														)
 															throw new Error(
-																"'interpolation' should have a start and an end symbol."
+																"'interpolation' should have a start and an end symbol.",
 															)
 														;(this.interpolation =
 															Q),
@@ -58727,12 +58793,12 @@
 															z = {}
 														null != L &&
 															Object.keys(
-																L
+																L,
 															).forEach((se) => {
 																let fe = L[se],
 																	ge =
 																		se.match(
-																			s
+																			s,
 																		)
 																null === ge
 																	? (z[se] =
@@ -58753,7 +58819,7 @@
 															let fe =
 																t.splitAtColon(
 																	se,
-																	[se, se]
+																	[se, se],
 																)
 															U[fe[0]] = fe[1]
 														})
@@ -58763,7 +58829,10 @@
 																let fe =
 																	t.splitAtColon(
 																		se,
-																		[se, se]
+																		[
+																			se,
+																			se,
+																		],
 																	)
 																Z[fe[0]] = fe[1]
 															}),
@@ -59045,66 +59114,66 @@
 													}
 													addDirective(v) {
 														this.directivesSet.has(
-															v.reference
+															v.reference,
 														) ||
 															(this.directivesSet.add(
-																v.reference
+																v.reference,
 															),
 															this.directives.push(
-																v
+																v,
 															))
 													}
 													addExportedDirective(v) {
 														this.exportedDirectivesSet.has(
-															v.reference
+															v.reference,
 														) ||
 															(this.exportedDirectivesSet.add(
-																v.reference
+																v.reference,
 															),
 															this.exportedDirectives.push(
-																v
+																v,
 															))
 													}
 													addPipe(v) {
 														this.pipesSet.has(
-															v.reference
+															v.reference,
 														) ||
 															(this.pipesSet.add(
-																v.reference
+																v.reference,
 															),
 															this.pipes.push(v))
 													}
 													addExportedPipe(v) {
 														this.exportedPipesSet.has(
-															v.reference
+															v.reference,
 														) ||
 															(this.exportedPipesSet.add(
-																v.reference
+																v.reference,
 															),
 															this.exportedPipes.push(
-																v
+																v,
 															))
 													}
 													addModule(v) {
 														this.modulesSet.has(
-															v.reference
+															v.reference,
 														) ||
 															(this.modulesSet.add(
-																v.reference
+																v.reference,
 															),
 															this.modules.push(
-																v
+																v,
 															))
 													}
 													addEntryComponent(v) {
 														this.entryComponentsSet.has(
-															v.componentType
+															v.componentType,
 														) ||
 															(this.entryComponentsSet.add(
-																v.componentType
+																v.componentType,
 															),
 															this.entryComponents.push(
-																v
+																v,
 															))
 													}
 												}
@@ -59119,7 +59188,7 @@
 												function T(v) {
 													return v.replace(
 														/(\w+:\/\/[\w:-]+)?(\/+)?/,
-														'ng:///'
+														'ng:///',
 													)
 												}
 												;(e.ProviderMeta = class {
@@ -59156,9 +59225,9 @@
 																	  r.StaticSymbol
 																		? `${S.type.reference.filePath}.${S.type.reference.name}.html`
 																		: `${u(
-																				v
+																				v,
 																		  )}/${u(
-																				S.type
+																				S.type,
 																		  )}.html`
 																	: b.templateUrl),
 																S.type
@@ -59172,7 +59241,7 @@
 														function C(v, S) {
 															let b =
 																v.moduleUrl.split(
-																	/\/\\/g
+																	/\/\\/g,
 																)
 															return T(
 																`css/${S}${
@@ -59180,36 +59249,36 @@
 																		b.length -
 																			1
 																	]
-																}.ngstyle.js`
+																}.ngstyle.js`,
 															)
 														}),
 													(e.ngModuleJitUrl =
 														function o(v) {
 															return T(
 																`${u(
-																	v.type
-																)}/module.ngfactory.js`
+																	v.type,
+																)}/module.ngfactory.js`,
 															)
 														}),
 													(e.templateJitUrl =
 														function d(v, S) {
 															return T(
 																`${u(v)}/${u(
-																	S.type
-																)}.ngfactory.js`
+																	S.type,
+																)}.ngfactory.js`,
 															)
 														})
 											},
 										}),
 										Ag = te({
 											'node_modules/angular-html-parser/lib/compiler/src/parse_util.js'(
-												e
+												e,
 											) {
 												ne(),
 													Object.defineProperty(
 														e,
 														'__esModule',
-														{ value: !0 }
+														{ value: !0 },
 													)
 												var r = vg(),
 													t = Fg(),
@@ -59218,7 +59287,7 @@
 															y,
 															h,
 															g,
-															c
+															c,
 														) {
 															;(this.file = y),
 																(this.offset =
@@ -59249,7 +59318,7 @@
 																	(c--,
 																	y++,
 																	h.charCodeAt(
-																		c
+																		c,
 																	) == r.$LF)
 																) {
 																	f--
@@ -59257,12 +59326,12 @@
 																		.substr(
 																			0,
 																			c -
-																				1
+																				1,
 																		)
 																		.lastIndexOf(
 																			String.fromCharCode(
-																				r.$LF
-																			)
+																				r.$LF,
+																			),
 																		)
 																	F =
 																		w > 0
@@ -59277,7 +59346,7 @@
 															) {
 																let _ =
 																	h.charCodeAt(
-																		c
+																		c,
 																	)
 																c++,
 																	y--,
@@ -59290,7 +59359,7 @@
 																this.file,
 																c,
 																f,
-																F
+																F,
 															)
 														}
 														getContext(y, h) {
@@ -59339,12 +59408,12 @@
 																	before: g.substring(
 																		c,
 																		this
-																			.offset
+																			.offset,
 																	),
 																	after: g.substring(
 																		this
 																			.offset,
-																		f + 1
+																		f + 1,
 																	),
 																}
 															}
@@ -59379,7 +59448,7 @@
 															return this.start.file.content.substring(
 																this.start
 																	.offset,
-																this.end.offset
+																this.end.offset,
 															)
 														}
 													}
@@ -59389,12 +59458,12 @@
 															new a('', ''),
 															0,
 															0,
-															0
+															0,
 														)),
 													(e.EMPTY_SOURCE_SPAN =
 														new n(
 															e.EMPTY_PARSE_LOCATION,
-															e.EMPTY_PARSE_LOCATION
+															e.EMPTY_PARSE_LOCATION,
 														)),
 													((y = u =
 														e.ParseErrorLevel ||
@@ -59420,7 +59489,7 @@
 														let y =
 															this.span.start.getContext(
 																100,
-																3
+																3,
 															)
 														return y
 															? `${this.msg} ("${
@@ -59447,15 +59516,15 @@
 														function l(y, h) {
 															let g =
 																	t.identifierModuleUrl(
-																		h
+																		h,
 																	),
 																c =
 																	null != g
 																		? `in ${y} ${t.identifierName(
-																				h
+																				h,
 																		  )} in ${g}`
 																		: `in ${y} ${t.identifierName(
-																				h
+																				h,
 																		  )}`,
 																f = new a('', c)
 															return new n(
@@ -59463,35 +59532,35 @@
 																	f,
 																	-1,
 																	-1,
-																	-1
+																	-1,
 																),
 																new s(
 																	f,
 																	-1,
 																	-1,
-																	-1
-																)
+																	-1,
+																),
 															)
 														}),
 													(e.r3JitTypeSourceSpan =
 														function p(y, h, g) {
 															let f = new a(
 																'',
-																`in ${y} ${h} in ${g}`
+																`in ${y} ${h} in ${g}`,
 															)
 															return new n(
 																new s(
 																	f,
 																	-1,
 																	-1,
-																	-1
+																	-1,
 																),
 																new s(
 																	f,
 																	-1,
 																	-1,
-																	-1
-																)
+																	-1,
+																),
 															)
 														})
 											},
@@ -59499,7 +59568,7 @@
 										Sg = te({
 											'src/language-html/print-preprocess.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var { ParseSourceSpan: t } =
@@ -59552,11 +59621,11 @@
 																	v.value
 																		.length
 																		? d.removeChild(
-																				v
+																				v,
 																		  )
 																		: (v.value =
 																				v.value.slice(
-																					1
+																					1,
 																				))
 																}
 															})
@@ -59606,7 +59675,7 @@
 																			]
 																		if (
 																			!d(
-																				b
+																				b,
 																			)
 																		)
 																			continue
@@ -59615,18 +59684,18 @@
 																			k =
 																				b.firstChild
 																		v.removeChild(
-																			B
+																			B,
 																		),
 																			S--
 																		let M =
 																				new t(
 																					B.sourceSpan.start,
-																					k.sourceSpan.end
+																					k.sourceSpan.end,
 																				),
 																			R =
 																				new t(
 																					M.start,
-																					b.sourceSpan.end
+																					b.sourceSpan.end,
 																				)
 																		;(b.condition =
 																			B.condition),
@@ -59635,7 +59704,7 @@
 																			(b.startSourceSpan =
 																				M),
 																			b.removeChild(
-																				k
+																				k,
 																			)
 																	}
 															})
@@ -59644,7 +59713,7 @@
 															return (function E(
 																o,
 																d,
-																v
+																v,
 															) {
 																o.walk((S) => {
 																	if (
@@ -59667,7 +59736,7 @@
 																				'text' !==
 																					B.type &&
 																				!d(
-																					B
+																					B,
 																				)
 																			)
 																				continue
@@ -59677,7 +59746,7 @@
 																					'text'),
 																				(B.value =
 																					v(
-																						B
+																						B,
 																					)))
 																			let k =
 																				B.prev
@@ -59689,10 +59758,10 @@
 																				(k.sourceSpan =
 																					new t(
 																						k.sourceSpan.start,
-																						B.sourceSpan.end
+																						B.sourceSpan.end,
 																					)),
 																				S.removeChild(
-																					B
+																					B,
 																				),
 																				b--)
 																		}
@@ -59703,7 +59772,7 @@
 																	'cdata' ===
 																	d.type,
 																(d) =>
-																	`<![CDATA[${d.value}]]>`
+																	`<![CDATA[${d.value}]]>`,
 															)
 														},
 														function I(o, d) {
@@ -59729,7 +59798,7 @@
 																				null,
 																			M =
 																				b.value.split(
-																					v
+																					v,
 																				)
 																		for (
 																			let R = 0;
@@ -59749,7 +59818,7 @@
 																				? ((k =
 																						B.moveBy(
 																							q.length +
-																								4
+																								4,
 																						)),
 																				  S.insertChildBefore(
 																						b,
@@ -59758,7 +59827,7 @@
 																							sourceSpan:
 																								new t(
 																									B,
-																									k
+																									k,
 																								),
 																							children:
 																								0 ===
@@ -59771,19 +59840,19 @@
 																												sourceSpan:
 																													new t(
 																														B.moveBy(
-																															2
+																															2,
 																														),
 																														k.moveBy(
-																															-2
-																														)
+																															-2,
+																														),
 																													),
 																											},
 																									  ],
-																						}
+																						},
 																				  ))
 																				: ((k =
 																						B.moveBy(
-																							q.length
+																							q.length,
 																						)),
 																				  q.length >
 																						0 &&
@@ -59795,13 +59864,13 @@
 																								sourceSpan:
 																									new t(
 																										B,
-																										k
+																										k,
 																									),
-																							}
+																							},
 																						))
 																		}
 																		S.removeChild(
-																			b
+																			b,
 																		)
 																	}
 															})
@@ -59827,7 +59896,7 @@
 																			s(
 																				d
 																					.children[0]
-																					.value
+																					.value,
 																			)
 																				.length)
 																)
@@ -59868,7 +59937,7 @@
 																				trailingWhitespace:
 																					R,
 																			} = a(
-																				B.value
+																				B.value,
 																			),
 																			q =
 																				B.prev,
@@ -59880,11 +59949,11 @@
 																			  (B.sourceSpan =
 																					new t(
 																						B.sourceSpan.start.moveBy(
-																							k.length
+																							k.length,
 																						),
 																						B.sourceSpan.end.moveBy(
-																							-R.length
-																						)
+																							-R.length,
+																						),
 																					)),
 																			  k &&
 																					(q &&
@@ -59899,7 +59968,7 @@
 																						(J.hasLeadingSpaces =
 																							!0)))
 																			: (d.removeChild(
-																					B
+																					B,
 																			  ),
 																			  b--,
 																			  (k ||
@@ -59951,8 +60020,8 @@
 																				v
 																					.endSourceSpan
 																					.end
-																					.offset
-																			)
+																					.offset,
+																			),
 																		))
 															})
 														},
@@ -59968,18 +60037,18 @@
 																	)
 																		return void (v.isDanglingSpaceSensitive =
 																			l(
-																				v
+																				v,
 																			))
 																	for (let b of S)
 																		(b.isLeadingSpaceSensitive =
 																			y(
 																				b,
-																				d
+																				d,
 																			)),
 																			(b.isTrailingSpaceSensitive =
 																				h(
 																					b,
-																					d
+																					d,
 																				))
 																	for (
 																		let b = 0;
@@ -60024,7 +60093,7 @@
 																!n(
 																	v
 																		.children[0]
-																		.value
+																		.value,
 																) &&
 																!v.firstChild
 																	.hasLeadingSpaces &&
@@ -60058,7 +60127,7 @@
 																			]
 																		if (
 																			!d(
-																				b
+																				b,
 																			)
 																		)
 																			continue
@@ -60076,18 +60145,18 @@
 																			(B.sourceSpan =
 																				new t(
 																					B.sourceSpan.start,
-																					k.sourceSpan.end
+																					k.sourceSpan.end,
 																				)),
 																			(B.isTrailingSpaceSensitive =
 																				k.isTrailingSpaceSensitive),
 																			(B.hasTrailingSpaces =
 																				k.hasTrailingSpaces),
 																			v.removeChild(
-																				b
+																				b,
 																			),
 																			S--,
 																			v.removeChild(
-																				k
+																				k,
 																			)
 																	}
 															})
@@ -60102,8 +60171,8 @@
 																		(b) =>
 																			c(
 																				b,
-																				d
-																			)
+																				d,
+																			),
 																	)
 																if (!v) return
 																let {
@@ -60126,15 +60195,15 @@
 										xg = te({
 											'src/language-html/pragma.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = {
 														hasPragma: function t(
-															a
+															a,
 														) {
 															return /^\s*<!--\s*@(?:format|prettier)\s*-->/.test(
-																a
+																a,
 															)
 														},
 														insertPragma:
@@ -60143,7 +60212,7 @@
 																	'\x3c!-- @format --\x3e\n\n' +
 																	a.replace(
 																		/^\s*\n/,
-																		''
+																		'',
 																	)
 																)
 															},
@@ -60155,7 +60224,7 @@
 												ne(),
 													(r.exports = {
 														locStart: function t(
-															a
+															a,
 														) {
 															return a.sourceSpan
 																.start.offset
@@ -60170,7 +60239,7 @@
 										ur = te({
 											'src/language-html/print/tag.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Zt(),
@@ -60327,13 +60396,13 @@
 															(function v(L) {
 																let Q =
 																	L.trim().match(
-																		/^prettier-ignore-attribute(?:\s+(.+))?$/s
+																		/^prettier-ignore-attribute(?:\s+(.+))?$/s,
 																	)
 																return (
 																	!!Q &&
 																	(!Q[1] ||
 																		Q[1].split(
-																			/\s+/
+																			/\s+/,
 																		))
 																)
 															})(j.prev.value),
@@ -60342,11 +60411,11 @@
 															typeof Y
 																? () => Y
 																: Array.isArray(
-																		Y
+																		Y,
 																  )
 																? (ue) =>
 																		Y.includes(
-																			ue.rawName
+																			ue.rawName,
 																		)
 																: () => !1,
 														ee = L.map((ue) => {
@@ -60356,12 +60425,12 @@
 																? p(
 																		Q.originalText.slice(
 																			y(
-																				Fe
+																				Fe,
 																			),
 																			h(
-																				Fe
-																			)
-																		)
+																				Fe,
+																			),
+																		),
 																  )
 																: V()
 														}, 'attrs'),
@@ -60401,7 +60470,7 @@
 															? de.push(
 																	j.isSelfClosing
 																		? ' '
-																		: ''
+																		: '',
 															  )
 															: de.push(
 																	Q.bracketSameLine
@@ -60410,7 +60479,7 @@
 																			: ''
 																		: j.isSelfClosing
 																		? u
-																		: i
+																		: i,
 															  ),
 														de
 													)
@@ -60468,7 +60537,7 @@
 												r.exports = {
 													printClosingTag: function E(
 														L,
-														Q
+														Q,
 													) {
 														return [
 															L.isSelfClosing
@@ -60492,7 +60561,7 @@
 													printOpeningTag: function k(
 														L,
 														Q,
-														V
+														V,
 													) {
 														let j = L.getValue()
 														return [
@@ -60518,7 +60587,7 @@
 										bg = te({
 											'node_modules/parse-srcset/src/parse-srcset.js'(
 												e,
-												r
+												r,
 											) {
 												var t, s
 												ne(),
@@ -60545,8 +60614,8 @@
 																var D,
 																	T = $.exec(
 																		t.substring(
-																			N
-																		)
+																			N,
+																		),
 																	)
 																if (T)
 																	return (
@@ -60592,7 +60661,7 @@
 																		? ((f =
 																				f.replace(
 																					h,
-																					''
+																					'',
 																				)),
 																		  P())
 																		: I()
@@ -60609,7 +60678,7 @@
 																	if (
 																		((E =
 																			t.charAt(
-																				N
+																				N,
 																			)),
 																		'in descriptor' ===
 																			w)
@@ -60619,7 +60688,7 @@
 																		)
 																			_ &&
 																				(F.push(
-																					_
+																					_,
 																				),
 																				(_ =
 																					''),
@@ -60634,7 +60703,7 @@
 																					(N += 1),
 																					_ &&
 																						F.push(
-																							_
+																							_,
 																						),
 																					void P()
 																				)
@@ -60654,7 +60723,7 @@
 																					return (
 																						_ &&
 																							F.push(
-																								_
+																								_,
 																							),
 																						void P()
 																					)
@@ -60681,7 +60750,7 @@
 																			)
 																				return (
 																					F.push(
-																						_
+																						_,
 																					),
 																					void P()
 																				)
@@ -60732,19 +60801,19 @@
 																			d.substring(
 																				0,
 																				d.length -
-																					1
+																					1,
 																			)),
 																		(b =
 																			parseInt(
 																				S,
-																				10
+																				10,
 																			)),
 																		(B =
 																			parseFloat(
-																				S
+																				S,
 																			)),
 																		g.test(
-																			S
+																			S,
 																		) &&
 																		'w' ===
 																			v
@@ -60759,7 +60828,7 @@
 																					: (D =
 																							b))
 																			: c.test(
-																					S
+																					S,
 																			  ) &&
 																			  'x' ===
 																					v
@@ -60775,7 +60844,7 @@
 																					: (T =
 																							B))
 																			: g.test(
-																					S
+																					S,
 																			  ) &&
 																			  'h' ===
 																					v
@@ -60799,7 +60868,7 @@
 																				t +
 																				"' at '" +
 																				d +
-																				"'."
+																				"'.",
 																	  )
 																	: ((o.url =
 																			f),
@@ -60830,7 +60899,7 @@
 										Tg = te({
 											'src/language-html/syntax-attribute.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = bg(),
@@ -60843,13 +60912,13 @@
 													} = qe()
 												r.exports = {
 													printImgSrcset: function u(
-														l
+														l,
 													) {
 														let p = t(l, {
 																logger: {
 																	error(I) {
 																		throw new Error(
-																			I
+																			I,
 																		)
 																	},
 																},
@@ -60874,7 +60943,7 @@
 															1
 														)
 															throw new Error(
-																'Mixed descriptor in srcset is not supported'
+																'Mixed descriptor in srcset is not supported',
 															)
 														let c = y
 																? 'w'
@@ -60889,27 +60958,27 @@
 															F = (I) =>
 																Math.max(...I),
 															_ = p.map(
-																(I) => I.url
+																(I) => I.url,
 															),
 															w = F(
 																_.map(
 																	(I) =>
-																		I.length
-																)
+																		I.length,
+																),
 															),
 															E = p
 																.map(
-																	(I) => I[c]
+																	(I) => I[c],
 																)
 																.map((I) =>
 																	I
 																		? I.toString()
-																		: ''
+																		: '',
 																),
 															N = E.map((I) => {
 																let P =
 																	I.indexOf(
-																		'.'
+																		'.',
 																	)
 																return -1 === P
 																	? I.length
@@ -60934,22 +61003,22 @@
 																		C =
 																			' '.repeat(
 																				T +
-																					m
+																					m,
 																			)
 																	$.push(
 																		s(
 																			C,
-																			' '
+																			' ',
 																		),
-																		D + f
+																		D + f,
 																	)
 																}
 																return $
-															})
+															}),
 														)
 													},
 													printClassNames: function i(
-														l
+														l,
 													) {
 														return l
 															.trim()
@@ -60962,7 +61031,7 @@
 										Bg = te({
 											'src/language-html/syntax-vue.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -60974,16 +61043,16 @@
 															let y = i.trim()
 															return (
 																/^(?:[\w$]+|\([^)]*\))\s*=>|^function\s*\(/.test(
-																	y
+																	y,
 																) ||
 																/^[$A-Z_a-z][\w$]*(?:\.[$A-Z_a-z][\w$]*|\['[^']*']|\["[^"]*"]|\[\d+]|\[[$A-Z_a-z][\w$]*])*$/.test(
-																	y
+																	y,
 																)
 															)
 														},
 													printVueFor: function s(
 														i,
-														l
+														l,
 													) {
 														let {
 															left: p,
@@ -61008,14 +61077,14 @@
 																	.trim()
 																	.replace(
 																		y,
-																		''
+																		'',
 																	),
 																f = c.match(p)
 															f
 																? ((g.alias =
 																		c.replace(
 																			p,
-																			''
+																			'',
 																		)),
 																  (g.iterator1 =
 																		f[1].trim()),
@@ -61036,15 +61105,15 @@
 																			w ||
 																			F.slice(
 																				w +
-																					1
+																					1,
 																			).some(
-																				Boolean
-																			))
+																				Boolean,
+																			)),
 																)
 															)
 																return {
 																	left: F.filter(
-																		Boolean
+																		Boolean,
 																	).join(','),
 																	operator:
 																		h[2],
@@ -61059,8 +61128,8 @@
 																		parser: 'babel',
 																		__isVueForBindingLeft:
 																			!0,
-																	}
-																)
+																	},
+																),
 															),
 															' ',
 															y,
@@ -61073,7 +61142,7 @@
 																{
 																	stripTrailingHardline:
 																		!0,
-																}
+																},
 															),
 														]
 													},
@@ -61085,7 +61154,7 @@
 																	parser: 'babel',
 																	__isVueBindings:
 																		!0,
-																}
+																},
 															)
 														},
 												}
@@ -61094,7 +61163,7 @@
 										Lo = te({
 											'src/language-html/get-node-content.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -61124,16 +61193,16 @@
 														t(p.lastChild)
 															? (g += s(
 																	p,
-																	y
+																	y,
 															  ).length)
 															: a(p) &&
 															  (g -= n(
 																	p.lastChild,
-																	y
+																	y,
 															  ).length),
 														y.originalText.slice(
 															h,
-															g
+															g,
 														)
 													)
 												}
@@ -61197,7 +61266,7 @@
 												function b(k, M, R) {
 													let q = (ee) =>
 															new RegExp(
-																ee.join('|')
+																ee.join('|'),
 															).test(k.fullName),
 														J = () => C(k.value),
 														L = !1,
@@ -61259,7 +61328,7 @@
 															L
 																? ((ee) =>
 																		s(ee))(
-																		ee
+																		ee,
 																  )
 																: j(ee),
 														ie = (ee, ce) =>
@@ -61272,8 +61341,8 @@
 																		__embeddedInHtml:
 																			!0,
 																	},
-																	ce
-																)
+																	ce,
+																),
 															)
 													if (
 														'srcset' ===
@@ -61306,7 +61375,7 @@
 																	parser: 'css',
 																	__isHTMLStyleAttribute:
 																		!0,
-																})
+																}),
 															)
 													}
 													if ('vue' === R.parser) {
@@ -61334,20 +61403,20 @@
 															return Y(
 																ie(K, {
 																	parser: de,
-																})
+																}),
 															)
 														}
 														if (q(ce))
 															return Y(
 																ie(J(), {
 																	parser: '__vue_expression',
-																})
+																}),
 															)
 														if (q(W))
 															return Y(
 																ie(J(), {
 																	parser: '__js_expression',
-																})
+																}),
 															)
 													}
 													if (
@@ -61359,14 +61428,14 @@
 																	Object.assign(
 																		Object.assign(
 																			{},
-																			U
+																			U,
 																		),
 																		{},
 																		{
 																			trailingComma:
 																				'none',
-																		}
-																	)
+																		},
+																	),
 																),
 															ce = ['^\\*'],
 															K = [
@@ -61386,28 +61455,28 @@
 															return Y(
 																ee(J(), {
 																	parser: '__ng_action',
-																})
+																}),
 															)
 														if (q(K))
 															return Y(
 																ee(J(), {
 																	parser: '__ng_binding',
-																})
+																}),
 															)
 														if (q(de)) {
 															let z = J().trim()
 															return j(
 																i(v(k, z)),
 																!z.includes(
-																	'@@'
-																)
+																	'@@',
+																),
 															)
 														}
 														if (q(ce))
 															return Y(
 																ee(J(), {
 																	parser: '__ng_directive',
-																})
+																}),
 															)
 														let ue = /{{(.+?)}}/s,
 															Fe = J()
@@ -61417,7 +61486,7 @@
 																U,
 																Z,
 															] of Fe.split(
-																ue
+																ue,
 															).entries())
 																if (U % 2 == 0)
 																	z.push(y(Z))
@@ -61435,21 +61504,21 @@
 																								parser: '__ng_interpolation',
 																								__isInHtmlInterpolation:
 																									!0,
-																							}
+																							},
 																						),
-																					]
+																					],
 																				),
 																				u,
 																				'}}',
-																			])
+																			]),
 																		)
 																	} catch {
 																		z.push(
 																			'{{',
 																			y(
-																				Z
+																				Z,
 																			),
-																			'}}'
+																			'}}',
 																		)
 																	}
 															return s(z)
@@ -61461,7 +61530,7 @@
 													k,
 													M,
 													R,
-													q
+													q,
 												) {
 													let J = k.getValue()
 													switch (J.type) {
@@ -61481,14 +61550,14 @@
 																let Q = S(J, q),
 																	V =
 																		/^\s*$/.test(
-																			Q
+																			Q,
 																		),
 																	j = ''
 																return (
 																	V ||
 																		((j = R(
 																			T(
-																				Q
+																				Q,
 																			),
 																			{
 																				parser: L,
@@ -61498,7 +61567,7 @@
 																			{
 																				stripTrailingHardline:
 																					!0,
-																			}
+																			},
 																		)),
 																		(V =
 																			'' ===
@@ -61509,8 +61578,8 @@
 																			_(
 																				k,
 																				q,
-																				M
-																			)
+																				M,
+																			),
 																		),
 																		V
 																			? ''
@@ -61529,7 +61598,7 @@
 															if (P(J.parent)) {
 																let L = D(
 																	J.parent,
-																	q
+																	q,
 																)
 																if (L) {
 																	let Q =
@@ -61538,8 +61607,8 @@
 																				? m(
 																						J.value.replace(
 																							/^[^\S\n]*\n/,
-																							''
-																						)
+																							'',
+																						),
 																				  )
 																				: J.value,
 																		V = {
@@ -61583,7 +61652,7 @@
 																			{
 																				stripTrailingHardline:
 																					!0,
-																			}
+																			},
 																		),
 																		c(J, q),
 																	]
@@ -61622,7 +61691,7 @@
 																				{
 																					stripTrailingHardline:
 																						!0,
-																				}
+																				},
 																			),
 																		]),
 																		J.parent
@@ -61630,7 +61699,7 @@
 																		f(
 																			J
 																				.parent
-																				.next
+																				.next,
 																		)
 																			? ' '
 																			: u,
@@ -61650,8 +61719,8 @@
 																		J
 																			.valueSpan
 																			.end
-																			.offset
-																	)
+																			.offset,
+																	),
 																)
 															)
 																return [
@@ -61671,8 +61740,8 @@
 																		J
 																			.valueSpan
 																			.end
-																			.offset
-																	)
+																			.offset,
+																	),
 																)
 															)
 																return [
@@ -61692,14 +61761,14 @@
 																				__embeddedInHtml:
 																					!0,
 																			},
-																			V
+																			V,
 																		),
 																		{
 																			stripTrailingHardline:
 																				!0,
-																		}
+																		},
 																	),
-																q
+																q,
 															)
 															if (L)
 																return [
@@ -61709,16 +61778,16 @@
 																		p(
 																			L,
 																			(
-																				Q
+																				Q,
 																			) =>
 																				'string' ==
 																				typeof Q
 																					? Q.replace(
 																							/"/g,
-																							'&quot;'
+																							'&quot;',
 																					  )
-																					: Q
-																		)
+																					: Q,
+																		),
 																	),
 																	'"',
 																]
@@ -61733,7 +61802,7 @@
 										Oo = te({
 											'src/language-html/print/children.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -61786,25 +61855,25 @@
 																		p(d) +
 																			(d.prev &&
 																			w(
-																				d.prev
+																				d.prev,
 																			)
 																				? E(
-																						d
+																						d,
 																				  )
 																						.length
 																				: 0),
 																		y(d) -
 																			(d.next &&
 																			N(
-																				d.next
+																				d.next,
 																			)
 																				? x(
 																						d,
-																						C
+																						C,
 																				  )
 																						.length
-																				: 0)
-																	)
+																				: 0),
+																	),
 																),
 																I(d, C),
 														  ]
@@ -61840,13 +61909,13 @@
 														  (N(C) &&
 																m.lastChild &&
 																P(
-																	m.lastChild
+																	m.lastChild,
 																) &&
 																m.lastChild
 																	.lastChild &&
 																P(
 																	m.lastChild
-																		.lastChild
+																		.lastChild,
 																))
 														? i
 														: C.hasLeadingSpaces
@@ -61857,7 +61926,7 @@
 													printChildren: function T(
 														m,
 														C,
-														o
+														o,
 													) {
 														let d = m.getValue()
 														if (h(d))
@@ -61871,7 +61940,7 @@
 																				b.prev
 																					? D(
 																							b.prev,
-																							b
+																							b,
 																					  )
 																					: ''
 																		return [
@@ -61879,7 +61948,7 @@
 																				? [
 																						B,
 																						g(
-																							b.prev
+																							b.prev,
 																						)
 																							? i
 																							: '',
@@ -61888,15 +61957,15 @@
 																			$(
 																				S,
 																				C,
-																				o
+																				o,
 																			),
 																		]
 																	},
-																	'children'
+																	'children',
 																),
 															]
 														let v = d.children.map(
-															() => Symbol('')
+															() => Symbol(''),
 														)
 														return m.map((S, b) => {
 															let B = S.getValue()
@@ -61907,11 +61976,11 @@
 																) {
 																	let Q = D(
 																		B.prev,
-																		B
+																		B,
 																	)
 																	if (Q)
 																		return g(
-																			B.prev
+																			B.prev,
 																		)
 																			? [
 																					i,
@@ -61919,7 +61988,7 @@
 																					$(
 																						S,
 																						C,
-																						o
+																						o,
 																					),
 																			  ]
 																			: [
@@ -61927,14 +61996,14 @@
 																					$(
 																						S,
 																						C,
-																						o
+																						o,
 																					),
 																			  ]
 																}
 																return $(
 																	S,
 																	C,
-																	o
+																	o,
 																)
 															}
 															let k = [],
@@ -61944,13 +62013,13 @@
 																J = B.prev
 																	? D(
 																			B.prev,
-																			B
+																			B,
 																	  )
 																	: '',
 																L = B.next
 																	? D(
 																			B,
-																			B.next
+																			B.next,
 																	  )
 																	: ''
 															return (
@@ -61958,18 +62027,18 @@
 																	(g(B.prev)
 																		? k.push(
 																				i,
-																				i
+																				i,
 																		  )
 																		: J ===
 																		  i
 																		? k.push(
-																				i
+																				i,
 																		  )
 																		: c(
-																				B.prev
+																				B.prev,
 																		  )
 																		? M.push(
-																				J
+																				J,
 																		  )
 																		: M.push(
 																				a(
@@ -61981,28 +62050,28 @@
 																								b -
 																									1
 																							],
-																					}
-																				)
+																					},
+																				),
 																		  )),
 																L &&
 																	(g(B)
 																		? c(
-																				B.next
+																				B.next,
 																		  ) &&
 																		  q.push(
 																				i,
-																				i
+																				i,
 																		  )
 																		: L ===
 																		  i
 																		? c(
-																				B.next
+																				B.next,
 																		  ) &&
 																		  q.push(
-																				i
+																				i,
 																		  )
 																		: R.push(
-																				L
+																				L,
 																		  )),
 																[
 																	...k,
@@ -62013,7 +62082,7 @@
 																				$(
 																					S,
 																					C,
-																					o
+																					o,
 																				),
 																				...R,
 																			],
@@ -62021,7 +62090,7 @@
 																				id: v[
 																					b
 																				],
-																			}
+																			},
 																		),
 																	]),
 																	...q,
@@ -62035,7 +62104,7 @@
 										wg = te({
 											'src/language-html/print/element.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -62080,7 +62149,7 @@
 													printElement: function D(
 														T,
 														m,
-														C
+														C,
 													) {
 														let o = T.getValue()
 														if (g(o, m))
@@ -62107,7 +62176,7 @@
 																!o.lastChild
 																	.hasTrailingSpaces,
 															v = Symbol(
-																'element-attr-group-id'
+																'element-attr-group-id',
 															),
 															S = (M) =>
 																a([
@@ -62115,11 +62184,11 @@
 																		E(
 																			T,
 																			m,
-																			C
+																			C,
 																		),
 																		{
 																			id: v,
-																		}
+																		},
 																	),
 																	M,
 																	x(o, m),
@@ -62130,7 +62199,7 @@
 																	o.hasDanglingSpaces &&
 																		o.isDanglingSpaceSensitive
 																		? l
-																		: ''
+																		: '',
 															  )
 															: S([
 																	_(o)
@@ -62144,7 +62213,7 @@
 																					{
 																						groupId:
 																							v,
-																					}
+																					},
 																			  )
 																			: o
 																					.firstChild
@@ -62160,13 +62229,13 @@
 																			  o.isWhitespaceSensitive &&
 																			  o.isIndentationSensitive
 																			? s(
-																					p
+																					p,
 																			  )
 																			: p,
 																		$(
 																			T,
 																			m,
-																			C
+																			C,
 																		),
 																	]),
 																	d
@@ -62175,11 +62244,11 @@
 																					v,
 																		  })
 																		: (!c(
-																				o
+																				o,
 																		  ) &&
 																				!f(
 																					o,
-																					m
+																					m,
 																				)) ||
 																		  'root' !==
 																				o
@@ -62193,10 +62262,10 @@
 																	(
 																		o.next
 																			? I(
-																					o.next
+																					o.next,
 																			  )
 																			: P(
-																					o.parent
+																					o.parent,
 																			  )
 																	)
 																		? o
@@ -62214,7 +62283,7 @@
 																				{
 																					groupId:
 																						v,
-																				}
+																				},
 																		  )
 																		: o
 																				.lastChild
@@ -62239,19 +62308,19 @@
 																					F(
 																						T,
 																						(
-																							R
+																							R,
 																						) =>
 																							R.parent &&
 																							'root' !==
 																								R
 																									.parent
-																									.type
+																									.type,
 																					)
-																				}}$`
+																				}}$`,
 																		  ).test(
 																				o
 																					.lastChild
-																					.value
+																					.value,
 																		  )
 																		? ''
 																		: p,
@@ -62264,7 +62333,7 @@
 										_g = te({
 											'src/language-html/printer-html.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -62315,15 +62384,15 @@
 																return (
 																	C.__onHtmlRoot &&
 																		C.__onHtmlRoot(
-																			d
+																			d,
 																		),
 																	[
 																		s(
 																			D(
 																				m,
 																				C,
-																				o
-																			)
+																				o,
+																			),
 																		),
 																		a,
 																	]
@@ -62333,7 +62402,7 @@
 																return $(
 																	m,
 																	C,
-																	o
+																	o,
 																)
 															case 'ieConditionalStartComment':
 															case 'ieConditionalEndComment':
@@ -62346,7 +62415,7 @@
 																	P(d, C),
 																	...m.map(
 																		o,
-																		'children'
+																		'children',
 																	),
 																	x(d, C),
 																]
@@ -62360,12 +62429,12 @@
 																			/\n[^\S\n]*$/,
 																		b =
 																			S.test(
-																				d.value
+																				d.value,
 																			),
 																		B = b
 																			? d.value.replace(
 																					S,
-																					''
+																					'',
 																			  )
 																			: d.value
 																	return [
@@ -62394,11 +62463,11 @@
 																		d.value
 																			.replace(
 																				/^html\b/i,
-																				'html'
+																				'html',
 																			)
 																			.replace(
 																				/\s+/g,
-																				' '
+																				' ',
 																			),
 																	]),
 																	x(d, C),
@@ -62409,11 +62478,13 @@
 																	...p(
 																		C.originalText.slice(
 																			_(
-																				d
+																				d,
 																			),
-																			w(d)
+																			w(
+																				d,
+																			),
 																		),
-																		n
+																		n,
 																	),
 																	N(d, C),
 																]
@@ -62424,16 +62495,16 @@
 																)
 																	return d.rawName
 																let v = g(
-																		d.value
+																		d.value,
 																	),
 																	B =
 																		h(
 																			v,
-																			"'"
+																			"'",
 																		) <
 																		h(
 																			v,
-																			'"'
+																			'"',
 																		)
 																			? "'"
 																			: '"'
@@ -62446,19 +62517,19 @@
 																			B
 																			? v.replace(
 																					/"/g,
-																					'&quot;'
+																					'&quot;',
 																			  )
 																			: v.replace(
 																					/'/g,
-																					'&apos;'
-																			  )
+																					'&apos;',
+																			  ),
 																	),
 																	B,
 																]
 															}
 															default:
 																throw new Error(
-																	`Unexpected node type ${d.type}`
+																	`Unexpected node type ${d.type}`,
 																)
 														}
 													},
@@ -62471,7 +62542,7 @@
 										Pg = te({
 											'src/language-html/options.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Mt(),
@@ -62525,7 +62596,7 @@
 										On = te({
 											'node_modules/linguist-languages/data/HTML.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'HTML',
@@ -62553,7 +62624,7 @@
 										kg = te({
 											'node_modules/linguist-languages/data/Vue.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'Vue',
@@ -62629,22 +62700,22 @@
 										Og = te({
 											'src/language-yaml/pragma.js'(
 												e,
-												r
+												r,
 											) {
 												ne(),
 													(r.exports = {
 														isPragma: function t(
-															n
+															n,
 														) {
 															return /^\s*@(?:prettier|format)\s*$/.test(
-																n
+																n,
 															)
 														},
 														hasPragma: function s(
-															n
+															n,
 														) {
 															return /^\s*#[^\S\n]*@(?:prettier|format)\s*?(?:\n|$)/.test(
-																n
+																n,
 															)
 														},
 														insertPragma:
@@ -62659,7 +62730,7 @@
 												ne(),
 													(r.exports = {
 														locStart: function t(
-															a
+															a,
 														) {
 															return a.position
 																.start.offset
@@ -62678,7 +62749,7 @@
 														s,
 														a,
 														n,
-														u
+														u,
 													) {
 														if (
 															'root' ===
@@ -62686,7 +62757,7 @@
 																	.type &&
 															u.filepath &&
 															/(?:[/\\]|^)\.(?:prettier|stylelint|lintstaged)rc$/.test(
-																u.filepath
+																u.filepath,
 															)
 														)
 															return n(
@@ -62694,13 +62765,13 @@
 																Object.assign(
 																	Object.assign(
 																		{},
-																		u
+																		u,
 																	),
 																	{},
 																	{
 																		parser: 'json',
-																	}
-																)
+																	},
+																),
 															)
 													})
 											},
@@ -62746,7 +62817,7 @@
 													let m,
 														T = []
 													for (let C of D.split(
-														/( +)/
+														/( +)/,
 													))
 														' ' !== C
 															? ' ' === m
@@ -62754,7 +62825,7 @@
 																: T.push(
 																		(T.pop() ||
 																			'') +
-																			C
+																			C,
 																  )
 															: void 0 === m &&
 															  T.unshift(''),
@@ -62763,14 +62834,14 @@
 														' ' === m &&
 															T.push(
 																(T.pop() ||
-																	'') + ' '
+																	'') + ' ',
 															),
 														'' === T[0] &&
 															(T.shift(),
 															T.unshift(
 																' ' +
 																	(T.shift() ||
-																		'')
+																		''),
 															)),
 														T
 													)
@@ -62813,7 +62884,7 @@
 														)
 													},
 													isInlineNode: function $(
-														D
+														D,
 													) {
 														if (!D) return !0
 														switch (D.type) {
@@ -62831,38 +62902,38 @@
 													mapNode: function u(
 														D,
 														T,
-														m
+														m,
 													) {
 														return T(
 															'children' in D
 																? Object.assign(
 																		Object.assign(
 																			{},
-																			D
+																			D,
 																		),
 																		{},
 																		{
 																			children:
 																				D.children.map(
 																					(
-																						C
+																						C,
 																					) =>
 																						u(
 																							C,
 																							T,
-																							D
-																						)
+																							D,
+																						),
 																				),
-																		}
+																		},
 																  )
 																: D,
-															m
+															m,
 														)
 													},
 													defineShortcut: function i(
 														D,
 														T,
-														m
+														m,
 													) {
 														Object.defineProperty(
 															D,
@@ -62870,12 +62941,12 @@
 															{
 																get: m,
 																enumerable: !1,
-															}
+															},
 														)
 													},
 													isNextLineEmpty: function l(
 														D,
-														T
+														T,
 													) {
 														let m = 0,
 															C = T.length
@@ -62892,7 +62963,7 @@
 																	m++,
 																1 === m &&
 																	/\S/.test(
-																		d
+																		d,
 																	))
 															)
 																return !1
@@ -62930,7 +63001,7 @@
 																		]
 																if (
 																	Array.isArray(
-																		d
+																		d,
 																	) &&
 																	'number' ==
 																		typeof o &&
@@ -62969,17 +63040,17 @@
 																					D
 																						.position
 																						.end
-																						.offset
+																						.offset,
 																				)
 																				.match(
-																					/^[^\n]*\n(.*)$/s
+																					/^[^\n]*\n(.*)$/s,
 																				)[1]
 															if (
 																null ===
 																D.indent
 															) {
 																let B = d.match(
-																	/^(?<leadingSpace> *)[^\n\r ]/m
+																	/^(?<leadingSpace> *)[^\n\r ]/m,
 																)
 																v = B
 																	? B.groups
@@ -62994,7 +63065,7 @@
 															let S = d
 																.split('\n')
 																.map((B) =>
-																	B.slice(v)
+																	B.slice(v),
 																)
 															return 'preserve' ===
 																o.proseWrap ||
@@ -63003,33 +63074,33 @@
 																? b(
 																		S.map(
 																			(
-																				B
+																				B,
 																			) =>
 																				0 ===
 																				B.length
 																					? []
 																					: [
 																							B,
-																					  ]
-																		)
+																					  ],
+																		),
 																  )
 																: b(
 																		S.map(
 																			(
-																				B
+																				B,
 																			) =>
 																				0 ===
 																				B.length
 																					? []
 																					: x(
-																							B
-																					  )
+																							B,
+																					  ),
 																		)
 																			.reduce(
 																				(
 																					B,
 																					k,
-																					M
+																					M,
 																				) =>
 																					0 !==
 																						M &&
@@ -63042,21 +63113,21 @@
 																					k.length >
 																						0 &&
 																					!/^\s/.test(
-																						k[0]
+																						k[0],
 																					) &&
 																					!/^\s|\s$/.test(
 																						t(
-																							B
-																						)
+																							B,
+																						),
 																					)
 																						? [
 																								...B.slice(
 																									0,
-																									-1
+																									-1,
 																								),
 																								[
 																									...t(
-																										B
+																										B,
 																									),
 																									...k,
 																								],
@@ -63065,31 +63136,31 @@
 																								...B,
 																								k,
 																						  ],
-																				[]
+																				[],
 																			)
 																			.map(
 																				(
-																					B
+																					B,
 																				) =>
 																					B.reduce(
 																						(
 																							k,
-																							M
+																							M,
 																						) =>
 																							k.length >
 																								0 &&
 																							/\s$/.test(
 																								t(
-																									k
-																								)
+																									k,
+																								),
 																							)
 																								? [
 																										...k.slice(
 																											0,
-																											-1
+																											-1,
 																										),
 																										t(
-																											k
+																											k,
 																										) +
 																											' ' +
 																											M,
@@ -63098,22 +63169,22 @@
 																										...k,
 																										M,
 																								  ],
-																						[]
-																					)
+																						[],
+																					),
 																			)
 																			.map(
 																				(
-																					B
+																					B,
 																				) =>
 																					'never' ===
 																					o.proseWrap
 																						? [
 																								B.join(
-																									' '
+																									' ',
 																								),
 																						  ]
-																						: B
-																			)
+																						: B,
+																			),
 																  )
 															function b(B) {
 																if (
@@ -63125,7 +63196,7 @@
 																			.length
 																		? B.slice(
 																				0,
-																				-1
+																				-1,
 																		  )
 																		: B
 																let k = 0
@@ -63149,18 +63220,18 @@
 																			-(
 																				k -
 																				1
-																			)
+																			),
 																	  )
 																	: B.slice(
 																			0,
-																			-k
+																			-k,
 																	  )
 															}
 														},
 													getFlowScalarLineContents:
 														function I(D, T, m) {
 															let C = T.split(
-																'\n'
+																'\n',
 															).map((o, d, v) =>
 																0 === d &&
 																d ===
@@ -63173,7 +63244,7 @@
 																	? o.trim()
 																	: 0 === d
 																	? o.trimEnd()
-																	: o.trimStart()
+																	: o.trimStart(),
 															)
 															return 'preserve' ===
 																m.proseWrap
@@ -63183,21 +63254,21 @@
 																			? []
 																			: [
 																					o,
-																			  ]
+																			  ],
 																  )
 																: C.map((o) =>
 																		0 ===
 																		o.length
 																			? []
 																			: x(
-																					o
-																			  )
+																					o,
+																			  ),
 																  )
 																		.reduce(
 																			(
 																				o,
 																				d,
-																				v
+																				v,
 																			) =>
 																				0 !==
 																					v &&
@@ -63213,19 +63284,19 @@
 																					D ||
 																					!t(
 																						t(
-																							o
-																						)
+																							o,
+																						),
 																					).endsWith(
-																						'\\'
+																						'\\',
 																					))
 																					? [
 																							...o.slice(
 																								0,
-																								-1
+																								-1,
 																							),
 																							[
 																								...t(
-																									o
+																									o,
 																								),
 																								...d,
 																							],
@@ -63234,20 +63305,20 @@
 																							...o,
 																							d,
 																					  ],
-																			[]
+																			[],
 																		)
 																		.map(
 																			(
-																				o
+																				o,
 																			) =>
 																				'never' ===
 																				m.proseWrap
 																					? [
 																							o.join(
-																								' '
+																								' ',
 																							),
 																					  ]
-																					: o
+																					: o,
 																		)
 														},
 													getLastDescendantNode:
@@ -63255,8 +63326,8 @@
 															return s(D.children)
 																? y(
 																		t(
-																			D.children
-																		)
+																			D.children,
+																		),
 																  )
 																: D
 														},
@@ -63275,8 +63346,8 @@
 																		t(
 																			m
 																				.head
-																				.endComments
-																		)
+																				.endComments,
+																		),
 																	)
 																)
 															}
@@ -63284,8 +63355,8 @@
 																F(T) &&
 																h(
 																	t(
-																		T.leadingComments
-																	)
+																		T.leadingComments,
+																	),
 																)
 															)
 														},
@@ -63300,7 +63371,7 @@
 										Mg = te({
 											'src/language-yaml/print-preprocess.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -63315,14 +63386,14 @@
 																'head',
 																() =>
 																	u
-																		.children[0]
+																		.children[0],
 															),
 																t(
 																	u,
 																	'body',
 																	() =>
 																		u
-																			.children[1]
+																			.children[1],
 																)
 															break
 														case 'documentBody':
@@ -63335,7 +63406,7 @@
 																'content',
 																() =>
 																	u
-																		.children[0]
+																		.children[0],
 															)
 															break
 														case 'mappingItem':
@@ -63345,14 +63416,14 @@
 																'key',
 																() =>
 																	u
-																		.children[0]
+																		.children[0],
 															),
 																t(
 																	u,
 																	'value',
 																	() =>
 																		u
-																			.children[1]
+																			.children[1],
 																)
 													}
 													return u
@@ -63365,7 +63436,7 @@
 										Mr = te({
 											'src/language-yaml/print/misc.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -63394,11 +63465,11 @@
 												r.exports = {
 													alignWithSpaces: function y(
 														h,
-														g
+														g,
 													) {
 														return s(
 															' '.repeat(h),
-															g
+															g,
 														)
 													},
 													shouldPrintEndComments: p,
@@ -63412,27 +63483,27 @@
 																i.has(f)
 																	? (F =
 																			i.get(
-																				f
+																				f,
 																			))
 																	: ((F =
 																			new Set()),
 																	  i.set(
 																			f,
-																			F
+																			F,
 																	  )),
 																F.has(
 																	c.position
 																		.end
-																		.line
+																		.line,
 																) ||
 																(F.add(
 																	c.position
 																		.end
-																		.line
+																		.line,
 																),
 																!n(c, g) ||
 																	p(
-																		h.getParentNode()
+																		h.getParentNode(),
 																	))
 																	? ''
 																	: t
@@ -63444,7 +63515,7 @@
 										Rg = te({
 											'src/language-yaml/print/flow-mapping-sequence.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -63500,8 +63571,8 @@
 																			n,
 																			f.map(
 																				F,
-																				'endComments'
-																			)
+																				'endComments',
+																			),
 																		),
 																  ]
 																: '',
@@ -63539,12 +63610,12 @@
 																			.line
 																			? y(
 																					N,
-																					_.originalText
+																					_.originalText,
 																			  )
 																			: '',
 																  ],
 														],
-														'children'
+														'children',
 													)
 												}
 												r.exports = {
@@ -63556,7 +63627,7 @@
 										$g = te({
 											'src/language-yaml/print/mapping-item.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -63607,19 +63678,19 @@
 																x.position.start
 																	.offset,
 																x.position.end
-																	.offset
-															)
+																	.offset,
+															),
 														)
 													)
 														return !1
 													switch (I.proseWrap) {
 														case 'never':
 															return !x.value.includes(
-																'\n'
+																'\n',
 															)
 														case 'always':
 															return !/[\n ]/.test(
-																x.value
+																x.value,
 															)
 														default:
 															return !1
@@ -63630,7 +63701,7 @@
 													I,
 													P,
 													$,
-													D
+													D,
 												) {
 													let { key: T, value: m } =
 															x,
@@ -63659,7 +63730,7 @@
 																	x.type ||
 															  !w(
 																	T.content,
-																	D
+																	D,
 															  ) ||
 															  y(T.content) ||
 															  (I.tag &&
@@ -63681,11 +63752,11 @@
 																P.map(
 																	$,
 																	'value',
-																	'leadingComments'
+																	'leadingComments',
 																).map((q) => [
 																	q,
 																	a,
-																])
+																]),
 															),
 															': ',
 															F(2, S),
@@ -63725,7 +63796,7 @@
 														return [d, v, ': ', S]
 													let b =
 															Symbol(
-																'mappingKey'
+																'mappingKey',
 															),
 														B = s([
 															n('? '),
@@ -63778,7 +63849,7 @@
 										Vg = te({
 											'src/language-yaml/print/block.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -63809,14 +63880,14 @@
 												r.exports = function w(
 													E,
 													N,
-													x
+													x,
 												) {
 													let I = E.getValue(),
 														P = h(E, (C) =>
 															F(C, [
 																'sequence',
 																'mapping',
-															])
+															]),
 														),
 														$ = f(E),
 														D = [
@@ -63827,21 +63898,21 @@
 														]
 													null !== I.indent &&
 														D.push(
-															I.indent.toString()
+															I.indent.toString(),
 														),
 														'clip' !== I.chomping &&
 															D.push(
 																'keep' ===
 																	I.chomping
 																	? '+'
-																	: '-'
+																	: '-',
 															),
 														c(I) &&
 															D.push(
 																' ',
 																N(
-																	'indicatorComment'
-																)
+																	'indicatorComment',
+																),
 															)
 													let T = g(I, {
 															parentIndent: P,
@@ -63855,7 +63926,7 @@
 													] of T.entries())
 														0 === C && m.push(n),
 															m.push(
-																a(y(u(i, o)))
+																a(y(u(i, o))),
 															),
 															C !== T.length - 1
 																? m.push(
@@ -63863,8 +63934,8 @@
 																			o.length
 																			? n
 																			: p(
-																					l
-																			  )
+																					l,
+																			  ),
 																  )
 																: 'keep' ===
 																		I.chomping &&
@@ -63874,8 +63945,8 @@
 																			0 ===
 																				o.length
 																				? n
-																				: l
-																		)
+																				: l,
+																		),
 																  )
 													return (
 														null === I.indent
@@ -63883,9 +63954,9 @@
 																	t(
 																		_(
 																			x.tabWidth,
-																			m
-																		)
-																	)
+																			m,
+																		),
+																	),
 															  )
 															: D.push(
 																	s(
@@ -63893,9 +63964,9 @@
 																			I.indent -
 																				1 +
 																				P,
-																			m
-																		)
-																	)
+																			m,
+																		),
+																	),
 															  ),
 														D
 													)
@@ -63905,7 +63976,7 @@
 										Wg = te({
 											'src/language-yaml/printer-yaml.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var {
@@ -63974,8 +64045,8 @@
 													return u(
 														n,
 														ee.map((ce) =>
-															s(y(u(i, ce)))
-														)
+															s(y(u(i, ce))),
+														),
 													)
 												}
 												r.exports = {
@@ -63984,7 +64055,7 @@
 													print: function M(
 														j,
 														Y,
-														ie
+														ie,
 													) {
 														let ee = j.getValue(),
 															ce = []
@@ -63996,8 +64067,8 @@
 																	n,
 																	j.map(
 																		ie,
-																		'leadingComments'
-																	)
+																		'leadingComments',
+																	),
 																),
 																n,
 															])
@@ -64011,7 +64082,9 @@
 																ce.push(' '),
 															K &&
 																ce.push(
-																	ie('anchor')
+																	ie(
+																		'anchor',
+																	),
 																)
 														let de = ''
 														T(ee, [
@@ -64025,7 +64098,7 @@
 															!D(j) &&
 															(de = d(
 																j,
-																Y.originalText
+																Y.originalText,
 															)),
 															(W || K) &&
 																(T(ee, [
@@ -64034,7 +64107,7 @@
 																]) && !x(ee)
 																	? ce.push(n)
 																	: ce.push(
-																			' '
+																			' ',
 																	  )),
 															x(ee) &&
 																ce.push([
@@ -64048,8 +64121,8 @@
 																		n,
 																		j.map(
 																			ie,
-																			'middleComments'
-																		)
+																			'middleComments',
+																		),
 																	),
 																	n,
 																])
@@ -64068,11 +64141,11 @@
 																					ee
 																						.position
 																						.end
-																						.offset
+																						.offset,
 																				)
 																				.trimEnd(),
-																			p
-																		)
+																			p,
+																		),
 																  )
 																: ce.push(
 																		a(
@@ -64081,7 +64154,7 @@
 																				Y,
 																				ie,
 																				ee,
-																				ce
+																				ce,
 																			) {
 																				switch (
 																					j.type
@@ -64097,7 +64170,7 @@
 																						ie.each(
 																							(
 																								ue,
-																								Fe
+																								Fe,
 																							) => {
 																								let z =
 																										W[
@@ -64111,42 +64184,42 @@
 																								0 !==
 																									Fe &&
 																									K.push(
-																										n
+																										n,
 																									),
 																									K.push(
-																										ce()
+																										ce(),
 																									),
 																									J(
 																										z,
-																										U
+																										U,
 																									)
 																										? (K.push(
 																												n,
-																												'...'
+																												'...',
 																										  ),
 																										  I(
-																												z
+																												z,
 																										  ) &&
 																												K.push(
 																													' ',
 																													ce(
-																														'trailingComment'
-																													)
+																														'trailingComment',
+																													),
 																												))
 																										: U &&
 																										  !I(
-																												U.head
+																												U.head,
 																										  ) &&
 																										  K.push(
 																												n,
-																												'---'
+																												'---',
 																										  )
 																							},
-																							'children'
+																							'children',
 																						)
 																						let de =
 																							E(
-																								j
+																								j,
 																							)
 																						return (
 																							(!T(
@@ -64154,12 +64227,12 @@
 																								[
 																									'blockLiteral',
 																									'blockFolded',
-																								]
+																								],
 																							) ||
 																								'keep' !==
 																									de.chomping) &&
 																								K.push(
-																									n
+																									n,
 																								),
 																							K
 																						)
@@ -64173,7 +64246,7 @@
 																									j,
 																									Y,
 																									ie,
-																									ee
+																									ee,
 																								) {
 																									return (ie
 																										.children[0] ===
@@ -64181,13 +64254,13 @@
 																										/---(?:\s|$)/.test(
 																											ee.originalText.slice(
 																												F(
-																													j
+																													j,
 																												),
 																												F(
-																													j
+																													j,
 																												) +
-																													4
-																											)
+																													4,
+																											),
 																										)) ||
 																										j
 																											.head
@@ -64195,15 +64268,15 @@
 																											.length >
 																											0 ||
 																										P(
-																											j.head
+																											j.head,
 																										) ||
 																										I(
-																											j.head
+																											j.head,
 																										)
 																										? 'head'
 																										: !J(
 																												j,
-																												Y
+																												Y,
 																										  ) &&
 																												!!Y &&
 																												'root'
@@ -64215,7 +64288,7 @@
 																											1
 																									],
 																									Y,
-																									ee
+																									ee,
 																								) &&
 																								((j
 																									.head
@@ -64229,11 +64302,11 @@
 																										0) &&
 																									K.push(
 																										ce(
-																											'head'
-																										)
+																											'head',
+																										),
 																									),
 																								I(
-																									j.head
+																									j.head,
 																								)
 																									? K.push(
 																											[
@@ -64243,15 +64316,15 @@
 																													[
 																														'head',
 																														'trailingComment',
-																													]
+																													],
 																												),
-																											]
+																											],
 																									  )
 																									: K.push(
-																											'---'
+																											'---',
 																									  )),
 																							(function q(
-																								j
+																								j,
 																							) {
 																								return (
 																									j
@@ -64260,20 +64333,20 @@
 																										.length >
 																										0 ||
 																									P(
-																										j.body
+																										j.body,
 																									)
 																								)
 																							})(
-																								j
+																								j,
 																							) &&
 																								K.push(
 																									ce(
-																										'body'
-																									)
+																										'body',
+																									),
 																								),
 																							u(
 																								n,
-																								K
+																								K,
 																							)
 																						)
 																					}
@@ -64283,13 +64356,13 @@
 																							[
 																								...ie.map(
 																									ce,
-																									'children'
+																									'children',
 																								),
 																								...ie.map(
 																									ce,
-																									'endComments'
+																									'endComments',
 																								),
-																							]
+																							],
 																						)
 																					case 'documentBody': {
 																						let {
@@ -64309,14 +64382,14 @@
 																						) {
 																							let ue =
 																								E(
-																									j
+																									j,
 																								)
 																							T(
 																								ue,
 																								[
 																									'blockFolded',
 																									'blockLiteral',
-																								]
+																								],
 																							)
 																								? 'keep' !==
 																										ue.chomping &&
@@ -64333,16 +64406,16 @@
 																								n,
 																								ie.map(
 																									ce,
-																									'children'
-																								)
+																									'children',
+																								),
 																							),
 																							de,
 																							u(
 																								n,
 																								ie.map(
 																									ce,
-																									'endComments'
-																								)
+																									'endComments',
+																								),
 																							),
 																						]
 																					}
@@ -64354,7 +64427,7 @@
 																								[
 																									j.name,
 																									...j.parameters,
-																								]
+																								],
 																							),
 																						]
 																					case 'comment':
@@ -64376,7 +64449,7 @@
 																							j
 																								.position
 																								.end
-																								.offset
+																								.offset,
 																						)
 																					case 'anchor':
 																						return [
@@ -64394,9 +64467,9 @@
 																								j
 																									.position
 																									.end
-																									.offset
+																									.offset,
 																							),
-																							ee
+																							ee,
 																						)
 																					case 'quoteDouble':
 																					case 'quoteSingle': {
@@ -64415,18 +64488,18 @@
 																										.position
 																										.end
 																										.offset -
-																										1
+																										1,
 																								)
 																						if (
 																							('quoteSingle' ===
 																								j.type &&
 																								de.includes(
-																									'\\'
+																									'\\',
 																								)) ||
 																							('quoteDouble' ===
 																								j.type &&
 																								/\\[^"]/.test(
-																									de
+																									de,
 																								))
 																						) {
 																							let Fe =
@@ -64439,14 +64512,14 @@
 																								Q(
 																									j.type,
 																									de,
-																									ee
+																									ee,
 																								),
 																								Fe,
 																							]
 																						}
 																						if (
 																							de.includes(
-																								K
+																								K,
 																							)
 																						)
 																							return [
@@ -64458,22 +64531,22 @@
 																										? de
 																												.replace(
 																													/\\"/g,
-																													K
+																													K,
 																												)
 																												.replace(
 																													/'/g,
 																													W.repeat(
-																														2
-																													)
+																														2,
+																													),
 																												)
 																										: de,
-																									ee
+																									ee,
 																								),
 																								W,
 																							]
 																						if (
 																							de.includes(
-																								W
+																								W,
 																							)
 																						)
 																							return [
@@ -64484,10 +64557,10 @@
 																										j.type
 																										? de.replace(
 																												/''/g,
-																												W
+																												W,
 																										  )
 																										: de,
-																									ee
+																									ee,
 																								),
 																								K,
 																							]
@@ -64500,7 +64573,7 @@
 																							Q(
 																								j.type,
 																								de,
-																								ee
+																								ee,
 																							),
 																							ue,
 																						]
@@ -64510,7 +64583,7 @@
 																						return k(
 																							ie,
 																							ce,
-																							ee
+																							ee,
 																						)
 																					case 'mapping':
 																					case 'sequence':
@@ -64518,8 +64591,8 @@
 																							n,
 																							ie.map(
 																								ce,
-																								'children'
-																							)
+																								'children',
+																							),
 																						)
 																					case 'sequenceItem':
 																						return [
@@ -64528,16 +64601,16 @@
 																								2,
 																								j.content
 																									? ce(
-																											'content'
+																											'content',
 																									  )
-																									: ''
+																									: '',
 																							),
 																						]
 																					case 'mappingKey':
 																					case 'mappingValue':
 																						return j.content
 																							? ce(
-																									'content'
+																									'content',
 																							  )
 																							: ''
 																					case 'mappingItem':
@@ -64547,27 +64620,27 @@
 																							Y,
 																							ie,
 																							ce,
-																							ee
+																							ee,
 																						)
 																					case 'flowMapping':
 																						return S(
 																							ie,
 																							ce,
-																							ee
+																							ee,
 																						)
 																					case 'flowSequence':
 																						return b(
 																							ie,
 																							ce,
-																							ee
+																							ee,
 																						)
 																					case 'flowSequenceItem':
 																						return ce(
-																							'content'
+																							'content',
 																						)
 																					default:
 																						throw new Error(
-																							`Unexpected node type ${j.type}`
+																							`Unexpected node type ${j.type}`,
 																						)
 																				}
 																			})(
@@ -64575,9 +64648,9 @@
 																				ue,
 																				j,
 																				Y,
-																				ie
-																			)
-																		)
+																				ie,
+																			),
+																		),
 																  ),
 															I(ee) &&
 																!T(ee, [
@@ -64595,16 +64668,16 @@
 																			ue.type &&
 																		'mapping' ===
 																			j.getParentNode(
-																				2
+																				2,
 																			)
 																				.type &&
 																		m(ee)
 																			? ''
 																			: t,
 																		ie(
-																			'trailingComment'
+																			'trailingComment',
 																		),
-																	])
+																	]),
 																),
 															v(ee) &&
 																ce.push(
@@ -64619,22 +64692,22 @@
 																				n,
 																				j.map(
 																					(
-																						Fe
+																						Fe,
 																					) => [
 																						g(
 																							Y.originalText,
 																							Fe.getValue(),
-																							F
+																							F,
 																						)
 																							? n
 																							: '',
 																						ie(),
 																					],
-																					'endComments'
-																				)
+																					'endComments',
+																				),
 																			),
-																		]
-																	)
+																		],
+																	),
 																),
 															ce.push(de),
 															ce
@@ -64642,7 +64715,7 @@
 													},
 													massageAstNode: function V(
 														j,
-														Y
+														Y,
 													) {
 														if (T(Y))
 															switch (
@@ -64652,7 +64725,7 @@
 																case 'comment':
 																	if (
 																		f(
-																			Y.value
+																			Y.value,
 																		)
 																	)
 																		return null
@@ -64670,7 +64743,7 @@
 										Hg = te({
 											'src/language-yaml/options.js'(
 												e,
-												r
+												r,
 											) {
 												ne()
 												var t = Mt()
@@ -64690,7 +64763,7 @@
 										Ug = te({
 											'node_modules/linguist-languages/data/YAML.json'(
 												e,
-												r
+												r,
 											) {
 												r.exports = {
 													name: 'YAML',
@@ -64746,7 +64819,7 @@
 																...i.filenames.filter(
 																	(l) =>
 																		'yarn.lock' !==
-																		l
+																		l,
 																),
 																'.prettierrc',
 																'.stylelintrc',
@@ -64810,10 +64883,10 @@
 															...(Array.isArray(u)
 																? u
 																: Object.values(
-																		u
+																		u,
 																  )),
 														],
-													}
+													},
 												)),
 												e(...s)
 											)
@@ -64837,7 +64910,7 @@
 											formatDoc: Nt(Ot.formatDoc),
 											printToDoc: Nt(Ot.printToDoc),
 											printDocToString: Nt(
-												Ot.printDocToString
+												Ot.printDocToString,
 											),
 										},
 									}
@@ -64848,14 +64921,14 @@
 				}),
 				import_parser_html = (0,
 				_chunk_NNAAFZ4U_mjs__WEBPACK_IMPORTED_MODULE_0__.v)(
-					require_parser_html()
+					require_parser_html(),
 				),
 				import_standalone = (0,
 				_chunk_NNAAFZ4U_mjs__WEBPACK_IMPORTED_MODULE_0__.v)(
-					require_standalone()
+					require_standalone(),
 				)
 			var formatter = memoizerific__WEBPACK_IMPORTED_MODULE_1___default()(
-				2
+				2,
 			)((type, source) =>
 				!1 === type
 					? source
@@ -64868,14 +64941,14 @@
 							)
 								values[_i - 1] = arguments[_i]
 							var strings = Array.from(
-								'string' == typeof templ ? [templ] : templ
+								'string' == typeof templ ? [templ] : templ,
 							)
 							strings[strings.length - 1] = strings[
 								strings.length - 1
 							].replace(/\r?\n([\t ]*)$/, '')
 							var indentLengths = strings.reduce(function (
 								arr,
-								str
+								str,
 							) {
 								var matches = str.match(/\n([\t ]+|(?!\s).)/g)
 								return matches
@@ -64887,7 +64960,7 @@
 														null ===
 															(_a =
 																match.match(
-																	/[\t ]/g
+																	/[\t ]/g,
 																)) ||
 														void 0 === _a
 															? void 0
@@ -64895,17 +64968,16 @@
 													void 0 !== _b
 													? _b
 													: 0
-											})
+											}),
 									  )
 									: arr
-							},
-							[])
+							}, [])
 							if (indentLengths.length) {
 								var pattern_1 = new RegExp(
 									'\n[\t ]{' +
 										Math.min.apply(Math, indentLengths) +
 										'}',
-									'g'
+									'g',
 								)
 								strings = strings.map(function (str) {
 									return str.replace(pattern_1, '\n')
@@ -64943,7 +65015,7 @@
 								plugins: [import_parser_html.default],
 								htmlWhitespaceSensitivity: 'ignore',
 							})
-							.trim()
+							.trim(),
 			)
 		},
 	},

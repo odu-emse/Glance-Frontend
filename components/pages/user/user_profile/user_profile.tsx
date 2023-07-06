@@ -118,7 +118,7 @@ export type UserProfileProps = {
 			openID: string
 			biography?: string | null
 			phoneNumber?: string | null
-		}
+		},
 	) => void
 	/**
 	 * The user's openID from the session

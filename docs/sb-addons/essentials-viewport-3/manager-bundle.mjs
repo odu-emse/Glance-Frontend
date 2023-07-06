@@ -37,7 +37,7 @@ try {
 			t || !e || !e.__esModule
 				? H(o, 'default', { value: e, enumerable: !0 })
 				: o,
-			e
+			e,
 		)
 	)
 	var m = M(() => {})
@@ -83,7 +83,7 @@ try {
 							n,
 							p,
 							g,
-							h
+							h,
 						)
 					}
 					return g[s].exports
@@ -156,7 +156,7 @@ try {
 										(this.lastItem &&
 											this.isEqual(
 												this.lastItem.key,
-												r
+												r,
 											) &&
 											(this.lastItem = void 0),
 										(i = this.indexOf(r)),
@@ -186,7 +186,7 @@ try {
 											i || this,
 											this.list[x].val,
 											this.list[x].key,
-											this
+											this,
 										)
 								}),
 								(h.prototype.indexOf = function (r) {
@@ -223,7 +223,7 @@ try {
 											l.numArgs !== I + 1
 										)
 											throw new Error(
-												'Memoizerific functions should always be called with the same number of arguments'
+												'Memoizerific functions should always be called with the same number of arguments',
 											)
 										for (E = 0; E < I; E++) {
 											if (
@@ -309,7 +309,7 @@ try {
 					],
 				},
 				{},
-				[3]
+				[3],
 			)(3)
 		})
 	})
@@ -591,7 +591,7 @@ try {
 							}
 					}
 				})
-				.filter(Boolean)
+				.filter(Boolean),
 		),
 		Se = 'storybook-preview-wrapper',
 		Ie = ({ width: e, height: t, ...o }) => ({ ...o, height: e, width: t }),
@@ -636,7 +636,7 @@ try {
 					[x, s] = X(!1)
 				r.find((d) => d.id === n) ||
 					console.warn(
-						`Cannot find "defaultViewport" of "${n}" in addon-viewport configs, please check the "viewports" setting in the configuration.`
+						`Cannot find "defaultViewport" of "${n}" in addon-viewport configs, please check the "viewports" setting in the configuration.`,
 					),
 					L(() => {
 						F(i, h, Object.keys(t))
@@ -692,10 +692,10 @@ try {
 													null,
 													u
 														? `${b.title} (L)`
-														: `${b.title} (P)`
+														: `${b.title} (P)`,
 											  )
-											: null
-									)
+											: null,
+									),
 								),
 								a
 									? S.createElement(
@@ -733,7 +733,7 @@ try {
 											S.createElement(
 												se,
 												{ title: 'Viewport width' },
-												a.width.replace('px', '')
+												a.width.replace('px', ''),
 											),
 											S.createElement(
 												B,
@@ -749,18 +749,18 @@ try {
 												},
 												S.createElement(z, {
 													icon: 'transfer',
-												})
+												}),
 											),
 											S.createElement(
 												se,
 												{ title: 'Viewport height' },
-												a.height.replace('px', '')
-											)
+												a.height.replace('px', ''),
+											),
 									  )
-									: null
+									: null,
 						  )
 				)
-			})
+			}),
 		)
 	N.register(w, () => {
 		N.add(w, {
@@ -774,7 +774,7 @@ try {
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

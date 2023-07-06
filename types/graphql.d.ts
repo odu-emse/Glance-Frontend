@@ -507,163 +507,163 @@ export interface AuthTokens {
 export interface IMutation {
 	login(code?: Nullable<string>): Nullable<string> | Promise<Nullable<string>>
 	createThread(
-		data: IThreadCreateInput
+		data: IThreadCreateInput,
 	): Nullable<Thread> | Promise<Nullable<Thread>>
 	addCommentToThread(
 		parentThreadID: string,
-		data: ICommentCreateInput
+		data: ICommentCreateInput,
 	): Nullable<Thread> | Promise<Nullable<Thread>>
 	upvoteThread(
 		id: string,
-		userID: string
+		userID: string,
 	): Nullable<Thread> | Promise<Nullable<Thread>>
 	downvoteThread(
 		id: string,
-		userID: string
+		userID: string,
 	): Nullable<Thread> | Promise<Nullable<Thread>>
 	updateThread(
 		id: string,
-		data: IThreadCreateInput
+		data: IThreadCreateInput,
 	): Nullable<Thread> | Promise<Nullable<Thread>>
 	deleteThread(id: string): Nullable<Thread> | Promise<Nullable<Thread>>
 	addUserAsWatcherToThread(
 		id: string,
-		userID: string
+		userID: string,
 	): Nullable<Thread> | Promise<Nullable<Thread>>
 	createDirectMessage(
 		receiverID: string,
 		message: string,
-		senderID: string
+		senderID: string,
 	): boolean | Promise<boolean>
 	newGroupMessage(
 		groupID: string,
 		message: string,
-		senderID: string
+		senderID: string,
 	): boolean | Promise<boolean>
 	addPlan(input?: Nullable<PlanInput>): PlanOfStudy | Promise<PlanOfStudy>
 	updatePlan(
 		id: string,
-		input?: Nullable<PlanInput>
+		input?: Nullable<PlanInput>,
 	): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>
 	deletePlan(
-		id: string
+		id: string,
 	): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>
 	deleteSection(id: string): Nullable<Section> | Promise<Nullable<Section>>
 	addSection(input?: Nullable<NewSection>): Section | Promise<Section>
 	updateSection(
-		input?: Nullable<UpdateSection>
+		input?: Nullable<UpdateSection>,
 	): Nullable<Section> | Promise<Nullable<Section>>
 	deleteCourse(id: string): Nullable<Course> | Promise<Nullable<Course>>
 	addCourse(
 		input?: Nullable<CourseInput[]>,
-		many?: Nullable<boolean>
+		many?: Nullable<boolean>,
 	): Course | Promise<Course>
 	updateCourse(
 		id: string,
-		input?: Nullable<CourseInput>
+		input?: Nullable<CourseInput>,
 	): Nullable<Course> | Promise<Nullable<Course>>
 	addAssignment(
-		input?: Nullable<NewAssignment>
+		input?: Nullable<NewAssignment>,
 	): Assignment | Promise<Assignment>
 	addObjectives(
 		id: string,
-		input?: Nullable<string[]>
+		input?: Nullable<string[]>,
 	): Nullable<Section> | Promise<Nullable<Section>>
 	deleteAssignment(
 		section: string,
-		id: string
+		id: string,
 	): Nullable<Section> | Promise<Nullable<Section>>
 	updateAssignment(
 		id: string,
-		input?: Nullable<AssignmentInput>
+		input?: Nullable<AssignmentInput>,
 	): Nullable<Assignment> | Promise<Nullable<Assignment>>
 	addSectionFeedback(
 		sectionId: string,
 		userId: string,
-		input?: Nullable<SectionFeedbackInput>
+		input?: Nullable<SectionFeedbackInput>,
 	): Nullable<Section> | Promise<Nullable<Section>>
 	updateSectionFeedback(
 		id: string,
-		input?: Nullable<SectionFeedbackUpdate>
+		input?: Nullable<SectionFeedbackUpdate>,
 	): Nullable<SectionFeedback> | Promise<Nullable<SectionFeedback>>
 	deleteSectionFeedback(
-		id: string
+		id: string,
 	): Nullable<SectionFeedback> | Promise<Nullable<SectionFeedback>>
 	addAssignmentResult(
-		input?: Nullable<NewAssignmentResult>
+		input?: Nullable<NewAssignmentResult>,
 	): AssignmentResult | Promise<AssignmentResult>
 	updateAssignmentResult(
 		id: string,
-		result: number
+		result: number,
 	): Nullable<AssignmentResult> | Promise<Nullable<AssignmentResult>>
 	deleteAssignmentResult(
-		id: string
+		id: string,
 	): Nullable<AssignmentResult> | Promise<Nullable<AssignmentResult>>
 	addSectionEnrollment(
-		input?: Nullable<SectionEnrollmentInput>
+		input?: Nullable<SectionEnrollmentInput>,
 	): SectionEnrollment | Promise<SectionEnrollment>
 	updateSectionEnrollment(
 		id: string,
-		input?: Nullable<SectionEnrollmentInput>
+		input?: Nullable<SectionEnrollmentInput>,
 	): Nullable<SectionEnrollment> | Promise<Nullable<SectionEnrollment>>
 	deleteSectionEnrollment(
-		id: string
+		id: string,
 	): Nullable<SectionEnrollment> | Promise<Nullable<SectionEnrollment>>
 	pairCourseSection(
 		courseId: string,
-		sectionId: string
+		sectionId: string,
 	): Section | Promise<Section>
 	unpairCourseSection(
 		courseId: string,
-		sectionId: string
+		sectionId: string,
 	): Nullable<Section> | Promise<Nullable<Section>>
 	createCollection(
-		data: CreateCollectionArgs
+		data: CreateCollectionArgs,
 	): Collection | Promise<Collection>
 	updateCollection(
 		id: string,
-		data: CollectionFields
+		data: CollectionFields,
 	): Collection | Promise<Collection>
 	createModule(input: ModuleInput): Module | Promise<Module>
 	updateModule(
 		input?: Nullable<ModuleFields>,
-		replaceObj?: Nullable<boolean>
+		replaceObj?: Nullable<boolean>,
 	): Nullable<Module> | Promise<Nullable<Module>>
 	deleteModule(id: string): Nullable<Module> | Promise<Nullable<Module>>
 	createContent(input: CreateContentArgs): Content | Promise<Content>
 	updateContent(
-		input: ContentFields
+		input: ContentFields,
 	): Nullable<Content[]> | Promise<Nullable<Content[]>>
 	deleteContent(
-		contentID: string
+		contentID: string,
 	): Nullable<Content> | Promise<Nullable<Content>>
 	createLearningPath(
 		planID: string,
-		input: CreateLearningPathInput
+		input: CreateLearningPathInput,
 	): LearningPath | Promise<LearningPath>
 	createPath(
 		planID: string,
-		input: PathInput
+		input: PathInput,
 	): SimpleLearningPath | Promise<SimpleLearningPath>
 	updateLearningPath(
 		planID: string,
 		pathID: string,
-		input: PathInput
+		input: PathInput,
 	): LearningPath | Promise<LearningPath>
 	deleteLearningPath(
 		planID: string,
-		pathID: string
+		pathID: string,
 	): LearningPath | Promise<LearningPath>
 	createProgress(
 		input: ProgressArgs,
-		enrollmentID: string
+		enrollmentID: string,
 	): Progress | Promise<Progress>
 	waiveSection(args: ProgressWaiveArgs): Progress | Promise<Progress>
 	deleteProgress(id: string): boolean | Promise<boolean>
 	updateProgress(
 		status: number,
 		id?: Nullable<string>,
-		enrollmentID?: Nullable<string>
+		enrollmentID?: Nullable<string>,
 	): Progress | Promise<Progress>
 	createQuiz(input?: Nullable<CreateQuiz>): Quiz | Promise<Quiz>
 	updateQuiz(id: string, values: UpdateQuiz): Quiz[] | Promise<Quiz[]>
@@ -671,129 +671,129 @@ export interface IMutation {
 	createQuizInstance(quizID: string): QuizInstance | Promise<QuizInstance>
 	deleteQuizInstance(id: string): QuizInstance | Promise<QuizInstance>
 	createQuestion(
-		input?: Nullable<CreateQuestion>
+		input?: Nullable<CreateQuestion>,
 	): Question | Promise<Question>
 	updateQuestion(
 		id: string,
-		values: UpdateQuestion
+		values: UpdateQuestion,
 	): Question[] | Promise<Question[]>
 	deleteQuestion(id: string): Question | Promise<Question>
 	createAnswer(input: CreateAnswer): Answer | Promise<Answer>
 	updateAnswer(id: string, values: UpdateAnswer): Answer[] | Promise<Answer[]>
 	deleteAnswer(id: string): Answer | Promise<Answer>
 	submitQuiz(
-		input: QuizSubmission
+		input: QuizSubmission,
 	): Nullable<QuizResult> | Promise<Nullable<QuizResult>>
 	updateQuizScore(
 		id: string,
-		newScore: number
+		newScore: number,
 	): Nullable<QuizResult> | Promise<Nullable<QuizResult>>
 	deleteQuizResult(
-		id: string
+		id: string,
 	): Nullable<QuizResult> | Promise<Nullable<QuizResult>>
 	deleteUser(openId: string): Nullable<User> | Promise<Nullable<User>>
 	createUser(input?: Nullable<NewUser>): User | Promise<User>
 	updateUser(
-		input?: Nullable<UpdateUser>
+		input?: Nullable<UpdateUser>,
 	): Nullable<User> | Promise<Nullable<User>>
 	updateInstructorProfile(
 		id: string,
-		input: InstructorProfileInput
+		input: InstructorProfileInput,
 	): Nullable<InstructorProfile> | Promise<Nullable<InstructorProfile>>
 	addSocial(
 		user: string,
-		input?: Nullable<SocialInput>
+		input?: Nullable<SocialInput>,
 	): Social | Promise<Social>
 	updateSocial(
 		id: string,
-		input: SocialInput
+		input: SocialInput,
 	): Nullable<Social> | Promise<Nullable<Social>>
 	updateUserSocial(
 		userId: string,
-		input: SocialInput
+		input: SocialInput,
 	): Nullable<Social> | Promise<Nullable<Social>>
 	deleteSocial(id: string): Nullable<Social> | Promise<Nullable<Social>>
 	deleteUserSocial(
-		userId: string
+		userId: string,
 	): Nullable<Social> | Promise<Nullable<Social>>
 }
 
 export interface IQuery {
 	refresh(
-		token?: Nullable<string>
+		token?: Nullable<string>,
 	): Nullable<string> | Promise<Nullable<string>>
 	thread(input?: Nullable<IThreadByParams>): Thread[] | Promise<Thread[]>
 	directMessages(
-		receiverID: string
+		receiverID: string,
 	): DirectMessageResponse[] | Promise<DirectMessageResponse[]>
 	groups(userID: string): Group[] | Promise<Group[]>
 	groupMessages(
-		groupID: string
+		groupID: string,
 	): DirectMessageResponse[] | Promise<DirectMessageResponse[]>
 	plan(
-		studentID: string
+		studentID: string,
 	): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>
 	plans(): Nullable<PlanOfStudy[]> | Promise<Nullable<PlanOfStudy[]>>
 	planByID(id: string): Nullable<PlanOfStudy> | Promise<Nullable<PlanOfStudy>>
 	planByParams(
-		input?: Nullable<PlanFields>
+		input?: Nullable<PlanFields>,
 	): Nullable<PlanOfStudy[]> | Promise<Nullable<PlanOfStudy[]>>
 	section(
 		input: SectionFields,
-		memberRole?: Nullable<UserRole>
+		memberRole?: Nullable<UserRole>,
 	): Nullable<Section[]> | Promise<Nullable<Section[]>>
 	course(
-		input: CourseFields
+		input: CourseFields,
 	): Nullable<Course[]> | Promise<Nullable<Course[]>>
 	assignment(
-		input: AssignmentFields
+		input: AssignmentFields,
 	): Nullable<Assignment[]> | Promise<Nullable<Assignment[]>>
 	sectionFeedback(
-		input: ModFeedbackFields
+		input: ModFeedbackFields,
 	): Nullable<SectionFeedback[]> | Promise<Nullable<SectionFeedback[]>>
 	assignmentResult(
-		input: AssignmentResFields
+		input: AssignmentResFields,
 	): Nullable<AssignmentResult[]> | Promise<Nullable<AssignmentResult[]>>
 	sectionEnrollment(
-		input: ModEnrollmentFields
+		input: ModEnrollmentFields,
 	): Nullable<SectionEnrollment[]> | Promise<Nullable<SectionEnrollment[]>>
 	modulesBySectionEnrollment(
 		planID: string,
-		sectionID: string
+		sectionID: string,
 	): Nullable<Module[]> | Promise<Nullable<Module[]>>
 	collection(
-		input?: Nullable<CollectionFields>
+		input?: Nullable<CollectionFields>,
 	):
 		| Nullable<Nullable<Collection>[]>
 		| Promise<Nullable<Nullable<Collection>[]>>
 	module(
-		input?: Nullable<ModuleFields>
+		input?: Nullable<ModuleFields>,
 	): Nullable<Module[]> | Promise<Nullable<Module[]>>
 	content(
-		input?: Nullable<ContentFields>
+		input?: Nullable<ContentFields>,
 	): Nullable<Content[]> | Promise<Nullable<Content[]>>
 	learningPath(
 		planID: string,
-		pathID?: Nullable<string>
+		pathID?: Nullable<string>,
 	): LearningPath[] | Promise<LearningPath[]>
 	latestModuleProgress(
 		planID: string,
 		sectionID: string,
-		moduleID: string
+		moduleID: string,
 	): Nullable<ModuleProgress> | Promise<Nullable<ModuleProgress>>
 	modulesFromLearningPath(
-		planID: string
+		planID: string,
 	): Nullable<Module[]> | Promise<Nullable<Module[]>>
 	moduleFlowFromLearningPath(
 		planID: string,
-		moduleID: string
+		moduleID: string,
 	): Nullable<ModuleFlow> | Promise<Nullable<ModuleFlow>>
 	progress(
-		args: ProgressArgs
+		args: ProgressArgs,
 	): Nullable<Progress>[] | Promise<Nullable<Progress>[]>
 	quiz(args: QuizFields): Quiz[] | Promise<Quiz[]>
 	quizInstance(
-		args: QuizInstanceFields
+		args: QuizInstanceFields,
 	): QuizInstance[] | Promise<QuizInstance[]>
 	question(args: QuestionFields): Question[] | Promise<Question[]>
 	answer(args: AnswerFields): Answer[] | Promise<Answer[]>
@@ -802,10 +802,10 @@ export interface IQuery {
 	socials(): Social[] | Promise<Social[]>
 	social(id: string): Nullable<Social> | Promise<Nullable<Social>>
 	socialsByParam(
-		input?: Nullable<SocialFields>
+		input?: Nullable<SocialFields>,
 	): Nullable<Social[]> | Promise<Nullable<Social[]>>
 	instructorProfile(
-		id: string
+		id: string,
 	): Nullable<InstructorProfile> | Promise<Nullable<InstructorProfile>>
 }
 
@@ -826,10 +826,10 @@ export interface Thread {
 
 export interface ISubscription {
 	newDirectMessage(
-		receiverID?: Nullable<string>
+		receiverID?: Nullable<string>,
 	): DirectMessageResponse | Promise<DirectMessageResponse>
 	newGroupMessage(
-		groupID?: Nullable<string>
+		groupID?: Nullable<string>,
 	): DirectMessageResponse | Promise<DirectMessageResponse>
 }
 

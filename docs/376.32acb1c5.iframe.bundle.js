@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function _typeof(obj) {
@@ -36,7 +36,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -61,7 +61,7 @@
 			})
 		},
 		'./node_modules/@babel/runtime/helpers/interopRequireDefault.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -197,7 +197,7 @@
 				value,
 				sourceUnit,
 				targetUnit,
-				precision
+				precision,
 			) {
 				if (!conversions.hasOwnProperty(targetUnit))
 					throw new Error('Cannot convert to ' + targetUnit)
@@ -206,7 +206,7 @@
 						'Cannot convert from ' +
 							sourceUnit +
 							' to ' +
-							targetUnit
+							targetUnit,
 					)
 				var converted = conversions[targetUnit][sourceUnit] * value
 				return !1 !== precision
@@ -218,7 +218,7 @@
 		'./node_modules/d3-scale/src/band.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -226,10 +226,10 @@
 				x: () => point,
 			})
 			var init = __webpack_require__(
-					'./node_modules/d3-scale/src/init.js'
+					'./node_modules/d3-scale/src/init.js',
 				),
 				ordinal = __webpack_require__(
-					'./node_modules/d3-scale/src/ordinal.js'
+					'./node_modules/d3-scale/src/ordinal.js',
 				)
 			function band() {
 				var step,
@@ -273,7 +273,7 @@
 									0 |
 									Math.max(
 										0,
-										Math.ceil((stop - start) / step)
+										Math.ceil((stop - start) / step),
 									),
 								range = new Array(n);
 							++i < n;
@@ -325,7 +325,7 @@
 						return arguments.length
 							? ((paddingInner = Math.min(
 									1,
-									(paddingOuter = +_)
+									(paddingOuter = +_),
 							  )),
 							  rescale())
 							: paddingInner
@@ -374,7 +374,7 @@
 		'./node_modules/d3-scale/src/init.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function initRange(domain, range) {
@@ -414,7 +414,7 @@
 		'./node_modules/d3-scale/src/ordinal.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -492,7 +492,7 @@
 					: value
 			}
 			var init = __webpack_require__(
-				'./node_modules/d3-scale/src/init.js'
+				'./node_modules/d3-scale/src/init.js',
 			)
 			const implicit = Symbol('implicit')
 			function ordinal() {
@@ -538,7 +538,7 @@
 		'./node_modules/d3-shape/src/array.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -552,7 +552,7 @@
 		'./node_modules/d3-shape/src/constant.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function __WEBPACK_DEFAULT_EXPORT__(x) {
@@ -567,7 +567,7 @@
 		'./node_modules/d3-shape/src/path.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { d: () => withPath })
@@ -590,7 +590,7 @@
 										let d = Math.floor(digits)
 										if (!(d >= 0))
 											throw new Error(
-												`invalid digits: ${digits}`
+												`invalid digits: ${digits}`,
 											)
 										if (d > 15) return append
 										const k = 10 ** d
@@ -603,7 +603,7 @@
 											)
 												this._ +=
 													Math.round(
-														arguments[i] * k
+														arguments[i] * k,
 													) /
 														k +
 													strings[i]
@@ -664,9 +664,9 @@
 										(pi -
 											Math.acos(
 												(l21_2 + l01_2 - l20_2) /
-													(2 * l21 * l01)
+													(2 * l21 * l01),
 											)) /
-											2
+											2,
 									),
 								t01 = l / l01,
 								t21 = l / l21
@@ -742,7 +742,7 @@
 		'./node_modules/decimal.js-light/decimal.js': function (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) {
 			var __WEBPACK_AMD_DEFINE_RESULT__
 			!(function (globalScope) {
@@ -903,7 +903,7 @@
 							var Ctor = this.constructor
 							return round(
 								divide(this, new Ctor(y), 0, 1),
-								Ctor.precision
+								Ctor.precision,
 							)
 						}),
 					(P.equals = P.eq =
@@ -959,7 +959,7 @@
 								throw Error(decimalError + 'NaN')
 							if (x.s < 1)
 								throw Error(
-									decimalError + (x.s ? 'NaN' : '-Infinity')
+									decimalError + (x.s ? 'NaN' : '-Infinity'),
 								)
 							return x.eq(ONE)
 								? new Ctor(0)
@@ -1069,8 +1069,8 @@
 																s.toExponential()).slice(
 																0,
 																n.indexOf('e') +
-																	1
-														  ) + e)
+																	1,
+														  ) + e),
 										  )))
 										: (r = new Ctor(s.toString())),
 									s = wpr = (pr = Ctor.precision) + 3;
@@ -1162,7 +1162,7 @@
 									  round(
 											x,
 											dp + getBase10Exponent(x) + 1,
-											rm
+											rm,
 									  ))
 							)
 						}),
@@ -1180,7 +1180,7 @@
 								  (str = toString(
 										(x = round(new Ctor(x), dp + 1, rm)),
 										!0,
-										dp + 1
+										dp + 1,
 								  ))),
 							str
 						)
@@ -1200,10 +1200,10 @@
 									(y = round(
 										new Ctor(x),
 										dp + getBase10Exponent(x) + 1,
-										rm
+										rm,
 									)).abs(),
 									!1,
-									dp + getBase10Exponent(y) + 1
+									dp + getBase10Exponent(y) + 1,
 							  )),
 							  x.isneg() && !x.isZero() ? '-' + str : str)
 					}),
@@ -1214,7 +1214,7 @@
 							return round(
 								new Ctor(x),
 								getBase10Exponent(x) + 1,
-								Ctor.rounding
+								Ctor.rounding,
 							)
 						}),
 					(P.toNumber = function () {
@@ -1290,7 +1290,7 @@
 								? (str = toString(
 										x,
 										(e = getBase10Exponent(x)) <=
-											Ctor.toExpNeg || e >= Ctor.toExpPos
+											Ctor.toExpNeg || e >= Ctor.toExpPos,
 								  ))
 								: (checkInt32(sd, 1, MAX_DIGITS),
 								  void 0 === rm
@@ -1300,7 +1300,7 @@
 										(x = round(new Ctor(x), sd, rm)),
 										sd <= (e = getBase10Exponent(x)) ||
 											e <= Ctor.toExpNeg,
-										sd
+										sd,
 								  ))),
 							str
 						)
@@ -1329,7 +1329,7 @@
 									Ctor = x.constructor
 								return toString(
 									x,
-									e <= Ctor.toExpNeg || e >= Ctor.toExpPos
+									e <= Ctor.toExpNeg || e >= Ctor.toExpPos,
 								)
 							})
 				var divide = (function () {
@@ -1449,12 +1449,12 @@
 															(prod =
 																multiplyInteger(
 																	yd,
-																	k
+																	k,
 																)),
 															rem,
 															(prodL =
 																prod.length),
-															(remL = rem.length)
+															(remL = rem.length),
 														)) &&
 														(k--,
 														subtract(
@@ -1462,7 +1462,7 @@
 															yL < prodL
 																? yz
 																: yd,
-															prodL
+															prodL,
 														)))
 												: (0 == k && (cmp = k = 1),
 												  (prod = yd.slice())),
@@ -1474,13 +1474,13 @@
 													yd,
 													rem,
 													yL,
-													(remL = rem.length)
+													(remL = rem.length),
 												)) < 1 &&
 												(k++,
 												subtract(
 													rem,
 													yL < remL ? yz : yd,
-													remL
+													remL,
 												)),
 										  (remL = rem.length))
 										: 0 === cmp && (k++, (rem = [0])),
@@ -1529,7 +1529,7 @@
 							((pow = round(pow.times(x), wpr)),
 							(denominator = denominator.times(++i)),
 							digitsToString(
-								(t = sum.plus(divide(pow, denominator, wpr))).d
+								(t = sum.plus(divide(pow, denominator, wpr))).d,
 							).slice(0, wpr) ===
 								digitsToString(sum.d).slice(0, wpr))
 						) {
@@ -1555,7 +1555,7 @@
 							((external = !0),
 							pr && (Ctor.precision = pr),
 							Error(
-								decimalError + 'LN10 precision limit exceeded'
+								decimalError + 'LN10 precision limit exceeded',
 							))
 						)
 					return round(new Ctor(Ctor.LN10), sd)
@@ -1600,7 +1600,7 @@
 							(t = getLn10(Ctor, wpr + 2, pr).times(e + '')),
 							(x = ln(
 								new Ctor(c0 + '.' + c.slice(1)),
-								wpr - 10
+								wpr - 10,
 							).plus(t)),
 							(Ctor.precision = pr),
 							null == sd ? ((external = !0), round(x, pr)) : x
@@ -1611,7 +1611,7 @@
 
 					)
 						(c0 = (c = digitsToString((x = x.times(y)).d)).charAt(
-							0
+							0,
 						)),
 							n++
 					for (
@@ -1635,9 +1635,9 @@
 									divide(
 										numerator,
 										new Ctor(denominator),
-										wpr
-									)
-								)).d
+										wpr,
+									),
+								)).d,
 							).slice(0, wpr) ===
 								digitsToString(sum.d).slice(0, wpr))
 						)
@@ -1645,7 +1645,9 @@
 								(sum = sum.times(2)),
 								0 !== e &&
 									(sum = sum.plus(
-										getLn10(Ctor, wpr + 2, pr).times(e + '')
+										getLn10(Ctor, wpr + 2, pr).times(
+											e + '',
+										),
 									)),
 								(sum = divide(sum, new Ctor(n), wpr)),
 								(Ctor.precision = pr),
@@ -1755,7 +1757,7 @@
 								  (sd = sd - k - 1),
 								  (xd[0] = mathpow(
 										10,
-										(LOG_BASE - (sd % LOG_BASE)) % LOG_BASE
+										(LOG_BASE - (sd % LOG_BASE)) % LOG_BASE,
 								  )),
 								  (x.e = mathfloor(-sd / LOG_BASE) || 0))
 								: ((xd.length = 1), (xd[0] = x.e = x.s = 0)),
@@ -1822,7 +1824,7 @@
 									(i =
 										Math.max(
 											Math.ceil(pr / LOG_BASE),
-											len
+											len,
 										) + 2) && ((k = i), (d.length = 1)),
 								d.reverse(),
 								i = k;
@@ -2028,18 +2030,18 @@
 							exports,
 							__webpack_require__,
 							exports,
-							module
+							module,
 						)) || (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)
 			})()
 		},
 		'./node_modules/dom-helpers/class/addClass.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var _interopRequireDefault = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js'
+				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js',
 			)
 			;(exports.__esModule = !0),
 				(exports.default = function addClass(element, className) {
@@ -2055,13 +2057,13 @@
 											element.className.baseVal) ||
 											'') +
 											' ' +
-											className
+											className,
 								  ))
 				})
 			var _hasClass = _interopRequireDefault(
 				__webpack_require__(
-					'./node_modules/dom-helpers/class/hasClass.js'
-				)
+					'./node_modules/dom-helpers/class/hasClass.js',
+				),
 			)
 			module.exports = exports.default
 		},
@@ -2088,9 +2090,9 @@
 					.replace(
 						new RegExp(
 							'(^|\\s)' + classToRemove + '(?:\\s|$)',
-							'g'
+							'g',
 						),
-						'$1'
+						'$1',
 					)
 					.replace(/\s+/g, ' ')
 					.replace(/^\s*|\s*$/g, '')
@@ -2101,7 +2103,7 @@
 					: 'string' == typeof element.className
 					? (element.className = replaceClassName(
 							element.className,
-							className
+							className,
 					  ))
 					: element.setAttribute(
 							'class',
@@ -2109,8 +2111,8 @@
 								(element.className &&
 									element.className.baseVal) ||
 									'',
-								className
-							)
+								className,
+							),
 					  )
 			}
 		},
@@ -2179,7 +2181,7 @@
 					return ee
 				}),
 				(EventEmitter.prototype.listenerCount = function listenerCount(
-					event
+					event,
 				) {
 					var evt = prefix ? prefix + event : event,
 						listeners = this._events[evt]
@@ -2191,7 +2193,7 @@
 					a2,
 					a3,
 					a4,
-					a5
+					a5,
 				) {
 					var evt = prefix ? prefix + event : event
 					if (!this._events[evt]) return !1
@@ -2206,7 +2208,7 @@
 									event,
 									listeners.fn,
 									void 0,
-									!0
+									!0,
 								),
 							len)
 						) {
@@ -2221,7 +2223,7 @@
 									listeners.fn.call(
 										listeners.context,
 										a1,
-										a2
+										a2,
 									),
 									!0
 								)
@@ -2231,7 +2233,7 @@
 										listeners.context,
 										a1,
 										a2,
-										a3
+										a3,
 									),
 									!0
 								)
@@ -2242,7 +2244,7 @@
 										a1,
 										a2,
 										a3,
-										a4
+										a4,
 									),
 									!0
 								)
@@ -2254,7 +2256,7 @@
 										a2,
 										a3,
 										a4,
-										a5
+										a5,
 									),
 									!0
 								)
@@ -2272,7 +2274,7 @@
 										event,
 										listeners[i].fn,
 										void 0,
-										!0
+										!0,
 									),
 								len)
 							) {
@@ -2282,14 +2284,14 @@
 								case 2:
 									listeners[i].fn.call(
 										listeners[i].context,
-										a1
+										a1,
 									)
 									break
 								case 3:
 									listeners[i].fn.call(
 										listeners[i].context,
 										a1,
-										a2
+										a2,
 									)
 									break
 								case 4:
@@ -2297,7 +2299,7 @@
 										listeners[i].context,
 										a1,
 										a2,
-										a3
+										a3,
 									)
 									break
 								default:
@@ -2310,7 +2312,7 @@
 											args[j - 1] = arguments[j]
 									listeners[i].fn.apply(
 										listeners[i].context,
-										args
+										args,
 									)
 							}
 					}
@@ -2322,7 +2324,7 @@
 				(EventEmitter.prototype.once = function once(
 					event,
 					fn,
-					context
+					context,
 				) {
 					return addListener(this, event, fn, context, !0)
 				}),
@@ -2381,7 +2383,7 @@
 		},
 		'./node_modules/fast-equals/dist/fast-equals.js': function (
 			__unused_webpack_module,
-			exports
+			exports,
 		) {
 			!(function (exports) {
 				'use strict'
@@ -2393,7 +2395,7 @@
 						_indexOrKeyB,
 						_parentA,
 						_parentB,
-						meta
+						meta,
 					) {
 						return comparator(a, b, meta)
 					}
@@ -2505,7 +2507,7 @@
 								index,
 								a,
 								b,
-								meta
+								meta,
 							)
 						)
 							return !1
@@ -2537,7 +2539,7 @@
 												matchIndexB,
 												a,
 												b,
-												meta
+												meta,
 											) &&
 											isEqual(
 												aValue,
@@ -2546,7 +2548,7 @@
 												bKey,
 												a,
 												b,
-												meta
+												meta,
 											)) ||
 										(matchedIndices[matchIndexB] = !0),
 										matchIndexB++
@@ -2608,7 +2610,7 @@
 											bKey,
 											a,
 											b,
-											meta
+											meta,
 										)) ||
 										(matchedIndices[matchIndex] = !0),
 										matchIndex++
@@ -2647,13 +2649,13 @@
 						createIsNestedEqual: function () {
 							return sameValueZeroEqual
 						},
-					})
+					}),
 				)
 				function shallowEqual(a, b) {
 					return isShallowEqual(a, b, void 0)
 				}
 				var isCircularDeepEqual = createComparator(
-					DEFAULT_CIRCULAR_CONFIG
+					DEFAULT_CIRCULAR_CONFIG,
 				)
 				function circularDeepEqual(a, b) {
 					return isCircularDeepEqual(a, b, new WeakMap())
@@ -2663,7 +2665,7 @@
 						createIsNestedEqual: function () {
 							return sameValueZeroEqual
 						},
-					})
+					}),
 				)
 				function circularShallowEqual(a, b) {
 					return isCircularShallowEqual(a, b, new WeakMap())
@@ -2672,16 +2674,16 @@
 					return createComparator(
 						merge(
 							DEFAULT_CONFIG,
-							getComparatorOptions(DEFAULT_CONFIG)
-						)
+							getComparatorOptions(DEFAULT_CONFIG),
+						),
 					)
 				}
 				function createCustomCircularEqual(getComparatorOptions) {
 					var comparator = createComparator(
 						merge(
 							DEFAULT_CIRCULAR_CONFIG,
-							getComparatorOptions(DEFAULT_CIRCULAR_CONFIG)
-						)
+							getComparatorOptions(DEFAULT_CIRCULAR_CONFIG),
+						),
 					)
 					return function (a, b, meta) {
 						return (
@@ -2730,10 +2732,10 @@
 		'./node_modules/lodash/_arrayIncludes.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseIndexOf = __webpack_require__(
-				'./node_modules/lodash/_baseIndexOf.js'
+				'./node_modules/lodash/_baseIndexOf.js',
 			)
 			module.exports = function arrayIncludes(array, value) {
 				return (
@@ -2746,7 +2748,7 @@
 			module.exports = function arrayIncludesWith(
 				array,
 				value,
-				comparator
+				comparator,
 			) {
 				for (
 					var index = -1, length = null == array ? 0 : array.length;
@@ -2765,23 +2767,23 @@
 		'./node_modules/lodash/_baseEach.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseForOwn = __webpack_require__(
-					'./node_modules/lodash/_baseForOwn.js'
+					'./node_modules/lodash/_baseForOwn.js',
 				),
 				baseEach = __webpack_require__(
-					'./node_modules/lodash/_createBaseEach.js'
+					'./node_modules/lodash/_createBaseEach.js',
 				)(baseForOwn)
 			module.exports = baseEach
 		},
 		'./node_modules/lodash/_baseEvery.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseEach = __webpack_require__(
-				'./node_modules/lodash/_baseEach.js'
+				'./node_modules/lodash/_baseEach.js',
 			)
 			module.exports = function baseEvery(collection, predicate) {
 				var result = !0
@@ -2796,15 +2798,15 @@
 		'./node_modules/lodash/_baseExtremum.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var isSymbol = __webpack_require__(
-				'./node_modules/lodash/isSymbol.js'
+				'./node_modules/lodash/isSymbol.js',
 			)
 			module.exports = function baseExtremum(
 				array,
 				iteratee,
-				comparator
+				comparator,
 			) {
 				for (
 					var index = -1, length = array.length;
@@ -2830,7 +2832,7 @@
 				array,
 				predicate,
 				fromIndex,
-				fromRight
+				fromRight,
 			) {
 				for (
 					var length = array.length,
@@ -2845,20 +2847,20 @@
 		'./node_modules/lodash/_baseFlatten.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var arrayPush = __webpack_require__(
-					'./node_modules/lodash/_arrayPush.js'
+					'./node_modules/lodash/_arrayPush.js',
 				),
 				isFlattenable = __webpack_require__(
-					'./node_modules/lodash/_isFlattenable.js'
+					'./node_modules/lodash/_isFlattenable.js',
 				)
 			module.exports = function baseFlatten(
 				array,
 				depth,
 				predicate,
 				isStrict,
-				result
+				result,
 			) {
 				var index = -1,
 					length = array.length
@@ -2876,7 +2878,7 @@
 									depth - 1,
 									predicate,
 									isStrict,
-									result
+									result,
 							  )
 							: arrayPush(result, value)
 						: isStrict || (result[result.length] = value)
@@ -2892,16 +2894,16 @@
 		'./node_modules/lodash/_baseIndexOf.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseFindIndex = __webpack_require__(
-					'./node_modules/lodash/_baseFindIndex.js'
+					'./node_modules/lodash/_baseFindIndex.js',
 				),
 				baseIsNaN = __webpack_require__(
-					'./node_modules/lodash/_baseIsNaN.js'
+					'./node_modules/lodash/_baseIsNaN.js',
 				),
 				strictIndexOf = __webpack_require__(
-					'./node_modules/lodash/_strictIndexOf.js'
+					'./node_modules/lodash/_strictIndexOf.js',
 				)
 			module.exports = function baseIndexOf(array, value, fromIndex) {
 				return value == value
@@ -2922,13 +2924,13 @@
 		'./node_modules/lodash/_baseMap.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseEach = __webpack_require__(
-					'./node_modules/lodash/_baseEach.js'
+					'./node_modules/lodash/_baseEach.js',
 				),
 				isArrayLike = __webpack_require__(
-					'./node_modules/lodash/isArrayLike.js'
+					'./node_modules/lodash/isArrayLike.js',
 				)
 			module.exports = function baseMap(collection, iteratee) {
 				var index = -1,
@@ -2946,39 +2948,39 @@
 		'./node_modules/lodash/_baseOrderBy.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var arrayMap = __webpack_require__(
-					'./node_modules/lodash/_arrayMap.js'
+					'./node_modules/lodash/_arrayMap.js',
 				),
 				baseGet = __webpack_require__(
-					'./node_modules/lodash/_baseGet.js'
+					'./node_modules/lodash/_baseGet.js',
 				),
 				baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				baseMap = __webpack_require__(
-					'./node_modules/lodash/_baseMap.js'
+					'./node_modules/lodash/_baseMap.js',
 				),
 				baseSortBy = __webpack_require__(
-					'./node_modules/lodash/_baseSortBy.js'
+					'./node_modules/lodash/_baseSortBy.js',
 				),
 				baseUnary = __webpack_require__(
-					'./node_modules/lodash/_baseUnary.js'
+					'./node_modules/lodash/_baseUnary.js',
 				),
 				compareMultiple = __webpack_require__(
-					'./node_modules/lodash/_compareMultiple.js'
+					'./node_modules/lodash/_compareMultiple.js',
 				),
 				identity = __webpack_require__(
-					'./node_modules/lodash/identity.js'
+					'./node_modules/lodash/identity.js',
 				),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				)
 			module.exports = function baseOrderBy(
 				collection,
 				iteratees,
-				orders
+				orders,
 			) {
 				iteratees = iteratees.length
 					? arrayMap(iteratees, function (iteratee) {
@@ -2988,7 +2990,7 @@
 											value,
 											1 === iteratee.length
 												? iteratee[0]
-												: iteratee
+												: iteratee,
 										)
 								  }
 								: iteratee
@@ -3006,7 +3008,7 @@
 							index: ++index,
 							value,
 						}
-					}
+					},
 				)
 				return baseSortBy(result, function (object, other) {
 					return compareMultiple(object, other, orders)
@@ -3021,7 +3023,7 @@
 					var index = -1,
 						length = nativeMax(
 							nativeCeil((end - start) / (step || 1)),
-							0
+							0,
 						),
 						result = Array(length);
 					length--;
@@ -3035,16 +3037,16 @@
 		'./node_modules/lodash/_baseRest.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var identity = __webpack_require__(
-					'./node_modules/lodash/identity.js'
+					'./node_modules/lodash/identity.js',
 				),
 				overRest = __webpack_require__(
-					'./node_modules/lodash/_overRest.js'
+					'./node_modules/lodash/_overRest.js',
 				),
 				setToString = __webpack_require__(
-					'./node_modules/lodash/_setToString.js'
+					'./node_modules/lodash/_setToString.js',
 				)
 			module.exports = function baseRest(func, start) {
 				return setToString(overRest(func, start, identity), func + '')
@@ -3053,16 +3055,16 @@
 		'./node_modules/lodash/_baseSetToString.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var constant = __webpack_require__(
-					'./node_modules/lodash/constant.js'
+					'./node_modules/lodash/constant.js',
 				),
 				defineProperty = __webpack_require__(
-					'./node_modules/lodash/_defineProperty.js'
+					'./node_modules/lodash/_defineProperty.js',
 				),
 				identity = __webpack_require__(
-					'./node_modules/lodash/identity.js'
+					'./node_modules/lodash/identity.js',
 				),
 				baseSetToString = defineProperty
 					? function (func, string) {
@@ -3092,10 +3094,10 @@
 		'./node_modules/lodash/_baseSome.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseEach = __webpack_require__(
-				'./node_modules/lodash/_baseEach.js'
+				'./node_modules/lodash/_baseEach.js',
 			)
 			module.exports = function baseSome(collection, predicate) {
 				var result
@@ -3118,10 +3120,10 @@
 		'./node_modules/lodash/_baseTrim.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var trimmedEndIndex = __webpack_require__(
-					'./node_modules/lodash/_trimmedEndIndex.js'
+					'./node_modules/lodash/_trimmedEndIndex.js',
 				),
 				reTrimStart = /^\s+/
 			module.exports = function baseTrim(string) {
@@ -3135,25 +3137,25 @@
 		'./node_modules/lodash/_baseUniq.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var SetCache = __webpack_require__(
-					'./node_modules/lodash/_SetCache.js'
+					'./node_modules/lodash/_SetCache.js',
 				),
 				arrayIncludes = __webpack_require__(
-					'./node_modules/lodash/_arrayIncludes.js'
+					'./node_modules/lodash/_arrayIncludes.js',
 				),
 				arrayIncludesWith = __webpack_require__(
-					'./node_modules/lodash/_arrayIncludesWith.js'
+					'./node_modules/lodash/_arrayIncludesWith.js',
 				),
 				cacheHas = __webpack_require__(
-					'./node_modules/lodash/_cacheHas.js'
+					'./node_modules/lodash/_cacheHas.js',
 				),
 				createSet = __webpack_require__(
-					'./node_modules/lodash/_createSet.js'
+					'./node_modules/lodash/_createSet.js',
 				),
 				setToArray = __webpack_require__(
-					'./node_modules/lodash/_setToArray.js'
+					'./node_modules/lodash/_setToArray.js',
 				)
 			module.exports = function baseUniq(array, iteratee, comparator) {
 				var index = -1,
@@ -3191,10 +3193,10 @@
 		'./node_modules/lodash/_castSlice.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseSlice = __webpack_require__(
-				'./node_modules/lodash/_baseSlice.js'
+				'./node_modules/lodash/_baseSlice.js',
 			)
 			module.exports = function castSlice(array, start, end) {
 				var length = array.length
@@ -3209,10 +3211,10 @@
 		'./node_modules/lodash/_compareAscending.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var isSymbol = __webpack_require__(
-				'./node_modules/lodash/isSymbol.js'
+				'./node_modules/lodash/isSymbol.js',
 			)
 			module.exports = function compareAscending(value, other) {
 				if (value !== other) {
@@ -3261,10 +3263,10 @@
 		'./node_modules/lodash/_compareMultiple.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var compareAscending = __webpack_require__(
-				'./node_modules/lodash/_compareAscending.js'
+				'./node_modules/lodash/_compareAscending.js',
 			)
 			module.exports = function compareMultiple(object, other, orders) {
 				for (
@@ -3278,7 +3280,7 @@
 				) {
 					var result = compareAscending(
 						objCriteria[index],
-						othCriteria[index]
+						othCriteria[index],
 					)
 					if (result)
 						return index >= ordersLength
@@ -3291,10 +3293,10 @@
 		'./node_modules/lodash/_createBaseEach.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var isArrayLike = __webpack_require__(
-				'./node_modules/lodash/isArrayLike.js'
+				'./node_modules/lodash/isArrayLike.js',
 			)
 			module.exports = function createBaseEach(eachFunc, fromRight) {
 				return function (collection, iteratee) {
@@ -3316,19 +3318,19 @@
 		'./node_modules/lodash/_createCaseFirst.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var castSlice = __webpack_require__(
-					'./node_modules/lodash/_castSlice.js'
+					'./node_modules/lodash/_castSlice.js',
 				),
 				hasUnicode = __webpack_require__(
-					'./node_modules/lodash/_hasUnicode.js'
+					'./node_modules/lodash/_hasUnicode.js',
 				),
 				stringToArray = __webpack_require__(
-					'./node_modules/lodash/_stringToArray.js'
+					'./node_modules/lodash/_stringToArray.js',
 				),
 				toString = __webpack_require__(
-					'./node_modules/lodash/toString.js'
+					'./node_modules/lodash/toString.js',
 				)
 			module.exports = function createCaseFirst(methodName) {
 				return function (string) {
@@ -3347,13 +3349,13 @@
 		'./node_modules/lodash/_createFind.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				isArrayLike = __webpack_require__(
-					'./node_modules/lodash/isArrayLike.js'
+					'./node_modules/lodash/isArrayLike.js',
 				),
 				keys = __webpack_require__('./node_modules/lodash/keys.js')
 			module.exports = function createFind(findIndexFunc) {
@@ -3376,16 +3378,16 @@
 		'./node_modules/lodash/_createRange.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseRange = __webpack_require__(
-					'./node_modules/lodash/_baseRange.js'
+					'./node_modules/lodash/_baseRange.js',
 				),
 				isIterateeCall = __webpack_require__(
-					'./node_modules/lodash/_isIterateeCall.js'
+					'./node_modules/lodash/_isIterateeCall.js',
 				),
 				toFinite = __webpack_require__(
-					'./node_modules/lodash/toFinite.js'
+					'./node_modules/lodash/toFinite.js',
 				)
 			module.exports = function createRange(fromRight) {
 				return function (start, end, step) {
@@ -3412,12 +3414,12 @@
 		'./node_modules/lodash/_createSet.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var Set = __webpack_require__('./node_modules/lodash/_Set.js'),
 				noop = __webpack_require__('./node_modules/lodash/noop.js'),
 				setToArray = __webpack_require__(
-					'./node_modules/lodash/_setToArray.js'
+					'./node_modules/lodash/_setToArray.js',
 				),
 				createSet =
 					Set && 1 / setToArray(new Set([, -0]))[1] == 1 / 0
@@ -3429,7 +3431,7 @@
 		},
 		'./node_modules/lodash/_hasUnicode.js': (module) => {
 			var reHasUnicode = RegExp(
-				'[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]'
+				'[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]',
 			)
 			module.exports = function hasUnicode(string) {
 				return reHasUnicode.test(string)
@@ -3438,16 +3440,16 @@
 		'./node_modules/lodash/_isFlattenable.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var Symbol = __webpack_require__(
-					'./node_modules/lodash/_Symbol.js'
+					'./node_modules/lodash/_Symbol.js',
 				),
 				isArguments = __webpack_require__(
-					'./node_modules/lodash/isArguments.js'
+					'./node_modules/lodash/isArguments.js',
 				),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : void 0
 			module.exports = function isFlattenable(value) {
@@ -3461,17 +3463,17 @@
 		'./node_modules/lodash/_isIterateeCall.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var eq = __webpack_require__('./node_modules/lodash/eq.js'),
 				isArrayLike = __webpack_require__(
-					'./node_modules/lodash/isArrayLike.js'
+					'./node_modules/lodash/isArrayLike.js',
 				),
 				isIndex = __webpack_require__(
-					'./node_modules/lodash/_isIndex.js'
+					'./node_modules/lodash/_isIndex.js',
 				),
 				isObject = __webpack_require__(
-					'./node_modules/lodash/isObject.js'
+					'./node_modules/lodash/isObject.js',
 				)
 			module.exports = function isIterateeCall(value, index, object) {
 				if (!isObject(object)) return !1
@@ -3487,7 +3489,7 @@
 		'./node_modules/lodash/_overRest.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var apply = __webpack_require__('./node_modules/lodash/_apply.js'),
 				nativeMax = Math.max
@@ -3495,7 +3497,7 @@
 				return (
 					(start = nativeMax(
 						void 0 === start ? func.length - 1 : start,
-						0
+						0,
 					)),
 					function () {
 						for (
@@ -3525,13 +3527,13 @@
 		'./node_modules/lodash/_setToString.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseSetToString = __webpack_require__(
-					'./node_modules/lodash/_baseSetToString.js'
+					'./node_modules/lodash/_baseSetToString.js',
 				),
 				setToString = __webpack_require__(
-					'./node_modules/lodash/_shortOut.js'
+					'./node_modules/lodash/_shortOut.js',
 				)(baseSetToString)
 			module.exports = setToString
 		},
@@ -3564,16 +3566,16 @@
 		'./node_modules/lodash/_stringToArray.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var asciiToArray = __webpack_require__(
-					'./node_modules/lodash/_asciiToArray.js'
+					'./node_modules/lodash/_asciiToArray.js',
 				),
 				hasUnicode = __webpack_require__(
-					'./node_modules/lodash/_hasUnicode.js'
+					'./node_modules/lodash/_hasUnicode.js',
 				),
 				unicodeToArray = __webpack_require__(
-					'./node_modules/lodash/_unicodeToArray.js'
+					'./node_modules/lodash/_unicodeToArray.js',
 				)
 			module.exports = function stringToArray(string) {
 				return hasUnicode(string)
@@ -3620,7 +3622,7 @@
 					')',
 				reUnicode = RegExp(
 					rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq,
-					'g'
+					'g',
 				)
 			module.exports = function unicodeToArray(string) {
 				return string.match(reUnicode) || []
@@ -3636,14 +3638,14 @@
 		'./node_modules/lodash/debounce.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var isObject = __webpack_require__(
-					'./node_modules/lodash/isObject.js'
+					'./node_modules/lodash/isObject.js',
 				),
 				now = __webpack_require__('./node_modules/lodash/now.js'),
 				toNumber = __webpack_require__(
-					'./node_modules/lodash/toNumber.js'
+					'./node_modules/lodash/toNumber.js',
 				),
 				nativeMax = Math.max,
 				nativeMin = Math.min
@@ -3688,10 +3690,10 @@
 							return maxing
 								? nativeMin(
 										timeWaiting,
-										maxWait - (time - lastInvokeTime)
+										maxWait - (time - lastInvokeTime),
 								  )
 								: timeWaiting
-						})(time)
+						})(time),
 					)
 				}
 				function trailingEdge(time) {
@@ -3762,22 +3764,22 @@
 		'./node_modules/lodash/every.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var arrayEvery = __webpack_require__(
-					'./node_modules/lodash/_arrayEvery.js'
+					'./node_modules/lodash/_arrayEvery.js',
 				),
 				baseEvery = __webpack_require__(
-					'./node_modules/lodash/_baseEvery.js'
+					'./node_modules/lodash/_baseEvery.js',
 				),
 				baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isIterateeCall = __webpack_require__(
-					'./node_modules/lodash/_isIterateeCall.js'
+					'./node_modules/lodash/_isIterateeCall.js',
 				)
 			module.exports = function every(collection, predicate, guard) {
 				var func = isArray(collection) ? arrayEvery : baseEvery
@@ -3792,26 +3794,26 @@
 		'./node_modules/lodash/find.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var find = __webpack_require__(
-				'./node_modules/lodash/_createFind.js'
+				'./node_modules/lodash/_createFind.js',
 			)(__webpack_require__('./node_modules/lodash/findIndex.js'))
 			module.exports = find
 		},
 		'./node_modules/lodash/findIndex.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseFindIndex = __webpack_require__(
-					'./node_modules/lodash/_baseFindIndex.js'
+					'./node_modules/lodash/_baseFindIndex.js',
 				),
 				baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				toInteger = __webpack_require__(
-					'./node_modules/lodash/toInteger.js'
+					'./node_modules/lodash/toInteger.js',
 				),
 				nativeMax = Math.max
 			module.exports = function findIndex(array, predicate, fromIndex) {
@@ -3827,10 +3829,10 @@
 		'./node_modules/lodash/flatMap.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseFlatten = __webpack_require__(
-					'./node_modules/lodash/_baseFlatten.js'
+					'./node_modules/lodash/_baseFlatten.js',
 				),
 				map = __webpack_require__('./node_modules/lodash/map.js')
 			module.exports = function flatMap(collection, iteratee) {
@@ -3840,13 +3842,13 @@
 		'./node_modules/lodash/isBoolean.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseGetTag = __webpack_require__(
-					'./node_modules/lodash/_baseGetTag.js'
+					'./node_modules/lodash/_baseGetTag.js',
 				),
 				isObjectLike = __webpack_require__(
-					'./node_modules/lodash/isObjectLike.js'
+					'./node_modules/lodash/isObjectLike.js',
 				)
 			module.exports = function isBoolean(value) {
 				return (
@@ -3860,10 +3862,10 @@
 		'./node_modules/lodash/isEqual.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseIsEqual = __webpack_require__(
-				'./node_modules/lodash/_baseIsEqual.js'
+				'./node_modules/lodash/_baseIsEqual.js',
 			)
 			module.exports = function isEqual(value, other) {
 				return baseIsEqual(value, other)
@@ -3872,10 +3874,10 @@
 		'./node_modules/lodash/isNaN.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var isNumber = __webpack_require__(
-				'./node_modules/lodash/isNumber.js'
+				'./node_modules/lodash/isNumber.js',
 			)
 			module.exports = function isNaN(value) {
 				return isNumber(value) && value != +value
@@ -3889,13 +3891,13 @@
 		'./node_modules/lodash/isNumber.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseGetTag = __webpack_require__(
-					'./node_modules/lodash/_baseGetTag.js'
+					'./node_modules/lodash/_baseGetTag.js',
 				),
 				isObjectLike = __webpack_require__(
-					'./node_modules/lodash/isObjectLike.js'
+					'./node_modules/lodash/isObjectLike.js',
 				)
 			module.exports = function isNumber(value) {
 				return (
@@ -3914,40 +3916,40 @@
 		'./node_modules/lodash/map.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var arrayMap = __webpack_require__(
-					'./node_modules/lodash/_arrayMap.js'
+					'./node_modules/lodash/_arrayMap.js',
 				),
 				baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				baseMap = __webpack_require__(
-					'./node_modules/lodash/_baseMap.js'
+					'./node_modules/lodash/_baseMap.js',
 				),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				)
 			module.exports = function map(collection, iteratee) {
 				return (isArray(collection) ? arrayMap : baseMap)(
 					collection,
-					baseIteratee(iteratee, 3)
+					baseIteratee(iteratee, 3),
 				)
 			}
 		},
 		'./node_modules/lodash/max.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseExtremum = __webpack_require__(
-					'./node_modules/lodash/_baseExtremum.js'
+					'./node_modules/lodash/_baseExtremum.js',
 				),
 				baseGt = __webpack_require__(
-					'./node_modules/lodash/_baseGt.js'
+					'./node_modules/lodash/_baseGt.js',
 				),
 				identity = __webpack_require__(
-					'./node_modules/lodash/identity.js'
+					'./node_modules/lodash/identity.js',
 				)
 			module.exports = function max(array) {
 				return array && array.length
@@ -3958,16 +3960,16 @@
 		'./node_modules/lodash/min.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseExtremum = __webpack_require__(
-					'./node_modules/lodash/_baseExtremum.js'
+					'./node_modules/lodash/_baseExtremum.js',
 				),
 				baseLt = __webpack_require__(
-					'./node_modules/lodash/_baseLt.js'
+					'./node_modules/lodash/_baseLt.js',
 				),
 				identity = __webpack_require__(
-					'./node_modules/lodash/identity.js'
+					'./node_modules/lodash/identity.js',
 				)
 			module.exports = function min(array) {
 				return array && array.length
@@ -3981,7 +3983,7 @@
 		'./node_modules/lodash/now.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var root = __webpack_require__('./node_modules/lodash/_root.js')
 			module.exports = function () {
@@ -3991,32 +3993,32 @@
 		'./node_modules/lodash/range.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var range = __webpack_require__(
-				'./node_modules/lodash/_createRange.js'
+				'./node_modules/lodash/_createRange.js',
 			)()
 			module.exports = range
 		},
 		'./node_modules/lodash/some.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var arraySome = __webpack_require__(
-					'./node_modules/lodash/_arraySome.js'
+					'./node_modules/lodash/_arraySome.js',
 				),
 				baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				baseSome = __webpack_require__(
-					'./node_modules/lodash/_baseSome.js'
+					'./node_modules/lodash/_baseSome.js',
 				),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isIterateeCall = __webpack_require__(
-					'./node_modules/lodash/_isIterateeCall.js'
+					'./node_modules/lodash/_isIterateeCall.js',
 				)
 			module.exports = function some(collection, predicate, guard) {
 				var func = isArray(collection) ? arraySome : baseSome
@@ -4031,19 +4033,19 @@
 		'./node_modules/lodash/sortBy.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseFlatten = __webpack_require__(
-					'./node_modules/lodash/_baseFlatten.js'
+					'./node_modules/lodash/_baseFlatten.js',
 				),
 				baseOrderBy = __webpack_require__(
-					'./node_modules/lodash/_baseOrderBy.js'
+					'./node_modules/lodash/_baseOrderBy.js',
 				),
 				baseRest = __webpack_require__(
-					'./node_modules/lodash/_baseRest.js'
+					'./node_modules/lodash/_baseRest.js',
 				),
 				isIterateeCall = __webpack_require__(
-					'./node_modules/lodash/_isIterateeCall.js'
+					'./node_modules/lodash/_isIterateeCall.js',
 				),
 				sortBy = baseRest(function (collection, iteratees) {
 					if (null == collection) return []
@@ -4056,7 +4058,7 @@
 							  isIterateeCall(
 									iteratees[0],
 									iteratees[1],
-									iteratees[2]
+									iteratees[2],
 							  ) &&
 							  (iteratees = [iteratees[0]]),
 						baseOrderBy(collection, baseFlatten(iteratees, 1), [])
@@ -4067,13 +4069,13 @@
 		'./node_modules/lodash/throttle.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var debounce = __webpack_require__(
-					'./node_modules/lodash/debounce.js'
+					'./node_modules/lodash/debounce.js',
 				),
 				isObject = __webpack_require__(
-					'./node_modules/lodash/isObject.js'
+					'./node_modules/lodash/isObject.js',
 				)
 			module.exports = function throttle(func, wait, options) {
 				var leading = !0,
@@ -4095,10 +4097,10 @@
 		'./node_modules/lodash/toFinite.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var toNumber = __webpack_require__(
-				'./node_modules/lodash/toNumber.js'
+				'./node_modules/lodash/toNumber.js',
 			)
 			module.exports = function toFinite(value) {
 				return value
@@ -4116,10 +4118,10 @@
 		'./node_modules/lodash/toInteger.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var toFinite = __webpack_require__(
-				'./node_modules/lodash/toFinite.js'
+				'./node_modules/lodash/toFinite.js',
 			)
 			module.exports = function toInteger(value) {
 				var result = toFinite(value),
@@ -4134,16 +4136,16 @@
 		'./node_modules/lodash/toNumber.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseTrim = __webpack_require__(
-					'./node_modules/lodash/_baseTrim.js'
+					'./node_modules/lodash/_baseTrim.js',
 				),
 				isObject = __webpack_require__(
-					'./node_modules/lodash/isObject.js'
+					'./node_modules/lodash/isObject.js',
 				),
 				isSymbol = __webpack_require__(
-					'./node_modules/lodash/isSymbol.js'
+					'./node_modules/lodash/isSymbol.js',
 				),
 				reIsBadHex = /^[-+]0x[0-9a-f]+$/i,
 				reIsBinary = /^0b[01]+$/i,
@@ -4173,13 +4175,13 @@
 		'./node_modules/lodash/uniqBy.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var baseIteratee = __webpack_require__(
-					'./node_modules/lodash/_baseIteratee.js'
+					'./node_modules/lodash/_baseIteratee.js',
 				),
 				baseUniq = __webpack_require__(
-					'./node_modules/lodash/_baseUniq.js'
+					'./node_modules/lodash/_baseUniq.js',
 				)
 			module.exports = function uniqBy(array, iteratee) {
 				return array && array.length
@@ -4190,10 +4192,10 @@
 		'./node_modules/lodash/upperFirst.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var upperFirst = __webpack_require__(
-				'./node_modules/lodash/_createCaseFirst.js'
+				'./node_modules/lodash/_createCaseFirst.js',
 			)('toUpperCase')
 			module.exports = upperFirst
 		},
@@ -4201,13 +4203,13 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				function componentWillMount() {
 					var state = this.constructor.getDerivedStateFromProps(
 						this.props,
-						this.state
+						this.state,
 					)
 					null != state && this.setState(state)
 				}
@@ -4217,10 +4219,10 @@
 							var state =
 								this.constructor.getDerivedStateFromProps(
 									nextProps,
-									prevState
+									prevState,
 								)
 							return null != state ? state : null
-						}.bind(this)
+						}.bind(this),
 					)
 				}
 				function componentWillUpdate(nextProps, nextState) {
@@ -4233,7 +4235,7 @@
 							(this.__reactInternalSnapshot =
 								this.getSnapshotBeforeUpdate(
 									prevProps,
-									prevState
+									prevState,
 								))
 					} finally {
 						;(this.props = prevProps), (this.state = prevState)
@@ -4298,7 +4300,7 @@
 								(null !== foundWillUpdateName
 									? '\n  ' + foundWillUpdateName
 									: '') +
-								'\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://fb.me/react-async-component-lifecycle-hooks'
+								'\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://fb.me/react-async-component-lifecycle-hooks',
 						)
 					}
 					if (
@@ -4312,7 +4314,7 @@
 					) {
 						if ('function' != typeof prototype.componentDidUpdate)
 							throw new Error(
-								'Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype'
+								'Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype',
 							)
 						prototype.componentWillUpdate = componentWillUpdate
 						var componentDidUpdate = prototype.componentDidUpdate
@@ -4320,7 +4322,7 @@
 							function componentDidUpdatePolyfill(
 								prevProps,
 								prevState,
-								maybeSnapshot
+								maybeSnapshot,
 							) {
 								var snapshot = this.__reactInternalSnapshotFlag
 									? this.__reactInternalSnapshot
@@ -4329,7 +4331,7 @@
 									this,
 									prevProps,
 									prevState,
-									snapshot
+									snapshot,
 								)
 							}
 					}
@@ -4347,7 +4349,7 @@
 		'./node_modules/react-smooth/es6/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -4356,11 +4358,11 @@
 			})
 			var react = __webpack_require__('./node_modules/react/index.js'),
 				prop_types = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				prop_types_default = __webpack_require__.n(prop_types),
 				fast_equals = __webpack_require__(
-					'./node_modules/fast-equals/dist/fast-equals.js'
+					'./node_modules/fast-equals/dist/fast-equals.js',
 				)
 			function setRafTimeout(callback) {
 				var timeout =
@@ -4424,7 +4426,7 @@
 					})(arr) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -4450,11 +4452,11 @@
 								return 'number' == typeof curr
 									? void setRafTimeout(
 											setStyle.bind(null, restStyles),
-											curr
+											curr,
 									  )
 									: (setStyle(curr),
 									  void setRafTimeout(
-											setStyle.bind(null, restStyles)
+											setStyle.bind(null, restStyles),
 									  ))
 							}
 							'object' === _typeof(_style) &&
@@ -4506,10 +4508,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -4525,13 +4525,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -4551,7 +4554,7 @@
 								var res = prim.call(input, hint || 'default')
 								if ('object' !== util_typeof(res)) return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -4583,7 +4586,7 @@
 						return _objectSpread(
 							_objectSpread({}, res),
 							{},
-							_defineProperty({}, key, fn(key, obj[key]))
+							_defineProperty({}, key, fn(key, obj[key])),
 						)
 					}, {})
 				},
@@ -4599,13 +4602,13 @@
 										/(\w)/,
 										function (v) {
 											return v.toUpperCase()
-										}
+										},
 									),
 									styleVal = value
 								return PREFIX_LIST.reduce(function (
 									result,
 									property,
-									i
+									i,
 								) {
 									return (
 										isTransition &&
@@ -4613,8 +4616,8 @@
 												/(transform|transform-origin)/gim,
 												''.concat(
 													IN_LINE_PREFIX_LIST[i],
-													'$1'
-												)
+													'$1',
+												),
 											)),
 										_objectSpread(
 											_objectSpread({}, result),
@@ -4622,20 +4625,19 @@
 											_defineProperty(
 												{},
 												property + camelName,
-												styleVal
-											)
+												styleVal,
+											),
 										)
 									)
-								},
-								{})
-							})(key, res[key])
+								}, {})
+							})(key, res[key]),
 						)
 					}, style)
 				},
 				getTransitionVal = function getTransitionVal(
 					props,
 					duration,
-					easing
+					easing,
 				) {
 					return props
 						.map(function (prop) {
@@ -4646,12 +4648,12 @@
 											/([A-Z])/g,
 											function (v) {
 												return '-'.concat(
-													v.toLowerCase()
+													v.toLowerCase(),
 												)
-											}
+											},
 										)
 									})(prop),
-									' '
+									' ',
 								)
 								.concat(duration, 'ms ')
 								.concat(easing)
@@ -4712,7 +4714,7 @@
 					easing_unsupportedIterableToArray(arr, i) ||
 					(function easing_nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -4734,7 +4736,7 @@
 					easing_unsupportedIterableToArray(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -4826,7 +4828,7 @@
 											.map(function (x) {
 												return parseFloat(x)
 											}),
-										4
+										4,
 									)
 									;(x1 = _easing$1$split$0$spl2[0]),
 										(y1 = _easing$1$split$0$spl2[1]),
@@ -4848,9 +4850,9 @@
 												.map(function (param, i) {
 													return param * i
 												})
-												.slice(1)
+												.slice(1),
 										),
-										[0]
+										[0],
 									)
 								return multyTime(newParams, t)
 							}
@@ -4917,7 +4919,7 @@
 										stepper = function stepper(
 											currX,
 											destX,
-											currV
+											currV,
 										) {
 											var newV =
 													currV +
@@ -4980,7 +4982,7 @@
 					configUpdate_unsupportedIterableToArray(arr) ||
 					(function configUpdate_nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -4991,10 +4993,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -5009,14 +5009,14 @@
 									configUpdate_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: configUpdate_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -5025,10 +5025,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -5038,7 +5038,7 @@
 					(key = (function configUpdate_toPropertyKey(arg) {
 						var key = (function configUpdate_toPrimitive(
 							input,
-							hint
+							hint,
 						) {
 							if (
 								'object' !== configUpdate_typeof(input) ||
@@ -5051,7 +5051,7 @@
 								if ('object' !== configUpdate_typeof(res))
 									return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -5124,7 +5124,7 @@
 					configUpdate_unsupportedIterableToArray(arr, i) ||
 					(function configUpdate_nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -5162,20 +5162,20 @@
 				calStepperVals = function calStepperVals(
 					easing,
 					preVals,
-					steps
+					steps,
 				) {
 					var nextStepVals = mapObject(function (key, val) {
 						if (needContinue(val)) {
 							var _easing2 = configUpdate_slicedToArray(
 									easing(val.from, val.to, val.velocity),
-									2
+									2,
 								),
 								newX = _easing2[0],
 								newV = _easing2[1]
 							return configUpdate_objectSpread(
 								configUpdate_objectSpread({}, val),
 								{},
-								{ from: newX, velocity: newV }
+								{ from: newX, velocity: newV },
 							)
 						}
 						return val
@@ -5190,14 +5190,14 @@
 												velocity: alpha(
 													val.velocity,
 													nextStepVals[key].velocity,
-													steps
+													steps,
 												),
 												from: alpha(
 													val.from,
 													nextStepVals[key].from,
-													steps
+													steps,
 												),
-											}
+											},
 									  )
 									: val
 						  }, preVals)
@@ -5223,7 +5223,7 @@
 							configUpdate_defineProperty({}, key, [
 								from[key],
 								to[key],
-							])
+							]),
 						)
 					}, {}),
 					stepperStyle = interKeys.reduce(function (res, key) {
@@ -5234,7 +5234,7 @@
 								from: from[key],
 								velocity: 0,
 								to: to[key],
-							})
+							}),
 						)
 					}, {}),
 					cafId = -1,
@@ -5249,32 +5249,31 @@
 								;(stepperStyle = calStepperVals(
 									easing,
 									stepperStyle,
-									steps
+									steps,
 								)),
 									render(
 										configUpdate_objectSpread(
 											configUpdate_objectSpread(
 												configUpdate_objectSpread(
 													{},
-													from
+													from,
 												),
-												to
+												to,
 											),
 											(function getCurrStyle() {
 												return mapObject(function (
 													key,
-													val
+													val,
 												) {
 													return val.from
-												},
-												stepperStyle)
-											})()
-										)
+												}, stepperStyle)
+											})(),
+										),
 									),
 									(preTime = now),
 									(function shouldStopAnimation() {
 										return !Object.values(
-											stepperStyle
+											stepperStyle,
 										).filter(needContinue).length
 									})() ||
 										(cafId = requestAnimationFrame(update))
@@ -5286,8 +5285,8 @@
 										return alpha.apply(
 											void 0,
 											configUpdate_toConsumableArray(
-												val
-											).concat([easing(t)])
+												val,
+											).concat([easing(t)]),
 										)
 									}, timingStyle)
 								if (
@@ -5296,12 +5295,12 @@
 											configUpdate_objectSpread(
 												configUpdate_objectSpread(
 													{},
-													from
+													from,
 												),
-												to
+												to,
 											),
-											currStyle
-										)
+											currStyle,
+										),
 									),
 									t < 1)
 								)
@@ -5309,27 +5308,26 @@
 								else {
 									var finalStyle = mapObject(function (
 										key,
-										val
+										val,
 									) {
 										return alpha.apply(
 											void 0,
 											configUpdate_toConsumableArray(
-												val
-											).concat([easing(1)])
+												val,
+											).concat([easing(1)]),
 										)
-									},
-									timingStyle)
+									}, timingStyle)
 									render(
 										configUpdate_objectSpread(
 											configUpdate_objectSpread(
 												configUpdate_objectSpread(
 													{},
-													from
+													from,
 												),
-												to
+												to,
 											),
-											finalStyle
-										)
+											finalStyle,
+										),
 									)
 								}
 						  }),
@@ -5383,7 +5381,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -5403,7 +5401,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -5440,7 +5438,7 @@
 					})(arr) ||
 					(function Animate_nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -5457,10 +5455,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -5470,25 +5466,32 @@
 				for (var i = 1; i < arguments.length; i++) {
 					var source = null != arguments[i] ? arguments[i] : {}
 					i % 2
-						? Animate_ownKeys(Object(source), !0).forEach(function (
-								key
-						  ) {
-								Animate_defineProperty(target, key, source[key])
-						  })
+						? Animate_ownKeys(Object(source), !0).forEach(
+								function (key) {
+									Animate_defineProperty(
+										target,
+										key,
+										source[key],
+									)
+								},
+						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
-						: Animate_ownKeys(Object(source)).forEach(function (
-								key
-						  ) {
-								Object.defineProperty(
-									target,
-									key,
-									Object.getOwnPropertyDescriptor(source, key)
-								)
-						  })
+						: Animate_ownKeys(Object(source)).forEach(
+								function (key) {
+									Object.defineProperty(
+										target,
+										key,
+										Object.getOwnPropertyDescriptor(
+											source,
+											key,
+										),
+									)
+								},
+						  )
 				}
 				return target
 			}
@@ -5501,7 +5504,7 @@
 						Object.defineProperty(
 							target,
 							Animate_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -5528,8 +5531,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -5556,14 +5559,14 @@
 					return call
 				if (void 0 !== call)
 					throw new TypeError(
-						'Derived constructors may only return object or undefined'
+						'Derived constructors may only return object or undefined',
 					)
 				return _assertThisInitialized(self)
 			}
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -5599,7 +5602,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== Animate_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -5610,7 +5613,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -5620,7 +5623,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -5633,13 +5636,13 @@
 					!(function _classCallCheck(instance, Constructor) {
 						if (!(instance instanceof Constructor))
 							throw new TypeError(
-								'Cannot call a class as a function'
+								'Cannot call a class as a function',
 							)
 					})(this, Animate)
 					var _this$props = (_this = _super.call(
 							this,
 							props,
-							context
+							context,
 						)).props,
 						isActive = _this$props.isActive,
 						attributeName = _this$props.attributeName,
@@ -5650,10 +5653,10 @@
 					if (
 						((_this.handleStyleChange =
 							_this.handleStyleChange.bind(
-								_assertThisInitialized(_this)
+								_assertThisInitialized(_this),
 							)),
 						(_this.changeStyle = _this.changeStyle.bind(
-							_assertThisInitialized(_this)
+							_assertThisInitialized(_this),
 						)),
 						!isActive)
 					)
@@ -5676,7 +5679,7 @@
 								? Animate_defineProperty(
 										{},
 										attributeName,
-										from
+										from,
 								  )
 								: from,
 						}
@@ -5687,13 +5690,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -5730,7 +5733,7 @@
 											!(
 												(0, fast_equals.deepEqual)(
 													prevProps.to,
-													this.props.to
+													this.props.to,
 												) &&
 												prevProps.canBegin &&
 												prevProps.isActive
@@ -5755,7 +5758,7 @@
 														? Animate_defineProperty(
 																{},
 																attributeName,
-																from
+																from,
 														  )
 														: from,
 												}
@@ -5772,11 +5775,11 @@
 												Animate_objectSpread(
 													Animate_objectSpread(
 														{},
-														this.props
+														this.props,
 													),
 													{},
-													{ from, begin: 0 }
-												)
+													{ from, begin: 0 },
+												),
 											)
 										}
 									} else {
@@ -5785,7 +5788,7 @@
 												? Animate_defineProperty(
 														{},
 														attributeName,
-														this.props.to
+														this.props.to,
 												  )
 												: this.props.to,
 										}
@@ -5830,7 +5833,7 @@
 										to,
 										configEasing(easing),
 										duration,
-										this.changeStyle
+										this.changeStyle,
 									)
 								this.manager.start([
 									onAnimationStart,
@@ -5865,7 +5868,7 @@
 												function addStyle(
 													sequence,
 													nextItem,
-													index
+													index,
 												) {
 													if (0 === index)
 														return sequence
@@ -5900,7 +5903,7 @@
 													)
 														return [].concat(
 															Animate_toConsumableArray(
-																sequence
+																sequence,
 															),
 															[
 																_this3.runJSAnimation.bind(
@@ -5910,39 +5913,39 @@
 																		to: style,
 																		duration,
 																		easing,
-																	}
+																	},
 																),
 																duration,
-															]
+															],
 														)
 													var transition =
 															getTransitionVal(
 																properties,
 																duration,
-																easing
+																easing,
 															),
 														newStyle =
 															Animate_objectSpread(
 																Animate_objectSpread(
 																	Animate_objectSpread(
 																		{},
-																		preItem.style
+																		preItem.style,
 																	),
-																	style
+																	style,
 																),
 																{},
-																{ transition }
+																{ transition },
 															)
 													return []
 														.concat(
 															Animate_toConsumableArray(
-																sequence
+																sequence,
 															),
 															[
 																newStyle,
 																duration,
 																onAnimationEnd,
-															]
+															],
 														)
 														.filter(identity)
 												},
@@ -5950,13 +5953,13 @@
 													initialStyle,
 													Math.max(
 														initialTime,
-														begin
+														begin,
 													),
-												]
-											)
+												],
+											),
 										),
-										[props.onAnimationEnd]
-									)
+										[props.onAnimationEnd],
+									),
 								)
 							},
 						},
@@ -5977,7 +5980,7 @@
 									manager = this.manager
 								if (
 									((this.unSubscribe = manager.subscribe(
-										this.handleStyleChange
+										this.handleStyleChange,
 									)),
 									'function' != typeof easing &&
 										'function' != typeof children &&
@@ -5990,13 +5993,13 @@
 												? Animate_defineProperty(
 														{},
 														attributeName,
-														propsTo
+														propsTo,
 												  )
 												: propsTo,
 											transition = getTransitionVal(
 												Object.keys(to),
 												duration,
-												easing
+												easing,
 											)
 										manager.start([
 											onAnimationStart,
@@ -6004,7 +6007,7 @@
 											Animate_objectSpread(
 												Animate_objectSpread({}, to),
 												{},
-												{ transition }
+												{ transition },
 											),
 											duration,
 											onAnimationEnd,
@@ -6046,17 +6049,17 @@
 										_this$props4.onAnimationReStart,
 										_objectWithoutProperties(
 											_this$props4,
-											_excluded
+											_excluded,
 										)),
 									count = react.Children.count(children),
 									stateStyle = translateStyle(
-										this.state.style
+										this.state.style,
 									)
 								if ('function' == typeof children)
 									return children(stateStyle)
 								if (!isActive || 0 === count) return children
 								var cloneContainer = function cloneContainer(
-									container
+									container,
 								) {
 									var _container$props = container.props,
 										_container$props$styl =
@@ -6075,18 +6078,18 @@
 												style: Animate_objectSpread(
 													Animate_objectSpread(
 														{},
-														style
+														style,
 													),
-													stateStyle
+													stateStyle,
 												),
 												className,
-											}
-										)
+											},
+										),
 									)
 								}
 								return 1 === count
 									? cloneContainer(
-											react.Children.only(children)
+											react.Children.only(children),
 									  )
 									: react.createElement(
 											'div',
@@ -6095,8 +6098,8 @@
 												children,
 												function (child) {
 													return cloneContainer(child)
-												}
-											)
+												},
+											),
 									  )
 							},
 						},
@@ -6137,7 +6140,7 @@
 							]),
 							properties: prop_types_default().arrayOf('string'),
 							onAnimationEnd: prop_types_default().func,
-						})
+						}),
 					),
 					children: prop_types_default().oneOfType([
 						prop_types_default().node,
@@ -6165,7 +6168,7 @@
 				})
 			const es6_Animate = Animate
 			var react_transition_group = __webpack_require__(
-					'./node_modules/react-transition-group/index.js'
+					'./node_modules/react-transition-group/index.js',
 				),
 				AnimateGroupChild_excluded = [
 					'children',
@@ -6202,7 +6205,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -6212,7 +6215,7 @@
 			}
 			function AnimateGroupChild_objectWithoutProperties(
 				source,
-				excluded
+				excluded,
 			) {
 				if (null == source) return {}
 				var key,
@@ -6220,7 +6223,7 @@
 					target =
 						(function AnimateGroupChild_objectWithoutPropertiesLoose(
 							source,
-							excluded
+							excluded,
 						) {
 							if (null == source) return {}
 							var key,
@@ -6240,7 +6243,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -6252,10 +6255,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -6270,14 +6271,14 @@
 									AnimateGroupChild_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: AnimateGroupChild_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -6286,10 +6287,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -6303,7 +6304,7 @@
 						Object.defineProperty(
 							target,
 							AnimateGroupChild_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -6330,8 +6331,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -6349,7 +6350,7 @@
 					} else result = Super.apply(this, arguments)
 					return (function AnimateGroupChild_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -6359,7 +6360,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return AnimateGroupChild_assertThisInitialized(self)
 					})(this, result)
@@ -6368,7 +6369,7 @@
 			function AnimateGroupChild_assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -6408,7 +6409,7 @@
 						if ('object' !== AnimateGroupChild_typeof(res))
 							return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -6446,14 +6447,14 @@
 				AnimateGroupChild = (function (_Component) {
 					!(function AnimateGroupChild_inherits(
 						subClass,
-						superClass
+						superClass,
 					) {
 						if (
 							'function' != typeof superClass &&
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -6463,7 +6464,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -6471,7 +6472,7 @@
 							superClass &&
 								AnimateGroupChild_setPrototypeOf(
 									subClass,
-									superClass
+									superClass,
 								)
 					})(AnimateGroupChild, _Component)
 					var _super =
@@ -6480,11 +6481,11 @@
 						var _this
 						!(function AnimateGroupChild_classCallCheck(
 							instance,
-							Constructor
+							Constructor,
 						) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, AnimateGroupChild)
 						for (
@@ -6500,11 +6501,11 @@
 								AnimateGroupChild_assertThisInitialized(
 									(_this = _super.call.apply(
 										_super,
-										[this].concat(args)
-									))
+										[this].concat(args),
+									)),
 								),
 								'state',
-								{ isActive: !1 }
+								{ isActive: !1 },
 							),
 							AnimateGroupChild_defineProperty(
 								AnimateGroupChild_assertThisInitialized(_this),
@@ -6517,18 +6518,18 @@
 									_this.handleStyleActive(
 										isAppearing
 											? appearOptions
-											: enterOptions
+											: enterOptions,
 									)
-								}
+								},
 							),
 							AnimateGroupChild_defineProperty(
 								AnimateGroupChild_assertThisInitialized(_this),
 								'handleExit',
 								function () {
 									_this.handleStyleActive(
-										_this.props.leaveOptions
+										_this.props.leaveOptions,
 									)
-								}
+								},
 							),
 							_this
 						)
@@ -6537,23 +6538,23 @@
 						(function AnimateGroupChild_createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									AnimateGroupChild_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									AnimateGroupChild_defineProperties(
 										Constructor,
-										staticProps
+										staticProps,
 									),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -6572,11 +6573,14 @@
 											AnimateGroupChild_objectSpread(
 												AnimateGroupChild_objectSpread(
 													{},
-													style
+													style,
 												),
 												{},
-												{ onAnimationEnd, isActive: !0 }
-											)
+												{
+													onAnimationEnd,
+													isActive: !0,
+												},
+											),
 										)
 									}
 								},
@@ -6592,13 +6596,13 @@
 										leaveOptions = _this$props2.leaveOptions
 									return (
 										parseDurationOfSingleTransition(
-											appearOptions
+											appearOptions,
 										) +
 										parseDurationOfSingleTransition(
-											enterOptions
+											enterOptions,
 										) +
 										parseDurationOfSingleTransition(
-											leaveOptions
+											leaveOptions,
 										)
 									)
 								},
@@ -6615,7 +6619,7 @@
 											_this$props3.leaveOptions,
 											AnimateGroupChild_objectWithoutProperties(
 												_this$props3,
-												AnimateGroupChild_excluded
+												AnimateGroupChild_excluded,
 											))
 									return react.createElement(
 										react_transition_group.Transition,
@@ -6628,9 +6632,9 @@
 											return react.createElement(
 												es6_Animate,
 												_this2.state,
-												react.Children.only(children)
+												react.Children.only(children),
 											)
-										}
+										},
 									)
 								},
 							},
@@ -6663,9 +6667,9 @@
 								leaveOptions: leave,
 								key: 'child-'.concat(index),
 							},
-							child
+							child,
 						)
-					})
+					}),
 				)
 			}
 			;(AnimateGroup.propTypes = {
@@ -6684,7 +6688,7 @@
 		'./node_modules/react-transition-group/CSSTransition.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			;(exports.__esModule = !0), (exports.default = void 0)
@@ -6707,24 +6711,24 @@
 			})(__webpack_require__('./node_modules/prop-types/index.js'))
 			var _addClass = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/dom-helpers/class/addClass.js'
-					)
+						'./node_modules/dom-helpers/class/addClass.js',
+					),
 				),
 				_removeClass = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/dom-helpers/class/removeClass.js'
-					)
+						'./node_modules/dom-helpers/class/removeClass.js',
+					),
 				),
 				_react = _interopRequireDefault(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_Transition = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/react-transition-group/Transition.js'
-					)
+						'./node_modules/react-transition-group/Transition.js',
+					),
 				)
 			__webpack_require__(
-				'./node_modules/react-transition-group/utils/PropTypes.js'
+				'./node_modules/react-transition-group/utils/PropTypes.js',
 			)
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -6739,7 +6743,7 @@
 								for (var key in source)
 									Object.prototype.hasOwnProperty.call(
 										source,
-										key
+										key,
 									) && (target[key] = source[key])
 							}
 							return target
@@ -6780,13 +6784,13 @@
 							((_this =
 								_React$Component.call.apply(
 									_React$Component,
-									[this].concat(args)
+									[this].concat(args),
 								) || this).onEnter = function (
 								node,
-								appearing
+								appearing,
 							) {
 								var className = _this.getClassNames(
-									appearing ? 'appear' : 'enter'
+									appearing ? 'appear' : 'enter',
 								).className
 								_this.removeClasses(node, 'exit'),
 									addClass(node, className),
@@ -6795,7 +6799,7 @@
 							}),
 							(_this.onEntering = function (node, appearing) {
 								var activeClassName = _this.getClassNames(
-									appearing ? 'appear' : 'enter'
+									appearing ? 'appear' : 'enter',
 								).activeClassName
 								_this.reflowAndAddClass(node, activeClassName),
 									_this.props.onEntering &&
@@ -6804,18 +6808,18 @@
 							(_this.onEntered = function (node, appearing) {
 								var appearClassName =
 										_this.getClassNames(
-											'appear'
+											'appear',
 										).doneClassName,
 									enterClassName =
 										_this.getClassNames(
-											'enter'
+											'enter',
 										).doneClassName,
 									doneClassName = appearing
 										? appearClassName + ' ' + enterClassName
 										: enterClassName
 								_this.removeClasses(
 									node,
-									appearing ? 'appear' : 'enter'
+									appearing ? 'appear' : 'enter',
 								),
 									addClass(node, doneClassName),
 									_this.props.onEntered &&
@@ -6869,7 +6873,7 @@
 					}
 					!(function _inheritsLoose(subClass, superClass) {
 						;(subClass.prototype = Object.create(
-							superClass.prototype
+							superClass.prototype,
 						)),
 							(subClass.prototype.constructor = subClass),
 							(subClass.__proto__ = superClass)
@@ -6878,7 +6882,7 @@
 					return (
 						(_proto.removeClasses = function removeClasses(
 							node,
-							type
+							type,
 						) {
 							var _this$getClassNames6 = this.getClassNames(type),
 								className = _this$getClassNames6.className,
@@ -6894,7 +6898,7 @@
 						}),
 						(_proto.reflowAndAddClass = function reflowAndAddClass(
 							node,
-							className
+							className,
 						) {
 							className &&
 								(node && node.scrollTop,
@@ -6913,7 +6917,7 @@
 										onExit: this.onExit,
 										onExiting: this.onExiting,
 										onExited: this.onExited,
-									})
+									}),
 								)
 							)
 						}),
@@ -6928,23 +6932,23 @@
 		'./node_modules/react-transition-group/ReplaceTransition.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			;(exports.__esModule = !0), (exports.default = void 0)
 			_interopRequireDefault(
-				__webpack_require__('./node_modules/prop-types/index.js')
+				__webpack_require__('./node_modules/prop-types/index.js'),
 			)
 			var _react = _interopRequireDefault(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_reactDom = __webpack_require__(
-					'./node_modules/react-dom/index.js'
+					'./node_modules/react-dom/index.js',
 				),
 				_TransitionGroup = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/react-transition-group/TransitionGroup.js'
-					)
+						'./node_modules/react-transition-group/TransitionGroup.js',
+					),
 				)
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -6964,7 +6968,7 @@
 						((_this =
 							_React$Component.call.apply(
 								_React$Component,
-								[this].concat(_args)
+								[this].concat(_args),
 							) || this).handleEnter = function () {
 							for (
 								var _len2 = arguments.length,
@@ -7044,7 +7048,7 @@
 					(_proto.handleLifecycle = function handleLifecycle(
 						handler,
 						idx,
-						originalArgs
+						originalArgs,
 					) {
 						var _child$props,
 							children = this.props.children,
@@ -7053,11 +7057,11 @@
 						child.props[handler] &&
 							(_child$props = child.props)[handler].apply(
 								_child$props,
-								originalArgs
+								originalArgs,
 							),
 							this.props[handler] &&
 								this.props[handler](
-									(0, _reactDom.findDOMNode)(this)
+									(0, _reactDom.findDOMNode)(this),
 								)
 					}),
 					(_proto.render = function render() {
@@ -7066,7 +7070,7 @@
 							inProp = _this$props.in,
 							props = (function _objectWithoutPropertiesLoose(
 								source,
-								excluded
+								excluded,
 							) {
 								if (null == source) return {}
 								var key,
@@ -7105,7 +7109,7 @@
 											onEnter: this.handleExit,
 											onEntering: this.handleExiting,
 											onEntered: this.handleExited,
-									  })
+									  }),
 							)
 						)
 					}),
@@ -7119,7 +7123,7 @@
 		'./node_modules/react-transition-group/Transition.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			;(exports.__esModule = !0),
@@ -7143,7 +7147,7 @@
 									Object.getOwnPropertyDescriptor
 										? Object.getOwnPropertyDescriptor(
 												obj,
-												key
+												key,
 										  )
 										: {}
 								desc.get || desc.set
@@ -7153,16 +7157,16 @@
 					return (newObj.default = obj), newObj
 				})(__webpack_require__('./node_modules/prop-types/index.js')),
 				_react = _interopRequireDefault(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_reactDom = _interopRequireDefault(
-					__webpack_require__('./node_modules/react-dom/index.js')
+					__webpack_require__('./node_modules/react-dom/index.js'),
 				),
 				_reactLifecyclesCompat = __webpack_require__(
-					'./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js'
+					'./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js',
 				)
 			__webpack_require__(
-				'./node_modules/react-transition-group/utils/PropTypes.js'
+				'./node_modules/react-transition-group/utils/PropTypes.js',
 			)
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -7218,7 +7222,7 @@
 						this.updateStatus(!0, this.appearStatus)
 					}),
 					(_proto.componentDidUpdate = function componentDidUpdate(
-						prevProps
+						prevProps,
 					) {
 						var nextStatus = null
 						if (prevProps !== this.props) {
@@ -7257,7 +7261,7 @@
 					}),
 					(_proto.updateStatus = function updateStatus(
 						mounting,
-						nextStatus
+						nextStatus,
 					) {
 						if (
 							(void 0 === mounting && (mounting = !1),
@@ -7275,7 +7279,7 @@
 					}),
 					(_proto.performEnter = function performEnter(
 						node,
-						mounting
+						mounting,
 					) {
 						var _this2 = this,
 							enter = this.props.enter,
@@ -7293,7 +7297,7 @@
 									function () {
 										_this2.props.onEntering(
 											node,
-											appearing
+											appearing,
 										),
 											_this2.onTransitionEnd(
 												node,
@@ -7304,19 +7308,19 @@
 														function () {
 															_this2.props.onEntered(
 																node,
-																appearing
+																appearing,
 															)
-														}
+														},
 													)
-												}
+												},
 											)
-									}
+									},
 							  ))
 							: this.safeSetState(
 									{ status: 'entered' },
 									function () {
 										_this2.props.onEntered(node)
-									}
+									},
 							  )
 					}),
 					(_proto.performExit = function performExit(node) {
@@ -7337,19 +7341,19 @@
 														{ status: 'exited' },
 														function () {
 															_this3.props.onExited(
-																node
+																node,
 															)
-														}
+														},
 													)
-												}
+												},
 											)
-									}
+									},
 							  ))
 							: this.safeSetState(
 									{ status: 'exited' },
 									function () {
 										_this3.props.onExited(node)
-									}
+									},
 							  )
 					}),
 					(_proto.cancelNextCallback = function cancelNextCallback() {
@@ -7359,13 +7363,13 @@
 					}),
 					(_proto.safeSetState = function safeSetState(
 						nextState,
-						callback
+						callback,
 					) {
 						;(callback = this.setNextCallback(callback)),
 							this.setState(nextState, callback)
 					}),
 					(_proto.setNextCallback = function setNextCallback(
-						callback
+						callback,
 					) {
 						var _this4 = this,
 							active = !0
@@ -7385,7 +7389,7 @@
 					(_proto.onTransitionEnd = function onTransitionEnd(
 						node,
 						timeout,
-						handler
+						handler,
 					) {
 						this.setNextCallback(handler)
 						var doesNotHaveTimeoutOrListener =
@@ -7394,7 +7398,7 @@
 							? (this.props.addEndListener &&
 									this.props.addEndListener(
 										node,
-										this.nextCallback
+										this.nextCallback,
 									),
 							  null != timeout &&
 									setTimeout(this.nextCallback, timeout))
@@ -7408,7 +7412,7 @@
 							childProps =
 								(function _objectWithoutPropertiesLoose(
 									source,
-									excluded
+									excluded,
 								) {
 									if (null == source) return {}
 									var key,
@@ -7476,21 +7480,21 @@
 		'./node_modules/react-transition-group/TransitionGroup.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			;(exports.__esModule = !0), (exports.default = void 0)
 			var _propTypes = _interopRequireDefault(
-					__webpack_require__('./node_modules/prop-types/index.js')
+					__webpack_require__('./node_modules/prop-types/index.js'),
 				),
 				_react = _interopRequireDefault(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_reactLifecyclesCompat = __webpack_require__(
-					'./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js'
+					'./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js',
 				),
 				_ChildMapping = __webpack_require__(
-					'./node_modules/react-transition-group/utils/ChildMapping.js'
+					'./node_modules/react-transition-group/utils/ChildMapping.js',
 				)
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -7505,7 +7509,7 @@
 								for (var key in source)
 									Object.prototype.hasOwnProperty.call(
 										source,
-										key
+										key,
 									) && (target[key] = source[key])
 							}
 							return target
@@ -7516,7 +7520,7 @@
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -7534,8 +7538,8 @@
 								_React$Component.call(this, props, context) ||
 								this).handleExited.bind(
 								_assertThisInitialized(
-									_assertThisInitialized(_this)
-								)
+									_assertThisInitialized(_this),
+								),
 							)
 						return (
 							(_this.state = { handleExited, firstRender: !0 }),
@@ -7544,7 +7548,7 @@
 					}
 					!(function _inheritsLoose(subClass, superClass) {
 						;(subClass.prototype = Object.create(
-							superClass.prototype
+							superClass.prototype,
 						)),
 							(subClass.prototype.constructor = subClass),
 							(subClass.__proto__ = superClass)
@@ -7573,20 +7577,20 @@
 										? (0,
 										  _ChildMapping.getInitialChildMapping)(
 												nextProps,
-												handleExited
+												handleExited,
 										  )
 										: (0,
 										  _ChildMapping.getNextChildMapping)(
 												nextProps,
 												prevChildMapping,
-												handleExited
+												handleExited,
 										  ),
 									firstRender: !1,
 								}
 							}),
 						(_proto.handleExited = function handleExited(
 							child,
-							node
+							node,
 						) {
 							var currentChildMapping = (0,
 							_ChildMapping.getChildMapping)(this.props.children)
@@ -7597,7 +7601,7 @@
 									this.setState(function (state) {
 										var children = _extends(
 											{},
-											state.children
+											state.children,
 										)
 										return (
 											delete children[child.key],
@@ -7611,7 +7615,7 @@
 								childFactory = _this$props.childFactory,
 								props = (function _objectWithoutPropertiesLoose(
 									source,
-									excluded
+									excluded,
 								) {
 									if (null == source) return {}
 									var key,
@@ -7625,7 +7629,7 @@
 									return target
 								})(_this$props, ['component', 'childFactory']),
 								children = values(this.state.children).map(
-									childFactory
+									childFactory,
 								)
 							return (
 								delete props.appear,
@@ -7636,7 +7640,7 @@
 									: _react.default.createElement(
 											Component,
 											props,
-											children
+											children,
 									  )
 							)
 						}),
@@ -7659,28 +7663,28 @@
 		'./node_modules/react-transition-group/index.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var _CSSTransition = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/react-transition-group/CSSTransition.js'
-					)
+						'./node_modules/react-transition-group/CSSTransition.js',
+					),
 				),
 				_ReplaceTransition = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/react-transition-group/ReplaceTransition.js'
-					)
+						'./node_modules/react-transition-group/ReplaceTransition.js',
+					),
 				),
 				_TransitionGroup = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/react-transition-group/TransitionGroup.js'
-					)
+						'./node_modules/react-transition-group/TransitionGroup.js',
+					),
 				),
 				_Transition = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/react-transition-group/Transition.js'
-					)
+						'./node_modules/react-transition-group/Transition.js',
+					),
 				)
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -7695,7 +7699,7 @@
 		'./node_modules/react-transition-group/utils/ChildMapping.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			;(exports.__esModule = !0),
@@ -7713,18 +7717,18 @@
 									enter: getProp(child, 'enter', props),
 									exit: getProp(child, 'exit', props),
 								})
-							}
+							},
 						)
 					}),
 				(exports.getNextChildMapping = function getNextChildMapping(
 					nextProps,
 					prevChildMapping,
-					onExited
+					onExited,
 				) {
 					var nextChildMapping = getChildMapping(nextProps.children),
 						children = mergeChildMappings(
 							prevChildMapping,
-							nextChildMapping
+							nextChildMapping,
 						)
 					return (
 						Object.keys(children).forEach(function (key) {
@@ -7741,24 +7745,24 @@
 										? hasNext &&
 										  hasPrev &&
 										  (0, _react.isValidElement)(
-												prevChild
+												prevChild,
 										  ) &&
 										  (children[key] = (0,
 										  _react.cloneElement)(child, {
 												onExited: onExited.bind(
 													null,
-													child
+													child,
 												),
 												in: prevChild.props.in,
 												exit: getProp(
 													child,
 													'exit',
-													nextProps
+													nextProps,
 												),
 												enter: getProp(
 													child,
 													'enter',
-													nextProps
+													nextProps,
 												),
 										  }))
 										: (children[key] = (0,
@@ -7770,20 +7774,20 @@
 											{
 												onExited: onExited.bind(
 													null,
-													child
+													child,
 												),
 												in: !0,
 												exit: getProp(
 													child,
 													'exit',
-													nextProps
+													nextProps,
 												),
 												enter: getProp(
 													child,
 													'enter',
-													nextProps
+													nextProps,
 												),
-											}
+											},
 									  ))
 							}
 						}),
@@ -7834,7 +7838,7 @@
 				}
 				for (i = 0; i < pendingKeys.length; i++)
 					childMapping[pendingKeys[i]] = getValueForKey(
-						pendingKeys[i]
+						pendingKeys[i],
 					)
 				return childMapping
 			}
@@ -7845,7 +7849,7 @@
 		'./node_modules/react-transition-group/utils/PropTypes.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			;(exports.__esModule = !0),
@@ -7859,20 +7863,20 @@
 		'./node_modules/recharts/es6/cartesian/ErrorBar.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { W: () => ErrorBar })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_container_Layer__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/container/Layer.js'
+						'./node_modules/recharts/es6/container/Layer.js',
 					),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_excluded = [
 					'offset',
@@ -7894,7 +7898,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -7970,7 +7974,7 @@
 					})(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -7987,7 +7991,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -8007,7 +8011,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -8028,7 +8032,7 @@
 					errorBars = data.map(function (entry, i) {
 						var _dataPointFormatter = dataPointFormatter(
 								entry,
-								dataKey
+								dataKey,
 							),
 							x = _dataPointFormatter.x,
 							y = _dataPointFormatter.y,
@@ -8101,22 +8105,22 @@
 									className: 'recharts-errorBar',
 									key: 'bar-'.concat(i),
 								},
-								svgProps
+								svgProps,
 							),
 							lineCoordinates.map(function (coordinates, index) {
 								return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 									'line',
 									_extends({}, coordinates, {
 										key: 'line-'.concat(index),
-									})
+									}),
 								)
-							})
+							}),
 						)
 					})
 				return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 					_container_Layer__WEBPACK_IMPORTED_MODULE_2__.m,
 					{ className: 'recharts-errorBars' },
-					errorBars
+					errorBars,
 				)
 			}
 			;(ErrorBar.defaultProps = {
@@ -8131,7 +8135,7 @@
 		'./node_modules/recharts/es6/chart/generateCategoricalChart.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -8142,11 +8146,11 @@
 				find = __webpack_require__('./node_modules/lodash/find.js'),
 				find_default = __webpack_require__.n(find),
 				isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				throttle = __webpack_require__(
-					'./node_modules/lodash/throttle.js'
+					'./node_modules/lodash/throttle.js',
 				),
 				throttle_default = __webpack_require__.n(throttle),
 				sortBy = __webpack_require__('./node_modules/lodash/sortBy.js'),
@@ -8158,26 +8162,26 @@
 				isNil = __webpack_require__('./node_modules/lodash/isNil.js'),
 				isNil_default = __webpack_require__.n(isNil),
 				isBoolean = __webpack_require__(
-					'./node_modules/lodash/isBoolean.js'
+					'./node_modules/lodash/isBoolean.js',
 				),
 				isBoolean_default = __webpack_require__.n(isBoolean),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isArray_default = __webpack_require__.n(isArray),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				DOMUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DOMUtils.js'
+					'./node_modules/recharts/es6/util/DOMUtils.js',
 				),
 				Global = __webpack_require__(
-					'./node_modules/recharts/es6/util/Global.js'
+					'./node_modules/recharts/es6/util/Global.js',
 				)
 			function getEveryNthWithCondition(array, n, isValid) {
 				if (n < 1) return []
@@ -8213,10 +8217,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -8232,13 +8234,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -8255,7 +8260,7 @@
 								var res = prim.call(input, hint || 'default')
 								if ('object' !== _typeof(res)) return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -8303,7 +8308,7 @@
 					sign =
 						len >= 2
 							? (0, DataUtils.uY)(
-									result[1].coordinate - result[0].coordinate
+									result[1].coordinate - result[0].coordinate,
 							  )
 							: 1
 				if (
@@ -8336,7 +8341,7 @@
 									tailGap > 0
 										? tail.coordinate - tailGap * sign
 										: tail.coordinate,
-							}
+							},
 						)),
 						sign *
 							(tail.tickCoord - (sign * tailSize) / 2 - start) >=
@@ -8352,7 +8357,7 @@
 							(result[len - 1] = _objectSpread(
 								_objectSpread({}, tail),
 								{},
-								{ isShow: !0 }
+								{ isShow: !0 },
 							)))
 				}
 				for (
@@ -8381,13 +8386,13 @@
 									gap < 0
 										? entry.coordinate - gap * sign
 										: entry.coordinate,
-							}
+							},
 						)
 					} else
 						result[i] = entry = _objectSpread(
 							_objectSpread({}, entry),
 							{},
-							{ tickCoord: entry.coordinate }
+							{ tickCoord: entry.coordinate },
 						)
 					sign * (entry.tickCoord - (sign * size) / 2 - start) >= 0 &&
 						sign * (entry.tickCoord + (sign * size) / 2 - end) <=
@@ -8397,7 +8402,7 @@
 						(result[i] = _objectSpread(
 							_objectSpread({}, entry),
 							{},
-							{ isShow: !0 }
+							{ isShow: !0 },
 						)))
 				}
 				return result
@@ -8420,7 +8425,7 @@
 						'number' == typeof interval &&
 							(0, DataUtils.hj)(interval)
 							? interval
-							: 0
+							: 0,
 					)
 				var candidates = []
 				return 'equidistantPreserveStart' === interval
@@ -8432,7 +8437,7 @@
 										N,
 										function (tickItem) {
 											return tickItem.isShow
-										}
+										},
 									);
 								N <= ticks.length;
 
@@ -8443,7 +8448,7 @@
 									++N,
 									function (tickItem) {
 										return tickItem.isShow
-									}
+									},
 								)
 							}
 							return ticks.slice(0, 1)
@@ -8457,7 +8462,7 @@
 								unit,
 								fontSize,
 								letterSpacing,
-							}))
+							})),
 					  )
 					: ((candidates =
 							'preserveStart' === interval ||
@@ -8473,7 +8478,7 @@
 											fontSize,
 											letterSpacing,
 										},
-										'preserveStartEnd' === interval
+										'preserveStartEnd' === interval,
 								  )
 								: (function getTicksEnd(_ref) {
 										var start,
@@ -8510,7 +8515,7 @@
 															result[1]
 																.coordinate -
 																result[0]
-																	.coordinate
+																	.coordinate,
 													  )
 													: 1
 										1 === sign
@@ -8533,11 +8538,11 @@
 										for (var i = len - 1; i >= 0; i--) {
 											var entry = result[i],
 												content = isFunction_default()(
-													tickFormatter
+													tickFormatter,
 												)
 													? tickFormatter(
 															entry.value,
-															len - i - 1
+															len - i - 1,
 													  )
 													: entry.value,
 												size =
@@ -8555,7 +8560,7 @@
 													_objectSpread(
 														_objectSpread(
 															{},
-															entry
+															entry,
 														),
 														{},
 														{
@@ -8564,20 +8569,20 @@
 																	? entry.coordinate -
 																	  gap * sign
 																	: entry.coordinate,
-														}
+														},
 													)
 											} else
 												result[i] = entry =
 													_objectSpread(
 														_objectSpread(
 															{},
-															entry
+															entry,
 														),
 														{},
 														{
 															tickCoord:
 																entry.coordinate,
-														}
+														},
 													)
 											sign *
 												(entry.tickCoord -
@@ -8597,7 +8602,7 @@
 												(result[i] = _objectSpread(
 													_objectSpread({}, entry),
 													{},
-													{ isShow: !0 }
+													{ isShow: !0 },
 												)))
 										}
 										return result
@@ -8616,22 +8621,22 @@
 					  }))
 			}
 			var Surface = __webpack_require__(
-					'./node_modules/recharts/es6/container/Surface.js'
+					'./node_modules/recharts/es6/container/Surface.js',
 				),
 				Layer = __webpack_require__(
-					'./node_modules/recharts/es6/container/Layer.js'
+					'./node_modules/recharts/es6/container/Layer.js',
 				),
 				Tooltip = __webpack_require__(
-					'./node_modules/recharts/es6/component/Tooltip.js'
+					'./node_modules/recharts/es6/component/Tooltip.js',
 				),
 				Legend = __webpack_require__(
-					'./node_modules/recharts/es6/component/Legend.js'
+					'./node_modules/recharts/es6/component/Legend.js',
 				),
 				Curve = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Curve.js'
+					'./node_modules/recharts/es6/shape/Curve.js',
 				),
 				ReactUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ReactUtils.js'
+					'./node_modules/recharts/es6/util/ReactUtils.js',
 				)
 			function Cross_typeof(obj) {
 				return (
@@ -8662,7 +8667,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -8679,7 +8684,7 @@
 						Object.defineProperty(
 							target,
 							Cross_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -8706,8 +8711,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -8731,12 +8736,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -8762,7 +8767,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== Cross_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -8773,7 +8778,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -8783,7 +8788,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -8796,7 +8801,7 @@
 						(function _classCallCheck(instance, Constructor) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, Cross),
 						_super.apply(this, arguments)
@@ -8806,13 +8811,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -8847,13 +8852,13 @@
 													{},
 													(0, ReactUtils.L6)(
 														this.props,
-														!0
+														!0,
 													),
 													{
 														className:
 															classnames_default()(
 																'recharts-cross',
-																className
+																className,
 															),
 														d: Cross.getPath(
 															x,
@@ -8861,10 +8866,10 @@
 															width,
 															height,
 															top,
-															left
+															left,
 														),
-													}
-												)
+													},
+												),
 										  )
 										: null
 								},
@@ -8879,7 +8884,7 @@
 									width,
 									height,
 									top,
-									left
+									left,
 								) {
 									return 'M'
 										.concat(x, ',')
@@ -8890,7 +8895,7 @@
 										.concat(width)
 								},
 							},
-						]
+						],
 					),
 					Cross
 				)
@@ -8916,25 +8921,25 @@
 				height: 0,
 			})
 			var Sector = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Sector.js'
+					'./node_modules/recharts/es6/shape/Sector.js',
 				),
 				Dot = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Dot.js'
+					'./node_modules/recharts/es6/shape/Dot.js',
 				),
 				Rectangle = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Rectangle.js'
+					'./node_modules/recharts/es6/shape/Rectangle.js',
 				),
 				ShallowEqual = __webpack_require__(
-					'./node_modules/recharts/es6/util/ShallowEqual.js'
+					'./node_modules/recharts/es6/util/ShallowEqual.js',
 				),
 				Text = __webpack_require__(
-					'./node_modules/recharts/es6/component/Text.js'
+					'./node_modules/recharts/es6/component/Text.js',
 				),
 				Label = __webpack_require__(
-					'./node_modules/recharts/es6/component/Label.js'
+					'./node_modules/recharts/es6/component/Label.js',
 				),
 				types = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				),
 				_excluded = ['viewBox'],
 				_excluded2 = ['viewBox'],
@@ -8968,7 +8973,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -8982,10 +8987,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -9000,14 +9003,14 @@
 									CartesianAxis_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: CartesianAxis_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -9016,10 +9019,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -9030,7 +9033,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -9050,7 +9053,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -9065,7 +9068,7 @@
 						Object.defineProperty(
 							target,
 							CartesianAxis_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -9092,8 +9095,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -9111,7 +9114,7 @@
 					} else result = Super.apply(this, arguments)
 					return (function CartesianAxis_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -9121,14 +9124,14 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function CartesianAxis_assertThisInitialized(
-							self
+							self,
 						) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -9170,7 +9173,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== CartesianAxis_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -9183,7 +9186,7 @@
 				!(function CartesianAxis_inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -9193,7 +9196,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -9207,11 +9210,11 @@
 					return (
 						(function CartesianAxis_classCallCheck(
 							instance,
-							Constructor
+							Constructor,
 						) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, CartesianAxis),
 						((_this = _super.call(this, props)).state = {
@@ -9225,18 +9228,18 @@
 					(function CartesianAxis_createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								CartesianAxis_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								CartesianAxis_defineProperties(
 									Constructor,
-									staticProps
+									staticProps,
 								),
 							Object.defineProperty(Constructor, 'prototype', {
 								writable: !1,
@@ -9250,31 +9253,31 @@
 								key: 'shouldComponentUpdate',
 								value: function shouldComponentUpdate(
 									_ref,
-									nextState
+									nextState,
 								) {
 									var viewBox = _ref.viewBox,
 										restProps = _objectWithoutProperties(
 											_ref,
-											_excluded
+											_excluded,
 										),
 										_this$props = this.props,
 										viewBoxOld = _this$props.viewBox,
 										restPropsOld = _objectWithoutProperties(
 											_this$props,
-											_excluded2
+											_excluded2,
 										)
 									return (
 										!(0, ShallowEqual.w)(
 											viewBox,
-											viewBoxOld
+											viewBoxOld,
 										) ||
 										!(0, ShallowEqual.w)(
 											restProps,
-											restPropsOld
+											restPropsOld,
 										) ||
 										!(0, ShallowEqual.w)(
 											nextState,
-											this.state
+											this.state,
 										)
 									)
 								},
@@ -9286,17 +9289,17 @@
 									if (htmlLayer) {
 										var tick =
 											htmlLayer.getElementsByClassName(
-												'recharts-cartesian-axis-tick-value'
+												'recharts-cartesian-axis-tick-value',
 											)[0]
 										tick &&
 											this.setState({
 												fontSize:
 													window.getComputedStyle(
-														tick
+														tick,
 													).fontSize,
 												letterSpacing:
 													window.getComputedStyle(
-														tick
+														tick,
 													).letterSpacing,
 											})
 									}
@@ -9324,7 +9327,7 @@
 										finalTickSize =
 											data.tickSize || tickSize,
 										tickCoord = (0, DataUtils.hj)(
-											data.tickCoord
+											data.tickCoord,
 										)
 											? data.tickCoord
 											: data.coordinate
@@ -9444,13 +9447,13 @@
 												CartesianAxis_objectSpread(
 													{},
 													(0, ReactUtils.L6)(
-														this.props
-													)
+														this.props,
+													),
 												),
-												(0, ReactUtils.L6)(axisLine)
+												(0, ReactUtils.L6)(axisLine),
 											),
 											{},
-											{ fill: 'none' }
+											{ fill: 'none' },
 										)
 									if (
 										'top' === orientation ||
@@ -9464,7 +9467,7 @@
 										props = CartesianAxis_objectSpread(
 											CartesianAxis_objectSpread(
 												{},
-												props
+												props,
 											),
 											{},
 											{
@@ -9472,7 +9475,7 @@
 												y1: y + needHeight * height,
 												x2: x + width,
 												y2: y + needHeight * height,
-											}
+											},
 										)
 									} else {
 										var needWidth = +(
@@ -9483,7 +9486,7 @@
 										props = CartesianAxis_objectSpread(
 											CartesianAxis_objectSpread(
 												{},
-												props
+												props,
 											),
 											{},
 											{
@@ -9491,7 +9494,7 @@
 												y1: y,
 												x2: x + needWidth * width,
 												y2: y + height,
-											}
+											},
 										)
 									}
 									return react.createElement(
@@ -9501,10 +9504,10 @@
 												'recharts-cartesian-axis-line',
 												get_default()(
 													axisLine,
-													'className'
-												)
+													'className',
+												),
 											),
-										})
+										}),
 									)
 								},
 							},
@@ -9513,7 +9516,7 @@
 								value: function renderTicks(
 									ticks,
 									fontSize,
-									letterSpacing
+									letterSpacing,
 								) {
 									var _this2 = this,
 										_this$props6 = this.props,
@@ -9527,133 +9530,136 @@
 											CartesianAxis_objectSpread(
 												CartesianAxis_objectSpread(
 													{},
-													this.props
+													this.props,
 												),
 												{},
-												{ ticks }
+												{ ticks },
 											),
 											fontSize,
-											letterSpacing
+											letterSpacing,
 										),
 										textAnchor = this.getTickTextAnchor(),
 										verticalAnchor =
 											this.getTickVerticalAnchor(),
 										axisProps = (0, ReactUtils.L6)(
-											this.props
+											this.props,
 										),
 										customTickProps = (0, ReactUtils.L6)(
-											tick
+											tick,
 										),
 										tickLineProps =
 											CartesianAxis_objectSpread(
 												CartesianAxis_objectSpread(
 													{},
-													axisProps
+													axisProps,
 												),
 												{},
 												{ fill: 'none' },
-												(0, ReactUtils.L6)(tickLine)
+												(0, ReactUtils.L6)(tickLine),
 											),
-										items = finalTicks.map(function (
-											entry,
-											i
-										) {
-											var _this2$getTickLineCoo =
-													_this2.getTickLineCoord(
-														entry
-													),
-												lineCoord =
-													_this2$getTickLineCoo.line,
-												tickCoord =
-													_this2$getTickLineCoo.tick,
-												tickProps =
-													CartesianAxis_objectSpread(
+										items = finalTicks.map(
+											function (entry, i) {
+												var _this2$getTickLineCoo =
+														_this2.getTickLineCoord(
+															entry,
+														),
+													lineCoord =
+														_this2$getTickLineCoo.line,
+													tickCoord =
+														_this2$getTickLineCoo.tick,
+													tickProps =
 														CartesianAxis_objectSpread(
 															CartesianAxis_objectSpread(
 																CartesianAxis_objectSpread(
-																	{
-																		textAnchor,
-																		verticalAnchor,
-																	},
-																	axisProps
-																),
-																{},
-																{
-																	stroke: 'none',
-																	fill: stroke,
-																},
-																customTickProps
-															),
-															tickCoord
-														),
-														{},
-														{
-															index: i,
-															payload: entry,
-															visibleTicksCount:
-																finalTicks.length,
-															tickFormatter,
-														}
-													)
-											return react.createElement(
-												Layer.m,
-												CartesianAxis_extends(
-													{
-														className:
-															'recharts-cartesian-axis-tick',
-														key: 'tick-'.concat(i),
-													},
-													(0, types.bw)(
-														_this2.props,
-														entry,
-														i
-													)
-												),
-												tickLine &&
-													react.createElement(
-														'line',
-														CartesianAxis_extends(
-															{},
-															tickLineProps,
-															lineCoord,
-															{
-																className:
-																	classnames_default()(
-																		'recharts-cartesian-axis-tick-line',
-																		get_default()(
-																			tickLine,
-																			'className'
-																		)
+																	CartesianAxis_objectSpread(
+																		{
+																			textAnchor,
+																			verticalAnchor,
+																		},
+																		axisProps,
 																	),
-															}
+																	{},
+																	{
+																		stroke: 'none',
+																		fill: stroke,
+																	},
+																	customTickProps,
+																),
+																tickCoord,
+															),
+															{},
+															{
+																index: i,
+																payload: entry,
+																visibleTicksCount:
+																	finalTicks.length,
+																tickFormatter,
+															},
 														)
+												return react.createElement(
+													Layer.m,
+													CartesianAxis_extends(
+														{
+															className:
+																'recharts-cartesian-axis-tick',
+															key: 'tick-'.concat(
+																i,
+															),
+														},
+														(0, types.bw)(
+															_this2.props,
+															entry,
+															i,
+														),
 													),
-												tick &&
-													CartesianAxis.renderTickItem(
-														tick,
-														tickProps,
-														''
-															.concat(
-																isFunction_default()(
-																	tickFormatter
+													tickLine &&
+														react.createElement(
+															'line',
+															CartesianAxis_extends(
+																{},
+																tickLineProps,
+																lineCoord,
+																{
+																	className:
+																		classnames_default()(
+																			'recharts-cartesian-axis-tick-line',
+																			get_default()(
+																				tickLine,
+																				'className',
+																			),
+																		),
+																},
+															),
+														),
+													tick &&
+														CartesianAxis.renderTickItem(
+															tick,
+															tickProps,
+															''
+																.concat(
+																	isFunction_default()(
+																		tickFormatter,
+																	)
+																		? tickFormatter(
+																				entry.value,
+																				i,
+																		  )
+																		: entry.value,
 																)
-																	? tickFormatter(
-																			entry.value,
-																			i
-																	  )
-																	: entry.value
-															)
-															.concat(unit || '')
-													)
-											)
-										})
+																.concat(
+																	unit || '',
+																),
+														),
+												)
+											},
+										)
 									return react.createElement(
 										'g',
 										{
 											className:
 												'recharts-cartesian-axis-ticks',
 										},
-										items
+										items,
 									)
 								},
 							},
@@ -9673,7 +9679,7 @@
 										ticks = _this$props8.ticks,
 										noTicksProps = _objectWithoutProperties(
 											_this$props8,
-											_excluded3
+											_excluded3,
 										),
 										finalTicks = ticks
 									return (
@@ -9682,7 +9688,7 @@
 												ticks && ticks.length > 0
 													? ticksGenerator(this.props)
 													: ticksGenerator(
-															noTicksProps
+															noTicksProps,
 													  )),
 										width <= 0 ||
 										height <= 0 ||
@@ -9695,10 +9701,10 @@
 														className:
 															classnames_default()(
 																'recharts-cartesian-axis',
-																className
+																className,
 															),
 														ref: function ref(
-															_ref2
+															_ref2,
 														) {
 															_this3.layerReference =
 																_ref2
@@ -9709,11 +9715,12 @@
 													this.renderTicks(
 														finalTicks,
 														this.state.fontSize,
-														this.state.letterSpacing
+														this.state
+															.letterSpacing,
 													),
 													Label._.renderCallByParent(
-														this.props
-													)
+														this.props,
+													),
 											  )
 									)
 								},
@@ -9725,7 +9732,7 @@
 								value: function renderTickItem(
 									option,
 									props,
-									value
+									value,
 								) {
 									return react.isValidElement(option)
 										? react.cloneElement(option, props)
@@ -9739,13 +9746,13 @@
 													{
 														className:
 															'recharts-cartesian-axis-tick-value',
-													}
+													},
 												),
-												value
+												value,
 										  )
 								},
 							},
-						]
+						],
 					),
 					CartesianAxis
 				)
@@ -9753,7 +9760,7 @@
 			CartesianAxis_defineProperty(
 				CartesianAxis,
 				'displayName',
-				'CartesianAxis'
+				'CartesianAxis',
 			),
 				CartesianAxis_defineProperty(CartesianAxis, 'defaultProps', {
 					x: 0,
@@ -9774,10 +9781,10 @@
 					interval: 'preserveEnd',
 				})
 			var band = __webpack_require__(
-					'./node_modules/d3-scale/src/band.js'
+					'./node_modules/d3-scale/src/band.js',
 				),
 				ChartUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ChartUtils.js'
+					'./node_modules/recharts/es6/util/ChartUtils.js',
 				)
 			function CssPrefixUtils_typeof(obj) {
 				return (
@@ -9804,10 +9811,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -9822,14 +9827,14 @@
 									CssPrefixUtils_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: CssPrefixUtils_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -9838,10 +9843,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -9851,7 +9856,7 @@
 					(key = (function CssPrefixUtils_toPropertyKey(arg) {
 						var key = (function CssPrefixUtils_toPrimitive(
 							input,
-							hint
+							hint,
 						) {
 							if (
 								'object' !== CssPrefixUtils_typeof(input) ||
@@ -9864,7 +9869,7 @@
 								if ('object' !== CssPrefixUtils_typeof(res))
 									return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -9913,7 +9918,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -9927,10 +9932,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -9940,21 +9943,28 @@
 				for (var i = 1; i < arguments.length; i++) {
 					var source = null != arguments[i] ? arguments[i] : {}
 					i % 2
-						? Brush_ownKeys(Object(source), !0).forEach(function (
-								key
-						  ) {
-								Brush_defineProperty(target, key, source[key])
-						  })
+						? Brush_ownKeys(Object(source), !0).forEach(
+								function (key) {
+									Brush_defineProperty(
+										target,
+										key,
+										source[key],
+									)
+								},
+						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: Brush_ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -9969,7 +9979,7 @@
 						Object.defineProperty(
 							target,
 							Brush_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -9996,8 +10006,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -10014,7 +10024,7 @@
 					} else result = Super.apply(this, arguments)
 					return (function Brush_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -10024,7 +10034,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return Brush_assertThisInitialized(self)
 					})(this, result)
@@ -10033,7 +10043,7 @@
 			function Brush_assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -10069,7 +10079,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== Brush_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -10086,7 +10096,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -10096,7 +10106,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -10110,16 +10120,16 @@
 						return (
 							(function Brush_classCallCheck(
 								instance,
-								Constructor
+								Constructor,
 							) {
 								if (!(instance instanceof Constructor))
 									throw new TypeError(
-										'Cannot call a class as a function'
+										'Cannot call a class as a function',
 									)
 							})(this, Brush),
 							Brush_defineProperty(
 								Brush_assertThisInitialized(
-									(_this = _super.call(this, props))
+									(_this = _super.call(this, props)),
 								),
 								'handleDrag',
 								function (e) {
@@ -10130,7 +10140,7 @@
 											? _this.handleTravellerMove(e)
 											: _this.state.isSlideMoving &&
 											  _this.handleSlideDrag(e)
-								}
+								},
 							),
 							Brush_defineProperty(
 								Brush_assertThisInitialized(_this),
@@ -10139,7 +10149,7 @@
 									null != e.changedTouches &&
 										e.changedTouches.length > 0 &&
 										_this.handleDrag(e.changedTouches[0])
-								}
+								},
 							),
 							Brush_defineProperty(
 								Brush_assertThisInitialized(_this),
@@ -10150,7 +10160,7 @@
 										isSlideMoving: !1,
 									}),
 										_this.detachDragEndListener()
-								}
+								},
 							),
 							Brush_defineProperty(
 								Brush_assertThisInitialized(_this),
@@ -10160,23 +10170,23 @@
 										_this.state.isSlideMoving) &&
 										(_this.leaveTimer = window.setTimeout(
 											_this.handleDragEnd,
-											_this.props.leaveTimeOut
+											_this.props.leaveTimeOut,
 										))
-								}
+								},
 							),
 							Brush_defineProperty(
 								Brush_assertThisInitialized(_this),
 								'handleEnterSlideOrTraveller',
 								function () {
 									_this.setState({ isTextActive: !0 })
-								}
+								},
 							),
 							Brush_defineProperty(
 								Brush_assertThisInitialized(_this),
 								'handleLeaveSlideOrTraveller',
 								function () {
 									_this.setState({ isTextActive: !1 })
-								}
+								},
 							),
 							Brush_defineProperty(
 								Brush_assertThisInitialized(_this),
@@ -10191,16 +10201,16 @@
 										slideMoveStartX: event.pageX,
 									}),
 										_this.attachDragEndListener()
-								}
+								},
 							),
 							(_this.travellerDragStartHandlers = {
 								startX: _this.handleTravellerDragStart.bind(
 									Brush_assertThisInitialized(_this),
-									'startX'
+									'startX',
 								),
 								endX: _this.handleTravellerDragStart.bind(
 									Brush_assertThisInitialized(_this),
-									'endX'
+									'endX',
 								),
 							}),
 							(_this.state = {}),
@@ -10211,23 +10221,23 @@
 						(function Brush_createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									Brush_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									Brush_defineProperties(
 										Constructor,
-										staticProps
+										staticProps,
 									),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -10258,11 +10268,11 @@
 											max = Math.max(startX, endX),
 											minIndex = Brush.getIndexInRange(
 												scaleValues,
-												min
+												min,
 											),
 											maxIndex = Brush.getIndexInRange(
 												scaleValues,
-												max
+												max,
 											)
 										return {
 											startIndex:
@@ -10286,10 +10296,10 @@
 											text = (0, ChartUtils.F$)(
 												data[index],
 												dataKey,
-												index
+												index,
 											)
 										return isFunction_default()(
-											tickFormatter
+											tickFormatter,
 										)
 											? tickFormatter(text, index)
 											: text
@@ -10301,17 +10311,17 @@
 										window.addEventListener(
 											'mouseup',
 											this.handleDragEnd,
-											!0
+											!0,
 										),
 											window.addEventListener(
 												'touchend',
 												this.handleDragEnd,
-												!0
+												!0,
 											),
 											window.addEventListener(
 												'mousemove',
 												this.handleDrag,
-												!0
+												!0,
 											)
 									},
 								},
@@ -10321,17 +10331,17 @@
 										window.removeEventListener(
 											'mouseup',
 											this.handleDragEnd,
-											!0
+											!0,
 										),
 											window.removeEventListener(
 												'touchend',
 												this.handleDragEnd,
-												!0
+												!0,
 											),
 											window.removeEventListener(
 												'mousemove',
 												this.handleDrag,
-												!0
+												!0,
 											)
 									},
 								},
@@ -10363,13 +10373,13 @@
 													x +
 														width -
 														travellerWidth -
-														startX
+														startX,
 											  ))
 											: delta < 0 &&
 											  (delta = Math.max(
 													delta,
 													x - startX,
-													x - endX
+													x - endX,
 											  ))
 										var newIndex = this.getIndex({
 											startX: startX + delta,
@@ -10390,7 +10400,7 @@
 									key: 'handleTravellerDragStart',
 									value: function handleTravellerDragStart(
 										id,
-										e
+										e,
 									) {
 										var event = isTouch(e)
 											? e.changedTouches[0]
@@ -10436,12 +10446,12 @@
 													x +
 														width -
 														travellerWidth -
-														prevValue
+														prevValue,
 											  ))
 											: delta < 0 &&
 											  (delta = Math.max(
 													delta,
-													x - prevValue
+													x - prevValue,
 											  )),
 											(params[movingTravellerId] =
 												prevValue + delta)
@@ -10452,12 +10462,12 @@
 											(Brush_defineProperty(
 												(_this$setState = {}),
 												movingTravellerId,
-												prevValue + delta
+												prevValue + delta,
 											),
 											Brush_defineProperty(
 												_this$setState,
 												'brushMoveStartX',
-												e.pageX
+												e.pageX,
 											),
 											_this$setState),
 											function () {
@@ -10493,7 +10503,7 @@
 														)
 													})() &&
 													onChange(newIndex)
-											}
+											},
 										)
 									},
 								},
@@ -10547,7 +10557,7 @@
 									key: 'renderTravellerLayer',
 									value: function renderTravellerLayer(
 										travellerX,
-										id
+										id,
 									) {
 										var _this$props7 = this.props,
 											y = _this$props7.y,
@@ -10557,14 +10567,14 @@
 											traveller = _this$props7.traveller,
 											x = Math.max(
 												travellerX,
-												this.props.x
+												this.props.x,
 											),
 											travellerProps = Brush_objectSpread(
 												Brush_objectSpread(
 													{},
 													(0, ReactUtils.L6)(
-														this.props
-													)
+														this.props,
+													),
 												),
 												{},
 												{
@@ -10572,7 +10582,7 @@
 													y,
 													width: travellerWidth,
 													height,
-												}
+												},
 											)
 										return react.createElement(
 											Layer.m,
@@ -10599,8 +10609,8 @@
 											},
 											Brush.renderTraveller(
 												traveller,
-												travellerProps
-											)
+												travellerProps,
+											),
 										)
 									},
 								},
@@ -10619,7 +10629,7 @@
 											width = Math.max(
 												Math.abs(endX - startX) -
 													travellerWidth,
-												0
+												0,
 											)
 										return react.createElement('rect', {
 											className: 'recharts-brush-slide',
@@ -10679,13 +10689,13 @@
 														x:
 															Math.min(
 																startX,
-																endX
+																endX,
 															) - 5,
 														y: y + height / 2,
 													},
-													attrs
+													attrs,
 												),
-												this.getTextOfTick(startIndex)
+												this.getTextOfTick(startIndex),
 											),
 											react.createElement(
 												Text.x,
@@ -10697,16 +10707,16 @@
 														x:
 															Math.max(
 																startX,
-																endX
+																endX,
 															) +
 															travellerWidth +
 															5,
 														y: y + height / 2,
 													},
-													attrs
+													attrs,
 												),
-												this.getTextOfTick(endIndex)
-											)
+												this.getTextOfTick(endIndex),
+											),
 										)
 									},
 								},
@@ -10745,7 +10755,7 @@
 											return null
 										var layerClass = classnames_default()(
 												'recharts-brush',
-												className
+												className,
 											),
 											isPanoramic =
 												1 ===
@@ -10753,7 +10763,7 @@
 											style =
 												(function generatePrefixStyle(
 													name,
-													value
+													value,
 												) {
 													if (!name) return null
 													var camelName =
@@ -10761,29 +10771,29 @@
 																/(\w)/,
 																function (v) {
 																	return v.toUpperCase()
-																}
+																},
 															),
 														result =
 															PREFIX_LIST.reduce(
 																function (
 																	res,
-																	entry
+																	entry,
 																) {
 																	return CssPrefixUtils_objectSpread(
 																		CssPrefixUtils_objectSpread(
 																			{},
-																			res
+																			res,
 																		),
 																		{},
 																		CssPrefixUtils_defineProperty(
 																			{},
 																			entry +
 																				camelName,
-																			value
-																		)
+																			value,
+																		),
 																	)
 																},
-																{}
+																{},
 															)
 													return (
 														(result[name] = value),
@@ -10806,17 +10816,17 @@
 											this.renderSlide(startX, endX),
 											this.renderTravellerLayer(
 												startX,
-												'startX'
+												'startX',
 											),
 											this.renderTravellerLayer(
 												endX,
-												'endX'
+												'endX',
 											),
 											(isTextActive ||
 												isSlideMoving ||
 												isTravellerMoving ||
 												alwaysShowText) &&
-												this.renderText()
+												this.renderText(),
 										)
 									},
 								},
@@ -10825,7 +10835,7 @@
 								{
 									key: 'renderDefaultTraveller',
 									value: function renderDefaultTraveller(
-										props
+										props,
 									) {
 										var x = props.x,
 											y = props.y,
@@ -10860,7 +10870,7 @@
 												y2: lineY + 2,
 												fill: 'none',
 												stroke: '#fff',
-											})
+											}),
 										)
 									},
 								},
@@ -10868,14 +10878,14 @@
 									key: 'renderTraveller',
 									value: function renderTraveller(
 										option,
-										props
+										props,
 									) {
 										return react.isValidElement(option)
 											? react.cloneElement(option, props)
 											: isFunction_default()(option)
 											? option(props)
 											: Brush.renderDefaultTraveller(
-													props
+													props,
 											  )
 									},
 								},
@@ -10883,7 +10893,7 @@
 									key: 'getDerivedStateFromProps',
 									value: function getDerivedStateFromProps(
 										nextProps,
-										prevState
+										prevState,
 									) {
 										var data = nextProps.data,
 											width = nextProps.width,
@@ -10908,7 +10918,7 @@
 												},
 												data && data.length
 													? (function createScale(
-															_ref
+															_ref,
 													  ) {
 															var data =
 																	_ref.data,
@@ -10933,8 +10943,8 @@
 																	.domain(
 																		range_default()(
 																			0,
-																			len
-																		)
+																			len,
+																		),
 																	)
 																	.range([
 																		x,
@@ -10947,12 +10957,12 @@
 																		.domain()
 																		.map(
 																			function (
-																				entry
+																				entry,
 																			) {
 																				return scale(
-																					entry
+																					entry,
 																				)
-																			}
+																			},
 																		)
 															return {
 																isTextActive:
@@ -10962,10 +10972,10 @@
 																isTravellerMoving:
 																	!1,
 																startX: scale(
-																	startIndex
+																	startIndex,
 																),
 																endX: scale(
-																	endIndex
+																	endIndex,
 																),
 																scale,
 																scaleValues,
@@ -10981,7 +10991,7 @@
 													: {
 															scale: null,
 															scaleValues: null,
-													  }
+													  },
 											)
 										if (
 											prevState.scale &&
@@ -10998,7 +11008,7 @@
 												.domain()
 												.map(function (entry) {
 													return prevState.scale(
-														entry
+														entry,
 													)
 												})
 											return {
@@ -11009,10 +11019,10 @@
 												prevX: x,
 												prevWidth: width,
 												startX: prevState.scale(
-													nextProps.startIndex
+													nextProps.startIndex,
 												),
 												endX: prevState.scale(
-													nextProps.endIndex
+													nextProps.endIndex,
 												),
 												scaleValues,
 											}
@@ -11030,7 +11040,7 @@
 
 										) {
 											var middle = Math.floor(
-												(start + end) / 2
+												(start + end) / 2,
 											)
 											range[middle] > x
 												? (end = middle)
@@ -11039,7 +11049,7 @@
 										return x >= range[end] ? end : start
 									},
 								},
-							]
+							],
 						),
 						Brush
 					)
@@ -11064,10 +11074,10 @@
 					)
 				},
 				CartesianUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/CartesianUtils.js'
+					'./node_modules/recharts/es6/util/CartesianUtils.js',
 				),
 				LogUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/LogUtils.js'
+					'./node_modules/recharts/es6/util/LogUtils.js',
 				)
 			function ReferenceDot_typeof(obj) {
 				return (
@@ -11098,7 +11108,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -11112,10 +11122,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -11130,14 +11138,14 @@
 									ReferenceDot_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ReferenceDot_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -11146,10 +11154,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -11159,7 +11167,7 @@
 					(key = (function ReferenceDot_toPropertyKey(arg) {
 						var key = (function ReferenceDot_toPrimitive(
 							input,
-							hint
+							hint,
 						) {
 							if (
 								'object' !== ReferenceDot_typeof(input) ||
@@ -11172,7 +11180,7 @@
 								if ('object' !== ReferenceDot_typeof(res))
 									return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -11202,7 +11210,7 @@
 				if (
 					((0, LogUtils.Z)(
 						void 0 === alwaysShow,
-						'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.'
+						'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.',
 					),
 					!isX || !isY)
 				)
@@ -11234,17 +11242,17 @@
 									? 'url(#'.concat(clipPathId, ')')
 									: void 0,
 							},
-							(0, ReactUtils.L6)(props, !0)
+							(0, ReactUtils.L6)(props, !0),
 						),
 						{},
-						{ cx, cy }
+						{ cx, cy },
 					)
 				return react.createElement(
 					Layer.m,
 					{
 						className: classnames_default()(
 							'recharts-reference-dot',
-							className
+							className,
 						),
 					},
 					ReferenceDot.renderDot(shape, dotProps),
@@ -11253,7 +11261,7 @@
 						y: cy - r,
 						width: 2 * r,
 						height: 2 * r,
-					})
+					}),
 				)
 			}
 			;(ReferenceDot.displayName = 'ReferenceDot'),
@@ -11279,7 +11287,7 @@
 									cx: props.cx,
 									cy: props.cy,
 									className: 'recharts-reference-dot-dot',
-								})
+								}),
 						  )
 				})
 			var some = __webpack_require__('./node_modules/lodash/some.js'),
@@ -11309,10 +11317,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -11327,14 +11333,14 @@
 									ReferenceLine_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ReferenceLine_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -11343,10 +11349,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -11356,7 +11362,7 @@
 					(key = (function ReferenceLine_toPropertyKey(arg) {
 						var key = (function ReferenceLine_toPrimitive(
 							input,
-							hint
+							hint,
 						) {
 							if (
 								'object' !== ReferenceLine_typeof(input) ||
@@ -11369,7 +11375,7 @@
 								if ('object' !== ReferenceLine_typeof(res))
 									return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -11456,7 +11462,7 @@
 					})(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -11477,7 +11483,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -11497,14 +11503,14 @@
 					clipPathId = props.clipPathId
 				;(0, LogUtils.Z)(
 					void 0 === alwaysShow,
-					'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.'
+					'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.',
 				)
 				var endPoints = (function getEndPoints(
 					scales,
 					isFixedX,
 					isFixedY,
 					isSegment,
-					props
+					props,
 				) {
 					var _props$viewBox = props.viewBox,
 						x = _props$viewBox.x,
@@ -11563,7 +11569,7 @@
 					(0, DataUtils.P2)(fixedX),
 					(0, DataUtils.P2)(fixedY),
 					segment && 2 === segment.length,
-					props
+					props,
 				)
 				if (!endPoints) return null
 				var _endPoints = _slicedToArray(endPoints, 2),
@@ -11580,17 +11586,17 @@
 									? 'url(#'.concat(clipPathId, ')')
 									: void 0,
 							},
-							(0, ReactUtils.L6)(props, !0)
+							(0, ReactUtils.L6)(props, !0),
 						),
 						{},
-						{ x1, y1, x2, y2 }
+						{ x1, y1, x2, y2 },
 					)
 				return react.createElement(
 					Layer.m,
 					{
 						className: classnames_default()(
 							'recharts-reference-line',
-							className
+							className,
 						),
 					},
 					(function renderLine(option, props) {
@@ -11603,13 +11609,13 @@
 									ReferenceLine_extends({}, props, {
 										className:
 											'recharts-reference-line-line',
-									})
+									}),
 							  )
 					})(shape, lineProps),
 					Label._.renderCallByParent(
 						props,
-						(0, CartesianUtils._b)({ x1, y1, x2, y2 })
-					)
+						(0, CartesianUtils._b)({ x1, y1, x2, y2 }),
+					),
 				)
 			}
 			function ReferenceArea_typeof(obj) {
@@ -11641,7 +11647,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -11655,10 +11661,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -11673,14 +11677,14 @@
 									ReferenceArea_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ReferenceArea_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -11689,10 +11693,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -11702,7 +11706,7 @@
 					(key = (function ReferenceArea_toPropertyKey(arg) {
 						var key = (function ReferenceArea_toPrimitive(
 							input,
-							hint
+							hint,
 						) {
 							if (
 								'object' !== ReferenceArea_typeof(input) ||
@@ -11715,7 +11719,7 @@
 								if ('object' !== ReferenceArea_typeof(res))
 									return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -11756,7 +11760,7 @@
 					clipPathId = props.clipPathId
 				;(0, LogUtils.Z)(
 					void 0 === alwaysShow,
-					'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.'
+					'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.',
 				)
 				var hasX1 = (0, DataUtils.P2)(x1),
 					hasX2 = (0, DataUtils.P2)(x2),
@@ -11769,7 +11773,7 @@
 					hasX2,
 					hasY1,
 					hasY2,
-					props
+					props,
 				) {
 					var xValue1 = props.x1,
 						xValue2 = props.x2,
@@ -11812,7 +11816,7 @@
 					{
 						className: classnames_default()(
 							'recharts-reference-area',
-							className
+							className,
 						),
 					},
 					ReferenceArea.renderRect(
@@ -11820,12 +11824,12 @@
 						ReferenceArea_objectSpread(
 							ReferenceArea_objectSpread(
 								{ clipPath },
-								(0, ReactUtils.L6)(props, !0)
+								(0, ReactUtils.L6)(props, !0),
 							),
-							rect
-						)
+							rect,
+						),
 					),
-					Label._.renderCallByParent(props, rect)
+					Label._.renderCallByParent(props, rect),
 				)
 			}
 			function _toConsumableArray(arr) {
@@ -11833,7 +11837,7 @@
 					(function _arrayWithoutHoles(arr) {
 						if (Array.isArray(arr))
 							return DetectReferenceElementsDomain_arrayLikeToArray(
-								arr
+								arr,
 							)
 					})(arr) ||
 					(function _iterableToArray(iter) {
@@ -11846,13 +11850,13 @@
 					})(arr) ||
 					(function DetectReferenceElementsDomain_unsupportedIterableToArray(
 						o,
-						minLen
+						minLen,
 					) {
 						if (!o) return
 						if ('string' == typeof o)
 							return DetectReferenceElementsDomain_arrayLikeToArray(
 								o,
-								minLen
+								minLen,
 							)
 						var n = Object.prototype.toString.call(o).slice(8, -1)
 						'Object' === n &&
@@ -11865,12 +11869,12 @@
 						)
 							return DetectReferenceElementsDomain_arrayLikeToArray(
 								o,
-								minLen
+								minLen,
 							)
 					})(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -11902,7 +11906,7 @@
 								Rectangle.A,
 								ReferenceArea_extends({}, props, {
 									className: 'recharts-reference-area-rect',
-								})
+								}),
 						  )
 				})
 			var detectReferenceElementsDomain =
@@ -11911,13 +11915,13 @@
 						domain,
 						axisId,
 						axisType,
-						specifiedTicks
+						specifiedTicks,
 					) {
 						var lines = (0, ReactUtils.NN)(children, ReferenceLine),
 							dots = (0, ReactUtils.NN)(children, ReferenceDot),
 							elements = [].concat(
 								_toConsumableArray(lines),
-								_toConsumableArray(dots)
+								_toConsumableArray(dots),
 							),
 							areas = (0, ReactUtils.NN)(children, ReferenceArea),
 							idKey = ''.concat(axisType, 'Id'),
@@ -11927,13 +11931,13 @@
 							(elements.length &&
 								(finalDomain = elements.reduce(function (
 									result,
-									el
+									el,
 								) {
 									if (
 										el.props[idKey] === axisId &&
 										ifOverflowMatches(
 											el.props,
-											'extendDomain'
+											'extendDomain',
 										) &&
 										(0, DataUtils.hj)(el.props[valueKey])
 									) {
@@ -11944,8 +11948,7 @@
 										]
 									}
 									return result
-								},
-								finalDomain)),
+								}, finalDomain)),
 							areas.length)
 						) {
 							var key1 = ''.concat(valueKey, '1'),
@@ -11955,7 +11958,7 @@
 									el.props[idKey] === axisId &&
 									ifOverflowMatches(
 										el.props,
-										'extendDomain'
+										'extendDomain',
 									) &&
 									(0, DataUtils.hj)(el.props[key1]) &&
 									(0, DataUtils.hj)(el.props[key2])
@@ -11975,7 +11978,7 @@
 								specifiedTicks.length &&
 								(finalDomain = specifiedTicks.reduce(function (
 									result,
-									tick
+									tick,
 								) {
 									return (0, DataUtils.hj)(tick)
 										? [
@@ -11983,16 +11986,15 @@
 												Math.max(result[1], tick),
 										  ]
 										: result
-								},
-								finalDomain)),
+								}, finalDomain)),
 							finalDomain
 						)
 					},
 				PolarUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/PolarUtils.js'
+					'./node_modules/recharts/es6/util/PolarUtils.js',
 				),
 				eventemitter3 = __webpack_require__(
-					'./node_modules/eventemitter3/index.js'
+					'./node_modules/eventemitter3/index.js',
 				),
 				eventCenter = new (__webpack_require__.n(eventemitter3)())()
 			eventCenter.setMaxListeners && eventCenter.setMaxListeners(10)
@@ -12034,7 +12036,7 @@
 					})(arr) ||
 					(function generateCategoricalChart_iterableToArrayLimit(
 						arr,
-						i
+						i,
 					) {
 						var _i =
 							null == arr
@@ -12083,11 +12085,11 @@
 					})(arr, i) ||
 					generateCategoricalChart_unsupportedIterableToArray(
 						arr,
-						i
+						i,
 					) ||
 					(function generateCategoricalChart_nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -12102,7 +12104,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -12112,7 +12114,7 @@
 			}
 			function generateCategoricalChart_objectWithoutProperties(
 				source,
-				excluded
+				excluded,
 			) {
 				if (null == source) return {}
 				var key,
@@ -12120,7 +12122,7 @@
 					target =
 						(function generateCategoricalChart_objectWithoutPropertiesLoose(
 							source,
-							excluded
+							excluded,
 						) {
 							if (null == source) return {}
 							var key,
@@ -12140,7 +12142,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -12155,9 +12157,9 @@
 						Object.defineProperty(
 							target,
 							generateCategoricalChart_toPropertyKey(
-								descriptor.key
+								descriptor.key,
 							),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -12185,8 +12187,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -12200,13 +12202,13 @@
 					if (hasNativeReflectConstruct) {
 						var NewTarget =
 							generateCategoricalChart_getPrototypeOf(
-								this
+								this,
 							).constructor
 						result = Reflect.construct(Super, arguments, NewTarget)
 					} else result = Super.apply(this, arguments)
 					return (function generateCategoricalChart_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -12217,10 +12219,10 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return generateCategoricalChart_assertThisInitialized(
-							self
+							self,
 						)
 					})(this, result)
 				}
@@ -12228,7 +12230,7 @@
 			function generateCategoricalChart_assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -12250,7 +12252,7 @@
 					(function generateCategoricalChart_arrayWithoutHoles(arr) {
 						if (Array.isArray(arr))
 							return generateCategoricalChart_arrayLikeToArray(
-								arr
+								arr,
 							)
 					})(arr) ||
 					(function generateCategoricalChart_iterableToArray(iter) {
@@ -12264,20 +12266,20 @@
 					generateCategoricalChart_unsupportedIterableToArray(arr) ||
 					(function generateCategoricalChart_nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
 			}
 			function generateCategoricalChart_unsupportedIterableToArray(
 				o,
-				minLen
+				minLen,
 			) {
 				if (o) {
 					if ('string' == typeof o)
 						return generateCategoricalChart_arrayLikeToArray(
 							o,
-							minLen
+							minLen,
 						)
 					var n = Object.prototype.toString.call(o).slice(8, -1)
 					return (
@@ -12290,7 +12292,7 @@
 							  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
 							? generateCategoricalChart_arrayLikeToArray(
 									o,
-									minLen
+									minLen,
 							  )
 							: void 0
 					)
@@ -12308,10 +12310,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -12323,26 +12323,29 @@
 					i % 2
 						? generateCategoricalChart_ownKeys(
 								Object(source),
-								!0
+								!0,
 						  ).forEach(function (key) {
 								generateCategoricalChart_defineProperty(
 									target,
 									key,
-									source[key]
+									source[key],
 								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: generateCategoricalChart_ownKeys(
-								Object(source)
+								Object(source),
 						  ).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -12364,7 +12367,7 @@
 			function generateCategoricalChart_toPropertyKey(arg) {
 				var key = (function generateCategoricalChart_toPrimitive(
 					input,
-					hint
+					hint,
 				) {
 					if (
 						'object' !== generateCategoricalChart_typeof(input) ||
@@ -12377,7 +12380,7 @@
 						if ('object' !== generateCategoricalChart_typeof(res))
 							return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -12410,21 +12413,20 @@
 						dataEndIndex = _ref.dataEndIndex,
 						itemsData = (graphicalItems || []).reduce(function (
 							result,
-							child
+							child,
 						) {
 							var itemData = child.props.data
 							return itemData && itemData.length
 								? [].concat(
 										generateCategoricalChart_toConsumableArray(
-											result
+											result,
 										),
 										generateCategoricalChart_toConsumableArray(
-											itemData
-										)
+											itemData,
+										),
 								  )
 								: result
-						},
-						[])
+						}, [])
 					return itemsData && itemsData.length > 0
 						? itemsData
 						: item &&
@@ -12446,7 +12448,7 @@
 					state,
 					chartData,
 					activeIndex,
-					activeLabel
+					activeLabel,
 				) {
 					var graphicalItems = state.graphicalItems,
 						tooltipAxis = state.tooltipAxis,
@@ -12469,15 +12471,23 @@
 									payload = (0, DataUtils.Ap)(
 										entries,
 										tooltipAxis.dataKey,
-										activeLabel
+										activeLabel,
 									)
-								} else payload = (data && data[activeIndex]) || displayedData[activeIndex]
+								} else
+									payload =
+										(data && data[activeIndex]) ||
+										displayedData[activeIndex]
 								return payload
 									? [].concat(
 											generateCategoricalChart_toConsumableArray(
-												result
+												result,
 											),
-											[(0, ChartUtils.Qo)(child, payload)]
+											[
+												(0, ChartUtils.Qo)(
+													child,
+													payload,
+												),
+											],
 									  )
 									: result
 						  }, [])
@@ -12486,7 +12496,7 @@
 					state,
 					chartData,
 					layout,
-					rangeObj
+					rangeObj,
 				) {
 					var rangeData = rangeObj || {
 							x: state.chartX,
@@ -12508,7 +12518,7 @@
 							pos,
 							ticks,
 							tooltipTicks,
-							axis
+							axis,
 						)
 					if (activeIndex >= 0 && tooltipTicks) {
 						var activeLabel =
@@ -12518,13 +12528,13 @@
 								state,
 								chartData,
 								activeIndex,
-								activeLabel
+								activeLabel,
 							),
 							activeCoordinate = (function getActiveCoordinate(
 								layout,
 								tooltipTicks,
 								activeIndex,
-								rangeObj
+								rangeObj,
 							) {
 								var entry = tooltipTicks.find(function (tick) {
 									return tick && tick.index === activeIndex
@@ -12547,17 +12557,17 @@
 											generateCategoricalChart_objectSpread(
 												generateCategoricalChart_objectSpread(
 													{},
-													rangeObj
+													rangeObj,
 												),
 												(0, PolarUtils.op)(
 													rangeObj.cx,
 													rangeObj.cy,
 													_radius,
-													_angle
-												)
+													_angle,
+												),
 											),
 											{},
-											{ angle: _angle, radius: _radius }
+											{ angle: _angle, radius: _radius },
 										)
 									}
 									var radius = entry.coordinate,
@@ -12566,17 +12576,17 @@
 										generateCategoricalChart_objectSpread(
 											generateCategoricalChart_objectSpread(
 												{},
-												rangeObj
+												rangeObj,
 											),
 											(0, PolarUtils.op)(
 												rangeObj.cx,
 												rangeObj.cy,
 												radius,
-												angle
-											)
+												angle,
+											),
 										),
 										{},
-										{ angle, radius }
+										{ angle, radius },
 									)
 								}
 								return originCoordinate
@@ -12619,11 +12629,11 @@
 							duplicateDomain,
 							categoricalDomain,
 							displayedData = getDisplayedData(props.data, {
-								graphicalItems: graphicalItems.filter(function (
-									item
-								) {
-									return item.props[axisIdKey] === axisId
-								}),
+								graphicalItems: graphicalItems.filter(
+									function (item) {
+										return item.props[axisIdKey] === axisId
+									},
+								),
 								dataStartIndex,
 								dataEndIndex,
 							}),
@@ -12631,7 +12641,7 @@
 						;(function isDomainSpecifiedByUser(
 							domain,
 							allowDataOverflow,
-							axisType
+							axisType,
 						) {
 							if (
 								'number' === axisType &&
@@ -12655,14 +12665,14 @@
 							((domain = (0, ChartUtils.LG)(
 								child.props.domain,
 								null,
-								allowDataOverflow
+								allowDataOverflow,
 							)),
 							!isCategorical ||
 								('number' !== type && 'auto' === scale) ||
 								(categoricalDomain = (0, ChartUtils.gF)(
 									displayedData,
 									dataKey,
-									'category'
+									'category',
 								)))
 						var defaultDomain = getDefaultDomainByAxisType(type)
 						if (!domain || 0 === domain.length) {
@@ -12679,7 +12689,7 @@
 									((domain = (0, ChartUtils.gF)(
 										displayedData,
 										dataKey,
-										type
+										type,
 									)),
 									'category' === type && isCategorical)
 								) {
@@ -12691,23 +12701,22 @@
 										  (domain = (0, ChartUtils.ko)(
 												childDomain,
 												domain,
-												child
+												child,
 										  ).reduce(function (
 												finalDomain,
-												entry
+												entry,
 										  ) {
 												return finalDomain.indexOf(
-													entry
+													entry,
 												) >= 0
 													? finalDomain
 													: [].concat(
 															generateCategoricalChart_toConsumableArray(
-																finalDomain
+																finalDomain,
 															),
-															[entry]
+															[entry],
 													  )
-										  },
-										  []))
+										  }, []))
 								} else if ('category' === type)
 									domain = allowDuplicatedCategory
 										? domain.filter(function (entry) {
@@ -12719,25 +12728,24 @@
 										: (0, ChartUtils.ko)(
 												childDomain,
 												domain,
-												child
+												child,
 										  ).reduce(function (
 												finalDomain,
-												entry
+												entry,
 										  ) {
 												return finalDomain.indexOf(
-													entry
+													entry,
 												) >= 0 ||
 													'' === entry ||
 													isNil_default()(entry)
 													? finalDomain
 													: [].concat(
 															generateCategoricalChart_toConsumableArray(
-																finalDomain
+																finalDomain,
 															),
-															[entry]
+															[entry],
 													  )
-										  },
-										  [])
+										  }, [])
 								else if ('number' === type) {
 									var errorBarsDomain = (0, ChartUtils.ZI)(
 										displayedData,
@@ -12751,7 +12759,7 @@
 										}),
 										dataKey,
 										axisType,
-										layout
+										layout,
 									)
 									errorBarsDomain &&
 										(domain = errorBarsDomain)
@@ -12761,7 +12769,7 @@
 									(categoricalDomain = (0, ChartUtils.gF)(
 										displayedData,
 										dataKey,
-										'category'
+										'category',
 									))
 							} else
 								domain = isCategorical
@@ -12775,23 +12783,24 @@
 										: (0, ChartUtils.EB)(
 												stackGroups[axisId].stackGroups,
 												dataStartIndex,
-												dataEndIndex
+												dataEndIndex,
 										  )
 									: (0, ChartUtils.s6)(
 											displayedData,
-											graphicalItems.filter(function (
-												item
-											) {
-												return (
-													item.props[axisIdKey] ===
-														axisId &&
-													(includeHidden ||
-														!item.props.hide)
-												)
-											}),
+											graphicalItems.filter(
+												function (item) {
+													return (
+														item.props[
+															axisIdKey
+														] === axisId &&
+														(includeHidden ||
+															!item.props.hide)
+													)
+												},
+											),
 											type,
 											layout,
-											!0
+											!0,
 									  )
 							if ('number' === type)
 								(domain = detectReferenceElementsDomain(
@@ -12799,13 +12808,13 @@
 									domain,
 									axisId,
 									axisType,
-									ticks
+									ticks,
 								)),
 									childDomain &&
 										(domain = (0, ChartUtils.LG)(
 											childDomain,
 											domain,
-											allowDataOverflow
+											allowDataOverflow,
 										))
 							else if ('category' === type && childDomain) {
 								var axisDomain = childDomain
@@ -12823,7 +12832,7 @@
 								generateCategoricalChart_objectSpread(
 									generateCategoricalChart_objectSpread(
 										{},
-										child.props
+										child.props,
 									),
 									{},
 									{
@@ -12840,9 +12849,9 @@
 												: defaultDomain,
 										isCategorical,
 										layout,
-									}
-								)
-							)
+									},
+								),
+							),
 						)
 					}, {})
 				},
@@ -12876,7 +12885,7 @@
 							  graphicalItems.length &&
 							  (axisMap = (function getAxisMapByItems(
 									props,
-									_ref3
+									_ref3,
 							  ) {
 									var graphicalItems = _ref3.graphicalItems,
 										Axis = _ref3.Axis,
@@ -12893,23 +12902,23 @@
 												graphicalItems,
 												dataStartIndex,
 												dataEndIndex,
-											}
+											},
 										),
 										len = displayedData.length,
 										isCategorical = (0, ChartUtils.NA)(
 											layout,
-											axisType
+											axisType,
 										),
 										index = -1
 									return graphicalItems.reduce(function (
 										result,
-										child
+										child,
 									) {
 										var domain,
 											axisId = child.props[axisIdKey],
 											originalDomain =
 												getDefaultDomainByAxisType(
-													'number'
+													'number',
 												)
 										return result[axisId]
 											? result
@@ -12917,7 +12926,7 @@
 											  isCategorical
 													? (domain = range_default()(
 															0,
-															len
+															len,
 													  ))
 													: stackGroups &&
 													  stackGroups[axisId] &&
@@ -12928,14 +12937,14 @@
 															stackGroups[axisId]
 																.stackGroups,
 															dataStartIndex,
-															dataEndIndex
+															dataEndIndex,
 													  )),
 													  (domain =
 															detectReferenceElementsDomain(
 																children,
 																domain,
 																axisId,
-																axisType
+																axisType,
 															)))
 													: ((domain = (0,
 													  ChartUtils.LG)(
@@ -12944,7 +12953,7 @@
 																displayedData,
 																graphicalItems.filter(
 																	function (
-																		item
+																		item,
 																	) {
 																		return (
 																			item
@@ -12956,25 +12965,25 @@
 																				.props
 																				.hide
 																		)
-																	}
+																	},
 																),
 																'number',
-																layout
+																layout,
 															),
 															Axis.defaultProps
-																.allowDataOverflow
+																.allowDataOverflow,
 													  )),
 													  (domain =
 															detectReferenceElementsDomain(
 																children,
 																domain,
 																axisId,
-																axisType
+																axisType,
 															))),
 											  generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														result
+														result,
 													),
 													{},
 													generateCategoricalChart_defineProperty(
@@ -12983,7 +12992,7 @@
 														generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{ axisType },
-																Axis.defaultProps
+																Axis.defaultProps,
 															),
 															{},
 															{
@@ -12994,24 +13003,23 @@
 																		''
 																			.concat(
 																				axisType,
-																				'.'
+																				'.',
 																			)
 																			.concat(
 																				index %
-																					2
+																					2,
 																			),
-																		null
+																		null,
 																	),
 																domain,
 																originalDomain,
 																isCategorical,
 																layout,
-															}
-														)
-													)
+															},
+														),
+													),
 											  ))
-									},
-									{})
+									}, {})
 							  })(props, {
 									Axis: AxisComp,
 									graphicalItems,
@@ -13074,7 +13082,7 @@
 						  }
 				},
 				generateCategoricalChart = function generateCategoricalChart(
-					_ref6
+					_ref6,
 				) {
 					var _class,
 						chartName = _ref6.chartName,
@@ -13095,7 +13103,7 @@
 						defaultProps = _ref6.defaultProps,
 						getFormatItems = function getFormatItems(
 							props,
-							currentState
+							currentState,
 						) {
 							var graphicalItems = currentState.graphicalItems,
 								stackGroups = currentState.stackGroups,
@@ -13115,7 +13123,7 @@
 								cateAxisName =
 									_getAxisNameByLayout.cateAxisName,
 								hasBar = (function hasGraphicalBarItem(
-									graphicalItems
+									graphicalItems,
 								) {
 									return (
 										!(
@@ -13124,7 +13132,7 @@
 										) &&
 										graphicalItems.some(function (item) {
 											var name = (0, ReactUtils.Gf)(
-												item && item.type
+												item && item.type,
 											)
 											return (
 												name && name.indexOf('Bar') >= 0
@@ -13144,7 +13152,7 @@
 									var displayedData = getDisplayedData(
 											props.data,
 											{ dataStartIndex, dataEndIndex },
-											item
+											item,
 										),
 										_item$props = item.props,
 										dataKey = _item$props.dataKey,
@@ -13165,14 +13173,14 @@
 														currentState[
 															''.concat(
 																entry.axisType,
-																'Map'
+																'Map',
 															)
 														],
 													id =
 														item.props[
 															''.concat(
 																entry.axisType,
-																'Id'
+																'Id',
 															)
 														],
 													axis =
@@ -13180,26 +13188,28 @@
 												return generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														result
+														result,
 													),
 													{},
 													(generateCategoricalChart_defineProperty(
 														(_objectSpread6 = {}),
 														entry.axisType,
-														axis
+														axis,
 													),
 													generateCategoricalChart_defineProperty(
 														_objectSpread6,
 														''.concat(
 															entry.axisType,
-															'Ticks'
+															'Ticks',
 														),
-														(0, ChartUtils.uY)(axis)
+														(0, ChartUtils.uY)(
+															axis,
+														),
 													),
-													_objectSpread6)
+													_objectSpread6),
 												)
 											},
-											{}
+											{},
 										),
 										cateAxis = axisObj[cateAxisName],
 										cateTicks =
@@ -13214,22 +13224,22 @@
 											(0, ChartUtils.O3)(
 												item,
 												stackGroups[numericAxisId]
-													.stackGroups
+													.stackGroups,
 											),
 										itemIsBar =
 											(0, ReactUtils.Gf)(
-												item.type
+												item.type,
 											).indexOf('Bar') >= 0,
 										bandSize = (0, ChartUtils.zT)(
 											cateAxis,
-											cateTicks
+											cateTicks,
 										),
 										barPosition = []
 									if (itemIsBar) {
 										var _ref7,
 											_getBandSizeOfAxis,
 											maxBarSize = isNil_default()(
-												childMaxBarSize
+												childMaxBarSize,
 											)
 												? globalMaxBarSize
 												: childMaxBarSize,
@@ -13242,7 +13252,7 @@
 																ChartUtils.zT)(
 																	cateAxis,
 																	cateTicks,
-																	!0
+																	!0,
 																)) &&
 														void 0 !==
 															_getBandSizeOfAxis
@@ -13267,7 +13277,7 @@
 														return generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																pos
+																pos,
 															),
 															{},
 															{
@@ -13275,7 +13285,7 @@
 																	generateCategoricalChart_objectSpread(
 																		generateCategoricalChart_objectSpread(
 																			{},
-																			pos.position
+																			pos.position,
 																		),
 																		{},
 																		{
@@ -13285,11 +13295,11 @@
 																					.offset -
 																				barBandSize /
 																					2,
-																		}
+																		},
 																	),
-															}
+															},
 														)
-													}
+													},
 												))
 									}
 									var _objectSpread7,
@@ -13306,7 +13316,7 @@
 														generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																axisObj
+																axisObj,
 															),
 															{},
 															{
@@ -13321,9 +13331,9 @@
 																layout,
 																dataStartIndex,
 																dataEndIndex,
-															}
-														)
-													)
+															},
+														),
+													),
 												),
 												{},
 												((_objectSpread7 = {
@@ -13334,23 +13344,23 @@
 												generateCategoricalChart_defineProperty(
 													_objectSpread7,
 													numericAxisName,
-													axisObj[numericAxisName]
+													axisObj[numericAxisName],
 												),
 												generateCategoricalChart_defineProperty(
 													_objectSpread7,
 													cateAxisName,
-													axisObj[cateAxisName]
+													axisObj[cateAxisName],
 												),
 												generateCategoricalChart_defineProperty(
 													_objectSpread7,
 													'animationId',
-													updateId
+													updateId,
 												),
-												_objectSpread7)
+												_objectSpread7),
 											),
 											childIndex: (0, ReactUtils.$R)(
 												item,
-												props.children
+												props.children,
 											),
 											item,
 										})
@@ -13361,7 +13371,7 @@
 						updateStateOfAxisMapsOffsetAndStackGroups =
 							function updateStateOfAxisMapsOffsetAndStackGroups(
 								_ref8,
-								prevState
+								prevState,
 							) {
 								var props = _ref8.props,
 									dataStartIndex = _ref8.dataStartIndex,
@@ -13381,7 +13391,7 @@
 										_getAxisNameByLayout2.cateAxisName,
 									graphicalItems = (0, ReactUtils.NN)(
 										children,
-										GraphicalChild
+										GraphicalChild,
 									),
 									stackGroups = (0, ChartUtils.wh)(
 										data,
@@ -13389,20 +13399,20 @@
 										''.concat(numericAxisName, 'Id'),
 										''.concat(cateAxisName, 'Id'),
 										stackOffset,
-										reverseStackOrder
+										reverseStackOrder,
 									),
 									axisObj = axisComponents.reduce(function (
 										result,
-										entry
+										entry,
 									) {
 										var name = ''.concat(
 											entry.axisType,
-											'Map'
+											'Map',
 										)
 										return generateCategoricalChart_objectSpread(
 											generateCategoricalChart_objectSpread(
 												{},
-												result
+												result,
 											),
 											{},
 											generateCategoricalChart_defineProperty(
@@ -13413,7 +13423,7 @@
 													generateCategoricalChart_objectSpread(
 														generateCategoricalChart_objectSpread(
 															{},
-															entry
+															entry,
 														),
 														{},
 														{
@@ -13424,16 +13434,15 @@
 																stackGroups,
 															dataStartIndex,
 															dataEndIndex,
-														}
-													)
-												)
-											)
+														},
+													),
+												),
+											),
 										)
-									},
-									{}),
+									}, {}),
 									offset = (function calculateOffset(
 										_ref5,
-										prevLegendBBox
+										prevLegendBBox,
 									) {
 										var props = _ref5.props,
 											graphicalItems =
@@ -13454,14 +13463,14 @@
 											margin = props.margin || {},
 											brushItem = (0, ReactUtils.sP)(
 												children,
-												Brush
+												Brush,
 											),
 											legendItem = (0, ReactUtils.sP)(
 												children,
-												Legend.D
+												Legend.D,
 											),
 											offsetH = Object.keys(
-												yAxisMap
+												yAxisMap,
 											).reduce(
 												function (result, id) {
 													var entry = yAxisMap[id],
@@ -13473,7 +13482,7 @@
 														: generateCategoricalChart_objectSpread(
 																generateCategoricalChart_objectSpread(
 																	{},
-																	result
+																	result,
 																),
 																{},
 																generateCategoricalChart_defineProperty(
@@ -13482,17 +13491,17 @@
 																	result[
 																		orientation
 																	] +
-																		entry.width
-																)
+																		entry.width,
+																),
 														  )
 												},
 												{
 													left: margin.left || 0,
 													right: margin.right || 0,
-												}
+												},
 											),
 											offsetV = Object.keys(
-												xAxisMap
+												xAxisMap,
 											).reduce(
 												function (result, id) {
 													var entry = xAxisMap[id],
@@ -13504,7 +13513,7 @@
 														: generateCategoricalChart_objectSpread(
 																generateCategoricalChart_objectSpread(
 																	{},
-																	result
+																	result,
 																),
 																{},
 																generateCategoricalChart_defineProperty(
@@ -13513,25 +13522,25 @@
 																	get_default()(
 																		result,
 																		''.concat(
-																			orientation
-																		)
+																			orientation,
+																		),
 																	) +
-																		entry.height
-																)
+																		entry.height,
+																),
 														  )
 												},
 												{
 													top: margin.top || 0,
 													bottom: margin.bottom || 0,
-												}
+												},
 											),
 											offset =
 												generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														offsetV
+														offsetV,
 													),
-													offsetH
+													offsetH,
 												),
 											brushBottom = offset.bottom
 										return (
@@ -13545,12 +13554,12 @@
 													offset,
 													graphicalItems,
 													props,
-													prevLegendBBox
+													prevLegendBBox,
 												)),
 											generateCategoricalChart_objectSpread(
 												generateCategoricalChart_objectSpread(
 													{ brushBottom },
-													offset
+													offset,
 												),
 												{},
 												{
@@ -13562,21 +13571,21 @@
 														height -
 														offset.top -
 														offset.bottom,
-												}
+												},
 											)
 										)
 									})(
 										generateCategoricalChart_objectSpread(
 											generateCategoricalChart_objectSpread(
 												{},
-												axisObj
+												axisObj,
 											),
 											{},
-											{ props, graphicalItems }
+											{ props, graphicalItems },
 										),
 										null == prevState
 											? void 0
-											: prevState.legendBBox
+											: prevState.legendBBox,
 									)
 								Object.keys(axisObj).forEach(function (key) {
 									axisObj[key] = formatAxisMap(
@@ -13584,17 +13593,17 @@
 										axisObj[key],
 										offset,
 										key.replace('Map', ''),
-										chartName
+										chartName,
 									)
 								})
 								var ticksObj = (function tooltipTicksGenerator(
-										axisMap
+										axisMap,
 									) {
 										var axis = (0, DataUtils.Kt)(axisMap),
 											tooltipTicks = (0, ChartUtils.uY)(
 												axis,
 												!1,
-												!0
+												!0,
 											)
 										return {
 											tooltipTicks,
@@ -13603,7 +13612,7 @@
 													tooltipTicks,
 													function (o) {
 														return o.coordinate
-													}
+													},
 												),
 											tooltipAxis: axis,
 											tooltipAxisBandSize: (0,
@@ -13615,7 +13624,7 @@
 										generateCategoricalChart_objectSpread(
 											generateCategoricalChart_objectSpread(
 												{},
-												axisObj
+												axisObj,
 											),
 											{},
 											{
@@ -13625,8 +13634,8 @@
 												graphicalItems,
 												stackGroups,
 												offset,
-											}
-										)
+											},
+										),
 									)
 								return generateCategoricalChart_objectSpread(
 									generateCategoricalChart_objectSpread(
@@ -13636,23 +13645,23 @@
 											offset,
 											stackGroups,
 										},
-										ticksObj
+										ticksObj,
 									),
-									axisObj
+									axisObj,
 								)
 							}
 					return (
 						(_class = (function (_Component) {
 							!(function generateCategoricalChart_inherits(
 								subClass,
-								superClass
+								superClass,
 							) {
 								if (
 									'function' != typeof superClass &&
 									null !== superClass
 								)
 									throw new TypeError(
-										'Super expression must either be null or a function'
+										'Super expression must either be null or a function',
 									)
 								;(subClass.prototype = Object.create(
 									superClass && superClass.prototype,
@@ -13662,37 +13671,37 @@
 											writable: !0,
 											configurable: !0,
 										},
-									}
+									},
 								)),
 									Object.defineProperty(
 										subClass,
 										'prototype',
-										{ writable: !1 }
+										{ writable: !1 },
 									),
 									superClass &&
 										generateCategoricalChart_setPrototypeOf(
 											subClass,
-											superClass
+											superClass,
 										)
 							})(CategoricalChartWrapper, _Component)
 							var _super = generateCategoricalChart_createSuper(
-								CategoricalChartWrapper
+								CategoricalChartWrapper,
 							)
 							function CategoricalChartWrapper(_props) {
 								var _this
 								return (
 									(function generateCategoricalChart_classCallCheck(
 										instance,
-										Constructor
+										Constructor,
 									) {
 										if (!(instance instanceof Constructor))
 											throw new TypeError(
-												'Cannot call a class as a function'
+												'Cannot call a class as a function',
 											)
 									})(this, CategoricalChartWrapper),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											(_this = _super.call(this, _props))
+											(_this = _super.call(this, _props)),
 										),
 										'clearDeferId',
 										function () {
@@ -13700,11 +13709,11 @@
 												deferClear &&
 												deferClear(_this.deferId),
 												(_this.deferId = null)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleLegendBBoxUpdate',
 										function (box) {
@@ -13729,23 +13738,23 @@
 															generateCategoricalChart_objectSpread(
 																generateCategoricalChart_objectSpread(
 																	{},
-																	_this.state
+																	_this.state,
 																),
 																{},
 																{
 																	legendBBox:
 																		box,
-																}
-															)
-														)
-													)
+																},
+															),
+														),
+													),
 												)
 											}
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleReceiveSyncEvent',
 										function (cId, chartId, data) {
@@ -13758,16 +13767,16 @@
 													defer(
 														_this.applySyncEvent.bind(
 															generateCategoricalChart_assertThisInitialized(
-																_this
+																_this,
 															),
-															data
-														)
+															data,
+														),
 													)))
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleBrushChange',
 										function (_ref9) {
@@ -13799,8 +13808,8 @@
 																	endIndex,
 																updateId,
 															},
-															_this.state
-														)
+															_this.state,
+														),
 													)
 												}),
 													_this.triggerSyncEvent({
@@ -13809,11 +13818,11 @@
 														dataEndIndex: endIndex,
 													})
 											}
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleMouseEnter',
 										function (e) {
@@ -13825,28 +13834,28 @@
 													generateCategoricalChart_objectSpread(
 														generateCategoricalChart_objectSpread(
 															{},
-															mouse
+															mouse,
 														),
 														{},
-														{ isTooltipActive: !0 }
+														{ isTooltipActive: !0 },
 													)
 												_this.setState(_nextState),
 													_this.triggerSyncEvent(
-														_nextState
+														_nextState,
 													),
 													isFunction_default()(
-														onMouseEnter
+														onMouseEnter,
 													) &&
 														onMouseEnter(
 															_nextState,
-															e
+															e,
 														)
 											}
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'triggeredAfterMouseMove',
 										function (e) {
@@ -13857,27 +13866,27 @@
 													? generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																mouse
+																mouse,
 															),
 															{},
 															{
 																isTooltipActive:
 																	!0,
-															}
+															},
 													  )
 													: { isTooltipActive: !1 }
 											_this.setState(nextState),
 												_this.triggerSyncEvent(
-													nextState
+													nextState,
 												),
 												isFunction_default()(
-													onMouseMove
+													onMouseMove,
 												) && onMouseMove(nextState, e)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleItemMouseEnter',
 										function (el) {
@@ -13894,36 +13903,36 @@
 														},
 												}
 											})
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleItemMouseLeave',
 										function () {
 											_this.setState(function () {
 												return { isTooltipActive: !1 }
 											})
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleMouseMove',
 										function (e) {
 											e &&
 												isFunction_default()(
-													e.persist
+													e.persist,
 												) &&
 												e.persist(),
 												_this.triggeredAfterMouseMove(e)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleMouseLeave',
 										function (e) {
@@ -13934,26 +13943,26 @@
 												}
 											_this.setState(nextState),
 												_this.triggerSyncEvent(
-													nextState
+													nextState,
 												),
 												isFunction_default()(
-													onMouseLeave
+													onMouseLeave,
 												) && onMouseLeave(nextState, e),
 												_this.cancelThrottledTriggerAfterMouseMove()
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleOuterEvent',
 										function (e) {
 											var eventName = (0, ReactUtils.Bh)(
-													e
+													e,
 												),
 												event = get_default()(
 													_this.props,
-													''.concat(eventName)
+													''.concat(eventName),
 												)
 											eventName &&
 												isFunction_default()(event) &&
@@ -13961,16 +13970,16 @@
 													/.*touch.*/i.test(eventName)
 														? _this.getMouseInfo(
 																e
-																	.changedTouches[0]
+																	.changedTouches[0],
 														  )
 														: _this.getMouseInfo(e),
-													e
+													e,
 												)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleClick',
 										function (e) {
@@ -13981,24 +13990,24 @@
 													generateCategoricalChart_objectSpread(
 														generateCategoricalChart_objectSpread(
 															{},
-															mouse
+															mouse,
 														),
 														{},
-														{ isTooltipActive: !0 }
+														{ isTooltipActive: !0 },
 													)
 												_this.setState(_nextState2),
 													_this.triggerSyncEvent(
-														_nextState2
+														_nextState2,
 													),
 													isFunction_default()(
-														onClick
+														onClick,
 													) && onClick(_nextState2, e)
 											}
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleMouseDown',
 										function (e) {
@@ -14007,13 +14016,13 @@
 											isFunction_default()(onMouseDown) &&
 												onMouseDown(
 													_this.getMouseInfo(e),
-													e
+													e,
 												)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleMouseUp',
 										function (e) {
@@ -14022,52 +14031,52 @@
 											isFunction_default()(onMouseUp) &&
 												onMouseUp(
 													_this.getMouseInfo(e),
-													e
+													e,
 												)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleTouchMove',
 										function (e) {
 											null != e.changedTouches &&
 												e.changedTouches.length > 0 &&
 												_this.handleMouseMove(
-													e.changedTouches[0]
+													e.changedTouches[0],
 												)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleTouchStart',
 										function (e) {
 											null != e.changedTouches &&
 												e.changedTouches.length > 0 &&
 												_this.handleMouseDown(
-													e.changedTouches[0]
+													e.changedTouches[0],
 												)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'handleTouchEnd',
 										function (e) {
 											null != e.changedTouches &&
 												e.changedTouches.length > 0 &&
 												_this.handleMouseUp(
-													e.changedTouches[0]
+													e.changedTouches[0],
 												)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'verticalCoordinatesGenerator',
 										function (_ref10) {
@@ -14081,16 +14090,16 @@
 														generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																CartesianAxis.defaultProps
+																CartesianAxis.defaultProps,
 															),
-															xAxis
+															xAxis,
 														),
 														{},
 														{
 															ticks: (0,
 															ChartUtils.uY)(
 																xAxis,
-																!0
+																!0,
 															),
 															viewBox: {
 																x: 0,
@@ -14098,17 +14107,17 @@
 																width,
 																height,
 															},
-														}
-													)
+														},
+													),
 												),
 												offset.left,
-												offset.left + offset.width
+												offset.left + offset.width,
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'horizontalCoordinatesGenerator',
 										function (_ref11) {
@@ -14122,16 +14131,16 @@
 														generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																CartesianAxis.defaultProps
+																CartesianAxis.defaultProps,
 															),
-															yAxis
+															yAxis,
 														),
 														{},
 														{
 															ticks: (0,
 															ChartUtils.uY)(
 																yAxis,
-																!0
+																!0,
 															),
 															viewBox: {
 																x: 0,
@@ -14139,26 +14148,26 @@
 																width,
 																height,
 															},
-														}
-													)
+														},
+													),
 												),
 												offset.top,
-												offset.top + offset.height
+												offset.top + offset.height,
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'axesTicksGenerator',
 										function (axis) {
 											return (0, ChartUtils.uY)(axis, !0)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderCursor',
 										function (element) {
@@ -14231,14 +14240,14 @@
 																		pointerEvents:
 																			'none',
 																	},
-																	offset
+																	offset,
 																),
-																restProps
+																restProps,
 															),
 															(0, ReactUtils.L6)(
 																element.props
-																	.cursor
-															)
+																	.cursor,
+															),
 														),
 														{},
 														{
@@ -14249,34 +14258,34 @@
 															key,
 															className:
 																'recharts-tooltip-cursor',
-														}
+														},
 													)
 											return (0, react.isValidElement)(
-												element.props.cursor
+												element.props.cursor,
 											)
 												? (0, react.cloneElement)(
 														element.props.cursor,
-														cursorProps
+														cursorProps,
 												  )
 												: (0, react.createElement)(
 														cursorComp,
-														cursorProps
+														cursorProps,
 												  )
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderPolarAxis',
 										function (element, displayName, index) {
 											var axisType = get_default()(
 													element,
-													'type.axisType'
+													'type.axisType',
 												),
 												axisMap = get_default()(
 													_this.state,
-													''.concat(axisType, 'Map')
+													''.concat(axisType, 'Map'),
 												),
 												axisOption =
 													axisMap &&
@@ -14284,7 +14293,7 @@
 														element.props[
 															''.concat(
 																axisType,
-																'Id'
+																'Id',
 															)
 														]
 													]
@@ -14293,7 +14302,7 @@
 												generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														axisOption
+														axisOption,
 													),
 													{},
 													{
@@ -14303,22 +14312,22 @@
 															''
 																.concat(
 																	displayName,
-																	'-'
+																	'-',
 																)
 																.concat(index),
 														ticks: (0,
 														ChartUtils.uY)(
 															axisOption,
-															!0
+															!0,
 														),
-													}
-												)
+													},
+												),
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderXAxis',
 										function (element, displayName, index) {
@@ -14330,13 +14339,13 @@
 												axisObj,
 												element,
 												displayName,
-												index
+												index,
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderYAxis',
 										function (element, displayName, index) {
@@ -14348,13 +14357,13 @@
 												axisObj,
 												element,
 												displayName,
-												index
+												index,
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderGrid',
 										function (element) {
@@ -14368,7 +14377,7 @@
 												width = _this$props.width,
 												height = _this$props.height,
 												xAxis = (0, DataUtils.Kt)(
-													xAxisMap
+													xAxisMap,
 												),
 												yAxis =
 													find_default()(
@@ -14376,9 +14385,9 @@
 														function (axis) {
 															return every_default()(
 																axis.domain,
-																isFinit
+																isFinit,
 															)
-														}
+														},
 													) ||
 													(0, DataUtils.Kt)(yAxisMap),
 												props = element.props || {}
@@ -14387,22 +14396,22 @@
 												{
 													key: element.key || 'grid',
 													x: (0, DataUtils.hj)(
-														props.x
+														props.x,
 													)
 														? props.x
 														: offset.left,
 													y: (0, DataUtils.hj)(
-														props.y
+														props.y,
 													)
 														? props.y
 														: offset.top,
 													width: (0, DataUtils.hj)(
-														props.width
+														props.width,
 													)
 														? props.width
 														: offset.width,
 													height: (0, DataUtils.hj)(
-														props.height
+														props.height,
 													)
 														? props.height
 														: offset.height,
@@ -14417,13 +14426,13 @@
 													horizontalCoordinatesGenerator:
 														props.horizontalCoordinatesGenerator ||
 														_this.horizontalCoordinatesGenerator,
-												}
+												},
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderPolarGrid',
 										function (element) {
@@ -14440,10 +14449,10 @@
 												angleAxisMap =
 													_this$state4.angleAxisMap,
 												radiusAxis = (0, DataUtils.Kt)(
-													radiusAxisMap
+													radiusAxisMap,
 												),
 												angleAxis = (0, DataUtils.Kt)(
-													angleAxisMap
+													angleAxisMap,
 												),
 												cx = angleAxis.cx,
 												cy = angleAxis.cy,
@@ -14456,32 +14465,36 @@
 												{
 													polarAngles:
 														isArray_default()(
-															polarAngles
+															polarAngles,
 														)
 															? polarAngles
 															: (0,
 															  ChartUtils.uY)(
 																	angleAxis,
-																	!0
-															  ).map(function (
-																	entry
-															  ) {
-																	return entry.coordinate
-															  }),
+																	!0,
+															  ).map(
+																	function (
+																		entry,
+																	) {
+																		return entry.coordinate
+																	},
+															  ),
 													polarRadius:
 														isArray_default()(
-															polarRadius
+															polarRadius,
 														)
 															? polarRadius
 															: (0,
 															  ChartUtils.uY)(
 																	radiusAxis,
-																	!0
-															  ).map(function (
-																	entry
-															  ) {
-																	return entry.coordinate
-															  }),
+																	!0,
+															  ).map(
+																	function (
+																		entry,
+																	) {
+																		return entry.coordinate
+																	},
+															  ),
 													cx,
 													cy,
 													innerRadius,
@@ -14490,13 +14503,13 @@
 														element.key ||
 														'polar-grid',
 													radialLines,
-												}
+												},
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderLegend',
 										function () {
@@ -14525,14 +14538,14 @@
 												otherProps =
 													generateCategoricalChart_objectWithoutProperties(
 														props,
-														generateCategoricalChart_excluded
+														generateCategoricalChart_excluded,
 													)
 											return (0, react.cloneElement)(
 												item,
 												generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														otherProps
+														otherProps,
 													),
 													{},
 													{
@@ -14540,21 +14553,21 @@
 														chartHeight: height,
 														margin,
 														ref: function ref(
-															legend
+															legend,
 														) {
 															_this.legendInstance =
 																legend
 														},
 														onBBoxUpdate:
 															_this.handleLegendBBoxUpdate,
-													}
-												)
+													},
+												),
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderTooltip',
 										function () {
@@ -14562,7 +14575,7 @@
 												tooltipItem = (0,
 												ReactUtils.sP)(
 													children,
-													Tooltip.u
+													Tooltip.u,
 												)
 											if (!tooltipItem) return null
 											var _this$state5 = _this.state,
@@ -14582,13 +14595,13 @@
 														generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																offset
+																offset,
 															),
 															{},
 															{
 																x: offset.left,
 																y: offset.top,
-															}
+															},
 														),
 													active: isTooltipActive,
 													label: activeLabel,
@@ -14597,13 +14610,13 @@
 														: [],
 													coordinate:
 														activeCoordinate,
-												}
+												},
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderBrush',
 										function (element) {
@@ -14627,16 +14640,16 @@
 													ChartUtils.DO)(
 														_this.handleBrushChange,
 														null,
-														element.props.onChange
+														element.props.onChange,
 													),
 													data,
 													x: (0, DataUtils.hj)(
-														element.props.x
+														element.props.x,
 													)
 														? element.props.x
 														: offset.left,
 													y: (0, DataUtils.hj)(
-														element.props.y
+														element.props.y,
 													)
 														? element.props.y
 														: offset.top +
@@ -14644,29 +14657,29 @@
 														  offset.brushBottom -
 														  (margin.bottom || 0),
 													width: (0, DataUtils.hj)(
-														element.props.width
+														element.props.width,
 													)
 														? element.props.width
 														: offset.width,
 													startIndex: dataStartIndex,
 													endIndex: dataEndIndex,
 													updateId: 'brush-'.concat(
-														updateId
+														updateId,
 													),
-												}
+												},
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderReferenceElement',
 										function (element, displayName, index) {
 											if (!element) return null
 											var clipPathId =
 													generateCategoricalChart_assertThisInitialized(
-														_this
+														_this,
 													).clipPathId,
 												_this$state7 = _this.state,
 												xAxisMap =
@@ -14687,7 +14700,7 @@
 														''
 															.concat(
 																displayName,
-																'-'
+																'-',
 															)
 															.concat(index),
 													xAxis: xAxisMap[xAxisId],
@@ -14699,13 +14712,13 @@
 														height: offset.height,
 													},
 													clipPathId,
-												}
+												},
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderActivePoints',
 										function (_ref12) {
@@ -14733,7 +14746,7 @@
 																r: 4,
 																fill: (0,
 																ChartUtils.fk)(
-																	item.item
+																	item.item,
 																),
 																strokeWidth: 2,
 																stroke: '#fff',
@@ -14743,24 +14756,26 @@
 																key: ''
 																	.concat(
 																		key,
-																		'-activePoint-'
+																		'-activePoint-',
 																	)
 																	.concat(
-																		childIndex
+																		childIndex,
 																	),
 															},
 															(0, ReactUtils.L6)(
-																activeDot
-															)
+																activeDot,
+															),
 														),
-														(0, types.Ym)(activeDot)
+														(0, types.Ym)(
+															activeDot,
+														),
 													)
 											return (
 												result.push(
 													CategoricalChartWrapper.renderActiveDot(
 														activeDot,
-														dotProps
-													)
+														dotProps,
+													),
 												),
 												basePoint
 													? result.push(
@@ -14769,7 +14784,7 @@
 																generateCategoricalChart_objectSpread(
 																	generateCategoricalChart_objectSpread(
 																		{},
-																		dotProps
+																		dotProps,
 																	),
 																	{},
 																	{
@@ -14778,31 +14793,31 @@
 																		key: ''
 																			.concat(
 																				key,
-																				'-basePoint-'
+																				'-basePoint-',
 																			)
 																			.concat(
-																				childIndex
+																				childIndex,
 																			),
-																	}
-																)
-															)
+																	},
+																),
+															),
 													  )
 													: isRange &&
 													  result.push(null),
 												result
 											)
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderGraphicChild',
 										function (element, displayName, index) {
 											var item = _this.filterFormatItem(
 												element,
 												displayName,
-												index
+												index,
 											)
 											if (!item) return null
 											var tooltipEventType =
@@ -14820,7 +14835,7 @@
 												tooltipItem = (0,
 												ReactUtils.sP)(
 													children,
-													Tooltip.u
+													Tooltip.u,
 												),
 												_item$props2 = item.props,
 												points = _item$props2.points,
@@ -14848,7 +14863,7 @@
 															_this.handleItemMouseEnter,
 															null,
 															element.props
-																.onCLick
+																.onCLick,
 														),
 												  })
 												: 'axis' !== tooltipEventType &&
@@ -14858,14 +14873,14 @@
 															_this.handleItemMouseLeave,
 															null,
 															element.props
-																.onMouseLeave
+																.onMouseLeave,
 														),
 														onMouseEnter: (0,
 														ChartUtils.DO)(
 															_this.handleItemMouseEnter,
 															null,
 															element.props
-																.onMouseEnter
+																.onMouseEnter,
 														),
 												  })
 											var graphicalItem = (0,
@@ -14874,10 +14889,10 @@
 												generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														item.props
+														item.props,
 													),
-													itemEvents
-												)
+													itemEvents,
+												),
 											)
 											if (hasActive) {
 												var activePoint, basePoint
@@ -14889,23 +14904,23 @@
 														'function' ==
 														typeof tooltipAxis.dataKey
 															? function findWithPayload(
-																	entry
+																	entry,
 															  ) {
 																	return 'function' ==
 																		typeof tooltipAxis.dataKey
 																		? tooltipAxis.dataKey(
-																				entry.payload
+																				entry.payload,
 																		  )
 																		: null
 															  }
 															: 'payload.'.concat(
-																	tooltipAxis.dataKey.toString()
+																	tooltipAxis.dataKey.toString(),
 															  )
 													;(activePoint = (0,
 													DataUtils.Ap)(
 														points,
 														specifiedKey,
-														activeLabel
+														activeLabel,
 													)),
 														(basePoint =
 															isRange &&
@@ -14913,7 +14928,7 @@
 															(0, DataUtils.Ap)(
 																baseLine,
 																specifiedKey,
-																activeLabel
+																activeLabel,
 															))
 												} else
 													(activePoint =
@@ -14928,7 +14943,7 @@
 															])
 												if (
 													!isNil_default()(
-														activePoint
+														activePoint,
 													)
 												)
 													return [
@@ -14943,19 +14958,19 @@
 																	childIndex:
 																		activeTooltipIndex,
 																	isRange,
-																}
-															)
-														)
+																},
+															),
+														),
 													)
 											}
 											return isRange
 												? [graphicalItem, null, null]
 												: [graphicalItem, null]
-										}
+										},
 									),
 									generateCategoricalChart_defineProperty(
 										generateCategoricalChart_assertThisInitialized(
-											_this
+											_this,
 										),
 										'renderCustomized',
 										function (element, displayName, index) {
@@ -14965,30 +14980,30 @@
 													generateCategoricalChart_objectSpread(
 														{
 															key: 'recharts-customized-'.concat(
-																index
+																index,
 															),
 														},
-														_this.props
+														_this.props,
 													),
-													_this.state
-												)
+													_this.state,
+												),
 											)
-										}
+										},
 									),
 									(_this.uniqueChartId = isNil_default()(
-										_props.id
+										_props.id,
 									)
 										? (0, DataUtils.EL)('recharts')
 										: _props.id),
 									(_this.clipPathId = ''.concat(
 										_this.uniqueChartId,
-										'-clip'
+										'-clip',
 									)),
 									_props.throttleDelay &&
 										(_this.triggeredAfterMouseMove =
 											throttle_default()(
 												_this.triggeredAfterMouseMove,
-												_props.throttleDelay
+												_props.throttleDelay,
 											)),
 									(_this.state = {}),
 									_this
@@ -14998,23 +15013,23 @@
 								(function generateCategoricalChart_createClass(
 									Constructor,
 									protoProps,
-									staticProps
+									staticProps,
 								) {
 									return (
 										protoProps &&
 											generateCategoricalChart_defineProperties(
 												Constructor.prototype,
-												protoProps
+												protoProps,
 											),
 										staticProps &&
 											generateCategoricalChart_defineProperties(
 												Constructor,
-												staticProps
+												staticProps,
 											),
 										Object.defineProperty(
 											Constructor,
 											'prototype',
-											{ writable: !1 }
+											{ writable: !1 },
 										),
 										Constructor
 									)
@@ -15023,25 +15038,25 @@
 										key: 'componentDidMount',
 										value: function componentDidMount() {
 											isNil_default()(
-												this.props.syncId
+												this.props.syncId,
 											) || this.addListener()
 										},
 									},
 									{
 										key: 'componentDidUpdate',
 										value: function componentDidUpdate(
-											prevProps
+											prevProps,
 										) {
 											isNil_default()(prevProps.syncId) &&
 												!isNil_default()(
-													this.props.syncId
+													this.props.syncId,
 												) &&
 												this.addListener(),
 												!isNil_default()(
-													prevProps.syncId
+													prevProps.syncId,
 												) &&
 													isNil_default()(
-														this.props.syncId
+														this.props.syncId,
 													) &&
 													this.removeListener()
 										},
@@ -15051,7 +15066,7 @@
 										value: function componentWillUnmount() {
 											this.clearDeferId(),
 												isNil_default()(
-													this.props.syncId
+													this.props.syncId,
 												) || this.removeListener(),
 												this.cancelThrottledTriggerAfterMouseMove()
 										},
@@ -15072,12 +15087,12 @@
 											var tooltipItem = (0,
 											ReactUtils.sP)(
 												this.props.children,
-												Tooltip.u
+												Tooltip.u,
 											)
 											if (
 												tooltipItem &&
 												isBoolean_default()(
-													tooltipItem.props.shared
+													tooltipItem.props.shared,
 												)
 											) {
 												var eventType = tooltipItem
@@ -15085,7 +15100,7 @@
 													? 'axis'
 													: 'item'
 												return validateTooltipEventTypes.indexOf(
-													eventType
+													eventType,
 												) >= 0
 													? eventType
 													: defaultTooltipEventType
@@ -15101,11 +15116,11 @@
 												DOMUtils.os)(this.container),
 												e = (0, DOMUtils.IR)(
 													event,
-													containerOffset
+													containerOffset,
 												),
 												rangeObj = this.inRange(
 													e.chartX,
-													e.chartY
+													e.chartY,
 												)
 											if (!rangeObj) return null
 											var _this$state9 = this.state,
@@ -15119,45 +15134,45 @@
 												yAxisMap
 											) {
 												var xScale = (0, DataUtils.Kt)(
-														xAxisMap
+														xAxisMap,
 													).scale,
 													yScale = (0, DataUtils.Kt)(
-														yAxisMap
+														yAxisMap,
 													).scale,
 													xValue =
 														xScale && xScale.invert
 															? xScale.invert(
-																	e.chartX
+																	e.chartX,
 															  )
 															: null,
 													yValue =
 														yScale && yScale.invert
 															? yScale.invert(
-																	e.chartY
+																	e.chartY,
 															  )
 															: null
 												return generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														e
+														e,
 													),
 													{},
-													{ xValue, yValue }
+													{ xValue, yValue },
 												)
 											}
 											var toolTipData = getTooltipData(
 												this.state,
 												this.props.data,
 												this.props.layout,
-												rangeObj
+												rangeObj,
 											)
 											return toolTipData
 												? generateCategoricalChart_objectSpread(
 														generateCategoricalChart_objectSpread(
 															{},
-															e
+															e,
 														),
-														toolTipData
+														toolTipData,
 												  )
 												: null
 										},
@@ -15224,10 +15239,10 @@
 														offset.width)
 											else if (
 												!isNil_default()(
-													activeCoordinate.cx
+													activeCoordinate.cx,
 												) ||
 												!isNil_default()(
-													activeCoordinate.cy
+													activeCoordinate.cy,
 												)
 											) {
 												if ('centric' !== layout) {
@@ -15247,13 +15262,13 @@
 																_cx,
 																_cy,
 																radius,
-																startAngle
+																startAngle,
 															),
 															(0, PolarUtils.op)(
 																_cx,
 																_cy,
 																radius,
-																endAngle
+																endAngle,
 															),
 														],
 														cx: _cx,
@@ -15276,14 +15291,14 @@
 														cx,
 														cy,
 														innerRadius,
-														angle
+														angle,
 													),
 													outerPoint = (0,
 													PolarUtils.op)(
 														cx,
 														cy,
 														outerRadius,
-														angle
+														angle,
 													)
 												;(x1 = innerPoint.x),
 													(y1 = innerPoint.y),
@@ -15326,7 +15341,7 @@
 												DataUtils.Kt)(angleAxisMap)
 												return (0, PolarUtils.z3)(
 													{ x, y },
-													angleAxis
+													angleAxis,
 												)
 											}
 											return null
@@ -15341,7 +15356,7 @@
 												tooltipItem = (0,
 												ReactUtils.sP)(
 													children,
-													Tooltip.u
+													Tooltip.u,
 												),
 												tooltipEvents = {}
 											return (
@@ -15383,10 +15398,10 @@
 														(0, types.Ym)(
 															this.props,
 															this
-																.handleOuterEvent
-														)
+																.handleOuterEvent,
+														),
 													),
-													tooltipEvents
+													tooltipEvents,
 												)
 											)
 										},
@@ -15396,13 +15411,13 @@
 										value: function addListener() {
 											eventCenter.on(
 												SYNC_EVENT,
-												this.handleReceiveSyncEvent
+												this.handleReceiveSyncEvent,
 											),
 												eventCenter.setMaxListeners &&
 													eventCenter._maxListeners &&
 													eventCenter.setMaxListeners(
 														eventCenter._maxListeners +
-															1
+															1,
 													)
 										},
 									},
@@ -15411,13 +15426,13 @@
 										value: function removeListener() {
 											eventCenter.removeListener(
 												SYNC_EVENT,
-												this.handleReceiveSyncEvent
+												this.handleReceiveSyncEvent,
 											),
 												eventCenter.setMaxListeners &&
 													eventCenter._maxListeners &&
 													eventCenter.setMaxListeners(
 														eventCenter._maxListeners -
-															1
+															1,
 													)
 										},
 									},
@@ -15430,7 +15445,7 @@
 													SYNC_EVENT,
 													syncId,
 													this.uniqueChartId,
-													data
+													data,
 												)
 										},
 									},
@@ -15447,15 +15462,15 @@
 												dataEndIndex = data.dataEndIndex
 											if (
 												isNil_default()(
-													data.dataStartIndex
+													data.dataStartIndex,
 												) &&
 												isNil_default()(
-													data.dataEndIndex
+													data.dataEndIndex,
 												)
 											)
 												if (
 													isNil_default()(
-														data.activeTooltipIndex
+														data.activeTooltipIndex,
 													)
 												)
 													this.setState(data)
@@ -15478,7 +15493,7 @@
 														activeTooltipIndex =
 															syncMethod(
 																tooltipTicks,
-																data
+																data,
 															)
 													else if (
 														'value' === syncMethod
@@ -15504,25 +15519,25 @@
 															generateCategoricalChart_objectSpread(
 																generateCategoricalChart_objectSpread(
 																	{},
-																	offset
+																	offset,
 																),
 																{},
 																{
 																	x: offset.left,
 																	y: offset.top,
-																}
+																},
 															),
 														validateChartX =
 															Math.min(
 																chartX,
 																viewBox.x +
-																	viewBox.width
+																	viewBox.width,
 															),
 														validateChartY =
 															Math.min(
 																chartY,
 																viewBox.y +
-																	viewBox.height
+																	viewBox.height,
 															),
 														activeLabel =
 															tooltipTicks[
@@ -15535,7 +15550,7 @@
 															getTooltipContent(
 																this.state,
 																this.props.data,
-																activeTooltipIndex
+																activeTooltipIndex,
 															),
 														activeCoordinate =
 															tooltipTicks[
@@ -15564,7 +15579,7 @@
 														generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																data
+																data,
 															),
 															{},
 															{
@@ -15572,8 +15587,8 @@
 																activeCoordinate,
 																activePayload,
 																activeTooltipIndex,
-															}
-														)
+															},
+														),
 													)
 												}
 											else
@@ -15591,9 +15606,9 @@
 																dataEndIndex,
 																updateId,
 															},
-															this.state
-														)
-													)
+															this.state,
+														),
+													),
 												)
 										},
 									},
@@ -15602,7 +15617,7 @@
 										value: function filterFormatItem(
 											item,
 											displayName,
-											childIndex
+											childIndex,
 										) {
 											for (
 												var formattedGraphicalItems =
@@ -15622,7 +15637,7 @@
 														item.key ||
 													(displayName ===
 														(0, ReactUtils.Gf)(
-															entry.item.type
+															entry.item.type,
 														) &&
 														childIndex ===
 															entry.childIndex)
@@ -15638,7 +15653,7 @@
 											axisOptions,
 											element,
 											displayName,
-											index
+											index,
 										) {
 											var _this$props5 = this.props,
 												width = _this$props5.width,
@@ -15652,17 +15667,17 @@
 														className: 'recharts-'
 															.concat(
 																axisOptions.axisType,
-																' '
+																' ',
 															)
 															.concat(
-																axisOptions.axisType
+																axisOptions.axisType,
 															),
 														key:
 															element.key ||
 															''
 																.concat(
 																	displayName,
-																	'-'
+																	'-',
 																)
 																.concat(index),
 														viewBox: {
@@ -15674,8 +15689,8 @@
 														ticksGenerator:
 															this
 																.axesTicksGenerator,
-													}
-												)
+													},
+												),
 											)
 										},
 									},
@@ -15703,9 +15718,9 @@
 															y: top,
 															height,
 															width,
-														}
-													)
-												)
+														},
+													),
+												),
 											)
 										},
 									},
@@ -15715,15 +15730,15 @@
 											var xAxisMap = this.state.xAxisMap
 											return xAxisMap
 												? Object.entries(
-														xAxisMap
+														xAxisMap,
 												  ).reduce(function (
 														res,
-														_ref13
+														_ref13,
 												  ) {
 														var _ref14 =
 																generateCategoricalChart_slicedToArray(
 																	_ref13,
-																	2
+																	2,
 																),
 															axisId = _ref14[0],
 															axisProps =
@@ -15731,17 +15746,16 @@
 														return generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																res
+																res,
 															),
 															{},
 															generateCategoricalChart_defineProperty(
 																{},
 																axisId,
-																axisProps.scale
-															)
+																axisProps.scale,
+															),
 														)
-												  },
-												  {})
+												  }, {})
 												: null
 										},
 									},
@@ -15751,15 +15765,15 @@
 											var yAxisMap = this.state.yAxisMap
 											return yAxisMap
 												? Object.entries(
-														yAxisMap
+														yAxisMap,
 												  ).reduce(function (
 														res,
-														_ref15
+														_ref15,
 												  ) {
 														var _ref16 =
 																generateCategoricalChart_slicedToArray(
 																	_ref15,
-																	2
+																	2,
 																),
 															axisId = _ref16[0],
 															axisProps =
@@ -15767,24 +15781,23 @@
 														return generateCategoricalChart_objectSpread(
 															generateCategoricalChart_objectSpread(
 																{},
-																res
+																res,
 															),
 															{},
 															generateCategoricalChart_defineProperty(
 																{},
 																axisId,
-																axisProps.scale
-															)
+																axisProps.scale,
+															),
 														)
-												  },
-												  {})
+												  }, {})
 												: null
 										},
 									},
 									{
 										key: 'getXScaleByAxisId',
 										value: function getXScaleByAxisId(
-											axisId
+											axisId,
 										) {
 											var _this$state$xAxisMap,
 												_this$state$xAxisMap$
@@ -15806,7 +15819,7 @@
 									{
 										key: 'getYScaleByAxisId',
 										value: function getYScaleByAxisId(
-											axisId
+											axisId,
 										) {
 											var _this$state$yAxisMap,
 												_this$state$yAxisMap$
@@ -15852,7 +15865,7 @@
 															graphicalItem.item,
 														itemDisplayName = (0,
 														ReactUtils.Gf)(
-															item.type
+															item.type,
 														)
 													if (
 														'Bar' ===
@@ -15860,15 +15873,15 @@
 													) {
 														var activeBarItem = (
 															props.data || []
-														).find(function (
-															entry
-														) {
-															return (0,
-															Rectangle.X)(
-																chartXY,
-																entry
-															)
-														})
+														).find(
+															function (entry) {
+																return (0,
+																Rectangle.X)(
+																	chartXY,
+																	entry,
+																)
+															},
+														)
 														if (activeBarItem)
 															return {
 																graphicalItem,
@@ -15881,15 +15894,15 @@
 													) {
 														var _activeBarItem = (
 															props.data || []
-														).find(function (
-															entry
-														) {
-															return (0,
-															PolarUtils.z3)(
-																chartXY,
-																entry
-															)
-														})
+														).find(
+															function (entry) {
+																return (0,
+																PolarUtils.z3)(
+																	chartXY,
+																	entry,
+																)
+															},
+														)
 														if (_activeBarItem)
 															return {
 																graphicalItem,
@@ -15921,10 +15934,10 @@
 												others =
 													generateCategoricalChart_objectWithoutProperties(
 														_this$props6,
-														generateCategoricalChart_excluded2
+														generateCategoricalChart_excluded2,
 													),
 												attrs = (0, ReactUtils.L6)(
-													others
+													others,
 												),
 												map = {
 													CartesianGrid: {
@@ -16038,13 +16051,13 @@
 															height,
 															title,
 															desc,
-														}
+														},
 													),
 													this.renderClipPath(),
 													(0, ReactUtils.eu)(
 														children,
-														map
-													)
+														map,
+													),
 												)
 											var events =
 												this.parseEventsOfWrapper()
@@ -16055,7 +16068,7 @@
 														className:
 															classnames_default()(
 																'recharts-wrapper',
-																className
+																className,
 															),
 														style: generateCategoricalChart_objectSpread(
 															{
@@ -16065,19 +16078,19 @@
 																width,
 																height,
 															},
-															style
+															style,
 														),
 													},
 													events,
 													{
 														ref: function ref(
-															node
+															node,
 														) {
 															_this2.container =
 																node
 														},
 														role: 'region',
-													}
+													},
 												),
 												react.createElement(
 													Surface.T,
@@ -16089,16 +16102,16 @@
 															height,
 															title,
 															desc,
-														}
+														},
 													),
 													this.renderClipPath(),
 													(0, ReactUtils.eu)(
 														children,
-														map
-													)
+														map,
+													),
 												),
 												this.renderLegend(),
-												this.renderTooltip()
+												this.renderTooltip(),
 											)
 										},
 									},
@@ -16109,7 +16122,7 @@
 						generateCategoricalChart_defineProperty(
 							_class,
 							'displayName',
-							chartName
+							chartName,
 						),
 						generateCategoricalChart_defineProperty(
 							_class,
@@ -16129,8 +16142,8 @@
 									reverseStackOrder: !1,
 									syncMethod: 'index',
 								},
-								defaultProps
-							)
+								defaultProps,
+							),
 						),
 						generateCategoricalChart_defineProperty(
 							_class,
@@ -16150,7 +16163,7 @@
 										generateCategoricalChart_objectSpread(
 											generateCategoricalChart_objectSpread(
 												{},
-												defaultState
+												defaultState,
 											),
 											{},
 											{ updateId: 0 },
@@ -16158,13 +16171,13 @@
 												generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{ props: nextProps },
-														defaultState
+														defaultState,
 													),
 													{},
-													{ updateId: 0 }
+													{ updateId: 0 },
 												),
-												prevState
-											)
+												prevState,
+											),
 										),
 										{},
 										{
@@ -16175,7 +16188,7 @@
 											prevStackOffset: stackOffset,
 											prevMargin: margin,
 											prevChildren: children,
-										}
+										},
 									)
 								}
 								if (
@@ -16186,7 +16199,7 @@
 									stackOffset !== prevState.prevStackOffset ||
 									!(0, ShallowEqual.w)(
 										margin,
-										prevState.prevMargin
+										prevState.prevMargin,
 									)
 								) {
 									var _defaultState =
@@ -16204,39 +16217,39 @@
 													getTooltipData(
 														prevState,
 														data,
-														layout
-													)
+														layout,
+													),
 												),
 												{},
 												{
 													updateId:
 														prevState.updateId + 1,
-												}
+												},
 											),
 										newState =
 											generateCategoricalChart_objectSpread(
 												generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{},
-														_defaultState
+														_defaultState,
 													),
-													keepFromPrevState
+													keepFromPrevState,
 												),
-												updatesToState
+												updatesToState,
 											)
 									return generateCategoricalChart_objectSpread(
 										generateCategoricalChart_objectSpread(
 											generateCategoricalChart_objectSpread(
 												{},
-												newState
+												newState,
 											),
 											updateStateOfAxisMapsOffsetAndStackGroups(
 												generateCategoricalChart_objectSpread(
 													{ props: nextProps },
-													newState
+													newState,
 												),
-												prevState
-											)
+												prevState,
+											),
 										),
 										{},
 										{
@@ -16247,13 +16260,13 @@
 											prevStackOffset: stackOffset,
 											prevMargin: margin,
 											prevChildren: children,
-										}
+										},
 									)
 								}
 								if (
 									!(0, ReactUtils.rL)(
 										children,
-										prevState.prevChildren
+										prevState.prevChildren,
 									)
 								) {
 									var newUpdateId = !isNil_default()(data)
@@ -16266,20 +16279,20 @@
 												generateCategoricalChart_objectSpread(
 													generateCategoricalChart_objectSpread(
 														{ props: nextProps },
-														prevState
+														prevState,
 													),
 													{},
-													{ updateId: newUpdateId }
+													{ updateId: newUpdateId },
 												),
-												prevState
-											)
+												prevState,
+											),
 										),
 										{},
-										{ prevChildren: children }
+										{ prevChildren: children },
 									)
 								}
 								return null
-							}
+							},
 						),
 						generateCategoricalChart_defineProperty(
 							_class,
@@ -16298,10 +16311,10 @@
 											className: 'recharts-active-dot',
 											key: props.key,
 										},
-										dot
+										dot,
 									)
 								)
-							}
+							},
 						),
 						_class
 					)
@@ -16310,7 +16323,7 @@
 		'./node_modules/recharts/es6/component/Cell.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { b: () => Cell })
@@ -16322,7 +16335,7 @@
 		'./node_modules/recharts/es6/component/Label.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { _: () => Label })
@@ -16330,45 +16343,45 @@
 					__webpack_require__('./node_modules/lodash/isObject.js'),
 				lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__('./node_modules/lodash/isFunction.js'),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__
+						lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/lodash/isNil.js'
+					'./node_modules/lodash/isNil.js',
 				),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default =
 					__webpack_require__.n(
-						lodash_isNil__WEBPACK_IMPORTED_MODULE_2__
+						lodash_isNil__WEBPACK_IMPORTED_MODULE_2__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_4___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_4__
+						classnames__WEBPACK_IMPORTED_MODULE_4__,
 					),
 				_Text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/Text.js'
+					'./node_modules/recharts/es6/component/Text.js',
 				),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_7__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/DataUtils.js'
+						'./node_modules/recharts/es6/util/DataUtils.js',
 					),
 				_util_PolarUtils__WEBPACK_IMPORTED_MODULE_6__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/PolarUtils.js'
+						'./node_modules/recharts/es6/util/PolarUtils.js',
 					)
 			function _typeof(obj) {
 				return (
@@ -16419,7 +16432,7 @@
 					})(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -16436,10 +16449,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -16455,13 +16466,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -16478,7 +16492,7 @@
 								var res = prim.call(input, hint || 'default')
 								if ('object' !== _typeof(res)) return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -16505,7 +16519,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -16518,12 +16532,12 @@
 						formatter = props.formatter,
 						label =
 							lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(
-								props.children
+								props.children,
 							)
 								? value
 								: props.children
 					return lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default()(
-						formatter
+						formatter,
 					)
 						? formatter(label)
 						: label
@@ -16531,7 +16545,7 @@
 				renderRadialLabel = function renderRadialLabel(
 					labelProps,
 					label,
-					attrs
+					attrs,
 				) {
 					var labelAngle,
 						direction,
@@ -16550,12 +16564,12 @@
 						radius = (innerRadius + outerRadius) / 2,
 						deltaAngle = (function getDeltaAngle(
 							startAngle,
-							endAngle
+							endAngle,
 						) {
 							return (
 								(0,
 								_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.uY)(
-									endAngle - startAngle
+									endAngle - startAngle,
 								) *
 								Math.min(Math.abs(endAngle - startAngle), 360)
 							)
@@ -16576,14 +16590,14 @@
 							cx,
 							cy,
 							radius,
-							labelAngle
+							labelAngle,
 						),
 						endPoint = (0,
 						_util_PolarUtils__WEBPACK_IMPORTED_MODULE_6__.op)(
 							cx,
 							cy,
 							radius,
-							labelAngle + 359 * (direction ? 1 : -1)
+							labelAngle + 359 * (direction ? 1 : -1),
 						),
 						path = 'M'
 							.concat(startPoint.x, ',')
@@ -16595,11 +16609,11 @@
 							.concat(endPoint.y),
 						id =
 							lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(
-								labelProps.id
+								labelProps.id,
 							)
 								? (0,
 								  _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.EL)(
-										'recharts-radial-line-'
+										'recharts-radial-line-',
 								  )
 								: labelProps.id
 					return react__WEBPACK_IMPORTED_MODULE_3__.createElement(
@@ -16609,7 +16623,7 @@
 							className:
 								classnames__WEBPACK_IMPORTED_MODULE_4___default()(
 									'recharts-radial-bar-label',
-									className
+									className,
 								),
 						}),
 						react__WEBPACK_IMPORTED_MODULE_3__.createElement(
@@ -16617,14 +16631,14 @@
 							null,
 							react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 								'path',
-								{ id, d: path }
-							)
+								{ id, d: path },
+							),
 						),
 						react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 							'textPath',
 							{ xlinkHref: '#'.concat(id) },
-							label
-						)
+							label,
+						),
 					)
 				},
 				getAttrsOfPolarLabel = function getAttrsOfPolarLabel(props) {
@@ -16643,7 +16657,7 @@
 								cx,
 								cy,
 								outerRadius + offset,
-								midAngle
+								midAngle,
 							),
 							_x = _polarToCartesian.x
 						return {
@@ -16680,7 +16694,7 @@
 							cx,
 							cy,
 							r,
-							midAngle
+							midAngle,
 						)
 					return {
 						x: _polarToCartesian2.x,
@@ -16690,7 +16704,7 @@
 					}
 				},
 				getAttrsOfCartesianLabel = function getAttrsOfCartesianLabel(
-					props
+					props,
 				) {
 					var viewBox = props.viewBox,
 						parentViewBox = props.parentViewBox,
@@ -16718,17 +16732,17 @@
 									y: y - verticalSign * offset,
 									textAnchor: 'middle',
 									verticalAnchor: verticalEnd,
-								}
+								},
 							),
 							parentViewBox
 								? {
 										height: Math.max(
 											y - parentViewBox.y,
-											0
+											0,
 										),
 										width,
 								  }
-								: {}
+								: {},
 						)
 					if ('bottom' === position)
 						return _objectSpread(
@@ -16739,7 +16753,7 @@
 									y: y + height + verticalOffset,
 									textAnchor: 'middle',
 									verticalAnchor: verticalStart,
-								}
+								},
 							),
 							parentViewBox
 								? {
@@ -16747,11 +16761,11 @@
 											parentViewBox.y +
 												parentViewBox.height -
 												(y + height),
-											0
+											0,
 										),
 										width,
 								  }
-								: {}
+								: {},
 						)
 					if ('left' === position) {
 						var _attrs2 = {
@@ -16766,11 +16780,11 @@
 								? {
 										width: Math.max(
 											_attrs2.x - parentViewBox.x,
-											0
+											0,
 										),
 										height,
 								  }
-								: {}
+								: {},
 						)
 					}
 					if ('right' === position) {
@@ -16788,11 +16802,11 @@
 											parentViewBox.x +
 												parentViewBox.width -
 												_attrs3.x,
-											0
+											0,
 										),
 										height,
 								  }
-								: {}
+								: {},
 						)
 					}
 					var sizeAttrs = parentViewBox ? { width, height } : {}
@@ -16804,7 +16818,7 @@
 									textAnchor: horizontalStart,
 									verticalAnchor: 'middle',
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: 'insideRight' === position
 						? _objectSpread(
@@ -16814,7 +16828,7 @@
 									textAnchor: horizontalEnd,
 									verticalAnchor: 'middle',
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: 'insideTop' === position
 						? _objectSpread(
@@ -16824,7 +16838,7 @@
 									textAnchor: 'middle',
 									verticalAnchor: verticalStart,
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: 'insideBottom' === position
 						? _objectSpread(
@@ -16834,7 +16848,7 @@
 									textAnchor: 'middle',
 									verticalAnchor: verticalEnd,
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: 'insideTopLeft' === position
 						? _objectSpread(
@@ -16844,7 +16858,7 @@
 									textAnchor: horizontalStart,
 									verticalAnchor: verticalStart,
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: 'insideTopRight' === position
 						? _objectSpread(
@@ -16854,7 +16868,7 @@
 									textAnchor: horizontalEnd,
 									verticalAnchor: verticalStart,
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: 'insideBottomLeft' === position
 						? _objectSpread(
@@ -16864,7 +16878,7 @@
 									textAnchor: horizontalStart,
 									verticalAnchor: verticalEnd,
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: 'insideBottomRight' === position
 						? _objectSpread(
@@ -16874,24 +16888,24 @@
 									textAnchor: horizontalEnd,
 									verticalAnchor: verticalEnd,
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default()(
-								position
+								position,
 						  ) &&
 						  ((0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-								position.x
+								position.x,
 						  ) ||
 								(0,
 								_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hU)(
-									position.x
+									position.x,
 								)) &&
 						  ((0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-								position.y
+								position.y,
 						  ) ||
 								(0,
 								_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hU)(
-									position.y
+									position.y,
 								))
 						? _objectSpread(
 								{
@@ -16900,19 +16914,19 @@
 										(0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.h1)(
 											position.x,
-											width
+											width,
 										),
 									y:
 										y +
 										(0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.h1)(
 											position.y,
-											height
+											height,
 										),
 									textAnchor: 'end',
 									verticalAnchor: 'end',
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 						: _objectSpread(
 								{
@@ -16921,14 +16935,14 @@
 									textAnchor: 'middle',
 									verticalAnchor: 'middle',
 								},
-								sizeAttrs
+								sizeAttrs,
 						  )
 				},
 				isPolar = function isPolar(viewBox) {
 					return (
 						'cx' in viewBox &&
 						(0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-							viewBox.cx
+							viewBox.cx,
 						)
 					)
 				}
@@ -16946,41 +16960,41 @@
 				if (
 					!viewBox ||
 					(lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(
-						value
+						value,
 					) &&
 						lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(
-							children
+							children,
 						) &&
 						!(0, react__WEBPACK_IMPORTED_MODULE_3__.isValidElement)(
-							content
+							content,
 						) &&
 						!lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default()(
-							content
+							content,
 						))
 				)
 					return null
 				if (
 					(0, react__WEBPACK_IMPORTED_MODULE_3__.isValidElement)(
-						content
+						content,
 					)
 				)
 					return (0, react__WEBPACK_IMPORTED_MODULE_3__.cloneElement)(
 						content,
-						props
+						props,
 					)
 				if (
 					lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default()(
-						content
+						content,
 					)
 				) {
 					if (
 						((label = (0,
 						react__WEBPACK_IMPORTED_MODULE_3__.createElement)(
 							content,
-							props
+							props,
 						)),
 						(0, react__WEBPACK_IMPORTED_MODULE_3__.isValidElement)(
-							label
+							label,
 						))
 					)
 						return label
@@ -17005,14 +17019,14 @@
 							className:
 								classnames__WEBPACK_IMPORTED_MODULE_4___default()(
 									'recharts-label',
-									className
+									className,
 								),
 						},
 						attrs,
 						positionAttrs,
-						{ breakAll: textBreakAll }
+						{ breakAll: textBreakAll },
 					),
-					label
+					label,
 				)
 			}
 			;(Label.displayName = 'Label'), (Label.defaultProps = { offset: 5 })
@@ -17037,33 +17051,33 @@
 				if (labelViewBox) return labelViewBox
 				if (
 					(0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-						width
+						width,
 					) &&
 					(0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(height)
 				) {
 					if (
 						(0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-							x
+							x,
 						) &&
 						(0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(y)
 					)
 						return { x, y, width, height }
 					if (
 						(0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-							top
+							top,
 						) &&
 						(0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-							left
+							left,
 						)
 					)
 						return { x: top, y: left, width, height }
 				}
 				return (0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-					x
+					x,
 				) && (0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(y)
 					? { x, y, width: 0, height: 0 }
 					: (0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-							cx
+							cx,
 					  ) &&
 					  (0, _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(cy)
 					? {
@@ -17082,7 +17096,7 @@
 			;(Label.parseViewBox = parseViewBox),
 				(Label.renderCallByParent = function renderCallByParent(
 					parentProps,
-					viewBox
+					viewBox,
 				) {
 					var checkPropsLabel =
 						!(arguments.length > 2 && void 0 !== arguments[2]) ||
@@ -17099,10 +17113,16 @@
 						explicitChildren = (0,
 						_util_ReactUtils__WEBPACK_IMPORTED_MODULE_7__.NN)(
 							children,
-							Label
+							Label,
 						).map(function (child, index) {
 							return (0,
-							react__WEBPACK_IMPORTED_MODULE_3__.cloneElement)(child, { viewBox: viewBox || parentViewBox, key: 'label-'.concat(index) })
+							react__WEBPACK_IMPORTED_MODULE_3__.cloneElement)(
+								child,
+								{
+									viewBox: viewBox || parentViewBox,
+									key: 'label-'.concat(index),
+								},
+							)
 						})
 					if (!checkPropsLabel) return explicitChildren
 					var implicitLabel = (function parseLabel(label, viewBox) {
@@ -17110,11 +17130,11 @@
 							? !0 === label
 								? react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 										Label,
-										{ key: 'label-implicit', viewBox }
+										{ key: 'label-implicit', viewBox },
 								  )
 								: (0,
 								  _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.P2)(
-										label
+										label,
 								  )
 								? react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 										Label,
@@ -17122,17 +17142,17 @@
 											key: 'label-implicit',
 											viewBox,
 											value: label,
-										}
+										},
 								  )
 								: (0,
 								  react__WEBPACK_IMPORTED_MODULE_3__.isValidElement)(
-										label
+										label,
 								  )
 								? label.type === Label
 									? (0,
 									  react__WEBPACK_IMPORTED_MODULE_3__.cloneElement)(
 											label,
-											{ key: 'label-implicit', viewBox }
+											{ key: 'label-implicit', viewBox },
 									  )
 									: react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 											Label,
@@ -17140,10 +17160,10 @@
 												key: 'label-implicit',
 												content: label,
 												viewBox,
-											}
+											},
 									  )
 								: lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default()(
-										label
+										label,
 								  )
 								? react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 										Label,
@@ -17151,29 +17171,29 @@
 											key: 'label-implicit',
 											content: label,
 											viewBox,
-										}
+										},
 								  )
 								: lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default()(
-										label
+										label,
 								  )
 								? react__WEBPACK_IMPORTED_MODULE_3__.createElement(
 										Label,
 										_extends({ viewBox }, label, {
 											key: 'label-implicit',
-										})
+										}),
 								  )
 								: null
 							: null
 					})(parentProps.label, viewBox || parentViewBox)
 					return [implicitLabel].concat(
-						_toConsumableArray(explicitChildren)
+						_toConsumableArray(explicitChildren),
 					)
 				})
 		},
 		'./node_modules/recharts/es6/component/LabelList.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { e: () => LabelList })
@@ -17181,51 +17201,51 @@
 					__webpack_require__('./node_modules/lodash/isObject.js'),
 				lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__('./node_modules/lodash/isFunction.js'),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__
+						lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/lodash/isNil.js'
+					'./node_modules/lodash/isNil.js',
 				),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default =
 					__webpack_require__.n(
-						lodash_isNil__WEBPACK_IMPORTED_MODULE_2__
+						lodash_isNil__WEBPACK_IMPORTED_MODULE_2__,
 					),
 				lodash_last__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/lodash/last.js'
+					'./node_modules/lodash/last.js',
 				),
 				lodash_last__WEBPACK_IMPORTED_MODULE_3___default =
 					__webpack_require__.n(
-						lodash_last__WEBPACK_IMPORTED_MODULE_3__
+						lodash_last__WEBPACK_IMPORTED_MODULE_3__,
 					),
 				lodash_isArray__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__('./node_modules/lodash/isArray.js'),
 				lodash_isArray__WEBPACK_IMPORTED_MODULE_4___default =
 					__webpack_require__.n(
-						lodash_isArray__WEBPACK_IMPORTED_MODULE_4__
+						lodash_isArray__WEBPACK_IMPORTED_MODULE_4__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_Label__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/Label.js'
+					'./node_modules/recharts/es6/component/Label.js',
 				),
 				_container_Layer__WEBPACK_IMPORTED_MODULE_6__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/container/Layer.js'
+						'./node_modules/recharts/es6/container/Layer.js',
 					),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_util_ChartUtils__WEBPACK_IMPORTED_MODULE_7__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ChartUtils.js'
+						'./node_modules/recharts/es6/util/ChartUtils.js',
 					)
 			function _typeof(obj) {
 				return (
@@ -17284,7 +17304,7 @@
 					})(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -17305,7 +17325,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -17319,10 +17339,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -17338,13 +17356,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -17361,7 +17382,7 @@
 								var res = prim.call(input, hint || 'default')
 								if ('object' !== _typeof(res)) return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -17384,7 +17405,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -17404,7 +17425,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -17413,10 +17434,10 @@
 			var defaultProps = {
 				valueAccessor: function valueAccessor(entry) {
 					return lodash_isArray__WEBPACK_IMPORTED_MODULE_4___default()(
-						entry.value
+						entry.value,
 					)
 						? lodash_last__WEBPACK_IMPORTED_MODULE_3___default()(
-								entry.value
+								entry.value,
 						  )
 						: entry.value
 				},
@@ -17436,17 +17457,17 @@
 							data.map(function (entry, index) {
 								var value =
 										lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(
-											dataKey
+											dataKey,
 										)
 											? valueAccessor(entry, index)
 											: (0,
 											  _util_ChartUtils__WEBPACK_IMPORTED_MODULE_7__.F$)(
 													entry && entry.payload,
-													dataKey
+													dataKey,
 											  ),
 									idProps =
 										lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(
-											id
+											id,
 										)
 											? {}
 											: {
@@ -17461,7 +17482,7 @@
 										(0,
 										_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__.L6)(
 											entry,
-											!0
+											!0,
 										),
 										others,
 										idProps,
@@ -17473,30 +17494,30 @@
 											viewBox:
 												_Label__WEBPACK_IMPORTED_MODULE_8__._.parseViewBox(
 													lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(
-														clockWise
+														clockWise,
 													)
 														? entry
 														: _objectSpread(
 																_objectSpread(
 																	{},
-																	entry
+																	entry,
 																),
 																{},
-																{ clockWise }
-														  )
+																{ clockWise },
+														  ),
 												),
 											key: 'label-'.concat(index),
-										}
-									)
+										},
+									),
 								)
-							})
+							}),
 					  )
 					: null
 			}
 			;(LabelList.displayName = 'LabelList'),
 				(LabelList.renderCallByParent = function renderCallByParent(
 					parentProps,
-					data
+					data,
 				) {
 					var checkPropsLabel =
 						!(arguments.length > 2 && void 0 !== arguments[2]) ||
@@ -17512,10 +17533,13 @@
 						explicitChildren = (0,
 						_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__.NN)(
 							children,
-							LabelList
+							LabelList,
 						).map(function (child, index) {
 							return (0,
-							react__WEBPACK_IMPORTED_MODULE_5__.cloneElement)(child, { data, key: 'labelList-'.concat(index) })
+							react__WEBPACK_IMPORTED_MODULE_5__.cloneElement)(
+								child,
+								{ data, key: 'labelList-'.concat(index) },
+							)
 						})
 					return checkPropsLabel
 						? [
@@ -17527,13 +17551,13 @@
 													{
 														key: 'labelList-implicit',
 														data,
-													}
+													},
 											  )
 											: react__WEBPACK_IMPORTED_MODULE_5__.isValidElement(
-													label
+													label,
 											  ) ||
 											  lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default()(
-													label
+													label,
 											  )
 											? react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 													LabelList,
@@ -17541,16 +17565,16 @@
 														key: 'labelList-implicit',
 														data,
 														content: label,
-													}
+													},
 											  )
 											: lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default()(
-													label
+													label,
 											  )
 											? react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 													LabelList,
 													_extends({ data }, label, {
 														key: 'labelList-implicit',
-													})
+													}),
 											  )
 											: null
 										: null
@@ -17563,26 +17587,26 @@
 		'./node_modules/recharts/es6/component/Legend.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { D: () => Legend })
 			var isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				uniqBy = __webpack_require__('./node_modules/lodash/uniqBy.js'),
 				uniqBy_default = __webpack_require__.n(uniqBy),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				Surface = __webpack_require__(
-					'./node_modules/recharts/es6/container/Surface.js'
+					'./node_modules/recharts/es6/container/Surface.js',
 				),
 				upperFirst = __webpack_require__(
-					'./node_modules/lodash/upperFirst.js'
+					'./node_modules/lodash/upperFirst.js',
 				),
 				upperFirst_default = __webpack_require__.n(upperFirst)
 			Math.abs, Math.atan2
@@ -17690,14 +17714,14 @@
 					},
 				}
 			var constant = __webpack_require__(
-					'./node_modules/d3-shape/src/constant.js'
+					'./node_modules/d3-shape/src/constant.js',
 				),
 				src_path = __webpack_require__(
-					'./node_modules/d3-shape/src/path.js'
+					'./node_modules/d3-shape/src/path.js',
 				)
 			sqrt(3), sqrt(3)
 			var ReactUtils = __webpack_require__(
-				'./node_modules/recharts/es6/util/ReactUtils.js'
+				'./node_modules/recharts/es6/util/ReactUtils.js',
 			)
 			function _typeof(obj) {
 				return (
@@ -17728,7 +17752,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -17745,7 +17769,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -17772,8 +17796,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -17797,12 +17821,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -17841,7 +17865,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -17865,7 +17889,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -17875,7 +17899,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -17888,7 +17912,7 @@
 							(function _classCallCheck(instance, Constructor) {
 								if (!(instance instanceof Constructor))
 									throw new TypeError(
-										'Cannot call a class as a function'
+										'Cannot call a class as a function',
 									)
 							})(this, Symbols),
 							_super.apply(this, arguments)
@@ -17898,20 +17922,20 @@
 						(function _createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									_defineProperties(Constructor, staticProps),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -17926,7 +17950,7 @@
 										symbolFactory =
 											(function getSymbolFactory(type) {
 												var name = 'symbol'.concat(
-													upperFirst_default()(type)
+													upperFirst_default()(type),
 												)
 												return (
 													symbolFactories[name] ||
@@ -17935,7 +17959,7 @@
 											})(type),
 										symbol = (function symbol_Symbol(
 											type,
-											size
+											size,
 										) {
 											let context = null,
 												path = (0, src_path.d)(symbol)
@@ -17951,8 +17975,8 @@
 															context,
 															+size.apply(
 																this,
-																arguments
-															)
+																arguments,
+															),
 														),
 													buffer)
 												)
@@ -17966,7 +17990,7 @@
 													'function' == typeof type
 														? type
 														: (0, constant.Z)(
-																type || circle
+																type || circle,
 														  )),
 												(size =
 													'function' == typeof size
@@ -17974,7 +17998,7 @@
 														: (0, constant.Z)(
 																void 0 === size
 																	? 64
-																	: +size
+																	: +size,
 														  )),
 												(symbol.type = function (_) {
 													return arguments.length
@@ -17984,7 +18008,7 @@
 																	? _
 																	: (0,
 																	  constant.Z)(
-																			_
+																			_,
 																	  )),
 														  symbol)
 														: type
@@ -17997,7 +18021,7 @@
 																	? _
 																	: (0,
 																	  constant.Z)(
-																			+_
+																			+_,
 																	  )),
 														  symbol)
 														: size
@@ -18019,7 +18043,7 @@
 												(function calculateAreaSize(
 													size,
 													sizeType,
-													type
+													type,
 												) {
 													if ('area' === sizeType)
 														return size
@@ -18048,17 +18072,17 @@
 																size *
 																size *
 																(Math.tan(
-																	angle
+																	angle,
 																) -
 																	Math.tan(
 																		2 *
-																			angle
+																			angle,
 																	) *
 																		Math.pow(
 																			Math.tan(
-																				angle
+																				angle,
 																			),
-																			2
+																			2,
 																		))
 															)
 														case 'triangle':
@@ -18073,7 +18097,7 @@
 																((21 -
 																	10 *
 																		Math.sqrt(
-																			3
+																			3,
 																		)) *
 																	size *
 																	size) /
@@ -18087,7 +18111,7 @@
 																4
 															)
 													}
-												})(size, sizeType, type)
+												})(size, sizeType, type),
 											)
 									return symbol()
 								},
@@ -18102,7 +18126,7 @@
 										size = _this$props2.size,
 										filteredProps = (0, ReactUtils.L6)(
 											this.props,
-											!0
+											!0,
 										)
 									return cx === +cx &&
 										cy === +cy &&
@@ -18113,13 +18137,13 @@
 													className:
 														classnames_default()(
 															'recharts-symbols',
-															className
+															className,
 														),
 													transform: 'translate('
 														.concat(cx, ', ')
 														.concat(cy, ')'),
 													d: this.getPath(),
-												})
+												}),
 										  )
 										: null
 								},
@@ -18140,10 +18164,10 @@
 						symbolFactories[
 							'symbol'.concat(upperFirst_default()(key))
 						] = factory
-					}
+					},
 				)
 			var types = __webpack_require__(
-				'./node_modules/recharts/es6/util/types.js'
+				'./node_modules/recharts/es6/util/types.js',
 			)
 			function DefaultLegendContent_typeof(obj) {
 				return (
@@ -18174,7 +18198,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -18188,10 +18212,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -18206,7 +18228,7 @@
 						Object.defineProperty(
 							target,
 							DefaultLegendContent_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -18233,8 +18255,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -18248,13 +18270,13 @@
 					if (hasNativeReflectConstruct) {
 						var NewTarget =
 							DefaultLegendContent_getPrototypeOf(
-								this
+								this,
 							).constructor
 						result = Reflect.construct(Super, arguments, NewTarget)
 					} else result = Super.apply(this, arguments)
 					return (function DefaultLegendContent_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -18264,14 +18286,14 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function DefaultLegendContent_assertThisInitialized(
-							self
+							self,
 						) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -18304,7 +18326,7 @@
 			function DefaultLegendContent_toPropertyKey(arg) {
 				var key = (function DefaultLegendContent_toPrimitive(
 					input,
-					hint
+					hint,
 				) {
 					if (
 						'object' !== DefaultLegendContent_typeof(input) ||
@@ -18317,7 +18339,7 @@
 						if ('object' !== DefaultLegendContent_typeof(res))
 							return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -18330,7 +18352,7 @@
 				!(function DefaultLegendContent_inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -18340,7 +18362,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -18348,7 +18370,7 @@
 						superClass &&
 							DefaultLegendContent_setPrototypeOf(
 								subClass,
-								superClass
+								superClass,
 							)
 				})(DefaultLegendContent, _PureComponent)
 				var _super =
@@ -18357,11 +18379,11 @@
 					return (
 						(function DefaultLegendContent_classCallCheck(
 							instance,
-							Constructor
+							Constructor,
 						) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, DefaultLegendContent),
 						_super.apply(this, arguments)
@@ -18371,18 +18393,18 @@
 					(function DefaultLegendContent_createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								DefaultLegendContent_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								DefaultLegendContent_defineProperties(
 									Constructor,
-									staticProps
+									staticProps,
 								),
 							Object.defineProperty(Constructor, 'prototype', {
 								writable: !1,
@@ -18421,7 +18443,7 @@
 											.concat(16, 'h')
 											.concat(
 												thirdSize,
-												'\n            A'
+												'\n            A',
 											)
 											.concat(sixthSize, ',')
 											.concat(sixthSize, ',0,1,1,')
@@ -18449,7 +18471,7 @@
 									})
 								if (react.isValidElement(data.legendIcon)) {
 									var iconProps = (function _objectSpread(
-										target
+										target,
 									) {
 										for (
 											var i = 1;
@@ -18463,31 +18485,31 @@
 											i % 2
 												? ownKeys(
 														Object(source),
-														!0
+														!0,
 												  ).forEach(function (key) {
 														DefaultLegendContent_defineProperty(
 															target,
 															key,
-															source[key]
+															source[key],
 														)
 												  })
 												: Object.getOwnPropertyDescriptors
 												? Object.defineProperties(
 														target,
 														Object.getOwnPropertyDescriptors(
-															source
-														)
+															source,
+														),
 												  )
 												: ownKeys(
-														Object(source)
+														Object(source),
 												  ).forEach(function (key) {
 														Object.defineProperty(
 															target,
 															key,
 															Object.getOwnPropertyDescriptor(
 																source,
-																key
-															)
+																key,
+															),
 														)
 												  })
 										}
@@ -18497,7 +18519,7 @@
 										delete iconProps.legendIcon,
 										react.cloneElement(
 											data.legendIcon,
-											iconProps
+											iconProps,
 										)
 									)
 								}
@@ -18549,14 +18571,14 @@
 													'recharts-legend-item': !0,
 												}),
 												'legend-item-'.concat(i),
-												!0
+												!0,
 											),
 											DefaultLegendContent_defineProperty(
 												_classNames,
 												'inactive',
-												entry.inactive
+												entry.inactive,
 											),
-											_classNames)
+											_classNames),
 										)
 									if ('none' === entry.type) return null
 									var color = entry.inactive
@@ -18570,7 +18592,11 @@
 												style: itemStyle,
 												key: 'legend-item-'.concat(i),
 											},
-											(0, types.bw)(_this.props, entry, i)
+											(0, types.bw)(
+												_this.props,
+												entry,
+												i,
+											),
 										),
 										react.createElement(
 											Surface.T,
@@ -18580,7 +18606,7 @@
 												viewBox,
 												style: svgStyle,
 											},
-											_this.renderIcon(entry)
+											_this.renderIcon(entry),
 										),
 										react.createElement(
 											'span',
@@ -18593,10 +18619,10 @@
 												? finalFormatter(
 														entry.value,
 														entry,
-														i
+														i,
 												  )
-												: entry.value
-										)
+												: entry.value,
+										),
 									)
 								})
 							},
@@ -18623,7 +18649,7 @@
 										className: 'recharts-default-legend',
 										style: finalStyle,
 									},
-									this.renderItems()
+									this.renderItems(),
 								)
 							},
 						},
@@ -18634,7 +18660,7 @@
 			DefaultLegendContent_defineProperty(
 				DefaultLegendContent,
 				'displayName',
-				'Legend'
+				'Legend',
 			),
 				DefaultLegendContent_defineProperty(
 					DefaultLegendContent,
@@ -18645,10 +18671,10 @@
 						align: 'center',
 						verticalAlign: 'middle',
 						inactiveColor: '#ccc',
-					}
+					},
 				)
 			var DataUtils = __webpack_require__(
-				'./node_modules/recharts/es6/util/DataUtils.js'
+				'./node_modules/recharts/es6/util/DataUtils.js',
 			)
 			function Legend_typeof(obj) {
 				return (
@@ -18676,10 +18702,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -18689,25 +18713,32 @@
 				for (var i = 1; i < arguments.length; i++) {
 					var source = null != arguments[i] ? arguments[i] : {}
 					i % 2
-						? Legend_ownKeys(Object(source), !0).forEach(function (
-								key
-						  ) {
-								Legend_defineProperty(target, key, source[key])
-						  })
+						? Legend_ownKeys(Object(source), !0).forEach(
+								function (key) {
+									Legend_defineProperty(
+										target,
+										key,
+										source[key],
+									)
+								},
+						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
-						: Legend_ownKeys(Object(source)).forEach(function (
-								key
-						  ) {
-								Object.defineProperty(
-									target,
-									key,
-									Object.getOwnPropertyDescriptor(source, key)
-								)
-						  })
+						: Legend_ownKeys(Object(source)).forEach(
+								function (key) {
+									Object.defineProperty(
+										target,
+										key,
+										Object.getOwnPropertyDescriptor(
+											source,
+											key,
+										),
+									)
+								},
+						  )
 				}
 				return target
 			}
@@ -18720,7 +18751,7 @@
 						Object.defineProperty(
 							target,
 							Legend_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -18747,8 +18778,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -18765,7 +18796,7 @@
 					} else result = Super.apply(this, arguments)
 					return (function Legend_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -18775,7 +18806,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return Legend_assertThisInitialized(self)
 					})(this, result)
@@ -18784,7 +18815,7 @@
 			function Legend_assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -18820,7 +18851,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== Legend_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -18833,7 +18864,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -18853,7 +18884,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -18873,7 +18904,7 @@
 				!(function Legend_inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -18883,7 +18914,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -18897,7 +18928,7 @@
 					!(function Legend_classCallCheck(instance, Constructor) {
 						if (!(instance instanceof Constructor))
 							throw new TypeError(
-								'Cannot call a class as a function'
+								'Cannot call a class as a function',
 							)
 					})(this, Legend)
 					for (
@@ -18913,11 +18944,11 @@
 							Legend_assertThisInitialized(
 								(_this = _super.call.apply(
 									_super,
-									[this].concat(args)
-								))
+									[this].concat(args),
+								)),
 							),
 							'state',
-							{ boxWidth: -1, boxHeight: -1 }
+							{ boxWidth: -1, boxHeight: -1 },
 						),
 						_this
 					)
@@ -18926,18 +18957,18 @@
 					(function Legend_createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								Legend_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								Legend_defineProperties(
 									Constructor,
-									staticProps
+									staticProps,
 								),
 							Object.defineProperty(Constructor, 'prototype', {
 								writable: !1,
@@ -19056,7 +19087,7 @@
 												  })
 									return Legend_objectSpread(
 										Legend_objectSpread({}, hPos),
-										vPos
+										vPos,
 									)
 								},
 							},
@@ -19085,7 +19116,7 @@
 												function () {
 													onBBoxUpdate &&
 														onBBoxUpdate(_box3)
-												}
+												},
 											)
 									} else
 										(-1 === boxWidth && -1 === boxHeight) ||
@@ -19094,7 +19125,7 @@
 												function () {
 													onBBoxUpdate &&
 														onBBoxUpdate(null)
-												}
+												},
 											)
 								},
 							},
@@ -19119,10 +19150,10 @@
 													height: height || 'auto',
 												},
 												this.getDefaultPosition(
-													wrapperStyle
-												)
+													wrapperStyle,
+												),
 											),
-											wrapperStyle
+											wrapperStyle,
 										)
 									return react.createElement(
 										'div',
@@ -19136,44 +19167,44 @@
 										},
 										(function renderContent(
 											content,
-											props
+											props,
 										) {
 											if (react.isValidElement(content))
 												return react.cloneElement(
 													content,
-													props
+													props,
 												)
 											if (isFunction_default()(content))
 												return react.createElement(
 													content,
-													props
+													props,
 												)
 											props.ref
 											var otherProps =
 												_objectWithoutProperties(
 													props,
-													_excluded
+													_excluded,
 												)
 											return react.createElement(
 												DefaultLegendContent,
-												otherProps
+												otherProps,
 											)
 										})(
 											content,
 											Legend_objectSpread(
 												Legend_objectSpread(
 													{},
-													this.props
+													this.props,
 												),
 												{},
 												{
 													payload: getUniqPayload(
 														payloadUniqBy,
-														payload
+														payload,
 													),
-												}
-											)
-										)
+												},
+											),
+										),
 									)
 								},
 							},
@@ -19183,7 +19214,7 @@
 								key: 'getWithHeight',
 								value: function getWithHeight(
 									item,
-									chartWidth
+									chartWidth,
 								) {
 									var layout = item.props.layout
 									return 'vertical' === layout &&
@@ -19198,7 +19229,7 @@
 										: null
 								},
 							},
-						]
+						],
 					),
 					Legend
 				)
@@ -19214,26 +19245,26 @@
 		'./node_modules/recharts/es6/component/ResponsiveContainer.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
 				h: () => ResponsiveContainer,
 			})
 			var classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				react_dom = __webpack_require__(
-					'./node_modules/react-dom/index.js'
+					'./node_modules/react-dom/index.js',
 				),
 				debounce = __webpack_require__(
-					'./node_modules/lodash/debounce.js'
+					'./node_modules/lodash/debounce.js',
 				),
 				debounce_default = __webpack_require__.n(debounce),
 				throttle = __webpack_require__(
-					'./node_modules/lodash/throttle.js'
+					'./node_modules/lodash/throttle.js',
 				),
 				throttle_default = __webpack_require__.n(throttle),
 				extendStatics = function (d, b) {
@@ -19276,7 +19307,7 @@
 						e.indexOf(p[i]) < 0 &&
 							Object.prototype.propertyIsEnumerable.call(
 								s,
-								p[i]
+								p[i],
 							) &&
 							(t[p[i]] = s[p[i]])
 				}
@@ -19286,20 +19317,20 @@
 					resizeCallback,
 					refreshMode,
 					refreshRate,
-					refreshOptions
+					refreshOptions,
 				) {
 					switch (refreshMode) {
 						case 'debounce':
 							return debounce_default()(
 								resizeCallback,
 								refreshRate,
-								refreshOptions
+								refreshOptions,
 							)
 						case 'throttle':
 							return throttle_default()(
 								resizeCallback,
 								refreshRate,
-								refreshOptions
+								refreshOptions,
 							)
 						default:
 							return resizeCallback
@@ -19358,7 +19389,7 @@
 												element),
 											_this.resizeObserver.observe(
 												element,
-												observerOptions
+												observerOptions,
 											)))
 								}
 							}),
@@ -19377,7 +19408,7 @@
 								)
 									return _this.targetRef.current
 								var currentElement = (0, react_dom.findDOMNode)(
-									_this
+									_this,
 								)
 								if (!currentElement) return null
 								switch (_this.getRenderType()) {
@@ -19409,13 +19440,13 @@
 																_this.state
 																	.width,
 																_this.state
-																	.height
+																	.height,
 														  )
-												}
+												},
 											)
 										},
 										handleWidth,
-										handleHeight
+										handleHeight,
 									)
 									entries.forEach(function (entry) {
 										var _a =
@@ -19459,11 +19490,11 @@
 									_this.createResizeHandler,
 									refreshMode,
 									refreshRate,
-									refreshOptions
+									refreshOptions,
 								)),
 								(_this.resizeObserver =
 									new window.ResizeObserver(
-										_this.resizeHandler
+										_this.resizeHandler,
 									))),
 							_this
 						)
@@ -19518,12 +19549,12 @@
 										])
 										return (0, react.cloneElement)(
 											child,
-											nativeProps
+											nativeProps,
 										)
 									}
 									return (0, react.cloneElement)(
 										child,
-										childProps
+										childProps,
 									)
 								case 'childArray':
 									return children.map(function (el) {
@@ -19531,7 +19562,7 @@
 											!!el &&
 											(0, react.cloneElement)(
 												el,
-												childProps
+												childProps,
 											)
 										)
 									})
@@ -19544,10 +19575,10 @@
 				})(react.PureComponent)
 			isSSR() ? react.useEffect : react.useLayoutEffect
 			var DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				LogUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/LogUtils.js'
+					'./node_modules/recharts/es6/util/LogUtils.js',
 				)
 			function _extends() {
 				return (
@@ -19559,7 +19590,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -19635,7 +19666,7 @@
 					})(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -19646,220 +19677,235 @@
 					arr2[i] = arr[i]
 				return arr2
 			}
-			var ResponsiveContainer = (0, react.forwardRef)(function (
-				_ref,
-				ref
-			) {
-				var aspect = _ref.aspect,
-					_ref$width = _ref.width,
-					width = void 0 === _ref$width ? '100%' : _ref$width,
-					_ref$height = _ref.height,
-					height = void 0 === _ref$height ? '100%' : _ref$height,
-					_ref$minWidth = _ref.minWidth,
-					minWidth = void 0 === _ref$minWidth ? 0 : _ref$minWidth,
-					minHeight = _ref.minHeight,
-					maxHeight = _ref.maxHeight,
-					children = _ref.children,
-					_ref$debounce = _ref.debounce,
-					debounce = void 0 === _ref$debounce ? 0 : _ref$debounce,
-					id = _ref.id,
-					className = _ref.className,
-					onResize = _ref.onResize,
-					_useState2 = _slicedToArray(
-						(0, react.useState)({
-							containerWidth: -1,
-							containerHeight: -1,
-						}),
-						2
-					),
-					sizes = _useState2[0],
-					setSizes = _useState2[1],
-					containerRef = (0, react.useRef)(null)
-				;(0, react.useImperativeHandle)(
-					ref,
-					function () {
-						return containerRef
-					},
-					[containerRef]
-				)
-				var getContainerSize = (0, react.useCallback)(function () {
-						return containerRef.current
-							? {
-									containerWidth:
-										containerRef.current.clientWidth,
-									containerHeight:
-										containerRef.current.clientHeight,
-							  }
-							: null
-					}, []),
-					updateDimensionsImmediate = (0, react.useCallback)(
+			var ResponsiveContainer = (0, react.forwardRef)(
+				function (_ref, ref) {
+					var aspect = _ref.aspect,
+						_ref$width = _ref.width,
+						width = void 0 === _ref$width ? '100%' : _ref$width,
+						_ref$height = _ref.height,
+						height = void 0 === _ref$height ? '100%' : _ref$height,
+						_ref$minWidth = _ref.minWidth,
+						minWidth = void 0 === _ref$minWidth ? 0 : _ref$minWidth,
+						minHeight = _ref.minHeight,
+						maxHeight = _ref.maxHeight,
+						children = _ref.children,
+						_ref$debounce = _ref.debounce,
+						debounce = void 0 === _ref$debounce ? 0 : _ref$debounce,
+						id = _ref.id,
+						className = _ref.className,
+						onResize = _ref.onResize,
+						_useState2 = _slicedToArray(
+							(0, react.useState)({
+								containerWidth: -1,
+								containerHeight: -1,
+							}),
+							2,
+						),
+						sizes = _useState2[0],
+						setSizes = _useState2[1],
+						containerRef = (0, react.useRef)(null)
+					;(0, react.useImperativeHandle)(
+						ref,
 						function () {
-							var newSize = getContainerSize()
-							if (newSize) {
-								var containerWidth = newSize.containerWidth,
-									containerHeight = newSize.containerHeight
-								onResize &&
-									onResize(containerWidth, containerHeight),
-									setSizes(function (currentSizes) {
-										var oldWidth =
-												currentSizes.containerWidth,
-											oldHeight =
-												currentSizes.containerHeight
-										return containerWidth !== oldWidth ||
-											containerHeight !== oldHeight
-											? {
-													containerWidth,
-													containerHeight,
-											  }
-											: currentSizes
-									})
-							}
+							return containerRef
 						},
-						[getContainerSize]
-					),
-					chartContent = (0, react.useMemo)(
-						function () {
-							var containerWidth = sizes.containerWidth,
-								containerHeight = sizes.containerHeight
-							if (containerWidth < 0 || containerHeight < 0)
-								return null
-							;(0, LogUtils.Z)(
-								(0, DataUtils.hU)(width) ||
-									(0, DataUtils.hU)(height),
-								"The width(%s) and height(%s) are both fixed numbers,\n       maybe you don't need to use a ResponsiveContainer.",
-								width,
-								height
-							),
-								(0, LogUtils.Z)(
-									!aspect || aspect > 0,
-									'The aspect(%s) must be greater than zero.',
-									aspect
-								)
-							var calculatedWidth = (0, DataUtils.hU)(width)
-									? containerWidth
-									: width,
-								calculatedHeight = (0, DataUtils.hU)(height)
-									? containerHeight
-									: height
-							return (
-								aspect &&
-									aspect > 0 &&
-									(calculatedWidth
-										? (calculatedHeight =
-												calculatedWidth / aspect)
-										: calculatedHeight &&
-										  (calculatedWidth =
-												calculatedHeight * aspect),
-									maxHeight &&
-										calculatedHeight > maxHeight &&
-										(calculatedHeight = maxHeight)),
-								(0, LogUtils.Z)(
-									calculatedWidth > 0 || calculatedHeight > 0,
-									'The width(%s) and height(%s) of chart should be greater than 0,\n       please check the style of container, or the props width(%s) and height(%s),\n       or add a minWidth(%s) or minHeight(%s) or use aspect(%s) to control the\n       height and width.',
-									calculatedWidth,
-									calculatedHeight,
+						[containerRef],
+					)
+					var getContainerSize = (0, react.useCallback)(function () {
+							return containerRef.current
+								? {
+										containerWidth:
+											containerRef.current.clientWidth,
+										containerHeight:
+											containerRef.current.clientHeight,
+								  }
+								: null
+						}, []),
+						updateDimensionsImmediate = (0, react.useCallback)(
+							function () {
+								var newSize = getContainerSize()
+								if (newSize) {
+									var containerWidth = newSize.containerWidth,
+										containerHeight =
+											newSize.containerHeight
+									onResize &&
+										onResize(
+											containerWidth,
+											containerHeight,
+										),
+										setSizes(function (currentSizes) {
+											var oldWidth =
+													currentSizes.containerWidth,
+												oldHeight =
+													currentSizes.containerHeight
+											return containerWidth !==
+												oldWidth ||
+												containerHeight !== oldHeight
+												? {
+														containerWidth,
+														containerHeight,
+												  }
+												: currentSizes
+										})
+								}
+							},
+							[getContainerSize],
+						),
+						chartContent = (0, react.useMemo)(
+							function () {
+								var containerWidth = sizes.containerWidth,
+									containerHeight = sizes.containerHeight
+								if (containerWidth < 0 || containerHeight < 0)
+									return null
+								;(0, LogUtils.Z)(
+									(0, DataUtils.hU)(width) ||
+										(0, DataUtils.hU)(height),
+									"The width(%s) and height(%s) are both fixed numbers,\n       maybe you don't need to use a ResponsiveContainer.",
 									width,
 									height,
-									minWidth,
-									minHeight,
-									aspect
 								),
-								(0, react.cloneElement)(children, {
-									width: calculatedWidth,
-									height: calculatedHeight,
-								})
-							)
+									(0, LogUtils.Z)(
+										!aspect || aspect > 0,
+										'The aspect(%s) must be greater than zero.',
+										aspect,
+									)
+								var calculatedWidth = (0, DataUtils.hU)(width)
+										? containerWidth
+										: width,
+									calculatedHeight = (0, DataUtils.hU)(height)
+										? containerHeight
+										: height
+								return (
+									aspect &&
+										aspect > 0 &&
+										(calculatedWidth
+											? (calculatedHeight =
+													calculatedWidth / aspect)
+											: calculatedHeight &&
+											  (calculatedWidth =
+													calculatedHeight * aspect),
+										maxHeight &&
+											calculatedHeight > maxHeight &&
+											(calculatedHeight = maxHeight)),
+									(0, LogUtils.Z)(
+										calculatedWidth > 0 ||
+											calculatedHeight > 0,
+										'The width(%s) and height(%s) of chart should be greater than 0,\n       please check the style of container, or the props width(%s) and height(%s),\n       or add a minWidth(%s) or minHeight(%s) or use aspect(%s) to control the\n       height and width.',
+										calculatedWidth,
+										calculatedHeight,
+										width,
+										height,
+										minWidth,
+										minHeight,
+										aspect,
+									),
+									(0, react.cloneElement)(children, {
+										width: calculatedWidth,
+										height: calculatedHeight,
+									})
+								)
+							},
+							[
+								aspect,
+								children,
+								height,
+								maxHeight,
+								minHeight,
+								minWidth,
+								sizes,
+								width,
+							],
+						)
+					;(0, react.useEffect)(
+						function () {
+							var size = getContainerSize()
+							size && setSizes(size)
 						},
-						[
-							aspect,
-							children,
-							height,
-							maxHeight,
-							minHeight,
-							minWidth,
-							sizes,
-							width,
-						]
+						[getContainerSize],
 					)
-				;(0, react.useEffect)(
-					function () {
-						var size = getContainerSize()
-						size && setSizes(size)
-					},
-					[getContainerSize]
-				)
-				var style = { width, height, minWidth, minHeight, maxHeight }
-				return react.createElement(
-					ResizeDetector,
-					{
-						handleWidth: !0,
-						handleHeight: !0,
-						onResize: updateDimensionsImmediate,
-						targetRef: containerRef,
-						refreshMode: debounce > 0 ? 'debounce' : void 0,
-						refreshRate: debounce,
-					},
-					react.createElement(
-						'div',
-						_extends({}, null != id ? { id: ''.concat(id) } : {}, {
-							className: classnames_default()(
-								'recharts-responsive-container',
-								className
+					var style = {
+						width,
+						height,
+						minWidth,
+						minHeight,
+						maxHeight,
+					}
+					return react.createElement(
+						ResizeDetector,
+						{
+							handleWidth: !0,
+							handleHeight: !0,
+							onResize: updateDimensionsImmediate,
+							targetRef: containerRef,
+							refreshMode: debounce > 0 ? 'debounce' : void 0,
+							refreshRate: debounce,
+						},
+						react.createElement(
+							'div',
+							_extends(
+								{},
+								null != id ? { id: ''.concat(id) } : {},
+								{
+									className: classnames_default()(
+										'recharts-responsive-container',
+										className,
+									),
+									style,
+									ref: containerRef,
+								},
 							),
-							style,
-							ref: containerRef,
-						}),
-						chartContent
+							chartContent,
+						),
 					)
-				)
-			})
+				},
+			)
 		},
 		'./node_modules/recharts/es6/component/Text.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { x: () => Text })
 			var lodash_isNil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/lodash/isNil.js'
+					'./node_modules/lodash/isNil.js',
 				),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isNil__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isNil__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				reduce_css_calc__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/reduce-css-calc/dist/index.js'
+						'./node_modules/reduce-css-calc/dist/index.js',
 					),
 				reduce_css_calc__WEBPACK_IMPORTED_MODULE_2___default =
 					__webpack_require__.n(
-						reduce_css_calc__WEBPACK_IMPORTED_MODULE_2__
+						reduce_css_calc__WEBPACK_IMPORTED_MODULE_2__,
 					),
 				classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_3___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_3__
+						classnames__WEBPACK_IMPORTED_MODULE_3__,
 					),
 				_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/DataUtils.js'
+						'./node_modules/recharts/es6/util/DataUtils.js',
 					),
 				_util_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/Global.js'
+					'./node_modules/recharts/es6/util/Global.js',
 				),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_7__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_util_DOMUtils__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/DOMUtils.js'
+						'./node_modules/recharts/es6/util/DOMUtils.js',
 					),
 				_excluded = [
 					'dx',
@@ -19902,7 +19948,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -19916,7 +19962,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -19936,7 +19982,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -19951,7 +19997,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -19978,8 +20024,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -20003,7 +20049,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return _assertThisInitialized(self)
 					})(this, result)
@@ -20012,7 +20058,7 @@
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -20094,7 +20140,7 @@
 					})(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -20111,10 +20157,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -20130,13 +20174,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -20164,7 +20211,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -20177,7 +20224,7 @@
 						var words = []
 						return (
 							lodash_isNil__WEBPACK_IMPORTED_MODULE_0___default()(
-								props.children
+								props.children,
 							) ||
 								(words = props.breakAll
 									? props.children.toString().split('')
@@ -20185,24 +20232,24 @@
 											.toString()
 											.split(BREAKING_SPACES)),
 							{
-								wordsWithComputedWidth: words.map(function (
-									word
-								) {
-									return {
-										word,
-										width: (0,
-										_util_DOMUtils__WEBPACK_IMPORTED_MODULE_4__.xE)(
+								wordsWithComputedWidth: words.map(
+									function (word) {
+										return {
 											word,
-											props.style
-										).width,
-									}
-								}),
+											width: (0,
+											_util_DOMUtils__WEBPACK_IMPORTED_MODULE_4__.xE)(
+												word,
+												props.style,
+											).width,
+										}
+									},
+								),
 								spaceWidth: props.breakAll
 									? 0
 									: (0,
 									  _util_DOMUtils__WEBPACK_IMPORTED_MODULE_4__.xE)(
 											' ',
-											props.style
+											props.style,
 									  ).width,
 							}
 						)
@@ -20211,12 +20258,12 @@
 					}
 				},
 				getWordsWithoutCalculate = function getWordsWithoutCalculate(
-					children
+					children,
 				) {
 					return [
 						{
 							words: lodash_isNil__WEBPACK_IMPORTED_MODULE_0___default()(
-								children
+								children,
 							)
 								? []
 								: children.toString().split(BREAKING_SPACES),
@@ -20225,7 +20272,7 @@
 				},
 				getWordsByLines = function getWordsByLines(
 					props,
-					needCalculate
+					needCalculate,
 				) {
 					if (
 						(props.width || props.scaleToFit) &&
@@ -20239,11 +20286,11 @@
 									initialWordsWithComputedWith,
 									spaceWidth,
 									lineWidth,
-									scaleToFit
+									scaleToFit,
 							  ) {
 									var shouldLimitLines = (0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-											props.maxLines
+											props.maxLines,
 										),
 										text = props.children,
 										calculate = function calculate() {
@@ -20269,7 +20316,7 @@
 															lineWidth)
 												)
 													currentLine.words.push(
-														word
+														word,
 													),
 														(currentLine.width +=
 															width + spaceWidth)
@@ -20284,7 +20331,7 @@
 											}, [])
 										},
 										originalResult = calculate(
-											initialWordsWithComputedWith
+											initialWordsWithComputedWith,
 										)
 									if (!shouldLimitLines) return originalResult
 									for (
@@ -20293,22 +20340,22 @@
 												function checkOverflow(index) {
 													var tempText = text.slice(
 															0,
-															index
+															index,
 														),
 														words =
 															calculateWordWidths(
 																_objectSpread(
 																	_objectSpread(
 																		{},
-																		props
+																		props,
 																	),
 																	{},
 																	{
 																		children:
 																			tempText +
 																			'…',
-																	}
-																)
+																	},
+																),
 															).wordsWithComputedWidth,
 														result =
 															calculate(words),
@@ -20316,18 +20363,18 @@
 															result.length >
 																props.maxLines ||
 															(function findLongestLine(
-																words
+																words,
 															) {
 																return words.reduce(
 																	function (
 																		a,
-																		b
+																		b,
 																	) {
 																		return a.width >
 																			b.width
 																			? a
 																			: b
-																	}
+																	},
 																)
 															})(result).width >
 																lineWidth
@@ -20344,18 +20391,18 @@
 
 									) {
 										var middle = Math.floor(
-												(start + end) / 2
+												(start + end) / 2,
 											),
 											_checkOverflow2 = _slicedToArray(
 												checkOverflow(middle - 1),
-												2
+												2,
 											),
 											doesPrevOverflow =
 												_checkOverflow2[0],
 											result = _checkOverflow2[1],
 											doesMiddleOverflow = _slicedToArray(
 												checkOverflow(middle),
-												1
+												1,
 											)[0]
 										if (
 											(doesPrevOverflow ||
@@ -20378,7 +20425,7 @@
 									wordWidths.wordsWithComputedWidth,
 									wordWidths.spaceWidth,
 									props.width,
-									props.scaleToFit
+									props.scaleToFit,
 							  )
 							: getWordsWithoutCalculate(props.children)
 					}
@@ -20391,7 +20438,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -20401,7 +20448,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -20414,7 +20461,7 @@
 						!(function _classCallCheck(instance, Constructor) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, Text)
 						for (
@@ -20430,11 +20477,11 @@
 								_assertThisInitialized(
 									(_this = _super.call.apply(
 										_super,
-										[this].concat(args)
-									))
+										[this].concat(args),
+									)),
 								),
 								'state',
-								{}
+								{},
 							),
 							_this
 						)
@@ -20443,20 +20490,20 @@
 						(function _createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									_defineProperties(Constructor, staticProps),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -20481,18 +20528,18 @@
 											textProps =
 												_objectWithoutProperties(
 													_this$props,
-													_excluded
+													_excluded,
 												),
 											wordsByLines =
 												this.state.wordsByLines
 										if (
 											!(0,
 											_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.P2)(
-												textProps.x
+												textProps.x,
 											) ||
 											!(0,
 											_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.P2)(
-												textProps.y
+												textProps.y,
 											)
 										)
 											return null
@@ -20501,7 +20548,7 @@
 												textProps.x +
 												((0,
 												_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-													dx
+													dx,
 												)
 													? dx
 													: 0),
@@ -20509,7 +20556,7 @@
 												textProps.y +
 												((0,
 												_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-													dy
+													dy,
 												)
 													? dy
 													: 0)
@@ -20519,8 +20566,8 @@
 													reduce_css_calc__WEBPACK_IMPORTED_MODULE_2___default()(
 														'calc('.concat(
 															capHeight,
-															')'
-														)
+															')',
+														),
 													)
 												break
 											case 'middle':
@@ -20531,16 +20578,16 @@
 																(wordsByLines.length -
 																	1) /
 																	2,
-																' * -'
+																' * -',
 															)
 															.concat(
 																lineHeight,
-																' + ('
+																' + (',
 															)
 															.concat(
 																capHeight,
-																' / 2))'
-															)
+																' / 2))',
+															),
 													)
 												break
 											default:
@@ -20550,12 +20597,12 @@
 															.concat(
 																wordsByLines.length -
 																	1,
-																' * -'
+																' * -',
 															)
 															.concat(
 																lineHeight,
-																')'
-															)
+																')',
+															),
 													)
 										}
 										var transforms = []
@@ -20567,12 +20614,12 @@
 												'scale('.concat(
 													((0,
 													_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.hj)(
-														width
+														width,
 													)
 														? width / lineWidth
 														: 1) / lineWidth,
-													')'
-												)
+													')',
+												),
 											)
 										}
 										return (
@@ -20581,7 +20628,7 @@
 													'rotate('
 														.concat(angle, ', ')
 														.concat(x, ', ')
-														.concat(y, ')')
+														.concat(y, ')'),
 												),
 											transforms.length &&
 												(textProps.transform =
@@ -20593,7 +20640,7 @@
 													(0,
 													_util_ReactUtils__WEBPACK_IMPORTED_MODULE_7__.L6)(
 														textProps,
-														!0
+														!0,
 													),
 													{
 														x,
@@ -20601,36 +20648,37 @@
 														className:
 															classnames__WEBPACK_IMPORTED_MODULE_3___default()(
 																'recharts-text',
-																className
+																className,
 															),
 														textAnchor,
 														fill: textProps.fill.includes(
-															'url'
+															'url',
 														)
 															? Text.defaultProps
 																	.fill
 															: textProps.fill,
-													}
+													},
 												),
-												wordsByLines.map(function (
-													line,
-													index
-												) {
-													return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
-														'tspan',
-														{
-															x,
-															dy:
-																0 === index
-																	? startDy
-																	: lineHeight,
-															key: index,
-														},
-														line.words.join(
-															breakAll ? '' : ' '
+												wordsByLines.map(
+													function (line, index) {
+														return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
+															'tspan',
+															{
+																x,
+																dy:
+																	0 === index
+																		? startDy
+																		: lineHeight,
+																key: index,
+															},
+															line.words.join(
+																breakAll
+																	? ''
+																	: ' ',
+															),
 														)
-													)
-												})
+													},
+												),
 											)
 										)
 									},
@@ -20641,7 +20689,7 @@
 									key: 'getDerivedStateFromProps',
 									value: function getDerivedStateFromProps(
 										nextProps,
-										prevState
+										prevState,
 									) {
 										if (
 											nextProps.width !==
@@ -20671,14 +20719,14 @@
 												prevStyle: nextProps.style,
 												wordsByLines: getWordsByLines(
 													nextProps,
-													needCalculate
+													needCalculate,
 												),
 											}
 										}
 										return null
 									},
 								},
-							]
+							],
 						),
 						Text
 					)
@@ -20697,34 +20745,34 @@
 		'./node_modules/recharts/es6/component/Tooltip.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { u: () => Tooltip })
 			var isNil = __webpack_require__('./node_modules/lodash/isNil.js'),
 				isNil_default = __webpack_require__.n(isNil),
 				isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				uniqBy = __webpack_require__('./node_modules/lodash/uniqBy.js'),
 				uniqBy_default = __webpack_require__.n(uniqBy),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				es6 = __webpack_require__(
-					'./node_modules/react-smooth/es6/index.js'
+					'./node_modules/react-smooth/es6/index.js',
 				),
 				classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				sortBy = __webpack_require__('./node_modules/lodash/sortBy.js'),
 				sortBy_default = __webpack_require__.n(sortBy),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isArray_default = __webpack_require__.n(isArray),
 				DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				)
 			function _typeof(obj) {
 				return (
@@ -20813,7 +20861,7 @@
 					})(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -20830,10 +20878,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -20849,13 +20895,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -20870,7 +20919,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -20897,8 +20946,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -20922,12 +20971,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -20966,7 +21015,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -20984,7 +21033,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -20994,7 +21043,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -21007,7 +21056,7 @@
 						(function _classCallCheck(instance, Constructor) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, DefaultTooltipContent),
 						_super.apply(this, arguments)
@@ -21017,13 +21066,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -21047,7 +21096,7 @@
 										itemSorter
 											? sortBy_default()(
 													payload,
-													itemSorter
+													itemSorter,
 											  )
 											: payload
 									).map(function (entry, i) {
@@ -21060,7 +21109,7 @@
 													color:
 														entry.color || '#000',
 												},
-												itemStyle
+												itemStyle,
 											),
 											finalFormatter =
 												entry.formatter ||
@@ -21078,12 +21127,12 @@
 												name,
 												entry,
 												i,
-												payload
+												payload,
 											)
 											if (Array.isArray(formatted)) {
 												var _ref2 = _slicedToArray(
 													formatted,
-													2
+													2,
 												)
 												;(value = _ref2[0]),
 													(name = _ref2[1])
@@ -21104,7 +21153,7 @@
 															className:
 																'recharts-tooltip-item-name',
 														},
-														name
+														name,
 												  )
 												: null,
 											(0, DataUtils.P2)(name)
@@ -21114,7 +21163,7 @@
 															className:
 																'recharts-tooltip-item-separator',
 														},
-														separator
+														separator,
 												  )
 												: null,
 											react.createElement(
@@ -21123,7 +21172,7 @@
 													className:
 														'recharts-tooltip-item-value',
 												},
-												value
+												value,
 											),
 											react.createElement(
 												'span',
@@ -21131,8 +21180,8 @@
 													className:
 														'recharts-tooltip-item-unit',
 												},
-												entry.unit || ''
-											)
+												entry.unit || '',
+											),
 										)
 									})
 									return react.createElement(
@@ -21142,7 +21191,7 @@
 												'recharts-tooltip-item-list',
 											style: { padding: 0, margin: 0 },
 										},
-										items
+										items,
 									)
 								}
 								return null
@@ -21170,21 +21219,21 @@
 											border: '1px solid #ccc',
 											whiteSpace: 'nowrap',
 										},
-										contentStyle
+										contentStyle,
 									),
 									finalLabelStyle = _objectSpread(
 										{ margin: 0 },
-										labelStyle
+										labelStyle,
 									),
 									hasLabel = !isNil_default()(label),
 									finalLabel = hasLabel ? label : '',
 									wrapperCN = classnames_default()(
 										'recharts-default-tooltip',
-										wrapperClassName
+										wrapperClassName,
 									),
 									labelCN = classnames_default()(
 										'recharts-tooltip-label',
-										labelClassName
+										labelClassName,
 									)
 								return (
 									hasLabel &&
@@ -21192,7 +21241,7 @@
 										null != payload &&
 										(finalLabel = labelFormatter(
 											label,
-											payload
+											payload,
 										)),
 									react.createElement(
 										'div',
@@ -21208,9 +21257,9 @@
 											},
 											react.isValidElement(finalLabel)
 												? finalLabel
-												: ''.concat(finalLabel)
+												: ''.concat(finalLabel),
 										),
-										this.renderContent()
+										this.renderContent(),
 									)
 								)
 							},
@@ -21222,7 +21271,7 @@
 			_defineProperty(
 				DefaultTooltipContent,
 				'displayName',
-				'DefaultTooltipContent'
+				'DefaultTooltipContent',
 			),
 				_defineProperty(DefaultTooltipContent, 'defaultProps', {
 					separator: ' : ',
@@ -21231,7 +21280,7 @@
 					labelStyle: {},
 				})
 			var Global = __webpack_require__(
-				'./node_modules/recharts/es6/util/Global.js'
+				'./node_modules/recharts/es6/util/Global.js',
 			)
 			function Tooltip_typeof(obj) {
 				return (
@@ -21258,10 +21307,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -21271,25 +21318,32 @@
 				for (var i = 1; i < arguments.length; i++) {
 					var source = null != arguments[i] ? arguments[i] : {}
 					i % 2
-						? Tooltip_ownKeys(Object(source), !0).forEach(function (
-								key
-						  ) {
-								Tooltip_defineProperty(target, key, source[key])
-						  })
+						? Tooltip_ownKeys(Object(source), !0).forEach(
+								function (key) {
+									Tooltip_defineProperty(
+										target,
+										key,
+										source[key],
+									)
+								},
+						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
-						: Tooltip_ownKeys(Object(source)).forEach(function (
-								key
-						  ) {
-								Object.defineProperty(
-									target,
-									key,
-									Object.getOwnPropertyDescriptor(source, key)
-								)
-						  })
+						: Tooltip_ownKeys(Object(source)).forEach(
+								function (key) {
+									Object.defineProperty(
+										target,
+										key,
+										Object.getOwnPropertyDescriptor(
+											source,
+											key,
+										),
+									)
+								},
+						  )
 				}
 				return target
 			}
@@ -21302,7 +21356,7 @@
 						Object.defineProperty(
 							target,
 							Tooltip_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -21329,8 +21383,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -21347,7 +21401,7 @@
 					} else result = Super.apply(this, arguments)
 					return (function Tooltip_possibleConstructorReturn(
 						self,
-						call
+						call,
 					) {
 						if (
 							call &&
@@ -21357,7 +21411,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return Tooltip_assertThisInitialized(self)
 					})(this, result)
@@ -21366,7 +21420,7 @@
 			function Tooltip_assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -21402,7 +21456,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== Tooltip_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -21417,7 +21471,7 @@
 				!(function Tooltip_inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -21427,7 +21481,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -21441,7 +21495,7 @@
 					!(function Tooltip_classCallCheck(instance, Constructor) {
 						if (!(instance instanceof Constructor))
 							throw new TypeError(
-								'Cannot call a class as a function'
+								'Cannot call a class as a function',
 							)
 					})(this, Tooltip)
 					for (
@@ -21457,8 +21511,8 @@
 							Tooltip_assertThisInitialized(
 								(_this = _super.call.apply(
 									_super,
-									[this].concat(args)
-								))
+									[this].concat(args),
+								)),
 							),
 							'state',
 							{
@@ -21466,7 +21520,7 @@
 								boxHeight: -1,
 								dismissed: !1,
 								dismissedAtCoordinate: { x: 0, y: 0 },
-							}
+							},
 						),
 						Tooltip_defineProperty(
 							Tooltip_assertThisInitialized(_this),
@@ -21506,7 +21560,7 @@
 									  viewBox[key] + viewBoxDimension
 									? Math.max(negative, viewBox[key])
 									: Math.max(positive, viewBox[key])
-							}
+							},
 						),
 						_this
 					)
@@ -21515,18 +21569,18 @@
 					(function Tooltip_createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								Tooltip_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								Tooltip_defineProperties(
 									Constructor,
-									staticProps
+									staticProps,
 								),
 							Object.defineProperty(Constructor, 'prototype', {
 								writable: !1,
@@ -21605,12 +21659,12 @@
 									filterNull = _this$props2.filterNull,
 									finalPayload = (function getUniqPayload(
 										option,
-										payload
+										payload,
 									) {
 										return !0 === option
 											? uniqBy_default()(
 													payload,
-													defaultUniqBy
+													defaultUniqBy,
 											  )
 											: isFunction_default()(option)
 											? uniqBy_default()(payload, option)
@@ -21620,10 +21674,10 @@
 										filterNull && payload && payload.length
 											? payload.filter(function (entry) {
 													return !isNil_default()(
-														entry.value
+														entry.value,
 													)
 											  })
-											: payload
+											: payload,
 									),
 									hasPayload =
 										finalPayload && finalPayload.length,
@@ -21647,7 +21701,7 @@
 											top: 0,
 											left: 0,
 										},
-										wrapperStyle
+										wrapperStyle,
 									)
 								if (
 									position &&
@@ -21682,24 +21736,24 @@
 												? 'translate3d('
 														.concat(
 															translateX,
-															'px, '
+															'px, ',
 														)
 														.concat(
 															translateY,
-															'px, 0)'
+															'px, 0)',
 														)
 												: 'translate('
 														.concat(
 															translateX,
-															'px, '
+															'px, ',
 														)
 														.concat(
 															translateY,
-															'px)'
+															'px)',
 														),
-										})
+										}),
 									),
-									outerStyle
+									outerStyle,
 								)),
 									isAnimationActive &&
 										active &&
@@ -21710,14 +21764,14 @@
 													transition: 'transform '
 														.concat(
 															animationDuration,
-															'ms '
+															'ms ',
 														)
 														.concat(
-															animationEasing
+															animationEasing,
 														),
-												})
+												}),
 											),
-											outerStyle
+											outerStyle,
 										))
 								var cls = classnames_default()(
 									CLS_PREFIX,
@@ -21727,7 +21781,7 @@
 										(0, DataUtils.hj)(translateX) &&
 											coordinate &&
 											(0, DataUtils.hj)(coordinate.x) &&
-											translateX >= coordinate.x
+											translateX >= coordinate.x,
 									),
 									Tooltip_defineProperty(
 										_classNames,
@@ -21735,7 +21789,7 @@
 										(0, DataUtils.hj)(translateX) &&
 											coordinate &&
 											(0, DataUtils.hj)(coordinate.x) &&
-											translateX < coordinate.x
+											translateX < coordinate.x,
 									),
 									Tooltip_defineProperty(
 										_classNames,
@@ -21743,7 +21797,7 @@
 										(0, DataUtils.hj)(translateY) &&
 											coordinate &&
 											(0, DataUtils.hj)(coordinate.y) &&
-											translateY >= coordinate.y
+											translateY >= coordinate.y,
 									),
 									Tooltip_defineProperty(
 										_classNames,
@@ -21751,9 +21805,9 @@
 										(0, DataUtils.hj)(translateY) &&
 											coordinate &&
 											(0, DataUtils.hj)(coordinate.y) &&
-											translateY < coordinate.y
+											translateY < coordinate.y,
 									),
-									_classNames)
+									_classNames),
 								)
 								return react.createElement(
 									'div',
@@ -21769,7 +21823,7 @@
 															Tooltip_objectSpread(
 																{},
 																_this2.state
-																	.dismissedAtCoordinate
+																	.dismissedAtCoordinate,
 															),
 															{},
 															{
@@ -21779,7 +21833,7 @@
 																y: _this2.props
 																	.coordinate
 																	.y,
-															}
+															},
 														),
 												})
 										},
@@ -21795,23 +21849,23 @@
 											: isFunction_default()(content)
 											? react.createElement(
 													content,
-													props
+													props,
 											  )
 											: react.createElement(
 													DefaultTooltipContent,
-													props
+													props,
 											  )
 									})(
 										content,
 										Tooltip_objectSpread(
 											Tooltip_objectSpread(
 												{},
-												this.props
+												this.props,
 											),
 											{},
-											{ payload: finalPayload }
-										)
-									)
+											{ payload: finalPayload },
+										),
+									),
 								)
 							},
 						},
@@ -21845,23 +21899,23 @@
 		'./node_modules/recharts/es6/container/Layer.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { m: () => Layer })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_1__
+						classnames__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_excluded = ['children', 'className']
 			function _extends() {
@@ -21874,7 +21928,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -21888,7 +21942,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -21908,58 +21962,58 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
 				return target
 			}
-			var Layer = react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function (
-				props,
-				ref
-			) {
-				var children = props.children,
-					className = props.className,
-					others = _objectWithoutProperties(props, _excluded),
-					layerClass =
-						classnames__WEBPACK_IMPORTED_MODULE_1___default()(
-							'recharts-layer',
-							className
-						)
-				return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-					'g',
-					_extends(
-						{ className: layerClass },
-						(0, _util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
-							others,
-							!0
+			var Layer = react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(
+				function (props, ref) {
+					var children = props.children,
+						className = props.className,
+						others = _objectWithoutProperties(props, _excluded),
+						layerClass =
+							classnames__WEBPACK_IMPORTED_MODULE_1___default()(
+								'recharts-layer',
+								className,
+							)
+					return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
+						'g',
+						_extends(
+							{ className: layerClass },
+							(0,
+							_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
+								others,
+								!0,
+							),
+							{ ref },
 						),
-						{ ref }
-					),
-					children
-				)
-			})
+						children,
+					)
+				},
+			)
 		},
 		'./node_modules/recharts/es6/container/Surface.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { T: () => Surface })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_1__
+						classnames__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_excluded = [
 					'children',
@@ -21979,7 +22033,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -21993,7 +22047,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -22013,7 +22067,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -22031,7 +22085,7 @@
 					layerClass =
 						classnames__WEBPACK_IMPORTED_MODULE_1___default()(
 							'recharts-surface',
-							className
+							className,
 						)
 				return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 					'svg',
@@ -22040,7 +22094,7 @@
 						(0, _util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
 							others,
 							!0,
-							'svg'
+							'svg',
 						),
 						{
 							className: layerClass,
@@ -22052,39 +22106,39 @@
 								.concat(svgView.y, ' ')
 								.concat(svgView.width, ' ')
 								.concat(svgView.height),
-						}
+						},
 					),
 					react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 						'title',
 						null,
-						props.title
+						props.title,
 					),
 					react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 						'desc',
 						null,
-						props.desc
+						props.desc,
 					),
-					children
+					children,
 				)
 			}
 		},
 		'./node_modules/recharts/es6/shape/Curve.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { H: () => Curve })
 			var isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isArray_default = __webpack_require__.n(isArray),
 				upperFirst = __webpack_require__(
-					'./node_modules/lodash/upperFirst.js'
+					'./node_modules/lodash/upperFirst.js',
 				),
 				upperFirst_default = __webpack_require__.n(upperFirst),
 				isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				react = __webpack_require__('./node_modules/react/index.js')
@@ -22096,7 +22150,7 @@
 					(that._x0 + 2 * that._x1) / 3,
 					(that._y0 + 2 * that._y1) / 3,
 					(that._x0 + 4 * that._x1 + x) / 6,
-					(that._y0 + 4 * that._y1 + y) / 6
+					(that._y0 + 4 * that._y1 + y) / 6,
 				)
 			}
 			function Basis(context) {
@@ -22131,7 +22185,7 @@
 						Math.min(
 							Math.abs(s0),
 							Math.abs(s1),
-							0.5 * Math.abs(p)
+							0.5 * Math.abs(p),
 						) || 0
 				)
 			}
@@ -22151,7 +22205,7 @@
 					x1 - dx,
 					y1 - dx * t1,
 					x1,
-					y1
+					y1,
 				)
 			}
 			function MonotoneX(context) {
@@ -22234,7 +22288,7 @@
 							;(this._point = 3),
 								this._context.lineTo(
 									(5 * this._x0 + this._x1) / 6,
-									(5 * this._y0 + this._y1) / 6
+									(5 * this._y0 + this._y1) / 6,
 								)
 						default:
 							point(this, x, y)
@@ -22271,11 +22325,11 @@
 							case 2:
 								this._context.moveTo(
 									(this._x2 + 2 * this._x3) / 3,
-									(this._y2 + 2 * this._y3) / 3
+									(this._y2 + 2 * this._y3) / 3,
 								),
 									this._context.lineTo(
 										(this._x3 + 2 * this._x2) / 3,
-										(this._y3 + 2 * this._y2) / 3
+										(this._y3 + 2 * this._y2) / 3,
 									),
 									this._context.closePath()
 								break
@@ -22303,7 +22357,7 @@
 									(this._y4 = y),
 									this._context.moveTo(
 										(this._x0 + 4 * this._x1 + x) / 6,
-										(this._y0 + 4 * this._y1 + y) / 6
+										(this._y0 + 4 * this._y1 + y) / 6,
 									)
 								break
 							default:
@@ -22433,7 +22487,7 @@
 								monotone_point(
 									this,
 									this._t0,
-									slope2(this, this._t0)
+									slope2(this, this._t0),
 								)
 						}
 						;(this._line ||
@@ -22462,16 +22516,16 @@
 											this,
 											slope2(
 												this,
-												(t1 = slope3(this, x, y))
+												(t1 = slope3(this, x, y)),
 											),
-											t1
+											t1,
 										)
 									break
 								default:
 									monotone_point(
 										this,
 										this._t0,
-										(t1 = slope3(this, x, y))
+										(t1 = slope3(this, x, y)),
 									)
 							}
 							;(this._x0 = this._x1),
@@ -22483,7 +22537,7 @@
 					},
 				}),
 				((MonotoneY.prototype = Object.create(
-					MonotoneX.prototype
+					MonotoneX.prototype,
 				)).point = function (x, y) {
 					MonotoneX.prototype.point.call(this, y, x)
 				}),
@@ -22538,7 +22592,7 @@
 										px[1][i0],
 										py[1][i0],
 										x[i1],
-										y[i1]
+										y[i1],
 									)
 						;(this._line || (0 !== this._line && 1 === n)) &&
 							this._context.closePath(),
@@ -22596,13 +22650,13 @@
 					},
 				})
 			var array = __webpack_require__(
-					'./node_modules/d3-shape/src/array.js'
+					'./node_modules/d3-shape/src/array.js',
 				),
 				constant = __webpack_require__(
-					'./node_modules/d3-shape/src/constant.js'
+					'./node_modules/d3-shape/src/constant.js',
 				),
 				src_path = __webpack_require__(
-					'./node_modules/d3-shape/src/path.js'
+					'./node_modules/d3-shape/src/path.js',
 				)
 			function point_x(p) {
 				return p[0]
@@ -22740,7 +22794,7 @@
 							(y0z[i] = +y0(d, i, data)),
 							output.point(
 								x1 ? +x1(d, i, data) : x0z[i],
-								y1 ? +y1(d, i, data) : y0z[i]
+								y1 ? +y1(d, i, data) : y0z[i],
 							))
 					}
 					if (buffer) return (output = null), buffer + '' || null
@@ -22865,17 +22919,17 @@
 				)
 			}
 			var classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				types = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				),
 				ReactUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ReactUtils.js'
+					'./node_modules/recharts/es6/util/ReactUtils.js',
 				),
 				DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				)
 			function _typeof(obj) {
 				return (
@@ -22906,7 +22960,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -22920,10 +22974,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -22939,13 +22991,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -22960,7 +23015,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -22987,8 +23042,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -23012,12 +23067,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -23056,7 +23111,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -23112,7 +23167,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -23122,7 +23177,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -23135,7 +23190,7 @@
 							(function _classCallCheck(instance, Constructor) {
 								if (!(instance instanceof Constructor))
 									throw new TypeError(
-										'Cannot call a class as a function'
+										'Cannot call a class as a function',
 									)
 							})(this, Curve),
 							_super.apply(this, arguments)
@@ -23145,20 +23200,20 @@
 						(function _createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									_defineProperties(Constructor, staticProps),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -23176,12 +23231,12 @@
 										curveFactory =
 											(function getCurveFactory(
 												type,
-												layout
+												layout,
 											) {
 												if (isFunction_default()(type))
 													return type
 												var name = 'curve'.concat(
-													upperFirst_default()(type)
+													upperFirst_default()(type),
 												)
 												return 'curveMonotone' ===
 													name && layout
@@ -23192,7 +23247,7 @@
 																	'vertical' ===
 																		layout
 																		? 'Y'
-																		: 'X'
+																		: 'X',
 																)
 													  ]
 													: CURVE_FACTORIES[name] ||
@@ -23205,27 +23260,27 @@
 											: points
 									if (isArray_default()(baseLine)) {
 										var formatBaseLine = connectNulls
-												? baseLine.filter(function (
-														base
-												  ) {
-														return defined(base)
-												  })
+												? baseLine.filter(
+														function (base) {
+															return defined(base)
+														},
+												  )
 												: baseLine,
 											areaPoints = formatPoints.map(
 												function (entry, index) {
 													return _objectSpread(
 														_objectSpread(
 															{},
-															entry
+															entry,
 														),
 														{},
 														{
 															base: formatBaseLine[
 																index
 															],
-														}
+														},
 													)
-												}
+												},
 											)
 										return (
 											(lineFunction =
@@ -23290,12 +23345,12 @@
 											{
 												className: classnames_default()(
 													'recharts-curve',
-													className
+													className,
 												),
 												d: realPath,
 												ref: pathRef,
-											}
-										)
+											},
+										),
 									)
 								},
 							},
@@ -23312,26 +23367,26 @@
 		'./node_modules/recharts/es6/shape/Dot.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { o: () => Dot })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_1__
+						classnames__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				_util_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					)
 			function _typeof(obj) {
 				return (
@@ -23362,7 +23417,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -23390,19 +23445,19 @@
 								if (void 0 !== prim) {
 									var res = prim.call(
 										input,
-										hint || 'default'
+										hint || 'default',
 									)
 									if ('object' !== _typeof(res)) return res
 									throw new TypeError(
-										'@@toPrimitive must return a primitive value.'
+										'@@toPrimitive must return a primitive value.',
 									)
 								}
 								return ('string' === hint ? String : Number)(
-									input
+									input,
 								)
 							})(arg, 'string')),
 							'symbol' === _typeof(key) ? key : String(key)),
-							descriptor
+							descriptor,
 						)
 				}
 				var arg, key
@@ -23430,8 +23485,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -23455,12 +23510,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -23481,7 +23536,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -23491,7 +23546,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -23504,7 +23559,7 @@
 						(function _classCallCheck(instance, Constructor) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, Dot),
 						_super.apply(this, arguments)
@@ -23514,13 +23569,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -23541,7 +23596,7 @@
 									layerClass =
 										classnames__WEBPACK_IMPORTED_MODULE_1___default()(
 											'recharts-dot',
-											className
+											className,
 										)
 								return cx === +cx && cy === +cy && r === +r
 									? react__WEBPACK_IMPORTED_MODULE_0__.createElement(
@@ -23550,19 +23605,19 @@
 												{},
 												(0,
 												_util_ReactUtils__WEBPACK_IMPORTED_MODULE_2__.L6)(
-													this.props
+													this.props,
 												),
 												(0,
 												_util_types__WEBPACK_IMPORTED_MODULE_3__.Ym)(
-													this.props
+													this.props,
 												),
 												{
 													className: layerClass,
 													cx,
 													cy,
 													r,
-												}
-											)
+												},
+											),
 									  )
 									: null
 							},
@@ -23575,7 +23630,7 @@
 		'./node_modules/recharts/es6/shape/Rectangle.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -23583,21 +23638,21 @@
 				X: () => isInRectangle,
 			})
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_1__
+						classnames__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				react_smooth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/react-smooth/es6/index.js'
+					'./node_modules/react-smooth/es6/index.js',
 				),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					)
 			function _typeof(obj) {
 				return (
@@ -23628,7 +23683,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -23645,7 +23700,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -23672,8 +23727,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -23697,7 +23752,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return _assertThisInitialized(self)
 					})(this, result)
@@ -23706,7 +23761,7 @@
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -23742,7 +23797,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -23754,12 +23809,12 @@
 					y,
 					width,
 					height,
-					radius
+					radius,
 				) {
 					var path,
 						maxRadius = Math.min(
 							Math.abs(width) / 2,
-							Math.abs(height) / 2
+							Math.abs(height) / 2,
 						),
 						ySign = height >= 0 ? 1 : -1,
 						xSign = width >= 0 ? 1 : -1,
@@ -23802,7 +23857,7 @@
 									.concat(clockWise, ',\n        ')
 									.concat(
 										x + width - xSign * newRadius[2],
-										','
+										',',
 									)
 									.concat(y + height)),
 							(path += 'L '
@@ -23840,7 +23895,7 @@
 							.concat(x + width, ',')
 							.concat(
 								y + height - ySign * _newRadius,
-								'\n            A '
+								'\n            A ',
 							)
 							.concat(_newRadius, ',')
 							.concat(_newRadius, ',0,0,')
@@ -23889,7 +23944,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -23899,7 +23954,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -23912,7 +23967,7 @@
 						!(function _classCallCheck(instance, Constructor) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, Rectangle)
 						for (
@@ -23928,11 +23983,11 @@
 								_assertThisInitialized(
 									(_this = _super.call.apply(
 										_super,
-										[this].concat(args)
-									))
+										[this].concat(args),
+									)),
 								),
 								'state',
-								{ totalLength: -1 }
+								{ totalLength: -1 },
 							),
 							_this
 						)
@@ -23941,20 +23996,20 @@
 						(function _createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									_defineProperties(Constructor, staticProps),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -24006,7 +24061,7 @@
 									var layerClass =
 										classnames__WEBPACK_IMPORTED_MODULE_1___default()(
 											'recharts-rectangle',
-											className
+											className,
 										)
 									return isUpdateAnimationActive
 										? react__WEBPACK_IMPORTED_MODULE_0__.createElement(
@@ -24041,11 +24096,11 @@
 																	totalLength
 																	? 1
 																	: totalLength,
-																'px'
+																'px',
 															),
 															to: ''.concat(
 																totalLength,
-																'px 0px'
+																'px 0px',
 															),
 															attributeName:
 																'strokeDasharray',
@@ -24063,7 +24118,7 @@
 																(0,
 																_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__.L6)(
 																	_this2.props,
-																	!0
+																	!0,
 																),
 																{
 																	className:
@@ -24073,19 +24128,19 @@
 																		currY,
 																		currWidth,
 																		currHeight,
-																		radius
+																		radius,
 																	),
 																	ref: function ref(
-																		node
+																		node,
 																	) {
 																		_this2.node =
 																			node
 																	},
-																}
-															)
-														)
+																},
+															),
+														),
 													)
-												}
+												},
 										  )
 										: react__WEBPACK_IMPORTED_MODULE_0__.createElement(
 												'path',
@@ -24094,7 +24149,7 @@
 													(0,
 													_util_ReactUtils__WEBPACK_IMPORTED_MODULE_3__.L6)(
 														this.props,
-														!0
+														!0,
 													),
 													{
 														className: layerClass,
@@ -24103,10 +24158,10 @@
 															y,
 															width,
 															height,
-															radius
+															radius,
 														),
-													}
-												)
+													},
+												),
 										  )
 								},
 							},
@@ -24130,31 +24185,31 @@
 		'./node_modules/recharts/es6/shape/Sector.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { L: () => Sector })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_1__
+						classnames__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_util_PolarUtils__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/PolarUtils.js'
+						'./node_modules/recharts/es6/util/PolarUtils.js',
 					),
 				_util_DataUtils__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/DataUtils.js'
+						'./node_modules/recharts/es6/util/DataUtils.js',
 					)
 			function _typeof(obj) {
 				return (
@@ -24185,7 +24240,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -24202,7 +24257,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -24229,8 +24284,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -24254,12 +24309,12 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return (function _assertThisInitialized(self) {
 							if (void 0 === self)
 								throw new ReferenceError(
-									"this hasn't been initialised - super() hasn't been called"
+									"this hasn't been initialised - super() hasn't been called",
 								)
 							return self
 						})(self)
@@ -24285,7 +24340,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -24318,14 +24373,14 @@
 							cx,
 							cy,
 							centerRadius,
-							centerAngle
+							centerAngle,
 						),
 						circleTangency: (0,
 						_util_PolarUtils__WEBPACK_IMPORTED_MODULE_3__.op)(
 							cx,
 							cy,
 							radius,
-							centerAngle
+							centerAngle,
 						),
 						lineTangency: (0,
 						_util_PolarUtils__WEBPACK_IMPORTED_MODULE_3__.op)(
@@ -24334,9 +24389,9 @@
 							centerRadius *
 								Math.cos(
 									theta *
-										_util_PolarUtils__WEBPACK_IMPORTED_MODULE_3__.Wk
+										_util_PolarUtils__WEBPACK_IMPORTED_MODULE_3__.Wk,
 								),
-							lineTangencyAngle
+							lineTangencyAngle,
 						),
 						theta,
 					}
@@ -24351,11 +24406,11 @@
 							return (
 								(0,
 								_util_DataUtils__WEBPACK_IMPORTED_MODULE_2__.uY)(
-									endAngle - startAngle
+									endAngle - startAngle,
 								) *
 								Math.min(
 									Math.abs(endAngle - startAngle),
-									359.999
+									359.999,
 								)
 							)
 						})(startAngle, _ref2.endAngle),
@@ -24365,14 +24420,14 @@
 							cx,
 							cy,
 							outerRadius,
-							startAngle
+							startAngle,
 						),
 						outerEndPoint = (0,
 						_util_PolarUtils__WEBPACK_IMPORTED_MODULE_3__.op)(
 							cx,
 							cy,
 							outerRadius,
-							tempEndAngle
+							tempEndAngle,
 						),
 						path = 'M '
 							.concat(outerStartPoint.x, ',')
@@ -24389,14 +24444,14 @@
 								cx,
 								cy,
 								innerRadius,
-								startAngle
+								startAngle,
 							),
 							innerEndPoint = (0,
 							_util_PolarUtils__WEBPACK_IMPORTED_MODULE_3__.op)(
 								cx,
 								cy,
 								innerRadius,
-								tempEndAngle
+								tempEndAngle,
 							)
 						path += 'L '
 							.concat(innerEndPoint.x, ',')
@@ -24406,7 +24461,7 @@
 							.concat(+(Math.abs(angle) > 180), ',')
 							.concat(
 								+(startAngle <= tempEndAngle),
-								',\n            '
+								',\n            ',
 							)
 							.concat(innerStartPoint.x, ',')
 							.concat(innerStartPoint.y, ' Z')
@@ -24420,7 +24475,7 @@
 							null !== superClass
 						)
 							throw new TypeError(
-								'Super expression must either be null or a function'
+								'Super expression must either be null or a function',
 							)
 						;(subClass.prototype = Object.create(
 							superClass && superClass.prototype,
@@ -24430,7 +24485,7 @@
 									writable: !0,
 									configurable: !0,
 								},
-							}
+							},
 						)),
 							Object.defineProperty(subClass, 'prototype', {
 								writable: !1,
@@ -24443,7 +24498,7 @@
 							(function _classCallCheck(instance, Constructor) {
 								if (!(instance instanceof Constructor))
 									throw new TypeError(
-										'Cannot call a class as a function'
+										'Cannot call a class as a function',
 									)
 							})(this, Sector),
 							_super.apply(this, arguments)
@@ -24453,20 +24508,20 @@
 						(function _createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									_defineProperties(Constructor, staticProps),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -24496,7 +24551,7 @@
 										layerClass =
 											classnames__WEBPACK_IMPORTED_MODULE_1___default()(
 												'recharts-sector',
-												className
+												className,
 											),
 										deltaRadius = outerRadius - innerRadius,
 										cr = (0,
@@ -24504,7 +24559,7 @@
 											cornerRadius,
 											deltaRadius,
 											0,
-											!0
+											!0,
 										)
 									return (
 										(path =
@@ -24512,7 +24567,7 @@
 											Math.abs(startAngle - endAngle) <
 												360
 												? (function getSectorWithCorner(
-														_ref3
+														_ref3,
 												  ) {
 														var cx = _ref3.cx,
 															cy = _ref3.cy,
@@ -24533,7 +24588,7 @@
 															sign = (0,
 															_util_DataUtils__WEBPACK_IMPORTED_MODULE_2__.uY)(
 																endAngle -
-																	startAngle
+																	startAngle,
 															),
 															_getTangentCircle =
 																getTangentCircle(
@@ -24545,7 +24600,7 @@
 																		sign,
 																		cornerRadius,
 																		cornerIsExternal,
-																	}
+																	},
 																),
 															soct =
 																_getTangentCircle.circleTangency,
@@ -24563,7 +24618,7 @@
 																		sign: -sign,
 																		cornerRadius,
 																		cornerIsExternal,
-																	}
+																	},
 																),
 															eoct =
 																_getTangentCircle2.circleTangency,
@@ -24575,11 +24630,11 @@
 																cornerIsExternal
 																	? Math.abs(
 																			startAngle -
-																				endAngle
+																				endAngle,
 																	  )
 																	: Math.abs(
 																			startAngle -
-																				endAngle
+																				endAngle,
 																	  ) -
 																	  sot -
 																	  eot
@@ -24588,37 +24643,37 @@
 																? 'M '
 																		.concat(
 																			solt.x,
-																			','
+																			',',
 																		)
 																		.concat(
 																			solt.y,
-																			'\n        a'
+																			'\n        a',
 																		)
 																		.concat(
 																			cornerRadius,
-																			','
+																			',',
 																		)
 																		.concat(
 																			cornerRadius,
-																			',0,0,1,'
+																			',0,0,1,',
 																		)
 																		.concat(
 																			2 *
 																				cornerRadius,
-																			',0\n        a'
+																			',0\n        a',
 																		)
 																		.concat(
 																			cornerRadius,
-																			','
+																			',',
 																		)
 																		.concat(
 																			cornerRadius,
-																			',0,0,1,'
+																			',0,0,1,',
 																		)
 																		.concat(
 																			2 *
 																				-cornerRadius,
-																			',0\n      '
+																			',0\n      ',
 																		)
 																: getSectorPath(
 																		{
@@ -24628,71 +24683,71 @@
 																			outerRadius,
 																			startAngle,
 																			endAngle,
-																		}
+																		},
 																  )
 														var path = 'M '
 															.concat(solt.x, ',')
 															.concat(
 																solt.y,
-																'\n    A'
+																'\n    A',
 															)
 															.concat(
 																cornerRadius,
-																','
+																',',
 															)
 															.concat(
 																cornerRadius,
-																',0,0,'
+																',0,0,',
 															)
 															.concat(
 																+(sign < 0),
-																','
+																',',
 															)
 															.concat(soct.x, ',')
 															.concat(
 																soct.y,
-																'\n    A'
+																'\n    A',
 															)
 															.concat(
 																outerRadius,
-																','
+																',',
 															)
 															.concat(
 																outerRadius,
-																',0,'
+																',0,',
 															)
 															.concat(
 																+(
 																	outerArcAngle >
 																	180
 																),
-																','
+																',',
 															)
 															.concat(
 																+(sign < 0),
-																','
+																',',
 															)
 															.concat(eoct.x, ',')
 															.concat(
 																eoct.y,
-																'\n    A'
+																'\n    A',
 															)
 															.concat(
 																cornerRadius,
-																','
+																',',
 															)
 															.concat(
 																cornerRadius,
-																',0,0,'
+																',0,0,',
 															)
 															.concat(
 																+(sign < 0),
-																','
+																',',
 															)
 															.concat(eolt.x, ',')
 															.concat(
 																eolt.y,
-																'\n  '
+																'\n  ',
 															)
 														if (innerRadius > 0) {
 															var _getTangentCircle3 =
@@ -24707,7 +24762,7 @@
 																				!0,
 																			cornerRadius,
 																			cornerIsExternal,
-																		}
+																		},
 																	),
 																sict =
 																	_getTangentCircle3.circleTangency,
@@ -24727,7 +24782,7 @@
 																				!0,
 																			cornerRadius,
 																			cornerIsExternal,
-																		}
+																		},
 																	),
 																eict =
 																	_getTangentCircle4.circleTangency,
@@ -24739,11 +24794,11 @@
 																	cornerIsExternal
 																		? Math.abs(
 																				startAngle -
-																					endAngle
+																					endAngle,
 																		  )
 																		: Math.abs(
 																				startAngle -
-																					endAngle
+																					endAngle,
 																		  ) -
 																		  sit -
 																		  eit
@@ -24756,91 +24811,91 @@
 																return ''
 																	.concat(
 																		path,
-																		'L'
+																		'L',
 																	)
 																	.concat(
 																		cx,
-																		','
+																		',',
 																	)
 																	.concat(
 																		cy,
-																		'Z'
+																		'Z',
 																	)
 															path += 'L'
 																.concat(
 																	eilt.x,
-																	','
+																	',',
 																)
 																.concat(
 																	eilt.y,
-																	'\n      A'
+																	'\n      A',
 																)
 																.concat(
 																	cornerRadius,
-																	','
+																	',',
 																)
 																.concat(
 																	cornerRadius,
-																	',0,0,'
+																	',0,0,',
 																)
 																.concat(
 																	+(sign < 0),
-																	','
+																	',',
 																)
 																.concat(
 																	eict.x,
-																	','
+																	',',
 																)
 																.concat(
 																	eict.y,
-																	'\n      A'
+																	'\n      A',
 																)
 																.concat(
 																	innerRadius,
-																	','
+																	',',
 																)
 																.concat(
 																	innerRadius,
-																	',0,'
+																	',0,',
 																)
 																.concat(
 																	+(
 																		innerArcAngle >
 																		180
 																	),
-																	','
+																	',',
 																)
 																.concat(
 																	+(sign > 0),
-																	','
+																	',',
 																)
 																.concat(
 																	sict.x,
-																	','
+																	',',
 																)
 																.concat(
 																	sict.y,
-																	'\n      A'
+																	'\n      A',
 																)
 																.concat(
 																	cornerRadius,
-																	','
+																	',',
 																)
 																.concat(
 																	cornerRadius,
-																	',0,0,'
+																	',0,0,',
 																)
 																.concat(
 																	+(sign < 0),
-																	','
+																	',',
 																)
 																.concat(
 																	silt.x,
-																	','
+																	',',
 																)
 																.concat(
 																	silt.y,
-																	'Z'
+																	'Z',
 																)
 														} else
 															path += 'L'
@@ -24854,7 +24909,7 @@
 														outerRadius,
 														cornerRadius: Math.min(
 															cr,
-															deltaRadius / 2
+															deltaRadius / 2,
 														),
 														forceCornerRadius,
 														cornerIsExternal,
@@ -24876,14 +24931,14 @@
 												(0,
 												_util_ReactUtils__WEBPACK_IMPORTED_MODULE_4__.L6)(
 													this.props,
-													!0
+													!0,
 												),
 												{
 													className: layerClass,
 													d: path,
 													role: 'img',
-												}
-											)
+												},
+											),
 										)
 									)
 								},
@@ -24919,7 +24974,7 @@
 		'./node_modules/recharts/es6/util/CartesianUtils.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -24931,60 +24986,60 @@
 			var every = __webpack_require__('./node_modules/lodash/every.js'),
 				every_default = __webpack_require__.n(every),
 				mapValues = __webpack_require__(
-					'./node_modules/lodash/mapValues.js'
+					'./node_modules/lodash/mapValues.js',
 				),
 				mapValues_default = __webpack_require__.n(mapValues),
 				ChartUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ChartUtils.js'
+					'./node_modules/recharts/es6/util/ChartUtils.js',
 				),
 				ReactUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ReactUtils.js'
+					'./node_modules/recharts/es6/util/ReactUtils.js',
 				),
 				DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				isNil = __webpack_require__('./node_modules/lodash/isNil.js'),
 				isNil_default = __webpack_require__.n(isNil),
 				isEqual = __webpack_require__(
-					'./node_modules/lodash/isEqual.js'
+					'./node_modules/lodash/isEqual.js',
 				),
 				isEqual_default = __webpack_require__.n(isEqual),
 				isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isArray_default = __webpack_require__.n(isArray),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				classnames = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames_default = __webpack_require__.n(classnames),
 				es6 = __webpack_require__(
-					'./node_modules/react-smooth/es6/index.js'
+					'./node_modules/react-smooth/es6/index.js',
 				),
 				Rectangle = __webpack_require__(
-					'./node_modules/recharts/es6/shape/Rectangle.js'
+					'./node_modules/recharts/es6/shape/Rectangle.js',
 				),
 				Layer = __webpack_require__(
-					'./node_modules/recharts/es6/container/Layer.js'
+					'./node_modules/recharts/es6/container/Layer.js',
 				),
 				ErrorBar = __webpack_require__(
-					'./node_modules/recharts/es6/cartesian/ErrorBar.js'
+					'./node_modules/recharts/es6/cartesian/ErrorBar.js',
 				),
 				Cell = __webpack_require__(
-					'./node_modules/recharts/es6/component/Cell.js'
+					'./node_modules/recharts/es6/component/Cell.js',
 				),
 				LabelList = __webpack_require__(
-					'./node_modules/recharts/es6/component/LabelList.js'
+					'./node_modules/recharts/es6/component/LabelList.js',
 				),
 				Global = __webpack_require__(
-					'./node_modules/recharts/es6/util/Global.js'
+					'./node_modules/recharts/es6/util/Global.js',
 				),
 				types = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				),
 				_excluded = ['value', 'background']
 			function _typeof(obj) {
@@ -25012,7 +25067,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -25032,7 +25087,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -25048,7 +25103,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -25062,10 +25117,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -25081,13 +25134,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -25102,7 +25158,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -25129,8 +25185,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -25154,7 +25210,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return _assertThisInitialized(self)
 					})(this, result)
@@ -25163,7 +25219,7 @@
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -25199,7 +25255,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -25210,7 +25266,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -25220,7 +25276,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -25233,7 +25289,7 @@
 					!(function _classCallCheck(instance, Constructor) {
 						if (!(instance instanceof Constructor))
 							throw new TypeError(
-								'Cannot call a class as a function'
+								'Cannot call a class as a function',
 							)
 					})(this, Bar)
 					for (
@@ -25249,16 +25305,16 @@
 							_assertThisInitialized(
 								(_this = _super.call.apply(
 									_super,
-									[this].concat(args)
-								))
+									[this].concat(args),
+								)),
 							),
 							'state',
-							{ isAnimationFinished: !1 }
+							{ isAnimationFinished: !1 },
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
 							'id',
-							(0, DataUtils.EL)('recharts-bar-')
+							(0, DataUtils.EL)('recharts-bar-'),
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -25267,7 +25323,7 @@
 								var onAnimationEnd = _this.props.onAnimationEnd
 								_this.setState({ isAnimationFinished: !0 }),
 									onAnimationEnd && onAnimationEnd()
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -25277,7 +25333,7 @@
 									_this.props.onAnimationStart
 								_this.setState({ isAnimationFinished: !1 }),
 									onAnimationStart && onAnimationStart()
-							}
+							},
 						),
 						_this
 					)
@@ -25286,13 +25342,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -25307,12 +25363,12 @@
 							{
 								key: 'renderRectanglesStatically',
 								value: function renderRectanglesStatically(
-									data
+									data,
 								) {
 									var _this2 = this,
 										shape = this.props.shape,
 										baseProps = (0, ReactUtils.L6)(
-											this.props
+											this.props,
 										)
 									return (
 										data &&
@@ -25321,12 +25377,12 @@
 												_objectSpread(
 													_objectSpread(
 														{},
-														baseProps
+														baseProps,
 													),
-													entry
+													entry,
 												),
 												{},
-												{ index: i }
+												{ index: i },
 											)
 											return react.createElement(
 												Layer.m,
@@ -25338,19 +25394,19 @@
 													(0, types.bw)(
 														_this2.props,
 														entry,
-														i
+														i,
 													),
 													{
 														key: 'rectangle-'.concat(
-															i
+															i,
 														),
 														role: 'img',
-													}
+													},
 												),
 												Bar.renderRectangle(
 													shape,
-													props
-												)
+													props,
+												),
 											)
 										})
 									)
@@ -25390,102 +25446,105 @@
 										},
 										function (_ref) {
 											var t = _ref.t,
-												stepData = data.map(function (
-													entry,
-													index
-												) {
-													var prev =
-														prevData &&
-														prevData[index]
-													if (prev) {
-														var interpolatorX = (0,
-															DataUtils.k4)(
-																prev.x,
-																entry.x
-															),
-															interpolatorY = (0,
-															DataUtils.k4)(
-																prev.y,
-																entry.y
-															),
-															interpolatorWidth =
-																(0,
-																DataUtils.k4)(
-																	prev.width,
-																	entry.width
+												stepData = data.map(
+													function (entry, index) {
+														var prev =
+															prevData &&
+															prevData[index]
+														if (prev) {
+															var interpolatorX =
+																	(0,
+																	DataUtils.k4)(
+																		prev.x,
+																		entry.x,
+																	),
+																interpolatorY =
+																	(0,
+																	DataUtils.k4)(
+																		prev.y,
+																		entry.y,
+																	),
+																interpolatorWidth =
+																	(0,
+																	DataUtils.k4)(
+																		prev.width,
+																		entry.width,
+																	),
+																interpolatorHeight =
+																	(0,
+																	DataUtils.k4)(
+																		prev.height,
+																		entry.height,
+																	)
+															return _objectSpread(
+																_objectSpread(
+																	{},
+																	entry,
 																),
-															interpolatorHeight =
-																(0,
-																DataUtils.k4)(
-																	prev.height,
-																	entry.height
-																)
-														return _objectSpread(
-															_objectSpread(
 																{},
-																entry
-															),
-															{},
-															{
-																x: interpolatorX(
-																	t
+																{
+																	x: interpolatorX(
+																		t,
+																	),
+																	y: interpolatorY(
+																		t,
+																	),
+																	width: interpolatorWidth(
+																		t,
+																	),
+																	height: interpolatorHeight(
+																		t,
+																	),
+																},
+															)
+														}
+														if (
+															'horizontal' ===
+															layout
+														) {
+															var h = (0,
+															DataUtils.k4)(
+																0,
+																entry.height,
+															)(t)
+															return _objectSpread(
+																_objectSpread(
+																	{},
+																	entry,
 																),
-																y: interpolatorY(
-																	t
-																),
-																width: interpolatorWidth(
-																	t
-																),
-																height: interpolatorHeight(
-																	t
-																),
-															}
-														)
-													}
-													if (
-														'horizontal' === layout
-													) {
-														var h = (0,
+																{},
+																{
+																	y:
+																		entry.y +
+																		entry.height -
+																		h,
+																	height: h,
+																},
+															)
+														}
+														var w = (0,
 														DataUtils.k4)(
 															0,
-															entry.height
+															entry.width,
 														)(t)
 														return _objectSpread(
 															_objectSpread(
 																{},
-																entry
+																entry,
 															),
 															{},
-															{
-																y:
-																	entry.y +
-																	entry.height -
-																	h,
-																height: h,
-															}
+															{ width: w },
 														)
-													}
-													var w = (0, DataUtils.k4)(
-														0,
-														entry.width
-													)(t)
-													return _objectSpread(
-														_objectSpread(
-															{},
-															entry
-														),
-														{},
-														{ width: w }
-													)
-												})
+													},
+												)
 											return react.createElement(
 												Layer.m,
 												null,
 												_this3.renderRectanglesStatically(
-													stepData
-												)
+													stepData,
+												),
 											)
-										}
+										},
 									)
 								},
 							},
@@ -25514,14 +25573,14 @@
 									var _this4 = this,
 										data = this.props.data,
 										backgroundProps = (0, ReactUtils.L6)(
-											this.props.background
+											this.props.background,
 										)
 									return data.map(function (entry, i) {
 										entry.value
 										var background = entry.background,
 											rest = _objectWithoutProperties(
 												entry,
-												_excluded
+												_excluded,
 											)
 										if (!background) return null
 										var props = _objectSpread(
@@ -25531,29 +25590,29 @@
 														_objectSpread({}, rest),
 														{},
 														{ fill: '#eee' },
-														background
+														background,
 													),
-													backgroundProps
+													backgroundProps,
 												),
 												(0, types.bw)(
 													_this4.props,
 													entry,
-													i
-												)
+													i,
+												),
 											),
 											{},
 											{
 												index: i,
 												key: 'background-bar-'.concat(
-													i
+													i,
 												),
 												className:
 													'recharts-bar-background-rectangle',
-											}
+											},
 										)
 										return Bar.renderRectangle(
 											_this4.props.background,
-											props
+											props,
 										)
 									})
 								},
@@ -25562,7 +25621,7 @@
 								key: 'renderErrorBar',
 								value: function renderErrorBar(
 									needClip,
-									clipPathId
+									clipPathId,
 								) {
 									if (
 										this.props.isAnimationActive &&
@@ -25577,7 +25636,7 @@
 										children = _this$props3.children,
 										errorBarItems = (0, ReactUtils.NN)(
 											children,
-											ErrorBar.W
+											ErrorBar.W,
 										)
 									if (!errorBarItems) return null
 									var offset =
@@ -25586,7 +25645,7 @@
 											: data[0].width / 2
 									function dataPointFormatter(
 										dataPoint,
-										dataKey
+										dataKey,
 									) {
 										return {
 											x: dataPoint.x,
@@ -25594,7 +25653,7 @@
 											value: dataPoint.value,
 											errorVal: (0, ChartUtils.F$)(
 												dataPoint,
-												dataKey
+												dataKey,
 											),
 										}
 									}
@@ -25602,7 +25661,7 @@
 										clipPath: needClip
 											? 'url(#clipPath-'.concat(
 													clipPathId,
-													')'
+													')',
 											  )
 											: null,
 									}
@@ -25619,7 +25678,7 @@
 												offset,
 												dataPointFormatter,
 											})
-										})
+										}),
 									)
 								},
 							},
@@ -25646,7 +25705,7 @@
 											this.state.isAnimationFinished,
 										layerClass = classnames_default()(
 											'recharts-bar',
-											className
+											className,
 										),
 										needClip =
 											(xAxis &&
@@ -25666,7 +25725,7 @@
 														'clipPath',
 														{
 															id: 'clipPath-'.concat(
-																clipPathId
+																clipPathId,
 															),
 														},
 														react.createElement(
@@ -25676,9 +25735,9 @@
 																y: top,
 																width,
 																height,
-															}
-														)
-													)
+															},
+														),
+													),
 											  )
 											: null,
 										react.createElement(
@@ -25689,25 +25748,25 @@
 												clipPath: needClip
 													? 'url(#clipPath-'.concat(
 															clipPathId,
-															')'
+															')',
 													  )
 													: null,
 											},
 											background
 												? this.renderBackground()
 												: null,
-											this.renderRectangles()
+											this.renderRectangles(),
 										),
 										this.renderErrorBar(
 											needClip,
-											clipPathId
+											clipPathId,
 										),
 										(!isAnimationActive ||
 											isAnimationFinished) &&
 											LabelList.e.renderCallByParent(
 												this.props,
-												data
-											)
+												data,
+											),
 									)
 								},
 							},
@@ -25717,7 +25776,7 @@
 								key: 'getDerivedStateFromProps',
 								value: function getDerivedStateFromProps(
 									nextProps,
-									prevState
+									prevState,
 								) {
 									return nextProps.animationId !==
 										prevState.prevAnimationId
@@ -25741,11 +25800,11 @@
 										? option(props)
 										: react.createElement(
 												Rectangle.A,
-												props
+												props,
 										  )
 								},
 							},
-						]
+						],
 					),
 					Bar
 				)
@@ -25778,7 +25837,7 @@
 						Object.defineProperty(
 							target,
 							CartesianUtils_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -25788,10 +25847,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -25806,14 +25863,14 @@
 									CartesianUtils_defineProperty(
 										target,
 										key,
-										source[key]
+										source[key],
 									)
-								}
+								},
 						  )
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: CartesianUtils_ownKeys(Object(source)).forEach(
 								function (key) {
@@ -25822,10 +25879,10 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
-								}
+								},
 						  )
 				}
 				return target
@@ -25855,7 +25912,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== CartesianUtils_typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -25910,11 +25967,11 @@
 								(stackedData
 									? (value = (0, ChartUtils.Vv)(
 											stackedData[dataStartIndex + index],
-											stackedDomain
+											stackedDomain,
 									  ))
 									: ((value = (0, ChartUtils.F$)(
 											entry,
-											dataKey
+											dataKey,
 									  )),
 									  isArray_default()(value) ||
 											(value = [baseValue, value])),
@@ -25963,7 +26020,7 @@
 								) {
 									var delta =
 										(0, DataUtils.uY)(
-											height || minPointSize
+											height || minPointSize,
 										) *
 										(Math.abs(minPointSize) -
 											Math.abs(height))
@@ -26001,7 +26058,7 @@
 								)
 									width +=
 										(0, DataUtils.uY)(
-											width || minPointSize
+											width || minPointSize,
 										) *
 										(Math.abs(minPointSize) -
 											Math.abs(width))
@@ -26019,7 +26076,7 @@
 										payload: entry,
 										background,
 									},
-									cells && cells[index] && cells[index].props
+									cells && cells[index] && cells[index].props,
 								),
 								{},
 								{
@@ -26030,7 +26087,7 @@
 										x: x + width / 2,
 										y: y + height / 2,
 									},
-								}
+								},
 							)
 						})
 					return _objectSpread({ data: rects, layout }, offset)
@@ -26040,7 +26097,7 @@
 					axisMap,
 					offset,
 					axisType,
-					chartName
+					chartName,
 				) {
 					var width = props.width,
 						height = props.height,
@@ -26088,7 +26145,7 @@
 									(smallestDistanceBetweenValues = Math.min(
 										(value || 0) -
 											(sortedValues[index - 1] || 0),
-										smallestDistanceBetweenValues
+										smallestDistanceBetweenValues,
 									))
 							})
 							var smallestDistanceInPercent =
@@ -26107,7 +26164,7 @@
 							) {
 								var gap = (0, DataUtils.h1)(
 										props.barCategoryGap,
-										smallestDistanceInPercent * rangeWidth
+										smallestDistanceInPercent * rangeWidth,
 									),
 									halfBand =
 										(smallestDistanceInPercent *
@@ -26152,7 +26209,7 @@
 						var _parseScale = (0, ChartUtils.Hq)(
 								axis,
 								chartName,
-								hasBar
+								hasBar,
 							),
 							scale = _parseScale.scale,
 							realScaleType = _parseScale.realScaleType
@@ -26163,8 +26220,8 @@
 							CartesianUtils_objectSpread(
 								CartesianUtils_objectSpread({}, axis),
 								{},
-								{ realScaleType }
-							)
+								{ realScaleType },
+							),
 						)
 						'xAxis' === axisType
 							? ((needSpace =
@@ -26181,7 +26238,7 @@
 						var finalAxis = CartesianUtils_objectSpread(
 							CartesianUtils_objectSpread(
 								CartesianUtils_objectSpread({}, axis),
-								ticks
+								ticks,
 							),
 							{},
 							{
@@ -26197,12 +26254,12 @@
 									'yAxis' === axisType
 										? offset.height
 										: axis.height,
-							}
+							},
 						)
 						return (
 							(finalAxis.bandSize = (0, ChartUtils.zT)(
 								finalAxis,
-								ticks
+								ticks,
 							)),
 							axis.hide || 'xAxis' !== axisType
 								? axis.hide ||
@@ -26214,7 +26271,11 @@
 							CartesianUtils_objectSpread(
 								CartesianUtils_objectSpread({}, result),
 								{},
-								CartesianUtils_defineProperty({}, id, finalAxis)
+								CartesianUtils_defineProperty(
+									{},
+									id,
+									finalAxis,
+								),
 							)
 						)
 					}, {})
@@ -26242,11 +26303,11 @@
 					function ScaleHelper(scale) {
 						!(function CartesianUtils_classCallCheck(
 							instance,
-							Constructor
+							Constructor,
 						) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, ScaleHelper),
 							(this.scale = scale)
@@ -26255,23 +26316,23 @@
 						(function CartesianUtils_createClass(
 							Constructor,
 							protoProps,
-							staticProps
+							staticProps,
 						) {
 							return (
 								protoProps &&
 									CartesianUtils_defineProperties(
 										Constructor.prototype,
-										protoProps
+										protoProps,
 									),
 								staticProps &&
 									CartesianUtils_defineProperties(
 										Constructor,
-										staticProps
+										staticProps,
 									),
 								Object.defineProperty(
 									Constructor,
 									'prototype',
-									{ writable: !1 }
+									{ writable: !1 },
 								),
 								Constructor
 							)
@@ -26375,7 +26436,7 @@
 										return new ScaleHelper(obj)
 									},
 								},
-							]
+							],
 						),
 						ScaleHelper
 					)
@@ -26389,8 +26450,8 @@
 						CartesianUtils_defineProperty(
 							{},
 							key,
-							ScaleHelper.create(options[key])
-						)
+							ScaleHelper.create(options[key]),
+						),
 					)
 				}, {})
 				return CartesianUtils_objectSpread(
@@ -26412,7 +26473,7 @@
 										bandAware,
 										position,
 									})
-								}
+								},
 							)
 						},
 						isInRange: function isInRange(coord) {
@@ -26420,17 +26481,17 @@
 								coord,
 								function (value, label) {
 									return scales[label].isInRange(value)
-								}
+								},
 							)
 						},
-					}
+					},
 				)
 			}
 		},
 		'./node_modules/recharts/es6/util/ChartUtils.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -26497,25 +26558,25 @@
 					tickFormat: () => tickFormat,
 				})
 			var isEqual = __webpack_require__(
-					'./node_modules/lodash/isEqual.js'
+					'./node_modules/lodash/isEqual.js',
 				),
 				isEqual_default = __webpack_require__.n(isEqual),
 				sortBy = __webpack_require__('./node_modules/lodash/sortBy.js'),
 				sortBy_default = __webpack_require__.n(sortBy),
 				upperFirst = __webpack_require__(
-					'./node_modules/lodash/upperFirst.js'
+					'./node_modules/lodash/upperFirst.js',
 				),
 				upperFirst_default = __webpack_require__.n(upperFirst),
 				isString = __webpack_require__(
-					'./node_modules/lodash/isString.js'
+					'./node_modules/lodash/isString.js',
 				),
 				isString_default = __webpack_require__.n(isString),
 				lodash_isNaN = __webpack_require__(
-					'./node_modules/lodash/isNaN.js'
+					'./node_modules/lodash/isNaN.js',
 				),
 				isNaN_default = __webpack_require__.n(lodash_isNaN),
 				isArray = __webpack_require__(
-					'./node_modules/lodash/isArray.js'
+					'./node_modules/lodash/isArray.js',
 				),
 				isArray_default = __webpack_require__.n(isArray),
 				max = __webpack_require__('./node_modules/lodash/max.js'),
@@ -26523,11 +26584,11 @@
 				min = __webpack_require__('./node_modules/lodash/min.js'),
 				min_default = __webpack_require__.n(min),
 				flatMap = __webpack_require__(
-					'./node_modules/lodash/flatMap.js'
+					'./node_modules/lodash/flatMap.js',
 				),
 				flatMap_default = __webpack_require__.n(flatMap),
 				isFunction = __webpack_require__(
-					'./node_modules/lodash/isFunction.js'
+					'./node_modules/lodash/isFunction.js',
 				),
 				isFunction_default = __webpack_require__.n(isFunction),
 				get = __webpack_require__('./node_modules/lodash/get.js'),
@@ -26535,7 +26596,7 @@
 				isNil = __webpack_require__('./node_modules/lodash/isNil.js'),
 				isNil_default = __webpack_require__.n(isNil),
 				band = __webpack_require__(
-					'./node_modules/d3-scale/src/band.js'
+					'./node_modules/d3-scale/src/band.js',
 				)
 			const e10 = Math.sqrt(50),
 				e5 = Math.sqrt(10),
@@ -26594,7 +26655,7 @@
 				return tickSpec(
 					(start = +start),
 					(stop = +stop),
-					(count = +count)
+					(count = +count),
 				)[2]
 			}
 			function tickStep(start, stop, count) {
@@ -26702,14 +26763,14 @@
 				reRgbInteger = new RegExp(`^rgb\\(${reI},${reI},${reI}\\)$`),
 				reRgbPercent = new RegExp(`^rgb\\(${reP},${reP},${reP}\\)$`),
 				reRgbaInteger = new RegExp(
-					`^rgba\\(${reI},${reI},${reI},${reN}\\)$`
+					`^rgba\\(${reI},${reI},${reI},${reN}\\)$`,
 				),
 				reRgbaPercent = new RegExp(
-					`^rgba\\(${reP},${reP},${reP},${reN}\\)$`
+					`^rgba\\(${reP},${reP},${reP},${reN}\\)$`,
 				),
 				reHslPercent = new RegExp(`^hsl\\(${reN},${reP},${reP}\\)$`),
 				reHslaPercent = new RegExp(
-					`^hsla\\(${reN},${reP},${reP},${reN}\\)$`
+					`^hsla\\(${reN},${reP},${reP},${reN}\\)$`,
 				),
 				named = {
 					aliceblue: 15792383,
@@ -26881,21 +26942,21 @@
 										((m >> 8) & 15) | ((m >> 4) & 240),
 										((m >> 4) & 15) | (240 & m),
 										((15 & m) << 4) | (15 & m),
-										1
+										1,
 								  )
 								: 8 === l
 								? rgba(
 										(m >> 24) & 255,
 										(m >> 16) & 255,
 										(m >> 8) & 255,
-										(255 & m) / 255
+										(255 & m) / 255,
 								  )
 								: 4 === l
 								? rgba(
 										((m >> 12) & 15) | ((m >> 8) & 240),
 										((m >> 8) & 15) | ((m >> 4) & 240),
 										((m >> 4) & 15) | (240 & m),
-										(((15 & m) << 4) | (15 & m)) / 255
+										(((15 & m) << 4) | (15 & m)) / 255,
 								  )
 								: null)
 						: (m = reRgbInteger.exec(format))
@@ -26905,7 +26966,7 @@
 								(255 * m[1]) / 100,
 								(255 * m[2]) / 100,
 								(255 * m[3]) / 100,
-								1
+								1,
 						  )
 						: (m = reRgbaInteger.exec(format))
 						? rgba(m[1], m[2], m[3], m[4])
@@ -26914,7 +26975,7 @@
 								(255 * m[1]) / 100,
 								(255 * m[2]) / 100,
 								(255 * m[3]) / 100,
-								m[4]
+								m[4],
 						  )
 						: (m = reHslPercent.exec(format))
 						? hsla(m[1], m[2] / 100, m[3] / 100, 1)
@@ -26943,7 +27004,7 @@
 											(o = o.rgb()).r,
 											o.g,
 											o.b,
-											o.opacity
+											o.opacity,
 									  )
 									: new Rgb()
 							)
@@ -26962,7 +27023,7 @@
 			function rgb_formatRgb() {
 				const a = clampa(this.opacity)
 				return `${1 === a ? 'rgb(' : 'rgba('}${clampi(
-					this.r
+					this.r,
 				)}, ${clampi(this.g)}, ${clampi(this.b)}${
 					1 === a ? ')' : `, ${a})`
 				}`
@@ -27082,7 +27143,7 @@
 									this.r * k,
 									this.g * k,
 									this.b * k,
-									this.opacity
+									this.opacity,
 								)
 							)
 						},
@@ -27093,7 +27154,7 @@
 									this.r * k,
 									this.g * k,
 									this.b * k,
-									this.opacity
+									this.opacity,
 								)
 							)
 						},
@@ -27105,7 +27166,7 @@
 								clampi(this.r),
 								clampi(this.g),
 								clampi(this.b),
-								clampa(this.opacity)
+								clampa(this.opacity),
 							)
 						},
 						displayable() {
@@ -27124,14 +27185,14 @@
 						formatHex: rgb_formatHex,
 						formatHex8: function rgb_formatHex8() {
 							return `#${hex(this.r)}${hex(this.g)}${hex(
-								this.b
+								this.b,
 							)}${hex(
-								255 * (isNaN(this.opacity) ? 1 : this.opacity)
+								255 * (isNaN(this.opacity) ? 1 : this.opacity),
 							)}`
 						},
 						formatRgb: rgb_formatRgb,
 						toString: rgb_formatRgb,
-					})
+					}),
 				),
 				src_define(
 					Hsl,
@@ -27151,7 +27212,7 @@
 									this.h,
 									this.s,
 									this.l * k,
-									this.opacity
+									this.opacity,
 								)
 							)
 						},
@@ -27162,7 +27223,7 @@
 									this.h,
 									this.s,
 									this.l * k,
-									this.opacity
+									this.opacity,
 								)
 							)
 						},
@@ -27176,7 +27237,7 @@
 								hsl2rgb(h >= 240 ? h - 240 : h + 120, m1, m2),
 								hsl2rgb(h, m1, m2),
 								hsl2rgb(h < 120 ? h + 240 : h - 120, m1, m2),
-								this.opacity
+								this.opacity,
 							)
 						},
 						clamp() {
@@ -27184,7 +27245,7 @@
 								clamph(this.h),
 								clampt(this.s),
 								clampt(this.l),
-								clampa(this.opacity)
+								clampa(this.opacity),
 							)
 						},
 						displayable() {
@@ -27200,12 +27261,12 @@
 						formatHsl() {
 							const a = clampa(this.opacity)
 							return `${1 === a ? 'hsl(' : 'hsla('}${clamph(
-								this.h
+								this.h,
 							)}, ${100 * clampt(this.s)}%, ${
 								100 * clampt(this.l)
 							}%${1 === a ? ')' : `, ${a})`}`
 						},
-					})
+					}),
 				)
 			const src_constant = (x) => () => x
 			function linear(a, d) {
@@ -27240,7 +27301,7 @@
 				function rgb(start, end) {
 					var r = color(
 							(start = color_rgb(start)).r,
-							(end = color_rgb(end)).r
+							(end = color_rgb(end)).r,
 						),
 						g = color(start.g, end.g),
 						b = color(start.b, end.b),
@@ -27553,7 +27614,7 @@
 								(output = piecewise(
 									domain.map(transform),
 									range,
-									interpolate
+									interpolate,
 								))
 						  )(transform(clamp(x)))
 				}
@@ -27566,10 +27627,10 @@
 									(input = piecewise(
 										range,
 										domain.map(transform),
-										src_number
+										src_number,
 									))
-								)(y)
-							)
+								)(y),
+							),
 						)
 					}),
 					(scale.domain = function (_) {
@@ -27615,7 +27676,7 @@
 			}
 			var prefixExponent,
 				init = __webpack_require__(
-					'./node_modules/d3-scale/src/init.js'
+					'./node_modules/d3-scale/src/init.js',
 				),
 				re =
 					/^(?:(.)?([<>=^]))?([+\-( ])?([$#])?(0)?(\d+)?(,)?(\.\d+)?(~)?([a-z%])?$/i
@@ -27739,7 +27800,7 @@
 								3 *
 								Math.max(
 									-8,
-									Math.min(8, Math.floor(exponent / 3))
+									Math.min(8, Math.floor(exponent / 3)),
 								)) +
 							1,
 						n = coefficient.length
@@ -27800,10 +27861,13 @@
 											(length + g + 1 > width &&
 												(g = Math.max(
 													1,
-													width - length
+													width - length,
 												)),
 											t.push(
-												value.substring((i -= g), i + g)
+												value.substring(
+													(i -= g),
+													i + g,
+												),
 											),
 											!((length += g + 1) > width));
 
@@ -27818,7 +27882,7 @@
 									}
 							  })(
 									map.call(locale.grouping, Number),
-									locale.thousands + ''
+									locale.thousands + '',
 							  ),
 					currencyPrefix =
 						void 0 === locale.currency
@@ -27839,7 +27903,7 @@
 											/[0-9]/g,
 											function (i) {
 												return numerals[+i]
-											}
+											},
 										)
 									}
 							  })(map.call(locale.numerals, String)),
@@ -27972,7 +28036,7 @@
 									padding + value,
 									padding.length
 										? width - valueSuffix.length
-										: 1 / 0
+										: 1 / 0,
 								)),
 								(padding = '')),
 							align)
@@ -27989,7 +28053,7 @@
 								value =
 									padding.slice(
 										0,
-										(length = padding.length >> 1)
+										(length = padding.length >> 1),
 									) +
 									valuePrefix +
 									value +
@@ -28021,13 +28085,16 @@
 						var f = newFormat(
 								(((specifier =
 									formatSpecifier(specifier)).type = 'f'),
-								specifier)
+								specifier),
 							),
 							e =
 								3 *
 								Math.max(
 									-8,
-									Math.min(8, Math.floor(exponent(value) / 3))
+									Math.min(
+										8,
+										Math.floor(exponent(value) / 3),
+									),
 								),
 							k = Math.pow(10, -e),
 							prefix = prefixes[8 + e / 3]
@@ -28042,7 +28109,7 @@
 					step = tickStep(start, stop, count)
 				switch (
 					(specifier = formatSpecifier(
-						null == specifier ? ',f' : specifier
+						null == specifier ? ',f' : specifier,
 					)).type
 				) {
 					case 's':
@@ -28052,7 +28119,7 @@
 								isNaN(
 									(precision = (function precisionPrefix(
 										step,
-										value
+										value,
 									) {
 										return Math.max(
 											0,
@@ -28062,13 +28129,13 @@
 													Math.min(
 														8,
 														Math.floor(
-															exponent(value) / 3
-														)
-													)
+															exponent(value) / 3,
+														),
+													),
 												) -
-												exponent(Math.abs(step))
+												exponent(Math.abs(step)),
 										)
-									})(step, value))
+									})(step, value)),
 								) ||
 								(specifier.precision = precision),
 							formatPrefix(specifier, value)
@@ -28082,20 +28149,20 @@
 							isNaN(
 								(precision = (function precisionRound(
 									step,
-									max
+									max,
 								) {
 									return (
 										(step = Math.abs(step)),
 										(max = Math.abs(max) - step),
 										Math.max(
 											0,
-											exponent(max) - exponent(step)
+											exponent(max) - exponent(step),
 										) + 1
 									)
 								})(
 									step,
-									Math.max(Math.abs(start), Math.abs(stop))
-								))
+									Math.max(Math.abs(start), Math.abs(stop)),
+								)),
 							) ||
 							(specifier.precision =
 								precision - ('e' === specifier.type))
@@ -28107,9 +28174,9 @@
 								(precision = (function precisionFixed(step) {
 									return Math.max(
 										0,
-										-exponent(Math.abs(step))
+										-exponent(Math.abs(step)),
 									)
-								})(step))
+								})(step)),
 							) ||
 							(specifier.precision =
 								precision - 2 * ('%' === specifier.type))
@@ -28124,7 +28191,7 @@
 						return ticks(
 							d[0],
 							d[d.length - 1],
-							null == count ? 10 : count
+							null == count ? 10 : count,
 						)
 					}),
 					(scale.tickFormat = function (count, specifier) {
@@ -28133,7 +28200,7 @@
 							d[0],
 							d[d.length - 1],
 							null == count ? 10 : count,
-							specifier
+							specifier,
 						)
 					}),
 					(scale.nice = function (count) {
@@ -28358,7 +28425,7 @@
 							return specifier
 						const k = Math.max(
 							1,
-							(base * count) / scale.ticks().length
+							(base * count) / scale.ticks().length,
 						)
 						return (d) => {
 							let i = d / pows(Math.round(logs(d)))
@@ -28373,7 +28440,7 @@
 							nice(domain(), {
 								floor: (x) => pows(Math.floor(logs(x))),
 								ceil: (x) => pows(Math.ceil(logs(x))),
-							})
+							}),
 						)),
 					scale
 				)
@@ -28404,7 +28471,7 @@
 						return arguments.length
 							? transform(
 									transformSymlog((c = +_)),
-									transformSymexp(c)
+									transformSymexp(c),
 							  )
 							: c
 					}),
@@ -28429,7 +28496,7 @@
 				)
 			})({ thousands: ',', grouping: [3], currency: ['$', ''] })
 			var ordinal = __webpack_require__(
-				'./node_modules/d3-scale/src/ordinal.js'
+				'./node_modules/d3-scale/src/ordinal.js',
 			)
 			function transformPow(exponent) {
 				return function (x) {
@@ -28457,11 +28524,11 @@
 										: 0.5 === exponent
 										? transform(
 												transformSqrt,
-												transformSquare
+												transformSquare,
 										  )
 										: transform(
 												transformPow(exponent),
-												transformPow(1 / exponent)
+												transformPow(1 / exponent),
 										  )
 							  })())
 							: exponent
@@ -28509,8 +28576,8 @@
 						return arguments.length
 							? (squared.range(
 									(range = Array.from(_, number_number)).map(
-										square
-									)
+										square,
+									),
 							  ),
 							  scale)
 							: range.slice()
@@ -28599,7 +28666,7 @@
 				k,
 				left = 0,
 				right = 1 / 0,
-				compare
+				compare,
 			) {
 				if (
 					((k = Math.floor(k)),
@@ -28631,9 +28698,9 @@
 							Math.max(left, Math.floor(k - (m * s) / n + sd)),
 							Math.min(
 								right,
-								Math.floor(k + ((n - m) * s) / n + sd)
+								Math.floor(k + ((n - m) * s) / n + sd),
 							),
-							compare
+							compare,
 						)
 					}
 					const t = array[k]
@@ -28682,12 +28749,12 @@
 										(value = valueof(
 											value,
 											++index,
-											values
+											values,
 										)) &&
 										(value = +value) >= value &&
 										(yield value)
 							}
-						})(values, valueof)
+						})(values, valueof),
 					)),
 					(n = values.length) && !isNaN((p = +p)))
 				) {
@@ -28699,8 +28766,8 @@
 						value0 = max_max(
 							quickselect_quickselect(values, i0).subarray(
 								0,
-								i0 + 1
-							)
+								i0 + 1,
+							),
 						)
 					return (
 						value0 +
@@ -28897,7 +28964,7 @@
 							(date =
 								0 === arguments.length
 									? new Date()
-									: new Date(+date))
+									: new Date(+date)),
 						),
 						date
 					)
@@ -28920,7 +28987,7 @@
 					(interval.offset = (date, step) => (
 						offseti(
 							(date = new Date(+date)),
-							null == step ? 1 : Math.floor(step)
+							null == step ? 1 : Math.floor(step),
 						),
 						date
 					)),
@@ -28963,7 +29030,7 @@
 												offseti(date, 1), !test(date);
 
 											);
-							}
+							},
 						)),
 					count &&
 						((interval.count = (start, end) => (
@@ -28983,7 +29050,7 @@
 												: (d) =>
 														interval.count(0, d) %
 															step ==
-														0
+														0,
 									  )
 									: interval
 								: null
@@ -28996,7 +29063,7 @@
 				(date, step) => {
 					date.setTime(+date + step)
 				},
-				(start, end) => end - start
+				(start, end) => end - start,
 			)
 			millisecond.every = (k) => (
 				(k = Math.floor(k)),
@@ -29009,7 +29076,7 @@
 								(date, step) => {
 									date.setTime(+date + step * k)
 								},
-								(start, end) => (end - start) / k
+								(start, end) => (end - start) / k,
 						  )
 						: millisecond
 					: null
@@ -29023,7 +29090,7 @@
 						date.setTime(+date + 1e3 * step)
 					},
 					(start, end) => (end - start) / 1e3,
-					(date) => date.getUTCSeconds()
+					(date) => date.getUTCSeconds(),
 				),
 				timeMinute =
 					(second.range,
@@ -29032,14 +29099,14 @@
 							date.setTime(
 								date -
 									date.getMilliseconds() -
-									1e3 * date.getSeconds()
+									1e3 * date.getSeconds(),
 							)
 						},
 						(date, step) => {
 							date.setTime(+date + step * durationMinute)
 						},
 						(start, end) => (end - start) / durationMinute,
-						(date) => date.getMinutes()
+						(date) => date.getMinutes(),
 					)),
 				utcMinute =
 					(timeMinute.range,
@@ -29051,7 +29118,7 @@
 							date.setTime(+date + step * durationMinute)
 						},
 						(start, end) => (end - start) / durationMinute,
-						(date) => date.getUTCMinutes()
+						(date) => date.getUTCMinutes(),
 					)),
 				timeHour =
 					(utcMinute.range,
@@ -29061,14 +29128,14 @@
 								date -
 									date.getMilliseconds() -
 									1e3 * date.getSeconds() -
-									date.getMinutes() * durationMinute
+									date.getMinutes() * durationMinute,
 							)
 						},
 						(date, step) => {
 							date.setTime(+date + step * durationHour)
 						},
 						(start, end) => (end - start) / durationHour,
-						(date) => date.getHours()
+						(date) => date.getHours(),
 					)),
 				utcHour =
 					(timeHour.range,
@@ -29080,7 +29147,7 @@
 							date.setTime(+date + step * durationHour)
 						},
 						(start, end) => (end - start) / durationHour,
-						(date) => date.getUTCHours()
+						(date) => date.getUTCHours(),
 					)),
 				timeDay =
 					(utcHour.range,
@@ -29094,7 +29161,7 @@
 									start.getTimezoneOffset()) *
 									durationMinute) /
 							durationDay,
-						(date) => date.getDate() - 1
+						(date) => date.getDate() - 1,
 					)),
 				utcDay =
 					(timeDay.range,
@@ -29106,7 +29173,7 @@
 							date.setUTCDate(date.getUTCDate() + step)
 						},
 						(start, end) => (end - start) / durationDay,
-						(date) => date.getUTCDate() - 1
+						(date) => date.getUTCDate() - 1,
 					)),
 				unixDay =
 					(utcDay.range,
@@ -29118,14 +29185,14 @@
 							date.setUTCDate(date.getUTCDate() + step)
 						},
 						(start, end) => (end - start) / durationDay,
-						(date) => Math.floor(date / durationDay)
+						(date) => Math.floor(date / durationDay),
 					))
 			unixDay.range
 			function timeWeekday(i) {
 				return timeInterval(
 					(date) => {
 						date.setDate(
-							date.getDate() - ((date.getDay() + 7 - i) % 7)
+							date.getDate() - ((date.getDay() + 7 - i) % 7),
 						),
 							date.setHours(0, 0, 0, 0)
 					},
@@ -29138,7 +29205,7 @@
 							(end.getTimezoneOffset() -
 								start.getTimezoneOffset()) *
 								durationMinute) /
-						durationWeek
+						durationWeek,
 				)
 			}
 			const timeSunday = timeWeekday(0),
@@ -29159,14 +29226,15 @@
 				return timeInterval(
 					(date) => {
 						date.setUTCDate(
-							date.getUTCDate() - ((date.getUTCDay() + 7 - i) % 7)
+							date.getUTCDate() -
+								((date.getUTCDay() + 7 - i) % 7),
 						),
 							date.setUTCHours(0, 0, 0, 0)
 					},
 					(date, step) => {
 						date.setUTCDate(date.getUTCDate() + 7 * step)
 					},
-					(start, end) => (end - start) / durationWeek
+					(start, end) => (end - start) / durationWeek,
 				)
 			}
 			const utcSunday = utcWeekday(0),
@@ -29195,7 +29263,7 @@
 							end.getMonth() -
 							start.getMonth() +
 							12 * (end.getFullYear() - start.getFullYear()),
-						(date) => date.getMonth()
+						(date) => date.getMonth(),
 					)),
 				utcMonth =
 					(timeMonth.range,
@@ -29211,7 +29279,7 @@
 							start.getUTCMonth() +
 							12 *
 								(end.getUTCFullYear() - start.getUTCFullYear()),
-						(date) => date.getUTCMonth()
+						(date) => date.getUTCMonth(),
 					)),
 				timeYear =
 					(utcMonth.range,
@@ -29223,21 +29291,21 @@
 							date.setFullYear(date.getFullYear() + step)
 						},
 						(start, end) => end.getFullYear() - start.getFullYear(),
-						(date) => date.getFullYear()
+						(date) => date.getFullYear(),
 					))
 			timeYear.every = (k) =>
 				isFinite((k = Math.floor(k))) && k > 0
 					? timeInterval(
 							(date) => {
 								date.setFullYear(
-									Math.floor(date.getFullYear() / k) * k
+									Math.floor(date.getFullYear() / k) * k,
 								),
 									date.setMonth(0, 1),
 									date.setHours(0, 0, 0, 0)
 							},
 							(date, step) => {
 								date.setFullYear(date.getFullYear() + step * k)
-							}
+							},
 					  )
 					: null
 			timeYear.range
@@ -29249,23 +29317,23 @@
 					date.setUTCFullYear(date.getUTCFullYear() + step)
 				},
 				(start, end) => end.getUTCFullYear() - start.getUTCFullYear(),
-				(date) => date.getUTCFullYear()
+				(date) => date.getUTCFullYear(),
 			)
 			utcYear.every = (k) =>
 				isFinite((k = Math.floor(k))) && k > 0
 					? timeInterval(
 							(date) => {
 								date.setUTCFullYear(
-									Math.floor(date.getUTCFullYear() / k) * k
+									Math.floor(date.getUTCFullYear() / k) * k,
 								),
 									date.setUTCMonth(0, 1),
 									date.setUTCHours(0, 0, 0, 0)
 							},
 							(date, step) => {
 								date.setUTCFullYear(
-									date.getUTCFullYear() + step * k
+									date.getUTCFullYear() + step * k,
 								)
-							}
+							},
 					  )
 					: null
 			utcYear.range
@@ -29294,19 +29362,19 @@
 					const target = Math.abs(stop - start) / count,
 						i = bisector(([, , step]) => step).right(
 							tickIntervals,
-							target
+							target,
 						)
 					if (i === tickIntervals.length)
 						return year.every(
 							tickStep(
 								start / durationYear,
 								stop / durationYear,
-								count
-							)
+								count,
+							),
 						)
 					if (0 === i)
 						return millisecond.every(
-							Math.max(tickStep(start, stop, count), 1)
+							Math.max(tickStep(start, stop, count), 1),
 						)
 					const [t, step] =
 						tickIntervals[
@@ -29339,7 +29407,7 @@
 					utcSunday,
 					unixDay,
 					utcHour,
-					utcMinute
+					utcMinute,
 				),
 				[timeTicks, timeTickInterval] = ticker(
 					timeYear,
@@ -29347,7 +29415,7 @@
 					timeSunday,
 					timeDay,
 					timeHour,
-					timeMinute
+					timeMinute,
 				)
 			function localDate(d) {
 				if (0 <= d.y && d.y < 100) {
@@ -29359,7 +29427,7 @@
 			function utcDate(d) {
 				if (0 <= d.y && d.y < 100) {
 					var date = new Date(
-						Date.UTC(-1, d.m, d.d, d.H, d.M, d.S, d.L)
+						Date.UTC(-1, d.m, d.d, d.H, d.M, d.S, d.L),
 					)
 					return date.setUTCFullYear(d.y), date
 				}
@@ -29392,7 +29460,7 @@
 			function formatRe(names) {
 				return new RegExp(
 					'^(?:' + names.map(requote).join('|') + ')',
-					'i'
+					'i',
 				)
 			}
 			function formatLookup(names) {
@@ -29431,7 +29499,7 @@
 			}
 			function parseZone(d, string, i) {
 				var n = /^(Z)|([+-]\d\d)(?::?(\d\d))?/.exec(
-					string.slice(i, i + 6)
+					string.slice(i, i + 6),
 				)
 				return n
 					? ((d.Z = n[1] ? 0 : -(n[2] + (n[3] || '00'))),
@@ -29535,7 +29603,7 @@
 						timeThursday.count(timeYear(d), d) +
 							(4 === timeYear(d).getDay()),
 						p,
-						2
+						2,
 					)
 				)
 			}
@@ -29562,7 +29630,7 @@
 							? timeThursday(d)
 							: timeThursday.ceil(d)).getFullYear() % 1e4,
 					p,
-					4
+					4,
 				)
 			}
 			function formatZone(d) {
@@ -29620,7 +29688,7 @@
 						utcThursday.count(utcYear(d), d) +
 							(4 === utcYear(d).getUTCDay()),
 						p,
-						2
+						2,
 					)
 				)
 			}
@@ -29647,7 +29715,7 @@
 							? utcThursday(d)
 							: utcThursday.ceil(d)).getUTCFullYear() % 1e4,
 					p,
-					4
+					4,
 				)
 			}
 			function formatUTCZone() {
@@ -29678,7 +29746,7 @@
 				hour,
 				minute,
 				second,
-				format
+				format,
 			) {
 				var scale = continuous(),
 					invert = scale.invert,
@@ -29724,7 +29792,7 @@
 						return ticks(
 							d[0],
 							d[d.length - 1],
-							null == interval ? 10 : interval
+							null == interval ? 10 : interval,
 						)
 					}),
 					(scale.tickFormat = function (count, specifier) {
@@ -29739,7 +29807,7 @@
 								(interval = tickInterval(
 									d[0],
 									d[d.length - 1],
-									null == interval ? 10 : interval
+									null == interval ? 10 : interval,
 								)),
 							interval ? domain(nice(d, interval)) : scale
 						)
@@ -29757,8 +29825,8 @@
 								hour,
 								minute,
 								second,
-								format
-							)
+								format,
+							),
 						)
 					}),
 					scale
@@ -29776,9 +29844,9 @@
 						timeHour,
 						timeMinute,
 						second,
-						timeFormat
+						timeFormat,
 					).domain([new Date(2e3, 0, 1), new Date(2e3, 0, 2)]),
-					arguments
+					arguments,
 				)
 			}
 			function utcTime() {
@@ -29793,9 +29861,9 @@
 						utcHour,
 						utcMinute,
 						second,
-						utcFormat
+						utcFormat,
 					).domain([Date.UTC(2e3, 0, 1), Date.UTC(2e3, 0, 2)]),
-					arguments
+					arguments,
 				)
 			}
 			function sequential_transformer() {
@@ -29815,7 +29883,7 @@
 								0 === k10
 									? 0.5
 									: ((x = (transform(x) - t0) * k10),
-									  clamp ? Math.max(0, Math.min(1, x)) : x)
+									  clamp ? Math.max(0, Math.min(1, x)) : x),
 						  )
 				}
 				function range(interpolate) {
@@ -29885,7 +29953,7 @@
 				return (
 					(scale.copy = function () {
 						return sequential_copy(scale, sequentialLog()).base(
-							scale.base()
+							scale.base(),
 						)
 					}),
 					init.O.apply(scale, arguments)
@@ -29897,7 +29965,7 @@
 					(scale.copy = function () {
 						return sequential_copy(
 							scale,
-							sequentialSymlog()
+							sequentialSymlog(),
 						).constant(scale.constant())
 					}),
 					init.O.apply(scale, arguments)
@@ -29908,7 +29976,7 @@
 				return (
 					(scale.copy = function () {
 						return sequential_copy(scale, sequentialPow()).exponent(
-							scale.exponent()
+							scale.exponent(),
 						)
 					}),
 					init.O.apply(scale, arguments)
@@ -29923,7 +29991,7 @@
 				function scale(x) {
 					if (null != x && !isNaN((x = +x)))
 						return interpolator(
-							(bisect(domain, x, 1) - 1) / (domain.length - 1)
+							(bisect(domain, x, 1) - 1) / (domain.length - 1),
 						)
 				}
 				return (
@@ -29941,12 +30009,12 @@
 					}),
 					(scale.range = function () {
 						return domain.map((d, i) =>
-							interpolator(i / (domain.length - 1))
+							interpolator(i / (domain.length - 1)),
 						)
 					}),
 					(scale.quantiles = function (n) {
 						return Array.from({ length: n + 1 }, (_, i) =>
-							quantile(domain, i / n)
+							quantile(domain, i / n),
 						)
 					}),
 					(scale.copy = function () {
@@ -29985,7 +30053,7 @@
 							? (([r0, r1, r2] = _),
 							  (interpolator = (function piecewise(
 									interpolate,
-									values
+									values,
 							  ) {
 									void 0 === values &&
 										((values = interpolate),
@@ -30004,8 +30072,8 @@
 											0,
 											Math.min(
 												n - 1,
-												Math.floor((t *= n))
-											)
+												Math.floor((t *= n)),
+											),
 										)
 										return I[i](t - i)
 									}
@@ -30076,7 +30144,7 @@
 				return (
 					(scale.copy = function () {
 						return sequential_copy(scale, divergingLog()).base(
-							scale.base()
+							scale.base(),
 						)
 					}),
 					init.O.apply(scale, arguments)
@@ -30088,7 +30156,7 @@
 					(scale.copy = function () {
 						return sequential_copy(
 							scale,
-							divergingSymlog()
+							divergingSymlog(),
 						).constant(scale.constant())
 					}),
 					init.O.apply(scale, arguments)
@@ -30099,7 +30167,7 @@
 				return (
 					(scale.copy = function () {
 						return sequential_copy(scale, divergingPow()).exponent(
-							scale.exponent()
+							scale.exponent(),
 						)
 					}),
 					init.O.apply(scale, arguments)
@@ -30246,7 +30314,7 @@
 									var n = shortWeekdayRe.exec(string.slice(i))
 									return n
 										? ((d.w = shortWeekdayLookup.get(
-												n[0].toLowerCase()
+												n[0].toLowerCase(),
 										  )),
 										  i + n[0].length)
 										: -1
@@ -30255,7 +30323,7 @@
 									var n = weekdayRe.exec(string.slice(i))
 									return n
 										? ((d.w = weekdayLookup.get(
-												n[0].toLowerCase()
+												n[0].toLowerCase(),
 										  )),
 										  i + n[0].length)
 										: -1
@@ -30264,7 +30332,7 @@
 									var n = shortMonthRe.exec(string.slice(i))
 									return n
 										? ((d.m = shortMonthLookup.get(
-												n[0].toLowerCase()
+												n[0].toLowerCase(),
 										  )),
 										  i + n[0].length)
 										: -1
@@ -30273,7 +30341,7 @@
 									var n = monthRe.exec(string.slice(i))
 									return n
 										? ((d.m = monthLookup.get(
-												n[0].toLowerCase()
+												n[0].toLowerCase(),
 										  )),
 										  i + n[0].length)
 										: -1
@@ -30283,7 +30351,7 @@
 										d,
 										locale_dateTime,
 										string,
-										i
+										i,
 									)
 								},
 								d: parseDayOfMonth,
@@ -30301,7 +30369,7 @@
 									var n = periodRe.exec(string.slice(i))
 									return n
 										? ((d.p = periodLookup.get(
-												n[0].toLowerCase()
+												n[0].toLowerCase(),
 										  )),
 										  i + n[0].length)
 										: -1
@@ -30320,7 +30388,7 @@
 										d,
 										locale_date,
 										string,
-										i
+										i,
 									)
 								},
 								X: function parseLocaleTime(d, string, i) {
@@ -30328,7 +30396,7 @@
 										d,
 										locale_time,
 										string,
-										i
+										i,
 									)
 								},
 								y: parseYear,
@@ -30378,14 +30446,14 @@
 										d,
 										specifier,
 										(string += ''),
-										0
+										0,
 									) != string.length
 								)
 									return null
 								if ('Q' in d) return new Date(d.Q)
 								if ('s' in d)
 									return new Date(
-										1e3 * d.s + ('L' in d ? d.L : 0)
+										1e3 * d.s + ('L' in d ? d.L : 0),
 									)
 								if (
 									(Z && !('Z' in d) && (d.Z = 0),
@@ -30398,7 +30466,7 @@
 									'w' in d || (d.w = 1),
 										'Z' in d
 											? ((day = (week = utcDate(
-													newDate(d.y, 0, 1)
+													newDate(d.y, 0, 1),
 											  )).getUTCDay()),
 											  (week =
 													day > 4 || 0 === day
@@ -30406,7 +30474,7 @@
 														: utcMonday(week)),
 											  (week = utcDay.offset(
 													week,
-													7 * (d.V - 1)
+													7 * (d.V - 1),
 											  )),
 											  (d.y = week.getUTCFullYear()),
 											  (d.m = week.getUTCMonth()),
@@ -30414,7 +30482,7 @@
 													week.getUTCDate() +
 													((d.w + 6) % 7)))
 											: ((day = (week = localDate(
-													newDate(d.y, 0, 1)
+													newDate(d.y, 0, 1),
 											  )).getDay()),
 											  (week =
 													day > 4 || 0 === day
@@ -30422,7 +30490,7 @@
 														: timeMonday(week)),
 											  (week = timeDay.offset(
 													week,
-													7 * (d.V - 1)
+													7 * (d.V - 1),
 											  )),
 											  (d.y = week.getFullYear()),
 											  (d.m = week.getMonth()),
@@ -30441,10 +30509,10 @@
 										(day =
 											'Z' in d
 												? utcDate(
-														newDate(d.y, 0, 1)
+														newDate(d.y, 0, 1),
 												  ).getUTCDay()
 												: localDate(
-														newDate(d.y, 0, 1)
+														newDate(d.y, 0, 1),
 												  ).getDay()),
 										(d.m = 0),
 										(d.d =
@@ -30497,13 +30565,13 @@
 							(utcFormats.X = newFormat(locale_time, utcFormats)),
 							(utcFormats.c = newFormat(
 								locale_dateTime,
-								utcFormats
+								utcFormats,
 							)),
 							{
 								format: function (specifier) {
 									var f = newFormat(
 										(specifier += ''),
-										formats
+										formats,
 									)
 									return (
 										(f.toString = function () {
@@ -30524,7 +30592,7 @@
 								utcFormat: function (specifier) {
 									var f = newFormat(
 										(specifier += ''),
-										utcFormats
+										utcFormats,
 									)
 									return (
 										(f.toString = function () {
@@ -30596,10 +30664,10 @@
 				],
 			})
 			var src_array = __webpack_require__(
-					'./node_modules/d3-shape/src/array.js'
+					'./node_modules/d3-shape/src/array.js',
 				),
 				d3_shape_src_constant = __webpack_require__(
-					'./node_modules/d3-shape/src/constant.js'
+					'./node_modules/d3-shape/src/constant.js',
 				)
 			function order_none(series) {
 				for (var n = series.length, o = new Array(n); --n >= 0; )
@@ -30614,7 +30682,7 @@
 				return (series.key = key), series
 			}
 			var decimal = __webpack_require__(
-					'./node_modules/decimal.js-light/decimal.js'
+					'./node_modules/decimal.js-light/decimal.js',
 				),
 				decimal_default = __webpack_require__.n(decimal)
 			function _toConsumableArray(arr) {
@@ -30646,7 +30714,7 @@
 					})(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -30671,7 +30739,7 @@
 								isPlaceHolder(
 									arguments.length <= 0
 										? void 0
-										: arguments[0]
+										: arguments[0],
 								))
 							? _curried
 							: fn.apply(void 0, arguments)
@@ -30701,7 +30769,7 @@
 													var _len2 =
 															arguments.length,
 														restArgs = new Array(
-															_len2
+															_len2,
 														),
 														_key2 = 0;
 													_key2 < _len2;
@@ -30712,19 +30780,19 @@
 												var newArgs = args.map(
 													function (arg) {
 														return isPlaceHolder(
-															arg
+															arg,
 														)
 															? restArgs.shift()
 															: arg
-													}
+													},
 												)
 												return fn.apply(
 													void 0,
 													_toConsumableArray(
-														newArgs
-													).concat(restArgs)
+														newArgs,
+													).concat(restArgs),
 												)
-											})
+											}),
 									  )
 						  })
 				},
@@ -30759,9 +30827,12 @@
 						firstFn = fns[0],
 						tailsFn = fns.slice(1)
 					return function () {
-						return tailsFn.reduce(function (res, fn) {
-							return fn(res)
-						}, firstFn.apply(void 0, arguments))
+						return tailsFn.reduce(
+							function (res, fn) {
+								return fn(res)
+							},
+							firstFn.apply(void 0, arguments),
+						)
 					}
 				},
 				reverse = function reverse(arr) {
@@ -30809,7 +30880,7 @@
 								new (decimal_default())(value)
 									.abs()
 									.log(10)
-									.toNumber()
+									.toNumber(),
 						  ) + 1
 				},
 				interpolateNumber: curry(function (a, b, t) {
@@ -30844,7 +30915,7 @@
 					getNiceTickValues_unsupportedIterableToArray(arr) ||
 					(function getNiceTickValues_nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -30885,7 +30956,7 @@
 					getNiceTickValues_unsupportedIterableToArray(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -30929,12 +31000,12 @@
 				if (roughStep.lte(0)) return new (decimal_default())(0)
 				var digitCount = arithmetic.getDigitCount(roughStep.toNumber()),
 					digitCountValue = new (decimal_default())(10).pow(
-						digitCount
+						digitCount,
 					),
 					stepRatio = roughStep.div(digitCountValue),
 					stepRatioScale = 1 !== digitCount ? 0.05 : 0.1,
 					formatStep = new (decimal_default())(
-						Math.ceil(stepRatio.div(stepRatioScale).toNumber())
+						Math.ceil(stepRatio.div(stepRatioScale).toNumber()),
 					)
 						.add(correctionFactor)
 						.mul(stepRatioScale)
@@ -30950,17 +31021,17 @@
 					var absVal = Math.abs(value)
 					absVal < 1
 						? ((step = new (decimal_default())(10).pow(
-								arithmetic.getDigitCount(value) - 1
+								arithmetic.getDigitCount(value) - 1,
 						  )),
 						  (middle = new (decimal_default())(
-								Math.floor(middle.div(step).toNumber())
+								Math.floor(middle.div(step).toNumber()),
 						  ).mul(step)))
 						: absVal > 1 &&
 						  (middle = new (decimal_default())(Math.floor(value)))
 				} else
 					0 === value
 						? (middle = new (decimal_default())(
-								Math.floor((tickCount - 1) / 2)
+								Math.floor((tickCount - 1) / 2),
 						  ))
 						: allowDecimals ||
 						  (middle = new (decimal_default())(Math.floor(value)))
@@ -30970,12 +31041,12 @@
 						return middle
 							.add(
 								new (decimal_default())(n - middleIndex).mul(
-									step
-								)
+									step,
+								),
 							)
 							.toNumber()
 					}),
-					range
+					range,
 				)(0, tickCount)
 			}
 			function calculateStep(min, max, tickCount, allowDecimals) {
@@ -30995,7 +31066,7 @@
 							.sub(min)
 							.div(tickCount - 1),
 						allowDecimals,
-						correctionFactor
+						correctionFactor,
 					)
 				middle =
 					min <= 0 && max >= 0
@@ -31003,16 +31074,16 @@
 						: (middle = new (decimal_default())(min)
 								.add(max)
 								.div(2)).sub(
-								new (decimal_default())(middle).mod(step)
+								new (decimal_default())(middle).mod(step),
 						  )
 				var belowCount = Math.ceil(
-						middle.sub(min).div(step).toNumber()
+						middle.sub(min).div(step).toNumber(),
 					),
 					upCount = Math.ceil(
 						new (decimal_default())(max)
 							.sub(middle)
 							.div(step)
-							.toNumber()
+							.toNumber(),
 					),
 					scaleCount = belowCount + upCount + 1
 				return scaleCount > tickCount
@@ -31021,7 +31092,7 @@
 							max,
 							tickCount,
 							allowDecimals,
-							correctionFactor + 1
+							correctionFactor + 1,
 					  )
 					: (scaleCount < tickCount &&
 							((upCount =
@@ -31035,80 +31106,83 @@
 					  {
 							step,
 							tickMin: middle.sub(
-								new (decimal_default())(belowCount).mul(step)
+								new (decimal_default())(belowCount).mul(step),
 							),
 							tickMax: middle.add(
-								new (decimal_default())(upCount).mul(step)
+								new (decimal_default())(upCount).mul(step),
 							),
 					  })
 			}
-			var getNiceTickValues = memoize(function getNiceTickValuesFn(
-					_ref3
-				) {
-					var _ref4 = _slicedToArray(_ref3, 2),
-						min = _ref4[0],
-						max = _ref4[1],
-						tickCount =
-							arguments.length > 1 && void 0 !== arguments[1]
-								? arguments[1]
-								: 6,
-						allowDecimals =
-							!(
-								arguments.length > 2 && void 0 !== arguments[2]
-							) || arguments[2],
-						count = Math.max(tickCount, 2),
-						_getValidInterval2 = _slicedToArray(
-							getValidInterval([min, max]),
-							2
-						),
-						cormin = _getValidInterval2[0],
-						cormax = _getValidInterval2[1]
-					if (cormin === -1 / 0 || cormax === 1 / 0) {
-						var _values =
-							cormax === 1 / 0
-								? [cormin].concat(
-										getNiceTickValues_toConsumableArray(
-											range(0, tickCount - 1).map(
-												function () {
-													return 1 / 0
-												}
-											)
-										)
-								  )
-								: [].concat(
-										getNiceTickValues_toConsumableArray(
-											range(0, tickCount - 1).map(
-												function () {
-													return -1 / 0
-												}
-											)
-										),
-										[cormax]
-								  )
-						return min > max ? reverse(_values) : _values
-					}
-					if (cormin === cormax)
-						return getTickOfSingleValue(
-							cormin,
-							tickCount,
-							allowDecimals
-						)
-					var _calculateStep = calculateStep(
-							cormin,
-							cormax,
-							count,
-							allowDecimals
-						),
-						step = _calculateStep.step,
-						tickMin = _calculateStep.tickMin,
-						tickMax = _calculateStep.tickMax,
-						values = arithmetic.rangeStep(
-							tickMin,
-							tickMax.add(new (decimal_default())(0.1).mul(step)),
-							step
-						)
-					return min > max ? reverse(values) : values
-				}),
+			var getNiceTickValues = memoize(
+					function getNiceTickValuesFn(_ref3) {
+						var _ref4 = _slicedToArray(_ref3, 2),
+							min = _ref4[0],
+							max = _ref4[1],
+							tickCount =
+								arguments.length > 1 && void 0 !== arguments[1]
+									? arguments[1]
+									: 6,
+							allowDecimals =
+								!(
+									arguments.length > 2 &&
+									void 0 !== arguments[2]
+								) || arguments[2],
+							count = Math.max(tickCount, 2),
+							_getValidInterval2 = _slicedToArray(
+								getValidInterval([min, max]),
+								2,
+							),
+							cormin = _getValidInterval2[0],
+							cormax = _getValidInterval2[1]
+						if (cormin === -1 / 0 || cormax === 1 / 0) {
+							var _values =
+								cormax === 1 / 0
+									? [cormin].concat(
+											getNiceTickValues_toConsumableArray(
+												range(0, tickCount - 1).map(
+													function () {
+														return 1 / 0
+													},
+												),
+											),
+									  )
+									: [].concat(
+											getNiceTickValues_toConsumableArray(
+												range(0, tickCount - 1).map(
+													function () {
+														return -1 / 0
+													},
+												),
+											),
+											[cormax],
+									  )
+							return min > max ? reverse(_values) : _values
+						}
+						if (cormin === cormax)
+							return getTickOfSingleValue(
+								cormin,
+								tickCount,
+								allowDecimals,
+							)
+						var _calculateStep = calculateStep(
+								cormin,
+								cormax,
+								count,
+								allowDecimals,
+							),
+							step = _calculateStep.step,
+							tickMin = _calculateStep.tickMin,
+							tickMax = _calculateStep.tickMax,
+							values = arithmetic.rangeStep(
+								tickMin,
+								tickMax.add(
+									new (decimal_default())(0.1).mul(step),
+								),
+								step,
+							)
+						return min > max ? reverse(values) : values
+					},
+				),
 				getTickValuesFixedDomain =
 					(memoize(function getTickValuesFn(_ref5) {
 						var _ref6 = _slicedToArray(_ref5, 2),
@@ -31126,7 +31200,7 @@
 							count = Math.max(tickCount, 2),
 							_getValidInterval4 = _slicedToArray(
 								getValidInterval([min, max]),
-								2
+								2,
 							),
 							cormin = _getValidInterval4[0],
 							cormax = _getValidInterval4[1]
@@ -31136,85 +31210,86 @@
 							return getTickOfSingleValue(
 								cormin,
 								tickCount,
-								allowDecimals
+								allowDecimals,
 							)
 						var step = getFormatStep(
 								new (decimal_default())(cormax)
 									.sub(cormin)
 									.div(count - 1),
 								allowDecimals,
-								0
+								0,
 							),
 							values = compose(
 								utils_map(function (n) {
 									return new (decimal_default())(cormin)
 										.add(
-											new (decimal_default())(n).mul(step)
+											new (decimal_default())(n).mul(
+												step,
+											),
 										)
 										.toNumber()
 								}),
-								range
+								range,
 							)(0, count).filter(function (entry) {
 								return entry >= cormin && entry <= cormax
 							})
 						return min > max ? reverse(values) : values
 					}),
-					memoize(function getTickValuesFixedDomainFn(
-						_ref7,
-						tickCount
-					) {
-						var _ref8 = _slicedToArray(_ref7, 2),
-							min = _ref8[0],
-							max = _ref8[1],
-							allowDecimals =
-								!(
-									arguments.length > 2 &&
-									void 0 !== arguments[2]
-								) || arguments[2],
-							_getValidInterval6 = _slicedToArray(
-								getValidInterval([min, max]),
-								2
-							),
-							cormin = _getValidInterval6[0],
-							cormax = _getValidInterval6[1]
-						if (cormin === -1 / 0 || cormax === 1 / 0)
-							return [min, max]
-						if (cormin === cormax) return [cormin]
-						var count = Math.max(tickCount, 2),
-							step = getFormatStep(
-								new (decimal_default())(cormax)
-									.sub(cormin)
-									.div(count - 1),
-								allowDecimals,
-								0
-							),
-							values = [].concat(
-								getNiceTickValues_toConsumableArray(
-									arithmetic.rangeStep(
-										new (decimal_default())(cormin),
-										new (decimal_default())(cormax).sub(
-											new (decimal_default())(0.99).mul(
-												step
-											)
-										),
-										step
-									)
+					memoize(
+						function getTickValuesFixedDomainFn(_ref7, tickCount) {
+							var _ref8 = _slicedToArray(_ref7, 2),
+								min = _ref8[0],
+								max = _ref8[1],
+								allowDecimals =
+									!(
+										arguments.length > 2 &&
+										void 0 !== arguments[2]
+									) || arguments[2],
+								_getValidInterval6 = _slicedToArray(
+									getValidInterval([min, max]),
+									2,
 								),
-								[cormax]
-							)
-						return min > max ? reverse(values) : values
-					})),
+								cormin = _getValidInterval6[0],
+								cormax = _getValidInterval6[1]
+							if (cormin === -1 / 0 || cormax === 1 / 0)
+								return [min, max]
+							if (cormin === cormax) return [cormin]
+							var count = Math.max(tickCount, 2),
+								step = getFormatStep(
+									new (decimal_default())(cormax)
+										.sub(cormin)
+										.div(count - 1),
+									allowDecimals,
+									0,
+								),
+								values = [].concat(
+									getNiceTickValues_toConsumableArray(
+										arithmetic.rangeStep(
+											new (decimal_default())(cormin),
+											new (decimal_default())(cormax).sub(
+												new (decimal_default())(
+													0.99,
+												).mul(step),
+											),
+											step,
+										),
+									),
+									[cormax],
+								)
+							return min > max ? reverse(values) : values
+						},
+					)),
 				ErrorBar = __webpack_require__(
-					'./node_modules/recharts/es6/cartesian/ErrorBar.js'
+					'./node_modules/recharts/es6/cartesian/ErrorBar.js',
 				),
 				Legend = __webpack_require__(
-					'./node_modules/recharts/es6/component/Legend.js'
+					'./node_modules/recharts/es6/component/Legend.js',
 				),
 				DataUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				ReactUtils = __webpack_require__(
-					'./node_modules/recharts/es6/util/ReactUtils.js'
+					'./node_modules/recharts/es6/util/ReactUtils.js',
 				)
 			function _typeof(obj) {
 				return (
@@ -31266,7 +31341,7 @@
 					})(arr) ||
 					(function ChartUtils_nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -31283,10 +31358,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -31302,13 +31375,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -31325,7 +31401,7 @@
 								var res = prim.call(input, hint || 'default')
 								if ('object' !== _typeof(res)) return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -31376,7 +31452,7 @@
 				})
 			}
 			var calculateActiveTickIndex = function calculateActiveTickIndex(
-					coordinate
+					coordinate,
 				) {
 					var _ticks$length,
 						ticks =
@@ -31399,7 +31475,7 @@
 						axis &&
 						'angleAxis' === axis.axisType &&
 						Math.abs(
-							Math.abs(axis.range[1] - axis.range[0]) - 360
+							Math.abs(axis.range[1] - axis.range[0]) - 360,
 						) <= 1e-6
 					)
 						for (var range = axis.range, i = 0; i < len; i++) {
@@ -31426,11 +31502,11 @@
 									var curInRange = cur + range[1] - range[0]
 									;(diffInterval[0] = Math.min(
 										curInRange,
-										(curInRange + before) / 2
+										(curInRange + before) / 2,
 									)),
 										(diffInterval[1] = Math.max(
 											curInRange,
-											(curInRange + before) / 2
+											(curInRange + before) / 2,
 										))
 								} else {
 									sameDirectionCoord = before
@@ -31438,21 +31514,21 @@
 										after + range[1] - range[0]
 									;(diffInterval[0] = Math.min(
 										cur,
-										(afterInRange + cur) / 2
+										(afterInRange + cur) / 2,
 									)),
 										(diffInterval[1] = Math.max(
 											cur,
-											(afterInRange + cur) / 2
+											(afterInRange + cur) / 2,
 										))
 								}
 								var sameInterval = [
 									Math.min(
 										cur,
-										(sameDirectionCoord + cur) / 2
+										(sameDirectionCoord + cur) / 2,
 									),
 									Math.max(
 										cur,
-										(sameDirectionCoord + cur) / 2
+										(sameDirectionCoord + cur) / 2,
 									),
 								]
 								if (
@@ -31506,7 +31582,7 @@
 					return index
 				},
 				getMainColorOfGraphicItem = function getMainColorOfGraphicItem(
-					item
+					item,
 				) {
 					var result,
 						displayName = item.type.displayName,
@@ -31559,10 +31635,10 @@
 															color: entry.fill,
 															payload: entry,
 														}
-													})
+													}),
 												)
 											},
-											[]
+											[],
 									  )
 									: (formattedGraphicalItems || []).map(
 											function (_ref4) {
@@ -31582,23 +31658,23 @@
 														legendType ||
 														'square',
 													color: getMainColorOfGraphicItem(
-														item
+														item,
 													),
 													value: name || dataKey,
 													payload: item.props,
 												}
-											}
+											},
 									  )),
 						  _objectSpread(
 								_objectSpread(
 									_objectSpread({}, legendItem.props),
 									Legend.D.getWithHeight(
 										legendItem,
-										legendWidth
-									)
+										legendWidth,
+									),
 								),
 								{},
-								{ payload: legendData, item: legendItem }
+								{ payload: legendData, item: legendItem },
 						  ))
 						: null
 				},
@@ -31633,7 +31709,7 @@
 								barItems = items.filter(function (item) {
 									return (
 										(0, ReactUtils.Gf)(item.type).indexOf(
-											'Bar'
+											'Bar',
 										) >= 0
 									)
 								})
@@ -31696,7 +31772,7 @@
 												: entry.barSize,
 										},
 									},
-								]
+								],
 							)
 							return (
 								(prev = newRes[newRes.length - 1].position),
@@ -31713,7 +31789,7 @@
 							barCategoryGap,
 							bandSize,
 							0,
-							!0
+							!0,
 						)
 						bandSize - 2 * _offset - (len - 1) * realBarGap <= 0 &&
 							(realBarGap = 0)
@@ -31740,7 +31816,7 @@
 											size,
 										},
 									},
-								]
+								],
 							)
 							return (
 								entry.stackList &&
@@ -31763,7 +31839,7 @@
 					offset,
 					items,
 					props,
-					legendBox
+					legendBox,
 				) {
 					var children = props.children,
 						width = props.width,
@@ -31787,8 +31863,8 @@
 								_defineProperty(
 									{},
 									align,
-									newOffset[align] + (box.width || 0)
-								)
+									newOffset[align] + (box.width || 0),
+								),
 							)),
 							('horizontal' === layout ||
 								('vertical' === layout &&
@@ -31801,8 +31877,8 @@
 										{},
 										verticalAlign,
 										newOffset[verticalAlign] +
-											(box.height || 0)
-									)
+											(box.height || 0),
+									),
 								))
 					}
 					return newOffset
@@ -31812,17 +31888,17 @@
 					item,
 					dataKey,
 					layout,
-					axisType
+					axisType,
 				) {
 					var children = item.props.children,
 						errorBars = (0, ReactUtils.NN)(
 							children,
-							ErrorBar.W
+							ErrorBar.W,
 						).filter(function (errorBarChild) {
 							return (function isErrorBarRelevantForAxis(
 								layout,
 								axisType,
-								direction
+								direction,
 							) {
 								return (
 									!!isNil_default()(axisType) ||
@@ -31845,7 +31921,7 @@
 								var entryValue = getValueByDataKey(
 										entry,
 										dataKey,
-										0
+										0,
 									),
 									mainValue = isArray_default()(entryValue)
 										? [
@@ -31858,45 +31934,45 @@
 											var errorValue = getValueByDataKey(
 													entry,
 													k,
-													0
+													0,
 												),
 												lowerValue =
 													mainValue[0] -
 													Math.abs(
 														isArray_default()(
-															errorValue
+															errorValue,
 														)
 															? errorValue[0]
-															: errorValue
+															: errorValue,
 													),
 												upperValue =
 													mainValue[1] +
 													Math.abs(
 														isArray_default()(
-															errorValue
+															errorValue,
 														)
 															? errorValue[1]
-															: errorValue
+															: errorValue,
 													)
 											return [
 												Math.min(
 													lowerValue,
-													prevErrorArr[0]
+													prevErrorArr[0],
 												),
 												Math.max(
 													upperValue,
-													prevErrorArr[1]
+													prevErrorArr[1],
 												),
 											]
 										},
-										[1 / 0, -1 / 0]
+										[1 / 0, -1 / 0],
 									)
 								return [
 									Math.min(errorDomain[0], result[0]),
 									Math.max(errorDomain[1], result[1]),
 								]
 							},
-							[1 / 0, -1 / 0]
+							[1 / 0, -1 / 0],
 						)
 					}
 					return null
@@ -31906,7 +31982,7 @@
 					items,
 					dataKey,
 					axisType,
-					layout
+					layout,
 				) {
 					var domains = items
 						.map(function (item) {
@@ -31915,7 +31991,7 @@
 								item,
 								dataKey,
 								layout,
-								axisType
+								axisType,
 							)
 						})
 						.filter(function (entry) {
@@ -31929,7 +32005,7 @@
 										Math.max(result[1], entry[1]),
 									]
 								},
-								[1 / 0, -1 / 0]
+								[1 / 0, -1 / 0],
 						  )
 						: null
 				},
@@ -31939,7 +32015,7 @@
 						items,
 						type,
 						layout,
-						filterNil
+						filterNil,
 					) {
 						var domains = items.map(function (item) {
 							var dataKey = item.props.dataKey
@@ -31950,13 +32026,13 @@
 										data,
 										item,
 										dataKey,
-										layout
+										layout,
 									)) ||
 								getDomainOfDataByKey(
 									data,
 									dataKey,
 									type,
-									filterNil
+									filterNil,
 								)
 							)
 						})
@@ -31968,7 +32044,7 @@
 										Math.max(result[1], entry[1]),
 									]
 								},
-								[1 / 0, -1 / 0]
+								[1 / 0, -1 / 0],
 							)
 						var tag = {}
 						return domains.reduce(function (result, entry) {
@@ -31981,7 +32057,7 @@
 					},
 				isCategoricalAxis = function isCategoricalAxis(
 					layout,
-					axisType
+					axisType,
 				) {
 					return (
 						('horizontal' === layout && 'xAxis' === axisType) ||
@@ -31993,7 +32069,7 @@
 				getCoordinatesOfGrid = function getCoordinatesOfGrid(
 					ticks,
 					min,
-					max
+					max,
 				) {
 					var hasMin,
 						hasMax,
@@ -32051,17 +32127,16 @@
 										return !isNaN_default()(row.coordinate)
 									})
 							: axis.isCategorical && axis.categoricalDomain
-							? axis.categoricalDomain.map(function (
-									entry,
-									index
-							  ) {
-									return {
-										coordinate: scale(entry) + offset,
-										value: entry,
-										index,
-										offset,
-									}
-							  })
+							? axis.categoricalDomain.map(
+									function (entry, index) {
+										return {
+											coordinate: scale(entry) + offset,
+											value: entry,
+											index,
+											offset,
+										}
+									},
+							  )
 							: scale.ticks && !isAll
 							? scale.ticks(axis.tickCount).map(function (entry) {
 									return {
@@ -32085,7 +32160,7 @@
 				combineEventHandlers = function combineEventHandlers(
 					defaultHandler,
 					parentHandler,
-					childHandler
+					childHandler,
 				) {
 					var customizedHandler
 					return (
@@ -32099,13 +32174,13 @@
 									isFunction_default()(defaultHandler) &&
 										defaultHandler(arg1, arg2, arg3, arg4),
 										isFunction_default()(
-											customizedHandler
+											customizedHandler,
 										) &&
 											customizedHandler(
 												arg1,
 												arg2,
 												arg3,
-												arg4
+												arg4,
 											)
 							  }
 							: null
@@ -32168,7 +32243,7 @@
 				},
 				findPositionOfBar = function findPositionOfBar(
 					barPosition,
-					child
+					child,
 				) {
 					if (!barPosition) return null
 					for (var i = 0, len = barPosition.length; i < len; i++)
@@ -32303,7 +32378,7 @@
 				getStackedData = function getStackedData(
 					data,
 					stackItems,
-					offsetType
+					offsetType,
 				) {
 					var dataKeys = stackItems.map(function (item) {
 							return item.props.dataKey
@@ -32318,7 +32393,7 @@
 									oz,
 									sz = Array.from(
 										keys.apply(this, arguments),
-										stackSeries
+										stackSeries,
 									),
 									n = sz.length,
 									j = -1
@@ -32344,7 +32419,7 @@
 													? _
 													: (0,
 													  d3_shape_src_constant.Z)(
-															Array.from(_)
+															Array.from(_),
 													  )),
 										  stack)
 										: keys
@@ -32356,7 +32431,7 @@
 													? _
 													: (0,
 													  d3_shape_src_constant.Z)(
-															+_
+															+_,
 													  )),
 										  stack)
 										: value
@@ -32370,7 +32445,7 @@
 													? _
 													: (0,
 													  d3_shape_src_constant.Z)(
-															Array.from(_)
+															Array.from(_),
 													  )),
 										  stack)
 										: order
@@ -32398,7 +32473,7 @@
 					numericAxisId,
 					cateAxisId,
 					offsetType,
-					reverseStackOrder
+					reverseStackOrder,
 				) {
 					if (!data) return null
 					var stackGroups = (
@@ -32419,22 +32494,25 @@
 							childGroup.items.push(item),
 								(parentGroup.hasStack = !0),
 								(parentGroup.stackGroups[stackId] = childGroup)
-						} else parentGroup.stackGroups[(0, DataUtils.EL)('_stackId_')] = { numericAxisId, cateAxisId, items: [item] }
+						} else
+							parentGroup.stackGroups[
+								(0, DataUtils.EL)('_stackId_')
+							] = { numericAxisId, cateAxisId, items: [item] }
 						return _objectSpread(
 							_objectSpread({}, result),
 							{},
-							_defineProperty({}, axisId, parentGroup)
+							_defineProperty({}, axisId, parentGroup),
 						)
 					}, {})
 					return Object.keys(stackGroups).reduce(function (
 						result,
-						axisId
+						axisId,
 					) {
 						var group = stackGroups[axisId]
 						return (
 							group.hasStack &&
 								(group.stackGroups = Object.keys(
-									group.stackGroups
+									group.stackGroups,
 								).reduce(function (res, stackId) {
 									var g = group.stackGroups[stackId]
 									return _objectSpread(
@@ -32447,19 +32525,18 @@
 											stackedData: getStackedData(
 												data,
 												g.items,
-												offsetType
+												offsetType,
 											),
-										})
+										}),
 									)
 								}, {})),
 							_objectSpread(
 								_objectSpread({}, result),
 								{},
-								_defineProperty({}, axisId, group)
+								_defineProperty({}, axisId, group),
 							)
 						)
-					},
-					{})
+					}, {})
 				},
 				getTicksOfScale = function getTicksOfScale(scale, opts) {
 					var realScaleType = opts.realScaleType,
@@ -32482,7 +32559,7 @@
 						var tickValues = getNiceTickValues(
 							domain,
 							tickCount,
-							allowDecimals
+							allowDecimals,
 						)
 						return (
 							scale.domain([
@@ -32498,14 +32575,14 @@
 							niceTicks: getTickValuesFixedDomain(
 								_domain,
 								tickCount,
-								allowDecimals
+								allowDecimals,
 							),
 						}
 					}
 					return null
 				},
 				getCateCoordinateOfLine = function getCateCoordinateOfLine(
-					_ref7
+					_ref7,
 				) {
 					var axis = _ref7.axis,
 						ticks = _ref7.ticks,
@@ -32522,7 +32599,7 @@
 							var matchedTick = (0, DataUtils.Ap)(
 								ticks,
 								'value',
-								entry[axis.dataKey]
+								entry[axis.dataKey],
 							)
 							if (matchedTick)
 								return matchedTick.coordinate + bandSize / 2
@@ -32533,12 +32610,12 @@
 					}
 					var value = getValueByDataKey(
 						entry,
-						isNil_default()(dataKey) ? axis.dataKey : dataKey
+						isNil_default()(dataKey) ? axis.dataKey : dataKey,
 					)
 					return isNil_default()(value) ? null : axis.scale(value)
 				},
 				getCateCoordinateOfBar = function getCateCoordinateOfBar(
-					_ref8
+					_ref8,
 				) {
 					var axis = _ref8.axis,
 						ticks = _ref8.ticks,
@@ -32553,7 +32630,7 @@
 					var value = getValueByDataKey(
 						entry,
 						axis.dataKey,
-						axis.domain[index]
+						axis.domain[index],
 					)
 					return isNil_default()(value)
 						? null
@@ -32571,7 +32648,7 @@
 				},
 				getStackedDataOfItem = function getStackedDataOfItem(
 					item,
-					stackGroups
+					stackGroups,
 				) {
 					var stackId = item.props.stackId
 					if ((0, DataUtils.P2)(stackId)) {
@@ -32598,7 +32675,7 @@
 				getDomainOfStackGroups = function getDomainOfStackGroups(
 					stackGroups,
 					startIndex,
-					endIndex
+					endIndex,
 				) {
 					return Object.keys(stackGroups)
 						.reduce(
@@ -32608,7 +32685,7 @@
 								].stackedData.reduce(
 									function (res, entry) {
 										var s = (function getDomainOfSingle(
-											data
+											data,
 										) {
 											return data.reduce(
 												function (result, entry) {
@@ -32619,8 +32696,8 @@
 																	result[0],
 																])
 																.filter(
-																	DataUtils.hj
-																)
+																	DataUtils.hj,
+																),
 														),
 														max_default()(
 															entry
@@ -32628,32 +32705,32 @@
 																	result[1],
 																])
 																.filter(
-																	DataUtils.hj
-																)
+																	DataUtils.hj,
+																),
 														),
 													]
 												},
-												[1 / 0, -1 / 0]
+												[1 / 0, -1 / 0],
 											)
 										})(
 											entry.slice(
 												startIndex,
-												endIndex + 1
-											)
+												endIndex + 1,
+											),
 										)
 										return [
 											Math.min(res[0], s[0]),
 											Math.max(res[1], s[1]),
 										]
 									},
-									[1 / 0, -1 / 0]
+									[1 / 0, -1 / 0],
 								)
 								return [
 									Math.min(domain[0], result[0]),
 									Math.max(domain[1], result[1]),
 								]
 							},
-							[1 / 0, -1 / 0]
+							[1 / 0, -1 / 0],
 						)
 						.map(function (result) {
 							return result === 1 / 0 || result === -1 / 0
@@ -32668,7 +32745,7 @@
 				parseSpecifiedDomain = function parseSpecifiedDomain(
 					specifiedDomain,
 					dataDomain,
-					allowDataOverflow
+					allowDataOverflow,
 				) {
 					if (isFunction_default()(specifiedDomain))
 						return specifiedDomain(dataDomain, allowDataOverflow)
@@ -32701,7 +32778,7 @@
 				getBandSizeOfAxis = function getBandSizeOfAxis(
 					axis,
 					ticks,
-					isBar
+					isBar,
 				) {
 					if (axis && axis.scale && axis.scale.bandwidth) {
 						var bandWidth = axis.scale.bandwidth()
@@ -32713,7 +32790,7 @@
 									ticks,
 									function (o) {
 										return o.coordinate
-									}
+									},
 								),
 								bandSize = 1 / 0,
 								i = 1,
@@ -32725,7 +32802,7 @@
 								prev = orderedTicks[i - 1]
 							bandSize = Math.min(
 								(cur.coordinate || 0) - (prev.coordinate || 0),
-								bandSize
+								bandSize,
 							)
 						}
 						return bandSize === 1 / 0 ? 0 : bandSize
@@ -32735,15 +32812,15 @@
 				parseDomainOfCategoryAxis = function parseDomainOfCategoryAxis(
 					specifiedDomain,
 					calculatedDomain,
-					axisChild
+					axisChild,
 				) {
 					return specifiedDomain && specifiedDomain.length
 						? isEqual_default()(
 								specifiedDomain,
 								get_default()(
 									axisChild,
-									'type.defaultProps.domain'
-								)
+									'type.defaultProps.domain',
+								),
 						  )
 							? calculatedDomain
 							: specifiedDomain
@@ -32751,7 +32828,7 @@
 				},
 				getTooltipItem = function getTooltipItem(
 					graphicalItem,
-					payload
+					payload,
 				) {
 					var _graphicalItem$props = graphicalItem.props,
 						dataKey = _graphicalItem$props.dataKey,
@@ -32773,14 +32850,14 @@
 							type: tooltipType,
 							payload,
 							chartType,
-						}
+						},
 					)
 				}
 		},
 		'./node_modules/recharts/es6/util/DOMUtils.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -32789,7 +32866,7 @@
 				xE: () => getStringSize,
 			})
 			var _Global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-				'./node_modules/recharts/es6/util/Global.js'
+				'./node_modules/recharts/es6/util/Global.js',
 			)
 			function _typeof(obj) {
 				return (
@@ -32816,10 +32893,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -32835,13 +32910,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -32858,7 +32936,7 @@
 								var res = prim.call(input, hint || 'default')
 								if ('object' !== _typeof(res)) return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -32905,7 +32983,7 @@
 					})(arr) ||
 					(function _nonIterableSpread() {
 						throw new TypeError(
-							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -32960,23 +33038,23 @@
 											return entry === entry.toUpperCase()
 												? [].concat(
 														_toConsumableArray(
-															result
+															result,
 														),
 														[
 															'-',
 															entry.toLowerCase(),
-														]
+														],
 												  )
 												: [].concat(
 														_toConsumableArray(
-															result
+															result,
 														),
-														[entry]
+														[entry],
 												  )
 										}, [])
 										.join('')
 								})(s),
-								':'
+								':',
 							)
 							.concat(
 								(function autoCompleteStyle(name, value) {
@@ -32985,7 +33063,7 @@
 										? ''.concat(value, 'px')
 										: value
 								})(s, style[s]),
-								';'
+								';',
 							)
 					}, '')
 				},
@@ -33006,29 +33084,29 @@
 						return stringCache.widthCache[cacheKey]
 					try {
 						var measurementSpan = document.getElementById(
-							'recharts_measurement_span'
+							'recharts_measurement_span',
 						)
 						measurementSpan ||
 							((measurementSpan =
 								document.createElement('span')).setAttribute(
 								'id',
-								'recharts_measurement_span'
+								'recharts_measurement_span',
 							),
 							measurementSpan.setAttribute('aria-hidden', 'true'),
 							document.body.appendChild(measurementSpan))
 						var measurementSpanStyle = _objectSpread(
 							_objectSpread({}, SPAN_STYLE),
-							style
+							style,
 						)
-						Object.keys(measurementSpanStyle).map(function (
-							styleKey
-						) {
-							return (
-								(measurementSpan.style[styleKey] =
-									measurementSpanStyle[styleKey]),
-								styleKey
-							)
-						}),
+						Object.keys(measurementSpanStyle).map(
+							function (styleKey) {
+								return (
+									(measurementSpan.style[styleKey] =
+										measurementSpanStyle[styleKey]),
+									styleKey
+								)
+							},
+						),
 							(measurementSpan.textContent = str)
 						var rect = measurementSpan.getBoundingClientRect(),
 							result = { width: rect.width, height: rect.height }
@@ -33058,7 +33136,7 @@
 				},
 				calculateChartCoordinate = function calculateChartCoordinate(
 					event,
-					offset
+					offset,
 				) {
 					return {
 						chartX: Math.round(event.pageX - offset.left),
@@ -33069,7 +33147,7 @@
 		'./node_modules/recharts/es6/util/DataUtils.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -33085,36 +33163,36 @@
 				uY: () => mathSign,
 			})
 			var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/lodash/get.js'
+					'./node_modules/lodash/get.js',
 				),
 				lodash_get__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_get__WEBPACK_IMPORTED_MODULE_0__
+						lodash_get__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				lodash_isArray__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__('./node_modules/lodash/isArray.js'),
 				lodash_isArray__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						lodash_isArray__WEBPACK_IMPORTED_MODULE_1__
+						lodash_isArray__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				lodash_isNaN__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/lodash/isNaN.js'
+					'./node_modules/lodash/isNaN.js',
 				),
 				lodash_isNaN__WEBPACK_IMPORTED_MODULE_2___default =
 					__webpack_require__.n(
-						lodash_isNaN__WEBPACK_IMPORTED_MODULE_2__
+						lodash_isNaN__WEBPACK_IMPORTED_MODULE_2__,
 					),
 				lodash_isNumber__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__('./node_modules/lodash/isNumber.js'),
 				lodash_isNumber__WEBPACK_IMPORTED_MODULE_3___default =
 					__webpack_require__.n(
-						lodash_isNumber__WEBPACK_IMPORTED_MODULE_3__
+						lodash_isNumber__WEBPACK_IMPORTED_MODULE_3__,
 					),
 				lodash_isString__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__('./node_modules/lodash/isString.js'),
 				lodash_isString__WEBPACK_IMPORTED_MODULE_4___default =
 					__webpack_require__.n(
-						lodash_isString__WEBPACK_IMPORTED_MODULE_4__
+						lodash_isString__WEBPACK_IMPORTED_MODULE_4__,
 					),
 				mathSign = function mathSign(value) {
 					return 0 === value ? 0 : value > 0 ? 1 : -1
@@ -33122,17 +33200,17 @@
 				isPercent = function isPercent(value) {
 					return (
 						lodash_isString__WEBPACK_IMPORTED_MODULE_4___default()(
-							value
+							value,
 						) && value.indexOf('%') === value.length - 1
 					)
 				},
 				isNumber = function isNumber(value) {
 					return (
 						lodash_isNumber__WEBPACK_IMPORTED_MODULE_3___default()(
-							value
+							value,
 						) &&
 						!lodash_isNaN__WEBPACK_IMPORTED_MODULE_2___default()(
-							value
+							value,
 						)
 					)
 				},
@@ -33140,7 +33218,7 @@
 					return (
 						isNumber(value) ||
 						lodash_isString__WEBPACK_IMPORTED_MODULE_4___default()(
-							value
+							value,
 						)
 					)
 				},
@@ -33151,7 +33229,7 @@
 				},
 				getPercentValue = function getPercentValue(
 					percent,
-					totalValue
+					totalValue,
 				) {
 					var value,
 						defaultValue =
@@ -33165,7 +33243,7 @@
 					if (
 						!isNumber(percent) &&
 						!lodash_isString__WEBPACK_IMPORTED_MODULE_4___default()(
-							percent
+							percent,
 						)
 					)
 						return defaultValue
@@ -33177,7 +33255,7 @@
 					} else value = +percent
 					return (
 						lodash_isNaN__WEBPACK_IMPORTED_MODULE_2___default()(
-							value
+							value,
 						) && (value = defaultValue),
 						validate && value > totalValue && (value = totalValue),
 						value
@@ -33191,7 +33269,7 @@
 				hasDuplicate = function hasDuplicate(ary) {
 					if (
 						!lodash_isArray__WEBPACK_IMPORTED_MODULE_1___default()(
-							ary
+							ary,
 						)
 					)
 						return !1
@@ -33207,7 +33285,7 @@
 				},
 				interpolateNumber = function interpolateNumber(
 					numberA,
-					numberB
+					numberB,
 				) {
 					return isNumber(numberA) && isNumber(numberB)
 						? function (t) {
@@ -33226,7 +33304,7 @@
 									? specifiedKey(entry)
 									: lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(
 											entry,
-											specifiedKey
+											specifiedKey,
 									  )) === specifiedValue
 							)
 					  })
@@ -33236,7 +33314,7 @@
 		'./node_modules/recharts/es6/util/Global.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { x: () => Global })
@@ -33268,7 +33346,7 @@
 		'./node_modules/recharts/es6/util/LogUtils.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { Z: () => warn })
@@ -33286,7 +33364,7 @@
 		'./node_modules/recharts/es6/util/PolarUtils.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -33297,17 +33375,17 @@
 				z3: () => inRangeOfSector,
 			})
 			var lodash_isNil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/lodash/isNil.js'
+					'./node_modules/lodash/isNil.js',
 				),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isNil__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isNil__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				_DataUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				_ChartUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/ChartUtils.js'
+					'./node_modules/recharts/es6/util/ChartUtils.js',
 				)
 			function _typeof(obj) {
 				return (
@@ -33334,10 +33412,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -33353,13 +33429,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -33376,7 +33455,7 @@
 								var res = prim.call(input, hint || 'default')
 								if ('object' !== _typeof(res)) return res
 								throw new TypeError(
-									'@@toPrimitive must return a primitive value.'
+									'@@toPrimitive must return a primitive value.',
 								)
 							}
 							return ('string' === hint ? String : Number)(input)
@@ -33461,7 +33540,7 @@
 					})(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -33480,7 +33559,7 @@
 					cx,
 					cy,
 					radius,
-					angle
+					angle,
 				) {
 					return {
 						x: cx + Math.cos(-RADIAN * angle) * radius,
@@ -33495,13 +33574,15 @@
 					return (
 						Math.min(
 							Math.abs(
-								width - (offset.left || 0) - (offset.right || 0)
+								width -
+									(offset.left || 0) -
+									(offset.right || 0),
 							),
 							Math.abs(
 								height -
 									(offset.top || 0) -
-									(offset.bottom || 0)
-							)
+									(offset.bottom || 0),
+							),
 						) / 2
 					)
 				},
@@ -33510,7 +33591,7 @@
 					axisMap,
 					offset,
 					axisType,
-					chartName
+					chartName,
 				) {
 					var width = props.width,
 						height = props.height,
@@ -33519,25 +33600,25 @@
 						cx = (0, _DataUtils__WEBPACK_IMPORTED_MODULE_1__.h1)(
 							props.cx,
 							width,
-							width / 2
+							width / 2,
 						),
 						cy = (0, _DataUtils__WEBPACK_IMPORTED_MODULE_1__.h1)(
 							props.cy,
 							height,
-							height / 2
+							height / 2,
 						),
 						maxRadius = getMaxRadius(width, height, offset),
 						innerRadius = (0,
 						_DataUtils__WEBPACK_IMPORTED_MODULE_1__.h1)(
 							props.innerRadius,
 							maxRadius,
-							0
+							0,
 						),
 						outerRadius = (0,
 						_DataUtils__WEBPACK_IMPORTED_MODULE_1__.h1)(
 							props.outerRadius,
 							maxRadius,
-							0.8 * maxRadius
+							0.8 * maxRadius,
 						)
 					return Object.keys(axisMap).reduce(function (result, id) {
 						var range,
@@ -33546,7 +33627,7 @@
 							reversed = axis.reversed
 						if (
 							lodash_isNil__WEBPACK_IMPORTED_MODULE_0___default()(
-								axis.range
+								axis.range,
 							)
 						)
 							'angleAxis' === axisType
@@ -33557,20 +33638,20 @@
 						else {
 							var _range2 = _slicedToArray(
 								(range = axis.range),
-								2
+								2,
 							)
 							;(startAngle = _range2[0]), (endAngle = _range2[1])
 						}
 						var _parseScale = (0,
 							_ChartUtils__WEBPACK_IMPORTED_MODULE_2__.Hq)(
 								axis,
-								chartName
+								chartName,
 							),
 							realScaleType = _parseScale.realScaleType,
 							scale = _parseScale.scale
 						scale.domain(domain).range(range),
 							(0, _ChartUtils__WEBPACK_IMPORTED_MODULE_2__.zF)(
-								scale
+								scale,
 							)
 						var ticks = (0,
 							_ChartUtils__WEBPACK_IMPORTED_MODULE_2__.g$)(
@@ -33578,8 +33659,8 @@
 								_objectSpread(
 									_objectSpread({}, axis),
 									{},
-									{ realScaleType }
-								)
+									{ realScaleType },
+								),
 							),
 							finalAxis = _objectSpread(
 								_objectSpread(_objectSpread({}, axis), ticks),
@@ -33595,12 +33676,12 @@
 									outerRadius,
 									startAngle,
 									endAngle,
-								}
+								},
 							)
 						return _objectSpread(
 							_objectSpread({}, result),
 							{},
-							_defineProperty({}, id, finalAxis)
+							_defineProperty({}, id, finalAxis),
 						)
 					}, {})
 				},
@@ -33611,14 +33692,14 @@
 						cy = _ref2.cy,
 						radius = (function distanceBetweenPoints(
 							point,
-							anotherPoint
+							anotherPoint,
 						) {
 							var x1 = point.x,
 								y1 = point.y,
 								x2 = anotherPoint.x,
 								y2 = anotherPoint.y
 							return Math.sqrt(
-								Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)
+								Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2),
 							)
 						})({ x, y }, { x: cx, y: cy })
 					if (radius <= 0) return { radius }
@@ -33635,7 +33716,7 @@
 				},
 				reverseFormatAngleOfSetor = function reverseFormatAngleOfSetor(
 					angle,
-					_ref4
+					_ref4,
 				) {
 					var startAngle = _ref4.startAngle,
 						endAngle = _ref4.endAngle,
@@ -33655,7 +33736,7 @@
 					if (0 === radius) return !0
 					var inRange,
 						_formatAngleOfSector = (function formatAngleOfSector(
-							_ref3
+							_ref3,
 						) {
 							var startAngle = _ref3.startAngle,
 								endAngle = _ref3.endAngle,
@@ -33689,9 +33770,9 @@
 									radius,
 									angle: reverseFormatAngleOfSetor(
 										formatAngle,
-										sector
+										sector,
 									),
-								}
+								},
 						  )
 						: null
 				}
@@ -33699,7 +33780,7 @@
 		'./node_modules/recharts/es6/util/ReactUtils.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -33717,55 +33798,55 @@
 					__webpack_require__('./node_modules/lodash/isObject.js'),
 				lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__('./node_modules/lodash/isFunction.js'),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__
+						lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				lodash_isString__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__('./node_modules/lodash/isString.js'),
 				lodash_isString__WEBPACK_IMPORTED_MODULE_2___default =
 					__webpack_require__.n(
-						lodash_isString__WEBPACK_IMPORTED_MODULE_2__
+						lodash_isString__WEBPACK_IMPORTED_MODULE_2__,
 					),
 				lodash_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/lodash/get.js'
+					'./node_modules/lodash/get.js',
 				),
 				lodash_get__WEBPACK_IMPORTED_MODULE_3___default =
 					__webpack_require__.n(
-						lodash_get__WEBPACK_IMPORTED_MODULE_3__
+						lodash_get__WEBPACK_IMPORTED_MODULE_3__,
 					),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-					'./node_modules/lodash/isNil.js'
+					'./node_modules/lodash/isNil.js',
 				),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default =
 					__webpack_require__.n(
-						lodash_isNil__WEBPACK_IMPORTED_MODULE_4__
+						lodash_isNil__WEBPACK_IMPORTED_MODULE_4__,
 					),
 				lodash_isArray__WEBPACK_IMPORTED_MODULE_5__ =
 					__webpack_require__('./node_modules/lodash/isArray.js'),
 				lodash_isArray__WEBPACK_IMPORTED_MODULE_5___default =
 					__webpack_require__.n(
-						lodash_isArray__WEBPACK_IMPORTED_MODULE_5__
+						lodash_isArray__WEBPACK_IMPORTED_MODULE_5__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_is__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-					'./node_modules/recharts/node_modules/react-is/index.js'
+					'./node_modules/recharts/node_modules/react-is/index.js',
 				),
 				_DataUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/DataUtils.js'
+					'./node_modules/recharts/es6/util/DataUtils.js',
 				),
 				_ShallowEqual__WEBPACK_IMPORTED_MODULE_10__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ShallowEqual.js'
+						'./node_modules/recharts/es6/util/ShallowEqual.js',
 					),
 				_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				),
 				_excluded = ['children'],
 				_excluded2 = ['children']
@@ -33775,7 +33856,7 @@
 					i,
 					target = (function _objectWithoutPropertiesLoose(
 						source,
-						excluded
+						excluded,
 					) {
 						if (null == source) return {}
 						var key,
@@ -33795,7 +33876,7 @@
 							excluded.indexOf(key) >= 0 ||
 								(Object.prototype.propertyIsEnumerable.call(
 									source,
-									key
+									key,
 								) &&
 									(target[key] = source[key]))
 				}
@@ -33828,7 +33909,7 @@
 					if (
 						children === lastChildren &&
 						lodash_isArray__WEBPACK_IMPORTED_MODULE_5___default()(
-							lastResult
+							lastResult,
 						)
 					)
 						return lastResult
@@ -33838,17 +33919,17 @@
 							children,
 							function (child) {
 								lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-									child
+									child,
 								) ||
 									((0,
 									react_is__WEBPACK_IMPORTED_MODULE_7__.isFragment)(
-										child
+										child,
 									)
 										? (result = result.concat(
-												toArray(child.props.children)
+												toArray(child.props.children),
 										  ))
 										: result.push(child))
-							}
+							},
 						),
 						(lastResult = result),
 						(lastChildren = children),
@@ -33861,7 +33942,7 @@
 				return (
 					(types =
 						lodash_isArray__WEBPACK_IMPORTED_MODULE_5___default()(
-							type
+							type,
 						)
 							? type.map(function (t) {
 									return getDisplayName(t)
@@ -33871,11 +33952,11 @@
 						var childType =
 							lodash_get__WEBPACK_IMPORTED_MODULE_3___default()(
 								child,
-								'type.displayName'
+								'type.displayName',
 							) ||
 							lodash_get__WEBPACK_IMPORTED_MODULE_3___default()(
 								child,
-								'type.name'
+								'type.name',
 							)
 						;-1 !== types.indexOf(childType) && result.push(child)
 					}),
@@ -33893,11 +33974,11 @@
 						height = _el$props.height
 					return !(
 						!(0, _DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-							width
+							width,
 						) ||
 						width <= 0 ||
 						!(0, _DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-							height
+							height,
 						) ||
 						height <= 0
 					)
@@ -33988,7 +34069,7 @@
 						child &&
 						child.type &&
 						lodash_isString__WEBPACK_IMPORTED_MODULE_2___default()(
-							child.type
+							child.type,
 						) &&
 						SVG_TAGS.indexOf(child.type) >= 0
 					)
@@ -33996,7 +34077,7 @@
 				filterProps = function filterProps(
 					props,
 					includeEvents,
-					svgElementType
+					svgElementType,
 				) {
 					if (
 						!props ||
@@ -34007,10 +34088,10 @@
 					var inputProps = props
 					if (
 						((0, react__WEBPACK_IMPORTED_MODULE_6__.isValidElement)(
-							props
+							props,
 						) && (inputProps = props.props),
 						!lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default()(
-							inputProps
+							inputProps,
 						))
 					)
 						return null
@@ -34022,7 +34103,7 @@
 								property,
 								key,
 								includeEvents,
-								svgElementType
+								svgElementType,
 							) {
 								var _FilteredElementKeyMa,
 									matchingElementTypeKeys =
@@ -34042,18 +34123,18 @@
 											: []
 								return (
 									(!lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default()(
-										property
+										property,
 									) &&
 										((svgElementType &&
 											matchingElementTypeKeys.includes(
-												key
+												key,
 											)) ||
 											_types__WEBPACK_IMPORTED_MODULE_9__.Yh.includes(
-												key
+												key,
 											))) ||
 									(includeEvents &&
 										_types__WEBPACK_IMPORTED_MODULE_9__.nv.includes(
-											key
+											key,
 										))
 								)
 							})(
@@ -34063,7 +34144,7 @@
 									: _inputProps[key],
 								key,
 								includeEvents,
-								svgElementType
+								svgElementType,
 							) && (out[key] = inputProps[key])
 						}),
 						out
@@ -34071,17 +34152,17 @@
 				},
 				isChildrenEqual = function isChildrenEqual(
 					nextChildren,
-					prevChildren
+					prevChildren,
 				) {
 					if (nextChildren === prevChildren) return !0
 					var count =
 						react__WEBPACK_IMPORTED_MODULE_6__.Children.count(
-							nextChildren
+							nextChildren,
 						)
 					if (
 						count !==
 						react__WEBPACK_IMPORTED_MODULE_6__.Children.count(
-							prevChildren
+							prevChildren,
 						)
 					)
 						return !1
@@ -34089,25 +34170,25 @@
 					if (1 === count)
 						return isSingleChildEqual(
 							lodash_isArray__WEBPACK_IMPORTED_MODULE_5___default()(
-								nextChildren
+								nextChildren,
 							)
 								? nextChildren[0]
 								: nextChildren,
 							lodash_isArray__WEBPACK_IMPORTED_MODULE_5___default()(
-								prevChildren
+								prevChildren,
 							)
 								? prevChildren[0]
-								: prevChildren
+								: prevChildren,
 						)
 					for (var i = 0; i < count; i++) {
 						var nextChild = nextChildren[i],
 							prevChild = prevChildren[i]
 						if (
 							lodash_isArray__WEBPACK_IMPORTED_MODULE_5___default()(
-								nextChild
+								nextChild,
 							) ||
 							lodash_isArray__WEBPACK_IMPORTED_MODULE_5___default()(
-								prevChild
+								prevChild,
 							)
 						) {
 							if (!isChildrenEqual(nextChild, prevChild))
@@ -34119,49 +34200,49 @@
 				},
 				isSingleChildEqual = function isSingleChildEqual(
 					nextChild,
-					prevChild
+					prevChild,
 				) {
 					if (
 						lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-							nextChild
+							nextChild,
 						) &&
 						lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-							prevChild
+							prevChild,
 						)
 					)
 						return !0
 					if (
 						!lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-							nextChild
+							nextChild,
 						) &&
 						!lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-							prevChild
+							prevChild,
 						)
 					) {
 						var _ref = nextChild.props || {},
 							nextChildren = _ref.children,
 							nextProps = _objectWithoutProperties(
 								_ref,
-								_excluded
+								_excluded,
 							),
 							_ref2 = prevChild.props || {},
 							prevChildren = _ref2.children,
 							prevProps = _objectWithoutProperties(
 								_ref2,
-								_excluded2
+								_excluded2,
 							)
 						return nextChildren && prevChildren
 							? (0,
 							  _ShallowEqual__WEBPACK_IMPORTED_MODULE_10__.w)(
 									nextProps,
-									prevProps
+									prevProps,
 							  ) && isChildrenEqual(nextChildren, prevChildren)
 							: !nextChildren &&
 									!prevChildren &&
 									(0,
 									_ShallowEqual__WEBPACK_IMPORTED_MODULE_10__.w)(
 										nextProps,
-										prevProps
+										prevProps,
 									)
 					}
 					return !1
@@ -34184,7 +34265,7 @@
 									var results = handler(
 										child,
 										displayName,
-										index
+										index,
 									)
 									elements.push(results),
 										(record[displayName] = !0)
@@ -34207,7 +34288,7 @@
 		'./node_modules/recharts/es6/util/ShallowEqual.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function shallowEqual(a, b) {
@@ -34232,7 +34313,7 @@
 		'./node_modules/recharts/es6/util/types.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -34246,10 +34327,10 @@
 					__webpack_require__('./node_modules/lodash/isObject.js'),
 				lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isObject__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				)
 			function _typeof(obj) {
 				return (
@@ -34744,7 +34825,7 @@
 				],
 				adaptEventHandlers = function adaptEventHandlers(
 					props,
-					newHandler
+					newHandler,
 				) {
 					if (
 						!props ||
@@ -34755,10 +34836,10 @@
 					var inputProps = props
 					if (
 						((0, react__WEBPACK_IMPORTED_MODULE_1__.isValidElement)(
-							props
+							props,
 						) && (inputProps = props.props),
 						!lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default()(
-							inputProps
+							inputProps,
 						))
 					)
 						return null
@@ -34778,11 +34859,11 @@
 				adaptEventsOfChild = function adaptEventsOfChild(
 					props,
 					data,
-					index
+					index,
 				) {
 					if (
 						!lodash_isObject__WEBPACK_IMPORTED_MODULE_0___default()(
-							props
+							props,
 						) ||
 						'object' !== _typeof(props)
 					)
@@ -34797,7 +34878,7 @@
 								(out[key] = (function getEventHandlerOfChild(
 									originalHandler,
 									data,
-									index
+									index,
 								) {
 									return function (e) {
 										return (
@@ -34873,37 +34954,37 @@
 		'./node_modules/recharts/node_modules/react-is/index.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			module.exports = __webpack_require__(
-				'./node_modules/recharts/node_modules/react-is/cjs/react-is.production.min.js'
+				'./node_modules/recharts/node_modules/react-is/cjs/react-is.production.min.js',
 			)
 		},
 		'./node_modules/reduce-css-calc/dist/index.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 })
 			var _postcssValueParser2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/index.js'
-					)
+						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/index.js',
+					),
 				),
 				_parser = __webpack_require__(
-					'./node_modules/reduce-css-calc/dist/parser.js'
+					'./node_modules/reduce-css-calc/dist/parser.js',
 				),
 				_reducer2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/reduce-css-calc/dist/lib/reducer.js'
-					)
+						'./node_modules/reduce-css-calc/dist/lib/reducer.js',
+					),
 				),
 				_stringifier2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/reduce-css-calc/dist/lib/stringifier.js'
-					)
+						'./node_modules/reduce-css-calc/dist/lib/stringifier.js',
+					),
 				)
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -34922,7 +35003,7 @@
 						) {
 							var contents =
 								_postcssValueParser2.default.stringify(
-									node.nodes
+									node.nodes,
 								)
 							if (
 								!(
@@ -34933,13 +35014,13 @@
 								var ast = _parser.parser.parse(contents),
 									reducedAst = (0, _reducer2.default)(
 										ast,
-										precision
+										precision,
 									)
 								;(node.type = 'word'),
 									(node.value = (0, _stringifier2.default)(
 										node.value,
 										reducedAst,
-										precision
+										precision,
 									))
 							}
 						}
@@ -34951,7 +35032,7 @@
 		'./node_modules/reduce-css-calc/dist/lib/convert.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 })
@@ -34959,8 +35040,8 @@
 				return obj && obj.__esModule ? obj : { default: obj }
 			})(
 				__webpack_require__(
-					'./node_modules/css-unit-converter/index.js'
-				)
+					'./node_modules/css-unit-converter/index.js',
+				),
 			)
 			;(exports.default = function convertNodes(left, right, precision) {
 				switch (left.type) {
@@ -34972,7 +35053,7 @@
 						return (function convertAbsoluteLength(
 							left,
 							right,
-							precision
+							precision,
 						) {
 							right.type === left.type &&
 								(right = {
@@ -34981,7 +35062,7 @@
 										right.value,
 										right.unit,
 										left.unit,
-										precision
+										precision,
 									),
 									unit: left.unit,
 								})
@@ -34996,7 +35077,7 @@
 		'./node_modules/reduce-css-calc/dist/lib/reducer.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -35005,8 +35086,8 @@
 				return obj && obj.__esModule ? obj : { default: obj }
 			})(
 				__webpack_require__(
-					'./node_modules/reduce-css-calc/dist/lib/convert.js'
-				)
+					'./node_modules/reduce-css-calc/dist/lib/convert.js',
+				),
 			)
 			function reduce(node, precision) {
 				return 'MathExpression' === node.type
@@ -35014,12 +35095,12 @@
 							switch (
 								((node = (function convertMathExpression(
 									node,
-									precision
+									precision,
 								) {
 									var nodes = (0, _convert2.default)(
 											node.left,
 											node.right,
-											precision
+											precision,
 										),
 										left = reduce(nodes.left, precision),
 										right = reduce(nodes.right, precision)
@@ -35037,18 +35118,18 @@
 											? (nodes = (0, _convert2.default)(
 													left.left,
 													right.left,
-													precision
+													precision,
 											  ))
 											: isEqual(left.right, right.left) &&
 											  (nodes = (0, _convert2.default)(
 													left.left,
 													right.right,
-													precision
+													precision,
 											  )),
 										(left = reduce(nodes.left, precision)),
 										(right = reduce(
 											nodes.right,
-											precision
+											precision,
 										)))
 									return (
 										(node.left = left),
@@ -35062,7 +35143,7 @@
 								case '-':
 									return (function reduceAddSubExpression(
 										node,
-										precision
+										precision,
 									) {
 										var _node = node,
 											left = _node.left,
@@ -35082,7 +35163,7 @@
 											isValueType(left.type) &&
 											((node = Object.assign(
 												{},
-												left
+												left,
 											)).value =
 												'+' === op
 													? left.value + right.value
@@ -35097,7 +35178,7 @@
 												return (
 													((node = Object.assign(
 														{},
-														node
+														node,
 													)).left = reduce(
 														{
 															type: 'MathExpression',
@@ -35105,13 +35186,13 @@
 															left,
 															right: right.left,
 														},
-														precision
+														precision,
 													)),
 													(node.right = right.right),
 													(node.operator =
 														'-' === op
 															? flip(
-																	right.operator
+																	right.operator,
 															  )
 															: right.operator),
 													reduce(node, precision)
@@ -35120,20 +35201,20 @@
 												return (
 													((node = Object.assign(
 														{},
-														node
+														node,
 													)).left = reduce(
 														{
 															type: 'MathExpression',
 															operator:
 																'-' === op
 																	? flip(
-																			right.operator
+																			right.operator,
 																	  )
 																	: right.operator,
 															left,
 															right: right.right,
 														},
-														precision
+														precision,
 													)),
 													(node.right = right.left),
 													reduce(node, precision)
@@ -35149,7 +35230,7 @@
 												return (
 													((node = Object.assign(
 														{},
-														left
+														left,
 													)).left = reduce(
 														{
 															type: 'MathExpression',
@@ -35157,7 +35238,7 @@
 															left: left.left,
 															right,
 														},
-														precision
+														precision,
 													)),
 													reduce(node, precision)
 												)
@@ -35165,7 +35246,7 @@
 												return (
 													(node = Object.assign(
 														{},
-														left
+														left,
 													)),
 													'-' === left.operator
 														? ((node.right = reduce(
@@ -35179,7 +35260,7 @@
 																	left: right,
 																	right: left.right,
 																},
-																precision
+																precision,
 														  )),
 														  (node.operator =
 																'-' === op
@@ -35193,7 +35274,7 @@
 																	left: left.right,
 																	right,
 																},
-																precision
+																precision,
 														  )),
 													node.right.value < 0 &&
 														((node.right.value *=
@@ -35211,7 +35292,7 @@
 								case '/':
 									return (function reduceDivisionExpression(
 										node,
-										precision
+										precision,
 									) {
 										if (!isValueType(node.right.type))
 											return node
@@ -35219,18 +35300,18 @@
 											throw new Error(
 												'Cannot divide by "' +
 													node.right.unit +
-													'", number expected'
+													'", number expected',
 											)
 										if (0 === node.right.value)
 											throw new Error(
-												'Cannot divide by zero'
+												'Cannot divide by zero',
 											)
 										if ('MathExpression' === node.left.type)
 											return isValueType(
-												node.left.left.type
+												node.left.left.type,
 											) &&
 												isValueType(
-													node.left.right.type
+													node.left.right.type,
 												)
 												? ((node.left.left.value /=
 														node.right.value),
@@ -35248,7 +35329,7 @@
 									})(node, precision)
 								case '*':
 									return (function reduceMultiplicationExpression(
-										node
+										node,
 									) {
 										if (
 											'MathExpression' ===
@@ -35257,10 +35338,10 @@
 										) {
 											if (
 												isValueType(
-													node.left.left.type
+													node.left.left.type,
 												) &&
 												isValueType(
-													node.left.right.type
+													node.left.right.type,
 												)
 											)
 												return (
@@ -35287,10 +35368,10 @@
 											) {
 												if (
 													isValueType(
-														node.right.left.type
+														node.right.left.type,
 													) &&
 													isValueType(
-														node.right.right.type
+														node.right.right.type,
 													)
 												)
 													return (
@@ -35361,7 +35442,7 @@
 		'./node_modules/reduce-css-calc/dist/lib/stringifier.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -35374,7 +35455,7 @@
 					)
 				})
 			var _reducer = __webpack_require__(
-					'./node_modules/reduce-css-calc/dist/lib/reducer.js'
+					'./node_modules/reduce-css-calc/dist/lib/reducer.js',
 				),
 				order = { '*': 0, '/': 0, '+': 1, '-': 1 }
 			function round(value, prec) {
@@ -35404,7 +35485,7 @@
 								  '-' === op &&
 								  ['+', '-'].includes(right.operator)
 								? ((right.operator = (0, _reducer.flip)(
-										right.operator
+										right.operator,
 								  )),
 								  (str += stringify(right, prec)))
 								: (str += stringify(right, prec)),
@@ -35436,7 +35517,7 @@
 		},
 		'./node_modules/reduce-css-calc/dist/parser.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			var parser = (function () {
 				function JisonParserError(msg, hash) {
@@ -35491,10 +35572,10 @@
 				'function' == typeof Object.setPrototypeOf
 					? Object.setPrototypeOf(
 							JisonParserError.prototype,
-							Error.prototype
+							Error.prototype,
 					  )
 					: (JisonParserError.prototype = Object.create(
-							Error.prototype
+							Error.prototype,
 					  )),
 					(JisonParserError.prototype.constructor = JisonParserError),
 					(JisonParserError.prototype.name = 'JisonParserError')
@@ -35608,7 +35689,7 @@
 					collect_expected_token_set:
 						function parser_collect_expected_token_set(
 							state,
-							do_not_describe
+							do_not_describe,
 						) {
 							var TERROR = this.TERROR,
 								tokenset = [],
@@ -35663,7 +35744,7 @@
 					performAction: function parser__PerformAction(
 						yystate,
 						yysp,
-						yyvstack
+						yyvstack,
 					) {
 						var yy = this.yy
 						yy.parser, yy.lexer
@@ -36176,7 +36257,7 @@
 									void 0 === dst[k] &&
 										Object.prototype.hasOwnProperty.call(
 											src,
-											k
+											k,
 										) &&
 										(dst[k] = src[k])
 							})(sharedState_yy, this.yy),
@@ -36186,7 +36267,7 @@
 								? (this.parseError = function parseErrorAlt(
 										str,
 										hash,
-										ExceptionClass
+										ExceptionClass,
 								  ) {
 										return (
 											ExceptionClass ||
@@ -36196,18 +36277,18 @@
 												this,
 												str,
 												hash,
-												ExceptionClass
+												ExceptionClass,
 											)
 										)
 								  })
 								: (this.parseError = this.originalParseError),
 							'function' == typeof sharedState_yy.quoteName
 								? (this.quoteName = function quoteNameAlt(
-										id_str
+										id_str,
 								  ) {
 										return sharedState_yy.quoteName.call(
 											this,
-											id_str
+											id_str,
 										)
 								  })
 								: (this.quoteName = this.originalQuoteName),
@@ -36215,7 +36296,7 @@
 								function parser_cleanupAfterParse(
 									resultValue,
 									invoke_post_methods,
-									do_not_nuke_errorinfos
+									do_not_nuke_errorinfos,
 								) {
 									var rv, hash
 									invoke_post_methods &&
@@ -36226,7 +36307,7 @@
 													null,
 													null,
 													null,
-													!1
+													!1,
 												)),
 										sharedState_yy.post_parse &&
 											void 0 !==
@@ -36235,7 +36316,7 @@
 														this,
 														sharedState_yy,
 														resultValue,
-														hash
+														hash,
 													)) &&
 											(resultValue = rv),
 										this.post_parse &&
@@ -36244,7 +36325,7 @@
 													this,
 													sharedState_yy,
 													resultValue,
-													hash
+													hash,
 												)) &&
 											(resultValue = rv),
 										hash && hash.destroy && hash.destroy())
@@ -36253,7 +36334,7 @@
 									if (
 										(lexer.cleanupAfterLex &&
 											lexer.cleanupAfterLex(
-												do_not_nuke_errorinfos
+												do_not_nuke_errorinfos,
 											),
 										sharedState_yy &&
 											((sharedState_yy.lexer = void 0),
@@ -36292,7 +36373,7 @@
 									msg,
 									ex,
 									expected,
-									recoverable
+									recoverable,
 								) {
 									var pei = {
 										errStr: msg,
@@ -36362,12 +36443,12 @@
 									this.pre_parse &&
 										this.pre_parse.call(
 											this,
-											sharedState_yy
+											sharedState_yy,
 										),
 									sharedState_yy.pre_parse &&
 										sharedState_yy.pre_parse.call(
 											this,
-											sharedState_yy
+											sharedState_yy,
 										),
 									newState = sstack[sp - 1];
 								;
@@ -36394,7 +36475,7 @@
 											symbol,
 										expected =
 											this.collect_expected_token_set(
-												state
+												state,
 											)
 									;(errStr =
 										'number' == typeof lexer.yylineno
@@ -36421,13 +36502,13 @@
 											errStr,
 											null,
 											expected,
-											!1
+											!1,
 										)),
 										void 0 !==
 											(r = this.parseError(
 												p.errStr,
 												p,
-												this.JisonParserError
+												this.JisonParserError,
 											)) && (retval = r)
 									break
 								}
@@ -36441,13 +36522,13 @@
 													symbol,
 												null,
 												null,
-												!1
+												!1,
 											)),
 												void 0 !==
 													(r = this.parseError(
 														p.errStr,
 														p,
-														this.JisonParserError
+														this.JisonParserError,
 													)) && (retval = r)
 											break
 										}
@@ -36455,13 +36536,13 @@
 											'Parsing halted. No viable error recovery approach available due to internal system failure.',
 											null,
 											null,
-											!1
+											!1,
 										)),
 											void 0 !==
 												(r = this.parseError(
 													p.errStr,
 													p,
-													this.JisonParserError
+													this.JisonParserError,
 												)) && (retval = r)
 										break
 									case 1:
@@ -36482,7 +36563,7 @@
 													yyval,
 													newState,
 													sp - 1,
-													vstack
+													vstack,
 												)))
 										) {
 											retval = r
@@ -36520,14 +36601,14 @@
 								'Parsing aborted due to exception.',
 								ex,
 								null,
-								!1
+								!1,
 							)),
 								(retval = !1),
 								void 0 !==
 									(r = this.parseError(
 										p.errStr,
 										p,
-										this.JisonParserError
+										this.JisonParserError,
 									)) && (retval = r)
 						} finally {
 							;(retval = this.cleanupAfterParse(retval, !0, !0)),
@@ -36564,7 +36645,7 @@
 							(Error.hasOwnProperty('captureStackTrace')
 								? Error.captureStackTrace(
 										this,
-										this.constructor
+										this.constructor,
 								  )
 								: (stacktrace = new Error(msg).stack)),
 							stacktrace &&
@@ -36577,10 +36658,10 @@
 					'function' == typeof Object.setPrototypeOf
 						? Object.setPrototypeOf(
 								JisonLexerError.prototype,
-								Error.prototype
+								Error.prototype,
 						  )
 						: (JisonLexerError.prototype = Object.create(
-								Error.prototype
+								Error.prototype,
 						  )),
 						(JisonLexerError.prototype.constructor =
 							JisonLexerError),
@@ -36609,7 +36690,7 @@
 							function lexer_constructLexErrorInfo(
 								msg,
 								recoverable,
-								show_input_position
+								show_input_position,
 							) {
 								if (
 									((msg = '' + msg),
@@ -36629,7 +36710,7 @@
 											(msg +=
 												'\n  Erroneous area:\n' +
 												this.prettyPrintRange(
-													this.yylloc
+													this.yylloc,
 												))
 									} else if (
 										'function' == typeof this.showPosition
@@ -36665,7 +36746,7 @@
 						parseError: function lexer_parseError(
 							str,
 							hash,
-							ExceptionClass
+							ExceptionClass,
 						) {
 							if (
 								(ExceptionClass ||
@@ -36682,7 +36763,7 @@
 											this,
 											str,
 											hash,
-											ExceptionClass
+											ExceptionClass,
 										) || this.ERROR
 									)
 								if ('function' == typeof this.yy.parseError)
@@ -36691,7 +36772,7 @@
 											this,
 											str,
 											hash,
-											ExceptionClass
+											ExceptionClass,
 										) || this.ERROR
 									)
 							}
@@ -36703,7 +36784,7 @@
 								(lineno_msg = ' on line ' + (this.yylineno + 1))
 							var p = this.constructLexErrorInfo(
 									'Lexical error' + lineno_msg + ': ' + str,
-									this.options.lexerErrorsAreRecoverable
+									this.options.lexerErrorsAreRecoverable,
 								),
 								args = Array.prototype.slice.call(arguments, 1)
 							return (
@@ -36712,12 +36793,12 @@
 								this.parseError(
 									p.errStr,
 									p,
-									this.JisonLexerError
+									this.JisonLexerError,
 								) || this.ERROR
 							)
 						},
 						cleanupAfterLex: function lexer_cleanupAfterLex(
-							do_not_nuke_errorinfos
+							do_not_nuke_errorinfos,
 						) {
 							if (
 								(this.setInput('', {}), !do_not_nuke_errorinfos)
@@ -36809,7 +36890,7 @@
 						},
 						editRemainingInput: function lexer_editRemainingInput(
 							callback,
-							cpsArg
+							cpsArg,
 						) {
 							var rv = callback.call(this, this._input, cpsArg)
 							return (
@@ -36861,17 +36942,17 @@
 								((this._input = ch + this._input),
 								(this.yytext = this.yytext.substr(
 									0,
-									this.yytext.length - len
+									this.yytext.length - len,
 								)),
 								(this.yyleng = this.yytext.length),
 								(this.offset -= len),
 								(this.match = this.match.substr(
 									0,
-									this.match.length - len
+									this.match.length - len,
 								)),
 								(this.matched = this.matched.substr(
 									0,
-									this.matched.length - len
+									this.matched.length - len,
 								)),
 								lines.length > 1)
 							) {
@@ -36881,7 +36962,7 @@
 									pre_lines = pre.split(/(?:\r\n?|\n)/g)
 								1 === pre_lines.length &&
 									(pre_lines = (pre = this.matched).split(
-										/(?:\r\n?|\n)/g
+										/(?:\r\n?|\n)/g,
 									)),
 									(this.yylloc.last_column =
 										pre_lines[pre_lines.length - 1].length)
@@ -36908,13 +36989,13 @@
 									'Lexical error' +
 										lineno_msg +
 										': You can only invoke reject() in the lexer when the lexer is of the backtracking persuasion (options.backtrack_lexer = true).',
-									!1
+									!1,
 								)
 								this._signaled_error_token =
 									this.parseError(
 										p.errStr,
 										p,
-										this.JisonLexerError
+										this.JisonLexerError,
 									) || this.ERROR
 							}
 							return this
@@ -36925,7 +37006,7 @@
 						pastInput: function lexer_pastInput(maxSize, maxLines) {
 							var past = this.matched.substring(
 								0,
-								this.matched.length - this.match.length
+								this.matched.length - this.match.length,
 							)
 							maxSize < 0
 								? (maxSize = past.length)
@@ -36945,7 +37026,7 @@
 						},
 						upcomingInput: function lexer_upcomingInput(
 							maxSize,
-							maxLines
+							maxLines,
 						) {
 							var next = this.match
 							maxSize < 0
@@ -36957,7 +37038,7 @@
 								next.length < 2 * maxSize + 2 &&
 									(next += this._input.substring(
 										0,
-										2 * maxSize + 2
+										2 * maxSize + 2,
 									))
 							var a = next.replace(/\r\n|\r/g, '\n').split('\n')
 							return (
@@ -36969,18 +37050,18 @@
 						},
 						showPosition: function lexer_showPosition(
 							maxPrefix,
-							maxPostfix
+							maxPostfix,
 						) {
 							var pre = this.pastInput(maxPrefix).replace(
 									/\s/g,
-									' '
+									' ',
 								),
 								c = new Array(pre.length + 1).join('-')
 							return (
 								pre +
 								this.upcomingInput(maxPostfix).replace(
 									/\s/g,
-									' '
+									' ',
 								) +
 								'\n' +
 								c +
@@ -36991,7 +37072,7 @@
 							actual,
 							preceding,
 							following,
-							current
+							current,
 						) {
 							var loc = {
 								first_line: 1,
@@ -37089,85 +37170,86 @@
 						prettyPrintRange: function lexer_prettyPrintRange(
 							loc,
 							context_loc,
-							context_loc2
+							context_loc2,
 						) {
 							loc = this.deriveLocationInfo(
 								loc,
 								context_loc,
-								context_loc2
+								context_loc2,
 							)
 							var lines = (this.matched + this._input).split(
-									'\n'
+									'\n',
 								),
 								l0 = Math.max(
 									1,
 									context_loc
 										? context_loc.first_line
-										: loc.first_line - 3
+										: loc.first_line - 3,
 								),
 								l1 = Math.max(
 									1,
 									context_loc2
 										? context_loc2.last_line
-										: loc.last_line + 1
+										: loc.last_line + 1,
 								),
 								lineno_display_width =
 									(1 + Math.log10(1 | l1)) | 0,
 								ws_prefix = new Array(
-									lineno_display_width
+									lineno_display_width,
 								).join(' '),
 								nonempty_line_indexes = [],
 								rv = lines
 									.slice(l0 - 1, l1 + 1)
-									.map(function injectLineNumber(
-										line,
-										index
-									) {
-										var lno = index + l0,
-											rv =
-												(ws_prefix + lno).substr(
-													-lineno_display_width
-												) +
-												': ' +
-												line,
-											errpfx = new Array(
-												lineno_display_width + 1
-											).join('^'),
-											offset = 3,
-											len = 0
-										;(lno === loc.first_line
-											? ((offset += loc.first_column),
-											  (len = Math.max(
-													2,
-													(lno === loc.last_line
-														? loc.last_column
-														: line.length) -
-														loc.first_column +
-														1
-											  )))
-											: lno === loc.last_line
-											? (len = Math.max(
-													2,
-													loc.last_column + 1
-											  ))
-											: lno > loc.first_line &&
-											  lno < loc.last_line &&
-											  (len = Math.max(
-													2,
-													line.length + 1
-											  )),
-										len) &&
-											((rv +=
-												'\n' +
-												errpfx +
-												new Array(offset).join('.') +
-												new Array(len).join('^')),
-											line.trim().length > 0 &&
-												nonempty_line_indexes.push(
-													index
-												))
-										return (rv = rv.replace(/\t/g, ' '))
-									})
+									.map(
+										function injectLineNumber(line, index) {
+											var lno = index + l0,
+												rv =
+													(ws_prefix + lno).substr(
+														-lineno_display_width,
+													) +
+													': ' +
+													line,
+												errpfx = new Array(
+													lineno_display_width + 1,
+												).join('^'),
+												offset = 3,
+												len = 0
+											;(lno === loc.first_line
+												? ((offset += loc.first_column),
+												  (len = Math.max(
+														2,
+														(lno === loc.last_line
+															? loc.last_column
+															: line.length) -
+															loc.first_column +
+															1,
+												  )))
+												: lno === loc.last_line
+												? (len = Math.max(
+														2,
+														loc.last_column + 1,
+												  ))
+												: lno > loc.first_line &&
+												  lno < loc.last_line &&
+												  (len = Math.max(
+														2,
+														line.length + 1,
+												  )),
+											len) &&
+												((rv +=
+													'\n' +
+													errpfx +
+													new Array(offset).join(
+														'.',
+													) +
+													new Array(len).join('^')),
+												line.trim().length > 0 &&
+													nonempty_line_indexes.push(
+														index,
+													))
+											return (rv = rv.replace(/\t/g, ' '))
+										},
+									)
 							if (nonempty_line_indexes.length > 4) {
 								var clip_start = nonempty_line_indexes[1] + 1,
 									clip_end =
@@ -37176,25 +37258,25 @@
 										] - 1,
 									intermediate_line =
 										new Array(
-											lineno_display_width + 1
+											lineno_display_width + 1,
 										).join(' ') + '  (...continued...)'
 								;(intermediate_line +=
 									'\n' +
 									new Array(lineno_display_width + 1).join(
-										'-'
+										'-',
 									) +
 									'  (---------------)'),
 									rv.splice(
 										clip_start,
 										clip_end - clip_start + 1,
-										intermediate_line
+										intermediate_line,
 									)
 							}
 							return rv.join('\n')
 						},
 						describeYYLLOC: function lexer_describe_yylloc(
 							yylloc,
-							display_range_too
+							display_range_too,
 						) {
 							var rv,
 								l1 = yylloc.first_line,
@@ -37238,7 +37320,7 @@
 						},
 						test_match: function lexer_test_match(
 							match,
-							indexed_rule
+							indexed_rule,
 						) {
 							var token, lines, backup, match_str, match_str_len
 							if (
@@ -37294,7 +37376,7 @@
 									indexed_rule,
 									this.conditionStack[
 										this.conditionStack.length - 1
-									]
+									],
 								)),
 								this.done && this._input && (this.done = !1),
 								token)
@@ -37335,13 +37417,13 @@
 										': The lex grammar programmer pushed a non-existing condition name "' +
 										this.topState() +
 										'"; this is a fatal error and should be reported to the application programmer team!',
-									!1
+									!1,
 								)
 								return (
 									this.parseError(
 										p.errStr,
 										p,
-										this.JisonLexerError
+										this.JisonLexerError,
 									) || this.ERROR
 								)
 							}
@@ -37355,7 +37437,7 @@
 							)
 								if (
 									(tempMatch = this._input.match(
-										regexes[i]
+										regexes[i],
 									)) &&
 									(!match ||
 										tempMatch[0].length > match[0].length)
@@ -37369,7 +37451,7 @@
 											!1 !==
 											(token = this.test_match(
 												tempMatch,
-												rule_ids[i]
+												rule_ids[i],
 											))
 										)
 											return token
@@ -37386,7 +37468,7 @@
 									!1 !==
 										(token = this.test_match(
 											match,
-											rule_ids[index]
+											rule_ids[index],
 										)) && token
 								)
 							if (this._input) {
@@ -37398,7 +37480,7 @@
 									'Lexical error' +
 										lineno_msg +
 										': Unrecognized text.',
-									this.options.lexerErrorsAreRecoverable
+									this.options.lexerErrorsAreRecoverable,
 								)
 								var pendingInput = this._input,
 									activeCondition = this.topState(),
@@ -37409,7 +37491,7 @@
 										this.parseError(
 											p.errStr,
 											p,
-											this.JisonLexerError
+											this.JisonLexerError,
 										) || this.ERROR) === this.ERROR &&
 										(this.matches ||
 											pendingInput !== this._input ||
@@ -37432,7 +37514,7 @@
 										(r =
 											this.options.pre_lex.call(
 												this,
-												r
+												r,
 											) || r),
 									this.yy &&
 										'function' == typeof this.yy.pre_lex &&
@@ -37522,7 +37604,7 @@
 						performAction: function lexer__performAction(
 							yy,
 							yyrulenumber,
-							YY_START
+							YY_START,
 						) {
 							if (1 !== yyrulenumber)
 								return this.simpleCaseActionClusters[
@@ -37645,13 +37727,13 @@
 		'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/index.js':
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				var parse = __webpack_require__(
-						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/parse.js'
+						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/parse.js',
 					),
 					walk = __webpack_require__(
-						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/walk.js'
+						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/walk.js',
 					),
 					stringify = __webpack_require__(
-						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/stringify.js'
+						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/stringify.js',
 					)
 				function ValueParser(value) {
 					return this instanceof ValueParser
@@ -37667,7 +37749,7 @@
 						return walk(this.nodes, cb, bubble), this
 					}),
 					(ValueParser.unit = __webpack_require__(
-						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/unit.js'
+						'./node_modules/reduce-css-calc/node_modules/postcss-value-parser/lib/unit.js',
 					)),
 					(ValueParser.walk = walk),
 					(ValueParser.stringify = stringify),
@@ -37835,7 +37917,7 @@
 													sourceIndex: pos,
 													value: value.slice(
 														pos,
-														whitespacePos + 1
+														whitespacePos + 1,
 													),
 												},
 										  ]
@@ -37847,12 +37929,12 @@
 												sourceIndex: whitespacePos + 1,
 												value: value.slice(
 													whitespacePos + 1,
-													next
+													next,
 												),
 										  }))
 										: (token.after = value.slice(
 												whitespacePos + 1,
-												next
+												next,
 										  )),
 									(pos = next + 1),
 									(code = value.charCodeAt(pos)),

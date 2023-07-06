@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _arrayLikeToArray(arr, len) {
 				;(null == len || len > arr.length) && (len = arr.length)
@@ -20,13 +20,13 @@
 		'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => _slicedToArray,
 			})
 			var unsupportedIterableToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js',
 			)
 			function _slicedToArray(arr, i) {
 				return (
@@ -82,7 +82,7 @@
 					(0, unsupportedIterableToArray.Z)(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -92,14 +92,14 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.d(__webpack_exports__, {
 					Z: () => _unsupportedIterableToArray,
 				})
 				var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js',
 					)
 				function _unsupportedIterableToArray(o, minLen) {
 					if (o) {
@@ -107,7 +107,7 @@
 							return (0,
 							_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 								o,
-								minLen
+								minLen,
 							)
 						var n = Object.prototype.toString.call(o).slice(8, -1)
 						return (
@@ -118,12 +118,12 @@
 								? Array.from(o)
 								: 'Arguments' === n ||
 								  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-										n
+										n,
 								  )
 								? (0,
 								  _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 										o,
-										minLen
+										minLen,
 								  )
 								: void 0
 						)
@@ -133,21 +133,21 @@
 		'./components/common/community/watched_threads/watched_threads.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				U: () => WatchedSidebarList,
 				Y: () => WatchedThreads,
 			})
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/next/link.js'
+					'./node_modules/next/link.js',
 				),
 				next_link__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						next_link__WEBPACK_IMPORTED_MODULE_1__
+						next_link__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				WatchedThreads = function WatchedThreads(_ref) {
@@ -163,7 +163,7 @@
 						__jsx(
 							'h1',
 							{ className: 'font-bold text-2xl py-1' },
-							title
+							title,
 						),
 						threads.map(function (thread, threadIndex) {
 							return __jsx(
@@ -174,7 +174,7 @@
 										.concat(
 											thread.parentLesson.collection
 												.module.id,
-											'/threads/'
+											'/threads/',
 										)
 										.concat(thread.id),
 									role: 'thread link',
@@ -186,14 +186,14 @@
 									? ''.concat(
 											thread.parentLesson.collection.module.moduleName.substring(
 												0,
-												30
+												30,
 											),
-											'...'
+											'...',
 									  )
 									: thread.parentLesson.collection.module
-											.moduleName
+											.moduleName,
 							)
-						})
+						}),
 					)
 				},
 				WatchedSidebarList = function WatchedSidebarList(_ref2) {
@@ -205,7 +205,7 @@
 						__jsx(
 							'h4',
 							{ className: 'text-2xl uppercase mb-2.5' },
-							title
+							title,
 						),
 						__jsx(
 							'div',
@@ -228,15 +228,15 @@
 											? ''.concat(
 													thread.title.substring(
 														0,
-														30
+														30,
 													),
-													'...'
+													'...',
 											  )
-											: thread.title
-									)
+											: thread.title,
+									),
 								)
-							})
-						)
+							}),
+						),
 					)
 				}
 			;(WatchedThreads.__docgenInfo = {
@@ -352,7 +352,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -360,16 +360,16 @@
 						default: () => watched_threads_sidebar_stories,
 					})
 				var defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					slicedToArray = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					index_esm = __webpack_require__(
-						'./node_modules/react-icons/io/index.esm.js'
+						'./node_modules/react-icons/io/index.esm.js',
 					),
 					__jsx = react.createElement,
 					WatchedThreadSidebar = function WatchedThreadSidebar(_ref) {
@@ -383,7 +383,7 @@
 								style: { overflowY: 'visible' },
 								className: ''.concat(
 									open ? 'flex-none' : 'w-3',
-									' border-l border-gray-300 relative h-screen overflow-y-scroll bg-white transition-all p-3 pt-14'
+									' border-l border-gray-300 relative h-screen overflow-y-scroll bg-white transition-all p-3 pt-14',
 								),
 							},
 							open && children,
@@ -399,9 +399,9 @@
 								},
 								__jsx(
 									open ? index_esm.hjJ : index_esm.u1R,
-									null
-								)
-							)
+									null,
+								),
+							),
 						)
 					}
 				;(WatchedThreadSidebar.displayName = 'WatchedThreadSidebar'),
@@ -447,7 +447,7 @@
 					_Default$parameters2,
 					_Default$parameters2$,
 					watched_threads = __webpack_require__(
-						'./components/common/community/watched_threads/watched_threads.tsx'
+						'./components/common/community/watched_threads/watched_threads.tsx',
 					),
 					watched_threads_sidebar_stories_jsx = react.createElement
 				function ownKeys(object, enumerableOnly) {
@@ -458,7 +458,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -469,19 +469,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -489,8 +489,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -504,7 +504,7 @@
 					var _React$useState = react.useState(!0),
 						_React$useState2 = (0, slicedToArray.Z)(
 							_React$useState,
-							2
+							2,
 						),
 						open = _React$useState2[0],
 						setOpen = _React$useState2[1]
@@ -539,9 +539,9 @@
 											id: 'moduleid6',
 										},
 									],
-								}
-							)
-						)
+								},
+							),
+						),
 					)
 				}
 				Template.displayName = 'Template'
@@ -558,7 +558,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -576,11 +576,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)
 			},
 	},
