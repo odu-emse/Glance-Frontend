@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _extends() {
 				return (
@@ -74,7 +74,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -87,7 +87,7 @@
 		'./components/common/forms/inputs/input/Oldinput.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -122,14 +122,14 @@
 				_Search$parameters2,
 				_Search$parameters2$d,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				index_esm = __webpack_require__(
-					'./node_modules/react-icons/bi/index.esm.js'
+					'./node_modules/react-icons/bi/index.esm.js',
 				),
 				__jsx = react.createElement,
 				Input = function Input(_ref) {
@@ -213,8 +213,8 @@
 													react.Fragment,
 													null,
 													option.icon && option.icon,
-													option.label
-											  )
+													option.label,
+											  ),
 									)
 								}),
 							__jsx(
@@ -225,10 +225,10 @@
 										'peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 '.concat(
 											error
 												? 'peer-focus:dark:text-red-500 peer-focus:text-red-600'
-												: 'peer-focus:dark:text-blue-500 peer-focus:text-blue-600'
+												: 'peer-focus:dark:text-blue-500 peer-focus:text-blue-600',
 										),
 								},
-								label
+								label,
 							),
 							'search' === type &&
 								icon &&
@@ -242,9 +242,9 @@
 									__jsx(
 										'span',
 										{ className: 'sr-only' },
-										'Search'
+										'Search',
 									),
-									__jsx(index_esm.Goc, { size: 24 })
+									__jsx(index_esm.Goc, { size: 24 }),
 								),
 							description &&
 								__jsx(
@@ -254,12 +254,12 @@
 										className: 'mt-2 text-sm '.concat(
 											error
 												? 'text-red-600 dark:text-red-500'
-												: 'text-gray-500 dark:text-gray-400'
+												: 'text-gray-500 dark:text-gray-400',
 										),
 									},
-									description
-								)
-						)
+									description,
+								),
+						),
 					)
 				}
 			Input.__docgenInfo = {
@@ -573,10 +573,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -592,13 +590,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -619,7 +620,7 @@
 						null !== (_args$defaultValue = args.defaultValue) &&
 							void 0 !== _args$defaultValue
 							? _args$defaultValue
-							: ''
+							: '',
 					)[0],
 					_useState2 = (0, react.useState)([]),
 					options = _useState2[0],
@@ -641,12 +642,12 @@
 									  }
 									: function (prev) {
 											return []
-									  }
+									  },
 							)
 						},
 						options,
 						defaultValue: value,
-					})
+					}),
 				)
 			}
 			Template.displayName = 'Template'
@@ -681,23 +682,23 @@
 								className:
 									'font-medium text-blue-600 hover:underline dark:text-blue-500',
 							},
-							'Privacy Policy'
+							'Privacy Policy',
 						),
-						'.'
+						'.',
 					),
-				}
+				},
 			)
 			var Disabled = Template.bind({})
 			Disabled.args = _objectSpread(
 				_objectSpread({}, Email.args),
 				{},
-				{ disabled: !0 }
+				{ disabled: !0 },
 			)
 			var ErrorState = Template.bind({})
 			ErrorState.args = _objectSpread(
 				_objectSpread({}, Email.args),
 				{},
-				{ error: !0 }
+				{ error: !0 },
 			)
 			var ErrorStateWithDescription = Template.bind({})
 			ErrorStateWithDescription.args = _objectSpread(
@@ -707,7 +708,7 @@
 					error: !0,
 					description:
 						'The error occurred while we were processing your request. Please try again and contact your system administrator if this issue persists.',
-				}
+				},
 			)
 			var Search = Template.bind({})
 			;(Search.args = {
@@ -728,7 +729,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -746,11 +747,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Email.parameters = _objectSpread(
 					_objectSpread({}, Email.parameters),
@@ -763,7 +764,7 @@
 									(_Email$parameters = Email.parameters) ||
 									void 0 === _Email$parameters
 									? void 0
-									: _Email$parameters.docs
+									: _Email$parameters.docs,
 							),
 							{},
 							{
@@ -781,11 +782,11 @@
 												_Email$parameters2.docs) ||
 										void 0 === _Email$parameters2$do
 										? void 0
-										: _Email$parameters2$do.source
+										: _Email$parameters2$do.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Descriptive.parameters = _objectSpread(
 					_objectSpread({}, Descriptive.parameters),
@@ -799,7 +800,7 @@
 										Descriptive.parameters) ||
 									void 0 === _Descriptive$paramete
 									? void 0
-									: _Descriptive$paramete.docs
+									: _Descriptive$paramete.docs,
 							),
 							{},
 							{
@@ -817,11 +818,11 @@
 												_Descriptive$paramete2.docs) ||
 										void 0 === _Descriptive$paramete3
 										? void 0
-										: _Descriptive$paramete3.source
+										: _Descriptive$paramete3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Disabled.parameters = _objectSpread(
 					_objectSpread({}, Disabled.parameters),
@@ -835,7 +836,7 @@
 										Disabled.parameters) ||
 									void 0 === _Disabled$parameters
 									? void 0
-									: _Disabled$parameters.docs
+									: _Disabled$parameters.docs,
 							),
 							{},
 							{
@@ -853,11 +854,11 @@
 												_Disabled$parameters2.docs) ||
 										void 0 === _Disabled$parameters3
 										? void 0
-										: _Disabled$parameters3.source
+										: _Disabled$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(ErrorState.parameters = _objectSpread(
 					_objectSpread({}, ErrorState.parameters),
@@ -871,7 +872,7 @@
 										ErrorState.parameters) ||
 									void 0 === _ErrorState$parameter
 									? void 0
-									: _ErrorState$parameter.docs
+									: _ErrorState$parameter.docs,
 							),
 							{},
 							{
@@ -889,11 +890,11 @@
 												_ErrorState$parameter2.docs) ||
 										void 0 === _ErrorState$parameter3
 										? void 0
-										: _ErrorState$parameter3.source
+										: _ErrorState$parameter3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(ErrorStateWithDescription.parameters = _objectSpread(
 					_objectSpread({}, ErrorStateWithDescription.parameters),
@@ -907,7 +908,7 @@
 										ErrorStateWithDescription.parameters) ||
 									void 0 === _ErrorStateWithDescri
 									? void 0
-									: _ErrorStateWithDescri.docs
+									: _ErrorStateWithDescri.docs,
 							),
 							{},
 							{
@@ -925,11 +926,11 @@
 												_ErrorStateWithDescri2.docs) ||
 										void 0 === _ErrorStateWithDescri3
 										? void 0
-										: _ErrorStateWithDescri3.source
+										: _ErrorStateWithDescri3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Search.parameters = _objectSpread(
 					_objectSpread({}, Search.parameters),
@@ -942,7 +943,7 @@
 									(_Search$parameters = Search.parameters) ||
 									void 0 === _Search$parameters
 									? void 0
-									: _Search$parameters.docs
+									: _Search$parameters.docs,
 							),
 							{},
 							{
@@ -960,17 +961,17 @@
 												_Search$parameters2.docs) ||
 										void 0 === _Search$parameters2$d
 										? void 0
-										: _Search$parameters2$d.source
+										: _Search$parameters2$d.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/react-icons/lib/esm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				w_: () => GenIcon,
@@ -999,7 +1000,7 @@
 									for (var p in (s = arguments[i]))
 										Object.prototype.hasOwnProperty.call(
 											s,
-											p
+											p,
 										) && (t[p] = s[p])
 								return t
 							}),
@@ -1025,7 +1026,7 @@
 							e.indexOf(p[i]) < 0 &&
 								Object.prototype.propertyIsEnumerable.call(
 									s,
-									p[i]
+									p[i],
 								) &&
 								(t[p[i]] = s[p[i]])
 					}
@@ -1038,7 +1039,7 @@
 						return react.createElement(
 							node.tag,
 							__assign({ key: i }, node.attr),
-							Tree2Element(node.child)
+							Tree2Element(node.child),
 						)
 					})
 				)
@@ -1048,7 +1049,7 @@
 					return react.createElement(
 						IconBase,
 						__assign({ attr: __assign({}, data.attr) }, props),
-						Tree2Element(data.child)
+						Tree2Element(data.child),
 					)
 				}
 			}
@@ -1085,17 +1086,17 @@
 												color:
 													props.color || conf.color,
 											},
-											conf.style
+											conf.style,
 										),
-										props.style
+										props.style,
 									),
 									height: computedSize,
 									width: computedSize,
 									xmlns: 'http://www.w3.org/2000/svg',
-								}
+								},
 							),
 							title && react.createElement('title', null, title),
-							props.children
+							props.children,
 						)
 					)
 				}
@@ -1105,7 +1106,7 @@
 							null,
 							function (conf) {
 								return elem(conf)
-							}
+							},
 					  )
 					: elem(DefaultContext)
 			}

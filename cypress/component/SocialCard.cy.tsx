@@ -43,7 +43,7 @@ describe('SocialCard.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('should render a profile picture with the following class and css properties', () => {
@@ -51,7 +51,7 @@ describe('SocialCard.tsx', function () {
 		cy.get('img')
 			.should(
 				'have.class',
-				'shadow-lg rounded-full max-w-full h-12 align-middle border-none'
+				'shadow-lg rounded-full max-w-full h-12 align-middle border-none',
 			)
 			.and('have.css', 'font-size', '16px')
 			.and('have.css', 'vertical-align', 'middle')
@@ -62,7 +62,7 @@ describe('SocialCard.tsx', function () {
 			.and(
 				'have.css',
 				'box-shadow',
-				'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px'
+				'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px',
 			)
 	})
 	it('should render component role in light color with correct content', () => {
@@ -86,7 +86,7 @@ describe('SocialCard.tsx', function () {
 	it('should render component timestamp with department name and their office', () => {
 		TA.office = office
 		cy.mount(
-			<Secondary user={TA} timestamp={timestamp} content={content} />
+			<Secondary user={TA} timestamp={timestamp} content={content} />,
 		)
 		cy.get('div.department')
 			.should('have.class', 'text-xs text-neutral-500')
@@ -135,7 +135,7 @@ describe('SocialCard.tsx', function () {
 		cy.get('div.likes')
 			.should(
 				'have.class',
-				'flex cursor-pointer items-center transition hover:text-slate-600 text-blue-600'
+				'flex cursor-pointer items-center transition hover:text-slate-600 text-blue-600',
 			)
 			.and('have.css', 'display', 'flex')
 			.and('have.css', 'color', 'rgb(28, 100, 242)')
@@ -155,7 +155,7 @@ describe('SocialCard.tsx', function () {
 		cy.get('div.comments')
 			.should(
 				'have.class',
-				'flex cursor-pointer items-center transition hover:text-slate-600 text-blue-600'
+				'flex cursor-pointer items-center transition hover:text-slate-600 text-blue-600',
 			)
 			.and('have.css', 'display', 'flex')
 			.and('have.css', 'color', 'rgb(28, 100, 242)')
@@ -171,7 +171,7 @@ describe('SocialCard.tsx', function () {
 		cy.get('input')
 			.should(
 				'have.class',
-				'border-transparent bg-transparent px-5 py-2 w-full'
+				'border-transparent bg-transparent px-5 py-2 w-full',
 			)
 			.and('have.css', 'padding-top', '8px')
 			.and('have.css', 'padding-bottom', '8px')
@@ -194,7 +194,7 @@ describe('SocialCard.tsx', function () {
 			.and('have.css', 'align-items', 'center')
 		cy.get("button[aria-label='attach-file']").should(
 			'have.descendants',
-			'svg'
+			'svg',
 		)
 		cy.get("button[aria-label='attach-file'] svg")
 			.should('have.attr', 'height', 20)
@@ -209,7 +209,7 @@ describe('SocialCard.tsx', function () {
 			.and('have.css', 'align-items', 'center')
 		cy.get("button[aria-label='insert-emoji']").should(
 			'have.descendants',
-			'svg'
+			'svg',
 		)
 		cy.get("button[aria-label='insert-emoji'] svg")
 			.should('have.attr', 'height', 20)

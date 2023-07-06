@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,18 +62,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -94,7 +94,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -113,7 +113,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -348,7 +348,7 @@
 		'./components/common/button/button.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -376,13 +376,13 @@
 				_Width$parameters2$do,
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./components/common/button/button.tsx'
+					'./components/common/button/button.tsx',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -391,10 +391,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -406,18 +404,25 @@
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
 								;(0,
-								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(target, key, source[key])
+								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -453,7 +458,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -471,11 +476,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = _objectSpread(
 					_objectSpread({}, Secondary.parameters),
@@ -489,7 +494,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -507,11 +512,11 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Large.parameters = _objectSpread(
 					_objectSpread({}, Large.parameters),
@@ -524,7 +529,7 @@
 									(_Large$parameters = Large.parameters) ||
 									void 0 === _Large$parameters
 									? void 0
-									: _Large$parameters.docs
+									: _Large$parameters.docs,
 							),
 							{},
 							{
@@ -542,11 +547,11 @@
 												_Large$parameters2.docs) ||
 										void 0 === _Large$parameters2$do
 										? void 0
-										: _Large$parameters2$do.source
+										: _Large$parameters2$do.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Small.parameters = _objectSpread(
 					_objectSpread({}, Small.parameters),
@@ -559,7 +564,7 @@
 									(_Small$parameters = Small.parameters) ||
 									void 0 === _Small$parameters
 									? void 0
-									: _Small$parameters.docs
+									: _Small$parameters.docs,
 							),
 							{},
 							{
@@ -577,11 +582,11 @@
 												_Small$parameters2.docs) ||
 										void 0 === _Small$parameters2$do
 										? void 0
-										: _Small$parameters2$do.source
+										: _Small$parameters2$do.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Width.parameters = _objectSpread(
 					_objectSpread({}, Width.parameters),
@@ -594,7 +599,7 @@
 									(_Width$parameters = Width.parameters) ||
 									void 0 === _Width$parameters
 									? void 0
-									: _Width$parameters.docs
+									: _Width$parameters.docs,
 							),
 							{},
 							{
@@ -612,11 +617,11 @@
 												_Width$parameters2.docs) ||
 										void 0 === _Width$parameters2$do
 										? void 0
-										: _Width$parameters2$do.source
+										: _Width$parameters2$do.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

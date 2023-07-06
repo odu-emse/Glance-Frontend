@@ -29,7 +29,7 @@ describe('InformationCard.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('should have no accessibility violations for Primary', () => {
@@ -42,7 +42,7 @@ describe('InformationCard.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('should have no accessibility violations for Secondary', () => {
@@ -55,7 +55,7 @@ describe('InformationCard.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 })
@@ -80,7 +80,7 @@ it('should render component statusMessage and percentComplete with l text and xs
 	cy.get('p.text-l').should('have.class', 'mx-2 my-2 text-l')
 	cy.get('p.text-xs').should(
 		'have.class',
-		'mx-2 my-2 text-gray-400 inline-block text-xs'
+		'mx-2 my-2 text-gray-400 inline-block text-xs',
 	)
 })
 
@@ -90,22 +90,22 @@ it('should render component moduleIdentifier with uppercase, sm text and semi-bo
 	cy.get('p.uppercase').should('have.css', 'text-transform', 'uppercase')
 	cy.get('p.uppercase').should(
 		'have.class',
-		'mx-2 my-2 text-gray-500 inline-block text-xs uppercase font-semibold'
+		'mx-2 my-2 text-gray-500 inline-block text-xs uppercase font-semibold',
 	)
 })
 
 it('should render component moduleIdentifier with lg text and minimal margin', () => {
 	cy.mount(
-		<Secondary moduleIdentifier={true} percentage={true} grade={true} />
+		<Secondary moduleIdentifier={true} percentage={true} grade={true} />,
 	)
 	cy.get('#secondary').should('have.class', 'font-medium')
 	cy.get('div.text-sm').should(
 		'have.class',
-		'flex justify-start items-center text-gray-600 inline-block text-sm'
+		'flex justify-start items-center text-gray-600 inline-block text-sm',
 	)
 	cy.get('div.text-xs').should(
 		'have.class',
-		'flex gap-1 items-center text-gray-500 inline-block text-xs'
+		'flex gap-1 items-center text-gray-500 inline-block text-xs',
 	)
 	cy.get('div.text-xl').should('have.class', 'text-xl')
 })

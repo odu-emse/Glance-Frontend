@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof ModuleLesson>
 
 const Template: ComponentStory<typeof ModuleLesson> = (
-	args: ModuleLessonProps
+	args: ModuleLessonProps,
 ) => <ModuleLesson {...args} />
 
 export const Default: ComponentStory<typeof ModuleLesson> = Template.bind({})

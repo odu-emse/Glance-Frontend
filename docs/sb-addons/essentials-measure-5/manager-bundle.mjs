@@ -156,7 +156,7 @@ try {
 			a.createElement(
 				b,
 				{ key: u, active: n, title: 'Enable measure', onClick: l },
-				a.createElement(O, { icon: 'ruler' })
+				a.createElement(O, { icon: 'ruler' }),
 			)
 		)
 	}
@@ -172,7 +172,7 @@ try {
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

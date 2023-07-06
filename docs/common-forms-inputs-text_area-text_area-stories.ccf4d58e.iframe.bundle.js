@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _extends() {
 				return (
@@ -74,7 +74,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -87,13 +87,13 @@
 		'./components/common/forms/inputs/text_area/text_area.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { K: () => TextArea })
 			var react = __webpack_require__('./node_modules/react/index.js')
 			const use_autosize_text_area = function useAutosizeTextArea(
 				textAreaRef,
-				value
+				value,
 			) {
 				;(0, react.useEffect)(
 					function () {
@@ -103,7 +103,7 @@
 							textAreaRef.style.height = scrollHeight + 'px'
 						}
 					},
-					[textAreaRef, value]
+					[textAreaRef, value],
 				)
 			}
 			var __jsx = react.createElement,
@@ -196,9 +196,9 @@
 									__jsx('span', {
 										className:
 											'absolute right-2 bottom-2 flex items-center '.concat(
-												disabled ? 'opacity-50' : ''
+												disabled ? 'opacity-50' : '',
 											),
-									})
+									}),
 							),
 							value.length === maxLength &&
 								__jsx(
@@ -208,9 +208,9 @@
 											'text-xs px-2 bg-gray-100 ml-auto mr-0 block w-fit',
 									},
 									'Maximum characters: ',
-									maxLength
-								)
-						)
+									maxLength,
+								),
+						),
 					)
 				}
 			;(TextArea.displayName = 'TextArea'),
@@ -468,7 +468,7 @@
 		'./components/common/forms/inputs/text_area/text_area.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -492,17 +492,17 @@
 				_MaxLength$parameters3,
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_extends_js__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/extends.js'
+						'./node_modules/@babel/runtime/helpers/esm/extends.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_text_area__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./components/common/forms/inputs/text_area/text_area.tsx'
+					'./components/common/forms/inputs/text_area/text_area.tsx',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -511,10 +511,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -526,18 +524,25 @@
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
 								;(0,
-								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(target, key, source[key])
+								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -581,11 +586,11 @@
 									null === (_evt$target = evt.target) ||
 										void 0 === _evt$target
 										? void 0
-										: _evt$target.value
+										: _evt$target.value,
 								)
 							},
-						}
-					)
+						},
+					),
 				)
 			}
 			Template.displayName = 'Template'
@@ -611,14 +616,14 @@
 				(Disabled.args = _objectSpread(
 					_objectSpread({}, Primary.args),
 					{},
-					{ disabled: !0 }
+					{ disabled: !0 },
 				))
 			var WithLabel = Template.bind({})
 			;(WithLabel.storyName = 'TextArea with a label on the top'),
 				(WithLabel.args = _objectSpread(
 					_objectSpread({}, Primary.args),
 					{},
-					{ label: 'Basic Text Area' }
+					{ label: 'Basic Text Area' },
 				))
 			var MaxLength = Template.bind({})
 			;(MaxLength.storyName = 'Specific Max Length'),
@@ -628,7 +633,7 @@
 					{
 						maxLength: 10,
 						value: 'This is a default value text for the text area component.',
-					}
+					},
 				)),
 				(Primary.parameters = _objectSpread(
 					_objectSpread({}, Primary.parameters),
@@ -642,7 +647,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -660,11 +665,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Disabled.parameters = _objectSpread(
 					_objectSpread({}, Disabled.parameters),
@@ -678,7 +683,7 @@
 										Disabled.parameters) ||
 									void 0 === _Disabled$parameters
 									? void 0
-									: _Disabled$parameters.docs
+									: _Disabled$parameters.docs,
 							),
 							{},
 							{
@@ -696,11 +701,11 @@
 												_Disabled$parameters2.docs) ||
 										void 0 === _Disabled$parameters3
 										? void 0
-										: _Disabled$parameters3.source
+										: _Disabled$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(WithLabel.parameters = _objectSpread(
 					_objectSpread({}, WithLabel.parameters),
@@ -714,7 +719,7 @@
 										WithLabel.parameters) ||
 									void 0 === _WithLabel$parameters
 									? void 0
-									: _WithLabel$parameters.docs
+									: _WithLabel$parameters.docs,
 							),
 							{},
 							{
@@ -732,11 +737,11 @@
 												_WithLabel$parameters2.docs) ||
 										void 0 === _WithLabel$parameters3
 										? void 0
-										: _WithLabel$parameters3.source
+										: _WithLabel$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(MaxLength.parameters = _objectSpread(
 					_objectSpread({}, MaxLength.parameters),
@@ -750,7 +755,7 @@
 										MaxLength.parameters) ||
 									void 0 === _MaxLength$parameters
 									? void 0
-									: _MaxLength$parameters.docs
+									: _MaxLength$parameters.docs,
 							),
 							{},
 							{
@@ -768,11 +773,11 @@
 												_MaxLength$parameters2.docs) ||
 										void 0 === _MaxLength$parameters3
 										? void 0
-										: _MaxLength$parameters3.source
+										: _MaxLength$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

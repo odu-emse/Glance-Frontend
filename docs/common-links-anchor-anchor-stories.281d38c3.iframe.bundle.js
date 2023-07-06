@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _extends() {
 				return (
@@ -74,7 +74,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -88,7 +88,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				function _objectWithoutProperties(source, excluded) {
 					if (null == source) return {}
@@ -96,7 +96,7 @@
 						i,
 						target = (function _objectWithoutPropertiesLoose(
 							source,
-							excluded
+							excluded,
 						) {
 							if (null == source) return {}
 							var key,
@@ -117,7 +117,7 @@
 								excluded.indexOf(key) >= 0 ||
 									(Object.prototype.propertyIsEnumerable.call(
 										source,
-										key
+										key,
 									) &&
 										(target[key] = source[key]))
 					}
@@ -130,7 +130,7 @@
 		'./components/common/links/anchor/anchor.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -141,14 +141,14 @@
 				_Primary$parameters2,
 				_Primary$parameters2$,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				objectWithoutProperties = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
+					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js',
 				),
 				_excluded = [
 					'path',
@@ -196,7 +196,7 @@
 						'a',
 						(0, esm_extends.Z)(
 							{ href: path, className: classes, onClick, id },
-							rest
+							rest,
 						),
 						icon && open
 							? __jsx(
@@ -205,11 +205,11 @@
 									__jsx(
 										'span',
 										{ className: 'opacity-50' },
-										icon
+										icon,
 									),
-									children
+									children,
 							  )
-							: children
+							: children,
 					)
 				}
 			;(Anchor.displayName = 'Anchor'),
@@ -378,10 +378,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -397,13 +395,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -431,11 +432,11 @@
 					(0, esm_extends.Z)({}, args, {
 						onClick: function onClick() {
 							alert(
-								'Your click was handled! This is an example of a custom onClick function. You can also infer the click event from the onClick prop, and access event details.'
+								'Your click was handled! This is an example of a custom onClick function. You can also infer the click event from the onClick prop, and access event details.',
 							)
 						},
 					}),
-					'Link to resource'
+					'Link to resource',
 				)
 			}
 			Template.displayName = 'Template'
@@ -451,7 +452,7 @@
 								(_Primary$parameters = Primary.parameters) ||
 								void 0 === _Primary$parameters
 								? void 0
-								: _Primary$parameters.docs
+								: _Primary$parameters.docs,
 						),
 						{},
 						{
@@ -469,11 +470,11 @@
 											_Primary$parameters2.docs) ||
 									void 0 === _Primary$parameters2$
 									? void 0
-									: _Primary$parameters2$.source
+									: _Primary$parameters2$.source,
 							),
-						}
+						},
 					),
-				}
+				},
 			)
 		},
 	},

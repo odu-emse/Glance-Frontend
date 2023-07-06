@@ -5,27 +5,27 @@
 		'./node_modules/recharts/es6/chart/PieChart.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { u: () => PieChart })
 			var _generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/chart/generateCategoricalChart.js'
+						'./node_modules/recharts/es6/chart/generateCategoricalChart.js',
 					),
 				_polar_PolarAngleAxis__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/polar/PolarAngleAxis.js'
+						'./node_modules/recharts/es6/polar/PolarAngleAxis.js',
 					),
 				_polar_PolarRadiusAxis__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/polar/PolarRadiusAxis.js'
+						'./node_modules/recharts/es6/polar/PolarRadiusAxis.js',
 					),
 				_util_PolarUtils__WEBPACK_IMPORTED_MODULE_4__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/PolarUtils.js'
+						'./node_modules/recharts/es6/util/PolarUtils.js',
 					),
 				_polar_Pie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/recharts/es6/polar/Pie.js'
+					'./node_modules/recharts/es6/polar/Pie.js',
 				),
 				PieChart = (0,
 				_generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__.z)({
@@ -62,110 +62,110 @@
 		'./node_modules/recharts/es6/polar/Pie.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { b: () => Pie })
 			var lodash_isEqual__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__('./node_modules/lodash/isEqual.js'),
 				lodash_isEqual__WEBPACK_IMPORTED_MODULE_0___default =
 					__webpack_require__.n(
-						lodash_isEqual__WEBPACK_IMPORTED_MODULE_0__
+						lodash_isEqual__WEBPACK_IMPORTED_MODULE_0__,
 					),
 				lodash_get__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/lodash/get.js'
+					'./node_modules/lodash/get.js',
 				),
 				lodash_get__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(
-						lodash_get__WEBPACK_IMPORTED_MODULE_1__
+						lodash_get__WEBPACK_IMPORTED_MODULE_1__,
 					),
 				lodash_isPlainObject__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/lodash/isPlainObject.js'
+						'./node_modules/lodash/isPlainObject.js',
 					),
 				lodash_isPlainObject__WEBPACK_IMPORTED_MODULE_2___default =
 					__webpack_require__.n(
-						lodash_isPlainObject__WEBPACK_IMPORTED_MODULE_2__
+						lodash_isPlainObject__WEBPACK_IMPORTED_MODULE_2__,
 					),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_3__ =
 					__webpack_require__('./node_modules/lodash/isFunction.js'),
 				lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default =
 					__webpack_require__.n(
-						lodash_isFunction__WEBPACK_IMPORTED_MODULE_3__
+						lodash_isFunction__WEBPACK_IMPORTED_MODULE_3__,
 					),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-					'./node_modules/lodash/isNil.js'
+					'./node_modules/lodash/isNil.js',
 				),
 				lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default =
 					__webpack_require__.n(
-						lodash_isNil__WEBPACK_IMPORTED_MODULE_4__
+						lodash_isNil__WEBPACK_IMPORTED_MODULE_4__,
 					),
 				react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				react_smooth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-					'./node_modules/react-smooth/es6/index.js'
+					'./node_modules/react-smooth/es6/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-					'./node_modules/classnames/index.js'
+					'./node_modules/classnames/index.js',
 				),
 				classnames__WEBPACK_IMPORTED_MODULE_7___default =
 					__webpack_require__.n(
-						classnames__WEBPACK_IMPORTED_MODULE_7__
+						classnames__WEBPACK_IMPORTED_MODULE_7__,
 					),
 				_container_Layer__WEBPACK_IMPORTED_MODULE_11__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/container/Layer.js'
+						'./node_modules/recharts/es6/container/Layer.js',
 					),
 				_shape_Sector__WEBPACK_IMPORTED_MODULE_18__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/shape/Sector.js'
+						'./node_modules/recharts/es6/shape/Sector.js',
 					),
 				_shape_Curve__WEBPACK_IMPORTED_MODULE_16__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/shape/Curve.js'
+						'./node_modules/recharts/es6/shape/Curve.js',
 					),
 				_component_Text__WEBPACK_IMPORTED_MODULE_17__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/component/Text.js'
+						'./node_modules/recharts/es6/component/Text.js',
 					),
 				_component_Label__WEBPACK_IMPORTED_MODULE_14__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/component/Label.js'
+						'./node_modules/recharts/es6/component/Label.js',
 					),
 				_component_LabelList__WEBPACK_IMPORTED_MODULE_15__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/component/LabelList.js'
+						'./node_modules/recharts/es6/component/LabelList.js',
 					),
 				_component_Cell__WEBPACK_IMPORTED_MODULE_20__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/component/Cell.js'
+						'./node_modules/recharts/es6/component/Cell.js',
 					),
 				_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ReactUtils.js'
+						'./node_modules/recharts/es6/util/ReactUtils.js',
 					),
 				_util_Global__WEBPACK_IMPORTED_MODULE_19__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/Global.js'
+						'./node_modules/recharts/es6/util/Global.js',
 					),
 				_util_PolarUtils__WEBPACK_IMPORTED_MODULE_10__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/PolarUtils.js'
+						'./node_modules/recharts/es6/util/PolarUtils.js',
 					),
 				_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/DataUtils.js'
+						'./node_modules/recharts/es6/util/DataUtils.js',
 					),
 				_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/ChartUtils.js'
+						'./node_modules/recharts/es6/util/ChartUtils.js',
 					),
 				_util_LogUtils__WEBPACK_IMPORTED_MODULE_21__ =
 					__webpack_require__(
-						'./node_modules/recharts/es6/util/LogUtils.js'
+						'./node_modules/recharts/es6/util/LogUtils.js',
 					),
 				_util_types__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-					'./node_modules/recharts/es6/util/types.js'
+					'./node_modules/recharts/es6/util/types.js',
 				)
 			function _typeof(obj) {
 				return (
@@ -196,7 +196,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -210,10 +210,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -229,13 +227,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -250,7 +251,7 @@
 						Object.defineProperty(
 							target,
 							_toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -277,8 +278,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -302,7 +303,7 @@
 							return call
 						if (void 0 !== call)
 							throw new TypeError(
-								'Derived constructors may only return object or undefined'
+								'Derived constructors may only return object or undefined',
 							)
 						return _assertThisInitialized(self)
 					})(this, result)
@@ -311,7 +312,7 @@
 			function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}
@@ -347,7 +348,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -358,7 +359,7 @@
 				!(function _inherits(subClass, superClass) {
 					if ('function' != typeof superClass && null !== superClass)
 						throw new TypeError(
-							'Super expression must either be null or a function'
+							'Super expression must either be null or a function',
 						)
 					;(subClass.prototype = Object.create(
 						superClass && superClass.prototype,
@@ -368,7 +369,7 @@
 								writable: !0,
 								configurable: !0,
 							},
-						}
+						},
 					)),
 						Object.defineProperty(subClass, 'prototype', {
 							writable: !1,
@@ -382,28 +383,28 @@
 						(function _classCallCheck(instance, Constructor) {
 							if (!(instance instanceof Constructor))
 								throw new TypeError(
-									'Cannot call a class as a function'
+									'Cannot call a class as a function',
 								)
 						})(this, Pie),
 						_defineProperty(
 							_assertThisInitialized(
-								(_this = _super.call(this, props))
+								(_this = _super.call(this, props)),
 							),
 							'pieRef',
-							null
+							null,
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
 							'sectorRefs',
-							[]
+							[],
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
 							'id',
 							(0,
 							_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.EL)(
-								'recharts-pie-'
-							)
+								'recharts-pie-',
+							),
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -412,9 +413,9 @@
 								var onAnimationEnd = _this.props.onAnimationEnd
 								_this.setState({ isAnimationFinished: !0 }),
 									lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(
-										onAnimationEnd
+										onAnimationEnd,
 									) && onAnimationEnd()
-							}
+							},
 						),
 						_defineProperty(
 							_assertThisInitialized(_this),
@@ -424,9 +425,9 @@
 									_this.props.onAnimationStart
 								_this.setState({ isAnimationFinished: !1 }),
 									lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(
-										onAnimationStart
+										onAnimationStart,
 									) && onAnimationStart()
-							}
+							},
 						),
 						(_this.state = {
 							isAnimationFinished: !props.isAnimationActive,
@@ -441,13 +442,13 @@
 					(function _createClass(
 						Constructor,
 						protoProps,
-						staticProps
+						staticProps,
 					) {
 						return (
 							protoProps &&
 								_defineProperties(
 									Constructor.prototype,
-									protoProps
+									protoProps,
 								),
 							staticProps &&
 								_defineProperties(Constructor, staticProps),
@@ -492,134 +493,139 @@
 										valueKey = _this$props.valueKey,
 										pieProps = (0,
 										_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__.L6)(
-											this.props
+											this.props,
 										),
 										customLabelProps = (0,
 										_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__.L6)(
-											label
+											label,
 										),
 										customLabelLineProps = (0,
 										_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__.L6)(
-											labelLine
+											labelLine,
 										),
 										offsetRadius =
 											(label && label.offsetRadius) || 20,
-										labels = sectors.map(function (
-											entry,
-											i
-										) {
-											var midAngle =
-													(entry.startAngle +
-														entry.endAngle) /
-													2,
-												endPoint = (0,
-												_util_PolarUtils__WEBPACK_IMPORTED_MODULE_10__.op)(
-													entry.cx,
-													entry.cy,
-													entry.outerRadius +
-														offsetRadius,
-													midAngle
-												),
-												labelProps = _objectSpread(
-													_objectSpread(
-														_objectSpread(
-															_objectSpread(
-																{},
-																pieProps
-															),
-															entry
-														),
-														{},
-														{ stroke: 'none' },
-														customLabelProps
+										labels = sectors.map(
+											function (entry, i) {
+												var midAngle =
+														(entry.startAngle +
+															entry.endAngle) /
+														2,
+													endPoint = (0,
+													_util_PolarUtils__WEBPACK_IMPORTED_MODULE_10__.op)(
+														entry.cx,
+														entry.cy,
+														entry.outerRadius +
+															offsetRadius,
+														midAngle,
 													),
-													{},
-													{
-														index: i,
-														textAnchor:
-															Pie.getTextAnchor(
-																endPoint.x,
-																entry.cx
-															),
-													},
-													endPoint
-												),
-												lineProps = _objectSpread(
-													_objectSpread(
+													labelProps = _objectSpread(
 														_objectSpread(
 															_objectSpread(
-																{},
-																pieProps
+																_objectSpread(
+																	{},
+																	pieProps,
+																),
+																entry,
 															),
-															entry
+															{},
+															{ stroke: 'none' },
+															customLabelProps,
 														),
 														{},
 														{
-															fill: 'none',
-															stroke: entry.fill,
+															index: i,
+															textAnchor:
+																Pie.getTextAnchor(
+																	endPoint.x,
+																	entry.cx,
+																),
 														},
-														customLabelLineProps
+														endPoint,
 													),
-													{},
-													{
-														index: i,
-														points: [
-															(0,
-															_util_PolarUtils__WEBPACK_IMPORTED_MODULE_10__.op)(
-																entry.cx,
-																entry.cy,
-																entry.outerRadius,
-																midAngle
+													lineProps = _objectSpread(
+														_objectSpread(
+															_objectSpread(
+																_objectSpread(
+																	{},
+																	pieProps,
+																),
+																entry,
 															),
-															endPoint,
-														],
-														key: 'line',
-													}
-												),
-												realDataKey = dataKey
-											return (
-												lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-													dataKey
-												) &&
-												lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-													valueKey
-												)
-													? (realDataKey = 'value')
-													: lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-															dataKey
-													  ) &&
-													  (realDataKey = valueKey),
-												react__WEBPACK_IMPORTED_MODULE_5__.createElement(
-													_container_Layer__WEBPACK_IMPORTED_MODULE_11__.m,
-													{ key: 'label-'.concat(i) },
-													labelLine &&
-														Pie.renderLabelLineItem(
-															labelLine,
-															lineProps
+															{},
+															{
+																fill: 'none',
+																stroke: entry.fill,
+															},
+															customLabelLineProps,
 														),
-													Pie.renderLabelItem(
-														label,
-														labelProps,
-														(0,
-														_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.F$)(
-															entry,
-															realDataKey
-														)
+														{},
+														{
+															index: i,
+															points: [
+																(0,
+																_util_PolarUtils__WEBPACK_IMPORTED_MODULE_10__.op)(
+																	entry.cx,
+																	entry.cy,
+																	entry.outerRadius,
+																	midAngle,
+																),
+																endPoint,
+															],
+															key: 'line',
+														},
+													),
+													realDataKey = dataKey
+												return (
+													lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
+														dataKey,
+													) &&
+													lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
+														valueKey,
+													)
+														? (realDataKey =
+																'value')
+														: lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
+																dataKey,
+														  ) &&
+														  (realDataKey =
+																valueKey),
+													react__WEBPACK_IMPORTED_MODULE_5__.createElement(
+														_container_Layer__WEBPACK_IMPORTED_MODULE_11__.m,
+														{
+															key: 'label-'.concat(
+																i,
+															),
+														},
+														labelLine &&
+															Pie.renderLabelLineItem(
+																labelLine,
+																lineProps,
+															),
+														Pie.renderLabelItem(
+															label,
+															labelProps,
+															(0,
+															_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.F$)(
+																entry,
+																realDataKey,
+															),
+														),
 													)
 												)
-											)
-										})
+											},
+										)
 									return react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 										_container_Layer__WEBPACK_IMPORTED_MODULE_11__.m,
 										{ className: 'recharts-pie-labels' },
-										labels
+										labels,
 									)
 								},
 							},
 							{
 								key: 'renderSectorsStatically',
 								value: function renderSectorsStatically(
-									sectors
+									sectors,
 								) {
 									var _this2 = this,
 										_this$props2 = this.props,
@@ -644,7 +650,7 @@
 													stroke: blendStroke
 														? entry.fill
 														: entry.stroke,
-												}
+												},
 											)
 										return react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 											_container_Layer__WEBPACK_IMPORTED_MODULE_11__.m,
@@ -653,10 +659,10 @@
 													ref: function ref(_ref) {
 														_ref &&
 															!_this2.sectorRefs.includes(
-																_ref
+																_ref,
 															) &&
 															_this2.sectorRefs.push(
-																_ref
+																_ref,
 															)
 													},
 													tabIndex: -1,
@@ -667,14 +673,14 @@
 												_util_types__WEBPACK_IMPORTED_MODULE_13__.bw)(
 													_this2.props,
 													entry,
-													i
+													i,
 												),
-												{ key: 'sector-'.concat(i) }
+												{ key: 'sector-'.concat(i) },
 											),
 											Pie.renderSectorItem(
 												sectorOptions,
-												sectorProps
-											)
+												sectorProps,
+											),
 										)
 									})
 								},
@@ -722,93 +728,98 @@
 													sectors && sectors[0]
 												).startAngle
 											return (
-												sectors.forEach(function (
-													entry,
-													index
-												) {
-													var prev =
-															prevSectors &&
-															prevSectors[index],
-														paddingAngle =
-															index > 0
-																? lodash_get__WEBPACK_IMPORTED_MODULE_1___default()(
-																		entry,
-																		'paddingAngle',
-																		0
-																  )
-																: 0
-													if (prev) {
-														var angleIp = (0,
-															_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.k4)(
-																prev.endAngle -
-																	prev.startAngle,
-																entry.endAngle -
-																	entry.startAngle
+												sectors.forEach(
+													function (entry, index) {
+														var prev =
+																prevSectors &&
+																prevSectors[
+																	index
+																],
+															paddingAngle =
+																index > 0
+																	? lodash_get__WEBPACK_IMPORTED_MODULE_1___default()(
+																			entry,
+																			'paddingAngle',
+																			0,
+																	  )
+																	: 0
+														if (prev) {
+															var angleIp = (0,
+																_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.k4)(
+																	prev.endAngle -
+																		prev.startAngle,
+																	entry.endAngle -
+																		entry.startAngle,
+																),
+																latest =
+																	_objectSpread(
+																		_objectSpread(
+																			{},
+																			entry,
+																		),
+																		{},
+																		{
+																			startAngle:
+																				curAngle +
+																				paddingAngle,
+																			endAngle:
+																				curAngle +
+																				angleIp(
+																					t,
+																				) +
+																				paddingAngle,
+																		},
+																	)
+															stepData.push(
+																latest,
 															),
-															latest =
-																_objectSpread(
+																(curAngle =
+																	latest.endAngle)
+														} else {
+															var endAngle =
+																	entry.endAngle,
+																startAngle =
+																	entry.startAngle,
+																deltaAngle = (0,
+																_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.k4)(
+																	0,
+																	endAngle -
+																		startAngle,
+																)(t),
+																_latest =
 																	_objectSpread(
+																		_objectSpread(
+																			{},
+																			entry,
+																		),
 																		{},
-																		entry
-																	),
-																	{},
-																	{
-																		startAngle:
-																			curAngle +
-																			paddingAngle,
-																		endAngle:
-																			curAngle +
-																			angleIp(
-																				t
-																			) +
-																			paddingAngle,
-																	}
-																)
-														stepData.push(latest),
-															(curAngle =
-																latest.endAngle)
-													} else {
-														var endAngle =
-																entry.endAngle,
-															startAngle =
-																entry.startAngle,
-															deltaAngle = (0,
-															_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.k4)(
-																0,
-																endAngle -
-																	startAngle
-															)(t),
-															_latest =
-																_objectSpread(
-																	_objectSpread(
-																		{},
-																		entry
-																	),
-																	{},
-																	{
-																		startAngle:
-																			curAngle +
-																			paddingAngle,
-																		endAngle:
-																			curAngle +
-																			deltaAngle +
-																			paddingAngle,
-																	}
-																)
-														stepData.push(_latest),
-															(curAngle =
-																_latest.endAngle)
-													}
-												}),
+																		{
+																			startAngle:
+																				curAngle +
+																				paddingAngle,
+																			endAngle:
+																				curAngle +
+																				deltaAngle +
+																				paddingAngle,
+																		},
+																	)
+															stepData.push(
+																_latest,
+															),
+																(curAngle =
+																	_latest.endAngle)
+														}
+													},
+												),
 												react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 													_container_Layer__WEBPACK_IMPORTED_MODULE_11__.m,
 													null,
 													_this3.renderSectorsStatically(
-														stepData
-													)
+														stepData,
+													),
 												)
 											)
-										}
+										},
 									)
 								},
 							},
@@ -877,7 +888,7 @@
 										(prevSectors &&
 											lodash_isEqual__WEBPACK_IMPORTED_MODULE_0___default()(
 												prevSectors,
-												sectors
+												sectors,
 											))
 										? this.renderSectorsStatically(sectors)
 										: this.renderSectorsWithAnimation()
@@ -913,26 +924,26 @@
 										!sectors.length ||
 										!(0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-											cx
+											cx,
 										) ||
 										!(0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-											cy
+											cy,
 										) ||
 										!(0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-											innerRadius
+											innerRadius,
 										) ||
 										!(0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-											outerRadius
+											outerRadius,
 										)
 									)
 										return null
 									var layerClass =
 										classnames__WEBPACK_IMPORTED_MODULE_7___default()(
 											'recharts-pie',
-											className
+											className,
 										)
 									return react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 										_container_Layer__WEBPACK_IMPORTED_MODULE_11__.m,
@@ -948,15 +959,15 @@
 										_component_Label__WEBPACK_IMPORTED_MODULE_14__._.renderCallByParent(
 											this.props,
 											null,
-											!1
+											!1,
 										),
 										(!isAnimationActive ||
 											isAnimationFinished) &&
 											_component_LabelList__WEBPACK_IMPORTED_MODULE_15__.e.renderCallByParent(
 												this.props,
 												sectors,
-												!1
-											)
+												!1,
+											),
 									)
 								},
 							},
@@ -966,7 +977,7 @@
 								key: 'getDerivedStateFromProps',
 								value: function getDerivedStateFromProps(
 									nextProps,
-									prevState
+									prevState,
 								) {
 									return prevState.prevIsAnimationActive !==
 										nextProps.isAnimationActive
@@ -1013,17 +1024,17 @@
 								key: 'renderLabelLineItem',
 								value: function renderLabelLineItem(
 									option,
-									props
+									props,
 								) {
 									return react__WEBPACK_IMPORTED_MODULE_5__.isValidElement(
-										option
+										option,
 									)
 										? react__WEBPACK_IMPORTED_MODULE_5__.cloneElement(
 												option,
-												props
+												props,
 										  )
 										: lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(
-												option
+												option,
 										  )
 										? option(props)
 										: react__WEBPACK_IMPORTED_MODULE_5__.createElement(
@@ -1032,7 +1043,7 @@
 													type: 'linear',
 													className:
 														'recharts-pie-label-line',
-												})
+												}),
 										  )
 								},
 							},
@@ -1041,24 +1052,24 @@
 								value: function renderLabelItem(
 									option,
 									props,
-									value
+									value,
 								) {
 									if (
 										react__WEBPACK_IMPORTED_MODULE_5__.isValidElement(
-											option
+											option,
 										)
 									)
 										return react__WEBPACK_IMPORTED_MODULE_5__.cloneElement(
 											option,
-											props
+											props,
 										)
 									var label = value
 									return lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(
-										option
+										option,
 									) &&
 										((label = option(props)),
 										react__WEBPACK_IMPORTED_MODULE_5__.isValidElement(
-											label
+											label,
 										))
 										? label
 										: react__WEBPACK_IMPORTED_MODULE_5__.createElement(
@@ -1068,7 +1079,7 @@
 													className:
 														'recharts-pie-label-text',
 												}),
-												label
+												label,
 										  )
 								},
 							},
@@ -1076,40 +1087,40 @@
 								key: 'renderSectorItem',
 								value: function renderSectorItem(
 									option,
-									props
+									props,
 								) {
 									return react__WEBPACK_IMPORTED_MODULE_5__.isValidElement(
-										option
+										option,
 									)
 										? react__WEBPACK_IMPORTED_MODULE_5__.cloneElement(
 												option,
-												props
+												props,
 										  )
 										: lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(
-												option
+												option,
 										  )
 										? option(props)
 										: lodash_isPlainObject__WEBPACK_IMPORTED_MODULE_2___default()(
-												option
+												option,
 										  )
 										? react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 												_shape_Sector__WEBPACK_IMPORTED_MODULE_18__.L,
 												_extends(
 													{ tabIndex: -1 },
 													props,
-													option
-												)
+													option,
+												),
 										  )
 										: react__WEBPACK_IMPORTED_MODULE_5__.createElement(
 												_shape_Sector__WEBPACK_IMPORTED_MODULE_18__.L,
 												_extends(
 													{ tabIndex: -1 },
-													props
-												)
+													props,
+												),
 										  )
 								},
 							},
-						]
+						],
 					),
 					Pie
 				)
@@ -1144,10 +1155,10 @@
 						return (
 							(0,
 							_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.uY)(
-								endAngle - startAngle
+								endAngle - startAngle,
 							) * Math.min(Math.abs(endAngle - startAngle), 360)
 						)
-					}
+					},
 				),
 				_defineProperty(Pie, 'getRealPieData', function (item) {
 					var _item$props = item.props,
@@ -1155,12 +1166,12 @@
 						children = _item$props.children,
 						presentationProps = (0,
 						_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__.L6)(
-							item.props
+							item.props,
 						),
 						cells = (0,
 						_util_ReactUtils__WEBPACK_IMPORTED_MODULE_9__.NN)(
 							children,
-							_component_Cell__WEBPACK_IMPORTED_MODULE_20__.b
+							_component_Cell__WEBPACK_IMPORTED_MODULE_20__.b,
 						)
 					return data && data.length
 						? data.map(function (entry, index) {
@@ -1168,18 +1179,18 @@
 									_objectSpread(
 										_objectSpread(
 											{ payload: entry },
-											presentationProps
+											presentationProps,
 										),
-										entry
+										entry,
 									),
-									cells && cells[index] && cells[index].props
+									cells && cells[index] && cells[index].props,
 								)
 						  })
 						: cells && cells.length
 						? cells.map(function (cell) {
 								return _objectSpread(
 									_objectSpread({}, presentationProps),
-									cell.props
+									cell.props,
 								)
 						  })
 						: []
@@ -1195,7 +1206,7 @@
 							maxPieRadius = (0,
 							_util_PolarUtils__WEBPACK_IMPORTED_MODULE_10__.$4)(
 								width,
-								height
+								height,
 							)
 						return {
 							cx:
@@ -1204,7 +1215,7 @@
 								_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.h1)(
 									item.props.cx,
 									width,
-									width / 2
+									width / 2,
 								),
 							cy:
 								top +
@@ -1212,25 +1223,25 @@
 								_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.h1)(
 									item.props.cy,
 									height,
-									height / 2
+									height / 2,
 								),
 							innerRadius: (0,
 							_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.h1)(
 								item.props.innerRadius,
 								maxPieRadius,
-								0
+								0,
 							),
 							outerRadius: (0,
 							_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.h1)(
 								item.props.outerRadius,
 								maxPieRadius,
-								0.8 * maxPieRadius
+								0.8 * maxPieRadius,
 							),
 							maxRadius:
 								item.props.maxRadius ||
 								Math.sqrt(width * width + height * height) / 2,
 						}
-					}
+					},
 				),
 				_defineProperty(Pie, 'getComposedData', function (_ref4) {
 					var item = _ref4.item,
@@ -1252,22 +1263,22 @@
 						absDeltaAngle = Math.abs(deltaAngle),
 						realDataKey = dataKey
 					lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-						dataKey
+						dataKey,
 					) &&
 					lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-						valueKey
+						valueKey,
 					)
 						? ((0, _util_LogUtils__WEBPACK_IMPORTED_MODULE_21__.Z)(
 								!1,
-								'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0'
+								'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0',
 						  ),
 						  (realDataKey = 'value'))
 						: lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(
-								dataKey
+								dataKey,
 						  ) &&
 						  ((0, _util_LogUtils__WEBPACK_IMPORTED_MODULE_21__.Z)(
 								!1,
-								'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0'
+								'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0',
 						  ),
 						  (realDataKey = valueKey))
 					var sectors,
@@ -1279,7 +1290,7 @@
 								_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.F$)(
 									entry,
 									realDataKey,
-									0
+									0,
 								)
 							)
 						}).length,
@@ -1295,13 +1306,13 @@
 							_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.F$)(
 								entry,
 								realDataKey,
-								0
+								0,
 							)
 							return (
 								result +
 								((0,
 								_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-									val
+									val,
 								)
 									? val
 									: 0)
@@ -1314,18 +1325,18 @@
 								_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.F$)(
 									entry,
 									realDataKey,
-									0
+									0,
 								),
 								name = (0,
 								_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.F$)(
 									entry,
 									nameKey,
-									i
+									i,
 								),
 								percent =
 									((0,
 									_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.hj)(
-										val
+										val,
 									)
 										? val
 										: 0) / sum,
@@ -1334,14 +1345,14 @@
 										? prev.endAngle +
 										  (0,
 										  _util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.uY)(
-												deltaAngle
+												deltaAngle,
 										  ) *
 												paddingAngle *
 												(0 !== val ? 1 : 0)
 										: startAngle) +
 									(0,
 									_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.uY)(
-										deltaAngle
+										deltaAngle,
 									) *
 										((0 !== val ? minAngle : 0) +
 											percent * realTotalAngle),
@@ -1364,7 +1375,7 @@
 									coordinate.cx,
 									coordinate.cy,
 									middleRadius,
-									midAngle
+									midAngle,
 								)
 							return (prev = _objectSpread(
 								_objectSpread(
@@ -1378,16 +1389,16 @@
 											middleRadius,
 											tooltipPosition,
 										},
-										entry
+										entry,
 									),
-									coordinate
+									coordinate,
 								),
 								{},
 								{
 									value: (0,
 									_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.F$)(
 										entry,
-										realDataKey
+										realDataKey,
 									),
 									startAngle: tempStartAngle,
 									endAngle: tempEndAngle,
@@ -1395,15 +1406,15 @@
 									paddingAngle:
 										(0,
 										_util_DataUtils__WEBPACK_IMPORTED_MODULE_8__.uY)(
-											deltaAngle
+											deltaAngle,
 										) * paddingAngle,
-								}
+								},
 							))
 						}))
 					return _objectSpread(
 						_objectSpread({}, coordinate),
 						{},
-						{ sectors, data: pieData }
+						{ sectors, data: pieData },
 					)
 				})
 		},

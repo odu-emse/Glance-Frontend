@@ -6,7 +6,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -16,23 +16,23 @@
 					})
 				var _chunk_NNAAFZ4U_mjs__WEBPACK_IMPORTED_MODULE_0__ =
 						__webpack_require__(
-							'./node_modules/@storybook/components/dist/chunk-NNAAFZ4U.mjs'
+							'./node_modules/@storybook/components/dist/chunk-NNAAFZ4U.mjs',
 						),
 					react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					require_OverlayScrollbars = (0,
 					_chunk_NNAAFZ4U_mjs__WEBPACK_IMPORTED_MODULE_0__.E)({
 						'../../node_modules/overlayscrollbars/js/OverlayScrollbars.js'(
 							exports,
-							module
+							module,
 						) {
 							var global, factory
 							;(global = typeof window < 'u' ? window : exports),
 								(factory = function (
 									window2,
 									document,
-									undefined2
+									undefined2,
 								) {
 									var _targets,
 										_easingsMath,
@@ -90,7 +90,7 @@
 													var result = cssCache[name]
 													if (
 														cssCache[LEXICON.hOP](
-															name
+															name,
 														)
 													)
 														return result
@@ -100,11 +100,11 @@
 															currVendorWithoutDashes,
 															uppercasedName =
 																firstLetterToUpper(
-																	name
+																	name,
 																),
 															elmStyle =
 																document.createElement(
-																	'div'
+																	'div',
 																)[LEXICON.s],
 															i = 0;
 														i < cssPrefixes.length;
@@ -116,7 +116,7 @@
 																	i
 																].replace(
 																	/-/g,
-																	''
+																	'',
 																),
 																resultPossibilities =
 																	[
@@ -128,7 +128,7 @@
 																		currVendorWithoutDashes +
 																			uppercasedName,
 																		firstLetterToUpper(
-																			currVendorWithoutDashes
+																			currVendorWithoutDashes,
 																		) +
 																			uppercasedName,
 																	],
@@ -161,7 +161,7 @@
 												_cssPropertyValue: function (
 													property,
 													values,
-													suffix
+													suffix,
 												) {
 													var name =
 															property +
@@ -170,7 +170,7 @@
 														result = cssCache[name]
 													if (
 														cssCache[LEXICON.hOP](
-															name
+															name,
 														)
 													)
 														return result
@@ -178,11 +178,11 @@
 														var prop,
 															dummyStyle =
 																document.createElement(
-																	'div'
+																	'div',
 																)[LEXICON.s],
 															possbleValues =
 																values.split(
-																	' '
+																	' ',
 																),
 															preparedSuffix =
 																suffix || '',
@@ -237,13 +237,13 @@
 												_jsAPI: function (
 													name,
 													isInterface,
-													fallback
+													fallback,
 												) {
 													var i = 0,
 														result = jsCache[name]
 													if (
 														!jsCache[LEXICON.hOP](
-															name
+															name,
 														)
 													) {
 														for (
@@ -266,7 +266,7 @@
 																				i
 																		  ].toLowerCase()) +
 																		firstLetterToUpper(
-																			name
+																			name,
 																		)
 																]
 														jsCache[name] = result
@@ -312,9 +312,9 @@
 																Array[
 																	proto
 																].slice.call(
-																	arguments
-																)
-															)
+																	arguments,
+																),
+															),
 														)
 													}
 												return (
@@ -333,13 +333,13 @@
 													VENDORS._jsAPI,
 													0,
 													'MutationObserver',
-													!0
+													!0,
 												),
 												rO: bind(
 													VENDORS._jsAPI,
 													0,
 													'ResizeObserver',
-													!0
+													!0,
 												),
 												rAF: bind(
 													VENDORS._jsAPI,
@@ -349,9 +349,9 @@
 													function (func) {
 														return window2.setTimeout(
 															func,
-															1e3 / 60
+															1e3 / 60,
 														)
-													}
+													},
 												),
 												cAF: bind(
 													VENDORS._jsAPI,
@@ -360,9 +360,9 @@
 													!1,
 													function (id) {
 														return window2.clearTimeout(
-															id
+															id,
 														)
-													}
+													},
 												),
 												now: function () {
 													return (
@@ -485,7 +485,7 @@
 																.call(obj)
 																.replace(
 																	/^\[object (.+)\]$/,
-																	'$1'
+																	'$1',
 																)
 																.toLowerCase()
 												},
@@ -511,12 +511,12 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														0.5 -
 														_easingsMath.c(
-															x * _easingsMath.p
+															x * _easingsMath.p,
 														) /
 															2
 													)
@@ -526,7 +526,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return x
 												},
@@ -535,7 +535,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return c * (t /= d) * t + b
 												},
@@ -544,7 +544,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														-c *
@@ -558,7 +558,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (t /= d / 2) < 1
 														? (c / 2) * t * t + b
@@ -572,7 +572,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c * (t /= d) * t * t + b
@@ -583,7 +583,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c *
@@ -599,7 +599,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (t /= d / 2) < 1
 														? (c / 2) * t * t * t +
@@ -616,7 +616,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c *
@@ -632,7 +632,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														-c *
@@ -649,7 +649,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (t /= d / 2) < 1
 														? (c / 2) *
@@ -671,7 +671,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c *
@@ -688,7 +688,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c *
@@ -706,7 +706,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (t /= d / 2) < 1
 														? (c / 2) *
@@ -730,14 +730,14 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														-c *
 															_easingsMath.c(
 																(t / d) *
 																	(_easingsMath.p /
-																		2)
+																		2),
 															) +
 														c +
 														b
@@ -748,14 +748,14 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c *
 															_easingsMath.s(
 																(t / d) *
 																	(_easingsMath.p /
-																		2)
+																		2),
 															) +
 														b
 													)
@@ -765,14 +765,14 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														(-c / 2) *
 															(_easingsMath.c(
 																(_easingsMath.p *
 																	t) /
-																	d
+																	d,
 															) -
 																1) +
 														b
@@ -783,7 +783,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return 0 == t
 														? b
@@ -792,7 +792,7 @@
 																	2,
 																	10 *
 																		(t / d -
-																			1)
+																			1),
 																) +
 																b
 												},
@@ -801,7 +801,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return t == d
 														? b + c
@@ -811,7 +811,7 @@
 																		2,
 																		(-10 *
 																			t) /
-																			d
+																			d,
 																	)) +
 																b
 												},
@@ -820,7 +820,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return 0 == t
 														? b
@@ -830,7 +830,8 @@
 														? (c / 2) *
 																_easingsMath.w(
 																	2,
-																	10 * (t - 1)
+																	10 *
+																		(t - 1),
 																) +
 														  b
 														: (c / 2) *
@@ -838,7 +839,7 @@
 																	_easingsMath.w(
 																		2,
 																		-10 *
-																			--t
+																			--t,
 																	)) +
 														  b
 												},
@@ -847,12 +848,14 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														-c *
 															(_easingsMath.t(
-																1 - (t /= d) * t
+																1 -
+																	(t /= d) *
+																		t,
 															) -
 																1) +
 														b
@@ -863,7 +866,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c *
@@ -872,7 +875,7 @@
 																	(t =
 																		t / d -
 																		1) *
-																		t
+																		t,
 															) +
 														b
 													)
@@ -882,12 +885,12 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (t /= d / 2) < 1
 														? (-c / 2) *
 																(_easingsMath.t(
-																	1 - t * t
+																	1 - t * t,
 																) -
 																	1) +
 																b
@@ -895,7 +898,7 @@
 																(_easingsMath.t(
 																	1 -
 																		(t -= 2) *
-																			t
+																			t,
 																) +
 																	1) +
 																b
@@ -905,7 +908,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													var s = _easingsMath.o,
 														p = 0,
@@ -924,20 +927,20 @@
 																				_easingsMath.p)) *
 																		_easingsMath.n(
 																			c /
-																				a
+																				a,
 																		)),
 														  -a *
 																_easingsMath.w(
 																	2,
 																	10 *
-																		(t -= 1)
+																		(t -= 1),
 																) *
 																_easingsMath.s(
 																	((t * d -
 																		s) *
 																		(2 *
 																			_easingsMath.p)) /
-																		p
+																		p,
 																) +
 																b)
 												},
@@ -946,7 +949,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													var s = _easingsMath.o,
 														p = 0,
@@ -965,19 +968,19 @@
 																				_easingsMath.p)) *
 																		_easingsMath.n(
 																			c /
-																				a
+																				a,
 																		)),
 														  a *
 																_easingsMath.w(
 																	2,
-																	-10 * t
+																	-10 * t,
 																) *
 																_easingsMath.s(
 																	((t * d -
 																		s) *
 																		(2 *
 																			_easingsMath.p)) /
-																		p
+																		p,
 																) +
 																c +
 																b)
@@ -987,7 +990,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													var s = _easingsMath.o,
 														p = 0,
@@ -1010,14 +1013,14 @@
 																				_easingsMath.p)) *
 																		_easingsMath.n(
 																			c /
-																				a
+																				a,
 																		)),
 														  t < 1
 																? a *
 																		_easingsMath.w(
 																			2,
 																			10 *
-																				(t -= 1)
+																				(t -= 1),
 																		) *
 																		_easingsMath.s(
 																			((t *
@@ -1025,7 +1028,7 @@
 																				s) *
 																				(2 *
 																					_easingsMath.p)) /
-																				p
+																				p,
 																		) *
 																		-0.5 +
 																  b
@@ -1033,7 +1036,7 @@
 																		_easingsMath.w(
 																			2,
 																			-10 *
-																				(t -= 1)
+																				(t -= 1),
 																		) *
 																		_easingsMath.s(
 																			((t *
@@ -1041,7 +1044,7 @@
 																				s) *
 																				(2 *
 																					_easingsMath.p)) /
-																				p
+																				p,
 																		) *
 																		0.5 +
 																  c +
@@ -1053,7 +1056,7 @@
 													b,
 													c,
 													d,
-													s
+													s,
 												) {
 													return (
 														c *
@@ -1074,7 +1077,7 @@
 													b,
 													c,
 													d,
-													s
+													s,
 												) {
 													return (
 														c *
@@ -1096,7 +1099,7 @@
 													b,
 													c,
 													d,
-													s
+													s,
 												) {
 													return (
 														(s =
@@ -1127,7 +1130,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return (
 														c -
@@ -1136,7 +1139,7 @@
 															d - t,
 															0,
 															c,
-															d
+															d,
 														) +
 														b
 													)
@@ -1146,7 +1149,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													var o = 7.5625
 													return (t /= d) < 1 / 2.75
@@ -1183,7 +1186,7 @@
 													t,
 													b,
 													c,
-													d
+													d,
 												) {
 													return t < d / 2
 														? 0.5 *
@@ -1192,7 +1195,7 @@
 																	2 * t,
 																	0,
 																	c,
-																	d
+																	d,
 																) +
 																b
 														: 0.5 *
@@ -1201,7 +1204,7 @@
 																	2 * t - d,
 																	0,
 																	c,
-																	d
+																	d,
 																) +
 																0.5 * c +
 																b
@@ -1275,11 +1278,11 @@
 																	(deep &&
 																	copy &&
 																	(isPlainObject(
-																		copy
+																		copy,
 																	) ||
 																		(copyIsArray =
 																			COMPATIBILITY.isA(
-																				copy
+																				copy,
 																			)))
 																		? (copyIsArray
 																				? ((copyIsArray =
@@ -1287,14 +1290,14 @@
 																				  (clone =
 																						src &&
 																						COMPATIBILITY.isA(
-																							src
+																							src,
 																						)
 																							? src
 																							: []))
 																				: (clone =
 																						src &&
 																						isPlainObject(
-																							src
+																							src,
 																						)
 																							? src
 																							: {}),
@@ -1304,7 +1307,7 @@
 																				extend(
 																					deep,
 																					clone,
-																					copy
+																					copy,
 																				)))
 																		: copy !==
 																				undefined2 &&
@@ -1317,7 +1320,7 @@
 											function inArray(
 												item,
 												arr,
-												fromIndex
+												fromIndex,
 											) {
 												for (
 													var i = fromIndex || 0;
@@ -1349,7 +1352,7 @@
 													hasOwnConstructor =
 														hasOwnProperty.call(
 															obj,
-															'constructor'
+															'constructor',
 														),
 													hasIsPrototypeOf =
 														obj.constructor &&
@@ -1360,7 +1363,7 @@
 															obj.constructor[
 																proto
 															],
-															'isPrototypeOf'
+															'isPrototypeOf',
 														)
 												if (
 													obj.constructor &&
@@ -1373,7 +1376,7 @@
 													_type(key) == TYPES_u ||
 													hasOwnProperty.call(
 														obj,
-														key
+														key,
 													)
 												)
 											}
@@ -1387,7 +1390,7 @@
 															callback.call(
 																obj[i],
 																i,
-																obj[i]
+																obj[i],
 															);
 														i++
 													);
@@ -1398,7 +1401,7 @@
 															callback.call(
 																obj[i],
 																i,
-																obj[i]
+																obj[i],
 															)
 														)
 															break
@@ -1423,7 +1426,7 @@
 											function stripAndCollapse(value) {
 												return (
 													value.match(
-														_rnothtmlwhite
+														_rnothtmlwhite,
 													) || []
 												).join(_strSpace)
 											}
@@ -1434,7 +1437,7 @@
 																elem.parentNode ||
 																document
 															).querySelectorAll(
-																selector
+																selector,
 															) || [],
 														i = nodeList[LEXICON.l];
 													i--;
@@ -1447,7 +1450,7 @@
 											function insertAdjacentElement(
 												el,
 												strategy,
-												child
+												child,
 											) {
 												if (COMPATIBILITY.isA(child))
 													for (
@@ -1458,19 +1461,19 @@
 														insertAdjacentElement(
 															el,
 															strategy,
-															child[i]
+															child[i],
 														)
 												else
 													_type(child) == TYPES_s
 														? el.insertAdjacentHTML(
 																strategy,
-																child
+																child,
 														  )
 														: el.insertAdjacentElement(
 																strategy,
 																child.nodeType
 																	? child
-																	: child[0]
+																	: child[0],
 														  )
 											}
 											function setCSSVal(el, prop, val) {
@@ -1480,14 +1483,14 @@
 														(el[LEXICON.s][prop] =
 															(function parseCSSVal(
 																prop,
-																val
+																val,
 															) {
 																return (
 																	!_cssNumber[
 																		prop.toLowerCase()
 																	] &&
 																		_type(
-																			val
+																			val,
 																		) ==
 																			TYPES_n &&
 																		(val +=
@@ -1499,7 +1502,7 @@
 											}
 											function startNextAnimationInQ(
 												animObj,
-												removeFromQ
+												removeFromQ,
 											) {
 												var index, nextAnim
 												!1 !== removeFromQ &&
@@ -1513,21 +1516,21 @@
 																nextAnim.duration,
 																nextAnim.easing,
 																nextAnim.complete,
-																!0
+																!0,
 														  ))
 														: (index = inArray(
 																animObj,
-																_animations
+																_animations,
 														  )) > -1 &&
 														  _animations.splice(
 																index,
-																1
+																1,
 														  )
 											}
 											function setAnimationValue(
 												el,
 												prop,
-												value
+												value,
 											) {
 												prop === _strScrollLeft ||
 												prop === _strScrollTop
@@ -1540,7 +1543,7 @@
 												options,
 												easing,
 												complete,
-												guaranteedNext
+												guaranteedNext,
 											) {
 												var key,
 													animObj,
@@ -1596,7 +1599,7 @@
 														key === _strScrollTop
 															? el[key]
 															: FakejQuery(
-																	el
+																	el,
 															  ).css(key)
 												for (key in from)
 													from[key] !== props[key] &&
@@ -1606,7 +1609,7 @@
 												if (isEmptyObject(to))
 													guaranteedNext &&
 														startNextAnimationInQ(
-															animObj
+															animObj,
 														)
 												else {
 													var timeNow,
@@ -1622,7 +1625,7 @@
 															? 0
 															: inArray(
 																	qObj,
-																	animObj.q
+																	animObj.q,
 															  ),
 														qObj = {
 															props: to,
@@ -1639,7 +1642,7 @@
 																	LEXICON.l
 																]),
 															animObj.q.push(
-																qObj
+																qObj,
 															)),
 														0 === qPos)
 													)
@@ -1663,7 +1666,7 @@
 																				0,
 																				timeStart +
 																					duration -
-																					timeNow
+																					timeNow,
 																			) /
 																				duration ||
 																				0)),
@@ -1672,13 +1675,13 @@
 																				parseFloat(
 																					from[
 																						key
-																					]
+																					],
 																				)),
 																				(toVal =
 																					parseFloat(
 																						to[
 																							key
-																						]
+																						],
 																					)),
 																				(easedVal =
 																					(toVal -
@@ -1694,16 +1697,16 @@
 																								duration,
 																							0,
 																							1,
-																							duration
+																							duration,
 																						) +
 																					fromVal),
 																				setAnimationValue(
 																					el,
 																					key,
-																					easedVal
+																					easedVal,
 																				),
 																				isFunction(
-																					step
+																					step,
 																				) &&
 																					step(
 																						easedVal,
@@ -1725,10 +1728,10 @@
 																								},
 																							startTime:
 																								timeStart,
-																						}
+																						},
 																					)
 																		isFunction(
-																			progress
+																			progress,
 																		) &&
 																			progress(
 																				{},
@@ -1736,35 +1739,35 @@
 																				MATH.max(
 																					0,
 																					duration -
-																						elapsed
-																				)
+																						elapsed,
+																				),
 																			),
 																			end
 																				? (startNextAnimationInQ(
-																						animObj
+																						animObj,
 																				  ),
 																				  isFunction(
-																						complete
+																						complete,
 																				  ) &&
 																						complete())
 																				: (qObj.frame =
 																						COMPATIBILITY.rAF()(
-																							frame
+																							frame,
 																						))
 																	}),
 																(qObj.frame =
 																	COMPATIBILITY.rAF()(
-																		frame
+																		frame,
 																	))
 														else {
 															for (key in to)
 																setAnimationValue(
 																	el,
 																	key,
-																	to[key]
+																	to[key],
 																)
 															startNextAnimationInQ(
-																animObj
+																animObj,
 															)
 														}
 												}
@@ -1793,14 +1796,14 @@
 															selector.charAt(0)
 																? (((el =
 																		document.createElement(
-																			'div'
+																			'div',
 																		)).innerHTML =
 																		selector),
 																  (elms =
 																		el.children))
 																: (elms =
 																		document.querySelectorAll(
-																			selector
+																			selector,
 																		));
 														i < elms[LEXICON.l];
 														i++
@@ -1811,7 +1814,7 @@
 														_type(elements) !=
 															TYPES_s &&
 															(!isArrayLike(
-																elements
+																elements,
 															) ||
 																elements ===
 																	window2 ||
@@ -1834,7 +1837,7 @@
 												(FakejQuery[LEXICON.p] = {
 													on: function (
 														eventName,
-														handler
+														handler,
 													) {
 														var el,
 															eventNameLength =
@@ -1842,7 +1845,7 @@
 																	eventName ||
 																	''
 																).match(
-																	_rnothtmlwhite
+																	_rnothtmlwhite,
 																) || [''])[
 																	LEXICON.l
 																],
@@ -1864,7 +1867,7 @@
 																				eventName[
 																					i
 																				],
-																				handler
+																				handler,
 																			)
 																	else if (
 																		el.detachEvent
@@ -1880,15 +1883,15 @@
 																					eventName[
 																						i
 																					],
-																				handler
+																				handler,
 																			)
 																} catch {}
-															}
+															},
 														)
 													},
 													off: function (
 														eventName,
-														handler
+														handler,
 													) {
 														var el,
 															eventNameLength =
@@ -1896,7 +1899,7 @@
 																	eventName ||
 																	''
 																).match(
-																	_rnothtmlwhite
+																	_rnothtmlwhite,
 																) || [''])[
 																	LEXICON.l
 																],
@@ -1918,7 +1921,7 @@
 																				eventName[
 																					i
 																				],
-																				handler
+																				handler,
 																			)
 																	else if (
 																		el.detachEvent
@@ -1934,59 +1937,59 @@
 																					eventName[
 																						i
 																					],
-																				handler
+																				handler,
 																			)
 																} catch {}
-															}
+															},
 														)
 													},
 													one: function (
 														eventName,
-														handler
+														handler,
 													) {
 														return (
 															(eventName = (
 																eventName || ''
 															).match(
-																_rnothtmlwhite
+																_rnothtmlwhite,
 															) || ['']),
 															this.each(
 																function () {
 																	var el =
 																		FakejQuery(
-																			this
+																			this,
 																		)
 																	FakejQuery.each(
 																		eventName,
 																		function (
 																			i,
-																			oneEventName
+																			oneEventName,
 																		) {
 																			var oneHandler =
 																				function (
-																					e
+																					e,
 																				) {
 																					handler.call(
 																						this,
-																						e
+																						e,
 																					),
 																						el.off(
 																							oneEventName,
-																							oneHandler
+																							oneHandler,
 																						)
 																				}
 																			el.on(
 																				oneEventName,
-																				oneHandler
+																				oneHandler,
 																			)
-																		}
+																		},
 																	)
-																}
+																},
 															)
 														)
 													},
 													trigger: function (
-														eventName
+														eventName,
 													) {
 														var el, event
 														return this.each(
@@ -1995,20 +1998,20 @@
 																	document.createEvent
 																		? ((event =
 																				document.createEvent(
-																					'HTMLEvents'
+																					'HTMLEvents',
 																				)).initEvent(
 																				eventName,
 																				!0,
-																				!1
+																				!1,
 																		  ),
 																		  el.dispatchEvent(
-																				event
+																				event,
 																		  ))
 																		: el.fireEvent(
 																				'on' +
-																					eventName
+																					eventName,
 																		  )
-															}
+															},
 														)
 													},
 													append: function (child) {
@@ -2017,9 +2020,9 @@
 																insertAdjacentElement(
 																	this,
 																	'beforeend',
-																	child
+																	child,
 																)
-															}
+															},
 														)
 													},
 													prepend: function (child) {
@@ -2028,9 +2031,9 @@
 																insertAdjacentElement(
 																	this,
 																	'afterbegin',
-																	child
+																	child,
 																)
-															}
+															},
 														)
 													},
 													before: function (child) {
@@ -2039,9 +2042,9 @@
 																insertAdjacentElement(
 																	this,
 																	'beforebegin',
-																	child
+																	child,
 																)
-															}
+															},
 														)
 													},
 													after: function (child) {
@@ -2050,9 +2053,9 @@
 																insertAdjacentElement(
 																	this,
 																	'afterend',
-																	child
+																	child,
 																)
-															}
+															},
 														)
 													},
 													remove: function () {
@@ -2062,9 +2065,9 @@
 																	this
 																		.parentNode
 																parentNode?.removeChild(
-																	this
+																	this,
 																)
-															}
+															},
 														)
 													},
 													unwrap: function () {
@@ -2080,12 +2083,12 @@
 																			(parent =
 																				this
 																					.parentNode),
-																			parents
+																			parents,
 																		) &&
 																		parents.push(
-																			parent
+																			parent,
 																		)
-																}
+																},
 															),
 																i = 0;
 															i <
@@ -2101,22 +2104,22 @@
 															)
 																parent.insertBefore(
 																	el.firstChild,
-																	el
+																	el,
 																)
 															parent.removeChild(
-																el
+																el,
 															)
 														}
 														return this
 													},
 													wrapAll: function (
-														wrapperHTML
+														wrapperHTML,
 													) {
 														for (
 															var i,
 																wrapper =
 																	FakejQuery(
-																		wrapperHTML
+																		wrapperHTML,
 																	)[0],
 																deepest =
 																	wrapper,
@@ -2141,7 +2144,7 @@
 																this[0] && i++
 														)
 															deepest.appendChild(
-																this[i]
+																this[i],
 															)
 														var nextSibling =
 															previousSibling
@@ -2150,19 +2153,19 @@
 														return (
 															parent.insertBefore(
 																wrapper,
-																nextSibling
+																nextSibling,
 															),
 															this
 														)
 													},
 													wrapInner: function (
-														wrapperHTML
+														wrapperHTML,
 													) {
 														return this.each(
 															function () {
 																var el =
 																		FakejQuery(
-																			this
+																			this,
 																		),
 																	contents =
 																		el.contents()
@@ -2170,30 +2173,30 @@
 																	LEXICON.l
 																]
 																	? contents.wrapAll(
-																			wrapperHTML
+																			wrapperHTML,
 																	  )
 																	: el.append(
-																			wrapperHTML
+																			wrapperHTML,
 																	  )
-															}
+															},
 														)
 													},
 													wrap: function (
-														wrapperHTML
+														wrapperHTML,
 													) {
 														return this.each(
 															function () {
 																FakejQuery(
-																	this
+																	this,
 																).wrapAll(
-																	wrapperHTML
+																	wrapperHTML,
 																)
-															}
+															},
 														)
 													},
 													css: function (
 														styles,
-														val
+														val,
 													) {
 														var el,
 															key,
@@ -2209,7 +2212,7 @@
 																		getCptStyle
 																			? getCptStyle(
 																					el,
-																					null
+																					null,
 																			  )
 																			: el
 																					.currentStyle[
@@ -2219,7 +2222,7 @@
 																		? null !=
 																		  cptStyle
 																			? cptStyle.getPropertyValue(
-																					styles
+																					styles,
 																			  )
 																			: el[
 																					LEXICON
@@ -2233,9 +2236,9 @@
 																			setCSSVal(
 																				this,
 																				styles,
-																				val
+																				val,
 																			)
-																		}
+																		},
 																  )
 															: this.each(
 																	function () {
@@ -2245,13 +2248,13 @@
 																				key,
 																				styles[
 																					key
-																				]
+																				],
 																			)
-																	}
+																	},
 															  )
 													},
 													hasClass: function (
-														className
+														className,
 													) {
 														for (
 															var elem,
@@ -2268,7 +2271,7 @@
 																(classList =
 																	elem.classList) &&
 																classList.contains(
-																	className
+																	className,
 																)
 															)
 																return !0
@@ -2279,11 +2282,11 @@
 																	_strSpace +
 																	stripAndCollapse(
 																		elem.className +
-																			''
+																			'',
 																	) +
 																	_strSpace
 																).indexOf(
-																	classNamePrepared
+																	classNamePrepared,
 																) > -1
 															)
 																return !0
@@ -2291,7 +2294,7 @@
 														return !1
 													},
 													addClass: function (
-														className
+														className,
 													) {
 														var classes,
 															elem,
@@ -2307,7 +2310,7 @@
 															for (
 																classes =
 																	className.match(
-																		_rnothtmlwhite
+																		_rnothtmlwhite,
 																	) || [];
 																(elem =
 																	this[i++]);
@@ -2332,7 +2335,7 @@
 
 																	)
 																		elmClassList.add(
-																			clazz
+																			clazz,
 																		)
 																else if (
 																	((curValue =
@@ -2343,7 +2346,7 @@
 																			elem.nodeType &&
 																		_strSpace +
 																			stripAndCollapse(
-																				curValue
+																				curValue,
 																			) +
 																			_strSpace))
 																) {
@@ -2358,7 +2361,7 @@
 																		cur.indexOf(
 																			_strSpace +
 																				clazz +
-																				_strSpace
+																				_strSpace,
 																		) < 0 &&
 																			(cur +=
 																				clazz +
@@ -2366,7 +2369,7 @@
 																	curValue !==
 																		(finalValue =
 																			stripAndCollapse(
-																				cur
+																				cur,
 																			)) &&
 																		(elem.className =
 																			finalValue)
@@ -2374,7 +2377,7 @@
 														return this
 													},
 													removeClass: function (
-														className
+														className,
 													) {
 														var classes,
 															elem,
@@ -2390,7 +2393,7 @@
 															for (
 																classes =
 																	className.match(
-																		_rnothtmlwhite
+																		_rnothtmlwhite,
 																	) || [];
 																(elem =
 																	this[i++]);
@@ -2415,7 +2418,7 @@
 
 																	)
 																		elmClassList.remove(
-																			clazz
+																			clazz,
 																		)
 																else if (
 																	((curValue =
@@ -2426,7 +2429,7 @@
 																			elem.nodeType &&
 																		_strSpace +
 																			stripAndCollapse(
-																				curValue
+																				curValue,
 																			) +
 																			_strSpace))
 																) {
@@ -2443,7 +2446,7 @@
 																			cur.indexOf(
 																				_strSpace +
 																					clazz +
-																					_strSpace
+																					_strSpace,
 																			) >
 																			-1;
 
@@ -2453,12 +2456,12 @@
 																					_strSpace +
 																						clazz +
 																						_strSpace,
-																					_strSpace
+																					_strSpace,
 																				)
 																	curValue !==
 																		(finalValue =
 																			stripAndCollapse(
-																				cur
+																				cur,
 																			)) &&
 																		(elem.className =
 																			finalValue)
@@ -2472,7 +2475,7 @@
 																	LEXICON.s
 																].display =
 																	'none'
-															}
+															},
 														)
 													},
 													show: function () {
@@ -2482,12 +2485,12 @@
 																	LEXICON.s
 																].display =
 																	'block'
-															}
+															},
 														)
 													},
 													attr: function (
 														attrName,
-														value
+														value,
 													) {
 														for (
 															var el, i = 0;
@@ -2499,24 +2502,24 @@
 																undefined2
 															)
 																return el.getAttribute(
-																	attrName
+																	attrName,
 																)
 															el.setAttribute(
 																attrName,
-																value
+																value,
 															)
 														}
 														return this
 													},
 													removeAttr: function (
-														attrName
+														attrName,
 													) {
 														return this.each(
 															function () {
 																this.removeAttribute(
-																	attrName
+																	attrName,
 																)
-															}
+															},
 														)
 													},
 													offset: function () {
@@ -2553,7 +2556,7 @@
 														}
 													},
 													scrollLeft: function (
-														value
+														value,
 													) {
 														for (
 															var el, i = 0;
@@ -2573,7 +2576,7 @@
 														return this
 													},
 													scrollTop: function (
-														value
+														value,
 													) {
 														for (
 															var el, i = 0;
@@ -2615,7 +2618,7 @@
 																			LEXICON
 																				.l
 																	  ] + index
-															]
+															],
 														)
 													},
 													find: function (selector) {
@@ -2626,7 +2629,7 @@
 																function () {
 																	var ch =
 																		this.querySelectorAll(
-																			selector
+																			selector,
 																		)
 																	for (
 																		i = 0;
@@ -2640,15 +2643,15 @@
 																		children.push(
 																			ch[
 																				i
-																			]
+																			],
 																		)
-																}
+																},
 															),
 															FakejQuery(children)
 														)
 													},
 													children: function (
-														selector
+														selector,
 													) {
 														var el,
 															ch,
@@ -2676,25 +2679,25 @@
 																			selector
 																				? ((el.matches &&
 																						el.matches(
-																							selector
+																							selector,
 																						)) ||
 																						matches(
 																							el,
-																							selector
+																							selector,
 																						)) &&
 																				  children.push(
-																						el
+																						el,
 																				  )
 																				: children.push(
-																						el
+																						el,
 																				  )
-																}
+																},
 															),
 															FakejQuery(children)
 														)
 													},
 													parent: function (
-														selector
+														selector,
 													) {
 														var parent,
 															parents = []
@@ -2706,14 +2709,14 @@
 																			.parentNode),
 																		(!selector ||
 																			FakejQuery(
-																				parent
+																				parent,
 																			).is(
-																				selector
+																				selector,
 																			)) &&
 																			parents.push(
-																				parent
+																				parent,
 																			)
-																}
+																},
 															),
 															FakejQuery(parents)
 														)
@@ -2731,23 +2734,23 @@
 																	selector)
 															)
 																return elementIsVisible(
-																	el
+																	el,
 																)
 															if (
 																':hidden' ===
 																selector
 															)
 																return !elementIsVisible(
-																	el
+																	el,
 																)
 															if (
 																(el.matches &&
 																	el.matches(
-																		selector
+																		selector,
 																	)) ||
 																matches(
 																	el,
-																	selector
+																	selector,
 																)
 															)
 																return !0
@@ -2776,9 +2779,9 @@
 																		contents.push(
 																			childs[
 																				i
-																			]
+																			],
 																		)
-																}
+																},
 															),
 															FakejQuery(contents)
 														)
@@ -2786,14 +2789,14 @@
 													each: function (callback) {
 														return each(
 															this,
-															callback
+															callback,
 														)
 													},
 													animate: function (
 														props,
 														duration,
 														easing,
-														complete
+														complete,
 													) {
 														return this.each(
 															function () {
@@ -2802,21 +2805,21 @@
 																	props,
 																	duration,
 																	easing,
-																	complete
+																	complete,
 																)
-															}
+															},
 														)
 													},
 													stop: function (
 														clearQ,
-														jump
+														jump,
 													) {
 														return this.each(
 															function () {
 																!(function stop(
 																	el,
 																	clearQ,
-																	jumpToEnd
+																	jumpToEnd,
 																) {
 																	for (
 																		var animObj,
@@ -2852,11 +2855,11 @@
 																							.q[0]).stop =
 																						!0),
 																					COMPATIBILITY.cAF()(
-																						qObj.frame
+																						qObj.frame,
 																					),
 																					animObj.q.splice(
 																						0,
-																						1
+																						1,
 																					),
 																					jumpToEnd)
 																				)
@@ -2867,14 +2870,14 @@
 																							qObj
 																								.props[
 																								key
-																							]
+																							],
 																						)
 																				clearQ
 																					? (animObj.q =
 																							[])
 																					: startNextAnimationInQ(
 																							animObj,
-																							!1
+																							!1,
 																					  )
 																			}
 																			break
@@ -2882,9 +2885,9 @@
 																})(
 																	this,
 																	clearQ,
-																	jump
+																	jump,
 																)
-															}
+															},
 														)
 													},
 												}),
@@ -2912,7 +2915,7 @@
 													var index =
 														COMPATIBILITY.inA(
 															target,
-															_targets
+															_targets,
 														)
 													if (index > -1) {
 														if (!(argLen > 1))
@@ -2923,7 +2926,7 @@
 														delete target.__overlayScrollbars__,
 															_targets.splice(
 																index,
-																1
+																1,
 															)
 													}
 												}
@@ -3092,11 +3095,11 @@
 													{
 														_defaults: (convert =
 															function (
-																template
+																template,
 															) {
 																var recursive =
 																	function (
-																		obj
+																		obj,
 																	) {
 																		var key,
 																			val,
@@ -3106,7 +3109,7 @@
 																				LEXICON
 																					.hOP
 																			](
-																				key
+																				key,
 																			) &&
 																				((val =
 																					obj[
@@ -3114,7 +3117,7 @@
 																					]),
 																				(valType =
 																					type(
-																						val
+																						val,
 																					)) ==
 																				TYPES_a
 																					? (obj[
@@ -3131,7 +3134,7 @@
 																							key
 																					  ] =
 																							recursive(
-																								val
+																								val,
 																							)))
 																		return obj
 																	}
@@ -3139,8 +3142,8 @@
 																	FRAMEWORK.extend(
 																		!0,
 																		{},
-																		optionsDefaultsAndTemplate
-																	)
+																		optionsDefaultsAndTemplate,
+																	),
 																)
 															})(),
 														_template: convert(!0),
@@ -3148,7 +3151,7 @@
 															obj,
 															template,
 															writeErrors,
-															diffObj
+															diffObj,
 														) {
 															var validatedOptions =
 																	{},
@@ -3158,7 +3161,7 @@
 																	FRAMEWORK.extend(
 																		!0,
 																		{},
-																		obj
+																		obj,
 																	),
 																inArray =
 																	FRAMEWORK.inArray,
@@ -3171,7 +3174,7 @@
 																		diffData,
 																		validatedOptions2,
 																		validatedOptionsPrepared2,
-																		prevPropName
+																		prevPropName,
 																	) {
 																		for (var prop in template2)
 																			if (
@@ -3179,13 +3182,13 @@
 																					LEXICON
 																						.hOP
 																				](
-																					prop
+																					prop,
 																				) &&
 																				data[
 																					LEXICON
 																						.hOP
 																				](
-																					prop
+																					prop,
 																				)
 																			) {
 																				var restrictedStringValuesSplit,
@@ -3206,14 +3209,14 @@
 																						],
 																					templateValueType =
 																						type(
-																							templateValue
+																							templateValue,
 																						),
 																					templateIsComplex =
 																						templateValueType ==
 																						TYPES_o,
 																					templateTypes =
 																						COMPATIBILITY.isA(
-																							templateValue
+																							templateValue,
 																						)
 																							? templateValue
 																							: [
@@ -3229,7 +3232,7 @@
 																						],
 																					dataValueType =
 																						type(
-																							dataValue
+																							dataValue,
 																						),
 																					propPrefix =
 																						prevPropName
@@ -3274,7 +3277,7 @@
 																								prop
 																							],
 																							propPrefix +
-																								prop
+																								prop,
 																						),
 																						FRAMEWORK.each(
 																							[
@@ -3284,17 +3287,17 @@
 																							],
 																							function (
 																								index,
-																								value
+																								value,
 																							) {
 																								isEmptyObj(
 																									value[
 																										prop
-																									]
+																									],
 																								) &&
 																									delete value[
 																										prop
 																									]
-																							}
+																							},
 																						)
 																				else if (
 																					!templateIsComplex
@@ -3316,26 +3319,26 @@
 																							(isRestrictedValue =
 																								(templateValueType =
 																									type(
-																										currType
+																										currType,
 																									)) ==
 																									TYPES_s &&
 																								-1 ===
 																									inArray(
 																										currType,
-																										possibleTemplateTypes
+																										possibleTemplateTypes,
 																									)))
 																						)
 																							for (
 																								errorPossibleTypes.push(
-																									TYPES_s
+																									TYPES_s,
 																								),
 																									restrictedStringValuesSplit =
 																										currType.split(
-																											' '
+																											' ',
 																										),
 																									errorRestrictedStrings =
 																										errorRestrictedStrings.concat(
-																											restrictedStringValuesSplit
+																											restrictedStringValuesSplit,
 																										),
 																									v = 0;
 																								v <
@@ -3351,7 +3354,7 @@
 																											restrictedStringValuesSplit[
 																												v
 																											].split(
-																												':'
+																												':',
 																											))[0],
 																										j = 0;
 																									j <
@@ -3378,7 +3381,7 @@
 																							}
 																						else if (
 																							(errorPossibleTypes.push(
-																								currType
+																								currType,
 																							),
 																							dataValueType ===
 																								currType)
@@ -3398,7 +3401,7 @@
 																						  (isRestrictedValue
 																								? inArray(
 																										dataDiffValue,
-																										restrictedStringValuesPossibilitiesSplit
+																										restrictedStringValuesPossibilitiesSplit,
 																								  ) <
 																								  0
 																								: isDiff) &&
@@ -3418,7 +3421,7 @@
 																									'".\r\nAccepted types are: [ ' +
 																									errorPossibleTypes
 																										.join(
-																											', '
+																											', ',
 																										)
 																										.toUpperCase() +
 																									' ].' +
@@ -3429,16 +3432,16 @@
 																										? '\r\nValid strings are: [ ' +
 																										  errorRestrictedStrings
 																												.join(
-																													', '
+																													', ',
 																												)
 																												.split(
-																													':'
+																													':',
 																												)
 																												.join(
-																													', '
+																													', ',
 																												) +
 																										  ' ].'
-																										: '')
+																										: ''),
 																						  ),
 																						delete data[
 																							prop
@@ -3453,10 +3456,10 @@
 																	diffObj ||
 																		{},
 																	validatedOptions,
-																	validatedOptionsPrepared
+																	validatedOptionsPrepared,
 																),
 																!isEmptyObj(
-																	objectCopy
+																	objectCopy,
 																) &&
 																	writeErrors &&
 																	console.warn(
@@ -3464,8 +3467,8 @@
 																			window2.JSON.stringify(
 																				objectCopy,
 																				null,
-																				2
-																			)
+																				2,
+																			),
 																	),
 																{
 																	_default:
@@ -3480,23 +3483,23 @@
 												_pluginsGlobals ||
 													(_pluginsGlobals =
 														new OverlayScrollbarsGlobals(
-															_pluginsOptions._defaults
+															_pluginsOptions._defaults,
 														)),
 													_pluginsAutoUpdateLoop ||
 														(_pluginsAutoUpdateLoop =
 															new OverlayScrollbarsAutoUpdateLoop(
-																_pluginsGlobals
+																_pluginsGlobals,
 															))
 											}
 											function OverlayScrollbarsGlobals(
-												defaultOptions
+												defaultOptions,
 											) {
 												var _base = this,
 													bodyElement =
 														FRAMEWORK('body'),
 													scrollbarDummyElement =
 														FRAMEWORK(
-															'<div id="os-dummy-scrollbar-size"><div></div></div>'
+															'<div id="os-dummy-scrollbar-size"><div></div></div>',
 														),
 													scrollbarDummyElement0 =
 														scrollbarDummyElement[0],
@@ -3504,10 +3507,10 @@
 														FRAMEWORK(
 															scrollbarDummyElement
 																.children('div')
-																.eq(0)
+																.eq(0),
 														)
 												bodyElement.append(
-													scrollbarDummyElement
+													scrollbarDummyElement,
 												),
 													scrollbarDummyElement
 														.hide()
@@ -3521,7 +3524,7 @@
 													parseIntFunc,
 													nativeScrollbarSize =
 														calcNativeScrollbarSize(
-															scrollbarDummyElement0
+															scrollbarDummyElement0,
 														),
 													nativeScrollbarIsOverlaid =
 														{
@@ -3538,15 +3541,15 @@
 																.userAgent),
 														(msie2 =
 															ua.indexOf(
-																'MSIE '
+																'MSIE ',
 															)),
 														(trident =
 															ua.indexOf(
-																'Trident/'
+																'Trident/',
 															)),
 														(edge =
 															ua.indexOf(
-																'Edge/'
+																'Edge/',
 															)),
 														(rv =
 															ua.indexOf('rv:')),
@@ -3560,10 +3563,10 @@
 																				5,
 																			ua.indexOf(
 																				'.',
-																				msie2
-																			)
+																				msie2,
+																			),
 																		),
-																		10
+																		10,
 																	))
 															: trident > 0
 															? (result =
@@ -3573,10 +3576,10 @@
 																				3,
 																			ua.indexOf(
 																				'.',
-																				rv
-																			)
+																				rv,
+																			),
 																		),
-																		10
+																		10,
 																	))
 															: edge > 0 &&
 															  (result =
@@ -3586,14 +3589,14 @@
 																				5,
 																			ua.indexOf(
 																				'.',
-																				edge
-																			)
+																				edge,
+																			),
 																		),
-																		10
+																		10,
 																	)),
 														result)
 												function calcNativeScrollbarSize(
-													measureElement
+													measureElement,
 												) {
 													return {
 														x:
@@ -3624,13 +3627,13 @@
 														(function () {
 															var result = !1
 															scrollbarDummyElement.addClass(
-																'os-viewport-native-scrollbars-invisible'
+																'os-viewport-native-scrollbars-invisible',
 															)
 															try {
 																result =
 																	('none' ===
 																		scrollbarDummyElement.css(
-																			'scrollbar-width'
+																			'scrollbar-width',
 																		) &&
 																		(msie >
 																			9 ||
@@ -3639,10 +3642,10 @@
 																		window2
 																			.getComputedStyle(
 																				scrollbarDummyElement0,
-																				'::-webkit-scrollbar'
+																				'::-webkit-scrollbar',
 																			)
 																			.getPropertyValue(
-																				'display'
+																				'display',
 																			)
 															} catch {}
 															return result
@@ -3655,13 +3658,13 @@
 														VENDORS._cssPropertyValue(
 															'width',
 															'calc',
-															'(1px)'
+															'(1px)',
 														) || null,
 													restrictedMeasuring:
 														(function () {
 															scrollbarDummyElement.css(
 																'overflow',
-																'hidden'
+																'hidden',
 															)
 															var scrollSize_w =
 																	scrollbarDummyElement0[
@@ -3675,7 +3678,7 @@
 																	]
 															scrollbarDummyElement.css(
 																'overflow',
-																'visible'
+																'visible',
 															)
 															var scrollSize2_w =
 																	scrollbarDummyElement0[
@@ -3713,7 +3716,7 @@
 																dummyContainerChildOffset =
 																	dummyContainerChild.offset()
 															scrollbarDummyElement.scrollLeft(
-																-999
+																-999,
 															)
 															var dummyContainerChildOffsetAfterScroll =
 																dummyContainerChild.offset()
@@ -3728,11 +3731,11 @@
 														})(),
 													supportTransform:
 														!!VENDORS._cssProperty(
-															'transform'
+															'transform',
 														),
 													supportTransition:
 														!!VENDORS._cssProperty(
-															'transition'
+															'transition',
 														),
 													supportPassiveEvents:
 														(function () {
@@ -3750,8 +3753,8 @@
 																				supportsPassive =
 																					!0
 																			},
-																		}
-																	)
+																		},
+																	),
 																)
 															} catch {}
 															return supportsPassive
@@ -3777,7 +3780,7 @@
 																windowDpr =
 																	getWindowDPR()
 															FRAMEWORK(
-																window2
+																window2,
 															).on(
 																'resize',
 																function () {
@@ -3808,29 +3811,29 @@
 																				MATH.round(
 																					newW /
 																						(windowWidth /
-																							100)
+																							100),
 																				),
 																			deltaHRatio =
 																				MATH.round(
 																					newH /
 																						(windowHeight /
-																							100)
+																							100),
 																				),
 																			absDeltaW =
 																				abs(
-																					deltaW
+																					deltaW,
 																				),
 																			absDeltaH =
 																				abs(
-																					deltaH
+																					deltaH,
 																				),
 																			absDeltaWRatio =
 																				abs(
-																					deltaWRatio
+																					deltaWRatio,
 																				),
 																			absDeltaHRatio =
 																				abs(
-																					deltaHRatio
+																					deltaHRatio,
 																				),
 																			newDPR =
 																				getWindowDPR(),
@@ -3842,15 +3845,15 @@
 																			difference =
 																				!(function differenceIsBiggerThanOne(
 																					valOne,
-																					valTwo
+																					valTwo,
 																				) {
 																					var absValOne =
 																							abs(
-																								valOne
+																								valOne,
 																							),
 																						absValTwo =
 																							abs(
-																								valTwo
+																								valTwo,
 																							)
 																					return !(
 																						absValOne ===
@@ -3864,7 +3867,7 @@
 																					)
 																				})(
 																					absDeltaWRatio,
-																					absDeltaHRatio
+																					absDeltaHRatio,
 																				),
 																			isZoom =
 																				deltaIsBigger &&
@@ -3877,12 +3880,12 @@
 																				_base.nativeScrollbarSize
 																		isZoom &&
 																			(bodyElement.append(
-																				scrollbarDummyElement
+																				scrollbarDummyElement,
 																			),
 																			(newScrollbarSize =
 																				_base.nativeScrollbarSize =
 																					calcNativeScrollbarSize(
-																						scrollbarDummyElement[0]
+																						scrollbarDummyElement[0],
 																					)),
 																			scrollbarDummyElement.remove(),
 																			(oldScrollbarSize.x !==
@@ -3893,14 +3896,14 @@
 																					INSTANCES(),
 																					function () {
 																						INSTANCES(
-																							this
+																							this,
 																						) &&
 																							INSTANCES(
-																								this
+																								this,
 																							).update(
-																								'zoom'
+																								'zoom',
 																							)
-																					}
+																					},
 																				)),
 																			(windowWidth =
 																				newW),
@@ -3909,7 +3912,7 @@
 																			(windowDpr =
 																				newDPR)
 																	}
-																}
+																},
 															)
 														}
 														function getWindowDPR() {
@@ -3931,7 +3934,7 @@
 													})()
 											}
 											function OverlayScrollbarsAutoUpdateLoop(
-												globals
+												globals,
 											) {
 												var _loopID,
 													_inArray =
@@ -3955,7 +3958,7 @@
 																COMPATIBILITY.rAF()(
 																	function () {
 																		loop()
-																	}
+																	},
 																)
 															var lowestInterval,
 																instance,
@@ -3997,7 +4000,7 @@
 																		(instanceAutoUpdateInterval =
 																			MATH.max(
 																				1,
-																				instanceOptions.autoUpdateInterval
+																				instanceOptions.autoUpdateInterval,
 																			)),
 																		(now =
 																			_getNow()),
@@ -4011,22 +4014,22 @@
 																				] >
 																				instanceAutoUpdateInterval &&
 																			(instance.update(
-																				'auto'
+																				'auto',
 																			),
 																			(_loopingInstancesIntervalCache[
 																				i
 																			] =
 																				new Date(
 																					(now +=
-																						instanceAutoUpdateInterval)
+																						instanceAutoUpdateInterval),
 																				))),
 																		(lowestInterval =
 																			MATH.max(
 																				1,
 																				MATH.min(
 																					lowestInterval,
-																					instanceAutoUpdateInterval
-																				)
+																					instanceAutoUpdateInterval,
+																				),
 																			)))
 																_loopInterval =
 																	lowestInterval
@@ -4035,18 +4038,18 @@
 															_loopInterval = 33
 													}
 												;(this.add = function (
-													instance
+													instance,
 												) {
 													;-1 ===
 														_inArray(
 															instance,
-															_loopingInstances
+															_loopingInstances,
 														) &&
 														(_loopingInstances.push(
-															instance
+															instance,
 														),
 														_loopingInstancesIntervalCache.push(
-															_getNow()
+															_getNow(),
 														),
 														_loopingInstances[
 															_strLength
@@ -4059,20 +4062,20 @@
 															loop()))
 												}),
 													(this.remove = function (
-														instance
+														instance,
 													) {
 														var index = _inArray(
 															instance,
-															_loopingInstances
+															_loopingInstances,
 														)
 														index > -1 &&
 															(_loopingInstancesIntervalCache.splice(
 																index,
-																1
+																1,
 															),
 															_loopingInstances.splice(
 																index,
-																1
+																1,
 															),
 															0 ===
 																_loopingInstances[
@@ -4086,7 +4089,7 @@
 																_loopID !==
 																	undefined2 &&
 																	(COMPATIBILITY.cAF()(
-																		_loopID
+																		_loopID,
 																	),
 																	(_loopID =
 																		-1))))
@@ -4097,7 +4100,7 @@
 												options,
 												extensions,
 												globals,
-												autoUpdateLoop
+												autoUpdateLoop,
 											) {
 												var type = COMPATIBILITY.type,
 													inArray = FRAMEWORK.inArray,
@@ -4107,21 +4110,21 @@
 														FRAMEWORK[LEXICON.p]
 												if (
 													isHTMLElement(
-														pluginTargetElement
+														pluginTargetElement,
 													)
 												) {
 													if (
 														INSTANCES(
-															pluginTargetElement
+															pluginTargetElement,
 														)
 													) {
 														var inst =
 															INSTANCES(
-																pluginTargetElement
+																pluginTargetElement,
 															)
 														return (
 															inst.options(
-																options
+																options,
 															),
 															inst
 														)
@@ -4459,7 +4462,7 @@
 																LEXICON.s,
 																'open',
 															].concat(
-																_viewportAttrsFromTarget
+																_viewportAttrsFromTarget,
 															),
 														_destroyEvents = []
 													return (
@@ -4477,7 +4480,7 @@
 																if (!_destroyed)
 																	return (
 																		type(
-																			force
+																			force,
 																		) ==
 																		TYPES_s
 																			? force ===
@@ -4498,7 +4501,7 @@
 																											{
 																												_elem: _hostElement,
 																												_attrs: _mutationObserverAttrsHost.concat(
-																													':visible'
+																													':visible',
 																												),
 																											},
 																											{
@@ -4513,7 +4516,7 @@
 																										checks,
 																										function (
 																											index,
-																											check
+																											check,
 																										) {
 																											;(elem =
 																												check._elem) &&
@@ -4521,18 +4524,18 @@
 																													check._attrs,
 																													function (
 																														index2,
-																														attr
+																														attr,
 																													) {
 																														;(curr =
 																															':' ===
 																															attr.charAt(
-																																0
+																																0,
 																															)
 																																? elem.is(
-																																		attr
+																																		attr,
 																																  )
 																																: elem.attr(
-																																		attr
+																																		attr,
 																																  )),
 																															(cache =
 																																_updateAutoCache[
@@ -4540,21 +4543,21 @@
 																																]),
 																															checkCache(
 																																curr,
-																																cache
+																																cache,
 																															) &&
 																																changedAttrs.push(
-																																	attr
+																																	attr,
 																																),
 																															(_updateAutoCache[
 																																attr
 																															] =
 																																curr)
-																													}
+																													},
 																												)
-																										}
+																										},
 																									),
 																									updateViewportAttrsFromTarget(
-																										changedAttrs
+																										changedAttrs,
 																									),
 																									changedAttrs[
 																										LEXICON
@@ -4593,7 +4596,7 @@
 																								setCSS &&
 																									((float =
 																										_contentElement.css(
-																											_strFloat
+																											_strFloat,
 																										)),
 																									(css[
 																										_strFloat
@@ -4606,7 +4609,7 @@
 																									] =
 																										_strAuto),
 																									_contentElement.css(
-																										css
+																										css,
 																									)),
 																								(contentElementScrollSize =
 																									{
@@ -4633,14 +4636,14 @@
 																									] =
 																										_strHundredPercent),
 																									_contentElement.css(
-																										css
+																										css,
 																									)),
 																								(bodyMinSizeC =
 																									bodyMinSizeChanged()),
 																								(changed =
 																									checkCache(
 																										contentElementScrollSize,
-																										_contentElementScrollSizeChangeDetectedCache
+																										_contentElementScrollSizeChangeDetectedCache,
 																									)),
 																								(_contentElementScrollSizeChangeDetectedCache =
 																									contentElementScrollSize),
@@ -4659,22 +4662,22 @@
 																									_initialized
 																										? undefined2
 																										: _currentPreparedOptions,
-																							}
+																							},
 																						))
 																				: 'sync' ===
 																				  force
 																				? _mutationObserversConnected
 																					? ((mutHost =
 																							_mutationObserverHostCallback(
-																								_mutationObserverHost.takeRecords()
+																								_mutationObserverHost.takeRecords(),
 																							)),
 																					  (mutContent =
 																							_mutationObserverContentCallback(
-																								_mutationObserverContent.takeRecords()
+																								_mutationObserverContent.takeRecords(),
 																							)))
 																					: (mutHost =
 																							_base.update(
-																								_strAuto
+																								_strAuto,
 																							))
 																				: 'zoom' ===
 																						force &&
@@ -4684,7 +4687,7 @@
 																								!0,
 																							_contentSizeChanged:
 																								!0,
-																						}
+																						},
 																				  )
 																			: ((force =
 																					_sleeping ||
@@ -4692,13 +4695,13 @@
 																			  (_sleeping =
 																					!1),
 																			  (!_base.update(
-																					'sync'
+																					'sync',
 																			  ) ||
 																					force) &&
 																					update(
 																						{
 																							_force: force,
-																						}
+																						},
 																					)),
 																		updateElementsOnLoad(),
 																		doUpdateAuto ||
@@ -4709,21 +4712,21 @@
 														(_base.options =
 															function (
 																newOptions,
-																value
+																value,
 															) {
 																var changedOps,
 																	option = {}
 																if (
 																	FRAMEWORK.isEmptyObject(
-																		newOptions
+																		newOptions,
 																	) ||
 																	!FRAMEWORK.isPlainObject(
-																		newOptions
+																		newOptions,
 																	)
 																) {
 																	if (
 																		type(
-																			newOptions
+																			newOptions,
 																		) !=
 																		TYPES_s
 																	)
@@ -4736,17 +4739,17 @@
 																	)
 																		return getObjectPropVal(
 																			_currentOptions,
-																			newOptions
+																			newOptions,
 																		)
 																	;(function setObjectPropVal(
 																		obj,
 																		path,
-																		val
+																		val,
 																	) {
 																		for (
 																			var splits =
 																					path.split(
-																						_strDot
+																						_strDot,
 																					),
 																				splitsLength =
 																					splits.length,
@@ -4773,24 +4776,24 @@
 																		FRAMEWORK.extend(
 																			obj,
 																			extendObjRoot,
-																			!0
+																			!0,
 																		)
 																	})(
 																		option,
 																		newOptions,
-																		value
+																		value,
 																	),
 																		(changedOps =
 																			setOptions(
-																				option
+																				option,
 																			))
 																} else
 																	changedOps =
 																		setOptions(
-																			newOptions
+																			newOptions,
 																		)
 																FRAMEWORK.isEmptyObject(
-																	changedOps
+																	changedOps,
 																) ||
 																	update({
 																		_changedOptions:
@@ -4803,18 +4806,18 @@
 																	!_destroyed
 																) {
 																	for (var extName in (autoUpdateLoop.remove(
-																		_base
+																		_base,
 																	),
 																	disconnectMutationObservers(),
 																	setupResizeObserver(
-																		_sizeObserverElement
+																		_sizeObserverElement,
 																	),
 																	setupResizeObserver(
-																		_sizeAutoObserverElement
+																		_sizeAutoObserverElement,
 																	),
 																	_extensions))
 																		_base.removeExt(
-																			extName
+																			extName,
 																		)
 																	for (
 																		;
@@ -4826,28 +4829,28 @@
 																	)
 																		_destroyEvents.pop()()
 																	setupHostMouseTouchEvents(
-																		!0
+																		!0,
 																	),
 																		_contentGlueElement &&
 																			remove(
-																				_contentGlueElement
+																				_contentGlueElement,
 																			),
 																		_contentArrangeElement &&
 																			remove(
-																				_contentArrangeElement
+																				_contentArrangeElement,
 																			),
 																		_sizeAutoObserverAdded &&
 																			remove(
-																				_sizeAutoObserverElement
+																				_sizeAutoObserverElement,
 																			),
 																		setupScrollbarsDOM(
-																			!0
+																			!0,
 																		),
 																		setupScrollbarCornerDOM(
-																			!0
+																			!0,
 																		),
 																		setupStructureDOM(
-																			!0
+																			!0,
 																		)
 																	for (
 																		var i = 0;
@@ -4861,10 +4864,10 @@
 																		FRAMEWORK(
 																			_updateOnLoadElms[
 																				i
-																			]
+																			],
 																		).off(
 																			_updateOnLoadEventName,
-																			updateOnLoadCallback
+																			updateOnLoadCallback,
 																		)
 																	;(_updateOnLoadElms =
 																		undefined2),
@@ -4874,10 +4877,10 @@
 																			!0),
 																		INSTANCES(
 																			pluginTargetElement,
-																			0
+																			0,
 																		),
 																		dispatchCallback(
-																			'onDestroyed'
+																			'onDestroyed',
 																		)
 																}
 															}),
@@ -4886,7 +4889,7 @@
 																coordinates,
 																duration,
 																easing,
-																complete
+																complete,
 															) {
 																if (
 																	0 ===
@@ -4976,7 +4979,7 @@
 																	)
 																}
 																_base.update(
-																	'sync'
+																	'sync',
 																)
 																var i,
 																	doScrollLeft,
@@ -5010,7 +5013,7 @@
 																		],
 																	durationIsObject =
 																		type(
-																			duration
+																			duration,
 																		) ==
 																		TYPES_o,
 																	completeCallback =
@@ -5063,22 +5066,22 @@
 																	possibleElementIsHTMLElement =
 																		!possibleElementIsJQuery &&
 																		isHTMLElement(
-																			possibleElement
+																			possibleElement,
 																		),
 																	updateScrollbarInfos =
 																		function () {
 																			doScrollLeft &&
 																				refreshScrollbarHandleOffset(
-																					!0
+																					!0,
 																				),
 																				doScrollTop &&
 																					refreshScrollbarHandleOffset(
-																						!1
+																						!1,
 																					)
 																		},
 																	proxyCompleteCallback =
 																		type(
-																			completeCallback
+																			completeCallback,
 																		) !=
 																		TYPES_f
 																			? undefined2
@@ -5088,7 +5091,7 @@
 																			  }
 																function checkSettingsStringValue(
 																	currValue,
-																	allowedValues
+																	allowedValues,
 																) {
 																	for (
 																		i = 0;
@@ -5109,7 +5112,7 @@
 																}
 																function getRawScroll(
 																	isX,
-																	coordinates2
+																	coordinates2,
 																) {
 																	var coordinateProps =
 																		isX
@@ -5118,11 +5121,11 @@
 																	if (
 																		((coordinates2 =
 																			type(
-																				coordinates2
+																				coordinates2,
 																			) ==
 																				TYPES_s ||
 																			type(
-																				coordinates2
+																				coordinates2,
 																			) ==
 																				TYPES_n
 																				? [
@@ -5131,7 +5134,7 @@
 																				  ]
 																				: coordinates2),
 																		COMPATIBILITY.isA(
-																			coordinates2
+																			coordinates2,
 																		))
 																	)
 																		return isX
@@ -5139,7 +5142,7 @@
 																			: coordinates2[1]
 																	if (
 																		type(
-																			coordinates2
+																			coordinates2,
 																		) ==
 																		TYPES_o
 																	)
@@ -5165,7 +5168,7 @@
 																}
 																function getFinalScroll(
 																	isX,
-																	rawScroll
+																	rawScroll,
 																) {
 																	var operator,
 																		amount,
@@ -5173,7 +5176,7 @@
 																		possibleOperator,
 																		isString =
 																			type(
-																				rawScroll
+																				rawScroll,
 																			) ==
 																			TYPES_s,
 																		scrollInfo =
@@ -5202,11 +5205,11 @@
 																					((possibleOperator =
 																						rawScroll.substr(
 																							0,
-																							2
+																							2,
 																						)),
 																					inArray(
 																						possibleOperator,
-																						coordinatesOperators
+																						coordinatesOperators,
 																					) >
 																						-1 &&
 																						(operator =
@@ -5215,34 +5218,34 @@
 																					(rawScroll =
 																						operator
 																							? rawScroll.substr(
-																									2
+																									2,
 																							  )
 																							: rawScroll)
 																						.replace(
 																							/min/g,
-																							0
+																							0,
 																						)
 																						.replace(
 																							/</g,
-																							0
+																							0,
 																						)
 																						.replace(
 																							/max/g,
 																							(normalizeShortcuts
 																								? '-'
 																								: _strEmpty) +
-																								_strHundredPercent
+																								_strHundredPercent,
 																						)
 																						.replace(
 																							/>/g,
 																							(normalizeShortcuts
 																								? '-'
 																								: _strEmpty) +
-																								_strHundredPercent
+																								_strHundredPercent,
 																						)
 																						.replace(
 																							/px/g,
-																							_strEmpty
+																							_strEmpty,
 																						)
 																						.replace(
 																							/%/g,
@@ -5252,40 +5255,40 @@
 																									_rtlScrollBehavior.n
 																										? -1
 																										: 1)) /
-																									100
+																									100,
 																						)
 																						.replace(
 																							/vw/g,
 																							' * ' +
-																								_viewportSize.w
+																								_viewportSize.w,
 																						)
 																						.replace(
 																							/vh/g,
 																							' * ' +
-																								_viewportSize.h
+																								_viewportSize.h,
 																						)),
 																			  (amount =
 																					parseToZeroOrNumber(
 																						isNaN(
-																							rawScroll
+																							rawScroll,
 																						)
 																							? parseToZeroOrNumber(
 																									evalFunc(
-																										rawScroll
+																										rawScroll,
 																									),
-																									!0
+																									!0,
 																							  ).toFixed()
-																							: rawScroll
+																							: rawScroll,
 																					)))
 																			: (amount =
 																					rawScroll),
 																		amount !==
 																			undefined2 &&
 																			!isNaN(
-																				amount
+																				amount,
 																			) &&
 																			type(
-																				amount
+																				amount,
 																			) ==
 																				TYPES_n)
 																	) {
@@ -5352,15 +5355,15 @@
 																							0,
 																							MATH.max(
 																								maxScroll,
-																								finalValue
-																							)
+																								finalValue,
+																							),
 																					  )
 																					: MATH.max(
 																							0,
 																							MATH.min(
 																								maxScroll,
-																								finalValue
-																							)
+																								finalValue,
+																							),
 																					  ))
 																	}
 																	return finalValue ===
@@ -5372,7 +5375,7 @@
 																	value,
 																	valueInternalType,
 																	defaultValue,
-																	allowedValues
+																	allowedValues,
 																) {
 																	var valueArrLength,
 																		valueArrItem,
@@ -5383,7 +5386,7 @@
 																			],
 																		valueType =
 																			type(
-																				value
+																				value,
 																			)
 																	if (
 																		valueType ==
@@ -5426,12 +5429,12 @@
 																							i
 																						]),
 																					type(
-																						valueArrItem
+																						valueArrItem,
 																					) !=
 																						valueInternalType ||
 																						!checkSettingsStringValue(
 																							valueArrItem,
-																							allowedValues
+																							allowedValues,
 																						))
 																				) {
 																					value =
@@ -5459,7 +5462,7 @@
 																	}
 																}
 																function generateMargin(
-																	marginTopRightBottomLeftArray
+																	marginTopRightBottomLeftArray,
 																) {
 																	var currValue,
 																		currValueType,
@@ -5490,7 +5493,7 @@
 																			]),
 																			(currValueType =
 																				type(
-																					currValue
+																					currValue,
 																				)) ==
 																			TYPES_b
 																				? result.push(
@@ -5500,16 +5503,16 @@
 																										_strMarginMinus +
 																											valueDirections[
 																												i
-																											]
-																									)
+																											],
+																									),
 																							  )
-																							: 0
+																							: 0,
 																				  )
 																				: result.push(
 																						currValueType ==
 																							TYPES_n
 																							? currValue
-																							: 0
+																							: 0,
 																				  )
 																	return result
 																}
@@ -5543,14 +5546,14 @@
 																			],
 																		marginType =
 																			type(
-																				margin
+																				margin,
 																			)
 																	if (
 																		(finalElement =
 																			possibleElementIsJQuery
 																				? possibleElement
 																				: FRAMEWORK(
-																						possibleElement
+																						possibleElement,
 																				  ))[
 																			strLength
 																		] > 0
@@ -5566,7 +5569,7 @@
 																							margin,
 																							margin,
 																							margin,
-																						]
+																						],
 																				  )
 																				: marginType ==
 																				  TYPES_a
@@ -5581,12 +5584,12 @@
 																								margin[1],
 																								margin[0],
 																								margin[1],
-																							]
+																							],
 																					  )
 																					: marginLength >=
 																					  4
 																					? generateMargin(
-																							margin
+																							margin,
 																					  )
 																					: marginDefault
 																				: marginType ==
@@ -5605,13 +5608,13 @@
 																							margin[
 																								_strLeft
 																							],
-																						]
+																						],
 																				  )
 																				: marginDefault),
 																			(settingsAxis =
 																				checkSettingsStringValue(
 																					axis,
-																					elementObjSettingsAxisValues
+																					elementObjSettingsAxisValues,
 																				)
 																					? axis
 																					: 'xy'),
@@ -5620,14 +5623,14 @@
 																					scroll,
 																					TYPES_s,
 																					'always',
-																					elementObjSettingsScrollValues
+																					elementObjSettingsScrollValues,
 																				)),
 																			(settingsBlock =
 																				getPerAxisValue(
 																					block,
 																					TYPES_s,
 																					'begin',
-																					elementObjSettingsBlockValues
+																					elementObjSettingsBlockValues,
 																				)),
 																			(settingsMargin =
 																				margin)
@@ -5670,7 +5673,7 @@
 																						viewportOffset[
 																							_strLeft
 																						] +
-																						viewportScroll.l
+																						viewportScroll.l,
 																				),
 																				y: MATH.round(
 																					elementOffset[
@@ -5679,7 +5682,7 @@
 																						viewportOffset[
 																							_strTop
 																						] +
-																						viewportScroll.t
+																						viewportScroll.t,
 																				),
 																			}
 																		if (
@@ -5694,7 +5697,7 @@
 																								elementOffset[
 																									_strLeft
 																								] +
-																								viewportScroll.l
+																								viewportScroll.l,
 																						)),
 																				_rtlScrollBehavior.n &&
 																					normalizeRTL &&
@@ -5711,7 +5714,7 @@
 																									_strLeft
 																								] +
 																								(_scrollHorizontalInfo._maxScroll -
-																									viewportScroll.l)
+																									viewportScroll.l),
 																						))),
 																			'begin' !=
 																				settingsBlock.x ||
@@ -5758,11 +5761,11 @@
 																					},
 																				finalizeBlock =
 																					function (
-																						isX
+																						isX,
 																					) {
 																						var vars =
 																								getScrollbarVars(
-																									isX
+																									isX,
 																								),
 																							wh =
 																								vars._w_h,
@@ -5874,10 +5877,10 @@
 																										: 0))
 																					}
 																			finalizeBlock(
-																				!0
+																				!0,
 																			),
 																				finalizeBlock(
-																					!1
+																					!1,
 																				)
 																		}
 																		doNotScroll.y &&
@@ -5895,8 +5898,8 @@
 																		!0,
 																		getRawScroll(
 																			!0,
-																			coordinates
-																		)
+																			coordinates,
+																		),
 																	)),
 																	(finalScroll[
 																		_strScrollTop
@@ -5905,8 +5908,8 @@
 																			!1,
 																			getRawScroll(
 																				!1,
-																				coordinates
-																			)
+																				coordinates,
+																			),
 																		)),
 																	(doScrollLeft =
 																		finalScroll[
@@ -5928,7 +5931,7 @@
 																					proxyCompleteCallback),
 																			  _viewportElement.animate(
 																					finalScroll,
-																					duration
+																					duration,
 																			  ))
 																			: ((animationOptions =
 																					{
@@ -5937,10 +5940,10 @@
 																							proxyCompleteCallback,
 																					}),
 																			  COMPATIBILITY.isA(
-																					easing
+																					easing,
 																			  ) ||
 																			  FRAMEWORK.isPlainObject(
-																					easing
+																					easing,
 																			  )
 																					? ((specialEasing[
 																							_strScrollLeft
@@ -5958,7 +5961,7 @@
 																							easing),
 																			  _viewportElement.animate(
 																					finalScroll,
-																					animationOptions
+																					animationOptions,
 																			  ))
 																		: (doScrollLeft &&
 																				_viewportElement[
@@ -5966,7 +5969,7 @@
 																				](
 																					finalScroll[
 																						_strScrollLeft
-																					]
+																					],
 																				),
 																		  doScrollTop &&
 																				_viewportElement[
@@ -5974,7 +5977,7 @@
 																				](
 																					finalScroll[
 																						_strScrollTop
-																					]
+																					],
 																				),
 																		  updateScrollbarInfos())
 															}),
@@ -5982,20 +5985,20 @@
 															function (
 																param1,
 																param2,
-																param3
+																param3,
 															) {
 																return (
 																	_viewportElement.stop(
 																		param1,
 																		param2,
-																		param3
+																		param3,
 																	),
 																	_base
 																)
 															}),
 														(_base.getElements =
 															function (
-																elementName
+																elementName,
 															) {
 																var obj = {
 																	target: _targetElementNative,
@@ -6024,42 +6027,42 @@
 																		_scrollbarCornerElement[0],
 																}
 																return type(
-																	elementName
+																	elementName,
 																) == TYPES_s
 																	? getObjectPropVal(
 																			obj,
-																			elementName
+																			elementName,
 																	  )
 																	: obj
 															}),
 														(_base.getState =
 															function (
-																stateProperty
+																stateProperty,
 															) {
 																function prepare(
-																	obj2
+																	obj2,
 																) {
 																	if (
 																		!FRAMEWORK.isPlainObject(
-																			obj2
+																			obj2,
 																		)
 																	)
 																		return obj2
 																	var extended =
 																			extendDeep(
 																				{},
-																				obj2
+																				obj2,
 																			),
 																		changePropertyName =
 																			function (
 																				from,
-																				to
+																				to,
 																			) {
 																				extended[
 																					LEXICON
 																						.hOP
 																				](
-																					from
+																					from,
 																				) &&
 																					((extended[
 																						to
@@ -6074,11 +6077,11 @@
 																	return (
 																		changePropertyName(
 																			'w',
-																			_strWidth
+																			_strWidth,
 																		),
 																		changePropertyName(
 																			'h',
-																			_strHeight
+																			_strHeight,
 																		),
 																		delete extended.c,
 																		extended
@@ -6087,73 +6090,73 @@
 																var obj = {
 																	destroyed:
 																		!!prepare(
-																			_destroyed
+																			_destroyed,
 																		),
 																	sleeping:
 																		!!prepare(
-																			_sleeping
+																			_sleeping,
 																		),
 																	autoUpdate:
 																		prepare(
-																			!_mutationObserversConnected
+																			!_mutationObserversConnected,
 																		),
 																	widthAuto:
 																		prepare(
-																			_widthAutoCache
+																			_widthAutoCache,
 																		),
 																	heightAuto:
 																		prepare(
-																			_heightAutoCache
+																			_heightAutoCache,
 																		),
 																	padding:
 																		prepare(
-																			_cssPaddingCache
+																			_cssPaddingCache,
 																		),
 																	overflowAmount:
 																		prepare(
-																			_overflowAmountCache
+																			_overflowAmountCache,
 																		),
 																	hideOverflow:
 																		prepare(
-																			_hideOverflowCache
+																			_hideOverflowCache,
 																		),
 																	hasOverflow:
 																		prepare(
-																			_hasOverflowCache
+																			_hasOverflowCache,
 																		),
 																	contentScrollSize:
 																		prepare(
-																			_contentScrollSizeCache
+																			_contentScrollSizeCache,
 																		),
 																	viewportSize:
 																		prepare(
-																			_viewportSize
+																			_viewportSize,
 																		),
 																	hostSize:
 																		prepare(
-																			_hostSizeCache
+																			_hostSizeCache,
 																		),
 																	documentMixed:
 																		prepare(
-																			_documentMixed
+																			_documentMixed,
 																		),
 																}
 																return type(
-																	stateProperty
+																	stateProperty,
 																) == TYPES_s
 																	? getObjectPropVal(
 																			obj,
-																			stateProperty
+																			stateProperty,
 																	  )
 																	: obj
 															}),
 														(_base.ext = function (
-															extName
+															extName,
 														) {
 															var result,
 																privateMethods =
 																	'added removed on contract'.split(
-																		' '
+																		' ',
 																	),
 																i = 0
 															if (
@@ -6172,7 +6175,7 @@
 																				{},
 																				_extensions[
 																					extName
-																				]
+																				],
 																			);
 																		i <
 																		privateMethods.length;
@@ -6191,15 +6194,15 @@
 																		extendDeep(
 																			{},
 																			_base.ext(
-																				i
-																			)
+																				i,
+																			),
 																		)
 															return result
 														}),
 														(_base.addExt =
 															function (
 																extName,
-																extensionOptions
+																extensionOptions,
 															) {
 																var instance,
 																	instanceAdded,
@@ -6207,7 +6210,7 @@
 																	contractResult,
 																	registeredExtensionObj =
 																		_plugin.extension(
-																			extName
+																			extName,
 																		),
 																	contractFulfilled =
 																		!0
@@ -6219,11 +6222,11 @@
 																			LEXICON
 																				.hOP
 																		](
-																			extName
+																			extName,
 																		)
 																	)
 																		return _base.ext(
-																			extName
+																			extName,
 																		)
 																	if (
 																		(instance =
@@ -6231,24 +6234,24 @@
 																				_base,
 																				extendDeep(
 																					{},
-																					registeredExtensionObj.defaultOptions
+																					registeredExtensionObj.defaultOptions,
 																				),
 																				FRAMEWORK,
-																				COMPATIBILITY
+																				COMPATIBILITY,
 																			)) &&
 																		((instanceContract =
 																			instance.contract),
 																		type(
-																			instanceContract
+																			instanceContract,
 																		) ==
 																			TYPES_f &&
 																			((contractResult =
 																				instanceContract(
-																					window2
+																					window2,
 																				)),
 																			(contractFulfilled =
 																				type(
-																					contractResult
+																					contractResult,
 																				) ==
 																				TYPES_b
 																					? contractResult
@@ -6263,21 +6266,21 @@
 																			(instanceAdded =
 																				instance.added),
 																			type(
-																				instanceAdded
+																				instanceAdded,
 																			) ==
 																				TYPES_f &&
 																				instanceAdded(
-																					extensionOptions
+																					extensionOptions,
 																				),
 																			_base.ext(
-																				extName
+																				extName,
 																			)
 																		)
 																} else
 																	console.warn(
 																		'A extension with the name "' +
 																			extName +
-																			'" isn\'t registered.'
+																			'" isn\'t registered.',
 																	)
 															}),
 														(_base.removeExt =
@@ -6295,7 +6298,7 @@
 																	(instanceRemoved =
 																		instance.removed),
 																	type(
-																		instanceRemoved
+																		instanceRemoved,
 																	) ==
 																		TYPES_f &&
 																		instanceRemoved(),
@@ -6306,7 +6309,7 @@
 															(function construct(
 																targetElement,
 																options2,
-																extensions2
+																extensions2,
 															) {
 																var initBodyScroll,
 																	bodyMouseTouchDownListener
@@ -6318,29 +6321,29 @@
 																	(_nativeScrollbarSize =
 																		extendDeep(
 																			{},
-																			globals.nativeScrollbarSize
+																			globals.nativeScrollbarSize,
 																		)),
 																	(_nativeScrollbarIsOverlaid =
 																		extendDeep(
 																			{},
-																			globals.nativeScrollbarIsOverlaid
+																			globals.nativeScrollbarIsOverlaid,
 																		)),
 																	(_overlayScrollbarDummySize =
 																		extendDeep(
 																			{},
-																			globals.overlayScrollbarDummySize
+																			globals.overlayScrollbarDummySize,
 																		)),
 																	(_rtlScrollBehavior =
 																		extendDeep(
 																			{},
-																			globals.rtlScrollBehavior
+																			globals.rtlScrollBehavior,
 																		)),
 																	setOptions(
 																		extendDeep(
 																			{},
 																			_defaultOptions,
-																			options2
-																		)
+																			options2,
+																		),
 																	),
 																	(_cssCalc =
 																		globals.cssCalc),
@@ -6361,40 +6364,40 @@
 																	globals.restrictedMeasuring,
 																	(_documentElement =
 																		FRAMEWORK(
-																			targetElement.ownerDocument
+																			targetElement.ownerDocument,
 																		)),
 																	(_documentElementNative =
 																		_documentElement[0]),
 																	(_windowElement =
 																		FRAMEWORK(
 																			_documentElementNative.defaultView ||
-																				_documentElementNative.parentWindow
+																				_documentElementNative.parentWindow,
 																		)),
 																	(_windowElementNative =
 																		_windowElement[0]),
 																	(_htmlElement =
 																		findFirst(
 																			_documentElement,
-																			'html'
+																			'html',
 																		)),
 																	(_bodyElement =
 																		findFirst(
 																			_htmlElement,
-																			'body'
+																			'body',
 																		)),
 																	(_targetElement =
 																		FRAMEWORK(
-																			targetElement
+																			targetElement,
 																		)),
 																	(_targetElementNative =
 																		_targetElement[0]),
 																	(_isTextarea =
 																		_targetElement.is(
-																			'textarea'
+																			'textarea',
 																		)),
 																	(_isBody =
 																		_targetElement.is(
-																			'body'
+																			'body',
 																		)),
 																	(_documentMixed =
 																		_documentElementNative !==
@@ -6402,19 +6405,19 @@
 																	(_domExists =
 																		_isTextarea
 																			? _targetElement.hasClass(
-																					_classNameTextareaElement
+																					_classNameTextareaElement,
 																			  ) &&
 																			  _targetElement
 																					.parent()
 																					.hasClass(
-																						_classNameContentElement
+																						_classNameContentElement,
 																					)
 																			: _targetElement.hasClass(
-																					_classNameHostElement
+																					_classNameHostElement,
 																			  ) &&
 																			  _targetElement.children(
 																					_strDot +
-																						_classNamePaddingElement
+																						_classNamePaddingElement,
 																			  )[
 																					LEXICON
 																						.l
@@ -6427,17 +6430,17 @@
 																		? ((_initialized =
 																				!0),
 																		  dispatchCallback(
-																				'onInitializationWithdrawn'
+																				'onInitializationWithdrawn',
 																		  ),
 																		  _domExists &&
 																				(setupStructureDOM(
-																					!0
+																					!0,
 																				),
 																				setupScrollbarsDOM(
-																					!0
+																					!0,
 																				),
 																				setupScrollbarCornerDOM(
-																					!0
+																					!0,
 																				)),
 																		  (_initialized =
 																				!1),
@@ -6458,7 +6461,7 @@
 																						](),
 																						_windowElement[
 																							_strScrollLeft
-																						]()
+																						](),
 																					)),
 																				(initBodyScroll.t =
 																					MATH.max(
@@ -6470,19 +6473,19 @@
 																						](),
 																						_windowElement[
 																							_strScrollTop
-																						]()
+																						](),
 																					)),
 																				(bodyMouseTouchDownListener =
 																					function () {
 																						_viewportElement.removeAttr(
-																							LEXICON.ti
+																							LEXICON.ti,
 																						),
 																							setupResponsiveEventListener(
 																								_viewportElement,
 																								_strMouseTouchDownEvent,
 																								bodyMouseTouchDownListener,
 																								!0,
-																								!0
+																								!0,
 																							)
 																					})),
 																		  setupStructureDOM(),
@@ -6490,10 +6493,10 @@
 																		  setupScrollbarCornerDOM(),
 																		  setupStructureEvents(),
 																		  setupScrollbarEvents(
-																				!0
+																				!0,
 																		  ),
 																		  setupScrollbarEvents(
-																				!1
+																				!1,
 																		  ),
 																		  (function setupScrollbarCornerEvents() {
 																				var reconnectMutationObserver,
@@ -6507,16 +6510,16 @@
 																					mouseDownInvertedScale =
 																						{}
 																				function documentDragMove(
-																					event
+																					event,
 																				) {
 																					if (
 																						onMouseTouchDownContinue(
-																							event
+																							event,
 																						)
 																					) {
 																						var pageOffset =
 																								getCoordinates(
-																									event
+																									event,
 																								),
 																							hostElementCSS =
 																								{}
@@ -6539,18 +6542,18 @@
 																										mouseDownPosition.y) *
 																										mouseDownInvertedScale.y),
 																							_hostElement.css(
-																								hostElementCSS
+																								hostElementCSS,
 																							),
 																							COMPATIBILITY.stpP(
-																								event
+																								event,
 																							)
 																					} else
 																						documentMouseTouchUp(
-																							event
+																							event,
 																						)
 																				}
 																				function documentMouseTouchUp(
-																					event
+																					event,
 																				) {
 																					var eventIsTrusted =
 																						event !==
@@ -6567,11 +6570,11 @@
 																							documentDragMove,
 																							documentMouseTouchUp,
 																						],
-																						!0
+																						!0,
 																					),
 																						removeClass(
 																							_bodyElement,
-																							_classNameDragging
+																							_classNameDragging,
 																						),
 																						_scrollbarCornerElement.releaseCapture &&
 																							_scrollbarCornerElement.releaseCapture(),
@@ -6579,13 +6582,13 @@
 																							(reconnectMutationObserver &&
 																								connectMutationObservers(),
 																							_base.update(
-																								_strAuto
+																								_strAuto,
 																							)),
 																						(reconnectMutationObserver =
 																							!1)
 																				}
 																				function onMouseTouchDownContinue(
-																					event
+																					event,
 																				) {
 																					var isTouchEvent =
 																						(
@@ -6599,13 +6602,13 @@
 																						!_destroyed &&
 																						(1 ===
 																							COMPATIBILITY.mBtn(
-																								event
+																								event,
 																							) ||
 																							isTouchEvent)
 																					)
 																				}
 																				function getCoordinates(
-																					event
+																					event,
 																				) {
 																					return _msieVersion &&
 																						insideIFrame
@@ -6614,17 +6617,17 @@
 																								y: event.screenY,
 																						  }
 																						: COMPATIBILITY.page(
-																								event
+																								event,
 																						  )
 																				}
 																				addDestroyEventListener(
 																					_scrollbarCornerElement,
 																					_strMouseTouchDownEvent,
 																					function (
-																						event
+																						event,
 																					) {
 																						onMouseTouchDownContinue(
-																							event
+																							event,
 																						) &&
 																							!_resizeNone &&
 																							(_mutationObserversConnected &&
@@ -6633,7 +6636,7 @@
 																								disconnectMutationObservers()),
 																							(mouseDownPosition =
 																								getCoordinates(
-																									event
+																									event,
 																								)),
 																							(mouseDownSize.w =
 																								_hostElementNative[
@@ -6664,44 +6667,44 @@
 																									documentOnSelectStart,
 																									documentDragMove,
 																									documentMouseTouchUp,
-																								]
+																								],
 																							),
 																							addClass(
 																								_bodyElement,
-																								_classNameDragging
+																								_classNameDragging,
 																							),
 																							_scrollbarCornerElement.setCapture &&
 																								_scrollbarCornerElement.setCapture(),
 																							COMPATIBILITY.prvD(
-																								event
+																								event,
 																							),
 																							COMPATIBILITY.stpP(
-																								event
+																								event,
 																							))
-																					}
+																					},
 																				)
 																		  })(),
 																		  createMutationObservers(),
 																		  setupResizeObserver(
 																				_sizeObserverElement,
-																				hostOnResized
+																				hostOnResized,
 																		  ),
 																		  _isBody &&
 																				(_viewportElement[
 																					_strScrollLeft
 																				](
-																					initBodyScroll.l
+																					initBodyScroll.l,
 																				)[
 																					_strScrollTop
 																				](
-																					initBodyScroll.t
+																					initBodyScroll.t,
 																				),
 																				document.activeElement ==
 																					targetElement &&
 																					_viewportElementNative.focus &&
 																					(_viewportElement.attr(
 																						LEXICON.ti,
-																						'-1'
+																						'-1',
 																					),
 																					_viewportElementNative.focus(),
 																					setupResponsiveEventListener(
@@ -6709,32 +6712,32 @@
 																						_strMouseTouchDownEvent,
 																						bodyMouseTouchDownListener,
 																						!1,
-																						!0
+																						!0,
 																					))),
 																		  _base.update(
-																				_strAuto
+																				_strAuto,
 																		  ),
 																		  (_initialized =
 																				!0),
 																		  dispatchCallback(
-																				'onInitialized'
+																				'onInitialized',
 																		  ),
 																		  each(
 																				_callbacksInitQeueue,
 																				function (
 																					index,
-																					value
+																					value,
 																				) {
 																					dispatchCallback(
 																						value.n,
-																						value.a
+																						value.a,
 																					)
-																				}
+																				},
 																		  ),
 																		  (_callbacksInitQeueue =
 																				[]),
 																		  type(
-																				extensions2
+																				extensions2,
 																		  ) ==
 																				TYPES_s &&
 																				(extensions2 =
@@ -6742,33 +6745,33 @@
 																						extensions2,
 																					]),
 																		  COMPATIBILITY.isA(
-																				extensions2
+																				extensions2,
 																		  )
 																				? each(
 																						extensions2,
 																						function (
 																							index,
-																							value
+																							value,
 																						) {
 																							_base.addExt(
-																								value
+																								value,
 																							)
-																						}
+																						},
 																				  )
 																				: FRAMEWORK.isPlainObject(
-																						extensions2
+																						extensions2,
 																				  ) &&
 																				  each(
 																						extensions2,
 																						function (
 																							key,
-																							value
+																							value,
 																						) {
 																							_base.addExt(
 																								key,
-																								value
+																								value,
 																							)
-																						}
+																						},
 																				  ),
 																		  setTimeout(
 																				function () {
@@ -6776,22 +6779,22 @@
 																						!_destroyed &&
 																						addClass(
 																							_hostElement,
-																							_classNameHostTransition
+																							_classNameHostTransition,
 																						)
 																				},
-																				333
+																				333,
 																		  ),
 																		  _base)
 																)
 															})(
 																pluginTargetElement,
 																options,
-																extensions
-															)
+																extensions,
+															),
 														) &&
 															INSTANCES(
 																pluginTargetElement,
-																_base
+																_base,
 															),
 														_base
 													)
@@ -6801,14 +6804,14 @@
 													eventNames,
 													listener,
 													remove2,
-													passiveOrOptions
+													passiveOrOptions,
 												) {
 													var collected =
 															COMPATIBILITY.isA(
-																eventNames
+																eventNames,
 															) &&
 															COMPATIBILITY.isA(
-																listener
+																listener,
 															),
 														method = remove2
 															? 'removeEventListener'
@@ -6819,12 +6822,12 @@
 														events =
 															!collected &&
 															eventNames.split(
-																_strSpace
+																_strSpace,
 															),
 														i = 0,
 														passiveOrOptionsIsObj =
 															FRAMEWORK.isPlainObject(
-																passiveOrOptions
+																passiveOrOptions,
 															),
 														passive =
 															(_supportPassiveEvents &&
@@ -6857,7 +6860,7 @@
 																eventNames[i],
 																listener[i],
 																remove2,
-																passiveOrOptions
+																passiveOrOptions,
 															)
 													else
 														for (
@@ -6874,7 +6877,7 @@
 																			i
 																		],
 																		listener,
-																		nativeParam
+																		nativeParam,
 																  )
 																: element[
 																		onOff
@@ -6882,21 +6885,21 @@
 																		events[
 																			i
 																		],
-																		listener
+																		listener,
 																  )
 												}
 												function addDestroyEventListener(
 													element,
 													eventNames,
 													listener,
-													passive
+													passive,
 												) {
 													setupResponsiveEventListener(
 														element,
 														eventNames,
 														listener,
 														!1,
-														passive
+														passive,
 													),
 														_destroyEvents.push(
 															COMPATIBILITY.bind(
@@ -6906,13 +6909,13 @@
 																eventNames,
 																listener,
 																!0,
-																passive
-															)
+																passive,
+															),
 														)
 												}
 												function setupResizeObserver(
 													targetElement,
-													onElementResizedCallback
+													onElementResizedCallback,
 												) {
 													if (targetElement) {
 														var resizeObserver =
@@ -6932,7 +6935,7 @@
 																				: _rtlScrollBehavior.i
 																				? 0
 																				: 3333333
-																			: 3333333
+																			: 3333333,
 																	),
 																		onElementResizedCallback()
 																}
@@ -6945,20 +6948,20 @@
 																((element =
 																	targetElement
 																		.addClass(
-																			'observed'
+																			'observed',
 																		)
 																		.append(
 																			generateDiv(
-																				_classNameResizeObserverElement
-																			)
+																				_classNameResizeObserverElement,
+																			),
 																		)
 																		.contents()[0])[
 																	_strResizeObserverProperty
 																] =
 																	new resizeObserver(
-																		callback
+																		callback,
 																	)).observe(
-																	element
+																	element,
 																)
 															else if (
 																_msieVersion >
@@ -6976,8 +6979,8 @@
 																			generateDiv(
 																				_classNameResizeObserverItemElement,
 																				generateDiv(
-																					_classNameResizeObserverItemFinalElement
-																				)
+																					_classNameResizeObserverItemFinalElement,
+																				),
 																			) +
 																				generateDiv(
 																					_classNameResizeObserverItemElement,
@@ -6985,11 +6988,11 @@
 																						{
 																							c: _classNameResizeObserverItemFinalElement,
 																							style: 'width: 200%; height: 200%',
-																						}
-																					)
-																				)
-																		)
-																	)
+																						},
+																					),
+																				),
+																		),
+																	),
 																)
 																var isDirty,
 																	rAFId,
@@ -7002,17 +7005,17 @@
 																	shrinkElement =
 																		FRAMEWORK(
 																			observerElement
-																				.childNodes[1]
+																				.childNodes[1],
 																		),
 																	expandElement =
 																		FRAMEWORK(
 																			observerElement
-																				.childNodes[0]
+																				.childNodes[0],
 																		),
 																	expandElementChild =
 																		FRAMEWORK(
 																			expandElement[0]
-																				.childNodes[0]
+																				.childNodes[0],
 																		),
 																	widthCache =
 																		observerElement[
@@ -7031,20 +7034,20 @@
 																			expandElement[
 																				_strScrollLeft
 																			](
-																				3333333
+																				3333333,
 																			)[
 																				_strScrollTop
 																			](
-																				3333333
+																				3333333,
 																			),
 																				shrinkElement[
 																					_strScrollLeft
 																				](
-																					3333333
+																					3333333,
 																				)[
 																					_strScrollTop
 																				](
-																					3333333
+																					3333333,
 																				)
 																		},
 																	onResized =
@@ -7059,7 +7062,7 @@
 																		},
 																	onScroll =
 																		function (
-																			event
+																			event,
 																		) {
 																			return (
 																				(currWidth =
@@ -7081,21 +7084,21 @@
 																				isDirty &&
 																				!rAFId
 																					? (COMPATIBILITY.cAF()(
-																							rAFId
+																							rAFId,
 																					  ),
 																					  (rAFId =
 																							COMPATIBILITY.rAF()(
-																								onResized
+																								onResized,
 																							)))
 																					: event ||
 																					  onResized(),
 																				reset(),
 																				event &&
 																					(COMPATIBILITY.prvD(
-																						event
+																						event,
 																					),
 																					COMPATIBILITY.stpP(
-																						event
+																						event,
 																					)),
 																				!1
 																			)
@@ -7118,28 +7121,28 @@
 																		-2 *
 																			(nativeScrollbarSize.x +
 																				1),
-																	]
+																	],
 																),
 																	FRAMEWORK(
-																		observerElement
+																		observerElement,
 																	).css(
-																		observerElementCSS
+																		observerElementCSS,
 																	),
 																	expandElement.on(
 																		_strScroll,
-																		onScroll
+																		onScroll,
 																	),
 																	shrinkElement.on(
 																		_strScroll,
-																		onScroll
+																		onScroll,
 																	),
 																	targetElement.on(
 																		strAnimationStartEvent,
 																		function () {
 																			onScroll(
-																				!1
+																				!1,
 																			)
-																		}
+																		},
 																	),
 																	(expandChildCSS[
 																		_strWidth
@@ -7148,7 +7151,7 @@
 																		_strHeight
 																	] = 3333333),
 																	expandElementChild.css(
-																		expandChildCSS
+																		expandChildCSS,
 																	),
 																	reset()
 															} else {
@@ -7160,29 +7163,29 @@
 																if (attachEvent)
 																	targetElement.prepend(
 																		generateDiv(
-																			_classNameResizeObserverElement
-																		)
+																			_classNameResizeObserverElement,
+																		),
 																	),
 																		findFirst(
 																			targetElement,
 																			_strDot +
-																				_classNameResizeObserverElement
+																				_classNameResizeObserverElement,
 																		)[0].attachEvent(
 																			'onresize',
-																			callback
+																			callback,
 																		)
 																else {
 																	var obj =
 																		_documentElementNative.createElement(
-																			TYPES_o
+																			TYPES_o,
 																		)
 																	obj.setAttribute(
 																		LEXICON.ti,
-																		'-1'
+																		'-1',
 																	),
 																		obj.setAttribute(
 																			LEXICON.c,
-																			_classNameResizeObserverElement
+																			_classNameResizeObserverElement,
 																		),
 																		(obj.onload =
 																			function () {
@@ -7192,7 +7195,7 @@
 																						.defaultView
 																				wnd.addEventListener(
 																					'resize',
-																					callback
+																					callback,
 																				),
 																					(wnd.document.documentElement.style.display =
 																						'none')
@@ -7201,17 +7204,17 @@
 																			'text/html'),
 																		isIE &&
 																			targetElement.prepend(
-																				obj
+																				obj,
 																			),
 																		(obj.data =
 																			'about:blank'),
 																		isIE ||
 																			targetElement.prepend(
-																				obj
+																				obj,
 																			),
 																		targetElement.on(
 																			strAnimationStartEvent,
-																			callback
+																			callback,
 																		)
 																}
 															}
@@ -7223,7 +7226,7 @@
 																	function () {
 																		var dir =
 																				_hostElement.css(
-																					'direction'
+																					'direction',
 																				),
 																			css =
 																				{},
@@ -7259,19 +7262,19 @@
 																				_sizeObserverElement
 																					.children()
 																					.eq(
-																						0
+																						0,
 																					)
 																					.css(
-																						css
+																						css,
 																					),
 																				_sizeObserverElement[
 																					_strScrollLeft
 																				](
-																					scrollLeftValue
+																					scrollLeftValue,
 																				)[
 																					_strScrollTop
 																				](
-																					3333333
+																					3333333,
 																				),
 																				(_cssDirectionDetectedCache =
 																					dir),
@@ -7285,20 +7288,20 @@
 																		targetElement,
 																		_strScroll,
 																		function (
-																			event
+																			event,
 																		) {
 																			return (
 																				directionChanged() &&
 																					update(),
 																				COMPATIBILITY.prvD(
-																					event
+																					event,
 																				),
 																				COMPATIBILITY.stpP(
-																					event
+																					event,
 																				),
 																				!1
 																			)
-																		}
+																		},
 																	)
 															}
 														} else if (
@@ -7320,9 +7323,9 @@
 																targetElement
 																	.children(
 																		_strDot +
-																			_classNameResizeObserverElement
+																			_classNameResizeObserverElement,
 																	)
-																	.eq(0)
+																	.eq(0),
 															)
 													}
 												}
@@ -7346,7 +7349,7 @@
 																COMPATIBILITY.now()
 														;(_mutationObserverContentCallback =
 															function (
-																mutations
+																mutations,
 															) {
 																var doUpdate =
 																	!1
@@ -7359,7 +7362,7 @@
 																				return (
 																					(doUpdate =
 																						(function isUnknownMutation(
-																							mutation
+																							mutation,
 																						) {
 																							var attributeName =
 																									mutation.attributeName,
@@ -7390,14 +7393,14 @@
 																									attributeName ===
 																										LEXICON.c &&
 																									FRAMEWORK(
-																										mutationTarget
+																										mutationTarget,
 																									).hasClass(
-																										_classNameHostElement
+																										_classNameHostElement,
 																									)
 																								)
 																									return hostClassNamesChanged(
 																										mutation.oldValue,
-																										mutationTarget.className
+																										mutationTarget.className,
 																									)
 																								if (
 																									typeof mutationTarget[
@@ -7412,32 +7415,32 @@
 																											strClosest
 																										](
 																											_strDot +
-																												_classNameResizeObserverElement
+																												_classNameResizeObserverElement,
 																										) ||
 																									null !==
 																										mutationTarget[
 																											strClosest
 																										](
 																											_strDot +
-																												_classNameScrollbar
+																												_classNameScrollbar,
 																										) ||
 																									null !==
 																										mutationTarget[
 																											strClosest
 																										](
 																											_strDot +
-																												_classNameScrollbarCorner
+																												_classNameScrollbarCorner,
 																										)
 																								)
 																									return !1
 																							}
 																							return !0
 																						})(
-																							this
+																							this,
 																						)),
 																					!doUpdate
 																				)
-																			}
+																			},
 																		),
 																		doUpdate &&
 																			((now =
@@ -7455,11 +7458,11 @@
 																						sizeAuto
 																							? update()
 																							: _base.update(
-																									_strAuto
+																									_strAuto,
 																							  ))
 																				}),
 																			clearTimeout(
-																				contentTimeout
+																				contentTimeout,
 																			),
 																			now -
 																				contentLastUpdate >
@@ -7469,7 +7472,7 @@
 																				: (contentTimeout =
 																						setTimeout(
 																							action,
-																							11
+																							11,
 																						)))),
 																	doUpdate
 																)
@@ -7478,7 +7481,7 @@
 																new mutationObserver(
 																	(_mutationObserverHostCallback =
 																		function (
-																			mutations
+																			mutations,
 																		) {
 																			var mutation,
 																				doUpdate =
@@ -7510,39 +7513,39 @@
 																									mutationIsClass &&
 																									!doUpdateForce &&
 																									oldMutationVal.indexOf(
-																										_classNameHostElementForeign
+																										_classNameHostElementForeign,
 																									) >
 																										-1 &&
 																									newClassVal.indexOf(
-																										_classNameHostElementForeign
+																										_classNameHostElementForeign,
 																									) <
 																										0 &&
 																									((hostClassNameRegex =
 																										createHostClassNameRegExp(
-																											!0
+																											!0,
 																										)),
 																									(_hostElementNative.className =
 																										newClassVal
 																											.split(
-																												_strSpace
+																												_strSpace,
 																											)
 																											.concat(
 																												oldMutationVal
 																													.split(
-																														_strSpace
+																														_strSpace,
 																													)
 																													.filter(
 																														function (
-																															name
+																															name,
 																														) {
 																															return name.match(
-																																hostClassNameRegex
+																																hostClassNameRegex,
 																															)
-																														}
-																													)
+																														},
+																													),
 																											)
 																											.join(
-																												_strSpace
+																												_strSpace,
 																											)),
 																									(doUpdate =
 																										doUpdateForce =
@@ -7552,7 +7555,7 @@
 																										mutationIsClass
 																											? hostClassNamesChanged(
 																													oldMutationVal,
-																													newClassVal
+																													newClassVal,
 																											  )
 																											: mutationAttrName !==
 																													LEXICON.s ||
@@ -7563,25 +7566,25 @@
 																													]
 																														.cssText),
 																								mutatedAttrs.push(
-																									mutationAttrName
+																									mutationAttrName,
 																								)
-																						}
+																						},
 																					),
 																					updateViewportAttrsFromTarget(
-																						mutatedAttrs
+																						mutatedAttrs,
 																					),
 																					doUpdate &&
 																						_base.update(
 																							doUpdateForce ||
-																								_strAuto
+																								_strAuto,
 																						)),
 																				doUpdate
 																			)
-																		})
+																		}),
 																)),
 															(_mutationObserverContent =
 																new mutationObserver(
-																	_mutationObserverContentCallback
+																	_mutationObserverContentCallback,
 																))
 													}
 												}
@@ -7596,7 +7599,7 @@
 																	!0,
 																attributeFilter:
 																	_mutationObserverAttrsHost,
-															}
+															},
 														),
 														_mutationObserverContent.observe(
 															_isTextarea
@@ -7616,7 +7619,7 @@
 																	_isTextarea
 																		? _mutationObserverAttrsTextarea
 																		: _mutationObserverAttrsHost,
-															}
+															},
 														),
 														(_mutationObserversConnected =
 															!0))
@@ -7642,7 +7645,7 @@
 															}
 														;(changed = checkCache(
 															hostSize,
-															_hostElementSizeChangeDetectedCache
+															_hostElementSizeChangeDetectedCache,
 														)),
 															(_hostElementSizeChangeDetectedCache =
 																hostSize),
@@ -7656,25 +7659,25 @@
 												function hostOnMouseEnter() {
 													_scrollbarsAutoHideLeave &&
 														refreshScrollbarsAutoHide(
-															!0
+															!0,
 														)
 												}
 												function hostOnMouseLeave() {
 													_scrollbarsAutoHideLeave &&
 														!_bodyElement.hasClass(
-															_classNameDragging
+															_classNameDragging,
 														) &&
 														refreshScrollbarsAutoHide(
-															!1
+															!1,
 														)
 												}
 												function hostOnMouseMove() {
 													_scrollbarsAutoHideMove &&
 														(refreshScrollbarsAutoHide(
-															!0
+															!0,
 														),
 														clearTimeout(
-															_scrollbarsAutoHideMoveTimeoutId
+															_scrollbarsAutoHideMoveTimeoutId,
 														),
 														(_scrollbarsAutoHideMoveTimeoutId =
 															setTimeout(
@@ -7682,73 +7685,73 @@
 																	_scrollbarsAutoHideMove &&
 																		!_destroyed &&
 																		refreshScrollbarsAutoHide(
-																			!1
+																			!1,
 																		)
 																},
-																100
+																100,
 															)))
 												}
 												function documentOnSelectStart(
-													event
+													event,
 												) {
 													return (
 														COMPATIBILITY.prvD(
-															event
+															event,
 														),
 														!1
 													)
 												}
 												function updateOnLoadCallback(
-													event
+													event,
 												) {
 													if (!_destroyed) {
 														var target =
 																event.target,
 															elm = FRAMEWORK(
-																event.target
+																event.target,
 															),
 															index =
 																FRAMEWORK.inArray(
 																	target,
-																	_updateOnLoadElms
+																	_updateOnLoadElms,
 																)
 														index > -1 &&
 															_updateOnLoadElms.splice(
 																index,
-																1
+																1,
 															),
 															eachUpdateOnLoad(
 																function (
 																	i,
-																	updateOnLoadSelector
+																	updateOnLoadSelector,
 																) {
 																	elm.is(
-																		updateOnLoadSelector
+																		updateOnLoadSelector,
 																	) &&
 																		update({
 																			_contentSizeChanged:
 																				!0,
 																		})
-																}
+																},
 															)
 													}
 												}
 												function setupHostMouseTouchEvents(
-													destroy
+													destroy,
 												) {
 													destroy ||
 														setupHostMouseTouchEvents(
-															!0
+															!0,
 														),
 														setupResponsiveEventListener(
 															_hostElement,
 															_strMouseTouchMoveEvent.split(
-																_strSpace
+																_strSpace,
 															)[0],
 															hostOnMouseMove,
 															!_scrollbarsAutoHideMove ||
 																destroy,
-															!0
+															!0,
 														),
 														setupResponsiveEventListener(
 															_hostElement,
@@ -7762,13 +7765,13 @@
 															],
 															!_scrollbarsAutoHideLeave ||
 																destroy,
-															!0
+															!0,
 														),
 														!_initialized &&
 															!destroy &&
 															_hostElement.one(
 																'mouseover',
-																hostOnMouseEnter
+																hostOnMouseEnter,
 															)
 												}
 												function bodyMinSizeChanged() {
@@ -7780,20 +7783,20 @@
 																parseToZeroOrNumber(
 																	_contentArrangeElement.css(
 																		_strMinMinus +
-																			_strWidth
-																	)
+																			_strWidth,
+																	),
 																)),
 															(bodyMinSize.h =
 																parseToZeroOrNumber(
 																	_contentArrangeElement.css(
 																		_strMinMinus +
-																			_strHeight
-																	)
+																			_strHeight,
+																	),
 																)),
 															(bodyMinSize.c =
 																checkCache(
 																	bodyMinSize,
-																	_bodyMinSizeCache
+																	_bodyMinSizeCache,
 																)),
 															(bodyMinSize.f =
 																!0)),
@@ -7804,7 +7807,7 @@
 												}
 												function hostClassNamesChanged(
 													oldClassNames,
-													newClassNames
+													newClassNames,
 												) {
 													var i,
 														regex,
@@ -7812,13 +7815,13 @@
 															typeof newClassNames ==
 															TYPES_s
 																? newClassNames.split(
-																		_strSpace
+																		_strSpace,
 																  )
 																: [],
 														diff =
 															(function getArrayDifferences(
 																a1,
-																a2
+																a2,
 															) {
 																var i,
 																	k,
@@ -7857,14 +7860,14 @@
 																typeof oldClassNames ==
 																	TYPES_s
 																	? oldClassNames.split(
-																			_strSpace
+																			_strSpace,
 																	  )
 																	: [],
-																currClasses
+																currClasses,
 															),
 														idx = inArray(
 															_classNameThemeNone,
-															diff
+															diff,
 														)
 													if (
 														(idx > -1 &&
@@ -7875,7 +7878,7 @@
 															regex =
 																createHostClassNameRegExp(
 																	!0,
-																	!0
+																	!0,
 																),
 																i = 0;
 															i < diff.length;
@@ -7883,14 +7886,14 @@
 														)
 															if (
 																!diff[i].match(
-																	regex
+																	regex,
 																)
 															)
 																return !0
 													return !1
 												}
 												function updateViewportAttrsFromTarget(
-													attrs
+													attrs,
 												) {
 													each(
 														(attrs =
@@ -7900,25 +7903,25 @@
 															if (
 																COMPATIBILITY.inA(
 																	attr,
-																	_viewportAttrsFromTarget
+																	_viewportAttrsFromTarget,
 																) > -1
 															) {
 																var targetAttr =
 																	_targetElement.attr(
-																		attr
+																		attr,
 																	)
 																type(
-																	targetAttr
+																	targetAttr,
 																) == TYPES_s
 																	? _viewportElement.attr(
 																			attr,
-																			targetAttr
+																			targetAttr,
 																	  )
 																	: _viewportElement.removeAttr(
-																			attr
+																			attr,
 																	  )
 															}
-														}
+														},
 													)
 												}
 												function textareaUpdate() {
@@ -7949,7 +7952,7 @@
 															(css[_strWidth] =
 																_strAuto),
 															_targetElement.css(
-																css
+																css,
 															),
 															(origWidth =
 																_targetElementNative[
@@ -7961,7 +7964,7 @@
 																		_targetElementNative[
 																			LEXICON
 																				.sW
-																		] - 1
+																		] - 1,
 																  )
 																: 1),
 															(css[_strWidth] =
@@ -7976,7 +7979,7 @@
 															(css[_strHeight] =
 																_strAuto),
 															_targetElement.css(
-																css
+																css,
 															),
 															(origHeight =
 																_targetElementNative[
@@ -7986,14 +7989,14 @@
 																origHeight,
 																_targetElementNative[
 																	LEXICON.sH
-																] - 1
+																] - 1,
 															)),
 															(css[_strWidth] =
 																width),
 															(css[_strHeight] =
 																height),
 															_textareaCoverElement.css(
-																css
+																css,
 															),
 															(css[
 																_strMinMinus +
@@ -8004,7 +8007,7 @@
 																	_strHeight
 															] = minHeight),
 															_targetElement.css(
-																css
+																css,
 															),
 															{
 																_originalWidth:
@@ -8021,7 +8024,7 @@
 												}
 												function update(updateHints) {
 													clearTimeout(
-														_swallowedUpdateTimeout
+														_swallowedUpdateTimeout,
 													),
 														(updateHints =
 															updateHints || {}),
@@ -8059,7 +8062,7 @@
 															(_swallowedUpdateTimeout =
 																setTimeout(
 																	update,
-																	_swallowUpdateLag
+																	_swallowUpdateLag,
 																)),
 														!(
 															_destroyed ||
@@ -8070,11 +8073,11 @@
 																!force &&
 																(displayIsHidden =
 																	_hostElement.is(
-																		':hidden'
+																		':hidden',
 																	))) ||
 															'inline' ===
 																_hostElement.css(
-																	'display'
+																	'display',
 																)
 														))
 													) {
@@ -8088,7 +8091,7 @@
 																? (_nativeScrollbarSize =
 																		extendDeep(
 																			{},
-																			globals.nativeScrollbarSize
+																			globals.nativeScrollbarSize,
 																		))
 																: ((_nativeScrollbarSize.x = 0),
 																  (_nativeScrollbarSize.y = 0)),
@@ -8116,13 +8119,13 @@
 																		this,
 																		[].slice
 																			.call(
-																				arguments
+																				arguments,
 																			)
 																			.concat(
 																				[
 																					force,
-																				]
-																			)
+																				],
+																			),
 																	)
 																},
 															currScroll = {
@@ -8142,56 +8145,56 @@
 															scrollbarsVisibilityChanged =
 																checkCacheAutoForce(
 																	scrollbarsVisibility,
-																	_scrollbarsVisibilityCache
+																	_scrollbarsVisibilityCache,
 																),
 															scrollbarsAutoHide =
 																currentPreparedOptionsScrollbars.autoHide,
 															scrollbarsAutoHideChanged =
 																checkCacheAutoForce(
 																	scrollbarsAutoHide,
-																	_scrollbarsAutoHideCache
+																	_scrollbarsAutoHideCache,
 																),
 															scrollbarsClickScrolling =
 																currentPreparedOptionsScrollbars.clickScrolling,
 															scrollbarsClickScrollingChanged =
 																checkCacheAutoForce(
 																	scrollbarsClickScrolling,
-																	_scrollbarsClickScrollingCache
+																	_scrollbarsClickScrollingCache,
 																),
 															scrollbarsDragScrolling =
 																currentPreparedOptionsScrollbars.dragScrolling,
 															scrollbarsDragScrollingChanged =
 																checkCacheAutoForce(
 																	scrollbarsDragScrolling,
-																	_scrollbarsDragScrollingCache
+																	_scrollbarsDragScrollingCache,
 																),
 															className =
 																_currentPreparedOptions.className,
 															classNameChanged =
 																checkCacheAutoForce(
 																	className,
-																	_classNameCache
+																	_classNameCache,
 																),
 															resize =
 																_currentPreparedOptions.resize,
 															resizeChanged =
 																checkCacheAutoForce(
 																	resize,
-																	_resizeCache
+																	_resizeCache,
 																) && !_isBody,
 															paddingAbsolute =
 																_currentPreparedOptions.paddingAbsolute,
 															paddingAbsoluteChanged =
 																checkCacheAutoForce(
 																	paddingAbsolute,
-																	_paddingAbsoluteCache
+																	_paddingAbsoluteCache,
 																),
 															clipAlways =
 																_currentPreparedOptions.clipAlways,
 															clipAlwaysChanged =
 																checkCacheAutoForce(
 																	clipAlways,
-																	_clipAlwaysCache
+																	_clipAlwaysCache,
 																),
 															sizeAutoCapable =
 																_currentPreparedOptions.sizeAutoCapable &&
@@ -8199,7 +8202,7 @@
 															sizeAutoCapableChanged =
 																checkCacheAutoForce(
 																	sizeAutoCapable,
-																	_sizeAutoCapableCache
+																	_sizeAutoCapableCache,
 																),
 															ignoreOverlayScrollbarHiding =
 																_currentPreparedOptions
@@ -8208,14 +8211,14 @@
 															ignoreOverlayScrollbarHidingChanged =
 																checkCacheAutoForce(
 																	ignoreOverlayScrollbarHiding,
-																	_ignoreOverlayScrollbarHidingCache
+																	_ignoreOverlayScrollbarHidingCache,
 																),
 															autoUpdate =
 																_currentPreparedOptions.autoUpdate,
 															autoUpdateChanged =
 																checkCacheAutoForce(
 																	autoUpdate,
-																	_autoUpdateCache
+																	_autoUpdateCache,
 																),
 															overflowBehavior =
 																_currentPreparedOptions.overflowBehavior,
@@ -8223,21 +8226,21 @@
 																checkCacheAutoForce(
 																	overflowBehavior,
 																	_overflowBehaviorCache,
-																	force
+																	force,
 																),
 															textareaDynWidth =
 																currentPreparedOptionsTextarea.dynWidth,
 															textareaDynWidthChanged =
 																checkCacheAutoForce(
 																	_textareaDynWidthCache,
-																	textareaDynWidth
+																	textareaDynWidth,
 																),
 															textareaDynHeight =
 																currentPreparedOptionsTextarea.dynHeight,
 															textareaDynHeightChanged =
 																checkCacheAutoForce(
 																	_textareaDynHeightCache,
-																	textareaDynHeight
+																	textareaDynHeight,
 																)
 														if (
 															((_scrollbarsAutoHideNever =
@@ -8295,7 +8298,7 @@
 															(_overflowBehaviorCache =
 																extendDeep(
 																	{},
-																	overflowBehavior
+																	overflowBehavior,
 																)),
 															(_textareaDynWidthCache =
 																textareaDynWidth),
@@ -8311,7 +8314,7 @@
 																	_hostElement,
 																	_oldClassName +
 																		_strSpace +
-																		_classNameThemeNone
+																		_classNameThemeNone,
 																),
 																addClass(
 																	_hostElement,
@@ -8322,7 +8325,7 @@
 																		className.length >
 																			0
 																		? className
-																		: _classNameThemeNone
+																		: _classNameThemeNone,
 																)),
 															autoUpdateChanged &&
 																(!0 ===
@@ -8332,10 +8335,10 @@
 																	_autoUpdateRecommended)
 																	? (disconnectMutationObservers(),
 																	  autoUpdateLoop.add(
-																			_base
+																			_base,
 																	  ))
 																	: (autoUpdateLoop.remove(
-																			_base
+																			_base,
 																	  ),
 																	  connectMutationObservers())),
 															sizeAutoCapableChanged)
@@ -8347,11 +8350,11 @@
 																		: ((_contentGlueElement =
 																				FRAMEWORK(
 																					generateDiv(
-																						_classNameContentGlueElement
-																					)
+																						_classNameContentGlueElement,
+																					),
 																				)),
 																		  _paddingElement.before(
-																				_contentGlueElement
+																				_contentGlueElement,
 																		  )),
 																	_sizeAutoObserverAdded)
 																)
@@ -8360,13 +8363,13 @@
 																	;(_sizeAutoObserverElement =
 																		FRAMEWORK(
 																			generateDiv(
-																				_classNameSizeAutoObserverElement
-																			)
+																				_classNameSizeAutoObserverElement,
+																			),
 																		)),
 																		(_sizeAutoObserverElementNative =
 																			_sizeAutoObserverElement[0]),
 																		_contentGlueElement.before(
-																			_sizeAutoObserverElement
+																			_sizeAutoObserverElement,
 																		)
 																	var oldSize =
 																		{
@@ -8389,7 +8392,7 @@
 																				}
 																			checkCache(
 																				newSize,
-																				oldSize
+																				oldSize,
 																			) &&
 																				((_initialized &&
 																					_heightAutoCache &&
@@ -8408,7 +8411,7 @@
 																				update(),
 																				(oldSize =
 																					newSize)
-																		}
+																		},
 																	),
 																		(_sizeAutoObserverAdded =
 																			!0),
@@ -8417,7 +8420,7 @@
 																			_sizeAutoObserverElement.css(
 																				_strHeight,
 																				_cssCalc +
-																					'(100% + 1px)'
+																					'(100% + 1px)',
 																			)
 																}
 															else
@@ -8429,19 +8432,19 @@
 															(_sizeObserverElement
 																.find('*')
 																.trigger(
-																	_strScroll
+																	_strScroll,
 																),
 															_sizeAutoObserverAdded &&
 																_sizeAutoObserverElement
 																	.find('*')
 																	.trigger(
-																		_strScroll
+																		_strScroll,
 																	)),
 															(displayIsHidden =
 																displayIsHidden ===
 																undefined2
 																	? _hostElement.is(
-																			':hidden'
+																			':hidden',
 																	  )
 																	: displayIsHidden)
 														var sizeAutoObserverElementBCRect,
@@ -8449,34 +8452,34 @@
 																!!_isTextarea &&
 																'off' !==
 																	_targetElement.attr(
-																		'wrap'
+																		'wrap',
 																	),
 															textareaAutoWrappingChanged =
 																checkCacheAutoForce(
 																	textareaAutoWrapping,
-																	_textareaAutoWrappingCache
+																	_textareaAutoWrappingCache,
 																),
 															cssDirection =
 																_hostElement.css(
-																	'direction'
+																	'direction',
 																),
 															cssDirectionChanged =
 																checkCacheAutoForce(
 																	cssDirection,
-																	_cssDirectionCache
+																	_cssDirectionCache,
 																),
 															boxSizing =
 																_hostElement.css(
-																	'box-sizing'
+																	'box-sizing',
 																),
 															boxSizingChanged =
 																checkCacheAutoForce(
 																	boxSizing,
-																	_cssBoxSizingCache
+																	_cssBoxSizingCache,
 																),
 															padding =
 																getTopRightBottomLeftHost(
-																	_strPaddingMinus
+																	_strPaddingMinus,
 																)
 														try {
 															sizeAutoObserverElementBCRect =
@@ -8508,13 +8511,13 @@
 																	!_sizeAutoObserverAdded ||
 																	'none' ===
 																		_hostElement.css(
-																			_strFloat
+																			_strFloat,
 																		)
 																) &&
 																0 ===
 																	MATH.round(
 																		sizeAutoObserverElementBCRect.right -
-																			sizeAutoObserverElementBCRect.left
+																			sizeAutoObserverElementBCRect.left,
 																	) &&
 																(!!paddingAbsolute ||
 																	_hostElementNative[
@@ -8534,11 +8537,11 @@
 																	],
 																tmpCurrContentGlueWidth =
 																	_contentGlueElement.css(
-																		_strWidth
+																		_strWidth,
 																	)
 															_contentGlueElement.css(
 																_strWidth,
-																_strAuto
+																_strAuto,
 															)
 															var tmpNewHostWidth =
 																_hostElementNative[
@@ -8546,7 +8549,7 @@
 																]
 															_contentGlueElement.css(
 																_strWidth,
-																tmpCurrContentGlueWidth
+																tmpCurrContentGlueWidth,
 															),
 																(widthAutoResizeDetection =
 																	tmpCurrHostWidth !==
@@ -8554,7 +8557,7 @@
 																	(_contentGlueElement.css(
 																		_strWidth,
 																		tmpCurrHostWidth +
-																			1
+																			1,
 																	),
 																	(tmpNewHostWidth =
 																		_hostElementNative[
@@ -8563,7 +8566,7 @@
 																		]),
 																	_contentGlueElement.css(
 																		_strWidth,
-																		tmpCurrContentGlueWidth
+																		tmpCurrContentGlueWidth,
 																	),
 																	(widthAutoResizeDetection =
 																		tmpCurrHostWidth !==
@@ -8577,7 +8580,7 @@
 															widthAutoChanged =
 																checkCacheAutoForce(
 																	widthAuto,
-																	_widthAutoCache
+																	_widthAutoCache,
 																),
 															wasWidthAuto =
 																!widthAuto &&
@@ -8591,12 +8594,12 @@
 																0 ===
 																	MATH.round(
 																		sizeAutoObserverElementBCRect.bottom -
-																			sizeAutoObserverElementBCRect.top
+																			sizeAutoObserverElementBCRect.top,
 																	),
 															heightAutoChanged =
 																checkCacheAutoForce(
 																	heightAuto,
-																	_heightAutoCache
+																	_heightAutoCache,
 																),
 															wasHeightAuto =
 																!heightAuto &&
@@ -8615,11 +8618,11 @@
 																		(heightAuto &&
 																			_isBorderBox) ||
 																		!_isBorderBox
-																	)
+																	),
 																),
 															margin =
 																getTopRightBottomLeftHost(
-																	_strMarginMinus
+																	_strMarginMinus,
 																),
 															contentElementCSS =
 																{},
@@ -8655,7 +8658,7 @@
 																					_contentElementNative[
 																						LEXICON
 																							.sW
-																					]
+																					],
 																			),
 																		h:
 																			_paddingElementNative[
@@ -8671,7 +8674,7 @@
 																					_contentElementNative[
 																						LEXICON
 																							.sH
-																					]
+																					],
 																			),
 																	}
 																},
@@ -8695,7 +8698,7 @@
 															(padding.c =
 																checkCacheAutoForce(
 																	padding,
-																	_cssPaddingCache
+																	_cssPaddingCache,
 																)),
 															(_borderX =
 																border.l +
@@ -8706,7 +8709,7 @@
 															(border.c =
 																checkCacheAutoForce(
 																	border,
-																	_cssBorderCache
+																	_cssBorderCache,
 																)),
 															(_marginX =
 																margin.l +
@@ -8717,7 +8720,7 @@
 															(margin.c =
 																checkCacheAutoForce(
 																	margin,
-																	_cssMarginCache
+																	_cssMarginCache,
 																)),
 															(_textareaAutoWrappingCache =
 																textareaAutoWrapping),
@@ -8739,7 +8742,7 @@
 																_sizeAutoObserverAdded &&
 																_sizeAutoObserverElement.css(
 																	_strFloat,
-																	isRTLRight
+																	isRTLRight,
 																),
 															padding.c ||
 																cssDirectionChanged ||
@@ -8768,36 +8771,36 @@
 																	-padding.r,
 																	-padding.b,
 																	-padding.l,
-																]
+																],
 															),
 																paddingAbsolute
 																	? (setTopRightBottomLeft(
 																			paddingElementCSS,
 																			_strEmpty,
-																			paddingValues
-																	  ),
-																	  setTopRightBottomLeft(
-																			_isTextarea
-																				? textareaCSS
-																				: contentElementCSS,
-																			_strPaddingMinus
-																	  ))
-																	: (setTopRightBottomLeft(
-																			paddingElementCSS,
-																			_strEmpty
+																			paddingValues,
 																	  ),
 																	  setTopRightBottomLeft(
 																			_isTextarea
 																				? textareaCSS
 																				: contentElementCSS,
 																			_strPaddingMinus,
-																			paddingValues
+																	  ))
+																	: (setTopRightBottomLeft(
+																			paddingElementCSS,
+																			_strEmpty,
+																	  ),
+																	  setTopRightBottomLeft(
+																			_isTextarea
+																				? textareaCSS
+																				: contentElementCSS,
+																			_strPaddingMinus,
+																			paddingValues,
 																	  )),
 																_paddingElement.css(
-																	paddingElementCSS
+																	paddingElementCSS,
 																),
 																_targetElement.css(
-																	textareaCSS
+																	textareaCSS,
 																)
 														}
 														_viewportSize =
@@ -8809,7 +8812,7 @@
 																_isTextarea &&
 																checkCacheAutoForce(
 																	textareaSize,
-																	_textareaSizeCache
+																	_textareaSizeCache,
 																),
 															textareaDynOrigSize =
 																_isTextarea &&
@@ -8880,7 +8883,7 @@
 																  ] =
 																		VENDORS._cssPropertyValue(
 																			_strWidth,
-																			'max-content intrinsic'
+																			'max-content intrinsic',
 																		) ||
 																		_strAuto),
 																  (contentElementCSS[
@@ -8902,10 +8905,10 @@
 																: _strEmpty),
 															sizeAutoCapable &&
 																_contentGlueElement.css(
-																	contentGlueElementCSS
+																	contentGlueElementCSS,
 																),
 															_contentElement.css(
-																contentElementCSS
+																contentElementCSS,
 															),
 															(contentElementCSS =
 																{}),
@@ -8944,7 +8947,7 @@
 																		!ignoreOverlayScrollbarHiding
 																			? _nativeScrollbarIsOverlaid.y
 																				? _viewportElement.css(
-																						isRTLLeft
+																						isRTLLeft,
 																				  )
 																				: -_nativeScrollbarSize.y
 																			: 0,
@@ -8954,16 +8957,16 @@
 																		!ignoreOverlayScrollbarHiding
 																			? _nativeScrollbarIsOverlaid.x
 																				? _viewportElement.css(
-																						_strBottom
+																						_strBottom,
 																				  )
 																				: -_nativeScrollbarSize.x
 																			: 0
 																setTopRightBottomLeft(
 																	viewportElementResetCSS,
-																	_strEmpty
+																	_strEmpty,
 																),
 																	_viewportElement.css(
-																		viewportElementResetCSS
+																		viewportElementResetCSS,
 																	)
 															}
 															var contentMeasureElement =
@@ -9005,7 +9008,7 @@
 																	? _strEmpty
 																	: resetXTmp),
 																_viewportElement.css(
-																	viewportElementResetCSS
+																	viewportElementResetCSS,
 																)),
 																(_viewportSize =
 																	getViewportSize())
@@ -9035,21 +9038,21 @@
 																				? contentSize.w
 																				: scrollSize.w) +
 																				paddingAbsoluteX,
-																			hostAbsoluteRectSize.w
+																			hostAbsoluteRectSize.w,
 																		),
 																		h: MATH.max(
 																			(heightAuto
 																				? contentSize.h
 																				: scrollSize.h) +
 																				paddingAbsoluteY,
-																			hostAbsoluteRectSize.h
+																			hostAbsoluteRectSize.h,
 																		),
 																	}
 															if (
 																((contentGlueSize.c =
 																	checkCacheAutoForce(
 																		contentGlueSize,
-																		_contentGlueSizeCache
+																		_contentGlueSizeCache,
 																	)),
 																(_contentGlueSizeCache =
 																	contentGlueSize),
@@ -9082,11 +9085,11 @@
 																		{},
 																	setContentGlueElementCSSfunction =
 																		function (
-																			horizontal
+																			horizontal,
 																		) {
 																			var scrollbarVars =
 																					getScrollbarVars(
-																						horizontal
+																						horizontal,
 																					),
 																				wh =
 																					scrollbarVars._w_h,
@@ -9143,8 +9146,8 @@
 																						] =
 																							parseToZeroOrNumber(
 																								_textareaCoverElement.css(
-																									strWH
-																								)
+																									strWH,
+																								),
 																							) -
 																							1),
 																					(contentGlueElementCSS[
@@ -9161,21 +9164,21 @@
 																							1,
 																							contentGlueElementCSS[
 																								strWH
-																							]
+																							],
 																						))
 																		}
 																setContentGlueElementCSSfunction(
-																	!0
+																	!0,
 																),
 																	setContentGlueElementCSSfunction(
-																		!1
+																		!1,
 																	),
 																	_isTextarea &&
 																		_textareaCoverElement.css(
-																			textareaCoverCSS
+																			textareaCoverCSS,
 																		),
 																	_contentGlueElement.css(
-																		contentGlueElementCSS
+																		contentGlueElementCSS,
 																	)
 															}
 															widthAuto &&
@@ -9190,7 +9193,7 @@
 																		_strFloat
 																	] = 'none'),
 																_contentElement.css(
-																	contentElementCSS
+																	contentElementCSS,
 																),
 																(contentElementCSS =
 																	{})
@@ -9209,7 +9212,7 @@
 																contentSizeChanged =
 																	checkCacheAutoForce(
 																		contentScrollSize,
-																		_contentScrollSizeCache
+																		_contentScrollSizeCache,
 																	)),
 																(_contentScrollSizeCache =
 																	contentScrollSize),
@@ -9219,7 +9222,7 @@
 																	checkCacheAutoForce(
 																		(hostSize =
 																			getHostSize()),
-																		_hostSizeCache
+																		_hostSizeCache,
 																	)),
 																(_hostSizeCache =
 																	hostSize)
@@ -9251,15 +9254,15 @@
 																	](),
 																setOverflowVariables =
 																	function (
-																		horizontal
+																		horizontal,
 																	) {
 																		var scrollbarVars =
 																				getScrollbarVars(
-																					horizontal
+																					horizontal,
 																				),
 																			xyI =
 																				getScrollbarVars(
-																					!horizontal
+																					!horizontal,
 																				)._x_y,
 																			xy =
 																				scrollbarVars._x_y,
@@ -9281,7 +9284,7 @@
 																							] -
 																								_viewportSize[
 																									wh
-																								]
+																								],
 																					  )
 																					: 0,
 																			checkFractionalOverflowAmount =
@@ -9327,9 +9330,9 @@
 																							] -
 																								_viewportSize[
 																									wh
-																								])
+																								]),
 																					) /
-																						100
+																						100,
 																				)),
 																			(overflowAmount[
 																				xy
@@ -9396,29 +9399,29 @@
 																	}
 															if (
 																(setOverflowVariables(
-																	!0
+																	!0,
 																),
 																setOverflowVariables(
-																	!1
+																	!1,
 																),
 																(overflowAmount.c =
 																	checkCacheAutoForce(
 																		overflowAmount,
-																		_overflowAmountCache
+																		_overflowAmountCache,
 																	)),
 																(_overflowAmountCache =
 																	overflowAmount),
 																(hasOverflow.c =
 																	checkCacheAutoForce(
 																		hasOverflow,
-																		_hasOverflowCache
+																		_hasOverflowCache,
 																	)),
 																(_hasOverflowCache =
 																	hasOverflow),
 																(hideOverflow.c =
 																	checkCacheAutoForce(
 																		hideOverflow,
-																		_hideOverflowCache
+																		_hideOverflowCache,
 																	)),
 																(_hideOverflowCache =
 																	hideOverflow),
@@ -9449,7 +9452,7 @@
 																	(arrangeChanged =
 																		checkCacheAutoForce(
 																			arrangeContent,
-																			_arrangeContentSizeCache
+																			_arrangeContentSizeCache,
 																		)),
 																	(_arrangeContentSizeCache =
 																		arrangeContent)),
@@ -9473,15 +9476,15 @@
 																				_strEmpty),
 																		(setContentElementCSS =
 																			function (
-																				horizontal
+																				horizontal,
 																			) {
 																				var scrollbarVars =
 																						getScrollbarVars(
-																							horizontal
+																							horizontal,
 																						),
 																					scrollbarVarsInverted =
 																						getScrollbarVars(
-																							!horizontal
+																							!horizontal,
 																						),
 																					xy =
 																						scrollbarVars._x_y,
@@ -9545,13 +9548,13 @@
 																			? addRemoveClass(
 																					_viewportElement,
 																					_classNameViewportNativeScrollbarsInvisible,
-																					!ignoreOverlayScrollbarHiding
+																					!ignoreOverlayScrollbarHiding,
 																			  )
 																			: (setContentElementCSS(
-																					!0
+																					!0,
 																			  ),
 																			  setContentElementCSS(
-																					!1
+																					!1,
 																			  ))),
 																	ignoreOverlayScrollbarHiding &&
 																		((arrangeContent.w =
@@ -9577,17 +9580,17 @@
 																			((_contentArrangeElement =
 																				FRAMEWORK(
 																					generateDiv(
-																						_classNameContentArrangeElement
-																					)
+																						_classNameContentArrangeElement,
+																					),
 																				)),
 																			_viewportElement.prepend(
-																				_contentArrangeElement
+																				_contentArrangeElement,
 																			)),
 																		_contentArrangeElement.css(
-																			contentArrangeElementCSS
+																			contentArrangeElementCSS,
 																		)),
 																	_contentElement.css(
-																		contentElementCSS
+																		contentElementCSS,
 																	)
 															}
 															var setViewportCSS,
@@ -9612,15 +9615,15 @@
 																		_strEmpty),
 																	(setViewportCSS =
 																		function (
-																			horizontal
+																			horizontal,
 																		) {
 																			var scrollbarVars =
 																					getScrollbarVars(
-																						horizontal
+																						horizontal,
 																					),
 																				scrollbarVarsInverted =
 																					getScrollbarVars(
-																						!horizontal
+																						!horizontal,
 																					),
 																				xy =
 																					scrollbarVars._x_y,
@@ -9686,7 +9689,7 @@
 																				  reset())
 																		})(!0),
 																	setViewportCSS(
-																		!1
+																		!1,
 																	),
 																	!_nativeScrollbarStyling &&
 																	(_viewportSize.h <
@@ -9780,10 +9783,10 @@
 																				] =
 																					'visible')),
 																	_paddingElement.css(
-																		paddingElementCSS
+																		paddingElementCSS,
 																	),
 																	_viewportElement.css(
-																		viewportElementCSS
+																		viewportElementCSS,
 																	),
 																	(viewportElementCSS =
 																		{}),
@@ -9825,30 +9828,30 @@
 																) {
 																	var floatTmp =
 																			_contentElement.css(
-																				_strFloat
+																				_strFloat,
 																			),
 																		posLeftWithoutFloat =
 																			MATH.round(
 																				_contentElement
 																					.css(
 																						_strFloat,
-																						_strEmpty
+																						_strEmpty,
 																					)
 																					.css(
 																						_strLeft,
-																						_strEmpty
+																						_strEmpty,
 																					)
 																					.position()
-																					.left
+																					.left,
 																			)
 																	_contentElement.css(
 																		_strFloat,
-																		floatTmp
+																		floatTmp,
 																	),
 																		posLeftWithoutFloat !==
 																			MATH.round(
 																				_contentElement.position()
-																					.left
+																					.left,
 																			) &&
 																			(contentElementCSS[
 																				_strLeft
@@ -9861,7 +9864,7 @@
 																		_strEmpty
 															if (
 																(_contentElement.css(
-																	contentElementCSS
+																	contentElementCSS,
 																),
 																_isTextarea &&
 																	contentSizeChanged)
@@ -9885,7 +9888,7 @@
 																					],
 																				textareaRowSplit =
 																					textareaValue.split(
-																						'\n'
+																						'\n',
 																					),
 																				textareaLastRow =
 																					textareaRowSplit[
@@ -9896,10 +9899,10 @@
 																					textareaValue
 																						.substr(
 																							0,
-																							textareaCursorPosition
+																							textareaCursorPosition,
 																						)
 																						.split(
-																							'\n'
+																							'\n',
 																						),
 																				widestRow = 0,
 																				textareaLastCol = 0,
@@ -10056,7 +10059,7 @@
 																refreshScrollbarsVisibility =
 																	function (
 																		showX,
-																		showY
+																		showY,
 																	) {
 																		;(showY =
 																			showY ===
@@ -10066,67 +10069,67 @@
 																			refreshScrollbarAppearance(
 																				!0,
 																				showX,
-																				canScroll.x
+																				canScroll.x,
 																			),
 																			refreshScrollbarAppearance(
 																				!1,
 																				showY,
-																				canScroll.y
+																				canScroll.y,
 																			)
 																	}
 															addRemoveClass(
 																_hostElement,
 																_classNameHostOverflow,
 																hideOverflow.x ||
-																	hideOverflow.y
+																	hideOverflow.y,
 															),
 																addRemoveClass(
 																	_hostElement,
 																	_classNameHostOverflowX,
-																	hideOverflow.x
+																	hideOverflow.x,
 																),
 																addRemoveClass(
 																	_hostElement,
 																	_classNameHostOverflowY,
-																	hideOverflow.y
+																	hideOverflow.y,
 																),
 																cssDirectionChanged &&
 																	!_isBody &&
 																	addRemoveClass(
 																		_hostElement,
 																		_classNameHostRTL,
-																		_isRTL
+																		_isRTL,
 																	),
 																_isBody &&
 																	addClass(
 																		_hostElement,
-																		_classNameHostResizeDisabled
+																		_classNameHostResizeDisabled,
 																	),
 																resizeChanged &&
 																	(addRemoveClass(
 																		_hostElement,
 																		_classNameHostResizeDisabled,
-																		_resizeNone
+																		_resizeNone,
 																	),
 																	addRemoveClass(
 																		_scrollbarCornerElement,
 																		_classNameScrollbarCornerResize,
-																		!_resizeNone
+																		!_resizeNone,
 																	),
 																	addRemoveClass(
 																		_scrollbarCornerElement,
 																		_classNameScrollbarCornerResizeB,
-																		_resizeBoth
+																		_resizeBoth,
 																	),
 																	addRemoveClass(
 																		_scrollbarCornerElement,
 																		_classNameScrollbarCornerResizeH,
-																		_resizeHorizontal
+																		_resizeHorizontal,
 																	),
 																	addRemoveClass(
 																		_scrollbarCornerElement,
 																		_classNameScrollbarCornerResizeV,
-																		_resizeVertical
+																		_resizeVertical,
 																	)),
 																(scrollbarsVisibilityChanged ||
 																	overflowBehaviorChanged ||
@@ -10137,34 +10140,34 @@
 																		? ignoreOverlayScrollbarHidingChanged &&
 																		  (removeClass(
 																				_hostElement,
-																				_classNameHostScrolling
+																				_classNameHostScrolling,
 																		  ),
 																		  ignoreOverlayScrollbarHiding &&
 																				refreshScrollbarsVisibility(
-																					!1
+																					!1,
 																				))
 																		: scrollbarsVisibilityAuto
 																		? refreshScrollbarsVisibility(
 																				canScroll.x,
-																				canScroll.y
+																				canScroll.y,
 																		  )
 																		: scrollbarsVisibilityVisible
 																		? refreshScrollbarsVisibility(
-																				!0
+																				!0,
 																		  )
 																		: scrollbarsVisibilityHidden &&
 																		  refreshScrollbarsVisibility(
-																				!1
+																				!1,
 																		  )),
 																(scrollbarsAutoHideChanged ||
 																	ignoreOverlayScrollbarHidingChanged) &&
 																	(setupHostMouseTouchEvents(
 																		!_scrollbarsAutoHideLeave &&
-																			!_scrollbarsAutoHideMove
+																			!_scrollbarsAutoHideMove,
 																	),
 																	refreshScrollbarsAutoHide(
 																		_scrollbarsAutoHideNever,
-																		!_scrollbarsAutoHideNever
+																		!_scrollbarsAutoHideNever,
 																	)),
 																(hostSizeChanged ||
 																	overflowAmount.c ||
@@ -10176,26 +10179,26 @@
 																	ignoreOverlayScrollbarHidingChanged ||
 																	cssDirectionChanged) &&
 																	(refreshScrollbarHandleLength(
-																		!0
+																		!0,
 																	),
 																	refreshScrollbarHandleOffset(
-																		!0
+																		!0,
 																	),
 																	refreshScrollbarHandleLength(
-																		!1
+																		!1,
 																	),
 																	refreshScrollbarHandleOffset(
-																		!1
+																		!1,
 																	)),
 																scrollbarsClickScrollingChanged &&
 																	refreshScrollbarsInteractive(
 																		!0,
-																		scrollbarsClickScrolling
+																		scrollbarsClickScrolling,
 																	),
 																scrollbarsDragScrollingChanged &&
 																	refreshScrollbarsInteractive(
 																		!1,
-																		scrollbarsDragScrolling
+																		scrollbarsDragScrolling,
 																	),
 																dispatchCallback(
 																	'onDirectionChanged',
@@ -10203,7 +10206,7 @@
 																		isRTL: _isRTL,
 																		dir: cssDirection,
 																	},
-																	cssDirectionChanged
+																	cssDirectionChanged,
 																),
 																dispatchCallback(
 																	'onHostSizeChanged',
@@ -10211,7 +10214,7 @@
 																		width: _hostSizeCache.w,
 																		height: _hostSizeCache.h,
 																	},
-																	hostSizeChanged
+																	hostSizeChanged,
 																),
 																dispatchCallback(
 																	'onContentSizeChanged',
@@ -10219,7 +10222,7 @@
 																		width: _contentScrollSizeCache.w,
 																		height: _contentScrollSizeCache.h,
 																	},
-																	contentSizeChanged
+																	contentSizeChanged,
 																),
 																dispatchCallback(
 																	'onOverflowChanged',
@@ -10235,7 +10238,7 @@
 																			hideOverflow.y,
 																	},
 																	hasOverflow.c ||
-																		hideOverflow.c
+																		hideOverflow.c,
 																),
 																dispatchCallback(
 																	'onOverflowAmountChanged',
@@ -10243,7 +10246,7 @@
 																		x: overflowAmount.x,
 																		y: overflowAmount.y,
 																	},
-																	overflowAmount.c
+																	overflowAmount.c,
 																)
 														}
 														_isBody &&
@@ -10258,7 +10261,7 @@
 																	_strMinMinus +
 																		_strWidth,
 																	_bodyMinSizeCache.w +
-																		_overlayScrollbarDummySize.y
+																		_overlayScrollbarDummySize.y,
 																),
 															_nativeScrollbarIsOverlaid.x &&
 																_hasOverflowCache.y &&
@@ -10266,7 +10269,7 @@
 																	_strMinMinus +
 																		_strHeight,
 																	_bodyMinSizeCache.h +
-																		_overlayScrollbarDummySize.x
+																		_overlayScrollbarDummySize.x,
 																),
 															(_bodyMinSizeCache.c =
 																!1)),
@@ -10277,7 +10280,7 @@
 																'onUpdated',
 																{
 																	forced: force,
-																}
+																},
 															)
 													}
 												}
@@ -10286,69 +10289,69 @@
 														eachUpdateOnLoad(
 															function (
 																i,
-																updateOnLoadSelector
+																updateOnLoadSelector,
 															) {
 																_contentElement
 																	.find(
-																		updateOnLoadSelector
+																		updateOnLoadSelector,
 																	)
 																	.each(
 																		function (
 																			i2,
-																			el
+																			el,
 																		) {
 																			COMPATIBILITY.inA(
 																				el,
-																				_updateOnLoadElms
+																				_updateOnLoadElms,
 																			) <
 																				0 &&
 																				(_updateOnLoadElms.push(
-																					el
+																					el,
 																				),
 																				FRAMEWORK(
-																					el
+																					el,
 																				)
 																					.off(
 																						_updateOnLoadEventName,
-																						updateOnLoadCallback
+																						updateOnLoadCallback,
 																					)
 																					.on(
 																						_updateOnLoadEventName,
-																						updateOnLoadCallback
+																						updateOnLoadCallback,
 																					))
-																		}
+																		},
 																	)
-															}
+															},
 														)
 												}
 												function setOptions(
-													newOptions
+													newOptions,
 												) {
 													var validatedOpts =
 														_pluginsOptions._validate(
 															newOptions,
 															_pluginsOptions._template,
 															!0,
-															_currentOptions
+															_currentOptions,
 														)
 													return (
 														(_currentOptions =
 															extendDeep(
 																{},
 																_currentOptions,
-																validatedOpts._default
+																validatedOpts._default,
 															)),
 														(_currentPreparedOptions =
 															extendDeep(
 																{},
 																_currentPreparedOptions,
-																validatedOpts._prepared
+																validatedOpts._prepared,
 															)),
 														validatedOpts._prepared
 													)
 												}
 												function setupStructureDOM(
-													destroy
+													destroy,
 												) {
 													var classNameTextareaElementFull =
 															_classNameTextareaElement +
@@ -10374,22 +10377,22 @@
 																	adoptAttrsMap,
 																	function (
 																		key,
-																		value
+																		value,
 																	) {
 																		type(
-																			value
+																			value,
 																		) ==
 																			TYPES_s &&
 																			(key ==
 																			LEXICON.c
 																				? applyAdoptedAttrsElm.addClass(
-																						value
+																						value,
 																				  )
 																				: applyAdoptedAttrsElm.attr(
 																						key,
-																						value
+																						value,
 																				  ))
-																	}
+																	},
 																)
 															},
 														hostElementClassNames =
@@ -10423,66 +10426,66 @@
 																		.parent()
 																: FRAMEWORK(
 																		generateDiv(
-																			_classNameHostTextareaElement
-																		)
+																			_classNameHostTextareaElement,
+																		),
 																  )
 															: _targetElement)),
 														(_contentElement =
 															_contentElement ||
 															selectOrGenerateDivByClass(
 																_classNameContentElement +
-																	textareaClass
+																	textareaClass,
 															)),
 														(_viewportElement =
 															_viewportElement ||
 															selectOrGenerateDivByClass(
 																_classNameViewportElement +
-																	textareaClass
+																	textareaClass,
 															)),
 														(_paddingElement =
 															_paddingElement ||
 															selectOrGenerateDivByClass(
 																_classNamePaddingElement +
-																	textareaClass
+																	textareaClass,
 															)),
 														(_sizeObserverElement =
 															_sizeObserverElement ||
 															selectOrGenerateDivByClass(
-																'os-resize-observer-host'
+																'os-resize-observer-host',
 															)),
 														(_textareaCoverElement =
 															_textareaCoverElement ||
 															(_isTextarea
 																? selectOrGenerateDivByClass(
-																		_classNameTextareaCoverElement
+																		_classNameTextareaCoverElement,
 																  )
 																: undefined2)),
 														_domExists &&
 															addClass(
 																_hostElement,
-																_classNameHostElementForeign
+																_classNameHostElementForeign,
 															),
 														destroy &&
 															removeClass(
 																_hostElement,
-																hostElementClassNames
+																hostElementClassNames,
 															),
 														(adoptAttrs =
 															type(adoptAttrs) ==
 															TYPES_s
 																? adoptAttrs.split(
-																		_strSpace
+																		_strSpace,
 																  )
 																: adoptAttrs),
 														COMPATIBILITY.isA(
-															adoptAttrs
+															adoptAttrs,
 														) &&
 															_isTextarea &&
 															each(
 																adoptAttrs,
 																function (
 																	i,
-																	v
+																	v,
 																) {
 																	type(v) ==
 																		TYPES_s &&
@@ -10491,12 +10494,12 @@
 																		] =
 																			destroy
 																				? _hostElement.attr(
-																						v
+																						v,
 																				  )
 																				: _targetElement.attr(
-																						v
+																						v,
 																				  ))
-																}
+																},
 															),
 														destroy
 															? (_domExists &&
@@ -10513,25 +10516,25 @@
 																			],
 																			function (
 																				i,
-																				elm
+																				elm,
 																			) {
 																				elm &&
 																					removeClass(
 																						elm.removeAttr(
-																							LEXICON.s
+																							LEXICON.s,
 																						),
-																						_classNamesDynamicDestroy
+																						_classNamesDynamicDestroy,
 																					)
-																			}
+																			},
 																	  ),
 																	  addClass(
 																			_hostElement,
 																			_isTextarea
 																				? _classNameHostTextareaElement
-																				: _classNameHostElement
+																				: _classNameHostElement,
 																	  ))
 																	: (remove(
-																			_sizeObserverElement
+																			_sizeObserverElement,
 																	  ),
 																	  _contentElement
 																			.contents()
@@ -10541,20 +10544,20 @@
 																	  _isTextarea &&
 																			(_targetElement.unwrap(),
 																			remove(
-																				_hostElement
+																				_hostElement,
 																			),
 																			remove(
-																				_textareaCoverElement
+																				_textareaCoverElement,
 																			),
 																			applyAdoptedAttrs())),
 															  _isTextarea &&
 																	_targetElement.removeAttr(
-																		LEXICON.s
+																		LEXICON.s,
 																	),
 															  _isBody &&
 																	removeClass(
 																		_htmlElement,
-																		_classNameHTMLElement
+																		_classNameHTMLElement,
 																	))
 															: (_isTextarea &&
 																	(_currentPreparedOptions.sizeAutoCapable ||
@@ -10562,86 +10565,86 @@
 																			_strWidth
 																		] =
 																			_targetElement.css(
-																				_strWidth
+																				_strWidth,
 																			)),
 																		(hostElementCSS[
 																			_strHeight
 																		] =
 																			_targetElement.css(
-																				_strHeight
+																				_strHeight,
 																			))),
 																	_domExists ||
 																		_targetElement
 																			.addClass(
-																				_classNameTextInherit
+																				_classNameTextInherit,
 																			)
 																			.wrap(
-																				_hostElement
+																				_hostElement,
 																			),
 																	(_hostElement =
 																		_targetElement
 																			.parent()
 																			.css(
-																				hostElementCSS
+																				hostElementCSS,
 																			))),
 															  _domExists ||
 																	(addClass(
 																		_targetElement,
 																		_isTextarea
 																			? classNameTextareaElementFull
-																			: _classNameHostElement
+																			: _classNameHostElement,
 																	),
 																	_hostElement
 																		.wrapInner(
-																			_contentElement
+																			_contentElement,
 																		)
 																		.wrapInner(
-																			_viewportElement
+																			_viewportElement,
 																		)
 																		.wrapInner(
-																			_paddingElement
+																			_paddingElement,
 																		)
 																		.prepend(
-																			_sizeObserverElement
+																			_sizeObserverElement,
 																		),
 																	(_contentElement =
 																		findFirst(
 																			_hostElement,
 																			_strDot +
-																				_classNameContentElement
+																				_classNameContentElement,
 																		)),
 																	(_viewportElement =
 																		findFirst(
 																			_hostElement,
 																			_strDot +
-																				_classNameViewportElement
+																				_classNameViewportElement,
 																		)),
 																	(_paddingElement =
 																		findFirst(
 																			_hostElement,
 																			_strDot +
-																				_classNamePaddingElement
+																				_classNamePaddingElement,
 																		)),
 																	_isTextarea &&
 																		(_contentElement.prepend(
-																			_textareaCoverElement
+																			_textareaCoverElement,
 																		),
 																		applyAdoptedAttrs())),
 															  _nativeScrollbarStyling &&
 																	addClass(
 																		_viewportElement,
-																		_classNameViewportNativeScrollbarsInvisible
+																		_classNameViewportNativeScrollbarsInvisible,
 																	),
 															  _nativeScrollbarIsOverlaid.x &&
 																	_nativeScrollbarIsOverlaid.y &&
 																	addClass(
 																		_viewportElement,
-																		_classNameViewportNativeScrollbarsOverlaid
+																		_classNameViewportNativeScrollbarsOverlaid,
 																	),
 															  _isBody &&
 																	addClass(
 																		_htmlElement,
-																		_classNameHTMLElement
+																		_classNameHTMLElement,
 																	),
 															  (_sizeObserverElementNative =
 																	_sizeObserverElement[0]),
@@ -10671,16 +10674,16 @@
 														textareaKeyDownKeyCodesList =
 															[]
 													function updateTextarea(
-														doClearInterval
+														doClearInterval,
 													) {
 														textareaUpdate(),
 															_base.update(
-																_strAuto
+																_strAuto,
 															),
 															doClearInterval &&
 																_autoUpdateRecommended &&
 																clearInterval(
-																	textareaUpdateIntervalID
+																	textareaUpdateIntervalID,
 																)
 													}
 													_isTextarea
@@ -10689,7 +10692,7 @@
 																? addDestroyEventListener(
 																		_targetElement,
 																		'input',
-																		updateTextarea
+																		updateTextarea,
 																  )
 																: addDestroyEventListener(
 																		_targetElement,
@@ -10699,13 +10702,13 @@
 																		],
 																		[
 																			function textareaOnKeyDown(
-																				event
+																				event,
 																			) {
 																				var keyCode =
 																					event.keyCode
 																				inArray(
 																					keyCode,
-																					textareaKeyDownRestrictedKeyCodes
+																					textareaKeyDownRestrictedKeyCodes,
 																				) <
 																					0 &&
 																					(textareaKeyDownKeyCodesList[
@@ -10717,47 +10720,47 @@
 																							setInterval(
 																								updateTextarea,
 																								1e3 /
-																									60
+																									60,
 																							))),
 																					inArray(
 																						keyCode,
-																						textareaKeyDownKeyCodesList
+																						textareaKeyDownKeyCodesList,
 																					) <
 																						0 &&
 																						textareaKeyDownKeyCodesList.push(
-																							keyCode
+																							keyCode,
 																						))
 																			},
 																			function textareaOnKeyUp(
-																				event
+																				event,
 																			) {
 																				var keyCode =
 																						event.keyCode,
 																					index =
 																						inArray(
 																							keyCode,
-																							textareaKeyDownKeyCodesList
+																							textareaKeyDownKeyCodesList,
 																						)
 																				inArray(
 																					keyCode,
-																					textareaKeyDownRestrictedKeyCodes
+																					textareaKeyDownRestrictedKeyCodes,
 																				) <
 																					0 &&
 																					(index >
 																						-1 &&
 																						textareaKeyDownKeyCodesList.splice(
 																							index,
-																							1
+																							1,
 																						),
 																					textareaKeyDownKeyCodesList[
 																						LEXICON
 																							.l
 																					] ||
 																						updateTextarea(
-																							!0
+																							!0,
 																						))
 																			},
-																		]
+																		],
 																  ),
 														  addDestroyEventListener(
 																_targetElement,
@@ -10769,7 +10772,7 @@
 																],
 																[
 																	function textareaOnScroll(
-																		event
+																		event,
 																	) {
 																		return (
 																			_targetElement[
@@ -10778,31 +10781,31 @@
 																				_rtlScrollBehavior.i &&
 																					_normalizeRTLCache
 																					? 9999999
-																					: 0
+																					: 0,
 																			),
 																			_targetElement[
 																				_strScrollTop
 																			](
-																				0
+																				0,
 																			),
 																			COMPATIBILITY.prvD(
-																				event
+																				event,
 																			),
 																			COMPATIBILITY.stpP(
-																				event
+																				event,
 																			),
 																			!1
 																		)
 																	},
 																	function textareaOnDrop(
-																		event
+																		event,
 																	) {
 																		setTimeout(
 																			function () {
 																				_destroyed ||
 																					updateTextarea()
 																			},
-																			50
+																			50,
 																		)
 																	},
 																	function textareaOnFocus() {
@@ -10810,7 +10813,7 @@
 																			!0),
 																			addClass(
 																				_hostElement,
-																				'focus'
+																				'focus',
 																			)
 																	},
 																	function textareaOnFocusout() {
@@ -10820,24 +10823,24 @@
 																				[]),
 																			removeClass(
 																				_hostElement,
-																				'focus'
+																				'focus',
 																			),
 																			updateTextarea(
-																				!0
+																				!0,
 																			)
 																	},
-																]
+																],
 														  ))
 														: addDestroyEventListener(
 																_contentElement,
 																_strTransitionEndEvent,
 																function contentOnTransitionEnd(
-																	event
+																	event,
 																) {
 																	!0 !==
 																		_autoUpdateCache &&
 																		(function isSizeAffectingCSSProperty(
-																			propertyName
+																			propertyName,
 																		) {
 																			if (
 																				!_initialized
@@ -10916,7 +10919,7 @@
 																				checkPropertyName =
 																					function (
 																						arr,
-																						name
+																						name,
 																					) {
 																						for (
 																							var i = 0;
@@ -10944,26 +10947,26 @@
 																					!(sizeIsAffected =
 																						checkPropertyName(
 																							affectingPropsY,
-																							propertyName
+																							propertyName,
 																						)) &&
 																					!_isBorderBox &&
 																					(sizeIsAffected =
 																						checkPropertyName(
 																							affectingPropsYContentBox,
-																							propertyName
+																							propertyName,
 																						)),
 																				checkX &&
 																					!sizeIsAffected &&
 																					!(sizeIsAffected =
 																						checkPropertyName(
 																							affectingPropsX,
-																							propertyName
+																							propertyName,
 																						)) &&
 																					!_isBorderBox &&
 																					(sizeIsAffected =
 																						checkPropertyName(
 																							affectingPropsXContentBox,
-																							propertyName
+																							propertyName,
 																						)),
 																				sizeIsAffected
 																			)
@@ -10971,88 +10974,88 @@
 																			(event =
 																				event.originalEvent ||
 																				event)
-																				.propertyName
+																				.propertyName,
 																		) &&
 																		_base.update(
-																			_strAuto
+																			_strAuto,
 																		)
-																}
+																},
 														  ),
 														addDestroyEventListener(
 															_viewportElement,
 															_strScroll,
 															function viewportOnScroll(
-																event
+																event,
 															) {
 																_sleeping ||
 																	(scrollStopTimeoutId !==
 																	undefined2
 																		? clearTimeout(
-																				scrollStopTimeoutId
+																				scrollStopTimeoutId,
 																		  )
 																		: ((_scrollbarsAutoHideScroll ||
 																				_scrollbarsAutoHideMove) &&
 																				refreshScrollbarsAutoHide(
-																					!0
+																					!0,
 																				),
 																		  nativeOverlayScrollbarsAreActive() ||
 																				addClass(
 																					_hostElement,
-																					_classNameHostScrolling
+																					_classNameHostScrolling,
 																				),
 																		  dispatchCallback(
 																				'onScrollStart',
-																				event
+																				event,
 																		  )),
 																	_scrollbarsHandlesDefineScrollPos ||
 																		(refreshScrollbarHandleOffset(
-																			!0
+																			!0,
 																		),
 																		refreshScrollbarHandleOffset(
-																			!1
+																			!1,
 																		)),
 																	dispatchCallback(
 																		'onScroll',
-																		event
+																		event,
 																	),
 																	(scrollStopTimeoutId =
 																		setTimeout(
 																			function () {
 																				_destroyed ||
 																					(clearTimeout(
-																						scrollStopTimeoutId
+																						scrollStopTimeoutId,
 																					),
 																					(scrollStopTimeoutId =
 																						undefined2),
 																					(_scrollbarsAutoHideScroll ||
 																						_scrollbarsAutoHideMove) &&
 																						refreshScrollbarsAutoHide(
-																							!1
+																							!1,
 																						),
 																					nativeOverlayScrollbarsAreActive() ||
 																						removeClass(
 																							_hostElement,
-																							_classNameHostScrolling
+																							_classNameHostScrolling,
 																						),
 																					dispatchCallback(
 																						'onScrollStop',
-																						event
+																						event,
 																					))
 																			},
-																			175
+																			175,
 																		)))
 															},
-															!0
+															!0,
 														)
 												}
 												function setupScrollbarsDOM(
-													destroy
+													destroy,
 												) {
 													var horizontalElements,
 														verticalElements,
 														selectOrGenerateScrollbarDOM =
 															function (
-																isHorizontal
+																isHorizontal,
 															) {
 																var scrollbar =
 																		selectOrGenerateDivByClass(
@@ -11061,26 +11064,26 @@
 																				(isHorizontal
 																					? _classNameScrollbarHorizontal
 																					: _classNameScrollbarVertical),
-																			!0
+																			!0,
 																		),
 																	track =
 																		selectOrGenerateDivByClass(
 																			_classNameScrollbarTrack,
-																			scrollbar
+																			scrollbar,
 																		),
 																	handle =
 																		selectOrGenerateDivByClass(
 																			_classNameScrollbarHandle,
-																			scrollbar
+																			scrollbar,
 																		)
 																return (
 																	!_domExists &&
 																		!destroy &&
 																		(scrollbar.append(
-																			track
+																			track,
 																		),
 																		track.append(
-																			handle
+																			handle,
 																		)),
 																	{
 																		_scrollbar:
@@ -11092,11 +11095,11 @@
 																)
 															}
 													function resetScrollbarDOM(
-														isHorizontal
+														isHorizontal,
 													) {
 														var scrollbarVars =
 																getScrollbarVars(
-																	isHorizontal
+																	isHorizontal,
 																),
 															scrollbar =
 																scrollbarVars._scrollbar,
@@ -11114,32 +11117,32 @@
 																	],
 																	function (
 																		i,
-																		elm
+																		elm,
 																	) {
 																		removeClass(
 																			elm.removeAttr(
-																				LEXICON.s
+																				LEXICON.s,
 																			),
-																			_classNamesDynamicDestroy
+																			_classNamesDynamicDestroy,
 																		)
-																	}
+																	},
 															  )
 															: remove(
 																	scrollbar ||
 																		selectOrGenerateScrollbarDOM(
-																			isHorizontal
+																			isHorizontal,
 																		)
-																			._scrollbar
+																			._scrollbar,
 															  )
 													}
 													destroy
 														? (resetScrollbarDOM(
-																!0
+																!0,
 														  ),
 														  resetScrollbarDOM())
 														: ((horizontalElements =
 																selectOrGenerateScrollbarDOM(
-																	!0
+																	!0,
 																)),
 														  (verticalElements =
 																selectOrGenerateScrollbarDOM()),
@@ -11157,14 +11160,14 @@
 																verticalElements._handle),
 														  _domExists ||
 																(_paddingElement.after(
-																	_scrollbarVerticalElement
+																	_scrollbarVerticalElement,
 																),
 																_paddingElement.after(
-																	_scrollbarHorizontalElement
+																	_scrollbarHorizontalElement,
 																)))
 												}
 												function setupScrollbarEvents(
-													isHorizontal
+													isHorizontal,
 												) {
 													var trackTimeout,
 														mouseDownScroll,
@@ -11172,7 +11175,7 @@
 														mouseDownInvertedScale,
 														scrollbarVars =
 															getScrollbarVars(
-																isHorizontal
+																isHorizontal,
 															),
 														scrollbarVarsInfo =
 															scrollbarVars._info,
@@ -11192,7 +11195,7 @@
 														increaseDecreaseScrollAmountKeyCodes =
 															[16, 17]
 													function getPointerPosition(
-														event
+														event,
 													) {
 														return _msieVersion &&
 															insideIFrame
@@ -11201,11 +11204,11 @@
 																		XY
 															  ]
 															: COMPATIBILITY.page(
-																	event
+																	event,
 															  )[xy]
 													}
 													function getPreparedScrollbarsOption(
-														name
+														name,
 													) {
 														return _currentPreparedOptions
 															.scrollbars[name]
@@ -11217,32 +11220,32 @@
 														scrollDurationFactor = 1
 													}
 													function stopClickEventPropagation(
-														event
+														event,
 													) {
 														COMPATIBILITY.stpP(
-															event
+															event,
 														)
 													}
 													function documentKeyDown(
-														event
+														event,
 													) {
 														inArray(
 															event.keyCode,
-															increaseDecreaseScrollAmountKeyCodes
+															increaseDecreaseScrollAmountKeyCodes,
 														) > -1 &&
 															increaseTrackScrollAmount()
 													}
 													function documentKeyUp(
-														event
+														event,
 													) {
 														inArray(
 															event.keyCode,
-															increaseDecreaseScrollAmountKeyCodes
+															increaseDecreaseScrollAmountKeyCodes,
 														) > -1 &&
 															decreaseTrackScrollAmount()
 													}
 													function onMouseTouchDownContinue(
-														event
+														event,
 													) {
 														var isTouchEvent =
 															(
@@ -11258,22 +11261,22 @@
 																!_scrollbarsDragScrollingCache ||
 																(isTouchEvent &&
 																	!getPreparedScrollbarsOption(
-																		'touchSupport'
+																		'touchSupport',
 																	))
 															) &&
 															(1 ===
 																COMPATIBILITY.mBtn(
-																	event
+																	event,
 																) ||
 																isTouchEvent)
 														)
 													}
 													function documentDragMove(
-														event
+														event,
 													) {
 														if (
 															onMouseTouchDownContinue(
-																event
+																event,
 															)
 														) {
 															var trackLength =
@@ -11283,7 +11286,7 @@
 																scrollDelta =
 																	scrollbarVarsInfo._maxScroll *
 																	(((getPointerPosition(
-																		event
+																		event,
 																	) -
 																		mouseDownOffset) *
 																		mouseDownInvertedScale) /
@@ -11291,7 +11294,7 @@
 																			handleLength))
 															;(scrollDelta =
 																isFinite(
-																	scrollDelta
+																	scrollDelta,
 																)
 																	? scrollDelta
 																	: 0),
@@ -11305,26 +11308,26 @@
 																](
 																	MATH.round(
 																		mouseDownScroll +
-																			scrollDelta
-																	)
+																			scrollDelta,
+																	),
 																),
 																_scrollbarsHandlesDefineScrollPos &&
 																	refreshScrollbarHandleOffset(
 																		isHorizontal,
 																		mouseDownScroll +
-																			scrollDelta
+																			scrollDelta,
 																	),
 																_supportPassiveEvents ||
 																	COMPATIBILITY.prvD(
-																		event
+																		event,
 																	)
 														} else
 															documentMouseTouchUp(
-																event
+																event,
 															)
 													}
 													function documentMouseTouchUp(
-														event
+														event,
 													) {
 														if (
 															((event =
@@ -11346,7 +11349,7 @@
 																	documentKeyUp,
 																	documentOnSelectStart,
 																],
-																!0
+																!0,
 															),
 															COMPATIBILITY.rAF()(
 																function () {
@@ -11358,32 +11361,32 @@
 																		{
 																			_capture:
 																				!0,
-																		}
+																		},
 																	)
-																}
+																},
 															),
 															_scrollbarsHandlesDefineScrollPos &&
 																refreshScrollbarHandleOffset(
 																	isHorizontal,
-																	!0
+																	!0,
 																),
 															(_scrollbarsHandlesDefineScrollPos =
 																!1),
 															removeClass(
 																_bodyElement,
-																_classNameDragging
+																_classNameDragging,
 															),
 															removeClass(
 																scrollbarVars._handle,
-																strActive
+																strActive,
 															),
 															removeClass(
 																scrollbarVars._track,
-																strActive
+																strActive,
 															),
 															removeClass(
 																scrollbarVars._scrollbar,
-																strActive
+																strActive,
 															),
 															(mouseDownScroll =
 																undefined2),
@@ -11395,7 +11398,7 @@
 																undefined2 &&
 																(_base.scrollStop(),
 																clearTimeout(
-																	trackTimeout
+																	trackTimeout,
 																),
 																(trackTimeout =
 																	undefined2)),
@@ -11417,12 +11420,12 @@
 																(_scrollbarsAutoHideScroll ||
 																	_scrollbarsAutoHideMove) &&
 																	refreshScrollbarsAutoHide(
-																		!1
+																		!1,
 																	)
 														}
 													}
 													function onHandleMouseTouchDownAction(
-														event
+														event,
 													) {
 														;(mouseDownScroll =
 															_viewportElement[
@@ -11430,7 +11433,7 @@
 															]()),
 															(mouseDownScroll =
 																isNaN(
-																	mouseDownScroll
+																	mouseDownScroll,
 																)
 																	? 0
 																	: mouseDownScroll),
@@ -11449,23 +11452,23 @@
 																]),
 															(mouseDownOffset =
 																getPointerPosition(
-																	event
+																	event,
 																)),
 															(_scrollbarsHandlesDefineScrollPos =
 																!getPreparedScrollbarsOption(
-																	strSnapHandle
+																	strSnapHandle,
 																)),
 															addClass(
 																_bodyElement,
-																_classNameDragging
+																_classNameDragging,
 															),
 															addClass(
 																scrollbarVars._handle,
-																strActive
+																strActive,
 															),
 															addClass(
 																scrollbarVars._scrollbar,
-																strActive
+																strActive,
 															),
 															setupResponsiveEventListener(
 																_documentElement,
@@ -11478,7 +11481,7 @@
 																	documentDragMove,
 																	documentMouseTouchUp,
 																	documentOnSelectStart,
-																]
+																],
 															),
 															COMPATIBILITY.rAF()(
 																function () {
@@ -11490,32 +11493,32 @@
 																		{
 																			_capture:
 																				!0,
-																		}
+																		},
 																	)
-																}
+																},
 															),
 															(_msieVersion ||
 																!_documentMixed) &&
 																COMPATIBILITY.prvD(
-																	event
+																	event,
 																),
 															COMPATIBILITY.stpP(
-																event
+																event,
 															)
 													}
 													addDestroyEventListener(
 														scrollbarVars._handle,
 														_strMouseTouchDownEvent,
 														function onHandleMouseTouchDown(
-															event
+															event,
 														) {
 															onMouseTouchDownContinue(
-																event
+																event,
 															) &&
 																onHandleMouseTouchDownAction(
-																	event
+																	event,
 																)
-														}
+														},
 													),
 														addDestroyEventListener(
 															scrollbarVars._track,
@@ -11526,11 +11529,11 @@
 															],
 															[
 																function onTrackMouseTouchDown(
-																	event
+																	event,
 																) {
 																	if (
 																		onMouseTouchDownContinue(
-																			event
+																			event,
 																		)
 																	) {
 																		var decreaseScroll,
@@ -11548,11 +11551,11 @@
 																							_contentScrollSizeCache[
 																								scrollbarVars
 																									._w_h
-																							]
+																							],
 																					) *
 																						scrollbarVars
 																							._info
-																							._trackLength
+																							._trackLength,
 																				),
 																			scrollDistance =
 																				MATH.round(
@@ -11560,7 +11563,7 @@
 																						scrollbarVars
 																							._w_h
 																					] *
-																						handleToViewportRatio
+																						handleToViewportRatio,
 																				),
 																			scrollBaseDuration =
 																				270 *
@@ -11584,19 +11587,19 @@
 																				!0,
 																			scrollActionFinsished =
 																				function (
-																					transition
+																					transition,
 																				) {
 																					_scrollbarsHandlesDefineScrollPos &&
 																						refreshScrollbarHandleOffset(
 																							isHorizontal,
-																							transition
+																							transition,
 																						)
 																				},
 																			scrollActionInstantFinished =
 																				function () {
 																					scrollActionFinsished(),
 																						onHandleMouseTouchDownAction(
-																							event
+																							event,
 																						)
 																				},
 																			scrollAction =
@@ -11625,7 +11628,7 @@
 																								isFirstIteration
 																									? MATH.max(
 																											scrollFirstIterationDelay,
-																											scrollDuration
+																											scrollDuration,
 																									  )
 																									: scrollDuration,
 																							instantScrollPosition =
@@ -11653,23 +11656,23 @@
 																								{
 																									easing: 'linear',
 																									step: function (
-																										now
+																										now,
 																									) {
 																										_scrollbarsHandlesDefineScrollPos &&
 																											(_viewportElement[
 																												scroll
 																											](
-																												now
+																												now,
 																											),
 																											refreshScrollbarHandleOffset(
 																												isHorizontal,
-																												now
+																												now,
 																											))
 																									},
 																								}
 																						;(instantScrollPosition =
 																							isFinite(
-																								instantScrollPosition
+																								instantScrollPosition,
 																							)
 																								? instantScrollPosition
 																								: 0),
@@ -11684,7 +11687,7 @@
 																								? (_viewportElement[
 																										scroll
 																								  ](
-																										instantScrollPosition
+																										instantScrollPosition,
 																								  ),
 																								  instantScrollTransition
 																										? ((instantScrollPosition =
@@ -11694,7 +11697,7 @@
 																										  _viewportElement[
 																												scroll
 																										  ](
-																												currScroll
+																												currScroll,
 																										  ),
 																										  (instantScrollPosition =
 																												rtlIsNormal &&
@@ -11719,8 +11722,8 @@
 																														duration: 130,
 																														complete:
 																															scrollActionInstantFinished,
-																													}
-																												)
+																													},
+																												),
 																										  ))
 																										: scrollActionInstantFinished())
 																								: ((decreaseScroll =
@@ -11743,18 +11746,18 @@
 																											  mouseOffset
 																								  )
 																										? (clearTimeout(
-																												trackTimeout
+																												trackTimeout,
 																										  ),
 																										  _base.scrollStop(),
 																										  (trackTimeout =
 																												undefined2),
 																										  scrollActionFinsished(
-																												!0
+																												!0,
 																										  ))
 																										: ((trackTimeout =
 																												setTimeout(
 																													scrollAction,
-																													timeoutDelay
+																													timeoutDelay,
 																												)),
 																										  (scrollObj[
 																												xy
@@ -11770,8 +11773,8 @@
 																													{
 																														duration:
 																															scrollDuration,
-																													}
-																												)
+																													},
+																												),
 																										  )),
 																								  (isFirstIteration =
 																										!1))
@@ -11785,25 +11788,25 @@
 																				]),
 																			(mouseDownOffset =
 																				COMPATIBILITY.page(
-																					event
+																					event,
 																				)[
 																					xy
 																				]),
 																			(_scrollbarsHandlesDefineScrollPos =
 																				!getPreparedScrollbarsOption(
-																					strSnapHandle
+																					strSnapHandle,
 																				)),
 																			addClass(
 																				_bodyElement,
-																				_classNameDragging
+																				_classNameDragging,
 																			),
 																			addClass(
 																				scrollbarVars._track,
-																				strActive
+																				strActive,
 																			),
 																			addClass(
 																				scrollbarVars._scrollbar,
-																				strActive
+																				strActive,
 																			),
 																			setupResponsiveEventListener(
 																				_documentElement,
@@ -11818,75 +11821,75 @@
 																					documentKeyDown,
 																					documentKeyUp,
 																					documentOnSelectStart,
-																				]
+																				],
 																			),
 																			scrollAction(),
 																			COMPATIBILITY.prvD(
-																				event
+																				event,
 																			),
 																			COMPATIBILITY.stpP(
-																				event
+																				event,
 																			)
 																	}
 																},
 																function onTrackMouseTouchEnter(
-																	event
+																	event,
 																) {
 																	;(_scrollbarsHandleHovered =
 																		!0),
 																		(_scrollbarsAutoHideScroll ||
 																			_scrollbarsAutoHideMove) &&
 																			refreshScrollbarsAutoHide(
-																				!0
+																				!0,
 																			)
 																},
 																function onTrackMouseTouchLeave(
-																	event
+																	event,
 																) {
 																	;(_scrollbarsHandleHovered =
 																		!1),
 																		(_scrollbarsAutoHideScroll ||
 																			_scrollbarsAutoHideMove) &&
 																			refreshScrollbarsAutoHide(
-																				!1
+																				!1,
 																			)
 																},
-															]
+															],
 														),
 														addDestroyEventListener(
 															scrollbarVars._scrollbar,
 															_strMouseTouchDownEvent,
 															function onScrollbarMouseTouchDown(
-																event
+																event,
 															) {
 																COMPATIBILITY.stpP(
-																	event
+																	event,
 																)
-															}
+															},
 														),
 														_supportTransition &&
 															addDestroyEventListener(
 																scrollbarVars._scrollbar,
 																_strTransitionEndEvent,
 																function (
-																	event
+																	event,
 																) {
 																	event.target ===
 																		scrollbarVars
 																			._scrollbar[0] &&
 																		(refreshScrollbarHandleLength(
-																			isHorizontal
+																			isHorizontal,
 																		),
 																		refreshScrollbarHandleOffset(
-																			isHorizontal
+																			isHorizontal,
 																		))
-																}
+																},
 															)
 												}
 												function refreshScrollbarAppearance(
 													isHorizontal,
 													shallBeVisible,
-													canScroll
+													canScroll,
 												) {
 													var scrollbarElement =
 														isHorizontal
@@ -11897,31 +11900,31 @@
 														isHorizontal
 															? _classNameHostScrollbarHorizontalHidden
 															: _classNameHostScrollbarVerticalHidden,
-														!shallBeVisible
+														!shallBeVisible,
 													),
 														addRemoveClass(
 															scrollbarElement,
 															_classNameScrollbarUnusable,
-															!canScroll
+															!canScroll,
 														)
 												}
 												function refreshScrollbarsAutoHide(
 													shallBeVisible,
-													delayfree
+													delayfree,
 												) {
 													if (
 														(clearTimeout(
-															_scrollbarsAutoHideTimeoutId
+															_scrollbarsAutoHideTimeoutId,
 														),
 														shallBeVisible)
 													)
 														removeClass(
 															_scrollbarHorizontalElement,
-															_classNameScrollbarAutoHidden
+															_classNameScrollbarAutoHidden,
 														),
 															removeClass(
 																_scrollbarVerticalElement,
-																_classNameScrollbarAutoHidden
+																_classNameScrollbarAutoHidden,
 															)
 													else {
 														var anyActive,
@@ -11930,17 +11933,17 @@
 																	!_destroyed &&
 																	(!(anyActive =
 																		_scrollbarHorizontalHandleElement.hasClass(
-																			'active'
+																			'active',
 																		) ||
 																		_scrollbarVerticalHandleElement.hasClass(
-																			'active'
+																			'active',
 																		)) &&
 																		(_scrollbarsAutoHideScroll ||
 																			_scrollbarsAutoHideMove ||
 																			_scrollbarsAutoHideLeave) &&
 																		addClass(
 																			_scrollbarHorizontalElement,
-																			_classNameScrollbarAutoHidden
+																			_classNameScrollbarAutoHidden,
 																		),
 																	!anyActive &&
 																		(_scrollbarsAutoHideScroll ||
@@ -11948,7 +11951,7 @@
 																			_scrollbarsAutoHideLeave) &&
 																		addClass(
 																			_scrollbarVerticalElement,
-																			_classNameScrollbarAutoHidden
+																			_classNameScrollbarAutoHidden,
 																		))
 															}
 														_scrollbarsAutoHideDelay >
@@ -11957,18 +11960,18 @@
 															? (_scrollbarsAutoHideTimeoutId =
 																	setTimeout(
 																		hide,
-																		_scrollbarsAutoHideDelay
+																		_scrollbarsAutoHideDelay,
 																	))
 															: hide()
 													}
 												}
 												function refreshScrollbarHandleLength(
-													isHorizontal
+													isHorizontal,
 												) {
 													var handleCSS = {},
 														scrollbarVars =
 															getScrollbarVars(
-																isHorizontal
+																isHorizontal,
 															),
 														scrollbarVarsInfo =
 															scrollbarVars._info,
@@ -11981,7 +11984,7 @@
 																_contentScrollSizeCache[
 																	scrollbarVars
 																		._w_h
-																]
+																],
 														)
 													;(handleCSS[
 														scrollbarVars._width_height
@@ -11989,13 +11992,13 @@
 														MATH.floor(
 															100 *
 																handleRatio *
-																1e6
+																1e6,
 														) /
 															1e6 +
 														'%'),
 														nativeOverlayScrollbarsAreActive() ||
 															scrollbarVars._handle.css(
-																handleCSS
+																handleCSS,
 															),
 														(scrollbarVarsInfo._handleLength =
 															scrollbarVars._handle[0][
@@ -12007,30 +12010,30 @@
 												}
 												function refreshScrollbarHandleOffset(
 													isHorizontal,
-													scrollOrTransition
+													scrollOrTransition,
 												) {
 													var transformOffset,
 														translateValue,
 														transition =
 															type(
-																scrollOrTransition
+																scrollOrTransition,
 															) == TYPES_b,
 														isRTLisHorizontal =
 															_isRTL &&
 															isHorizontal,
 														scrollbarVars =
 															getScrollbarVars(
-																isHorizontal
+																isHorizontal,
 															),
 														scrollbarVarsInfo =
 															scrollbarVars._info,
 														strTransform =
 															VENDORS._cssProperty(
-																'transform'
+																'transform',
 															),
 														strTransition =
 															VENDORS._cssProperty(
-																'transition'
+																'transition',
 															),
 														nativeScroll =
 															isHorizontal
@@ -12075,7 +12078,7 @@
 															function (base) {
 																return isNaN(
 																	base /
-																		maxScroll
+																		maxScroll,
 																)
 																	? 0
 																	: MATH.max(
@@ -12083,13 +12086,13 @@
 																			MATH.min(
 																				1,
 																				base /
-																					maxScroll
-																			)
+																					maxScroll,
+																			),
 																	  )
 															},
 														getHandleOffset =
 															function (
-																scrollRatio2
+																scrollRatio2,
 															) {
 																var offset =
 																	handleTrackDiff *
@@ -12097,7 +12100,7 @@
 																return (
 																	(offset =
 																		isNaN(
-																			offset
+																			offset,
 																		)
 																			? 0
 																			: offset),
@@ -12111,23 +12114,23 @@
 																	(offset =
 																		MATH.max(
 																			0,
-																			offset
+																			offset,
 																		))
 																)
 															},
 														scrollRatio =
 															getScrollRatio(
-																nativeScroll
+																nativeScroll,
 															),
 														handleOffset =
 															getHandleOffset(
 																getScrollRatio(
-																	currentScroll
-																)
+																	currentScroll,
+																),
 															),
 														snappedHandleOffset =
 															getHandleOffset(
-																scrollRatio
+																scrollRatio,
 															)
 													;(scrollbarVarsInfo._maxScroll =
 														maxScroll),
@@ -12163,18 +12166,18 @@
 																		transition &&
 																		MATH.abs(
 																			handleOffset -
-																				scrollbarVarsInfo._handleOffset
+																				scrollbarVarsInfo._handleOffset,
 																		) > 1
 																			? (function getCSSTransitionString(
-																					element
+																					element,
 																			  ) {
 																					var transitionStr =
 																							VENDORS._cssProperty(
-																								'transition'
+																								'transition',
 																							),
 																						assembledValue =
 																							element.css(
-																								transitionStr
+																								transitionStr,
 																							)
 																					if (
 																						assembledValue
@@ -12188,47 +12191,47 @@
 																								'\\s*(([^,(]+(\\(.+?\\))?)+)[\\s,]*',
 																							regExpMain =
 																								new RegExp(
-																									regExpString
+																									regExpString,
 																								),
 																							regExpValidate =
 																								new RegExp(
 																									'^(' +
 																										regExpString +
-																										')+$'
+																										')+$',
 																								),
 																							properties =
 																								'property duration timing-function delay'.split(
-																									' '
+																									' ',
 																								),
 																							result =
 																								[],
 																							i = 0,
 																							splitCssStyleByComma =
 																								function (
-																									str
+																									str,
 																								) {
 																									if (
 																										((strResult =
 																											[]),
 																										!str.match(
-																											regExpValidate
+																											regExpValidate,
 																										))
 																									)
 																										return str
 																									for (
 																										;
 																										str.match(
-																											regExpMain
+																											regExpMain,
 																										);
 
 																									)
 																										strResult.push(
-																											RegExp.$1
+																											RegExp.$1,
 																										),
 																											(str =
 																												str.replace(
 																													regExpMain,
-																													_strEmpty
+																													_strEmpty,
 																												))
 																									return strResult
 																								};
@@ -12247,8 +12250,8 @@
 																											'-' +
 																											properties[
 																												i
-																											]
-																									)
+																											],
+																									),
 																								),
 																								j = 0;
 																							j <
@@ -12273,10 +12276,10 @@
 																									j
 																								]
 																					return result.join(
-																						', '
+																						', ',
 																					)
 																			  })(
-																					scrollbarVars._handle
+																					scrollbarVars._handle,
 																			  ) +
 																			  ', ' +
 																			  (strTransform +
@@ -12289,7 +12292,7 @@
 															  ] = handleOffset),
 														nativeOverlayScrollbarsAreActive() ||
 															(scrollbarVars._handle.css(
-																handleCSS
+																handleCSS,
 															),
 															_supportTransform &&
 																_supportTransition &&
@@ -12300,9 +12303,9 @@
 																		_destroyed ||
 																			scrollbarVars._handle.css(
 																				strTransition,
-																				_strEmpty
+																				_strEmpty,
 																			)
-																	}
+																	},
 																)),
 														(scrollbarVarsInfo._handleOffset =
 															handleOffset),
@@ -12313,7 +12316,7 @@
 												}
 												function refreshScrollbarsInteractive(
 													isTrack,
-													value
+													value,
 												) {
 													var action = value
 															? 'removeClass'
@@ -12330,11 +12333,11 @@
 														action
 													](className),
 														element2[action](
-															className
+															className,
 														)
 												}
 												function getScrollbarVars(
-													isHorizontal
+													isHorizontal,
 												) {
 													return {
 														_width_height:
@@ -12378,35 +12381,35 @@
 													}
 												}
 												function setupScrollbarCornerDOM(
-													destroy
+													destroy,
 												) {
 													;(_scrollbarCornerElement =
 														_scrollbarCornerElement ||
 														selectOrGenerateDivByClass(
 															_classNameScrollbarCorner,
-															!0
+															!0,
 														)),
 														destroy
 															? _domExists &&
 															  _initialized
 																? removeClass(
 																		_scrollbarCornerElement.removeAttr(
-																			LEXICON.s
+																			LEXICON.s,
 																		),
-																		_classNamesDynamicDestroy
+																		_classNamesDynamicDestroy,
 																  )
 																: remove(
-																		_scrollbarCornerElement
+																		_scrollbarCornerElement,
 																  )
 															: _domExists ||
 															  _hostElement.append(
-																	_scrollbarCornerElement
+																	_scrollbarCornerElement,
 															  )
 												}
 												function dispatchCallback(
 													name,
 													args,
-													dependent
+													dependent,
 												) {
 													if (!1 !== dependent)
 														if (_initialized) {
@@ -12421,24 +12424,24 @@
 															'on' ===
 																extensionOnName.substr(
 																	0,
-																	2
+																	2,
 																) &&
 																(extensionOnName =
 																	extensionOnName
 																		.substr(
 																			2,
-																			1
+																			1,
 																		)
 																		.toLowerCase() +
 																	extensionOnName.substr(
-																		3
+																		3,
 																	)),
 																type(
-																	callback
+																	callback,
 																) == TYPES_f &&
 																	callback.call(
 																		_base,
-																		args
+																		args,
 																	),
 																each(
 																	_extensions,
@@ -12446,14 +12449,14 @@
 																		type(
 																			(ext =
 																				this)
-																				.on
+																				.on,
 																		) ==
 																			TYPES_f &&
 																			ext.on(
 																				extensionOnName,
-																				args
+																				args,
 																			)
-																	}
+																	},
 																)
 														} else
 															_destroyed ||
@@ -12461,13 +12464,13 @@
 																	{
 																		n: name,
 																		a: args,
-																	}
+																	},
 																)
 												}
 												function setTopRightBottomLeft(
 													targetCSSObject,
 													prefix,
-													values
+													values,
 												) {
 													;(values = values || [
 														_strEmpty,
@@ -12495,7 +12498,7 @@
 													prefix,
 													suffix,
 													zeroX,
-													zeroY
+													zeroY,
 												) {
 													return (
 														(suffix =
@@ -12511,8 +12514,8 @@
 																		_hostElement.css(
 																			prefix +
 																				_strTop +
-																				suffix
-																		)
+																				suffix,
+																		),
 																  ),
 															r: zeroX
 																? 0
@@ -12520,8 +12523,8 @@
 																		_hostElement.css(
 																			prefix +
 																				_strRight +
-																				suffix
-																		)
+																				suffix,
+																		),
 																  ),
 															b: zeroY
 																? 0
@@ -12529,8 +12532,8 @@
 																		_hostElement.css(
 																			prefix +
 																				_strBottom +
-																				suffix
-																		)
+																				suffix,
+																		),
 																  ),
 															l: zeroX
 																? 0
@@ -12538,15 +12541,15 @@
 																		_hostElement.css(
 																			prefix +
 																				_strLeft +
-																				suffix
-																		)
+																				suffix,
+																		),
 																  ),
 														}
 													)
 												}
 												function createHostClassNameRegExp(
 													withCurrClassNameOption,
-													withOldClassNameOption
+													withOldClassNameOption,
 												) {
 													var i,
 														split,
@@ -12554,7 +12557,7 @@
 														appendClasses =
 															function (
 																classes,
-																condition
+																condition,
 															) {
 																if (
 																	((appendix =
@@ -12566,7 +12569,7 @@
 																	for (
 																		split =
 																			classes.split(
-																				_strSpace
+																				_strSpace,
 																			),
 																			i = 0;
 																		i <
@@ -12590,13 +12593,13 @@
 															'([-_].+|)$)' +
 															appendClasses(
 																_classNameCache,
-																withCurrClassNameOption
+																withCurrClassNameOption,
 															) +
 															appendClasses(
 																_oldClassName,
-																withOldClassNameOption
+																withOldClassNameOption,
 															),
-														'g'
+														'g',
 													)
 												}
 												function getHostElementInvertedScale() {
@@ -12609,7 +12612,7 @@
 															(_supportTransform &&
 																1 /
 																	(MATH.round(
-																		rect.width
+																		rect.width,
 																	) /
 																		_paddingElementNative[
 																			LEXICON
@@ -12620,7 +12623,7 @@
 															(_supportTransform &&
 																1 /
 																	(MATH.round(
-																		rect.height
+																		rect.height,
 																	) /
 																		_paddingElementNative[
 																			LEXICON
@@ -12651,7 +12654,7 @@
 												}
 												function parseToZeroOrNumber(
 													value,
-													toFloat
+													toFloat,
 												) {
 													var num = toFloat
 														? parseFloat(value)
@@ -12672,13 +12675,13 @@
 												}
 												function generateDiv(
 													classesOrAttrs,
-													content
+													content,
 												) {
 													return (
 														'<div ' +
 														(classesOrAttrs
 															? type(
-																	classesOrAttrs
+																	classesOrAttrs,
 															  ) == TYPES_s
 																? 'class="' +
 																  classesOrAttrs +
@@ -12689,7 +12692,7 @@
 																				_strEmpty
 																		if (
 																			FRAMEWORK.isPlainObject(
-																				classesOrAttrs
+																				classesOrAttrs,
 																			)
 																		)
 																			for (key in classesOrAttrs)
@@ -12713,11 +12716,11 @@
 												}
 												function selectOrGenerateDivByClass(
 													className,
-													selectParentOrOnlyChildren
+													selectParentOrOnlyChildren,
 												) {
 													var onlyChildren =
 															type(
-																selectParentOrOnlyChildren
+																selectParentOrOnlyChildren,
 															) == TYPES_b,
 														selectParent =
 															onlyChildren
@@ -12736,24 +12739,24 @@
 																_strDot +
 																	className.replace(
 																		/\s/g,
-																		_strDot
-																	)
+																		_strDot,
+																	),
 														  ).eq(0)
 														: FRAMEWORK(
 																generateDiv(
-																	className
-																)
+																	className,
+																),
 														  )
 												}
 												function getObjectPropVal(
 													obj,
-													path
+													path,
 												) {
 													for (
 														var val,
 															splits =
 																path.split(
-																	_strDot
+																	_strDot,
 																),
 															i = 0;
 														i < splits.length;
@@ -12761,7 +12764,7 @@
 													) {
 														if (
 															!obj[LEXICON.hOP](
-																splits[i]
+																splits[i],
 															)
 														)
 															return
@@ -12774,7 +12777,7 @@
 													return val
 												}
 												function eachUpdateOnLoad(
-													action
+													action,
 												) {
 													var updateOnLoad =
 														_currentPreparedOptions.updateOnLoad
@@ -12782,22 +12785,22 @@
 														type(updateOnLoad) ==
 														TYPES_s
 															? updateOnLoad.split(
-																	_strSpace
+																	_strSpace,
 															  )
 															: updateOnLoad),
 														COMPATIBILITY.isA(
-															updateOnLoad
+															updateOnLoad,
 														) &&
 															!_destroyed &&
 															each(
 																updateOnLoad,
-																action
+																action,
 															)
 												}
 												function checkCache(
 													current,
 													cache,
-													force
+													force,
 												) {
 													if (force) return force
 													if (
@@ -12822,7 +12825,7 @@
 																	current[
 																		prop
 																	],
-																	cache[prop]
+																	cache[prop],
 																)
 															)
 																return !0
@@ -12834,46 +12837,46 @@
 														this,
 														[!0].concat(
 															[].slice.call(
-																arguments
-															)
-														)
+																arguments,
+															),
+														),
 													)
 												}
 												function addClass(el, classes) {
 													return _frameworkProto.addClass.call(
 														el,
-														classes
+														classes,
 													)
 												}
 												function removeClass(
 													el,
-													classes
+													classes,
 												) {
 													return _frameworkProto.removeClass.call(
 														el,
-														classes
+														classes,
 													)
 												}
 												function addRemoveClass(
 													el,
 													classes,
-													doAdd
+													doAdd,
 												) {
 													return doAdd
 														? addClass(el, classes)
 														: removeClass(
 																el,
-																classes
+																classes,
 														  )
 												}
 												function remove(el) {
 													return _frameworkProto.remove.call(
-														el
+														el,
 													)
 												}
 												function findFirst(
 													el,
-													selector
+													selector,
 												) {
 													return _frameworkProto.find
 														.call(el, selector)
@@ -12886,7 +12889,7 @@
 														function (
 															pluginTargetElements,
 															options,
-															extensions
+															extensions,
 														) {
 															if (
 																0 ===
@@ -12900,7 +12903,7 @@
 																arr = [],
 																optsIsPlainObj =
 																	FRAMEWORK.isPlainObject(
-																		options
+																		options,
 																	)
 															return pluginTargetElements
 																? ((pluginTargetElements =
@@ -12924,7 +12927,7 @@
 																					pluginTargetElements,
 																					function (
 																						i,
-																						v
+																						v,
 																					) {
 																						;(inst =
 																							v) !==
@@ -12935,40 +12938,40 @@
 																									options,
 																									extensions,
 																									_pluginsGlobals,
-																									_pluginsAutoUpdateLoop
-																								)
+																									_pluginsAutoUpdateLoop,
+																								),
 																							)
-																					}
+																					},
 																			  )
 																			: FRAMEWORK.each(
 																					pluginTargetElements,
 																					function (
 																						i,
-																						v
+																						v,
 																					) {
 																						;(inst =
 																							INSTANCES(
-																								v
+																								v,
 																							)),
 																							(('!' ===
 																								options &&
 																								_plugin.valid(
-																									inst
+																									inst,
 																								)) ||
 																								(COMPATIBILITY.type(
-																									options
+																									options,
 																								) ==
 																									TYPES_f &&
 																									options(
 																										v,
-																										inst
+																										inst,
 																									)) ||
 																								options ===
 																									undefined2) &&
 																								arr.push(
-																									inst
+																									inst,
 																								)
-																					}
+																					},
 																			  ),
 																		(result =
 																			1 ===
@@ -12990,7 +12993,7 @@
 														FRAMEWORK.extend(
 															!0,
 															{},
-															_pluginsGlobals
+															_pluginsGlobals,
 														)
 													return (
 														delete globals.msie,
@@ -12999,7 +13002,7 @@
 												}),
 												(_plugin.defaultOptions =
 													function (
-														newDefaultOptions
+														newDefaultOptions,
 													) {
 														initOverlayScrollbarsStatics()
 														var currDefaultOptions =
@@ -13011,7 +13014,7 @@
 															return FRAMEWORK.extend(
 																!0,
 																{},
-																currDefaultOptions
+																currDefaultOptions,
 															)
 														_pluginsGlobals.defaultOptions =
 															FRAMEWORK.extend(
@@ -13022,12 +13025,12 @@
 																	newDefaultOptions,
 																	_pluginsOptions._template,
 																	!0,
-																	currDefaultOptions
-																)._default
+																	currDefaultOptions,
+																)._default,
 															)
 													}),
 												(_plugin.valid = function (
-													osInstance
+													osInstance,
 												) {
 													return (
 														osInstance instanceof
@@ -13039,11 +13042,11 @@
 												(_plugin.extension = function (
 													extensionName,
 													extension,
-													defaultOptions
+													defaultOptions,
 												) {
 													var extNameTypeString =
 															COMPATIBILITY.type(
-																extensionName
+																extensionName,
 															) == TYPES_s,
 														argLen =
 															arguments[
@@ -13061,12 +13064,12 @@
 																	LEXICON.l
 																],
 															},
-															_pluginsExtensions
+															_pluginsExtensions,
 														)
 													if (extNameTypeString)
 														if (
 															COMPATIBILITY.type(
-																extension
+																extension,
 															) == TYPES_f
 														)
 															_pluginsExtensions.push(
@@ -13075,7 +13078,7 @@
 																	extensionFactory:
 																		extension,
 																	defaultOptions,
-																}
+																},
 															)
 														else
 															for (
@@ -13103,11 +13106,11 @@
 																			{},
 																			_pluginsExtensions[
 																				i
-																			]
+																			],
 																		)
 																	_pluginsExtensions.splice(
 																		i,
-																		1
+																		1,
 																	)
 																}
 												}),
@@ -13120,7 +13123,7 @@
 											(JQUERY.fn.overlayScrollbars =
 												function (options, extensions) {
 													return JQUERY.isPlainObject(
-														options
+														options,
 													)
 														? (JQUERY.each(
 																this,
@@ -13128,9 +13131,9 @@
 																	PLUGIN(
 																		this,
 																		options,
-																		extensions
+																		extensions,
 																	)
-																}
+																},
 														  ),
 														  this)
 														: PLUGIN(this, options)
@@ -13144,7 +13147,7 @@
 											return factory(
 												global,
 												global.document,
-												void 0
+												void 0,
 											)
 									  })
 									: 'object' == typeof module &&
@@ -13152,14 +13155,14 @@
 									? (module.exports = factory(
 											global,
 											global.document,
-											void 0
+											void 0,
 									  ))
 									: factory(global, global.document, void 0)
 						},
 					}),
 					import_overlayscrollbars = (0,
 					_chunk_NNAAFZ4U_mjs__WEBPACK_IMPORTED_MODULE_0__.v)(
-						require_OverlayScrollbars()
+						require_OverlayScrollbars(),
 					),
 					OverlayScrollbarsComponent = ({
 						options = {},
@@ -13179,36 +13182,36 @@
 									import_overlayscrollbars.default)(
 										osTargetRef.current,
 										options,
-										extensions
+										extensions,
 									)),
 									mergeHostClassNames(
 										osInstance.current,
-										className
+										className,
 									),
 									() => {
 										import_overlayscrollbars.default.valid(
-											osInstance.current
+											osInstance.current,
 										) &&
 											(osInstance.current.destroy(),
 											(osInstance.current = null))
 									}
 								),
-								[]
+								[],
 							),
 							(0,
 							react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
 								import_overlayscrollbars.default.valid(
-									osInstance.current
+									osInstance.current,
 								) && osInstance.current.options(options)
 							}, [options]),
 							(0,
 							react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
 								import_overlayscrollbars.default.valid(
-									osInstance.current
+									osInstance.current,
 								) &&
 									mergeHostClassNames(
 										osInstance.current,
-										className
+										className,
 									)
 							}, [className]),
 							react__WEBPACK_IMPORTED_MODULE_1__.createElement(
@@ -13220,7 +13223,7 @@
 								},
 								react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 									'div',
-									{ className: 'os-resize-observer-host' }
+									{ className: 'os-resize-observer-host' },
 								),
 								react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 									'div',
@@ -13231,9 +13234,9 @@
 										react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 											'div',
 											{ className: 'os-content' },
-											children
-										)
-									)
+											children,
+										),
+									),
 								),
 								react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 									'div',
@@ -13246,9 +13249,12 @@
 										{ className: 'os-scrollbar-track' },
 										react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 											'div',
-											{ className: 'os-scrollbar-handle' }
-										)
-									)
+											{
+												className:
+													'os-scrollbar-handle',
+											},
+										),
+									),
 								),
 								react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 									'div',
@@ -13261,14 +13267,17 @@
 										{ className: 'os-scrollbar-track' },
 										react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 											'div',
-											{ className: 'os-scrollbar-handle' }
-										)
-									)
+											{
+												className:
+													'os-scrollbar-handle',
+											},
+										),
+									),
 								),
 								react__WEBPACK_IMPORTED_MODULE_1__.createElement(
 									'div',
-									{ className: 'os-scrollbar-corner' }
-								)
+									{ className: 'os-scrollbar-corner' },
+								),
 							)
 						)
 					}
@@ -13279,7 +13288,7 @@
 								`(^os-host([-_].+|)$)|${osInstance
 									.options()
 									.className.replace(/\s/g, '$|')}$`,
-								'g'
+								'g',
 							),
 							osClassNames = host.className
 								.split(' ')

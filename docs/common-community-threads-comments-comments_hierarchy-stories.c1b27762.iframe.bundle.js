@@ -6,7 +6,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				__webpack_require__.r(__webpack_exports__),
 					__webpack_require__.d(__webpack_exports__, {
@@ -14,19 +14,19 @@
 						default: () => comments_hierarchy_stories,
 					})
 				var defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					esm_extends = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/extends.js'
+						'./node_modules/@babel/runtime/helpers/esm/extends.js',
 					),
 					taggedTemplateLiteral = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+						'./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					thread = __webpack_require__(
-						'./components/common/community/threads/thread/thread.tsx'
+						'./components/common/community/threads/thread/thread.tsx',
 					),
 					__jsx = react.createElement
 				function _createForOfIteratorHelper(o, allowArrayLike) {
@@ -38,7 +38,7 @@
 							Array.isArray(o) ||
 							(it = (function _unsupportedIterableToArray(
 								o,
-								minLen
+								minLen,
 							) {
 								if (!o) return
 								if ('string' == typeof o)
@@ -54,7 +54,7 @@
 								if (
 									'Arguments' === n ||
 									/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-										n
+										n,
 									)
 								)
 									return _arrayLikeToArray(o, minLen)
@@ -78,7 +78,7 @@
 							}
 						}
 						throw new TypeError(
-							'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					}
 					var err,
@@ -117,7 +117,7 @@
 						var _step,
 							threads = [],
 							_iterator = _createForOfIteratorHelper(
-								parentComment.comments
+								parentComment.comments,
 							)
 						try {
 							for (
@@ -141,9 +141,9 @@
 												viewCutOff: !1,
 												showAuthor: !0,
 											},
-											subThreads
-										)
-									)
+											subThreads,
+										),
+									),
 								)
 							}
 						} catch (err) {
@@ -195,11 +195,11 @@
 					_Sample$parameters2,
 					_Sample$parameters2$d,
 					dist = __webpack_require__(
-						'./node_modules/swr/dist/index.mjs'
+						'./node_modules/swr/dist/index.mjs',
 					),
 					gql_fetcher = __webpack_require__('./utils/gql_fetcher.ts'),
 					esm = __webpack_require__(
-						'./node_modules/graphql-request/build/esm/index.js'
+						'./node_modules/graphql-request/build/esm/index.js',
 					),
 					comments_hierarchy_stories_jsx = react.createElement
 				function ownKeys(object, enumerableOnly) {
@@ -210,7 +210,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -221,19 +221,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -241,8 +241,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -260,10 +260,10 @@
 										(_templateObject = (0,
 										taggedTemplateLiteral.Z)([
 											'\n                {\n                    thread(input: { id: "63e3f79631115da3472a72dc" }) {\n                        id\n                        title\n                        body\n                        author {\n                            id\n                        }\n                        comments {\n                            id\n                            body\n                            comments {\n                                id\n                                body\n                                comments {\n                                    id\n                                    body\n                                }\n                            }\n                        }\n                    }\n                }\n            ',
-										]))
+										])),
 								),
 							},
-							gql_fetcher.Z
+							gql_fetcher.Z,
 						),
 						data = _useSWR.data,
 						error = _useSWR.error
@@ -272,19 +272,19 @@
 							? comments_hierarchy_stories_jsx(
 									'p',
 									null,
-									'Failed to load content...'
+									'Failed to load content...',
 							  )
 							: (console.log(data),
 							  comments_hierarchy_stories_jsx(
 									CommentsHierarchy,
 									(0, esm_extends.Z)({}, args, {
 										thread: data.thread[0],
-									})
+									}),
 							  ))
 						: comments_hierarchy_stories_jsx(
 								'p',
 								null,
-								'Loading...'
+								'Loading...',
 						  )
 				}
 				Template.displayName = 'Template'
@@ -303,7 +303,7 @@
 											Sample.parameters) ||
 										void 0 === _Sample$parameters
 										? void 0
-										: _Sample$parameters.docs
+										: _Sample$parameters.docs,
 								),
 								{},
 								{
@@ -321,11 +321,11 @@
 													_Sample$parameters2.docs) ||
 											void 0 === _Sample$parameters2$d
 											? void 0
-											: _Sample$parameters2$d.source
+											: _Sample$parameters2$d.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 	},

@@ -63,7 +63,7 @@ function ModuleSidebar({
 											{objective}
 										</li>
 									)
-								}
+								},
 							)}
 						</ul>
 					</div>

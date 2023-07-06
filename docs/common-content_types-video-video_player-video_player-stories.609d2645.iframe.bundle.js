@@ -4,15 +4,15 @@
 		'./components/common/content_types/video/video_chip/video_chip.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { C: () => VideoChip })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/moment/moment.js'
+					'./node_modules/moment/moment.js',
 				),
 				moment__WEBPACK_IMPORTED_MODULE_1___default =
 					__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__),
@@ -43,10 +43,10 @@
 									__jsx('img', {
 										className: 'w-full h-full object-cover',
 										src: icon,
-									})
-								)
+									}),
+								),
 							),
-							__jsx('p', { className: 'font-medium mt-1' }, text)
+							__jsx('p', { className: 'font-medium mt-1' }, text),
 						),
 						__jsx(
 							'div',
@@ -60,9 +60,9 @@
 								moment__WEBPACK_IMPORTED_MODULE_1___default()
 									.utc(1e3 * timestamp)
 									.format('HH:mm:ss', { trim: !0 })
-									.replace(/^0(?:0:0?)?/, '')
-							)
-						)
+									.replace(/^0(?:0:0?)?/, ''),
+							),
+						),
 					)
 				}
 			;(VideoChip.displayName = 'VideoChip'),
@@ -143,14 +143,14 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				__webpack_require__.d(__webpack_exports__, {
 					N: () => VideoCommentTick,
 				})
 				var __jsx = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					).createElement,
 					VideoCommentTick = function VideoCommentTick(_ref) {
 						var icon = _ref.icon
@@ -167,9 +167,9 @@
 							__jsx('img', {
 								src: icon,
 								className: ['object-cover w-full h-full'].join(
-									' '
+									' ',
 								),
-							})
+							}),
 						)
 					}
 				;(VideoCommentTick.displayName = 'VideoCommentTick'),
@@ -214,7 +214,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				__webpack_require__.r(__webpack_exports__),
@@ -226,23 +226,23 @@
 					_Sample$parameters2,
 					_Sample$parameters2$d,
 					defineProperty = __webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 					react = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					lodash = __webpack_require__(
-						'./node_modules/lodash/lodash.js'
+						'./node_modules/lodash/lodash.js',
 					),
 					lodash_default = __webpack_require__.n(lodash),
 					index_esm = __webpack_require__(
-						'./node_modules/react-icons/fa/index.esm.js'
+						'./node_modules/react-icons/fa/index.esm.js',
 					),
 					video_chip = __webpack_require__(
-						'./components/common/content_types/video/video_chip/video_chip.tsx'
+						'./components/common/content_types/video/video_chip/video_chip.tsx',
 					),
 					video_comment_tick = __webpack_require__(
-						'./components/common/content_types/video/video_comment_tick/video_comment_tick.tsx'
+						'./components/common/content_types/video/video_comment_tick/video_comment_tick.tsx',
 					),
 					__jsx = react.createElement,
 					VideoPlayer = function VideoPlayer(_ref) {
@@ -302,7 +302,7 @@
 												function () {
 													setControlsFocused(!1)
 												},
-												3e3
+												3e3,
 											))
 									})()
 								},
@@ -314,7 +314,7 @@
 									className: 'w-full h-full absolute',
 									autoPlay: autoplay,
 									onTimeUpdate: function handleTimeUpdate(
-										event
+										event,
 									) {
 										if (progressBar.current) {
 											var target = event.target,
@@ -341,7 +341,7 @@
 									ref: captionsTrack,
 								}),
 								__jsx('source', { src: source, type }),
-								"Your browser doesn't support video playback. Please consider updating to the latest version."
+								"Your browser doesn't support video playback. Please consider updating to the latest version.",
 							),
 							__jsx(
 								'div',
@@ -350,7 +350,7 @@
 										'absolute z-40 w-full sm:w-1/2 h-full bg-gradient-to-l from-black/[0.75] text-white flex justify-end '.concat(
 											viewComments && controlsFocused
 												? 'visible'
-												: 'invisible'
+												: 'invisible',
 										),
 									style: { right: 0 },
 								},
@@ -371,13 +371,13 @@
 											value: commentInputBox,
 											onChange:
 												function handleCommentBoxValueChange(
-													event
+													event,
 												) {
 													if (videoPlayer.current) {
 														var target =
 															event.target
 														setCommentInputBox(
-															target.value
+															target.value,
 														),
 															videoPlayer.current.pause()
 													}
@@ -397,13 +397,13 @@
 															controlsFocused &&
 															viewComments
 															? 'visible'
-															: 'invisible'
+															: 'invisible',
 													),
 												'data-cy': 'send',
 											},
 											__jsx(index_esm.nbd, null),
-											' Send'
-										)
+											' Send',
+										),
 									),
 									cards.map(function (card, index) {
 										return __jsx(video_chip.C, {
@@ -413,8 +413,8 @@
 											key: index,
 											id: card.id,
 										})
-									})
-								)
+									}),
+								),
 							),
 							__jsx(
 								'div',
@@ -423,7 +423,7 @@
 										'absolute w-full h-full flex flex-col text-white '.concat(
 											controlsFocused
 												? 'visible'
-												: 'invisible'
+												: 'invisible',
 										),
 								},
 								__jsx(
@@ -443,14 +443,14 @@
 													: 'p-4 text-white',
 												onClick: function onClick() {
 													return setViewComments(
-														!viewComments
+														!viewComments,
 													)
 												},
 												'data-cy': 'comment-button',
 											},
-											__jsx(index_esm.OdJ, null)
-										)
-									)
+											__jsx(index_esm.OdJ, null),
+										),
+									),
 								),
 								__jsx('div', { className: 'grow' }),
 								__jsx(
@@ -484,9 +484,9 @@
 												videoPlaying
 													? index_esm.Wh
 													: index_esm.gmG,
-												null
-											)
-										)
+												null,
+											),
+										),
 									),
 									__jsx(
 										'div',
@@ -497,63 +497,65 @@
 										(function generateCommentTicks() {
 											if (videoPlayer.current)
 												return (
-													cards.sort(function (
-														cardA,
-														cardB
-													) {
-														return cardA.timestamp >
-															cardB.timestamp
-															? 1
-															: 0
-													}),
-													cards.map(function (
-														card,
-														index
-													) {
-														return __jsx(
-															'div',
-															{
-																key: index,
-																className:
-																	'absolute h-4 w-4 z-50',
-																onClick:
-																	function onClick() {
-																		!(function handleCommentTickButtonClick(
-																			id
-																		) {
-																			setViewComments(
-																				!0
-																			),
-																				(location.hash =
-																					'#'.concat(
-																						id
-																					))
-																		})(
-																			card.id
-																		)
-																	},
-																style: {
-																	left:
-																		lodash_default().clamp(
-																			(card.timestamp /
-																				videoPlayer
-																					.current
-																					.duration) *
-																				100,
-																			0,
-																			100
-																		) + '%',
-																},
-															},
-															__jsx(
-																video_comment_tick.N,
+													cards.sort(
+														function (
+															cardA,
+															cardB,
+														) {
+															return cardA.timestamp >
+																cardB.timestamp
+																? 1
+																: 0
+														},
+													),
+													cards.map(
+														function (card, index) {
+															return __jsx(
+																'div',
 																{
-																	icon: card.icon,
 																	key: index,
-																}
+																	className:
+																		'absolute h-4 w-4 z-50',
+																	onClick:
+																		function onClick() {
+																			!(function handleCommentTickButtonClick(
+																				id,
+																			) {
+																				setViewComments(
+																					!0,
+																				),
+																					(location.hash =
+																						'#'.concat(
+																							id,
+																						))
+																			})(
+																				card.id,
+																			)
+																		},
+																	style: {
+																		left:
+																			lodash_default().clamp(
+																				(card.timestamp /
+																					videoPlayer
+																						.current
+																						.duration) *
+																					100,
+																				0,
+																				100,
+																			) +
+																			'%',
+																	},
+																},
+																__jsx(
+																	video_comment_tick.N,
+																	{
+																		icon: card.icon,
+																		key: index,
+																	},
+																),
 															)
-														)
-													})
+														},
+													)
 												)
 										})(),
 										__jsx('input', {
@@ -564,13 +566,13 @@
 											ref: progressBar,
 											onChange:
 												function handleProgressBarChange(
-													event
+													event,
 												) {
 													if (
 														videoPlayer.current &&
 														!isNaN(
 															videoPlayer.current
-																.duration
+																.duration,
 														)
 													) {
 														var position =
@@ -587,7 +589,7 @@
 											max: 100,
 											defaultValue: 0,
 											step: 'any',
-										})
+										}),
 									),
 									__jsx(
 										'div',
@@ -605,7 +607,7 @@
 														function handleCaptionsButtonClick() {
 															captionsTrack.current &&
 																(setCaptionsVisible(
-																	!isCaptionsVisible
+																	!isCaptionsVisible,
 																),
 																(captionsTrack.current.track.mode =
 																	isCaptionsVisible
@@ -618,9 +620,9 @@
 													isCaptionsVisible
 														? index_esm.mpV
 														: index_esm.LPX,
-													null
-												)
-											)
+													null,
+												),
+											),
 										),
 										__jsx(
 											'div',
@@ -635,7 +637,7 @@
 																((videoPlayer.current.muted =
 																	!isAudioMuted),
 																setAudioMuted(
-																	!isAudioMuted
+																	!isAudioMuted,
 																))
 														},
 													'data-cy': 'volume',
@@ -644,8 +646,8 @@
 													isAudioMuted
 														? index_esm.xZH
 														: index_esm.rxG,
-													null
-												)
+													null,
+												),
 											),
 											__jsx('input', {
 												className:
@@ -662,7 +664,7 @@
 												orient: 'vertical',
 												value: isAudioMuted ? 0 : 80,
 												step: '1',
-											})
+											}),
 										),
 										__jsx(
 											'div',
@@ -684,7 +686,7 @@
 																player.current.requestFullscreen()
 															}
 															setFullScreen(
-																!document.fullscreenElement
+																!document.fullscreenElement,
 															)
 														},
 												},
@@ -692,13 +694,13 @@
 													isFullscreen
 														? index_esm.Y7H
 														: index_esm.a1O,
-													null
-												)
-											)
-										)
-									)
-								)
-							)
+													null,
+												),
+											),
+										),
+									),
+								),
+							),
 						)
 					}
 				;(VideoPlayer.displayName = 'VideoPlayer'),
@@ -803,7 +805,7 @@
 							(symbols = symbols.filter(function (sym) {
 								return Object.getOwnPropertyDescriptor(
 									object,
-									sym
+									sym,
 								).enumerable
 							})),
 							keys.push.apply(keys, symbols)
@@ -814,19 +816,19 @@
 					for (var i = 1; i < arguments.length; i++) {
 						var source = null != arguments[i] ? arguments[i] : {}
 						i % 2
-							? ownKeys(Object(source), !0).forEach(function (
-									key
-							  ) {
-									;(0, defineProperty.Z)(
-										target,
-										key,
-										source[key]
-									)
-							  })
+							? ownKeys(Object(source), !0).forEach(
+									function (key) {
+										;(0, defineProperty.Z)(
+											target,
+											key,
+											source[key],
+										)
+									},
+							  )
 							: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(
 									target,
-									Object.getOwnPropertyDescriptors(source)
+									Object.getOwnPropertyDescriptors(source),
 							  )
 							: ownKeys(Object(source)).forEach(function (key) {
 									Object.defineProperty(
@@ -834,8 +836,8 @@
 										key,
 										Object.getOwnPropertyDescriptor(
 											source,
-											key
-										)
+											key,
+										),
 									)
 							  })
 					}
@@ -906,7 +908,7 @@
 											Sample.parameters) ||
 										void 0 === _Sample$parameters
 										? void 0
-										: _Sample$parameters.docs
+										: _Sample$parameters.docs,
 								),
 								{},
 								{
@@ -924,17 +926,17 @@
 													_Sample$parameters2.docs) ||
 											void 0 === _Sample$parameters2$d
 											? void 0
-											: _Sample$parameters2$d.source
+											: _Sample$parameters2$d.source,
 									),
-								}
+								},
 							),
-						}
+						},
 					))
 			},
 		'./node_modules/moment/locale sync recursive ^\\.\\/.*$': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var map = {
 				'./af': './node_modules/moment/locale/af.js',

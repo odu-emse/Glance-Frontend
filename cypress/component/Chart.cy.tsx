@@ -44,7 +44,7 @@ describe('Line Chart', function () {
 						data1={[]}
 					/>
 				</div>
-			</SimpleLine>
+			</SimpleLine>,
 		)
 		expect(cy.get('div')).to.exist
 		cy.get('div').should('exist')
@@ -78,7 +78,7 @@ describe('Line Chart', function () {
 						height={100}
 					/>
 				</div>
-			</SimplePie>
+			</SimplePie>,
 		)
 		cy.checkA11y(
 			undefined,
@@ -88,7 +88,7 @@ describe('Line Chart', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 
@@ -114,7 +114,7 @@ describe('Line Chart', function () {
 						height={100}
 					/>
 				</div>
-			</SimplePie>
+			</SimplePie>,
 		)
 		cy.get('div')
 			.children('div.recharts-responsive-container')
@@ -149,7 +149,7 @@ describe('Pie Chart', function () {
 						height={100}
 					/>
 				</div>
-			</SimplePie>
+			</SimplePie>,
 		)
 		expect(cy.get('div')).to.exist
 		cy.get('div').should('exist')
@@ -182,7 +182,7 @@ describe('Pie Chart', function () {
 						height={100}
 					/>
 				</div>
-			</SimplePie>
+			</SimplePie>,
 		)
 		cy.checkA11y(
 			undefined,
@@ -192,7 +192,7 @@ describe('Pie Chart', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('should respect panel width with charts', () => {
@@ -217,7 +217,7 @@ describe('Pie Chart', function () {
 						height={100}
 					/>
 				</div>
-			</SimplePie>
+			</SimplePie>,
 		)
 		cy.get('div')
 			.children('div.recharts-responsive-container')
@@ -277,7 +277,7 @@ describe('Radar Chart', function () {
 						{null}
 					</RadarComponent>
 				</div>
-			</SimpleRadar>
+			</SimpleRadar>,
 		)
 	})
 })

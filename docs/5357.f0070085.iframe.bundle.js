@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function _arrayLikeToArray(arr, len) {
@@ -22,7 +22,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				function _objectWithoutProperties(source, excluded) {
@@ -31,7 +31,7 @@
 						i,
 						target = (function _objectWithoutPropertiesLoose(
 							source,
-							excluded
+							excluded,
 						) {
 							if (null == source) return {}
 							var key,
@@ -52,7 +52,7 @@
 								excluded.indexOf(key) >= 0 ||
 									(Object.prototype.propertyIsEnumerable.call(
 										source,
-										key
+										key,
 									) &&
 										(target[key] = source[key]))
 					}
@@ -65,14 +65,14 @@
 		'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
 				Z: () => _slicedToArray,
 			})
 			var unsupportedIterableToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js'
+				'./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js',
 			)
 			function _slicedToArray(arr, i) {
 				return (
@@ -128,7 +128,7 @@
 					(0, unsupportedIterableToArray.Z)(arr, i) ||
 					(function _nonIterableRest() {
 						throw new TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 						)
 					})()
 				)
@@ -138,7 +138,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				__webpack_require__.d(__webpack_exports__, {
@@ -146,7 +146,7 @@
 				})
 				var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js'
+						'./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js',
 					)
 				function _unsupportedIterableToArray(o, minLen) {
 					if (o) {
@@ -154,7 +154,7 @@
 							return (0,
 							_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 								o,
-								minLen
+								minLen,
 							)
 						var n = Object.prototype.toString.call(o).slice(8, -1)
 						return (
@@ -165,12 +165,12 @@
 								? Array.from(o)
 								: 'Arguments' === n ||
 								  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(
-										n
+										n,
 								  )
 								? (0,
 								  _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.Z)(
 										o,
-										minLen
+										minLen,
 								  )
 								: void 0
 						)
@@ -181,7 +181,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache
@@ -190,7 +190,7 @@
 					j: () => useInsertionEffectWithLayoutFallback,
 				})
 				var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-						'./node_modules/react/index.js'
+						'./node_modules/react/index.js',
 					),
 					useInsertionEffect =
 						!!(
@@ -198,7 +198,7 @@
 							(react__WEBPACK_IMPORTED_MODULE_0___namespace_cache =
 								__webpack_require__.t(
 									react__WEBPACK_IMPORTED_MODULE_0__,
-									2
+									2,
 								))
 						).useInsertionEffect &&
 						(
@@ -206,7 +206,7 @@
 							(react__WEBPACK_IMPORTED_MODULE_0___namespace_cache =
 								__webpack_require__.t(
 									react__WEBPACK_IMPORTED_MODULE_0__,
-									2
+									2,
 								))
 						).useInsertionEffect,
 					useInsertionEffectAlwaysWithSyncFallback =
@@ -221,12 +221,12 @@
 		'./node_modules/@instructure/ui-buttons/es/Button/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var objectWithoutProperties = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
+					'./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js')
 			function decorator(decorate) {
@@ -246,7 +246,7 @@
 									ComposedComponent.name,
 								DecoratedComponent = decorate(
 									ComposedComponent,
-									...args
+									...args,
 								)
 							return (
 								(DecoratedComponent.displayName = displayName),
@@ -258,7 +258,7 @@
 				}
 			}
 			var react_dom = __webpack_require__(
-				'./node_modules/react-dom/index.js'
+				'./node_modules/react-dom/index.js',
 			)
 			const isReactNodeWithRef = (el) => !!el && void 0 !== el.ref,
 				isRefObject = (obj) => !!obj && void 0 !== obj.current
@@ -288,7 +288,7 @@
 				}
 			}
 			const testable = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			).env.ALWAYS_APPEND_UI_TESTABLE_LOCATORS
 				? decorator((ComposedComponent) => {
 						const locator = {
@@ -315,7 +315,7 @@
 									super.componentDidUpdate(
 										prevProps,
 										prevState,
-										snapshot
+										snapshot,
 									),
 									this.appendLocatorAttribute()
 							}
@@ -337,7 +337,7 @@
 										} catch (e) {}
 										if (node) {
 											const attribute = node.getAttribute(
-													locator.attribute
+													locator.attribute,
 												),
 												values =
 													'string' == typeof attribute
@@ -347,7 +347,7 @@
 												values.push(locator.value),
 												node.setAttribute(
 													locator.attribute,
-													values.join(' ')
+													values.join(' '),
 												)
 										}
 									}
@@ -415,7 +415,7 @@
 								'children' !== propName &&
 								'styles' !== propName &&
 								'makeStyles' !== propName &&
-								'deterministicId' !== propName
+								'deterministicId' !== propName,
 						)
 						.forEach((propName) => {
 							validProps[propName] = props[propName]
@@ -424,16 +424,16 @@
 				)
 			}
 			var slicedToArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+					'./node_modules/@babel/runtime/helpers/esm/slicedToArray.js',
 				),
 				hoist_non_react_statics_cjs = __webpack_require__(
-					'./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js'
+					'./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js',
 				),
 				hoist_non_react_statics_cjs_default = __webpack_require__.n(
-					hoist_non_react_statics_cjs
+					hoist_non_react_statics_cjs,
 				),
 				fast_deep_equal = __webpack_require__(
-					'./node_modules/fast-deep-equal/index.js'
+					'./node_modules/fast-deep-equal/index.js',
 				),
 				fast_deep_equal_default = __webpack_require__.n(fast_deep_equal)
 			__webpack_require__('./node_modules/process/browser.js')
@@ -462,7 +462,7 @@
 					displayName,
 					componentId,
 					props,
-					componentTheme
+					componentTheme,
 				) => {
 					const name = displayName,
 						id = componentId,
@@ -526,20 +526,20 @@
 										return (
 											tag.setAttribute(
 												'data-emotion',
-												options.key
+												options.key,
 											),
 											void 0 !== options.nonce &&
 												tag.setAttribute(
 													'nonce',
-													options.nonce
+													options.nonce,
 												),
 											tag.appendChild(
-												document.createTextNode('')
+												document.createTextNode(''),
 											),
 											tag.setAttribute('data-s', ''),
 											tag
 										)
-									})(this)
+									})(this),
 								)
 							var tag = this.tags[this.tags.length - 1]
 							if (this.isSpeedy) {
@@ -559,7 +559,7 @@
 								try {
 									sheet.insertRule(
 										rule,
-										sheet.cssRules.length
+										sheet.cssRules.length,
 									)
 								} catch (e) {
 									0
@@ -633,7 +633,7 @@
 					node('', null, null, '', null, null, 0),
 					root,
 					{ length: -root.length },
-					props
+					props,
 				)
 			}
 			function prev() {
@@ -719,9 +719,9 @@
 								? type + 2
 								: 40 === type
 								? type + 1
-								: type
-						)
-					)
+								: type,
+						),
+					),
 				)
 			}
 			function whitespace(type) {
@@ -743,7 +743,7 @@
 				);
 				return slice(
 					index,
-					caret() + (count < 6 && 32 == peek() && 32 == next())
+					caret() + (count < 6 && 32 == peek() && 32 == next()),
 				)
 			}
 			function delimiter(type) {
@@ -819,8 +819,8 @@
 				return Utility_strlen(
 					(children = Serializer_serialize(
 						element.children,
-						callback
-					))
+						callback,
+					)),
 				)
 					? (element.return = element.value + '{' + children + '}')
 					: ''
@@ -836,8 +836,8 @@
 						(value = alloc(value)),
 						0,
 						[0],
-						value
-					)
+						value,
+					),
 				)
 			}
 			function parse(
@@ -849,7 +849,7 @@
 				rulesets,
 				pseudo,
 				points,
-				declarations
+				declarations,
 			) {
 				for (
 					var index = 0,
@@ -881,9 +881,9 @@
 										(characters += Utility_replace(
 											delimit(character),
 											'&',
-											'&\f'
+											'&\f',
 										)),
-										'&\f'
+										'&\f',
 									) && (ampersand = -1)
 								break
 							}
@@ -909,9 +909,9 @@
 										comment(
 											commenter(next(), caret()),
 											root,
-											parent
+											parent,
 										),
-										declarations
+										declarations,
 									)
 									break
 								default:
@@ -933,7 +933,7 @@
 										(characters = Utility_replace(
 											characters,
 											/\f/g,
-											''
+											'',
 										)),
 										property > 0 &&
 											Utility_strlen(characters) -
@@ -944,19 +944,19 @@
 															characters + ';',
 															rule,
 															parent,
-															length - 1
+															length - 1,
 													  )
 													: declaration(
 															Utility_replace(
 																characters,
 																' ',
-																''
+																'',
 															) + ';',
 															rule,
 															parent,
-															length - 2
+															length - 2,
 													  ),
-												declarations
+												declarations,
 											)
 									break
 								case 59:
@@ -975,9 +975,9 @@
 												type,
 												(props = []),
 												(children = []),
-												length
+												length,
 											)),
-											rulesets
+											rulesets,
 										),
 										123 === character)
 									)
@@ -991,7 +991,7 @@
 												rulesets,
 												length,
 												points,
-												children
+												children,
 											)
 										else
 											switch (
@@ -999,7 +999,7 @@
 												110 ===
 													Utility_charat(
 														characters,
-														3
+														3,
 													)
 													? 100
 													: atrule
@@ -1026,15 +1026,15 @@
 																	rules,
 																	(props =
 																		[]),
-																	length
+																	length,
 																),
-																children
+																children,
 															),
 														rules,
 														children,
 														length,
 														points,
-														rule ? props : children
+														rule ? props : children,
 													)
 													break
 												default:
@@ -1047,7 +1047,7 @@
 														children,
 														0,
 														points,
-														children
+														children,
 													)
 											}
 							}
@@ -1091,7 +1091,7 @@
 										(offset = length =
 											Utility_strlen(
 												(type = characters +=
-													identifier(caret()))
+													identifier(caret())),
 											)),
 										character++
 									break
@@ -1114,7 +1114,7 @@
 				type,
 				props,
 				children,
-				length
+				length,
 			) {
 				for (
 					var post = offset - 1,
@@ -1131,7 +1131,7 @@
 							y = Utility_substr(
 								value,
 								post + 1,
-								(post = abs((j = points[i])))
+								(post = abs((j = points[i]))),
 							),
 							z = value;
 						x < size;
@@ -1140,7 +1140,7 @@
 						(z = trim(
 							j > 0
 								? rule[x] + ' ' + y
-								: Utility_replace(y, /&\f/g, rule[x])
+								: Utility_replace(y, /&\f/g, rule[x]),
 						)) && (props[k++] = z)
 				return node(
 					value,
@@ -1149,7 +1149,7 @@
 					0 === offset ? Enum_RULESET : type,
 					props,
 					children,
-					length
+					length,
 				)
 			}
 			function comment(value, root, parent) {
@@ -1161,10 +1161,10 @@
 					Utility_from(
 						(function Tokenizer_char() {
 							return character
-						})()
+						})(),
 					),
 					Utility_substr(value, 2, -2),
-					0
+					0,
 				)
 			}
 			function declaration(value, root, parent, length) {
@@ -1175,7 +1175,7 @@
 					Enum_DECLARATION,
 					Utility_substr(value, 0, length),
 					Utility_substr(value, length + 1, -1),
-					length
+					length,
 				)
 			}
 			var identifierWithPointTracking =
@@ -1208,7 +1208,7 @@
 												identifierWithPointTracking(
 													position - 1,
 													points,
-													index
+													index,
 												))
 										break
 									case 2:
@@ -1227,7 +1227,7 @@
 								}
 							} while ((character = next()))
 							return parsed
-						})(alloc(value), points)
+						})(alloc(value), points),
 					)
 				},
 				fixedElements = new WeakMap(),
@@ -1271,7 +1271,7 @@
 									element.props[k] = points[i]
 										? rules[i].replace(
 												/&\f/g,
-												parentRules[j]
+												parentRules[j],
 										  )
 										: parentRules[j] + ' ' + rules[i]
 						}
@@ -1360,7 +1360,10 @@
 							Utility_replace(
 								value,
 								/(\w+).+(:[^]+)/,
-								Enum_WEBKIT + 'box-$1$2' + Enum_MS + 'flex-$1$2'
+								Enum_WEBKIT +
+									'box-$1$2' +
+									Enum_MS +
+									'flex-$1$2',
 							) +
 							value
 						)
@@ -1382,7 +1385,7 @@
 							Utility_replace(
 								value,
 								/align-content|flex-|-self/,
-								''
+								'',
 							) +
 							value
 						)
@@ -1419,7 +1422,7 @@
 							Utility_replace(
 								value,
 								/([^-])(transform)/g,
-								'$1' + Enum_WEBKIT + '$2'
+								'$1' + Enum_WEBKIT + '$2',
 							) +
 							value
 						)
@@ -1430,13 +1433,13 @@
 									Utility_replace(
 										value,
 										/(zoom-|grab)/,
-										Enum_WEBKIT + '$1'
+										Enum_WEBKIT + '$1',
 									),
 									/(image-set)/,
-									Enum_WEBKIT + '$1'
+									Enum_WEBKIT + '$1',
 								),
 								value,
-								''
+								'',
 							) + value
 						)
 					case 5495:
@@ -1444,7 +1447,7 @@
 						return Utility_replace(
 							value,
 							/(image-set\([^]*)/,
-							Enum_WEBKIT + '$1$`$1'
+							Enum_WEBKIT + '$1$`$1',
 						)
 					case 4968:
 						return (
@@ -1455,10 +1458,10 @@
 									Enum_WEBKIT +
 										'box-pack:$3' +
 										Enum_MS +
-										'flex-pack:$3'
+										'flex-pack:$3',
 								),
 								/s.+-b[^;]+/,
-								'justify'
+								'justify',
 							) +
 							Enum_WEBKIT +
 							value +
@@ -1472,7 +1475,7 @@
 							Utility_replace(
 								value,
 								/(.+)-inline(.+)/,
-								Enum_WEBKIT + '$1$2'
+								Enum_WEBKIT + '$1$2',
 							) + value
 						)
 					case 8116:
@@ -1506,10 +1509,10 @@
 												(108 ==
 												Utility_charat(
 													value,
-													length + 3
+													length + 3,
 												)
 													? '$3'
-													: '$2-$3')
+													: '$2-$3'),
 										) + value
 									)
 								case 115:
@@ -1518,9 +1521,9 @@
 												Utility_replace(
 													value,
 													'stretch',
-													'fill-available'
+													'fill-available',
 												),
-												length
+												length,
 										  ) + value
 										: value
 							}
@@ -1533,7 +1536,7 @@
 								value,
 								Utility_strlen(value) -
 									3 -
-									(~indexof(value, '!important') && 10)
+									(~indexof(value, '!important') && 10),
 							)
 						) {
 							case 107:
@@ -1541,7 +1544,7 @@
 									Utility_replace(
 										value,
 										':',
-										':' + Enum_WEBKIT
+										':' + Enum_WEBKIT,
 									) + value
 								)
 							case 101:
@@ -1558,7 +1561,7 @@
 											Enum_WEBKIT +
 											'$2$3$1' +
 											Enum_MS +
-											'$2box$3'
+											'$2box$3',
 									) + value
 								)
 						}
@@ -1573,7 +1576,7 @@
 									Utility_replace(
 										value,
 										/[svh]\w+-[tblr]{2}/,
-										'tb'
+										'tb',
 									) +
 									value
 								)
@@ -1585,7 +1588,7 @@
 									Utility_replace(
 										value,
 										/[svh]\w+-[tblr]{2}/,
-										'tb-rl'
+										'tb-rl',
 									) +
 									value
 								)
@@ -1597,7 +1600,7 @@
 									Utility_replace(
 										value,
 										/[svh]\w+-[tblr]{2}/,
-										'lr'
+										'lr',
 									) +
 									value
 								)
@@ -1614,7 +1617,7 @@
 									element.return =
 										emotion_cache_browser_esm_prefix(
 											element.value,
-											element.length
+											element.length,
 										)
 									break
 								case '@keyframes':
@@ -1624,24 +1627,24 @@
 												value: Utility_replace(
 													element.value,
 													'@',
-													'@' + Enum_WEBKIT
+													'@' + Enum_WEBKIT,
 												),
 											}),
 										],
-										callback
+										callback,
 									)
 								case Enum_RULESET:
 									if (element.length)
 										return (function Utility_combine(
 											array,
-											callback
+											callback,
 										) {
 											return array.map(callback).join('')
 										})(element.props, function (value) {
 											switch (
 												(function Utility_match(
 													value,
-													pattern
+													pattern,
 												) {
 													return (value =
 														pattern.exec(value))
@@ -1649,7 +1652,7 @@
 														: value
 												})(
 													value,
-													/(::plac\w+|:read-\w+)/
+													/(::plac\w+|:read-\w+)/,
 												)
 											) {
 												case ':read-only':
@@ -1665,13 +1668,13 @@
 																			/:(read-\w+)/,
 																			':' +
 																				Enum_MOZ +
-																				'$1'
+																				'$1',
 																		),
 																	],
-																}
+																},
 															),
 														],
-														callback
+														callback,
 													)
 												case '::placeholder':
 													return Serializer_serialize(
@@ -1685,10 +1688,10 @@
 																			/:(plac\w+)/,
 																			':' +
 																				Enum_WEBKIT +
-																				'input-$1'
+																				'input-$1',
 																		),
 																	],
-																}
+																},
 															),
 															Tokenizer_copy(
 																element,
@@ -1699,10 +1702,10 @@
 																			/:(plac\w+)/,
 																			':' +
 																				Enum_MOZ +
-																				'$1'
+																				'$1',
 																		),
 																	],
-																}
+																},
 															),
 															Tokenizer_copy(
 																element,
@@ -1712,13 +1715,13 @@
 																			value,
 																			/:(plac\w+)/,
 																			Enum_MS +
-																				'input-$1'
+																				'input-$1',
 																		),
 																	],
-																}
+																},
 															),
 														],
-														callback
+														callback,
 													)
 											}
 											return ''
@@ -1730,7 +1733,7 @@
 					var key = options.key
 					if ('css' === key) {
 						var ssrStyles = document.querySelectorAll(
-							'style[data-emotion]:not([data-s])'
+							'style[data-emotion]:not([data-s])',
 						)
 						Array.prototype.forEach.call(
 							ssrStyles,
@@ -1741,7 +1744,7 @@
 										.indexOf(' ') &&
 									(document.head.appendChild(node),
 									node.setAttribute('data-s', ''))
-							}
+							},
 						)
 					}
 					var stylisPlugins =
@@ -1753,7 +1756,7 @@
 					;(container = options.container || document.head),
 						Array.prototype.forEach.call(
 							document.querySelectorAll(
-								'style[data-emotion^="' + key + ' "]'
+								'style[data-emotion^="' + key + ' "]',
 							),
 							function (node) {
 								for (
@@ -1766,7 +1769,7 @@
 								)
 									inserted[attrib[i]] = !0
 								nodesToHydrate.push(node)
-							}
+							},
 						)
 					var currentSheet,
 						callback,
@@ -1787,7 +1790,7 @@
 								element,
 								index,
 								children,
-								callback
+								callback,
 							) {
 								for (var output = '', i = 0; i < length; i++)
 									output +=
@@ -1795,32 +1798,32 @@
 											element,
 											index,
 											children,
-											callback
+											callback,
 										) || ''
 								return output
 							}
 						})(
 							[compat, removeLabel].concat(
 								stylisPlugins,
-								finalizingPlugins
-							)
+								finalizingPlugins,
+							),
 						)
 					_insert = function insert(
 						selector,
 						serialized,
 						sheet,
-						shouldCache
+						shouldCache,
 					) {
 						;(currentSheet = sheet),
 							(function stylis(styles) {
 								Serializer_serialize(
 									compile(styles),
-									serializer
+									serializer,
 								)
 							})(
 								selector
 									? selector + '{' + serialized.styles + '}'
-									: serialized.styles
+									: serialized.styles,
 							),
 							shouldCache &&
 								(cache.inserted[serialized.name] = !0)
@@ -1926,7 +1929,7 @@
 											}),
 											p1
 										)
-									}
+									},
 								)
 					}
 					return 1 === unitlessKeys[key] ||
@@ -1939,7 +1942,7 @@
 			function handleInterpolation(
 				mergedProps,
 				registered,
-				interpolation
+				interpolation,
 			) {
 				if (null == interpolation) return ''
 				if (void 0 !== interpolation.__emotion_styles)
@@ -1972,7 +1975,7 @@
 						return (function createStringFromObject(
 							mergedProps,
 							registered,
-							obj
+							obj,
 						) {
 							var string = ''
 							if (Array.isArray(obj))
@@ -1981,7 +1984,7 @@
 										handleInterpolation(
 											mergedProps,
 											registered,
-											obj[i]
+											obj[i],
 										) + ';'
 							else
 								for (var _key in obj) {
@@ -2000,7 +2003,7 @@
 													':' +
 													processStyleValue(
 														_key,
-														value
+														value,
 													) +
 													';')
 									else if (
@@ -2012,7 +2015,7 @@
 										var interpolated = handleInterpolation(
 											mergedProps,
 											registered,
-											value
+											value,
 										)
 										switch (_key) {
 											case 'animation':
@@ -2042,7 +2045,7 @@
 													':' +
 													processStyleValue(
 														_key,
-														value[_i]
+														value[_i],
 													) +
 													';')
 								}
@@ -2057,7 +2060,7 @@
 								handleInterpolation(
 									mergedProps,
 									registered,
-									result
+									result,
 								)
 							)
 						}
@@ -2070,14 +2073,14 @@
 				labelPattern = /label:\s*([^\s;\n{]+)\s*(;|$)/g
 			var emotion_use_insertion_effect_with_fallbacks_browser_esm =
 					__webpack_require__(
-						'./node_modules/@emotion/use-insertion-effect-with-fallbacks/dist/emotion-use-insertion-effect-with-fallbacks.browser.esm.js'
+						'./node_modules/@emotion/use-insertion-effect-with-fallbacks/dist/emotion-use-insertion-effect-with-fallbacks.browser.esm.js',
 					),
 				emotion_element_c39617d8_browser_esm_hasOwnProperty = {}
 					.hasOwnProperty,
 				EmotionCacheContext = react.createContext(
 					'undefined' != typeof HTMLElement
 						? createCache({ key: 'css' })
-						: null
+						: null,
 				)
 			EmotionCacheContext.Provider
 			var emotion_element_c39617d8_browser_esm_withEmotionCache =
@@ -2098,7 +2101,7 @@
 						emotion_utils_browser_esm_registerStyles(
 							cache,
 							serialized,
-							isStringTag
+							isStringTag,
 						),
 						(0,
 						emotion_use_insertion_effect_with_fallbacks_browser_esm.L)(
@@ -2106,12 +2109,12 @@
 								return (function insertStyles(
 									cache,
 									serialized,
-									isStringTag
+									isStringTag,
 								) {
 									emotion_utils_browser_esm_registerStyles(
 										cache,
 										serialized,
-										isStringTag
+										isStringTag,
 									)
 									var className =
 										cache.key + '-' + serialized.name
@@ -2127,13 +2130,13 @@
 													: '',
 												current,
 												cache.sheet,
-												!0
+												!0,
 											),
 												(current = current.next)
 										} while (void 0 !== current)
 									}
 								})(cache, serialized, isStringTag)
-							}
+							},
 						),
 						null
 					)
@@ -2152,7 +2155,7 @@
 									(function emotion_utils_browser_esm_getRegisteredStyles(
 										registered,
 										registeredStyles,
-										classNames
+										classNames,
 									) {
 										var rawClassName = ''
 										return (
@@ -2164,7 +2167,7 @@
 														? registeredStyles.push(
 																registered[
 																	className
-																] + ';'
+																] + ';',
 														  )
 														: (rawClassName +=
 																className + ' ')
@@ -2174,14 +2177,14 @@
 									})(
 										cache.registered,
 										registeredStyles,
-										props.className
+										props.className,
 									))
 							: null != props.className &&
 							  (className = props.className + ' ')
 						var serialized = (function serializeStyles(
 							args,
 							registered,
-							mergedProps
+							mergedProps,
 						) {
 							if (
 								1 === args.length &&
@@ -2199,14 +2202,14 @@
 								  (styles += handleInterpolation(
 										mergedProps,
 										registered,
-										strings
+										strings,
 								  )))
 								: (styles += strings[0])
 							for (var i = 1; i < args.length; i++)
 								(styles += handleInterpolation(
 									mergedProps,
 									registered,
-									args[i]
+									args[i],
 								)),
 									stringMode && (styles += strings[i])
 							labelPattern.lastIndex = 0
@@ -2231,17 +2234,17 @@
 															str.charCodeAt(i)) |
 														((255 &
 															str.charCodeAt(
-																++i
+																++i,
 															)) <<
 															8) |
 														((255 &
 															str.charCodeAt(
-																++i
+																++i,
 															)) <<
 															16) |
 														((255 &
 															str.charCodeAt(
-																++i
+																++i,
 															)) <<
 															24))) +
 											((59797 * (k >>> 16)) << 16)),
@@ -2269,7 +2272,7 @@
 														(h ^=
 															255 &
 															str.charCodeAt(
-																i
+																i,
 															))) +
 												((59797 * (h >>> 16)) << 16)
 									}
@@ -2287,15 +2290,15 @@
 							registeredStyles,
 							void 0,
 							react.useContext(
-								emotion_element_c39617d8_browser_esm_ThemeContext
-							)
+								emotion_element_c39617d8_browser_esm_ThemeContext,
+							),
 						)
 						className += cache.key + '-' + serialized.name
 						var newProps = {}
 						for (var key in props)
 							emotion_element_c39617d8_browser_esm_hasOwnProperty.call(
 								props,
-								key
+								key,
 							) &&
 								'css' !== key &&
 								key !== typePropName &&
@@ -2312,10 +2315,10 @@
 									isStringTag:
 										'string' == typeof WrappedComponent,
 								}),
-								react.createElement(WrappedComponent, newProps)
+								react.createElement(WrappedComponent, newProps),
 							)
 						)
-					}
+					},
 				)
 			var Emotion$1 = Emotion
 			const borders = Object.freeze({
@@ -2396,7 +2399,7 @@
 						tiara: '#C7CDD1',
 						porcelain: '#F5F5F5',
 						white: '#FFFFFF',
-					})
+					}),
 				),
 				transitions = Object.freeze({
 					duration: '300ms',
@@ -2519,7 +2522,7 @@
 							isObject(target[key]) && isObject(source[key])
 								? (merged[key] = mergeSourceIntoTarget(
 										target[key],
-										source[key]
+										source[key],
 								  ))
 								: isArray(source[key]) && isArray(target[key])
 								? (merged[key] = [
@@ -2612,12 +2615,12 @@
 									(themeKey !== DEFAULT_THEME_KEY &&
 										error(
 											theme,
-											`[theme-registry] Could not find theme: '${themeKey}' in the registry.`
+											`[theme-registry] Could not find theme: '${themeKey}' in the registry.`,
 										)),
 									(registry.currentThemeKey = themeKey)
 								const themeWithOverrides = mergeDeep(
 									theme,
-									overrides
+									overrides,
 								)
 								return (
 									(registry.themes[themeKey] =
@@ -2626,7 +2629,7 @@
 								)
 							})(
 								key,
-								(null == arg ? void 0 : arg.overrides) || {}
+								(null == arg ? void 0 : arg.overrides) || {},
 							)
 						},
 					}
@@ -2635,7 +2638,7 @@
 						target.key, target.description, target.use
 						const variables = (0, objectWithoutProperties.Z)(
 							target,
-							_excluded2
+							_excluded2,
 						)
 						return 'variables' === property
 							? variables
@@ -2646,7 +2649,7 @@
 			globalThis[GLOBAL_THEME_REGISTRY]
 				? (error(
 						!1,
-						"[theme-registry] A theme registry has already been initialized. Ensure that you are importing only one copy of '@instructure/theme-registry'."
+						"[theme-registry] A theme registry has already been initialized. Ensure that you are importing only one copy of '@instructure/theme-registry'.",
 				  ),
 				  setRegistry(
 						(function validateRegistry(registry) {
@@ -2659,11 +2662,11 @@
 								}),
 								error(
 									valid,
-									'[theme-registry] Invalid global theme registry!'
+									'[theme-registry] Invalid global theme registry!',
 								),
 								registry
 							)
-						})(globalThis[GLOBAL_THEME_REGISTRY])
+						})(globalThis[GLOBAL_THEME_REGISTRY]),
 				  ))
 				: clearRegistry()
 			const ThemeRegistry = {
@@ -2679,7 +2682,7 @@
 								throw (
 									(error(
 										!1,
-										"[theme-registry] The theme provided to 'registerTheme' is not a valid theme object!\nFor it to be valid some properties have to be present, check out https://instructure.design/#canvas as a reference."
+										"[theme-registry] The theme provided to 'registerTheme' is not a valid theme object!\nFor it to be valid some properties have to be present, check out https://instructure.design/#canvas as a reference.",
 									),
 									new Error())
 								)
@@ -2734,7 +2737,7 @@
 			const useTheme_useTheme = () => {
 					let theme = (function useTheme() {
 						return react.useContext(
-							emotion_element_c39617d8_browser_esm_ThemeContext
+							emotion_element_c39617d8_browser_esm_ThemeContext,
 						)
 					})()
 					if (isEmpty(theme)) {
@@ -2749,7 +2752,7 @@
 					(
 						ComposedComponent,
 						generateStyle,
-						generateComponentTheme
+						generateComponentTheme,
 					) => {
 						const displayName =
 								ComposedComponent.displayName ||
@@ -2760,12 +2763,12 @@
 									warn(
 										!1,
 										`Manually passing the "styles" property is not allowed on the ${displayName} component. Using the default styles calculated by the @withStyle decorator instead.\n`,
-										props.styles
+										props.styles,
 									),
 									props.makeStyles &&
 										warn(
 											!1,
-											`Manually passing the "makeStyles" property is not allowed on the ${displayName} component. Styles are calculated by the @withStyle decorator.`
+											`Manually passing the "makeStyles" property is not allowed on the ${displayName} component. Styles are calculated by the @withStyle decorator.`,
 										)
 								const componentProps = {
 									...ComposedComponent.defaultProps,
@@ -2781,7 +2784,7 @@
 									displayName,
 									ComposedComponent.componentId,
 									componentProps,
-									componentTheme
+									componentTheme,
 								)
 								componentTheme = {
 									...componentTheme,
@@ -2792,13 +2795,13 @@
 											? generateStyle(
 													componentTheme,
 													componentProps,
-													{}
+													{},
 											  )
-											: {}
+											: {},
 									),
 									_useState2 = (0, slicedToArray.Z)(
 										_useState,
-										2
+										2,
 									),
 									styles = _useState2[0],
 									setStyles = _useState2[1]
@@ -2810,22 +2813,22 @@
 												generateStyle(
 													componentTheme,
 													componentProps,
-													extraArgs
+													extraArgs,
 												)
 											fast_deep_equal_default()(
 												calculatedStyles,
-												styles
+												styles,
 											) || setStyles(calculatedStyles)
 										},
 										styles,
 										themeOverride,
-									})
+									}),
 								)
 							})
 						return (
 							hoist_non_react_statics_cjs_default()(
 								WithStyle,
-								ComposedComponent
+								ComposedComponent,
 							),
 							(WithStyle.propTypes = ComposedComponent.propTypes),
 							(WithStyle.defaultProps =
@@ -2841,7 +2844,7 @@
 							}),
 							WithStyle
 						)
-					}
+					},
 				)
 			function _typeof(obj) {
 				return (
@@ -2943,29 +2946,29 @@
 							if ((match = matchers.hex4.exec(color)))
 								return {
 									r: parseIntFromHex(
-										match[1] + '' + match[1]
+										match[1] + '' + match[1],
 									),
 									g: parseIntFromHex(
-										match[2] + '' + match[2]
+										match[2] + '' + match[2],
 									),
 									b: parseIntFromHex(
-										match[3] + '' + match[3]
+										match[3] + '' + match[3],
 									),
 									a: convertHexToDecimal(
-										match[4] + '' + match[4]
+										match[4] + '' + match[4],
 									),
 									format: named ? 'name' : 'hex8',
 								}
 							if ((match = matchers.hex3.exec(color)))
 								return {
 									r: parseIntFromHex(
-										match[1] + '' + match[1]
+										match[1] + '' + match[1],
 									),
 									g: parseIntFromHex(
-										match[2] + '' + match[2]
+										match[2] + '' + match[2],
 									),
 									b: parseIntFromHex(
-										match[3] + '' + match[3]
+										match[3] + '' + match[3],
 									),
 									format: named ? 'name' : 'hex',
 								}
@@ -3196,15 +3199,24 @@
 				return (
 					(rgb.r = Math.max(
 						0,
-						Math.min(255, rgb.r - Math.round((-amount / 100) * 255))
+						Math.min(
+							255,
+							rgb.r - Math.round((-amount / 100) * 255),
+						),
 					)),
 					(rgb.g = Math.max(
 						0,
-						Math.min(255, rgb.g - Math.round((-amount / 100) * 255))
+						Math.min(
+							255,
+							rgb.g - Math.round((-amount / 100) * 255),
+						),
 					)),
 					(rgb.b = Math.max(
 						0,
-						Math.min(255, rgb.b - Math.round((-amount / 100) * 255))
+						Math.min(
+							255,
+							rgb.b - Math.round((-amount / 100) * 255),
+						),
 					)),
 					tinycolor(rgb)
 				)
@@ -3230,7 +3242,7 @@
 			function polyad(color, number) {
 				if (isNaN(number) || number <= 0)
 					throw new Error(
-						'Argument to polyad must be a positive number'
+						'Argument to polyad must be a positive number',
 					)
 				for (
 					var hsl = tinycolor(color).toHsl(),
@@ -3245,7 +3257,7 @@
 							h: (hsl.h + i * step) % 360,
 							s: hsl.s,
 							l: hsl.l,
-						})
+						}),
 					)
 				return result
 			}
@@ -3544,7 +3556,7 @@
 				_applyModification: function _applyModification(fn, args) {
 					var color = fn.apply(
 						null,
-						[this].concat([].slice.call(args))
+						[this].concat([].slice.call(args)),
 					)
 					return (
 						(this._r = color._r),
@@ -3684,7 +3696,7 @@
 				(tinycolor.mostReadable = function (
 					baseColor,
 					colorList,
-					args
+					args,
 				) {
 					var readability,
 						includeFallbackColors,
@@ -3699,7 +3711,7 @@
 					for (var i = 0; i < colorList.length; i++)
 						(readability = tinycolor.readability(
 							baseColor,
-							colorList[i]
+							colorList[i],
 						)) > bestScore &&
 							((bestScore = readability),
 							(bestColor = tinycolor(colorList[i])))
@@ -3712,7 +3724,7 @@
 						  tinycolor.mostReadable(
 								baseColor,
 								['#fff', '#000'],
-								args
+								args,
 						  ))
 				})
 			var names = (tinycolor.names = {
@@ -3978,27 +3990,27 @@
 						[`${style}Background`]: backgroundColor,
 						[`${style}HoverBackground`]: darken(
 							backgroundColor,
-							10
+							10,
 						),
 						[`${style}ActiveBackground`]: darken(
 							backgroundColor,
-							10
+							10,
 						),
 						[`${style}ActiveBoxShadow`]: `${activeShadow} ${darken(
 							borderColor,
-							20
+							20,
 						)}`,
 						[`${style}GhostColor`]: ghostTextColor,
 						[`${style}GhostBorderColor`]: ghostBorderColor,
 						[`${style}GhostBackground`]: 'transparent',
 						[`${style}GhostHoverBackground`]: alpha(
 							ghostTextColor,
-							10
+							10,
 						),
 						[`${style}GhostActiveBackground`]: 'transparent',
 						[`${style}GhostActiveBoxShadow`]: `${activeShadow} ${alpha(
 							ghostBorderColor,
-							28
+							28,
 						)}`,
 					}
 				},
@@ -4024,7 +4036,7 @@
 								}),
 								primaryGhostHoverBackground: alpha(
 									theme['ic-brand-button--primary-bgd'],
-									10
+									10,
 								),
 							},
 							'canvas-high-contrast': {
@@ -4206,13 +4218,13 @@
 							}),
 							primaryInverseBorderColor: darken(
 								null == colors ? void 0 : colors.borderLight,
-								10
+								10,
 							),
 							primaryInverseHoverBackground: darken(
 								null == colors
 									? void 0
 									: colors.backgroundLightest,
-								5
+								5,
 							),
 							primaryInverseActiveBackground:
 								null == colors
@@ -4220,18 +4232,18 @@
 									: colors.backgroundLightest,
 							primaryInverseActiveBoxShadow: `${activeShadow} ${darken(
 								null == colors ? void 0 : colors.borderLightest,
-								25
+								25,
 							)}`,
 							successGhostHoverBackground: alpha(
 								null == colors ? void 0 : colors.textSuccess,
-								1
+								1,
 							),
 						},
 						...themeSpecificStyle[themeName],
 					}
 				}
 			var keycode = __webpack_require__(
-					'./node_modules/keycode/index.js'
+					'./node_modules/keycode/index.js',
 				),
 				keycode_default = __webpack_require__.n(keycode)
 			function getElementType(Component, props, getDefault) {
@@ -4251,7 +4263,7 @@
 					: props.to
 					? (warn(
 							!props.as,
-							`[${Component.displayName}] \`as\` prop should be provided when using \`to\``
+							`[${Component.displayName}] \`as\` prop should be provided when using \`to\``,
 					  ),
 					  'a')
 					: 'function' == typeof props.onClick
@@ -4276,7 +4288,7 @@
 			function isDefinedCustomElement(el) {
 				return Boolean(
 					el.tagName.includes('-') &&
-						customElements.get(el.tagName.toLowerCase())
+						customElements.get(el.tagName.toLowerCase()),
 				)
 			}
 			function getActiveElement(doc) {
@@ -4315,7 +4327,7 @@
 					null == props ||
 					!emotion_element_c39617d8_browser_esm_hasOwnProperty.call(
 						props,
-						'css'
+						'css',
 					)
 				)
 					return react.createElement.apply(void 0, args)
@@ -4324,13 +4336,13 @@
 				;(createElementArgArray[0] = Emotion$1),
 					(createElementArgArray[1] = (function createEmotionProps(
 						type,
-						props
+						props,
 					) {
 						var newProps = {}
 						for (var key in props)
 							emotion_element_c39617d8_browser_esm_hasOwnProperty.call(
 								props,
-								key
+								key,
 							) && (newProps[key] = props[key])
 						return (newProps[typePropName] = type), newProps
 					})(type, props))
@@ -4354,7 +4366,7 @@
 				},
 			})
 			var prop_types = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				prop_types_default = __webpack_require__.n(prop_types)
 			const propTypes = {
@@ -4367,7 +4379,7 @@
 			let ScreenReaderContent =
 				withStyle(
 					styles,
-					null
+					null,
 				)(
 					((_class2 = class ScreenReaderContent extends (
 						react.Component
@@ -4404,11 +4416,11 @@
 								styles = _this$props3.styles,
 								props = (0, objectWithoutProperties.Z)(
 									_this$props3,
-									ScreenReaderContent_excluded
+									ScreenReaderContent_excluded,
 								),
 								ElementType = getElementType(
 									ScreenReaderContent,
-									props
+									props,
 								)
 							return jsx(
 								ElementType,
@@ -4419,7 +4431,7 @@
 											: styles.screenReaderContent,
 									ref: this.handleRef,
 								}),
-								children
+								children,
 							)
 						}
 					}),
@@ -4428,7 +4440,7 @@
 					(_class2.propTypes = propTypes),
 					(_class2.allowedProps = ['as', 'children', 'elementRef']),
 					(_class2.defaultProps = { as: 'span', children: null }),
-					(_class = _class2))
+					(_class = _class2)),
 				) || _class
 			function hasVisibleChildren(children) {
 				let visible = !1
@@ -4496,14 +4508,14 @@
 												() => {
 													const attr =
 														htmlEl.getAttribute(
-															'dir'
+															'dir',
 														)
 													attr &&
 														attr !== dirAttribute &&
 														(dirAttribute =
 															defaultDir =
 																attr)
-												}
+												},
 											)),
 											observer.observe(htmlEl, {
 												attributes: !0,
@@ -4516,7 +4528,7 @@
 								getComputedStyle(element).direction
 			}
 			const TextDirectionContext = (0, react.createContext)(
-					getTextDirection() || 'ltr'
+					getTextDirection() || 'ltr',
 				),
 				DIRECTION = { ltr: 'ltr', rtl: 'rtl' },
 				bidirectional_excluded = ['forwardedRef'],
@@ -4527,7 +4539,7 @@
 								forwardedRef = _this$props.forwardedRef,
 								rest = (0, objectWithoutProperties.Z)(
 									_this$props,
-									bidirectional_excluded
+									bidirectional_excluded,
 								)
 							return react.createElement(
 								TextDirectionContext.Consumer,
@@ -4537,9 +4549,9 @@
 										ComposedComponent,
 										Object.assign(
 											{ ref: forwardedRef, dir },
-											rest
-										)
-									)
+											rest,
+										),
+									),
 							)
 						}
 					}
@@ -4549,13 +4561,13 @@
 						(props, ref) =>
 							react.createElement(
 								BidirectionalComponent,
-								Object.assign({}, props, { forwardedRef: ref })
-							)
+								Object.assign({}, props, { forwardedRef: ref }),
+							),
 					)
 					return (
 						hoist_non_react_statics_cjs_default()(
 							BidirectionalForwardingRef,
-							ComposedComponent
+							ComposedComponent,
 						),
 						(BidirectionalForwardingRef.defaultProps =
 							ComposedComponent.defaultProps),
@@ -4590,7 +4602,7 @@
 							!keysToOmit.includes(key) &&
 							omitProps_hasOwnProperty.call(
 								originalObject,
-								key
+								key,
 							) &&
 							(newObject[key] = originalObject[key])
 					return newObject
@@ -4602,7 +4614,7 @@
 				componentName,
 				componentTheme,
 				propValue,
-				propName
+				propName,
 			) {
 				if ('string' == typeof propValue && !isEmpty(componentTheme))
 					return propValue
@@ -4617,14 +4629,14 @@
 							if ('circle' === shortHandValue) return '100%'
 							if ('pill' === shortHandValue) return '999em'
 							const themeVariableName = camelize(
-									`${propName}-${shortHandValue}`
+									`${propName}-${shortHandValue}`,
 								),
 								themeVariableValue =
 									componentTheme[themeVariableName]
 							return (
 								error(
 									void 0 !== themeVariableValue,
-									`[${componentName}] '${themeVariableName}' is an invalid '${propName}' value.`
+									`[${componentName}] '${themeVariableName}' is an invalid '${propName}' value.`,
 								),
 								themeVariableValue || '0'
 							)
@@ -4723,12 +4735,12 @@
 										(error(
 											'inline' === display ||
 												'relative' === position,
-											'[View] the focus outline will only show if the `position` prop is `relative`.'
+											'[View] the focus outline will only show if the `position` prop is `relative`.',
 										),
 										error(
 											'inline' !== display ||
 												'inset' === focusPosition,
-											'[View] when display is set to `inline` the focus outline will only show if `focusPosition` is set to `inset`.'
+											'[View] when display is set to `inline` the focus outline will only show if `focusPosition` is set to `inset`.',
 										))),
 								shouldDisplayFocusOutline
 							)
@@ -4767,7 +4779,7 @@
 											.split(' ')
 											.every(
 												(value) =>
-													initialValue === value
+													initialValue === value,
 											))(initialValue, borderRadius)
 								) {
 									const capitalize = (str) =>
@@ -4776,15 +4788,15 @@
 											.toUpperCase()}${str.slice(1)}`
 									if (
 										['small', 'medium', 'large'].includes(
-											initialValue
+											initialValue,
 										)
 									)
 										return `focusRing--radius${capitalize(
-											initialValue
+											initialValue,
 										)}`
 									if (
 										['circle', 'pill'].includes(
-											initialValue
+											initialValue,
 										)
 									)
 										return 'focusRing--radiusInherit'
@@ -4918,7 +4930,7 @@
 									isRtlDirection
 										? mirrorShorthandCorners(borderRadius)
 										: borderRadius,
-									'borderRadius'
+									'borderRadius',
 								),
 								borderWidth: getShorthandPropValue(
 									'View',
@@ -4926,7 +4938,7 @@
 									isRtlDirection
 										? mirrorShorthandEdges(borderWidth)
 										: borderWidth,
-									'borderWidth'
+									'borderWidth',
 								),
 							}
 						})({
@@ -4948,7 +4960,7 @@
 									isRtlDirection
 										? mirrorShorthandEdges(margin)
 										: margin,
-									'margin'
+									'margin',
 								),
 								padding: getShorthandPropValue(
 									'View',
@@ -4956,7 +4968,7 @@
 									isRtlDirection
 										? mirrorShorthandEdges(padding)
 										: padding,
-									'padding'
+									'padding',
 								),
 							}
 						})({ margin, padding, theme: componentTheme, dir }),
@@ -5391,19 +5403,19 @@
 				SPACING = ThemeablePropValues.SPACING,
 				ThemeablePropTypes = {
 					shadow: prop_types_default().oneOf(
-						Object.values(SHADOW_TYPES)
+						Object.values(SHADOW_TYPES),
 					),
 					stacking: prop_types_default().oneOf(
-						Object.values(STACKING_TYPES)
+						Object.values(STACKING_TYPES),
 					),
 					borderWidth: shorthandPropType(
-						Object.values(BORDER_WIDTHS)
+						Object.values(BORDER_WIDTHS),
 					),
 					borderRadius: shorthandPropType(
-						Object.values(BORDER_RADII)
+						Object.values(BORDER_RADII),
 					),
 					background: prop_types_default().oneOf(
-						Object.values(BACKGROUNDS)
+						Object.values(BACKGROUNDS),
 					),
 					size: prop_types_default().oneOf(Object.values(SIZES)),
 					spacing: shorthandPropType(Object.values(SPACING)),
@@ -5414,15 +5426,15 @@
 					if (void 0 === propValue) return null
 					if ('string' != typeof propValue)
 						return new Error(
-							`Invalid ${location} \`${propName}\` of type \`${typeof propValue}\` supplied to \`${componentName}\`, expected a string.`
+							`Invalid ${location} \`${propName}\` of type \`${typeof propValue}\` supplied to \`${componentName}\`, expected a string.`,
 						)
 					const propValues = propValue.split(' '),
 						valuesLength = propValues.length
 					if (!(valuesLength > 0 && valuesLength < 5))
 						return new Error(
 							`Invalid ${location} \`${propName}\` \`${propValue}\` supplied to \`${componentName}\`, expected between one and four of the following valid values: \`${validValues.join(
-								', '
-							)}\`.`
+								', ',
+							)}\`.`,
 						)
 					for (let i = 0; i < valuesLength; i++) {
 						if (-1 === validValues.indexOf(propValues[i]))
@@ -5430,8 +5442,8 @@
 								`Invalid ${location} \`${propName}\` \`${
 									propValues[i]
 								}\` supplied to \`${componentName}\`, expected a one of \`${validValues.join(
-									', '
-								)}\`.`
+									', ',
+								)}\`.`,
 							)
 					}
 					return null
@@ -5543,7 +5555,7 @@
 					shouldAnimateFocus: prop_types_default().bool,
 					withVisualDebug: prop_types_default().bool,
 					dir: prop_types_default().oneOf(
-						Object.values(textDirectionContextConsumer.DIRECTION)
+						Object.values(textDirectionContextConsumer.DIRECTION),
 					),
 				},
 				View_excluded = [
@@ -5577,7 +5589,7 @@
 					(View_class =
 						withStyle(
 							View_styles,
-							View_theme
+							View_theme,
 						)(
 							((View_class2 = class View extends react.Component {
 								get _element() {
@@ -5611,7 +5623,7 @@
 												.makeStyles) ||
 										void 0 === _this$props$makeStyle2 ||
 										_this$props$makeStyle2.call(
-											_this$props2
+											_this$props2,
 										)
 								}
 								render() {
@@ -5643,11 +5655,11 @@
 											(_this$props3.makeStyles,
 											(0, objectWithoutProperties.Z)(
 												_this$props3,
-												View_excluded
+												View_excluded,
 											)),
 										ElementType = getElementType(
 											View,
-											this.props
+											this.props,
 										)
 									return jsx(
 										ElementType,
@@ -5665,9 +5677,9 @@
 														: styles.inlineStyles,
 												],
 												ref: this.handleElementRef,
-											}
+											},
 										),
-										children
+										children,
 									)
 								}
 							}),
@@ -5727,8 +5739,8 @@
 									'makeStyles',
 									'themeOverride',
 								])),
-							(View_class = View_class2))
-						) || View_class)
+							(View_class = View_class2)),
+						) || View_class),
 				) || View_class
 			const BaseButton_styles = (componentTheme, props, state) => {
 					const size = props.size,
@@ -6205,7 +6217,7 @@
 			let BaseButton =
 				withStyle(
 					BaseButton_styles,
-					theme
+					theme,
 				)(
 					(BaseButton_class =
 						testable()(
@@ -6248,7 +6260,7 @@
 												enter = _keycode$codes.enter
 											'button' !== this.elementType &&
 												[space, enter].includes(
-													event.keyCode
+													event.keyCode,
 												) &&
 												(event.preventDefault(),
 												event.stopPropagation(),
@@ -6268,7 +6280,7 @@
 										void 0 === _this$props$makeStyle ||
 										_this$props$makeStyle.call(
 											_this$props2,
-											this.makeStylesVariables
+											this.makeStylesVariables,
 										)
 								}
 								componentDidUpdate() {
@@ -6280,7 +6292,7 @@
 										void 0 === _this$props$makeStyle2 ||
 										_this$props$makeStyle2.call(
 											_this$props3,
-											this.makeStylesVariables
+											this.makeStylesVariables,
 										)
 								}
 								get _rootElement() {
@@ -6304,7 +6316,7 @@
 								get elementType() {
 									return getElementType(
 										BaseButton,
-										this.props
+										this.props,
 									)
 								}
 								get interaction() {
@@ -6324,7 +6336,7 @@
 									return 'string' == typeof tabIndex
 										? (warn(
 												!1,
-												'The `string` value for `tabIndex` is deprecated. Only `number` type will be accepted from V9.0.0.'
+												'The `string` value for `tabIndex` is deprecated. Only `number` type will be accepted from V9.0.0.',
 										  ),
 										  parseInt(tabIndex))
 										: tabIndex
@@ -6364,7 +6376,7 @@
 														? void 0
 														: styles.children,
 											},
-											children
+											children,
 										)
 									if (!renderIcon) return wrappedChildren
 									const hasOnlyIconVisible =
@@ -6377,7 +6389,7 @@
 														? void 0
 														: styles.iconSVG,
 											},
-											callRenderProp(renderIcon)
+											callRenderProp(renderIcon),
 										),
 										flexChildren = hasOnlyIconVisible
 											? jsx(
@@ -6389,7 +6401,7 @@
 																: styles.iconOnly,
 													},
 													wrappedIcon,
-													children
+													children,
 											  )
 											: [
 													jsx(
@@ -6401,7 +6413,7 @@
 																	? void 0
 																	: styles.iconWrapper,
 														},
-														wrappedIcon
+														wrappedIcon,
 													),
 													jsx(
 														'span',
@@ -6412,7 +6424,7 @@
 																	? void 0
 																	: styles.childrenWrapper,
 														},
-														wrappedChildren
+														wrappedChildren,
 													),
 											  ]
 									return jsx(
@@ -6423,7 +6435,7 @@
 													? void 0
 													: styles.childrenLayout,
 										},
-										flexChildren
+										flexChildren,
 									)
 								}
 								render() {
@@ -6455,7 +6467,7 @@
 											(_this$props7.makeStyles,
 											(0, objectWithoutProperties.Z)(
 												_this$props7,
-												BaseButton_excluded
+												BaseButton_excluded,
 											)),
 										isDisabled = this.isDisabled,
 										isEnabled = this.isEnabled,
@@ -6507,7 +6519,7 @@
 														? void 0
 														: styles.baseButton
 													: null,
-											}
+											},
 										),
 										jsx(
 											'span',
@@ -6517,8 +6529,8 @@
 														? void 0
 														: styles.content,
 											},
-											this.renderChildren()
-										)
+											this.renderChildren(),
+										),
 									)
 								}
 							}),
@@ -6564,8 +6576,8 @@
 								margin: '0',
 								cursor: 'pointer',
 							}),
-							(BaseButton_class = BaseButton_class2))
-						) || BaseButton_class)
+							(BaseButton_class = BaseButton_class2)),
+						) || BaseButton_class),
 				) || BaseButton_class
 			const Button_props_propTypes = {
 					children: prop_types_default().node,
@@ -6628,7 +6640,7 @@
 			let Button =
 				withStyle(
 					null,
-					theme
+					theme,
 				)(
 					(Button_class =
 						testable()(
@@ -6679,7 +6691,7 @@
 										renderIcon = _this$props.renderIcon,
 										props = (0, objectWithoutProperties.Z)(
 											_this$props,
-											Button_excluded
+											Button_excluded,
 										),
 										interaction = getInteraction({ props }),
 										themeOverride =
@@ -6706,7 +6718,7 @@
 									return react.createElement(
 										BaseButton,
 										buttonProps,
-										children
+										children,
 									)
 								}
 							}),
@@ -6743,8 +6755,8 @@
 								margin: '0',
 								cursor: 'pointer',
 							}),
-							(Button_class = Button_class2))
-						) || Button_class)
+							(Button_class = Button_class2)),
+						) || Button_class),
 				) || Button_class
 		},
 		'./node_modules/fast-deep-equal/index.js': (module) => {
@@ -6787,7 +6799,7 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				var reactIs = __webpack_require__(
-						'./node_modules/hoist-non-react-statics/node_modules/react-is/index.js'
+						'./node_modules/hoist-non-react-statics/node_modules/react-is/index.js',
 					),
 					REACT_STATICS = {
 						childContextTypes: !0,
@@ -6842,7 +6854,7 @@
 				module.exports = function hoistNonReactStatics(
 					targetComponent,
 					sourceComponent,
-					blacklist
+					blacklist,
 				) {
 					if ('string' != typeof sourceComponent) {
 						if (objectPrototype) {
@@ -6853,13 +6865,13 @@
 								hoistNonReactStatics(
 									targetComponent,
 									inheritedComponent,
-									blacklist
+									blacklist,
 								)
 						}
 						var keys = getOwnPropertyNames(sourceComponent)
 						getOwnPropertySymbols &&
 							(keys = keys.concat(
-								getOwnPropertySymbols(sourceComponent)
+								getOwnPropertySymbols(sourceComponent),
 							))
 						for (
 							var targetStatics = getStatics(targetComponent),
@@ -6879,13 +6891,13 @@
 							) {
 								var descriptor = getOwnPropertyDescriptor(
 									sourceComponent,
-									key
+									key,
 								)
 								try {
 									defineProperty(
 										targetComponent,
 										key,
-										descriptor
+										descriptor,
 									)
 								} catch (e) {}
 							}
@@ -7032,7 +7044,7 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				module.exports = __webpack_require__(
-					'./node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.production.min.js'
+					'./node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.production.min.js',
 				)
 			},
 		'./node_modules/keycode/index.js': (module, exports) => {

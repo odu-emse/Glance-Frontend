@@ -4,7 +4,7 @@
 		'./components/common/chat/bubble_message/bubble_message.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -20,7 +20,7 @@
 				_Secondary$parameters2,
 				_Secondary$parameters3,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				moment = __webpack_require__('./node_modules/moment/moment.js'),
@@ -51,117 +51,122 @@
 											'ul',
 											{ className: 'space-y-2' },
 											message.length > 0 &&
-												message.map(function (
-													_ref2,
-													index
-												) {
-													var message = _ref2.message,
-														user = _ref2.user,
-														timestamp =
-															_ref2.timestamp
-													return __jsx(
-														react.Fragment,
-														null,
-														__jsx(
-															'li',
-															{
-																className:
-																	'flex items-center left-li '.concat(
-																		user.id ===
-																			currentUserID
-																			? 'flex-row-reverse'
-																			: 'justify-start'
-																	),
-																key: index,
-															},
-															__jsx(
-																'div',
-																{
-																	className:
-																		'w-50 h-50 px-2',
-																},
-																__jsx('img', {
-																	src: user.image,
-																	alt: 'User profile picture',
-																	className:
-																		'shadow-lg rounded-full max-w-full h-8 aspect-square',
-																})
-															),
-															__jsx(
-																'div',
-																{
-																	className:
-																		'relative max-w-xl px-4 py-2 text-white '.concat(
-																			user.id ===
-																				currentUserID
-																				? 'bg-blue-300'
-																				: 'bg-gray-300',
-																			' rounded shadow'
-																		),
-																},
-																__jsx(
-																	'span',
-																	{
-																		className:
-																			'block',
-																	},
-																	message
-																)
-															),
-															__jsx(
-																'div',
-																{
-																	className:
-																		'w-50 h-50 px-2 opacity-50',
-																},
-																__jsx(
-																	'span',
-																	{
-																		className:
-																			'block text-xs text-slate-500',
-																	},
-																	__jsx(
-																		'span',
-																		null,
-																		'// '
-																	),
-																	moment_default()(
-																		timestamp
-																	).format(
-																		'hh:mm A'
-																	)
-																)
-															)
-														),
-														message[index + 1] &&
+												message.map(
+													function (_ref2, index) {
+														var message =
+																_ref2.message,
+															user = _ref2.user,
+															timestamp =
+																_ref2.timestamp
+														return __jsx(
+															react.Fragment,
+															null,
 															__jsx(
 																'li',
 																{
 																	className:
-																		'flex justify-center right-li',
+																		'flex items-center left-li '.concat(
+																			user.id ===
+																				currentUserID
+																				? 'flex-row-reverse'
+																				: 'justify-start',
+																		),
+																	key: index,
 																},
 																__jsx(
 																	'div',
 																	{
 																		className:
-																			'w-50 h-50 px-2 t-100',
+																			'w-50 h-50 px-2',
+																	},
+																	__jsx(
+																		'img',
+																		{
+																			src: user.image,
+																			alt: 'User profile picture',
+																			className:
+																				'shadow-lg rounded-full max-w-full h-8 aspect-square',
+																		},
+																	),
+																),
+																__jsx(
+																	'div',
+																	{
+																		className:
+																			'relative max-w-xl px-4 py-2 text-white '.concat(
+																				user.id ===
+																					currentUserID
+																					? 'bg-blue-300'
+																					: 'bg-gray-300',
+																				' rounded shadow',
+																			),
+																	},
+																	__jsx(
+																		'span',
+																		{
+																			className:
+																				'block',
+																		},
+																		message,
+																	),
+																),
+																__jsx(
+																	'div',
+																	{
+																		className:
+																			'w-50 h-50 px-2 opacity-50',
 																	},
 																	__jsx(
 																		'span',
 																		{
 																			className:
 																				'block text-xs text-slate-500',
-																		}
-																	)
-																)
-															)
-													)
-												})
-										)
-									)
-								)
-							)
-						)
+																		},
+																		__jsx(
+																			'span',
+																			null,
+																			'// ',
+																		),
+																		moment_default()(
+																			timestamp,
+																		).format(
+																			'hh:mm A',
+																		),
+																	),
+																),
+															),
+															message[
+																index + 1
+															] &&
+																__jsx(
+																	'li',
+																	{
+																		className:
+																			'flex justify-center right-li',
+																	},
+																	__jsx(
+																		'div',
+																		{
+																			className:
+																				'w-50 h-50 px-2 t-100',
+																		},
+																		__jsx(
+																			'span',
+																			{
+																				className:
+																					'block text-xs text-slate-500',
+																			},
+																		),
+																	),
+																),
+														)
+													},
+												),
+										),
+									),
+								),
+							),
+						),
 					)
 				}
 			;(BubbleMessage.displayName = 'BubbleMessage'),
@@ -294,10 +299,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -313,13 +316,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -416,7 +422,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -434,11 +440,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = _objectSpread(
 					_objectSpread({}, Secondary.parameters),
@@ -452,7 +458,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -470,17 +476,17 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 		'./node_modules/moment/locale sync recursive ^\\.\\/.*$': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var map = {
 				'./af': './node_modules/moment/locale/af.js',

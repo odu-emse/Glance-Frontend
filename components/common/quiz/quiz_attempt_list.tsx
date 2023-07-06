@@ -28,7 +28,7 @@ function QuizAttemptList({
 				.sort(
 					(a, b) =>
 						new Date(b.submittedAt).valueOf() -
-						new Date(a.submittedAt).valueOf()
+						new Date(a.submittedAt).valueOf(),
 				)
 				.map((result, index) => (
 					<QuizAttemptRow

@@ -32,7 +32,7 @@ describe('VideoPlayer.tsx', function () {
 					values: ['wcag2a', 'wcag2aa', 'section508'],
 				},
 			},
-			terminalLog
+			terminalLog,
 		)
 	})
 	it('video should be muted and unmuted when volume button gets clicked', () => {
@@ -92,7 +92,7 @@ describe('VideoPlayer.tsx', function () {
 					// https://github.com/mdn/interactive-examples/blob/a31ab1f205d90b93a945dff726d6dbfead150ea1/live-examples/media/examples/friday.vtt
 					const captionText = track.activeCues[0].text
 					expect(captionText).to.equal(
-						"Yes, he's in - in a bad humor"
+						"Yes, he's in - in a bad humor",
 					)
 				}
 				// pause at 4.3 seconds into the clip
@@ -102,7 +102,7 @@ describe('VideoPlayer.tsx', function () {
 					// https://github.com/mdn/interactive-examples/blob/a31ab1f205d90b93a945dff726d6dbfead150ea1/live-examples/media/examples/friday.vtt
 					const captionText = track.activeCues[0].text
 					expect(captionText).to.equal(
-						"Somebody must've stolen the crown jewels"
+						"Somebody must've stolen the crown jewels",
 					)
 				}
 			})

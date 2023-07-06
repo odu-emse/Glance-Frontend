@@ -431,7 +431,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								)
 									return n
 								throw Pi(
-									"Can't convert object to primitive value"
+									"Can't convert object to primitive value",
 								)
 							}
 							return r === void 0 && (r = 'number'), Ri(e, r)
@@ -501,7 +501,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									Object.defineProperty(
 										function () {},
 										'prototype',
-										{ value: 42, writable: !1 }
+										{ value: 42, writable: !1 },
 									).prototype != 42
 								)
 							})
@@ -646,7 +646,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										throw qr(
 											'Incompatible receiver, ' +
 												e +
-												' required'
+												' required',
 										)
 									return u
 								}
@@ -714,7 +714,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										'[' +
 										String(r).replace(
 											/^Symbol\(([^)]*)\)/,
-											'$1'
+											'$1',
 										) +
 										']'),
 									u && u.getter && (r = 'get ' + r),
@@ -741,7 +741,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								return (
 									Xe(n, 'source') ||
 										(n.source = La.join(
-											typeof r == 'string' ? r : ''
+											typeof r == 'string' ? r : '',
 										)),
 									e
 								)
@@ -971,7 +971,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											: (c = i[f]),
 										(s = Oo(
 											n ? f : u + (D ? '.' : '#') + f,
-											e.forced
+											e.forced,
 										)),
 										!s && c !== void 0)
 									) {
@@ -989,7 +989,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							kr = ee()
 						qo(
 							{ global: !0, forced: kr.globalThis !== kr },
-							{ globalThis: kr }
+							{ globalThis: kr },
 						)
 					}),
 					mn = S(() => {
@@ -1085,7 +1085,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								We(
 									(function () {
 										return arguments
-									})()
+									})(),
 								) == 'Arguments',
 							Zo = function (e, r) {
 								try {
@@ -1218,12 +1218,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											r,
 											arguments.length > 1
 												? arguments[1]
-												: void 0
+												: void 0,
 										)),
 										D
 									)
 								},
-							}
+							},
 						)
 					}),
 					Ur = S(($2, Hn) => {
@@ -1387,12 +1387,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											function (n, D) {
 												QD(u, n, D)
 											},
-											{ AS_ENTRIES: !0 }
+											{ AS_ENTRIES: !0 },
 										),
 										u
 									)
 								},
-							}
+							},
 						)
 					}),
 					Dc = S((W2, Os) => {
@@ -1409,7 +1409,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										!(r.indexOf(n) >= 0) &&
 											Object.prototype.propertyIsEnumerable.call(
 												e,
-												n
+												n,
 											) &&
 											(u[n] = e[n])
 							}
@@ -1445,7 +1445,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										r ||
 											(0, e[Xr(e)[0]])(
 												(r = { exports: {} }).exports,
-												r
+												r,
 											),
 										r.exports
 									)
@@ -1479,7 +1479,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												enumerable: !0,
 										  })
 										: u,
-									e
+									e,
 								)
 							),
 							ds = (e) =>
@@ -1492,7 +1492,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Es = I({
 								'node_modules/angular-html-parser/lib/compiler/src/chars.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -1598,7 +1598,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							sl = I({
 								'node_modules/angular-html-parser/lib/compiler/src/aot/static_symbol.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -1615,8 +1615,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											if (this.members.length)
 												throw new Error(
 													`Illegal state: symbol without members expected, but got ${JSON.stringify(
-														this
-													)}.`
+														this,
+													)}.`,
 												)
 										}
 									}
@@ -1645,7 +1645,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							il = I({
 								'node_modules/angular-html-parser/lib/compiler/src/util.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -1730,7 +1730,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											assertSync: (o) => {
 												if (_(o))
 													throw new Error(
-														'Illegal state: value cannot be a promise'
+														'Illegal state: value cannot be a promise',
 													)
 												return o
 											},
@@ -1761,7 +1761,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									function T(o) {
 										return o.replace(
 											/([.*+?^=!:${}()|[\]\/\\])/g,
-											'\\$1'
+											'\\$1',
 										)
 									}
 									e.escapeRegExp = T
@@ -1797,20 +1797,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												: A <= 2047
 												? (E += String.fromCharCode(
 														((A >> 6) & 31) | 192,
-														(A & 63) | 128
+														(A & 63) | 128,
 												  ))
 												: A <= 65535
 												? (E += String.fromCharCode(
 														(A >> 12) | 224,
 														((A >> 6) & 63) | 128,
-														(A & 63) | 128
+														(A & 63) | 128,
 												  ))
 												: A <= 2097151 &&
 												  (E += String.fromCharCode(
 														((A >> 18) & 7) | 240,
 														((A >> 12) & 63) | 128,
 														((A >> 6) & 63) | 128,
-														(A & 63) | 128
+														(A & 63) | 128,
 												  ))
 										}
 										return E
@@ -1873,7 +1873,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							al = I({
 								'node_modules/angular-html-parser/lib/compiler/src/compile_metadata.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -1944,7 +1944,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									})(
 										(h =
 											e.CompileSummaryKind ||
-											(e.CompileSummaryKind = {}))
+											(e.CompileSummaryKind = {})),
 									)
 									function C(p) {
 										return p.value != null
@@ -2007,7 +2007,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												J && J.length != 2)
 											)
 												throw new Error(
-													"'interpolation' should have a start and an end symbol."
+													"'interpolation' should have a start and an end symbol.",
 												)
 											;(this.interpolation = J),
 												(this.isInline = v),
@@ -2288,19 +2288,19 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										}
 										addDirective(p) {
 											this.directivesSet.has(
-												p.reference
+												p.reference,
 											) ||
 												(this.directivesSet.add(
-													p.reference
+													p.reference,
 												),
 												this.directives.push(p))
 										}
 										addExportedDirective(p) {
 											this.exportedDirectivesSet.has(
-												p.reference
+												p.reference,
 											) ||
 												(this.exportedDirectivesSet.add(
-													p.reference
+													p.reference,
 												),
 												this.exportedDirectives.push(p))
 										}
@@ -2311,26 +2311,26 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										}
 										addExportedPipe(p) {
 											this.exportedPipesSet.has(
-												p.reference
+												p.reference,
 											) ||
 												(this.exportedPipesSet.add(
-													p.reference
+													p.reference,
 												),
 												this.exportedPipes.push(p))
 										}
 										addModule(p) {
 											this.modulesSet.has(p.reference) ||
 												(this.modulesSet.add(
-													p.reference
+													p.reference,
 												),
 												this.modules.push(p))
 										}
 										addEntryComponent(p) {
 											this.entryComponentsSet.has(
-												p.componentType
+												p.componentType,
 											) ||
 												(this.entryComponentsSet.add(
-													p.componentType
+													p.componentType,
 												),
 												this.entryComponents.push(p))
 										}
@@ -2369,7 +2369,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									function k(p) {
 										return p.replace(
 											/(\w+:\/\/[\w:-]+)?(\/+)?/,
-											'ng:///'
+											'ng:///',
 										)
 									}
 									function $(p, A, P) {
@@ -2380,7 +2380,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												  r.StaticSymbol
 													? (M = `${A.type.reference.filePath}.${A.type.reference.name}.html`)
 													: (M = `${i(p)}/${i(
-															A.type
+															A.type,
 													  )}.html`)
 												: (M = P.templateUrl),
 											A.type.reference instanceof
@@ -2398,13 +2398,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									e.sharedStylesheetJitUrl = t
 									function o(p) {
 										return k(
-											`${i(p.type)}/module.ngfactory.js`
+											`${i(p.type)}/module.ngfactory.js`,
 										)
 									}
 									e.ngModuleJitUrl = o
 									function E(p, A) {
 										return k(
-											`${i(p)}/${i(A.type)}.ngfactory.js`
+											`${i(p)}/${i(A.type)}.ngfactory.js`,
 										)
 									}
 									e.templateJitUrl = E
@@ -2412,7 +2412,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Be = I({
 								'node_modules/angular-html-parser/lib/compiler/src/parse_util.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -2451,8 +2451,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.substr(0, C - 1)
 															.lastIndexOf(
 																String.fromCharCode(
-																	r.$LF
-																)
+																	r.$LF,
+																),
 															)
 														m = w > 0 ? C - w : C
 													} else m--
@@ -2504,11 +2504,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													return {
 														before: h.substring(
 															C,
-															this.offset
+															this.offset,
 														),
 														after: h.substring(
 															this.offset,
-															d + 1
+															d + 1,
 														),
 													}
 												}
@@ -2536,7 +2536,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										toString() {
 											return this.start.file.content.substring(
 												this.start.offset,
-												this.end.offset
+												this.end.offset,
 											)
 										}
 									}
@@ -2545,11 +2545,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											new D('', ''),
 											0,
 											0,
-											0
+											0,
 										)),
 										(e.EMPTY_SOURCE_SPAN = new s(
 											e.EMPTY_PARSE_LOCATION,
-											e.EMPTY_PARSE_LOCATION
+											e.EMPTY_PARSE_LOCATION,
 										))
 									var i
 									;(function (a) {
@@ -2558,7 +2558,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									})(
 										(i =
 											e.ParseErrorLevel ||
-											(e.ParseErrorLevel = {}))
+											(e.ParseErrorLevel = {})),
 									)
 									var f = class {
 										constructor(a, l) {
@@ -2574,7 +2574,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										contextualMessage() {
 											let a = this.span.start.getContext(
 												100,
-												3
+												3,
 											)
 											return a
 												? `${this.msg} ("${a.before}[${
@@ -2597,15 +2597,15 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											C =
 												h != null
 													? `in ${a} ${u.identifierName(
-															l
+															l,
 													  )} in ${h}`
 													: `in ${a} ${u.identifierName(
-															l
+															l,
 													  )}`,
 											d = new D('', C)
 										return new s(
 											new n(d, -1, -1, -1),
-											new n(d, -1, -1, -1)
+											new n(d, -1, -1, -1),
 										)
 									}
 									e.typeSourceSpan = c
@@ -2614,7 +2614,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											d = new D('', C)
 										return new s(
 											new n(d, -1, -1, -1),
-											new n(d, -1, -1, -1)
+											new n(d, -1, -1, -1),
 										)
 									}
 									e.r3JitTypeSourceSpan = F
@@ -2626,7 +2626,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									q()
 									var u = new RegExp(
 										'^(?<startDelimiter>-{3}|\\+{3})(?<language>[^\\n]*)\\n(?:|(?<value>.*?)\\n)(?<endDelimiter>\\k<startDelimiter>|\\.{3})[^\\S\\n]*(?:\\n|$)',
-										's'
+										's',
 									)
 									function n(D) {
 										let s = D.match(u)
@@ -2680,7 +2680,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												D.start.line +
 												':' +
 												D.start.column +
-												')'
+												')',
 										)
 										return (s.loc = D), s
 									}
@@ -2721,7 +2721,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														D[s] = arguments[s]
 													return console.error(
 														'SEMVER',
-														...D
+														...D,
 													)
 											  }
 											: () => {}
@@ -2731,7 +2731,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Fs = I({
 								'node_modules/semver/internal/constants.js'(
 									e,
-									r
+									r,
 								) {
 									q()
 									var u = '2.0.0',
@@ -2765,20 +2765,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												(s[h] = a),
 												(D[h] = new RegExp(
 													a,
-													l ? 'g' : void 0
+													l ? 'g' : void 0,
 												))
 										}
 									c('NUMERICIDENTIFIER', '0|[1-9]\\d*'),
 										c('NUMERICIDENTIFIERLOOSE', '[0-9]+'),
 										c(
 											'NONNUMERICIDENTIFIER',
-											'\\d*[a-zA-Z-][a-zA-Z0-9-]*'
+											'\\d*[a-zA-Z-][a-zA-Z0-9-]*',
 										),
 										c(
 											'MAINVERSION',
 											`(${s[i.NUMERICIDENTIFIER]})\\.(${
 												s[i.NUMERICIDENTIFIER]
-											})\\.(${s[i.NUMERICIDENTIFIER]})`
+											})\\.(${s[i.NUMERICIDENTIFIER]})`,
 										),
 										c(
 											'MAINVERSIONLOOSE',
@@ -2788,19 +2788,19 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												s[i.NUMERICIDENTIFIERLOOSE]
 											})\\.(${
 												s[i.NUMERICIDENTIFIERLOOSE]
-											})`
+											})`,
 										),
 										c(
 											'PRERELEASEIDENTIFIER',
 											`(?:${s[i.NUMERICIDENTIFIER]}|${
 												s[i.NONNUMERICIDENTIFIER]
-											})`
+											})`,
 										),
 										c(
 											'PRERELEASEIDENTIFIERLOOSE',
 											`(?:${
 												s[i.NUMERICIDENTIFIERLOOSE]
-											}|${s[i.NONNUMERICIDENTIFIER]})`
+											}|${s[i.NONNUMERICIDENTIFIER]})`,
 										),
 										c(
 											'PRERELEASE',
@@ -2808,7 +2808,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												s[i.PRERELEASEIDENTIFIER]
 											}(?:\\.${
 												s[i.PRERELEASEIDENTIFIER]
-											})*))`
+											})*))`,
 										),
 										c(
 											'PRERELEASELOOSE',
@@ -2816,27 +2816,27 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												s[i.PRERELEASEIDENTIFIERLOOSE]
 											}(?:\\.${
 												s[i.PRERELEASEIDENTIFIERLOOSE]
-											})*))`
+											})*))`,
 										),
 										c('BUILDIDENTIFIER', '[0-9A-Za-z-]+'),
 										c(
 											'BUILD',
 											`(?:\\+(${
 												s[i.BUILDIDENTIFIER]
-											}(?:\\.${s[i.BUILDIDENTIFIER]})*))`
+											}(?:\\.${s[i.BUILDIDENTIFIER]})*))`,
 										),
 										c(
 											'FULLPLAIN',
 											`v?${s[i.MAINVERSION]}${
 												s[i.PRERELEASE]
-											}?${s[i.BUILD]}?`
+											}?${s[i.BUILD]}?`,
 										),
 										c('FULL', `^${s[i.FULLPLAIN]}$`),
 										c(
 											'LOOSEPLAIN',
 											`[v=\\s]*${s[i.MAINVERSIONLOOSE]}${
 												s[i.PRERELEASELOOSE]
-											}?${s[i.BUILD]}?`
+											}?${s[i.BUILD]}?`,
 										),
 										c('LOOSE', `^${s[i.LOOSEPLAIN]}$`),
 										c('GTLT', '((?:<|>)?=?)'),
@@ -2844,11 +2844,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											'XRANGEIDENTIFIERLOOSE',
 											`${
 												s[i.NUMERICIDENTIFIERLOOSE]
-											}|x|X|\\*`
+											}|x|X|\\*`,
 										),
 										c(
 											'XRANGEIDENTIFIER',
-											`${s[i.NUMERICIDENTIFIER]}|x|X|\\*`
+											`${s[i.NUMERICIDENTIFIER]}|x|X|\\*`,
 										),
 										c(
 											'XRANGEPLAIN',
@@ -2860,7 +2860,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												s[i.XRANGEIDENTIFIER]
 											})(?:${s[i.PRERELEASE]})?${
 												s[i.BUILD]
-											}?)?)?`
+											}?)?)?`,
 										),
 										c(
 											'XRANGEPLAINLOOSE',
@@ -2872,81 +2872,81 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												s[i.XRANGEIDENTIFIERLOOSE]
 											})(?:${s[i.PRERELEASELOOSE]})?${
 												s[i.BUILD]
-											}?)?)?`
+											}?)?)?`,
 										),
 										c(
 											'XRANGE',
 											`^${s[i.GTLT]}\\s*${
 												s[i.XRANGEPLAIN]
-											}$`
+											}$`,
 										),
 										c(
 											'XRANGELOOSE',
 											`^${s[i.GTLT]}\\s*${
 												s[i.XRANGEPLAINLOOSE]
-											}$`
+											}$`,
 										),
 										c(
 											'COERCE',
-											`(^|[^\\d])(\\d{1,${u}})(?:\\.(\\d{1,${u}}))?(?:\\.(\\d{1,${u}}))?(?:$|[^\\d])`
+											`(^|[^\\d])(\\d{1,${u}})(?:\\.(\\d{1,${u}}))?(?:\\.(\\d{1,${u}}))?(?:$|[^\\d])`,
 										),
 										c('COERCERTL', s[i.COERCE], !0),
 										c('LONETILDE', '(?:~>?)'),
 										c(
 											'TILDETRIM',
 											`(\\s*)${s[i.LONETILDE]}\\s+`,
-											!0
+											!0,
 										),
 										(e.tildeTrimReplace = '$1~'),
 										c(
 											'TILDE',
 											`^${s[i.LONETILDE]}${
 												s[i.XRANGEPLAIN]
-											}$`
+											}$`,
 										),
 										c(
 											'TILDELOOSE',
 											`^${s[i.LONETILDE]}${
 												s[i.XRANGEPLAINLOOSE]
-											}$`
+											}$`,
 										),
 										c('LONECARET', '(?:\\^)'),
 										c(
 											'CARETTRIM',
 											`(\\s*)${s[i.LONECARET]}\\s+`,
-											!0
+											!0,
 										),
 										(e.caretTrimReplace = '$1^'),
 										c(
 											'CARET',
 											`^${s[i.LONECARET]}${
 												s[i.XRANGEPLAIN]
-											}$`
+											}$`,
 										),
 										c(
 											'CARETLOOSE',
 											`^${s[i.LONECARET]}${
 												s[i.XRANGEPLAINLOOSE]
-											}$`
+											}$`,
 										),
 										c(
 											'COMPARATORLOOSE',
 											`^${s[i.GTLT]}\\s*(${
 												s[i.LOOSEPLAIN]
-											})$|^$`
+											})$|^$`,
 										),
 										c(
 											'COMPARATOR',
 											`^${s[i.GTLT]}\\s*(${
 												s[i.FULLPLAIN]
-											})$|^$`
+											})$|^$`,
 										),
 										c(
 											'COMPARATORTRIM',
 											`(\\s*)${s[i.GTLT]}\\s*(${
 												s[i.LOOSEPLAIN]
 											}|${s[i.XRANGEPLAIN]})`,
-											!0
+											!0,
 										),
 										(e.comparatorTrimReplace = '$1$2$3'),
 										c(
@@ -2955,7 +2955,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												s[i.XRANGEPLAIN]
 											})\\s+-\\s+(${
 												s[i.XRANGEPLAIN]
-											})\\s*$`
+											})\\s*$`,
 										),
 										c(
 											'HYPHENRANGELOOSE',
@@ -2963,20 +2963,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												s[i.XRANGEPLAINLOOSE]
 											})\\s+-\\s+(${
 												s[i.XRANGEPLAINLOOSE]
-											})\\s*$`
+											})\\s*$`,
 										),
 										c('STAR', '(<|>)?=?\\s*\\*'),
 										c('GTE0', '^\\s*>=\\s*0\\.0\\.0\\s*$'),
 										c(
 											'GTE0PRE',
-											'^\\s*>=\\s*0\\.0\\.0-0\\s*$'
+											'^\\s*>=\\s*0\\.0\\.0-0\\s*$',
 										)
 								},
 							}),
 							pl = I({
 								'node_modules/semver/internal/parse-options.js'(
 									e,
-									r
+									r,
 								) {
 									q()
 									var u = [
@@ -2995,7 +2995,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	(s[i] = !0),
 																	s
 																),
-																{}
+																{},
 															)
 												: {}
 									r.exports = n
@@ -3004,7 +3004,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							fl = I({
 								'node_modules/semver/internal/identifiers.js'(
 									e,
-									r
+									r,
 								) {
 									q()
 									var u = /^[0-9]+$/,
@@ -3054,11 +3054,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													a = a.version
 												} else if (typeof a != 'string')
 													throw new TypeError(
-														`Invalid Version: ${a}`
+														`Invalid Version: ${a}`,
 													)
 												if (a.length > n)
 													throw new TypeError(
-														`version is longer than ${n} characters`
+														`version is longer than ${n} characters`,
 													)
 												u('SemVer', a, l),
 													(this.options = l),
@@ -3070,11 +3070,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													.match(
 														l.loose
 															? s[i.LOOSE]
-															: s[i.FULL]
+															: s[i.FULL],
 													)
 												if (!h)
 													throw new TypeError(
-														`Invalid Version: ${a}`
+														`Invalid Version: ${a}`,
 													)
 												if (
 													((this.raw = a),
@@ -3085,21 +3085,21 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														this.major < 0)
 												)
 													throw new TypeError(
-														'Invalid major version'
+														'Invalid major version',
 													)
 												if (
 													this.minor > D ||
 													this.minor < 0
 												)
 													throw new TypeError(
-														'Invalid minor version'
+														'Invalid minor version',
 													)
 												if (
 													this.patch > D ||
 													this.patch < 0
 												)
 													throw new TypeError(
-														'Invalid patch version'
+														'Invalid patch version',
 													)
 												h[4]
 													? (this.prerelease = h[4]
@@ -3107,7 +3107,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.map((C) => {
 																if (
 																	/^[0-9]+$/.test(
-																		C
+																		C,
 																	)
 																) {
 																	let d = +C
@@ -3131,7 +3131,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													(this.version = `${this.major}.${this.minor}.${this.patch}`),
 													this.prerelease.length &&
 														(this.version += `-${this.prerelease.join(
-															'.'
+															'.',
 														)}`),
 													this.version
 												)
@@ -3145,7 +3145,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														'SemVer.compare',
 														this.version,
 														this.options,
-														a
+														a,
 													),
 													!(a instanceof F))
 												) {
@@ -3167,12 +3167,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													a instanceof F ||
 														(a = new F(
 															a,
-															this.options
+															this.options,
 														)),
 													c(this.major, a.major) ||
 														c(
 															this.minor,
-															a.minor
+															a.minor,
 														) ||
 														c(this.patch, a.patch)
 												)
@@ -3182,7 +3182,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													(a instanceof F ||
 														(a = new F(
 															a,
-															this.options
+															this.options,
 														)),
 													this.prerelease.length &&
 														!a.prerelease.length)
@@ -3207,7 +3207,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															'prerelease compare',
 															l,
 															h,
-															C
+															C,
 														),
 														h === void 0 &&
 															C === void 0)
@@ -3230,7 +3230,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															'prerelease compare',
 															l,
 															h,
-															C
+															C,
 														),
 														h === void 0 &&
 															C === void 0)
@@ -3260,7 +3260,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														;(this.prerelease.length = 0),
 															this.inc(
 																'patch',
-																l
+																l,
 															),
 															this.inc('pre', l)
 														break
@@ -3269,7 +3269,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.length === 0 &&
 															this.inc(
 																'patch',
-																l
+																l,
 															),
 															this.inc('pre', l)
 														break
@@ -3326,18 +3326,18 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	(h = -2))
 															h === -1 &&
 																this.prerelease.push(
-																	0
+																	0,
 																)
 														}
 														l &&
 															(c(
 																this
 																	.prerelease[0],
-																l
+																l,
 															) === 0
 																? isNaN(
 																		this
-																			.prerelease[1]
+																			.prerelease[1],
 																  ) &&
 																  (this.prerelease =
 																		[l, 0])
@@ -3346,7 +3346,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														break
 													default:
 														throw new Error(
-															`invalid increment argument: ${a}`
+															`invalid increment argument: ${a}`,
 														)
 												}
 												return (
@@ -3362,7 +3362,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Hr = I({
 								'node_modules/semver/functions/compare.js'(
 									e,
-									r
+									r,
 								) {
 									q()
 									var u = dl(),
@@ -3396,7 +3396,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												let [s, i] = D
 												return Object.assign(
 													{ [n]: s },
-													i
+													i,
 												)
 											}))
 								},
@@ -3482,7 +3482,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															/\r\n|\n|\r/g,
 															function (M) {
 																return k
-															}
+															},
 														)),
 													A
 												)
@@ -3554,7 +3554,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												Object.defineProperty(
 													w,
 													'__esModule',
-													{ value: !0 }
+													{ value: !0 },
 												),
 												(w.default = w),
 												(w.outdent = w)
@@ -3969,7 +3969,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											h = D.split('-', 1)[0],
 											C = c
 												.flatMap(
-													(g) => g.languages || []
+													(g) => g.languages || [],
 												)
 												.filter(m),
 											d = n(
@@ -3979,9 +3979,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														let { options: N } = g
 														return N
 													}),
-													s
+													s,
 												),
-												'name'
+												'name',
 											)
 												.filter((g) => m(g) && T(g))
 												.sort((g, N) =>
@@ -3989,13 +3989,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														? 0
 														: g.name < N.name
 														? -1
-														: 1
+														: 1,
 												)
 												.map(w)
 												.map((g) => {
 													;(g = Object.assign({}, g)),
 														Array.isArray(
-															g.default
+															g.default,
 														) &&
 															(g.default =
 																g.default
@@ -4006,27 +4006,27 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																			.value
 																	: g.default
 																			.filter(
-																				m
+																				m,
 																			)
 																			.sort(
 																				(
 																					R,
-																					j
+																					j,
 																				) =>
 																					u.compare(
 																						j.since,
-																						R.since
-																					)
+																						R.since,
+																					),
 																			)[0]
 																			.value),
 														Array.isArray(
-															g.choices
+															g.choices,
 														) &&
 															((g.choices =
 																g.choices.filter(
 																	(R) =>
 																		m(R) &&
-																		T(R)
+																		T(R),
 																)),
 															g.name ===
 																'parser' &&
@@ -4039,7 +4039,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	R
 																		.defaultOptions[
 																		g.name
-																	] !== void 0
+																	] !==
+																		void 0,
 															)
 															.map((R) => [
 																R.name,
@@ -4047,12 +4048,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	.defaultOptions[
 																	g.name
 																],
-															])
+															]),
 													)
 													return Object.assign(
 														Object.assign({}, g),
 														{},
-														{ pluginDefaults: N }
+														{ pluginDefaults: N },
 													)
 												})
 										return { languages: C, options: d }
@@ -4083,7 +4084,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									}
 									function f(c, F, a) {
 										let l = new Set(
-											c.choices.map((h) => h.value)
+											c.choices.map((h) => h.value),
 										)
 										for (let h of F)
 											if (h.parsers) {
@@ -4093,7 +4094,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														let d = a.find(
 																(T) =>
 																	T.parsers &&
-																	T.parsers[C]
+																	T.parsers[
+																		C
+																	],
 															),
 															m = h.name
 														d &&
@@ -4139,7 +4142,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						function Tl(e) {
 							if (typeof e != 'string')
 								throw new TypeError(
-									`Expected a \`string\`, got \`${typeof e}\``
+									`Expected a \`string\`, got \`${typeof e}\``,
 								)
 							return e.replace(Sl(), '')
 						}
@@ -4289,7 +4292,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Ss = I({
 								'src/utils/text/skip-trailing-comment.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									q()
@@ -4356,7 +4359,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Rl = I({
 								'src/utils/text/get-next-non-space-non-comment-character-index-with-start-index.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									q()
@@ -4424,7 +4427,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											b = c(
 												v,
 												B.backwards ? y - 1 : y,
-												B
+												B,
 											),
 											L = C(v, b, B)
 										return b !== L
@@ -4503,7 +4506,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													v
 														.slice(B + 1)
 														.match(/^[\t ]*/)[0],
-													y
+													y,
 											  )
 									}
 									function t(v, y) {
@@ -4547,7 +4550,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															B,
 															y.singleQuote
 																? "'"
-																: '"'
+																: '"',
 													  ).quote
 										return E(
 											B,
@@ -4557,7 +4560,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												y.parser === 'less' ||
 												y.parser === 'scss' ||
 												y.__embeddedInHtml
-											)
+											),
 										)
 									}
 									function E(v, y, B) {
@@ -4571,10 +4574,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													: ne ||
 													  (B &&
 													  /^[^\n\r"'0-7\\bfnrt-vx\u2028\u2029]$/.test(
-															W
+															W,
 													  )
 															? W
-															: '\\' + W)
+															: '\\' + W),
 											)
 										return y + U + y
 									}
@@ -4583,11 +4586,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											.toLowerCase()
 											.replace(
 												/^([+-]?[\d.]+e)(?:\+|(-))?0*(\d)/,
-												'$1$2$3'
+												'$1$2$3',
 											)
 											.replace(
 												/^([+-]?[\d.]+)e[+-]?0+$/,
-												'$1'
+												'$1',
 											)
 											.replace(/^([+-])?\./, '$10.')
 											.replace(/(\.\d+?)0+(?=e|$)/, '$1')
@@ -4595,7 +4598,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									}
 									function A(v, y) {
 										let B = v.match(
-											new RegExp(`(${u(y)})+`, 'g')
+											new RegExp(`(${u(y)})+`, 'g'),
 										)
 										return B === null
 											? 0
@@ -4603,14 +4606,14 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													(b, L) =>
 														Math.max(
 															b,
-															L.length / y.length
+															L.length / y.length,
 														),
-													0
+													0,
 											  )
 									}
 									function P(v, y) {
 										let B = v.match(
-											new RegExp(`(${u(y)})+`, 'g')
+											new RegExp(`(${u(y)})+`, 'g'),
 										)
 										if (B === null) return 0
 										let b = new Map(),
@@ -4625,7 +4628,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									}
 									function M(v, y) {
 										;(v.comments || (v.comments = [])).push(
-											y
+											y,
 										),
 											(y.printed = !1),
 											(y.nodeDescription = J(v))
@@ -4704,10 +4707,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														'object'
 															? ''
 															: String(
-																	v.value
+																	v.value,
 															  ))) ||
 													v.operator ||
-													''
+													'',
 											)
 										return (
 											B.length > 20 &&
@@ -4915,7 +4918,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Ts = I({
 								'src/language-html/utils/array-to-map.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									q()
@@ -4930,7 +4933,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							kl = I({
 								'src/language-html/utils/html-tag-names.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									q()
@@ -5437,7 +5440,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Ml = I({
 								'src/language-html/utils/html-elements-attributes.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									q()
@@ -5451,7 +5454,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							jl = I({
 								'src/language-html/utils/is-unknown-namespace.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									q()
@@ -5460,7 +5463,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											n.type === 'element' &&
 											!n.hasExplicitNamespace &&
 											!['html', 'svg'].includes(
-												n.namespace
+												n.namespace,
 											)
 										)
 									}
@@ -5473,7 +5476,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									q()
 									function u(D) {
 										return /^\s*<!--\s*@(?:format|prettier)\s*-->/.test(
-											D
+											D,
 										)
 									}
 									function n(D) {
@@ -5514,8 +5517,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														(i in u &&
 															(f = f.map((c) =>
 																this.createChild(
-																	c
-																)
+																	c,
+																),
 															)),
 														!n.has(i))
 													) {
@@ -5529,7 +5532,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															value: f,
 															enumerable: !1,
 															configurable: !0,
-														}
+														},
 													)
 												}
 											}
@@ -5539,7 +5542,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													let F = this[c]
 													if (F) {
 														let a = s(F, (l) =>
-															l.map(i)
+															l.map(i),
 														)
 														f !== F &&
 															(f ||
@@ -5577,7 +5580,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												return (
 													f.setProperty(
 														'parent',
-														this
+														this,
 													),
 													f
 												)
@@ -5586,13 +5589,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												this.children.splice(
 													this.children.indexOf(i),
 													0,
-													this.createChild(f)
+													this.createChild(f),
 												)
 											}
 											removeChild(i) {
 												this.children.splice(
 													this.children.indexOf(i),
-													1
+													1,
 												)
 											}
 											replaceChild(i, f) {
@@ -5627,7 +5630,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													? void 0
 													: i.children[
 															this.parent.children.indexOf(
-																this
+																this,
 															) - 1
 													  ]
 											}
@@ -5638,7 +5641,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													? void 0
 													: i.children[
 															this.parent.children.indexOf(
-																this
+																this,
 															) + 1
 													  ]
 											}
@@ -5659,7 +5662,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													this.attrs.map((i) => [
 														i.fullName,
 														i.value,
-													])
+													]),
 												)
 											}
 										}
@@ -5675,7 +5678,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Vl = I({
 								'src/language-html/conditional-comment.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									q()
@@ -5740,11 +5743,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											sourceSpan: c.sourceSpan,
 											startSourceSpan: new u(
 												c.sourceSpan.start,
-												m
+												m,
 											),
 											endSourceSpan: new u(
 												T,
-												c.sourceSpan.end
+												c.sourceSpan.end,
 											),
 										}
 									}
@@ -5782,7 +5785,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Ze = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ml_parser/tags.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -5799,14 +5802,14 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									})(
 										(r =
 											e.TagContentType ||
-											(e.TagContentType = {}))
+											(e.TagContentType = {})),
 									)
 									function u(c) {
 										if (c[0] != ':') return [null, c]
 										let F = c.indexOf(':', 1)
 										if (F == -1)
 											throw new Error(
-												`Unsupported format "${c}" expecting ":namespace:name"`
+												`Unsupported format "${c}" expecting ":namespace:name"`,
 											)
 										return [c.slice(1, F), c.slice(F + 1)]
 									}
@@ -7968,7 +7971,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Bs = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ml_parser/html_tags.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -8000,7 +8003,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															(h) =>
 																(this.closedByChildren[
 																	h
-																] = !0)
+																] = !0),
 														),
 													(this.isVoid = a),
 													(this.closedByParent =
@@ -8230,7 +8233,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Hl = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ast_path.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -8295,7 +8298,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							bs = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ml_parser/ast.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -8481,7 +8484,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												m,
 												(T) => {
 													T(d.cases)
-												}
+												},
 											)
 										}
 										visitExpansionCase(d, m) {}
@@ -8495,7 +8498,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												m(g),
 												Array.prototype.concat.apply(
 													[],
-													T
+													T,
 												)
 											)
 										}
@@ -8516,7 +8519,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															d.children[
 																d.children
 																	.length - 1
-															]
+															],
 													  ).end)),
 											{ start: m, end: T }
 										)
@@ -8541,7 +8544,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							zl = I({
 								'node_modules/angular-html-parser/lib/compiler/src/assertions.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -8552,7 +8555,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										if (s != null) {
 											if (!Array.isArray(s))
 												throw new Error(
-													`Expected '${D}' to be an array of strings.`
+													`Expected '${D}' to be an array of strings.`,
 												)
 											for (
 												let i = 0;
@@ -8561,7 +8564,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											)
 												if (typeof s[i] != 'string')
 													throw new Error(
-														`Expected '${D}' to be an array of strings.`
+														`Expected '${D}' to be an array of strings.`,
 													)
 										}
 									}
@@ -8579,7 +8582,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											!(Array.isArray(s) && s.length == 2)
 										)
 											throw new Error(
-												`Expected '${D}' to be an array, [start, end].`
+												`Expected '${D}' to be an array, [start, end].`,
 											)
 										if (s != null) {
 											let i = s[0],
@@ -8587,7 +8590,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											u.forEach((c) => {
 												if (c.test(i) || c.test(f))
 													throw new Error(
-														`['${i}', '${f}'] contains unusable interpolation symbol.`
+														`['${i}', '${f}'] contains unusable interpolation symbol.`,
 													)
 											})
 										}
@@ -8597,7 +8600,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Wl = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ml_parser/interpolation_config.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -8614,7 +8617,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												return n
 													? (r.assertInterpolationSymbols(
 															'interpolation',
-															n
+															n,
 													  ),
 													  new u(n[0], n[1]))
 													: e.DEFAULT_INTERPOLATION_CONFIG
@@ -8623,13 +8626,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									;(e.InterpolationConfig = u),
 										(e.DEFAULT_INTERPOLATION_CONFIG = new u(
 											'{{',
-											'}}'
+											'}}',
 										))
 								},
 							}),
 							Yl = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ml_parser/lexer.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -8716,7 +8719,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										return new d(
 											new u.ParseSourceFile(t, o),
 											E,
-											p
+											p,
 										).tokenize()
 									}
 									e.tokenize = F
@@ -8761,8 +8764,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														E.leadingTriviaChars.map(
 															(A) =>
 																A.codePointAt(
-																	0
-																) || 0
+																	0,
+																) || 0,
 														)),
 													(this._canSelfClose =
 														E.canSelfClose || !1),
@@ -8788,7 +8791,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												return t.replace(
 													a,
 													`
-`
+`,
 												)
 											}
 											tokenize() {
@@ -8802,56 +8805,56 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													try {
 														if (
 															this._attemptCharCode(
-																r.$LT
+																r.$LT,
 															)
 														)
 															if (
 																this._attemptCharCode(
-																	r.$BANG
+																	r.$BANG,
 																)
 															)
 																this._attemptStr(
-																	'[CDATA['
+																	'[CDATA[',
 																)
 																	? this._consumeCdata(
-																			t
+																			t,
 																	  )
 																	: this._attemptStr(
-																			'--'
+																			'--',
 																	  )
 																	? this._consumeComment(
-																			t
+																			t,
 																	  )
 																	: this._attemptStrCaseInsensitive(
-																			'doctype'
+																			'doctype',
 																	  )
 																	? this._consumeDocType(
-																			t
+																			t,
 																	  )
 																	: this._consumeBogusComment(
-																			t
+																			t,
 																	  )
 															else if (
 																this._attemptCharCode(
-																	r.$SLASH
+																	r.$SLASH,
 																)
 															)
 																this._consumeTagClose(
-																	t
+																	t,
 																)
 															else {
 																let o =
 																	this._cursor.clone()
 																this._attemptCharCode(
-																	r.$QUESTION
+																	r.$QUESTION,
 																)
 																	? ((this._cursor =
 																			o),
 																	  this._consumeBogusComment(
-																			t
+																			t,
 																	  ))
 																	: this._consumeTagOpen(
-																			t
+																			t,
 																	  )
 															}
 														else
@@ -8868,7 +8871,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													this._endToken([]),
 													new c(
 														O(this.tokens),
-														this.errors
+														this.errors,
 													)
 												)
 											}
@@ -8929,7 +8932,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													throw new f(
 														'Programming error - attempted to end a token when there was no start to the token',
 														this._currentTokenType,
-														this._cursor.getSpan(o)
+														this._cursor.getSpan(o),
 													)
 												if (
 													this._currentTokenType ===
@@ -8940,8 +8943,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														null,
 														this._cursor.getSpan(
 															this
-																._currentTokenStart
-														)
+																._currentTokenStart,
+														),
 													)
 												let E = new i(
 													this._currentTokenType,
@@ -8949,8 +8952,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													this._cursor.getSpan(
 														this._currentTokenStart,
 														this
-															._leadingTriviaCodePoints
-													)
+															._leadingTriviaCodePoints,
+													),
 												)
 												return (
 													this.tokens.push(E),
@@ -8967,7 +8970,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												let E = new f(
 													t,
 													this._currentTokenType,
-													o
+													o,
 												)
 												return (
 													(this._currentTokenStart =
@@ -8983,8 +8986,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														(t = this._createError(
 															t.msg,
 															this._cursor.getSpan(
-																t.cursor
-															)
+																t.cursor,
+															),
 														)),
 													t instanceof C)
 												)
@@ -9008,7 +9011,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												if (!this._attemptCharCode(t))
 													throw this._createError(
 														l(this._cursor.peek()),
-														this._cursor.getSpan(o)
+														this._cursor.getSpan(o),
 													)
 											}
 											_attemptStr(t) {
@@ -9021,7 +9024,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												for (let p = 0; p < o; p++)
 													if (
 														!this._attemptCharCode(
-															t.charCodeAt(p)
+															t.charCodeAt(p),
 														)
 													)
 														return (
@@ -9038,7 +9041,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												)
 													if (
 														!this._attemptCharCodeCaseInsensitive(
-															t.charCodeAt(o)
+															t.charCodeAt(o),
 														)
 													)
 														return !1
@@ -9049,19 +9052,19 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												if (!this._attemptStr(t))
 													throw this._createError(
 														l(this._cursor.peek()),
-														this._cursor.getSpan(o)
+														this._cursor.getSpan(o),
 													)
 											}
 											_requireStrCaseInsensitive(t) {
 												let o = this._cursor.clone()
 												if (
 													!this._attemptStrCaseInsensitive(
-														t
+														t,
 													)
 												)
 													throw this._createError(
 														l(this._cursor.peek()),
-														this._cursor.getSpan(o)
+														this._cursor.getSpan(o),
 													)
 											}
 											_attemptCharCodeUntilFn(t) {
@@ -9076,7 +9079,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												let E = this._cursor.clone()
 												if (
 													(this._attemptCharCodeUntilFn(
-														t
+														t,
 													),
 													this._cursor
 														.clone()
@@ -9084,7 +9087,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												)
 													throw this._createError(
 														l(this._cursor.peek()),
-														this._cursor.getSpan(E)
+														this._cursor.getSpan(E),
 													)
 											}
 											_attemptUntilChar(t) {
@@ -9105,7 +9108,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												{
 													let o =
 														String.fromCodePoint(
-															this._cursor.peek()
+															this._cursor.peek(),
 														)
 													return (
 														this._cursor.advance(),
@@ -9118,29 +9121,29 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												if (
 													(this._cursor.advance(),
 													this._attemptCharCode(
-														r.$HASH
+														r.$HASH,
 													))
 												) {
 													let o =
 															this._attemptCharCode(
-																r.$x
+																r.$x,
 															) ||
 															this._attemptCharCode(
-																r.$X
+																r.$X,
 															),
 														E = this._cursor.clone()
 													if (
 														(this._attemptCharCodeUntilFn(
-															g
+															g,
 														),
 														this._cursor.peek() !=
 															r.$SEMICOLON)
 													)
 														throw this._createError(
 															l(
-																this._cursor.peek()
+																this._cursor.peek(),
 															),
-															this._cursor.getSpan()
+															this._cursor.getSpan(),
 														)
 													let p =
 														this._cursor.getChars(E)
@@ -9148,26 +9151,26 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													try {
 														let A = parseInt(
 															p,
-															o ? 16 : 10
+															o ? 16 : 10,
 														)
 														return String.fromCharCode(
-															A
+															A,
 														)
 													} catch {
 														throw this._createError(
 															h(
 																this._cursor.getChars(
-																	t
-																)
+																	t,
+																),
 															),
-															this._cursor.getSpan()
+															this._cursor.getSpan(),
 														)
 													}
 												} else {
 													let o = this._cursor.clone()
 													if (
 														(this._attemptCharCodeUntilFn(
-															N
+															N,
 														),
 														this._cursor.peek() !=
 															r.$SEMICOLON)
@@ -9184,8 +9187,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														throw this._createError(
 															h(E),
 															this._cursor.getSpan(
-																t
-															)
+																t,
+															),
 														)
 													return p
 												}
@@ -9194,7 +9197,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												this._beginToken(
 													t
 														? s.ESCAPABLE_RAW_TEXT
-														: s.RAW_TEXT
+														: s.RAW_TEXT,
 												)
 												let E = []
 												for (;;) {
@@ -9207,25 +9210,25 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												}
 												return this._endToken([
 													this._processCarriageReturns(
-														E.join('')
+														E.join(''),
 													),
 												])
 											}
 											_consumeComment(t) {
 												this._beginToken(
 													s.COMMENT_START,
-													t
+													t,
 												),
 													this._endToken([]),
 													this._consumeRawText(
 														!1,
 														() =>
 															this._attemptStr(
-																'-->'
-															)
+																'-->',
+															),
 													),
 													this._beginToken(
-														s.COMMENT_END
+														s.COMMENT_END,
 													),
 													this._requireStr('-->'),
 													this._endToken([])
@@ -9233,17 +9236,17 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											_consumeBogusComment(t) {
 												this._beginToken(
 													s.COMMENT_START,
-													t
+													t,
 												),
 													this._endToken([]),
 													this._consumeRawText(
 														!1,
 														() =>
 															this._cursor.peek() ===
-															r.$GT
+															r.$GT,
 													),
 													this._beginToken(
-														s.COMMENT_END
+														s.COMMENT_END,
 													),
 													this._cursor.advance(),
 													this._endToken([])
@@ -9251,18 +9254,18 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											_consumeCdata(t) {
 												this._beginToken(
 													s.CDATA_START,
-													t
+													t,
 												),
 													this._endToken([]),
 													this._consumeRawText(
 														!1,
 														() =>
 															this._attemptStr(
-																']]>'
-															)
+																']]>',
+															),
 													),
 													this._beginToken(
-														s.CDATA_END
+														s.CDATA_END,
 													),
 													this._requireStr(']]>'),
 													this._endToken([])
@@ -9270,17 +9273,17 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											_consumeDocType(t) {
 												this._beginToken(
 													s.DOC_TYPE_START,
-													t
+													t,
 												),
 													this._endToken([]),
 													this._consumeRawText(
 														!1,
 														() =>
 															this._cursor.peek() ===
-															r.$GT
+															r.$GT,
 													),
 													this._beginToken(
-														s.DOC_TYPE_END
+														s.DOC_TYPE_END,
 													),
 													this._cursor.advance(),
 													this._endToken([])
@@ -9300,7 +9303,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												this._cursor.peek() === r.$COLON
 													? ((o =
 															this._cursor.getChars(
-																t
+																t,
 															)),
 													  this._cursor.advance(),
 													  (E =
@@ -9308,7 +9311,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													: (E = t),
 													this._requireCharCodeUntilFn(
 														T,
-														o === '' ? 0 : 1
+														o === '' ? 0 : 1,
 													)
 												let p = this._cursor.getChars(E)
 												return [o, p]
@@ -9323,26 +9326,26 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												try {
 													if (
 														!r.isAsciiLetter(
-															this._cursor.peek()
+															this._cursor.peek(),
 														)
 													)
 														throw this._createError(
 															l(
-																this._cursor.peek()
+																this._cursor.peek(),
 															),
 															this._cursor.getSpan(
-																t
-															)
+																t,
+															),
 														)
 													for (
 														p =
 															this._consumeTagOpenStart(
-																t
+																t,
 															),
 															E = p.parts[0],
 															o = p.parts[1],
 															this._attemptCharCodeUntilFn(
-																m
+																m,
 															);
 														this._cursor.peek() !==
 															r.$SLASH &&
@@ -9354,14 +9357,14 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															this._consumeAttributeName()
 														if (
 															(this._attemptCharCodeUntilFn(
-																m
+																m,
 															),
 															this._attemptCharCode(
-																r.$EQ
+																r.$EQ,
 															))
 														) {
 															this._attemptCharCodeUntilFn(
-																m
+																m,
 															)
 															let H =
 																this._consumeAttributeValue()
@@ -9376,7 +9379,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																name: X,
 															})
 														this._attemptCharCodeUntilFn(
-															m
+															m,
 														)
 													}
 													this._consumeTagOpenEnd()
@@ -9388,7 +9391,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	A),
 															this._beginToken(
 																s.TEXT,
-																t
+																t,
 															),
 															this._endToken([
 																'<',
@@ -9410,18 +9413,18 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													E,
 													this._fullNameStack.length >
 														0,
-													M
+													M,
 												)
 												this._handleFullNameStackForTagOpen(
 													E,
-													o
+													o,
 												),
 													z ===
 													D.TagContentType.RAW_TEXT
 														? this._consumeRawTextWithTagClose(
 																E,
 																o,
-																!1
+																!1,
 														  )
 														: z ===
 																D.TagContentType
@@ -9429,53 +9432,53 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														  this._consumeRawTextWithTagClose(
 																E,
 																o,
-																!0
+																!0,
 														  )
 											}
 											_consumeRawTextWithTagClose(
 												t,
 												o,
-												E
+												E,
 											) {
 												let p = this._consumeRawText(
 													E,
 													() =>
 														!this._attemptCharCode(
-															r.$LT
+															r.$LT,
 														) ||
 														!this._attemptCharCode(
-															r.$SLASH
+															r.$SLASH,
 														) ||
 														(this._attemptCharCodeUntilFn(
-															m
+															m,
 														),
 														!this._attemptStrCaseInsensitive(
-															t ? `${t}:${o}` : o
+															t ? `${t}:${o}` : o,
 														))
 															? !1
 															: (this._attemptCharCodeUntilFn(
-																	m
+																	m,
 															  ),
 															  this._attemptCharCode(
-																	r.$GT
-															  ))
+																	r.$GT,
+															  )),
 												)
 												this._beginToken(s.TAG_CLOSE),
 													this._requireCharCodeUntilFn(
 														(A) => A === r.$GT,
-														3
+														3,
 													),
 													this._cursor.advance(),
 													this._endToken([t, o]),
 													this._handleFullNameStackForTagClose(
 														t,
-														o
+														o,
 													)
 											}
 											_consumeTagOpenStart(t) {
 												this._beginToken(
 													s.TAG_OPEN_START,
-													t
+													t,
 												)
 												let o =
 													this._consumePrefixAndName()
@@ -9486,7 +9489,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												if (t === r.$SQ || t === r.$DQ)
 													throw this._createError(
 														l(t),
-														this._cursor.getSpan()
+														this._cursor.getSpan(),
 													)
 												this._beginToken(s.ATTR_NAME)
 												let o =
@@ -9502,17 +9505,17 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														r.$DQ
 												) {
 													this._beginToken(
-														s.ATTR_QUOTE
+														s.ATTR_QUOTE,
 													)
 													let o = this._cursor.peek()
 													this._cursor.advance(),
 														this._endToken([
 															String.fromCodePoint(
-																o
+																o,
 															),
 														]),
 														this._beginToken(
-															s.ATTR_VALUE
+															s.ATTR_VALUE,
 														)
 													let E = []
 													for (
@@ -9522,36 +9525,36 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 
 													)
 														E.push(
-															this._readChar(!0)
+															this._readChar(!0),
 														)
 													;(t =
 														this._processCarriageReturns(
-															E.join('')
+															E.join(''),
 														)),
 														this._endToken([t]),
 														this._beginToken(
-															s.ATTR_QUOTE
+															s.ATTR_QUOTE,
 														),
 														this._cursor.advance(),
 														this._endToken([
 															String.fromCodePoint(
-																o
+																o,
 															),
 														])
 												} else {
 													this._beginToken(
-														s.ATTR_VALUE
+														s.ATTR_VALUE,
 													)
 													let o = this._cursor.clone()
 													this._requireCharCodeUntilFn(
 														T,
-														1
+														1,
 													),
 														(t =
 															this._processCarriageReturns(
 																this._cursor.getChars(
-																	o
-																)
+																	o,
+																),
 															)),
 														this._endToken([t])
 												}
@@ -9559,13 +9562,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											}
 											_consumeTagOpenEnd() {
 												let t = this._attemptCharCode(
-													r.$SLASH
+													r.$SLASH,
 												)
 													? s.TAG_OPEN_END_VOID
 													: s.TAG_OPEN_END
 												this._beginToken(t),
 													this._requireCharCode(
-														r.$GT
+														r.$GT,
 													),
 													this._endToken([])
 											}
@@ -9573,118 +9576,118 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												if (
 													(this._beginToken(
 														s.TAG_CLOSE,
-														t
+														t,
 													),
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													),
 													this
 														._allowHtmComponentClosingTags &&
 														this._attemptCharCode(
-															r.$SLASH
+															r.$SLASH,
 														))
 												)
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													),
 														this._requireCharCode(
-															r.$GT
+															r.$GT,
 														),
 														this._endToken([])
 												else {
 													let [o, E] =
 														this._consumePrefixAndName()
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													),
 														this._requireCharCode(
-															r.$GT
+															r.$GT,
 														),
 														this._endToken([o, E]),
 														this._handleFullNameStackForTagClose(
 															o,
-															E
+															E,
 														)
 												}
 											}
 											_consumeExpansionFormStart() {
 												this._beginToken(
-													s.EXPANSION_FORM_START
+													s.EXPANSION_FORM_START,
 												),
 													this._requireCharCode(
-														r.$LBRACE
+														r.$LBRACE,
 													),
 													this._endToken([]),
 													this._expansionCaseStack.push(
-														s.EXPANSION_FORM_START
+														s.EXPANSION_FORM_START,
 													),
 													this._beginToken(s.RAW_TEXT)
 												let t = this._readUntil(
-													r.$COMMA
+													r.$COMMA,
 												)
 												this._endToken([t]),
 													this._requireCharCode(
-														r.$COMMA
+														r.$COMMA,
 													),
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													),
 													this._beginToken(s.RAW_TEXT)
 												let o = this._readUntil(
-													r.$COMMA
+													r.$COMMA,
 												)
 												this._endToken([o]),
 													this._requireCharCode(
-														r.$COMMA
+														r.$COMMA,
 													),
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													)
 											}
 											_consumeExpansionCaseStart() {
 												this._beginToken(
-													s.EXPANSION_CASE_VALUE
+													s.EXPANSION_CASE_VALUE,
 												)
 												let t = this._readUntil(
-													r.$LBRACE
+													r.$LBRACE,
 												).trim()
 												this._endToken([t]),
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													),
 													this._beginToken(
-														s.EXPANSION_CASE_EXP_START
+														s.EXPANSION_CASE_EXP_START,
 													),
 													this._requireCharCode(
-														r.$LBRACE
+														r.$LBRACE,
 													),
 													this._endToken([]),
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													),
 													this._expansionCaseStack.push(
-														s.EXPANSION_CASE_EXP_START
+														s.EXPANSION_CASE_EXP_START,
 													)
 											}
 											_consumeExpansionCaseEnd() {
 												this._beginToken(
-													s.EXPANSION_CASE_EXP_END
+													s.EXPANSION_CASE_EXP_END,
 												),
 													this._requireCharCode(
-														r.$RBRACE
+														r.$RBRACE,
 													),
 													this._endToken([]),
 													this._attemptCharCodeUntilFn(
-														m
+														m,
 													),
 													this._expansionCaseStack.pop()
 											}
 											_consumeExpansionFormEnd() {
 												this._beginToken(
-													s.EXPANSION_FORM_END
+													s.EXPANSION_FORM_END,
 												),
 													this._requireCharCode(
-														r.$RBRACE
+														r.$RBRACE,
 													),
 													this._endToken([]),
 													this._expansionCaseStack.pop()
@@ -9698,12 +9701,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													this._attemptStr(
 														this
 															._interpolationConfig
-															.start
+															.start,
 													)
 														? (o.push(
 																this
 																	._interpolationConfig
-																	.start
+																	.start,
 														  ),
 														  (this._inInterpolation =
 																!0))
@@ -9714,24 +9717,24 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														  this._attemptStr(
 																this
 																	._interpolationConfig
-																	.end
+																	.end,
 														  )
 														? (o.push(
 																this
 																	._interpolationConfig
-																	.end
+																	.end,
 														  ),
 														  (this._inInterpolation =
 																!1))
 														: o.push(
 																this._readChar(
-																	!0
-																)
+																	!0,
+																),
 														  )
 												while (!this._isTextEnd())
 												this._endToken([
 													this._processCarriageReturns(
-														o.join('')
+														o.join(''),
 													),
 												])
 											}
@@ -9790,7 +9793,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														o = this._attemptStr(
 															this
 																._interpolationConfig
-																.start
+																.start,
 														)
 													return (
 														(this._cursor = t), !o
@@ -9800,7 +9803,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											}
 											_handleFullNameStackForTagOpen(
 												t,
-												o
+												o,
 											) {
 												let E = D.mergeNsAndName(t, o)
 												;(this._fullNameStack.length ===
@@ -9813,7 +9816,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											}
 											_handleFullNameStackForTagClose(
 												t,
-												o
+												o,
 											) {
 												let E = D.mergeNsAndName(t, o)
 												this._fullNameStack.length !==
@@ -9900,12 +9903,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														(this.state =
 															Object.assign(
 																{},
-																t.state
+																t.state,
 															))
 												else {
 													if (!o)
 														throw new Error(
-															'Programming error: the range argument must be provided with a file argument.'
+															'Programming error: the range argument must be provided with a file argument.',
 														)
 													;(this.file = t),
 														(this.input =
@@ -9957,20 +9960,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														t.file,
 														t.state.offset,
 														t.state.line,
-														t.state.column
+														t.state.column,
 													),
 													new u.ParseLocation(
 														this.file,
 														this.state.offset,
 														this.state.line,
-														this.state.column
-													)
+														this.state.column,
+													),
 												)
 											}
 											getChars(t) {
 												return this.input.substring(
 													t.state.offset,
-													this.state.offset
+													this.state.offset,
 												)
 											}
 											charAt(t) {
@@ -9982,7 +9985,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														((this.state = t),
 														new $(
 															'Unexpected character "EOF"',
-															this
+															this,
 														))
 													)
 												let o = this.charAt(t.offset)
@@ -10007,7 +10010,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													  (this.internalState =
 															Object.assign(
 																{},
-																t.internalState
+																t.internalState,
 															)))
 													: (super(t, o),
 													  (this.internalState =
@@ -10036,7 +10039,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 
 												)
 													(E += String.fromCodePoint(
-														o.peek()
+														o.peek(),
 													)),
 														o.advance()
 												return E
@@ -10049,10 +10052,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														((this.internalState =
 															Object.assign(
 																{},
-																this.state
+																this.state,
 															)),
 														this.advanceState(
-															this.internalState
+															this.internalState,
 														),
 														t() === r.$n)
 													)
@@ -10073,13 +10076,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														if (
 															(this.advanceState(
 																this
-																	.internalState
+																	.internalState,
 															),
 															t() === r.$LBRACE)
 														) {
 															this.advanceState(
 																this
-																	.internalState
+																	.internalState,
 															)
 															let o =
 																	this.clone(),
@@ -10092,46 +10095,46 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															)
 																this.advanceState(
 																	this
-																		.internalState
+																		.internalState,
 																),
 																	E++
 															this.state.peek =
 																this.decodeHexDigits(
 																	o,
-																	E
+																	E,
 																)
 														} else {
 															let o = this.clone()
 															this.advanceState(
 																this
-																	.internalState
+																	.internalState,
 															),
 																this.advanceState(
 																	this
-																		.internalState
+																		.internalState,
 																),
 																this.advanceState(
 																	this
-																		.internalState
+																		.internalState,
 																),
 																(this.state.peek =
 																	this.decodeHexDigits(
 																		o,
-																		4
+																		4,
 																	))
 														}
 													else if (t() === r.$x) {
 														this.advanceState(
-															this.internalState
+															this.internalState,
 														)
 														let o = this.clone()
 														this.advanceState(
-															this.internalState
+															this.internalState,
 														),
 															(this.state.peek =
 																this.decodeHexDigits(
 																	o,
-																	2
+																	2,
 																))
 													} else if (
 														r.isOctalDigit(t())
@@ -10142,18 +10145,18 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														for (
 															;
 															r.isOctalDigit(
-																t()
+																t(),
 															) && E < 3;
 
 														)
 															(p = this.clone()),
 																(o +=
 																	String.fromCodePoint(
-																		t()
+																		t(),
 																	)),
 																this.advanceState(
 																	this
-																		.internalState
+																		.internalState,
 																),
 																E++
 														;(this.state.peek =
@@ -10163,11 +10166,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													} else
 														r.isNewLine(
 															this.internalState
-																.peek
+																.peek,
 														)
 															? (this.advanceState(
 																	this
-																		.internalState
+																		.internalState,
 															  ),
 															  (this.state =
 																	this.internalState))
@@ -10177,7 +10180,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											decodeHexDigits(t, o) {
 												let E = this.input.substr(
 														t.internalState.offset,
-														o
+														o,
 													),
 													p = parseInt(E, 16)
 												if (isNaN(p))
@@ -10186,7 +10189,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															t.internalState),
 														new $(
 															'Invalid hexadecimal escape sequence',
-															t
+															t,
 														))
 													)
 												return p
@@ -10203,7 +10206,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							ls = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ml_parser/parser.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -10253,7 +10256,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																t = new Array(
 																	$ > 1
 																		? $ - 1
-																		: 0
+																		: 0,
 																),
 																o = 1;
 															o < $;
@@ -10263,7 +10266,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																arguments[o]
 														return x(
 															k.toLowerCase(),
-															...t
+															...t,
 														)
 													},
 												T = C
@@ -10277,7 +10280,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																x,
 																k,
 																$,
-																t
+																t,
 															)
 															return o !== void 0
 																? o
@@ -10295,11 +10298,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													T,
 													j,
 													_,
-													C
+													C,
 												).build()
 											return new i(
 												O.rootNodes,
-												R.errors.concat(O.errors)
+												R.errors.concat(O.errors),
 											)
 										}
 									}
@@ -10329,25 +10332,25 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												this._peek.type ===
 												n.TokenType.TAG_OPEN_START
 													? this._consumeStartTag(
-															this._advance()
+															this._advance(),
 													  )
 													: this._peek.type ===
 													  n.TokenType.TAG_CLOSE
 													? (this._closeVoidElement(),
 													  this._consumeEndTag(
-															this._advance()
+															this._advance(),
 													  ))
 													: this._peek.type ===
 													  n.TokenType.CDATA_START
 													? (this._closeVoidElement(),
 													  this._consumeCdata(
-															this._advance()
+															this._advance(),
 													  ))
 													: this._peek.type ===
 													  n.TokenType.COMMENT_START
 													? (this._closeVoidElement(),
 													  this._consumeComment(
-															this._advance()
+															this._advance(),
 													  ))
 													: this._peek.type ===
 															n.TokenType.TEXT ||
@@ -10359,23 +10362,23 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																.ESCAPABLE_RAW_TEXT
 													? (this._closeVoidElement(),
 													  this._consumeText(
-															this._advance()
+															this._advance(),
 													  ))
 													: this._peek.type ===
 													  n.TokenType
 															.EXPANSION_FORM_START
 													? this._consumeExpansion(
-															this._advance()
+															this._advance(),
 													  )
 													: this._peek.type ===
 													  n.TokenType.DOC_TYPE_START
 													? this._consumeDocType(
-															this._advance()
+															this._advance(),
 													  )
 													: this._advance()
 											return new i(
 												this._rootNodes,
-												this._errors
+												this._errors,
 											)
 										}
 										_advance() {
@@ -10398,24 +10401,24 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											let l = this._advance(),
 												h = this._getText(l),
 												C = this._advanceIf(
-													n.TokenType.CDATA_END
+													n.TokenType.CDATA_END,
 												)
 											this._addToParent(
 												new u.CDATA(
 													h,
 													new r.ParseSourceSpan(
 														a.sourceSpan.start,
-														(C || l).sourceSpan.end
-													)
-												)
+														(C || l).sourceSpan.end,
+													),
+												),
 											)
 										}
 										_consumeComment(a) {
 											let l = this._advanceIf(
-													n.TokenType.RAW_TEXT
+													n.TokenType.RAW_TEXT,
 												),
 												h = this._advanceIf(
-													n.TokenType.COMMENT_END
+													n.TokenType.COMMENT_END,
 												),
 												C =
 													l != null
@@ -10423,18 +10426,22 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														: null,
 												d = new r.ParseSourceSpan(
 													a.sourceSpan.start,
-													(h || l || a).sourceSpan.end
+													(
+														h ||
+														l ||
+														a
+													).sourceSpan.end,
 												)
 											this._addToParent(
-												new u.Comment(C, d)
+												new u.Comment(C, d),
 											)
 										}
 										_consumeDocType(a) {
 											let l = this._advanceIf(
-													n.TokenType.RAW_TEXT
+													n.TokenType.RAW_TEXT,
 												),
 												h = this._advanceIf(
-													n.TokenType.DOC_TYPE_END
+													n.TokenType.DOC_TYPE_END,
 												),
 												C =
 													l != null
@@ -10442,10 +10449,14 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														: null,
 												d = new r.ParseSourceSpan(
 													a.sourceSpan.start,
-													(h || l || a).sourceSpan.end
+													(
+														h ||
+														l ||
+														a
+													).sourceSpan.end,
 												)
 											this._addToParent(
-												new u.DocType(C, d)
+												new u.DocType(C, d),
 											)
 										}
 										_consumeExpansion(a) {
@@ -10472,14 +10483,14 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													s.create(
 														null,
 														this._peek.sourceSpan,
-														"Invalid ICU message. Missing '}'."
-													)
+														"Invalid ICU message. Missing '}'.",
+													),
 												)
 												return
 											}
 											let d = new r.ParseSourceSpan(
 												a.sourceSpan.start,
-												this._peek.sourceSpan.end
+												this._peek.sourceSpan.end,
 											)
 											this._addToParent(
 												new u.Expansion(
@@ -10487,8 +10498,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													h.parts[0],
 													C,
 													d,
-													l.sourceSpan
-												)
+													l.sourceSpan,
+												),
 											),
 												this._advance()
 										}
@@ -10505,15 +10516,15 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															null,
 															this._peek
 																.sourceSpan,
-															"Invalid ICU message. Missing '{'."
-														)
+															"Invalid ICU message. Missing '{'.",
+														),
 													),
 													null
 												)
 											let l = this._advance(),
 												h =
 													this._collectExpansionExpTokens(
-														l
+														l,
 													)
 											if (!h) return null
 											let C = this._advance()
@@ -10521,38 +10532,38 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												new n.Token(
 													n.TokenType.EOF,
 													[],
-													C.sourceSpan
-												)
+													C.sourceSpan,
+												),
 											)
 											let d = new c(
 												h,
 												this.getTagDefinition,
 												this.canSelfClose,
 												this.allowHtmComponentClosingTags,
-												this.isTagNameCaseSensitive
+												this.isTagNameCaseSensitive,
 											).build()
 											if (d.errors.length > 0)
 												return (
 													(this._errors =
 														this._errors.concat(
-															d.errors
+															d.errors,
 														)),
 													null
 												)
 											let m = new r.ParseSourceSpan(
 													a.sourceSpan.start,
-													C.sourceSpan.end
+													C.sourceSpan.end,
 												),
 												T = new r.ParseSourceSpan(
 													l.sourceSpan.start,
-													C.sourceSpan.end
+													C.sourceSpan.end,
 												)
 											return new u.ExpansionCase(
 												a.parts[0],
 												d.rootNodes,
 												m,
 												a.sourceSpan,
-												T
+												T,
 											)
 										}
 										_collectExpansionExpTokens(a) {
@@ -10578,7 +10589,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														F(
 															h,
 															n.TokenType
-																.EXPANSION_CASE_EXP_START
+																.EXPANSION_CASE_EXP_START,
 														)
 													) {
 														if (
@@ -10592,8 +10603,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																s.create(
 																	null,
 																	a.sourceSpan,
-																	"Invalid ICU message. Missing '}'."
-																)
+																	"Invalid ICU message. Missing '}'.",
+																),
 															),
 															null
 														)
@@ -10606,7 +10617,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														F(
 															h,
 															n.TokenType
-																.EXPANSION_FORM_START
+																.EXPANSION_FORM_START,
 														)
 													)
 														h.pop()
@@ -10616,8 +10627,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																s.create(
 																	null,
 																	a.sourceSpan,
-																	"Invalid ICU message. Missing '}'."
-																)
+																	"Invalid ICU message. Missing '}'.",
+																),
 															),
 															null
 														)
@@ -10630,8 +10641,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															s.create(
 																null,
 																a.sourceSpan,
-																"Invalid ICU message. Missing '}'."
-															)
+																"Invalid ICU message. Missing '}'.",
+															),
 														),
 														null
 													)
@@ -10650,7 +10661,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												h != null &&
 													h.children.length == 0 &&
 													this.getTagDefinition(
-														h.name
+														h.name,
 													).ignoreFirstLf &&
 													(l = l.substring(1))
 											}
@@ -10660,7 +10671,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											let l = this._getText(a)
 											l.length > 0 &&
 												this._addToParent(
-													new u.Text(l, a.sourceSpan)
+													new u.Text(l, a.sourceSpan),
 												)
 										}
 										_closeVoidElement() {
@@ -10682,13 +10693,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											)
 												C.push(
 													this._consumeAttr(
-														this._advance()
-													)
+														this._advance(),
+													),
 												)
 											let d = this._getElementFullName(
 													l,
 													h,
-													this._getParentElement()
+													this._getParentElement(),
 												),
 												m = !1
 											if (
@@ -10705,8 +10716,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														s.create(
 															d,
 															a.sourceSpan,
-															`Only void and foreign elements can be self closed "${a.parts[1]}"`
-														)
+															`Only void and foreign elements can be self closed "${a.parts[1]}"`,
+														),
 													)
 											} else
 												this._peek.type ===
@@ -10715,13 +10726,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											let T = this._peek.sourceSpan.start,
 												w = new r.ParseSourceSpan(
 													a.sourceSpan.start,
-													T
+													T,
 												),
 												g = new r.ParseSourceSpan(
 													a.sourceSpan.start.moveBy(
-														1
+														1,
 													),
-													a.sourceSpan.end
+													a.sourceSpan.end,
 												),
 												N = new u.Element(
 													d,
@@ -10730,7 +10741,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													w,
 													w,
 													void 0,
-													g
+													g,
 												)
 											this._pushElement(N),
 												m &&
@@ -10741,7 +10752,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											let l = this._getParentElement()
 											l &&
 												this.getTagDefinition(
-													l.name
+													l.name,
 												).isClosedByChild(a.name) &&
 												this._elementStack.pop(),
 												this._addToParent(a),
@@ -10756,7 +10767,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													: this._getElementFullName(
 															a.parts[0],
 															a.parts[1],
-															this._getParentElement()
+															this._getParentElement(),
 													  )
 											if (
 												(this._getParentElement() &&
@@ -10770,13 +10781,17 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													s.create(
 														l,
 														a.sourceSpan,
-														`Void elements do not have end tags "${a.parts[1]}"`
-													)
+														`Void elements do not have end tags "${a.parts[1]}"`,
+													),
 												)
 											else if (!this._popElement(l)) {
 												let h = `Unexpected closing tag "${l}". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags`
 												this._errors.push(
-													s.create(l, a.sourceSpan, h)
+													s.create(
+														l,
+														a.sourceSpan,
+														h,
+													),
 												)
 											}
 										}
@@ -10800,13 +10815,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														this._elementStack.splice(
 															l,
 															this._elementStack
-																.length - l
+																.length - l,
 														),
 														!0
 													)
 												if (
 													!this.getTagDefinition(
-														h.name
+														h.name,
 													).closedByParent
 												)
 													return !1
@@ -10816,7 +10831,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										_consumeAttr(a) {
 											let l = D.mergeNsAndName(
 													a.parts[0],
-													a.parts[1]
+													a.parts[1],
 												),
 												h = a.sourceSpan.end,
 												C = '',
@@ -10844,17 +10859,17 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.sourceSpan.end),
 													(d = new r.ParseSourceSpan(
 														m,
-														h
+														h,
 													))),
 												new u.Attribute(
 													l,
 													C,
 													new r.ParseSourceSpan(
 														a.sourceSpan.start,
-														h
+														h,
 													),
 													d,
-													a.sourceSpan
+													a.sourceSpan,
 												)
 											)
 										}
@@ -10878,7 +10893,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												if (
 													!D.isNgContainer(
 														this._elementStack[l]
-															.name
+															.name,
 													)
 												)
 													return {
@@ -10912,10 +10927,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												h.children.push(l),
 													this._elementStack.splice(
 														this._elementStack.indexOf(
-															l
+															l,
 														),
 														0,
-														h
+														h,
 													)
 											}
 										}
@@ -10929,7 +10944,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													a === '' &&
 														h != null &&
 														(a = D.getNsPrefix(
-															h.name
+															h.name,
 														))),
 												D.mergeNsAndName(a, l)
 											)
@@ -10945,7 +10960,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Ql = I({
 								'node_modules/angular-html-parser/lib/compiler/src/ml_parser/html_parser.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -10979,7 +10994,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							ws = I({
 								'node_modules/angular-html-parser/lib/angular-html-parser/src/index.js'(
-									e
+									e,
 								) {
 									'use strict'
 									q(),
@@ -11016,7 +11031,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												allowHtmComponentClosingTags: F,
 											},
 											a,
-											l
+											l,
 										)
 									}
 									e.parse = s
@@ -11065,7 +11080,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											(O.type === 'docType' &&
 												O.value === 'html') ||
 											(O.type === 'element' &&
-												O.name.toLowerCase() === 'html')
+												O.name.toLowerCase() ===
+													'html'),
 									)
 								) {
 									;(n = !0),
@@ -11088,7 +11104,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										)
 											return !1
 										let k = x.attrs.find(
-												(t) => t.name === 'lang'
+												(t) => t.name === 'lang',
 											),
 											$ = k && k.value
 										return !$ || rc($, u) === 'html'
@@ -11177,12 +11193,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														? ((O.value =
 																O.valueSpan.toString()),
 														  /["']/.test(
-																O.value[0]
+																O.value[0],
 														  ) &&
 																(O.value =
 																	O.value.slice(
 																		1,
-																		-1
+																		-1,
 																	)))
 														: (O.value = null)
 											break
@@ -11211,7 +11227,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												hs(_)) &&
 											(_.name = g(
 												_.name,
-												(O) => O in uc
+												(O) => O in uc,
 											)),
 										s)
 									) {
@@ -11223,7 +11239,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													x.name,
 													(k) =>
 														_.name in Vr &&
-														(k in Vr['*'] || k in O)
+														(k in Vr['*'] ||
+															k in O),
 												))
 									}
 								},
@@ -11232,13 +11249,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										_.endSourceSpan &&
 										(_.sourceSpan = new h(
 											_.sourceSpan.start,
-											_.endSourceSpan.end
+											_.endSourceSpan.end,
 										))
 								},
 								j = (_) => {
 									if (_.type === 'element') {
 										let O = C(
-											f ? _.name : _.name.toLowerCase()
+											f ? _.name : _.name.toLowerCase(),
 										)
 										!_.namespace ||
 										_.namespace ===
@@ -11255,7 +11272,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											w(_), j(_), N(_), R(_)
 										}
 									})(),
-									d
+									d,
 								),
 								d
 							)
@@ -11292,7 +11309,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										w = Ns(m + h, r, u, !1)
 									w.sourceSpan = new Qe(
 										C,
-										Zl(w.children).sourceSpan.end
+										Zl(w.children).sourceSpan.end,
 									)
 									let g = w.children[0]
 									return (
@@ -11300,9 +11317,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											? w.children.shift()
 											: ((g.sourceSpan = new Qe(
 													g.sourceSpan.start.moveBy(
-														d
+														d,
 													),
-													g.sourceSpan.end
+													g.sourceSpan.end,
 											  )),
 											  (g.value = g.value.slice(d))),
 										w
@@ -11818,7 +11835,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								)
 									return s
 								throw Wl(
-									"Can't convert object to primitive value"
+									"Can't convert object to primitive value",
 								)
 							}
 							return r === void 0 && (r = 'number'), $l(e, r)
@@ -11888,7 +11905,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									Object.defineProperty(
 										function () {},
 										'prototype',
-										{ value: 42, writable: !1 }
+										{ value: 42, writable: !1 },
 									).prototype != 42
 								)
 							})
@@ -12033,7 +12050,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										throw En(
 											'Incompatible receiver, ' +
 												e +
-												' required'
+												' required',
 										)
 									return t
 								}
@@ -12101,7 +12118,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										'[' +
 										String(r).replace(
 											/^Symbol\(([^)]*)\)/,
-											'$1'
+											'$1',
 										) +
 										']'),
 									t && t.getter && (r = 'get ' + r),
@@ -12128,7 +12145,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								return (
 									Fr(s, 'source') ||
 										(s.source = Gc.join(
-											typeof r == 'string' ? r : ''
+											typeof r == 'string' ? r : '',
 										)),
 									e
 								)
@@ -12358,7 +12375,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											: (l = u[i]),
 										(n = jp(
 											s ? i : t + (a ? '.' : '#') + i,
-											e.forced
+											e.forced,
 										)),
 										!n && l !== void 0)
 									) {
@@ -12461,7 +12478,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								xr(
 									(function () {
 										return arguments
-									})()
+									})(),
 								) == 'Arguments',
 							uf = function (e, r) {
 								try {
@@ -12594,12 +12611,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											r,
 											arguments.length > 1
 												? arguments[1]
-												: void 0
+												: void 0,
 										)),
 										a
 									)
 								},
-							}
+							},
 						)
 					}),
 					Pn = xe((by, ea) => {
@@ -12763,12 +12780,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											function (s, a) {
 												rD(t, s, a)
 											},
-											{ AS_ENTRIES: !0 }
+											{ AS_ENTRIES: !0 },
 										),
 										t
 									)
 								},
-							}
+							},
 						)
 					}),
 					Ca = xe((Ly, va) => {
@@ -12839,7 +12856,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									for (var u in n) a(u, n[u])
 									var i = Object.getOwnPropertyDescriptor(
 										Sa,
-										'flags'
+										'flags',
 									).get.call(r)
 									return i !== s || t !== s
 								})
@@ -12850,7 +12867,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							kn = pt()
 						pD(
 							{ global: !0, forced: kn.globalThis !== kn },
-							{ globalThis: kn }
+							{ globalThis: kn },
 						)
 					}),
 					Ta = xe(() => {
@@ -12881,12 +12898,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											t,
 											s,
 											0,
-											r === void 0 ? 1 : gD(r)
+											r === void 0 ? 1 : gD(r),
 										)),
 										a
 									)
 								},
-							}
+							},
 						)
 					}),
 					e0 = xe((Uy, jo) => {
@@ -12905,7 +12922,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										!(r.indexOf(s) >= 0) &&
 											Object.prototype.propertyIsEnumerable.call(
 												e,
-												s
+												s,
 											) &&
 											(t[s] = e[s])
 							}
@@ -12941,7 +12958,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										r ||
 											(0, e[Gn(e)[0]])(
 												(r = { exports: {} }).exports,
-												r
+												r,
 											),
 										r.exports
 									)
@@ -12975,7 +12992,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												enumerable: !0,
 										  })
 										: t,
-									e
+									e,
 								)
 							),
 							ft = (e) =>
@@ -13023,10 +13040,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											;(n = this.castInput(n)),
 												(u = this.castInput(u)),
 												(n = this.removeEmpty(
-													this.tokenize(n)
+													this.tokenize(n),
 												)),
 												(u = this.removeEmpty(
-													this.tokenize(u)
+													this.tokenize(u),
 												))
 											var h = u.length,
 												g = n.length,
@@ -13042,7 +13059,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													F[0],
 													u,
 													n,
-													0
+													0,
 												)
 											if (
 												F[0].newPos + 1 >= h &&
@@ -13083,20 +13100,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															  p.pushComponent(
 																	x.components,
 																	void 0,
-																	!0
+																	!0,
 															  ))
 															: ((x = I),
 															  x.newPos++,
 															  p.pushComponent(
 																	x.components,
 																	!0,
-																	void 0
+																	void 0,
 															  )),
 														($ = p.extractCommon(
 															x,
 															u,
 															n,
-															N
+															N,
 														)),
 														x.newPos + 1 >= h &&
 															$ + 1 >= g)
@@ -13107,8 +13124,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																x.components,
 																u,
 																n,
-																p.useLongestToken
-															)
+																p.useLongestToken,
+															),
 														)
 													F[N] = x
 												}
@@ -13206,7 +13223,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											if (c.removed) {
 												if (
 													((c.value = a.join(
-														i.slice(g, g + c.count)
+														i.slice(g, g + c.count),
 													)),
 													(g += c.count),
 													p && n[p - 1].added)
@@ -13219,22 +13236,21 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												if (!c.added && l) {
 													var f = u.slice(
 														h,
-														h + c.count
+														h + c.count,
 													)
-													;(f = f.map(function (
-														w,
-														E
-													) {
-														var N = i[g + E]
-														return N.length >
-															w.length
-															? N
-															: w
-													})),
+													;(f = f.map(
+														function (w, E) {
+															var N = i[g + E]
+															return N.length >
+																w.length
+																? N
+																: w
+														},
+													)),
 														(c.value = a.join(f))
 												} else
 													c.value = a.join(
-														u.slice(h, h + c.count)
+														u.slice(h, h + c.count),
 													)
 												;(h += c.count),
 													c.added || (g += c.count)
@@ -13334,8 +13350,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											Object.assign(
 												Object.assign({}, o),
 												{},
-												{ expandedStates: C }
-											)
+												{ expandedStates: C },
+											),
 										)
 									}
 									function y(C) {
@@ -13403,7 +13419,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											;(v = a(o % d, v)),
 												(v = a(
 													Number.NEGATIVE_INFINITY,
-													v
+													v,
 												))
 										}
 										return v
@@ -13487,8 +13503,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											default:
 												throw new Error(
 													`Unexpected "eol" ${JSON.stringify(
-														i
-													)}.`
+														i,
+													)}.`,
 												)
 										}
 										let p = u.match(l)
@@ -13498,7 +13514,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										return u.replace(
 											/\r\n?/g,
 											`
-`
+`,
 										)
 									}
 									r.exports = {
@@ -13537,7 +13553,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						function _D(e) {
 							if (typeof e != 'string')
 								throw new TypeError(
-									`Expected a \`string\`, got \`${typeof e}\``
+									`Expected a \`string\`, got \`${typeof e}\``,
 								)
 							return e.replace(ND(), '')
 						}
@@ -13641,7 +13657,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												o.type !== 'fill'
 											)
 												throw new Error(
-													'Expect doc type to be `concat` or `fill`.'
+													'Expect doc type to be `concat` or `fill`.',
 												)
 											return o.parts
 										},
@@ -13674,7 +13690,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														b.push(B.flatContents),
 														B.breakContents &&
 															b.push(
-																B.breakContents
+																B.breakContents,
 															)
 												else if (
 													B.type === 'group' &&
@@ -13694,7 +13710,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																B
 																	.expandedStates[
 																	M
-																]
+																],
 															)
 													else b.push(B.contents)
 												else
@@ -13722,8 +13738,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													Object.assign(
 														Object.assign({}, B),
 														{},
-														{ parts: k }
-													)
+														{ parts: k },
+													),
 												)
 											}
 											if (B.type === 'if-break') {
@@ -13740,8 +13756,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														{
 															breakContents: k,
 															flatContents: M,
-														}
-													)
+														},
+													),
 												)
 											}
 											if (
@@ -13757,8 +13773,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														{
 															contents: M,
 															expandedStates: k,
-														}
-													)
+														},
+													),
 												)
 											}
 											if (B.contents) {
@@ -13767,8 +13783,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													Object.assign(
 														Object.assign({}, B),
 														{},
-														{ contents: k }
-													)
+														{ contents: k },
+													),
 												)
 											}
 											return d(B)
@@ -13867,7 +13883,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												: Object.assign(
 														Object.assign({}, o),
 														{},
-														{ parts: d }
+														{ parts: d },
 												  )
 										}
 										switch (o.type) {
@@ -13881,7 +13897,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												return Object.assign(
 													Object.assign({}, o),
 													{},
-													{ contents: d }
+													{ contents: d },
 												)
 											}
 											case 'if-break': {
@@ -13893,7 +13909,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													{
 														breakContents: d,
 														flatContents: v,
-													}
+													},
 												)
 											}
 										}
@@ -13907,7 +13923,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											case 'fill':
 												if (
 													o.parts.every(
-														(v) => v === ''
+														(v) => v === '',
 													)
 												)
 													return ''
@@ -13966,7 +13982,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											: Object.assign(
 													Object.assign({}, o),
 													{},
-													{ parts: d }
+													{ parts: d },
 											  )
 									}
 									function I(o) {
@@ -14003,9 +14019,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												? Object.assign(
 														Object.assign({}, d),
 														{},
-														{ parts: P(d.parts) }
+														{ parts: P(d.parts) },
 												  )
-												: d
+												: d,
 										)
 									}
 									function D(o) {
@@ -14014,7 +14030,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											d.includes(`
 `)
 												? T(d)
-												: d
+												: d,
 										)
 									}
 									function T(o) {
@@ -14026,7 +14042,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										return a(
 											d,
 											o.split(`
-`)
+`),
 										).parts
 									}
 									function m(o) {
@@ -14090,7 +14106,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												? Object.assign(
 														Object.assign({}, x),
 														{},
-														{ root: x }
+														{ root: x },
 												  )
 												: _(
 														x,
@@ -14102,7 +14118,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	: 'numberAlign',
 															n: I,
 														},
-														P
+														P,
 												  )
 											: x
 									}
@@ -14133,7 +14149,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													break
 												default:
 													throw new Error(
-														`Unexpected type '${k.type}'`
+														`Unexpected type '${k.type}'`,
 													)
 											}
 										return (
@@ -14145,7 +14161,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													value: D,
 													length: T,
 													queue: $,
-												}
+												},
 											)
 										)
 										function o(k) {
@@ -14238,7 +14254,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																d.expandedStates &&
 																v === h
 																	? s(
-																			d.expandedStates
+																			d.expandedStates,
 																	  )
 																	: d.contents
 														m.push({
@@ -14367,7 +14383,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																		B,
 																		T,
 																		k,
-																		M
+																		M,
 																	)
 																)
 																	T.push(B)
@@ -14375,7 +14391,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	b.expandedStates
 																) {
 																	let R = s(
-																		b.expandedStates
+																		b.expandedStates,
 																	)
 																	if (
 																		b.break
@@ -14407,7 +14423,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																						ind: v,
 																						mode: h,
 																						doc: R,
-																					}
+																					},
 																				)
 																				break
 																			} else {
@@ -14427,11 +14443,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																						L,
 																						T,
 																						k,
-																						M
+																						M,
 																					)
 																				) {
 																					T.push(
-																						L
+																						L,
 																					)
 																					break
 																				}
@@ -14470,7 +14486,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																[],
 																B,
 																o.length > 0,
-																!0
+																!0,
 															)
 														if (k.length === 1) {
 															L
@@ -14510,7 +14526,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															[],
 															B,
 															o.length > 0,
-															!0
+															!0,
 														)
 															? T.push(j, Q, q)
 															: L
@@ -14531,7 +14547,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	: b.negate
 																	? b.contents
 																	: i(
-																			b.contents
+																			b.contents,
 																	  )
 															k &&
 																T.push({
@@ -14547,7 +14563,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	? b.flatContents
 																	: b.negate
 																	? i(
-																			b.contents
+																			b.contents,
 																	  )
 																	: b.contents
 															k &&
@@ -14585,7 +14601,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																else {
 																	b.soft ||
 																		(m.push(
-																			' '
+																			' ',
 																		),
 																		(D += 1))
 																	break
@@ -14600,7 +14616,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																			mode: S,
 																			doc: b,
 																		},
-																		...o.reverse()
+																		...o.reverse(),
 																	),
 																		(o.length = 0)
 																	break
@@ -14611,23 +14627,23 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																				$,
 																				v
 																					.root
-																					.value
+																					.value,
 																		  ),
 																		  (D =
 																				v
 																					.root
 																					.length))
 																		: (m.push(
-																				$
+																				$,
 																		  ),
 																		  (D = 0))
 																	: ((D -=
 																			w(
-																				m
+																				m,
 																			)),
 																	  m.push(
 																			$ +
-																				v.value
+																				v.value,
 																	  ),
 																	  (D =
 																			v.length))
@@ -14652,7 +14668,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										if (d !== -1) {
 											let v = m.indexOf(
 													u.placeholder,
-													d + 1
+													d + 1,
 												),
 												S = m.slice(0, d).join(''),
 												b = m.slice(d + 1, v).join(''),
@@ -14691,12 +14707,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													{},
 													{
 														breakContents: a(
-															u.breakContents
+															u.breakContents,
 														),
 														flatContents: a(
-															u.flatContents
+															u.flatContents,
 														),
-													}
+													},
 											  )
 											: u.type === 'group'
 											? Object.assign(
@@ -14707,9 +14723,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														expandedStates:
 															u.expandedStates &&
 															u.expandedStates.map(
-																a
+																a,
 															),
-													}
+													},
 											  )
 											: u.type === 'fill'
 											? {
@@ -14720,7 +14736,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											? Object.assign(
 													Object.assign({}, u),
 													{},
-													{ contents: a(u.contents) }
+													{ contents: a(u.contents) },
 											  )
 											: u
 									}
@@ -14803,7 +14819,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																? ''
 																: ', ""') +
 														  `, { groupId: ${y(
-																h.groupId
+																h.groupId,
 														  )} }`
 														: '') +
 													')'
@@ -14815,17 +14831,17 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													h.groupId &&
 														f.push(
 															`groupId: ${y(
-																h.groupId
-															)}`
+																h.groupId,
+															)}`,
 														)
 												let F =
 													f.length > 0
 														? `, { ${f.join(
-																', '
+																', ',
 														  )} }`
 														: ''
 												return `indentIfBreak(${p(
-													h.contents
+													h.contents,
 												)}${F})`
 											}
 											if (h.type === 'group') {
@@ -14838,7 +14854,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												let F =
 													f.length > 0
 														? `, { ${f.join(
-																', '
+																', ',
 														  )} }`
 														: ''
 												return h.expandedStates
@@ -14846,7 +14862,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.map((_) => p(_))
 															.join(',')}]${F})`
 													: `group(${p(
-															h.contents
+															h.contents,
 													  )}${F})`
 											}
 											if (h.type === 'fill')
@@ -14866,10 +14882,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												return 'lineSuffixBoundary'
 											if (h.type === 'label')
 												return `label(${JSON.stringify(
-													h.label
+													h.label,
 												)}, ${p(h.contents)})`
 											throw new Error(
-												'Unknown doc type ' + h.type
+												'Unknown doc type ' + h.type,
 											)
 										}
 										function y(h) {
@@ -14888,7 +14904,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														(i[
 															h
 														] = `Symbol.for(${JSON.stringify(
-															f
+															f,
 														)})`)
 													)
 											}
@@ -14943,7 +14959,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														a[n] = arguments[n]
 													return console.error(
 														'SEMVER',
-														...a
+														...a,
 													)
 											  }
 											: () => {}
@@ -14953,7 +14969,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Ma = te({
 								'node_modules/semver/internal/constants.js'(
 									e,
-									r
+									r,
 								) {
 									ne()
 									var t = '2.0.0',
@@ -14987,20 +15003,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												(n[g] = y),
 												(a[g] = new RegExp(
 													y,
-													h ? 'g' : void 0
+													h ? 'g' : void 0,
 												))
 										}
 									l('NUMERICIDENTIFIER', '0|[1-9]\\d*'),
 										l('NUMERICIDENTIFIERLOOSE', '[0-9]+'),
 										l(
 											'NONNUMERICIDENTIFIER',
-											'\\d*[a-zA-Z-][a-zA-Z0-9-]*'
+											'\\d*[a-zA-Z-][a-zA-Z0-9-]*',
 										),
 										l(
 											'MAINVERSION',
 											`(${n[u.NUMERICIDENTIFIER]})\\.(${
 												n[u.NUMERICIDENTIFIER]
-											})\\.(${n[u.NUMERICIDENTIFIER]})`
+											})\\.(${n[u.NUMERICIDENTIFIER]})`,
 										),
 										l(
 											'MAINVERSIONLOOSE',
@@ -15010,19 +15026,19 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												n[u.NUMERICIDENTIFIERLOOSE]
 											})\\.(${
 												n[u.NUMERICIDENTIFIERLOOSE]
-											})`
+											})`,
 										),
 										l(
 											'PRERELEASEIDENTIFIER',
 											`(?:${n[u.NUMERICIDENTIFIER]}|${
 												n[u.NONNUMERICIDENTIFIER]
-											})`
+											})`,
 										),
 										l(
 											'PRERELEASEIDENTIFIERLOOSE',
 											`(?:${
 												n[u.NUMERICIDENTIFIERLOOSE]
-											}|${n[u.NONNUMERICIDENTIFIER]})`
+											}|${n[u.NONNUMERICIDENTIFIER]})`,
 										),
 										l(
 											'PRERELEASE',
@@ -15030,7 +15046,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												n[u.PRERELEASEIDENTIFIER]
 											}(?:\\.${
 												n[u.PRERELEASEIDENTIFIER]
-											})*))`
+											})*))`,
 										),
 										l(
 											'PRERELEASELOOSE',
@@ -15038,27 +15054,27 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												n[u.PRERELEASEIDENTIFIERLOOSE]
 											}(?:\\.${
 												n[u.PRERELEASEIDENTIFIERLOOSE]
-											})*))`
+											})*))`,
 										),
 										l('BUILDIDENTIFIER', '[0-9A-Za-z-]+'),
 										l(
 											'BUILD',
 											`(?:\\+(${
 												n[u.BUILDIDENTIFIER]
-											}(?:\\.${n[u.BUILDIDENTIFIER]})*))`
+											}(?:\\.${n[u.BUILDIDENTIFIER]})*))`,
 										),
 										l(
 											'FULLPLAIN',
 											`v?${n[u.MAINVERSION]}${
 												n[u.PRERELEASE]
-											}?${n[u.BUILD]}?`
+											}?${n[u.BUILD]}?`,
 										),
 										l('FULL', `^${n[u.FULLPLAIN]}$`),
 										l(
 											'LOOSEPLAIN',
 											`[v=\\s]*${n[u.MAINVERSIONLOOSE]}${
 												n[u.PRERELEASELOOSE]
-											}?${n[u.BUILD]}?`
+											}?${n[u.BUILD]}?`,
 										),
 										l('LOOSE', `^${n[u.LOOSEPLAIN]}$`),
 										l('GTLT', '((?:<|>)?=?)'),
@@ -15066,11 +15082,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											'XRANGEIDENTIFIERLOOSE',
 											`${
 												n[u.NUMERICIDENTIFIERLOOSE]
-											}|x|X|\\*`
+											}|x|X|\\*`,
 										),
 										l(
 											'XRANGEIDENTIFIER',
-											`${n[u.NUMERICIDENTIFIER]}|x|X|\\*`
+											`${n[u.NUMERICIDENTIFIER]}|x|X|\\*`,
 										),
 										l(
 											'XRANGEPLAIN',
@@ -15082,7 +15098,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												n[u.XRANGEIDENTIFIER]
 											})(?:${n[u.PRERELEASE]})?${
 												n[u.BUILD]
-											}?)?)?`
+											}?)?)?`,
 										),
 										l(
 											'XRANGEPLAINLOOSE',
@@ -15094,81 +15110,81 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												n[u.XRANGEIDENTIFIERLOOSE]
 											})(?:${n[u.PRERELEASELOOSE]})?${
 												n[u.BUILD]
-											}?)?)?`
+											}?)?)?`,
 										),
 										l(
 											'XRANGE',
 											`^${n[u.GTLT]}\\s*${
 												n[u.XRANGEPLAIN]
-											}$`
+											}$`,
 										),
 										l(
 											'XRANGELOOSE',
 											`^${n[u.GTLT]}\\s*${
 												n[u.XRANGEPLAINLOOSE]
-											}$`
+											}$`,
 										),
 										l(
 											'COERCE',
-											`(^|[^\\d])(\\d{1,${t}})(?:\\.(\\d{1,${t}}))?(?:\\.(\\d{1,${t}}))?(?:$|[^\\d])`
+											`(^|[^\\d])(\\d{1,${t}})(?:\\.(\\d{1,${t}}))?(?:\\.(\\d{1,${t}}))?(?:$|[^\\d])`,
 										),
 										l('COERCERTL', n[u.COERCE], !0),
 										l('LONETILDE', '(?:~>?)'),
 										l(
 											'TILDETRIM',
 											`(\\s*)${n[u.LONETILDE]}\\s+`,
-											!0
+											!0,
 										),
 										(e.tildeTrimReplace = '$1~'),
 										l(
 											'TILDE',
 											`^${n[u.LONETILDE]}${
 												n[u.XRANGEPLAIN]
-											}$`
+											}$`,
 										),
 										l(
 											'TILDELOOSE',
 											`^${n[u.LONETILDE]}${
 												n[u.XRANGEPLAINLOOSE]
-											}$`
+											}$`,
 										),
 										l('LONECARET', '(?:\\^)'),
 										l(
 											'CARETTRIM',
 											`(\\s*)${n[u.LONECARET]}\\s+`,
-											!0
+											!0,
 										),
 										(e.caretTrimReplace = '$1^'),
 										l(
 											'CARET',
 											`^${n[u.LONECARET]}${
 												n[u.XRANGEPLAIN]
-											}$`
+											}$`,
 										),
 										l(
 											'CARETLOOSE',
 											`^${n[u.LONECARET]}${
 												n[u.XRANGEPLAINLOOSE]
-											}$`
+											}$`,
 										),
 										l(
 											'COMPARATORLOOSE',
 											`^${n[u.GTLT]}\\s*(${
 												n[u.LOOSEPLAIN]
-											})$|^$`
+											})$|^$`,
 										),
 										l(
 											'COMPARATOR',
 											`^${n[u.GTLT]}\\s*(${
 												n[u.FULLPLAIN]
-											})$|^$`
+											})$|^$`,
 										),
 										l(
 											'COMPARATORTRIM',
 											`(\\s*)${n[u.GTLT]}\\s*(${
 												n[u.LOOSEPLAIN]
 											}|${n[u.XRANGEPLAIN]})`,
-											!0
+											!0,
 										),
 										(e.comparatorTrimReplace = '$1$2$3'),
 										l(
@@ -15177,7 +15193,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												n[u.XRANGEPLAIN]
 											})\\s+-\\s+(${
 												n[u.XRANGEPLAIN]
-											})\\s*$`
+											})\\s*$`,
 										),
 										l(
 											'HYPHENRANGELOOSE',
@@ -15185,20 +15201,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												n[u.XRANGEPLAINLOOSE]
 											})\\s+-\\s+(${
 												n[u.XRANGEPLAINLOOSE]
-											})\\s*$`
+											})\\s*$`,
 										),
 										l('STAR', '(<|>)?=?\\s*\\*'),
 										l('GTE0', '^\\s*>=\\s*0\\.0\\.0\\s*$'),
 										l(
 											'GTE0PRE',
-											'^\\s*>=\\s*0\\.0\\.0-0\\s*$'
+											'^\\s*>=\\s*0\\.0\\.0-0\\s*$',
 										)
 								},
 							}),
 							WD = te({
 								'node_modules/semver/internal/parse-options.js'(
 									e,
-									r
+									r,
 								) {
 									ne()
 									var t = [
@@ -15217,7 +15233,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	(n[u] = !0),
 																	n
 																),
-																{}
+																{},
 															)
 												: {}
 									r.exports = s
@@ -15226,7 +15242,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							HD = te({
 								'node_modules/semver/internal/identifiers.js'(
 									e,
-									r
+									r,
 								) {
 									ne()
 									var t = /^[0-9]+$/,
@@ -15276,11 +15292,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													y = y.version
 												} else if (typeof y != 'string')
 													throw new TypeError(
-														`Invalid Version: ${y}`
+														`Invalid Version: ${y}`,
 													)
 												if (y.length > s)
 													throw new TypeError(
-														`version is longer than ${s} characters`
+														`version is longer than ${s} characters`,
 													)
 												t('SemVer', y, h),
 													(this.options = h),
@@ -15292,11 +15308,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													.match(
 														h.loose
 															? n[u.LOOSE]
-															: n[u.FULL]
+															: n[u.FULL],
 													)
 												if (!g)
 													throw new TypeError(
-														`Invalid Version: ${y}`
+														`Invalid Version: ${y}`,
 													)
 												if (
 													((this.raw = y),
@@ -15307,21 +15323,21 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														this.major < 0)
 												)
 													throw new TypeError(
-														'Invalid major version'
+														'Invalid major version',
 													)
 												if (
 													this.minor > a ||
 													this.minor < 0
 												)
 													throw new TypeError(
-														'Invalid minor version'
+														'Invalid minor version',
 													)
 												if (
 													this.patch > a ||
 													this.patch < 0
 												)
 													throw new TypeError(
-														'Invalid patch version'
+														'Invalid patch version',
 													)
 												g[4]
 													? (this.prerelease = g[4]
@@ -15329,7 +15345,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.map((c) => {
 																if (
 																	/^[0-9]+$/.test(
-																		c
+																		c,
 																	)
 																) {
 																	let f = +c
@@ -15353,7 +15369,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													(this.version = `${this.major}.${this.minor}.${this.patch}`),
 													this.prerelease.length &&
 														(this.version += `-${this.prerelease.join(
-															'.'
+															'.',
 														)}`),
 													this.version
 												)
@@ -15367,7 +15383,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														'SemVer.compare',
 														this.version,
 														this.options,
-														y
+														y,
 													),
 													!(y instanceof p))
 												) {
@@ -15389,12 +15405,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													y instanceof p ||
 														(y = new p(
 															y,
-															this.options
+															this.options,
 														)),
 													l(this.major, y.major) ||
 														l(
 															this.minor,
-															y.minor
+															y.minor,
 														) ||
 														l(this.patch, y.patch)
 												)
@@ -15404,7 +15420,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													(y instanceof p ||
 														(y = new p(
 															y,
-															this.options
+															this.options,
 														)),
 													this.prerelease.length &&
 														!y.prerelease.length)
@@ -15429,7 +15445,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															'prerelease compare',
 															h,
 															g,
-															c
+															c,
 														),
 														g === void 0 &&
 															c === void 0)
@@ -15452,7 +15468,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															'prerelease compare',
 															h,
 															g,
-															c
+															c,
 														),
 														g === void 0 &&
 															c === void 0)
@@ -15482,7 +15498,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														;(this.prerelease.length = 0),
 															this.inc(
 																'patch',
-																h
+																h,
 															),
 															this.inc('pre', h)
 														break
@@ -15491,7 +15507,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.length === 0 &&
 															this.inc(
 																'patch',
-																h
+																h,
 															),
 															this.inc('pre', h)
 														break
@@ -15548,18 +15564,18 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	(g = -2))
 															g === -1 &&
 																this.prerelease.push(
-																	0
+																	0,
 																)
 														}
 														h &&
 															(l(
 																this
 																	.prerelease[0],
-																h
+																h,
 															) === 0
 																? isNaN(
 																		this
-																			.prerelease[1]
+																			.prerelease[1],
 																  ) &&
 																  (this.prerelease =
 																		[h, 0])
@@ -15568,7 +15584,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														break
 													default:
 														throw new Error(
-															`invalid increment argument: ${y}`
+															`invalid increment argument: ${y}`,
 														)
 												}
 												return (
@@ -15584,7 +15600,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							zn = te({
 								'node_modules/semver/functions/compare.js'(
 									e,
-									r
+									r,
 								) {
 									ne()
 									var t = GD(),
@@ -15618,7 +15634,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												let [n, u] = a
 												return Object.assign(
 													{ [s]: n },
-													u
+													u,
 												)
 											}))
 								},
@@ -15699,7 +15715,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															/\r\n|\n|\r/g,
 															function (B) {
 																return T
-															}
+															},
 														)),
 													S
 												)
@@ -15771,7 +15787,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												Object.defineProperty(
 													w,
 													'__esModule',
-													{ value: !0 }
+													{ value: !0 },
 												),
 												(w.default = w),
 												(w.outdent = w)
@@ -16186,7 +16202,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											g = a.split('-', 1)[0],
 											c = l
 												.flatMap(
-													(E) => E.languages || []
+													(E) => E.languages || [],
 												)
 												.filter(F),
 											f = s(
@@ -16196,9 +16212,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														let { options: N } = E
 														return N
 													}),
-													n
+													n,
 												),
-												'name'
+												'name',
 											)
 												.filter((E) => F(E) && _(E))
 												.sort((E, N) =>
@@ -16206,13 +16222,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														? 0
 														: E.name < N.name
 														? -1
-														: 1
+														: 1,
 												)
 												.map(w)
 												.map((E) => {
 													;(E = Object.assign({}, E)),
 														Array.isArray(
-															E.default
+															E.default,
 														) &&
 															(E.default =
 																E.default
@@ -16223,27 +16239,27 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																			.value
 																	: E.default
 																			.filter(
-																				F
+																				F,
 																			)
 																			.sort(
 																				(
 																					x,
-																					I
+																					I,
 																				) =>
 																					t.compare(
 																						I.since,
-																						x.since
-																					)
+																						x.since,
+																					),
 																			)[0]
 																			.value),
 														Array.isArray(
-															E.choices
+															E.choices,
 														) &&
 															((E.choices =
 																E.choices.filter(
 																	(x) =>
 																		F(x) &&
-																		_(x)
+																		_(x),
 																)),
 															E.name ===
 																'parser' &&
@@ -16256,7 +16272,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	x
 																		.defaultOptions[
 																		E.name
-																	] !== void 0
+																	] !==
+																		void 0,
 															)
 															.map((x) => [
 																x.name,
@@ -16264,12 +16281,12 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	.defaultOptions[
 																	E.name
 																],
-															])
+															]),
 													)
 													return Object.assign(
 														Object.assign({}, E),
 														{},
-														{ pluginDefaults: N }
+														{ pluginDefaults: N },
 													)
 												})
 										return { languages: c, options: f }
@@ -16300,7 +16317,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									}
 									function i(l, p, y) {
 										let h = new Set(
-											l.choices.map((g) => g.value)
+											l.choices.map((g) => g.value),
 										)
 										for (let g of p)
 											if (g.parsers) {
@@ -16310,7 +16327,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														let f = y.find(
 																(_) =>
 																	_.parsers &&
-																	_.parsers[c]
+																	_.parsers[
+																		c
+																	],
 															),
 															F = g.name
 														f &&
@@ -16398,7 +16417,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							$a = te({
 								'src/utils/text/skip-trailing-comment.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -16465,7 +16484,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							YD = te({
 								'src/utils/text/get-next-non-space-non-comment-character-index-with-start-index.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -16533,7 +16552,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											ie = l(
 												V,
 												Y.backwards ? j - 1 : j,
-												Y
+												Y,
 											),
 											ee = c(V, ie, Y)
 										return ie !== ee
@@ -16610,9 +16629,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											? 0
 											: T(
 													V.slice(Y + 1).match(
-														/^[\t ]*/
+														/^[\t ]*/,
 													)[0],
-													j
+													j,
 											  )
 									}
 									function C(V, j) {
@@ -16656,7 +16675,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															Y,
 															j.singleQuote
 																? "'"
-																: '"'
+																: '"',
 													  ).quote
 										return d(
 											Y,
@@ -16666,7 +16685,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												j.parser === 'less' ||
 												j.parser === 'scss' ||
 												j.__embeddedInHtml
-											)
+											),
 										)
 									}
 									function d(V, j, Y) {
@@ -16680,10 +16699,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													: de ||
 													  (Y &&
 													  /^[^\n\r"'0-7\\bfnrt-vx\u2028\u2029]$/.test(
-															K
+															K,
 													  )
 															? K
-															: '\\' + K)
+															: '\\' + K),
 											)
 										return j + ce + j
 									}
@@ -16691,11 +16710,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										return V.toLowerCase()
 											.replace(
 												/^([+-]?[\d.]+e)(?:\+|(-))?0*(\d)/,
-												'$1$2$3'
+												'$1$2$3',
 											)
 											.replace(
 												/^([+-]?[\d.]+)e[+-]?0+$/,
-												'$1'
+												'$1',
 											)
 											.replace(/^([+-])?\./, '$10.')
 											.replace(/(\.\d+?)0+(?=e|$)/, '$1')
@@ -16703,7 +16722,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									}
 									function S(V, j) {
 										let Y = V.match(
-											new RegExp(`(${t(j)})+`, 'g')
+											new RegExp(`(${t(j)})+`, 'g'),
 										)
 										return Y === null
 											? 0
@@ -16711,14 +16730,15 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													(ie, ee) =>
 														Math.max(
 															ie,
-															ee.length / j.length
+															ee.length /
+																j.length,
 														),
-													0
+													0,
 											  )
 									}
 									function b(V, j) {
 										let Y = V.match(
-											new RegExp(`(${t(j)})+`, 'g')
+											new RegExp(`(${t(j)})+`, 'g'),
 										)
 										if (Y === null) return 0
 										let ie = new Map(),
@@ -16733,7 +16753,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									}
 									function B(V, j) {
 										;(V.comments || (V.comments = [])).push(
-											j
+											j,
 										),
 											(j.printed = !1),
 											(j.nodeDescription = Q(V))
@@ -16814,10 +16834,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														'object'
 															? ''
 															: String(
-																	V.value
+																	V.value,
 															  ))) ||
 													V.operator ||
-													''
+													'',
 											)
 										return (
 											Y.length > 20 &&
@@ -16901,7 +16921,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								var s = t >= 0 ? arguments[t] : '/'
 								if (typeof s != 'string')
 									throw new TypeError(
-										'Arguments to path.resolve must be strings'
+										'Arguments to path.resolve must be strings',
 									)
 								s &&
 									((e = s + '/' + e),
@@ -16912,7 +16932,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									Zn(e.split('/'), function (a) {
 										return !!a
 									}),
-									!r
+									!r,
 								).join('/')),
 								(r ? '/' : '') + e || '.'
 							)
@@ -16925,7 +16945,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									Zn(e.split('/'), function (s) {
 										return !!s
 									}),
-									!r
+									!r,
 								).join('/')),
 								!e && !r && (e = '.'),
 								e && t && (e += '/'),
@@ -16941,10 +16961,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								Zn(e, function (r, t) {
 									if (typeof r != 'string')
 										throw new TypeError(
-											'Arguments to path.join must be strings'
+											'Arguments to path.join must be strings',
 										)
 									return r
-								}).join('/')
+								}).join('/'),
 							)
 						}
 						function Ua(e, r) {
@@ -17131,7 +17151,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									r.indexOf(s[a]) < 0 &&
 										Object.prototype.propertyIsEnumerable.call(
 											e,
-											s[a]
+											s[a],
 										) &&
 										(t[s[a]] = e[s[a]])
 							return t
@@ -17144,7 +17164,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										: s === null
 										? (s = Object.getOwnPropertyDescriptor(
 												r,
-												t
+												t,
 										  ))
 										: s,
 								u
@@ -17237,7 +17257,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							function l(p) {
 								if (s)
 									throw new TypeError(
-										'Generator is already executing.'
+										'Generator is already executing.',
 									)
 								for (; t; )
 									try {
@@ -17351,7 +17371,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							throw new TypeError(
 								r
 									? 'Object is not iterable.'
-									: 'Symbol.iterator is not defined.'
+									: 'Symbol.iterator is not defined.',
 							)
 						}
 						function Qa(e, r) {
@@ -17411,7 +17431,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						function pm(e, r, t) {
 							if (!Symbol.asyncIterator)
 								throw new TypeError(
-									'Symbol.asyncIterator is not defined.'
+									'Symbol.asyncIterator is not defined.',
 								)
 							var s = t.apply(e, r || []),
 								a,
@@ -17488,7 +17508,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						function Dm(e) {
 							if (!Symbol.asyncIterator)
 								throw new TypeError(
-									'Symbol.asyncIterator is not defined.'
+									'Symbol.asyncIterator is not defined.',
 								)
 							var r = e[Symbol.asyncIterator],
 								t
@@ -17547,14 +17567,14 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						function ym(e, r) {
 							if (!r.has(e))
 								throw new TypeError(
-									'attempted to get private field on non-instance'
+									'attempted to get private field on non-instance',
 								)
 							return r.get(e)
 						}
 						function hm(e, r, t) {
 							if (!r.has(e))
 								throw new TypeError(
-									'attempted to set private field on non-instance'
+									'attempted to set private field on non-instance',
 								)
 							return r.set(e, t), t
 						}
@@ -17576,7 +17596,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													function (t, s) {
 														for (var a in s)
 															s.hasOwnProperty(
-																a
+																a,
 															) && (t[a] = s[a])
 													}),
 												Br(e, r)
@@ -17599,7 +17619,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															for (var n in t)
 																Object.prototype.hasOwnProperty.call(
 																	t,
-																	n
+																	n,
 																) &&
 																	(r[n] =
 																		t[n])
@@ -17613,7 +17633,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Za = te({
 								'node_modules/vnopts/lib/descriptors/api.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17623,7 +17643,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										(e.apiDescriptor = {
 											key: (r) =>
 												/^[$_a-zA-Z][$_a-zA-Z0-9]*$/.test(
-													r
+													r,
 												)
 													? r
 													: JSON.stringify(r),
@@ -17637,8 +17657,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													return `[${r
 														.map((s) =>
 															e.apiDescriptor.value(
-																s
-															)
+																s,
+															),
 														)
 														.join(', ')}]`
 												let t = Object.keys(r)
@@ -17648,10 +17668,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															.map(
 																(s) =>
 																	`${e.apiDescriptor.key(
-																		s
+																		s,
 																	)}: ${e.apiDescriptor.value(
-																		r[s]
-																	)}`
+																		r[s],
+																	)}`,
 															)
 															.join(', ')} }`
 											},
@@ -17666,7 +17686,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							vm = te({
 								'node_modules/vnopts/lib/descriptors/index.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17693,7 +17713,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							eo = te({
 								'node_modules/vnopts/lib/handlers/deprecated/common.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17707,7 +17727,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												`${r.default.yellow(
 													typeof t == 'string'
 														? n.key(t)
-														: n.pair(t)
+														: n.pair(t),
 												)} is deprecated`,
 											]
 										return (
@@ -17716,8 +17736,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													`we now treat it as ${r.default.blue(
 														typeof s == 'string'
 															? n.key(s)
-															: n.pair(s)
-													)}`
+															: n.pair(s),
+													)}`,
 												),
 											u.join('; ') + '.'
 										)
@@ -17726,7 +17746,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Cm = te({
 								'node_modules/vnopts/lib/handlers/deprecated/index.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17739,7 +17759,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Em = te({
 								'node_modules/vnopts/lib/handlers/invalid/common.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17750,20 +17770,20 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									e.commonInvalidHandler = (t, s, a) =>
 										[
 											`Invalid ${r.default.red(
-												a.descriptor.key(t)
+												a.descriptor.key(t),
 											)} value.`,
 											`Expected ${r.default.blue(
-												a.schemas[t].expected(a)
+												a.schemas[t].expected(a),
 											)},`,
 											`but received ${r.default.red(
-												a.descriptor.value(s)
+												a.descriptor.value(s),
 											)}.`,
 										].join(' ')
 								},
 							}),
 							to = te({
 								'node_modules/vnopts/lib/handlers/invalid/index.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17777,7 +17797,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							Fm = te({
 								'node_modules/vnopts/node_modules/leven/index.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -17843,7 +17863,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							ro = te({
 								'node_modules/vnopts/lib/handlers/unknown/leven.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17860,7 +17880,10 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											} = n,
 											p = [
 												`Ignored unknown option ${r.default.yellow(
-													u.pair({ key: s, value: a })
+													u.pair({
+														key: s,
+														value: a,
+													}),
 												)}.`,
 											],
 											y = Object.keys(l)
@@ -17869,8 +17892,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										y &&
 											p.push(
 												`Did you mean ${r.default.blue(
-													u.key(y)
-												)}?`
+													u.key(y),
+												)}?`,
 											),
 											i.warn(p.join(' '))
 									}
@@ -17878,7 +17901,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Am = te({
 								'node_modules/vnopts/lib/handlers/unknown/index.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -17928,7 +17951,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												(l[p] = a(
 													u[p],
 													i,
-													s.prototype[p].length
+													s.prototype[p].length,
 												))
 										return l
 									}
@@ -17978,7 +18001,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													return n(
 														...p.slice(0, i - 1),
 														u,
-														...p.slice(i - 1)
+														...p.slice(i - 1),
 													)
 											  }
 											: () => n
@@ -18057,13 +18080,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												super(
 													Object.assign({}, l, {
 														name: i,
-													})
+													}),
 												),
 													(this._valueSchema = u)
 											}
 											expected(n) {
 												return `an array of ${this._valueSchema.expected(
-													n
+													n,
 												)}`
 											}
 											validate(n, u) {
@@ -18074,9 +18097,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														u.normalizeValidateResult(
 															this._valueSchema.validate(
 																l,
-																u
+																u,
 															),
-															l
+															l,
 														)
 													p !== !0 && i.push(p.value)
 												}
@@ -18091,9 +18114,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														u.normalizeDeprecatedResult(
 															this._valueSchema.deprecated(
 																l,
-																u
+																u,
 															),
-															l
+															l,
 														)
 													p !== !1 &&
 														i.push(
@@ -18104,7 +18127,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																return {
 																	value: [h],
 																}
-															})
+															}),
 														)
 												}
 												return i
@@ -18116,9 +18139,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														u.normalizeForwardResult(
 															this._valueSchema.forward(
 																l,
-																u
+																u,
 															),
-															l
+															l,
 														)
 													i.push(...p.map(a))
 												}
@@ -18132,14 +18155,16 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														u.normalizeRedirectResult(
 															this._valueSchema.redirect(
 																p,
-																u
+																u,
 															),
-															p
+															p,
 														)
 													'remain' in y &&
 														i.push(y.remain),
 														l.push(
-															...y.redirect.map(a)
+															...y.redirect.map(
+																a,
+															),
 														)
 												}
 												return i.length === 0
@@ -18159,7 +18184,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Bm = te({
 								'node_modules/vnopts/lib/schemas/boolean.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -18192,8 +18217,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											if (F[w])
 												throw new Error(
 													`Duplicate ${f} ${JSON.stringify(
-														w
-													)}`
+														w,
+													)}`,
 												)
 											F[w] = _
 										}
@@ -18207,8 +18232,8 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											if (F.has(w))
 												throw new Error(
 													`Duplicate ${f} ${JSON.stringify(
-														w
-													)}`
+														w,
+													)}`,
 												)
 											F.set(w, _)
 										}
@@ -18307,7 +18332,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												'redirect' in c
 												? c.redirect
 												: c,
-											f
+											f,
 										)
 										return F.length === 0
 											? { remain: f, redirect: F }
@@ -18333,32 +18358,36 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												super(a),
 													(this._choices =
 														t.mapFromArray(
-															a.choices.map((n) =>
-																n &&
-																typeof n ==
-																	'object'
-																	? n
-																	: {
-																			value: n,
-																	  }
+															a.choices.map(
+																(n) =>
+																	n &&
+																	typeof n ==
+																		'object'
+																		? n
+																		: {
+																				value: n,
+																		  },
 															),
-															'value'
+															'value',
 														))
 											}
 											expected(a) {
 												let { descriptor: n } = a,
 													u = Array.from(
-														this._choices.keys()
+														this._choices.keys(),
 													)
 														.map((p) =>
-															this._choices.get(p)
+															this._choices.get(
+																p,
+															),
 														)
 														.filter(
-															(p) => !p.deprecated
+															(p) =>
+																!p.deprecated,
 														)
 														.map((p) => p.value)
 														.sort(
-															t.comparePrimitive
+															t.comparePrimitive,
 														)
 														.map(n.value),
 													i = u.slice(0, -2),
@@ -18409,7 +18438,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							wm = te({
 								'node_modules/vnopts/lib/schemas/integer.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -18426,7 +18455,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												return (
 													n.normalizeValidateResult(
 														super.validate(a, n),
-														a
+														a,
 													) === !0 && r.isInt(a)
 												)
 											}
@@ -18520,7 +18549,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												logger: u || { warn: () => {} },
 												schemas: t.recordFromArray(
 													a,
-													'name'
+													'name',
 												),
 												normalizeDefaultResult:
 													t.normalizeDefaultResult,
@@ -18551,22 +18580,22 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															p =
 																this._applyNormalization(
 																	l,
-																	n
+																	n,
 																)
 														u.push(...p)
 													}
 												}
 											i()
 											for (let l of Object.keys(
-												this._utils.schemas
+												this._utils.schemas,
 											)) {
 												let p = this._utils.schemas[l]
 												if (!(l in n)) {
 													let y =
 														t.normalizeDefaultResult(
 															p.default(
-																this._utils
-															)
+																this._utils,
+															),
 														)
 													'value' in y &&
 														u.push({ [l]: y.value })
@@ -18574,13 +18603,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											}
 											i()
 											for (let l of Object.keys(
-												this._utils.schemas
+												this._utils.schemas,
 											)) {
 												let p = this._utils.schemas[l]
 												l in n &&
 													(n[l] = p.postprocess(
 														n[l],
-														this._utils
+														this._utils,
 													))
 											}
 											return n
@@ -18590,21 +18619,22 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												[i, l] = t.partition(
 													Object.keys(a),
 													(p) =>
-														p in this._utils.schemas
+														p in
+														this._utils.schemas,
 												)
 											for (let p of i) {
 												let y = this._utils.schemas[p],
 													h = y.preprocess(
 														a[p],
-														this._utils
+														this._utils,
 													),
 													g =
 														t.normalizeValidateResult(
 															y.validate(
 																h,
-																this._utils
+																this._utils,
 															),
-															h
+															h,
 														)
 												if (g !== !0) {
 													let { value: w } = g,
@@ -18612,7 +18642,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															this._invalidHandler(
 																p,
 																w,
-																this._utils
+																this._utils,
 															)
 													throw typeof E == 'string'
 														? new Error(E)
@@ -18627,7 +18657,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																: {
 																		[N.key]:
 																			N.value,
-																  }
+																  },
 														)
 													},
 													f = (w) => {
@@ -18640,23 +18670,23 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	y.deprecated(
 																		E,
 																		this
-																			._utils
+																			._utils,
 																	),
 																	h,
-																	!0
+																	!0,
 																)
 														if (x !== !1)
 															if (x === !0)
 																this._hasDeprecationWarned(
-																	p
+																	p,
 																) ||
 																	this._utils.logger.warn(
 																		this._deprecatedHandler(
 																			p,
 																			N,
 																			this
-																				._utils
-																		)
+																				._utils,
+																		),
 																	)
 															else
 																for (let {
@@ -18668,7 +18698,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	}
 																	if (
 																		!this._hasDeprecationWarned(
-																			P
+																			P,
 																		)
 																	) {
 																		let $ =
@@ -18684,23 +18714,23 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																				P,
 																				$,
 																				this
-																					._utils
-																			)
+																					._utils,
+																			),
 																		)
 																	}
 																}
 													}
 												t.normalizeForwardResult(
 													y.forward(h, this._utils),
-													h
+													h,
 												).forEach(c)
 												let _ =
 													t.normalizeRedirectResult(
 														y.redirect(
 															h,
-															this._utils
+															this._utils,
 														),
-														h
+														h,
 													)
 												if (
 													(_.redirect.forEach(c),
@@ -18712,7 +18742,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															? y.overlap(
 																	n[p],
 																	w,
-																	this._utils
+																	this._utils,
 															  )
 															: w),
 														f({ value: w })
@@ -18731,18 +18761,18 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													h = this._unknownHandler(
 														p,
 														y,
-														this._utils
+														this._utils,
 													)
 												if (h)
 													for (let g of Object.keys(
-														h
+														h,
 													)) {
 														let c = { [g]: h[g] }
 														g in this._utils.schemas
 															? u.push(c)
 															: Object.assign(
 																	n,
-																	c
+																	c,
 															  )
 													}
 											}
@@ -18788,7 +18818,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													? a.key(c)
 													: f === ''
 													? `${a.key(
-															c
+															c,
 													  )} without an argument`
 													: `${a.key(c)}=${f}`
 											},
@@ -18819,7 +18849,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														let E =
 															this._flags.find(
 																(N) =>
-																	f(N, _) < 3
+																	f(N, _) < 3,
 															)
 														if (E)
 															return (
@@ -18827,15 +18857,15 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	[
 																		`Unknown flag ${c.yellow(
 																			w.descriptor.value(
-																				_
-																			)
+																				_,
+																			),
 																		)},`,
 																		`did you mean ${c.blue(
 																			w.descriptor.value(
-																				E
-																			)
+																				E,
+																			),
 																		)}?`,
-																	].join(' ')
+																	].join(' '),
 																),
 																E
 															)
@@ -18876,11 +18906,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 															Object.assign(
 																Object.assign(
 																	{},
-																	C
+																	C,
 																),
 																{},
-																{ schemas: v }
-															)
+																{ schemas: v },
+															),
 														)
 												  },
 											x = F ? a : t.apiDescriptor,
@@ -18916,7 +18946,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 											w.push(
 												t.AnySchema.create({
 													name: '_',
-												})
+												}),
 											)
 										for (let E of g)
 											w.push(
@@ -18925,7 +18955,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													optionInfos: g,
 													colorsModule: F,
 													levenshteinDistance: _,
-												})
+												}),
 											),
 												E.alias &&
 													f &&
@@ -18933,7 +18963,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														t.AliasSchema.create({
 															name: E.alias,
 															sourceName: E.name,
-														})
+														}),
 													)
 										return w
 									}
@@ -18955,7 +18985,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													return (
 														P === !1 ||
 															(P = Array.isArray(
-																P
+																P,
 															)
 																? P
 																: [P]),
@@ -18968,7 +18998,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 														: P.every(
 																($) =>
 																	typeof $ ==
-																	'string'
+																	'string',
 														  )
 												},
 												expected() {
@@ -18996,7 +19026,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																? Object.assign(
 																		Object.assign(
 																			{},
-																			P
+																			P,
 																		),
 																		{},
 																		{
@@ -19007,9 +19037,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																						value: P.redirect,
 																					},
 																				},
-																		}
+																		},
 																  )
-																: P
+																: P,
 													))
 												break
 											case 'boolean':
@@ -19027,7 +19057,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																P.name,
 															P.oppositeDescription &&
 																`no-${P.name}`,
-														].filter(Boolean)
+														].filter(Boolean),
 													))
 												break
 											case 'path':
@@ -19035,7 +19065,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												break
 											default:
 												throw new Error(
-													`Unexpected type ${g.type}`
+													`Unexpected type ${g.type}`,
 												)
 										}
 										if (
@@ -19069,9 +19099,9 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													P(
 														Array.isArray($)
 															? s($)
-															: $
+															: $,
 													),
-													T
+													T,
 												)
 										}
 										return g.array
@@ -19084,32 +19114,32 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	? {
 																			preprocess:
 																				(
-																					P
+																					P,
 																				) =>
 																					Array.isArray(
-																						P
+																						P,
 																					)
 																						? P
 																						: [
 																								P,
 																						  ],
 																	  }
-																	: {}
+																	: {},
 															),
-															I
+															I,
 														),
 														{},
 														{
 															valueSchema:
 																x.create(N),
-														}
-													)
+														},
+													),
 											  )
 											: x.create(
 													Object.assign(
 														Object.assign({}, N),
-														I
-													)
+														I,
+													),
 											  )
 									}
 									function y(g, c, f) {
@@ -19119,7 +19149,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 										return i(
 											g,
 											c,
-											Object.assign({ isCLI: !0 }, f)
+											Object.assign({ isCLI: !0 }, f),
 										)
 									}
 									r.exports = {
@@ -19177,7 +19207,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							qm = te({
 								'scripts/build/shims/babel-highlight.cjs'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -19191,7 +19221,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							}),
 							Mm = te({
 								'node_modules/@babel/code-frame/lib/index.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -19213,7 +19243,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 									function n(l, p, y) {
 										let h = Object.assign(
 												{ column: 0, line: -1 },
-												l.start
+												l.start,
 											),
 											g = Object.assign({}, h, l.end),
 											{
@@ -19286,7 +19316,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 												.map(($, D) => {
 													let T = _ + 1 + D,
 														C = ` ${` ${T}`.slice(
-															-x
+															-x,
 														)} |`,
 														o = E[T],
 														d = !E[T + 1]
@@ -19298,11 +19328,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	Math.max(
 																		o[0] -
 																			1,
-																		0
-																	)
+																		0,
+																	),
 																).replace(
 																	/[^\t]/g,
-																	' '
+																	' ',
 																),
 																b = o[1] || 1
 															;(v = [
@@ -19312,14 +19342,14 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																	c.gutter,
 																	C.replace(
 																		/\d/g,
-																		' '
-																	)
+																		' ',
+																	),
 																),
 																' ',
 																S,
 																f(
 																	c.marker,
-																	'^'
+																	'^',
 																).repeat(b),
 															].join('')),
 																d &&
@@ -19328,7 +19358,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 																		' ' +
 																		f(
 																			c.message,
-																			y.message
+																			y.message,
 																		))
 														}
 														return [
@@ -19342,7 +19372,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 													} else
 														return ` ${f(
 															c.gutter,
-															C
+															C,
 														)}${
 															$.length > 0
 																? ` ${$}`
@@ -19373,7 +19403,7 @@ ${P}`),
 											if (wt.emitWarning)
 												wt.emitWarning(
 													c,
-													'DeprecationWarning'
+													'DeprecationWarning',
 												)
 											else {
 												let f = new Error(c)
@@ -19392,7 +19422,7 @@ ${P}`),
 														line: p,
 													},
 												},
-												h
+												h,
 											)
 										)
 									}
@@ -19416,7 +19446,7 @@ ${P}`),
 													Object.defineProperty(
 														c,
 														F,
-														l(f.parsers, F)
+														l(f.parsers, F),
 													)
 										return c
 									}
@@ -19437,12 +19467,12 @@ ${P}`),
 											if (
 												Object.prototype.hasOwnProperty.call(
 													c,
-													g.parser
+													g.parser,
 												)
 											)
 												return c[g.parser]
 											throw new t(
-												`Couldn't resolve parser "${g.parser}". Parsers must be explicitly added to the standalone bundle.`
+												`Couldn't resolve parser "${g.parser}". Parsers must be explicitly added to the standalone bundle.`,
 											)
 										}
 									}
@@ -19460,8 +19490,8 @@ ${P}`),
 																	.parse
 															},
 														},
-													])
-												)
+													]),
+												),
 											),
 											_ = y(c, f)
 										try {
@@ -19529,29 +19559,29 @@ ${P}`),
 														.filter(
 															(x) =>
 																x.default !==
-																void 0
+																void 0,
 														)
 														.map((x) => [
 															x.name,
 															x.default,
-														])
-												)
+														]),
+												),
 											)
 										if (!c.parser) {
 											if (!c.filepath)
 												(g.logger || console).warn(
-													"No parser and no filepath given, using 'babel' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred."
+													"No parser and no filepath given, using 'babel' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred.",
 												),
 													(c.parser = 'babel')
 											else if (
 												((c.parser = y(
 													c.filepath,
-													c.plugins
+													c.plugins,
 												)),
 												!c.parser)
 											)
 												throw new s(
-													`No parser could be inferred for file: ${c.filepath}`
+													`No parser could be inferred for file: ${c.filepath}`,
 												)
 										}
 										let _ = u(
@@ -19560,11 +19590,11 @@ ${P}`),
 												[
 													f.find(
 														(x) =>
-															x.name === 'parser'
+															x.name === 'parser',
 													),
 												],
-												{ passThrough: !0, logger: !1 }
-											)
+												{ passThrough: !0, logger: !1 },
+											),
 										)
 										;(c.astFormat = _.astFormat),
 											(c.locEnd = _.locEnd),
@@ -19578,18 +19608,18 @@ ${P}`),
 															x.pluginDefaults &&
 															x.pluginDefaults[
 																w.name
-															] !== void 0
+															] !== void 0,
 													)
 													.map((x) => [
 														x.name,
 														x.pluginDefaults[
 															w.name
 														],
-													])
+													]),
 											),
 											N = Object.assign(
 												Object.assign({}, F),
-												E
+												E,
 											)
 										for (let [x, I] of Object.entries(N))
 											(c[x] === null ||
@@ -19606,8 +19636,8 @@ ${P}`),
 														passThrough:
 															Object.keys(i),
 													},
-													g
-												)
+													g,
+												),
 											)
 										)
 									}
@@ -19615,14 +19645,14 @@ ${P}`),
 										let { astFormat: g } = h
 										if (!g)
 											throw new Error(
-												'getPlugin() requires astFormat to be set'
+												'getPlugin() requires astFormat to be set',
 											)
 										let c = h.plugins.find(
-											(f) => f.printers && f.printers[g]
+											(f) => f.printers && f.printers[g],
 										)
 										if (!c)
 											throw new Error(
-												`Couldn't find plugin for AST format "${g}"`
+												`Couldn't find plugin for AST format "${g}"`,
 											)
 										return c
 									}
@@ -19630,7 +19660,7 @@ ${P}`),
 										let c = t.basename(h).toLowerCase(),
 											F = a({ plugins: g })
 												.languages.filter(
-													(_) => _.since !== null
+													(_) => _.since !== null,
 												)
 												.find(
 													(_) =>
@@ -19638,15 +19668,15 @@ ${P}`),
 															_.extensions.some(
 																(w) =>
 																	c.endsWith(
-																		w
-																	)
+																		w,
+																	),
 															)) ||
 														(_.filenames &&
 															_.filenames.some(
 																(w) =>
 																	w.toLowerCase() ===
-																	c
-															))
+																	c,
+															)),
 												)
 										return F && F.parsers[0]
 									}
@@ -19803,7 +19833,7 @@ ${P}`),
 												continue
 											}
 											throw new Error(
-												'Comment location overlaps with node location'
+												'Comment location overlaps with node location',
 											)
 										}
 										if (q && q.type === 'TemplateLiteral') {
@@ -19841,7 +19871,7 @@ ${P}`),
 												Object.assign(
 													Object.assign(
 														{},
-														N(M, W, q)
+														N(M, W, q),
 													),
 													{},
 													{
@@ -19851,8 +19881,8 @@ ${P}`),
 														ast: M,
 														isLastComment:
 															k.length - 1 === K,
-													}
-												)
+													},
+												),
 											)
 										for (let [W, K] of ce.entries()) {
 											let {
@@ -20022,7 +20052,7 @@ ${P}`),
 												ie.comments.sort(
 													(ee, ce) =>
 														R.locStart(ee) -
-														R.locStart(ce)
+														R.locStart(ce),
 												)
 										k.length = 0
 									}
@@ -20133,7 +20163,7 @@ ${P}`),
 										let { leading: J, trailing: L } = S(
 											k,
 											R,
-											q
+											q,
 										)
 										return !J && !L ? M : [J, M, L]
 									}
@@ -20144,7 +20174,7 @@ ${P}`),
 													throw new Error(
 														'Comment "' +
 															M.value.trim() +
-															'" was not printed. Please report this error!'
+															'" was not printed. Please report this error!',
 													)
 												delete M.printed
 											}
@@ -20219,7 +20249,7 @@ ${P}`),
 											for (
 												var y = arguments.length,
 													h = new Array(
-														y > 1 ? y - 1 : 0
+														y > 1 ? y - 1 : 0,
 													),
 													g = 1;
 												g < y;
@@ -20249,7 +20279,7 @@ ${P}`),
 											for (
 												var y = arguments.length,
 													h = new Array(
-														y > 1 ? y - 1 : 0
+														y > 1 ? y - 1 : 0,
 													),
 													g = 1;
 												g < y;
@@ -20269,7 +20299,7 @@ ${P}`),
 											for (
 												var l = arguments.length,
 													p = new Array(
-														l > 1 ? l - 1 : 0
+														l > 1 ? l - 1 : 0,
 													),
 													y = 1;
 												y < l;
@@ -20277,9 +20307,12 @@ ${P}`),
 											)
 												p[y - 1] = arguments[y]
 											return (
-												this.each((h, g, c) => {
-													i[g] = u(h, g, c)
-												}, ...p),
+												this.each(
+													(h, g, c) => {
+														i[g] = u(h, g, c)
+													},
+													...p,
+												),
 												i
 											)
 										}
@@ -20361,7 +20394,7 @@ ${P}`),
 												i,
 												l,
 												(h, g, c) => u(h, g, p, y, c),
-												p
+												p,
 											)
 									}
 									function u(i, l, p, y) {
@@ -20374,15 +20407,15 @@ ${P}`),
 												Object.assign(
 													Object.assign(
 														Object.assign({}, p),
-														l
+														l,
 													),
 													{},
 													{
 														parentParser: p.parser,
 														originalText: i,
-													}
+													},
 												),
-												{ passThrough: !0 }
+												{ passThrough: !0 },
 											),
 											c = tu().parse(i, g),
 											{ ast: f } = c
@@ -20401,7 +20434,7 @@ ${P}`),
 												? typeof _ == 'string'
 													? _.replace(
 															/(?:\r?\n)*$/,
-															''
+															'',
 													  )
 													: t(_)
 												: _
@@ -20489,7 +20522,7 @@ ${P}`),
 										)
 											({ doc: w, printedComments: E } = p(
 												F,
-												g
+												g,
 											))
 										else {
 											if (F)
@@ -20498,7 +20531,7 @@ ${P}`),
 														h,
 														c,
 														g,
-														l
+														l,
 													)
 												} catch (N) {
 													if (
@@ -20512,7 +20545,7 @@ ${P}`),
 											(!_.willPrintOwnComments ||
 												!_.willPrintOwnComments(
 													h,
-													g
+													g,
 												)) &&
 												(w = u(h, w, g, E)),
 											w
@@ -20542,7 +20575,7 @@ ${P}`),
 												...F.parentNodes,
 											])
 										return _.find(
-											(E) => y.has(E.type) && w.has(E)
+											(E) => y.has(E.type) && w.has(E),
 										)
 									}
 									function u(f) {
@@ -20600,7 +20633,7 @@ ${P}`),
 										) {
 											for (let D of s.getSortedChildNodes(
 												f,
-												_
+												_,
 											)) {
 												let T = l(
 													D,
@@ -20608,7 +20641,7 @@ ${P}`),
 													_,
 													w,
 													[f, ...E],
-													N
+													N,
 												)
 												if (T) return T
 											}
@@ -20706,7 +20739,7 @@ ${P}`),
 												F,
 												(C, o) => g(F, C, o),
 												[],
-												'rangeStart'
+												'rangeStart',
 											),
 											D = P
 												? $
@@ -20716,7 +20749,7 @@ ${P}`),
 														F,
 														(C) => g(F, C),
 														[],
-														'rangeEnd'
+														'rangeEnd',
 												  )
 										if (!$ || !D)
 											return {
@@ -20731,7 +20764,7 @@ ${P}`),
 											({ startNode: T, endNode: m } = i(
 												$,
 												D,
-												F
+												F,
 											))
 										return {
 											rangeStart: Math.min(N(T), N(m)),
@@ -20799,7 +20832,7 @@ ${P}`),
 											let k = F.findNodeAtOffset(
 												d,
 												C.cursorOffset,
-												C
+												C,
 											)
 											k &&
 												k.node &&
@@ -20825,13 +20858,13 @@ ${P}`),
 												(C.cursorNode &&
 												B.cursorNodeText
 													? ((k = C.locStart(
-															C.cursorNode
+															C.cursorNode,
 													  )),
 													  (M = v.slice(
 															k,
 															C.locEnd(
-																C.cursorNode
-															)
+																C.cursorNode,
+															),
 													  )),
 													  (R = C.cursorOffset - k),
 													  (q = B.cursorNodeStart),
@@ -20880,8 +20913,8 @@ ${P}`),
 												d.lastIndexOf(
 													`
 `,
-													v
-												) + 1
+													v,
+												) + 1,
 											),
 											k = d.slice(B, v).match(/^\s*/)[0],
 											M = n(k, C.tabWidth),
@@ -20902,9 +20935,9 @@ ${P}`),
 																  v
 																: -1,
 														endOfLine: 'lf',
-													}
+													},
 												),
-												M
+												M,
 											),
 											q = R.formatted.trimEnd(),
 											{ cursorOffset: J } = C
@@ -20922,7 +20955,7 @@ ${P}`),
 												(J += l(
 													L.slice(0, J),
 													`
-`
+`,
 												)),
 												(L = L.replace(/\n/g, Q))
 										}
@@ -20957,7 +20990,7 @@ ${P}`),
 													cursorOffset: o,
 													rangeStart: d,
 													rangeEnd: v,
-												}
+												},
 											)
 										)
 									}
@@ -20982,7 +21015,7 @@ ${P}`),
 												l(
 													m.slice(0, Math.max(k, 0)),
 													`\r
-`
+`,
 												)
 											;(o -= B(o)),
 												(d -= B(d)),
@@ -21002,8 +21035,8 @@ ${P}`),
 														rangeStart: d,
 														rangeEnd: v,
 														endOfLine: S,
-													}
-												)
+													},
+												),
 											),
 										}
 									}
@@ -21039,7 +21072,7 @@ ${P}`),
 														!D(d, v) &&
 														(d =
 															v.printer.insertPragma(
-																d
+																d,
 															)),
 												  (S = N(d, v))),
 											o &&
@@ -21055,7 +21088,7 @@ ${P}`),
 										parse(m, C, o) {
 											let { text: d, options: v } = $(
 													m,
-													y(C)
+													y(C),
 												),
 												S = c.parse(d, v)
 											return o && (S.ast = h(S.ast, v)), S
@@ -21073,15 +21106,15 @@ ${P}`),
 													{},
 													{
 														parser: '__js_expression',
-													}
-												)
+													},
+												),
 											).formatted
 										},
 										printToDoc(m, C) {
 											C = y(C)
 											let { ast: o, text: d } = c.parse(
 												m,
-												C
+												C,
 											)
 											return E(d, o, C), f(o, C)
 										},
@@ -21159,9 +21192,9 @@ ${P}`),
 											return Object.assign(
 												Object.assign(
 													{ linguistLanguageId: a },
-													n
+													n,
 												),
-												s(t)
+												s(t),
 											)
 										})
 								},
@@ -21343,16 +21376,16 @@ ${P}`),
 											function c(E) {
 												if (E <= 65535)
 													return String.fromCharCode(
-														E
+														E,
 													)
 												var N = String.fromCharCode(
 														Math.floor(
-															(E - 65536) / 1024
-														) + 55296
+															(E - 65536) / 1024,
+														) + 55296,
 													),
 													x = String.fromCharCode(
 														((E - 65536) % 1024) +
-															56320
+															56320,
 													)
 												return N + x
 											}
@@ -21381,28 +21414,28 @@ ${P}`),
 												return E < 128
 													? n[E]
 													: s.NonAsciiIdentifierStart.test(
-															c(E)
+															c(E),
 													  )
 											}
 											function F(E) {
 												return E < 128
 													? u[E]
 													: s.NonAsciiIdentifierPart.test(
-															c(E)
+															c(E),
 													  )
 											}
 											function _(E) {
 												return E < 128
 													? n[E]
 													: t.NonAsciiIdentifierStart.test(
-															c(E)
+															c(E),
 													  )
 											}
 											function w(E) {
 												return E < 128
 													? u[E]
 													: t.NonAsciiIdentifierPart.test(
-															c(E)
+															c(E),
 													  )
 											}
 											r.exports = {
@@ -21548,7 +21581,7 @@ ${P}`),
 													if (
 														((w = f.charCodeAt(F)),
 														!t.isIdentifierPartES5(
-															w
+															w,
 														))
 													)
 														return !1
@@ -21581,7 +21614,7 @@ ${P}`),
 															F >= _ ||
 																((E =
 																	f.charCodeAt(
-																		F
+																		F,
 																	)),
 																!(
 																	56320 <=
@@ -21631,7 +21664,7 @@ ${P}`),
 							Pt = te({
 								'src/language-js/utils/is-block-comment.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -21647,7 +21680,7 @@ ${P}`),
 							Km = te({
 								'src/language-js/utils/is-node-matches.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -21716,7 +21749,7 @@ ${P}`),
 												(_e = O.trailingComments) ===
 													null || _e === void 0
 													? void 0
-													: _e[0]
+													: _e[0],
 											) &&
 											F.test(O.trailingComments[0].value)
 										)
@@ -21734,7 +21767,7 @@ ${P}`),
 										return typeof _e == 'boolean'
 											? _e
 											: Object.values(O).some((He) =>
-													N(He, me)
+													N(He, me),
 											  )
 									}
 									function x(O) {
@@ -21803,7 +21836,7 @@ ${P}`),
 										if (me.argument) return ['argument']
 										if (me.expression) return ['expression']
 										throw new Error(
-											'Unexpected node has no left side.'
+											'Unexpected node has no left side.',
 										)
 									}
 									function $(O) {
@@ -22138,7 +22171,7 @@ ${P}`),
 										return M(me)
 											? Oe(me)
 											: Me(me, Te.Leading, (_e) =>
-													a(O, y(_e))
+													a(O, y(_e)),
 											  )
 									}
 									function se(O, me) {
@@ -22159,7 +22192,7 @@ ${P}`),
 												)) ||
 												(fe(O.key.value) &&
 													String(
-														Number(O.key.value)
+														Number(O.key.value),
 													) === O.key.value &&
 													(me.parser === 'babel' ||
 														me.parser === 'acorn' ||
@@ -22202,14 +22235,14 @@ ${P}`),
 														'Identifier' &&
 													_e.test(
 														me.tag.object.object
-															.name
+															.name,
 													)))
 										)
 									}
 									function he(O) {
 										return O.quasis.some((me) =>
 											me.value.raw.includes(`
-`)
+`),
 										)
 									}
 									function we(O, me) {
@@ -22285,7 +22318,7 @@ ${P}`),
 												O.quasis.every(
 													(Qe) =>
 														!Qe.value.raw.includes(`
-`)
+`),
 												) && O.expressions.every(_e)
 											)
 										if (O.type === 'ObjectExpression')
@@ -22294,11 +22327,11 @@ ${P}`),
 													!Qe.computed &&
 													(Qe.shorthand ||
 														(Qe.value &&
-															_e(Qe.value)))
+															_e(Qe.value))),
 											)
 										if (O.type === 'ArrayExpression')
 											return O.elements.every(
-												(Qe) => Qe === null || _e(Qe)
+												(Qe) => Qe === null || _e(Qe),
 											)
 										if (tt(O))
 											return (
@@ -22448,8 +22481,8 @@ ${P}`),
 											['*', '/', '%'],
 											['**'],
 										].flatMap((O, me) =>
-											O.map((_e) => [_e, me])
-										)
+											O.map((_e) => [_e, me]),
+										),
 									)
 									function re(O) {
 										return G.get(O)
@@ -22517,12 +22550,12 @@ ${P}`),
 										_e.type === 'ImportExpression'
 											? (O.call(
 													(He) => me(He, 0),
-													'source'
+													'source',
 											  ),
 											  _e.attributes &&
 													O.call(
 														(He) => me(He, 1),
-														'attributes'
+														'attributes',
 													))
 											: O.each(me, 'arguments')
 									}
@@ -22621,7 +22654,7 @@ ${P}`),
 										return Boolean(O.__isUsingHackPipeline)
 									}
 									var Xe = Symbol(
-										'ifWithoutBlockAndSameLineComment'
+										'ifWithoutBlockAndSameLineComment',
 									)
 									function st(O) {
 										return (
@@ -22701,7 +22734,7 @@ ${P}`),
 							jt = te({
 								'src/language-js/print/template-literal.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -22756,15 +22789,15 @@ ${P}`),
 															Object.assign(
 																Object.assign(
 																	{},
-																	d
+																	d,
 																),
 																{},
 																{
 																	printWidth:
 																		Number.POSITIVE_INFINITY,
-																}
-															)
-														).formatted
+																},
+															),
+														).formatted,
 												)),
 											B.push(h, '`'),
 											C.each((R) => {
@@ -22794,7 +22827,7 @@ ${P}`),
 `)
 															? y(
 																	Number.NEGATIVE_INFINITY,
-																	V
+																	V,
 															  )
 															: g(V, Q, J)
 													B.push(l(['${', j, h, '}']))
@@ -22825,7 +22858,7 @@ ${P}`),
 															Object.assign(
 																Object.assign(
 																	{},
-																	o
+																	o,
 																),
 																{},
 																{
@@ -22833,10 +22866,10 @@ ${P}`),
 																		Number.POSITIVE_INFINITY,
 																	endOfLine:
 																		'lf',
-																}
-															)
+																},
+															),
 														).formatted +
-														'}'
+														'}',
 												),
 												M = [
 													{
@@ -22861,8 +22894,8 @@ ${P}`),
 											let R = Math.max(
 													S.length,
 													...M.map(
-														(L) => L.cells.length
-													)
+														(L) => L.cells.length,
+													),
 												),
 												q = Array.from({
 													length: R,
@@ -22871,11 +22904,11 @@ ${P}`),
 													{ cells: S },
 													...M.filter(
 														(L) =>
-															L.cells.length > 0
+															L.cells.length > 0,
 													),
 												]
 											for (let { cells: L } of J.filter(
-												(Q) => !Q.hasLineBreak
+												(Q) => !Q.hasLineBreak,
 											))
 												for (let [Q, V] of L.entries())
 													q[Q] = Math.max(q[Q], s(V))
@@ -22893,7 +22926,7 @@ ${P}`),
 																	L.cells.map(
 																		(
 																			Q,
-																			V
+																			V,
 																		) =>
 																			L.hasLineBreak
 																				? Q
@@ -22903,16 +22936,16 @@ ${P}`),
 																							V
 																						] -
 																							s(
-																								Q
-																							)
-																				  )
-																	)
-																)
-															)
+																								Q,
+																							),
+																				  ),
+																	),
+																),
+															),
 														),
 													]),
 													u,
-													'`'
+													'`',
 												),
 												B
 											)
@@ -22929,7 +22962,7 @@ ${P}`),
 									function D(C, o) {
 										return C.map(
 											(d) => $(d, o),
-											'expressions'
+											'expressions',
 										)
 									}
 									function T(C, o) {
@@ -22938,10 +22971,10 @@ ${P}`),
 												? o
 													? d.replace(
 															/(\\*)`/g,
-															'$1$1\\`'
+															'$1$1\\`',
 													  )
 													: m(d)
-												: d
+												: d,
 										)
 									}
 									function m(C) {
@@ -22975,15 +23008,15 @@ ${P}`),
 													/((?:\\\\)*)\\`/g,
 													(w, E) =>
 														'\\'.repeat(
-															E.length / 2
-														) + '`'
+															E.length / 2,
+														) + '`',
 												),
 											f = l(c),
 											F = f !== ''
 										F &&
 											(c = c.replace(
 												new RegExp(`^${f}`, 'gm'),
-												''
+												'',
 											))
 										let _ = u(
 											h(
@@ -22992,9 +23025,9 @@ ${P}`),
 													parser: 'markdown',
 													__inJsTemplate: !0,
 												},
-												{ stripTrailingHardline: !0 }
+												{ stripTrailingHardline: !0 },
 											),
-											!0
+											!0,
 										)
 										return [
 											'`',
@@ -23031,7 +23064,7 @@ ${P}`),
 									function y(c, f, F) {
 										let _ = c.getValue(),
 											w = _.quasis.map(
-												(P) => P.value.raw
+												(P) => P.value.raw,
 											),
 											E = 0,
 											N = w.reduce(
@@ -23043,12 +23076,12 @@ ${P}`),
 														  E++ +
 														  '-id' +
 														  $,
-												''
+												'',
 											),
 											x = F(
 												N,
 												{ parser: 'scss' },
-												{ stripTrailingHardline: !0 }
+												{ stripTrailingHardline: !0 },
 											),
 											I = p(c, f)
 										return h(x, _, I)
@@ -23062,7 +23095,7 @@ ${P}`),
 										let w = g(c, F)
 										if (!w)
 											throw new Error(
-												"Couldn't insert all the expressions"
+												"Couldn't insert all the expressions",
 											)
 										return ['`', s([a, w]), n, '`']
 									}
@@ -23072,19 +23105,19 @@ ${P}`),
 											_ = u(l(c), (w) =>
 												typeof w != 'string' ||
 												!w.includes(
-													'@prettier-placeholder'
+													'@prettier-placeholder',
 												)
 													? w
 													: w
 															.split(
-																/@prettier-placeholder-(\d+)-id/
+																/@prettier-placeholder-(\d+)-id/,
 															)
 															.map((E, N) =>
 																N % 2 === 0
 																	? i(E)
 																	: (F++,
-																	  f[E])
-															)
+																	  f[E]),
+															),
 											)
 										return f.length === F ? _ : null
 									}
@@ -23135,8 +23168,8 @@ ${P}`),
 													I[P - 2].trim() === '',
 												m = I.every((o) =>
 													/^\s*(?:#[^\n\r]*)?$/.test(
-														o
-													)
+														o,
+													),
 												)
 											if (
 												!N &&
@@ -23152,7 +23185,7 @@ ${P}`),
 														{
 															stripTrailingHardline:
 																!0,
-														}
+														},
 												  )),
 												C
 													? ((C = n(C, !1)),
@@ -23211,7 +23244,7 @@ ${P}`),
 												.map((d, v, S) =>
 													v === S.length - 1
 														? d.value.cooked
-														: d.value.cooked + N(v)
+														: d.value.cooked + N(v),
 												)
 												.join(''),
 											I = i(h, g)
@@ -23230,7 +23263,7 @@ ${P}`),
 														$ = d.children.length
 													},
 												},
-												{ stripTrailingHardline: !0 }
+												{ stripTrailingHardline: !0 },
 											),
 											T = u(D, (d) => {
 												if (typeof d != 'string')
@@ -23249,7 +23282,7 @@ ${P}`),
 															f.__embeddedInHtml &&
 																(B = B.replace(
 																	/<\/(script)\b/gi,
-																	'<\\/$1'
+																	'<\\/$1',
 																)),
 															v.push(B))
 														continue
@@ -23277,7 +23310,7 @@ ${P}`),
 														$ > 1 ? t(n(T)) : n(T),
 														C,
 														'`',
-												  ]
+												  ],
 										)
 									}
 									r.exports = y
@@ -23350,7 +23383,8 @@ ${P}`),
 												C.openingElement.name.name ===
 													'style' &&
 												C.openingElement.attributes.some(
-													(o) => o.name.name === 'jsx'
+													(o) =>
+														o.name.name === 'jsx',
 												)) ||
 											(m &&
 												m.type ===
@@ -23380,7 +23414,7 @@ ${P}`),
 												T.key.type === 'Identifier' &&
 												T.key.name === 'styles' &&
 												m === 'value',
-											...F
+											...F,
 										)
 									}
 									function f(D) {
@@ -23391,7 +23425,7 @@ ${P}`),
 												T.key.type === 'Identifier' &&
 												T.key.name === 'template' &&
 												m === 'value',
-											...F
+											...F,
 										)
 									}
 									var F = [
@@ -23433,11 +23467,11 @@ ${P}`),
 															'MemberExpression' &&
 															(E(
 																m.callee.object
-																	.object
+																	.object,
 															) ||
 																N(
 																	m.callee
-																		.object
+																		.object,
 																))) ||
 															(m.callee.object
 																.type ===
@@ -23445,7 +23479,7 @@ ${P}`),
 																E(
 																	m.callee
 																		.object
-																		.callee
+																		.callee,
 																))))
 												)
 											case 'Identifier':
@@ -23513,7 +23547,7 @@ ${P}`),
 											(m) => {
 												let { value: C } = m
 												return C === ` ${T} `
-											}
+											},
 										)
 									}
 									function P(D) {
@@ -23529,7 +23563,7 @@ ${P}`),
 													T.tag.type ===
 														'Identifier' &&
 													T.tag.name === 'html' &&
-													m === 'quasi'
+													m === 'quasi',
 											)
 										)
 									}
@@ -23627,7 +23661,8 @@ ${P}`),
 												u.openingElement.name.name ===
 													'style' &&
 												u.openingElement.attributes.some(
-													(h) => h.name.name === 'jsx'
+													(h) =>
+														h.name.name === 'jsx',
 												))
 										)
 											for (let {
@@ -23650,12 +23685,12 @@ ${P}`),
 												u.value &&
 												u.value.type === 'Literal' &&
 												/["']|&quot;|&apos;/.test(
-													u.value.value
+													u.value.value,
 												) &&
 												(i.value.value =
 													i.value.value.replace(
 														/["']|&quot;|&apos;/g,
-														'"'
+														'"',
 													))
 										let p = u.expression || u.callee
 										if (
@@ -23677,7 +23712,7 @@ ${P}`),
 															'ArrayExpression' &&
 															a(
 																c.value
-																	.elements[0]
+																	.elements[0],
 															)
 														break
 													case 'template':
@@ -23724,8 +23759,8 @@ ${P}`),
 														].some(
 															(c) =>
 																g.value ===
-																` ${c} `
-														)
+																` ${c} `,
+														),
 												)) ||
 												(l.type === 'CallExpression' &&
 													l.callee.name ===
@@ -23776,7 +23811,7 @@ ${P}`),
 								else if (t[0] === 513) Tr = 'LE'
 								else
 									throw new Error(
-										'unable to figure out endianess'
+										'unable to figure out endianess',
 									)
 							}
 							return Tr
@@ -23865,7 +23900,7 @@ ${P}`),
 									var t = (s) => {
 										if (typeof s != 'string')
 											throw new TypeError(
-												'Expected a string'
+												'Expected a string',
 											)
 										let a = s.match(/(?:\r?\n)/g) || []
 										if (a.length === 0) return
@@ -23873,7 +23908,7 @@ ${P}`),
 												(i) =>
 													i ===
 													`\r
-`
+`,
 											).length,
 											u = a.length - n
 										return n > u
@@ -23957,7 +23992,7 @@ ${P}`),
 											(I = N),
 												(N = N.replace(
 													p,
-													`${x}$1 $2${x}`
+													`${x}$1 $2${x}`,
 												))
 										N = N.replace(l, '').trimRight()
 										let P = Object.create(null),
@@ -23971,7 +24006,7 @@ ${P}`),
 											Array.isArray(P[D[1]])
 												? (P[D[1]] = g.concat(
 														P[D[1]],
-														T
+														T,
 												  ))
 												: (P[D[1]] = T)
 										}
@@ -23991,7 +24026,7 @@ ${P}`),
 												.map((d) => E(d, I[d]))
 												.reduce(
 													(d, v) => d.concat(v),
-													[]
+													[],
 												)
 												.map((d) => `${D} ${d}${P}`)
 												.join('')
@@ -24083,7 +24118,7 @@ ${P}`),
 											w = n({
 												pragmas: Object.assign(
 													{ format: '' },
-													f
+													f,
 												),
 												comments: F.trimStart(),
 											})
@@ -24112,7 +24147,7 @@ ${P}`),
 							cd = te({
 								'src/language-js/utils/is-type-cast-comment.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -24122,7 +24157,7 @@ ${P}`),
 											t(a) &&
 											a.value[0] === '*' &&
 											/@(?:type|satisfies)\b/.test(
-												a.value
+												a.value,
 											)
 										)
 									}
@@ -24229,7 +24264,7 @@ ${P}`),
 											(re) => {
 												let { type: ye } = re
 												return ye !== 'EmptyStatement'
-											}
+											},
 										)
 										G ? i(G, A) : p(De, A)
 									}
@@ -24897,7 +24932,7 @@ ${P}`),
 												(o.extra &&
 													o.extra.parenthesized &&
 													/^PRETTIER_HTML_PLACEHOLDER_\d+_\d+_IN_JS$/.test(
-														o.name
+														o.name,
 													)) ||
 												(C === 'left' &&
 													((o.name === 'async' &&
@@ -24912,7 +24947,7 @@ ${P}`),
 													(d = D.findAncestor(
 														(b) =>
 															b.type ===
-															'ForOfStatement'
+															'ForOfStatement',
 													)) === null || d === void 0
 														? void 0
 														: d.left
@@ -24933,7 +24968,7 @@ ${P}`),
 															B.type ===
 																'ForStatement' ||
 															B.type ===
-																'ForInStatement'
+																'ForInStatement',
 													),
 													b = S
 														? S.type ===
@@ -24960,7 +24995,7 @@ ${P}`),
 												(v = D.findAncestor(
 													(b) =>
 														b.type ===
-														'ExpressionStatement'
+														'ExpressionStatement',
 												)) === null || v === void 0
 													? void 0
 													: v.expression
@@ -25059,7 +25094,7 @@ ${P}`),
 														o,
 														(S) =>
 															S.type ===
-															'ObjectExpression'
+															'ObjectExpression',
 													)
 												)
 													return !0
@@ -25335,9 +25370,9 @@ ${P}`),
 													(m.type ===
 														'TSTypeAnnotation' &&
 														D.getParentNode(
-															1
+															1,
 														).type.startsWith(
-															'TSJSDoc'
+															'TSJSDoc',
 														))
 												)
 											case 'TSTypeQuery':
@@ -25420,7 +25455,7 @@ ${P}`),
 																b.typeAnnotation &&
 																b.typeAnnotation
 																	.type ===
-																	'NullableTypeAnnotation'
+																	'NullableTypeAnnotation',
 														))
 												)
 											}
@@ -25495,7 +25530,7 @@ ${P}`),
 																S.type ===
 																	'ObjectPattern' &&
 																S.properties.includes(
-																	m
+																	m,
 																)) ||
 															m.type ===
 																'NGChainedExpression'
@@ -25812,9 +25847,9 @@ ${P}`),
 														(m) =>
 															m.type ===
 																'FunctionTypeAnnotation' ||
-															void 0
+															void 0,
 													)) ||
-												void 0
+												void 0,
 										)
 									}
 									function I(D) {
@@ -25896,7 +25931,7 @@ ${P}`),
 													{},
 													{
 														type: a.parser.startsWith(
-															'__'
+															'__',
 														)
 															? 'JsExpressionRoot'
 															: 'JsonRoot',
@@ -25904,7 +25939,7 @@ ${P}`),
 														comments: [],
 														rootMarker:
 															a.rootMarker,
-													}
+													},
 												)
 											default:
 												return s
@@ -25941,8 +25976,8 @@ ${P}`),
 																[',', s],
 																c.map(
 																	h,
-																	'params'
-																)
+																	'params',
+																),
 															),
 															{ params: F } =
 																c.getValue()
@@ -25960,18 +25995,18 @@ ${P}`),
 													},
 													'program',
 													'body',
-													0
+													0,
 												)
 											if (y.__isVueBindings)
 												return p.call(
 													(c) =>
 														t(
 															[',', s],
-															c.map(h, 'params')
+															c.map(h, 'params'),
 														),
 													'program',
 													'body',
-													0
+													0,
 												)
 										}
 									}
@@ -26114,15 +26149,15 @@ ${P}`),
 												(W) =>
 													typeof W != 'string' &&
 													!Array.isArray(W) &&
-													W.type === 'group'
+													W.type === 'group',
 											),
 											j = R.slice(
 												0,
-												V === -1 ? 1 : V + 1
+												V === -1 ? 1 : V + 1,
 											),
 											Y = R.slice(
 												j.length,
-												Q ? -1 : void 0
+												Q ? -1 : void 0,
 											),
 											ie = Symbol('logicalChain-' + ++D),
 											ee = i([...j, l(Y)], { id: ie })
@@ -26137,7 +26172,7 @@ ${P}`),
 										w(B.operator, B.left.operator)
 											? (k = o.call(
 													(Y) => m(Y, d, v, !0, b),
-													'left'
+													'left',
 											  ))
 											: k.push(i(d('left')))
 										let M = C(B),
@@ -26165,21 +26200,21 @@ ${P}`),
 																	o
 																		.map(
 																			d,
-																			'arguments'
+																			'arguments',
 																		)
 																		.map(
 																			(
-																				Y
+																				Y,
 																			) =>
 																				p(
 																					2,
 																					i(
-																						Y
-																					)
-																				)
-																		)
+																						Y,
+																					),
+																				),
+																		),
 																),
-															])
+															]),
 													  )
 													: '',
 											L
@@ -26194,9 +26229,9 @@ ${P}`),
 																	d,
 																	v,
 																	!0,
-																	b
+																	b,
 																),
-															'right'
+															'right',
 													  )
 													: d('right')
 											L = [
@@ -26222,7 +26257,9 @@ ${P}`),
 										if (
 											(k.push(
 												R ? '' : ' ',
-												j ? i(L, { shouldBreak: V }) : L
+												j
+													? i(L, { shouldBreak: V })
+													: L,
 											),
 											S && E(B))
 										) {
@@ -26281,7 +26318,7 @@ ${P}`),
 														u(F.node)
 															? ' //' +
 															  i(
-																	F.node
+																	F.node,
 															  )[0].value.trimEnd()
 															: '',
 													]
@@ -26300,9 +26337,9 @@ ${P}`),
 																				f(),
 																				')',
 																		  ],
-																'expressions'
-															)
-														)
+																'expressions',
+															),
+														),
 													)
 												case 'NGEmptyExpression':
 													return ''
@@ -26320,17 +26357,17 @@ ${P}`),
 																: y(
 																		_.getValue(),
 																		w,
-																		F
+																		F,
 																  )
 																? ' '
 																: [';', s],
 															f(),
 														],
-														'body'
+														'body',
 													)
 												case 'NGMicrosyntaxKey':
 													return /^[$_a-z][\w$]*(?:-[$_a-z][\w$])*$/i.test(
-														F.name
+														F.name,
 													)
 														? F.name
 														: JSON.stringify(F.name)
@@ -26397,8 +26434,8 @@ ${P}`),
 												default:
 													throw new Error(
 														`Unknown Angular node type: ${JSON.stringify(
-															F.type
-														)}.`
+															F.type,
+														)}.`,
 													)
 											}
 									}
@@ -26508,14 +26545,14 @@ ${P}`),
 														value: ' ',
 														raw: ' ',
 												  }
-												: A
+												: A,
 										)
 										let we = fe.children.some(E),
 											ke =
 												fe.children.filter(
 													(A) =>
 														A.type ===
-														'JSXExpressionContainer'
+														'JSXExpressionContainer',
 												).length > 1,
 											Re =
 												fe.type === 'JSXElement' &&
@@ -26630,7 +26667,7 @@ ${P}`),
 																(he.push(''),
 																oe.shift(),
 																/\n/.test(
-																	oe[0]
+																	oe[0],
 																))
 															) {
 																let pe =
@@ -26640,8 +26677,8 @@ ${P}`),
 																		ge,
 																		oe[1],
 																		Ne,
-																		pe
-																	)
+																		pe,
+																	),
 																)
 															} else he.push(fe)
 															oe.shift()
@@ -26670,8 +26707,8 @@ ${P}`),
 																		ge,
 																		_(he),
 																		Ne,
-																		pe
-																	)
+																		pe,
+																	),
 																)
 															} else he.push(fe)
 														else {
@@ -26681,8 +26718,8 @@ ${P}`),
 																	ge,
 																	_(he),
 																	Ne,
-																	pe
-																)
+																	pe,
+																),
 															)
 														}
 													} else
@@ -26698,10 +26735,10 @@ ${P}`),
 													let oe = Re[ke + 1]
 													if (oe && ue(oe)) {
 														let pe = K(N(oe)).split(
-															ce
+															ce,
 														)[0]
 														he.push(
-															S(ge, pe, Ne, oe)
+															S(ge, pe, Ne, oe),
 														)
 													} else he.push(u)
 												}
@@ -26761,7 +26798,7 @@ ${P}`),
 												x,
 												(ke) =>
 													ke.type ===
-													'JSXExpressionContainer'
+													'JSXExpressionContainer',
 											),
 											we = m(U, se)
 										return l(
@@ -26771,7 +26808,7 @@ ${P}`),
 												i,
 												we ? '' : g(')'),
 											],
-											{ shouldBreak: he }
+											{ shouldBreak: he },
 										)
 									}
 									function k(U, Z, se) {
@@ -26785,7 +26822,7 @@ ${P}`),
 														.replace(/&apos;/g, "'")
 														.replace(
 															/&quot;/g,
-															'"'
+															'"',
 														),
 													{
 														escaped: Re,
@@ -26795,7 +26832,7 @@ ${P}`),
 														ke,
 														Z.jsxSingleQuote
 															? "'"
-															: '"'
+															: '"',
 													)
 												ke = ke.replace(Pe, Re)
 												let {
@@ -26803,7 +26840,7 @@ ${P}`),
 													trailing: H,
 												} = U.call(
 													() => a(U, Z),
-													'value'
+													'value',
 												)
 												he = [oe, Ne, ke, Ne, H]
 											} else he = se('value')
@@ -26827,7 +26864,7 @@ ${P}`),
 															'AwaitExpression' &&
 															(ge(
 																he.argument,
-																he
+																he,
 															) ||
 																he.argument
 																	.type ===
@@ -26847,7 +26884,7 @@ ${P}`),
 																P(he)))))
 										return ge(
 											fe.expression,
-											U.getParentNode(0)
+											U.getParentNode(0),
 										)
 											? l(['{', se('expression'), c, '}'])
 											: l([
@@ -26902,7 +26939,7 @@ ${P}`),
 														I(ke.value) &&
 														ke.value.value
 															.includes(`
-`)
+`),
 												),
 											we =
 												Z.singleAttributePerLine &&
@@ -26917,12 +26954,12 @@ ${P}`),
 												p(
 													U.map(
 														() => [we, se()],
-														'attributes'
-													)
+														'attributes',
+													),
 												),
 												...q(fe, Z, ge),
 											],
-											{ shouldBreak: he }
+											{ shouldBreak: he },
 										)
 									}
 									function q(U, Z, se) {
@@ -26956,7 +26993,7 @@ ${P}`),
 												? ge.push(p([u, he]), u)
 												: $(
 														fe.name,
-														D.Leading | D.Block
+														D.Leading | D.Block,
 												  )
 												? ge.push(' ', he)
 												: ge.push(he),
@@ -27005,7 +27042,7 @@ ${P}`),
 																	t(
 																		ge,
 																		he,
-																		Z
+																		Z,
 																	),
 																]),
 																i,
@@ -27013,7 +27050,7 @@ ${P}`),
 												},
 												fe.type === 'JSXSpreadAttribute'
 													? 'argument'
-													: 'expression'
+													: 'expression',
 											),
 											'}',
 										]
@@ -27056,13 +27093,13 @@ ${P}`),
 													return j(U, Z)
 												case 'JSXText':
 													throw new Error(
-														'JSXText should be handled by JSXElement'
+														'JSXText should be handled by JSXElement',
 													)
 												default:
 													throw new Error(
 														`Unknown JSX node type: ${JSON.stringify(
-															fe.type
-														)}.`
+															fe.type,
+														)}.`,
 													)
 											}
 									}
@@ -27077,9 +27114,9 @@ ${P}`),
 														ce.source +
 														'|' +
 														ce.source +
-														'$)'
+														'$)',
 												),
-												''
+												'',
 											)
 									function de(U) {
 										if (U.children.length === 0) return !0
@@ -27171,7 +27208,7 @@ ${P}`),
 													E === 'id' &&
 													w.type ===
 														'VariableDeclarator' &&
-													w.definite
+													w.definite,
 											)
 											? '!'
 											: ''
@@ -27193,7 +27230,7 @@ ${P}`),
 												x.id === N
 										return u(
 											w.originalText,
-											N.typeAnnotation
+											N.typeAnnotation,
 										)
 											? [
 													' /*: ',
@@ -27214,7 +27251,7 @@ ${P}`),
 											? [
 													a(
 														' ',
-														_.map(E, 'modifiers')
+														_.map(E, 'modifiers'),
 													),
 													' ',
 											  ]
@@ -27332,7 +27369,7 @@ ${P}`),
 																L[ie] &&
 																L[ie].length > 1
 															)
-														}
+														},
 													),
 												q = P(o, m),
 												J = B
@@ -27359,7 +27396,7 @@ ${P}`),
 																			T,
 																			m,
 																			'elements',
-																			C
+																			C,
 																		),
 																		J,
 																  ],
@@ -27368,8 +27405,8 @@ ${P}`),
 														a,
 														S,
 													],
-													{ shouldBreak: R, id: M }
-												)
+													{ shouldBreak: R, id: M },
+												),
 											)
 										}
 										return d.push(N(T), x(T, m, C)), d
@@ -27393,9 +27430,9 @@ ${P}`),
 																{
 																	backwards:
 																		!0,
-																}
-															)
-													)
+																},
+															),
+													),
 											)
 										)
 									}
@@ -27429,10 +27466,10 @@ ${P}`),
 																				1
 																		],
 																		f.Leading |
-																			f.Line
+																			f.Line,
 																  )
 																? n
-																: s
+																: s,
 														)
 											}, 'elements'),
 											p(d)
@@ -27448,7 +27485,7 @@ ${P}`),
 							Ao = te({
 								'src/language-js/print/call-arguments.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -27526,7 +27563,7 @@ ${P}`),
 										function K() {
 											return P(
 												['(', $([N, ...ce]), W, N, ')'],
-												{ shouldBreak: !0 }
+												{ shouldBreak: !0 },
 											)
 										}
 										if (
@@ -27571,7 +27608,7 @@ ${P}`),
 																(z = [
 																	...ce.slice(
 																		0,
-																		-1
+																		-1,
 																	),
 																	L([], {
 																		expandLastArg:
@@ -27602,7 +27639,7 @@ ${P}`),
 																'(',
 																...ce.slice(
 																	0,
-																	-1
+																	-1,
 																),
 																P(s(z), {
 																	shouldBreak:
@@ -27729,7 +27766,7 @@ ${P}`),
 											q.type === 'BlockStatement' &&
 											(q.body.some(
 												(J) =>
-													J.type !== 'EmptyStatement'
+													J.type !== 'EmptyStatement',
 											) ||
 												u(q, i.Dangling))
 										)
@@ -27810,7 +27847,7 @@ ${P}`),
 															'TSNonNullExpression' &&
 															l(
 																F.object
-																	.expression
+																	.expression,
 															) &&
 															F.object.expression
 																.arguments
@@ -27821,7 +27858,7 @@ ${P}`),
 											N.label === 'member-chain'
 												? 'member-chain'
 												: 'member',
-											[N, I ? x : s(a([t, x]))]
+											[N, I ? x : s(a([t, x]))],
 										)
 									}
 									function h(g, c, f) {
@@ -27912,14 +27949,14 @@ ${P}`),
 																	d(Ne, B, k),
 																	m(Ne, B, k),
 																],
-																B
+																B,
 															),
 															J(Pe) ? N : '',
 														],
 												  }),
 												  Ne.call(
 														(oe) => L(oe),
-														'callee'
+														'callee',
 												  ))
 												: h(Pe)
 												? (q.unshift({
@@ -27930,12 +27967,12 @@ ${P}`),
 															l(Pe)
 																? C(Ne, B, k)
 																: v(Ne, B, k),
-															B
+															B,
 														),
 												  }),
 												  Ne.call(
 														(oe) => L(oe),
-														'object'
+														'object',
 												  ))
 												: Pe.type ===
 												  'TSNonNullExpression'
@@ -27945,7 +27982,7 @@ ${P}`),
 												  }),
 												  Ne.call(
 														(oe) => L(oe),
-														'expression'
+														'expression',
 												  ))
 												: q.unshift({
 														node: Pe,
@@ -28062,10 +28099,10 @@ ${P}`),
 											Z = V.flat(),
 											se =
 												Z.slice(1, -1).some((Ne) =>
-													f(Ne.node, F.Leading)
+													f(Ne.node, F.Leading),
 												) ||
 												Z.slice(0, -1).some((Ne) =>
-													f(Ne.node, F.Trailing)
+													f(Ne.node, F.Trailing),
 												) ||
 												(V[U] &&
 													f(V[U][0].node, F.Leading))
@@ -28094,7 +28131,7 @@ ${P}`),
 												we
 													.slice(0, -1)
 													.some((oe) =>
-														oe.arguments.some(p)
+														oe.arguments.some(p),
 													)
 											)
 										}
@@ -28105,8 +28142,8 @@ ${P}`),
 												we.some(
 													(Ne) =>
 														!Ne.arguments.every(
-															(Pe) => c(Pe, 0)
-														)
+															(Pe) => c(Pe, 0),
+														),
 												)) ||
 											Fe.slice(0, -1).some(T) ||
 											ke()
@@ -28124,7 +28161,7 @@ ${P}`),
 							xo = te({
 								'src/language-js/print/call-expression.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -28193,7 +28230,7 @@ ${P}`),
 												l(P.callee) &&
 												!N.call(
 													(v) => a(v, x),
-													'callee'
+													'callee',
 												))
 										)
 											return c(N, x, I)
@@ -28317,7 +28354,7 @@ ${P}`),
 											de,
 											de('left'),
 											[' ', ue.operator],
-											'right'
+											'right',
 										)
 									}
 									function o(W, K, de) {
@@ -28327,7 +28364,7 @@ ${P}`),
 											de,
 											de('id'),
 											' =',
-											'init'
+											'init',
 										)
 									}
 									function d(W, K, de, ue, Fe) {
@@ -28344,7 +28381,7 @@ ${P}`),
 													(he.type !==
 														'ExpressionStatement' &&
 														he.type !==
-															'VariableDeclaration')
+															'VariableDeclaration'),
 											)
 										)
 											return Z
@@ -28432,7 +28469,7 @@ ${P}`),
 															(de.value &&
 																de.value
 																	.type ===
-																	'AssignmentPattern'))
+																	'AssignmentPattern')),
 												)
 											)
 										}
@@ -28458,7 +28495,8 @@ ${P}`),
 											if (
 												K.length > 1 &&
 												K.some(
-													(ue) => ue[de] || ue.default
+													(ue) =>
+														ue[de] || ue.default,
 												)
 											)
 												return !0
@@ -28492,7 +28530,7 @@ ${P}`),
 												(ue) =>
 													t(L(ue)) ||
 													ue.type ===
-														'TSConditionalType'
+														'TSConditionalType',
 											)
 										)
 									}
@@ -28634,7 +28672,7 @@ ${P}`),
 							Lr = te({
 								'src/language-js/print/function-parameters.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -28690,8 +28728,8 @@ ${P}`),
 														t(
 															b.originalText,
 															ie,
-															$
-														) === ')'
+															$,
+														) === ')',
 												),
 												')',
 											]
@@ -28750,7 +28788,7 @@ ${P}`),
 													p(
 														!N(M) && x(b, 'all')
 															? ','
-															: ''
+															: '',
 													),
 													u,
 													')',
@@ -28774,7 +28812,7 @@ ${P}`),
 															'TSTypeAnnotation') &&
 													w(
 														b.typeAnnotation
-															.typeAnnotation
+															.typeAnnotation,
 													)) ||
 												(b.type ===
 													'FunctionTypeParam' &&
@@ -28839,7 +28877,7 @@ ${P}`),
 							Or = te({
 								'src/language-js/print/type-annotation.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -28889,7 +28927,7 @@ ${P}`),
 														M.type ===
 															'NullLiteralTypeAnnotation' ||
 														M.type ===
-															'TSNullKeyword'
+															'TSNullKeyword',
 												).length,
 												k = b.types.some(
 													(M) =>
@@ -28900,7 +28938,7 @@ ${P}`),
 														M.type ===
 															'GenericTypeAnnotation' ||
 														M.type ===
-															'TSTypeReference'
+															'TSTypeReference',
 												)
 											if (b.types.length - 1 === B && k)
 												return !0
@@ -28915,7 +28953,7 @@ ${P}`),
 											q.push(
 												'opaque type ',
 												k('id'),
-												k('typeParameters')
+												k('typeParameters'),
 											),
 											R.supertype &&
 												q.push(': ', k('supertype')),
@@ -28933,7 +28971,7 @@ ${P}`),
 											q.push(
 												'type ',
 												k('id'),
-												k('typeParameters')
+												k('typeParameters'),
 											)
 										let J =
 											R.type === 'TSTypeAliasDeclaration'
@@ -28961,7 +28999,7 @@ ${P}`),
 												: (L > 1 && (J = !0),
 												  q.push(
 														' & ',
-														L > 1 ? p(R[L]) : R[L]
+														L > 1 ? p(R[L]) : R[L],
 												  ))
 										return n(q)
 									}
@@ -29137,7 +29175,7 @@ ${P}`),
 							jr = te({
 								'src/language-js/print/type-parameters.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -29186,7 +29224,7 @@ ${P}`),
 												(M, R) =>
 													R === 'typeAnnotation',
 												(M) => M.type === 'Identifier',
-												x
+												x,
 											)
 										if (
 											d[o].length === 0 ||
@@ -29227,7 +29265,7 @@ ${P}`),
 												u,
 												'>',
 											],
-											{ id: I(d) }
+											{ id: I(d) },
 										)
 									}
 									function $(T, m) {
@@ -29251,22 +29289,22 @@ ${P}`),
 													d.push(
 														w(
 															v.readonly,
-															'readonly'
+															'readonly',
 														),
-														' '
+														' ',
 													),
 											  d.push('[', C('name')),
 											  o.constraint &&
 													d.push(
 														' in ',
-														C('constraint')
+														C('constraint'),
 													),
 											  v.nameType &&
 													d.push(
 														' as ',
 														T.callParent(() =>
-															C('nameType')
-														)
+															C('nameType'),
+														),
 													),
 											  d.push(']'),
 											  d)
@@ -29280,7 +29318,7 @@ ${P}`),
 											  o.constraint &&
 													d.push(
 														' extends ',
-														C('constraint')
+														C('constraint'),
 													),
 											  o.default &&
 													d.push(' = ', C('default')),
@@ -29328,7 +29366,7 @@ ${P}`),
 													!I.computed &&
 													I.key &&
 													i(I.key) &&
-													!l(I, F)
+													!l(I, F),
 											)
 											h.set(E, x)
 										}
@@ -29352,13 +29390,13 @@ ${P}`),
 												JSON.stringify(
 													N.type === 'Identifier'
 														? N.name
-														: N.value.toString()
+														: N.value.toString(),
 												),
-												F
+												F,
 											)
 											return f.call(
 												(I) => t(I, x, F),
-												'key'
+												'key',
 											)
 										}
 										return l(w, F) &&
@@ -29373,9 +29411,9 @@ ${P}`),
 															/^\d/.test(N.value)
 																? a(N.value)
 																: N.value,
-															F
+															F,
 														),
-													'key'
+													'key',
 											  )
 											: _('key')
 									}
@@ -29388,7 +29426,7 @@ ${P}`),
 													_,
 													g(f, F, _),
 													':',
-													'value'
+													'value',
 											  )
 									}
 									r.exports = {
@@ -29488,7 +29526,7 @@ ${P}`),
 												L(U, se, Z),
 												p([Ne ? p(ke) : ke, Re]),
 												ge.body ? ' ' : '',
-												Z('body')
+												Z('body'),
 											),
 											se.semi &&
 												(ge.declare || !ge.body) &&
@@ -29509,7 +29547,7 @@ ${P}`),
 												? he.async && we.push('async ')
 												: (t.ok(
 														ge === 'get' ||
-															ge === 'set'
+															ge === 'set',
 												  ),
 												  we.push(ge, ' ')),
 											he.generator && we.push('*'),
@@ -29517,7 +29555,7 @@ ${P}`),
 												J(U, Z, se),
 												fe.optional || fe.key.optional
 													? '?'
-													: ''
+													: '',
 											),
 											fe === he
 												? we.push(j(U, Z, se))
@@ -29527,8 +29565,8 @@ ${P}`),
 														U.call(
 															(ke) =>
 																j(ke, Z, se),
-															'value'
-														)
+															'value',
+														),
 												  )
 												: we.push(se('value')),
 											we
@@ -29569,7 +29607,7 @@ ${P}`),
 												Re = p(F(Re))
 											}
 											he.push(
-												p([R(U, se, Z, ke, !0), Re])
+												p([R(U, se, Z, ke, !0), Re]),
 											)
 										}
 										let we = s(U, Z, !0, (ke) => {
@@ -29578,7 +29616,7 @@ ${P}`),
 												Re !== !1 &&
 												Z.originalText.slice(
 													Re,
-													Re + 2
+													Re + 2,
 												) === '=>'
 											)
 										})
@@ -29589,7 +29627,7 @@ ${P}`),
 											ke = U.getParentNode(),
 											Re = v(ke) && we === 'callee',
 											Ne = Boolean(
-												Z && Z.assignmentLayout
+												Z && Z.assignmentLayout,
 											),
 											Pe =
 												he.body.type !==
@@ -29621,7 +29659,7 @@ ${P}`),
 															shouldBreak: fe,
 														}),
 													]),
-													{ id: H, shouldBreak: oe }
+													{ id: H, shouldBreak: oe },
 												),
 												' =>',
 												f(Pe ? y([i, ge]) : [' ', ge], {
@@ -29658,13 +29696,13 @@ ${P}`),
 													E(ge).some(
 														(X) =>
 															X.type !==
-															'Identifier'
+															'Identifier',
 													)),
 													ge.body.type !==
 														'ArrowFunctionExpression' ||
 													(fe && fe.expandLastArg)
 														? we.unshift(
-																se('body', fe)
+																se('body', fe),
 														  )
 														: ((ge = ge.body),
 														  U.call(H, 'body'))
@@ -29685,7 +29723,7 @@ ${P}`),
 													I(ge.body) ||
 													P(
 														ge.body,
-														Z.originalText
+														Z.originalText,
 													) ||
 													ge.body.type ===
 														'ArrowFunctionExpression' ||
@@ -29717,7 +29755,7 @@ ${P}`),
 													ge.body,
 													(H) =>
 														H.type ===
-														'ObjectExpression'
+														'ObjectExpression',
 												)
 										return p([
 											...Re,
@@ -29771,7 +29809,7 @@ ${P}`),
 											fe.predicate &&
 												he.push(
 													fe.returnType ? ' ' : ': ',
-													Z('predicate')
+													Z('predicate'),
 												),
 											he
 										)
@@ -29800,7 +29838,7 @@ ${P}`),
 															]),
 															l,
 															h(')'),
-														])
+														]),
 												  )
 												: he.push(' ', se('argument')))
 										let we = o(fe),
@@ -29876,8 +29914,8 @@ ${P}`),
 												w.map(
 													N,
 													'declaration',
-													'decorators'
-												)
+													'decorators',
+												),
 											),
 											n,
 										]
@@ -29899,7 +29937,7 @@ ${P}`),
 									}
 									function F(w, E) {
 										return w.decorators.some((N) =>
-											s(E.originalText, y(N))
+											s(E.originalText, y(N)),
 										)
 									}
 									function _(w) {
@@ -29973,7 +30011,7 @@ ${P}`),
 												(M.typeParameters &&
 													c(
 														M.typeParameters,
-														f.Trailing
+														f.Trailing,
 													)) ||
 												(M.superClass &&
 													c(M.superClass)) ||
@@ -29996,14 +30034,14 @@ ${P}`),
 														'extends ',
 														a(j, Q, B),
 													],
-													'superClass'
+													'superClass',
 												)
 											q ? L.push(i, y(V)) : L.push(' ', V)
 										} else L.push(o(b, B, k, 'extends'))
 										if (
 											(L.push(
 												o(b, B, k, 'mixins'),
-												o(b, B, k, 'implements')
+												o(b, B, k, 'implements'),
 											),
 											q)
 										) {
@@ -30035,7 +30073,7 @@ ${P}`),
 											b.typeParameters &&
 											!c(
 												b.typeParameters,
-												f.Trailing | f.Line
+												f.Trailing | f.Line,
 											) &&
 											!m(b)
 										)
@@ -30051,7 +30089,7 @@ ${P}`),
 											C(R)
 												? g(' ', i, {
 														groupId: F(
-															R.typeParameters
+															R.typeParameters,
 														),
 												  })
 												: i,
@@ -30118,7 +30156,7 @@ ${P}`),
 												x(b, B, k),
 												w(b),
 												N(b),
-												E(b, B, k)
+												E(b, B, k),
 											),
 											[I(b, B, k, R, ' =', 'value'), q]
 										)
@@ -30162,7 +30200,7 @@ ${P}`),
 													w.abstract
 														? 'abstract '
 														: '',
-													g(f, F, _)
+													g(f, F, _),
 												),
 											E.push('interface')
 										let N = [],
@@ -30171,13 +30209,13 @@ ${P}`),
 											N.push(
 												' ',
 												_('id'),
-												_('typeParameters')
+												_('typeParameters'),
 											)
 										let I =
 											w.typeParameters &&
 											!l(
 												w.typeParameters,
-												y.Trailing | y.Line
+												y.Trailing | y.Line,
 											)
 										return (
 											t(w.extends) &&
@@ -30185,7 +30223,7 @@ ${P}`),
 													I
 														? i(' ', a, {
 																groupId: h(
-																	w.typeParameters
+																	w.typeParameters,
 																),
 														  })
 														: a,
@@ -30195,9 +30233,9 @@ ${P}`),
 														: u)(
 														s(
 															[',', a],
-															f.map(_, 'extends')
-														)
-													)
+															f.map(_, 'extends'),
+														),
+													),
 												),
 											(w.id && l(w.id, y.Trailing)) ||
 											t(w.extends)
@@ -30257,7 +30295,7 @@ ${P}`),
 												m(S, b, B),
 												T(S, b, B),
 												o(S, b, B),
-												M
+												M,
 											),
 											R
 										)
@@ -30288,7 +30326,7 @@ ${P}`),
 															: '',
 														m(S, b, B),
 														T(S, b, B),
-														o(S, b, B)
+														o(S, b, B),
 												  ),
 											D(k, b) && M.push(';'),
 											M
@@ -30365,8 +30403,8 @@ ${P}`),
 												else
 													throw new Error(
 														`Unknown specifier type ${JSON.stringify(
-															J
-														)}`
+															J,
+														)}`,
 													)
 											}, 'specifiers'),
 												M.push(u(', ', R)),
@@ -30376,7 +30414,7 @@ ${P}`),
 													q.length > 1 ||
 													R.length > 0 ||
 													k.specifiers.some((L) =>
-														h(L)
+														h(L),
 													)
 														? M.push(
 																a([
@@ -30390,19 +30428,19 @@ ${P}`),
 																				',',
 																				i,
 																			],
-																			q
+																			q,
 																		),
 																	]),
 																	l(
 																		c(b)
 																			? ','
-																			: ''
+																			: '',
 																	),
 																	b.bracketSpacing
 																		? i
 																		: s,
 																	'}',
-																])
+																]),
 														  )
 														: M.push([
 																'{',
@@ -30432,8 +30470,8 @@ ${P}`),
 											: !/{\s*}/.test(
 													b.originalText.slice(
 														w(S),
-														w(M)
-													)
+														w(M),
+													),
 											  )
 									}
 									function o(S, b, B) {
@@ -30444,7 +30482,7 @@ ${P}`),
 													b.bracketSpacing ? ' ' : '',
 													u(
 														', ',
-														S.map(B, 'assertions')
+														S.map(B, 'assertions'),
 													),
 													b.bracketSpacing ? ' ' : '',
 													'}',
@@ -30476,7 +30514,7 @@ ${P}`),
 											R.push(
 												Y,
 												Y && ie ? ' as ' : '',
-												ie
+												ie,
 											),
 											R
 										)
@@ -30569,10 +30607,10 @@ ${P}`),
 											B.push(
 												'indexers',
 												'callProperties',
-												'internalSlots'
+												'internalSlots',
 											)
 										let k = B.map((W) => v[W][0]).sort(
-												(W, K) => E(W) - E(K)
+												(W, K) => E(W) - E(K),
 											)[0],
 											M = m.getParentNode(0),
 											R =
@@ -30608,14 +30646,14 @@ ${P}`),
 															(W.value.type ===
 																'ObjectPattern' ||
 																W.value.type ===
-																	'ArrayPattern')
+																	'ArrayPattern'),
 													)) ||
 												(v.type !== 'ObjectPattern' &&
 													k &&
 													y(
 														C.originalText,
 														E(v),
-														E(k)
+														E(k),
 													)),
 											J = R
 												? ';'
@@ -30656,7 +30694,7 @@ ${P}`),
 															'TSConstructSignatureDeclaration') &&
 														f(
 															W.node,
-															_.PrettierIgnore
+															_.PrettierIgnore,
 														) &&
 														j.shift(),
 													w(W.node, C) && j.push(l),
@@ -30672,7 +30710,7 @@ ${P}`),
 													K ||
 													h(
 														C.originalText,
-														N(p(F(v)))
+														N(p(F(v))),
 													)
 														? l
 														: s,
@@ -30723,7 +30761,7 @@ ${P}`),
 												i(
 													ee && (J !== ',' || c(C))
 														? J
-														: ''
+														: '',
 												),
 												C.bracketSpacing ? s : a,
 												Q,
@@ -30740,7 +30778,7 @@ ${P}`),
 													K === 'parameters' ||
 													K === 'this' ||
 													K === 'rest') &&
-												de === 0
+												de === 0,
 										) ||
 											m.match(
 												$,
@@ -30754,7 +30792,7 @@ ${P}`),
 														K === 'parameters' ||
 														K === 'this' ||
 														K === 'rest') &&
-													de === 0
+													de === 0,
 											) ||
 											(!q &&
 												m.match(
@@ -30765,7 +30803,7 @@ ${P}`),
 														W.type ===
 															'AssignmentExpression' ||
 														W.type ===
-															'VariableDeclarator'
+															'VariableDeclarator',
 												))
 											? ce
 											: n(ce, { shouldBreak: q })
@@ -30889,7 +30927,7 @@ ${P}`),
 														L,
 														Q,
 														V,
-														'typeParameters'
+														'typeParameters',
 													),
 												]
 											case 'IndexedAccessType':
@@ -30957,7 +30995,7 @@ ${P}`),
 															s(L, Q),
 															i,
 															'}',
-														])
+														]),
 													)
 												else {
 													let ee =
@@ -30968,7 +31006,7 @@ ${P}`),
 																		L,
 																		Q,
 																		'members',
-																		V
+																		V,
 																	),
 																	j.hasUnknownMembers ||
 																	f(Q)
@@ -30988,7 +31026,7 @@ ${P}`),
 															s(L, Q, !0),
 															u,
 															'}',
-														])
+														]),
 													)
 												}
 												return ie
@@ -31038,7 +31076,7 @@ ${P}`),
 												return (
 													t.ok(
 														ee === 'plus' ||
-															ee === 'minus'
+															ee === 'minus',
 													),
 													ee === 'plus' ? '+' : '-'
 												)
@@ -31111,7 +31149,7 @@ ${P}`),
 											case 'NumberLiteralTypeAnnotation':
 												t.strictEqual(
 													typeof j.value,
-													'number'
+													'number',
 												)
 											case 'BigIntLiteralTypeAnnotation':
 												return j.extra
@@ -31133,12 +31171,12 @@ ${P}`),
 														K =
 															Q.originalText.lastIndexOf(
 																'/*',
-																ce
+																ce,
 															),
 														de =
 															Q.originalText.indexOf(
 																'*/',
-																W
+																W,
 															)
 													if (K !== -1 && de !== -1) {
 														let ue = Q.originalText
@@ -31146,10 +31184,10 @@ ${P}`),
 															.trim()
 														if (
 															ue.startsWith(
-																'::'
+																'::',
 															) &&
 															!ue.includes(
-																'/*'
+																'/*',
 															) &&
 															!ue.includes('*/')
 														)
@@ -31204,7 +31242,7 @@ ${P}`),
 											case 'Type':
 												throw new Error(
 													'unprintable type: ' +
-														JSON.stringify(j.type)
+														JSON.stringify(j.type),
 												)
 										}
 									}
@@ -31213,7 +31251,7 @@ ${P}`),
 										return V
 											? (t.strictEqual(
 													V.type,
-													'DeclareExportDeclaration'
+													'DeclareExportDeclaration',
 											  ),
 											  Q)
 											: ['declare ', Q]
@@ -31224,7 +31262,7 @@ ${P}`),
 							gd = te({
 								'src/language-js/utils/is-ts-keyword-type.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -31395,7 +31433,7 @@ ${P}`),
 												' : ',
 												B.type === C.type || Fe(B)
 													? m(v)
-													: ue(m(v))
+													: ue(m(v)),
 											)
 										} else {
 											let ue = [
@@ -31424,10 +31462,10 @@ ${P}`),
 													: F(
 															Math.max(
 																0,
-																T.tabWidth - 2
+																T.tabWidth - 2,
 															),
-															ue
-													  )
+															ue,
+													  ),
 											)
 										}
 										let ee = [
@@ -31442,8 +31480,8 @@ ${P}`),
 														t(
 															T.originalText,
 															l(ue),
-															p(ue)
-														)
+															p(ue),
+														),
 												),
 											ce = (ue) =>
 												R === j
@@ -31508,7 +31546,7 @@ ${P}`),
 																P([], {
 																	needsSemi:
 																		!0,
-																})
+																}),
 														  )
 														: T.push(';', b)
 													: T.push(b),
@@ -31541,7 +31579,7 @@ ${P}`),
 											? !1
 											: x.call(
 													($) => F($, I),
-													'expression'
+													'expression',
 											  )
 									}
 									function F(x, I) {
@@ -31736,7 +31774,7 @@ ${P}`),
 											w = s(_.directives),
 											E = _.body.some(
 												(I) =>
-													I.type !== 'EmptyStatement'
+													I.type !== 'EmptyStatement',
 											),
 											N = u(_, i.Dangling)
 										if (!w && !E && !N) return ''
@@ -31751,7 +31789,7 @@ ${P}`),
 															(x.push(a),
 															l(
 																I.getValue(),
-																f
+																f,
 															) && x.push(a))
 												}, 'directives'),
 											E && x.push(y(c, f, F)),
@@ -31921,7 +31959,7 @@ ${P}`),
 													ue.push(W('expression')),
 													K.typeParameters &&
 														ue.push(
-															W('typeParameters')
+															W('typeParameters'),
 														),
 													ue
 												)
@@ -31965,7 +32003,7 @@ ${P}`),
 												ue.push(
 													W('expression'),
 													` ${Fe} `,
-													W('typeAnnotation')
+													W('typeAnnotation'),
 												)
 												let z = ee.getParentNode()
 												return (F(z) &&
@@ -31982,17 +32020,17 @@ ${P}`),
 														ue.push('readonly '),
 													ue.push(
 														b(ee, ce, W),
-														x(ee)
+														x(ee),
 													),
 													K.typeAnnotation &&
 														ue.push(
 															': ',
-															W('typeAnnotation')
+															W('typeAnnotation'),
 														),
 													K.initializer &&
 														ue.push(
 															' = ',
-															W('initializer')
+															W('initializer'),
 														),
 													ue
 												)
@@ -32001,7 +32039,7 @@ ${P}`),
 													K.accessibility &&
 														ue.push(
 															K.accessibility +
-																' '
+																' ',
 														),
 													K.export &&
 														ue.push('export '),
@@ -32027,7 +32065,7 @@ ${P}`),
 															? h(
 																	f(ce)
 																		? ','
-																		: ''
+																		: '',
 															  )
 															: '',
 													U = l([
@@ -32037,8 +32075,8 @@ ${P}`),
 																[', ', i],
 																ee.map(
 																	W,
-																	'parameters'
-																)
+																	'parameters',
+																),
 															),
 														]),
 														z,
@@ -32075,7 +32113,7 @@ ${P}`),
 														? [
 																' is ',
 																W(
-																	'typeAnnotation'
+																	'typeAnnotation',
 																),
 														  ]
 														: '',
@@ -32089,7 +32127,7 @@ ${P}`),
 													W(
 														K.parameter
 															? 'parameter'
-															: 'argument'
+															: 'argument',
 													),
 													')',
 													K.qualifier
@@ -32099,7 +32137,7 @@ ${P}`),
 														ee,
 														ce,
 														W,
-														'typeParameters'
+														'typeParameters',
 													),
 												]
 											case 'TSLiteralType':
@@ -32118,7 +32156,7 @@ ${P}`),
 														'TSCallSignatureDeclaration' &&
 														ue.push('new '),
 													ue.push(
-														l($(ee, W, ce, !1, !0))
+														l($(ee, W, ce, !1, !0)),
 													),
 													K.returnType ||
 														K.typeAnnotation)
@@ -32129,7 +32167,7 @@ ${P}`),
 													ue.push(
 														Fe ? ' => ' : ': ',
 														W('returnType'),
-														W('typeAnnotation')
+														W('typeAnnotation'),
 													)
 												}
 												return ue
@@ -32144,7 +32182,7 @@ ${P}`),
 												let Fe = s(
 													ce.originalText,
 													E(K),
-													N(K)
+													N(K),
 												)
 												return l(
 													[
@@ -32157,7 +32195,7 @@ ${P}`),
 															K.optional
 																? c(
 																		K.optional,
-																		'?'
+																		'?',
 																  )
 																: '',
 															K.typeAnnotation
@@ -32172,7 +32210,7 @@ ${P}`),
 															: i,
 														'}',
 													],
-													{ shouldBreak: Fe }
+													{ shouldBreak: Fe },
 												)
 											}
 											case 'TSMethodSignature': {
@@ -32198,7 +32236,7 @@ ${P}`),
 													K.computed ? '[' : '',
 													W('key'),
 													K.computed ? ']' : '',
-													x(ee)
+													x(ee),
 												)
 												let z = $(ee, W, ce, !1, !0),
 													U = K.returnType
@@ -32217,7 +32255,7 @@ ${P}`),
 												return (
 													ue.push(
 														'export as namespace ',
-														W('id')
+														W('id'),
 													),
 													ce.semi && ue.push(';'),
 													l(ue)
@@ -32233,7 +32271,7 @@ ${P}`),
 													ue.push(
 														'enum ',
 														W('id'),
-														' '
+														' ',
 													),
 													K.members.length === 0
 														? ue.push(
@@ -32242,7 +32280,7 @@ ${P}`),
 																	t(ee, ce),
 																	i,
 																	'}',
-																])
+																]),
 														  )
 														: ue.push(
 																l([
@@ -32253,11 +32291,11 @@ ${P}`),
 																			ee,
 																			ce,
 																			'members',
-																			W
+																			W,
 																		),
 																		f(
 																			ce,
-																			'es5'
+																			'es5',
 																		)
 																			? ','
 																			: '',
@@ -32265,11 +32303,11 @@ ${P}`),
 																	t(
 																		ee,
 																		ce,
-																		!0
+																		!0,
 																	),
 																	u,
 																	'}',
-																])
+																]),
 														  ),
 													ue
 												)
@@ -32279,13 +32317,13 @@ ${P}`),
 														? ue.push(
 																'[',
 																W('id'),
-																']'
+																']',
 														  )
 														: ue.push(W('id')),
 													K.initializer &&
 														ue.push(
 															' = ',
-															W('initializer')
+															W('initializer'),
 														),
 													ue
 												)
@@ -32299,12 +32337,12 @@ ${P}`),
 															'value' &&
 														ue.push(
 															K.importKind,
-															' '
+															' ',
 														),
 													ue.push(
 														W('id'),
 														' = ',
-														W('moduleReference')
+														W('moduleReference'),
 													),
 													ce.semi && ue.push(';'),
 													l(ue)
@@ -32333,22 +32371,22 @@ ${P}`),
 													let se =
 														ce.originalText.slice(
 															E(K),
-															E(K.id)
+															E(K.id),
 														)
 													;(K.id.type ===
 														'Identifier' &&
 														K.id.name ===
 															'global' &&
 														!/namespace|module/.test(
-															se
+															se,
 														)) ||
 														ue.push(
 															z ||
 																/(?:^|\s)module(?:\s|$)/.test(
-																	se
+																	se,
 																)
 																? 'module '
-																: 'namespace '
+																: 'namespace ',
 														)
 												}
 												return (
@@ -32358,7 +32396,7 @@ ${P}`),
 														: K.body
 														? ue.push(
 																' ',
-																l(W('body'))
+																l(W('body')),
 														  )
 														: ue.push(de),
 													ue
@@ -32387,7 +32425,7 @@ ${P}`),
 														ee,
 														ce,
 														W,
-														'typeParameters'
+														'typeParameters',
 													),
 												]
 											case 'TSTypeAnnotation':
@@ -32410,8 +32448,8 @@ ${P}`),
 											default:
 												throw new Error(
 													`Unknown TypeScript node type: ${JSON.stringify(
-														K.type
-													)}.`
+														K.type,
+													)}.`,
 												)
 										}
 									}
@@ -32450,7 +32488,7 @@ ${P}`),
 												w =
 													f.originalText.slice(
 														_ - 3,
-														_
+														_,
 													) === '*-/'
 											return [
 												'/*',
@@ -32460,7 +32498,7 @@ ${P}`),
 										}
 										throw new Error(
 											'Not a comment: ' +
-												JSON.stringify(F)
+												JSON.stringify(F),
 										)
 									}
 									function h(c) {
@@ -32484,8 +32522,8 @@ ${P}`),
 														: ' ' +
 														  (_ < f.length - 1
 																? F.trim()
-																: F.trimStart())
-												)
+																: F.trimStart()),
+												),
 											),
 											'*/',
 										]
@@ -32508,7 +32546,7 @@ ${P}`),
 												return p(g)
 											case 'BigIntLiteral':
 												return l(
-													g.bigint || g.extra.raw
+													g.bigint || g.extra.raw,
 												)
 											case 'NumericLiteral':
 												return s(g.extra.raw)
@@ -32706,7 +32744,7 @@ ${P}`),
 											Ie.push(
 												' /*',
 												je.value.trimStart(),
-												'*/'
+												'*/',
 											),
 												(je.printed = !0)
 										}
@@ -32738,7 +32776,7 @@ ${P}`),
 															ve([
 																'program',
 																'interpreter',
-															])
+															]),
 														),
 													Se.push(ve('program')),
 													Se
@@ -32793,7 +32831,7 @@ ${P}`),
 															p([
 																i,
 																ve(
-																	'expression'
+																	'expression',
 																),
 															]),
 															i,
@@ -32826,7 +32864,12 @@ ${P}`),
 													be.object &&
 														Se.push(ve('object')),
 													Se.push(
-														l(p([i, L(Ce, Be, ve)]))
+														l(
+															p([
+																i,
+																L(Ce, Be, ve),
+															]),
+														),
 													),
 													Se
 												)
@@ -32857,7 +32900,7 @@ ${P}`),
 													be.argument &&
 														Se.push(
 															' ',
-															ve('argument')
+															ve('argument'),
 														),
 													Se
 												)
@@ -32881,7 +32924,7 @@ ${P}`),
 																	Je.type ===
 																		'AwaitExpression' ||
 																	Je.type ===
-																		'BlockStatement'
+																		'BlockStatement',
 															)
 														if (
 															!Oe ||
@@ -32964,7 +33007,7 @@ ${P}`),
 																		p([
 																			n,
 																			ve(),
-																		])
+																		]),
 																  )
 														}, 'expressions'),
 														l(Oe)
@@ -32975,9 +33018,9 @@ ${P}`),
 														[',', n],
 														Ce.map(
 															ve,
-															'expressions'
-														)
-													)
+															'expressions',
+														),
+													),
 												)
 											}
 											case 'ThisExpression':
@@ -32992,7 +33035,7 @@ ${P}`),
 												return (
 													Se.push(be.operator),
 													/[a-z]$/.test(
-														be.operator
+														be.operator,
 													) && Se.push(' '),
 													E(be.argument)
 														? Se.push(
@@ -33001,15 +33044,15 @@ ${P}`),
 																	p([
 																		i,
 																		ve(
-																			'argument'
+																			'argument',
 																		),
 																	]),
 																	i,
 																	')',
-																])
+																]),
 														  )
 														: Se.push(
-																ve('argument')
+																ve('argument'),
 														  ),
 													Se
 												)
@@ -33017,7 +33060,7 @@ ${P}`),
 												return (
 													Se.push(
 														ve('argument'),
-														be.operator
+														be.operator,
 													),
 													be.prefix && Se.reverse(),
 													Se
@@ -33027,7 +33070,7 @@ ${P}`),
 											case 'VariableDeclaration': {
 												let Ie = Ce.map(
 														ve,
-														'declarations'
+														'declarations',
 													),
 													Oe = Ce.getParentNode(),
 													Je =
@@ -33038,7 +33081,7 @@ ${P}`),
 														Oe.type ===
 															'ForOfStatement',
 													Te = be.declarations.some(
-														(Me) => Me.init
+														(Me) => Me.init,
 													),
 													je
 												return (
@@ -33061,8 +33104,8 @@ ${P}`),
 																		? u
 																		: n,
 																	Me,
-																]
-															)
+																],
+															),
 														),
 													]),
 													(Je && Oe.body !== be) ||
@@ -33080,7 +33123,7 @@ ${P}`),
 											case 'IfStatement': {
 												let Ie = V(
 														be.consequent,
-														ve('consequent')
+														ve('consequent'),
 													),
 													Oe = l([
 														'if (',
@@ -33098,7 +33141,7 @@ ${P}`),
 															E(
 																be.consequent,
 																N.Trailing |
-																	N.Line
+																	N.Line,
 															) || $(be),
 														Te =
 															be.consequent
@@ -33109,7 +33152,7 @@ ${P}`),
 														E(be, N.Dangling) &&
 															Se.push(
 																t(Ce, Be, !0),
-																Je ? u : ' '
+																Je ? u : ' ',
 															),
 														Se.push(
 															'else',
@@ -33117,13 +33160,13 @@ ${P}`),
 																V(
 																	be.alternate,
 																	ve(
-																		'alternate'
+																		'alternate',
 																	),
 																	be.alternate
 																		.type ===
-																		'IfStatement'
-																)
-															)
+																		'IfStatement',
+																),
+															),
 														)
 												}
 												return Se
@@ -33144,17 +33187,17 @@ ${P}`),
 																	p([
 																		i,
 																		ve(
-																			'init'
+																			'init',
 																		),
 																		';',
 																		n,
 																		ve(
-																			'test'
+																			'test',
 																		),
 																		';',
 																		n,
 																		ve(
-																			'update'
+																			'update',
 																		),
 																	]),
 																	i,
@@ -33206,7 +33249,7 @@ ${P}`),
 															i,
 														]),
 														')',
-														Ye
+														Ye,
 													),
 													Se
 												)
@@ -33223,7 +33266,7 @@ ${P}`),
 													be.label &&
 														Se.push(
 															' ',
-															ve('label')
+															ve('label'),
 														),
 													Se.push(Ye),
 													Se
@@ -33234,7 +33277,7 @@ ${P}`),
 													be.label &&
 														Se.push(
 															' ',
-															ve('label')
+															ve('label'),
 														),
 													Se.push(Ye),
 													Se
@@ -33271,7 +33314,7 @@ ${P}`),
 																(Je.leading &&
 																	s(
 																		Be.originalText,
-																		d(Je)
+																		d(Je),
 																	)) ||
 																(Je.trailing &&
 																	s(
@@ -33280,8 +33323,8 @@ ${P}`),
 																		{
 																			backwards:
 																				!0,
-																		}
-																	))
+																		},
+																	)),
 														),
 														Oe = ve('param')
 													return [
@@ -33319,7 +33362,7 @@ ${P}`),
 																		(
 																			Ie,
 																			Oe,
-																			Je
+																			Je,
 																		) => {
 																			let Te =
 																				Ie.getValue()
@@ -33330,14 +33373,14 @@ ${P}`),
 																						1 &&
 																				P(
 																					Te,
-																					Be
+																					Be,
 																				)
 																					? u
 																					: '',
 																			]
 																		},
-																		'cases'
-																	)
+																		'cases',
+																	),
 																),
 														  ])
 														: '',
@@ -33349,18 +33392,18 @@ ${P}`),
 													? Se.push(
 															'case ',
 															ve('test'),
-															':'
+															':',
 													  )
 													: Se.push('default:'),
 													E(be, N.Dangling) &&
 														Se.push(
 															' ',
-															t(Ce, Be, !0)
+															t(Ce, Be, !0),
 														)
 												let Ie = be.consequent.filter(
 													(Oe) =>
 														Oe.type !==
-														'EmptyStatement'
+														'EmptyStatement',
 												)
 												if (Ie.length > 0) {
 													let Oe = pe(Ce, Be, ve)
@@ -33369,7 +33412,7 @@ ${P}`),
 															Ie[0].type ===
 																'BlockStatement'
 															? [' ', Oe]
-															: p([u, Oe])
+															: p([u, Oe]),
 													)
 												}
 												return Se
@@ -33426,7 +33469,7 @@ ${P}`),
 											default:
 												throw new Error(
 													'unknown type: ' +
-														JSON.stringify(be.type)
+														JSON.stringify(be.type),
 												)
 										}
 									}
@@ -33492,7 +33535,7 @@ ${P}`),
 														y.getValue() === null
 															? 'null'
 															: g(),
-													'elements'
+													'elements',
 												)
 												return [
 													'[',
@@ -33512,8 +33555,8 @@ ${P}`),
 																	[',', t],
 																	y.map(
 																		g,
-																		'properties'
-																	)
+																		'properties',
+																	),
 																),
 															]),
 															t,
@@ -33543,7 +33586,7 @@ ${P}`),
 											case 'NumericLiteral':
 												return i(y)
 													? JSON.stringify(
-															String(c.value)
+															String(c.value),
 													  )
 													: JSON.stringify(c.value)
 											case 'Identifier':
@@ -33554,12 +33597,12 @@ ${P}`),
 												return g(['quasis', 0])
 											case 'TemplateElement':
 												return JSON.stringify(
-													c.value.cooked
+													c.value.cooked,
 												)
 											default:
 												throw new Error(
 													'unknown type: ' +
-														JSON.stringify(c.type)
+														JSON.stringify(c.type),
 												)
 										}
 									}
@@ -33842,7 +33885,7 @@ ${P}`),
 							Ln = te({
 								'node_modules/linguist-languages/data/JavaScript.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'JavaScript',
@@ -33900,7 +33943,7 @@ ${P}`),
 							Sd = te({
 								'node_modules/linguist-languages/data/TypeScript.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'TypeScript',
@@ -33921,7 +33964,7 @@ ${P}`),
 							xd = te({
 								'node_modules/linguist-languages/data/TSX.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'TSX',
@@ -33940,7 +33983,7 @@ ${P}`),
 							wa = te({
 								'node_modules/linguist-languages/data/JSON.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'JSON',
@@ -33996,7 +34039,7 @@ ${P}`),
 							bd = te({
 								'node_modules/linguist-languages/data/JSON with Comments.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'JSON with Comments',
@@ -34046,7 +34089,7 @@ ${P}`),
 							Td = te({
 								'node_modules/linguist-languages/data/JSON5.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'JSON5',
@@ -34093,7 +34136,7 @@ ${P}`),
 												],
 												extensions: [
 													...p.extensions.filter(
-														(y) => y !== '.jsx'
+														(y) => y !== '.jsx',
 													),
 													'.wxs',
 												],
@@ -34172,7 +34215,7 @@ ${P}`),
 												parsers: ['json'],
 												vscodeLanguageIds: ['json'],
 												extensions: p.extensions.filter(
-													(y) => y !== '.jsonl'
+													(y) => y !== '.jsonl',
 												),
 											})),
 											t(bd(), (p) => ({
@@ -34228,7 +34271,7 @@ ${P}`),
 														p.nodes[1] === i)) &&
 													(delete l.text,
 													/^\*\s*@(?:format|prettier)\s*$/.test(
-														i.text
+														i.text,
 													))) ||
 													(p.type === 'css-root' &&
 														s(p.nodes) === i)))
@@ -34247,12 +34290,12 @@ ${P}`),
 											i.type === 'selector-combinator' &&
 												(l.value = l.value.replace(
 													/\s+/g,
-													' '
+													' ',
 												)),
 											i.type === 'media-feature' &&
 												(l.value = l.value.replace(
 													/ /g,
-													''
+													'',
 												)),
 											((i.type === 'value-word' &&
 												((i.isColor && i.isHex) ||
@@ -34264,7 +34307,7 @@ ${P}`),
 													].includes(
 														l.value
 															.replace()
-															.toLowerCase()
+															.toLowerCase(),
 													))) ||
 												i.type === 'media-feature' ||
 												i.type ===
@@ -34309,7 +34352,7 @@ ${P}`),
 														.trim()
 														.replace(
 															/^["']|["']$/g,
-															''
+															'',
 														)),
 													delete l.quoted)),
 											(i.type === 'media-value' ||
@@ -34330,7 +34373,7 @@ ${P}`),
 															? y
 															: c +
 																	g.toLowerCase()
-													}
+													},
 												)),
 											i.type === 'selector-tag')
 										) {
@@ -34350,7 +34393,7 @@ ${P}`),
 											let y = i.groups.findIndex(
 												(h) =>
 													h.type === 'value-number' &&
-													h.unit === '...'
+													h.unit === '...',
 											)
 											y !== -1 &&
 												((l.groups[y].unit = ''),
@@ -34368,10 +34411,12 @@ ${P}`),
 													(y.type ===
 														'value-atword' &&
 														y.value.endsWith(
-															'['
+															'[',
 														)) ||
 													(y.type === 'value-word' &&
-														y.value.startsWith(']'))
+														y.value.startsWith(
+															']',
+														)),
 											)
 										)
 											return {
@@ -34416,7 +34461,7 @@ ${P}`),
 															{
 																stripTrailingHardline:
 																	!0,
-															}
+															},
 													  )
 													: ''
 											return s([
@@ -34455,7 +34500,7 @@ ${P}`),
 									ne()
 									var t = new RegExp(
 										'^(?<startDelimiter>-{3}|\\+{3})(?<language>[^\\n]*)\\n(?:|(?<value>.*?)\\n)(?<endDelimiter>\\k<startDelimiter>|\\.{3})[^\\S\\n]*(?:\\n|$)',
-										's'
+										's',
 									)
 									function s(a) {
 										let n = a.match(t)
@@ -34588,7 +34633,7 @@ ${P}`),
 												.toLowerCase()
 												.endsWith('keyframes') &&
 											['from', 'to'].includes(
-												U.toLowerCase()
+												U.toLowerCase(),
 											)
 										)
 									}
@@ -34671,7 +34716,7 @@ ${P}`),
 													/^@.+:.*$/.test(U)) ||
 													(U.value &&
 														/^@.+:.*$/.test(
-															U.value
+															U.value,
 														))
 											: !1
 									}
@@ -34679,7 +34724,7 @@ ${P}`),
 										return (
 											z.type === 'value-word' &&
 											['from', 'through', 'end'].includes(
-												z.value
+												z.value,
 											)
 										)
 									}
@@ -34687,7 +34732,7 @@ ${P}`),
 										return (
 											z.type === 'value-word' &&
 											['and', 'or', 'not'].includes(
-												z.value
+												z.value,
 											)
 										)
 									}
@@ -34742,7 +34787,7 @@ ${P}`),
 										return (
 											z.type === 'value-word' &&
 											['<', '>', '<=', '>='].includes(
-												z.value
+												z.value,
 											)
 										)
 									}
@@ -34770,12 +34815,12 @@ ${P}`),
 									}
 									function v(z) {
 										return z.name.startsWith(
-											'prettier-placeholder'
+											'prettier-placeholder',
 										)
 									}
 									function S(z) {
 										return z.prop.startsWith(
-											'@prettier-placeholder'
+											'@prettier-placeholder',
 										)
 									}
 									function b(z, U) {
@@ -34907,7 +34952,7 @@ ${P}`),
 										return (
 											z.value &&
 											['not', 'and', 'or'].includes(
-												z.value.toLowerCase()
+												z.value.toLowerCase(),
 											)
 										)
 									}
@@ -34918,14 +34963,14 @@ ${P}`),
 									}
 									function K(z) {
 										return /\/\//.test(
-											z.split(/[\n\r]/).pop()
+											z.split(/[\n\r]/).pop(),
 										)
 									}
 									function de(z) {
 										return (
 											z?.type === 'value-atword' &&
 											z.value.startsWith(
-												'prettier-placeholder-'
+												'prettier-placeholder-',
 											)
 										)
 									}
@@ -34943,7 +34988,7 @@ ${P}`),
 											z.groups.some(
 												(fe) =>
 													fe.type !==
-													'value-comma_group'
+													'value-comma_group',
 											)
 										)
 											return !1
@@ -35035,7 +35080,7 @@ ${P}`),
 													s.indexOf(
 														`
 `,
-														a
+														a,
 													) + 1
 											return a + t.column
 										})
@@ -35086,7 +35131,7 @@ ${P}`),
 													? l(
 															_,
 															p(c),
-															_.text || _.value
+															_.text || _.value,
 													  )
 													: i(_, f))
 										}
@@ -35115,7 +35160,7 @@ ${P}`),
 													1 +
 													c.name.length +
 													c.raws.afterName.match(
-														/^\s*:?\s*/
+														/^\s*:?\s*/,
 													)[0].length),
 											c.type !== 'css-atrule' &&
 												c.raws &&
@@ -35261,7 +35306,7 @@ ${P}`),
 							Ld = te({
 								'src/language-css/utils/is-less-parser.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -35282,7 +35327,7 @@ ${P}`),
 										return s === 'less' || s === 'scss'
 											? s === 'scss'
 											: /(?:\w\s*:\s*[^:}]+|#){|@import[^\n]+(?:url|,)/.test(
-													a
+													a,
 											  )
 									}
 									r.exports = t
@@ -35291,7 +35336,7 @@ ${P}`),
 							jd = te({
 								'src/language-css/utils/css-units.evaluate.js'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										em: 'em',
@@ -35361,7 +35406,7 @@ ${P}`),
 										let n = a.toLowerCase()
 										return Object.prototype.hasOwnProperty.call(
 											t,
-											n
+											n,
 										)
 											? t[n]
 											: a
@@ -35490,7 +35535,7 @@ ${P}`),
 														ae.raws.inline,
 													We = je.originalText.slice(
 														Ae(ae),
-														Ee(ae)
+														Ee(ae),
 													)
 												return Ve ? We.trimEnd() : We
 											}
@@ -35508,7 +35553,7 @@ ${P}`),
 																	'selector-unknown' &&
 																H(
 																	ae.selector
-																		.value
+																		.value,
 																)
 																	? y
 																	: ' ',
@@ -35520,7 +35565,7 @@ ${P}`),
 																			Ce(
 																				Te,
 																				je,
-																				Me
+																				Me,
 																			),
 																	  ])
 																	: '',
@@ -35547,7 +35592,7 @@ ${P}`),
 													[
 														ae.raws.before.replace(
 															/[\s;]/g,
-															''
+															'',
 														),
 														(Ve.type ===
 															'css-atrule' &&
@@ -35566,7 +35611,7 @@ ${P}`),
 															? [
 																	'extend(',
 																	Me(
-																		'selector'
+																		'selector',
 																	),
 																	')',
 															  ]
@@ -35575,7 +35620,7 @@ ${P}`),
 														ae.raws.important
 															? ae.raws.important.replace(
 																	/\s*!\s*important/i,
-																	' !important'
+																	' !important',
 															  )
 															: ae.important
 															? ' !important'
@@ -35583,7 +35628,7 @@ ${P}`),
 														ae.raws.scssDefault
 															? ae.raws.scssDefault.replace(
 																	/\s*!default/i,
-																	' !default'
+																	' !default',
 															  )
 															: ae.scssDefault
 															? ' !default'
@@ -35591,7 +35636,7 @@ ${P}`),
 														ae.raws.scssGlobal
 															? ae.raws.scssGlobal.replace(
 																	/\s*!global/i,
-																	' !global'
+																	' !global',
 															  )
 															: ae.scssGlobal
 															? ' !global'
@@ -35604,7 +35649,7 @@ ${P}`),
 																		Ce(
 																			Te,
 																			je,
-																			Me
+																			Me,
 																		),
 																	]),
 																	g,
@@ -35672,7 +35717,7 @@ ${P}`),
 																			Ce(
 																				Te,
 																				je,
-																				Me
+																				Me,
 																			),
 																		]),
 																		g,
@@ -35698,19 +35743,19 @@ ${P}`),
 																	  ''
 																		? ''
 																		: ae.name.endsWith(
-																				':'
+																				':',
 																		  )
 																		? ' '
 																		: /^\s*\n\s*\n/.test(
 																				ae
 																					.raws
-																					.afterName
+																					.afterName,
 																		  )
 																		? [h, h]
 																		: /^\s*\n/.test(
 																				ae
 																					.raws
-																					.afterName
+																					.afterName,
 																		  )
 																		? h
 																		: ' '
@@ -35752,13 +35797,13 @@ ${P}`),
 																			H(
 																				ae
 																					.selector
-																					.value
+																					.value,
 																			)) ||
 																	  (!ae.selector &&
 																			typeof ae.params ==
 																				'string' &&
 																			H(
-																				ae.params
+																				ae.params,
 																			))
 																	? y
 																	: ' ',
@@ -35772,7 +35817,7 @@ ${P}`),
 																	Ce(
 																		Te,
 																		je,
-																		Me
+																		Me,
 																	),
 																]),
 																g,
@@ -35809,7 +35854,7 @@ ${P}`),
 															'(',
 															...Te.map(
 																Me,
-																'nodes'
+																'nodes',
 															),
 															')',
 													  ]
@@ -35819,10 +35864,10 @@ ${P}`),
 													Se(
 														ae.value.replace(
 															/ +/g,
-															' '
+															' ',
 														),
-														je
-													)
+														je,
+													),
 												)
 											case 'media-colon':
 												return [ae.value, ' ']
@@ -35835,13 +35880,13 @@ ${P}`),
 													ae.value
 														.replace(
 															/^url\(\s+/gi,
-															'url('
+															'url(',
 														)
 														.replace(
 															/\s+\)$/g,
-															')'
+															')',
 														),
-													je
+													je,
 												)
 											case 'media-unknown':
 												return ae.value
@@ -35851,7 +35896,7 @@ ${P}`),
 														? [
 																D(
 																	Te,
-																	'css-atrule'
+																	'css-atrule',
 																)
 																	.customSelector,
 																y,
@@ -35868,7 +35913,7 @@ ${P}`),
 																? y
 																: h,
 														],
-														Te.map(Me, 'nodes')
+														Te.map(Me, 'nodes'),
 													),
 												])
 											case 'selector-selector':
@@ -35899,7 +35944,7 @@ ${P}`),
 														: Oe(
 																S(Te, ae.value)
 																	? ae.value.toLowerCase()
-																	: ae.value
+																	: ae.value,
 														  ),
 												]
 											}
@@ -35932,9 +35977,9 @@ ${P}`),
 														? Ie(
 																Se(
 																	ae.value.trim(),
-																	je
+																	je,
 																),
-																je
+																je,
 														  )
 														: '',
 													ae.insensitive ? ' i' : '',
@@ -35968,8 +36013,8 @@ ${P}`),
 														Oe(
 															Se(
 																ae.value.trim(),
-																je
-															)
+																je,
+															),
 														) || y
 												return [Ve, We]
 											}
@@ -36001,8 +36046,8 @@ ${P}`),
 																		],
 																		Te.map(
 																			Me,
-																			'nodes'
-																		)
+																			'nodes',
+																		),
 																	),
 																]),
 																g,
@@ -36019,7 +36064,7 @@ ${P}`),
 													Ve.isSCSSNesterProperty
 												)
 													return Oe(
-														Se(m(ae.value), je)
+														Se(m(ae.value), je),
 													)
 												let We = Te.getParentNode()
 												if (
@@ -36058,7 +36103,7 @@ ${P}`),
 											case 'value-comment':
 												return je.originalText.slice(
 													Ae(ae),
-													Ee(ae)
+													Ee(ae),
 												)
 											case 'value-comma_group': {
 												let Ve = Te.getParentNode(),
@@ -36070,12 +36115,12 @@ ${P}`),
 															'value-value' &&
 														(Xe === 'grid' ||
 															Xe.startsWith(
-																'grid-template'
+																'grid-template',
 															)),
 													O = D(Te, 'css-atrule'),
 													me = O && k(O),
 													_e = ae.groups.some((at) =>
-														ge(at)
+														ge(at),
 													),
 													He = Te.map(Me, 'groups'),
 													Ge = [],
@@ -36115,7 +36160,7 @@ ${P}`),
 														(Le.type ===
 															'value-word' &&
 															Le.value.endsWith(
-																'-'
+																'-',
 															) &&
 															pe($e))
 													)
@@ -36127,11 +36172,11 @@ ${P}`),
 													) {
 														let $r =
 																Le.value.lastIndexOf(
-																	'#{'
+																	'#{',
 																),
 															Vr =
 																Le.value.lastIndexOf(
-																	'}'
+																	'}',
 																)
 														$r !== -1 && Vr !== -1
 															? (Qe = $r > Vr)
@@ -36148,17 +36193,17 @@ ${P}`),
 															'value-atword' &&
 															(Le.value === '' ||
 																Le.value.endsWith(
-																	'['
+																	'[',
 																))) ||
 														($e.type ===
 															'value-word' &&
 															$e.value.startsWith(
-																']'
+																']',
 															)) ||
 														Le.value === '~' ||
 														(Le.value &&
 															Le.value.includes(
-																'\\'
+																'\\',
 															) &&
 															$e &&
 															$e.type !==
@@ -36166,7 +36211,7 @@ ${P}`),
 														(Ze &&
 															Ze.value &&
 															Ze.value.indexOf(
-																'\\'
+																'\\',
 															) ===
 																Ze.value
 																	.length -
@@ -36244,7 +36289,7 @@ ${P}`),
 																	(!Ze ||
 																		(Ze &&
 																			j(
-																				Ze
+																				Ze,
 																			)))))
 														) &&
 														!(
@@ -36342,7 +36387,7 @@ ${P}`),
 																null &&
 																tt !== void 0 &&
 																tt.endsWith(
-																	'#'
+																	'#',
 																) &&
 																$e.value ===
 																	'{' &&
@@ -36378,7 +36423,7 @@ ${P}`),
 																.type ===
 																'value-word' &&
 															ae.groups[0].groups[0].value.startsWith(
-																'data:'
+																'data:',
 															)))
 												)
 													return [
@@ -36387,7 +36432,10 @@ ${P}`),
 															: '',
 														p(
 															',',
-															Te.map(Me, 'groups')
+															Te.map(
+																Me,
+																'groups',
+															),
 														),
 														ae.close
 															? Me('close')
@@ -36396,7 +36444,7 @@ ${P}`),
 												if (!ae.open) {
 													let it = Te.map(
 															Me,
-															'groups'
+															'groups',
 														),
 														Qe = []
 													for (
@@ -36431,7 +36479,7 @@ ${P}`),
 																	Te.map(
 																		(
 																			it,
-																			Qe
+																			Qe,
 																		) => {
 																			let rt =
 																					it.getValue(),
@@ -36450,7 +36498,7 @@ ${P}`),
 																					]
 																			if (
 																				ue(
-																					rt
+																					rt,
 																				) &&
 																				rt.type ===
 																					'value-comma_group' &&
@@ -36470,18 +36518,18 @@ ${P}`),
 																					x(
 																						Ze[0]
 																							.contents
-																							.contents
+																							.contents,
 																					)
 																				;(Le[1] =
 																					c(
-																						Le[1]
+																						Le[1],
 																					)),
 																					(Ze =
 																						[
 																							c(
 																								_(
-																									Ze
-																								)
+																									Ze,
+																								),
 																							),
 																						])
 																			}
@@ -36490,12 +36538,12 @@ ${P}`),
 																				rt.type ===
 																					'value-comma_group' &&
 																				l(
-																					rt.groups
+																					rt.groups,
 																				)
 																			) {
 																				let Le =
 																					t(
-																						rt.groups
+																						rt.groups,
 																					)
 																				!Le.source &&
 																					Le.close &&
@@ -36505,35 +36553,35 @@ ${P}`),
 																						i(
 																							je.originalText,
 																							Le,
-																							Ee
+																							Ee,
 																						) &&
 																						Ze.push(
-																							h
+																							h,
 																						)
 																			}
 																			return Ze
 																		},
-																		'groups'
-																	)
+																		'groups',
+																	),
 																),
 															]),
 															w(
 																!st &&
 																	A(
 																		je.parser,
-																		je.originalText
+																		je.originalText,
 																	) &&
 																	We &&
 																	re(je)
 																	? ','
-																	: ''
+																	: '',
 															),
 															g,
 															ae.close
 																? Me('close')
 																: '',
 														],
-														{ shouldBreak: _e }
+														{ shouldBreak: _e },
 													)
 												return He ? _(Ge) : Ge
 											}
@@ -36584,7 +36632,7 @@ ${P}`),
 													ae.raws.quote +
 														ae.value +
 														ae.raws.quote,
-													je
+													je,
 												)
 											case 'value-atword':
 												return ['@', ae.value]
@@ -36595,8 +36643,8 @@ ${P}`),
 											default:
 												throw new Error(
 													`Unknown postcss type ${JSON.stringify(
-														ae.type
-													)}`
+														ae.type,
+													)}`,
 												)
 										}
 									}
@@ -36615,8 +36663,8 @@ ${P}`),
 													ae.push(
 														je.originalText.slice(
 															Ae(Xe),
-															Ee(Xe)
-														)
+															Ee(Xe),
+														),
 													)
 												} else ae.push(Me())
 												tt !== Ve.length - 1 &&
@@ -36625,7 +36673,7 @@ ${P}`),
 														!n(
 															je.originalText,
 															Ae(Ve[tt + 1]),
-															{ backwards: !0 }
+															{ backwards: !0 },
 														) &&
 														!u(Ve[tt])) ||
 													(Ve[tt + 1].type ===
@@ -36638,12 +36686,12 @@ ${P}`),
 														: (ae.push(
 																je.__isHTMLStyleAttribute
 																	? y
-																	: h
+																	: h,
 														  ),
 														  i(
 																je.originalText,
 																nt.getValue(),
-																Ee
+																Ee,
 														  ) &&
 																!u(Ve[tt]) &&
 																ae.push(h)))
@@ -36660,7 +36708,7 @@ ${P}`),
 										Ye = new RegExp(
 											Be.source +
 												`|(${be.source})?(${ve.source})(${ze.source})?`,
-											'g'
+											'g',
 										)
 									function Se(Te, je) {
 										return Te.replace(Be, (Me) => a(Me, je))
@@ -36678,7 +36726,7 @@ ${P}`),
 											(je, Me, ae, nt, tt) =>
 												!ae && nt
 													? Je(nt) + m(tt || '')
-													: je
+													: je,
 										)
 									}
 									function Je(Te) {
@@ -36708,7 +36756,7 @@ ${P}`),
 							Vd = te({
 								'node_modules/linguist-languages/data/CSS.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'CSS',
@@ -36726,7 +36774,7 @@ ${P}`),
 							Wd = te({
 								'node_modules/linguist-languages/data/PostCSS.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'PostCSS',
@@ -36743,7 +36791,7 @@ ${P}`),
 							Hd = te({
 								'node_modules/linguist-languages/data/Less.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'Less',
@@ -36762,7 +36810,7 @@ ${P}`),
 							Gd = te({
 								'node_modules/linguist-languages/data/SCSS.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'SCSS',
@@ -36843,7 +36891,7 @@ ${P}`),
 											if (!n) return null
 											a.chars = n.replace(
 												/[\t\n\f\r ]+/g,
-												' '
+												' ',
 											)
 										}
 										s.type === 'AttrNode' &&
@@ -36860,7 +36908,7 @@ ${P}`),
 							Xd = te({
 								'src/language-handlebars/html-void-elements.evaluate.js'(
 									e,
-									r
+									r,
 								) {
 									r.exports = [
 										'area',
@@ -37009,7 +37057,7 @@ ${P}`),
 							Yd = te({
 								'src/language-handlebars/printer-glimmer.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -37055,7 +37103,7 @@ ${P}`),
 										if (x(H))
 											return pe.originalText.slice(
 												F(le),
-												_(le)
+												_(le),
 											)
 										let Ae = pe.singleQuote ? "'" : '"'
 										switch (le.type) {
@@ -37108,7 +37156,7 @@ ${P}`),
 																Ee.inverse
 																	.body[0]
 																	.path
-																	.parts[0]
+																	.parts[0],
 															),
 															de(H, X, pe),
 															ue(H, X, pe),
@@ -37156,14 +37204,14 @@ ${P}`),
 																	.filter(
 																		(re) =>
 																			re.type ===
-																			'TextNode'
+																			'TextNode',
 																	)
 																	.map(
 																		(re) =>
-																			re.chars
+																			re.chars,
 																	)
 																	.join(''),
-																Ae
+																Ae,
 														  ).quote
 														: '',
 													G = X('value')
@@ -37186,7 +37234,7 @@ ${P}`),
 											case 'TextNode': {
 												let Ee = le.chars.replace(
 														/{{/g,
-														'\\{{'
+														'\\{{',
 													),
 													De = U(H)
 												if (De) {
@@ -37204,14 +37252,14 @@ ${P}`),
 																	'MustacheStatement',
 																]) &&
 																	/^\s/.test(
-																		Ee
+																		Ee,
 																	) &&
 																	(Se = !0),
 																P(H, [
 																	'MustacheStatement',
 																]) &&
 																	/\s$/.test(
-																		Ee
+																		Ee,
 																	) &&
 																	Ye !== '' &&
 																	(Ie = !0)),
@@ -37225,7 +37273,7 @@ ${P}`),
 													return g(Ee)
 												}
 												let G = /^[\t\n\f\r ]*$/.test(
-														Ee
+														Ee,
 													),
 													re = !N(H),
 													ye = !E(H)
@@ -37250,7 +37298,7 @@ ${P}`),
 															I(H) &&
 																(ae = ae.map(
 																	(tt) =>
-																		t(tt)
+																		t(tt),
 																)),
 															ae
 														)
@@ -37264,7 +37312,7 @@ ${P}`),
 														ae && (je = ge(ae)),
 															(Ee = Ee.replace(
 																Ye,
-																''
+																'',
 															))
 													}
 													let Me = []
@@ -37277,11 +37325,11 @@ ${P}`),
 																	(Me =
 																		Me.map(
 																			(
-																				nt
+																				nt,
 																			) =>
 																				t(
-																					nt
-																				)
+																					nt,
+																				),
 																		))
 														}
 														Ee = Ee.replace(Se, '')
@@ -37314,7 +37362,7 @@ ${P}`),
 													  ]) &&
 															(ve = Math.max(
 																ve,
-																1
+																1,
 															)),
 													  T(H, [
 															'BlockStatement',
@@ -37322,7 +37370,7 @@ ${P}`),
 													  ]) &&
 															(Be = Math.max(
 																Be,
-																1
+																1,
 															)))
 												let ze = '',
 													be = ''
@@ -37341,10 +37389,10 @@ ${P}`),
 													ye && ((ve = 0), (be = '')),
 													(Ee = Ee.replace(
 														/^[\t\n\f\r ]+/g,
-														ze
+														ze,
 													).replace(
 														/[\t\n\f\r ]+$/,
-														be
+														be,
 													)),
 													[
 														...ge(Be),
@@ -37358,11 +37406,11 @@ ${P}`),
 													De = _(le),
 													A =
 														pe.originalText.charAt(
-															Ee + 2
+															Ee + 2,
 														) === '~',
 													G =
 														pe.originalText.charAt(
-															De - 3
+															De - 3,
 														) === '~',
 													re = le.value.includes('}}')
 														? '--'
@@ -37402,7 +37450,7 @@ ${P}`),
 											default:
 												throw new Error(
 													'unknown glimmer type: ' +
-														JSON.stringify(le.type)
+														JSON.stringify(le.type),
 												)
 										}
 									}
@@ -37422,7 +37470,7 @@ ${P}`),
 										for (let Ee of le)
 											H.each((De) => {
 												let A = Ae.indexOf(
-													De.getValue()
+													De.getValue(),
 												)
 												Ae.splice(A, 1, [p, pe()])
 											}, Ee)
@@ -37434,7 +37482,7 @@ ${P}`),
 									}
 									function b(H, pe, X) {
 										let Ae = H.getValue().children.every(
-											(Ee) => C(Ee)
+											(Ee) => C(Ee),
 										)
 										return pe.htmlWhitespaceSensitivity ===
 											'ignore' && Ae
@@ -37717,7 +37765,7 @@ ${P}`),
 							Zd = te({
 								'node_modules/linguist-languages/data/Handlebars.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'Handlebars',
@@ -37761,7 +37809,7 @@ ${P}`),
 									ne()
 									function t(a) {
 										return /^\s*#[^\S\n]*@(?:format|prettier)\s*(?:\n|$)/.test(
-											a
+											a,
 										)
 									}
 									function s(a) {
@@ -37797,7 +37845,7 @@ ${P}`),
 							ng = te({
 								'src/language-graphql/printer-graphql.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -37834,7 +37882,7 @@ ${P}`),
 																p(
 																	$.originalText,
 																	C.getValue(),
-																	c
+																	c,
 																) && m.push(s))
 													}, 'definitions'),
 													[...m, s]
@@ -37864,14 +37912,14 @@ ${P}`),
 																		[
 																			l(
 																				'',
-																				', '
+																				', ',
 																			),
 																			n,
 																		],
 																		P.map(
 																			D,
-																			'variableDefinitions'
-																		)
+																			'variableDefinitions',
+																		),
 																	),
 																]),
 																n,
@@ -37900,14 +37948,14 @@ ${P}`),
 																		[
 																			l(
 																				'',
-																				', '
+																				', ',
 																			),
 																			n,
 																		],
 																		P.map(
 																			D,
-																			'variableDefinitions'
-																		)
+																			'variableDefinitions',
+																		),
 																	),
 																]),
 																n,
@@ -37931,8 +37979,8 @@ ${P}`),
 																P,
 																$,
 																D,
-																'selections'
-															)
+																'selections',
+															),
 														),
 													]),
 													s,
@@ -37953,7 +38001,7 @@ ${P}`),
 																		[
 																			l(
 																				'',
-																				', '
+																				', ',
 																			),
 																			n,
 																		],
@@ -37961,8 +38009,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'arguments'
-																		)
+																			'arguments',
+																		),
 																	),
 																]),
 																n,
@@ -37979,7 +38027,7 @@ ${P}`),
 												if (T.block) {
 													let m = T.value.replace(
 														/"""/g,
-														'\\$&'
+														'\\$&',
 													).split(`
 `)
 													return (
@@ -37987,7 +38035,7 @@ ${P}`),
 															(m[0] =
 																m[0].trim()),
 														m.every(
-															(C) => C === ''
+															(C) => C === '',
 														) && (m.length = 0),
 														t(s, [
 															'"""',
@@ -38001,7 +38049,7 @@ ${P}`),
 													T.value
 														.replace(
 															/["\\]/g,
-															'\\$&'
+															'\\$&',
 														)
 														.replace(/\n/g, '\\n'),
 													'"',
@@ -38026,7 +38074,7 @@ ${P}`),
 														n,
 														t(
 															[l('', ', '), n],
-															P.map(D, 'values')
+															P.map(D, 'values'),
 														),
 													]),
 													n,
@@ -38043,7 +38091,7 @@ ${P}`),
 														n,
 														t(
 															[l('', ', '), n],
-															P.map(D, 'fields')
+															P.map(D, 'fields'),
 														),
 													]),
 													n,
@@ -38052,7 +38100,7 @@ ${P}`),
 														$.bracketSpacing &&
 															T.fields.length > 0
 															? ' '
-															: ''
+															: '',
 													),
 													'}',
 												])
@@ -38076,7 +38124,7 @@ ${P}`),
 																		[
 																			l(
 																				'',
-																				', '
+																				', ',
 																			),
 																			n,
 																		],
@@ -38084,8 +38132,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'arguments'
-																		)
+																			'arguments',
+																		),
 																	),
 																]),
 																n,
@@ -38104,7 +38152,7 @@ ${P}`),
 														? [
 																' = ',
 																D(
-																	'defaultValue'
+																	'defaultValue',
 																),
 														  ]
 														: '',
@@ -38139,8 +38187,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'fields'
-																		)
+																			'fields',
+																		),
 																	),
 																]),
 																s,
@@ -38162,7 +38210,7 @@ ${P}`),
 																		[
 																			l(
 																				'',
-																				', '
+																				', ',
 																			),
 																			n,
 																		],
@@ -38170,8 +38218,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'arguments'
-																		)
+																			'arguments',
+																		),
 																	),
 																]),
 																n,
@@ -38198,7 +38246,7 @@ ${P}`),
 																		[
 																			l(
 																				'',
-																				', '
+																				', ',
 																			),
 																			n,
 																		],
@@ -38206,8 +38254,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'arguments'
-																		)
+																			'arguments',
+																		),
 																	),
 																]),
 																n,
@@ -38220,7 +38268,7 @@ ${P}`),
 													' on ',
 													t(
 														' | ',
-														P.map(D, 'locations')
+														P.map(D, 'locations'),
 													),
 												]
 											case 'EnumTypeExtension':
@@ -38246,8 +38294,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'values'
-																		)
+																			'values',
+																		),
 																	),
 																]),
 																s,
@@ -38277,7 +38325,7 @@ ${P}`),
 														? [
 																' = ',
 																D(
-																	'defaultValue'
+																	'defaultValue',
 																),
 														  ]
 														: '',
@@ -38306,8 +38354,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'fields'
-																		)
+																			'fields',
+																		),
 																	),
 																]),
 																s,
@@ -38331,8 +38379,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'operationTypes'
-																		)
+																			'operationTypes',
+																		),
 																	),
 																]),
 																s,
@@ -38356,8 +38404,8 @@ ${P}`),
 																		P,
 																		$,
 																		D,
-																		'operationTypes'
-																	)
+																		'operationTypes',
+																	),
 																),
 														  ])
 														: '',
@@ -38399,8 +38447,8 @@ ${P}`),
 																			P,
 																			$,
 																			D,
-																			'fields'
-																		)
+																			'fields',
+																		),
 																	),
 																]),
 																s,
@@ -38421,7 +38469,7 @@ ${P}`),
 														? [
 																' on ',
 																D(
-																	'typeCondition'
+																	'typeCondition',
 																),
 														  ]
 														: '',
@@ -38458,8 +38506,8 @@ ${P}`),
 																			],
 																			P.map(
 																				D,
-																				'types'
-																			)
+																				'types',
+																			),
 																		),
 																	]),
 															  ]
@@ -38486,7 +38534,7 @@ ${P}`),
 											default:
 												throw new Error(
 													'unknown graphql type: ' +
-														JSON.stringify(T.kind)
+														JSON.stringify(T.kind),
 												)
 										}
 									}
@@ -38506,7 +38554,7 @@ ${P}`),
 												p(
 													$.originalText,
 													m.getValue(),
-													c
+													c,
 												)
 												? [d, s]
 												: d
@@ -38521,7 +38569,7 @@ ${P}`),
 											return '#' + $.value.trimEnd()
 										throw new Error(
 											'Not a comment: ' +
-												JSON.stringify($)
+												JSON.stringify($),
 										)
 									}
 									function N(P, $, D) {
@@ -38536,7 +38584,7 @@ ${P}`),
 											if (S) {
 												let b = $.originalText.slice(
 														v.loc.end,
-														S.loc.start
+														S.loc.start,
 													),
 													B = b.includes('#'),
 													k = b
@@ -38544,7 +38592,7 @@ ${P}`),
 														.trim()
 												m.push(
 													k === ',' ? ',' : ' &',
-													B ? a : ' '
+													B ? a : ' ',
 												)
 											}
 										}
@@ -38571,7 +38619,7 @@ ${P}`),
 											: $.some(
 													(T) =>
 														T.value.trim() ===
-														'prettier-ignore'
+														'prettier-ignore',
 											  )
 									}
 									r.exports = {
@@ -38602,7 +38650,7 @@ ${P}`),
 							ig = te({
 								'node_modules/linguist-languages/data/GraphQL.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'GraphQL',
@@ -38646,7 +38694,7 @@ ${P}`),
 							Po = te({
 								'node_modules/collapse-white-space/index.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne(), (r.exports = t)
@@ -38671,7 +38719,7 @@ ${P}`),
 							og = te({
 								'src/language-markdown/constants.evaluate.js'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										cjkPattern:
@@ -38735,9 +38783,9 @@ ${P}`),
 															new RegExp(
 																`(${n})
 (${n})`,
-																'g'
+																'g',
 															),
-															'$1$2'
+															'$1$2',
 													  )
 											).split(/([\t\n ]+)/)
 										for (let [C, o] of T.entries()) {
@@ -38758,7 +38806,7 @@ ${P}`),
 											)
 												continue
 											let d = o.split(
-												new RegExp(`(${n})`)
+												new RegExp(`(${n})`),
 											)
 											for (let [v, S] of d.entries())
 												if (
@@ -38777,11 +38825,11 @@ ${P}`),
 																kind: x,
 																hasLeadingPunctuation:
 																	h.test(
-																		S[0]
+																		S[0],
 																	),
 																hasTrailingPunctuation:
 																	h.test(
-																		t(S)
+																		t(S),
 																	),
 															})
 														continue
@@ -38801,7 +38849,7 @@ ${P}`),
 																	type: 'word',
 																	value: S,
 																	kind: y.test(
-																		S
+																		S,
 																	)
 																		? P
 																		: I,
@@ -38809,7 +38857,7 @@ ${P}`),
 																		!1,
 																	hasTrailingPunctuation:
 																		!1,
-															  }
+															  },
 													)
 												}
 										}
@@ -38831,7 +38879,9 @@ ${P}`),
 													: !d(x, $) &&
 													  ![o.value, C.value].some(
 															(v) =>
-																/\u3000/.test(v)
+																/\u3000/.test(
+																	v,
+																),
 													  ) &&
 													  D.push({
 															type: 'whitespace',
@@ -38851,7 +38901,7 @@ ${P}`),
 									function c(E, N) {
 										let [, x, I, P] = N.slice(
 											E.position.start.offset,
-											E.position.end.offset
+											E.position.end.offset,
 										).match(/^\s*(\d+)(\.|\))(\s*)/)
 										return {
 											numberText: x,
@@ -38864,16 +38914,16 @@ ${P}`),
 											return !1
 										let x = Number(
 												c(E.children[0], N.originalText)
-													.numberText
+													.numberText,
 											),
 											I = Number(
 												c(E.children[1], N.originalText)
-													.numberText
+													.numberText,
 											)
 										if (x === 0 && E.children.length > 2) {
 											let P = Number(
 												c(E.children[2], N.originalText)
-													.numberText
+													.numberText,
 											)
 											return I === 1 && P === 1
 										}
@@ -38894,13 +38944,13 @@ ${P}`),
 										return (function x(I, P, $) {
 											let D = Object.assign(
 												{},
-												N(I, P, $)
+												N(I, P, $),
 											)
 											return (
 												D.children &&
 													(D.children =
 														D.children.map((T, m) =>
-															x(T, m, [D, ...$])
+															x(T, m, [D, ...$]),
 														)),
 												D
 											)
@@ -38959,8 +39009,8 @@ ${P}`),
 													w = _.repeat(
 														Math.max(
 															3,
-															s(f.value, _) + 1
-														)
+															s(f.value, _) + 1,
+														),
 													),
 													E = { parser: F }
 												f.lang === 'tsx' &&
@@ -38971,7 +39021,7 @@ ${P}`),
 													{
 														stripTrailingHardline:
 															!0,
-													}
+													},
 												)
 												return n([
 													w,
@@ -38995,7 +39045,7 @@ ${P}`),
 														{
 															stripTrailingHardline:
 																!0,
-														}
+														},
 													),
 													a,
 												]
@@ -39009,7 +39059,7 @@ ${P}`),
 													{
 														stripTrailingHardline:
 															!0,
-													}
+													},
 												)
 										}
 										return null
@@ -39037,7 +39087,7 @@ ${P}`),
 )[\\s\\S]*
 .*-->`,
 												].join('|'),
-												'm'
+												'm',
 											)
 										return n.match(i)?.index === 0
 									}
@@ -39064,7 +39114,7 @@ ${u.content}`
 							cg = te({
 								'src/language-markdown/print-preprocess.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -39096,8 +39146,10 @@ ${u.content}`
 												: Object.assign(
 														Object.assign({}, E),
 														{},
-														{ type: 'importExport' }
-												  )
+														{
+															type: 'importExport',
+														},
+												  ),
 										)
 									}
 									function p(w, E) {
@@ -39111,10 +39163,10 @@ ${u.content}`
 														{
 															value: N.value.replace(
 																/\s+/g,
-																' '
+																' ',
 															),
-														}
-												  )
+														},
+												  ),
 										)
 									}
 									function y(w, E) {
@@ -39135,10 +39187,10 @@ ${u.content}`
 																N.position.start
 																	.offset,
 																N.position.end
-																	.offset
+																	.offset,
 															),
-														}
-												  )
+														},
+												  ),
 										)
 									}
 									function h(w) {
@@ -39159,7 +39211,7 @@ ${u.content}`
 													start: E.position.start,
 													end: N.position.end,
 												},
-											})
+											}),
 										)
 									}
 									function g(w, E, N) {
@@ -39173,18 +39225,18 @@ ${u.content}`
 															? P.splice(
 																	-1,
 																	1,
-																	N(D, $)
+																	N(D, $),
 															  )
 															: P.push($),
 														P
 													)
 												},
-												[]
+												[],
 											)
 											return Object.assign(
 												Object.assign({}, x),
 												{},
-												{ children: I }
+												{ children: I },
 											)
 										})
 									}
@@ -39201,7 +39253,7 @@ ${u.content}`
 													start: E.position.start,
 													end: N.position.end,
 												},
-											})
+											}),
 										)
 									}
 									function f(w, E) {
@@ -39230,8 +39282,8 @@ ${u.content}`
 												let P = /^\n?(?: {4,}|\t)/.test(
 													E.originalText.slice(
 														N.position.start.offset,
-														N.position.end.offset
-													)
+														N.position.end.offset,
+													),
 												)
 												if (((N.isIndented = P), P))
 													for (
@@ -39335,14 +39387,14 @@ ${u.content}`
 												(i.type === 'inlineCode' &&
 													(l.value = i.value.replace(
 														/[\t\n ]+/g,
-														' '
+														' ',
 													)),
 												i.type === 'wikiLink' &&
 													(l.value = i.value
 														.trim()
 														.replace(
 															/[\t\n]+/g,
-															' '
+															' ',
 														)),
 												(i.type === 'definition' ||
 													i.type ===
@@ -39356,7 +39408,7 @@ ${u.content}`
 													i.title &&
 													(l.title = i.title.replace(
 														/\\(["')])/g,
-														'$1'
+														'$1',
 													)),
 												p &&
 													p.type === 'root' &&
@@ -39376,7 +39428,7 @@ ${u.content}`
 							fg = te({
 								'src/language-markdown/printer-markdown.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -39442,21 +39494,21 @@ ${u.content}`
 											return b(
 												H.originalText.slice(
 													X.position.start.offset,
-													X.position.end.offset
+													X.position.end.offset,
 												),
-												H
+												H,
 											).map((le) =>
 												le.type === 'word'
 													? le.value
 													: le.value === ''
 													? ''
-													: W(oe, le.value, H)
+													: W(oe, le.value, H),
 											)
 										switch (X.type) {
 											case 'front-matter':
 												return H.originalText.slice(
 													X.position.start.offset,
-													X.position.end.offset
+													X.position.end.offset,
 												)
 											case 'root':
 												return X.children.length === 0
@@ -39482,22 +39534,22 @@ ${u.content}`
 																	`(^|${B})(_+)`,
 																	`(_+)(${B}|$)`,
 																].join('|'),
-																'g'
+																'g',
 															),
 															(
 																De,
 																A,
 																G,
 																re,
-																ye
+																ye,
 															) =>
 																(G
 																	? `${A}${G}`
 																	: `${re}${ye}`
 																).replace(
 																	/_/g,
-																	'\\_'
-																)
+																	'\\_',
+																),
 														),
 													Ae = (De, A, G) =>
 														De.type ===
@@ -39510,7 +39562,7 @@ ${u.content}`
 														(oe.match(
 															void 0,
 															Ae,
-															Ee
+															Ee,
 														) ||
 															oe.match(
 																void 0,
@@ -39519,15 +39571,15 @@ ${u.content}`
 																	De.type ===
 																		'emphasis' &&
 																	G === 0,
-																Ee
+																Ee,
 															)) &&
 														(le = le.replace(
 															/^(\\?[*_])+/,
 															(De) =>
 																De.replace(
 																	/\\/g,
-																	''
-																)
+																	'',
+																),
 														)),
 													le
 												)
@@ -39539,7 +39591,7 @@ ${u.content}`
 													De =
 														Ee &&
 														/^>|^(?:[*+-]|#{1,6}|\d+[).])$/.test(
-															Ee.value
+															Ee.value,
 														)
 															? 'never'
 															: H.proseWrap
@@ -39559,7 +39611,7 @@ ${u.content}`
 													let Ae = oe.getParentNode(),
 														Ee =
 															Ae.children.indexOf(
-																X
+																X,
 															),
 														De =
 															Ae.children[Ee - 1],
@@ -39620,7 +39672,7 @@ ${u.content}`
 														? (le = X.value)
 														: (le = X.value.replace(
 																/[\t\n]+/g,
-																' '
+																' ',
 														  )),
 													['[[', le, ']]']
 												)
@@ -39636,7 +39688,7 @@ ${u.content}`
 														return [
 															'<',
 															X.url.startsWith(
-																le
+																le,
 															) &&
 															H.originalText.slice(
 																X.position.start
@@ -39644,10 +39696,10 @@ ${u.content}`
 																X.position.start
 																	.offset +
 																	1 +
-																	le.length
+																	le.length,
 															) !== le
 																? X.url.slice(
-																		le.length
+																		le.length,
 																  )
 																: X.url,
 															'>',
@@ -39667,7 +39719,7 @@ ${u.content}`
 															X.position.start
 																.offset,
 															X.position.end
-																.offset
+																.offset,
 														)
 												}
 											case 'image':
@@ -39703,8 +39755,8 @@ ${u.content}`
 													Ae = le.repeat(
 														Math.max(
 															3,
-															n(X.value, le) + 1
-														)
+															n(X.value, le) + 1,
+														),
 													)
 												return [
 													Ae,
@@ -39713,7 +39765,7 @@ ${u.content}`
 													c,
 													...P(
 														v(X, H.originalText),
-														c
+														c,
 													),
 													c,
 													Ae,
@@ -39732,7 +39784,7 @@ ${u.content}`
 											case 'list': {
 												let le = Y(
 														X,
-														oe.getParentNode()
+														oe.getParentNode(),
 													),
 													Ae = S(X, H)
 												return ue(oe, H, pe, {
@@ -39761,9 +39813,9 @@ ${u.content}`
 															A,
 															w(
 																' '.repeat(
-																	A.length
+																	A.length,
 																),
-																V(Ee, H, pe, A)
+																V(Ee, H, pe, A),
 															),
 														]
 														function re() {
@@ -39794,11 +39846,11 @@ ${u.content}`
 													? '---'
 													: Y(
 															oe.getParentNode(
-																le
+																le,
 															),
 															oe.getParentNode(
-																le + 1
-															)
+																le + 1,
+															),
 													  ) %
 															2 ===
 													  0
@@ -39855,7 +39907,7 @@ ${u.content}`
 																	we(
 																		X.title,
 																		H,
-																		!1
+																		!1,
 																	),
 															  ],
 													]),
@@ -39901,7 +39953,7 @@ ${u.content}`
 														: N([
 																w(
 																	' '.repeat(
-																		4
+																		4,
 																	),
 																	ue(
 																		oe,
@@ -39911,7 +39963,7 @@ ${u.content}`
 																			processor:
 																				(
 																					Ee,
-																					De
+																					De,
 																				) =>
 																					De ===
 																					0
@@ -39919,11 +39971,11 @@ ${u.content}`
 																								[
 																									f,
 																									pe(),
-																								]
+																								],
 																						  )
 																						: pe(),
-																		}
-																	)
+																		},
+																	),
 																),
 																le &&
 																le.type ===
@@ -39941,7 +39993,7 @@ ${u.content}`
 												return /\s/.test(
 													H.originalText[
 														X.position.start.offset
-													]
+													],
 												)
 													? ['  ', g(h)]
 													: ['\\', c]
@@ -39965,15 +40017,15 @@ ${u.content}`
 											case 'inlineMath':
 												return H.originalText.slice(
 													m(X),
-													C(X)
+													C(X),
 												)
 											case 'tableRow':
 											case 'listItem':
 											default:
 												throw new Error(
 													`Unknown markdown type ${JSON.stringify(
-														X.type
-													)}`
+														X.type,
+													)}`,
 												)
 										}
 									}
@@ -39996,17 +40048,17 @@ ${u.content}`
 													)
 														return w(
 															' '.repeat(
-																Ae.length
+																Ae.length,
 															),
-															pe()
+															pe(),
 														)
 													let A = ' '.repeat(
 														ke(
 															H.tabWidth -
 																X.length,
 															0,
-															3
-														)
+															3,
+														),
 													)
 													return [A, w(A, pe())]
 												},
@@ -40027,7 +40079,7 @@ ${u.content}`
 										return ie(
 											oe,
 											H,
-											(pe) => pe.ordered === oe.ordered
+											(pe) => pe.ordered === oe.ordered,
 										)
 									}
 									function ie(oe, H, pe) {
@@ -40082,13 +40134,13 @@ ${u.content}`
 													ye.map((Ce, Be) => {
 														let ve = $(
 																pe(),
-																H
+																H,
 															).formatted,
 															ze = u(ve)
 														return (
 															(le[Be] = Math.max(
 																le[Be] || 3,
-																ze
+																ze,
 															)),
 															{
 																text: ve,
@@ -40096,7 +40148,7 @@ ${u.content}`
 															}
 														)
 													}, 'children'),
-												'children'
+												'children',
 											),
 											Ee = A(!1)
 										if (H.proseWrap !== 'never')
@@ -40112,9 +40164,9 @@ ${u.content}`
 															x,
 															Ae.slice(1).map(
 																(Be) =>
-																	re(Be, ye)
-															)
-														)
+																	re(Be, ye),
+															),
+														),
 													),
 												p(x, Ce)
 											)
@@ -40155,11 +40207,11 @@ ${u.content}`
 														? (Oe = Se)
 														: Ie === 'center' &&
 														  (Oe = Math.floor(
-																Se / 2
+																Se / 2,
 														  ))
 													let Je = Se - Oe
 													return `${' '.repeat(
-														Oe
+														Oe,
 													)}${be}${' '.repeat(Je)}`
 												})
 												.join(' | ')} |`
@@ -40206,11 +40258,11 @@ ${u.content}`
 																Ae[
 																	A.start
 																		.index
-																]
+																],
 															),
 															H.originalText.slice(
 																A.start.offset,
-																A.end.offset
+																A.end.offset,
 															),
 															Fe(Ae[A.end.index]),
 														]
@@ -40287,7 +40339,7 @@ ${u.content}`
 										let H
 										if (oe.type === 'html')
 											H = oe.value.match(
-												/^<!--\s*prettier-ignore(?:-(start|end))?\s*-->$/
+												/^<!--\s*prettier-ignore(?:-(start|end))?\s*-->$/,
 											)
 										else {
 											let pe
@@ -40300,7 +40352,7 @@ ${u.content}`
 												  (pe = oe.children[0]),
 												pe &&
 													(H = pe.value.match(
-														/^prettier-ignore(?:-(start|end))?$/
+														/^prettier-ignore(?:-(start|end))?$/,
 													))
 										}
 										return H ? H[1] || 'next' : !1
@@ -40384,7 +40436,7 @@ ${u.content}`
 												...(Array.isArray(H) ? H : [H]),
 											]
 										return new RegExp(
-											pe.map((X) => `\\${X}`).join('|')
+											pe.map((X) => `\\${X}`).join('|'),
 										).test(oe)
 											? `<${oe}>`
 											: oe
@@ -40400,7 +40452,7 @@ ${u.content}`
 										if (
 											((oe = oe.replace(
 												/\\(["')])/g,
-												'$1'
+												'$1',
 											)),
 											oe.includes('"') &&
 												oe.includes("'") &&
@@ -40419,7 +40471,7 @@ ${u.content}`
 											(oe = oe.replace(/\\/, '\\\\')),
 											(oe = oe.replace(
 												new RegExp(`(${Ae})`, 'g'),
-												'\\$1'
+												'\\$1',
 											)),
 											`${Ae}${oe}${Ae}`
 										)
@@ -40469,7 +40521,7 @@ ${u.content}`
 							_a = te({
 								'node_modules/linguist-languages/data/Markdown.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'Markdown',
@@ -40518,7 +40570,7 @@ ${u.content}`
 													'README',
 												],
 												extensions: l.extensions.filter(
-													(p) => p !== '.mdx'
+													(p) => p !== '.mdx',
 												),
 											})),
 											t(_a(), () => ({
@@ -40571,7 +40623,7 @@ ${u.content}`
 							yg = te({
 								'src/language-html/constants.evaluate.js'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										CSS_DISPLAY_TAGS: {
@@ -40673,7 +40725,7 @@ ${u.content}`
 							hg = te({
 								'src/language-html/utils/is-unknown-namespace.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -40682,7 +40734,7 @@ ${u.content}`
 											s.type === 'element' &&
 											!s.hasExplicitNamespace &&
 											!['html', 'svg'].includes(
-												s.namespace
+												s.namespace,
 											)
 										)
 									}
@@ -40735,7 +40787,7 @@ ${u.content}`
 										I = (A) => A.match(/^[\t\n\f\r ]*/)[0],
 										P = (A) => {
 											let [, G, re, ye] = A.match(
-												/^([\t\n\f\r ]*)(.*?)([\t\n\f\r ]*)$/s
+												/^([\t\n\f\r ]*)(.*?)([\t\n\f\r ]*)$/s,
 											)
 											return {
 												leadingWhitespace: G,
@@ -40759,7 +40811,7 @@ ${u.content}`
 													(re) =>
 														re.type !== 'text' &&
 														re.type !==
-															'interpolation'
+															'interpolation',
 												)) ||
 											(X(A, G) &&
 												!o(A) &&
@@ -40845,16 +40897,16 @@ ${u.content}`
 																o(A.parent) ||
 																H(
 																	A.parent,
-																	G
+																	G,
 																) ||
 																!ue(
 																	A.parent
-																		.cssDisplay
+																		.cssDisplay,
 																))) ||
 														(A.prev &&
 															!U(
 																A.prev
-																	.cssDisplay
+																	.cssDisplay,
 															))
 												  )
 										}
@@ -40885,7 +40937,7 @@ ${u.content}`
 															H(A.parent, G) ||
 															!Fe(
 																A.parent
-																	.cssDisplay
+																	.cssDisplay,
 															))) ||
 													(A.next &&
 														!z(A.next.cssDisplay))
@@ -40915,7 +40967,7 @@ ${u.content}`
 													'style',
 												].includes(A.name) ||
 													A.children.some((G) =>
-														ee(G)
+														ee(G),
 													))) ||
 											(A.firstChild &&
 												A.firstChild === A.lastChild &&
@@ -40938,7 +40990,7 @@ ${u.content}`
 												'select',
 											].includes(A.name) ||
 												(A.cssDisplay.startsWith(
-													'table'
+													'table',
 												) &&
 													A.cssDisplay !==
 														'table-cell'))
@@ -41009,7 +41061,7 @@ ${u.content}`
 										return (
 											A.children &&
 											A.children.some(
-												(G) => G.type !== 'text'
+												(G) => G.type !== 'text',
 											)
 										)
 									}
@@ -41127,7 +41179,7 @@ ${u.content}`
 											A.prev.type === 'comment'
 										) {
 											let ye = A.prev.value.match(
-												/^\s*display:\s*([a-z]+)\s*$/
+												/^\s*display:\s*([a-z]+)\s*$/,
 											)
 											if (ye) return ye[1]
 										}
@@ -41141,7 +41193,7 @@ ${u.content}`
 													A,
 													(ye) =>
 														ye.fullName ===
-														'svg:foreignObject'
+														'svg:foreignObject',
 												)
 											)
 												re = !0
@@ -41200,7 +41252,7 @@ ${u.content}`
 											? A
 											: A.split(
 													`
-`
+`,
 											  ).map((re) => re.slice(G)).join(`
 `)
 									}
@@ -41213,7 +41265,7 @@ ${u.content}`
 									function Pe(A) {
 										return A.replace(
 											/&apos;/g,
-											"'"
+											"'",
 										).replace(/&quot;/g, '"')
 									}
 									var oe = new Set([
@@ -41317,7 +41369,7 @@ ${u.content}`
 							}),
 							vg = te({
 								'node_modules/angular-html-parser/lib/compiler/src/chars.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -41423,7 +41475,7 @@ ${u.content}`
 							}),
 							Cg = te({
 								'node_modules/angular-html-parser/lib/compiler/src/aot/static_symbol.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -41440,8 +41492,8 @@ ${u.content}`
 											if (this.members.length)
 												throw new Error(
 													`Illegal state: symbol without members expected, but got ${JSON.stringify(
-														this
-													)}.`
+														this,
+													)}.`,
 												)
 										}
 									}
@@ -41470,7 +41522,7 @@ ${u.content}`
 							}),
 							Eg = te({
 								'node_modules/angular-html-parser/lib/compiler/src/util.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -41555,7 +41607,7 @@ ${u.content}`
 											assertSync: (o) => {
 												if (P(o))
 													throw new Error(
-														'Illegal state: value cannot be a promise'
+														'Illegal state: value cannot be a promise',
 													)
 												return o
 											},
@@ -41586,7 +41638,7 @@ ${u.content}`
 									function _(o) {
 										return o.replace(
 											/([.*+?^=!:${}()|[\]\/\\])/g,
-											'\\$1'
+											'\\$1',
 										)
 									}
 									e.escapeRegExp = _
@@ -41622,20 +41674,20 @@ ${u.content}`
 												: S <= 2047
 												? (d += String.fromCharCode(
 														((S >> 6) & 31) | 192,
-														(S & 63) | 128
+														(S & 63) | 128,
 												  ))
 												: S <= 65535
 												? (d += String.fromCharCode(
 														(S >> 12) | 224,
 														((S >> 6) & 63) | 128,
-														(S & 63) | 128
+														(S & 63) | 128,
 												  ))
 												: S <= 2097151 &&
 												  (d += String.fromCharCode(
 														((S >> 18) & 7) | 240,
 														((S >> 12) & 63) | 128,
 														((S >> 6) & 63) | 128,
-														(S & 63) | 128
+														(S & 63) | 128,
 												  ))
 										}
 										return d
@@ -41699,7 +41751,7 @@ ${u.content}`
 							}),
 							Fg = te({
 								'node_modules/angular-html-parser/lib/compiler/src/compile_metadata.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -41770,7 +41822,7 @@ ${u.content}`
 									})(
 										(g =
 											e.CompileSummaryKind ||
-											(e.CompileSummaryKind = {}))
+											(e.CompileSummaryKind = {})),
 									)
 									function c(v) {
 										return v.value != null
@@ -41833,7 +41885,7 @@ ${u.content}`
 												Q && Q.length != 2)
 											)
 												throw new Error(
-													"'interpolation' should have a start and an end symbol."
+													"'interpolation' should have a start and an end symbol.",
 												)
 											;(this.interpolation = Q),
 												(this.isInline = V),
@@ -41901,7 +41953,7 @@ ${u.content}`
 												J?.forEach((se) => {
 													let fe = t.splitAtColon(
 														se,
-														[se, se]
+														[se, se],
 													)
 													Z[fe[0]] = fe[1]
 												}),
@@ -42114,19 +42166,19 @@ ${u.content}`
 										}
 										addDirective(v) {
 											this.directivesSet.has(
-												v.reference
+												v.reference,
 											) ||
 												(this.directivesSet.add(
-													v.reference
+													v.reference,
 												),
 												this.directives.push(v))
 										}
 										addExportedDirective(v) {
 											this.exportedDirectivesSet.has(
-												v.reference
+												v.reference,
 											) ||
 												(this.exportedDirectivesSet.add(
-													v.reference
+													v.reference,
 												),
 												this.exportedDirectives.push(v))
 										}
@@ -42137,26 +42189,26 @@ ${u.content}`
 										}
 										addExportedPipe(v) {
 											this.exportedPipesSet.has(
-												v.reference
+												v.reference,
 											) ||
 												(this.exportedPipesSet.add(
-													v.reference
+													v.reference,
 												),
 												this.exportedPipes.push(v))
 										}
 										addModule(v) {
 											this.modulesSet.has(v.reference) ||
 												(this.modulesSet.add(
-													v.reference
+													v.reference,
 												),
 												this.modules.push(v))
 										}
 										addEntryComponent(v) {
 											this.entryComponentsSet.has(
-												v.componentType
+												v.componentType,
 											) ||
 												(this.entryComponentsSet.add(
-													v.componentType
+													v.componentType,
 												),
 												this.entryComponents.push(v))
 										}
@@ -42195,7 +42247,7 @@ ${u.content}`
 									function T(v) {
 										return v.replace(
 											/(\w+:\/\/[\w:-]+)?(\/+)?/,
-											'ng:///'
+											'ng:///',
 										)
 									}
 									function m(v, S, b) {
@@ -42206,7 +42258,7 @@ ${u.content}`
 												  r.StaticSymbol
 													? (B = `${S.type.reference.filePath}.${S.type.reference.name}.html`)
 													: (B = `${u(v)}/${u(
-															S.type
+															S.type,
 													  )}.html`)
 												: (B = b.templateUrl),
 											S.type.reference instanceof
@@ -42224,13 +42276,13 @@ ${u.content}`
 									e.sharedStylesheetJitUrl = C
 									function o(v) {
 										return T(
-											`${u(v.type)}/module.ngfactory.js`
+											`${u(v.type)}/module.ngfactory.js`,
 										)
 									}
 									e.ngModuleJitUrl = o
 									function d(v, S) {
 										return T(
-											`${u(v)}/${u(S.type)}.ngfactory.js`
+											`${u(v)}/${u(S.type)}.ngfactory.js`,
 										)
 									}
 									e.templateJitUrl = d
@@ -42238,7 +42290,7 @@ ${u.content}`
 							}),
 							Ag = te({
 								'node_modules/angular-html-parser/lib/compiler/src/parse_util.js'(
-									e
+									e,
 								) {
 									'use strict'
 									ne(),
@@ -42277,8 +42329,8 @@ ${u.content}`
 															.substr(0, c - 1)
 															.lastIndexOf(
 																String.fromCharCode(
-																	r.$LF
-																)
+																	r.$LF,
+																),
 															)
 														F = w > 0 ? c - w : c
 													} else F--
@@ -42330,11 +42382,11 @@ ${u.content}`
 													return {
 														before: g.substring(
 															c,
-															this.offset
+															this.offset,
 														),
 														after: g.substring(
 															this.offset,
-															f + 1
+															f + 1,
 														),
 													}
 												}
@@ -42362,7 +42414,7 @@ ${u.content}`
 										toString() {
 											return this.start.file.content.substring(
 												this.start.offset,
-												this.end.offset
+												this.end.offset,
 											)
 										}
 									}
@@ -42371,11 +42423,11 @@ ${u.content}`
 											new a('', ''),
 											0,
 											0,
-											0
+											0,
 										)),
 										(e.EMPTY_SOURCE_SPAN = new n(
 											e.EMPTY_PARSE_LOCATION,
-											e.EMPTY_PARSE_LOCATION
+											e.EMPTY_PARSE_LOCATION,
 										))
 									var u
 									;(function (y) {
@@ -42384,7 +42436,7 @@ ${u.content}`
 									})(
 										(u =
 											e.ParseErrorLevel ||
-											(e.ParseErrorLevel = {}))
+											(e.ParseErrorLevel = {})),
 									)
 									var i = class {
 										constructor(y, h) {
@@ -42400,7 +42452,7 @@ ${u.content}`
 										contextualMessage() {
 											let y = this.span.start.getContext(
 												100,
-												3
+												3,
 											)
 											return y
 												? `${this.msg} ("${y.before}[${
@@ -42423,15 +42475,15 @@ ${u.content}`
 											c =
 												g != null
 													? `in ${y} ${t.identifierName(
-															h
+															h,
 													  )} in ${g}`
 													: `in ${y} ${t.identifierName(
-															h
+															h,
 													  )}`,
 											f = new a('', c)
 										return new n(
 											new s(f, -1, -1, -1),
-											new s(f, -1, -1, -1)
+											new s(f, -1, -1, -1),
 										)
 									}
 									e.typeSourceSpan = l
@@ -42440,7 +42492,7 @@ ${u.content}`
 											f = new a('', c)
 										return new n(
 											new s(f, -1, -1, -1),
-											new s(f, -1, -1, -1)
+											new s(f, -1, -1, -1),
 										)
 									}
 									e.r3JitTypeSourceSpan = p
@@ -42518,11 +42570,11 @@ ${u.content}`
 													v.removeChild(B), S--
 													let M = new t(
 															B.sourceSpan.start,
-															k.sourceSpan.end
+															k.sourceSpan.end,
 														),
 														R = new t(
 															M.start,
-															b.sourceSpan.end
+															b.sourceSpan.end,
 														)
 													;(b.condition =
 														B.condition),
@@ -42555,7 +42607,7 @@ ${u.content}`
 														((k.value += B.value),
 														(k.sourceSpan = new t(
 															k.sourceSpan.start,
-															B.sourceSpan.end
+															B.sourceSpan.end,
 														)),
 														S.removeChild(B),
 														b--)
@@ -42566,7 +42618,7 @@ ${u.content}`
 										return E(
 											o,
 											(d) => d.type === 'cdata',
-											(d) => `<![CDATA[${d.value}]]>`
+											(d) => `<![CDATA[${d.value}]]>`,
 										)
 									}
 									function x(o) {
@@ -42604,7 +42656,7 @@ ${u.content}`
 														k.value),
 														(B.sourceSpan = new t(
 															B.sourceSpan.start,
-															k.sourceSpan.end
+															k.sourceSpan.end,
 														)),
 														(B.isTrailingSpaceSensitive =
 															k.isTrailingSpaceSensitive),
@@ -42635,7 +42687,7 @@ ${u.content}`
 														let q = M[R]
 														if (R % 2 === 0) {
 															;(k = B.moveBy(
-																q.length
+																q.length,
 															)),
 																q.length > 0 &&
 																	S.insertChildBefore(
@@ -42646,14 +42698,14 @@ ${u.content}`
 																			sourceSpan:
 																				new t(
 																					B,
-																					k
+																					k,
 																				),
-																		}
+																		},
 																	)
 															continue
 														}
 														;(k = B.moveBy(
-															q.length + 4
+															q.length + 4,
 														)),
 															S.insertChildBefore(
 																b,
@@ -42662,7 +42714,7 @@ ${u.content}`
 																	sourceSpan:
 																		new t(
 																			B,
-																			k
+																			k,
 																		),
 																	children:
 																		q.length ===
@@ -42675,15 +42727,15 @@ ${u.content}`
 																						sourceSpan:
 																							new t(
 																								B.moveBy(
-																									2
+																									2,
 																								),
 																								k.moveBy(
-																									-2
-																								)
+																									-2,
+																								),
 																							),
 																					},
 																			  ],
-																}
+																},
 															)
 													}
 													S.removeChild(b)
@@ -42730,11 +42782,11 @@ ${u.content}`
 														? ((B.value = M),
 														  (B.sourceSpan = new t(
 																B.sourceSpan.start.moveBy(
-																	k.length
+																	k.length,
 																),
 																B.sourceSpan.end.moveBy(
-																	-R.length
-																)
+																	-R.length,
+																),
 														  )),
 														  k &&
 																(q &&
@@ -42782,8 +42834,8 @@ ${u.content}`
 															v.endSourceSpan
 																.start.offset,
 															v.endSourceSpan.end
-																.offset
-														)
+																.offset,
+														),
 													))
 										})
 									}
@@ -42830,7 +42882,7 @@ ${u.content}`
 									function C(o, d) {
 										if (d.parser === 'vue') {
 											let v = o.children.find((b) =>
-												c(b, d)
+												c(b, d),
 											)
 											if (!v) return
 											let { lang: S } = v.attrMap
@@ -42849,7 +42901,7 @@ ${u.content}`
 									ne()
 									function t(a) {
 										return /^\s*<!--\s*@(?:format|prettier)\s*-->/.test(
-											a
+											a,
 										)
 									}
 									function s(a) {
@@ -43005,7 +43057,7 @@ ${u.content}`
 									}
 									function v(L) {
 										let Q = L.trim().match(
-											/^prettier-ignore-attribute(?:\s+(.+))?$/s
+											/^prettier-ignore-attribute(?:\s+(.+))?$/s,
 										)
 										return Q
 											? Q[1]
@@ -43034,7 +43086,7 @@ ${u.content}`
 													: Array.isArray(Y)
 													? (ue) =>
 															Y.includes(
-																ue.rawName
+																ue.rawName,
 															)
 													: () => !1,
 											ee = L.map((ue) => {
@@ -43043,8 +43095,8 @@ ${u.content}`
 													? p(
 															Q.originalText.slice(
 																y(Fe),
-																h(Fe)
-															)
+																h(Fe),
+															),
 													  )
 													: V()
 											}, 'attrs'),
@@ -43068,7 +43120,7 @@ ${u.content}`
 												? de.push(
 														j.isSelfClosing
 															? ' '
-															: ''
+															: '',
 												  )
 												: de.push(
 														Q.bracketSameLine
@@ -43077,7 +43129,7 @@ ${u.content}`
 																: ''
 															: j.isSelfClosing
 															? u
-															: i
+															: i,
 												  ),
 											de
 										)
@@ -43163,7 +43215,7 @@ ${u.content}`
 							bg = te({
 								'node_modules/parse-srcset/src/parse-srcset.js'(
 									e,
-									r
+									r,
 								) {
 									ne(),
 										(function (t, s) {
@@ -43192,7 +43244,7 @@ ${u.content}`
 												function u($) {
 													var D,
 														T = $.exec(
-															t.substring(N)
+															t.substring(N),
 														)
 													if (T)
 														return (
@@ -43228,7 +43280,7 @@ ${u.content}`
 														f.slice(-1) === ','
 															? ((f = f.replace(
 																	h,
-																	''
+																	'',
 															  )),
 															  P())
 															: I()
@@ -43258,7 +43310,7 @@ ${u.content}`
 																;(N += 1),
 																	_ &&
 																		F.push(
-																			_
+																			_,
 																		),
 																	P()
 																return
@@ -43323,11 +43375,11 @@ ${u.content}`
 																]),
 															(S = d.substring(
 																0,
-																d.length - 1
+																d.length - 1,
 															)),
 															(b = parseInt(
 																S,
-																10
+																10,
 															)),
 															(B = parseFloat(S)),
 															g.test(S) &&
@@ -43371,7 +43423,7 @@ ${u.content}`
 																	t +
 																	"' at '" +
 																	d +
-																	"'."
+																	"'.",
 														  )
 														: ((o.url = f),
 														  D && (o.w = D),
@@ -43417,7 +43469,7 @@ ${u.content}`
 											})
 										if (y + h + g > 1)
 											throw new Error(
-												'Mixed descriptor in srcset is not supported'
+												'Mixed descriptor in srcset is not supported',
 											)
 										let c = y ? 'w' : h ? 'h' : 'd',
 											f = y ? 'w' : h ? 'h' : 'x',
@@ -43427,7 +43479,7 @@ ${u.content}`
 											E = p
 												.map((I) => I[c])
 												.map((I) =>
-													I ? I.toString() : ''
+													I ? I.toString() : '',
 												),
 											N = E.map((I) => {
 												let P = I.indexOf('.')
@@ -43446,7 +43498,7 @@ ${u.content}`
 													$.push(s(C, ' '), D + f)
 												}
 												return $
-											})
+											}),
 										)
 									}
 									function i(l) {
@@ -43476,7 +43528,7 @@ ${u.content}`
 												l(`function _(${p}) {}`, {
 													parser: 'babel',
 													__isVueForBindingLeft: !0,
-												})
+												}),
 											),
 											' ',
 											y,
@@ -43484,7 +43536,7 @@ ${u.content}`
 											l(
 												h,
 												{ parser: '__js_expression' },
-												{ stripTrailingHardline: !0 }
+												{ stripTrailingHardline: !0 },
 											),
 										]
 									}
@@ -43516,13 +43568,13 @@ ${u.content}`
 													!_ &&
 													(w === 0 ||
 														F.slice(w + 1).some(
-															Boolean
-														))
+															Boolean,
+														)),
 											)
 										)
 											return {
 												left: F.filter(Boolean).join(
-													','
+													',',
 												),
 												operator: h[2],
 												right: g.for,
@@ -43576,7 +43628,7 @@ ${u.content}`
 												: a(p) &&
 												  (g -= n(
 														p.lastChild,
-														y
+														y,
 												  ).length),
 											y.originalText.slice(h, g)
 										)
@@ -43636,7 +43688,7 @@ ${u.content}`
 									function b(k, M, R) {
 										let q = (ee) =>
 												new RegExp(ee.join('|')).test(
-													k.fullName
+													k.fullName,
 												),
 											J = () => C(k.value),
 											L = !1,
@@ -43693,8 +43745,8 @@ ${u.content}`
 															__embeddedInHtml:
 																!0,
 														},
-														ce
-													)
+														ce,
+													),
 												)
 										if (
 											k.fullName === 'srcset' &&
@@ -43720,7 +43772,7 @@ ${u.content}`
 														parser: 'css',
 														__isHTMLStyleAttribute:
 															!0,
-													})
+													}),
 												)
 										}
 										if (R.parser === 'vue') {
@@ -43744,13 +43796,13 @@ ${u.content}`
 												return Y(
 													ie(J(), {
 														parser: '__vue_expression',
-													})
+													}),
 												)
 											if (q(W))
 												return Y(
 													ie(J(), {
 														parser: '__js_expression',
-													})
+													}),
 												)
 										}
 										if (R.parser === 'angular') {
@@ -43760,14 +43812,14 @@ ${u.content}`
 														Object.assign(
 															Object.assign(
 																{},
-																U
+																U,
 															),
 															{},
 															{
 																trailingComma:
 																	'none',
-															}
-														)
+															},
+														),
 													),
 												ce = ['^\\*'],
 												W = ['^\\(.+\\)$', '^on-'],
@@ -43781,33 +43833,33 @@ ${u.content}`
 												return Y(
 													ee(J(), {
 														parser: '__ng_action',
-													})
+													}),
 												)
 											if (q(K))
 												return Y(
 													ee(J(), {
 														parser: '__ng_binding',
-													})
+													}),
 												)
 											if (q(de)) {
 												let z = J().trim()
 												return j(
 													i(v(k, z)),
-													!z.includes('@@')
+													!z.includes('@@'),
 												)
 											}
 											if (q(ce))
 												return Y(
 													ee(J(), {
 														parser: '__ng_directive',
-													})
+													}),
 												)
 											let ue = /{{(.+?)}}/s,
 												Fe = J()
 											if (ue.test(Fe)) {
 												let z = []
 												for (let [U, Z] of Fe.split(
-													ue
+													ue,
 												).entries())
 													if (U % 2 === 0)
 														z.push(y(Z))
@@ -43826,13 +43878,13 @@ ${u.content}`
 																	]),
 																	u,
 																	'}}',
-																])
+																]),
 															)
 														} catch {
 															z.push(
 																'{{',
 																y(Z),
-																'}}'
+																'}}',
 															)
 														}
 												return s(z)
@@ -43870,7 +43922,7 @@ ${u.content}`
 																{
 																	stripTrailingHardline:
 																		!0,
-																}
+																},
 															)),
 															(V = j === '')),
 														[
@@ -43895,8 +43947,8 @@ ${u.content}`
 																	? m(
 																			J.value.replace(
 																				/^[^\S\n]*\n/,
-																				''
-																			)
+																				'',
+																			),
 																	  )
 																	: J.value,
 															V = {
@@ -43982,8 +44034,8 @@ ${u.content}`
 															J.valueSpan.start
 																.offset,
 															J.valueSpan.end
-																.offset
-														)
+																.offset,
+														),
 													)
 												)
 													return [
@@ -43998,8 +44050,8 @@ ${u.content}`
 															J.valueSpan.start
 																.offset,
 															J.valueSpan.end
-																.offset
-														)
+																.offset,
+														),
 													)
 												)
 													return [
@@ -44019,14 +44071,14 @@ ${u.content}`
 																	__embeddedInHtml:
 																		!0,
 																},
-																V
+																V,
 															),
 															{
 																stripTrailingHardline:
 																	!0,
-															}
+															},
 														),
-													q
+													q,
 												)
 												if (L)
 													return [
@@ -44038,10 +44090,10 @@ ${u.content}`
 																'string'
 																	? Q.replace(
 																			/"/g,
-																			'&quot;'
+																			'&quot;',
 																	  )
-																	: Q
-															)
+																	: Q,
+															),
 														),
 														'"',
 													]
@@ -44107,8 +44159,8 @@ ${u.content}`
 																N(d.next)
 																	? x(d, C)
 																			.length
-																	: 0)
-														)
+																	: 0),
+														),
 													),
 													I(d, C),
 											  ]
@@ -44205,7 +44257,7 @@ ${u.content}`
 																			b -
 																				1
 																		],
-																})
+																}),
 														  )),
 												L &&
 													(g(B)
@@ -44353,9 +44405,9 @@ ${u.content}`
 																		R.parent &&
 																		R.parent
 																			.type !==
-																			'root'
+																			'root',
 																)
-															}}$`
+															}}$`,
 													  ).test(o.lastChild.value)
 													? ''
 													: p
@@ -44364,7 +44416,7 @@ ${u.content}`
 													o.hasDanglingSpaces &&
 														o.isDanglingSpaceSensitive
 														? l
-														: ''
+														: '',
 											  )
 											: S([
 													_(o) ? t : '',
@@ -44444,7 +44496,7 @@ ${u.content}`
 														B = b
 															? d.value.replace(
 																	S,
-																	''
+																	'',
 															  )
 															: d.value
 													return [...p(B), b ? a : '']
@@ -44466,11 +44518,11 @@ ${u.content}`
 														d.value
 															.replace(
 																/^html\b/i,
-																'html'
+																'html',
 															)
 															.replace(
 																/\s+/g,
-																' '
+																' ',
 															),
 													]),
 													x(d, C),
@@ -44481,9 +44533,9 @@ ${u.content}`
 													...p(
 														C.originalText.slice(
 															_(d),
-															w(d)
+															w(d),
 														),
-														n
+														n,
 													),
 													N(d, C),
 												]
@@ -44502,19 +44554,19 @@ ${u.content}`
 														B === '"'
 															? v.replace(
 																	/"/g,
-																	'&quot;'
+																	'&quot;',
 															  )
 															: v.replace(
 																	/'/g,
-																	'&apos;'
-															  )
+																	'&apos;',
+															  ),
 													),
 													B,
 												]
 											}
 											default:
 												throw new Error(
-													`Unexpected node type ${d.type}`
+													`Unexpected node type ${d.type}`,
 												)
 										}
 									}
@@ -44581,7 +44633,7 @@ ${u.content}`
 							On = te({
 								'node_modules/linguist-languages/data/HTML.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'HTML',
@@ -44608,7 +44660,7 @@ ${u.content}`
 							kg = te({
 								'node_modules/linguist-languages/data/Vue.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'Vue',
@@ -44676,12 +44728,12 @@ ${u.content}`
 									ne()
 									function t(n) {
 										return /^\s*@(?:prettier|format)\s*$/.test(
-											n
+											n,
 										)
 									}
 									function s(n) {
 										return /^\s*#[^\S\n]*@(?:prettier|format)\s*?(?:\n|$)/.test(
-											n
+											n,
 										)
 									}
 									function a(n) {
@@ -44718,7 +44770,7 @@ ${n}`
 											s.getValue().type === 'root' &&
 											u.filepath &&
 											/(?:[/\\]|^)\.(?:prettier|stylelint|lintstaged)rc$/.test(
-												u.filepath
+												u.filepath,
 											)
 										)
 											return n(
@@ -44726,8 +44778,8 @@ ${n}`
 												Object.assign(
 													Object.assign({}, u),
 													{},
-													{ parser: 'json' }
-												)
+													{ parser: 'json' },
+												),
 											)
 									}
 									r.exports = t
@@ -44768,13 +44820,13 @@ ${n}`
 																		u(
 																			C,
 																			T,
-																			D
-																		)
+																			D,
+																		),
 																),
-														}
+														},
 												  )
 												: D,
-											m
+											m,
 										)
 									}
 									function i(D, T, m) {
@@ -44875,7 +44927,7 @@ ${n}`
 												? m === ' '
 													? T.push(C)
 													: T.push(
-															(T.pop() || '') + C
+															(T.pop() || '') + C,
 													  )
 												: m === void 0 && T.unshift(''),
 												(m = C)
@@ -44885,7 +44937,7 @@ ${n}`
 											T[0] === '' &&
 												(T.shift(),
 												T.unshift(
-													' ' + (T.shift() || '')
+													' ' + (T.shift() || ''),
 												)),
 											T
 										)
@@ -44893,7 +44945,7 @@ ${n}`
 									function I(D, T, m) {
 										let C = T.split(
 											`
-`
+`,
 										).map((o, d, v) =>
 											d === 0 && d === v.length - 1
 												? o
@@ -44901,14 +44953,14 @@ ${n}`
 												? o.trim()
 												: d === 0
 												? o.trimEnd()
-												: o.trimStart()
+												: o.trimStart(),
 										)
 										return m.proseWrap === 'preserve'
 											? C.map((o) =>
-													o.length === 0 ? [] : [o]
+													o.length === 0 ? [] : [o],
 											  )
 											: C.map((o) =>
-													o.length === 0 ? [] : x(o)
+													o.length === 0 ? [] : x(o),
 											  )
 													.reduce(
 														(o, d, v) =>
@@ -44920,28 +44972,28 @@ ${n}`
 																D ===
 																	'quoteDouble' &&
 																t(
-																	t(o)
+																	t(o),
 																).endsWith('\\')
 															)
 																? [
 																		...o.slice(
 																			0,
-																			-1
+																			-1,
 																		),
 																		[
 																			...t(
-																				o
+																				o,
 																			),
 																			...d,
 																		],
 																  ]
 																: [...o, d],
-														[]
+														[],
 													)
 													.map((o) =>
 														m.proseWrap === 'never'
 															? [o.join(' ')]
-															: o
+															: o,
 													)
 									}
 									function P(D, T) {
@@ -44959,15 +45011,15 @@ ${n}`
 																D.position.start
 																	.offset,
 																D.position.end
-																	.offset
+																	.offset,
 															)
 															.match(
-																/^[^\n]*\n(.*)$/s
+																/^[^\n]*\n(.*)$/s,
 															)[1],
 											v
 										if (D.indent === null) {
 											let B = d.match(
-												/^(?<leadingSpace> *)[^\n\r ]/m
+												/^(?<leadingSpace> *)[^\n\r ]/m,
 											)
 											v = B
 												? B.groups.leadingSpace.length
@@ -44976,7 +45028,7 @@ ${n}`
 										let S = d
 											.split(
 												`
-`
+`,
 											)
 											.map((B) => B.slice(v))
 										if (
@@ -44985,12 +45037,12 @@ ${n}`
 										)
 											return b(
 												S.map((B) =>
-													B.length === 0 ? [] : [B]
-												)
+													B.length === 0 ? [] : [B],
+												),
 											)
 										return b(
 											S.map((B) =>
-												B.length === 0 ? [] : x(B)
+												B.length === 0 ? [] : x(B),
 											)
 												.reduce(
 													(B, k, M) =>
@@ -45002,7 +45054,7 @@ ${n}`
 															? [
 																	...B.slice(
 																		0,
-																		-1
+																		-1,
 																	),
 																	[
 																		...t(B),
@@ -45010,7 +45062,7 @@ ${n}`
 																	],
 															  ]
 															: [...B, k],
-													[]
+													[],
 												)
 												.map((B) =>
 													B.reduce(
@@ -45020,21 +45072,21 @@ ${n}`
 																? [
 																		...k.slice(
 																			0,
-																			-1
+																			-1,
 																		),
 																		t(k) +
 																			' ' +
 																			M,
 																  ]
 																: [...k, M],
-														[]
-													)
+														[],
+													),
 												)
 												.map((B) =>
 													o.proseWrap === 'never'
 														? [B.join(' ')]
-														: B
-												)
+														: B,
+												),
 										)
 										function b(B) {
 											if (D.chomping === 'keep')
@@ -45105,12 +45157,12 @@ ${n}`
 												t(
 													u,
 													'head',
-													() => u.children[0]
+													() => u.children[0],
 												),
 													t(
 														u,
 														'body',
-														() => u.children[1]
+														() => u.children[1],
 													)
 												break
 											case 'documentBody':
@@ -45121,7 +45173,7 @@ ${n}`
 												t(
 													u,
 													'content',
-													() => u.children[0]
+													() => u.children[0],
 												)
 												break
 											case 'mappingItem':
@@ -45129,12 +45181,12 @@ ${n}`
 												t(
 													u,
 													'key',
-													() => u.children[0]
+													() => u.children[0],
 												),
 													t(
 														u,
 														'value',
-														() => u.children[1]
+														() => u.children[1],
 													)
 												break
 										}
@@ -45196,7 +45248,7 @@ ${n}`
 							Rg = te({
 								'src/language-yaml/print/flow-mapping-sequence.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -45249,8 +45301,8 @@ ${n}`
 																n,
 																f.map(
 																	F,
-																	'endComments'
-																)
+																	'endComments',
+																),
 															),
 													  ]
 													: '',
@@ -45277,12 +45329,12 @@ ${n}`
 																.line
 																? y(
 																		N,
-																		_.originalText
+																		_.originalText,
 																  )
 																: '',
 													  ],
 											],
-											'children'
+											'children',
 										)
 									}
 									r.exports = {
@@ -45294,7 +45346,7 @@ ${n}`
 							$g = te({
 								'src/language-yaml/print/mapping-item.js'(
 									e,
-									r
+									r,
 								) {
 									'use strict'
 									ne()
@@ -45350,8 +45402,8 @@ ${n}`
 													P.map(
 														$,
 														'value',
-														'leadingComments'
-													).map((q) => [q, a])
+														'leadingComments',
+													).map((q) => [q, a]),
 												),
 												': ',
 												F(2, S),
@@ -45423,8 +45475,8 @@ ${n}`
 											/\\$/m.test(
 												I.originalText.slice(
 													x.position.start.offset,
-													x.position.end.offset
-												)
+													x.position.end.offset,
+												),
 											)
 										)
 											return !1
@@ -45491,7 +45543,7 @@ ${n}`
 									function w(E, N, x) {
 										let I = E.getValue(),
 											P = h(E, (C) =>
-												F(C, ['sequence', 'mapping'])
+												F(C, ['sequence', 'mapping']),
 											),
 											$ = f(E),
 											D = [
@@ -45505,12 +45557,12 @@ ${n}`
 												D.push(
 													I.chomping === 'keep'
 														? '+'
-														: '-'
+														: '-',
 												),
 											c(I) &&
 												D.push(
 													' ',
-													N('indicatorComment')
+													N('indicatorComment'),
 												)
 										let T = g(I, {
 												parentIndent: P,
@@ -45525,7 +45577,7 @@ ${n}`
 													? m.push(
 															o.length === 0
 																? n
-																: p(l)
+																: p(l),
 													  )
 													: I.chomping === 'keep' &&
 													  $ &&
@@ -45533,8 +45585,8 @@ ${n}`
 															s(
 																o.length === 0
 																	? n
-																	: l
-															)
+																	: l,
+															),
 													  )
 										return (
 											I.indent === null
@@ -45545,9 +45597,9 @@ ${n}`
 																I.indent -
 																	1 +
 																	P,
-																m
-															)
-														)
+																m,
+															),
+														),
 												  ),
 											D
 										)
@@ -45611,7 +45663,10 @@ ${n}`
 											ce.push([
 												u(
 													n,
-													j.map(ie, 'leadingComments')
+													j.map(
+														ie,
+														'leadingComments',
+													),
 												),
 												n,
 											])
@@ -45647,8 +45702,8 @@ ${n}`
 														n,
 														j.map(
 															ie,
-															'middleComments'
-														)
+															'middleComments',
+														),
 													),
 													n,
 												])
@@ -45664,14 +45719,14 @@ ${n}`
 																		.offset,
 																	ee.position
 																		.end
-																		.offset
+																		.offset,
 																)
 																.trimEnd(),
-															p
-														)
+															p,
+														),
 												  )
 												: ce.push(
-														a(R(ee, ue, j, Y, ie))
+														a(R(ee, ue, j, Y, ie)),
 												  ),
 											I(ee) &&
 												!T(ee, [
@@ -45694,7 +45749,7 @@ ${n}`
 															? ''
 															: t,
 														ie('trailingComment'),
-													])
+													]),
 												),
 											v(ee) &&
 												ce.push(
@@ -45712,17 +45767,17 @@ ${n}`
 																		g(
 																			Y.originalText,
 																			Fe.getValue(),
-																			F
+																			F,
 																		)
 																			? n
 																			: '',
 																		ie(),
 																	],
-																	'endComments'
-																)
+																	'endComments',
+																),
 															),
-														]
-													)
+														],
+													),
 												),
 											ce.push(de),
 											ce
@@ -45744,8 +45799,8 @@ ${n}`
 																	K.push(
 																		' ',
 																		ce(
-																			'trailingComment'
-																		)
+																			'trailingComment',
+																		),
 																	))
 															: U &&
 															  !I(U.head) &&
@@ -45795,7 +45850,7 @@ ${n}`
 													...ie.map(ce, 'children'),
 													...ie.map(
 														ce,
-														'endComments'
+														'endComments',
 													),
 												])
 											case 'documentBody': {
@@ -45821,15 +45876,15 @@ ${n}`
 												return [
 													u(
 														n,
-														ie.map(ce, 'children')
+														ie.map(ce, 'children'),
 													),
 													de,
 													u(
 														n,
 														ie.map(
 															ce,
-															'endComments'
-														)
+															'endComments',
+														),
 													),
 												]
 											}
@@ -45848,7 +45903,7 @@ ${n}`
 											case 'tag':
 												return ee.originalText.slice(
 													j.position.start.offset,
-													j.position.end.offset
+													j.position.end.offset,
 												)
 											case 'anchor':
 												return ['&', j.value]
@@ -45857,9 +45912,9 @@ ${n}`
 													j.type,
 													ee.originalText.slice(
 														j.position.start.offset,
-														j.position.end.offset
+														j.position.end.offset,
 													),
-													ee
+													ee,
 												)
 											case 'quoteDouble':
 											case 'quoteSingle': {
@@ -45869,7 +45924,7 @@ ${n}`
 														j.position.start
 															.offset + 1,
 														j.position.end.offset -
-															1
+															1,
 													)
 												if (
 													(j.type === 'quoteSingle' &&
@@ -45897,16 +45952,16 @@ ${n}`
 																? de
 																		.replace(
 																			/\\"/g,
-																			K
+																			K,
 																		)
 																		.replace(
 																			/'/g,
 																			W.repeat(
-																				2
-																			)
+																				2,
+																			),
 																		)
 																: de,
-															ee
+															ee,
 														),
 														W,
 													]
@@ -45919,10 +45974,10 @@ ${n}`
 																'quoteSingle'
 																? de.replace(
 																		/''/g,
-																		W
+																		W,
 																  )
 																: de,
-															ee
+															ee,
 														),
 														K,
 													]
@@ -45940,7 +45995,7 @@ ${n}`
 											case 'sequence':
 												return u(
 													n,
-													ie.map(ce, 'children')
+													ie.map(ce, 'children'),
 												)
 											case 'sequenceItem':
 												return [
@@ -45949,7 +46004,7 @@ ${n}`
 														2,
 														j.content
 															? ce('content')
-															: ''
+															: '',
 													),
 												]
 											case 'mappingKey':
@@ -45968,7 +46023,7 @@ ${n}`
 												return ce('content')
 											default:
 												throw new Error(
-													`Unexpected node type ${j.type}`
+													`Unexpected node type ${j.type}`,
 												)
 										}
 									}
@@ -45991,8 +46046,8 @@ ${n}`
 											/---(?:\s|$)/.test(
 												ee.originalText.slice(
 													F(j),
-													F(j) + 4
-												)
+													F(j) + 4,
+												),
 											)) ||
 											j.head.children.length > 0 ||
 											P(j.head) ||
@@ -46008,7 +46063,7 @@ ${n}`
 										let ee = w(j, Y, ie)
 										return u(
 											n,
-											ee.map((ce) => s(y(u(i, ce))))
+											ee.map((ce) => s(y(u(i, ce)))),
 										)
 									}
 									function V(j, Y) {
@@ -46054,7 +46109,7 @@ ${n}`
 							Ug = te({
 								'node_modules/linguist-languages/data/YAML.json'(
 									e,
-									r
+									r,
 								) {
 									r.exports = {
 										name: 'YAML',
@@ -46108,7 +46163,8 @@ ${n}`
 												],
 												filenames: [
 													...i.filenames.filter(
-														(l) => l !== 'yarn.lock'
+														(l) =>
+															l !== 'yarn.lock',
 													),
 													'.prettierrc',
 													'.stylelintrc',
@@ -46173,7 +46229,7 @@ ${n}`
 													? u
 													: Object.values(u)),
 											],
-										}
+										},
 									)),
 									e(...s)
 								)
@@ -46214,7 +46270,7 @@ function dedent(templ) {
 	var strings = Array.from(typeof templ == 'string' ? [templ] : templ)
 	strings[strings.length - 1] = strings[strings.length - 1].replace(
 		/\r?\n([\t ]*)$/,
-		''
+		'',
 	)
 	var indentLengths = strings.reduce(function (arr, str) {
 		var matches = str.match(/\n([\t ]+|(?!\s).)/g)
@@ -46229,7 +46285,7 @@ function dedent(templ) {
 								: _a.length) !== null && _b !== void 0
 							? _b
 							: 0
-					})
+					}),
 			  )
 			: arr
 	}, [])
@@ -46239,13 +46295,13 @@ function dedent(templ) {
 [	 ]{` +
 				Math.min.apply(Math, indentLengths) +
 				'}',
-			'g'
+			'g',
 		)
 		strings = strings.map(function (str) {
 			return str.replace(
 				pattern_1,
 				`
-`
+`,
 			)
 		})
 	}
@@ -46262,7 +46318,7 @@ function dedent(templ) {
 				(indentedValue = String(value)
 					.split(
 						`
-`
+`,
 					)
 					.map(function (str, i2) {
 						return i2 === 0 ? str : '' + endentation + str
@@ -46284,6 +46340,6 @@ var formatter = (0, import_memoizerific.default)(2)((type, source) =>
 					plugins: [import_parser_html.default],
 					htmlWhitespaceSensitivity: 'ignore',
 				})
-				.trim()
+				.trim(),
 )
 export { formatter }

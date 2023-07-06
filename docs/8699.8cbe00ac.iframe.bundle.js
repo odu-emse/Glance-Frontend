@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function _extends() {
@@ -18,7 +18,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -31,7 +31,7 @@
 		'./node_modules/comma-separated-tokens/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function parse(value) {
@@ -57,7 +57,7 @@
 					.join(
 						(settings.padRight ? ' ' : '') +
 							',' +
-							(!1 === settings.padLeft ? '' : ' ')
+							(!1 === settings.padLeft ? '' : ' '),
 					)
 					.trim()
 			}
@@ -69,7 +69,7 @@
 		'./node_modules/decode-named-character-reference/index.dom.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -108,7 +108,7 @@
 							obj.constructor.prototype &&
 							hasOwn.call(
 								obj.constructor.prototype,
-								'isPrototypeOf'
+								'isPrototypeOf',
 							)
 					if (
 						obj.constructor &&
@@ -184,7 +184,7 @@
 												newValue: extend(
 													deep,
 													clone,
-													copy
+													copy,
 												),
 										  }))
 										: void 0 !== copy &&
@@ -249,7 +249,7 @@
 							':' +
 							column +
 							': ' +
-							msg
+							msg,
 					)
 					if (
 						((err.reason = msg),
@@ -315,14 +315,17 @@
 							ret = pos({
 								type: 'declaration',
 								property: trim(
-									prop[0].replace(COMMENT_REGEX, EMPTY_STRING)
+									prop[0].replace(
+										COMMENT_REGEX,
+										EMPTY_STRING,
+									),
 								),
 								value: val
 									? trim(
 											val[0].replace(
 												COMMENT_REGEX,
-												EMPTY_STRING
-											)
+												EMPTY_STRING,
+											),
 									  )
 									: EMPTY_STRING,
 							})
@@ -354,7 +357,7 @@
 		'./node_modules/mdast-util-to-markdown/lib/util/pattern-compile.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function patternCompile(pattern) {
@@ -369,7 +372,7 @@
 								: '') +
 							pattern.character +
 							(pattern.after ? '(?:' + pattern.after + ')' : ''),
-						'g'
+						'g',
 					)
 				}
 				return pattern._compiled
@@ -381,12 +384,12 @@
 		'./node_modules/mdast-util-to-markdown/lib/util/safe.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { T: () => safe })
 			var pattern_compile = __webpack_require__(
-				'./node_modules/mdast-util-to-markdown/lib/util/pattern-compile.js'
+				'./node_modules/mdast-util-to-markdown/lib/util/pattern-compile.js',
 			)
 			function patternInScope(stack, pattern) {
 				return (
@@ -457,8 +460,8 @@
 							result.push(
 								escapeBackslashes(
 									value.slice(start, position),
-									'\\'
-								)
+									'\\',
+								),
 							),
 						(start = position),
 						!/[!-/:-@[-`{-~]/.test(value.charAt(position)) ||
@@ -470,14 +473,17 @@
 											.charCodeAt(position)
 											.toString(16)
 											.toUpperCase() +
-										';'
+										';',
 							  ),
 							  start++)
 							: result.push('\\'))
 				}
 				return (
 					result.push(
-						escapeBackslashes(value.slice(start, end), config.after)
+						escapeBackslashes(
+							value.slice(start, end),
+							config.after,
+						),
 					),
 					result.join('')
 				)
@@ -506,7 +512,7 @@
 		'./node_modules/mdast-util-to-markdown/lib/util/track.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function track(config) {
@@ -542,17 +548,17 @@
 		'./node_modules/micromark-core-commonmark/lib/blank-line.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { w: () => blankLine })
 			var micromark_factory_space__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/micromark-factory-space/index.js'
+						'./node_modules/micromark-factory-space/index.js',
 					),
 				micromark_util_character__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/micromark-util-character/index.js'
+						'./node_modules/micromark-util-character/index.js',
 					)
 			const blankLine = {
 				tokenize: function tokenizeBlankLine(effects, ok, nok) {
@@ -563,12 +569,12 @@
 							return null === code ||
 								(0,
 								micromark_util_character__WEBPACK_IMPORTED_MODULE_1__.Ch)(
-									code
+									code,
 								)
 								? ok(code)
 								: nok(code)
 						},
-						'linePrefix'
+						'linePrefix',
 					)
 				},
 				partial: !0,
@@ -577,7 +583,7 @@
 		'./node_modules/micromark-factory-space/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -585,7 +591,7 @@
 			})
 			var micromark_util_character__WEBPACK_IMPORTED_MODULE_0__ =
 				__webpack_require__(
-					'./node_modules/micromark-util-character/index.js'
+					'./node_modules/micromark-util-character/index.js',
 				)
 			function factorySpace(effects, ok, type, max) {
 				const limit = max ? max - 1 : Number.POSITIVE_INFINITY
@@ -594,7 +600,7 @@
 					if (
 						(0,
 						micromark_util_character__WEBPACK_IMPORTED_MODULE_0__.xz)(
-							code
+							code,
 						)
 					)
 						return effects.enter(type), prefix(code)
@@ -603,7 +609,7 @@
 				function prefix(code) {
 					return (0,
 					micromark_util_character__WEBPACK_IMPORTED_MODULE_0__.xz)(
-						code
+						code,
 					) && size++ < limit
 						? (effects.consume(code), prefix)
 						: (effects.exit(type), ok(code))
@@ -613,7 +619,7 @@
 		'./node_modules/micromark-util-character/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -650,7 +656,7 @@
 			}
 			const unicodeWhitespace = regexCheck(/\s/),
 				unicodePunctuation = regexCheck(
-					/[!-/:-@[-`{-~\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C77\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4F\u2E52\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/
+					/[!-/:-@[-`{-~\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C77\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4F\u2E52\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/,
 				)
 			function regexCheck(regex) {
 				return function check(code) {
@@ -663,7 +669,7 @@
 		'./node_modules/micromark-util-chunked/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function splice(list, start, remove, items) {
@@ -693,7 +699,7 @@
 					)
 						(parameters = items.slice(
 							chunkStart,
-							chunkStart + 1e4
+							chunkStart + 1e4,
 						)),
 							parameters.unshift(start, 0),
 							[].splice.apply(list, parameters),
@@ -713,7 +719,7 @@
 		'./node_modules/micromark-util-classify-character/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -721,22 +727,22 @@
 			})
 			var micromark_util_character__WEBPACK_IMPORTED_MODULE_0__ =
 				__webpack_require__(
-					'./node_modules/micromark-util-character/index.js'
+					'./node_modules/micromark-util-character/index.js',
 				)
 			function classifyCharacter(code) {
 				return null === code ||
 					(0,
 					micromark_util_character__WEBPACK_IMPORTED_MODULE_0__.z3)(
-						code
+						code,
 					) ||
 					(0,
 					micromark_util_character__WEBPACK_IMPORTED_MODULE_0__.B8)(
-						code
+						code,
 					)
 					? 1
 					: (0,
 					  micromark_util_character__WEBPACK_IMPORTED_MODULE_0__.Xh)(
-							code
+							code,
 					  )
 					? 2
 					: void 0
@@ -745,7 +751,7 @@
 		'./node_modules/micromark-util-combine-extensions/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -753,7 +759,7 @@
 			})
 			var micromark_util_chunked__WEBPACK_IMPORTED_MODULE_0__ =
 				__webpack_require__(
-					'./node_modules/micromark-util-chunked/index.js'
+					'./node_modules/micromark-util-chunked/index.js',
 				)
 			const hasOwnProperty = {}.hasOwnProperty
 			function combineExtensions(extensions) {
@@ -777,7 +783,7 @@
 						const value = right[code]
 						constructs(
 							left[code],
-							Array.isArray(value) ? value : value ? [value] : []
+							Array.isArray(value) ? value : value ? [value] : [],
 						)
 					}
 				}
@@ -787,13 +793,13 @@
 				const before = []
 				for (; ++index < list.length; )
 					('after' === list[index].add ? existing : before).push(
-						list[index]
+						list[index],
 					)
 				;(0, micromark_util_chunked__WEBPACK_IMPORTED_MODULE_0__.d)(
 					existing,
 					0,
 					0,
-					before
+					before,
 				)
 			}
 		},
@@ -801,7 +807,7 @@
 			(
 				__unused_webpack_module,
 				__webpack_exports__,
-				__webpack_require__
+				__webpack_require__,
 			) => {
 				'use strict'
 				function decodeNumericCharacterReference(value, base) {
@@ -825,7 +831,7 @@
 		'./node_modules/micromark-util-decode-string/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -833,11 +839,11 @@
 			})
 			var decode_named_character_reference__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/decode-named-character-reference/index.dom.js'
+						'./node_modules/decode-named-character-reference/index.dom.js',
 					),
 				micromark_util_decode_numeric_character_reference__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/micromark-util-decode-numeric-character-reference/index.js'
+						'./node_modules/micromark-util-decode-numeric-character-reference/index.js',
 					)
 			const characterEscapeOrReference =
 				/\\([!-/:-@[-`{-~])|&(#(?:\d{1,7}|x[\da-f]{1,6})|[\da-z]{1,31});/gi
@@ -852,13 +858,13 @@
 					return (0,
 					micromark_util_decode_numeric_character_reference__WEBPACK_IMPORTED_MODULE_0__.o)(
 						$2.slice(hex ? 2 : 1),
-						hex ? 16 : 10
+						hex ? 16 : 10,
 					)
 				}
 				return (
 					(0,
 					decode_named_character_reference__WEBPACK_IMPORTED_MODULE_1__.T)(
-						$2
+						$2,
 					) || $0
 				)
 			}
@@ -866,7 +872,7 @@
 		'./node_modules/micromark-util-normalize-identifier/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function normalizeIdentifier(value) {
@@ -883,7 +889,7 @@
 		'./node_modules/micromark-util-resolve-all/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function resolveAll(constructs, events, context) {
@@ -903,25 +909,25 @@
 		'./node_modules/next/dist/client/get-domain-locale.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.getDomainLocale = function getDomainLocale(
 					path,
 					locale,
 					locales,
-					domainLocales
+					domainLocales,
 				) {
 					if (process.env.__NEXT_I18N_SUPPORT) {
 						const normalizeLocalePath = __webpack_require__(
-								'./node_modules/next/dist/client/normalize-locale-path.js'
+								'./node_modules/next/dist/client/normalize-locale-path.js',
 							).normalizeLocalePath,
 							detectDomainLocale = __webpack_require__(
-								'./node_modules/next/dist/client/detect-domain-locale.js'
+								'./node_modules/next/dist/client/detect-domain-locale.js',
 							).detectDomainLocale,
 							target =
 								locale ||
@@ -930,7 +936,7 @@
 							domain = detectDomainLocale(
 								domainLocales,
 								void 0,
-								target
+								target,
 							)
 						if (domain) {
 							const proto = `http${domain.http ? '' : 's'}://`,
@@ -958,40 +964,40 @@
 		'./node_modules/next/dist/client/link.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.default = void 0)
 			var _interop_require_default = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 				).Z,
 				_object_without_properties_loose = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_object_without_properties_loose.js'
+					'./node_modules/@swc/helpers/lib/_object_without_properties_loose.js',
 				).Z,
 				_react = _interop_require_default(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_router = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router/router.js'
+					'./node_modules/next/dist/shared/lib/router/router.js',
 				),
 				_addLocale = __webpack_require__(
-					'./node_modules/next/dist/client/add-locale.js'
+					'./node_modules/next/dist/client/add-locale.js',
 				),
 				_routerContext = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router-context.js'
+					'./node_modules/next/dist/shared/lib/router-context.js',
 				),
 				_appRouterContext = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/app-router-context.js'
+					'./node_modules/next/dist/shared/lib/app-router-context.js',
 				),
 				_useIntersection = __webpack_require__(
-					'./node_modules/next/dist/client/use-intersection.js'
+					'./node_modules/next/dist/client/use-intersection.js',
 				),
 				_getDomainLocale = __webpack_require__(
-					'./node_modules/next/dist/client/get-domain-locale.js'
+					'./node_modules/next/dist/client/get-domain-locale.js',
 				),
 				_addBasePath = __webpack_require__(
-					'./node_modules/next/dist/client/add-base-path.js'
+					'./node_modules/next/dist/client/add-base-path.js',
 				)
 			const hasUseTransition = void 0 !== _react.default.useTransition,
 				prefetched = {}
@@ -1009,262 +1015,269 @@
 					href + '%' + as + (curLocale ? '%' + curLocale : '')
 				] = !0
 			}
-			var _default = _react.default.forwardRef(function LinkComponent(
-				props,
-				forwardedRef
-			) {
-				let children
-				const {
-						href: hrefProp,
-						as: asProp,
-						children: childrenProp,
-						prefetch: prefetchProp,
-						passHref,
-						replace,
-						soft,
-						shallow,
-						scroll,
-						locale,
-						onClick,
-						onMouseEnter,
-						onTouchStart,
-						legacyBehavior = !0 !== Boolean(void 0),
-					} = props,
-					restProps = _object_without_properties_loose(props, [
-						'href',
-						'as',
-						'children',
-						'prefetch',
-						'passHref',
-						'replace',
-						'soft',
-						'shallow',
-						'scroll',
-						'locale',
-						'onClick',
-						'onMouseEnter',
-						'onTouchStart',
-						'legacyBehavior',
-					])
-				;(children = childrenProp),
-					!legacyBehavior ||
-						('string' != typeof children &&
-							'number' != typeof children) ||
-						(children = _react.default.createElement(
-							'a',
-							null,
-							children
-						))
-				const p = !1 !== prefetchProp,
-					[, startTransition] = hasUseTransition
-						? _react.default.useTransition()
-						: []
-				let router = _react.default.useContext(
-					_routerContext.RouterContext
-				)
-				const appRouter = _react.default.useContext(
-					_appRouterContext.AppRouterContext
-				)
-				appRouter && (router = appRouter)
-				const { href, as } = _react.default.useMemo(() => {
-						const [resolvedHref, resolvedAs] = _router.resolveHref(
-							router,
-							hrefProp,
-							!0
-						)
-						return {
-							href: resolvedHref,
-							as: asProp
-								? _router.resolveHref(router, asProp)
-								: resolvedAs || resolvedHref,
-						}
-					}, [router, hrefProp, asProp]),
-					previousHref = _react.default.useRef(href),
-					previousAs = _react.default.useRef(as)
-				let child
-				legacyBehavior &&
-					(child = _react.default.Children.only(children))
-				const childRef = legacyBehavior
-						? child && 'object' == typeof child && child.ref
-						: forwardedRef,
-					[setIntersectionRef, isVisible, resetVisible] =
-						_useIntersection.useIntersection({
-							rootMargin: '200px',
-						}),
-					setRef = _react.default.useCallback(
-						(el) => {
-							;(previousAs.current === as &&
-								previousHref.current === href) ||
-								(resetVisible(),
-								(previousAs.current = as),
-								(previousHref.current = href)),
-								setIntersectionRef(el),
-								childRef &&
-									('function' == typeof childRef
-										? childRef(el)
-										: 'object' == typeof childRef &&
-										  (childRef.current = el))
-						},
-						[as, childRef, href, resetVisible, setIntersectionRef]
+			var _default = _react.default.forwardRef(
+				function LinkComponent(props, forwardedRef) {
+					let children
+					const {
+							href: hrefProp,
+							as: asProp,
+							children: childrenProp,
+							prefetch: prefetchProp,
+							passHref,
+							replace,
+							soft,
+							shallow,
+							scroll,
+							locale,
+							onClick,
+							onMouseEnter,
+							onTouchStart,
+							legacyBehavior = !0 !== Boolean(void 0),
+						} = props,
+						restProps = _object_without_properties_loose(props, [
+							'href',
+							'as',
+							'children',
+							'prefetch',
+							'passHref',
+							'replace',
+							'soft',
+							'shallow',
+							'scroll',
+							'locale',
+							'onClick',
+							'onMouseEnter',
+							'onTouchStart',
+							'legacyBehavior',
+						])
+					;(children = childrenProp),
+						!legacyBehavior ||
+							('string' != typeof children &&
+								'number' != typeof children) ||
+							(children = _react.default.createElement(
+								'a',
+								null,
+								children,
+							))
+					const p = !1 !== prefetchProp,
+						[, startTransition] = hasUseTransition
+							? _react.default.useTransition()
+							: []
+					let router = _react.default.useContext(
+						_routerContext.RouterContext,
 					)
-				_react.default.useEffect(() => {
-					const shouldPrefetch =
-							isVisible && p && _router.isLocalURL(href),
-						curLocale =
-							void 0 !== locale
-								? locale
-								: router && router.locale,
-						isPrefetched =
-							prefetched[
-								href +
-									'%' +
-									as +
-									(curLocale ? '%' + curLocale : '')
-							]
-					shouldPrefetch &&
-						!isPrefetched &&
-						prefetch(router, href, as, { locale: curLocale })
-				}, [as, href, isVisible, locale, p, router])
-				const childProps = {
-					ref: setRef,
-					onClick: (e) => {
-						legacyBehavior ||
-							'function' != typeof onClick ||
-							onClick(e),
-							legacyBehavior &&
-								child.props &&
-								'function' == typeof child.props.onClick &&
-								child.props.onClick(e),
-							e.defaultPrevented ||
-								(function linkClicked(
-									e,
-									router,
-									href,
-									as,
-									replace,
-									soft,
-									shallow,
-									scroll,
-									locale,
-									startTransition
-								) {
-									const { nodeName } = e.currentTarget
-									if (
-										'A' === nodeName.toUpperCase() &&
-										((function isModifiedEvent(event) {
-											const { target } =
-												event.currentTarget
-											return (
-												(target &&
-													'_self' !== target) ||
-												event.metaKey ||
-												event.ctrlKey ||
-												event.shiftKey ||
-												event.altKey ||
-												(event.nativeEvent &&
-													2 ===
-														event.nativeEvent.which)
-											)
-										})(e) ||
-											!_router.isLocalURL(href))
-									)
-										return
-									e.preventDefault()
-									const navigate = () => {
-										'softPush' in router &&
-										'softReplace' in router
-											? router[
-													soft
-														? replace
-															? 'softReplace'
-															: 'softPush'
-														: replace
-														? 'replace'
-														: 'push'
-											  ](href)
-											: router[
-													replace ? 'replace' : 'push'
-											  ](href, as, {
-													shallow,
-													locale,
-													scroll,
-											  })
-									}
-									startTransition
-										? startTransition(navigate)
-										: navigate()
-								})(
-									e,
-									router,
-									href,
-									as,
-									replace,
-									soft,
-									shallow,
-									scroll,
-									locale,
-									appRouter ? startTransition : void 0
-								)
-					},
-					onMouseEnter: (e) => {
-						legacyBehavior ||
-							'function' != typeof onMouseEnter ||
-							onMouseEnter(e),
-							legacyBehavior &&
-								child.props &&
-								'function' == typeof child.props.onMouseEnter &&
-								child.props.onMouseEnter(e),
-							_router.isLocalURL(href) &&
-								prefetch(router, href, as, { priority: !0 })
-					},
-					onTouchStart: (e) => {
-						legacyBehavior ||
-							'function' != typeof onTouchStart ||
-							onTouchStart(e),
-							legacyBehavior &&
-								child.props &&
-								'function' == typeof child.props.onTouchStart &&
-								child.props.onTouchStart(e),
-							_router.isLocalURL(href) &&
-								prefetch(router, href, as, { priority: !0 })
-					},
-				}
-				if (
-					!legacyBehavior ||
-					passHref ||
-					('a' === child.type && !('href' in child.props))
-				) {
-					const curLocale =
-							void 0 !== locale
-								? locale
-								: router && router.locale,
-						localeDomain =
-							router &&
-							router.isLocaleDomain &&
-							_getDomainLocale.getDomainLocale(
+					const appRouter = _react.default.useContext(
+						_appRouterContext.AppRouterContext,
+					)
+					appRouter && (router = appRouter)
+					const { href, as } = _react.default.useMemo(() => {
+							const [resolvedHref, resolvedAs] =
+								_router.resolveHref(router, hrefProp, !0)
+							return {
+								href: resolvedHref,
+								as: asProp
+									? _router.resolveHref(router, asProp)
+									: resolvedAs || resolvedHref,
+							}
+						}, [router, hrefProp, asProp]),
+						previousHref = _react.default.useRef(href),
+						previousAs = _react.default.useRef(as)
+					let child
+					legacyBehavior &&
+						(child = _react.default.Children.only(children))
+					const childRef = legacyBehavior
+							? child && 'object' == typeof child && child.ref
+							: forwardedRef,
+						[setIntersectionRef, isVisible, resetVisible] =
+							_useIntersection.useIntersection({
+								rootMargin: '200px',
+							}),
+						setRef = _react.default.useCallback(
+							(el) => {
+								;(previousAs.current === as &&
+									previousHref.current === href) ||
+									(resetVisible(),
+									(previousAs.current = as),
+									(previousHref.current = href)),
+									setIntersectionRef(el),
+									childRef &&
+										('function' == typeof childRef
+											? childRef(el)
+											: 'object' == typeof childRef &&
+											  (childRef.current = el))
+							},
+							[
 								as,
-								curLocale,
-								router.locales,
-								router.domainLocales
-							)
-					childProps.href =
-						localeDomain ||
-						_addBasePath.addBasePath(
-							_addLocale.addLocale(
-								as,
-								curLocale,
-								router && router.defaultLocale
-							)
+								childRef,
+								href,
+								resetVisible,
+								setIntersectionRef,
+							],
 						)
-				}
-				return legacyBehavior
-					? _react.default.cloneElement(child, childProps)
-					: _react.default.createElement(
-							'a',
-							Object.assign({}, restProps, childProps),
-							children
-					  )
-			})
+					_react.default.useEffect(() => {
+						const shouldPrefetch =
+								isVisible && p && _router.isLocalURL(href),
+							curLocale =
+								void 0 !== locale
+									? locale
+									: router && router.locale,
+							isPrefetched =
+								prefetched[
+									href +
+										'%' +
+										as +
+										(curLocale ? '%' + curLocale : '')
+								]
+						shouldPrefetch &&
+							!isPrefetched &&
+							prefetch(router, href, as, { locale: curLocale })
+					}, [as, href, isVisible, locale, p, router])
+					const childProps = {
+						ref: setRef,
+						onClick: (e) => {
+							legacyBehavior ||
+								'function' != typeof onClick ||
+								onClick(e),
+								legacyBehavior &&
+									child.props &&
+									'function' == typeof child.props.onClick &&
+									child.props.onClick(e),
+								e.defaultPrevented ||
+									(function linkClicked(
+										e,
+										router,
+										href,
+										as,
+										replace,
+										soft,
+										shallow,
+										scroll,
+										locale,
+										startTransition,
+									) {
+										const { nodeName } = e.currentTarget
+										if (
+											'A' === nodeName.toUpperCase() &&
+											((function isModifiedEvent(event) {
+												const { target } =
+													event.currentTarget
+												return (
+													(target &&
+														'_self' !== target) ||
+													event.metaKey ||
+													event.ctrlKey ||
+													event.shiftKey ||
+													event.altKey ||
+													(event.nativeEvent &&
+														2 ===
+															event.nativeEvent
+																.which)
+												)
+											})(e) ||
+												!_router.isLocalURL(href))
+										)
+											return
+										e.preventDefault()
+										const navigate = () => {
+											'softPush' in router &&
+											'softReplace' in router
+												? router[
+														soft
+															? replace
+																? 'softReplace'
+																: 'softPush'
+															: replace
+															? 'replace'
+															: 'push'
+												  ](href)
+												: router[
+														replace
+															? 'replace'
+															: 'push'
+												  ](href, as, {
+														shallow,
+														locale,
+														scroll,
+												  })
+										}
+										startTransition
+											? startTransition(navigate)
+											: navigate()
+									})(
+										e,
+										router,
+										href,
+										as,
+										replace,
+										soft,
+										shallow,
+										scroll,
+										locale,
+										appRouter ? startTransition : void 0,
+									)
+						},
+						onMouseEnter: (e) => {
+							legacyBehavior ||
+								'function' != typeof onMouseEnter ||
+								onMouseEnter(e),
+								legacyBehavior &&
+									child.props &&
+									'function' ==
+										typeof child.props.onMouseEnter &&
+									child.props.onMouseEnter(e),
+								_router.isLocalURL(href) &&
+									prefetch(router, href, as, { priority: !0 })
+						},
+						onTouchStart: (e) => {
+							legacyBehavior ||
+								'function' != typeof onTouchStart ||
+								onTouchStart(e),
+								legacyBehavior &&
+									child.props &&
+									'function' ==
+										typeof child.props.onTouchStart &&
+									child.props.onTouchStart(e),
+								_router.isLocalURL(href) &&
+									prefetch(router, href, as, { priority: !0 })
+						},
+					}
+					if (
+						!legacyBehavior ||
+						passHref ||
+						('a' === child.type && !('href' in child.props))
+					) {
+						const curLocale =
+								void 0 !== locale
+									? locale
+									: router && router.locale,
+							localeDomain =
+								router &&
+								router.isLocaleDomain &&
+								_getDomainLocale.getDomainLocale(
+									as,
+									curLocale,
+									router.locales,
+									router.domainLocales,
+								)
+						childProps.href =
+							localeDomain ||
+							_addBasePath.addBasePath(
+								_addLocale.addLocale(
+									as,
+									curLocale,
+									router && router.defaultLocale,
+								),
+							)
+					}
+					return legacyBehavior
+						? _react.default.cloneElement(child, childProps)
+						: _react.default.createElement(
+								'a',
+								Object.assign({}, restProps, childProps),
+								children,
+						  )
+				},
+			)
 			;(exports.default = _default),
 				('function' == typeof exports.default ||
 					('object' == typeof exports.default &&
@@ -1279,18 +1292,18 @@
 		'./node_modules/next/dist/client/normalize-locale-path.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var process = __webpack_require__(
-				'./node_modules/process/browser.js'
+				'./node_modules/process/browser.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.normalizeLocalePath = void 0)
 			;(exports.normalizeLocalePath = (pathname, locales) =>
 				process.env.__NEXT_I18N_SUPPORT
 					? __webpack_require__(
-							'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js'
+							'./node_modules/next/dist/shared/lib/i18n/normalize-locale-path.js',
 					  ).normalizeLocalePath(pathname, locales)
 					: { pathname, detectedLocale: void 0 }),
 				('function' == typeof exports.default ||
@@ -1306,7 +1319,7 @@
 		'./node_modules/next/dist/client/router.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -1324,7 +1337,7 @@
 				}),
 				(exports.useRouter = function useRouter() {
 					return _react.default.useContext(
-						_routerContext.RouterContext
+						_routerContext.RouterContext,
 					)
 				}),
 				(exports.createRouter = function createRouter(...args) {
@@ -1346,7 +1359,7 @@
 										Array.isArray(scopedRouter[property])
 											? []
 											: {},
-										scopedRouter[property]
+										scopedRouter[property],
 								  ))
 						return (
 							(instance.events = _router.default.events),
@@ -1359,28 +1372,28 @@
 					}),
 				(exports.default = void 0)
 			var _interop_require_default = __webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 				).Z,
 				_react = _interop_require_default(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_router = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/shared/lib/router/router.js'
-					)
+						'./node_modules/next/dist/shared/lib/router/router.js',
+					),
 				),
 				_routerContext = __webpack_require__(
-					'./node_modules/next/dist/shared/lib/router-context.js'
+					'./node_modules/next/dist/shared/lib/router-context.js',
 				),
 				_isError = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/lib/is-error.js'
-					)
+						'./node_modules/next/dist/lib/is-error.js',
+					),
 				),
 				_withRouter = _interop_require_default(
 					__webpack_require__(
-						'./node_modules/next/dist/client/with-router.js'
-					)
+						'./node_modules/next/dist/client/with-router.js',
+					),
 				)
 			const singletonRouter = {
 					router: null,
@@ -1418,7 +1431,7 @@
 			function getRouter() {
 				if (!singletonRouter.router) {
 					throw new Error(
-						'No router instance found.\nYou should only use "next/router" on the client side of your app.\n'
+						'No router instance found.\nYou should only use "next/router" on the client side of your app.\n',
 					)
 				}
 				return singletonRouter.router
@@ -1454,12 +1467,12 @@
 									_singletonRouter[eventField](...args)
 								} catch (err) {
 									console.error(
-										`Error when running the Router event: ${eventField}`
+										`Error when running the Router event: ${eventField}`,
 									),
 										console.error(
 											_isError.default(err)
 												? `${err.message}\n${err.stack}`
-												: err + ''
+												: err + '',
 										)
 								}
 						})
@@ -1480,7 +1493,7 @@
 		'./node_modules/next/dist/client/with-router.js': (
 			module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -1490,8 +1503,8 @@
 							ComposedComponent,
 							Object.assign(
 								{ router: _router.useRouter() },
-								props
-							)
+								props,
+							),
 						)
 					}
 					;(WithRouterWrapper.getInitialProps =
@@ -1503,10 +1516,10 @@
 				})
 			var _react = (0,
 				__webpack_require__(
-					'./node_modules/@swc/helpers/lib/_interop_require_default.js'
+					'./node_modules/@swc/helpers/lib/_interop_require_default.js',
 				).Z)(__webpack_require__('./node_modules/react/index.js')),
 				_router = __webpack_require__(
-					'./node_modules/next/dist/client/router.js'
+					'./node_modules/next/dist/client/router.js',
 				)
 			;('function' == typeof exports.default ||
 				('object' == typeof exports.default &&
@@ -1521,25 +1534,25 @@
 		'./node_modules/next/link.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			module.exports = __webpack_require__(
-				'./node_modules/next/dist/client/link.js'
+				'./node_modules/next/dist/client/link.js',
 			)
 		},
 		'./node_modules/next/router.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			module.exports = __webpack_require__(
-				'./node_modules/next/dist/client/router.js'
+				'./node_modules/next/dist/client/router.js',
 			)
 		},
 		'./node_modules/property-information/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -1566,10 +1579,10 @@
 				(Schema.prototype.normal = {}),
 				(Schema.prototype.space = null)
 			var normalize = __webpack_require__(
-					'./node_modules/property-information/lib/normalize.js'
+					'./node_modules/property-information/lib/normalize.js',
 				),
 				defined_info = __webpack_require__(
-					'./node_modules/property-information/lib/util/defined-info.js'
+					'./node_modules/property-information/lib/util/defined-info.js',
 				)
 			const own = {}.hasOwnProperty
 			function create(definition) {
@@ -1583,10 +1596,10 @@
 								prop,
 								definition.transform(
 									definition.attributes || {},
-									prop
+									prop,
 								),
 								value,
-								definition.space
+								definition.space,
 							)
 						definition.mustUseProperty &&
 							definition.mustUseProperty.includes(prop) &&
@@ -1629,7 +1642,7 @@
 			function caseInsensitiveTransform(attributes, property) {
 				return caseSensitiveTransform(
 					attributes,
-					property.toLowerCase()
+					property.toLowerCase(),
 				)
 			}
 			const xmlns = create({
@@ -1639,7 +1652,7 @@
 				properties: { xmlns: null, xmlnsXLink: null },
 			})
 			var types = __webpack_require__(
-				'./node_modules/property-information/lib/util/types.js'
+				'./node_modules/property-information/lib/util/types.js',
 			)
 			const aria = create({
 					transform: (_, prop) =>
@@ -2555,31 +2568,31 @@
 				}),
 				property_information_html = merge(
 					[xml, xlink, xmlns, aria, html],
-					'html'
+					'html',
 				),
 				property_information_svg = merge(
 					[xml, xlink, xmlns, aria, svg],
-					'svg'
+					'svg',
 				)
 		},
 		'./node_modules/property-information/lib/find.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { s: () => find })
 			var _normalize_js__WEBPACK_IMPORTED_MODULE_0__ =
 					__webpack_require__(
-						'./node_modules/property-information/lib/normalize.js'
+						'./node_modules/property-information/lib/normalize.js',
 					),
 				_util_defined_info_js__WEBPACK_IMPORTED_MODULE_2__ =
 					__webpack_require__(
-						'./node_modules/property-information/lib/util/defined-info.js'
+						'./node_modules/property-information/lib/util/defined-info.js',
 					),
 				_util_info_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/property-information/lib/util/info.js'
+						'./node_modules/property-information/lib/util/info.js',
 					)
 			const valid = /^data[-\w.:]+$/i,
 				dash = /-[a-z]/g,
@@ -2624,7 +2637,7 @@
 		'./node_modules/property-information/lib/normalize.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function normalize(value) {
@@ -2635,15 +2648,15 @@
 		'./node_modules/property-information/lib/util/defined-info.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { I: () => DefinedInfo })
 			var _info_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/property-information/lib/util/info.js'
+					'./node_modules/property-information/lib/util/info.js',
 				),
 				_types_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/property-information/lib/util/types.js'
+					'./node_modules/property-information/lib/util/types.js',
 				)
 			const checks = Object.keys(_types_js__WEBPACK_IMPORTED_MODULE_0__)
 			class DefinedInfo extends _info_js__WEBPACK_IMPORTED_MODULE_1__.k {
@@ -2665,7 +2678,7 @@
 									]) ===
 									_types_js__WEBPACK_IMPORTED_MODULE_0__[
 										check
-									]
+									],
 							)
 						}
 				}
@@ -2678,7 +2691,7 @@
 		'./node_modules/property-information/lib/util/info.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { k: () => Info })
@@ -2701,7 +2714,7 @@
 		'./node_modules/property-information/lib/util/types.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.r(__webpack_exports__),
@@ -2729,7 +2742,7 @@
 		'./node_modules/react-icons/lib/esm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -2759,7 +2772,7 @@
 									for (var p in (s = arguments[i]))
 										Object.prototype.hasOwnProperty.call(
 											s,
-											p
+											p,
 										) && (t[p] = s[p])
 								return t
 							}),
@@ -2785,7 +2798,7 @@
 							e.indexOf(p[i]) < 0 &&
 								Object.prototype.propertyIsEnumerable.call(
 									s,
-									p[i]
+									p[i],
 								) &&
 								(t[p[i]] = s[p[i]])
 					}
@@ -2798,7 +2811,7 @@
 						return react.createElement(
 							node.tag,
 							__assign({ key: i }, node.attr),
-							Tree2Element(node.child)
+							Tree2Element(node.child),
 						)
 					})
 				)
@@ -2808,7 +2821,7 @@
 					return react.createElement(
 						IconBase,
 						__assign({ attr: __assign({}, data.attr) }, props),
-						Tree2Element(data.child)
+						Tree2Element(data.child),
 					)
 				}
 			}
@@ -2845,17 +2858,17 @@
 												color:
 													props.color || conf.color,
 											},
-											conf.style
+											conf.style,
 										),
-										props.style
+										props.style,
 									),
 									height: computedSize,
 									width: computedSize,
 									xmlns: 'http://www.w3.org/2000/svg',
-								}
+								},
 							),
 							title && react.createElement('title', null, title),
-							props.children
+							props.children,
 						)
 					)
 				}
@@ -2865,7 +2878,7 @@
 							null,
 							function (conf) {
 								return elem(conf)
-							}
+							},
 					  )
 					: elem(DefaultContext)
 			}
@@ -2873,12 +2886,12 @@
 		'./node_modules/react-icons/tb/index.esm.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { gG0: () => TbShare })
 			var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-				'./node_modules/react-icons/lib/esm/index.js'
+				'./node_modules/react-icons/lib/esm/index.js',
 			)
 			function TbShare(props) {
 				return (0, _lib__WEBPACK_IMPORTED_MODULE_0__.w_)({
@@ -2927,7 +2940,7 @@
 		'./node_modules/react-markdown/lib/react-markdown.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
@@ -2949,7 +2962,7 @@
 			var react = __webpack_require__('./node_modules/react/index.js'),
 				lib = __webpack_require__('./node_modules/vfile/lib/index.js'),
 				unified_lib = __webpack_require__(
-					'./node_modules/unified/lib/index.js'
+					'./node_modules/unified/lib/index.js',
 				)
 			const emptyOptions = {}
 			function one(value, includeImageAlt, includeHtml) {
@@ -2968,7 +2981,7 @@
 						return lib_all(
 							value.children,
 							includeImageAlt,
-							includeHtml
+							includeHtml,
 						)
 				}
 				return Array.isArray(value)
@@ -2982,18 +2995,18 @@
 					result[index] = one(
 						values[index],
 						includeImageAlt,
-						includeHtml
+						includeHtml,
 					)
 				return result.join('')
 			}
 			var micromark_util_combine_extensions = __webpack_require__(
-					'./node_modules/micromark-util-combine-extensions/index.js'
+					'./node_modules/micromark-util-combine-extensions/index.js',
 				),
 				micromark_factory_space = __webpack_require__(
-					'./node_modules/micromark-factory-space/index.js'
+					'./node_modules/micromark-factory-space/index.js',
 				),
 				micromark_util_character = __webpack_require__(
-					'./node_modules/micromark-util-character/index.js'
+					'./node_modules/micromark-util-character/index.js',
 				)
 			const content = {
 				tokenize: function initializeContent(effects) {
@@ -3008,13 +3021,13 @@
 								(0, micromark_factory_space.f)(
 									effects,
 									contentStart,
-									'linePrefix'
+									'linePrefix',
 								)
 							)
 						},
 						function paragraphInitial(code) {
 							return effects.enter('paragraph'), lineStart(code)
-						}
+						},
 					)
 					let previous
 					return contentStart
@@ -3043,7 +3056,7 @@
 				},
 			}
 			var micromark_util_chunked = __webpack_require__(
-				'./node_modules/micromark-util-chunked/index.js'
+				'./node_modules/micromark-util-chunked/index.js',
 			)
 			const document_document = {
 					tokenize: function initializeDocument(effects) {
@@ -3062,7 +3075,7 @@
 									effects.attempt(
 										item[0].continuation,
 										documentContinue,
-										checkNewContainers
+										checkNewContainers,
 									)(code)
 								)
 							}
@@ -3091,7 +3104,7 @@
 								for (; index < self.events.length; )
 									(self.events[index][1].end = Object.assign(
 										{},
-										point
+										point,
 									)),
 										index++
 								return (
@@ -3099,7 +3112,7 @@
 										self.events,
 										indexBeforeFlow + 1,
 										0,
-										self.events.slice(indexBeforeExits)
+										self.events.slice(indexBeforeExits),
 									),
 									(self.events.length = index),
 									checkNewContainers(code)
@@ -3117,7 +3130,7 @@
 									return flowStart(code)
 								self.interrupt = Boolean(
 									childFlow.currentConstruct &&
-										!childFlow._gfmTableDynamicInterruptHack
+										!childFlow._gfmTableDynamicInterruptHack,
 								)
 							}
 							return (
@@ -3125,7 +3138,7 @@
 								effects.check(
 									containerConstruct,
 									thereIsANewContainer,
-									thereIsNoNewContainer
+									thereIsNoNewContainer,
 								)(code)
 							)
 						}
@@ -3150,7 +3163,7 @@
 								effects.attempt(
 									containerConstruct,
 									containerContinue,
-									flowStart
+									flowStart,
 								)(code)
 							)
 						}
@@ -3240,14 +3253,14 @@
 								)
 									(self.events[index][1].end = Object.assign(
 										{},
-										point
+										point,
 									)),
 										index++
 								;(0, micromark_util_chunked.d)(
 									self.events,
 									indexBeforeFlow + 1,
 									0,
-									self.events.slice(indexBeforeExits)
+									self.events.slice(indexBeforeExits),
 								),
 									(self.events.length = index)
 							}
@@ -3276,19 +3289,19 @@
 							effects.attempt(
 								this.parser.constructs.document,
 								ok,
-								nok
+								nok,
 							),
 							'linePrefix',
 							this.parser.constructs.disable.null.includes(
-								'codeIndented'
+								'codeIndented',
 							)
 								? void 0
-								: 4
+								: 4,
 						)
 					},
 				}
 			var blank_line = __webpack_require__(
-				'./node_modules/micromark-core-commonmark/lib/blank-line.js'
+				'./node_modules/micromark-core-commonmark/lib/blank-line.js',
 			)
 			function subtokenize(events) {
 				const jumps = {}
@@ -3350,7 +3363,7 @@
 						lineIndex &&
 							((event[1].end = Object.assign(
 								{},
-								events[lineIndex][1].start
+								events[lineIndex][1].start,
 							)),
 							(parameters = events.slice(lineIndex, index)),
 							parameters.unshift(event),
@@ -3358,7 +3371,7 @@
 								events,
 								lineIndex,
 								index - lineIndex + 1,
-								parameters
+								parameters,
 							))
 					}
 				}
@@ -3423,7 +3436,7 @@
 				) {
 					const slice = childEvents.slice(
 							breaks[index],
-							breaks[index + 1]
+							breaks[index + 1],
 						),
 						start = startPositions.pop()
 					jumps.unshift([start, start + slice.length - 1]),
@@ -3453,7 +3466,7 @@
 								? effects.check(
 										continuationConstruct,
 										contentContinue,
-										contentEnd
+										contentEnd,
 								  )(code)
 								: (effects.consume(code), data)
 						}
@@ -3493,7 +3506,7 @@
 								(0, micromark_factory_space.f)(
 									effects,
 									prefixed,
-									'linePrefix'
+									'linePrefix',
 								)
 							)
 						}
@@ -3505,7 +3518,7 @@
 								return nok(code)
 							const tail = self.events[self.events.length - 1]
 							return !self.parser.constructs.disable.null.includes(
-								'codeIndented'
+								'codeIndented',
 							) &&
 								tail &&
 								'linePrefix' === tail[1].type &&
@@ -3514,7 +3527,7 @@
 								: effects.interrupt(
 										self.parser.constructs.flow,
 										nok,
-										ok
+										ok,
 								  )(code)
 						}
 					},
@@ -3546,12 +3559,12 @@
 										afterConstruct,
 										effects.attempt(
 											content_content,
-											afterConstruct
-										)
+											afterConstruct,
+										),
 									),
-									'linePrefix'
-								)
-							)
+									'linePrefix',
+								),
+							),
 						)
 					return initial
 					function afterConstruct(code) {
@@ -3611,7 +3624,7 @@
 						}
 					},
 					resolveAll: createResolver(
-						'text' === field ? resolveAllLineSuffixes : void 0
+						'text' === field ? resolveAllLineSuffixes : void 0,
 					),
 				}
 			}
@@ -3694,7 +3707,7 @@
 											eventIndex,
 											0,
 											['enter', token, context],
-											['exit', token, context]
+											['exit', token, context],
 									  ),
 									  (eventIndex += 2))
 						}
@@ -3703,14 +3716,14 @@
 				return events
 			}
 			var micromark_util_resolve_all = __webpack_require__(
-				'./node_modules/micromark-util-resolve-all/index.js'
+				'./node_modules/micromark-util-resolve-all/index.js',
 			)
 			function createTokenizer(parser, initialize, from) {
 				let point = Object.assign(
 					from
 						? Object.assign({}, from)
 						: { line: 1, column: 1, offset: 0 },
-					{ _index: 0, _bufferIndex: -1 }
+					{ _index: 0, _bufferIndex: -1 },
 				)
 				const columnStart = {},
 					resolveAllConstructs = []
@@ -3756,7 +3769,7 @@
 						attempt: constructFactory(
 							function onsuccessfulconstruct(construct, info) {
 								addResult(construct, info.from)
-							}
+							},
 						),
 						check: constructFactory(onsuccessfulcheck),
 						interrupt: constructFactory(onsuccessfulcheck, {
@@ -3772,11 +3785,11 @@
 						sliceStream,
 						sliceSerialize: function sliceSerialize(
 							token,
-							expandTabs
+							expandTabs,
 						) {
 							return (function serializeChunks(
 								chunks,
-								expandTabs
+								expandTabs,
 							) {
 								let index = -1
 								const result = []
@@ -3822,7 +3835,7 @@
 							if (
 								((chunks = (0, micromark_util_chunked.V)(
 									chunks,
-									slice
+									slice,
 								)),
 								main(),
 								null !== chunks[chunks.length - 1])
@@ -3834,7 +3847,7 @@
 								micromark_util_resolve_all.C)(
 									resolveAllConstructs,
 									context.events,
-									context
+									context,
 								)),
 								context.events
 							)
@@ -3858,7 +3871,7 @@
 							? (view = [
 									chunks[startIndex].slice(
 										startBufferIndex,
-										endBufferIndex
+										endBufferIndex,
 									),
 							  ])
 							: ((view = chunks.slice(startIndex, endIndex)),
@@ -3868,8 +3881,8 @@
 									view.push(
 										chunks[endIndex].slice(
 											0,
-											endBufferIndex
-										)
+											endBufferIndex,
+										),
 									))
 						return view
 					})(chunks, token)
@@ -3968,7 +3981,7 @@
 								if (
 									construct.name &&
 									context.parser.constructs.disable.null.includes(
-										construct.name
+										construct.name,
 									)
 								)
 									return nok(code)
@@ -3976,12 +3989,12 @@
 									fields
 										? Object.assign(
 												Object.create(context),
-												fields
+												fields,
 										  )
 										: context,
 									effects,
 									ok,
-									nok
+									nok,
 								)(code)
 							}
 						}
@@ -3998,7 +4011,7 @@
 								info.restore(),
 								++constructIndex < listOfConstructs.length
 									? handleConstruct(
-											listOfConstructs[constructIndex]
+											listOfConstructs[constructIndex],
 									  )
 									: bogusState
 							)
@@ -4016,13 +4029,13 @@
 								context.events.length - from,
 								construct.resolve(
 									context.events.slice(from),
-									context
-								)
+									context,
+								),
 							),
 						construct.resolveTo &&
 							(context.events = construct.resolveTo(
 								context.events,
-								context
+								context,
 							))
 				}
 				function accountForPotentialSkip() {
@@ -4052,7 +4065,7 @@
 							? (0, micromark_factory_space.f)(
 									effects,
 									atBreak,
-									'whitespace'
+									'whitespace',
 							  )(code)
 							: size < 3 ||
 							  (null !== code &&
@@ -4104,7 +4117,7 @@
 											? effects.check(
 													thematicBreak,
 													nok,
-													atMarker
+													atMarker,
 											  )(code)
 											: atMarker(code)
 									)
@@ -4142,8 +4155,8 @@
 									effects.attempt(
 										listItemPrefixWhitespaceConstruct,
 										endOfPrefix,
-										otherPrefix
-									)
+										otherPrefix,
+									),
 								)
 							)
 						}
@@ -4168,7 +4181,7 @@
 									initialSize +
 									self.sliceSerialize(
 										effects.exit('listItemPrefix'),
-										!0
+										!0,
 									).length),
 								ok(code)
 							)
@@ -4178,7 +4191,7 @@
 						tokenize: function tokenizeListContinuation(
 							effects,
 							ok,
-							nok
+							nok,
 						) {
 							const self = this
 							return (
@@ -4196,7 +4209,7 @@
 												effects,
 												ok,
 												'listItemIndent',
-												self.containerState.size + 1
+												self.containerState.size + 1,
 											)(code)
 										)
 									},
@@ -4205,7 +4218,7 @@
 											self.containerState
 												.furtherBlankLines ||
 											!(0, micromark_util_character.xz)(
-												code
+												code,
 											)
 										)
 											return (
@@ -4223,10 +4236,10 @@
 											effects.attempt(
 												indentConstruct,
 												ok,
-												notInCurrentItem
+												notInCurrentItem,
 											)(code)
 										)
-									}
+									},
 								)
 							)
 							function notInCurrentItem(code) {
@@ -4238,10 +4251,10 @@
 										effects.attempt(list, ok, nok),
 										'linePrefix',
 										self.parser.constructs.disable.null.includes(
-											'codeIndented'
+											'codeIndented',
 										)
 											? void 0
-											: 4
+											: 4,
 									)(code)
 								)
 							}
@@ -4255,7 +4268,7 @@
 					tokenize: function tokenizeListItemPrefixWhitespace(
 						effects,
 						ok,
-						nok
+						nok,
 					) {
 						const self = this
 						return (0, micromark_factory_space.f)(
@@ -4263,7 +4276,7 @@
 							function afterPrefix(code) {
 								const tail = self.events[self.events.length - 1]
 								return !(0, micromark_util_character.xz)(
-									code
+									code,
 								) &&
 									tail &&
 									'listItemPrefixWhitespace' === tail[1].type
@@ -4272,10 +4285,10 @@
 							},
 							'listItemPrefixWhitespace',
 							self.parser.constructs.disable.null.includes(
-								'codeIndented'
+								'codeIndented',
 							)
 								? void 0
-								: 5
+								: 5,
 						)
 					},
 					partial: !0,
@@ -4295,7 +4308,7 @@
 									: nok(code)
 							},
 							'listItemIndent',
-							self.containerState.size + 1
+							self.containerState.size + 1,
 						)
 					},
 					partial: !0,
@@ -4336,17 +4349,17 @@
 					tokenize: function tokenizeBlockQuoteContinuation(
 						effects,
 						ok,
-						nok
+						nok,
 					) {
 						return (0, micromark_factory_space.f)(
 							effects,
 							effects.attempt(blockQuote, ok, nok),
 							'linePrefix',
 							this.parser.constructs.disable.null.includes(
-								'codeIndented'
+								'codeIndented',
 							)
 								? void 0
-								: 4
+								: 4,
 						)
 					},
 				},
@@ -4363,7 +4376,7 @@
 				literalMarkerType,
 				rawType,
 				stringType,
-				max
+				max,
 			) {
 				const limit = max || Number.POSITIVE_INFINITY
 				let balance = 0
@@ -4463,7 +4476,7 @@
 				nok,
 				type,
 				markerType,
-				stringType
+				stringType,
 			) {
 				const self = this
 				let data,
@@ -4530,7 +4543,7 @@
 				nok,
 				type,
 				markerType,
-				stringType
+				stringType,
 			) {
 				let marker
 				return function start(code) {
@@ -4564,7 +4577,7 @@
 						  (0, micromark_factory_space.f)(
 								effects,
 								atTitleBreak,
-								'linePrefix'
+								'linePrefix',
 						  ))
 						: (effects.enter('chunkString', {
 								contentType: 'string',
@@ -4600,13 +4613,13 @@
 						return (0, micromark_factory_space.f)(
 							effects,
 							start,
-							seen ? 'linePrefix' : 'lineSuffix'
+							seen ? 'linePrefix' : 'lineSuffix',
 						)(code)
 					return ok(code)
 				}
 			}
 			var micromark_util_normalize_identifier = __webpack_require__(
-				'./node_modules/micromark-util-normalize-identifier/index.js'
+				'./node_modules/micromark-util-normalize-identifier/index.js',
 			)
 			const definition = {
 					name: 'definition',
@@ -4623,7 +4636,7 @@
 									nok,
 									'definitionLabel',
 									'definitionLabelMarker',
-									'definitionLabelString'
+									'definitionLabelString',
 								)(code)
 							)
 						}
@@ -4635,9 +4648,9 @@
 										.sliceSerialize(
 											self.events[
 												self.events.length - 1
-											][1]
+											][1],
 										)
-										.slice(1, -1)
+										.slice(1, -1),
 								)),
 								58 === code
 									? (effects.enter('definitionMarker'),
@@ -4653,22 +4666,22 @@
 													micromark_factory_space.f)(
 														effects,
 														after,
-														'whitespace'
+														'whitespace',
 													),
 													(0,
 													micromark_factory_space.f)(
 														effects,
 														after,
-														'whitespace'
-													)
+														'whitespace',
+													),
 												),
 												nok,
 												'definitionDestination',
 												'definitionDestinationLiteral',
 												'definitionDestinationLiteralMarker',
 												'definitionDestinationRaw',
-												'definitionDestinationString'
-											)
+												'definitionDestinationString',
+											),
 									  ))
 									: nok(code)
 							)
@@ -4698,12 +4711,12 @@
 										(0, micromark_factory_space.f)(
 											effects,
 											after,
-											'whitespace'
+											'whitespace',
 										),
 										nok,
 										'definitionTitle',
 										'definitionTitleMarker',
-										'definitionTitleString'
+										'definitionTitleString',
 								  )(code)
 								: nok(code)
 						}
@@ -4727,7 +4740,7 @@
 									effects,
 									afterStartPrefix,
 									'linePrefix',
-									5
+									5,
 								)(code)
 							)
 						}
@@ -4746,7 +4759,7 @@
 								? effects.attempt(
 										indentedContent,
 										afterPrefix,
-										after
+										after,
 								  )(code)
 								: (effects.enter('codeFlowValue'),
 								  content(code))
@@ -4767,7 +4780,7 @@
 					tokenize: function tokenizeIndentedContent(
 						effects,
 						ok,
-						nok
+						nok,
 					) {
 						const self = this
 						return start
@@ -4783,7 +4796,7 @@
 										effects,
 										afterPrefix,
 										'linePrefix',
-										5
+										5,
 								  )(code)
 						}
 						function afterPrefix(code) {
@@ -4831,7 +4844,7 @@
 							? (0, micromark_factory_space.f)(
 									effects,
 									headingBreak,
-									'whitespace'
+									'whitespace',
 							  )(code)
 							: (effects.enter('atxHeadingText'), data(code))
 					}
@@ -4887,7 +4900,7 @@
 								['enter', text, context],
 								['exit', text, context],
 								['exit', content, context],
-							]
+							],
 						))
 					return events
 				},
@@ -4929,7 +4942,7 @@
 							  (0, micromark_factory_space.f)(
 									effects,
 									closingSequenceEnd,
-									'lineSuffix'
+									'lineSuffix',
 							  )(code))
 					}
 					function closingSequenceEnd(code) {
@@ -4963,7 +4976,7 @@
 						start: Object.assign({}, events[text][1].start),
 						end: Object.assign(
 							{},
-							events[events.length - 1][1].end
+							events[events.length - 1][1].end,
 						),
 					}
 					;(events[text][1].type = 'setextHeadingText'),
@@ -4980,7 +4993,7 @@
 							  ]),
 							  (events[content][1].end = Object.assign(
 									{},
-									events[definition][1].end
+									events[definition][1].end,
 							  )))
 							: (events[content][1] = heading)
 					return events.push(['exit', heading, context]), events
@@ -5138,7 +5151,7 @@
 											? ok(code)
 											: continuation(code))
 									: htmlBlockNames.includes(
-											buffer.toLowerCase()
+											buffer.toLowerCase(),
 									  )
 									? ((kind = 6),
 									  47 === code
@@ -5287,7 +5300,7 @@
 								: effects.check(
 										nextBlankConstruct,
 										continuationClose,
-										continuationAtLineEnding
+										continuationAtLineEnding,
 								  )(code)
 						}
 						function continuationAtLineEnding(code) {
@@ -5303,7 +5316,7 @@
 								? effects.attempt(
 										{ tokenize: htmlLineEnd, partial: !0 },
 										htmlContinueStart,
-										done
+										done,
 								  )(code)
 								: (effects.enter('htmlFlowData'),
 								  continuation(code))
@@ -5413,7 +5426,7 @@
 							tokenize: function tokenizeClosingFence(
 								effects,
 								ok,
-								nok
+								nok,
 							) {
 								let size = 0
 								return (0, micromark_factory_space.f)(
@@ -5421,16 +5434,16 @@
 									closingSequenceStart,
 									'linePrefix',
 									this.parser.constructs.disable.null.includes(
-										'codeIndented'
+										'codeIndented',
 									)
 										? void 0
-										: 4
+										: 4,
 								)
 								function closingSequenceStart(code) {
 									return (
 										effects.enter('codeFencedFence'),
 										effects.enter(
-											'codeFencedFenceSequence'
+											'codeFencedFenceSequence',
 										),
 										closingSequence(code)
 									)
@@ -5443,12 +5456,12 @@
 										: size < sizeOpen
 										? nok(code)
 										: (effects.exit(
-												'codeFencedFenceSequence'
+												'codeFencedFenceSequence',
 										  ),
 										  (0, micromark_factory_space.f)(
 												effects,
 												closingSequenceEnd,
-												'whitespace'
+												'whitespace',
 										  )(code))
 								}
 								function closingSequenceEnd(code) {
@@ -5465,7 +5478,7 @@
 							tokenize: function tokenizeNonLazyLine(
 								effects,
 								ok,
-								nok
+								nok,
 							) {
 								const self = this
 								return start
@@ -5510,7 +5523,7 @@
 									: (0, micromark_factory_space.f)(
 											effects,
 											infoOpen,
-											'whitespace'
+											'whitespace',
 									  )(code))
 					}
 					function infoOpen(code) {
@@ -5531,7 +5544,7 @@
 							  (0, micromark_factory_space.f)(
 									effects,
 									infoAfter,
-									'whitespace'
+									'whitespace',
 							  )(code))
 							: 96 === code && code === marker
 							? nok(code)
@@ -5577,11 +5590,11 @@
 													effects,
 													contentStart,
 													'linePrefix',
-													initialPrefix + 1
+													initialPrefix + 1,
 											  )
-											: contentStart
+											: contentStart,
 									),
-									after
+									after,
 							  )(code)
 							: (effects.enter('codeFlowValue'),
 							  contentContinue(code))
@@ -5600,14 +5613,14 @@
 				concrete: !0,
 			}
 			var index_dom = __webpack_require__(
-				'./node_modules/decode-named-character-reference/index.dom.js'
+				'./node_modules/decode-named-character-reference/index.dom.js',
 			)
 			const characterReference = {
 				name: 'characterReference',
 				tokenize: function tokenizeCharacterReference(
 					effects,
 					ok,
-					nok
+					nok,
 				) {
 					const self = this
 					let max,
@@ -5636,11 +5649,11 @@
 					function numeric(code) {
 						return 88 === code || 120 === code
 							? (effects.enter(
-									'characterReferenceMarkerHexadecimal'
+									'characterReferenceMarkerHexadecimal',
 							  ),
 							  effects.consume(code),
 							  effects.exit(
-									'characterReferenceMarkerHexadecimal'
+									'characterReferenceMarkerHexadecimal',
 							  ),
 							  effects.enter('characterReferenceValue'),
 							  (max = 6),
@@ -5655,12 +5668,12 @@
 						let token
 						return 59 === code && size
 							? ((token = effects.exit(
-									'characterReferenceValue'
+									'characterReferenceValue',
 							  )),
 							  test !== micromark_util_character.H$ ||
 							  (0, index_dom.T)(self.sliceSerialize(token))
 									? (effects.enter(
-											'characterReferenceMarker'
+											'characterReferenceMarker',
 									  ),
 									  effects.consume(code),
 									  effects.exit('characterReferenceMarker'),
@@ -5707,7 +5720,7 @@
 							(0, micromark_factory_space.f)(
 								effects,
 								ok,
-								'linePrefix'
+								'linePrefix',
 							)
 						)
 					}
@@ -5740,8 +5753,8 @@
 											self.sliceSerialize({
 												start: labelStart.end,
 												end: self.now(),
-											})
-										)
+											}),
+										),
 								  )),
 								  effects.enter('labelEnd'),
 								  effects.enter('labelMarker'),
@@ -5755,7 +5768,7 @@
 								? effects.attempt(
 										resourceConstruct,
 										ok,
-										defined ? ok : balanced
+										defined ? ok : balanced,
 								  )(code)
 								: 91 === code
 								? effects.attempt(
@@ -5765,9 +5778,9 @@
 											? effects.attempt(
 													collapsedReferenceConstruct,
 													ok,
-													balanced
+													balanced,
 											  )
-											: balanced
+											: balanced,
 								  )(code)
 								: defined
 								? ok(code)
@@ -5815,7 +5828,7 @@
 								start: Object.assign({}, events[open][1].start),
 								end: Object.assign(
 									{},
-									events[events.length - 1][1].end
+									events[events.length - 1][1].end,
 								),
 							},
 							label = {
@@ -5827,11 +5840,11 @@
 								type: 'labelText',
 								start: Object.assign(
 									{},
-									events[open + offset + 2][1].end
+									events[open + offset + 2][1].end,
 								),
 								end: Object.assign(
 									{},
-									events[close - 2][1].start
+									events[close - 2][1].start,
 								),
 							}
 						return (
@@ -5841,7 +5854,7 @@
 							]),
 							(media = (0, micromark_util_chunked.V)(
 								media,
-								events.slice(open + 1, open + offset + 3)
+								events.slice(open + 1, open + offset + 3),
 							)),
 							(media = (0, micromark_util_chunked.V)(media, [
 								['enter', text, context],
@@ -5851,8 +5864,8 @@
 								(0, micromark_util_resolve_all.C)(
 									context.parser.constructs.insideSpan.null,
 									events.slice(open + offset + 4, close - 3),
-									context
-								)
+									context,
+								),
 							)),
 							(media = (0, micromark_util_chunked.V)(media, [
 								['exit', text, context],
@@ -5862,7 +5875,7 @@
 							])),
 							(media = (0, micromark_util_chunked.V)(
 								media,
-								events.slice(close + 1)
+								events.slice(close + 1),
 							)),
 							(media = (0, micromark_util_chunked.V)(media, [
 								['exit', group, context],
@@ -5871,7 +5884,7 @@
 								events,
 								open,
 								events.length,
-								media
+								media,
 							),
 							events
 						)
@@ -5886,7 +5899,7 @@
 									'labelEnd' !== token.type) ||
 									(events.splice(
 										index + 1,
-										'labelImage' === token.type ? 4 : 2
+										'labelImage' === token.type ? 4 : 2,
 									),
 									(token.type = 'data'),
 									index++)
@@ -5916,7 +5929,7 @@
 										'resourceDestinationLiteralMarker',
 										'resourceDestinationRaw',
 										'resourceDestinationString',
-										32
+										32,
 								  )(code)
 						}
 						function destinationAfter(code) {
@@ -5932,7 +5945,7 @@
 										nok,
 										'resourceTitle',
 										'resourceTitleMarker',
-										'resourceTitleString'
+										'resourceTitleString',
 								  )(code)
 								: end(code)
 						}
@@ -5958,7 +5971,7 @@
 								nok,
 								'reference',
 								'referenceMarker',
-								'referenceString'
+								'referenceString',
 							)(code)
 						}
 						function afterLabel(code) {
@@ -5968,10 +5981,10 @@
 										.sliceSerialize(
 											self.events[
 												self.events.length - 1
-											][1]
+											][1],
 										)
-										.slice(1, -1)
-								)
+										.slice(1, -1),
+								),
 							)
 								? ok(code)
 								: nok(code)
@@ -5982,7 +5995,7 @@
 					tokenize: function tokenizeCollapsedReference(
 						effects,
 						ok,
-						nok
+						nok,
 					) {
 						return function start(code) {
 							return (
@@ -6036,7 +6049,7 @@
 				resolveAll: labelEnd.resolveAll,
 			}
 			var micromark_util_classify_character = __webpack_require__(
-				'./node_modules/micromark-util-classify-character/index.js'
+				'./node_modules/micromark-util-classify-character/index.js',
 			)
 			const attention = {
 				name: 'attention',
@@ -6045,7 +6058,7 @@
 							this.parser.constructs.attentionMarkers.null,
 						previous = this.previous,
 						before = (0, micromark_util_classify_character.r)(
-							previous
+							previous,
 						)
 					let marker
 					return function start(code) {
@@ -6060,7 +6073,7 @@
 							return effects.consume(code), sequence
 						const token = effects.exit('attentionSequence'),
 							after = (0, micromark_util_classify_character.r)(
-								code
+								code,
 							),
 							open =
 								!after ||
@@ -6074,12 +6087,12 @@
 							(token._open = Boolean(
 								42 === marker
 									? open
-									: open && (before || !close)
+									: open && (before || !close),
 							)),
 							(token._close = Boolean(
 								42 === marker
 									? close
-									: close && (after || !open)
+									: close && (after || !open),
 							)),
 							ok(code)
 						)
@@ -6140,11 +6153,11 @@
 											: 1
 									const start = Object.assign(
 											{},
-											events[open][1].end
+											events[open][1].end,
 										),
 										end = Object.assign(
 											{},
-											events[index][1].start
+											events[index][1].start,
 										)
 									movePoint(start, -use),
 										movePoint(end, use),
@@ -6156,7 +6169,7 @@
 											start,
 											end: Object.assign(
 												{},
-												events[open][1].end
+												events[open][1].end,
 											),
 										}),
 										(closingSequence = {
@@ -6166,7 +6179,7 @@
 													: 'emphasisSequence',
 											start: Object.assign(
 												{},
-												events[index][1].start
+												events[index][1].start,
 											),
 											end,
 										}),
@@ -6177,11 +6190,11 @@
 													: 'emphasisText',
 											start: Object.assign(
 												{},
-												events[open][1].end
+												events[open][1].end,
 											),
 											end: Object.assign(
 												{},
-												events[index][1].start
+												events[index][1].start,
 											),
 										}),
 										(group = {
@@ -6189,20 +6202,20 @@
 												use > 1 ? 'strong' : 'emphasis',
 											start: Object.assign(
 												{},
-												openingSequence.start
+												openingSequence.start,
 											),
 											end: Object.assign(
 												{},
-												closingSequence.end
+												closingSequence.end,
 											),
 										}),
 										(events[open][1].end = Object.assign(
 											{},
-											openingSequence.start
+											openingSequence.start,
 										)),
 										(events[index][1].start = Object.assign(
 											{},
-											closingSequence.end
+											closingSequence.end,
 										)),
 										(nextEvents = []),
 										events[open][1].end.offset -
@@ -6221,7 +6234,7 @@
 														events[open][1],
 														context,
 													],
-												]
+												],
 											)),
 										(nextEvents = (0,
 										micromark_util_chunked.V)(nextEvents, [
@@ -6237,8 +6250,8 @@
 												context.parser.constructs
 													.insideSpan.null,
 												events.slice(open + 1, index),
-												context
-											)
+												context,
+											),
 										)),
 										(nextEvents = (0,
 										micromark_util_chunked.V)(nextEvents, [
@@ -6264,14 +6277,14 @@
 															events[index][1],
 															context,
 														],
-													]
+													],
 											  )))
 											: (offset = 0),
 										(0, micromark_util_chunked.d)(
 											events,
 											open - 1,
 											index - open + 3,
-											nextEvents
+											nextEvents,
 										),
 										(index =
 											open +
@@ -6627,10 +6640,10 @@
 								afterPrefix,
 								'linePrefix',
 								self.parser.constructs.disable.null.includes(
-									'codeIndented'
+									'codeIndented',
 								)
 									? void 0
-									: 4
+									: 4,
 							)
 						)
 					}
@@ -6852,13 +6865,13 @@
 			const search = /[\0\t\n\r]/g
 			var micromark_util_decode_numeric_character_reference =
 					__webpack_require__(
-						'./node_modules/micromark-util-decode-numeric-character-reference/index.js'
+						'./node_modules/micromark-util-decode-numeric-character-reference/index.js',
 					),
 				micromark_util_decode_string = __webpack_require__(
-					'./node_modules/micromark-util-decode-string/index.js'
+					'./node_modules/micromark-util-decode-string/index.js',
 				),
 				unist_util_stringify_position_lib = __webpack_require__(
-					'./node_modules/unist-util-stringify-position/lib/index.js'
+					'./node_modules/unist-util-stringify-position/lib/index.js',
 				)
 			const own = {}.hasOwnProperty,
 				fromMarkdown = function (value, encoding, options) {
@@ -6909,7 +6922,7 @@
 									listItemValue: onenterlistitemvalue,
 									listOrdered: opener(
 										list,
-										onenterlistordered
+										onenterlistordered,
 									),
 									listUnordered: opener(list),
 									paragraph: opener(paragraph),
@@ -6986,7 +6999,7 @@
 							}
 							configure(
 								config,
-								(options || {}).mdastExtensions || []
+								(options || {}).mdastExtensions || [],
 							)
 							const data = {}
 							return compile
@@ -7018,7 +7031,7 @@
 											index = prepareList(
 												events,
 												listStack.pop(),
-												index
+												index,
 											)
 										}
 								for (index = -1; ++index < events.length; ) {
@@ -7031,9 +7044,9 @@
 														events[index][2]
 															.sliceSerialize,
 												},
-												context
+												context,
 											),
-											events[index][1]
+											events[index][1],
 										)
 								}
 								if (context.tokenStack.length > 0) {
@@ -7044,7 +7057,7 @@
 									;(tail[1] || defaultOnError).call(
 										context,
 										void 0,
-										tail[0]
+										tail[0],
 									)
 								}
 								for (
@@ -7056,7 +7069,7 @@
 														line: 1,
 														column: 1,
 														offset: 0,
-												  }
+												  },
 										),
 										end: point(
 											events.length > 0
@@ -7066,7 +7079,7 @@
 														line: 1,
 														column: 1,
 														offset: 0,
-												  }
+												  },
 										),
 									},
 										index = -1;
@@ -7176,12 +7189,16 @@
 													lineIndex
 														? events[lineIndex][1]
 																.start
-														: event[1].end
+														: event[1].end,
 												)),
 												events.splice(
 													lineIndex || index,
 													0,
-													['exit', listItem, event[2]]
+													[
+														'exit',
+														listItem,
+														event[2],
+													],
 												),
 												index++,
 												length++
@@ -7192,7 +7209,7 @@
 												_spread: !1,
 												start: Object.assign(
 													{},
-													event[1].start
+													event[1].start,
 												),
 											}),
 											events.splice(index, 0, [
@@ -7263,9 +7280,9 @@
 												{
 													start: token.start,
 													end: token.end,
-												}
+												},
 											) +
-											'): it’s not open'
+											'): it’s not open',
 									)
 								if (open[0].type !== token.type)
 									if (onExitError)
@@ -7274,7 +7291,7 @@
 										;(open[1] || defaultOnError).call(
 											this,
 											token,
-											open[0]
+											open[0],
 										)
 									}
 								return (
@@ -7291,7 +7308,7 @@
 											settings.includeImageAlt,
 										'boolean' !=
 											typeof settings.includeHtml ||
-											settings.includeHtml
+											settings.includeHtml,
 									)
 								})(this.stack.pop())
 							}
@@ -7303,7 +7320,7 @@
 									;(this.stack[this.stack.length - 2].start =
 										Number.parseInt(
 											this.sliceSerialize(token),
-											10
+											10,
 										)),
 										setData('expectingFirstListItemValue')
 								}
@@ -7326,7 +7343,7 @@
 								;(this.stack[this.stack.length - 1].value =
 									data.replace(
 										/^(\r?\n|\r)|(\r?\n|\r)$/g,
-										''
+										'',
 									)),
 									setData('flowCodeInside')
 							}
@@ -7341,7 +7358,7 @@
 								;(node.label = label),
 									(node.identifier = (0,
 									micromark_util_normalize_identifier.d)(
-										this.sliceSerialize(token)
+										this.sliceSerialize(token),
 									).toLowerCase())
 							}
 							function onexitdefinitiontitlestring() {
@@ -7403,7 +7420,7 @@
 								}
 								!getData('setextHeadingSlurpLineEnding') &&
 									config.canContainEols.includes(
-										context.type
+										context.type,
 									) &&
 									(onenterdata.call(this, token),
 									onexitdata.call(this, token))
@@ -7454,7 +7471,7 @@
 								micromark_util_decode_string.v)(string)),
 									(ancestor.identifier = (0,
 									micromark_util_normalize_identifier.d)(
-										string
+										string,
 									).toLowerCase())
 							}
 							function onexitlabel() {
@@ -7490,7 +7507,7 @@
 								;(node.label = label),
 									(node.identifier = (0,
 									micromark_util_normalize_identifier.d)(
-										this.sliceSerialize(token)
+										this.sliceSerialize(token),
 									).toLowerCase()),
 									setData('referenceType', 'full')
 							}
@@ -7508,7 +7525,7 @@
 										'characterReferenceMarkerNumeric' ===
 											type
 											? 10
-											: 16
+											: 16,
 									)),
 										setData('characterReferenceType')
 								else {
@@ -7624,8 +7641,8 @@
 										constructs: (0,
 										micromark_util_combine_extensions.W)(
 											[constructs_namespaceObject].concat(
-												options.extensions || []
-											)
+												options.extensions || [],
+											),
 										),
 										content: create(content),
 										document: create(document_document),
@@ -7639,7 +7656,7 @@
 											return createTokenizer(
 												parser,
 												initial,
-												from
+												from,
 											)
 										}
 									}
@@ -7654,7 +7671,7 @@
 											return function preprocessor(
 												value,
 												encoding,
-												end
+												end,
 											) {
 												const chunks = []
 												let match,
@@ -7666,14 +7683,14 @@
 													value =
 														buffer +
 														value.toString(
-															encoding
+															encoding,
 														),
 														startPosition = 0,
 														buffer = '',
 														start &&
 															(65279 ===
 																value.charCodeAt(
-																	0
+																	0,
 																) &&
 																startPosition++,
 															(start = void 0));
@@ -7694,13 +7711,13 @@
 																: value.length),
 														(code =
 															value.charCodeAt(
-																endPosition
+																endPosition,
 															)),
 														!match)
 													) {
 														buffer =
 															value.slice(
-																startPosition
+																startPosition,
 															)
 														break
 													}
@@ -7717,7 +7734,7 @@
 														switch (
 															(atCarriageReturn &&
 																(chunks.push(
-																	-5
+																	-5,
 																),
 																(atCarriageReturn =
 																	void 0)),
@@ -7726,8 +7743,8 @@
 																(chunks.push(
 																	value.slice(
 																		startPosition,
-																		endPosition
-																	)
+																		endPosition,
+																	),
 																),
 																(column +=
 																	endPosition -
@@ -7736,7 +7753,7 @@
 														) {
 															case 0:
 																chunks.push(
-																	65533
+																	65533,
 																),
 																	column++
 																break
@@ -7746,17 +7763,17 @@
 																		4 *
 																		Math.ceil(
 																			column /
-																				4
+																				4,
 																		),
 																		chunks.push(
-																			-2
+																			-2,
 																		);
 																	column++ <
 																	next;
 
 																)
 																	chunks.push(
-																		-1
+																		-1,
 																	)
 																break
 															case 10:
@@ -7781,9 +7798,9 @@
 													chunks
 												)
 											}
-										})()(value, encoding, !0)
-									)
-							)
+										})()(value, encoding, !0),
+									),
+							),
 						)
 					)
 				}
@@ -7831,7 +7848,7 @@
 									start: right.start,
 									end: right.end,
 								}) +
-								') is open'
+								') is open',
 					  )
 					: new Error(
 							'Cannot close document, a token (`' +
@@ -7841,7 +7858,7 @@
 									start: right.start,
 									end: right.end,
 								}) +
-								') is still open'
+								') is still open',
 					  )
 			}
 			const remark_parse = function remarkParse(options) {
@@ -7855,7 +7872,7 @@
 									this.data('micromarkExtensions') || [],
 								mdastExtensions:
 									this.data('fromMarkdownExtensions') || [],
-							})
+							}),
 						)
 					},
 				})
@@ -7871,10 +7888,10 @@
 					if (
 						37 === code &&
 						(0, micromark_util_character.H$)(
-							value.charCodeAt(index + 1)
+							value.charCodeAt(index + 1),
 						) &&
 						(0, micromark_util_character.H$)(
-							value.charCodeAt(index + 2)
+							value.charCodeAt(index + 2),
 						)
 					)
 						skip = 2
@@ -7891,7 +7908,7 @@
 					replace &&
 						(result.push(
 							value.slice(start, index),
-							encodeURIComponent(replace)
+							encodeURIComponent(replace),
 						),
 						(start = index + skip + 1),
 						(replace = '')),
@@ -7900,7 +7917,7 @@
 				return result.join('') + value.slice(start)
 			}
 			var unist_util_visit_lib = __webpack_require__(
-				'./node_modules/unist-util-visit/lib/index.js'
+				'./node_modules/unist-util-visit/lib/index.js',
 			)
 			const pointStart = lib_point('start'),
 				pointEnd = lib_point('end')
@@ -7994,7 +8011,7 @@
 				for (; match; )
 					lines.push(
 						trimLine(source.slice(last, match.index), last > 0, !0),
-						match[0]
+						match[0],
 					),
 						(last = match.index + match[0].length),
 						(match = search.exec(source))
@@ -8240,7 +8257,7 @@
 
 										)
 											loose = listItemLoose(
-												children[index]
+												children[index],
 											)
 									}
 									return loose
@@ -8325,7 +8342,7 @@
 							child.properties &&
 							Array.isArray(child.properties.className) &&
 							child.properties.className.includes(
-								'task-list-item'
+								'task-list-item',
 							)
 						) {
 							properties.className = ['contains-task-list']
@@ -8396,7 +8413,7 @@
 							},
 							start = pointStart(node.children[1]),
 							end = pointEnd(
-								node.children[node.children.length - 1]
+								node.children[node.children.length - 1],
 							)
 						start.line &&
 							end.line &&
@@ -8475,7 +8492,7 @@
 				},
 				thematicBreak: function thematic_break_thematicBreak(
 					state,
-					node
+					node,
 				) {
 					const result = {
 						type: 'element',
@@ -8524,7 +8541,7 @@
 						const cache = Object.create(null)
 						if (!tree || !tree.type)
 							throw new Error(
-								'mdast-util-definitions expected node'
+								'mdast-util-definitions expected node',
 							)
 						return (
 							(0, unist_util_visit_lib.Vn)(
@@ -8535,7 +8552,7 @@
 									id &&
 										!lib_own.call(cache, id) &&
 										(cache[id] = definition)
-								}
+								},
 							),
 							function definition(identifier) {
 								const id = clean(identifier)
@@ -8563,11 +8580,11 @@
 						'footnoteDefinition',
 						(definition) => {
 							const id = String(
-								definition.identifier
+								definition.identifier,
 							).toUpperCase()
 							state_own.call(footnoteById, id) ||
 								(footnoteById[id] = definition)
-						}
+						},
 					),
 					state
 				)
@@ -8685,7 +8702,7 @@
 												properties: {},
 												children: state_all(
 													state,
-													node
+													node,
 												),
 										  }
 										: { type: 'text', value: node.value }
@@ -8710,7 +8727,7 @@
 									'text' !== result.type ||
 									(result.value = result.value.replace(
 										/^\s+/,
-										''
+										'',
 									)),
 								!Array.isArray(result) &&
 									'element' === result.type)
@@ -8720,7 +8737,7 @@
 									'text' === head.type &&
 									(head.value = head.value.replace(
 										/^\s+/,
-										''
+										'',
 									))
 							}
 							Array.isArray(result)
@@ -8845,8 +8862,8 @@
 										properties: {
 											...JSON.parse(
 												JSON.stringify(
-													state.footnoteLabelProperties
-												)
+													state.footnoteLabelProperties,
+												),
 											),
 											id: 'footnote-label',
 										},
@@ -8885,7 +8902,7 @@
 									file,
 									(error) => {
 										next(error)
-									}
+									},
 								)
 							}
 					  })(destination, options)
@@ -8894,16 +8911,16 @@
 					  })(destination || options)
 			}
 			var prop_types = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				prop_types_default = __webpack_require__.n(prop_types),
 				property_information = __webpack_require__(
-					'./node_modules/property-information/index.js'
+					'./node_modules/property-information/index.js',
 				)
 			function rehypeFilter(options) {
 				if (options.allowedElements && options.disallowedElements)
 					throw new TypeError(
-						'Only one of `allowedElements` and `disallowedElements` should be defined'
+						'Only one of `allowedElements` and `disallowedElements` should be defined',
 					)
 				if (
 					options.allowedElements ||
@@ -8921,12 +8938,12 @@
 									(options.allowedElements
 										? (remove =
 												!options.allowedElements.includes(
-													node.tagName
+													node.tagName,
 												))
 										: options.disallowedElements &&
 										  (remove =
 												options.disallowedElements.includes(
-													node.tagName
+													node.tagName,
 												)),
 									!remove &&
 										options.allowElement &&
@@ -8934,7 +8951,7 @@
 										(remove = !options.allowElement(
 											node,
 											index,
-											parent
+											parent,
 										)),
 									remove && 'number' == typeof index)
 								)
@@ -8944,17 +8961,17 @@
 											? parent.children.splice(
 													index,
 													1,
-													...node.children
+													...node.children,
 											  )
 											: parent.children.splice(index, 1),
 										index
 									)
-							}
+							},
 						)
 					}
 			}
 			var react_is = __webpack_require__(
-				'./node_modules/react-markdown/node_modules/react-is/index.js'
+				'./node_modules/react-markdown/node_modules/react-is/index.js',
 			)
 			function whitespace(thing) {
 				const value =
@@ -8967,7 +8984,7 @@
 				)
 			}
 			var find = __webpack_require__(
-				'./node_modules/property-information/lib/find.js'
+				'./node_modules/property-information/lib/find.js',
 			)
 			const hastToReact = {
 				classId: 'classID',
@@ -8989,13 +9006,13 @@
 				xmlnsXLink: 'xmlnsXlink',
 			}
 			var space_separated_tokens = __webpack_require__(
-					'./node_modules/space-separated-tokens/index.js'
+					'./node_modules/space-separated-tokens/index.js',
 				),
 				comma_separated_tokens = __webpack_require__(
-					'./node_modules/comma-separated-tokens/index.js'
+					'./node_modules/comma-separated-tokens/index.js',
 				),
 				style_to_object = __webpack_require__(
-					'./node_modules/style-to-object/index.js'
+					'./node_modules/style-to-object/index.js',
 				)
 			const node_modules_style_to_object =
 					__webpack_require__.n(style_to_object)(),
@@ -9041,7 +9058,7 @@
 					(child = node.children[childIndex]),
 						'element' === child.type
 							? children.push(
-									toReact(context, child, childIndex, node)
+									toReact(context, child, childIndex, node),
 							  )
 							: 'text' === child.type
 							? ('element' === node.type &&
@@ -9077,7 +9094,7 @@
 								properties,
 								property,
 								node.properties[property],
-								context
+								context,
 							)
 				;('ol' !== name && 'ul' !== name) || context.listDepth++
 				const children = childrenToReact(context, node)
@@ -9097,7 +9114,7 @@
 						component === react.Fragment
 				if (!react_is.isValidElementType(component))
 					throw new TypeError(
-						`Component for name \`${name}\` not defined or is not renderable`
+						`Component for name \`${name}\` not defined or is not renderable`,
 					)
 				if (
 					((properties.key = index),
@@ -9110,7 +9127,7 @@
 										node.children,
 										'string' == typeof properties.title
 											? properties.title
-											: null
+											: null,
 								  )
 								: options.linkTarget),
 					'a' === name &&
@@ -9120,7 +9137,7 @@
 							node.children,
 							'string' == typeof properties.title
 								? properties.title
-								: null
+								: null,
 						)),
 					basic ||
 						'code' !== name ||
@@ -9136,7 +9153,7 @@
 							'h6' !== name) ||
 						(properties.level = Number.parseInt(
 							name.charAt(1),
-							10
+							10,
 						)),
 					'img' === name &&
 						options.transformImageUri &&
@@ -9145,7 +9162,7 @@
 							String(properties.alt || ''),
 							'string' == typeof properties.title
 								? properties.title
-								: null
+								: null,
 						)),
 					!basic && 'li' === name && 'element' === parent.type)
 				) {
@@ -9167,7 +9184,7 @@
 							: null),
 						(properties.index = getElementsBeforeCount(
 							parent,
-							node
+							node,
 						)),
 						(properties.ordered = 'ol' === parent.tagName)
 				}
@@ -9186,7 +9203,7 @@
 						'tr' !== name ||
 						'element' !== parent.type ||
 						(properties.isHeader = Boolean(
-							'thead' === parent.tagName
+							'thead' === parent.tagName,
 						)),
 					options.sourcePos &&
 						(properties['data-sourcepos'] =
@@ -9210,7 +9227,7 @@
 						options.includeElementIndex &&
 						((properties.index = getElementsBeforeCount(
 							parent,
-							node
+							node,
 						)),
 						(properties.siblingCount =
 							getElementsBeforeCount(parent))),
@@ -9262,7 +9279,7 @@
 						? (props[
 								ast_to_react_own.call(
 									hastToReact,
-									info.property
+									info.property,
 								)
 									? hastToReact[info.property]
 									: info.property
@@ -9321,7 +9338,7 @@
 									: 'remove'
 							} \`${key}\` (see <${changelog}#${
 								deprecation.id
-							}> for more info)`
+							}> for more info)`,
 						),
 							delete deprecated[key]
 					}
@@ -9340,7 +9357,7 @@
 					: void 0 !== options.children &&
 					  null !== options.children &&
 					  console.warn(
-							`[react-markdown] Warning: please pass a string as \`children\` (not: \`${options.children}\`)`
+							`[react-markdown] Warning: please pass a string as \`children\` (not: \`${options.children}\`)`,
 					  )
 				const hastNode = processor.runSync(processor.parse(file), file)
 				if ('root' !== hastNode.type)
@@ -9354,15 +9371,15 @@
 							schema: property_information.dy,
 							listDepth: 0,
 						},
-						hastNode
-					)
+						hastNode,
+					),
 				)
 				return (
 					options.className &&
 						(result = react.createElement(
 							'div',
 							{ className: options.className },
-							result
+							result,
 						)),
 					result
 				)
@@ -9372,10 +9389,10 @@
 				className: prop_types_default().string,
 				allowElement: prop_types_default().func,
 				allowedElements: prop_types_default().arrayOf(
-					prop_types_default().string
+					prop_types_default().string,
 				),
 				disallowedElements: prop_types_default().arrayOf(
-					prop_types_default().string
+					prop_types_default().string,
 				),
 				unwrapDisallowed: prop_types_default().bool,
 				remarkPlugins: prop_types_default().arrayOf(
@@ -9389,11 +9406,11 @@
 								prop_types_default().object,
 								prop_types_default().func,
 								prop_types_default().arrayOf(
-									prop_types_default().any
+									prop_types_default().any,
 								),
-							])
+							]),
 						),
-					])
+					]),
 				),
 				rehypePlugins: prop_types_default().arrayOf(
 					prop_types_default().oneOfType([
@@ -9406,11 +9423,11 @@
 								prop_types_default().object,
 								prop_types_default().func,
 								prop_types_default().arrayOf(
-									prop_types_default().any
+									prop_types_default().any,
 								),
-							])
+							]),
 						),
-					])
+					]),
 				),
 				sourcePos: prop_types_default().bool,
 				rawSourcePos: prop_types_default().bool,
@@ -9561,17 +9578,17 @@
 		'./node_modules/react-markdown/node_modules/react-is/index.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			module.exports = __webpack_require__(
-				'./node_modules/react-markdown/node_modules/react-is/cjs/react-is.production.min.js'
+				'./node_modules/react-markdown/node_modules/react-is/cjs/react-is.production.min.js',
 			)
 		},
 		'./node_modules/rehype-katex/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { Z: () => rehypeKatex })
@@ -9593,7 +9610,7 @@
 							? new SourceLocation(
 									first.loc.lexer,
 									first.loc.start,
-									second.loc.end
+									second.loc.end,
 							  )
 							: null
 						: first && first.loc
@@ -9675,7 +9692,7 @@
 					escape: function katex_escape(text) {
 						return String(text).replace(
 							ESCAPE_REGEX,
-							(match) => ESCAPE_LOOKUP[match]
+							(match) => ESCAPE_LOOKUP[match],
 						)
 					},
 					hyphenate: function hyphenate(str) {
@@ -9851,7 +9868,7 @@
 									' [' +
 									errorCode +
 									']',
-								token
+								token,
 							)
 						'warn' === strict
 							? 'undefined' != typeof console &&
@@ -9860,7 +9877,7 @@
 										errorMsg +
 										' [' +
 										errorCode +
-										']'
+										']',
 							  )
 							: 'undefined' != typeof console &&
 							  console.warn(
@@ -9870,7 +9887,7 @@
 										errorMsg +
 										' [' +
 										errorCode +
-										']'
+										']',
 							  )
 					}
 				}
@@ -9893,7 +9910,7 @@
 												errorMsg +
 												' [' +
 												errorCode +
-												']'
+												']',
 										),
 								  !1)
 								: ('undefined' != typeof console &&
@@ -9904,7 +9921,7 @@
 												errorMsg +
 												' [' +
 												errorCode +
-												']'
+												']',
 										),
 								  !1)))
 					)
@@ -10006,7 +10023,7 @@
 				return !1
 			}
 			scriptData.forEach((s) =>
-				s.blocks.forEach((b) => allBlocks.push(...b))
+				s.blocks.forEach((b) => allBlocks.push(...b)),
 			)
 			var path = {
 				doubleleftarrow:
@@ -12338,7 +12355,7 @@
 			function getCharacterMetrics(character, font, mode) {
 				if (!fontMetricsData[font])
 					throw new Error(
-						'Font metrics not found for font: ' + font + '.'
+						'Font metrics not found for font: ' + font + '.',
 					)
 				var ch = character.charCodeAt(0),
 					metrics = fontMetricsData[font][ch]
@@ -12517,7 +12534,7 @@
 					return (
 						this._fontMetrics ||
 							(this._fontMetrics = (function getGlobalMetrics(
-								size
+								size,
 							) {
 								var sizeIndex
 								if (
@@ -12591,7 +12608,7 @@
 						else {
 							if ('em' !== sizeValue.unit)
 								throw new ParseError(
-									"Invalid unit: '" + sizeValue.unit + "'"
+									"Invalid unit: '" + sizeValue.unit + "'",
 								)
 							scale = unitOptions.fontMetrics().quad
 						}
@@ -12626,7 +12643,7 @@
 				toNode = function toNode(tagName) {
 					var node = document.createElement(tagName)
 					for (var style in ((node.className = createClass(
-						this.classes
+						this.classes,
 					)),
 					this.style))
 						this.style.hasOwnProperty(style) &&
@@ -12779,7 +12796,7 @@
 					skew,
 					width,
 					classes,
-					style
+					style,
 				) {
 					;(this.text = void 0),
 						(this.height = void 0),
@@ -12880,12 +12897,12 @@
 				toNode() {
 					var node = document.createElementNS(
 						'http://www.w3.org/2000/svg',
-						'svg'
+						'svg',
 					)
 					for (var attr in this.attributes)
 						Object.prototype.hasOwnProperty.call(
 							this.attributes,
-							attr
+							attr,
 						) && node.setAttribute(attr, this.attributes[attr])
 					for (var i = 0; i < this.children.length; i++)
 						node.appendChild(this.children[i].toNode())
@@ -12896,7 +12913,7 @@
 					for (var attr in this.attributes)
 						Object.prototype.hasOwnProperty.call(
 							this.attributes,
-							attr
+							attr,
 						) &&
 							(markup +=
 								' ' + attr + "='" + this.attributes[attr] + "'")
@@ -12916,7 +12933,7 @@
 				toNode() {
 					var node = document.createElementNS(
 						'http://www.w3.org/2000/svg',
-						'path'
+						'path',
 					)
 					return (
 						this.alternate
@@ -12939,12 +12956,12 @@
 				toNode() {
 					var node = document.createElementNS(
 						'http://www.w3.org/2000/svg',
-						'line'
+						'line',
 					)
 					for (var attr in this.attributes)
 						Object.prototype.hasOwnProperty.call(
 							this.attributes,
-							attr
+							attr,
 						) && node.setAttribute(attr, this.attributes[attr])
 					return node
 				}
@@ -12953,7 +12970,7 @@
 					for (var attr in this.attributes)
 						Object.prototype.hasOwnProperty.call(
 							this.attributes,
-							attr
+							attr,
 						) &&
 							(markup +=
 								' ' + attr + "='" + this.attributes[attr] + "'")
@@ -12963,7 +12980,7 @@
 			function assertSymbolDomNode(group) {
 				if (group instanceof SymbolNode) return group
 				throw new Error(
-					'Expected symbolNode but got ' + String(group) + '.'
+					'Expected symbolNode but got ' + String(group) + '.',
 				)
 			}
 			var ATOMS = {
@@ -12988,7 +13005,7 @@
 				group,
 				replace,
 				name,
-				acceptUnicodeChar
+				acceptUnicodeChar,
 			) {
 				;(symbols[mode][name] = { font, group, replace }),
 					acceptUnicodeChar &&
@@ -13638,7 +13655,7 @@
 					main,
 					mathord,
 					_ch3,
-					(wideChar = String.fromCharCode(55349, 56320 + _i3))
+					(wideChar = String.fromCharCode(55349, 56320 + _i3)),
 				),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					defineSymbol(
@@ -13646,7 +13663,7 @@
 						main,
 						mathord,
 						_ch3,
-						(wideChar = String.fromCharCode(55349, 56372 + _i3))
+						(wideChar = String.fromCharCode(55349, 56372 + _i3)),
 					),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					defineSymbol(
@@ -13654,7 +13671,7 @@
 						main,
 						mathord,
 						_ch3,
-						(wideChar = String.fromCharCode(55349, 56424 + _i3))
+						(wideChar = String.fromCharCode(55349, 56424 + _i3)),
 					),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					defineSymbol(
@@ -13662,7 +13679,7 @@
 						main,
 						mathord,
 						_ch3,
-						(wideChar = String.fromCharCode(55349, 56580 + _i3))
+						(wideChar = String.fromCharCode(55349, 56580 + _i3)),
 					),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					defineSymbol(
@@ -13670,7 +13687,7 @@
 						main,
 						mathord,
 						_ch3,
-						(wideChar = String.fromCharCode(55349, 56736 + _i3))
+						(wideChar = String.fromCharCode(55349, 56736 + _i3)),
 					),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					defineSymbol(
@@ -13678,7 +13695,7 @@
 						main,
 						mathord,
 						_ch3,
-						(wideChar = String.fromCharCode(55349, 56788 + _i3))
+						(wideChar = String.fromCharCode(55349, 56788 + _i3)),
 					),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					defineSymbol(
@@ -13686,7 +13703,7 @@
 						main,
 						mathord,
 						_ch3,
-						(wideChar = String.fromCharCode(55349, 56840 + _i3))
+						(wideChar = String.fromCharCode(55349, 56840 + _i3)),
 					),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					defineSymbol(
@@ -13694,7 +13711,7 @@
 						main,
 						mathord,
 						_ch3,
-						(wideChar = String.fromCharCode(55349, 56944 + _i3))
+						(wideChar = String.fromCharCode(55349, 56944 + _i3)),
 					),
 					defineSymbol('text', main, textord, _ch3, wideChar),
 					_i3 < 26 &&
@@ -13703,7 +13720,10 @@
 							main,
 							mathord,
 							_ch3,
-							(wideChar = String.fromCharCode(55349, 56632 + _i3))
+							(wideChar = String.fromCharCode(
+								55349,
+								56632 + _i3,
+							)),
 						),
 						defineSymbol('text', main, textord, _ch3, wideChar),
 						defineSymbol(
@@ -13711,7 +13731,10 @@
 							main,
 							mathord,
 							_ch3,
-							(wideChar = String.fromCharCode(55349, 56476 + _i3))
+							(wideChar = String.fromCharCode(
+								55349,
+								56476 + _i3,
+							)),
 						),
 						defineSymbol('text', main, textord, _ch3, wideChar))
 			}
@@ -13720,7 +13743,7 @@
 				main,
 				mathord,
 				'k',
-				(wideChar = String.fromCharCode(55349, 56668))
+				(wideChar = String.fromCharCode(55349, 56668)),
 			),
 				defineSymbol('text', main, textord, 'k', wideChar)
 			for (var _i4 = 0; _i4 < 10; _i4++) {
@@ -13730,7 +13753,7 @@
 					main,
 					mathord,
 					_ch4,
-					(wideChar = String.fromCharCode(55349, 57294 + _i4))
+					(wideChar = String.fromCharCode(55349, 57294 + _i4)),
 				),
 					defineSymbol('text', main, textord, _ch4, wideChar),
 					defineSymbol(
@@ -13738,7 +13761,7 @@
 						main,
 						mathord,
 						_ch4,
-						(wideChar = String.fromCharCode(55349, 57314 + _i4))
+						(wideChar = String.fromCharCode(55349, 57314 + _i4)),
 					),
 					defineSymbol('text', main, textord, _ch4, wideChar),
 					defineSymbol(
@@ -13746,7 +13769,7 @@
 						main,
 						mathord,
 						_ch4,
-						(wideChar = String.fromCharCode(55349, 57324 + _i4))
+						(wideChar = String.fromCharCode(55349, 57324 + _i4)),
 					),
 					defineSymbol('text', main, textord, _ch4, wideChar),
 					defineSymbol(
@@ -13754,7 +13777,7 @@
 						main,
 						mathord,
 						_ch4,
-						(wideChar = String.fromCharCode(55349, 57334 + _i4))
+						(wideChar = String.fromCharCode(55349, 57334 + _i4)),
 					),
 					defineSymbol('text', main, textord, _ch4, wideChar)
 			}
@@ -13814,7 +13837,7 @@
 					fontName,
 					mode,
 					options,
-					classes
+					classes,
 				) {
 					var symbolNode,
 						lookup = lookupSymbol(value, fontName, mode),
@@ -13831,7 +13854,7 @@
 								italic,
 								metrics.skew,
 								metrics.width,
-								classes
+								classes,
 							))
 					} else
 						'undefined' != typeof console &&
@@ -13842,7 +13865,7 @@
 									fontName +
 									"' and mode '" +
 									mode +
-									"'"
+									"'",
 							),
 							(symbolNode = new SymbolNode(
 								value,
@@ -13851,7 +13874,7 @@
 								0,
 								0,
 								0,
-								classes
+								classes,
 							))
 					if (options) {
 						;(symbolNode.maxFontSize = options.sizeMultiplier),
@@ -13889,7 +13912,7 @@
 					return !0
 				},
 				sizeElementFromChildren = function sizeElementFromChildren(
-					elem
+					elem,
 				) {
 					for (
 						var height = 0, depth = 0, maxFontSize = 0, i = 0;
@@ -13910,7 +13933,7 @@
 					classes,
 					children,
 					options,
-					style
+					style,
 				) {
 					var span = new Span(classes, children, options, style)
 					return sizeElementFromChildren(span), span
@@ -13924,7 +13947,7 @@
 				retrieveTextFontName = function retrieveTextFontName(
 					fontFamily,
 					fontWeight,
-					fontShape
+					fontShape,
 				) {
 					var baseFontName = ''
 					switch (fontFamily) {
@@ -14003,7 +14026,7 @@
 										'Main-Bold',
 										mode,
 										options,
-										classes.concat(['mathbf'])
+										classes.concat(['mathbf']),
 								  )
 								: '\\' === value ||
 								  'main' === symbols[mode][value].font
@@ -14012,14 +14035,14 @@
 										'Main-Regular',
 										mode,
 										options,
-										classes
+										classes,
 								  )
 								: makeSymbol(
 										value,
 										'AMS-Regular',
 										mode,
 										options,
-										classes.concat(['amsrm'])
+										classes.concat(['amsrm']),
 								  )
 						)
 					},
@@ -14028,17 +14051,17 @@
 					makeLineSpan: function makeLineSpan(
 						className,
 						options,
-						thickness
+						thickness,
 					) {
 						var line = makeSpan$2([className], [], options)
 						return (
 							(line.height = Math.max(
 								thickness ||
 									options.fontMetrics().defaultRuleThickness,
-								options.minRuleThickness
+								options.minRuleThickness,
 							)),
 							(line.style.borderBottomWidth = makeEm(
-								line.height
+								line.height,
 							)),
 							(line.maxFontSize = 1),
 							line
@@ -14048,13 +14071,13 @@
 						href,
 						classes,
 						children,
-						options
+						options,
 					) {
 						var anchor = new Anchor(
 							href,
 							classes,
 							children,
-							options
+							options,
 						)
 						return sizeElementFromChildren(anchor), anchor
 					},
@@ -14102,7 +14125,7 @@
 														size,
 													}),
 													children.push(
-														oldChildren[i]
+														oldChildren[i],
 													)
 											}
 											return { children, depth: _depth }
@@ -14132,7 +14155,7 @@
 											var firstChild = params.children[0]
 											if ('elem' !== firstChild.type)
 												throw new Error(
-													'First child must have type "elem".'
+													'First child must have type "elem".',
 												)
 											if ('shift' === params.positionType)
 												depth =
@@ -14146,7 +14169,7 @@
 													throw new Error(
 														'Invalid positionType ' +
 															params.positionType +
-															'.'
+															'.',
 													)
 												depth = -firstChild.elem.depth
 											}
@@ -14167,7 +14190,7 @@
 								pstrutSize = Math.max(
 									pstrutSize,
 									elem.maxFontSize,
-									elem.height
+									elem.height,
 								)
 							}
 						}
@@ -14193,10 +14216,10 @@
 										classes,
 										[pstrut, _elem],
 										void 0,
-										style
+										style,
 									)
 								;(childWrap.style.top = makeEm(
-									-pstrutSize - currPos - _elem.depth
+									-pstrutSize - currPos - _elem.depth,
 								)),
 									_child.marginLeft &&
 										(childWrap.style.marginLeft =
@@ -14220,7 +14243,7 @@
 							depthStrut.style.height = makeEm(-minPos)
 							var topStrut = makeSpan$2(
 								['vlist-s'],
-								[new SymbolNode('​')]
+								[new SymbolNode('​')],
 							)
 							rows = [
 								makeSpan$2(['vlist-r'], [vlist, topStrut]),
@@ -14261,7 +14284,7 @@
 										codePoint < 120484
 									) {
 										var i = Math.floor(
-											(codePoint - 119808) / 26
+											(codePoint - 119808) / 26,
 										)
 										return [
 											wideLatinLetterData[i][2],
@@ -14273,7 +14296,7 @@
 										codePoint <= 120831
 									) {
 										var _i = Math.floor(
-											(codePoint - 120782) / 10
+											(codePoint - 120782) / 10,
 										)
 										return [
 											wideNumeralData[_i][2],
@@ -14294,7 +14317,7 @@
 									)
 										return ['', '']
 									throw new ParseError(
-										'Unsupported character: ' + wideChar
+										'Unsupported character: ' + wideChar,
 									)
 								})(text, mode)
 							return makeSymbol(
@@ -14302,7 +14325,7 @@
 								wideFontName,
 								mode,
 								options,
-								classes.concat(wideFontClass)
+								classes.concat(wideFontClass),
 							)
 						}
 						if (fontOrFamily) {
@@ -14313,13 +14336,13 @@
 									mode,
 									options,
 									classes,
-									type
+									type,
 								) {
 									return 'textord' !== type &&
 										lookupSymbol(
 											value,
 											'Math-BoldItalic',
-											mode
+											mode,
 										).metrics
 										? {
 												fontName: 'Math-BoldItalic',
@@ -14340,7 +14363,7 @@
 									: ((fontName = retrieveTextFontName(
 											fontOrFamily,
 											options.fontWeight,
-											options.fontShape
+											options.fontShape,
 									  )),
 									  (fontClasses = [
 											fontOrFamily,
@@ -14353,7 +14376,7 @@
 									fontName,
 									mode,
 									options,
-									classes.concat(fontClasses)
+									classes.concat(fontClasses),
 								)
 							if (
 								ligatures.hasOwnProperty(text) &&
@@ -14370,8 +14393,8 @@
 											fontName,
 											mode,
 											options,
-											classes.concat(fontClasses)
-										)
+											classes.concat(fontClasses),
+										),
 									)
 								return makeFragment(parts)
 							}
@@ -14382,7 +14405,7 @@
 								'Math-Italic',
 								mode,
 								options,
-								classes.concat(['mathnormal'])
+								classes.concat(['mathnormal']),
 							)
 						if ('textord' === type) {
 							var font =
@@ -14391,7 +14414,7 @@
 								var _fontName = retrieveTextFontName(
 									'amsrm',
 									options.fontWeight,
-									options.fontShape
+									options.fontShape,
 								)
 								return makeSymbol(
 									text,
@@ -14401,15 +14424,15 @@
 									classes.concat(
 										'amsrm',
 										options.fontWeight,
-										options.fontShape
-									)
+										options.fontShape,
+									),
 								)
 							}
 							if ('main' !== font && font) {
 								var _fontName3 = retrieveTextFontName(
 									font,
 									options.fontWeight,
-									options.fontShape
+									options.fontShape,
 								)
 								return makeSymbol(
 									text,
@@ -14419,14 +14442,14 @@
 									classes.concat(
 										_fontName3,
 										options.fontWeight,
-										options.fontShape
-									)
+										options.fontShape,
+									),
 								)
 							}
 							var _fontName2 = retrieveTextFontName(
 								'textrm',
 								options.fontWeight,
-								options.fontShape
+								options.fontShape,
 							)
 							return makeSymbol(
 								text,
@@ -14435,12 +14458,12 @@
 								options,
 								classes.concat(
 									options.fontWeight,
-									options.fontShape
-								)
+									options.fontShape,
+								),
 							)
 						}
 						throw new Error(
-							'unexpected type: ' + type + ' in makeOrd'
+							'unexpected type: ' + type + ' in makeOrd',
 						)
 					},
 					makeGlue: (measurement, options) => {
@@ -14478,7 +14501,7 @@
 								((prev.text += next.text),
 								(prev.height = Math.max(
 									prev.height,
-									next.height
+									next.height,
 								)),
 								(prev.depth = Math.max(prev.depth, next.depth)),
 								(prev.italic = next.italic),
@@ -14640,7 +14663,7 @@
 					expression,
 					options,
 					isRealGroup,
-					surrounding
+					surrounding,
 				) {
 					void 0 === surrounding && (surrounding = [null, null])
 					for (var groups = [], i = 0; i < expression.length; i++) {
@@ -14659,18 +14682,18 @@
 							? (glueOptions = options.havingSize(node.size))
 							: 'styling' === node.type &&
 							  (glueOptions = options.havingStyle(
-									styleMap$1[node.style]
+									styleMap$1[node.style],
 							  ))
 					}
 					var dummyPrev = makeSpan$1(
 							[surrounding[0] || 'leftmost'],
 							[],
-							options
+							options,
 						),
 						dummyNext = makeSpan$1(
 							[surrounding[1] || 'rightmost'],
 							[],
-							options
+							options,
 						),
 						isRoot = 'root' === isRealGroup
 					return (
@@ -14685,13 +14708,13 @@
 									: 'mbin' === type &&
 									  utils.contains(
 											binLeftCanceller,
-											prevType
+											prevType,
 									  ) &&
 									  (node.classes[0] = 'mord')
 							},
 							{ node: dummyPrev },
 							dummyNext,
-							isRoot
+							isRoot,
 						),
 						traverseNonSpaceNodes(
 							groups,
@@ -14707,12 +14730,12 @@
 								if (space)
 									return buildCommon.makeGlue(
 										space,
-										glueOptions
+										glueOptions,
 									)
 							},
 							{ node: dummyPrev },
 							dummyNext,
-							isRoot
+							isRoot,
 						),
 						groups
 					)
@@ -14722,7 +14745,7 @@
 					callback,
 					prev,
 					next,
-					isRoot
+					isRoot,
 				) {
 					next && nodes.push(next)
 					for (var i = 0; i < nodes.length; i++) {
@@ -14734,7 +14757,7 @@
 								callback,
 								prev,
 								null,
-								isRoot
+								isRoot,
 							)
 						else {
 							var nonspace = !node.hasClass('mspace')
@@ -14772,7 +14795,7 @@
 							if ('right' === side)
 								return getOutermostNode(
 									children[children.length - 1],
-									'right'
+									'right',
 								)
 							if ('left' === side)
 								return getOutermostNode(children[0], 'left')
@@ -14788,29 +14811,29 @@
 				},
 				makeNullDelimiter = function makeNullDelimiter(
 					options,
-					classes
+					classes,
 				) {
 					var moreClasses = ['nulldelimiter'].concat(
-						options.baseSizingClasses()
+						options.baseSizingClasses(),
 					)
 					return makeSpan$1(classes.concat(moreClasses))
 				},
 				buildGroup$1 = function buildGroup(
 					group,
 					options,
-					baseOptions
+					baseOptions,
 				) {
 					if (!group) return makeSpan$1()
 					if (_htmlGroupBuilders[group.type]) {
 						var groupNode = _htmlGroupBuilders[group.type](
 							group,
-							options
+							options,
 						)
 						if (baseOptions && options.size !== baseOptions.size) {
 							groupNode = makeSpan$1(
 								options.sizingClasses(baseOptions),
 								[groupNode],
-								options
+								options,
 							)
 							var multiplier =
 								options.sizeMultiplier /
@@ -14821,7 +14844,7 @@
 						return groupNode
 					}
 					throw new ParseError(
-						"Got group of unknown type: '" + group.type + "'"
+						"Got group of unknown type: '" + group.type + "'",
 					)
 				}
 			function buildHTMLUnbreakable(children, options) {
@@ -14869,7 +14892,7 @@
 									(nobreak = !0)
 						nobreak ||
 							(children.push(
-								buildHTMLUnbreakable(parts, options)
+								buildHTMLUnbreakable(parts, options),
 							),
 							(parts = []))
 					} else
@@ -14877,7 +14900,7 @@
 							(parts.pop(),
 							parts.length > 0 &&
 								(children.push(
-									buildHTMLUnbreakable(parts, options)
+									buildHTMLUnbreakable(parts, options),
 								),
 								(parts = [])),
 							children.push(expression[i]))
@@ -14885,7 +14908,7 @@
 					children.push(buildHTMLUnbreakable(parts, options)),
 					tag
 						? (((tagChild = buildHTMLUnbreakable(
-								buildExpression$1(tag, options, !0)
+								buildExpression$1(tag, options, !0),
 						  )).classes = ['tag']),
 						  children.push(tagChild))
 						: eqnNum && children.push(eqnNum)
@@ -14893,11 +14916,11 @@
 				if ((htmlNode.setAttribute('aria-hidden', 'true'), tagChild)) {
 					var strut = tagChild.children[0]
 					;(strut.style.height = makeEm(
-						htmlNode.height + htmlNode.depth
+						htmlNode.height + htmlNode.depth,
 					)),
 						htmlNode.depth &&
 							(strut.style.verticalAlign = makeEm(
-								-htmlNode.depth
+								-htmlNode.depth,
 							))
 				}
 				return htmlNode
@@ -14925,12 +14948,12 @@
 				toNode() {
 					var node = document.createElementNS(
 						'http://www.w3.org/1998/Math/MathML',
-						this.type
+						this.type,
 					)
 					for (var attr in this.attributes)
 						Object.prototype.hasOwnProperty.call(
 							this.attributes,
-							attr
+							attr,
 						) && node.setAttribute(attr, this.attributes[attr])
 					this.classes.length > 0 &&
 						(node.className = createClass(this.classes))
@@ -14943,7 +14966,7 @@
 					for (var attr in this.attributes)
 						Object.prototype.hasOwnProperty.call(
 							this.attributes,
-							attr
+							attr,
 						) &&
 							((markup += ' ' + attr + '="'),
 							(markup += utils.escape(this.attributes[attr])),
@@ -15008,7 +15031,7 @@
 								return document.createTextNode(this.character)
 							var node = document.createElementNS(
 								'http://www.w3.org/1998/Math/MathML',
-								'mspace'
+								'mspace',
 							)
 							return (
 								node.setAttribute('width', makeEm(this.width)),
@@ -15086,7 +15109,7 @@
 						  getCharacterMetrics(
 								text,
 								buildCommon.fontMap[font].fontName,
-								mode
+								mode,
 						  )
 								? buildCommon.fontMap[font].variant
 								: null)
@@ -15094,7 +15117,7 @@
 				buildExpression = function buildExpression(
 					expression,
 					options,
-					isOrdgroup
+					isOrdgroup,
 				) {
 					if (1 === expression.length) {
 						var group = buildGroup(expression[0], options)
@@ -15176,10 +15199,10 @@
 				buildExpressionRow = function buildExpressionRow(
 					expression,
 					options,
-					isOrdgroup
+					isOrdgroup,
 				) {
 					return makeRow(
-						buildExpression(expression, options, isOrdgroup)
+						buildExpression(expression, options, isOrdgroup),
 					)
 				},
 				buildGroup = function buildGroup(group, options) {
@@ -15187,7 +15210,7 @@
 					if (_mathmlGroupBuilders[group.type])
 						return _mathmlGroupBuilders[group.type](group, options)
 					throw new ParseError(
-						"Got group of unknown type: '" + group.type + "'"
+						"Got group of unknown type: '" + group.type + "'",
 					)
 				}
 			function buildMathML(
@@ -15195,7 +15218,7 @@
 				texExpression,
 				options,
 				isDisplayMode,
-				forMathmlOnly
+				forMathmlOnly,
 			) {
 				var wrapper,
 					expression = buildExpression(tree, options)
@@ -15216,7 +15239,7 @@
 					math = new mathMLTree.MathNode('math', [semantics])
 				math.setAttribute(
 					'xmlns',
-					'http://www.w3.org/1998/Math/MathML'
+					'http://www.w3.org/1998/Math/MathML',
 				),
 					isDisplayMode && math.setAttribute('display', 'block')
 				var wrapperClass = forMathmlOnly ? 'katex' : 'katex-mathml'
@@ -15419,7 +15442,7 @@
 					label,
 					topPad,
 					bottomPad,
-					options
+					options,
 				) {
 					var img,
 						totalHeight =
@@ -15429,7 +15452,7 @@
 							((img = buildCommon.makeSpan(
 								['stretchy', label],
 								[],
-								options
+								options,
 							)),
 							'fbox' === label)
 						) {
@@ -15446,7 +15469,7 @@
 									x2: '100%',
 									y2: '100%',
 									'stroke-width': '0.046em',
-								})
+								}),
 							),
 							/^x?cancel$/.test(label) &&
 								lines.push(
@@ -15456,7 +15479,7 @@
 										x2: '100%',
 										y2: '0',
 										'stroke-width': '0.046em',
-									})
+									}),
 								)
 						var svgNode = new SvgNode(lines, {
 							width: '100%',
@@ -15473,7 +15496,7 @@
 				stretchy_mathMLnode = function mathMLnode(label) {
 					var node = new mathMLTree.MathNode('mo', [
 						new mathMLTree.TextNode(
-							stretchyCodePoint[label.replace(/^\\/, '')]
+							stretchyCodePoint[label.replace(/^\\/, '')],
 						),
 					])
 					return node.setAttribute('stretchy', 'true'), node
@@ -15485,7 +15508,7 @@
 						if (
 							utils.contains(
 								['widehat', 'widecheck', 'widetilde', 'utilde'],
-								label
+								label,
 							)
 						) {
 							var viewBoxHeight,
@@ -15545,7 +15568,7 @@
 								span: buildCommon.makeSvgSpan(
 									[],
 									[svgNode],
-									options
+									options,
 								),
 								minWidth: 0,
 								height: _height,
@@ -15571,7 +15594,7 @@
 								throw new Error(
 									'Correct katexImagesData or update code here to support\n                    ' +
 										numSvgChildren +
-										' children.'
+										' children.',
 								)
 							;(widthClasses = [
 								'brace-left',
@@ -15595,7 +15618,7 @@
 								_span = buildCommon.makeSvgSpan(
 									[widthClasses[i]],
 									[_svgNode],
-									options
+									options,
 								)
 							if (1 === numSvgChildren)
 								return {
@@ -15610,7 +15633,7 @@
 							span: buildCommon.makeSpan(
 								['stretchy'],
 								spans,
-								options
+								options,
 							),
 							minWidth: _minWidth,
 							height: _height2,
@@ -15630,7 +15653,7 @@
 						'Expected node of type ' +
 							type +
 							', but got ' +
-							(node ? 'node of type ' + node.type : String(node))
+							(node ? 'node of type ' + node.type : String(node)),
 					)
 				return node
 			}
@@ -15639,7 +15662,7 @@
 				if (!typedNode)
 					throw new Error(
 						'Expected node of symbol group type, but got ' +
-							(node ? 'node of type ' + node.type : String(node))
+							(node ? 'node of type ' + node.type : String(node)),
 					)
 				return typedNode
 			}
@@ -15661,7 +15684,7 @@
 								throw new Error(
 									'Expected span<HtmlDomNode> but got ' +
 										String(group) +
-										'.'
+										'.',
 								)
 						  })(buildGroup$1(grp, options))),
 						  (grp.base = group))
@@ -15671,7 +15694,10 @@
 					if (group.isShifty && utils.isCharacterBox(base)) {
 						var baseChar = utils.getBaseElem(base)
 						skew = assertSymbolDomNode(
-							buildGroup$1(baseChar, options.havingCrampedStyle())
+							buildGroup$1(
+								baseChar,
+								options.havingCrampedStyle(),
+							),
 						).skew
 					}
 					var accentBody,
@@ -15680,7 +15706,7 @@
 							? body.height + body.depth
 							: Math.min(
 									body.height,
-									options.fontMetrics().xHeight
+									options.fontMetrics().xHeight,
 							  )
 					if (group.isStretchy)
 						(accentBody = stretchy_svgSpan(group, options)),
@@ -15699,18 +15725,18 @@
 															width:
 																'calc(100% - ' +
 																makeEm(
-																	2 * skew
+																	2 * skew,
 																) +
 																')',
 															marginLeft: makeEm(
-																2 * skew
+																2 * skew,
 															),
 													  }
 													: void 0,
 										},
 									],
 								},
-								options
+								options,
 							))
 					else {
 						var accent, width
@@ -15721,14 +15747,14 @@
 									(accent = buildCommon.makeOrd(
 										{ mode: group.mode, text: group.label },
 										options,
-										'textord'
-									))
+										'textord',
+									)),
 							  )).italic = 0),
 							  (width = accent.width),
 							  accentBelow && (clearance += accent.depth)),
 							(accentBody = buildCommon.makeSpan(
 								['accent-body'],
-								[accent]
+								[accent],
 							))
 						var accentFull = '\\textcircled' === group.label
 						accentFull &&
@@ -15748,19 +15774,19 @@
 										{ type: 'elem', elem: accentBody },
 									],
 								},
-								options
+								options,
 							))
 					}
 					var accentWrap = buildCommon.makeSpan(
 						['mord', 'accent'],
 						[accentBody],
-						options
+						options,
 					)
 					return supSubGroup
 						? ((supSubGroup.children[0] = accentWrap),
 						  (supSubGroup.height = Math.max(
 								accentWrap.height,
-								supSubGroup.height
+								supSubGroup.height,
 						  )),
 						  (supSubGroup.classes[0] = 'mord'),
 						  supSubGroup)
@@ -15793,7 +15819,7 @@
 						'\\mathring',
 					]
 						.map((accent) => '\\' + accent)
-						.join('|')
+						.join('|'),
 				)
 			defineFunction({
 				type: 'accent',
@@ -15825,7 +15851,7 @@
 				handler: (context, args) => {
 					var base = normalizeArgument(args[0]),
 						isStretchy = !NON_STRETCHY_ACCENT_REGEX.test(
-							context.funcName
+							context.funcName,
 						),
 						isShifty =
 							!isStretchy ||
@@ -15876,7 +15902,7 @@
 									'mathVsTextAccents',
 									"LaTeX's accent " +
 										context.funcName +
-										' works only in text mode'
+										' works only in text mode',
 								),
 								(mode = 'text')),
 							{
@@ -15931,12 +15957,12 @@
 										{ type: 'elem', elem: innerGroup },
 									],
 								},
-								options
+								options,
 							)
 						return buildCommon.makeSpan(
 							['mord', 'accentunder'],
 							[vlist],
-							options
+							options,
 						)
 					},
 					mathmlBuilder: (group, options) => {
@@ -15951,7 +15977,7 @@
 			var paddedNode = (group) => {
 				var node = new mathMLTree.MathNode(
 					'mpadded',
-					group ? [group] : []
+					group ? [group] : [],
 				)
 				return (
 					node.setAttribute('width', '+0.6em'),
@@ -16005,7 +16031,7 @@
 						newOptions = options.havingStyle(style.sup()),
 						upperGroup = buildCommon.wrapFragment(
 							buildGroup$1(group.body, newOptions, options),
-							options
+							options,
 						),
 						arrowPrefix =
 							'\\x' === group.label.slice(0, 2) ? 'x' : 'cd'
@@ -16014,7 +16040,7 @@
 							((newOptions = options.havingStyle(style.sub())),
 							(lowerGroup = buildCommon.wrapFragment(
 								buildGroup$1(group.below, newOptions, options),
-								options
+								options,
 							)).classes.push(arrowPrefix + '-arrow-pad'))
 					var vlist,
 						arrowBody = stretchy_svgSpan(group, options),
@@ -16057,7 +16083,7 @@
 									},
 								],
 							},
-							options
+							options,
 						)
 					} else
 						vlist = buildCommon.makeVList(
@@ -16076,16 +16102,16 @@
 									},
 								],
 							},
-							options
+							options,
 						)
 					return (
 						vlist.children[0].children[0].children[1].classes.push(
-							'svg-align'
+							'svg-align',
 						),
 						buildCommon.makeSpan(
 							['mrel', 'x-arrow'],
 							[vlist],
-							options
+							options,
 						)
 					)
 				},
@@ -16095,16 +16121,16 @@
 					if (
 						(arrowNode.setAttribute(
 							'minsize',
-							'x' === group.label.charAt(0) ? '1.75em' : '3.0em'
+							'x' === group.label.charAt(0) ? '1.75em' : '3.0em',
 						),
 						group.body)
 					) {
 						var upperNode = paddedNode(
-							buildGroup(group.body, options)
+							buildGroup(group.body, options),
 						)
 						if (group.below) {
 							var lowerNode = paddedNode(
-								buildGroup(group.below, options)
+								buildGroup(group.below, options),
 							)
 							node = new mathMLTree.MathNode('munderover', [
 								arrowNode,
@@ -16118,7 +16144,7 @@
 							])
 					} else if (group.below) {
 						var _lowerNode = paddedNode(
-							buildGroup(group.below, options)
+							buildGroup(group.below, options),
 						)
 						node = new mathMLTree.MathNode('munder', [
 							arrowNode,
@@ -16152,7 +16178,7 @@
 						return parser.callFunction(
 							funcName,
 							[labels[0]],
-							[labels[1]]
+							[labels[1]],
 						)
 					case '\\uparrow':
 					case '\\downarrow':
@@ -16169,24 +16195,24 @@
 									parser.callFunction(
 										'\\\\cdleft',
 										[labels[0]],
-										[]
+										[],
 									),
 									parser.callFunction(
 										'\\Big',
 										[bareArrow],
-										[]
+										[],
 									),
 									parser.callFunction(
 										'\\\\cdright',
 										[labels[1]],
-										[]
+										[],
 									),
 								],
 							}
 						return parser.callFunction(
 							'\\\\cdparent',
 							[arrowGroup],
-							[]
+							[],
 						)
 					case '\\\\cdlongequal':
 						return parser.callFunction('\\\\cdlongequal', [], [])
@@ -16194,7 +16220,7 @@
 						return parser.callFunction(
 							'\\Big',
 							[{ type: 'textord', text: '\\Vert', mode: 'math' }],
-							[]
+							[],
 						)
 					default:
 						return { type: 'textord', text: ' ', mode: 'math' }
@@ -16217,7 +16243,7 @@
 					var newOptions = options.havingStyle(options.style.sup()),
 						label = buildCommon.wrapFragment(
 							buildGroup$1(group.label, newOptions, options),
-							options
+							options,
 						)
 					return (
 						label.classes.push('cd-label-' + group.side),
@@ -16261,7 +16287,7 @@
 					htmlBuilder(group, options) {
 						var parent = buildCommon.wrapFragment(
 							buildGroup$1(group.fragment, options),
-							options
+							options,
 						)
 						return parent.classes.push('cd-vert-arrow'), parent
 					},
@@ -16279,7 +16305,7 @@
 							var { parser } = _ref,
 								group = assertNodeType(
 									args[0],
-									'ordgroup'
+									'ordgroup',
 								).body,
 								number = '',
 								i = 0;
@@ -16292,11 +16318,11 @@
 							code = parseInt(number)
 						if (isNaN(code))
 							throw new ParseError(
-								'\\@char has non-numeric argument ' + number
+								'\\@char has non-numeric argument ' + number,
 							)
 						if (code < 0 || code >= 1114111)
 							throw new ParseError(
-								'\\@char with invalid code point ' + number
+								'\\@char with invalid code point ' + number,
 							)
 						return (
 							code <= 65535
@@ -16304,7 +16330,7 @@
 								: ((code -= 65536),
 								  (text = String.fromCharCode(
 										55296 + (code >> 10),
-										56320 + (1023 & code)
+										56320 + (1023 & code),
 								  ))),
 							{ type: 'textord', mode: parser.mode, text }
 						)
@@ -16314,14 +16340,14 @@
 					var elements = buildExpression$1(
 						group.body,
 						options.withColor(group.color),
-						!1
+						!1,
 					)
 					return buildCommon.makeFragment(elements)
 				},
 				mathmlBuilder$8 = (group, options) => {
 					var inner = buildExpression(
 							group.body,
-							options.withColor(group.color)
+							options.withColor(group.color),
 						),
 						node = new mathMLTree.MathNode('mstyle', inner)
 					return node.setAttribute('mathcolor', group.color), node
@@ -16382,7 +16408,7 @@
 								!parser.settings.displayMode ||
 								!parser.settings.useStrictBehavior(
 									'newLineInDisplayMode',
-									'In LaTeX, \\\\ or \\newline does nothing in display mode'
+									'In LaTeX, \\\\ or \\newline does nothing in display mode',
 								)
 						return {
 							type: 'cr',
@@ -16398,7 +16424,7 @@
 								(span.classes.push('newline'),
 								group.size &&
 									(span.style.marginTop = makeEm(
-										calculateSize(group.size, options)
+										calculateSize(group.size, options),
 									))),
 							span
 						)
@@ -16412,8 +16438,8 @@
 									node.setAttribute(
 										'height',
 										makeEm(
-											calculateSize(group.size, options)
-										)
+											calculateSize(group.size, options),
+										),
 									)),
 							node
 						)
@@ -16464,7 +16490,7 @@
 						)
 					throw new ParseError(
 						'Invalid token after macro prefix',
-						token
+						token,
 					)
 				},
 			}),
@@ -16479,7 +16505,7 @@
 						if (/^(?:[\\{}$&#^_]|EOF)$/.test(name))
 							throw new ParseError(
 								'Expected a control sequence',
-								tok
+								tok,
 							)
 						for (
 							var insert, numArgs = 0, delimiters = [[]];
@@ -16499,19 +16525,19 @@
 									throw new ParseError(
 										'Invalid argument number "' +
 											tok.text +
-											'"'
+											'"',
 									)
 								if (parseInt(tok.text) !== numArgs + 1)
 									throw new ParseError(
 										'Argument number "' +
 											tok.text +
-											'" out of order'
+											'" out of order',
 									)
 								numArgs++, delimiters.push([])
 							} else {
 								if ('EOF' === tok.text)
 									throw new ParseError(
-										'Expected a macro definition'
+										'Expected a macro definition',
 									)
 								delimiters[numArgs].push(tok.text)
 							}
@@ -16521,12 +16547,12 @@
 							('\\edef' !== funcName && '\\xdef' !== funcName) ||
 								(tokens =
 									parser.gullet.expandTokens(
-										tokens
+										tokens,
 									)).reverse(),
 							parser.gullet.macros.set(
 								name,
 								{ tokens, numArgs, delimiters },
-								funcName === globalMap[funcName]
+								funcName === globalMap[funcName],
 							),
 							{ type: 'internal', mode: parser.mode }
 						)
@@ -16539,7 +16565,7 @@
 					handler(_ref3) {
 						var { parser, funcName } = _ref3,
 							name = checkControlSequence(
-								parser.gullet.popToken()
+								parser.gullet.popToken(),
 							)
 						parser.gullet.consumeSpaces()
 						var tok = ((parser) => {
@@ -16557,7 +16583,7 @@
 								parser,
 								name,
 								tok,
-								'\\\\globallet' === funcName
+								'\\\\globallet' === funcName,
 							),
 							{ type: 'internal', mode: parser.mode }
 						)
@@ -16570,7 +16596,7 @@
 					handler(_ref4) {
 						var { parser, funcName } = _ref4,
 							name = checkControlSequence(
-								parser.gullet.popToken()
+								parser.gullet.popToken(),
 							),
 							middle = parser.gullet.popToken(),
 							tok = parser.gullet.popToken()
@@ -16579,7 +16605,7 @@
 								parser,
 								name,
 								tok,
-								'\\\\globalfuture' === funcName
+								'\\\\globalfuture' === funcName,
 							),
 							parser.gullet.pushToken(tok),
 							parser.gullet.pushToken(middle),
@@ -16593,7 +16619,7 @@
 							symbols.math[symbol].replace) ||
 							symbol,
 						font,
-						mode
+						mode,
 					)
 					if (!metrics)
 						throw new Error(
@@ -16601,7 +16627,7 @@
 								symbol +
 								' and font size ' +
 								font +
-								'.'
+								'.',
 						)
 					return metrics
 				},
@@ -16609,13 +16635,13 @@
 					delim,
 					toStyle,
 					options,
-					classes
+					classes,
 				) {
 					var newOptions = options.havingBaseStyle(toStyle),
 						span = buildCommon.makeSpan(
 							classes.concat(newOptions.sizingClasses(options)),
 							[delim],
-							options
+							options,
 						),
 						delimSizeMultiplier =
 							newOptions.sizeMultiplier / options.sizeMultiplier
@@ -16644,30 +16670,30 @@
 					center,
 					options,
 					mode,
-					classes
+					classes,
 				) {
 					var inner = (function mathrmSize(
 							value,
 							size,
 							mode,
-							options
+							options,
 						) {
 							return buildCommon.makeSymbol(
 								value,
 								'Size' + size + '-Regular',
 								mode,
-								options
+								options,
 							)
 						})(delim, size, mode, options),
 						span = styleWrap(
 							buildCommon.makeSpan(
 								['delimsizing', 'size' + size],
 								[inner],
-								options
+								options,
 							),
 							Style$1.TEXT,
 							options,
-							classes
+							classes,
 						)
 					return (
 						center && centerSpan(span, options, Style$1.TEXT), span
@@ -16691,11 +16717,11 @@
 											buildCommon.makeSymbol(
 												symbol,
 												font,
-												mode
+												mode,
 											),
-										]
+										],
 									),
-								]
+								],
 							),
 						}
 					)
@@ -16797,7 +16823,7 @@
 									default:
 										return ''
 								}
-							})(ch, Math.round(1e3 * height))
+							})(ch, Math.round(1e3 * height)),
 						),
 						svgNode = new SvgNode([path], {
 							width: makeEm(width),
@@ -16827,7 +16853,7 @@
 					center,
 					options,
 					mode,
-					classes
+					classes,
 				) {
 					var top, middle, repeat, bottom
 					;(top = repeat = bottom = delim), (middle = null)
@@ -16946,8 +16972,8 @@
 								0,
 								Math.ceil(
 									(heightTotal - minHeight) /
-										(middleFactor * repeatHeightTotal)
-								)
+										(middleFactor * repeatHeightTotal),
+								),
 							) *
 								middleFactor *
 								repeatHeightTotal,
@@ -16988,17 +17014,17 @@
 								positionData: depth,
 								children: stack,
 							},
-							newOptions
+							newOptions,
 						)
 					return styleWrap(
 						buildCommon.makeSpan(
 							['delimsizing', 'mult'],
 							[inner],
-							newOptions
+							newOptions,
 						),
 						Style$1.TEXT,
 						options,
-						classes
+						classes,
 					)
 				},
 				sqrtSvg = function sqrtSvg(
@@ -17006,12 +17032,12 @@
 					height,
 					viewBoxHeight,
 					extraViniculum,
-					options
+					options,
 				) {
 					var path = (function sqrtPath(
 							size,
 							extraViniculum,
-							viewBoxHeight
+							viewBoxHeight,
 						) {
 							extraViniculum *= 1e3
 							var path = ''
@@ -17019,7 +17045,7 @@
 								case 'sqrtMain':
 									path = (function sqrtMain(
 										extraViniculum,
-										hLinePad
+										hLinePad,
 									) {
 										return (
 											'M95,' +
@@ -17043,7 +17069,7 @@
 								case 'sqrtSize1':
 									path = (function sqrtSize1(
 										extraViniculum,
-										hLinePad
+										hLinePad,
 									) {
 										return (
 											'M263,' +
@@ -17067,7 +17093,7 @@
 								case 'sqrtSize2':
 									path = (function sqrtSize2(
 										extraViniculum,
-										hLinePad
+										hLinePad,
 									) {
 										return (
 											'M983 ' +
@@ -17091,7 +17117,7 @@
 								case 'sqrtSize3':
 									path = (function sqrtSize3(
 										extraViniculum,
-										hLinePad
+										hLinePad,
 									) {
 										return (
 											'M424,' +
@@ -17115,7 +17141,7 @@
 								case 'sqrtSize4':
 									path = (function sqrtSize4(
 										extraViniculum,
-										hLinePad
+										hLinePad,
 									) {
 										return (
 											'M473,' +
@@ -17140,7 +17166,7 @@
 									path = (function sqrtTall(
 										extraViniculum,
 										hLinePad,
-										viewBoxHeight
+										viewBoxHeight,
 									) {
 										return (
 											'M702 ' +
@@ -17172,7 +17198,7 @@
 					return buildCommon.makeSvgSpan(
 						['hide-tail'],
 						[svg],
-						options
+						options,
 					)
 				},
 				stackLargeDelimiters = [
@@ -17264,14 +17290,14 @@
 						return 'Size' + type.size + '-Regular'
 					if ('stack' === type.type) return 'Size4-Regular'
 					throw new Error(
-						"Add support for delim type '" + type.type + "' here."
+						"Add support for delim type '" + type.type + "' here.",
 					)
 				},
 				traverseSequence = function traverseSequence(
 					delim,
 					height,
 					sequence,
-					options
+					options,
 				) {
 					for (
 						var i = Math.min(2, 3 - options.style.size);
@@ -17281,13 +17307,13 @@
 						var metrics = getMetrics(
 								delim,
 								delimTypeToFont(sequence[i]),
-								'math'
+								'math',
 							),
 							heightDepth = metrics.height + metrics.depth
 						if (
 							('small' === sequence[i].type &&
 								(heightDepth *= options.havingBaseStyle(
-									sequence[i].style
+									sequence[i].style,
 								).sizeMultiplier),
 							heightDepth > height)
 						)
@@ -17301,7 +17327,7 @@
 					center,
 					options,
 					mode,
-					classes
+					classes,
 				) {
 					var sequence
 					'<' === delim || '\\lt' === delim || '⟨' === delim
@@ -17319,7 +17345,7 @@
 						delim,
 						height,
 						sequence,
-						options
+						options,
 					)
 					return 'small' === delimType.type
 						? (function makeSmallDelim(
@@ -17328,19 +17354,19 @@
 								center,
 								options,
 								mode,
-								classes
+								classes,
 						  ) {
 								var text = buildCommon.makeSymbol(
 										delim,
 										'Main-Regular',
 										mode,
-										options
+										options,
 									),
 									span = styleWrap(
 										text,
 										style,
 										options,
-										classes
+										classes,
 									)
 								return (
 									center && centerSpan(span, options, style),
@@ -17352,7 +17378,7 @@
 								center,
 								options,
 								mode,
-								classes
+								classes,
 						  )
 						: 'large' === delimType.type
 						? makeLargeDelim(
@@ -17361,7 +17387,7 @@
 								center,
 								options,
 								mode,
-								classes
+								classes,
 						  )
 						: makeStackedDelim(
 								delim,
@@ -17369,7 +17395,7 @@
 								center,
 								options,
 								mode,
-								classes
+								classes,
 						  )
 				},
 				delimiter = {
@@ -17381,13 +17407,13 @@
 								'\\surd',
 								height * newOptions.sizeMultiplier,
 								stackLargeDelimiterSequence,
-								newOptions
+								newOptions,
 							),
 							sizeMultiplier = newOptions.sizeMultiplier,
 							extraViniculum = Math.max(
 								0,
 								options.minRuleThickness -
-									options.fontMetrics().sqrtRuleThickness
+									options.fontMetrics().sqrtRuleThickness,
 							),
 							spanHeight = 0,
 							texHeight = 0,
@@ -17408,7 +17434,7 @@
 										(viewBoxHeight =
 											1e3 + 1e3 * extraViniculum + 80),
 										extraViniculum,
-										options
+										options,
 								  )).style.minWidth = '0.853em'),
 								  (advanceWidth = 0.833 / sizeMultiplier))
 								: 'large' === delim.type
@@ -17428,7 +17454,7 @@
 										spanHeight,
 										viewBoxHeight,
 										extraViniculum,
-										options
+										options,
 								  )).style.minWidth = '1.02em'),
 								  (advanceWidth = 1 / sizeMultiplier))
 								: ((spanHeight =
@@ -17436,14 +17462,14 @@
 								  (texHeight = height + extraViniculum),
 								  (viewBoxHeight =
 										Math.floor(
-											1e3 * height + extraViniculum
+											1e3 * height + extraViniculum,
 										) + 80),
 								  ((span = sqrtSvg(
 										'sqrtTall',
 										spanHeight,
 										viewBoxHeight,
 										extraViniculum,
-										options
+										options,
 								  )).style.minWidth = '0.742em'),
 								  (advanceWidth = 1.056)),
 							(span.height = texHeight),
@@ -17463,7 +17489,7 @@
 						size,
 						options,
 						mode,
-						classes
+						classes,
 					) {
 						if (
 							('<' === delim || '\\lt' === delim || '⟨' === delim
@@ -17481,7 +17507,7 @@
 								!1,
 								options,
 								mode,
-								classes
+								classes,
 							)
 						if (utils.contains(stackAlwaysDelimiters, delim))
 							return makeStackedDelim(
@@ -17490,10 +17516,10 @@
 								!1,
 								options,
 								mode,
-								classes
+								classes,
 							)
 						throw new ParseError(
-							"Illegal delimiter: '" + delim + "'"
+							"Illegal delimiter: '" + delim + "'",
 						)
 					},
 					sizeToMaxHeight,
@@ -17504,7 +17530,7 @@
 						depth,
 						options,
 						mode,
-						classes
+						classes,
 					) {
 						var axisHeight =
 								options.fontMetrics().axisHeight *
@@ -17512,11 +17538,11 @@
 							delimiterExtend = 5 / options.fontMetrics().ptPerEm,
 							maxDistFromAxis = Math.max(
 								height - axisHeight,
-								depth + axisHeight
+								depth + axisHeight,
 							),
 							totalHeight = Math.max(
 								(maxDistFromAxis / 500) * 901,
-								2 * maxDistFromAxis - delimiterExtend
+								2 * maxDistFromAxis - delimiterExtend,
 							)
 						return makeCustomSizedDelim(
 							delim,
@@ -17524,7 +17550,7 @@
 							!0,
 							options,
 							mode,
-							classes
+							classes,
 						)
 					},
 				},
@@ -17613,13 +17639,13 @@
 						  context.funcName +
 						  "'"
 						: "Invalid delimiter type '" + delim.type + "'",
-					delim
+					delim,
 				)
 			}
 			function assertParsed(group) {
 				if (!group.body)
 					throw new Error(
-						"Bug: The leftright ParseNode wasn't fully parsed."
+						"Bug: The leftright ParseNode wasn't fully parsed.",
 					)
 			}
 			defineFunction({
@@ -17661,7 +17687,7 @@
 								group.size,
 								options,
 								group.mode,
-								[group.mclass]
+								[group.mclass],
 						  ),
 				mathmlBuilder: (group) => {
 					var children = []
@@ -17689,7 +17715,7 @@
 							context.parser.gullet.macros.get('\\current@color')
 						if (color && 'string' != typeof color)
 							throw new ParseError(
-								'\\current@color set to non-string in \\right'
+								'\\current@color set to non-string in \\right',
 							)
 						return {
 							type: 'leftright-right',
@@ -17711,7 +17737,7 @@
 						--parser.leftrightDepth, parser.expect('\\right', !1)
 						var right = assertNodeType(
 							parser.parseFunction(),
-							'leftright-right'
+							'leftright-right',
 						)
 						return {
 							type: 'leftright',
@@ -17731,7 +17757,7 @@
 									group.body,
 									options,
 									!0,
-									['mopen', 'mclose']
+									['mopen', 'mclose'],
 								),
 								innerHeight = 0,
 								innerDepth = 0,
@@ -17744,11 +17770,11 @@
 								? (hadMiddle = !0)
 								: ((innerHeight = Math.max(
 										inner[i].height,
-										innerHeight
+										innerHeight,
 								  )),
 								  (innerDepth = Math.max(
 										inner[i].depth,
-										innerDepth
+										innerDepth,
 								  )))
 						if (
 							((innerHeight *= options.sizeMultiplier),
@@ -17762,7 +17788,7 @@
 											innerDepth,
 											options,
 											group.mode,
-											['mopen']
+											['mopen'],
 									  )),
 							inner.unshift(leftDelim),
 							hadMiddle)
@@ -17776,7 +17802,7 @@
 										innerDepth,
 										isMiddle.options,
 										group.mode,
-										[]
+										[],
 									))
 							}
 						if ('.' === group.right)
@@ -17791,7 +17817,7 @@
 								innerDepth,
 								colorOptions,
 								group.mode,
-								['mclose']
+								['mclose'],
 							)
 						}
 						return (
@@ -17817,7 +17843,7 @@
 								group.rightColor &&
 									rightNode.setAttribute(
 										'mathcolor',
-										group.rightColor
+										group.rightColor,
 									),
 								inner.push(rightNode)
 						}
@@ -17833,7 +17859,7 @@
 						if (!context.parser.leftrightDepth)
 							throw new ParseError(
 								'\\middle without preceding \\left',
-								delim
+								delim,
 							)
 						return {
 							type: 'middle',
@@ -17851,7 +17877,7 @@
 								1,
 								options,
 								group.mode,
-								[]
+								[],
 							)
 							var isMiddle = { delim: group.delim, options }
 							middleDelim.isMiddle = isMiddle
@@ -17879,7 +17905,7 @@
 						vlist,
 						inner = buildCommon.wrapFragment(
 							buildGroup$1(group.body, options),
-							options
+							options,
 						),
 						label = group.label.substr(1),
 						scale = options.sizeMultiplier,
@@ -17895,20 +17921,20 @@
 					else if ('phase' === label) {
 						var lineWeight = calculateSize(
 								{ number: 0.6, unit: 'pt' },
-								options
+								options,
 							),
 							clearance = calculateSize(
 								{ number: 0.35, unit: 'ex' },
-								options
+								options,
 							)
 						scale /= options.havingBaseSizing().sizeMultiplier
 						var angleHeight =
 							inner.height + inner.depth + lineWeight + clearance
 						inner.style.paddingLeft = makeEm(
-							angleHeight / 2 + lineWeight
+							angleHeight / 2 + lineWeight,
 						)
 						var viewBoxHeight = Math.floor(
-								1e3 * angleHeight * scale
+								1e3 * angleHeight * scale,
 							),
 							path = (function phasePath(y) {
 								return (
@@ -17928,12 +17954,12 @@
 									height: makeEm(viewBoxHeight / 1e3),
 									viewBox: '0 0 400000 ' + viewBoxHeight,
 									preserveAspectRatio: 'xMinYMin slice',
-								}
+								},
 							)
 						;((img = buildCommon.makeSvgSpan(
 							['hide-tail'],
 							[svgNode],
-							options
+							options,
 						)).style.height = makeEm(angleHeight)),
 							(imgShift = inner.depth + lineWeight + clearance)
 					} else {
@@ -17948,7 +17974,7 @@
 						;/box/.test(label)
 							? ((ruleThickness = Math.max(
 									options.fontMetrics().fboxrule,
-									options.minRuleThickness
+									options.minRuleThickness,
 							  )),
 							  (bottomPad = topPad =
 									options.fontMetrics().fboxsep +
@@ -17959,7 +17985,7 @@
 									(ruleThickness = Math.max(
 										options.fontMetrics()
 											.defaultRuleThickness,
-										options.minRuleThickness
+										options.minRuleThickness,
 									))),
 							  (bottomPad = Math.max(0, 0.25 - inner.depth)))
 							: (bottomPad = topPad = isSingleChar ? 0.2 : 0),
@@ -17968,7 +17994,7 @@
 								label,
 								topPad,
 								bottomPad,
-								options
+								options,
 							)),
 							/fbox|boxed|fcolorbox/.test(label)
 								? ((img.style.borderStyle = 'solid'),
@@ -18000,7 +18026,7 @@
 									{ type: 'elem', elem: inner, shift: 0 },
 								],
 							},
-							options
+							options,
 						)
 					else {
 						var classes = /cancel|phase/.test(label)
@@ -18019,7 +18045,7 @@
 									},
 								],
 							},
-							options
+							options,
 						)
 					}
 					return (
@@ -18030,7 +18056,7 @@
 							? buildCommon.makeSpan(
 									['mord', 'cancel-lap'],
 									[vlist],
-									options
+									options,
 							  )
 							: buildCommon.makeSpan(['mord'], [vlist], options)
 					)
@@ -18041,7 +18067,7 @@
 							group.label.indexOf('colorbox') > -1
 								? 'mpadded'
 								: 'menclose',
-							[buildGroup(group.body, options)]
+							[buildGroup(group.body, options)],
 						)
 					switch (group.label) {
 						case '\\cancel':
@@ -18070,11 +18096,11 @@
 									options.fontMetrics().ptPerEm),
 								node.setAttribute(
 									'width',
-									'+' + 2 * fboxsep + 'pt'
+									'+' + 2 * fboxsep + 'pt',
 								),
 								node.setAttribute(
 									'height',
-									'+' + 2 * fboxsep + 'pt'
+									'+' + 2 * fboxsep + 'pt',
 								),
 								node.setAttribute('lspace', fboxsep + 'pt'),
 								node.setAttribute('voffset', fboxsep + 'pt'),
@@ -18082,28 +18108,28 @@
 							) {
 								var thk = Math.max(
 									options.fontMetrics().fboxrule,
-									options.minRuleThickness
+									options.minRuleThickness,
 								)
 								node.setAttribute(
 									'style',
 									'border: ' +
 										thk +
 										'em solid ' +
-										String(group.borderColor)
+										String(group.borderColor),
 								)
 							}
 							break
 						case '\\xcancel':
 							node.setAttribute(
 								'notation',
-								'updiagonalstrike downdiagonalstrike'
+								'updiagonalstrike downdiagonalstrike',
 							)
 					}
 					return (
 						group.backgroundColor &&
 							node.setAttribute(
 								'mathbackground',
-								group.backgroundColor
+								group.backgroundColor,
 							),
 						node
 					)
@@ -18143,11 +18169,11 @@
 						var { parser, funcName } = _ref2,
 							borderColor = assertNodeType(
 								args[0],
-								'color-token'
+								'color-token',
 							).color,
 							backgroundColor = assertNodeType(
 								args[1],
-								'color-token'
+								'color-token',
 							).color,
 							body = args[2]
 						return {
@@ -18271,7 +18297,7 @@
 					throw new ParseError(
 						'{' +
 							context.envName +
-							'} can be used only in display mode.'
+							'} can be used only in display mode.',
 					)
 			}
 			function getAutoTag(name) {
@@ -18304,7 +18330,7 @@
 						arraystretch < 0
 					)
 						throw new ParseError(
-							'Invalid \\arraystretch: ' + stretch
+							'Invalid \\arraystretch: ' + stretch,
 						)
 				}
 				parser.gullet.beginGroup()
@@ -18320,19 +18346,21 @@
 					tags &&
 						(parser.gullet.macros.get('\\df@tag')
 							? (tags.push(
-									parser.subparse([new Token('\\df@tag')])
+									parser.subparse([new Token('\\df@tag')]),
 							  ),
 							  parser.gullet.macros.set('\\df@tag', void 0, !0))
 							: tags.push(
 									Boolean(autoTag) &&
 										'1' ===
-											parser.gullet.macros.get('\\@eqnsw')
+											parser.gullet.macros.get(
+												'\\@eqnsw',
+											),
 							  ))
 				}
 				for (beginRow(), hLinesBeforeRow.push(getHLines(parser)); ; ) {
 					var cell = parser.parseExpression(
 						!1,
-						singleRow ? '\\end' : '\\\\'
+						singleRow ? '\\end' : '\\\\',
 					)
 					parser.gullet.endGroup(),
 						parser.gullet.beginGroup(),
@@ -18355,11 +18383,11 @@
 							if (singleRow || colSeparationType)
 								throw new ParseError(
 									'Too many tab characters: &',
-									parser.nextToken
+									parser.nextToken,
 								)
 							parser.settings.reportNonstrict(
 								'textEnv',
-								'Too few columns specified in the {array} column argument.'
+								'Too few columns specified in the {array} column argument.',
 							)
 						}
 						parser.consume()
@@ -18378,7 +18406,7 @@
 						if ('\\\\' !== next)
 							throw new ParseError(
 								'Expected & or \\\\ or \\cr or \\end',
-								parser.nextToken
+								parser.nextToken,
 							)
 						parser.consume()
 						var size = void 0
@@ -18424,7 +18452,7 @@
 						hlines = [],
 						ruleThickness = Math.max(
 							options.fontMetrics().arrayRuleWidth,
-							options.minRuleThickness
+							options.minRuleThickness,
 						),
 						pt = 1 / options.fontMetrics().ptPerEm,
 						arraycolsep = 5 * pt
@@ -18439,7 +18467,7 @@
 							'CD' === group.colSeparationType
 								? calculateSize(
 										{ number: 3, unit: 'ex' },
-										options
+										options,
 								  )
 								: 12 * pt,
 						jot = 3 * pt,
@@ -18504,14 +18532,14 @@
 									? buildCommon.makeSpan(
 											['eqn-num'],
 											[],
-											options
+											options,
 									  )
 									: !1 === tag
 									? buildCommon.makeSpan([], [], options)
 									: buildCommon.makeSpan(
 											[],
 											buildExpression$1(tag, options, !0),
-											options
+											options,
 									  )).depth = rw.depth),
 								(tagSpan.height = rw.height),
 								tagSpans.push({
@@ -18535,9 +18563,9 @@
 								(firstSeparator ||
 									(((colSep = buildCommon.makeSpan(
 										['arraycolsep'],
-										[]
+										[],
 									)).style.width = makeEm(
-										options.fontMetrics().doubleRuleSep
+										options.fontMetrics().doubleRuleSep,
 									)),
 									cols.push(colSep)),
 								'|' !== colDescr.separator &&
@@ -18545,7 +18573,7 @@
 							)
 								throw new ParseError(
 									'Invalid separator type: ' +
-										colDescr.separator
+										colDescr.separator,
 								)
 							var lineType =
 									'|' === colDescr.separator
@@ -18554,7 +18582,7 @@
 								separator = buildCommon.makeSpan(
 									['vertical-separator'],
 									[],
-									options
+									options,
 								)
 							;(separator.style.height = makeEm(totalHeight)),
 								(separator.style.borderRightWidth =
@@ -18565,7 +18593,7 @@
 							var _shift = totalHeight - offset
 							_shift &&
 								(separator.style.verticalAlign = makeEm(
-									-_shift
+									-_shift,
 								)),
 								cols.push(separator),
 								(colDescr =
@@ -18578,11 +18606,11 @@
 								0 !==
 									(sepwidth = utils.deflt(
 										colDescr.pregap,
-										arraycolsep
+										arraycolsep,
 									)) &&
 								(((colSep = buildCommon.makeSpan(
 									['arraycolsep'],
-									[]
+									[],
 								)).style.width = makeEm(sepwidth)),
 								cols.push(colSep))
 							var col = []
@@ -18605,22 +18633,22 @@
 									positionType: 'individualShift',
 									children: col,
 								},
-								options
+								options,
 							)),
 								(col = buildCommon.makeSpan(
 									['col-align-' + (colDescr.align || 'c')],
-									[col]
+									[col],
 								)),
 								cols.push(col),
 								(c < nc - 1 || group.hskipBeforeAndAfter) &&
 									0 !==
 										(sepwidth = utils.deflt(
 											colDescr.postgap,
-											arraycolsep
+											arraycolsep,
 										)) &&
 									(((colSep = buildCommon.makeSpan(
 										['arraycolsep'],
-										[]
+										[],
 									)).style.width = makeEm(sepwidth)),
 									cols.push(colSep))
 						}
@@ -18633,12 +18661,12 @@
 							var line = buildCommon.makeLineSpan(
 									'hline',
 									options,
-									ruleThickness
+									ruleThickness,
 								),
 								dashes = buildCommon.makeLineSpan(
 									'hdashline',
 									options,
-									ruleThickness
+									ruleThickness,
 								),
 								vListElems = [
 									{ type: 'elem', elem: body, shift: 0 },
@@ -18665,20 +18693,20 @@
 								positionType: 'individualShift',
 								children: vListElems,
 							},
-							options
+							options,
 						)
 					}
 					if (0 === tagSpans.length)
 						return buildCommon.makeSpan(['mord'], [body], options)
 					var eqnNumCol = buildCommon.makeVList(
 						{ positionType: 'individualShift', children: tagSpans },
-						options
+						options,
 					)
 					return (
 						(eqnNumCol = buildCommon.makeSpan(
 							['tag'],
 							[eqnNumCol],
-							options
+							options,
 						)),
 						buildCommon.makeFragment([body, eqnNumCol])
 					)
@@ -18690,12 +18718,12 @@
 							glue = new mathMLTree.MathNode(
 								'mtd',
 								[],
-								['mtr-glue']
+								['mtr-glue'],
 							),
 							tag = new mathMLTree.MathNode(
 								'mtd',
 								[],
-								['mml-eqn-num']
+								['mml-eqn-num'],
 							),
 							i = 0;
 						i < group.body.length;
@@ -18709,7 +18737,7 @@
 							row.push(
 								new mathMLTree.MathNode('mtd', [
 									buildGroup(rw[j], options),
-								])
+								]),
 							)
 						group.tags &&
 							group.tags[i] &&
@@ -18755,7 +18783,7 @@
 							/[sd]/.test(columnLines) &&
 								table.setAttribute(
 									'columnlines',
-									columnLines.trim()
+									columnLines.trim(),
 								)
 					}
 					if ('align' === group.colSeparationType) {
@@ -18827,7 +18855,7 @@
 								maxNumCols: isSplit ? 2 : void 0,
 								leqno: context.parser.settings.leqno,
 							},
-							'display'
+							'display',
 						),
 						numCols = 0,
 						emptyGroup = {
@@ -18843,7 +18871,7 @@
 						) {
 							arg0 += assertNodeType(
 								args[0].body[i],
-								'textord'
+								'textord',
 							).text
 						}
 						;(numMaths = Number(arg0)), (numCols = 2 * numMaths)
@@ -18854,7 +18882,7 @@
 							var styling = assertNodeType(row[_i4], 'styling')
 							assertNodeType(
 								styling.body[0],
-								'ordgroup'
+								'ordgroup',
 							).body.unshift(emptyGroup)
 						}
 						if (isAligned)
@@ -18867,7 +18895,7 @@
 										numMaths +
 										', but got ' +
 										curMaths,
-									row[0]
+									row[0],
 								)
 						}
 					})
@@ -18910,7 +18938,7 @@
 								return { type: 'separator', separator: ':' }
 							throw new ParseError(
 								'Unknown column alignment: ' + ca,
-								nde
+								nde,
 							)
 						}),
 						res = {
@@ -18921,7 +18949,7 @@
 					return parseArray(
 						context.parser,
 						res,
-						dCellStyle(context.envName)
+						dCellStyle(context.envName),
 					)
 				},
 				htmlBuilder: htmlBuilder$7,
@@ -18975,7 +19003,7 @@
 								)
 									throw new ParseError(
 										'Expected l or c or r',
-										parser.nextToken
+										parser.nextToken,
 									)
 								parser.consume(),
 									parser.consumeSpaces(),
@@ -18989,11 +19017,11 @@
 						var res = parseArray(
 								context.parser,
 								payload,
-								dCellStyle(context.envName)
+								dCellStyle(context.envName),
 							),
 							numCols = Math.max(
 								0,
-								...res.body.map((row) => row.length)
+								...res.body.map((row) => row.length),
 							)
 						return (
 							(res.cols = new Array(numCols).fill({
@@ -19023,7 +19051,7 @@
 						var res = parseArray(
 							context.parser,
 							{ arraystretch: 0.5 },
-							'script'
+							'script',
 						)
 						return (res.colSeparationType = 'small'), res
 					},
@@ -19045,12 +19073,12 @@
 								return { type: 'align', align: ca }
 							throw new ParseError(
 								'Unknown column alignment: ' + ca,
-								nde
+								nde,
 							)
 						})
 						if (cols.length > 1)
 							throw new ParseError(
-								'{subarray} can contain only one column'
+								'{subarray} can contain only one column',
 							)
 						var res = {
 							cols,
@@ -19063,7 +19091,7 @@
 							res.body[0].length > 1
 						)
 							throw new ParseError(
-								'{subarray} can contain only one column'
+								'{subarray} can contain only one column',
 							)
 						return res
 					},
@@ -19094,7 +19122,7 @@
 									},
 								],
 							},
-							dCellStyle(context.envName)
+							dCellStyle(context.envName),
 						)
 						return {
 							type: 'leftright',
@@ -19125,7 +19153,7 @@
 					handler(context) {
 						utils.contains(
 							['gather', 'gather*'],
-							context.envName
+							context.envName,
 						) && validateAmsEnvironmentContext(context)
 						var res = {
 							cols: [{ type: 'align', align: 'c' }],
@@ -19178,14 +19206,14 @@
 								parser.gullet.beginGroup(),
 									parser.gullet.macros.set(
 										'\\cr',
-										'\\\\\\relax'
+										'\\\\\\relax',
 									),
 									parser.gullet.beginGroup();
 								;
 
 							) {
 								parsedRows.push(
-									parser.parseExpression(!1, '\\\\')
+									parser.parseExpression(!1, '\\\\'),
 								),
 									parser.gullet.endGroup(),
 									parser.gullet.beginGroup()
@@ -19199,7 +19227,7 @@
 									}
 									throw new ParseError(
 										'Expected \\\\ or \\cr or \\end',
-										parser.nextToken
+										parser.nextToken,
 									)
 								}
 								parser.consume()
@@ -19228,7 +19256,7 @@
 									if (isStartOfArrow(rowNodes[j])) {
 										row.push(cell)
 										var arrowChar = assertSymbolNodeType(
-												rowNodes[(j += 1)]
+												rowNodes[(j += 1)],
 											).text,
 											labels = new Array(2)
 										if (
@@ -19253,7 +19281,7 @@
 											)
 												throw new ParseError(
 													'Expected one of "<>AV=|." after @',
-													rowNodes[j]
+													rowNodes[j],
 												)
 											for (
 												var labelNum = 0;
@@ -19280,17 +19308,17 @@
 													}
 													if (
 														isStartOfArrow(
-															rowNodes[k]
+															rowNodes[k],
 														)
 													)
 														throw new ParseError(
 															'Missing a ' +
 																arrowChar +
 																' character to complete a CD arrow.',
-															rowNodes[k]
+															rowNodes[k],
 														)
 													labels[labelNum].body.push(
-														rowNodes[k]
+														rowNodes[k],
 													)
 												}
 												if (inLabel)
@@ -19298,7 +19326,7 @@
 														'Missing a ' +
 															arrowChar +
 															' character to complete a CD arrow.',
-														rowNodes[j]
+														rowNodes[j],
 													)
 											}
 										}
@@ -19308,7 +19336,7 @@
 												cdArrow(
 													arrowChar,
 													labels,
-													parser
+													parser,
 												),
 											],
 											mode: 'math',
@@ -19344,7 +19372,7 @@
 									}),
 									colSeparationType: 'CD',
 									hLinesBeforeRow: new Array(
-										body.length + 1
+										body.length + 1,
 									).fill([]),
 								}
 							)
@@ -19362,7 +19390,7 @@
 					handler(context, args) {
 						throw new ParseError(
 							context.funcName +
-								' valid only within array environment'
+								' valid only within array environment',
 						)
 					},
 				})
@@ -19377,7 +19405,7 @@
 					if ('ordgroup' !== nameGroup.type)
 						throw new ParseError(
 							'Invalid environment name',
-							nameGroup
+							nameGroup,
 						)
 					for (
 						var envName = '', i = 0;
@@ -19386,18 +19414,18 @@
 					)
 						envName += assertNodeType(
 							nameGroup.body[i],
-							'textord'
+							'textord',
 						).text
 					if ('\\begin' === funcName) {
 						if (!environments.hasOwnProperty(envName))
 							throw new ParseError(
 								'No such environment: ' + envName,
-								nameGroup
+								nameGroup,
 							)
 						var env = environments[envName],
 							{ args: _args, optArgs } = parser.parseArguments(
 								'\\begin{' + envName + '}',
-								env
+								env,
 							),
 							context = { mode: parser.mode, envName, parser },
 							result = env.handler(context, _args, optArgs)
@@ -19405,7 +19433,7 @@
 						var endNameToken = parser.nextToken,
 							end = assertNodeType(
 								parser.parseFunction(),
-								'environment'
+								'environment',
 							)
 						if (end.name !== envName)
 							throw new ParseError(
@@ -19414,7 +19442,7 @@
 									'} matched by \\end{' +
 									end.name +
 									'}',
-								endNameToken
+								endNameToken,
 							)
 						return result
 					}
@@ -19701,16 +19729,16 @@
 							? (group.barSize
 									? ((ruleWidth = calculateSize(
 											group.barSize,
-											options
+											options,
 									  )),
 									  (rule = buildCommon.makeLineSpan(
 											'frac-line',
 											options,
-											ruleWidth
+											ruleWidth,
 									  )))
 									: (rule = buildCommon.makeLineSpan(
 											'frac-line',
-											options
+											options,
 									  )),
 							  (ruleWidth = rule.height),
 							  (ruleSpacing = rule.height))
@@ -19776,7 +19804,7 @@
 									},
 								],
 							},
-							options
+							options,
 						)
 					} else {
 						var candidateClearance =
@@ -19804,7 +19832,7 @@
 										},
 									],
 								},
-								options
+								options,
 							))
 					}
 					return (
@@ -19830,7 +19858,7 @@
 										!0,
 										options.havingStyle(style),
 										group.mode,
-										['mopen']
+										['mopen'],
 								  )),
 						(rightDelim = group.continued
 							? buildCommon.makeSpan([])
@@ -19842,7 +19870,7 @@
 									!0,
 									options.havingStyle(style),
 									group.mode,
-									['mclose']
+									['mclose'],
 							  )),
 						buildCommon.makeSpan(
 							['mord'].concat(newOptions.sizingClasses(options)),
@@ -19851,7 +19879,7 @@
 								buildCommon.makeSpan(['mfrac'], [frac]),
 								rightDelim,
 							],
-							options
+							options,
 						)
 					)
 				},
@@ -19864,11 +19892,11 @@
 						if (group.barSize) {
 							var ruleWidth = calculateSize(
 								group.barSize,
-								options
+								options,
 							)
 							node.setAttribute(
 								'linethickness',
-								makeEm(ruleWidth)
+								makeEm(ruleWidth),
 							)
 						}
 					} else node.setAttribute('linethickness', '0px')
@@ -19887,7 +19915,7 @@
 						if (null != group.leftDelim) {
 							var leftOp = new mathMLTree.MathNode('mo', [
 								new mathMLTree.TextNode(
-									group.leftDelim.replace('\\', '')
+									group.leftDelim.replace('\\', ''),
 								),
 							])
 							leftOp.setAttribute('fence', 'true'),
@@ -19896,7 +19924,7 @@
 						if ((withDelims.push(node), null != group.rightDelim)) {
 							var rightOp = new mathMLTree.MathNode('mo', [
 								new mathMLTree.TextNode(
-									group.rightDelim.replace('\\', '')
+									group.rightDelim.replace('\\', ''),
 								),
 							])
 							rightOp.setAttribute('fence', 'true'),
@@ -20035,7 +20063,7 @@
 								break
 							default:
 								throw new Error(
-									'Unrecognized infix genfrac command'
+									'Unrecognized infix genfrac command',
 								)
 						}
 						return {
@@ -20092,7 +20120,7 @@
 						if (styl.body.length > 0) {
 							var textOrd = assertNodeType(
 								styl.body[0],
-								'textord'
+								'textord',
 							)
 							size = stylArray[Number(textOrd.text)]
 						}
@@ -20141,7 +20169,7 @@
 								if (!value)
 									throw new Error(
 										'Expected non-null, but got ' +
-											String(value)
+											String(value),
 									)
 								return value
 							})(assertNodeType(args[1], 'infix').size),
@@ -20172,19 +20200,19 @@
 							? buildGroup$1(
 									grp.sup,
 									options.havingStyle(style.sup()),
-									options
+									options,
 							  )
 							: buildGroup$1(
 									grp.sub,
 									options.havingStyle(style.sub()),
-									options
+									options,
 							  )),
 					  (group = assertNodeType(grp.base, 'horizBrace')))
 					: (group = assertNodeType(grp, 'horizBrace'))
 				var vlist,
 					body = buildGroup$1(
 						group.base,
-						options.havingBaseStyle(Style$1.DISPLAY)
+						options.havingBaseStyle(Style$1.DISPLAY),
 					),
 					braceBody = stretchy_svgSpan(group, options)
 				if (
@@ -20198,9 +20226,9 @@
 										{ type: 'elem', elem: braceBody },
 									],
 								},
-								options
+								options,
 						  )).children[0].children[0].children[1].classes.push(
-								'svg-align'
+								'svg-align',
 						  )
 						: (vlist = buildCommon.makeVList(
 								{
@@ -20213,16 +20241,16 @@
 										{ type: 'elem', elem: body },
 									],
 								},
-								options
+								options,
 						  )).children[0].children[0].children[0].classes.push(
-								'svg-align'
+								'svg-align',
 						  ),
 					supSubGroup)
 				) {
 					var vSpan = buildCommon.makeSpan(
 						['mord', group.isOver ? 'mover' : 'munder'],
 						[vlist],
-						options
+						options,
 					)
 					vlist = group.isOver
 						? buildCommon.makeVList(
@@ -20234,7 +20262,7 @@
 										{ type: 'elem', elem: supSubGroup },
 									],
 								},
-								options
+								options,
 						  )
 						: buildCommon.makeVList(
 								{
@@ -20250,13 +20278,13 @@
 										{ type: 'elem', elem: vSpan },
 									],
 								},
-								options
+								options,
 						  )
 				}
 				return buildCommon.makeSpan(
 					['mord', group.isOver ? 'mover' : 'munder'],
 					[vlist],
-					options
+					options,
 				)
 			}
 			defineFunction({
@@ -20278,7 +20306,7 @@
 					var accentNode = stretchy_mathMLnode(group.label)
 					return new mathMLTree.MathNode(
 						group.isOver ? 'mover' : 'munder',
-						[buildGroup(group.base, options), accentNode]
+						[buildGroup(group.base, options), accentNode],
 					)
 				},
 			}),
@@ -20310,13 +20338,13 @@
 						var elements = buildExpression$1(
 							group.body,
 							options,
-							!1
+							!1,
 						)
 						return buildCommon.makeAnchor(
 							group.href,
 							[],
 							elements,
-							options
+							options,
 						)
 					},
 					mathmlBuilder: (group, options) => {
@@ -20387,14 +20415,14 @@
 						var elements = buildExpression$1(
 							group.body,
 							options,
-							!1
+							!1,
 						)
 						return buildCommon.makeFragment(elements)
 					},
 					mathmlBuilder: (group, options) =>
 						new mathMLTree.MathNode(
 							'mrow',
-							buildExpression(group.body, options)
+							buildExpression(group.body, options),
 						),
 				}),
 				defineFunction({
@@ -20418,7 +20446,7 @@
 						parser.settings.strict &&
 							parser.settings.reportNonstrict(
 								'htmlExtension',
-								'HTML extension is disabled on strict mode'
+								'HTML extension is disabled on strict mode',
 							)
 						var attributes = {}
 						switch (funcName) {
@@ -20452,7 +20480,7 @@
 									var keyVal = data[i].split('=')
 									if (2 !== keyVal.length)
 										throw new ParseError(
-											'Error parsing key-value for \\htmlData'
+											'Error parsing key-value for \\htmlData',
 										)
 									attributes['data-' + keyVal[0].trim()] =
 										keyVal[1].trim()
@@ -20478,17 +20506,17 @@
 						var elements = buildExpression$1(
 								group.body,
 								options,
-								!1
+								!1,
 							),
 							classes = ['enclosing']
 						group.attributes.class &&
 							classes.push(
-								...group.attributes.class.trim().split(/\s+/)
+								...group.attributes.class.trim().split(/\s+/),
 							)
 						var span = buildCommon.makeSpan(
 							classes,
 							elements,
-							options
+							options,
 						)
 						for (var attr in group.attributes)
 							'class' !== attr &&
@@ -20516,7 +20544,7 @@
 						var elements = buildExpression$1(
 							group.html,
 							options,
-							!1
+							!1,
 						)
 						return buildCommon.makeFragment(elements)
 					},
@@ -20527,18 +20555,18 @@
 				if (/^[-+]? *(\d+(\.\d*)?|\.\d+)$/.test(str))
 					return { number: +str, unit: 'bp' }
 				var match = /([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/.exec(
-					str
+					str,
 				)
 				if (!match)
 					throw new ParseError(
-						"Invalid size: '" + str + "' in \\includegraphics"
+						"Invalid size: '" + str + "' in \\includegraphics",
 					)
 				var data = { number: +(match[1] + match[2]), unit: match[3] }
 				if (!validUnit(data))
 					throw new ParseError(
 						"Invalid unit: '" +
 							data.unit +
-							"' in \\includegraphics."
+							"' in \\includegraphics.",
 					)
 				return data
 			}
@@ -20561,7 +20589,7 @@
 						for (
 							var attributes = assertNodeType(
 									optArgs[0],
-									'raw'
+									'raw',
 								).string.split(','),
 								i = 0;
 							i < attributes.length;
@@ -20587,7 +20615,7 @@
 										throw new ParseError(
 											"Invalid key: '" +
 												keyVal[0] +
-												"' in \\includegraphics."
+												"' in \\includegraphics.",
 										)
 								}
 							}
@@ -20597,7 +20625,7 @@
 						'' === alt &&
 							(alt = (alt = (alt = src).replace(
 								/^.*[\\/]/,
-								''
+								'',
 							)).substring(0, alt.lastIndexOf('.'))),
 						parser.settings.isTrusted({
 							command: '\\includegraphics',
@@ -20673,21 +20701,21 @@
 												funcName +
 												' supports only mu units, not ' +
 												size.value.unit +
-												' units'
+												' units',
 										),
 								  'math' !== parser.mode &&
 										parser.settings.reportNonstrict(
 											'mathVsTextUnits',
 											"LaTeX's " +
 												funcName +
-												' works only in math mode'
+												' works only in math mode',
 										))
 								: muUnit &&
 								  parser.settings.reportNonstrict(
 										'mathVsTextUnits',
 										"LaTeX's " +
 											funcName +
-											" doesn't support mu units"
+											" doesn't support mu units",
 								  )
 						}
 						return {
@@ -20722,42 +20750,42 @@
 						'clap' === group.alignment
 							? ((inner = buildCommon.makeSpan(
 									[],
-									[buildGroup$1(group.body, options)]
+									[buildGroup$1(group.body, options)],
 							  )),
 							  (inner = buildCommon.makeSpan(
 									['inner'],
 									[inner],
-									options
+									options,
 							  )))
 							: (inner = buildCommon.makeSpan(
 									['inner'],
-									[buildGroup$1(group.body, options)]
+									[buildGroup$1(group.body, options)],
 							  ))
 						var fix = buildCommon.makeSpan(['fix'], []),
 							node = buildCommon.makeSpan(
 								[group.alignment],
 								[inner, fix],
-								options
+								options,
 							),
 							strut = buildCommon.makeSpan(['strut'])
 						return (
 							(strut.style.height = makeEm(
-								node.height + node.depth
+								node.height + node.depth,
 							)),
 							node.depth &&
 								(strut.style.verticalAlign = makeEm(
-									-node.depth
+									-node.depth,
 								)),
 							node.children.unshift(strut),
 							(node = buildCommon.makeSpan(
 								['thinbox'],
 								[node],
-								options
+								options,
 							)),
 							buildCommon.makeSpan(
 								['mord', 'vbox'],
 								[node],
-								options
+								options,
 							)
 						)
 					},
@@ -20849,7 +20877,7 @@
 					options,
 					style,
 					slant,
-					baseShift
+					baseShift,
 				) => {
 					base = buildCommon.makeSpan([], [base])
 					var sub,
@@ -20861,13 +20889,14 @@
 						var elem = buildGroup$1(
 							supGroup,
 							options.havingStyle(style.sup()),
-							options
+							options,
 						)
 						sup = {
 							elem,
 							kern: Math.max(
 								options.fontMetrics().bigOpSpacing1,
-								options.fontMetrics().bigOpSpacing3 - elem.depth
+								options.fontMetrics().bigOpSpacing3 -
+									elem.depth,
 							),
 						}
 					}
@@ -20875,14 +20904,14 @@
 						var _elem = buildGroup$1(
 							subGroup,
 							options.havingStyle(style.sub()),
-							options
+							options,
 						)
 						sub = {
 							elem: _elem,
 							kern: Math.max(
 								options.fontMetrics().bigOpSpacing2,
 								options.fontMetrics().bigOpSpacing4 -
-									_elem.height
+									_elem.height,
 							),
 						}
 					}
@@ -20924,7 +20953,7 @@
 									},
 								],
 							},
-							options
+							options,
 						)
 					} else if (sub) {
 						var top = base.height - baseShift
@@ -20947,7 +20976,7 @@
 									{ type: 'elem', elem: base },
 								],
 							},
-							options
+							options,
 						)
 					} else {
 						if (!sup) return base
@@ -20971,7 +21000,7 @@
 									},
 								],
 							},
-							options
+							options,
 						)
 					}
 					var parts = [finalGroup]
@@ -20979,7 +21008,7 @@
 						var spacer = buildCommon.makeSpan(
 							['mspace'],
 							[],
-							options
+							options,
 						)
 						;(spacer.style.marginRight = makeEm(slant)),
 							parts.unshift(spacer)
@@ -20987,7 +21016,7 @@
 					return buildCommon.makeSpan(
 						['mop', 'op-limits'],
 						parts,
-						options
+						options,
 					)
 				},
 				noSuccessor = ['\\smallint'],
@@ -21031,14 +21060,14 @@
 									'mop',
 									'op-symbol',
 									large ? 'large-op' : 'small-op',
-								]
+								],
 							)),
 							stash.length > 0)
 						) {
 							var italic = base.italic,
 								oval = buildCommon.staticSvg(
 									stash + 'Size' + (large ? '2' : '1'),
-									options
+									options,
 								)
 							;(base = buildCommon.makeVList(
 								{
@@ -21052,7 +21081,7 @@
 										},
 									],
 								},
-								options
+								options,
 							)),
 								(group.name = '\\' + stash),
 								base.classes.unshift('mop'),
@@ -21065,7 +21094,7 @@
 							: (base = buildCommon.makeSpan(
 									['mop'],
 									inner,
-									options
+									options,
 							  ))
 					} else {
 						for (var output = [], i = 1; i < group.name.length; i++)
@@ -21073,8 +21102,8 @@
 								buildCommon.mathsym(
 									group.name[i],
 									group.mode,
-									options
-								)
+									options,
+								),
 							)
 						base = buildCommon.makeSpan(['mop'], output, options)
 					}
@@ -21097,7 +21126,7 @@
 									options,
 									style,
 									slant,
-									baseShift
+									baseShift,
 							  )
 							: (baseShift &&
 									((base.style.position = 'relative'),
@@ -21116,7 +21145,7 @@
 					else if (group.body)
 						node = new MathNode(
 							'mo',
-							buildExpression(group.body, options)
+							buildExpression(group.body, options),
 						)
 					else {
 						node = new MathNode('mi', [
@@ -21364,7 +21393,7 @@
 							expression = buildExpression$1(
 								body,
 								options.withFont('mathrm'),
-								!0
+								!0,
 							),
 							i = 0;
 						i < expression.length;
@@ -21386,7 +21415,7 @@
 							options,
 							options.style,
 							0,
-							0
+							0,
 					  )
 					: base
 			}
@@ -21403,7 +21432,7 @@
 					pos < 0
 						? Array.prototype.push.apply(
 								inner[i].classes,
-								options.sizingClasses(baseOptions)
+								options.sizingClasses(baseOptions),
 						  )
 						: inner[i].classes[pos + 1] ===
 								'reset-size' + options.size &&
@@ -21436,7 +21465,7 @@
 					for (
 						var expression = buildExpression(
 								group.body,
-								options.withFont('mathrm')
+								options.withFont('mathrm'),
 							),
 							isAllString = !0,
 							i = 0;
@@ -21488,19 +21517,19 @@
 			}),
 				defineMacro(
 					'\\operatorname',
-					'\\@ifstar\\operatornamewithlimits\\operatorname@'
+					'\\@ifstar\\operatornamewithlimits\\operatorname@',
 				),
 				defineFunctionBuilders({
 					type: 'ordgroup',
 					htmlBuilder: (group, options) =>
 						group.semisimple
 							? buildCommon.makeFragment(
-									buildExpression$1(group.body, options, !1)
+									buildExpression$1(group.body, options, !1),
 							  )
 							: buildCommon.makeSpan(
 									['mord'],
 									buildExpression$1(group.body, options, !0),
-									options
+									options,
 							  ),
 					mathmlBuilder: (group, options) =>
 						buildExpressionRow(group.body, options, !0),
@@ -21517,11 +21546,11 @@
 					htmlBuilder(group, options) {
 						var innerGroup = buildGroup$1(
 								group.body,
-								options.havingCrampedStyle()
+								options.havingCrampedStyle(),
 							),
 							line = buildCommon.makeLineSpan(
 								'overline-line',
-								options
+								options,
 							),
 							defaultRuleThickness =
 								options.fontMetrics().defaultRuleThickness,
@@ -21541,12 +21570,12 @@
 										},
 									],
 								},
-								options
+								options,
 							)
 						return buildCommon.makeSpan(
 							['mord', 'overline'],
 							[vlist],
-							options
+							options,
 						)
 					},
 					mathmlBuilder(group, options) {
@@ -21578,7 +21607,7 @@
 						var elements = buildExpression$1(
 							group.body,
 							options.withPhantom(),
-							!1
+							!1,
 						)
 						return buildCommon.makeFragment(elements)
 					},
@@ -21599,7 +21628,7 @@
 					htmlBuilder: (group, options) => {
 						var node = buildCommon.makeSpan(
 							[],
-							[buildGroup$1(group.body, options.withPhantom())]
+							[buildGroup$1(group.body, options.withPhantom())],
 						)
 						if (
 							((node.height = 0), (node.depth = 0), node.children)
@@ -21613,7 +21642,7 @@
 									positionType: 'firstBaseline',
 									children: [{ type: 'elem', elem: node }],
 								},
-								options
+								options,
 							)),
 							buildCommon.makeSpan(['mord'], [node], options)
 						)
@@ -21621,11 +21650,11 @@
 					mathmlBuilder: (group, options) => {
 						var inner = buildExpression(
 								ordargument(group.body),
-								options
+								options,
 							),
 							phantom = new mathMLTree.MathNode(
 								'mphantom',
-								inner
+								inner,
 							),
 							node = new mathMLTree.MathNode('mpadded', [phantom])
 						return (
@@ -21650,25 +21679,25 @@
 								[
 									buildGroup$1(
 										group.body,
-										options.withPhantom()
+										options.withPhantom(),
 									),
-								]
+								],
 							),
 							fix = buildCommon.makeSpan(['fix'], [])
 						return buildCommon.makeSpan(
 							['mord', 'rlap'],
 							[inner, fix],
-							options
+							options,
 						)
 					},
 					mathmlBuilder: (group, options) => {
 						var inner = buildExpression(
 								ordargument(group.body),
-								options
+								options,
 							),
 							phantom = new mathMLTree.MathNode(
 								'mphantom',
-								inner
+								inner,
 							),
 							node = new mathMLTree.MathNode('mpadded', [phantom])
 						return node.setAttribute('width', '0px'), node
@@ -21702,7 +21731,7 @@
 								positionData: -dy,
 								children: [{ type: 'elem', elem: body }],
 							},
-							options
+							options,
 						)
 					},
 					mathmlBuilder(group, options) {
@@ -21747,7 +21776,7 @@
 						var rule = buildCommon.makeSpan(
 								['mord', 'rule'],
 								[],
-								options
+								options,
 							),
 							width = calculateSize(group.width, options),
 							height = calculateSize(group.height, options),
@@ -21785,11 +21814,11 @@
 								? wrapper.setAttribute('height', makeEm(shift))
 								: (wrapper.setAttribute(
 										'height',
-										makeEm(shift)
+										makeEm(shift),
 								  ),
 								  wrapper.setAttribute(
 										'depth',
-										makeEm(-shift)
+										makeEm(-shift),
 								  )),
 							wrapper.setAttribute('voffset', makeEm(shift)),
 							wrapper
@@ -21834,7 +21863,7 @@
 					return (
 						node.setAttribute(
 							'mathsize',
-							makeEm(newOptions.sizeMultiplier)
+							makeEm(newOptions.sizeMultiplier),
 						),
 						node
 					)
@@ -21884,7 +21913,7 @@
 					htmlBuilder: (group, options) => {
 						var node = buildCommon.makeSpan(
 							[],
-							[buildGroup$1(group.body, options)]
+							[buildGroup$1(group.body, options)],
 						)
 						if (!group.smashHeight && !group.smashDepth) return node
 						if (
@@ -21904,12 +21933,12 @@
 								positionType: 'firstBaseline',
 								children: [{ type: 'elem', elem: node }],
 							},
-							options
+							options,
 						)
 						return buildCommon.makeSpan(
 							['mord'],
 							[smashedNode],
-							options
+							options,
 						)
 					},
 					mathmlBuilder: (group, options) => {
@@ -21938,7 +21967,7 @@
 					htmlBuilder(group, options) {
 						var inner = buildGroup$1(
 							group.body,
-							options.havingCrampedStyle()
+							options.havingCrampedStyle(),
 						)
 						0 === inner.height &&
 							(inner.height = options.fontMetrics().xHeight),
@@ -21959,7 +21988,7 @@
 								advanceWidth,
 							} = delimiter.sqrtImage(
 								minDelimiterHeight,
-								options
+								options,
 							),
 							delimDepth = img.height - ruleWidth
 						delimDepth >
@@ -21993,16 +22022,16 @@
 									{ type: 'kern', size: ruleWidth },
 								],
 							},
-							options
+							options,
 						)
 						if (group.index) {
 							var newOptions = options.havingStyle(
-									Style$1.SCRIPTSCRIPT
+									Style$1.SCRIPTSCRIPT,
 								),
 								rootm = buildGroup$1(
 									group.index,
 									newOptions,
-									options
+									options,
 								),
 								toShift = 0.6 * (body.height - body.depth),
 								rootVList = buildCommon.makeVList(
@@ -22013,22 +22042,22 @@
 											{ type: 'elem', elem: rootm },
 										],
 									},
-									options
+									options,
 								),
 								rootVListWrap = buildCommon.makeSpan(
 									['root'],
-									[rootVList]
+									[rootVList],
 								)
 							return buildCommon.makeSpan(
 								['mord', 'sqrt'],
 								[rootVListWrap, body],
-								options
+								options,
 							)
 						}
 						return buildCommon.makeSpan(
 							['mord', 'sqrt'],
 							[body],
-							options
+							options,
 						)
 					},
 					mathmlBuilder(group, options) {
@@ -22092,7 +22121,7 @@
 				htmlBuilder(group, options) {
 					var builderDelegate = (function htmlBuilderDelegate(
 						group,
-						options
+						options,
 					) {
 						var base = group.base
 						return base
@@ -22137,7 +22166,7 @@
 							valueBase && utils.isCharacterBox(valueBase)
 					if (valueSup) {
 						var newOptions = options.havingStyle(
-							options.style.sup()
+							options.style.sup(),
 						)
 						;(supm = buildGroup$1(valueSup, newOptions, options)),
 							isCharacterBox ||
@@ -22149,7 +22178,7 @@
 					}
 					if (valueSub) {
 						var _newOptions = options.havingStyle(
-							options.style.sub()
+							options.style.sub(),
 						)
 						;(subm = buildGroup$1(valueSub, _newOptions, options)),
 							isCharacterBox ||
@@ -22168,7 +22197,7 @@
 					var supsub,
 						multiplier = options.sizeMultiplier,
 						marginRight = makeEm(
-							0.5 / metrics.ptPerEm / multiplier
+							0.5 / metrics.ptPerEm / multiplier,
 						),
 						marginLeft = null
 					if (subm) {
@@ -22185,7 +22214,7 @@
 						;(supShift = Math.max(
 							supShift,
 							minSupShift,
-							supm.depth + 0.25 * metrics.xHeight
+							supm.depth + 0.25 * metrics.xHeight,
 						)),
 							(subShift = Math.max(subShift, metrics.sub2))
 						var maxWidth = 4 * metrics.defaultRuleThickness
@@ -22219,13 +22248,13 @@
 								positionType: 'individualShift',
 								children: vlistElem,
 							},
-							options
+							options,
 						)
 					} else if (subm) {
 						subShift = Math.max(
 							subShift,
 							metrics.sub1,
-							subm.height - 0.8 * metrics.xHeight
+							subm.height - 0.8 * metrics.xHeight,
 						)
 						var _vlistElem = [
 							{
@@ -22241,17 +22270,17 @@
 								positionData: subShift,
 								children: _vlistElem,
 							},
-							options
+							options,
 						)
 					} else {
 						if (!supm)
 							throw new Error(
-								'supsub must have either sup or sub.'
+								'supsub must have either sup or sub.',
 							)
 						;(supShift = Math.max(
 							supShift,
 							minSupShift,
-							supm.depth + 0.25 * metrics.xHeight
+							supm.depth + 0.25 * metrics.xHeight,
 						)),
 							(supsub = buildCommon.makeVList(
 								{
@@ -22265,14 +22294,14 @@
 										},
 									],
 								},
-								options
+								options,
 							))
 					}
 					var mclass = getTypeOfDomTree(base, 'right') || 'mord'
 					return buildCommon.makeSpan(
 						[mclass],
 						[base, buildCommon.makeSpan(['msupsub'], [supsub])],
-						options
+						options,
 					)
 				},
 				mathmlBuilder(group, options) {
@@ -22429,7 +22458,7 @@
 							var ord = buildCommon.makeOrd(
 								group,
 								options,
-								'textord'
+								'textord',
 							)
 							return ord.classes.push(className), ord
 						}
@@ -22439,20 +22468,20 @@
 								buildCommon.mathsym(
 									group.text,
 									group.mode,
-									options
+									options,
 								),
 							],
-							options
+							options,
 						)
 					}
 					if (cssSpace.hasOwnProperty(group.text))
 						return buildCommon.makeSpan(
 							['mspace', cssSpace[group.text]],
 							[],
-							options
+							options,
 						)
 					throw new ParseError(
-						'Unknown type of space "' + group.text + '"'
+						'Unknown type of space "' + group.text + '"',
 					)
 				},
 				mathmlBuilder(group, options) {
@@ -22460,7 +22489,7 @@
 						if (cssSpace.hasOwnProperty(group.text))
 							return new mathMLTree.MathNode('mspace')
 						throw new ParseError(
-							'Unknown type of space "' + group.text + '"'
+							'Unknown type of space "' + group.text + '"',
 						)
 					}
 					return new mathMLTree.MathNode('mtext', [
@@ -22547,7 +22576,7 @@
 					return buildCommon.makeSpan(
 						['mord', 'text'],
 						inner,
-						newOptions
+						newOptions,
 					)
 				},
 				mathmlBuilder(group, options) {
@@ -22571,7 +22600,7 @@
 						var innerGroup = buildGroup$1(group.body, options),
 							line = buildCommon.makeLineSpan(
 								'underline-line',
-								options
+								options,
 							),
 							defaultRuleThickness =
 								options.fontMetrics().defaultRuleThickness,
@@ -22592,12 +22621,12 @@
 										{ type: 'elem', elem: innerGroup },
 									],
 								},
-								options
+								options,
 							)
 						return buildCommon.makeSpan(
 							['mord', 'underline'],
 							[vlist],
-							options
+							options,
 						)
 					},
 					mathmlBuilder(group, options) {
@@ -22642,14 +22671,14 @@
 								positionData: dy,
 								children: [{ type: 'elem', elem: body }],
 							},
-							options
+							options,
 						)
 					},
 					mathmlBuilder: (group, options) =>
 						new mathMLTree.MathNode(
 							'mpadded',
 							[buildGroup(group.body, options)],
-							['vcenter']
+							['vcenter'],
 						),
 				}),
 				defineFunction({
@@ -22658,7 +22687,7 @@
 					props: { numArgs: 0, allowedInText: !0 },
 					handler(context, args, optArgs) {
 						throw new ParseError(
-							'\\verb ended by end of line instead of matching delimiter'
+							'\\verb ended by end of line instead of matching delimiter',
 						)
 					},
 					htmlBuilder(group, options) {
@@ -22666,7 +22695,7 @@
 							var text = makeVerb(group),
 								body = [],
 								newOptions = options.havingStyle(
-									options.style.text()
+									options.style.text(),
 								),
 								i = 0;
 							i < text.length;
@@ -22680,16 +22709,16 @@
 										'Typewriter-Regular',
 										group.mode,
 										newOptions,
-										['mord', 'texttt']
-									)
+										['mord', 'texttt'],
+									),
 								)
 						}
 						return buildCommon.makeSpan(
 							['mord', 'text'].concat(
-								newOptions.sizingClasses(options)
+								newOptions.sizingClasses(options),
 							),
 							buildCommon.tryCombineChars(body),
-							newOptions
+							newOptions,
 						)
 					},
 					mathmlBuilder(group, options) {
@@ -22714,7 +22743,7 @@
 						(this.settings = settings),
 						(this.tokenRegex = new RegExp(
 							'([ \r\n\t]+)|\\\\(\n|[ \r\t]+\n?)[ \r\t]*|([!-\\[\\]-‧‪-퟿豈-￿][̀-ͯ]*|[\ud800-\udbff][\udc00-\udfff][̀-ͯ]*|\\\\verb\\*([^]).*?\\4|\\\\verb([^*a-zA-Z]).*?\\5|(\\\\[a-zA-Z@]+)[ \r\n\t]*|\\\\[^\ud800-\udfff])',
-							'g'
+							'g',
 						)),
 						(this.catcodes = { '%': 14, '~': 13 })
 				}
@@ -22727,7 +22756,7 @@
 					if (pos === input.length)
 						return new Token(
 							'EOF',
-							new SourceLocation(this, pos, pos)
+							new SourceLocation(this, pos, pos),
 						)
 					var match = this.tokenRegex.exec(input)
 					if (null === match || match.index !== pos)
@@ -22735,21 +22764,21 @@
 							"Unexpected character: '" + input[pos] + "'",
 							new Token(
 								input[pos],
-								new SourceLocation(this, pos, pos + 1)
-							)
+								new SourceLocation(this, pos, pos + 1),
+							),
 						)
 					var text = match[6] || match[3] || (match[2] ? '\\ ' : ' ')
 					if (14 === this.catcodes[text]) {
 						var nlIndex = input.indexOf(
 							'\n',
-							this.tokenRegex.lastIndex
+							this.tokenRegex.lastIndex,
 						)
 						return (
 							-1 === nlIndex
 								? ((this.tokenRegex.lastIndex = input.length),
 								  this.settings.reportNonstrict(
 										'commentAtEnd',
-										'% comment has no terminating newline; LaTeX would fail because of commenting the end of math mode (e.g. $)'
+										'% comment has no terminating newline; LaTeX would fail because of commenting the end of math mode (e.g. $)',
 								  ))
 								: (this.tokenRegex.lastIndex = nlIndex + 1),
 							this.lex()
@@ -22757,7 +22786,11 @@
 					}
 					return new Token(
 						text,
-						new SourceLocation(this, pos, this.tokenRegex.lastIndex)
+						new SourceLocation(
+							this,
+							pos,
+							this.tokenRegex.lastIndex,
+						),
 					)
 				}
 			}
@@ -22778,7 +22811,7 @@
 				endGroup() {
 					if (0 === this.undefStack.length)
 						throw new ParseError(
-							'Unbalanced namespace destruction: attempt to pop global namespace; please report this as a bug'
+							'Unbalanced namespace destruction: attempt to pop global namespace; please report this as a bug',
 						)
 					var undefs = this.undefStack.pop()
 					for (var undef in undefs)
@@ -22900,7 +22933,7 @@
 						number >= base
 					)
 						throw new ParseError(
-							'Invalid base-' + base + ' digit ' + token.text
+							'Invalid base-' + base + ' digit ' + token.text,
 						)
 					for (
 						var digit;
@@ -22917,7 +22950,7 @@
 				var arg = context.consumeArg().tokens
 				if (1 !== arg.length)
 					throw new ParseError(
-						"\\newcommand's first argument must be a macro name"
+						"\\newcommand's first argument must be a macro name",
 					)
 				var name = arg[0].text,
 					exists = context.isDefined(name)
@@ -22927,7 +22960,7 @@
 							name +
 							'} attempting to redefine ' +
 							name +
-							'; use \\renewcommand'
+							'; use \\renewcommand',
 					)
 				if (!exists && !nonexistsOK)
 					throw new ParseError(
@@ -22935,7 +22968,7 @@
 							name +
 							'} when command ' +
 							name +
-							' does not yet exist; use \\newcommand'
+							' does not yet exist; use \\newcommand',
 					)
 				var numArgs = 0
 				if (
@@ -22951,7 +22984,7 @@
 							(token = context.expandNextToken())
 					if (!argText.match(/^\s*[0-9]+\s*$/))
 						throw new ParseError(
-							'Invalid number of arguments: ' + argText
+							'Invalid number of arguments: ' + argText,
 						)
 					;(numArgs = parseInt(argText)),
 						(arg = context.consumeArg().tokens)
@@ -22959,13 +22992,13 @@
 				return context.macros.set(name, { tokens: arg, numArgs }), ''
 			}
 			defineMacro('\\newcommand', (context) =>
-				newcommand(context, !1, !0)
+				newcommand(context, !1, !0),
 			),
 				defineMacro('\\renewcommand', (context) =>
-					newcommand(context, !0, !1)
+					newcommand(context, !0, !1),
 				),
 				defineMacro('\\providecommand', (context) =>
-					newcommand(context, !0, !0)
+					newcommand(context, !0, !0),
 				),
 				defineMacro('\\message', (context) => {
 					var arg = context.consumeArgs(1)[0]
@@ -22974,7 +23007,7 @@
 							arg
 								.reverse()
 								.map((token) => token.text)
-								.join('')
+								.join(''),
 						),
 						''
 					)
@@ -22986,7 +23019,7 @@
 							arg
 								.reverse()
 								.map((token) => token.text)
-								.join('')
+								.join(''),
 						),
 						''
 					)
@@ -23000,7 +23033,7 @@
 							context.macros.get(name),
 							functions[name],
 							symbols.math[name],
-							symbols.text[name]
+							symbols.text[name],
 						),
 						''
 					)
@@ -23014,15 +23047,15 @@
 				defineMacro('\\AA', '\\r A'),
 				defineMacro(
 					'\\textcopyright',
-					'\\html@mathml{\\textcircled{c}}{\\char`©}'
+					'\\html@mathml{\\textcircled{c}}{\\char`©}',
 				),
 				defineMacro(
 					'\\copyright',
-					'\\TextOrMath{\\textcopyright}{\\text{\\textcopyright}}'
+					'\\TextOrMath{\\textcopyright}{\\text{\\textcopyright}}',
 				),
 				defineMacro(
 					'\\textregistered',
-					'\\html@mathml{\\textcircled{\\scriptsize R}}{\\char`®}'
+					'\\html@mathml{\\textcircled{\\scriptsize R}}{\\char`®}',
 				),
 				defineMacro('ℬ', '\\mathscr{B}'),
 				defineMacro('ℰ', '\\mathscr{E}'),
@@ -23044,46 +23077,46 @@
 				defineMacro('\\underbar', '\\underline{\\text{#1}}'),
 				defineMacro(
 					'\\not',
-					'\\html@mathml{\\mathrel{\\mathrlap\\@not}}{\\char"338}'
+					'\\html@mathml{\\mathrel{\\mathrlap\\@not}}{\\char"338}',
 				),
 				defineMacro(
 					'\\neq',
-					'\\html@mathml{\\mathrel{\\not=}}{\\mathrel{\\char`≠}}'
+					'\\html@mathml{\\mathrel{\\not=}}{\\mathrel{\\char`≠}}',
 				),
 				defineMacro('\\ne', '\\neq'),
 				defineMacro('≠', '\\neq'),
 				defineMacro(
 					'\\notin',
-					'\\html@mathml{\\mathrel{{\\in}\\mathllap{/\\mskip1mu}}}{\\mathrel{\\char`∉}}'
+					'\\html@mathml{\\mathrel{{\\in}\\mathllap{/\\mskip1mu}}}{\\mathrel{\\char`∉}}',
 				),
 				defineMacro('∉', '\\notin'),
 				defineMacro(
 					'≘',
-					'\\html@mathml{\\mathrel{=\\kern{-1em}\\raisebox{0.4em}{$\\scriptsize\\frown$}}}{\\mathrel{\\char`≘}}'
+					'\\html@mathml{\\mathrel{=\\kern{-1em}\\raisebox{0.4em}{$\\scriptsize\\frown$}}}{\\mathrel{\\char`≘}}',
 				),
 				defineMacro(
 					'≙',
-					'\\html@mathml{\\stackrel{\\tiny\\wedge}{=}}{\\mathrel{\\char`≘}}'
+					'\\html@mathml{\\stackrel{\\tiny\\wedge}{=}}{\\mathrel{\\char`≘}}',
 				),
 				defineMacro(
 					'≚',
-					'\\html@mathml{\\stackrel{\\tiny\\vee}{=}}{\\mathrel{\\char`≚}}'
+					'\\html@mathml{\\stackrel{\\tiny\\vee}{=}}{\\mathrel{\\char`≚}}',
 				),
 				defineMacro(
 					'≛',
-					'\\html@mathml{\\stackrel{\\scriptsize\\star}{=}}{\\mathrel{\\char`≛}}'
+					'\\html@mathml{\\stackrel{\\scriptsize\\star}{=}}{\\mathrel{\\char`≛}}',
 				),
 				defineMacro(
 					'≝',
-					'\\html@mathml{\\stackrel{\\tiny\\mathrm{def}}{=}}{\\mathrel{\\char`≝}}'
+					'\\html@mathml{\\stackrel{\\tiny\\mathrm{def}}{=}}{\\mathrel{\\char`≝}}',
 				),
 				defineMacro(
 					'≞',
-					'\\html@mathml{\\stackrel{\\tiny\\mathrm{m}}{=}}{\\mathrel{\\char`≞}}'
+					'\\html@mathml{\\stackrel{\\tiny\\mathrm{m}}{=}}{\\mathrel{\\char`≞}}',
 				),
 				defineMacro(
 					'≟',
-					'\\html@mathml{\\stackrel{\\tiny?}{=}}{\\mathrel{\\char`≟}}'
+					'\\html@mathml{\\stackrel{\\tiny?}{=}}{\\mathrel{\\char`≟}}',
 				),
 				defineMacro('⟂', '\\perp'),
 				defineMacro('‼', '\\mathclose{!\\mkern-0.8mu!}'),
@@ -23097,23 +23130,23 @@
 				defineMacro('️', '\\textregistered'),
 				defineMacro(
 					'\\ulcorner',
-					'\\html@mathml{\\@ulcorner}{\\mathop{\\char"231c}}'
+					'\\html@mathml{\\@ulcorner}{\\mathop{\\char"231c}}',
 				),
 				defineMacro(
 					'\\urcorner',
-					'\\html@mathml{\\@urcorner}{\\mathop{\\char"231d}}'
+					'\\html@mathml{\\@urcorner}{\\mathop{\\char"231d}}',
 				),
 				defineMacro(
 					'\\llcorner',
-					'\\html@mathml{\\@llcorner}{\\mathop{\\char"231e}}'
+					'\\html@mathml{\\@llcorner}{\\mathop{\\char"231e}}',
 				),
 				defineMacro(
 					'\\lrcorner',
-					'\\html@mathml{\\@lrcorner}{\\mathop{\\char"231f}}'
+					'\\html@mathml{\\@lrcorner}{\\mathop{\\char"231f}}',
 				),
 				defineMacro(
 					'\\vdots',
-					'\\mathord{\\varvdots\\rule{0pt}{15pt}}'
+					'\\mathord{\\varvdots\\rule{0pt}{15pt}}',
 				),
 				defineMacro('⋮', '\\vdots'),
 				defineMacro('\\varGamma', '\\mathit{\\Gamma}'),
@@ -23129,11 +23162,11 @@
 				defineMacro('\\varOmega', '\\mathit{\\Omega}'),
 				defineMacro(
 					'\\substack',
-					'\\begin{subarray}{c}#1\\end{subarray}'
+					'\\begin{subarray}{c}#1\\end{subarray}',
 				),
 				defineMacro(
 					'\\colon',
-					'\\nobreak\\mskip2mu\\mathpunct{}\\mathchoice{\\mkern-3mu}{\\mkern-3mu}{}{}{:}\\mskip6mu\\relax'
+					'\\nobreak\\mskip2mu\\mathpunct{}\\mathchoice{\\mkern-3mu}{\\mkern-3mu}{}{}{:}\\mskip6mu\\relax',
 				),
 				defineMacro('\\boxed', '\\fbox{$\\displaystyle{#1}$}'),
 				defineMacro('\\iff', '\\DOTSB\\;\\Longleftrightarrow\\;'),
@@ -23198,7 +23231,7 @@
 								(next in symbols.math &&
 									utils.contains(
 										['bin', 'rel'],
-										symbols.math[next].group
+										symbols.math[next].group,
 									))) &&
 						  (thedots = '\\dotsb'),
 					thedots
@@ -23250,7 +23283,7 @@
 				defineMacro('\\DOTSX', '\\relax'),
 				defineMacro(
 					'\\tmspace',
-					'\\TextOrMath{\\kern#1#3}{\\mskip#1#2}\\relax'
+					'\\TextOrMath{\\kern#1#3}{\\mskip#1#2}\\relax',
 				),
 				defineMacro('\\,', '\\tmspace+{3mu}{.1667em}'),
 				defineMacro('\\thinspace', '\\,'),
@@ -23276,41 +23309,41 @@
 				}),
 				defineMacro(
 					'\\bmod',
-					'\\mathchoice{\\mskip1mu}{\\mskip1mu}{\\mskip5mu}{\\mskip5mu}\\mathbin{\\rm mod}\\mathchoice{\\mskip1mu}{\\mskip1mu}{\\mskip5mu}{\\mskip5mu}'
+					'\\mathchoice{\\mskip1mu}{\\mskip1mu}{\\mskip5mu}{\\mskip5mu}\\mathbin{\\rm mod}\\mathchoice{\\mskip1mu}{\\mskip1mu}{\\mskip5mu}{\\mskip5mu}',
 				),
 				defineMacro(
 					'\\pod',
-					'\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern8mu}{\\mkern8mu}{\\mkern8mu}(#1)'
+					'\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern8mu}{\\mkern8mu}{\\mkern8mu}(#1)',
 				),
 				defineMacro('\\pmod', '\\pod{{\\rm mod}\\mkern6mu#1}'),
 				defineMacro(
 					'\\mod',
-					'\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}{\\rm mod}\\,\\,#1'
+					'\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}{\\rm mod}\\,\\,#1',
 				),
 				defineMacro(
 					'\\pmb',
-					'\\html@mathml{\\@binrel{#1}{\\mathrlap{#1}\\kern0.5px#1}}{\\mathbf{#1}}'
+					'\\html@mathml{\\@binrel{#1}{\\mathrlap{#1}\\kern0.5px#1}}{\\mathbf{#1}}',
 				),
 				defineMacro('\\newline', '\\\\\\relax'),
 				defineMacro(
 					'\\TeX',
-					'\\textrm{\\html@mathml{T\\kern-.1667em\\raisebox{-.5ex}{E}\\kern-.125emX}{TeX}}'
+					'\\textrm{\\html@mathml{T\\kern-.1667em\\raisebox{-.5ex}{E}\\kern-.125emX}{TeX}}',
 				)
 			var latexRaiseA = makeEm(
 				fontMetricsData['Main-Regular']['T'.charCodeAt(0)][1] -
-					0.7 * fontMetricsData['Main-Regular']['A'.charCodeAt(0)][1]
+					0.7 * fontMetricsData['Main-Regular']['A'.charCodeAt(0)][1],
 			)
 			defineMacro(
 				'\\LaTeX',
 				'\\textrm{\\html@mathml{L\\kern-.36em\\raisebox{' +
 					latexRaiseA +
-					'}{\\scriptstyle A}\\kern-.15em\\TeX}{LaTeX}}'
+					'}{\\scriptstyle A}\\kern-.15em\\TeX}{LaTeX}}',
 			),
 				defineMacro(
 					'\\KaTeX',
 					'\\textrm{\\html@mathml{K\\kern-.17em\\raisebox{' +
 						latexRaiseA +
-						'}{\\scriptstyle A}\\kern-.15em\\TeX}{KaTeX}}'
+						'}{\\scriptstyle A}\\kern-.15em\\TeX}{KaTeX}}',
 				),
 				defineMacro('\\hspace', '\\@ifstar\\@hspacer\\@hspace'),
 				defineMacro('\\@hspace', '\\hskip #1\\relax'),
@@ -23318,59 +23351,59 @@
 				defineMacro('\\ordinarycolon', ':'),
 				defineMacro(
 					'\\vcentcolon',
-					'\\mathrel{\\mathop\\ordinarycolon}'
+					'\\mathrel{\\mathop\\ordinarycolon}',
 				),
 				defineMacro(
 					'\\dblcolon',
-					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-.9mu}\\vcentcolon}}{\\mathop{\\char"2237}}'
+					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-.9mu}\\vcentcolon}}{\\mathop{\\char"2237}}',
 				),
 				defineMacro(
 					'\\coloneqq',
-					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}=}}{\\mathop{\\char"2254}}'
+					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}=}}{\\mathop{\\char"2254}}',
 				),
 				defineMacro(
 					'\\Coloneqq',
-					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}=}}{\\mathop{\\char"2237\\char"3d}}'
+					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}=}}{\\mathop{\\char"2237\\char"3d}}',
 				),
 				defineMacro(
 					'\\coloneq',
-					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}{\\mathop{\\char"3a\\char"2212}}'
+					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}{\\mathop{\\char"3a\\char"2212}}',
 				),
 				defineMacro(
 					'\\Coloneq',
-					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}{\\mathop{\\char"2237\\char"2212}}'
+					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}{\\mathop{\\char"2237\\char"2212}}',
 				),
 				defineMacro(
 					'\\eqqcolon',
-					'\\html@mathml{\\mathrel{=\\mathrel{\\mkern-1.2mu}\\vcentcolon}}{\\mathop{\\char"2255}}'
+					'\\html@mathml{\\mathrel{=\\mathrel{\\mkern-1.2mu}\\vcentcolon}}{\\mathop{\\char"2255}}',
 				),
 				defineMacro(
 					'\\Eqqcolon',
-					'\\html@mathml{\\mathrel{=\\mathrel{\\mkern-1.2mu}\\dblcolon}}{\\mathop{\\char"3d\\char"2237}}'
+					'\\html@mathml{\\mathrel{=\\mathrel{\\mkern-1.2mu}\\dblcolon}}{\\mathop{\\char"3d\\char"2237}}',
 				),
 				defineMacro(
 					'\\eqcolon',
-					'\\html@mathml{\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\vcentcolon}}{\\mathop{\\char"2239}}'
+					'\\html@mathml{\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\vcentcolon}}{\\mathop{\\char"2239}}',
 				),
 				defineMacro(
 					'\\Eqcolon',
-					'\\html@mathml{\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\dblcolon}}{\\mathop{\\char"2212\\char"2237}}'
+					'\\html@mathml{\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\dblcolon}}{\\mathop{\\char"2212\\char"2237}}',
 				),
 				defineMacro(
 					'\\colonapprox',
-					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\approx}}{\\mathop{\\char"3a\\char"2248}}'
+					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\approx}}{\\mathop{\\char"3a\\char"2248}}',
 				),
 				defineMacro(
 					'\\Colonapprox',
-					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\approx}}{\\mathop{\\char"2237\\char"2248}}'
+					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\approx}}{\\mathop{\\char"2237\\char"2248}}',
 				),
 				defineMacro(
 					'\\colonsim',
-					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\sim}}{\\mathop{\\char"3a\\char"223c}}'
+					'\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\sim}}{\\mathop{\\char"3a\\char"223c}}',
 				),
 				defineMacro(
 					'\\Colonsim',
-					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\sim}}{\\mathop{\\char"2237\\char"223c}}'
+					'\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\sim}}{\\mathop{\\char"2237\\char"223c}}',
 				),
 				defineMacro('∷', '\\dblcolon'),
 				defineMacro('∹', '\\eqcolon'),
@@ -23391,23 +23424,23 @@
 				defineMacro('\\coloncolonsim', '\\Colonsim'),
 				defineMacro(
 					'\\simcolon',
-					'\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\vcentcolon}'
+					'\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\vcentcolon}',
 				),
 				defineMacro(
 					'\\simcoloncolon',
-					'\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\dblcolon}'
+					'\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\dblcolon}',
 				),
 				defineMacro(
 					'\\approxcolon',
-					'\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\vcentcolon}'
+					'\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\vcentcolon}',
 				),
 				defineMacro(
 					'\\approxcoloncolon',
-					'\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\dblcolon}'
+					'\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\dblcolon}',
 				),
 				defineMacro(
 					'\\notni',
-					'\\html@mathml{\\not\\ni}{\\mathrel{\\char`∌}}'
+					'\\html@mathml{\\not\\ni}{\\mathrel{\\char`∌}}',
 				),
 				defineMacro('\\limsup', '\\DOTSB\\operatorname*{lim\\,sup}'),
 				defineMacro('\\liminf', '\\DOTSB\\operatorname*{lim\\,inf}'),
@@ -23415,19 +23448,19 @@
 				defineMacro('\\projlim', '\\DOTSB\\operatorname*{proj\\,lim}'),
 				defineMacro(
 					'\\varlimsup',
-					'\\DOTSB\\operatorname*{\\overline{lim}}'
+					'\\DOTSB\\operatorname*{\\overline{lim}}',
 				),
 				defineMacro(
 					'\\varliminf',
-					'\\DOTSB\\operatorname*{\\underline{lim}}'
+					'\\DOTSB\\operatorname*{\\underline{lim}}',
 				),
 				defineMacro(
 					'\\varinjlim',
-					'\\DOTSB\\operatorname*{\\underrightarrow{lim}}'
+					'\\DOTSB\\operatorname*{\\underrightarrow{lim}}',
 				),
 				defineMacro(
 					'\\varprojlim',
-					'\\DOTSB\\operatorname*{\\underleftarrow{lim}}'
+					'\\DOTSB\\operatorname*{\\underleftarrow{lim}}',
 				),
 				defineMacro('\\gvertneqq', '\\html@mathml{\\@gvertneqq}{≩}'),
 				defineMacro('\\lvertneqq', '\\html@mathml{\\@lvertneqq}{≨}'),
@@ -23438,51 +23471,51 @@
 				defineMacro('\\nshortmid', '\\html@mathml{\\@nshortmid}{∤}'),
 				defineMacro(
 					'\\nshortparallel',
-					'\\html@mathml{\\@nshortparallel}{∦}'
+					'\\html@mathml{\\@nshortparallel}{∦}',
 				),
 				defineMacro('\\nsubseteqq', '\\html@mathml{\\@nsubseteqq}{⊈}'),
 				defineMacro('\\nsupseteqq', '\\html@mathml{\\@nsupseteqq}{⊉}'),
 				defineMacro(
 					'\\varsubsetneq',
-					'\\html@mathml{\\@varsubsetneq}{⊊}'
+					'\\html@mathml{\\@varsubsetneq}{⊊}',
 				),
 				defineMacro(
 					'\\varsubsetneqq',
-					'\\html@mathml{\\@varsubsetneqq}{⫋}'
+					'\\html@mathml{\\@varsubsetneqq}{⫋}',
 				),
 				defineMacro(
 					'\\varsupsetneq',
-					'\\html@mathml{\\@varsupsetneq}{⊋}'
+					'\\html@mathml{\\@varsupsetneq}{⊋}',
 				),
 				defineMacro(
 					'\\varsupsetneqq',
-					'\\html@mathml{\\@varsupsetneqq}{⫌}'
+					'\\html@mathml{\\@varsupsetneqq}{⫌}',
 				),
 				defineMacro('\\imath', '\\html@mathml{\\@imath}{ı}'),
 				defineMacro('\\jmath', '\\html@mathml{\\@jmath}{ȷ}'),
 				defineMacro(
 					'\\llbracket',
-					'\\html@mathml{\\mathopen{[\\mkern-3.2mu[}}{\\mathopen{\\char`⟦}}'
+					'\\html@mathml{\\mathopen{[\\mkern-3.2mu[}}{\\mathopen{\\char`⟦}}',
 				),
 				defineMacro(
 					'\\rrbracket',
-					'\\html@mathml{\\mathclose{]\\mkern-3.2mu]}}{\\mathclose{\\char`⟧}}'
+					'\\html@mathml{\\mathclose{]\\mkern-3.2mu]}}{\\mathclose{\\char`⟧}}',
 				),
 				defineMacro('⟦', '\\llbracket'),
 				defineMacro('⟧', '\\rrbracket'),
 				defineMacro(
 					'\\lBrace',
-					'\\html@mathml{\\mathopen{\\{\\mkern-3.2mu[}}{\\mathopen{\\char`⦃}}'
+					'\\html@mathml{\\mathopen{\\{\\mkern-3.2mu[}}{\\mathopen{\\char`⦃}}',
 				),
 				defineMacro(
 					'\\rBrace',
-					'\\html@mathml{\\mathclose{]\\mkern-3.2mu\\}}}{\\mathclose{\\char`⦄}}'
+					'\\html@mathml{\\mathclose{]\\mkern-3.2mu\\}}}{\\mathclose{\\char`⦄}}',
 				),
 				defineMacro('⦃', '\\lBrace'),
 				defineMacro('⦄', '\\rBrace'),
 				defineMacro(
 					'\\minuso',
-					'\\mathbin{\\html@mathml{{\\mathrlap{\\mathchoice{\\kern{0.145em}}{\\kern{0.145em}}{\\kern{0.1015em}}{\\kern{0.0725em}}\\circ}{-}}}{\\char`⦵}}'
+					'\\mathbin{\\html@mathml{{\\mathrlap{\\mathchoice{\\kern{0.145em}}{\\kern{0.145em}}{\\kern{0.1015em}}{\\kern{0.0725em}}\\circ}{-}}}{\\char`⦵}}',
 				),
 				defineMacro('⦵', '\\minuso'),
 				defineMacro('\\darr', '\\downarrow'),
@@ -23552,7 +23585,7 @@
 				defineMacro('\\argmax', '\\DOTSB\\operatorname*{arg\\,max}'),
 				defineMacro(
 					'\\plim',
-					'\\DOTSB\\mathop{\\operatorname{plim}}\\limits'
+					'\\DOTSB\\mathop{\\operatorname{plim}}\\limits',
 				),
 				defineMacro('\\bra', '\\mathinner{\\langle{#1}|}'),
 				defineMacro('\\ket', '\\mathinner{|{#1}\\rangle}'),
@@ -23596,11 +23629,11 @@
 				defineMacro('\\bra@set', braketHelper(!0)),
 				defineMacro(
 					'\\Braket',
-					'\\bra@ket{\\left\\langle}{\\,\\middle\\vert\\,}{\\,\\middle\\vert\\,}{\\right\\rangle}'
+					'\\bra@ket{\\left\\langle}{\\,\\middle\\vert\\,}{\\,\\middle\\vert\\,}{\\right\\rangle}',
 				),
 				defineMacro(
 					'\\Set',
-					'\\bra@set{\\left\\{\\:}{\\;\\middle\\vert\\;}{\\;\\middle\\Vert\\;}{\\:\\right\\}}'
+					'\\bra@set{\\left\\{\\:}{\\;\\middle\\vert\\;}{\\;\\middle\\Vert\\;}{\\:\\right\\}}',
 				),
 				defineMacro('\\set', '\\bra@set{\\{\\,}{\\mid}{}{\\,\\}}'),
 				defineMacro('\\angln', '{\\angl n}'),
@@ -23757,7 +23790,7 @@
 										? delims[match]
 										: '}') +
 									"'",
-								tok
+								tok,
 							)
 						if (delims && isDelimited)
 							if (
@@ -23783,7 +23816,7 @@
 					if (delimiters) {
 						if (delimiters.length !== numArgs + 1)
 							throw new ParseError(
-								"The length of delimiters doesn't match the number of args!"
+								"The length of delimiters doesn't match the number of args!",
 							)
 						for (
 							var delims = delimiters[0], i = 0;
@@ -23794,14 +23827,14 @@
 							if (delims[i] !== tok.text)
 								throw new ParseError(
 									"Use of the macro doesn't match its definition",
-									tok
+									tok,
 								)
 						}
 					}
 					for (var args = [], _i = 0; _i < numArgs; _i++)
 						args.push(
 							this.consumeArg(delimiters && delimiters[_i + 1])
-								.tokens
+								.tokens,
 						)
 					return args
 				}
@@ -23822,7 +23855,7 @@
 							!this.isDefined(name)
 						)
 							throw new ParseError(
-								'Undefined control sequence: ' + name
+								'Undefined control sequence: ' + name,
 							)
 						return this.pushToken(topToken), topToken
 					}
@@ -23831,12 +23864,12 @@
 						this.expansionCount > this.settings.maxExpand)
 					)
 						throw new ParseError(
-							'Too many expansions: infinite loop or need to increase maxExpand setting'
+							'Too many expansions: infinite loop or need to increase maxExpand setting',
 						)
 					var tokens = expansion.tokens,
 						args = this.consumeArgs(
 							expansion.numArgs,
-							expansion.delimiters
+							expansion.delimiters,
 						)
 					if (expansion.numArgs)
 						for (
@@ -23849,7 +23882,7 @@
 								if (0 === i)
 									throw new ParseError(
 										'Incomplete placeholder at end of macro body',
-										tok
+										tok,
 									)
 								if ('#' === (tok = tokens[--i]).text)
 									tokens.splice(i + 1, 1)
@@ -23857,7 +23890,7 @@
 									if (!/^[1-9]$/.test(tok.text))
 										throw new ParseError(
 											'Not a valid argument number',
-											tok
+											tok,
 										)
 									tokens.splice(i, 2, ...args[+tok.text - 1])
 								}
@@ -24435,7 +24468,7 @@
 						(this.gullet = new MacroExpander(
 							input,
 							settings,
-							this.mode
+							this.mode,
 						)),
 						(this.settings = settings),
 						(this.leftrightDepth = 0)
@@ -24451,7 +24484,7 @@
 								"', got '" +
 								this.fetch().text +
 								"'",
-							this.fetch()
+							this.fetch(),
 						)
 					consume && this.consume()
 				}
@@ -24524,7 +24557,7 @@
 							if (-1 !== overIndex)
 								throw new ParseError(
 									'only one infix operator per group',
-									body[i].token
+									body[i].token,
 								)
 							;(overIndex = i), (funcName = body[i].replaceWith)
 						}
@@ -24561,12 +24594,12 @@
 												body[overIndex],
 												denomNode,
 											],
-											[]
+											[],
 									  )
 									: this.callFunction(
 											funcName,
 											[numerNode, denomNode],
-											[]
+											[],
 									  ),
 							]
 						)
@@ -24581,7 +24614,7 @@
 					if (!group)
 						throw new ParseError(
 							"Expected group after '" + symbol + "'",
-							symbolToken
+							symbolToken,
 						)
 					return group
 				}
@@ -24624,7 +24657,7 @@
 								if (!base || 'operatorname' !== base.type)
 									throw new ParseError(
 										'Limit controls must follow a math operator',
-										lex
+										lex,
 									)
 								base.alwaysHandleSupSub &&
 									(base.limits = '\\limits' === lex.text)
@@ -24651,7 +24684,7 @@
 								primes.push(prime), this.consume()
 							'^' === this.fetch().text &&
 								primes.push(
-									this.handleSupSubscript('superscript')
+									this.handleSupSubscript('superscript'),
 								),
 								(superscript = {
 									type: 'ordgroup',
@@ -24706,17 +24739,17 @@
 								func +
 								"' with no arguments" +
 								(name ? ' as ' + name : ''),
-							token
+							token,
 						)
 					if ('text' === this.mode && !funcData.allowedInText)
 						throw new ParseError(
 							"Can't use function '" + func + "' in text mode",
-							token
+							token,
 						)
 					if ('math' === this.mode && !1 === funcData.allowedInMath)
 						throw new ParseError(
 							"Can't use function '" + func + "' in math mode",
-							token
+							token,
 						)
 					var { args, optArgs } = this.parseArguments(func, funcData)
 					return this.callFunction(
@@ -24724,7 +24757,7 @@
 						args,
 						optArgs,
 						token,
-						breakOnTokenText
+						breakOnTokenText,
 					)
 				}
 				callFunction(name, args, optArgs, token, breakOnTokenText) {
@@ -24757,13 +24790,13 @@
 						var arg = this.parseGroupOfType(
 							"argument to '" + func + "'",
 							argType,
-							isOptional
+							isOptional,
 						)
 						if (isOptional) optArgs.push(arg)
 						else {
 							if (null == arg)
 								throw new ParseError(
-									'Null argument, please report this as a bug'
+									'Null argument, please report this as a bug',
 								)
 							args.push(arg)
 						}
@@ -24784,7 +24817,7 @@
 						case 'hbox':
 							var group = this.parseArgumentGroup(
 								optional,
-								'text'
+								'text',
 							)
 							return null != group
 								? {
@@ -24806,13 +24839,13 @@
 						case 'primitive':
 							if (optional)
 								throw new ParseError(
-									'A primitive argument cannot be optional'
+									'A primitive argument cannot be optional',
 								)
 							var _group = this.parseGroup(name)
 							if (null == _group)
 								throw new ParseError(
 									'Expected group as ' + name,
-									this.fetch()
+									this.fetch(),
 								)
 							return _group
 						case 'original':
@@ -24822,7 +24855,7 @@
 						default:
 							throw new ParseError(
 								'Unknown group type as ' + name,
-								this.fetch()
+								this.fetch(),
 							)
 					}
 				}
@@ -24858,7 +24891,7 @@
 								": '" +
 								firstToken.text +
 								"'",
-							firstToken
+							firstToken,
 						)
 					return firstToken.range(lastToken, str)
 				}
@@ -24866,12 +24899,12 @@
 					var res = this.parseStringGroup('color', optional)
 					if (null == res) return null
 					var match = /^(#[a-f0-9]{3}|#?[a-f0-9]{6}|[a-z]+)$/i.exec(
-						res.text
+						res.text,
 					)
 					if (!match)
 						throw new ParseError(
 							"Invalid color: '" + res.text + "'",
-							res
+							res,
 						)
 					var color = match[0]
 					return (
@@ -24889,7 +24922,7 @@
 								? this.parseStringGroup('size', optional)
 								: this.parseRegexGroup(
 										/^[-+]? *(?:$|\d+|\d+\.\d*|\.\d*) *[a-z]{0,2} *$/,
-										'size'
+										'size',
 								  )))
 					)
 						return null
@@ -24898,12 +24931,12 @@
 						((res.text = '0pt'), (isBlank = !0))
 					var match =
 						/([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/.exec(
-							res.text
+							res.text,
 						)
 					if (!match)
 						throw new ParseError(
 							"Invalid size: '" + res.text + "'",
-							res
+							res,
 						)
 					var data = {
 						number: +(match[1] + match[2]),
@@ -24912,7 +24945,7 @@
 					if (!validUnit(data))
 						throw new ParseError(
 							"Invalid unit: '" + data.unit + "'",
-							res
+							res,
 						)
 					return {
 						type: 'size',
@@ -24966,7 +24999,7 @@
 								mode: this.mode,
 								loc: SourceLocation.range(
 									firstToken,
-									lastToken
+									lastToken,
 								),
 								body: expression,
 								semisimple: '\\begingroup' === text || void 0,
@@ -24982,7 +25015,7 @@
 						if (this.settings.throwOnError)
 							throw new ParseError(
 								'Undefined control sequence: ' + text,
-								firstToken
+								firstToken,
 							)
 						;(result = this.formatUnsupportedCmd(text)),
 							this.consume()
@@ -25001,7 +25034,7 @@
 										mode: 'text',
 										loc: SourceLocation.range(
 											a,
-											group[i + 2]
+											group[i + 2],
 										),
 										text: '---',
 								  }),
@@ -25011,7 +25044,7 @@
 										mode: 'text',
 										loc: SourceLocation.range(
 											a,
-											group[i + 1]
+											group[i + 1],
 										),
 										text: '--',
 								  }),
@@ -25039,7 +25072,7 @@
 							arg.length < 2 || arg.charAt(0) !== arg.slice(-1))
 						)
 							throw new ParseError(
-								'\\verb assertion failed --\n                    please report what input caused this bug'
+								'\\verb assertion failed --\n                    please report what input caused this bug',
 							)
 						return {
 							type: 'verb',
@@ -25057,7 +25090,7 @@
 								'Accented Unicode text character "' +
 									text[0] +
 									'" used in math mode',
-								nucleus
+								nucleus,
 							),
 						(text = unicodeSymbols[text[0]] + text.substr(1)))
 					var symbol,
@@ -25077,7 +25110,7 @@
 								'Latin-1/Unicode text character "' +
 									text[0] +
 									'" used in math mode',
-								nucleus
+								nucleus,
 							)
 						var s,
 							group = symbols[this.mode][text].group,
@@ -25103,7 +25136,7 @@
 										'Unicode text character "' +
 											text[0] +
 											'" used in math mode',
-										nucleus
+										nucleus,
 								  )
 								: this.settings.reportNonstrict(
 										'unknownSymbol',
@@ -25112,7 +25145,7 @@
 											'" (' +
 											text.charCodeAt(0) +
 											')',
-										nucleus
+										nucleus,
 								  )),
 							(symbol = {
 								type: 'textord',
@@ -25127,7 +25160,7 @@
 							if (!unicodeAccents[accent])
 								throw new ParseError(
 									"Unknown accent ' " + accent + "'",
-									nucleus
+									nucleus,
 								)
 							var command =
 								unicodeAccents[accent][this.mode] ||
@@ -25139,7 +25172,7 @@
 										' unsupported in ' +
 										this.mode +
 										' mode',
-									nucleus
+									nucleus,
 								)
 							symbol = {
 								type: 'accent',
@@ -25169,7 +25202,7 @@
 						)
 					)
 						throw new TypeError(
-							'KaTeX can only parse string typed expression'
+							'KaTeX can only parse string typed expression',
 						)
 					var parser = new Parser(toParse, settings)
 					delete parser.gullet.macros.current['\\df@tag']
@@ -25181,7 +25214,7 @@
 					) {
 						if (!settings.displayMode)
 							throw new ParseError(
-								'\\tag works only in display equations'
+								'\\tag works only in display equations',
 							)
 						tree = [
 							{
@@ -25203,7 +25236,7 @@
 				'CSS1Compat' !== document.compatMode &&
 				('undefined' != typeof console &&
 					console.warn(
-						"Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype."
+						"Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.",
 					),
 				(render = function render() {
 					throw new ParseError("KaTeX doesn't work in quirks mode.")
@@ -25213,20 +25246,20 @@
 						throw error
 					var node = buildCommon.makeSpan(
 						['katex-error'],
-						[new SymbolNode(expression)]
+						[new SymbolNode(expression)],
 					)
 					return (
 						node.setAttribute('title', error.toString()),
 						node.setAttribute(
 							'style',
-							'color:' + options.errorColor
+							'color:' + options.errorColor,
 						),
 						node
 					)
 				},
 				renderToDomTree = function renderToDomTree(
 					expression,
-					options
+					options,
 				) {
 					var settings = new Settings(options)
 					try {
@@ -25239,13 +25272,13 @@
 									expression,
 									options,
 									settings.displayMode,
-									!0
+									!0,
 								)
 							if ('html' === settings.output) {
 								var htmlNode = buildHTML(tree, options)
 								katexNode = buildCommon.makeSpan(
 									['katex'],
-									[htmlNode]
+									[htmlNode],
 								)
 							} else {
 								var mathMLNode = buildMathML(
@@ -25253,19 +25286,19 @@
 										expression,
 										options,
 										settings.displayMode,
-										!1
+										!1,
 									),
 									_htmlNode = buildHTML(tree, options)
 								katexNode = buildCommon.makeSpan(
 									['katex'],
-									[mathMLNode, _htmlNode]
+									[mathMLNode, _htmlNode],
 								)
 							}
 							return displayWrap(katexNode, settings)
 						})(
 							parseTree(expression, settings),
 							expression,
-							settings
+							settings,
 						)
 					} catch (error) {
 						return renderError(error, expression, settings)
@@ -25276,7 +25309,7 @@
 					render,
 					renderToString: function renderToString(
 						expression,
-						options
+						options,
 					) {
 						return renderToDomTree(expression, options).toMarkup()
 					},
@@ -25289,22 +25322,22 @@
 					__renderToDomTree: renderToDomTree,
 					__renderToHTMLTree: function renderToHTMLTree(
 						expression,
-						options
+						options,
 					) {
 						var settings = new Settings(options)
 						try {
 							return (function buildHTMLTree(
 								tree,
 								expression,
-								settings
+								settings,
 							) {
 								var htmlNode = buildHTML(
 										tree,
-										optionsFromSettings(settings)
+										optionsFromSettings(settings),
 									),
 									katexNode = buildCommon.makeSpan(
 										['katex'],
-										[htmlNode]
+										[htmlNode],
 									)
 								return displayWrap(katexNode, settings)
 							})(parseTree(expression, settings), 0, settings)
@@ -25314,7 +25347,7 @@
 					},
 					__setFontMetrics: function setFontMetrics(
 						fontName,
-						metrics
+						metrics,
 					) {
 						fontMetricsData[fontName] = metrics
 					},
@@ -25330,7 +25363,7 @@
 					},
 				},
 				lib = __webpack_require__(
-					'./node_modules/unist-util-visit/lib/index.js'
+					'./node_modules/unist-util-visit/lib/index.js',
 				)
 			const convertElement = function (test) {
 				if (null == test) return hast_util_is_element_element
@@ -25375,11 +25408,11 @@
 					node &&
 						'object' == typeof node &&
 						'element' === node.type &&
-						'string' == typeof node.tagName
+						'string' == typeof node.tagName,
 				)
 			}
 			var unist_util_is_lib = __webpack_require__(
-				'./node_modules/unist-util-is/lib/index.js'
+				'./node_modules/unist-util-is/lib/index.js',
 			)
 			const findAfter = function (parent, index, test) {
 					const is = (0, unist_util_is_lib.O)(test)
@@ -25388,7 +25421,7 @@
 					if ('number' == typeof index) {
 						if (index < 0 || index === Number.POSITIVE_INFINITY)
 							throw new Error(
-								'Expected positive finite number as index'
+								'Expected positive finite number as index',
 							)
 					} else if ((index = parent.children.indexOf(index)) < 0)
 						throw new Error('Expected child node or index')
@@ -25491,7 +25524,7 @@
 											index < children.length - 1
 												? br(children[index + 1])
 												: suffix,
-									})
+									}),
 								)
 							cell(node) &&
 								findAfter(parent, node, cell) &&
@@ -25526,11 +25559,11 @@
 								.slice(start, end)
 								.replace(
 									/[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/g,
-									''
+									'',
 								),
 							0 !== start || info.breakBefore,
-							end !== value.length || info.breakAfter
-						)
+							end !== value.length || info.breakAfter,
+						),
 					),
 						(start = end + 1)
 				}
@@ -25552,7 +25585,7 @@
 			function trimAndCollapseSpacesAndTabs(
 				value,
 				breakBefore,
-				breakAfter
+				breakAfter,
 			) {
 				const result = []
 				let end,
@@ -25596,27 +25629,27 @@
 				return info.whitespace
 			}
 			var unified_lib = __webpack_require__(
-					'./node_modules/unified/lib/index.js'
+					'./node_modules/unified/lib/index.js',
 				),
 				lib_parser = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/parser/index.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/parser/index.js',
 				),
 				parser_default = __webpack_require__.n(lib_parser),
 				property_information = __webpack_require__(
-					'./node_modules/property-information/index.js'
+					'./node_modules/property-information/index.js',
 				),
 				find = __webpack_require__(
-					'./node_modules/property-information/lib/find.js'
+					'./node_modules/property-information/lib/find.js',
 				),
 				normalize = __webpack_require__(
-					'./node_modules/property-information/lib/normalize.js'
+					'./node_modules/property-information/lib/normalize.js',
 				)
 			const search = /[#.]/g
 			var space_separated_tokens = __webpack_require__(
-					'./node_modules/space-separated-tokens/index.js'
+					'./node_modules/space-separated-tokens/index.js',
 				),
 				comma_separated_tokens = __webpack_require__(
-					'./node_modules/comma-separated-tokens/index.js'
+					'./node_modules/comma-separated-tokens/index.js',
 				)
 			const buttonTypes = new Set(['menu', 'submit', 'reset', 'button']),
 				own = {}.hasOwnProperty
@@ -25639,7 +25672,7 @@
 					else if (
 						((node = (function parseSelector(
 							selector,
-							defaultTagName
+							defaultTagName,
 						) {
 							const value = selector || '',
 								props = {}
@@ -25651,7 +25684,7 @@
 								const match = search.exec(value),
 									subvalue = value.slice(
 										start,
-										match ? match.index : value.length
+										match ? match.index : value.length,
 									)
 								subvalue &&
 									(previous
@@ -25705,7 +25738,7 @@
 									schema,
 									node.properties,
 									key,
-									properties[key]
+									properties[key],
 								)
 					} else children.unshift(properties)
 					for (; ++index < children.length; )
@@ -25742,8 +25775,8 @@
 									: info.commaOrSpaceSeparated
 									? (0, space_separated_tokens.Q)(
 											(0, comma_separated_tokens.Q)(
-												value
-											).join(' ')
+												value,
+											).join(' '),
 									  )
 									: parsePrimitive(info, info.property, value)
 								: Array.isArray(value)
@@ -25755,7 +25788,9 @@
 										for (key in value)
 											own.call(value, key) &&
 												result.push(
-													[key, value[key]].join(': ')
+													[key, value[key]].join(
+														': ',
+													),
 												)
 										return result.join('; ')
 								  })(value)
@@ -25766,7 +25801,7 @@
 							finalResult[index] = parsePrimitive(
 								info,
 								info.property,
-								result[index]
+								result[index],
 							)
 						result = finalResult
 					}
@@ -25789,7 +25824,7 @@
 						throw new Error(
 							'Expected node, nodes, or string, got `' +
 								value +
-								'`'
+								'`',
 						)
 					'root' === value.type
 						? addChild(nodes, value.children)
@@ -26014,7 +26049,7 @@
 									result = fn(
 										node.tagName,
 										props,
-										lib_all(state, node.childNodes)
+										lib_all(state, node.childNodes),
 									)
 								if (
 									(patch(state, node, result),
@@ -26062,7 +26097,7 @@
 					const position = createLocation(
 						state,
 						to,
-						from.sourceCodeLocation
+						from.sourceCodeLocation,
 					)
 					position &&
 						((state.location = !0), (to.position = position))
@@ -26437,7 +26472,7 @@
 							settings = Object.assign(
 								{},
 								processorSettings,
-								options
+								options,
 							)
 						Object.assign(this, {
 							Parser: function parser(doc, file) {
@@ -26448,14 +26483,14 @@
 										? function onerror(error) {
 												const code = error.code,
 													name = (function camelcase(
-														value
+														value,
 													) {
 														return value.replace(
 															/-[a-z]/g,
 															($0) =>
 																$0
 																	.charAt(1)
-																	.toUpperCase()
+																	.toUpperCase(),
 														)
 													})(code),
 													setting = settings[name],
@@ -26489,7 +26524,7 @@
 														},
 														message = file.message(
 															format(info.reason),
-															{ start, end }
+															{ start, end },
 														)
 													;(message.source =
 														'parse-error'),
@@ -26497,7 +26532,7 @@
 														(message.fatal =
 															fatalities[level]),
 														(message.note = format(
-															info.description
+															info.description,
 														)),
 														(message.url =
 															'url' in info &&
@@ -26514,19 +26549,19 @@
 																		$1
 																			? -Number.parseInt(
 																					$1,
-																					10
+																					10,
 																			  )
 																			: 0,
 																	char =
 																		doc.charAt(
 																			error.startOffset +
-																				offset
+																				offset,
 																		)
 																return '`' ===
 																	char
 																	? '` ` `'
 																	: char
-															}
+															},
 														)
 														.replace(
 															/%x/g,
@@ -26534,12 +26569,12 @@
 																'0x' +
 																doc
 																	.charCodeAt(
-																		error.startOffset
+																		error.startOffset,
 																	)
 																	.toString(
-																		16
+																		16,
 																	)
-																	.toUpperCase()
+																	.toUpperCase(),
 														)
 												}
 										  }
@@ -26565,7 +26600,7 @@
 												verbose: settings.verbose,
 												location: !1,
 											},
-											tree
+											tree,
 										)
 									)
 								})(
@@ -26578,12 +26613,12 @@
 										space: settings.space,
 										file,
 										verbose: settings.verbose,
-									}
+									},
 								)
 							},
 						})
 					},
-					{ fragment: !0 }
+					{ fragment: !0 },
 				),
 				source = 'rehype-katex'
 			function rehypeKatex(options) {
@@ -26616,7 +26651,7 @@
 										whitespace,
 										breakBefore: !0,
 										breakAfter: !0,
-									})
+									}),
 								)
 							let index = -1
 							for (; ++index < children.length; )
@@ -26631,8 +26666,8 @@
 												index < children.length - 1
 													? br(children[index + 1])
 													: block,
-										}
-									)
+										},
+									),
 								)
 							const result = []
 							let count
@@ -26646,7 +26681,7 @@
 									  (void 0 !== count &&
 											count > -1 &&
 											result.push(
-												'\n'.repeat(count) || ' '
+												'\n'.repeat(count) || ' ',
 											),
 									  (count = -1),
 									  result.push(value))
@@ -26660,7 +26695,7 @@
 								rehype_katex_assign({}, settings, {
 									displayMode,
 									throwOnError: !0,
-								})
+								}),
 							)
 						} catch (error_) {
 							const error = error_,
@@ -26676,12 +26711,12 @@
 										displayMode,
 										throwOnError: !1,
 										strict: 'ignore',
-									})
+									}),
 								))
 						}
 						element.children = (function removePosition(
 							tree,
-							options
+							options,
 						) {
 							const force =
 								'boolean' == typeof options
@@ -26704,7 +26739,7 @@
 			(__unused_webpack_module, exports, __webpack_require__) => {
 				'use strict'
 				const { DOCUMENT_MODE } = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js',
 					),
 					QUIRKS_MODE_PUBLIC_ID_PREFIXES = [
 						'+//silmaril//dtd html pro v0r11 19970101//',
@@ -26835,7 +26870,7 @@
 					(exports.serializeContent = function (
 						name,
 						publicId,
-						systemId
+						systemId,
 					) {
 						let str = '!DOCTYPE '
 						return (
@@ -26953,10 +26988,10 @@
 			(__unused_webpack_module, exports, __webpack_require__) => {
 				'use strict'
 				const Tokenizer = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js',
 					),
 					HTML = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js',
 					),
 					$ = HTML.TAG_NAMES,
 					NS = HTML.NAMESPACES,
@@ -27178,17 +27213,17 @@
 							(null !==
 								Tokenizer.getTokenAttr(
 									startTagToken,
-									ATTRS.COLOR
+									ATTRS.COLOR,
 								) ||
 								null !==
 									Tokenizer.getTokenAttr(
 										startTagToken,
-										ATTRS.SIZE
+										ATTRS.SIZE,
 									) ||
 								null !==
 									Tokenizer.getTokenAttr(
 										startTagToken,
-										ATTRS.FACE
+										ATTRS.FACE,
 									))
 						) || EXITS_FOREIGN_CONTENT[tn]
 					)
@@ -27229,7 +27264,7 @@
 						tn,
 						ns,
 						attrs,
-						foreignNS
+						foreignNS,
 					) {
 						return (
 							!(
@@ -27237,7 +27272,7 @@
 								!(function isHtmlIntegrationPoint(
 									tn,
 									ns,
-									attrs
+									attrs,
 								) {
 									if (
 										ns === NS.MATHML &&
@@ -27268,7 +27303,7 @@
 								(foreignNS && foreignNS !== NS.MATHML) ||
 								!(function isMathMLTextIntegrationPoint(
 									tn,
-									ns
+									ns,
 								) {
 									return (
 										ns === NS.MATHML &&
@@ -27285,7 +27320,7 @@
 			},
 		'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			'use strict'
 			const NS = (exports.NAMESPACES = {
@@ -27619,7 +27654,7 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const Mixin = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 				)
 				module.exports = class ErrorReportingMixinBase extends Mixin {
 					constructor(host, opts) {
@@ -27658,16 +27693,16 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const ErrorReportingMixinBase = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/mixin-base.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/mixin-base.js',
 					),
 					ErrorReportingTokenizerMixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/tokenizer-mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/tokenizer-mixin.js',
 					),
 					LocationInfoTokenizerMixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/tokenizer-mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/tokenizer-mixin.js',
 					),
 					Mixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 					)
 				module.exports = class ErrorReportingParserMixin extends (
 					ErrorReportingMixinBase
@@ -27699,16 +27734,16 @@
 								orig._bootstrap.call(
 									this,
 									document,
-									fragmentContext
+									fragmentContext,
 								),
 									Mixin.install(
 										this.tokenizer,
 										ErrorReportingTokenizerMixin,
-										mxn.opts
+										mxn.opts,
 									),
 									Mixin.install(
 										this.tokenizer,
-										LocationInfoTokenizerMixin
+										LocationInfoTokenizerMixin,
 									)
 							},
 							_processInputToken(token) {
@@ -27728,13 +27763,13 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const ErrorReportingMixinBase = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/mixin-base.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/mixin-base.js',
 					),
 					PositionTrackingPreprocessorMixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/position-tracking/preprocessor-mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/position-tracking/preprocessor-mixin.js',
 					),
 					Mixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 					)
 				module.exports = class ErrorReportingPreprocessorMixin extends (
 					ErrorReportingMixinBase
@@ -27743,7 +27778,7 @@
 						super(preprocessor, opts),
 							(this.posTracker = Mixin.install(
 								preprocessor,
-								PositionTrackingPreprocessorMixin
+								PositionTrackingPreprocessorMixin,
 							)),
 							(this.lastErrOffset = -1)
 					}
@@ -27758,13 +27793,13 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const ErrorReportingMixinBase = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/mixin-base.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/mixin-base.js',
 					),
 					ErrorReportingPreprocessorMixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/preprocessor-mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/preprocessor-mixin.js',
 					),
 					Mixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 					)
 				module.exports = class ErrorReportingTokenizerMixin extends (
 					ErrorReportingMixinBase
@@ -27774,7 +27809,7 @@
 						const preprocessorMixin = Mixin.install(
 							tokenizer.preprocessor,
 							ErrorReportingPreprocessorMixin,
-							opts
+							opts,
 						)
 						this.posTracker = preprocessorMixin.posTracker
 					}
@@ -27784,7 +27819,7 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const Mixin = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 				)
 				module.exports = class LocationInfoOpenElementStackMixin extends (
 					Mixin
@@ -27814,19 +27849,19 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const Mixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 					),
 					Tokenizer = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js',
 					),
 					LocationInfoTokenizerMixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/tokenizer-mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/tokenizer-mixin.js',
 					),
 					LocationInfoOpenElementStackMixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/open-element-stack-mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/open-element-stack-mixin.js',
 					),
 					$ = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js',
 					).TAG_NAMES
 				module.exports = class LocationInfoParserMixin extends Mixin {
 					constructor(parser) {
@@ -27843,18 +27878,18 @@
 						this.lastStartTagToken &&
 							((loc = Object.assign(
 								{},
-								this.lastStartTagToken.location
+								this.lastStartTagToken.location,
 							)),
 							(loc.startTag = this.lastStartTagToken.location)),
 							this.treeAdapter.setNodeSourceCodeLocation(
 								element,
-								loc
+								loc,
 							)
 					}
 					_setEndLocation(element, closingToken) {
 						if (
 							this.treeAdapter.getNodeSourceCodeLocation(
-								element
+								element,
 							) &&
 							closingToken.location
 						) {
@@ -27872,7 +27907,7 @@
 								  (endLoc.endOffset = ctLoc.startOffset)),
 								this.treeAdapter.updateNodeSourceCodeLocation(
 									element,
-									endLoc
+									endLoc,
 								)
 						}
 					}
@@ -27882,14 +27917,14 @@
 								orig._bootstrap.call(
 									this,
 									document,
-									fragmentContext
+									fragmentContext,
 								),
 									(mxn.lastStartTagToken = null),
 									(mxn.lastFosterParentingLocation = null),
 									(mxn.currentToken = null)
 								const tokenizerMixin = Mixin.install(
 									this.tokenizer,
-									LocationInfoTokenizerMixin
+									LocationInfoTokenizerMixin,
 								)
 								;(mxn.posTracker = tokenizerMixin.posTracker),
 									Mixin.install(
@@ -27899,10 +27934,10 @@
 											onItemPop: function (element) {
 												mxn._setEndLocation(
 													element,
-													mxn.currentToken
+													mxn.currentToken,
 												)
 											},
-										}
+										},
 									)
 							},
 							_runParsingLoop(scriptHandler) {
@@ -27914,14 +27949,14 @@
 								)
 									mxn._setEndLocation(
 										this.openElements.items[i],
-										mxn.currentToken
+										mxn.currentToken,
 									)
 							},
 							_processTokenInForeignContent(token) {
 								;(mxn.currentToken = token),
 									orig._processTokenInForeignContent.call(
 										this,
-										token
+										token,
 									)
 							},
 							_processToken(token) {
@@ -27932,7 +27967,7 @@
 									(token.tagName === $.HTML ||
 										(token.tagName === $.BODY &&
 											this.openElements.hasInScope(
-												$.BODY
+												$.BODY,
 											)))
 								)
 									for (
@@ -27944,7 +27979,7 @@
 											this.openElements.items[i]
 										if (
 											this.treeAdapter.getTagName(
-												element
+												element,
 											) === token.tagName
 										) {
 											mxn._setEndLocation(element, token)
@@ -27956,19 +27991,19 @@
 								orig._setDocumentType.call(this, token)
 								const documentChildren =
 										this.treeAdapter.getChildNodes(
-											this.document
+											this.document,
 										),
 									cnLength = documentChildren.length
 								for (let i = 0; i < cnLength; i++) {
 									const node = documentChildren[i]
 									if (
 										this.treeAdapter.isDocumentTypeNode(
-											node
+											node,
 										)
 									) {
 										this.treeAdapter.setNodeSourceCodeLocation(
 											node,
-											token.location
+											token.location,
 										)
 										break
 									}
@@ -27979,7 +28014,7 @@
 									(mxn.lastStartTagToken = null),
 									orig._attachElementToTree.call(
 										this,
-										element
+										element,
 									)
 							},
 							_appendElement(token, namespaceURI) {
@@ -27987,7 +28022,7 @@
 									orig._appendElement.call(
 										this,
 										token,
-										namespaceURI
+										namespaceURI,
 									)
 							},
 							_insertElement(token, namespaceURI) {
@@ -27995,7 +28030,7 @@
 									orig._insertElement.call(
 										this,
 										token,
-										namespaceURI
+										namespaceURI,
 									)
 							},
 							_insertTemplate(token) {
@@ -28003,39 +28038,39 @@
 									orig._insertTemplate.call(this, token)
 								const tmplContent =
 									this.treeAdapter.getTemplateContent(
-										this.openElements.current
+										this.openElements.current,
 									)
 								this.treeAdapter.setNodeSourceCodeLocation(
 									tmplContent,
-									null
+									null,
 								)
 							},
 							_insertFakeRootElement() {
 								orig._insertFakeRootElement.call(this),
 									this.treeAdapter.setNodeSourceCodeLocation(
 										this.openElements.current,
-										null
+										null,
 									)
 							},
 							_appendCommentNode(token, parent) {
 								orig._appendCommentNode.call(
 									this,
 									token,
-									parent
+									parent,
 								)
 								const children =
 										this.treeAdapter.getChildNodes(parent),
 									commentNode = children[children.length - 1]
 								this.treeAdapter.setNodeSourceCodeLocation(
 									commentNode,
-									token.location
+									token.location,
 								)
 							},
 							_findFosterParentingLocation() {
 								return (
 									(mxn.lastFosterParentingLocation =
 										orig._findFosterParentingLocation.call(
-											this
+											this,
 										)),
 									mxn.lastFosterParentingLocation
 								)
@@ -28059,25 +28094,25 @@
 											? siblings.indexOf(
 													mxn
 														.lastFosterParentingLocation
-														.beforeElement
+														.beforeElement,
 											  ) - 1
 											: siblings.length - 1,
 									textNode = siblings[textNodeIdx]
 								if (
 									this.treeAdapter.getNodeSourceCodeLocation(
-										textNode
+										textNode,
 									)
 								) {
 									const { endLine, endCol, endOffset } =
 										token.location
 									this.treeAdapter.updateNodeSourceCodeLocation(
 										textNode,
-										{ endLine, endCol, endOffset }
+										{ endLine, endCol, endOffset },
 									)
 								} else
 									this.treeAdapter.setNodeSourceCodeLocation(
 										textNode,
-										token.location
+										token.location,
 									)
 							},
 						}
@@ -28088,13 +28123,13 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const Mixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 					),
 					Tokenizer = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js',
 					),
 					PositionTrackingPreprocessorMixin = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/position-tracking/preprocessor-mixin.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/position-tracking/preprocessor-mixin.js',
 					)
 				module.exports = class LocationInfoTokenizerMixin extends (
 					Mixin
@@ -28104,7 +28139,7 @@
 							(this.tokenizer = tokenizer),
 							(this.posTracker = Mixin.install(
 								tokenizer.preprocessor,
-								PositionTrackingPreprocessorMixin
+								PositionTrackingPreprocessorMixin,
 							)),
 							(this.currentAttrLocation = null),
 							(this.ctLoc = null)
@@ -28150,7 +28185,7 @@
 							_createDoctypeToken(initialName) {
 								orig._createDoctypeToken.call(
 									this,
-									initialName
+									initialName,
 								),
 									(this.currentToken.location = mxn.ctLoc)
 							},
@@ -28228,7 +28263,7 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const Mixin = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 				)
 				module.exports = class PositionTrackingPreprocessorMixin extends (
 					Mixin
@@ -28295,7 +28330,7 @@
 						if (this.length >= 3) {
 							const neAttrsLength =
 									this.treeAdapter.getAttrList(
-										newElement
+										newElement,
 									).length,
 								neTagName =
 									this.treeAdapter.getTagName(newElement),
@@ -28314,7 +28349,7 @@
 								this.treeAdapter.getTagName(element) ===
 									neTagName &&
 									this.treeAdapter.getNamespaceURI(
-										element
+										element,
 									) === neNamespaceURI &&
 									elementAttrs.length === neAttrsLength &&
 									candidates.push({
@@ -28439,47 +28474,47 @@
 		'./node_modules/rehype-parse/node_modules/parse5/lib/parser/index.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			const Tokenizer = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/index.js',
 				),
 				OpenElementStack = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/parser/open-element-stack.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/parser/open-element-stack.js',
 				),
 				FormattingElementList = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/parser/formatting-element-list.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/parser/formatting-element-list.js',
 				),
 				LocationInfoParserMixin = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/parser-mixin.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/location-info/parser-mixin.js',
 				),
 				ErrorReportingParserMixin = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/parser-mixin.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/extensions/error-reporting/parser-mixin.js',
 				),
 				Mixin = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js',
 				),
 				defaultTreeAdapter = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/tree-adapters/default.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/tree-adapters/default.js',
 				),
 				mergeOptions = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/merge-options.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/utils/merge-options.js',
 				),
 				doctype = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/common/doctype.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/common/doctype.js',
 				),
 				foreignContent = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/common/foreign-content.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/common/foreign-content.js',
 				),
 				ERR = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/common/error-codes.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/common/error-codes.js',
 				),
 				unicode = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/common/unicode.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/common/unicode.js',
 				),
 				HTML = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js',
 				),
 				$ = HTML.TAG_NAMES,
 				NS = HTML.NAMESPACES,
@@ -28573,7 +28608,7 @@
 							},
 						[Tokenizer.END_TAG_TOKEN]: function endTagBeforeHtml(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							;(tn !== $.HTML &&
@@ -28603,7 +28638,7 @@
 							},
 						[Tokenizer.END_TAG_TOKEN]: function endTagBeforeHead(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.HEAD ||
@@ -28659,7 +28694,7 @@
 									: tn === $.BR
 									? tokenInHeadNoScript(p, token)
 									: p._err(
-											ERR.endTagWithoutMatchingOpenElement
+											ERR.endTagWithoutMatchingOpenElement,
 									  )
 							},
 						[Tokenizer.EOF_TOKEN]: tokenInHeadNoScript,
@@ -28673,7 +28708,7 @@
 						[Tokenizer.DOCTYPE_TOKEN]: misplacedDoctype,
 						[Tokenizer.START_TAG_TOKEN]: function startTagAfterHead(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.HTML
@@ -28705,7 +28740,7 @@
 						},
 						[Tokenizer.END_TAG_TOKEN]: function endTagAfterHead(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.BODY || tn === $.HTML || tn === $.BR
@@ -28737,7 +28772,7 @@
 						[Tokenizer.START_TAG_TOKEN]: ignoreToken,
 						[Tokenizer.END_TAG_TOKEN]: function endTagInText(
 							p,
-							token
+							token,
 						) {
 							token.tagName === $.SCRIPT &&
 								(p.pendingScript = p.openElements.current)
@@ -28789,7 +28824,7 @@
 						[Tokenizer.DOCTYPE_TOKEN]: ignoreToken,
 						[Tokenizer.START_TAG_TOKEN]: function startTagInCaption(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.CAPTION ||
@@ -28804,7 +28839,7 @@
 								? p.openElements.hasInTableScope($.CAPTION) &&
 								  (p.openElements.generateImpliedEndTags(),
 								  p.openElements.popUntilTagNamePopped(
-										$.CAPTION
+										$.CAPTION,
 								  ),
 								  p.activeFormattingElements.clearToLastMarker(),
 								  (p.insertionMode = IN_TABLE_MODE),
@@ -28813,14 +28848,14 @@
 						},
 						[Tokenizer.END_TAG_TOKEN]: function endTagInCaption(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.CAPTION || tn === $.TABLE
 								? p.openElements.hasInTableScope($.CAPTION) &&
 								  (p.openElements.generateImpliedEndTags(),
 								  p.openElements.popUntilTagNamePopped(
-										$.CAPTION
+										$.CAPTION,
 								  ),
 								  p.activeFormattingElements.clearToLastMarker(),
 								  (p.insertionMode = IN_TABLE_MODE),
@@ -28860,7 +28895,7 @@
 							},
 						[Tokenizer.END_TAG_TOKEN]: function endTagInColumnGroup(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.COLGROUP
@@ -28908,7 +28943,7 @@
 							},
 						[Tokenizer.END_TAG_TOKEN]: function endTagInTableBody(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.TBODY || tn === $.TFOOT || tn === $.THEAD
@@ -28943,7 +28978,7 @@
 						[Tokenizer.DOCTYPE_TOKEN]: ignoreToken,
 						[Tokenizer.START_TAG_TOKEN]: function startTagInRow(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.TH || tn === $.TD
@@ -28967,7 +29002,7 @@
 						},
 						[Tokenizer.END_TAG_TOKEN]: function endTagInRow(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.TR
@@ -29010,7 +29045,7 @@
 						[Tokenizer.DOCTYPE_TOKEN]: ignoreToken,
 						[Tokenizer.START_TAG_TOKEN]: function startTagInCell(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.CAPTION ||
@@ -29029,7 +29064,7 @@
 						},
 						[Tokenizer.END_TAG_TOKEN]: function endTagInCell(
 							p,
-							token
+							token,
 						) {
 							const tn = token.tagName
 							tn === $.TD || tn === $.TH
@@ -29084,7 +29119,7 @@
 								tn === $.TD ||
 								tn === $.TH
 									? (p.openElements.popUntilTagNamePopped(
-											$.SELECT
+											$.SELECT,
 									  ),
 									  p._resetInsertionMode(),
 									  p._processToken(token))
@@ -29103,7 +29138,7 @@
 								tn === $.TH
 									? p.openElements.hasInTableScope(tn) &&
 									  (p.openElements.popUntilTagNamePopped(
-											$.SELECT
+											$.SELECT,
 									  ),
 									  p._resetInsertionMode(),
 									  p._processToken(token))
@@ -29141,7 +29176,7 @@
 										] || IN_BODY_MODE
 									p._popTmplInsertionMode(),
 										p._pushTmplInsertionMode(
-											newInsertionMode
+											newInsertionMode,
 										),
 										(p.insertionMode = newInsertionMode),
 										p._processToken(token)
@@ -29149,7 +29184,7 @@
 							},
 						[Tokenizer.END_TAG_TOKEN]: function endTagInTemplate(
 							p,
-							token
+							token,
 						) {
 							token.tagName === $.TEMPLATE &&
 								endTagInHead(p, token)
@@ -29165,13 +29200,13 @@
 							function appendCommentToRootHtmlElement(p, token) {
 								p._appendCommentNode(
 									token,
-									p.openElements.items[0]
+									p.openElements.items[0],
 								)
 							},
 						[Tokenizer.DOCTYPE_TOKEN]: ignoreToken,
 						[Tokenizer.START_TAG_TOKEN]: function startTagAfterBody(
 							p,
-							token
+							token,
 						) {
 							token.tagName === $.HTML
 								? startTagInBody(p, token)
@@ -29179,7 +29214,7 @@
 						},
 						[Tokenizer.END_TAG_TOKEN]: function endTagAfterBody(
 							p,
-							token
+							token,
 						) {
 							token.tagName === $.HTML
 								? p.fragmentContext ||
@@ -29210,7 +29245,7 @@
 							},
 						[Tokenizer.END_TAG_TOKEN]: function endTagInFrameset(
 							p,
-							token
+							token,
 						) {
 							token.tagName !== $.FRAMESET ||
 								p.openElements.isRootHtmlElementCurrent() ||
@@ -29239,7 +29274,7 @@
 							},
 						[Tokenizer.END_TAG_TOKEN]: function endTagAfterFrameset(
 							p,
-							token
+							token,
 						) {
 							token.tagName === $.HTML &&
 								(p.insertionMode = AFTER_AFTER_FRAMESET_MODE)
@@ -29284,17 +29319,17 @@
 			function aaObtainFormattingElementEntry(p, token) {
 				let formattingElementEntry =
 					p.activeFormattingElements.getElementEntryInScopeWithTagName(
-						token.tagName
+						token.tagName,
 					)
 				return (
 					formattingElementEntry
 						? p.openElements.contains(
-								formattingElementEntry.element
+								formattingElementEntry.element,
 						  )
 							? p.openElements.hasInScope(token.tagName) ||
 							  (formattingElementEntry = null)
 							: (p.activeFormattingElements.removeEntry(
-									formattingElementEntry
+									formattingElementEntry,
 							  ),
 							  (formattingElementEntry = null))
 						: genericEndTagInBody(p, token),
@@ -29311,10 +29346,10 @@
 				return (
 					furthestBlock ||
 						(p.openElements.popUntilElementPopped(
-							formattingElementEntry.element
+							formattingElementEntry.element,
 						),
 						p.activeFormattingElements.removeEntry(
-							formattingElementEntry
+							formattingElementEntry,
 						)),
 					furthestBlock
 				)
@@ -29336,12 +29371,12 @@
 					!elementEntry || counterOverflow
 						? (counterOverflow &&
 								p.activeFormattingElements.removeEntry(
-									elementEntry
+									elementEntry,
 								),
 						  p.openElements.remove(element))
 						: ((element = aaRecreateElementFromEntry(
 								p,
-								elementEntry
+								elementEntry,
 						  )),
 						  lastElement === furthestBlock &&
 								(p.activeFormattingElements.bookmark =
@@ -29357,7 +29392,7 @@
 					newElement = p.treeAdapter.createElement(
 						elementEntry.token.tagName,
 						ns,
-						elementEntry.token.attrs
+						elementEntry.token.attrs,
 					)
 				return (
 					p.openElements.replace(elementEntry.element, newElement),
@@ -29368,7 +29403,7 @@
 			function aaInsertLastNodeInCommonAncestor(
 				p,
 				commonAncestor,
-				lastElement
+				lastElement,
 			) {
 				if (p._isElementCausesFosterParenting(commonAncestor))
 					p._fosterParentElement(lastElement)
@@ -29385,25 +29420,25 @@
 			function aaReplaceFormattingElement(
 				p,
 				furthestBlock,
-				formattingElementEntry
+				formattingElementEntry,
 			) {
 				const ns = p.treeAdapter.getNamespaceURI(
-						formattingElementEntry.element
+						formattingElementEntry.element,
 					),
 					token = formattingElementEntry.token,
 					newElement = p.treeAdapter.createElement(
 						token.tagName,
 						ns,
-						token.attrs
+						token.attrs,
 					)
 				p._adoptNodes(furthestBlock, newElement),
 					p.treeAdapter.appendChild(furthestBlock, newElement),
 					p.activeFormattingElements.insertElementAfterBookmark(
 						newElement,
-						formattingElementEntry.token
+						formattingElementEntry.token,
 					),
 					p.activeFormattingElements.removeEntry(
-						formattingElementEntry
+						formattingElementEntry,
 					),
 					p.openElements.remove(formattingElementEntry.element),
 					p.openElements.insertAfter(furthestBlock, newElement)
@@ -29415,35 +29450,35 @@
 					i < AA_OUTER_LOOP_ITER &&
 					((formattingElementEntry = aaObtainFormattingElementEntry(
 						p,
-						token
+						token,
 					)),
 					formattingElementEntry);
 					i++
 				) {
 					const furthestBlock = aaObtainFurthestBlock(
 						p,
-						formattingElementEntry
+						formattingElementEntry,
 					)
 					if (!furthestBlock) break
 					p.activeFormattingElements.bookmark = formattingElementEntry
 					const lastElement = aaInnerLoop(
 							p,
 							furthestBlock,
-							formattingElementEntry.element
+							formattingElementEntry.element,
 						),
 						commonAncestor = p.openElements.getCommonAncestor(
-							formattingElementEntry.element
+							formattingElementEntry.element,
 						)
 					p.treeAdapter.detachNode(lastElement),
 						aaInsertLastNodeInCommonAncestor(
 							p,
 							commonAncestor,
-							lastElement
+							lastElement,
 						),
 						aaReplaceFormattingElement(
 							p,
 							furthestBlock,
-							formattingElementEntry
+							formattingElementEntry,
 						)
 				}
 			}
@@ -29454,7 +29489,7 @@
 			function appendComment(p, token) {
 				p._appendCommentNode(
 					token,
-					p.openElements.currentTmplContent || p.openElements.current
+					p.openElements.currentTmplContent || p.openElements.current,
 				)
 			}
 			function appendCommentToDocument(p, token) {
@@ -29470,7 +29505,7 @@
 				p._err(ERR.missingDoctype, { beforeToken: !0 }),
 					p.treeAdapter.setDocumentMode(
 						p.document,
-						HTML.DOCUMENT_MODE.QUIRKS
+						HTML.DOCUMENT_MODE.QUIRKS,
 					),
 					(p.insertionMode = BEFORE_HTML_MODE),
 					p._processToken(token)
@@ -29579,7 +29614,7 @@
 					p._insertElement(token, NS.HTML),
 					p.activeFormattingElements.pushElement(
 						p.openElements.current,
-						token
+						token,
 					)
 			}
 			function appletStartTagInBody(p, token) {
@@ -29627,21 +29662,21 @@
 							? (function aStartTagInBody(p, token) {
 									const activeElementEntry =
 										p.activeFormattingElements.getElementEntryInScopeWithTagName(
-											$.A
+											$.A,
 										)
 									activeElementEntry &&
 										(callAdoptionAgency(p, token),
 										p.openElements.remove(
-											activeElementEntry.element
+											activeElementEntry.element,
 										),
 										p.activeFormattingElements.removeEntry(
-											activeElementEntry
+											activeElementEntry,
 										)),
 										p._reconstructActiveFormattingElements(),
 										p._insertElement(token, NS.HTML),
 										p.activeFormattingElements.pushElement(
 											p.openElements.current,
-											token
+											token,
 										)
 							  })(p, token)
 							: genericStartTagInBody(p, token)
@@ -29680,7 +29715,7 @@
 										const element = p.openElements.items[i],
 											elementTn =
 												p.treeAdapter.getTagName(
-													element
+													element,
 												)
 										let closeTn = null
 										if (
@@ -29694,10 +29729,10 @@
 											closeTn)
 										) {
 											p.openElements.generateImpliedEndTagsWithExclusion(
-												closeTn
+												closeTn,
 											),
 												p.openElements.popUntilTagNamePopped(
-													closeTn
+													closeTn,
 												)
 											break
 										}
@@ -29731,7 +29766,7 @@
 							? (function rtStartTagInBody(p, token) {
 									p.openElements.hasInScope($.RUBY) &&
 										p.openElements.generateImpliedEndTagsWithExclusion(
-											$.RTC
+											$.RTC,
 										),
 										p._insertElement(token, NS.HTML)
 							  })(p, token)
@@ -29757,17 +29792,17 @@
 										(p.framesetOk = !1),
 										p._switchToTextParsing(
 											token,
-											Tokenizer.MODE.RAWTEXT
+											Tokenizer.MODE.RAWTEXT,
 										)
 							  })(p, token)
 							: tn === $.SVG
 							? (function svgStartTagInBody(p, token) {
 									p._reconstructActiveFormattingElements(),
 										foreignContent.adjustTokenSVGAttrs(
-											token
+											token,
 										),
 										foreignContent.adjustTokenXMLAttrs(
-											token
+											token,
 										),
 										token.selfClosing
 											? p._appendElement(token, NS.SVG)
@@ -29784,7 +29819,7 @@
 									0 === p.openElements.tmplCount &&
 										p.treeAdapter.adoptAttributes(
 											p.openElements.items[0],
-											token.attrs
+											token.attrs,
 										)
 							  })(p, token)
 							: tn === $.BASE || tn === $.LINK || tn === $.META
@@ -29798,7 +29833,7 @@
 										((p.framesetOk = !1),
 										p.treeAdapter.adoptAttributes(
 											bodyElement,
-											token.attrs
+											token.attrs,
 										))
 							  })(p, token)
 							: tn === $.MAIN || tn === $.MENU
@@ -29826,7 +29861,7 @@
 										p._insertElement(token, NS.HTML),
 										p.activeFormattingElements.pushElement(
 											p.openElements.current,
-											token
+											token,
 										)
 							  })(p, token)
 							: tn === $.AREA
@@ -29835,16 +29870,16 @@
 							? (function mathStartTagInBody(p, token) {
 									p._reconstructActiveFormattingElements(),
 										foreignContent.adjustTokenMathMLAttrs(
-											token
+											token,
 										),
 										foreignContent.adjustTokenXMLAttrs(
-											token
+											token,
 										),
 										token.selfClosing
 											? p._appendElement(token, NS.MATHML)
 											: p._insertElement(
 													token,
-													NS.MATHML
+													NS.MATHML,
 											  ),
 										(token.ackSelfClosing = !0)
 							  })(p, token)
@@ -29866,7 +29901,7 @@
 							: tn === $.TABLE
 							? (function tableStartTagInBody(p, token) {
 									p.treeAdapter.getDocumentMode(
-										p.document
+										p.document,
 									) !== HTML.DOCUMENT_MODE.QUIRKS &&
 										p.openElements.hasInButtonScope($.P) &&
 										p._closePElement(),
@@ -29882,7 +29917,7 @@
 										p._appendElement(token, NS.HTML)
 									const inputType = Tokenizer.getTokenAttr(
 										token,
-										ATTRS.TYPE
+										ATTRS.TYPE,
 									)
 									;(inputType &&
 										inputType.toLowerCase() ===
@@ -29918,7 +29953,7 @@
 									p.openElements.hasInScope($.BUTTON) &&
 										(p.openElements.generateImpliedEndTags(),
 										p.openElements.popUntilTagNamePopped(
-											$.BUTTON
+											$.BUTTON,
 										)),
 										p._reconstructActiveFormattingElements(),
 										p._insertElement(token, NS.HTML),
@@ -29937,7 +29972,7 @@
 									;(p.framesetOk = !1),
 										p._switchToTextParsing(
 											token,
-											Tokenizer.MODE.RAWTEXT
+											Tokenizer.MODE.RAWTEXT,
 										)
 							  })(p, token)
 							: tn === $.SELECT
@@ -30085,10 +30120,10 @@
 							? (function liEndTagInBody(p) {
 									p.openElements.hasInListItemScope($.LI) &&
 										(p.openElements.generateImpliedEndTagsWithExclusion(
-											$.LI
+											$.LI,
 										),
 										p.openElements.popUntilTagNamePopped(
-											$.LI
+											$.LI,
 										))
 							  })(p)
 							: tn === $.DD || tn === $.DT
@@ -30096,10 +30131,10 @@
 									const tn = token.tagName
 									p.openElements.hasInScope(tn) &&
 										(p.openElements.generateImpliedEndTagsWithExclusion(
-											tn
+											tn,
 										),
 										p.openElements.popUntilTagNamePopped(
-											tn
+											tn,
 										))
 							  })(p, token)
 							: tn === $.H1 ||
@@ -30157,10 +30192,10 @@
 											(p.openElements.generateImpliedEndTags(),
 											inTemplate
 												? p.openElements.popUntilTagNamePopped(
-														$.FORM
+														$.FORM,
 												  )
 												: p.openElements.remove(
-														formElement
+														formElement,
 												  ))
 							  })(p)
 							: tn === $.CODE || tn === $.FONT || tn === $.NOBR
@@ -30278,7 +30313,7 @@
 							? (function tableStartTagInTable(p, token) {
 									p.openElements.hasInTableScope($.TABLE) &&
 										(p.openElements.popUntilTagNamePopped(
-											$.TABLE
+											$.TABLE,
 										),
 										p._resetInsertionMode(),
 										p._processToken(token))
@@ -30295,7 +30330,7 @@
 							? (function inputStartTagInTable(p, token) {
 									const inputType = Tokenizer.getTokenAttr(
 										token,
-										ATTRS.TYPE
+										ATTRS.TYPE,
 									)
 									inputType &&
 									inputType.toLowerCase() ===
@@ -30469,12 +30504,12 @@
 						(fragmentContext = this.treeAdapter.createElement(
 							$.TEMPLATE,
 							NS.HTML,
-							[]
+							[],
 						))
 					const documentMock = this.treeAdapter.createElement(
 						'documentmock',
 						NS.HTML,
-						[]
+						[],
 					)
 					this._bootstrap(documentMock, fragmentContext),
 						this.treeAdapter.getTagName(fragmentContext) ===
@@ -30502,7 +30537,7 @@
 						(this.formElement = null),
 						(this.openElements = new OpenElementStack(
 							this.document,
-							this.treeAdapter
+							this.treeAdapter,
 						)),
 						(this.activeFormattingElements =
 							new FormattingElementList(this.treeAdapter)),
@@ -30589,11 +30624,11 @@
 				_initTokenizerForFragmentParsing() {
 					if (
 						this.treeAdapter.getNamespaceURI(
-							this.fragmentContext
+							this.fragmentContext,
 						) === NS.HTML
 					) {
 						const tn = this.treeAdapter.getTagName(
-							this.fragmentContext
+							this.fragmentContext,
 						)
 						tn === $.TITLE || tn === $.TEXTAREA
 							? (this.tokenizer.state = Tokenizer.MODE.RCDATA)
@@ -30619,7 +30654,7 @@
 						this.document,
 						name,
 						publicId,
-						systemId
+						systemId,
 					)
 				}
 				_attachElementToTree(element) {
@@ -30636,7 +30671,7 @@
 					const element = this.treeAdapter.createElement(
 						token.tagName,
 						namespaceURI,
-						token.attrs
+						token.attrs,
 					)
 					this._attachElementToTree(element)
 				}
@@ -30644,7 +30679,7 @@
 					const element = this.treeAdapter.createElement(
 						token.tagName,
 						namespaceURI,
-						token.attrs
+						token.attrs,
 					)
 					this._attachElementToTree(element),
 						this.openElements.push(element)
@@ -30653,7 +30688,7 @@
 					const element = this.treeAdapter.createElement(
 						tagName,
 						NS.HTML,
-						[]
+						[],
 					)
 					this._attachElementToTree(element),
 						this.openElements.push(element)
@@ -30662,7 +30697,7 @@
 					const tmpl = this.treeAdapter.createElement(
 							token.tagName,
 							NS.HTML,
-							token.attrs
+							token.attrs,
 						),
 						content = this.treeAdapter.createDocumentFragment()
 					this.treeAdapter.setTemplateContent(tmpl, content),
@@ -30673,17 +30708,17 @@
 					const element = this.treeAdapter.createElement(
 						$.HTML,
 						NS.HTML,
-						[]
+						[],
 					)
 					this.treeAdapter.appendChild(
 						this.openElements.current,
-						element
+						element,
 					),
 						this.openElements.push(element)
 				}
 				_appendCommentNode(token, parent) {
 					const commentNode = this.treeAdapter.createCommentNode(
-						token.data
+						token.data,
 					)
 					this.treeAdapter.appendChild(parent, commentNode)
 				}
@@ -30766,10 +30801,10 @@
 									for (
 										;
 										p.treeAdapter.getNamespaceURI(
-											p.openElements.current
+											p.openElements.current,
 										) !== NS.HTML &&
 										!p._isIntegrationPoint(
-											p.openElements.current
+											p.openElements.current,
 										);
 
 									)
@@ -30780,27 +30815,27 @@
 											p._getAdjustedCurrentElement(),
 										currentNs =
 											p.treeAdapter.getNamespaceURI(
-												current
+												current,
 											)
 									currentNs === NS.MATHML
 										? foreignContent.adjustTokenMathMLAttrs(
-												token
+												token,
 										  )
 										: currentNs === NS.SVG &&
 										  (foreignContent.adjustTokenSVGTagName(
-												token
+												token,
 										  ),
 										  foreignContent.adjustTokenSVGAttrs(
-												token
+												token,
 										  )),
 										foreignContent.adjustTokenXMLAttrs(
-											token
+											token,
 										),
 										token.selfClosing
 											? p._appendElement(token, currentNs)
 											: p._insertElement(
 													token,
-													currentNs
+													currentNs,
 											  ),
 										(token.ackSelfClosing = !0)
 								}
@@ -30815,7 +30850,7 @@
 									const element = p.openElements.items[i]
 									if (
 										p.treeAdapter.getNamespaceURI(
-											element
+											element,
 										) === NS.HTML
 									) {
 										p._processToken(token)
@@ -30827,7 +30862,7 @@
 											.toLowerCase() === token.tagName
 									) {
 										p.openElements.popUntilElementPopped(
-											element
+											element,
 										)
 										break
 									}
@@ -30842,7 +30877,7 @@
 							token.selfClosing &&
 							!token.ackSelfClosing &&
 							this._err(
-								ERR.nonVoidHtmlElementStartTagWithTrailingSolidus
+								ERR.nonVoidHtmlElementStartTagWithTrailingSolidus,
 							)
 				}
 				_isIntegrationPoint(element, foreignNS) {
@@ -30853,7 +30888,7 @@
 						tn,
 						ns,
 						attrs,
-						foreignNS
+						foreignNS,
 					)
 				}
 				_reconstructActiveFormattingElements() {
@@ -30881,8 +30916,8 @@
 								this._insertElement(
 									entry.token,
 									this.treeAdapter.getNamespaceURI(
-										entry.element
-									)
+										entry.element,
+									),
 								),
 								(entry.element = this.openElements.current)
 					}
@@ -30981,7 +31016,7 @@
 					return (
 						this.fosterParentingEnabled &&
 						this._isElementCausesFosterParenting(
-							this.openElements.current
+							this.openElements.current,
 						)
 					)
 				}
@@ -31018,7 +31053,7 @@
 						? this.treeAdapter.insertBefore(
 								location.parent,
 								element,
-								location.beforeElement
+								location.beforeElement,
 						  )
 						: this.treeAdapter.appendChild(location.parent, element)
 				}
@@ -31028,7 +31063,7 @@
 						? this.treeAdapter.insertTextBefore(
 								location.parent,
 								chars,
-								location.beforeElement
+								location.beforeElement,
 						  )
 						: this.treeAdapter.insertText(location.parent, chars)
 				}
@@ -31043,7 +31078,7 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const HTML = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js',
 					),
 					$ = HTML.TAG_NAMES,
 					NS = HTML.NAMESPACES
@@ -31176,7 +31211,7 @@
 								this.treeAdapter.getTagName(this.current)),
 							(this.currentTmplContent = this._isInTemplate()
 								? this.treeAdapter.getTemplateContent(
-										this.current
+										this.current,
 								  )
 								: null)
 					}
@@ -31208,7 +31243,7 @@
 						for (; this.stackTop > -1; ) {
 							const tn = this.currentTagName,
 								ns = this.treeAdapter.getNamespaceURI(
-									this.current
+									this.current,
 								)
 							if ((this.pop(), tn === tagName && ns === NS.HTML))
 								break
@@ -31224,7 +31259,7 @@
 						for (; this.stackTop > -1; ) {
 							const tn = this.currentTagName,
 								ns = this.treeAdapter.getNamespaceURI(
-									this.current
+									this.current,
 								)
 							if (
 								(this.pop(),
@@ -31242,7 +31277,7 @@
 						for (; this.stackTop > -1; ) {
 							const tn = this.currentTagName,
 								ns = this.treeAdapter.getNamespaceURI(
-									this.current
+									this.current,
 								)
 							if (
 								(this.pop(),
@@ -31324,10 +31359,10 @@
 					hasInScope(tagName) {
 						for (let i = this.stackTop; i >= 0; i--) {
 							const tn = this.treeAdapter.getTagName(
-									this.items[i]
+									this.items[i],
 								),
 								ns = this.treeAdapter.getNamespaceURI(
-									this.items[i]
+									this.items[i],
 								)
 							if (tn === tagName && ns === NS.HTML) return !0
 							if (isScopingElement(tn, ns)) return !1
@@ -31337,10 +31372,10 @@
 					hasNumberedHeaderInScope() {
 						for (let i = this.stackTop; i >= 0; i--) {
 							const tn = this.treeAdapter.getTagName(
-									this.items[i]
+									this.items[i],
 								),
 								ns = this.treeAdapter.getNamespaceURI(
-									this.items[i]
+									this.items[i],
 								)
 							if (
 								(tn === $.H1 ||
@@ -31359,10 +31394,10 @@
 					hasInListItemScope(tagName) {
 						for (let i = this.stackTop; i >= 0; i--) {
 							const tn = this.treeAdapter.getTagName(
-									this.items[i]
+									this.items[i],
 								),
 								ns = this.treeAdapter.getNamespaceURI(
-									this.items[i]
+									this.items[i],
 								)
 							if (tn === tagName && ns === NS.HTML) return !0
 							if (
@@ -31377,10 +31412,10 @@
 					hasInButtonScope(tagName) {
 						for (let i = this.stackTop; i >= 0; i--) {
 							const tn = this.treeAdapter.getTagName(
-									this.items[i]
+									this.items[i],
 								),
 								ns = this.treeAdapter.getNamespaceURI(
-									this.items[i]
+									this.items[i],
 								)
 							if (tn === tagName && ns === NS.HTML) return !0
 							if (
@@ -31394,11 +31429,11 @@
 					hasInTableScope(tagName) {
 						for (let i = this.stackTop; i >= 0; i--) {
 							const tn = this.treeAdapter.getTagName(
-								this.items[i]
+								this.items[i],
 							)
 							if (
 								this.treeAdapter.getNamespaceURI(
-									this.items[i]
+									this.items[i],
 								) === NS.HTML
 							) {
 								if (tn === tagName) return !0
@@ -31415,11 +31450,11 @@
 					hasTableBodyContextInTableScope() {
 						for (let i = this.stackTop; i >= 0; i--) {
 							const tn = this.treeAdapter.getTagName(
-								this.items[i]
+								this.items[i],
 							)
 							if (
 								this.treeAdapter.getNamespaceURI(
-									this.items[i]
+									this.items[i],
 								) === NS.HTML
 							) {
 								if (
@@ -31436,11 +31471,11 @@
 					hasInSelectScope(tagName) {
 						for (let i = this.stackTop; i >= 0; i--) {
 							const tn = this.treeAdapter.getTagName(
-								this.items[i]
+								this.items[i],
 							)
 							if (
 								this.treeAdapter.getNamespaceURI(
-									this.items[i]
+									this.items[i],
 								) === NS.HTML
 							) {
 								if (tn === tagName) return !0
@@ -31458,7 +31493,7 @@
 						for (
 							;
 							isImpliedEndTagRequiredThoroughly(
-								this.currentTagName
+								this.currentTagName,
 							);
 
 						)
@@ -31479,16 +31514,16 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const Preprocessor = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/preprocessor.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/preprocessor.js',
 					),
 					unicode = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/unicode.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/unicode.js',
 					),
 					neTree = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/named-entity-data.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/tokenizer/named-entity-data.js',
 					),
 					ERR = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/error-codes.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/error-codes.js',
 					),
 					$ = unicode.CODE_POINTS,
 					$$ = unicode.CODE_POINT_SEQUENCES,
@@ -31730,7 +31765,7 @@
 						null ===
 						Tokenizer.getTokenAttr(
 							this.currentToken,
-							this.currentAttr.name
+							this.currentAttr.name,
 						)
 							? this.currentToken.attrs.push(this.currentAttr)
 							: this._err(ERR.duplicateAttribute),
@@ -31750,7 +31785,7 @@
 										this._err(ERR.endTagWithAttributes),
 								  ct.selfClosing &&
 										this._err(
-											ERR.endTagWithTrailingSolidus
+											ERR.endTagWithTrailingSolidus,
 										)),
 							this.tokenQueue.push(ct)
 					}
@@ -31778,7 +31813,7 @@
 							  (type = Tokenizer.NULL_CHARACTER_TOKEN),
 							this._appendCharToCurrentCharacterToken(
 								type,
-								toChar(cp)
+								toChar(cp),
 							)
 					}
 					_emitSeveralCodePoints(codePoints) {
@@ -31788,7 +31823,7 @@
 					_emitChars(ch) {
 						this._appendCharToCurrentCharacterToken(
 							Tokenizer.CHARACTER_TOKEN,
-							ch
+							ch,
 						)
 					}
 					_matchNamedCharacterReference(startCp) {
@@ -31850,7 +31885,7 @@
 						if (this._isCharacterReferenceInAttribute())
 							for (let i = 0; i < this.tempBuff.length; i++)
 								this.currentAttr.value += toChar(
-									this.tempBuff[i]
+									this.tempBuff[i],
 								)
 						else this._emitSeveralCodePoints(this.tempBuff)
 						this.tempBuff = []
@@ -31879,7 +31914,7 @@
 								: cp === $.NULL
 								? (this._err(ERR.unexpectedNullCharacter),
 								  this._emitChars(
-										unicode.REPLACEMENT_CHARACTER
+										unicode.REPLACEMENT_CHARACTER,
 								  ))
 								: cp === $.EOF
 								? this._emitEOFToken()
@@ -31892,7 +31927,7 @@
 								: cp === $.NULL
 								? (this._err(ERR.unexpectedNullCharacter),
 								  this._emitChars(
-										unicode.REPLACEMENT_CHARACTER
+										unicode.REPLACEMENT_CHARACTER,
 								  ))
 								: cp === $.EOF
 								? this._emitEOFToken()
@@ -31906,7 +31941,7 @@
 								: cp === $.NULL
 								? (this._err(ERR.unexpectedNullCharacter),
 								  this._emitChars(
-										unicode.REPLACEMENT_CHARACTER
+										unicode.REPLACEMENT_CHARACTER,
 								  ))
 								: cp === $.EOF
 								? this._emitEOFToken()
@@ -31917,7 +31952,7 @@
 							cp === $.NULL
 								? (this._err(ERR.unexpectedNullCharacter),
 								  this._emitChars(
-										unicode.REPLACEMENT_CHARACTER
+										unicode.REPLACEMENT_CHARACTER,
 								  ))
 								: cp === $.EOF
 								? this._emitEOFToken()
@@ -31933,7 +31968,7 @@
 							  this._reconsumeInState('TAG_NAME_STATE'))
 							: cp === $.QUESTION_MARK
 							? (this._err(
-									ERR.unexpectedQuestionMarkInsteadOfTagName
+									ERR.unexpectedQuestionMarkInsteadOfTagName,
 							  ),
 							  this._createCommentToken(),
 							  this._reconsumeInState('BOGUS_COMMENT_STATE'))
@@ -31990,7 +32025,7 @@
 						isAsciiLetter(cp)
 							? (this._createEndTagToken(),
 							  this._reconsumeInState(
-									'RCDATA_END_TAG_NAME_STATE'
+									'RCDATA_END_TAG_NAME_STATE',
 							  ))
 							: (this._emitChars('</'),
 							  this._reconsumeInState('RCDATA_STATE'))
@@ -32035,7 +32070,7 @@
 						isAsciiLetter(cp)
 							? (this._createEndTagToken(),
 							  this._reconsumeInState(
-									'RAWTEXT_END_TAG_NAME_STATE'
+									'RAWTEXT_END_TAG_NAME_STATE',
 							  ))
 							: (this._emitChars('</'),
 							  this._reconsumeInState('RAWTEXT_STATE'))
@@ -32083,7 +32118,7 @@
 						isAsciiLetter(cp)
 							? (this._createEndTagToken(),
 							  this._reconsumeInState(
-									'SCRIPT_DATA_END_TAG_NAME_STATE'
+									'SCRIPT_DATA_END_TAG_NAME_STATE',
 							  ))
 							: (this._emitChars('</'),
 							  this._reconsumeInState('SCRIPT_DATA_STATE'))
@@ -32192,22 +32227,22 @@
 							? ((this.tempBuff = []),
 							  this._emitChars('<'),
 							  this._reconsumeInState(
-									'SCRIPT_DATA_DOUBLE_ESCAPE_START_STATE'
+									'SCRIPT_DATA_DOUBLE_ESCAPE_START_STATE',
 							  ))
 							: (this._emitChars('<'),
 							  this._reconsumeInState(
-									'SCRIPT_DATA_ESCAPED_STATE'
+									'SCRIPT_DATA_ESCAPED_STATE',
 							  ))
 					}
 					SCRIPT_DATA_ESCAPED_END_TAG_OPEN_STATE(cp) {
 						isAsciiLetter(cp)
 							? (this._createEndTagToken(),
 							  this._reconsumeInState(
-									'SCRIPT_DATA_ESCAPED_END_TAG_NAME_STATE'
+									'SCRIPT_DATA_ESCAPED_END_TAG_NAME_STATE',
 							  ))
 							: (this._emitChars('</'),
 							  this._reconsumeInState(
-									'SCRIPT_DATA_ESCAPED_STATE'
+									'SCRIPT_DATA_ESCAPED_STATE',
 							  ))
 					}
 					SCRIPT_DATA_ESCAPED_END_TAG_NAME_STATE(cp) {
@@ -32237,7 +32272,7 @@
 							this._emitChars('</'),
 								this._emitSeveralCodePoints(this.tempBuff),
 								this._reconsumeInState(
-									'SCRIPT_DATA_ESCAPED_STATE'
+									'SCRIPT_DATA_ESCAPED_STATE',
 								)
 						}
 					}
@@ -32256,7 +32291,7 @@
 							: isAsciiLower(cp)
 							? (this.tempBuff.push(cp), this._emitCodePoint(cp))
 							: this._reconsumeInState(
-									'SCRIPT_DATA_ESCAPED_STATE'
+									'SCRIPT_DATA_ESCAPED_STATE',
 							  )
 					}
 					SCRIPT_DATA_DOUBLE_ESCAPED_STATE(cp) {
@@ -32324,7 +32359,7 @@
 									'SCRIPT_DATA_DOUBLE_ESCAPE_END_STATE'),
 							  this._emitChars('/'))
 							: this._reconsumeInState(
-									'SCRIPT_DATA_DOUBLE_ESCAPED_STATE'
+									'SCRIPT_DATA_DOUBLE_ESCAPED_STATE',
 							  )
 					}
 					SCRIPT_DATA_DOUBLE_ESCAPE_END_STATE(cp) {
@@ -32342,7 +32377,7 @@
 							: isAsciiLower(cp)
 							? (this.tempBuff.push(cp), this._emitCodePoint(cp))
 							: this._reconsumeInState(
-									'SCRIPT_DATA_DOUBLE_ESCAPED_STATE'
+									'SCRIPT_DATA_DOUBLE_ESCAPED_STATE',
 							  )
 					}
 					BEFORE_ATTRIBUTE_NAME_STATE(cp) {
@@ -32351,17 +32386,17 @@
 							cp === $.GREATER_THAN_SIGN ||
 							cp === $.EOF
 								? this._reconsumeInState(
-										'AFTER_ATTRIBUTE_NAME_STATE'
+										'AFTER_ATTRIBUTE_NAME_STATE',
 								  )
 								: cp === $.EQUALS_SIGN
 								? (this._err(
-										ERR.unexpectedEqualsSignBeforeAttributeName
+										ERR.unexpectedEqualsSignBeforeAttributeName,
 								  ),
 								  this._createAttr('='),
 								  (this.state = 'ATTRIBUTE_NAME_STATE'))
 								: (this._createAttr(''),
 								  this._reconsumeInState(
-										'ATTRIBUTE_NAME_STATE'
+										'ATTRIBUTE_NAME_STATE',
 								  )))
 					}
 					ATTRIBUTE_NAME_STATE(cp) {
@@ -32370,12 +32405,12 @@
 						cp === $.GREATER_THAN_SIGN ||
 						cp === $.EOF
 							? (this._leaveAttrName(
-									'AFTER_ATTRIBUTE_NAME_STATE'
+									'AFTER_ATTRIBUTE_NAME_STATE',
 							  ),
 							  this._unconsume())
 							: cp === $.EQUALS_SIGN
 							? this._leaveAttrName(
-									'BEFORE_ATTRIBUTE_VALUE_STATE'
+									'BEFORE_ATTRIBUTE_VALUE_STATE',
 							  )
 							: isAsciiUpper(cp)
 							? (this.currentAttr.name += toAsciiLowerChar(cp))
@@ -32383,7 +32418,7 @@
 							  cp === $.APOSTROPHE ||
 							  cp === $.LESS_THAN_SIGN
 							? (this._err(
-									ERR.unexpectedCharacterInAttributeName
+									ERR.unexpectedCharacterInAttributeName,
 							  ),
 							  (this.currentAttr.name += toChar(cp)))
 							: cp === $.NULL
@@ -32406,7 +32441,7 @@
 								  this._emitEOFToken())
 								: (this._createAttr(''),
 								  this._reconsumeInState(
-										'ATTRIBUTE_NAME_STATE'
+										'ATTRIBUTE_NAME_STATE',
 								  )))
 					}
 					BEFORE_ATTRIBUTE_VALUE_STATE(cp) {
@@ -32422,7 +32457,7 @@
 								  (this.state = DATA_STATE),
 								  this._emitCurrentToken())
 								: this._reconsumeInState(
-										'ATTRIBUTE_VALUE_UNQUOTED_STATE'
+										'ATTRIBUTE_VALUE_UNQUOTED_STATE',
 								  ))
 					}
 					ATTRIBUTE_VALUE_DOUBLE_QUOTED_STATE(cp) {
@@ -32460,7 +32495,7 @@
 					ATTRIBUTE_VALUE_UNQUOTED_STATE(cp) {
 						isWhitespace(cp)
 							? this._leaveAttrValue(
-									'BEFORE_ATTRIBUTE_NAME_STATE'
+									'BEFORE_ATTRIBUTE_NAME_STATE',
 							  )
 							: cp === $.AMPERSAND
 							? ((this.returnState =
@@ -32479,7 +32514,7 @@
 							  cp === $.EQUALS_SIGN ||
 							  cp === $.GRAVE_ACCENT
 							? (this._err(
-									ERR.unexpectedCharacterInUnquotedAttributeValue
+									ERR.unexpectedCharacterInUnquotedAttributeValue,
 							  ),
 							  (this.currentAttr.value += toChar(cp)))
 							: cp === $.EOF
@@ -32489,11 +32524,11 @@
 					AFTER_ATTRIBUTE_VALUE_QUOTED_STATE(cp) {
 						isWhitespace(cp)
 							? this._leaveAttrValue(
-									'BEFORE_ATTRIBUTE_NAME_STATE'
+									'BEFORE_ATTRIBUTE_NAME_STATE',
 							  )
 							: cp === $.SOLIDUS
 							? this._leaveAttrValue(
-									'SELF_CLOSING_START_TAG_STATE'
+									'SELF_CLOSING_START_TAG_STATE',
 							  )
 							: cp === $.GREATER_THAN_SIGN
 							? (this._leaveAttrValue(DATA_STATE),
@@ -32501,10 +32536,10 @@
 							: cp === $.EOF
 							? (this._err(ERR.eofInTag), this._emitEOFToken())
 							: (this._err(
-									ERR.missingWhitespaceBetweenAttributes
+									ERR.missingWhitespaceBetweenAttributes,
 							  ),
 							  this._reconsumeInState(
-									'BEFORE_ATTRIBUTE_NAME_STATE'
+									'BEFORE_ATTRIBUTE_NAME_STATE',
 							  ))
 					}
 					SELF_CLOSING_START_TAG_STATE(cp) {
@@ -32516,7 +32551,7 @@
 							? (this._err(ERR.eofInTag), this._emitEOFToken())
 							: (this._err(ERR.unexpectedSolidusInTag),
 							  this._reconsumeInState(
-									'BEFORE_ATTRIBUTE_NAME_STATE'
+									'BEFORE_ATTRIBUTE_NAME_STATE',
 							  ))
 					}
 					BOGUS_COMMENT_STATE(cp) {
@@ -32535,20 +32570,20 @@
 						this._consumeSequenceIfMatch(
 							$$.DASH_DASH_STRING,
 							cp,
-							!0
+							!0,
 						)
 							? (this._createCommentToken(),
 							  (this.state = 'COMMENT_START_STATE'))
 							: this._consumeSequenceIfMatch(
 									$$.DOCTYPE_STRING,
 									cp,
-									!1
+									!1,
 							  )
 							? (this.state = 'DOCTYPE_STATE')
 							: this._consumeSequenceIfMatch(
 									$$.CDATA_START_STRING,
 									cp,
-									!0
+									!0,
 							  )
 							? this.allowCDATA
 								? (this.state = 'CDATA_SECTION_STATE')
@@ -32672,7 +32707,7 @@
 							? (this.state = 'BEFORE_DOCTYPE_NAME_STATE')
 							: cp === $.GREATER_THAN_SIGN
 							? this._reconsumeInState(
-									'BEFORE_DOCTYPE_NAME_STATE'
+									'BEFORE_DOCTYPE_NAME_STATE',
 							  )
 							: cp === $.EOF
 							? (this._err(ERR.eofInDoctype),
@@ -32681,23 +32716,23 @@
 							  this._emitCurrentToken(),
 							  this._emitEOFToken())
 							: (this._err(
-									ERR.missingWhitespaceBeforeDoctypeName
+									ERR.missingWhitespaceBeforeDoctypeName,
 							  ),
 							  this._reconsumeInState(
-									'BEFORE_DOCTYPE_NAME_STATE'
+									'BEFORE_DOCTYPE_NAME_STATE',
 							  ))
 					}
 					BEFORE_DOCTYPE_NAME_STATE(cp) {
 						isWhitespace(cp) ||
 							(isAsciiUpper(cp)
 								? (this._createDoctypeToken(
-										toAsciiLowerChar(cp)
+										toAsciiLowerChar(cp),
 								  ),
 								  (this.state = 'DOCTYPE_NAME_STATE'))
 								: cp === $.NULL
 								? (this._err(ERR.unexpectedNullCharacter),
 								  this._createDoctypeToken(
-										unicode.REPLACEMENT_CHARACTER
+										unicode.REPLACEMENT_CHARACTER,
 								  ),
 								  (this.state = 'DOCTYPE_NAME_STATE'))
 								: cp === $.GREATER_THAN_SIGN
@@ -32747,24 +32782,24 @@
 								: this._consumeSequenceIfMatch(
 										$$.PUBLIC_STRING,
 										cp,
-										!1
+										!1,
 								  )
 								? (this.state =
 										'AFTER_DOCTYPE_PUBLIC_KEYWORD_STATE')
 								: this._consumeSequenceIfMatch(
 										$$.SYSTEM_STRING,
 										cp,
-										!1
+										!1,
 								  )
 								? (this.state =
 										'AFTER_DOCTYPE_SYSTEM_KEYWORD_STATE')
 								: this._ensureHibernation() ||
 								  (this._err(
-										ERR.invalidCharacterSequenceAfterDoctypeName
+										ERR.invalidCharacterSequenceAfterDoctypeName,
 								  ),
 								  (this.currentToken.forceQuirks = !0),
 								  this._reconsumeInState(
-										'BOGUS_DOCTYPE_STATE'
+										'BOGUS_DOCTYPE_STATE',
 								  )))
 					}
 					AFTER_DOCTYPE_PUBLIC_KEYWORD_STATE(cp) {
@@ -32773,14 +32808,14 @@
 									'BEFORE_DOCTYPE_PUBLIC_IDENTIFIER_STATE')
 							: cp === $.QUOTATION_MARK
 							? (this._err(
-									ERR.missingWhitespaceAfterDoctypePublicKeyword
+									ERR.missingWhitespaceAfterDoctypePublicKeyword,
 							  ),
 							  (this.currentToken.publicId = ''),
 							  (this.state =
 									'DOCTYPE_PUBLIC_IDENTIFIER_DOUBLE_QUOTED_STATE'))
 							: cp === $.APOSTROPHE
 							? (this._err(
-									ERR.missingWhitespaceAfterDoctypePublicKeyword
+									ERR.missingWhitespaceAfterDoctypePublicKeyword,
 							  ),
 							  (this.currentToken.publicId = ''),
 							  (this.state =
@@ -32796,7 +32831,7 @@
 							  this._emitCurrentToken(),
 							  this._emitEOFToken())
 							: (this._err(
-									ERR.missingQuoteBeforeDoctypePublicIdentifier
+									ERR.missingQuoteBeforeDoctypePublicIdentifier,
 							  ),
 							  (this.currentToken.forceQuirks = !0),
 							  this._reconsumeInState('BOGUS_DOCTYPE_STATE'))
@@ -32813,7 +32848,7 @@
 										'DOCTYPE_PUBLIC_IDENTIFIER_SINGLE_QUOTED_STATE'))
 								: cp === $.GREATER_THAN_SIGN
 								? (this._err(
-										ERR.missingDoctypePublicIdentifier
+										ERR.missingDoctypePublicIdentifier,
 								  ),
 								  (this.currentToken.forceQuirks = !0),
 								  (this.state = DATA_STATE),
@@ -32824,11 +32859,11 @@
 								  this._emitCurrentToken(),
 								  this._emitEOFToken())
 								: (this._err(
-										ERR.missingQuoteBeforeDoctypePublicIdentifier
+										ERR.missingQuoteBeforeDoctypePublicIdentifier,
 								  ),
 								  (this.currentToken.forceQuirks = !0),
 								  this._reconsumeInState(
-										'BOGUS_DOCTYPE_STATE'
+										'BOGUS_DOCTYPE_STATE',
 								  )))
 					}
 					DOCTYPE_PUBLIC_IDENTIFIER_DOUBLE_QUOTED_STATE(cp) {
@@ -32880,14 +32915,14 @@
 							  this._emitCurrentToken())
 							: cp === $.QUOTATION_MARK
 							? (this._err(
-									ERR.missingWhitespaceBetweenDoctypePublicAndSystemIdentifiers
+									ERR.missingWhitespaceBetweenDoctypePublicAndSystemIdentifiers,
 							  ),
 							  (this.currentToken.systemId = ''),
 							  (this.state =
 									'DOCTYPE_SYSTEM_IDENTIFIER_DOUBLE_QUOTED_STATE'))
 							: cp === $.APOSTROPHE
 							? (this._err(
-									ERR.missingWhitespaceBetweenDoctypePublicAndSystemIdentifiers
+									ERR.missingWhitespaceBetweenDoctypePublicAndSystemIdentifiers,
 							  ),
 							  (this.currentToken.systemId = ''),
 							  (this.state =
@@ -32898,7 +32933,7 @@
 							  this._emitCurrentToken(),
 							  this._emitEOFToken())
 							: (this._err(
-									ERR.missingQuoteBeforeDoctypeSystemIdentifier
+									ERR.missingQuoteBeforeDoctypeSystemIdentifier,
 							  ),
 							  (this.currentToken.forceQuirks = !0),
 							  this._reconsumeInState('BOGUS_DOCTYPE_STATE'))
@@ -32922,11 +32957,11 @@
 								  this._emitCurrentToken(),
 								  this._emitEOFToken())
 								: (this._err(
-										ERR.missingQuoteBeforeDoctypeSystemIdentifier
+										ERR.missingQuoteBeforeDoctypeSystemIdentifier,
 								  ),
 								  (this.currentToken.forceQuirks = !0),
 								  this._reconsumeInState(
-										'BOGUS_DOCTYPE_STATE'
+										'BOGUS_DOCTYPE_STATE',
 								  )))
 					}
 					AFTER_DOCTYPE_SYSTEM_KEYWORD_STATE(cp) {
@@ -32935,14 +32970,14 @@
 									'BEFORE_DOCTYPE_SYSTEM_IDENTIFIER_STATE')
 							: cp === $.QUOTATION_MARK
 							? (this._err(
-									ERR.missingWhitespaceAfterDoctypeSystemKeyword
+									ERR.missingWhitespaceAfterDoctypeSystemKeyword,
 							  ),
 							  (this.currentToken.systemId = ''),
 							  (this.state =
 									'DOCTYPE_SYSTEM_IDENTIFIER_DOUBLE_QUOTED_STATE'))
 							: cp === $.APOSTROPHE
 							? (this._err(
-									ERR.missingWhitespaceAfterDoctypeSystemKeyword
+									ERR.missingWhitespaceAfterDoctypeSystemKeyword,
 							  ),
 							  (this.currentToken.systemId = ''),
 							  (this.state =
@@ -32958,7 +32993,7 @@
 							  this._emitCurrentToken(),
 							  this._emitEOFToken())
 							: (this._err(
-									ERR.missingQuoteBeforeDoctypeSystemIdentifier
+									ERR.missingQuoteBeforeDoctypeSystemIdentifier,
 							  ),
 							  (this.currentToken.forceQuirks = !0),
 							  this._reconsumeInState('BOGUS_DOCTYPE_STATE'))
@@ -32975,7 +33010,7 @@
 										'DOCTYPE_SYSTEM_IDENTIFIER_SINGLE_QUOTED_STATE'))
 								: cp === $.GREATER_THAN_SIGN
 								? (this._err(
-										ERR.missingDoctypeSystemIdentifier
+										ERR.missingDoctypeSystemIdentifier,
 								  ),
 								  (this.currentToken.forceQuirks = !0),
 								  (this.state = DATA_STATE),
@@ -32986,11 +33021,11 @@
 								  this._emitCurrentToken(),
 								  this._emitEOFToken())
 								: (this._err(
-										ERR.missingQuoteBeforeDoctypeSystemIdentifier
+										ERR.missingQuoteBeforeDoctypeSystemIdentifier,
 								  ),
 								  (this.currentToken.forceQuirks = !0),
 								  this._reconsumeInState(
-										'BOGUS_DOCTYPE_STATE'
+										'BOGUS_DOCTYPE_STATE',
 								  )))
 					}
 					DOCTYPE_SYSTEM_IDENTIFIER_DOUBLE_QUOTED_STATE(cp) {
@@ -33044,10 +33079,10 @@
 								  this._emitCurrentToken(),
 								  this._emitEOFToken())
 								: (this._err(
-										ERR.unexpectedCharacterAfterDoctypeSystemIdentifier
+										ERR.unexpectedCharacterAfterDoctypeSystemIdentifier,
 								  ),
 								  this._reconsumeInState(
-										'BOGUS_DOCTYPE_STATE'
+										'BOGUS_DOCTYPE_STATE',
 								  )))
 					}
 					BOGUS_DOCTYPE_STATE(cp) {
@@ -33088,7 +33123,7 @@
 										'NUMERIC_CHARACTER_REFERENCE_STATE'))
 								: isAsciiAlphaNumeric(cp)
 								? this._reconsumeInState(
-										'NAMED_CHARACTER_REFERENCE_STATE'
+										'NAMED_CHARACTER_REFERENCE_STATE',
 								  )
 								: (this._flushCodePointsConsumedAsCharacterReference(),
 								  this._reconsumeInState(this.returnState))
@@ -33103,11 +33138,11 @@
 								this.tempBuff[this.tempBuff.length - 1] ===
 								$.SEMICOLON
 							this._isCharacterReferenceAttributeQuirk(
-								withSemicolon
+								withSemicolon,
 							) ||
 								(withSemicolon ||
 									this._errOnNextCodePoint(
-										ERR.missingSemicolonAfterCharacterReference
+										ERR.missingSemicolonAfterCharacterReference,
 									),
 								(this.tempBuff = matchResult)),
 								this._flushCodePointsConsumedAsCharacterReference(),
@@ -33123,7 +33158,7 @@
 								: this._emitCodePoint(cp)
 							: (cp === $.SEMICOLON &&
 									this._err(
-										ERR.unknownNamedCharacterReference
+										ERR.unknownNamedCharacterReference,
 									),
 							  this._reconsumeInState(this.returnState))
 					}
@@ -33134,7 +33169,7 @@
 								  (this.state =
 										'HEXADEMICAL_CHARACTER_REFERENCE_START_STATE'))
 								: this._reconsumeInState(
-										'DECIMAL_CHARACTER_REFERENCE_START_STATE'
+										'DECIMAL_CHARACTER_REFERENCE_START_STATE',
 								  )
 					}
 					HEXADEMICAL_CHARACTER_REFERENCE_START_STATE(cp) {
@@ -33146,21 +33181,21 @@
 							)
 						})(cp)
 							? (this._err(
-									ERR.absenceOfDigitsInNumericCharacterReference
+									ERR.absenceOfDigitsInNumericCharacterReference,
 							  ),
 							  this._flushCodePointsConsumedAsCharacterReference(),
 							  this._reconsumeInState(this.returnState))
 							: this._reconsumeInState(
-									'HEXADEMICAL_CHARACTER_REFERENCE_STATE'
+									'HEXADEMICAL_CHARACTER_REFERENCE_STATE',
 							  )
 					}
 					DECIMAL_CHARACTER_REFERENCE_START_STATE(cp) {
 						isAsciiDigit(cp)
 							? this._reconsumeInState(
-									'DECIMAL_CHARACTER_REFERENCE_STATE'
+									'DECIMAL_CHARACTER_REFERENCE_STATE',
 							  )
 							: (this._err(
-									ERR.absenceOfDigitsInNumericCharacterReference
+									ERR.absenceOfDigitsInNumericCharacterReference,
 							  ),
 							  this._flushCodePointsConsumedAsCharacterReference(),
 							  this._reconsumeInState(this.returnState))
@@ -33179,10 +33214,10 @@
 							? (this.state =
 									'NUMERIC_CHARACTER_REFERENCE_END_STATE')
 							: (this._err(
-									ERR.missingSemicolonAfterCharacterReference
+									ERR.missingSemicolonAfterCharacterReference,
 							  ),
 							  this._reconsumeInState(
-									'NUMERIC_CHARACTER_REFERENCE_END_STATE'
+									'NUMERIC_CHARACTER_REFERENCE_END_STATE',
 							  ))
 					}
 					DECIMAL_CHARACTER_REFERENCE_STATE(cp) {
@@ -33193,10 +33228,10 @@
 							? (this.state =
 									'NUMERIC_CHARACTER_REFERENCE_END_STATE')
 							: (this._err(
-									ERR.missingSemicolonAfterCharacterReference
+									ERR.missingSemicolonAfterCharacterReference,
 							  ),
 							  this._reconsumeInState(
-									'NUMERIC_CHARACTER_REFERENCE_END_STATE'
+									'NUMERIC_CHARACTER_REFERENCE_END_STATE',
 							  ))
 					}
 					NUMERIC_CHARACTER_REFERENCE_END_STATE() {
@@ -33205,7 +33240,7 @@
 								(this.charRefCode = $.REPLACEMENT_CHARACTER)
 						else if (this.charRefCode > 1114111)
 							this._err(
-								ERR.characterReferenceOutsideUnicodeRange
+								ERR.characterReferenceOutsideUnicodeRange,
 							),
 								(this.charRefCode = $.REPLACEMENT_CHARACTER)
 						else if (unicode.isSurrogate(this.charRefCode))
@@ -34843,10 +34878,10 @@
 			(module, __unused_webpack_exports, __webpack_require__) => {
 				'use strict'
 				const unicode = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/unicode.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/unicode.js',
 					),
 					ERR = __webpack_require__(
-						'./node_modules/rehype-parse/node_modules/parse5/lib/common/error-codes.js'
+						'./node_modules/rehype-parse/node_modules/parse5/lib/common/error-codes.js',
 					),
 					$ = unicode.CODE_POINTS
 				module.exports = class Preprocessor {
@@ -34875,7 +34910,7 @@
 									this._addGap(),
 									unicode.getSurrogatePairCodePoint(
 										cp,
-										nextCp
+										nextCp,
 									)
 								)
 						} else if (!this.lastChunkWritten)
@@ -34902,7 +34937,7 @@
 							chunk +
 							this.html.substring(
 								this.pos + 1,
-								this.html.length
+								this.html.length,
 							)),
 							(this.lastCharPos = this.html.length - 1),
 							(this.endOfChunkHit = !1)
@@ -34952,7 +34987,7 @@
 			(__unused_webpack_module, exports, __webpack_require__) => {
 				'use strict'
 				const { DOCUMENT_MODE } = __webpack_require__(
-					'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js'
+					'./node_modules/rehype-parse/node_modules/parse5/lib/common/html.js',
 				)
 				;(exports.createDocument = function () {
 					return {
@@ -34970,7 +35005,7 @@
 					(exports.createElement = function (
 						tagName,
 						namespaceURI,
-						attrs
+						attrs,
 					) {
 						return {
 							nodeName: tagName,
@@ -34989,7 +35024,7 @@
 					},
 					appendChild = (exports.appendChild = function (
 						parentNode,
-						newNode
+						newNode,
 					) {
 						parentNode.childNodes.push(newNode),
 							(newNode.parentNode = parentNode)
@@ -34997,7 +35032,7 @@
 					insertBefore = (exports.insertBefore = function (
 						parentNode,
 						newNode,
-						referenceNode
+						referenceNode,
 					) {
 						const insertionIdx =
 							parentNode.childNodes.indexOf(referenceNode)
@@ -35006,7 +35041,7 @@
 					})
 				;(exports.setTemplateContent = function (
 					templateElement,
-					contentElement
+					contentElement,
 				) {
 					templateElement.content = contentElement
 				}),
@@ -35017,7 +35052,7 @@
 						document,
 						name,
 						publicId,
-						systemId
+						systemId,
 					) {
 						let doctypeNode = null
 						for (let i = 0; i < document.childNodes.length; i++)
@@ -35066,7 +35101,7 @@
 					(exports.insertTextBefore = function (
 						parentNode,
 						text,
-						referenceNode
+						referenceNode,
 					) {
 						const prevNode =
 							parentNode.childNodes[
@@ -35077,7 +35112,7 @@
 							: insertBefore(
 									parentNode,
 									createTextNode(text),
-									referenceNode
+									referenceNode,
 							  )
 					}),
 					(exports.adoptAttributes = function (recipient, attrs) {
@@ -35116,12 +35151,12 @@
 						return doctypeNode.name
 					}),
 					(exports.getDocumentTypeNodePublicId = function (
-						doctypeNode
+						doctypeNode,
 					) {
 						return doctypeNode.publicId
 					}),
 					(exports.getDocumentTypeNodeSystemId = function (
-						doctypeNode
+						doctypeNode,
 					) {
 						return doctypeNode.systemId
 					}),
@@ -35139,7 +35174,7 @@
 					}),
 					(exports.setNodeSourceCodeLocation = function (
 						node,
-						location
+						location,
 					) {
 						node.sourceCodeLocation = location
 					}),
@@ -35148,11 +35183,11 @@
 					}),
 					(exports.updateNodeSourceCodeLocation = function (
 						node,
-						endLocation
+						endLocation,
 					) {
 						node.sourceCodeLocation = Object.assign(
 							node.sourceCodeLocation,
-							endLocation
+							endLocation,
 						)
 					})
 			},
@@ -35170,12 +35205,12 @@
 							}),
 							merged
 						),
-						Object.create(null)
+						Object.create(null),
 					)
 				}
 			},
 		'./node_modules/rehype-parse/node_modules/parse5/lib/utils/mixin.js': (
-			module
+			module,
 		) => {
 			'use strict'
 			class Mixin {
@@ -35183,7 +35218,7 @@
 					const originalMethods = {},
 						overriddenMethods = this._getOverriddenMethods(
 							this,
-							originalMethods
+							originalMethods,
 						)
 					for (const key of Object.keys(overriddenMethods))
 						'function' == typeof overriddenMethods[key] &&
@@ -35207,15 +35242,15 @@
 		'./node_modules/remark-gfm/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { Z: () => remarkGfm })
 			var micromark_util_combine_extensions = __webpack_require__(
-					'./node_modules/micromark-util-combine-extensions/index.js'
+					'./node_modules/micromark-util-combine-extensions/index.js',
 				),
 				micromark_util_character = __webpack_require__(
-					'./node_modules/micromark-util-character/index.js'
+					'./node_modules/micromark-util-character/index.js',
 				)
 			const www = {
 					tokenize: function tokenizeWww(effects, ok, nok) {
@@ -35256,13 +35291,13 @@
 								? effects.check(
 										namedCharacterReference,
 										done,
-										punctuationContinuation
+										punctuationContinuation,
 								  )(code)
 								: 46 === code || 95 === code
 								? effects.check(
 										punctuation,
 										done,
-										punctuationContinuation
+										punctuationContinuation,
 								  )(code)
 								: null === code ||
 								  (0, micromark_util_character.Av)(code) ||
@@ -35302,14 +35337,14 @@
 								? effects.check(
 										namedCharacterReference,
 										ok,
-										continuedPunctuation
+										continuedPunctuation,
 								  )(code)
 								: (40 === code && balance++,
 								  41 === code
 										? effects.check(
 												punctuation,
 												parenAtPathEnd,
-												continuedPunctuation
+												continuedPunctuation,
 										  )(code)
 										: pathEnd(code)
 										? ok(code)
@@ -35317,7 +35352,7 @@
 										? effects.check(
 												punctuation,
 												ok,
-												continuedPunctuation
+												continuedPunctuation,
 										  )(code)
 										: (effects.consume(code), inPath))
 						}
@@ -35354,7 +35389,7 @@
 					tokenize: function tokenizeNamedCharacterReference(
 						effects,
 						ok,
-						nok
+						nok,
 					) {
 						return function start(code) {
 							return effects.consume(code), inside
@@ -35390,9 +35425,9 @@
 									effects.attempt(
 										domain,
 										effects.attempt(path, done),
-										nok
+										nok,
 									),
-									nok
+									nok,
 								)(code)
 							)
 						}
@@ -35467,7 +35502,7 @@
 								: effects.attempt(
 										domain,
 										effects.attempt(path, done),
-										nok
+										nok,
 								  )(code)
 						}
 						function done(code) {
@@ -35509,18 +35544,18 @@
 								? effects.check(
 										punctuation,
 										done,
-										dotContinuation
+										dotContinuation,
 								  )(code)
 								: 45 === code || 95 === code
 								? effects.check(
 										punctuation,
 										nok,
-										dashOrUnderscoreContinuation
+										dashOrUnderscoreContinuation,
 								  )(code)
 								: (0, micromark_util_character.H$)(code)
 								? (!hasDigitInLastSegment &&
 										(0, micromark_util_character.pY)(
-											code
+											code,
 										) &&
 										(hasDigitInLastSegment = !0),
 								  effects.consume(code),
@@ -35543,7 +35578,7 @@
 								? effects.check(
 										punctuation,
 										nok,
-										dotContinuation
+										dotContinuation,
 								  )(code)
 								: label(code)
 						}
@@ -35649,13 +35684,13 @@
 				(syntax_text[87] = [emailAutolink, wwwAutolink]),
 				(syntax_text[119] = [emailAutolink, wwwAutolink])
 			var blank_line = __webpack_require__(
-					'./node_modules/micromark-core-commonmark/lib/blank-line.js'
+					'./node_modules/micromark-core-commonmark/lib/blank-line.js',
 				),
 				micromark_factory_space = __webpack_require__(
-					'./node_modules/micromark-factory-space/index.js'
+					'./node_modules/micromark-factory-space/index.js',
 				),
 				micromark_util_normalize_identifier = __webpack_require__(
-					'./node_modules/micromark-util-normalize-identifier/index.js'
+					'./node_modules/micromark-util-normalize-identifier/index.js',
 				)
 			const indent = {
 				tokenize: function tokenizeIndent(effects, ok, nok) {
@@ -35672,7 +35707,7 @@
 								: nok(code)
 						},
 						'gfmFootnoteDefinitionIndent',
-						5
+						5,
 					)
 				},
 				partial: !0,
@@ -35704,7 +35739,7 @@
 						self.sliceSerialize({
 							start: labelStart.end,
 							end: self.now(),
-						})
+						}),
 					)
 					if (
 						94 !== id.codePointAt(0) ||
@@ -35737,7 +35772,7 @@
 						start: Object.assign({}, events[index + 3][1].start),
 						end: Object.assign(
 							{},
-							events[events.length - 1][1].end
+							events[events.length - 1][1].end,
 						),
 					},
 					marker = {
@@ -35753,7 +35788,7 @@
 						start: Object.assign({}, marker.end),
 						end: Object.assign(
 							{},
-							events[events.length - 1][1].start
+							events[events.length - 1][1].start,
 						),
 					},
 					chunk = {
@@ -35782,7 +35817,7 @@
 					events.splice(
 						index,
 						events.length - index + 1,
-						...replacement
+						...replacement,
 					),
 					events
 				)
@@ -35827,8 +35862,8 @@
 						const token = effects.exit('gfmFootnoteCallString')
 						return defined.includes(
 							(0, micromark_util_normalize_identifier.d)(
-								self.sliceSerialize(token)
-							)
+								self.sliceSerialize(token),
+							),
 						)
 							? (effects.enter('gfmFootnoteCallLabelMarker'),
 							  effects.consume(code),
@@ -35891,12 +35926,12 @@
 					if (93 === code) {
 						effects.exit('chunkString')
 						const token = effects.exit(
-							'gfmFootnoteDefinitionLabelString'
+							'gfmFootnoteDefinitionLabelString',
 						)
 						return (
 							(identifier = (0,
 							micromark_util_normalize_identifier.d)(
-								self.sliceSerialize(token)
+								self.sliceSerialize(token),
 							)),
 							effects.enter('gfmFootnoteDefinitionLabelMarker'),
 							effects.consume(code),
@@ -35927,7 +35962,7 @@
 						  (0, micromark_factory_space.f)(
 								effects,
 								whitespaceAfter,
-								'gfmFootnoteDefinitionWhitespace'
+								'gfmFootnoteDefinitionWhitespace',
 						  ))
 						: nok(code)
 				}
@@ -35939,20 +35974,20 @@
 				return effects.check(
 					blank_line.w,
 					ok,
-					effects.attempt(indent, ok, nok)
+					effects.attempt(indent, ok, nok),
 				)
 			}
 			function gfmFootnoteDefinitionEnd(effects) {
 				effects.exit('gfmFootnoteDefinition')
 			}
 			var micromark_util_chunked = __webpack_require__(
-					'./node_modules/micromark-util-chunked/index.js'
+					'./node_modules/micromark-util-chunked/index.js',
 				),
 				micromark_util_classify_character = __webpack_require__(
-					'./node_modules/micromark-util-classify-character/index.js'
+					'./node_modules/micromark-util-classify-character/index.js',
 				),
 				micromark_util_resolve_all = __webpack_require__(
-					'./node_modules/micromark-util-resolve-all/index.js'
+					'./node_modules/micromark-util-resolve-all/index.js',
 				)
 			function gfmStrikethrough(options) {
 				let single = (options || {}).singleTilde
@@ -35982,7 +36017,7 @@
 									: (effects.consume(code), size++, more)
 							if (size < 2 && !single) return nok(code)
 							const token = effects.exit(
-									'strikethroughSequenceTemporary'
+									'strikethroughSequenceTemporary',
 								),
 								after = (0,
 								micromark_util_classify_character.r)(code)
@@ -35998,7 +36033,7 @@
 					},
 					resolveAll: function resolveAllStrikethrough(
 						events,
-						context
+						context,
 					) {
 						let index = -1
 						for (; ++index < events.length; )
@@ -36028,22 +36063,22 @@
 												type: 'strikethrough',
 												start: Object.assign(
 													{},
-													events[open][1].start
+													events[open][1].start,
 												),
 												end: Object.assign(
 													{},
-													events[index][1].end
+													events[index][1].end,
 												),
 											},
 											text = {
 												type: 'strikethroughText',
 												start: Object.assign(
 													{},
-													events[open][1].end
+													events[open][1].end,
 												),
 												end: Object.assign(
 													{},
-													events[index][1].start
+													events[index][1].start,
 												),
 											},
 											nextEvents = [
@@ -36077,10 +36112,10 @@
 													insideSpan,
 													events.slice(
 														open + 1,
-														index
+														index,
 													),
-													context
-												)
+													context,
+												),
 											),
 											(0, micromark_util_chunked.d)(
 												nextEvents,
@@ -36103,13 +36138,13 @@
 														strikethrough,
 														context,
 													],
-												]
+												],
 											),
 											(0, micromark_util_chunked.d)(
 												events,
 												open - 1,
 												index - open + 3,
-												nextEvents
+												nextEvents,
 											),
 											(index =
 												open + nextEvents.length - 2)
@@ -36154,7 +36189,7 @@
 									return (
 										tableHeaderCount++,
 										effects.enter(
-											'temporaryTableCellContent'
+											'temporaryTableCellContent',
 										),
 										inCellContentHead(code)
 									)
@@ -36191,10 +36226,10 @@
 																(self.interrupt =
 																	originalInterrupt),
 																effects.enter(
-																	'tableDelimiterRow'
+																	'tableDelimiterRow',
 																),
 																atDelimiterRowBreak(
-																	code
+																	code,
 																)
 															)
 														},
@@ -36204,7 +36239,7 @@
 																	originalInterrupt),
 																nok(code)
 															)
-														}
+														},
 													)(code)
 												)
 										  })(code)
@@ -36218,13 +36253,13 @@
 										  124 === code
 												? cellDividerHead(code)
 												: (effects.enter(
-														'temporaryTableCellContent'
+														'temporaryTableCellContent',
 												  ),
 												  inCellContentHead(code)))
 								}
 								function inWhitespaceHead(code) {
 									return (0, micromark_util_character.xz)(
-										code
+										code,
 									)
 										? (effects.consume(code),
 										  inWhitespaceHead)
@@ -36236,7 +36271,7 @@
 										124 === code ||
 										(0, micromark_util_character.z3)(code)
 										? (effects.exit(
-												'temporaryTableCellContent'
+												'temporaryTableCellContent',
 										  ),
 										  cellBreakHead(code))
 										: (effects.consume(code),
@@ -36260,7 +36295,7 @@
 										  inWhitespaceDelimiter)
 										: 45 === code
 										? (effects.enter(
-												'tableDelimiterFiller'
+												'tableDelimiterFiller',
 										  ),
 										  effects.consume(code),
 										  (hasDash = !0),
@@ -36268,11 +36303,11 @@
 										  inFillerDelimiter)
 										: 58 === code
 										? (effects.enter(
-												'tableDelimiterAlignment'
+												'tableDelimiterAlignment',
 										  ),
 										  effects.consume(code),
 										  effects.exit(
-												'tableDelimiterAlignment'
+												'tableDelimiterAlignment',
 										  ),
 										  align.push('left'),
 										  afterLeftAlignment)
@@ -36285,7 +36320,7 @@
 								}
 								function inWhitespaceDelimiter(code) {
 									return (0, micromark_util_character.xz)(
-										code
+										code,
 									)
 										? (effects.consume(code),
 										  inWhitespaceDelimiter)
@@ -36299,11 +36334,11 @@
 										: (effects.exit('tableDelimiterFiller'),
 										  58 === code
 												? (effects.enter(
-														'tableDelimiterAlignment'
+														'tableDelimiterAlignment',
 												  ),
 												  effects.consume(code),
 												  effects.exit(
-														'tableDelimiterAlignment'
+														'tableDelimiterAlignment',
 												  ),
 												  (align[align.length - 1] =
 														'left' ===
@@ -36316,7 +36351,7 @@
 								function afterLeftAlignment(code) {
 									return 45 === code
 										? (effects.enter(
-												'tableDelimiterFiller'
+												'tableDelimiterFiller',
 										  ),
 										  effects.consume(code),
 										  (hasDash = !0),
@@ -36359,10 +36394,10 @@
 																effects,
 																bodyStart,
 																'linePrefix',
-																4
+																4,
 															),
-															tableClose
-														)
+															tableClose,
+														),
 												  )(code)
 											: nok(code)
 									)
@@ -36382,7 +36417,7 @@
 										124 === code
 											? cellDividerBody(code)
 											: (effects.enter(
-													'temporaryTableCellContent'
+													'temporaryTableCellContent',
 											  ),
 											  inCellContentBody(code))
 									)
@@ -36418,10 +36453,10 @@
 															effects,
 															rowStartBody,
 															'linePrefix',
-															4
+															4,
 														),
-														tableBodyClose
-													)
+														tableBodyClose,
+													),
 												)(code)
 										  })(code)
 										: (0, micromark_util_character.xz)(code)
@@ -36431,13 +36466,13 @@
 										: 124 === code
 										? cellDividerBody(code)
 										: (effects.enter(
-												'temporaryTableCellContent'
+												'temporaryTableCellContent',
 										  ),
 										  inCellContentBody(code))
 								}
 								function inWhitespaceBody(code) {
 									return (0, micromark_util_character.xz)(
-										code
+										code,
 									)
 										? (effects.consume(code),
 										  inWhitespaceBody)
@@ -36449,7 +36484,7 @@
 										124 === code ||
 										(0, micromark_util_character.z3)(code)
 										? (effects.exit(
-												'temporaryTableCellContent'
+												'temporaryTableCellContent',
 										  ),
 										  cellBreakBody(code))
 										: (effects.consume(code),
@@ -36478,7 +36513,7 @@
 											(0, micromark_factory_space.f)(
 												effects,
 												prefixed,
-												'linePrefix'
+												'linePrefix',
 											)
 										)
 									}
@@ -36487,14 +36522,14 @@
 											self.parser.lazy[self.now().line] ||
 											null === code ||
 											(0, micromark_util_character.Ch)(
-												code
+												code,
 											)
 										)
 											return nok(code)
 										const tail =
 											self.events[self.events.length - 1]
 										return !self.parser.constructs.disable.null.includes(
-											'codeIndented'
+											'codeIndented',
 										) &&
 											tail &&
 											'linePrefix' === tail[1].type &&
@@ -36518,7 +36553,7 @@
 																!1),
 															ok(code)
 														)
-													}
+													},
 											  )(code))
 									}
 								}
@@ -36563,7 +36598,7 @@
 											['enter', content, context],
 											['enter', text, context],
 											['exit', text, context],
-											['exit', content, context]
+											['exit', content, context],
 										),
 											(index -=
 												contentEnd - contentStart - 3),
@@ -36598,7 +36633,7 @@
 													? 1
 													: 0),
 											0,
-											['exit', cell, context]
+											['exit', cell, context],
 										),
 											events.splice(cellStart, 0, [
 												'enter',
@@ -36633,7 +36668,7 @@
 					tokenize: function tokenizeNextPrefixedOrBlank(
 						effects,
 						ok,
-						nok
+						nok,
 					) {
 						let size = 0
 						return function start(code) {
@@ -36702,7 +36737,7 @@
 								? effects.check(
 										{ tokenize: spaceThenNonSpace },
 										ok,
-										nok
+										nok,
 								  )(code)
 								: nok(code)
 						}
@@ -36715,7 +36750,7 @@
 					function after(code) {
 						return null === code ? nok(code) : ok(code)
 					},
-					'whitespace'
+					'whitespace',
 				)
 			}
 			function ccount(value, character) {
@@ -36728,15 +36763,15 @@
 					count++,
 						(index = source.indexOf(
 							character,
-							index + character.length
+							index + character.length,
 						))
 				return count
 			}
 			var lib = __webpack_require__(
-					'./node_modules/unist-util-visit-parents/lib/index.js'
+					'./node_modules/unist-util-visit-parents/lib/index.js',
 				),
 				unist_util_is_lib = __webpack_require__(
-					'./node_modules/unist-util-is/lib/index.js'
+					'./node_modules/unist-util-is/lib/index.js',
 				)
 			const own = {}.hasOwnProperty,
 				findAndReplace = function (tree, find, replace, options) {
@@ -36746,13 +36781,13 @@
 						: ((schema = find), (settings = replace)),
 						settings || (settings = {})
 					const ignored = (0, unist_util_is_lib.O)(
-							settings.ignore || []
+							settings.ignore || [],
 						),
 						pairs = (function toPairs(schema) {
 							const result = []
 							if ('object' != typeof schema)
 								throw new TypeError(
-									'Expected array or object as schema'
+									'Expected array or object as schema',
 								)
 							if (Array.isArray(schema)) {
 								let index = -1
@@ -36787,7 +36822,7 @@
 									grandparent
 										? grandparent.children.indexOf(parent)
 										: void 0,
-									grandparent
+									grandparent,
 								)
 							)
 								return
@@ -36824,7 +36859,7 @@
 													type: 'text',
 													value: node.value.slice(
 														start,
-														position
+														position,
 													),
 												}),
 											Array.isArray(value)
@@ -36847,7 +36882,7 @@
 									  parent.children.splice(
 											index,
 											1,
-											...nodes
+											...nodes,
 									  ))
 									: (nodes = [node])
 								return index + nodes.length
@@ -36864,7 +36899,7 @@
 									.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
 									.replace(/-/g, '\\x2d')
 							})(find),
-							'g'
+							'g',
 					  )
 					: find
 			}
@@ -36887,7 +36922,7 @@
 										findEmail,
 									],
 								],
-								{ ignore: ['link', 'linkReference'] }
+								{ ignore: ['link', 'linkReference'] },
 							)
 						},
 					],
@@ -36900,7 +36935,7 @@
 									url: '',
 									children: [],
 								},
-								token
+								token,
 							)
 						},
 						literalAutolinkEmail: enterLiteralAutolinkValue,
@@ -36912,17 +36947,17 @@
 							this.exit(token)
 						},
 						literalAutolinkEmail: function exitLiteralAutolinkEmail(
-							token
+							token,
 						) {
 							this.config.exit.autolinkEmail.call(this, token)
 						},
 						literalAutolinkHttp: function exitLiteralAutolinkHttp(
-							token
+							token,
 						) {
 							this.config.exit.autolinkProtocol.call(this, token)
 						},
 						literalAutolinkWww: function exitLiteralAutolinkWww(
-							token
+							token,
 						) {
 							this.config.exit.data.call(this, token)
 							this.stack[this.stack.length - 1].url =
@@ -36973,12 +37008,12 @@
 							(parts[parts.length - 1] &&
 								(/_/.test(parts[parts.length - 1]) ||
 									!/[a-zA-Z\d]/.test(
-										parts[parts.length - 1]
+										parts[parts.length - 1],
 									))) ||
 							(parts[parts.length - 2] &&
 								(/_/.test(parts[parts.length - 2]) ||
 									!/[a-zA-Z\d]/.test(
-										parts[parts.length - 2]
+										parts[parts.length - 2],
 									)))
 						)
 							return !1
@@ -37039,7 +37074,7 @@
 				)
 			}
 			var micromark_util_decode_string = __webpack_require__(
-				'./node_modules/micromark-util-decode-string/index.js'
+				'./node_modules/micromark-util-decode-string/index.js',
 			)
 			function association(node) {
 				return node.label || !node.identifier
@@ -37059,10 +37094,10 @@
 			}
 			const eol = /\r?\n|\r/g
 			var safe = __webpack_require__(
-					'./node_modules/mdast-util-to-markdown/lib/util/safe.js'
+					'./node_modules/mdast-util-to-markdown/lib/util/safe.js',
 				),
 				track = __webpack_require__(
-					'./node_modules/mdast-util-to-markdown/lib/util/track.js'
+					'./node_modules/mdast-util-to-markdown/lib/util/track.js',
 				)
 			function enterFootnoteDefinition(token) {
 				this.enter(
@@ -37072,7 +37107,7 @@
 						label: '',
 						children: [],
 					},
-					token
+					token,
 				)
 			}
 			function enterFootnoteDefinitionLabelString() {
@@ -37084,7 +37119,7 @@
 				;(node.label = label),
 					(node.identifier = (0,
 					micromark_util_normalize_identifier.d)(
-						this.sliceSerialize(token)
+						this.sliceSerialize(token),
 					).toLowerCase())
 			}
 			function exitFootnoteDefinition(token) {
@@ -37093,7 +37128,7 @@
 			function enterFootnoteCall(token) {
 				this.enter(
 					{ type: 'footnoteReference', identifier: '', label: '' },
-					token
+					token,
 				)
 			}
 			function enterFootnoteCallString() {
@@ -37105,7 +37140,7 @@
 				;(node.label = label),
 					(node.identifier = (0,
 					micromark_util_normalize_identifier.d)(
-						this.sliceSerialize(token)
+						this.sliceSerialize(token),
 					).toLowerCase())
 			}
 			function exitFootnoteCall(token) {
@@ -37122,7 +37157,7 @@
 							...tracker.current(),
 							before: value,
 							after: ']',
-						})
+						}),
 					)),
 					subexit(),
 					exit(),
@@ -37141,14 +37176,14 @@
 							...tracker.current(),
 							before: value,
 							after: ']',
-						})
+						}),
 					)),
 					subexit(),
 					(value += tracker.move(
 						']:' +
 							(node.children && node.children.length > 0
 								? ' '
-								: '')
+								: ''),
 					)),
 					tracker.shift(4),
 					(value += tracker.move(
@@ -37191,9 +37226,9 @@
 														before: '\n',
 														after: '\n',
 														...tracker.current(),
-													}
-												)
-											)
+													},
+												),
+											),
 										),
 										'list' !== child.type &&
 											(state.bulletLastUsed = void 0),
@@ -37204,15 +37239,15 @@
 														child,
 														children[index + 1],
 														parent,
-														state
-													)
-												)
+														state,
+													),
+												),
 											)
 								}
 								return indexStack.pop(), results.join('')
 							})(node, context, tracker.current()),
-							map
-						)
+							map,
+						),
 					)),
 					exit(),
 					value
@@ -37262,8 +37297,8 @@
 									...tracker.current(),
 									before,
 									after,
-								})
-							)
+								}),
+							),
 						),
 						(before = results[results.length - 1].slice(-1))
 				}
@@ -37321,7 +37356,7 @@
 				)
 			}
 			var pattern_compile = __webpack_require__(
-				'./node_modules/mdast-util-to-markdown/lib/util/pattern-compile.js'
+				'./node_modules/mdast-util-to-markdown/lib/util/pattern-compile.js',
 			)
 			function inlineCode(node, _, state) {
 				let value = node.value || '',
@@ -37382,11 +37417,11 @@
 							{
 								type: 'table',
 								align: align.map((d) =>
-									'none' === d ? null : d
+									'none' === d ? null : d,
 								),
 								children: [],
 							},
-							token
+							token,
 						),
 							this.setData('inTable', !0)
 					},
@@ -37441,13 +37476,13 @@
 							node,
 							_,
 							context,
-							safeOptions
+							safeOptions,
 						) {
 							return serializeData(
 								(function handleTableAsData(
 									node,
 									context,
-									safeOptions
+									safeOptions,
 								) {
 									const children = node.children
 									let index = -1
@@ -37457,24 +37492,24 @@
 										result[index] = handleTableRowAsData(
 											children[index],
 											context,
-											safeOptions
+											safeOptions,
 										)
 									return subexit(), result
 								})(node, context, safeOptions),
-								node.align
+								node.align,
 							)
 						},
 						tableRow: function handleTableRow(
 							node,
 							_,
 							context,
-							safeOptions
+							safeOptions,
 						) {
 							const value = serializeData([
 								handleTableRowAsData(
 									node,
 									context,
-									safeOptions
+									safeOptions,
 								),
 							])
 							return value.slice(0, value.indexOf('\n'))
@@ -37483,7 +37518,7 @@
 						inlineCode: function inlineCodeWithTable(
 							node,
 							parent,
-							context
+							context,
 						) {
 							let value = inlineCode(node, 0, context)
 							context.stack.includes('tableCell') &&
@@ -37550,7 +37585,7 @@
 						if ('object' == typeof align && 'length' in align)
 							for (; ++columnIndex < mostCellsPerRow; )
 								alignments[columnIndex] = toAlignment(
-									align[columnIndex]
+									align[columnIndex],
 								)
 						else {
 							const code = toAlignment(align)
@@ -37576,7 +37611,7 @@
 											1,
 											longestCellByColumn[columnIndex] -
 												before.length -
-												after.length
+												after.length,
 									  )
 							const cell = before + '-'.repeat(size) + after
 							!1 !== options.alignDelimiters &&
@@ -37609,10 +37644,10 @@
 										: 99 === code
 										? size % 2
 											? ((before = ' '.repeat(
-													size / 2 + 0.5
+													size / 2 + 0.5,
 											  )),
 											  (after = ' '.repeat(
-													size / 2 - 0.5
+													size / 2 - 0.5,
 											  )))
 											: ((before = ' '.repeat(size / 2)),
 											  (after = before))
@@ -37640,7 +37675,7 @@
 							lines.push(
 								!1 === options.delimiterEnd
 									? line.join('').replace(/ +$/, '')
-									: line.join('')
+									: line.join(''),
 							)
 						}
 						return lines.join('\n')
@@ -37661,7 +37696,7 @@
 							children[index],
 							0,
 							context,
-							safeOptions
+							safeOptions,
 						)
 					return subexit(), result
 				}
@@ -37674,7 +37709,7 @@
 						throw new Error(
 							'Cannot serialize items with `' +
 								style +
-								'` for `options.listItemIndent`, expected `tab`, `one`, or `mixed`'
+								'` for `options.listItemIndent`, expected `tab`, `one`, or `mixed`',
 						)
 					return style
 				})(state)
@@ -37686,7 +37721,7 @@
 							throw new Error(
 								'Cannot serialize items with `' +
 									marker +
-									'` for `options.bullet`, expected `*`, `+`, or `-`'
+									'` for `options.bullet`, expected `*`, `+`, or `-`',
 							)
 						return marker
 					})(state)
@@ -37722,7 +37757,7 @@
 									: bullet +
 									  ' '.repeat(size - bullet.length)) + line
 							)
-						}
+						},
 					)
 				return exit(), value
 			}
@@ -37731,7 +37766,7 @@
 						taskListCheckValueChecked: exitCheck,
 						taskListCheckValueUnchecked: exitCheck,
 						paragraph: function exitParagraphWithTaskListItem(
-							token
+							token,
 						) {
 							const parent = this.stack[this.stack.length - 2]
 							if (
@@ -37766,7 +37801,7 @@
 											  (node.position.start =
 													Object.assign(
 														{},
-														head.position.start
+														head.position.start,
 													))))
 								}
 							}
@@ -37781,7 +37816,7 @@
 							node,
 							parent,
 							context,
-							safeOptions
+							safeOptions,
 						) {
 							const head = node.children[0],
 								checkable =
@@ -37801,7 +37836,7 @@
 									/^(?:[*+-]|\d+\.)([\r\n]| {1,3})/,
 									function check($0) {
 										return $0 + checkbox
-									}
+									},
 								))
 							return value
 						},
@@ -37815,7 +37850,7 @@
 				const data = this.data()
 				function add(field, value) {
 					;(data[field] ? data[field] : (data[field] = [])).push(
-						value
+						value,
 					)
 				}
 				add(
@@ -37849,7 +37884,7 @@
 							gfmTable,
 							gfmTaskListItem,
 						])
-					})(options)
+					})(options),
 				),
 					add(
 						'fromMarkdownExtensions',
@@ -37880,7 +37915,7 @@
 								gfmTableFromMarkdown,
 								gfmTaskListItemFromMarkdown,
 							]
-						})()
+						})(),
 					),
 					add(
 						'toMarkdownExtensions',
@@ -37909,22 +37944,22 @@
 									gfmTaskListItemToMarkdown,
 								],
 							}
-						})(options)
+						})(options),
 					)
 			}
 		},
 		'./node_modules/remark-math/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { Z: () => remarkMath })
 			var micromark_factory_space = __webpack_require__(
-					'./node_modules/micromark-factory-space/index.js'
+					'./node_modules/micromark-factory-space/index.js',
 				),
 				micromark_util_character = __webpack_require__(
-					'./node_modules/micromark-util-character/index.js'
+					'./node_modules/micromark-util-character/index.js',
 				)
 			const mathFlow = {
 					tokenize: function tokenizeMathFenced(effects, ok, nok) {
@@ -37954,7 +37989,7 @@
 								  (0, micromark_factory_space.f)(
 										effects,
 										metaBefore,
-										'whitespace'
+										'whitespace',
 								  )(code))
 						}
 						function metaBefore(code) {
@@ -37985,7 +38020,7 @@
 									: effects.attempt(
 											nonLazyContinuation,
 											beforeNonLazyContinuation,
-											after
+											after,
 									  )(code)
 							)
 						}
@@ -37993,7 +38028,7 @@
 							return effects.attempt(
 								{ tokenize: tokenizeClosingFence, partial: !0 },
 								after,
-								contentStart
+								contentStart,
 							)(code)
 						}
 						function contentStart(code) {
@@ -38003,7 +38038,7 @@
 											effects,
 											beforeContentChunk,
 											'linePrefix',
-											initialSize + 1
+											initialSize + 1,
 									  )
 									: beforeContentChunk
 							)(code)
@@ -38015,7 +38050,7 @@
 								? effects.attempt(
 										nonLazyContinuation,
 										beforeNonLazyContinuation,
-										after
+										after,
 								  )(code)
 								: (effects.enter('mathFlowValue'),
 								  contentChunk(code))
@@ -38042,7 +38077,7 @@
 									)
 								},
 								'linePrefix',
-								4
+								4,
 							)
 							function sequenceClose(code) {
 								return 36 === code
@@ -38055,7 +38090,7 @@
 									  (0, micromark_factory_space.f)(
 											effects,
 											afterSequenceClose,
-											'whitespace'
+											'whitespace',
 									  )(code))
 							}
 							function afterSequenceClose(code) {
@@ -38072,7 +38107,7 @@
 					tokenize: function tokenizeNonLazyContinuation(
 						effects,
 						ok,
-						nok
+						nok,
 					) {
 						const self = this
 						return function start(code) {
@@ -38218,13 +38253,13 @@
 				)
 			}
 			var safe = __webpack_require__(
-					'./node_modules/mdast-util-to-markdown/lib/util/safe.js'
+					'./node_modules/mdast-util-to-markdown/lib/util/safe.js',
 				),
 				track = __webpack_require__(
-					'./node_modules/mdast-util-to-markdown/lib/util/track.js'
+					'./node_modules/mdast-util-to-markdown/lib/util/track.js',
 				),
 				pattern_compile = __webpack_require__(
-					'./node_modules/mdast-util-to-markdown/lib/util/pattern-compile.js'
+					'./node_modules/mdast-util-to-markdown/lib/util/pattern-compile.js',
 				)
 			function mathToMarkdown(options) {
 				let single = (options || {}).singleDollarTextMath
@@ -38253,12 +38288,12 @@
 										Math.max(
 											(function longestStreak(
 												value,
-												substring
+												substring,
 											) {
 												const source = String(value)
 												let index =
 														source.indexOf(
-															substring
+															substring,
 														),
 													expected = index,
 													count = 0,
@@ -38267,7 +38302,7 @@
 													'string' != typeof substring
 												)
 													throw new TypeError(
-														'Expected substring'
+														'Expected substring',
 													)
 												for (; -1 !== index; )
 													index === expected
@@ -38279,12 +38314,12 @@
 															substring.length),
 														(index = source.indexOf(
 															substring,
-															expected
+															expected,
 														))
 												return max
 											})(raw, '$') + 1,
-											2
-										)
+											2,
+										),
 									),
 									exit = context.enter('mathFlow')
 								let value = tracker.move(sequence)
@@ -38297,7 +38332,7 @@
 											after: '\n',
 											encode: ['$'],
 											...tracker.current(),
-										})
+										}),
 									)),
 										subexit()
 								}
@@ -38319,7 +38354,7 @@
 					for (
 						single || size++;
 						new RegExp(
-							'(^|[^$])' + '\\$'.repeat(size) + '([^$]|$)'
+							'(^|[^$])' + '\\$'.repeat(size) + '([^$]|$)',
 						).test(value);
 
 					)
@@ -38353,7 +38388,7 @@
 				const data = this.data()
 				function add(field, value) {
 					;(data[field] ? data[field] : (data[field] = [])).push(
-						value
+						value,
 					)
 				}
 				add(
@@ -38363,7 +38398,7 @@
 							flow: { 36: mathFlow },
 							text: { 36: mathText(options) },
 						}
-					})(options)
+					})(options),
 				),
 					add(
 						'fromMarkdownExtensions',
@@ -38392,7 +38427,7 @@
 													],
 												},
 											},
-											token
+											token,
 										)
 									},
 									mathFlowFenceMeta:
@@ -38420,7 +38455,7 @@
 													],
 												},
 											},
-											token
+											token,
 										),
 											this.buffer()
 									},
@@ -38429,7 +38464,7 @@
 									mathFlow: function exitMathFlow(token) {
 										const data = this.resume().replace(
 												/^(\r?\n|\r)|(\r?\n|\r)$/g,
-												''
+												'',
 											),
 											node = this.exit(token)
 										;(node.value = data),
@@ -38443,7 +38478,7 @@
 												(this.buffer(),
 												this.setData(
 													'mathFlowInside',
-													!0
+													!0,
 												))
 										},
 									mathFlowFenceMeta:
@@ -38468,7 +38503,7 @@
 								this.config.enter.data.call(this, token),
 									this.config.exit.data.call(this, token)
 							}
-						})()
+						})(),
 					),
 					add('toMarkdownExtensions', mathToMarkdown(options))
 			}
@@ -38476,7 +38511,7 @@
 		'./node_modules/space-separated-tokens/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function parse(value) {
@@ -38494,10 +38529,10 @@
 		'./node_modules/style-to-object/index.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var parse = __webpack_require__(
-				'./node_modules/inline-style-parser/index.js'
+				'./node_modules/inline-style-parser/index.js',
 			)
 			function StyleToObject(style, iterator) {
 				var declaration,
@@ -38528,7 +38563,7 @@
 		'./node_modules/unified/lib/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function bail(error) {
@@ -38536,7 +38571,7 @@
 			}
 			__webpack_require__.d(__webpack_exports__, { l: () => unified })
 			var is_buffer = __webpack_require__(
-					'./node_modules/is-buffer/index.js'
+					'./node_modules/is-buffer/index.js',
 				),
 				is_buffer_default = __webpack_require__.n(is_buffer),
 				extend = __webpack_require__('./node_modules/extend/index.js'),
@@ -38561,7 +38596,7 @@
 							if ('function' != typeof callback)
 								throw new TypeError(
 									'Expected function as last argument, not ' +
-										callback
+										callback,
 								)
 							!(function next(error, ...output) {
 								const fn = fns[++middlewareIndex]
@@ -38576,7 +38611,7 @@
 										fn
 											? (function wrap(
 													middleware,
-													callback
+													callback,
 											  ) {
 													let called
 													return wrapped
@@ -38589,13 +38624,13 @@
 														let result
 														fnExpectsCallback &&
 															parameters.push(
-																done
+																done,
 															)
 														try {
 															result =
 																middleware.apply(
 																	this,
-																	parameters
+																	parameters,
 																)
 														} catch (error) {
 															if (
@@ -38610,7 +38645,7 @@
 															Promise
 																? result.then(
 																		then,
-																		done
+																		done,
 																  )
 																: result instanceof
 																  Error
@@ -38625,7 +38660,7 @@
 															((called = !0),
 															callback(
 																error,
-																...output
+																...output,
 															))
 													}
 													function then(value) {
@@ -38633,7 +38668,7 @@
 													}
 											  })(
 													fn,
-													next
+													next,
 											  )(...output)
 											: callback(null, ...output)
 								}
@@ -38643,7 +38678,7 @@
 							if ('function' != typeof middelware)
 								throw new TypeError(
 									'Expected `middelware` to be a function, not ' +
-										middelware
+										middelware,
 								)
 							return fns.push(middelware), pipeline
 						},
@@ -38686,7 +38721,7 @@
 								!0 === options[0] && (options[0] = void 0)
 								const transformer = attacher.call(
 									processor,
-									...options
+									...options,
 								)
 								'function' == typeof transformer &&
 									transformers.use(transformer)
@@ -38708,7 +38743,7 @@
 									throw new TypeError(
 										'Expected usable value, not `' +
 											value +
-											'`'
+											'`',
 									)
 								Array.isArray(value)
 									? addList(value)
@@ -38717,7 +38752,7 @@
 							settings &&
 								(namespace.settings = Object.assign(
 									namespace.settings || {},
-									settings
+									settings,
 								))
 							return processor
 							function add(value) {
@@ -38727,7 +38762,7 @@
 										throw new TypeError(
 											'Expected usable value, not `' +
 												value +
-												'`'
+												'`',
 										)
 									if (Array.isArray(value)) {
 										const [plugin, ...options] = value
@@ -38740,7 +38775,7 @@
 									result.settings &&
 										(settings = Object.assign(
 											settings || {},
-											result.settings
+											result.settings,
 										))
 							}
 							function addList(plugins) {
@@ -38751,7 +38786,7 @@
 										throw new TypeError(
 											'Expected a list of plugins, not `' +
 												plugins +
-												'`'
+												'`',
 										)
 									for (; ++index < plugins.length; ) {
 										add(plugins[index])
@@ -38772,7 +38807,7 @@
 											(value = extend_default()(
 												!0,
 												entry[1],
-												value
+												value,
 											)),
 									  (entry[1] = value))
 									: attachers.push([...arguments])
@@ -38856,17 +38891,17 @@
 										if (!error && tree && file) {
 											const result = processor.stringify(
 												tree,
-												file
+												file,
 											)
 											null == result ||
 												(!(function looksLikeAVFileValue(
-													value
+													value,
 												) {
 													return (
 														'string' ==
 															typeof value ||
 														is_buffer_default()(
-															value
+															value,
 														)
 													)
 												})(result)
@@ -38874,7 +38909,7 @@
 													: (file.value = result)),
 												done(error, file)
 										} else done(error)
-									}
+									},
 								)
 							}
 							executor(null, callback)
@@ -38885,7 +38920,7 @@
 								assertParser('processSync', processor.Parser),
 								assertCompiler(
 									'processSync',
-									processor.Compiler
+									processor.Compiler,
 								)
 							const file = vfile(doc)
 							return (
@@ -38906,7 +38941,7 @@
 							destination.use(...attachers[index])
 						return (
 							destination.data(
-								extend_default()(!0, {}, namespace)
+								extend_default()(!0, {}, namespace),
 							),
 							destination
 						)
@@ -38928,13 +38963,13 @@
 			function assertParser(name, value) {
 				if ('function' != typeof value)
 					throw new TypeError(
-						'Cannot `' + name + '` without `Parser`'
+						'Cannot `' + name + '` without `Parser`',
 					)
 			}
 			function assertCompiler(name, value) {
 				if ('function' != typeof value)
 					throw new TypeError(
-						'Cannot `' + name + '` without `Compiler`'
+						'Cannot `' + name + '` without `Compiler`',
 					)
 			}
 			function assertUnfrozen(name, frozen) {
@@ -38942,7 +38977,7 @@
 					throw new Error(
 						'Cannot call `' +
 							name +
-							'` on a frozen processor.\nCreate a new processor first, by calling it: use `processor()` instead of `processor`.'
+							'` on a frozen processor.\nCreate a new processor first, by calling it: use `processor()` instead of `processor`.',
 					)
 			}
 			function assertNode(node) {
@@ -38956,7 +38991,7 @@
 							name +
 							'` finished async. Use `' +
 							asyncName +
-							'` instead'
+							'` instead',
 					)
 			}
 			function vfile(value) {
@@ -38965,7 +39000,7 @@
 						value &&
 							'object' == typeof value &&
 							'message' in value &&
-							'messages' in value
+							'messages' in value,
 					)
 				})(value)
 					? value
@@ -38975,7 +39010,7 @@
 		'./node_modules/unist-util-is/lib/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { O: () => convert })
@@ -39002,7 +39037,7 @@
 										if (
 											checks[index].call(
 												this,
-												...parameters
+												...parameters,
 											)
 										)
 											return !0
@@ -39027,7 +39062,7 @@
 						node &&
 							'object' == typeof node &&
 							'type' in node &&
-							Boolean(check.call(this, node, ...parameters))
+							Boolean(check.call(this, node, ...parameters)),
 					)
 				}
 			}
@@ -39038,7 +39073,7 @@
 		'./node_modules/unist-util-stringify-position/lib/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			function stringifyPosition(value) {
@@ -39072,14 +39107,14 @@
 		'./node_modules/unist-util-visit-parents/lib/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, {
 				S4: () => visitParents,
 			})
 			var lib = __webpack_require__(
-				'./node_modules/unist-util-is/lib/index.js'
+				'./node_modules/unist-util-is/lib/index.js',
 			)
 			const visitParents = function (tree, test, visitor, reverse) {
 				'function' == typeof test &&
@@ -39115,7 +39150,7 @@
 								is(
 									node,
 									index,
-									parents[parents.length - 1] || null
+									parents[parents.length - 1] || null,
 								)) &&
 							((result = (function toResult(value) {
 								if (Array.isArray(value)) return value
@@ -39139,7 +39174,7 @@
 									((subresult = factory(
 										node.children[offset],
 										offset,
-										grandparents
+										grandparents,
 									)()),
 									false === subresult[0])
 								)
@@ -39157,13 +39192,13 @@
 		'./node_modules/unist-util-visit/lib/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { Vn: () => visit })
 			var unist_util_visit_parents__WEBPACK_IMPORTED_MODULE_0__ =
 				__webpack_require__(
-					'./node_modules/unist-util-visit-parents/lib/index.js'
+					'./node_modules/unist-util-visit-parents/lib/index.js',
 				)
 			const visit = function (tree, test, visitor, reverse) {
 				'function' == typeof test &&
@@ -39178,26 +39213,26 @@
 							return visitor(
 								node,
 								parent ? parent.children.indexOf(node) : null,
-								parent
+								parent,
 							)
 						},
-						reverse
+						reverse,
 					)
 			}
 		},
 		'./node_modules/vfile/lib/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			__webpack_require__.d(__webpack_exports__, { k: () => VFile })
 			var is_buffer = __webpack_require__(
-					'./node_modules/is-buffer/index.js'
+					'./node_modules/is-buffer/index.js',
 				),
 				is_buffer_default = __webpack_require__.n(is_buffer),
 				lib = __webpack_require__(
-					'./node_modules/unist-util-stringify-position/lib/index.js'
+					'./node_modules/unist-util-stringify-position/lib/index.js',
 				)
 			class VFileMessage extends Error {
 				constructor(reason, place, origin) {
@@ -39379,7 +39414,7 @@
 								const absolute = 47 === path.charCodeAt(0)
 								let value = (function normalizeString(
 									path,
-									allowAboveRoot
+									allowAboveRoot,
 								) {
 									let code,
 										lastSlashIndex,
@@ -39409,18 +39444,18 @@
 													2 !== lastSegmentLength ||
 													46 !==
 														result.charCodeAt(
-															result.length - 1
+															result.length - 1,
 														) ||
 													46 !==
 														result.charCodeAt(
-															result.length - 2
+															result.length - 2,
 														)
 												)
 													if (result.length > 2) {
 														if (
 															((lastSlashIndex =
 																result.lastIndexOf(
-																	'/'
+																	'/',
 																)),
 															lastSlashIndex !==
 																result.length -
@@ -39433,13 +39468,13 @@
 																: ((result =
 																		result.slice(
 																			0,
-																			lastSlashIndex
+																			lastSlashIndex,
 																		)),
 																  (lastSegmentLength =
 																		result.length -
 																		1 -
 																		result.lastIndexOf(
-																			'/'
+																			'/',
 																		))),
 																(lastSlash =
 																	index),
@@ -39467,11 +39502,11 @@
 															'/' +
 															path.slice(
 																lastSlash + 1,
-																index
+																index,
 															))
 													: (result = path.slice(
 															lastSlash + 1,
-															index
+															index,
 													  )),
 													(lastSegmentLength =
 														index - lastSlash - 1)
@@ -39496,7 +39531,7 @@
 				if ('string' != typeof path)
 					throw new TypeError(
 						'Path must be a string. Received ' +
-							JSON.stringify(path)
+							JSON.stringify(path),
 					)
 			}
 			const proc = {
@@ -39518,20 +39553,20 @@
 					const error = new TypeError(
 						'The "path" argument must be of type string or an instance of URL. Received `' +
 							path +
-							'`'
+							'`',
 					)
 					throw ((error.code = 'ERR_INVALID_ARG_TYPE'), error)
 				}
 				if ('file:' !== path.protocol) {
 					const error = new TypeError(
-						'The URL must be of scheme file'
+						'The URL must be of scheme file',
 					)
 					throw ((error.code = 'ERR_INVALID_URL_SCHEME'), error)
 				}
 				return (function getPathFromURLPosix(url) {
 					if ('' !== url.hostname) {
 						const error = new TypeError(
-							'File URL host must be "localhost" or empty on darwin'
+							'File URL host must be "localhost" or empty on darwin',
 						)
 						throw (
 							((error.code = 'ERR_INVALID_FILE_URL_HOST'), error)
@@ -39547,7 +39582,7 @@
 							const third = pathname.charCodeAt(index + 2)
 							if (70 === third || 102 === third) {
 								const error = new TypeError(
-									'File URL path must not include encoded / characters'
+									'File URL path must not include encoded / characters',
 								)
 								throw (
 									((error.code = 'ERR_INVALID_FILE_URL_PATH'),
@@ -39644,12 +39679,12 @@
 							throw new Error('`extname` must start with `.`')
 						if (extname.includes('.', 1))
 							throw new Error(
-								'`extname` cannot contain multiple dots'
+								'`extname` cannot contain multiple dots',
 							)
 					}
 					this.path = path.join(
 						this.dirname,
-						this.stem + (extname || '')
+						this.stem + (extname || ''),
 					)
 				}
 				get stem() {
@@ -39662,7 +39697,7 @@
 						assertPart(stem, 'stem'),
 						(this.path = path.join(
 							this.dirname || '',
-							stem + (this.extname || '')
+							stem + (this.extname || ''),
 						))
 				}
 				toString(encoding) {
@@ -39695,7 +39730,7 @@
 							name +
 							'` cannot be a path: did not expect `' +
 							path.sep +
-							'`'
+							'`',
 					)
 			}
 			function assertNonEmpty(part, name) {
@@ -39704,7 +39739,7 @@
 			function lib_assertPath(path, name) {
 				if (!path)
 					throw new Error(
-						'Setting `' + name + '` requires `path` to be set too'
+						'Setting `' + name + '` requires `path` to be set too',
 					)
 			}
 		},

@@ -32,7 +32,7 @@ var require_memoizerific = __commonJS({
 							if (!u2 && a) return a(o2, !0)
 							if (i) return i(o2, !0)
 							var f3 = new Error(
-								"Cannot find module '" + o2 + "'"
+								"Cannot find module '" + o2 + "'",
 							)
 							throw ((f3.code = 'MODULE_NOT_FOUND'), f3)
 						}
@@ -48,7 +48,7 @@ var require_memoizerific = __commonJS({
 							e,
 							t,
 							n,
-							r
+							r,
 						)
 					}
 					return n[o2].exports
@@ -121,7 +121,7 @@ var require_memoizerific = __commonJS({
 										(this.lastItem &&
 											this.isEqual(
 												this.lastItem.key,
-												key2
+												key2,
 											) &&
 											(this.lastItem = void 0),
 										(index = this.indexOf(key2)),
@@ -146,7 +146,7 @@ var require_memoizerific = __commonJS({
 								}),
 								(Similar.prototype.forEach = function (
 									callback,
-									thisArg
+									thisArg,
 								) {
 									var i
 									for (i = 0; i < this.size; i++)
@@ -154,7 +154,7 @@ var require_memoizerific = __commonJS({
 											thisArg || this,
 											this.list[i].val,
 											this.list[i].key,
-											this
+											this,
 										)
 								}),
 								(Similar.prototype.indexOf = function (key2) {
@@ -168,7 +168,7 @@ var require_memoizerific = __commonJS({
 								}),
 								(Similar.prototype.isEqual = function (
 									val1,
-									val2
+									val2,
 								) {
 									return (
 										val1 === val2 ||
@@ -193,7 +193,7 @@ var require_memoizerific = __commonJS({
 											argsLengthMinusOne =
 												arguments.length - 1,
 											lruPath = Array(
-												argsLengthMinusOne + 1
+												argsLengthMinusOne + 1,
 											),
 											isMemoized = !0,
 											i
@@ -204,7 +204,7 @@ var require_memoizerific = __commonJS({
 												argsLengthMinusOne + 1
 										)
 											throw new Error(
-												'Memoizerific functions should always be called with the same number of arguments'
+												'Memoizerific functions should always be called with the same number of arguments',
 											)
 										for (
 											i = 0;
@@ -219,17 +219,17 @@ var require_memoizerific = __commonJS({
 												currentCache.has(arguments[i]))
 											) {
 												currentCache = currentCache.get(
-													arguments[i]
+													arguments[i],
 												)
 												continue
 											}
 											;(isMemoized = !1),
 												(newMap = new MapOrSimilar(
-													void 0 === 'true'
+													void 0 === 'true',
 												)),
 												currentCache.set(
 													arguments[i],
-													newMap
+													newMap,
 												),
 												(currentCache = newMap)
 										}
@@ -238,25 +238,25 @@ var require_memoizerific = __commonJS({
 												(currentCache.has(
 													arguments[
 														argsLengthMinusOne
-													]
+													],
 												)
 													? (fnResult =
 															currentCache.get(
 																arguments[
 																	argsLengthMinusOne
-																]
+																],
 															))
 													: (isMemoized = !1)),
 											isMemoized ||
 												((fnResult = fn.apply(
 													null,
-													arguments
+													arguments,
 												)),
 												currentCache.set(
 													arguments[
 														argsLengthMinusOne
 													],
-													fnResult
+													fnResult,
 												)),
 											limit > 0 &&
 												((lruPath[argsLengthMinusOne] =
@@ -269,12 +269,12 @@ var require_memoizerific = __commonJS({
 												isMemoized
 													? moveToMostRecentLru(
 															lru,
-															lruPath
+															lruPath,
 													  )
 													: lru.push(lruPath),
 												lru.length > limit &&
 													removeCachedResult(
-														lru.shift()
+														lru.shift(),
 													)),
 											(memoizerific.wasMemoized =
 												isMemoized),
@@ -307,7 +307,7 @@ var require_memoizerific = __commonJS({
 										if (
 											!isEqual(
 												lru[i][ii].arg,
-												lruPath[ii].arg
+												lruPath[ii].arg,
 											)
 										) {
 											isMatch = !1
@@ -328,7 +328,7 @@ var require_memoizerific = __commonJS({
 									i >= 0 &&
 									((currentLru = removedLru[i]),
 									(tmp = currentLru.cacheItem.get(
-										currentLru.arg
+										currentLru.arg,
 									)),
 									!tmp || !tmp.size);
 									i--
@@ -346,7 +346,7 @@ var require_memoizerific = __commonJS({
 					],
 				},
 				{},
-				[3]
+				[3],
 			)(3)
 		})
 	},
@@ -429,13 +429,13 @@ var require_implementation2 = __commonJS({
 						if (this instanceof bound) {
 							var result2 = target.apply(
 								this,
-								args2.concat(slice.call(arguments))
+								args2.concat(slice.call(arguments)),
 							)
 							return Object(result2) === result2 ? result2 : this
 						} else
 							return target.apply(
 								that,
-								args2.concat(slice.call(arguments))
+								args2.concat(slice.call(arguments)),
 							)
 					},
 					boundLength = Math.max(0, target.length - args2.length),
@@ -450,7 +450,7 @@ var require_implementation2 = __commonJS({
 					'binder',
 					'return function (' +
 						boundArgs.join(',') +
-						'){ return binder.apply(this,arguments); }'
+						'){ return binder.apply(this,arguments); }',
 				)(binder)),
 				target.prototype)
 			) {
@@ -476,7 +476,7 @@ var require_src2 = __commonJS({
 		var bind = require_function_bind2()
 		module.exports = bind.call(
 			Function.call,
-			Object.prototype.hasOwnProperty
+			Object.prototype.hasOwnProperty,
 		)
 	},
 })
@@ -492,7 +492,7 @@ var require_get_intrinsic2 = __commonJS({
 					return $Function(
 						'"use strict"; return (' +
 							expressionSyntax +
-							').constructor;'
+							').constructor;',
 					)()
 				} catch {}
 			},
@@ -734,11 +734,11 @@ var require_get_intrinsic2 = __commonJS({
 					last = $strSlice(string, -1)
 				if (first === '%' && last !== '%')
 					throw new $SyntaxError(
-						'invalid intrinsic syntax, expected closing `%`'
+						'invalid intrinsic syntax, expected closing `%`',
 					)
 				if (last === '%' && first !== '%')
 					throw new $SyntaxError(
-						'invalid intrinsic syntax, expected opening `%`'
+						'invalid intrinsic syntax, expected opening `%`',
 					)
 				var result2 = []
 				return (
@@ -749,7 +749,7 @@ var require_get_intrinsic2 = __commonJS({
 							result2[result2.length] = quote
 								? $replace(subString, reEscapeChar2, '$1')
 								: number || match
-						}
+						},
 					),
 					result2
 				)
@@ -772,32 +772,32 @@ var require_get_intrinsic2 = __commonJS({
 						throw new $TypeError(
 							'intrinsic ' +
 								name2 +
-								' exists, but is not available. Please file an issue!'
+								' exists, but is not available. Please file an issue!',
 						)
 					return { alias, name: intrinsicName, value: value2 }
 				}
 				throw new $SyntaxError(
-					'intrinsic ' + name2 + ' does not exist!'
+					'intrinsic ' + name2 + ' does not exist!',
 				)
 			}
 		module.exports = function (name2, allowMissing) {
 			if (typeof name2 != 'string' || name2.length === 0)
 				throw new $TypeError(
-					'intrinsic name must be a non-empty string'
+					'intrinsic name must be a non-empty string',
 				)
 			if (arguments.length > 1 && typeof allowMissing != 'boolean')
 				throw new $TypeError(
-					'"allowMissing" argument must be a boolean'
+					'"allowMissing" argument must be a boolean',
 				)
 			if ($exec(/^%?[^%]*%?$/, name2) === null)
 				throw new $SyntaxError(
-					'`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+					'`%` may not be present anywhere but at the beginning and end of the intrinsic name',
 				)
 			var parts = stringToPath2(name2),
 				intrinsicBaseName = parts.length > 0 ? parts[0] : '',
 				intrinsic = getBaseIntrinsic(
 					'%' + intrinsicBaseName + '%',
-					allowMissing
+					allowMissing,
 				),
 				intrinsicRealName = intrinsic.name,
 				value2 = intrinsic.value,
@@ -820,7 +820,7 @@ var require_get_intrinsic2 = __commonJS({
 					first !== last
 				)
 					throw new $SyntaxError(
-						'property names with quotes must have matching quotes'
+						'property names with quotes must have matching quotes',
 					)
 				if (
 					((part === 'constructor' || !isOwn) &&
@@ -836,7 +836,7 @@ var require_get_intrinsic2 = __commonJS({
 							throw new $TypeError(
 								'base intrinsic for ' +
 									name2 +
-									' exists, but the property is not available.'
+									' exists, but the property is not available.',
 							)
 						return
 					}
@@ -887,7 +887,8 @@ var require_call_bind2 = __commonJS({
 							1 +
 							$max(
 								0,
-								originalFunction.length - (arguments.length - 1)
+								originalFunction.length -
+									(arguments.length - 1),
 							),
 					})
 			}
@@ -1012,7 +1013,7 @@ var require_object_inspect = __commonJS({
 						$replace.call(
 							$replace.call(dec, /([0-9]{3})/g, '$&_'),
 							/_$/,
-							''
+							'',
 						)
 					)
 				}
@@ -1030,7 +1031,7 @@ var require_object_inspect = __commonJS({
 				opts.quoteStyle !== 'double'
 			)
 				throw new TypeError(
-					'option "quoteStyle" must be "single" or "double"'
+					'option "quoteStyle" must be "single" or "double"',
 				)
 			if (
 				has2(opts, 'maxStringLength') &&
@@ -1039,14 +1040,14 @@ var require_object_inspect = __commonJS({
 					: opts.maxStringLength !== null)
 			)
 				throw new TypeError(
-					'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`'
+					'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`',
 				)
 			var customInspect = has2(opts, 'customInspect')
 				? opts.customInspect
 				: !0
 			if (typeof customInspect != 'boolean' && customInspect !== 'symbol')
 				throw new TypeError(
-					'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`'
+					'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`',
 				)
 			if (
 				has2(opts, 'indent') &&
@@ -1055,14 +1056,14 @@ var require_object_inspect = __commonJS({
 				!(parseInt(opts.indent, 10) === opts.indent && opts.indent > 0)
 			)
 				throw new TypeError(
-					'option "indent" must be "\\t", an integer > 0, or `null`'
+					'option "indent" must be "\\t", an integer > 0, or `null`',
 				)
 			if (
 				has2(opts, 'numericSeparator') &&
 				typeof opts.numericSeparator != 'boolean'
 			)
 				throw new TypeError(
-					'option "numericSeparator", if provided, must be `true` or `false`'
+					'option "numericSeparator", if provided, must be `true` or `false`',
 				)
 			var numericSeparator = opts.numericSeparator
 			if (typeof obj > 'u') return 'undefined'
@@ -1161,9 +1162,9 @@ var require_object_inspect = __commonJS({
 							$join.call(
 								$concat.call(
 									'[cause]: ' + inspect(obj.cause),
-									parts
+									parts,
 								),
-								', '
+								', ',
 							) +
 							' }'
 					: parts.length === 0
@@ -1195,7 +1196,7 @@ var require_object_inspect = __commonJS({
 							mapParts.push(
 								inspect(key2, obj, !0) +
 									' => ' +
-									inspect(value2, obj)
+									inspect(value2, obj),
 							)
 						}),
 					collectionOf('Map', mapSize.call(obj), mapParts, indent)
@@ -1248,9 +1249,9 @@ var require_object_inspect = __commonJS({
 									$concat.call(
 										[],
 										stringTag || [],
-										protoTag || []
+										protoTag || [],
 									),
-									': '
+									': ',
 							  ) +
 							  '] '
 							: '')
@@ -1351,7 +1352,7 @@ var require_object_inspect = __commonJS({
 			if (f3.name) return f3.name
 			var m2 = $match.call(
 				functionToString.call(f3),
-				/^function\s*([\w$]+)/
+				/^function\s*([\w$]+)/,
 			)
 			return m2 ? m2[1] : null
 		}
@@ -1439,14 +1440,14 @@ var require_object_inspect = __commonJS({
 				return (
 					inspectString(
 						$slice.call(str, 0, opts.maxStringLength),
-						opts
+						opts,
 					) + trailer
 				)
 			}
 			var s = $replace.call(
 				$replace.call(str, /(['\\])/g, '\\$1'),
 				/[\x00-\x1f]/g,
-				lowbyte
+				lowbyte,
 			)
 			return wrapQuotes(s, 'single', opts)
 		}
@@ -1477,7 +1478,7 @@ var require_object_inspect = __commonJS({
 					indexOf(
 						xs[i],
 						`
-`
+`,
 					) >= 0
 				)
 					return !1
@@ -1535,7 +1536,7 @@ var require_object_inspect = __commonJS({
 							? xs.push(
 									inspect(key2, obj) +
 										': ' +
-										inspect(obj[key2], obj)
+										inspect(obj[key2], obj),
 							  )
 							: xs.push(key2 + ': ' + inspect(obj[key2], obj))))
 			if (typeof gOPS == 'function')
@@ -1545,7 +1546,7 @@ var require_object_inspect = __commonJS({
 							'[' +
 								inspect(syms[j]) +
 								']: ' +
-								inspect(obj[syms[j]], obj)
+								inspect(obj[syms[j]], obj),
 						)
 			return xs
 		}
@@ -1605,7 +1606,8 @@ var require_side_channel = __commonJS({
 					assert: function (key2) {
 						if (!channel.has(key2))
 							throw new $TypeError(
-								'Side channel does not contain ' + inspect(key2)
+								'Side channel does not contain ' +
+									inspect(key2),
 							)
 					},
 					get: function (key2) {
@@ -1681,7 +1683,9 @@ var require_utils = __commonJS({
 				for (var array = [], i = 0; i < 256; ++i)
 					array.push(
 						'%' +
-							((i < 16 ? '0' : '') + i.toString(16)).toUpperCase()
+							(
+								(i < 16 ? '0' : '') + i.toString(16)
+							).toUpperCase(),
 					)
 				return array
 			})(),
@@ -1740,7 +1744,7 @@ var require_utils = __commonJS({
 										? (target[i] = merge2(
 												targetItem,
 												item,
-												options2
+												options2,
 										  ))
 										: target.push(item)
 								} else target[i] = item
@@ -1753,7 +1757,7 @@ var require_utils = __commonJS({
 										? (acc[key2] = merge2(
 												acc[key2],
 												value2,
-												options2
+												options2,
 										  ))
 										: (acc[key2] = value2),
 									acc
@@ -1789,7 +1793,7 @@ var require_utils = __commonJS({
 						/%u[0-9a-f]{4}/gi,
 						function ($0) {
 							return '%26%23' + parseInt($0.slice(2), 16) + '%3B'
-						}
+						},
 					)
 				for (var out = '', i = 0; i < string.length; ++i) {
 					var c2 = string.charCodeAt(i)
@@ -1924,7 +1928,7 @@ var require_stringify = __commonJS({
 			pushToArray = function (arr, valueOrArray) {
 				push.apply(
 					arr,
-					isArray2(valueOrArray) ? valueOrArray : [valueOrArray]
+					isArray2(valueOrArray) ? valueOrArray : [valueOrArray],
 				)
 			},
 			toISO = Date.prototype.toISOString,
@@ -1973,7 +1977,7 @@ var require_stringify = __commonJS({
 				formatter,
 				encodeValuesOnly,
 				charset,
-				sideChannel
+				sideChannel,
 			) {
 				for (
 					var obj = object,
@@ -2012,7 +2016,7 @@ var require_stringify = __commonJS({
 									defaults.encoder,
 									charset,
 									'key',
-									format
+									format,
 							  )
 							: prefix
 					obj = ''
@@ -2026,7 +2030,7 @@ var require_stringify = __commonJS({
 									defaults.encoder,
 									charset,
 									'key',
-									format
+									format,
 							  )
 						return [
 							formatter(keyValue) +
@@ -2037,8 +2041,8 @@ var require_stringify = __commonJS({
 										defaults.encoder,
 										charset,
 										'value',
-										format
-									)
+										format,
+									),
 								),
 						]
 					}
@@ -2110,8 +2114,8 @@ var require_stringify = __commonJS({
 									formatter,
 									encodeValuesOnly,
 									charset,
-									valueSideChannel
-								)
+									valueSideChannel,
+								),
 							)
 					}
 				}
@@ -2132,7 +2136,7 @@ var require_stringify = __commonJS({
 					opts.charset !== 'iso-8859-1'
 				)
 					throw new TypeError(
-						'The charset option must be either utf-8, iso-8859-1, or undefined'
+						'The charset option must be either utf-8, iso-8859-1, or undefined',
 					)
 				var format = formats.default
 				if (typeof opts.format < 'u') {
@@ -2219,7 +2223,7 @@ var require_stringify = __commonJS({
 				typeof opts.commaRoundTrip != 'boolean'
 			)
 				throw new TypeError(
-					'`commaRoundTrip` must be a boolean, or absent'
+					'`commaRoundTrip` must be a boolean, or absent',
 				)
 			var commaRoundTrip =
 				generateArrayPrefix === 'comma' && opts && opts.commaRoundTrip
@@ -2250,8 +2254,8 @@ var require_stringify = __commonJS({
 							options2.formatter,
 							options2.encodeValuesOnly,
 							options2.charset,
-							sideChannel
-						)
+							sideChannel,
+						),
 					)
 			}
 			var joined = keys.join(options2.delimiter),
@@ -2342,28 +2346,28 @@ var require_parse = __commonJS({
 									part,
 									defaults.decoder,
 									charset,
-									'key'
+									'key',
 							  )),
 							  (val = options2.strictNullHandling ? null : ''))
 							: ((key2 = options2.decoder(
 									part.slice(0, pos),
 									defaults.decoder,
 									charset,
-									'key'
+									'key',
 							  )),
 							  (val = utils.maybeMap(
 									parseArrayValue(
 										part.slice(pos + 1),
-										options2
+										options2,
 									),
 									function (encodedVal) {
 										return options2.decoder(
 											encodedVal,
 											defaults.decoder,
 											charset,
-											'value'
+											'value',
 										)
-									}
+									},
 							  ))),
 							val &&
 								options2.interpretNumericEntities &&
@@ -2445,7 +2449,7 @@ var require_parse = __commonJS({
 							!options2.plainObjects &&
 								has2.call(
 									Object.prototype,
-									segment[1].slice(1, -1)
+									segment[1].slice(1, -1),
 								) &&
 								!options2.allowPrototypes)
 						)
@@ -2473,7 +2477,7 @@ var require_parse = __commonJS({
 					opts.charset !== 'iso-8859-1'
 				)
 					throw new TypeError(
-						'The charset option must be either utf-8, iso-8859-1, or undefined'
+						'The charset option must be either utf-8, iso-8859-1, or undefined',
 					)
 				var charset =
 					typeof opts.charset > 'u' ? defaults.charset : opts.charset
@@ -2556,7 +2560,7 @@ var require_parse = __commonJS({
 						key2,
 						tempObj[key2],
 						options2,
-						typeof str == 'string'
+						typeof str == 'string',
 					)
 				obj = utils.merge(obj, newObj, options2)
 			}
@@ -2703,7 +2707,7 @@ var require_isMasked = __commonJS({
 					(coreJsData2 &&
 						coreJsData2.keys &&
 						coreJsData2.keys.IE_PROTO) ||
-						''
+						'',
 				)
 				return uid ? 'Symbol(src)_1.' + uid : ''
 			})()
@@ -2750,9 +2754,9 @@ var require_baseIsNative = __commonJS({
 						.replace(reRegExpChar2, '\\$&')
 						.replace(
 							/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-							'$1.*?'
+							'$1.*?',
 						) +
-					'$'
+					'$',
 			)
 		function baseIsNative2(value2) {
 			if (!isObject5(value2) || isMasked2(value2)) return !1
@@ -2876,7 +2880,7 @@ var require_isArguments = __commonJS({
 			isArguments = baseIsArguments(
 				(function () {
 					return arguments
-				})()
+				})(),
 			)
 				? baseIsArguments
 				: function (value2) {
@@ -3666,7 +3670,7 @@ var require_equalArrays = __commonJS({
 			bitmask,
 			customizer,
 			equalFunc,
-			stack
+			stack,
 		) {
 			var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
 				arrLength = array.length,
@@ -3696,7 +3700,7 @@ var require_equalArrays = __commonJS({
 								index,
 								other,
 								array,
-								stack
+								stack,
 						  )
 						: customizer(
 								arrValue,
@@ -3704,7 +3708,7 @@ var require_equalArrays = __commonJS({
 								index,
 								array,
 								other,
-								stack
+								stack,
 						  )
 				if (compared !== void 0) {
 					if (compared) continue
@@ -3722,7 +3726,7 @@ var require_equalArrays = __commonJS({
 										othValue2,
 										bitmask,
 										customizer,
-										stack
+										stack,
 									))
 							)
 								return seen.push(othIndex)
@@ -3739,7 +3743,7 @@ var require_equalArrays = __commonJS({
 							othValue,
 							bitmask,
 							customizer,
-							stack
+							stack,
 						)
 					)
 				) {
@@ -3819,7 +3823,7 @@ var require_equalByTag = __commonJS({
 			bitmask,
 			customizer,
 			equalFunc,
-			stack
+			stack,
 		) {
 			switch (tag) {
 				case dataViewTag:
@@ -3834,7 +3838,7 @@ var require_equalByTag = __commonJS({
 						object.byteLength != other.byteLength ||
 						!equalFunc(
 							new Uint8Array2(object),
-							new Uint8Array2(other)
+							new Uint8Array2(other),
 						)
 					)
 				case boolTag:
@@ -3868,7 +3872,7 @@ var require_equalByTag = __commonJS({
 						bitmask,
 						customizer,
 						equalFunc,
-						stack
+						stack,
 					)
 					return stack.delete(object), result2
 				case symbolTag2:
@@ -3955,9 +3959,9 @@ var require_getSymbols = __commonJS({
 									function (symbol) {
 										return propertyIsEnumerable.call(
 											object,
-											symbol
+											symbol,
 										)
-									}
+									},
 							  ))
 				  }
 				: stubArray
@@ -3987,7 +3991,7 @@ var require_equalObjects = __commonJS({
 			bitmask,
 			customizer,
 			equalFunc,
-			stack
+			stack,
 		) {
 			var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
 				objProps = getAllKeys(object),
@@ -4022,7 +4026,7 @@ var require_equalObjects = __commonJS({
 								key2,
 								other,
 								object,
-								stack
+								stack,
 						  )
 						: customizer(
 								objValue,
@@ -4030,7 +4034,7 @@ var require_equalObjects = __commonJS({
 								key2,
 								object,
 								other,
-								stack
+								stack,
 						  )
 				if (
 					!(compared === void 0
@@ -4040,7 +4044,7 @@ var require_equalObjects = __commonJS({
 								othValue,
 								bitmask,
 								customizer,
-								stack
+								stack,
 						  )
 						: compared)
 				) {
@@ -4171,7 +4175,7 @@ var require_baseIsEqualDeep = __commonJS({
 			bitmask,
 			customizer,
 			equalFunc,
-			stack
+			stack,
 		) {
 			var objIsArr = isArray2(object),
 				othIsArr = isArray2(other),
@@ -4196,7 +4200,7 @@ var require_baseIsEqualDeep = __commonJS({
 								bitmask,
 								customizer,
 								equalFunc,
-								stack
+								stack,
 						  )
 						: equalByTag(
 								object,
@@ -4205,7 +4209,7 @@ var require_baseIsEqualDeep = __commonJS({
 								bitmask,
 								customizer,
 								equalFunc,
-								stack
+								stack,
 						  )
 				)
 			if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
@@ -4223,7 +4227,7 @@ var require_baseIsEqualDeep = __commonJS({
 							othUnwrapped,
 							bitmask,
 							customizer,
-							stack
+							stack,
 						)
 					)
 				}
@@ -4236,7 +4240,7 @@ var require_baseIsEqualDeep = __commonJS({
 						bitmask,
 						customizer,
 						equalFunc,
-						stack
+						stack,
 				  ))
 				: !1
 		}
@@ -4260,7 +4264,7 @@ var require_baseIsEqual = __commonJS({
 						bitmask,
 						customizer,
 						baseIsEqual,
-						stack
+						stack,
 				  )
 		}
 		module.exports = baseIsEqual
@@ -4302,7 +4306,7 @@ var require_baseIsMatch = __commonJS({
 							key2,
 							object,
 							source2,
-							stack
+							stack,
 						)
 					if (
 						!(result2 === void 0
@@ -4312,7 +4316,7 @@ var require_baseIsMatch = __commonJS({
 									COMPARE_PARTIAL_FLAG |
 										COMPARE_UNORDERED_FLAG,
 									customizer,
-									stack
+									stack,
 							  )
 							: result2)
 					)
@@ -4481,9 +4485,9 @@ var require_stringToPath = __commonJS({
 							result2.push(
 								quote
 									? subString.replace(reEscapeChar2, '$1')
-									: number || match
+									: number || match,
 							)
-						}
+						},
 					),
 					result2
 				)
@@ -4661,7 +4665,7 @@ var require_baseMatchesProperty = __commonJS({
 									srcValue,
 									objValue,
 									COMPARE_PARTIAL_FLAG |
-										COMPARE_UNORDERED_FLAG
+										COMPARE_UNORDERED_FLAG,
 							  )
 				  }
 		}
@@ -4745,7 +4749,7 @@ var require_mapValues = __commonJS({
 					baseAssignValue(
 						result2,
 						key2,
-						iteratee(value2, key2, object2)
+						iteratee(value2, key2, object2),
 					)
 				}),
 				result2
@@ -4884,7 +4888,7 @@ var require_baseFlatten = __commonJS({
 								depth - 1,
 								predicate,
 								isStrict,
-								result2
+								result2,
 						  )
 						: arrayPush(result2, value2)
 					: isStrict || (result2[result2.length] = value2)
@@ -4930,7 +4934,7 @@ var require_overRest = __commonJS({
 			return (
 				(start2 = nativeMax(
 					start2 === void 0 ? func.length - 1 : start2,
-					0
+					0,
 				)),
 				function () {
 					for (
@@ -5050,7 +5054,7 @@ var require_synchronous_promise = __commonJS({
 					handler.call(
 						this,
 						this._continueWith.bind(this),
-						this._failWith.bind(this)
+						this._failWith.bind(this),
 					)
 		}
 		function looksLikeAPromise(obj) {
@@ -5079,15 +5083,15 @@ var require_synchronous_promise = __commonJS({
 								? (this._chainPromiseData(catchResult, next),
 								  next)
 								: SynchronousPromise4.resolve(
-										catchResult
+										catchResult,
 								  )._setParent(this)
 						} catch (e) {
 							return SynchronousPromise4.reject(e)._setParent(
-								this
+								this,
 							)
 						}
 					return SynchronousPromise4.reject(this._error)._setParent(
-						this
+						this,
 					)
 				}
 				return (
@@ -5103,7 +5107,7 @@ var require_synchronous_promise = __commonJS({
 			catch: function (handler) {
 				if (this._isResolved())
 					return SynchronousPromise4.resolve(this._data)._setParent(
-						this
+						this,
 					)
 				var next = SynchronousPromise4.unresolved()._setParent(this)
 				return (
@@ -5204,7 +5208,7 @@ var require_synchronous_promise = __commonJS({
 								var catchResult = cont.catchFn(error)
 								self2._handleUserFunctionResult(
 									catchResult,
-									cont.promise
+									cont.promise,
 								)
 							} catch (e) {
 								cont.promise.reject(e)
@@ -5227,7 +5231,7 @@ var require_synchronous_promise = __commonJS({
 									var result2 = cont.nextFn(data)
 									self2._handleUserFunctionResult(
 										result2,
-										cont.promise
+										cont.promise,
 									)
 								} catch (e) {
 									self2._handleResolutionError(e, cont)
@@ -5362,7 +5366,7 @@ var require_synchronous_promise = __commonJS({
 								doReject = function () {
 									numRejected === args2.length &&
 										reject(
-											createAggregateErrorFrom(allErrors)
+											createAggregateErrorFrom(allErrors),
 										)
 								},
 								resolved = !1,
@@ -5421,7 +5425,7 @@ var require_synchronous_promise = __commonJS({
 		}
 		if (Promise === SynchronousPromise4)
 			throw new Error(
-				'Please use SynchronousPromise.installGlobally() to install globally'
+				'Please use SynchronousPromise.installGlobally() to install globally',
 			)
 		var RealPromise = Promise
 		SynchronousPromise4.installGlobally = function (__awaiter) {
@@ -5765,7 +5769,7 @@ var generateRandomId = () => Math.random().toString(16).slice(2),
 				transport &&
 					((this.transport = transport),
 					this.transport.setHandler((event) =>
-						this.handleEvent(event)
+						this.handleEvent(event),
 					))
 		}
 		get hasTransport() {
@@ -5814,7 +5818,7 @@ var generateRandomId = () => Math.random().toString(16).slice(2),
 			let listeners = this.listeners(eventName)
 			listeners &&
 				(this.events[eventName] = listeners.filter(
-					(l) => l !== listener
+					(l) => l !== listener,
 				))
 		}
 		on(eventName, listener) {
@@ -5904,7 +5908,7 @@ var deprecate = once('warn'),
 					argArray.push(
 						args2[0]
 							.replace(startTagRe, '%c')
-							.replace(endTagRe, '%c')
+							.replace(endTagRe, '%c'),
 					);
 					(reResultArray = startTagRe.exec(args2[0]));
 
@@ -5931,7 +5935,7 @@ var __create = Object.create,
 				mod ||
 					(0, cb[__getOwnPropNames(cb)[0]])(
 						(mod = { exports: {} }).exports,
-						mod
+						mod,
 					),
 				mod.exports
 			)
@@ -5955,7 +5959,7 @@ var __create = Object.create,
 			isNodeMode || !mod || !mod.__esModule
 				? __defProp(target, 'default', { value: mod, enumerable: !0 })
 				: target,
-			mod
+			mod,
 		)
 	),
 	eventProperties = [
@@ -6074,7 +6078,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							if (this instanceof bound) {
 								var result2 = target.apply(
 									this,
-									args2.concat(slice.call(arguments))
+									args2.concat(slice.call(arguments)),
 								)
 								return Object(result2) === result2
 									? result2
@@ -6082,7 +6086,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							} else
 								return target.apply(
 									that,
-									args2.concat(slice.call(arguments))
+									args2.concat(slice.call(arguments)),
 								)
 						},
 						boundLength = Math.max(0, target.length - args2.length),
@@ -6097,7 +6101,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						'binder',
 						'return function (' +
 							boundArgs.join(',') +
-							'){ return binder.apply(this,arguments); }'
+							'){ return binder.apply(this,arguments); }',
 					)(binder)),
 					target.prototype)
 				) {
@@ -6123,7 +6127,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 			var bind = require_function_bind()
 			module.exports = bind.call(
 				Function.call,
-				Object.prototype.hasOwnProperty
+				Object.prototype.hasOwnProperty,
 			)
 		},
 	}),
@@ -6139,7 +6143,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						return $Function(
 							'"use strict"; return (' +
 								expressionSyntax +
-								').constructor;'
+								').constructor;',
 						)()
 					} catch {}
 				},
@@ -6366,7 +6370,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 				$concat = bind.call(Function.call, Array.prototype.concat),
 				$spliceApply = bind.call(
 					Function.apply,
-					Array.prototype.splice
+					Array.prototype.splice,
 				),
 				$replace = bind.call(Function.call, String.prototype.replace),
 				$strSlice = bind.call(Function.call, String.prototype.slice),
@@ -6379,11 +6383,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						last = $strSlice(string, -1)
 					if (first === '%' && last !== '%')
 						throw new $SyntaxError(
-							'invalid intrinsic syntax, expected closing `%`'
+							'invalid intrinsic syntax, expected closing `%`',
 						)
 					if (last === '%' && first !== '%')
 						throw new $SyntaxError(
-							'invalid intrinsic syntax, expected opening `%`'
+							'invalid intrinsic syntax, expected opening `%`',
 						)
 					var result2 = []
 					return (
@@ -6394,7 +6398,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								result2[result2.length] = quote
 									? $replace(subString, reEscapeChar2, '$1')
 									: number || match
-							}
+							},
 						),
 						result2
 					)
@@ -6417,32 +6421,32 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 							throw new $TypeError(
 								'intrinsic ' +
 									name2 +
-									' exists, but is not available. Please file an issue!'
+									' exists, but is not available. Please file an issue!',
 							)
 						return { alias, name: intrinsicName, value: value2 }
 					}
 					throw new $SyntaxError(
-						'intrinsic ' + name2 + ' does not exist!'
+						'intrinsic ' + name2 + ' does not exist!',
 					)
 				}
 			module.exports = function (name2, allowMissing) {
 				if (typeof name2 != 'string' || name2.length === 0)
 					throw new $TypeError(
-						'intrinsic name must be a non-empty string'
+						'intrinsic name must be a non-empty string',
 					)
 				if (arguments.length > 1 && typeof allowMissing != 'boolean')
 					throw new $TypeError(
-						'"allowMissing" argument must be a boolean'
+						'"allowMissing" argument must be a boolean',
 					)
 				if ($exec(/^%?[^%]*%?$/, name2) === null)
 					throw new $SyntaxError(
-						'`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+						'`%` may not be present anywhere but at the beginning and end of the intrinsic name',
 					)
 				var parts = stringToPath2(name2),
 					intrinsicBaseName = parts.length > 0 ? parts[0] : '',
 					intrinsic = getBaseIntrinsic(
 						'%' + intrinsicBaseName + '%',
-						allowMissing
+						allowMissing,
 					),
 					intrinsicRealName = intrinsic.name,
 					value2 = intrinsic.value,
@@ -6465,7 +6469,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 						first !== last
 					)
 						throw new $SyntaxError(
-							'property names with quotes must have matching quotes'
+							'property names with quotes must have matching quotes',
 						)
 					if (
 						((part === 'constructor' || !isOwn) &&
@@ -6481,7 +6485,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								throw new $TypeError(
 									'base intrinsic for ' +
 										name2 +
-										' exists, but the property is not available.'
+										' exists, but the property is not available.',
 								)
 							return
 						}
@@ -6535,7 +6539,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
 								$max(
 									0,
 									originalFunction.length -
-										(arguments.length - 1)
+										(arguments.length - 1),
 								),
 						})
 				}
@@ -6788,7 +6792,7 @@ var isFunction_default = isFunction,
 			(coreJsData_default &&
 				coreJsData_default.keys &&
 				coreJsData_default.keys.IE_PROTO) ||
-				''
+				'',
 		)
 		return uid ? 'Symbol(src)_1.' + uid : ''
 	})()
@@ -6823,9 +6827,9 @@ var toSource_default = toSource,
 				.replace(reRegExpChar, '\\$&')
 				.replace(
 					/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-					'$1.*?'
+					'$1.*?',
 				) +
-			'$'
+			'$',
 	)
 function baseIsNative(value2) {
 	if (!isObject_default(value2) || isMasked_default(value2)) return !1
@@ -7087,9 +7091,9 @@ var memoizeCapped_default = memoizeCapped,
 					result2.push(
 						quote
 							? subString.replace(reEscapeChar, '$1')
-							: number || match
+							: number || match,
 					)
-				}
+				},
 			),
 			result2
 		)
@@ -7180,7 +7184,7 @@ var get_default = get,
 		return newCode
 	},
 	cleanCode = (0, import_memoizerific.default)(1e4)((code) =>
-		removeCodeComments(code).replace(/\n\s*/g, '').trim()
+		removeCodeComments(code).replace(/\n\s*/g, '').trim(),
 	),
 	convertShorthandMethods = function (key2, stringified) {
 		let fnHead = stringified.slice(0, stringified.indexOf('{')),
@@ -7260,11 +7264,11 @@ var replacer = function (options2) {
 					let { name: name2 } = value2,
 						stringified = value2.toString()
 					return stringified.match(
-						/(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/
+						/(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/,
 					)
 						? `_function_${name2}|${(() => {}).toString()}`
 						: `_function_${name2}|${cleanCode(
-								convertShorthandMethods(key2, stringified)
+								convertShorthandMethods(key2, stringified),
 						  )}`
 				}
 				if ((0, import_is_symbol.default)(value2)) {
@@ -7333,7 +7337,7 @@ var replacer = function (options2) {
 							? (container[target] = root)
 							: (container[target] = get_default(
 									root,
-									replacementArr
+									replacementArr,
 							  ))
 					})),
 				key === '_constructor-name_')
@@ -7349,8 +7353,8 @@ var replacer = function (options2) {
 					let Fn = new Function(
 						`return function ${name2.replace(
 							/[^a-zA-Z0-9$_]+/g,
-							''
-						)}(){}`
+							'',
+						)}(){}`,
 					)()
 					Object.setPrototypeOf(value, new Fn())
 				}
@@ -7434,7 +7438,7 @@ var replacer = function (options2) {
 		return JSON.stringify(
 			convertUnconventionalData(data),
 			replacer(mergedOptions),
-			options2.space
+			options2.space,
 		)
 	},
 	mutator = () => {
@@ -7475,12 +7479,12 @@ var import_qs = __toESM(require_lib(), 1),
 					scope.addEventListener(
 						'message',
 						this.handleEvent.bind(this),
-						!1
+						!1,
 					),
 				config.page !== 'manager' && config.page !== 'preview')
 			)
 				throw new Error(
-					`postmsg-channel: "config.page" cannot be "${config.page}"`
+					`postmsg-channel: "config.page" cannot be "${config.page}"`,
 				)
 		}
 		setHandler(handler) {
@@ -7515,7 +7519,7 @@ var import_qs = __toESM(require_lib(), 1),
 						maxDepth,
 						space,
 						lazyEval,
-					}).filter(([k, v2]) => typeof v2 < 'u')
+					}).filter(([k, v2]) => typeof v2 < 'u'),
 				),
 				stringifyOptions = {
 					...defaultEventOptions,
@@ -7528,7 +7532,7 @@ var import_qs = __toESM(require_lib(), 1),
 				}),
 				data = stringify(
 					{ key: KEY, event, refId: query.refId },
-					stringifyOptions
+					stringifyOptions,
 				)
 			return frames.length
 				? (this.buffer.length && this.flush(),
@@ -7555,8 +7559,8 @@ var import_qs = __toESM(require_lib(), 1),
 			if (this.config.page === 'manager') {
 				let list = Array.from(
 					document.querySelectorAll(
-						'iframe[data-is-storybook][data-is-loaded]'
-					)
+						'iframe[data-is-storybook][data-is-loaded]',
+					),
 				)
 					.filter((e) => {
 						try {
@@ -7579,7 +7583,7 @@ var import_qs = __toESM(require_lib(), 1),
 		getCurrentFrames() {
 			return this.config.page === 'manager'
 				? Array.from(
-						document.querySelectorAll('[data-is-storybook="true"]')
+						document.querySelectorAll('[data-is-storybook="true"]'),
 				  ).map((e) => e.contentWindow)
 				: scope && scope.parent
 				? [scope.parent]
@@ -7588,7 +7592,7 @@ var import_qs = __toESM(require_lib(), 1),
 		getLocalFrame() {
 			return this.config.page === 'manager'
 				? Array.from(
-						document.querySelectorAll('#storybook-preview-iframe')
+						document.querySelectorAll('#storybook-preview-iframe'),
 				  ).map((e) => e.contentWindow)
 				: scope && scope.parent
 				? [scope.parent]
@@ -7610,7 +7614,7 @@ var import_qs = __toESM(require_lib(), 1),
 								? '<span style="color: #37D5D3; background: black"> manager </span>'
 								: '<span style="color: #1EA7FD; background: black"> preview </span>',
 						eventString = Object.values(dist_exports).includes(
-							event.type
+							event.type,
 						)
 							? `<span style="color: #FF4785">${event.type}</span>`
 							: `<span style="color: #FFAE00">${event.type}</span>`
@@ -7623,7 +7627,7 @@ var import_qs = __toESM(require_lib(), 1),
 						!event.source)
 					) {
 						pretty.error(
-							`${pageString} received ${eventString} but was unable to determine the source of the event`
+							`${pageString} received ${eventString} but was unable to determine the source of the event`,
 						)
 						return
 					}
@@ -7632,7 +7636,7 @@ var import_qs = __toESM(require_lib(), 1),
 						location.origin !== event.source
 							? message
 							: `${message} <span style="color: gray">(on ${location.origin} from ${event.source})</span>`,
-						...event.args
+						...event.args,
 					),
 						this.handler(event)
 				}
@@ -7643,7 +7647,7 @@ var import_qs = __toESM(require_lib(), 1),
 	},
 	getEventSourceUrl = (event) => {
 		let frames = Array.from(
-				document.querySelectorAll('iframe[data-is-storybook]')
+				document.querySelectorAll('iframe[data-is-storybook]'),
 			),
 			[frame, ...remainder] = frames.filter((element) => {
 				try {
@@ -7662,7 +7666,7 @@ var import_qs = __toESM(require_lib(), 1),
 			let src = frame.getAttribute('src'),
 				{ protocol, host, pathname } = new URL(
 					src,
-					document.location.toString()
+					document.location.toString(),
 				)
 			return `${protocol}//${host}${pathname}`
 		}
@@ -7799,7 +7803,7 @@ var __create2 = Object.create,
 				mod ||
 					(0, cb[__getOwnPropNames2(cb)[0]])(
 						(mod = { exports: {} }).exports,
-						mod
+						mod,
 					),
 				mod.exports
 			)
@@ -7823,7 +7827,7 @@ var __create2 = Object.create,
 			isNodeMode || !mod || !mod.__esModule
 				? __defProp2(target, 'default', { value: mod, enumerable: !0 })
 				: target,
-			mod
+			mod,
 		)
 	)
 function mockChannel() {
@@ -7955,7 +7959,7 @@ function hookify(fn) {
 			hooks.currentPhase === 'UPDATE' && hooks.getNextHook() != null)
 		)
 			throw new Error(
-				'Rendered fewer hooks than expected. This may be caused by an accidental early return statement.'
+				'Rendered fewer hooks than expected. This may be caused by an accidental early return statement.',
 			)
 		return (
 			(hooks.currentPhase = prevPhase),
@@ -7972,7 +7976,7 @@ var numberOfRenders = 0,
 	applyHooks = (applyDecorators) => (storyFn, decorators) => {
 		let decorated = applyDecorators(
 			hookify(storyFn),
-			decorators.map((decorator) => hookify(decorator))
+			decorators.map((decorator) => hookify(decorator)),
 		)
 		return (context) => {
 			let { hooks } = context
@@ -7990,7 +7994,7 @@ var numberOfRenders = 0,
 					numberOfRenders > RENDER_LIMIT)
 				)
 					throw new Error(
-						'Too many re-renders. Storybook limits the number of renders to prevent an infinite loop.'
+						'Too many re-renders. Storybook limits the number of renders to prevent an infinite loop.',
 					)
 			return hooks.addRenderListeners(), result2
 		}
@@ -8000,7 +8004,7 @@ var numberOfRenders = 0,
 		deps.every((dep, i) => dep === nextDeps[i]),
 	invalidHooksError = () =>
 		new Error(
-			'Storybook preview hooks can only be called inside decorators and story functions.'
+			'Storybook preview hooks can only be called inside decorators and story functions.',
 		)
 function getHooksContextOrNull() {
 	return scope.STORYBOOK_HOOKS_CONTEXT || null
@@ -8016,7 +8020,7 @@ function useHook(name2, callback, deps) {
 		deps != null &&
 			!Array.isArray(deps) &&
 			logger.warn(
-				`${name2} received a final argument that is not an array (instead, received ${deps}). When specified, the final argument must be an array.`
+				`${name2} received a final argument that is not an array (instead, received ${deps}). When specified, the final argument must be an array.`,
 			)
 		let hook = { name: name2, deps }
 		return hooks.currentHooks.push(hook), callback(hook), hook
@@ -8025,7 +8029,7 @@ function useHook(name2, callback, deps) {
 		let hook = hooks.getNextHook()
 		if (hook == null)
 			throw new Error(
-				'Rendered more hooks than during the previous render.'
+				'Rendered more hooks than during the previous render.',
 			)
 		return (
 			hook.name !== name2 &&
@@ -8034,12 +8038,12 @@ function useHook(name2, callback, deps) {
 						hooks.currentDecoratorName
 							? ` called by ${hooks.currentDecoratorName}`
 							: ''
-					}. This will lead to bugs and errors if not fixed.`
+					}. This will lead to bugs and errors if not fixed.`,
 				),
 			deps != null &&
 				hook.deps == null &&
 				logger.warn(
-					`${name2} received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.`
+					`${name2} received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.`,
 				),
 			deps != null &&
 				hook.deps != null &&
@@ -8062,7 +8066,7 @@ function useMemoLike(name2, nextCreate, deps) {
 		(hook) => {
 			hook.memoizedState = nextCreate()
 		},
-		deps
+		deps,
 	)
 	return memoizedState
 }
@@ -8086,14 +8090,14 @@ function triggerUpdate() {
 			addons.getChannel().emit(FORCE_RE_RENDER)
 		} catch {
 			logger.warn(
-				'State updates of Storybook preview hooks work only in browser'
+				'State updates of Storybook preview hooks work only in browser',
 			)
 		}
 }
 function useStateLike(name2, initialState) {
 	let stateRef = useRefLike(
 			name2,
-			typeof initialState == 'function' ? initialState() : initialState
+			typeof initialState == 'function' ? initialState() : initialState,
 		),
 		setState = (update) => {
 			;(stateRef.current =
@@ -8126,15 +8130,15 @@ function useChannel(eventMap, deps = []) {
 		useEffect(
 			() => (
 				Object.entries(eventMap).forEach(([type, listener]) =>
-					channel.on(type, listener)
+					channel.on(type, listener),
 				),
 				() => {
 					Object.entries(eventMap).forEach(([type, listener]) =>
-						channel.removeListener(type, listener)
+						channel.removeListener(type, listener),
 					)
 				}
 			),
-			[...Object.keys(eventMap), ...deps]
+			[...Object.keys(eventMap), ...deps],
 		),
 		useCallback(channel.emit.bind(channel), [channel])
 	)
@@ -8154,11 +8158,11 @@ function useArgs() {
 		updateArgs = useCallback(
 			(updatedArgs) =>
 				channel.emit(UPDATE_STORY_ARGS, { storyId, updatedArgs }),
-			[channel, storyId]
+			[channel, storyId],
 		),
 		resetArgs = useCallback(
 			(argNames) => channel.emit(RESET_STORY_ARGS, { storyId, argNames }),
-			[channel, storyId]
+			[channel, storyId],
 		)
 	return [args2, updateArgs, resetArgs]
 }
@@ -8168,7 +8172,7 @@ function useGlobals() {
 		updateGlobals = useCallback(
 			(newGlobals) =>
 				channel.emit(UPDATE_GLOBALS, { globals: newGlobals }),
-			[channel]
+			[channel],
 		)
 	return [globals2, updateGlobals]
 }
@@ -8182,7 +8186,7 @@ function dedent(templ) {
 	var strings = Array.from(typeof templ == 'string' ? [templ] : templ)
 	strings[strings.length - 1] = strings[strings.length - 1].replace(
 		/\r?\n([\t ]*)$/,
-		''
+		'',
 	)
 	var indentLengths = strings.reduce(function (arr, str) {
 		var matches2 = str.match(/\n([\t ]+|(?!\s).)/g)
@@ -8197,7 +8201,7 @@ function dedent(templ) {
 								: _a.length) !== null && _b !== void 0
 							? _b
 							: 0
-					})
+					}),
 			  )
 			: arr
 	}, [])
@@ -8207,13 +8211,13 @@ function dedent(templ) {
 [	 ]{` +
 				Math.min.apply(Math, indentLengths) +
 				'}',
-			'g'
+			'g',
 		)
 		strings = strings.map(function (str) {
 			return str.replace(
 				pattern_1,
 				`
-`
+`,
 			)
 		})
 	}
@@ -8230,7 +8234,7 @@ function dedent(templ) {
 				(indentedValue = String(value2)
 					.split(
 						`
-`
+`,
 					)
 					.map(function (str, i2) {
 						return i2 === 0 ? str : '' + endentation + str
@@ -8336,7 +8340,7 @@ var B = Object.create,
 			e || !r || !r.__esModule
 				? R(t, 'default', { value: r, enumerable: !0 })
 				: t,
-			r
+			r,
 		)
 	),
 	x = I((T) => {
@@ -8347,7 +8351,7 @@ var B = Object.create,
 					t = Object.getOwnPropertySymbols
 						? function (n) {
 								return Object.keys(n).concat(
-									Object.getOwnPropertySymbols(n)
+									Object.getOwnPropertySymbols(n),
 								)
 						  }
 						: Object.keys
@@ -8391,7 +8395,7 @@ var B = Object.create,
 										!i(
 											(p = y.next()).value,
 											g.next().value,
-											d
+											d,
 										)
 									)
 										return !1
@@ -8454,7 +8458,7 @@ var c = P(x()),
 					exists: t,
 					eq: n,
 					neq: a,
-				})}`
+				})}`,
 			)
 		if (typeof n < 'u') return (0, c.isEqual)(e, n)
 		if (typeof a < 'u') return !(0, c.isEqual)(e, a)
@@ -8472,7 +8476,7 @@ var c = P(x()),
 				`Invalid conditional value ${JSON.stringify({
 					arg: n,
 					global: a,
-				})}`
+				})}`,
 			)
 		let i = n ? e[n] : t[a]
 		return O(r.if, i)
@@ -8488,7 +8492,7 @@ var c = P(x()),
 		let t = L(r)
 		if (t === '')
 			throw new Error(
-				`Invalid ${e} '${r}', must include alphanumeric characters`
+				`Invalid ${e} '${r}', must include alphanumeric characters`,
 			)
 		return t
 	},
@@ -8510,8 +8514,8 @@ var getImportPathMap = (0, import_memoizerific3.default)(1)((entries) =>
 			(acc, entry) => (
 				(acc[entry.importPath] = acc[entry.importPath] || entry), acc
 			),
-			{}
-		)
+			{},
+		),
 	),
 	StoryIndexStore = class {
 		constructor({ entries } = { v: 4, entries: {} }) {
@@ -8526,7 +8530,7 @@ var getImportPathMap = (0, import_memoizerific3.default)(1)((entries) =>
 					: entries.find((entry) => entry.id.startsWith(specifier))
 			let { name: name2, title } = specifier
 			return entries.find(
-				(entry) => entry.name === name2 && entry.title === title
+				(entry) => entry.name === name2 && entry.title === title,
 			)
 		}
 		storyIdToEntry(storyId) {
@@ -8597,11 +8601,11 @@ var getImportPathMap = (0, import_memoizerific3.default)(1)((entries) =>
 						(acc, upd, index) => (
 							(acc[index] = combineArgs(
 								value2[index],
-								update[index]
+								update[index],
 							)),
 							acc
 						),
-						[...value2]
+						[...value2],
 					)
 					.filter((v2) => v2 !== void 0)
 			: !(0, import_isPlainObject.default)(value2) ||
@@ -8633,7 +8637,7 @@ var getImportPathMap = (0, import_memoizerific3.default)(1)((entries) =>
 				if (
 					options2.some(
 						(opt) =>
-							opt && ['object', 'function'].includes(typeof opt)
+							opt && ['object', 'function'].includes(typeof opt),
 					)
 				)
 					return (
@@ -8658,17 +8662,17 @@ var getImportPathMap = (0, import_memoizerific3.default)(1)((entries) =>
 				let field = isArray2 ? `${key2}[${invalidIndex}]` : key2,
 					supportedOptions = options2
 						.map((opt) =>
-							typeof opt == 'string' ? `'${opt}'` : String(opt)
+							typeof opt == 'string' ? `'${opt}'` : String(opt),
 						)
 						.join(', ')
 				return (
 					once.warn(
-						`Received illegal value for '${field}'. Supported options: ${supportedOptions}`
+						`Received illegal value for '${field}'. Supported options: ${supportedOptions}`,
 					),
 					acc
 				)
 			},
-			{}
+			{},
 		),
 	DEEPLY_EQUAL = Symbol('Deeply equal'),
 	deepDiff = (value2, update) => {
@@ -8682,7 +8686,7 @@ var getImportPathMap = (0, import_memoizerific3.default)(1)((entries) =>
 			return update.length >= value2.length
 				? res
 				: res.concat(
-						new Array(value2.length - update.length).fill(void 0)
+						new Array(value2.length - update.length).fill(void 0),
 				  )
 		}
 		return (0, import_isPlainObject.default)(value2) &&
@@ -8713,7 +8717,7 @@ function noTargetArgs(context) {
 function deleteUndefined(obj) {
 	return (
 		Object.keys(obj).forEach(
-			(key2) => obj[key2] === void 0 && delete obj[key2]
+			(key2) => obj[key2] === void 0 && delete obj[key2],
 		),
 		obj
 	)
@@ -8725,7 +8729,7 @@ var ArgsStore = class {
 		get(storyId) {
 			if (!(storyId in this.argsByStoryId))
 				throw new Error(
-					`No args known for ${storyId} -- has it been rendered yet?`
+					`No args known for ${storyId} -- has it been rendered yet?`,
 				)
 			return this.argsByStoryId[storyId]
 		}
@@ -8738,7 +8742,7 @@ var ArgsStore = class {
 			) {
 				let delta = deepDiff(
 					this.initialArgsByStoryId[story.id],
-					this.argsByStoryId[story.id]
+					this.argsByStoryId[story.id],
 				)
 				;(this.initialArgsByStoryId[story.id] = story.initialArgs),
 					(this.argsByStoryId[story.id] = story.initialArgs),
@@ -8749,7 +8753,7 @@ var ArgsStore = class {
 			let validatedDelta = validateOptions(delta, story.argTypes)
 			this.argsByStoryId[story.id] = combineArgs(
 				this.argsByStoryId[story.id],
-				validatedDelta
+				validatedDelta,
 			)
 		}
 		updateFromPersisted(story, persisted) {
@@ -8759,7 +8763,7 @@ var ArgsStore = class {
 		update(storyId, argsUpdate) {
 			if (!(storyId in this.argsByStoryId))
 				throw new Error(
-					`No args known for ${storyId} -- has it been rendered yet?`
+					`No args known for ${storyId} -- has it been rendered yet?`,
 				)
 			this.argsByStoryId[storyId] = deleteUndefined({
 				...this.argsByStoryId[storyId],
@@ -8772,7 +8776,7 @@ var ArgsStore = class {
 			(acc, [arg, { defaultValue }]) => (
 				typeof defaultValue < 'u' && (acc[arg] = defaultValue), acc
 			),
-			{}
+			{},
 		),
 	GlobalsStore = class {
 		constructor({ globals: globals2 = {}, globalTypes = {} }) {
@@ -8799,11 +8803,11 @@ var ArgsStore = class {
 					this.allowedGlobalNames.has(key2)
 						? (acc[key2] = value2)
 						: logger.warn(
-								`Attempted to set a global (${key2}) that is not defined in initial globals or globalTypes`
+								`Attempted to set a global (${key2}) that is not defined in initial globals or globalTypes`,
 						  ),
 					acc
 				),
-				{}
+				{},
 			)
 		}
 		updateFromPersisted(persisted) {
@@ -8844,7 +8848,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 `,
 	deprecatedStoryAnnotationWarning = (0, import_util_deprecate.default)(
 		() => {},
-		deprecatedStoryAnnotation
+		deprecatedStoryAnnotation,
 	)
 function normalizeStory(key2, storyAnnotations, meta) {
 	let storyObject = storyAnnotations,
@@ -8888,7 +8892,7 @@ function normalizeStory(key2, storyAnnotations, meta) {
 function normalizeComponentAnnotations(
 	defaultExport,
 	title = defaultExport.title,
-	importPath
+	importPath,
 ) {
 	let { id, argTypes } = defaultExport
 	return {
@@ -8904,14 +8908,14 @@ var checkGlobals = (parameters) => {
 		;(globals2 || globalTypes) &&
 			logger.error(
 				'Global args/argTypes can only be set globally',
-				JSON.stringify({ globals: globals2, globalTypes })
+				JSON.stringify({ globals: globals2, globalTypes }),
 			)
 	},
 	checkStorySort = (parameters) => {
 		let { options: options2 } = parameters
 		options2?.storySort &&
 			logger.error(
-				'The storySort option parameter can only be set globally'
+				'The storySort option parameter can only be set globally',
 			)
 	},
 	checkDisallowedParameters = (parameters) => {
@@ -8960,7 +8964,7 @@ var combineParameters = (...parameterSets) => {
 				}),
 				acc
 			),
-			{}
+			{},
 		)
 	return (
 		Object.keys(mergeKeys).forEach((key2) => {
@@ -8969,7 +8973,7 @@ var combineParameters = (...parameterSets) => {
 				.map((p) => p[key2])
 				.filter((value2) => typeof value2 < 'u')
 			mergeValues.every((value2) =>
-				(0, import_isPlainObject2.default)(value2)
+				(0, import_isPlainObject2.default)(value2),
 			)
 				? (combined[key2] = combineParameters(...mergeValues))
 				: (combined[key2] = mergeValues[mergeValues.length - 1])
@@ -9011,7 +9015,7 @@ function defaultDecorateStory(storyFn, decorators) {
 		decoratedWithContextStore = decorators.reduce(
 			(story, decorator) =>
 				decorateStory(story, decorator, bindWithContext),
-			storyFn
+			storyFn,
 		)
 	return (context) => (
 		(contextStore.value = context), decoratedWithContextStore(context)
@@ -9020,13 +9024,13 @@ function defaultDecorateStory(storyFn, decorators) {
 function prepareStory(
 	storyAnnotations,
 	componentAnnotations,
-	projectAnnotations
+	projectAnnotations,
 ) {
 	let { moduleExport, id, name: name2 } = storyAnnotations || {},
 		partialAnnotations = preparePartialAnnotations(
 			storyAnnotations,
 			componentAnnotations,
-			projectAnnotations
+			projectAnnotations,
 		),
 		loaders = [
 			...(projectAnnotations.loaders || []),
@@ -9035,7 +9039,7 @@ function prepareStory(
 		],
 		applyLoaders = async (context) => {
 			let loadResults = await Promise.all(
-					loaders.map((loader) => loader(context))
+					loaders.map((loader) => loader(context)),
 				),
 				loaded = Object.assign({}, ...loadResults)
 			return { ...context, loaded }
@@ -9063,7 +9067,7 @@ function prepareStory(
 		throw new Error(`No render function available for storyId '${id}'`)
 	let decoratedStoryFn = applyHooks(applyDecorators)(
 			undecoratedStoryFn,
-			decorators
+			decorators,
 		),
 		unboundStoryFn = (context) => decoratedStoryFn(context),
 		prepareContext = (context) => {
@@ -9086,7 +9090,7 @@ function prepareStory(
 							acc
 						)
 					},
-					{}
+					{},
 				),
 				includedArgs = Object.entries(mappedArgs).reduce(
 					(acc, [key2, val]) => {
@@ -9097,7 +9101,7 @@ function prepareStory(
 							acc
 						)
 					},
-					{}
+					{},
 				)
 			return { ...finalContext, args: includedArgs }
 		},
@@ -9130,7 +9134,7 @@ function prepareMeta(componentAnnotations, projectAnnotations, moduleExport) {
 		...preparePartialAnnotations(
 			void 0,
 			componentAnnotations,
-			projectAnnotations
+			projectAnnotations,
 		),
 		moduleExport,
 	}
@@ -9138,7 +9142,7 @@ function prepareMeta(componentAnnotations, projectAnnotations, moduleExport) {
 function preparePartialAnnotations(
 	storyAnnotations,
 	componentAnnotations,
-	projectAnnotations
+	projectAnnotations,
 ) {
 	let id = storyAnnotations?.id || componentAnnotations.id,
 		tags = [
@@ -9148,7 +9152,7 @@ function preparePartialAnnotations(
 		parameters = combineParameters(
 			projectAnnotations.parameters,
 			componentAnnotations.parameters,
-			storyAnnotations?.parameters
+			storyAnnotations?.parameters,
 		),
 		{ argTypesEnhancers = [], argsEnhancers = [] } = projectAnnotations,
 		render =
@@ -9160,7 +9164,7 @@ function preparePartialAnnotations(
 	let passedArgTypes = combineParameters(
 			projectAnnotations.argTypes,
 			componentAnnotations.argTypes,
-			storyAnnotations?.argTypes
+			storyAnnotations?.argTypes,
 		),
 		{ passArgsFirst = !0 } = parameters
 	parameters.__isArgsStory = passArgsFirst && render.length > 0
@@ -9186,7 +9190,7 @@ function preparePartialAnnotations(
 	contextForEnhancers.argTypes = argTypesEnhancers.reduce(
 		(accumulatedArgTypes, enhancer) =>
 			enhancer({ ...contextForEnhancers, argTypes: accumulatedArgTypes }),
-		contextForEnhancers.argTypes
+		contextForEnhancers.argTypes,
 	)
 	let initialArgsBeforeEnhancers = { ...passedArgs }
 	contextForEnhancers.initialArgs = argsEnhancers.reduce(
@@ -9197,7 +9201,7 @@ function preparePartialAnnotations(
 				initialArgs: accumulatedArgs,
 			}),
 		}),
-		initialArgsBeforeEnhancers
+		initialArgsBeforeEnhancers,
 	)
 	let { name: name2, story, ...withoutStoryIdentifiers } = contextForEnhancers
 	return withoutStoryIdentifiers
@@ -9233,7 +9237,7 @@ var inferType = (value2, name2, visited) => {
 										? inferType(
 												value2[0],
 												name2,
-												new Set(visited)
+												new Set(visited),
 										  )
 										: { name: 'other', value: 'unknown' },
 						  }
@@ -9245,8 +9249,8 @@ var inferType = (value2, name2, visited) => {
 										inferType(
 											field,
 											name2,
-											new Set(visited)
-										)
+											new Set(visited),
+										),
 								),
 						  })
 			: { name: 'object', value: {} }
@@ -9258,11 +9262,11 @@ var inferType = (value2, name2, visited) => {
 				(arg, key2) => ({
 					name: key2,
 					type: inferType(arg, `${id}.${key2}`, new Set()),
-				})
+				}),
 			),
 			userArgTypesNames = (0, import_mapValues3.default)(
 				userArgTypes,
-				(argType, key2) => ({ name: key2 })
+				(argType, key2) => ({ name: key2 }),
 			)
 		return combineParameters(argTypes, userArgTypesNames, userArgTypes)
 	}
@@ -9291,7 +9295,7 @@ var matches = (name2, descriptor) =>
 					return { control: { type: 'color' } }
 				controlType !== 'enum' &&
 					logger.warn(
-						`Addon controls: Control of type color only supports string, received "${controlType}" instead`
+						`Addon controls: Control of type color only supports string, received "${controlType}" instead`,
 					)
 			}
 			if (matchers.date && matchers.date.test(name2))
@@ -9339,7 +9343,7 @@ var matches = (name2, descriptor) =>
 			withControls = (0, import_mapValues4.default)(
 				filteredArgTypes,
 				(argType, name2) =>
-					argType?.type && inferControl(argType, name2, matchers)
+					argType?.type && inferControl(argType, name2, matchers),
 			)
 		return combineParameters(withControls, filteredArgTypes)
 	}
@@ -9366,7 +9370,7 @@ function composeStepRunners(stepRunners) {
 		await stepRunners.reduceRight(
 			(innerPlay, stepRunner) => async () =>
 				stepRunner(label, innerPlay, playContext),
-			async () => play(playContext)
+			async () => play(playContext),
 		)()
 	}
 }
@@ -9378,7 +9382,7 @@ function getField(moduleExportList, field) {
 function getArrayField(moduleExportList, field, options2 = {}) {
 	return getField(moduleExportList, field).reduce(
 		(a, b2) => (options2.reverseFileOrder ? [...b2, ...a] : [...a, ...b2]),
-		[]
+		[],
 	)
 }
 function getObjectField(moduleExportList, field) {
@@ -9390,12 +9394,12 @@ function getSingletonField(moduleExportList, field) {
 function composeConfigs(moduleExportList) {
 	let allArgTypeEnhancers = getArrayField(
 			moduleExportList,
-			'argTypesEnhancers'
+			'argTypesEnhancers',
 		),
 		stepRunners = getField(moduleExportList, 'runStep')
 	return {
 		parameters: combineParameters(
-			...getField(moduleExportList, 'parameters')
+			...getField(moduleExportList, 'parameters'),
 		),
 		decorators: getArrayField(moduleExportList, 'decorators', {
 			reverseFileOrder: !(scope.FEATURES?.legacyDecoratorFileOrder ?? !1),
@@ -9429,7 +9433,7 @@ function composeStory(
 	componentAnnotations,
 	projectAnnotations = GLOBAL_STORYBOOK_PROJECT_ANNOTATIONS,
 	defaultConfig = {},
-	exportsName
+	exportsName,
 ) {
 	if (storyAnnotations === void 0)
 		throw new Error('Expected a story but received undefined.')
@@ -9445,7 +9449,7 @@ function composeStory(
 		normalizedStory = normalizeStory(
 			storyName,
 			storyAnnotations,
-			normalizedComponentAnnotations
+			normalizedComponentAnnotations,
 		),
 		normalizedProjectAnnotations = normalizeProjectAnnotations({
 			...projectAnnotations,
@@ -9454,7 +9458,7 @@ function composeStory(
 		story = prepareStory(
 			normalizedStory,
 			normalizedComponentAnnotations,
-			normalizedProjectAnnotations
+			normalizedProjectAnnotations,
 		),
 		defaultGlobals = getValuesFromArgTypes(projectAnnotations.globalTypes),
 		composedStory = (extraArgs) => {
@@ -9489,11 +9493,11 @@ function composeStories(storiesImport, globalConfig, composeStoryFn) {
 							story,
 							meta,
 							globalConfig,
-							exportsName
+							exportsName,
 						),
 				  })
 				: storiesMap,
-		{}
+		{},
 	)
 }
 var CSF_CACHE_SIZE = 1e3,
@@ -9505,7 +9509,7 @@ var CSF_CACHE_SIZE = 1e3,
 				let { storyIndex } = this
 				if (!storyIndex)
 					throw new Error(
-						'getStoriesJsonData called before initialization'
+						'getStoriesJsonData called before initialization',
 					)
 				let value2 = this.getSetStoriesPayload(),
 					allowedParameters = [
@@ -9533,12 +9537,12 @@ var CSF_CACHE_SIZE = 1e3,
 								parameters: {
 									...(0, import_pick.default)(
 										story.parameters,
-										allowedParameters
+										allowedParameters,
 									),
 									fileName: importPath,
 								},
 							}
-						}
+						},
 					),
 				}
 			}),
@@ -9547,13 +9551,13 @@ var CSF_CACHE_SIZE = 1e3,
 				(this.processCSFFileWithCache = (0,
 				import_memoizerific2.default)(CSF_CACHE_SIZE)(processCSFFile)),
 				(this.prepareStoryWithCache = (0, import_memoizerific2.default)(
-					STORY_CACHE_SIZE
+					STORY_CACHE_SIZE,
 				)(prepareStory)),
 				(this.initializationPromise =
 					new import_synchronous_promise.SynchronousPromise(
 						(resolve) => {
 							this.resolveInitializationPromise = resolve
-						}
+						},
 					))
 		}
 		setProjectAnnotations(projectAnnotations) {
@@ -9592,39 +9596,39 @@ var CSF_CACHE_SIZE = 1e3,
 		loadCSFFileByStoryId(storyId) {
 			if (!this.storyIndex || !this.importFn)
 				throw new Error(
-					'loadCSFFileByStoryId called before initialization'
+					'loadCSFFileByStoryId called before initialization',
 				)
 			let { importPath, title } = this.storyIndex.storyIdToEntry(storyId)
 			return this.importFn(importPath).then((moduleExports) =>
-				this.processCSFFileWithCache(moduleExports, importPath, title)
+				this.processCSFFileWithCache(moduleExports, importPath, title),
 			)
 		}
 		loadAllCSFFiles({ batchSize = EXTRACT_BATCH_SIZE } = {}) {
 			if (!this.storyIndex)
 				throw new Error('loadAllCSFFiles called before initialization')
 			let importPaths = Object.entries(this.storyIndex.entries).map(
-					([storyId, { importPath }]) => [importPath, storyId]
+					([storyId, { importPath }]) => [importPath, storyId],
 				),
 				loadInBatches = (remainingImportPaths) => {
 					if (remainingImportPaths.length === 0)
 						return import_synchronous_promise.SynchronousPromise.resolve(
-							[]
+							[],
 						)
 					let csfFilePromiseList = remainingImportPaths
 						.slice(0, batchSize)
 						.map(([importPath, storyId]) =>
 							this.loadCSFFileByStoryId(storyId).then(
-								(csfFile) => ({ importPath, csfFile })
-							)
+								(csfFile) => ({ importPath, csfFile }),
+							),
 						)
 					return import_synchronous_promise.SynchronousPromise.all(
-						csfFilePromiseList
+						csfFilePromiseList,
 					).then((firstResults) =>
 						loadInBatches(
-							remainingImportPaths.slice(batchSize)
+							remainingImportPaths.slice(batchSize),
 						).then((restResults) =>
-							firstResults.concat(restResults)
-						)
+							firstResults.concat(restResults),
+						),
 					)
 				}
 			return loadInBatches(importPaths).then((list) =>
@@ -9632,15 +9636,15 @@ var CSF_CACHE_SIZE = 1e3,
 					(acc, { importPath, csfFile }) => (
 						(acc[importPath] = csfFile), acc
 					),
-					{}
-				)
+					{},
+				),
 			)
 		}
 		cacheAllCSFFiles() {
 			return this.initializationPromise.then(() =>
 				this.loadAllCSFFiles().then((csfFiles) => {
 					this.cachedCSFFiles = csfFiles
-				})
+				}),
 			)
 		}
 		async loadStory({ storyId }) {
@@ -9654,13 +9658,13 @@ var CSF_CACHE_SIZE = 1e3,
 			let storyAnnotations = csfFile.stories[storyId]
 			if (!storyAnnotations)
 				throw new Error(
-					`Didn't find '${storyId}' in CSF file, this is unexpected`
+					`Didn't find '${storyId}' in CSF file, this is unexpected`,
 				)
 			let componentAnnotations = csfFile.meta,
 				story = this.prepareStoryWithCache(
 					storyAnnotations,
 					componentAnnotations,
-					this.projectAnnotations
+					this.projectAnnotations,
 				)
 			return (
 				this.args.setInitial(story),
@@ -9672,7 +9676,7 @@ var CSF_CACHE_SIZE = 1e3,
 		componentStoriesFromCSFFile({ csfFile }) {
 			if (!this.storyIndex)
 				throw new Error(
-					'componentStoriesFromCSFFile called before initialization'
+					'componentStoriesFromCSFFile called before initialization',
 				)
 			return Object.keys(this.storyIndex.entries)
 				.filter((storyId) => !!csfFile.stories[storyId])
@@ -9714,7 +9718,7 @@ var CSF_CACHE_SIZE = 1e3,
 			let { cachedCSFFiles } = this
 			if (!cachedCSFFiles)
 				throw new Error(
-					'Cannot call extract() unless you call cacheAllCSFFiles() first.'
+					'Cannot call extract() unless you call cacheAllCSFFiles() first.',
 				)
 			return Object.entries(this.storyIndex.entries).reduce(
 				(acc, [storyId, { type, importPath }]) => {
@@ -9736,23 +9740,23 @@ var CSF_CACHE_SIZE = 1e3,
 										: Object.assign(storyAcc, {
 												[key2]: value2,
 										  }),
-								{ args: story.initialArgs }
+								{ args: story.initialArgs },
 							)),
 						acc
 					)
 				},
-				{}
+				{},
 			)
 		}
 		getSetStoriesPayload() {
 			if (!this.globals)
 				throw new Error(
-					'getSetStoriesPayload called before initialization'
+					'getSetStoriesPayload called before initialization',
 				)
 			let stories = this.extract({ includeDocsOnly: !0 }),
 				kindParameters = Object.values(stories).reduce(
 					(acc, { title }) => ((acc[title] = {}), acc),
-					{}
+					{},
 				)
 			return {
 				v: 2,
@@ -9765,7 +9769,7 @@ var CSF_CACHE_SIZE = 1e3,
 		getSetIndexPayload() {
 			if (!this.storyIndex)
 				throw new Error(
-					'getSetIndexPayload called before initialization'
+					'getSetIndexPayload called before initialization',
 				)
 			let stories = this.extract({ includeDocsOnly: !0 })
 			return {
@@ -9783,8 +9787,8 @@ var CSF_CACHE_SIZE = 1e3,
 										parameters: stories[id].parameters,
 								  }
 								: entry,
-						]
-					)
+						],
+					),
 				),
 			}
 		}
@@ -9798,7 +9802,7 @@ var CSF_CACHE_SIZE = 1e3,
 				throw new Error('fromId called before initialization')
 			if (!this.cachedCSFFiles)
 				throw new Error(
-					'Cannot call fromId/raw() unless you call cacheAllCSFFiles() first.'
+					'Cannot call fromId/raw() unless you call cacheAllCSFFiles() first.',
 				)
 			let importPath
 			try {
@@ -9833,7 +9837,7 @@ function useSharedState(sharedId, defaultState) {
 					setState(s),
 				[`${SHARED_STATE_SET}-manager-${sharedId}`]: (s) => setState(s),
 			}),
-			[sharedId]
+			[sharedId],
 		),
 		emit = useChannel(allListeners, [sharedId])
 	return (
@@ -9872,7 +9876,7 @@ var stripExtension = (path) => {
 		return paths.filter((val, index) =>
 			index === paths.length - 1 && (val === prevVal || indexRe.test(val))
 				? !1
-				: ((prevVal = val), !0)
+				: ((prevVal = val), !0),
 		)
 	}
 function pathJoin(paths) {
@@ -9908,7 +9912,7 @@ var userOrAutoTitleFromSpecifier = (fileName, entry, userTitle) => {
 			let title = userOrAutoTitleFromSpecifier(
 				fileName,
 				storiesEntries[i],
-				userTitle
+				userTitle,
 			)
 			if (title) return title
 		}
@@ -9950,7 +9954,7 @@ var userOrAutoTitleFromSpecifier = (fileName, entry, userTitle) => {
 						: nameA.localeCompare(
 								nameB,
 								options2.locales ? options2.locales : void 0,
-								{ numeric: !0, sensitivity: 'accent' }
+								{ numeric: !0, sensitivity: 'accent' },
 						  )
 				}
 				let index = order.indexOf(nameA)
@@ -9974,7 +9978,7 @@ var userOrAutoTitleFromSpecifier = (fileName, entry, userTitle) => {
 			stories.sort(
 				(s1, s2) =>
 					fileNameOrder.indexOf(s1.importPath) -
-					fileNameOrder.indexOf(s2.importPath)
+					fileNameOrder.indexOf(s2.importPath),
 			)
 		return stories
 	},
@@ -10030,7 +10034,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 					let moduleExports = this.csfExports[path]
 					if (!moduleExports) throw new Error(`Unknown path: ${path}`)
 					return moduleExports
-				}
+				},
 			)
 		}
 		getStoryIndex(store) {
@@ -10043,7 +10047,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 							csfFile = store.processCSFFileWithCache(
 								exports,
 								importPath,
-								exports.default.title
+								exports.default.title,
 							),
 							storyLike
 						return (
@@ -10057,7 +10061,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 										story: entry.name,
 										kind: entry.title,
 										componentId: N(
-											entry.componentId || entry.title
+											entry.componentId || entry.title,
 										),
 										parameters: { fileName: importPath },
 								  }),
@@ -10068,14 +10072,14 @@ var import_qs2 = __toESM(require_lib(), 1),
 								this.projectAnnotations.parameters || {},
 							]
 						)
-					}
+					},
 				),
 				sortedV7
 			try {
 				sortedV7 = sortStoriesV6(
 					sortableV6,
 					storySortParameter,
-					fileNameOrder
+					fileNameOrder,
 				)
 			} catch (err) {
 				throw typeof storySortParameter == 'function'
@@ -10094,7 +10098,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 				v: 4,
 				entries: sortedV7.reduce(
 					(acc, s) => ((acc[s.id] = this.entries[s.id]), acc),
-					{}
+					{},
 				),
 			}
 		}
@@ -10103,7 +10107,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 				(Object.entries(this.entries).forEach(
 					([id, { importPath }]) => {
 						importPath === fileName && delete this.entries[id]
-					}
+					},
 				),
 				(this.csfExports[fileName] = {}))
 		}
@@ -10143,8 +10147,8 @@ var import_qs2 = __toESM(require_lib(), 1),
 			) {
 				logger.info(
 					`Unexpected default export without title in '${fileName}': ${JSON.stringify(
-						fileExports.default
-					)}`
+						fileExports.default,
+					)}`,
 				)
 				return
 			}
@@ -10160,7 +10164,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 					namedExport && (sortedExports[name2] = namedExport)
 				}))
 			let storyExports = Object.entries(sortedExports).filter(([key2]) =>
-					G(key2, defaultExport)
+					G(key2, defaultExport),
 				),
 				docsOptions = scope.DOCS_OPTIONS || {},
 				{ autodocs } = docsOptions,
@@ -10236,7 +10240,7 @@ var import_qs2 = __toESM(require_lib(), 1),
       ${warningAlternatives[method]}`)
 		if (!scope.__STORYBOOK_CLIENT_API__)
 			throw new Error(
-				`Singleton client API not yet initialized, cannot call \`${method}\`.`
+				`Singleton client API not yet initialized, cannot call \`${method}\`.`,
 			)
 	},
 	addDecorator = (decorator) => {
@@ -10291,7 +10295,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 					;(this.facade.projectAnnotations.parameters =
 						combineParameters(
 							this.facade.projectAnnotations.parameters,
-							parameters
+							parameters,
 						)),
 						globals2 &&
 							(this.facade.projectAnnotations.globals = {
@@ -10309,7 +10313,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 						[
 							this.facade.projectAnnotations.runStep,
 							stepRunner,
-						].filter(Boolean)
+						].filter(Boolean),
 					)
 				}),
 				(this.addLoader = (loader) => {
@@ -10332,19 +10336,19 @@ var import_qs2 = __toESM(require_lib(), 1),
 				}),
 				(this.addArgTypesEnhancer = (enhancer) => {
 					this.facade.projectAnnotations.argTypesEnhancers?.push(
-						enhancer
+						enhancer,
 					)
 				}),
 				(this._addedExports = {}),
 				(this.storiesOf = (kind, m2) => {
 					if (!kind && typeof kind != 'string')
 						throw new Error(
-							'Invalid or missing kind provided for stories, should be a string'
+							'Invalid or missing kind provided for stories, should be a string',
 						)
 					if (
 						(m2 ||
 							logger.warn(
-								`Missing 'module' parameter for story with a kind of '${kind}'. It will break your HMR`
+								`Missing 'module' parameter for story with a kind of '${kind}'. It will break your HMR`,
 							),
 						m2)
 					) {
@@ -10352,7 +10356,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 						proto.exports &&
 							proto.exports.default &&
 							logger.error(
-								`Illegal mix of CSF default export and storiesOf calls in a single file: ${proto.i}`
+								`Illegal mix of CSF default export and storiesOf calls in a single file: ${proto.i}`,
 							)
 					}
 					let baseFilename =
@@ -10404,7 +10408,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 						(api.add = (storyName, storyFn, parameters = {}) => {
 							if (((hasAdded = !0), typeof storyName != 'string'))
 								throw new Error(
-									`Invalid or missing storyName provided for a "${kind}" story.`
+									`Invalid or missing storyName provided for a "${kind}" story.`,
 								)
 							if (
 								!storyFn ||
@@ -10412,7 +10416,7 @@ var import_qs2 = __toESM(require_lib(), 1),
 								invalidStoryTypes.has(typeof storyFn)
 							)
 								throw new Error(
-									`Cannot load story "${storyName}" in "${kind}" due to invalid format. Storybook expected a function/object but received ${typeof storyFn} instead.`
+									`Cannot load story "${storyName}" in "${kind}" due to invalid format. Storybook expected a function/object but received ${typeof storyFn} instead.`,
 								)
 							let {
 									decorators,
@@ -10452,7 +10456,7 @@ Read more here: https://github.com/storybookjs/storybook/blob/master/MIGRATION.m
 						(api.addLoader = (loader) => {
 							if (hasAdded)
 								throw new Error(
-									'You cannot add a loader after the first story for a kind.'
+									'You cannot add a loader after the first story for a kind.',
 								)
 							return meta.loaders?.push(loader), api
 						}),
@@ -10469,7 +10473,7 @@ Read more here: https://github.com/storybookjs/storybook/blob/master/MIGRATION.m
 							return (
 								(meta.parameters = combineParameters(
 									meta.parameters,
-									parameters
+									parameters,
 								)),
 								component && (meta.component = component),
 								args2 &&
@@ -10497,14 +10501,14 @@ Read more here: https://github.com/storybookjs/storybook/blob/master/MIGRATION.m
 		getStoryIndex() {
 			if (!this.storyStore)
 				throw new Error(
-					'Cannot get story index before setting storyStore'
+					'Cannot get story index before setting storyStore',
 				)
 			return this.facade.getStoryIndex(this.storyStore)
 		}
 		_loadAddedExports() {
 			Object.entries(this._addedExports).forEach(
 				([fileName, fileExports]) =>
-					this.facade.addStoriesFromExports(fileName, fileExports)
+					this.facade.addStoriesFromExports(fileName, fileExports),
 			)
 		}
 		get _storyStore() {
@@ -12832,7 +12836,7 @@ var require_entities = __commonJS3({
 							codePoint > 65535 &&
 								((codePoint -= 65536),
 								(output += String.fromCharCode(
-									((codePoint >>> 10) & 1023) | 55296
+									((codePoint >>> 10) & 1023) | 55296,
 								)),
 								(codePoint = 56320 | (codePoint & 1023))),
 							(output += String.fromCharCode(codePoint)),
@@ -12867,12 +12871,12 @@ var require_entities = __commonJS3({
 				legacy_json_1 = __importDefault(require_legacy()),
 				xml_json_1 = __importDefault(require_xml()),
 				decode_codepoint_1 = __importDefault(
-					require_decode_codepoint()
+					require_decode_codepoint(),
 				),
 				strictEntityRe = /&(?:[a-zA-Z0-9]+|#[xX][\da-fA-F]+|#\d+);/g
 			;(exports.decodeXML = getStrictDecoder(xml_json_1.default)),
 				(exports.decodeHTMLStrict = getStrictDecoder(
-					entities_json_1.default
+					entities_json_1.default,
 				))
 			function getStrictDecoder(map2) {
 				var replace = getReplacer(map2)
@@ -12886,10 +12890,10 @@ var require_entities = __commonJS3({
 			exports.decodeHTML = (function () {
 				for (
 					var legacy = Object.keys(legacy_json_1.default).sort(
-							sorter
+							sorter,
 						),
 						keys = Object.keys(entities_json_1.default).sort(
-							sorter
+							sorter,
 						),
 						i = 0,
 						j = 0;
@@ -12903,7 +12907,7 @@ var require_entities = __commonJS3({
 						'&(?:' +
 							keys.join('|') +
 							'|#[xX][\\da-fA-F]+;?|#\\d+;?)',
-						'g'
+						'g',
 					),
 					replace = getReplacer(entities_json_1.default)
 				function replacer3(str) {
@@ -12919,10 +12923,10 @@ var require_entities = __commonJS3({
 						var secondChar = str.charAt(2)
 						return secondChar === 'X' || secondChar === 'x'
 							? decode_codepoint_1.default(
-									parseInt(str.substr(3), 16)
+									parseInt(str.substr(3), 16),
 							  )
 							: decode_codepoint_1.default(
-									parseInt(str.substr(2), 10)
+									parseInt(str.substr(2), 10),
 							  )
 					}
 					return map2[str.slice(1, -1)] || str
@@ -12990,7 +12994,7 @@ var require_entities = __commonJS3({
 						single.splice(
 							start2,
 							count,
-							single[start2] + '-' + single[end]
+							single[start2] + '-' + single[end],
 						)
 				}
 				return (
@@ -13033,7 +13037,7 @@ var require_entities = __commonJS3({
 			}
 			var reEscapeChars = new RegExp(
 				xmlReplacer.source + '|' + reNonASCII.source,
-				'g'
+				'g',
 			)
 			function escape2(data) {
 				return data.replace(reEscapeChars, singleCharReplacer)
@@ -13211,7 +13215,7 @@ var require_entities = __commonJS3({
 						Object.defineProperty(
 							target,
 							descriptor.key,
-							descriptor
+							descriptor,
 						)
 				}
 			}
@@ -13380,7 +13384,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						: token === 'xterm256'
 						? (result2 = pushForegroundColor(
 								stack,
-								options2.colors[data]
+								options2.colors[data],
 						  ))
 						: token === 'rgb' && (result2 = handleRgb(stack, data)),
 					result2
@@ -13393,13 +13397,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					rgb = color
 						.map(function (value2) {
 							return ('0' + Number(value2).toString(16)).substr(
-								-2
+								-2,
 							)
 						})
 						.join('')
 				return pushStyle(
 					stack,
-					(operation === 38 ? 'color:#' : 'background-color:#') + rgb
+					(operation === 38 ? 'color:#' : 'background-color:#') + rgb,
 				)
 			}
 			function handleDisplay(stack, code, options2) {
@@ -13429,7 +13433,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						22: function () {
 							return pushStyle(
 								stack,
-								'font-weight:normal;text-decoration:none;font-style:normal'
+								'font-weight:normal;text-decoration:none;font-style:normal',
 							)
 						},
 						23: function () {
@@ -13457,23 +13461,23 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						: 29 < code && code < 38
 						? (result2 = pushForegroundColor(
 								stack,
-								options2.colors[code - 30]
+								options2.colors[code - 30],
 						  ))
 						: 39 < code && code < 48
 						? (result2 = pushBackgroundColor(
 								stack,
-								options2.colors[code - 40]
+								options2.colors[code - 40],
 						  ))
 						: 89 < code && code < 98
 						? (result2 = pushForegroundColor(
 								stack,
-								options2.colors[8 + (code - 90)]
+								options2.colors[8 + (code - 90)],
 						  ))
 						: 99 < code &&
 						  code < 108 &&
 						  (result2 = pushBackgroundColor(
 								stack,
-								options2.colors[8 + (code - 100)]
+								options2.colors[8 + (code - 100)],
 						  )),
 					result2
 				)
@@ -13645,7 +13649,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				return (
 					token !== 'text' &&
 						((stickyStack = stickyStack.filter(
-							notCategory(categoryForCode(data))
+							notCategory(categoryForCode(data)),
 						)),
 						stickyStack.push({
 							token,
@@ -13663,7 +13667,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							(options2.colors = Object.assign(
 								{},
 								defaults.colors,
-								options2.colors
+								options2.colors,
 							)),
 						(this.options = Object.assign({}, defaults, options2)),
 						(this.stack = []),
@@ -13681,17 +13685,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 									options2 = this.options,
 									buf = []
 								return (
-									this.stickyStack.forEach(function (
-										element
-									) {
-										var output = generateOutput(
-											stack,
-											element.token,
-											element.data,
-											options2
-										)
-										output && buf.push(output)
-									}),
+									this.stickyStack.forEach(
+										function (element) {
+											var output = generateOutput(
+												stack,
+												element.token,
+												element.data,
+												options2,
+											)
+											output && buf.push(output)
+										},
+									),
 									tokenize(
 										input.join(''),
 										options2,
@@ -13700,7 +13704,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 												stack,
 												token,
 												data,
-												options2
+												options2,
 											)
 											output && buf.push(output),
 												options2.stream &&
@@ -13708,9 +13712,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 														updateStickyStack(
 															_this.stickyStack,
 															token,
-															data
+															data,
 														))
-										}
+										},
 									),
 									stack.length &&
 										buf.push(resetStyles(stack)),
@@ -13744,7 +13748,7 @@ var StoryRender = class {
 			id,
 			viewMode,
 			renderOptions = { autoplay: !0, forceInitialArgs: !1 },
-			story
+			story,
 		) {
 			;(this.channel = channel),
 				(this.store = store),
@@ -13784,7 +13788,7 @@ var StoryRender = class {
 						this.story = await this.store.loadStory({
 							storyId: this.id,
 						})
-					}
+					},
 				),
 				this.abortController.signal.aborted)
 			)
@@ -13887,7 +13891,7 @@ var StoryRender = class {
 					(await this.runPhase(abortSignal, 'rendering', async () => {
 						let teardown = await this.renderToScreen(
 							renderContext,
-							canvasElement
+							canvasElement,
 						)
 						this.teardownRender = teardown || (() => {})
 					}),
@@ -13908,7 +13912,7 @@ var StoryRender = class {
 							'playing',
 							async () => {
 								await playFunction(renderContext.storyContext)
-							}
+							},
 						),
 							await this.runPhase(abortSignal, 'played')
 					} catch (error) {
@@ -13920,9 +13924,9 @@ var StoryRender = class {
 								async () => {
 									this.channel.emit(
 										PLAY_FUNCTION_THREW_EXCEPTION,
-										serializeError(error)
+										serializeError(error),
 									)
-								}
+								},
 							),
 							this.story.parameters
 								.throwPlayFunctionExceptions !== !1)
@@ -13933,7 +13937,7 @@ var StoryRender = class {
 						return
 				}
 				await this.runPhase(abortSignal, 'completed', async () =>
-					this.channel.emit(STORY_RENDERED, id)
+					this.channel.emit(STORY_RENDERED, id),
 				)
 			} catch (err) {
 				;(this.phase = 'errored'), this.callbacks.showException(err)
@@ -13979,29 +13983,29 @@ var StoryRender = class {
 				(this.importFn = importFn),
 				this.setupListeners(),
 				this.getProjectAnnotationsOrRenderError(
-					getProjectAnnotations
+					getProjectAnnotations,
 				).then((projectAnnotations) =>
-					this.initializeWithProjectAnnotations(projectAnnotations)
+					this.initializeWithProjectAnnotations(projectAnnotations),
 				)
 			)
 		}
 		setupListeners() {
 			this.serverChannel?.on(
 				STORY_INDEX_INVALIDATED,
-				this.onStoryIndexChanged.bind(this)
+				this.onStoryIndexChanged.bind(this),
 			),
 				this.channel.on(
 					UPDATE_GLOBALS,
-					this.onUpdateGlobals.bind(this)
+					this.onUpdateGlobals.bind(this),
 				),
 				this.channel.on(
 					UPDATE_STORY_ARGS,
-					this.onUpdateArgs.bind(this)
+					this.onUpdateArgs.bind(this),
 				),
 				this.channel.on(RESET_STORY_ARGS, this.onResetArgs.bind(this)),
 				this.channel.on(
 					FORCE_RE_RENDER,
-					this.onForceReRender.bind(this)
+					this.onForceReRender.bind(this),
 				),
 				this.channel.on(FORCE_REMOUNT, this.onForceRemount.bind(this))
 		}
@@ -14012,7 +14016,7 @@ var StoryRender = class {
 					if (
 						(projectAnnotations.renderToDOM &&
 							deprecate(
-								'`renderToDOM` is deprecated, please rename to `renderToCanvas`'
+								'`renderToDOM` is deprecated, please rename to `renderToCanvas`',
 							),
 						(this.renderToCanvas =
 							projectAnnotations.renderToCanvas ||
@@ -14032,7 +14036,7 @@ var StoryRender = class {
 					throw (
 						(this.renderPreviewEntryError(
 							'Error reading preview.js:',
-							err
+							err,
 						),
 						err)
 					)
@@ -14047,11 +14051,11 @@ var StoryRender = class {
 			else {
 				if (!this.getStoryIndex)
 					throw new Error(
-						'No `getStoryIndex` passed defined in v6 mode'
+						'No `getStoryIndex` passed defined in v6 mode',
 					)
 				storyIndexPromise =
 					import_synchronous_promise3.SynchronousPromise.resolve().then(
-						this.getStoryIndex
+						this.getStoryIndex,
 					)
 			}
 			return storyIndexPromise
@@ -14060,7 +14064,7 @@ var StoryRender = class {
 					throw (
 						(this.renderPreviewEntryError(
 							'Error loading story index:',
-							err
+							err,
 						),
 						err)
 					)
@@ -14087,7 +14091,7 @@ var StoryRender = class {
 		initializeWithStoryIndex(storyIndex) {
 			if (!this.importFn)
 				throw new Error(
-					'Cannot call initializeWithStoryIndex before initialization'
+					'Cannot call initializeWithStoryIndex before initialization',
 				)
 			return this.storyStore.initialize({
 				storyIndex,
@@ -14099,7 +14103,7 @@ var StoryRender = class {
 			delete this.previewEntryError
 			let projectAnnotations =
 				await this.getProjectAnnotationsOrRenderError(
-					getProjectAnnotations
+					getProjectAnnotations,
 				)
 			if (!this.storyStore.projectAnnotations) {
 				await this.initializeWithProjectAnnotations(projectAnnotations)
@@ -14122,7 +14126,7 @@ var StoryRender = class {
 					throw (
 						(this.renderPreviewEntryError(
 							'Error loading story index:',
-							err
+							err,
 						),
 						err)
 					)
@@ -14134,7 +14138,7 @@ var StoryRender = class {
 		async onUpdateGlobals({ globals: globals2 }) {
 			if (!this.storyStore.globals)
 				throw new Error(
-					'Cannot call onUpdateGlobals before initialization'
+					'Cannot call onUpdateGlobals before initialization',
 				)
 			this.storyStore.globals.update(globals2),
 				await Promise.all(this.storyRenders.map((r) => r.rerender())),
@@ -14150,9 +14154,9 @@ var StoryRender = class {
 						.filter(
 							(r) =>
 								r.id === storyId &&
-								!r.renderOptions.forceInitialArgs
+								!r.renderOptions.forceInitialArgs,
 						)
-						.map((r) => r.rerender())
+						.map((r) => r.rerender()),
 				),
 				this.channel.emit(STORY_ARGS_UPDATED, {
 					storyId,
@@ -14174,7 +14178,7 @@ var StoryRender = class {
 					(acc, argName) => (
 						(acc[argName] = story.initialArgs[argName]), acc
 					),
-					{}
+					{},
 				)
 			await this.onUpdateArgs({ storyId, updatedArgs })
 		}
@@ -14185,13 +14189,13 @@ var StoryRender = class {
 			await Promise.all(
 				this.storyRenders
 					.filter((r) => r.id === storyId)
-					.map((r) => r.remount())
+					.map((r) => r.remount()),
 			)
 		}
 		renderStoryToElement(story, element, callbacks, options2) {
 			if (!this.renderToCanvas)
 				throw new Error(
-					'Cannot call renderStoryToElement before initialization'
+					'Cannot call renderStoryToElement before initialization',
 				)
 			let render = new StoryRender(
 				this.channel,
@@ -14201,7 +14205,7 @@ var StoryRender = class {
 				story.id,
 				'docs',
 				options2,
-				story
+				story,
 			)
 			return (
 				render.renderToElement(element),
@@ -14213,7 +14217,7 @@ var StoryRender = class {
 		}
 		async teardownRender(render, { viewModeChanged } = {}) {
 			;(this.storyRenders = this.storyRenders.filter(
-				(r) => r !== render
+				(r) => r !== render,
 			)),
 				await render?.teardown?.({ viewModeChanged })
 		}
@@ -14245,7 +14249,7 @@ var StoryRender = class {
 					let storyId = this.nameToStoryId.get(storyName)
 					if (storyId) return storyId
 					throw new Error(
-						`No story found with that name: ${storyName}`
+						`No story found with that name: ${storyName}`,
 					)
 				}),
 				(this.componentStories = () => this.componentStoriesValue),
@@ -14253,14 +14257,14 @@ var StoryRender = class {
 					if (!storyId) {
 						if (!this.primaryStory)
 							throw new Error(
-								'No primary story defined for docs entry. Did you forget to use `<Meta>`?'
+								'No primary story defined for docs entry. Did you forget to use `<Meta>`?',
 							)
 						return this.primaryStory
 					}
 					let csfFile = this.storyIdToCSFFile.get(storyId)
 					if (!csfFile)
 						throw new Error(
-							`Called \`storyById\` for story that was never loaded: ${storyId}`
+							`Called \`storyById\` for story that was never loaded: ${storyId}`,
 						)
 					return this.store.storyFromCSFFile({ storyId, csfFile })
 				}),
@@ -14283,7 +14287,7 @@ var StoryRender = class {
 			this.exportsToCSFFile.set(csfFile.moduleExports, csfFile),
 				this.exportsToCSFFile.set(
 					csfFile.moduleExports.default,
-					csfFile
+					csfFile,
 				),
 				this.store
 					.componentStoriesFromCSFFile({ csfFile })
@@ -14292,14 +14296,14 @@ var StoryRender = class {
 						this.storyIdToCSFFile.set(annotation.id, csfFile),
 							this.exportToStory.set(
 								annotation.moduleExport,
-								story
+								story,
 							)
 					})
 		}
 		attachCSFFile(csfFile) {
 			if (!this.exportsToCSFFile.has(csfFile.moduleExports))
 				throw new Error(
-					'Cannot attach a CSF file that has not been referenced'
+					'Cannot attach a CSF file that has not been referenced',
 				)
 			;(this.attachedCSFFile = csfFile),
 				this.store
@@ -14314,7 +14318,7 @@ var StoryRender = class {
 			let resolved = this.resolveModuleExport(metaExports)
 			if (resolved.type !== 'meta')
 				throw new Error(
-					'<Meta of={} /> must reference a CSF file module export or meta export. Did you mistakenly reference your component instead of your CSF file?'
+					'<Meta of={} /> must reference a CSF file module export or meta export. Did you mistakenly reference your component instead of your CSF file?',
 				)
 			attach && this.attachCSFFile(resolved.csfFile)
 		}
@@ -14322,7 +14326,7 @@ var StoryRender = class {
 			let { projectAnnotations } = this.store
 			if (!projectAnnotations)
 				throw new Error(
-					"Can't get projectAnnotations from DocsContext before they are initialized"
+					"Can't get projectAnnotations from DocsContext before they are initialized",
 				)
 			return projectAnnotations
 		}
@@ -14330,20 +14334,20 @@ var StoryRender = class {
 			if (moduleExportType === 'story') {
 				if (!this.primaryStory)
 					throw new Error(
-						'No primary story attached to this docs file, did you forget to use <Meta of={} />?'
+						'No primary story attached to this docs file, did you forget to use <Meta of={} />?',
 					)
 				return { type: 'story', story: this.primaryStory }
 			}
 			if (!this.attachedCSFFile)
 				throw new Error(
-					'No CSF file attached to this docs file, did you forget to use <Meta of={} />?'
+					'No CSF file attached to this docs file, did you forget to use <Meta of={} />?',
 				)
 			if (moduleExportType === 'meta')
 				return { type: 'meta', csfFile: this.attachedCSFFile }
 			let { component } = this.attachedCSFFile.meta
 			if (!component)
 				throw new Error(
-					'Attached CSF file does not defined a component, did you forget to export one?'
+					'Attached CSF file does not defined a component, did you forget to export one?',
 				)
 			return { type: 'component', component }
 		}
@@ -14367,7 +14371,7 @@ var StoryRender = class {
 						? 'component or unknown'
 						: resolved.type
 				throw new Error(esm_default`Invalid value passed to the 'of' prop. The value was resolved to a '${prettyType}' type but the only types for this block are: ${validTypes.join(
-					', '
+					', ',
 				)}.
         - Did you pass a component to the 'of' prop when the block only supports a story or a meta?
         - ... or vice versa?
@@ -14385,7 +14389,7 @@ var StoryRender = class {
 						preparedMeta: prepareMeta(
 							resolved.csfFile.meta,
 							this.projectAnnotations,
-							resolved.csfFile.moduleExports.default
+							resolved.csfFile.moduleExports.default,
 						),
 					}
 				case 'story':
@@ -14412,14 +14416,14 @@ var StoryRender = class {
 		async prepare() {
 			this.preparing = !0
 			let { entryExports, csfFiles = [] } = await this.store.loadEntry(
-				this.id
+				this.id,
 			)
 			if (this.torndown) throw PREPARE_ABORTED
 			let { importPath, title } = this.entry,
 				primaryCsfFile = this.store.processCSFFileWithCache(
 					entryExports,
 					importPath,
-					title
+					title,
 				),
 				primaryStoryId = Object.keys(primaryCsfFile.stories)[0]
 			;(this.story = this.store.storyFromCSFFile({
@@ -14443,11 +14447,11 @@ var StoryRender = class {
 				this.channel,
 				this.store,
 				renderStoryToElement,
-				this.csfFiles
+				this.csfFiles,
 			)
 			return (
 				this.csfFiles.forEach((csfFile) =>
-					docsContext.attachCSFFile(csfFile)
+					docsContext.attachCSFFile(csfFile),
 				),
 				docsContext
 			)
@@ -14459,7 +14463,7 @@ var StoryRender = class {
 				{ docs: docsParameter } = this.story.parameters || {}
 			if (!docsParameter)
 				throw new Error(
-					'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed'
+					'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed',
 				)
 			let renderer = await docsParameter.renderer(),
 				{ render } = renderer,
@@ -14503,7 +14507,7 @@ var StoryRender = class {
 		async prepare() {
 			this.preparing = !0
 			let { entryExports, csfFiles = [] } = await this.store.loadEntry(
-				this.id
+				this.id,
 			)
 			if (this.torndown) throw PREPARE_ABORTED
 			;(this.csfFiles = csfFiles),
@@ -14524,7 +14528,7 @@ var StoryRender = class {
 				this.channel,
 				this.store,
 				renderStoryToElement,
-				this.csfFiles
+				this.csfFiles,
 			)
 		}
 		async renderToElement(canvasElement, renderStoryToElement) {
@@ -14538,7 +14542,7 @@ var StoryRender = class {
 				{ docs } = this.store.projectAnnotations.parameters || {}
 			if (!docs)
 				throw new Error(
-					'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed'
+					'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed',
 				)
 			let docsParameter = { ...docs, page: this.exports.default },
 				renderer = await docs.renderer(),
@@ -14590,15 +14594,15 @@ var PreviewWithSelection = class extends Preview {
 				(globalWindow.onkeydown = this.onKeydown.bind(this)),
 				this.channel.on(
 					SET_CURRENT_STORY,
-					this.onSetCurrentStory.bind(this)
+					this.onSetCurrentStory.bind(this),
 				),
 				this.channel.on(
 					UPDATE_QUERY_PARAMS,
-					this.onUpdateQueryParams.bind(this)
+					this.onUpdateQueryParams.bind(this),
 				),
 				this.channel.on(
 					PRELOAD_ENTRIES,
-					this.onPreloadStories.bind(this)
+					this.onPreloadStories.bind(this),
 				)
 		}
 		initializeWithProjectAnnotations(projectAnnotations) {
@@ -14609,7 +14613,7 @@ var PreviewWithSelection = class extends Preview {
 		async setInitialGlobals() {
 			if (!this.storyStore.globals)
 				throw new Error(
-					'Cannot call setInitialGlobals before initialization'
+					'Cannot call setInitialGlobals before initialization',
 				)
 			let { globals: globals2 } =
 				this.selectionStore.selectionSpecifier || {}
@@ -14624,16 +14628,16 @@ var PreviewWithSelection = class extends Preview {
 						scope.FEATURES?.storyStoreV7 ||
 							this.channel.emit(
 								SET_INDEX,
-								this.storyStore.getSetIndexPayload()
+								this.storyStore.getSetIndexPayload(),
 							),
 						this.selectSpecifiedStory()
-					)
+					),
 				)
 		}
 		async selectSpecifiedStory() {
 			if (!this.storyStore.storyIndex)
 				throw new Error(
-					'Cannot call selectSpecifiedStory before initialization'
+					'Cannot call selectSpecifiedStory before initialization',
 				)
 			if (!this.selectionStore.selectionSpecifier) {
 				this.renderMissingStory()
@@ -14643,7 +14647,7 @@ var PreviewWithSelection = class extends Preview {
 					this.selectionStore.selectionSpecifier,
 				entry =
 					this.storyStore.storyIndex.entryFromSpecifier(
-						storySpecifier
+						storySpecifier,
 					)
 			if (!entry) {
 				storySpecifier === '*'
@@ -14653,7 +14657,7 @@ var PreviewWithSelection = class extends Preview {
             Couldn't find any stories in your Storybook.
             - Please check your stories field of your main.js config.
             - Also check the browser console and terminal for error messages.
-          `)
+          `),
 					  )
 					: this.renderStoryLoadingException(
 							storySpecifier,
@@ -14662,7 +14666,7 @@ var PreviewWithSelection = class extends Preview {
             - Are you sure a story with that id exists?
             - Please check your stories field of your main.js config.
             - Also check the browser console and terminal for error messages.
-          `)
+          `),
 					  )
 				return
 			}
@@ -14670,11 +14674,11 @@ var PreviewWithSelection = class extends Preview {
 			this.selectionStore.setSelection({ storyId, viewMode }),
 				this.channel.emit(
 					STORY_SPECIFIED,
-					this.selectionStore.selection
+					this.selectionStore.selection,
 				),
 				this.channel.emit(
 					CURRENT_STORY_WAS_SET,
-					this.selectionStore.selection
+					this.selectionStore.selection,
 				),
 				await this.renderSelection({ persistedArgs: args2 })
 		}
@@ -14689,7 +14693,7 @@ var PreviewWithSelection = class extends Preview {
 				scope.FEATURES?.storyStoreV7 ||
 					this.channel.emit(
 						SET_INDEX,
-						await this.storyStore.getSetIndexPayload()
+						await this.storyStore.getSetIndexPayload(),
 					),
 				this.selectionStore.selection
 					? await this.renderSelection()
@@ -14730,7 +14734,7 @@ var PreviewWithSelection = class extends Preview {
 				}),
 				this.channel.emit(
 					CURRENT_STORY_WAS_SET,
-					this.selectionStore.selection
+					this.selectionStore.selection,
 				),
 				this.renderSelection()
 		}
@@ -14748,19 +14752,19 @@ var PreviewWithSelection = class extends Preview {
 		}
 		async onPreloadStories({ ids }) {
 			await Promise.allSettled(
-				ids.map((id) => this.storyStore.loadEntry(id))
+				ids.map((id) => this.storyStore.loadEntry(id)),
 			)
 		}
 		async renderSelection({ persistedArgs } = {}) {
 			let { renderToCanvas } = this
 			if (!renderToCanvas)
 				throw new Error(
-					'Cannot call renderSelection before initialization'
+					'Cannot call renderSelection before initialization',
 				)
 			let { selection } = this.selectionStore
 			if (!selection)
 				throw new Error(
-					'Cannot call renderSelection as no selection was made'
+					'Cannot call renderSelection as no selection was made',
 				)
 			let { storyId } = selection,
 				entry
@@ -14790,20 +14794,20 @@ var PreviewWithSelection = class extends Preview {
 						),
 						this.mainStoryCallbacks(storyId),
 						storyId,
-						'story'
+						'story',
 				  ))
 				: isMdxEntry(entry)
 				? (render = new MdxDocsRender(
 						this.channel,
 						this.storyStore,
 						entry,
-						this.mainStoryCallbacks(storyId)
+						this.mainStoryCallbacks(storyId),
 				  ))
 				: (render = new CsfDocsRender(
 						this.channel,
 						this.storyStore,
 						entry,
-						this.mainStoryCallbacks(storyId)
+						this.mainStoryCallbacks(storyId),
 				  ))
 			let lastSelection = this.currentSelection
 			this.currentSelection = selection
@@ -14824,7 +14828,7 @@ var PreviewWithSelection = class extends Preview {
 					throw new Error('Render has not been prepared!')
 				this.storyStore.args.updateFromPersisted(
 					render.story,
-					persistedArgs
+					persistedArgs,
 				)
 			}
 			if (
@@ -14876,17 +14880,17 @@ var PreviewWithSelection = class extends Preview {
 					throw new Error('Render has not been prepared!')
 				this.storyRenders.push(render),
 					this.currentRender.renderToElement(
-						this.view.prepareForStory(render.story)
+						this.view.prepareForStory(render.story),
 					)
 			} else
 				this.currentRender.renderToElement(
 					this.view.prepareForDocs(),
-					this.renderStoryToElement.bind(this)
+					this.renderStoryToElement.bind(this),
 				)
 		}
 		async teardownRender(render, { viewModeChanged = !1 } = {}) {
 			;(this.storyRenders = this.storyRenders.filter(
-				(r) => r !== render
+				(r) => r !== render,
 			)),
 				await render?.teardown?.({ viewModeChanged })
 		}
@@ -15011,7 +15015,7 @@ var PreviewWithSelection = class extends Preview {
 			.split(';')
 			.map((part) => part.replace('=', '~').replace(':', '='))
 		return Object.entries(
-			import_qs4.default.parse(parts.join(';'), QS_OPTIONS)
+			import_qs4.default.parse(parts.join(';'), QS_OPTIONS),
 		).reduce(
 			(acc, [key2, value2]) =>
 				validateArgs(key2, value2)
@@ -15022,7 +15026,7 @@ var PreviewWithSelection = class extends Preview {
       More info: https://storybook.js.org/docs/react/writing-stories/args#setting-args-through-the-url
     `),
 					  acc),
-			{}
+			{},
 		)
 	},
 	{ history, document: document2 } = scope
@@ -15045,7 +15049,7 @@ var getQueryString = ({ selection, extraParams }) => {
 					viewMode: selection.viewMode,
 				}),
 			},
-			{ encode: !1, addQueryPrefix: !0 }
+			{ encode: !1, addQueryPrefix: !0 },
 		)
 	},
 	setPath = (selection) => {
@@ -15056,7 +15060,7 @@ var getQueryString = ({ selection, extraParams }) => {
 			history.replaceState(
 				{},
 				'',
-				`${document2.location.pathname}${query}${hash}`
+				`${document2.location.pathname}${query}${hash}`,
 			)
 	},
 	isObject4 = (val) =>
@@ -15108,7 +15112,7 @@ var getQueryString = ({ selection, extraParams }) => {
 			history.replaceState(
 				{},
 				'',
-				`${document2.location.pathname}${query}${hash}`
+				`${document2.location.pathname}${query}${hash}`,
 			)
 		}
 	},
@@ -15141,7 +15145,7 @@ var getQueryString = ({ selection, extraParams }) => {
 			this.testing = !1
 			let { __SPECIAL_TEST_PARAMETER__ } = import_qs5.default.parse(
 				document22.location.search,
-				{ ignoreQueryPrefix: !0 }
+				{ ignoreQueryPrefix: !0 },
 			)
 			switch (__SPECIAL_TEST_PARAMETER__) {
 				case 'preparing-story': {
@@ -15194,7 +15198,7 @@ var getQueryString = ({ selection, extraParams }) => {
 			layoutClassMap[layout] ||
 				logger.warn(dedent`The desired layout: ${layout} is not a valid option.
          The possible options are: ${Object.keys(layoutClassMap).join(
-				', '
+				', ',
 			)}, none.`)
 		}
 		showMode(mode) {
@@ -15232,7 +15236,7 @@ var getQueryString = ({ selection, extraParams }) => {
 					? this.showMode('PREPARING_STORY')
 					: (this.preparingTimeout = setTimeout(
 							() => this.showMode('PREPARING_STORY'),
-							PREPARING_DELAY
+							PREPARING_DELAY,
 					  ))
 		}
 		showPreparingDocs({ immediate = !1 } = {}) {
@@ -15241,7 +15245,7 @@ var getQueryString = ({ selection, extraParams }) => {
 					? this.showMode('PREPARING_DOCS')
 					: (this.preparingTimeout = setTimeout(
 							() => this.showMode('PREPARING_DOCS'),
-							PREPARING_DELAY
+							PREPARING_DELAY,
 					  ))
 		}
 		showMain() {
@@ -15328,14 +15332,14 @@ function simulatePageLoad($container) {
 			let typeAttr = $script.getAttribute('type')
 			;(!typeAttr || runScriptTypes.includes(typeAttr)) &&
 				scriptsToExecute.push((callback) =>
-					insertScript($script, callback, $scriptsRoot)
+					insertScript($script, callback, $scriptsRoot),
 				)
 		}),
 			scriptsToExecute.length &&
 				insertScriptsSequentially(
 					scriptsToExecute,
 					simulateDOMContentLoaded,
-					void 0
+					void 0,
 				)
 	} else simulateDOMContentLoaded()
 }
@@ -15354,7 +15358,7 @@ function executeLoadable(loadable) {
 						typeof req.resolve == 'function'
 							? req.resolve(filename)
 							: filename,
-						fileExports
+						fileExports,
 					)
 				} catch (error) {
 					let errorString =
@@ -15363,7 +15367,7 @@ function executeLoadable(loadable) {
  ${error.stack}`
 							: error.toString()
 					logger.error(
-						`Unexpected error while loading ${filename}: ${errorString}`
+						`Unexpected error while loading ${filename}: ${errorString}`,
 					)
 				}
 			})
@@ -15375,13 +15379,13 @@ function executeLoadable(loadable) {
 					exported.map((fileExports, index) => [
 						`exports-map-${index}`,
 						fileExports,
-					])
+					]),
 			  ))
 			: exported &&
 			  logger.warn(
 					`Loader function passed to 'configure' should return void or an array of module exports that all contain a 'default' export. Received: ${JSON.stringify(
-						exported
-					)}`
+						exported,
+					)}`,
 			  )
 	}
 	return exportsMap
@@ -15399,7 +15403,7 @@ function executeLoadableForChanges(loadable, m2) {
 		.filter(([, fileExports]) => !!fileExports.default)
 		.filter(
 			([fileName, fileExports]) =>
-				lastExportsMap.get(fileName) !== fileExports
+				lastExportsMap.get(fileName) !== fileExports,
 		)
 		.forEach(([fileName, fileExports]) => added.set(fileName, fileExports))
 	let removed = new Map()
@@ -15417,7 +15421,7 @@ function executeLoadableForChanges(loadable, m2) {
 var { FEATURES } = scope,
 	removedApi = (name2) => () => {
 		throw new Error(
-			`@storybook/client-api:${name2} was removed in storyStoreV7.`
+			`@storybook/client-api:${name2} was removed in storyStoreV7.`,
 		)
 	}
 function start(renderToCanvas, { decorateStory: decorateStory2, render } = {}) {
@@ -15455,7 +15459,7 @@ function start(renderToCanvas, { decorateStory: decorateStory2, render } = {}) {
 				renderer,
 				loadable,
 				m2,
-				disableBackwardCompatibility = !0
+				disableBackwardCompatibility = !0,
 			) {
 				if (disableBackwardCompatibility)
 					throw new Error('unexpected configure() call')
@@ -15463,7 +15467,7 @@ function start(renderToCanvas, { decorateStory: decorateStory2, render } = {}) {
 				let getProjectAnnotations = () => {
 					let { added, removed } = executeLoadableForChanges(
 						loadable,
-						m2
+						m2,
 					)
 					return (
 						clientApi._loadAddedExports(),
@@ -15471,11 +15475,11 @@ function start(renderToCanvas, { decorateStory: decorateStory2, render } = {}) {
 							([fileName, fileExports]) =>
 								clientApi.facade.addStoriesFromExports(
 									fileName,
-									fileExports
-								)
+									fileExports,
+								),
 						),
 						Array.from(removed.entries()).forEach(([fileName]) =>
-							clientApi.facade.clearFilenameExports(fileName)
+							clientApi.facade.clearFilenameExports(fileName),
 						),
 						{
 							render,

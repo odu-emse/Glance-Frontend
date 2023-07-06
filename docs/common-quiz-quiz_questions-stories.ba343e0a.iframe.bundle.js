@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./components/common/quiz/quiz_questions.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -73,7 +73,7 @@
 				_Default$parameters2,
 				_Default$parameters2$,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				__jsx = react.createElement,
@@ -87,11 +87,11 @@
 						setSelectedOption = _useState[1],
 						handleChange = function handleChange(e) {
 							setSelectedOption(e.target.value)
-							var selectedAnswer = options.find(function (
-								option
-							) {
-								return option.text === e.target.value
-							})
+							var selectedAnswer = options.find(
+								function (option) {
+									return option.text === e.target.value
+								},
+							)
 							updateAnswer(questionNumber, selectedAnswer.id)
 						}
 					return __jsx(
@@ -104,10 +104,10 @@
 								'span',
 								{ className: 'mr-3' },
 								questionNumber,
-								'.'
+								'.',
 							),
 							' ',
-							question
+							question,
 						),
 						__jsx(
 							'ul',
@@ -139,12 +139,12 @@
 										__jsx(
 											'li',
 											{ className: 'list-none' },
-											option.text
-										)
-									)
+											option.text,
+										),
+									),
 								)
-							})
-						)
+							}),
+						),
 					)
 				}
 			;(QuizQuestion.displayName = 'QuizQuestion'),
@@ -212,10 +212,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -231,13 +229,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -271,7 +272,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -289,11 +290,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

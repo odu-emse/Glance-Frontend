@@ -39,7 +39,7 @@ export const Thread: React.FC<ThreadProps> = ({
 	useEffect(() => {
 		if (upvotesProp) {
 			const initialIsUpvoted = upvotesProp.some(
-				(upvote) => upvote.id === user.id
+				(upvote) => upvote.id === user.id,
 			)
 			setIsUpvoted(initialIsUpvoted)
 			setUpvotes(upvotesProp.length)
@@ -58,7 +58,7 @@ export const Thread: React.FC<ThreadProps> = ({
 			`,
 				{
 					input: threadId,
-				}
+				},
 			)
 		}, false)
 			.then(() => {
@@ -82,7 +82,7 @@ export const Thread: React.FC<ThreadProps> = ({
 			`,
 				{
 					input: threadId,
-				}
+				},
 			)
 		}, false)
 			.then(() => {
@@ -115,7 +115,7 @@ export const Thread: React.FC<ThreadProps> = ({
 					threadID: threadId,
 					commentBody,
 					commentAuthor: author,
-				}
+				},
 			)
 		}, false).catch((err) => {
 			console.log(err)
@@ -233,7 +233,7 @@ export const Thread: React.FC<ThreadProps> = ({
 							addCommentToThread(
 								currentThread.current.id,
 								commentBody,
-								user.id
+								user.id,
 							)
 							setAddComment(false)
 							setCommentBody(null)

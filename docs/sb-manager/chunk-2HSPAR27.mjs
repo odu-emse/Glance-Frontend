@@ -107,7 +107,7 @@ var deprecate = once('warn'),
 					argArray.push(
 						args[0]
 							.replace(startTagRe, '%c')
-							.replace(endTagRe, '%c')
+							.replace(endTagRe, '%c'),
 					);
 					(reResultArray = startTagRe.exec(args[0]));
 
@@ -134,7 +134,7 @@ var __create = Object.create,
 				mod ||
 					(0, cb[__getOwnPropNames(cb)[0]])(
 						(mod = { exports: {} }).exports,
-						mod
+						mod,
 					),
 				mod.exports
 			)
@@ -158,7 +158,7 @@ var __create = Object.create,
 			isNodeMode || !mod || !mod.__esModule
 				? __defProp(target, 'default', { value: mod, enumerable: !0 })
 				: target,
-			mod
+			mod,
 		)
 	)
 function _extends() {
@@ -180,7 +180,7 @@ function _extends() {
 function _assertThisInitialized(self2) {
 	if (self2 === void 0)
 		throw new ReferenceError(
-			"this hasn't been initialised - super() hasn't been called"
+			"this hasn't been initialised - super() hasn't been called",
 		)
 	return self2
 }
@@ -219,7 +219,7 @@ function _isNativeReflectConstruct() {
 	try {
 		return (
 			Boolean.prototype.valueOf.call(
-				Reflect.construct(Boolean, [], function () {})
+				Reflect.construct(Boolean, [], function () {}),
 			),
 			!0
 		)
@@ -251,7 +251,7 @@ function _wrapNativeSuper(Class) {
 			if (Class2 === null || !_isNativeFunction(Class2)) return Class2
 			if (typeof Class2 != 'function')
 				throw new TypeError(
-					'Super expression must either be null or a function'
+					'Super expression must either be null or a function',
 				)
 			if (typeof _cache < 'u') {
 				if (_cache.has(Class2)) return _cache.get(Class2)
@@ -261,7 +261,7 @@ function _wrapNativeSuper(Class) {
 				return _construct(
 					Class2,
 					arguments,
-					_getPrototypeOf(this).constructor
+					_getPrototypeOf(this).constructor,
 				)
 			}
 			return (
@@ -541,7 +541,7 @@ var PolishedError = (function (_Error) {
 			(_this =
 				_Error.call(
 					this,
-					format.apply(void 0, [ERRORS[code]].concat(args))
+					format.apply(void 0, [ERRORS[code]].concat(args)),
 				) || this),
 			_assertThisInitialized(_this)
 		)
@@ -764,7 +764,7 @@ function parseToRgb(color2) {
 		var alpha = parseFloat(
 			(
 				parseInt('' + normalizedColor[7] + normalizedColor[8], 16) / 255
-			).toFixed(2)
+			).toFixed(2),
 		)
 		return {
 			red: parseInt('' + normalizedColor[1] + normalizedColor[2], 16),
@@ -783,7 +783,7 @@ function parseToRgb(color2) {
 		var _alpha = parseFloat(
 			(
 				parseInt('' + normalizedColor[4] + normalizedColor[4], 16) / 255
-			).toFixed(2)
+			).toFixed(2),
 		)
 		return {
 			red: parseInt('' + normalizedColor[1] + normalizedColor[1], 16),
@@ -902,7 +902,7 @@ function colorToHex(color2) {
 }
 function convertToHex(red, green, blue) {
 	return reduceHexValue$1(
-		'#' + colorToHex(red) + colorToHex(green) + colorToHex(blue)
+		'#' + colorToHex(red) + colorToHex(green) + colorToHex(blue),
 	)
 }
 function hslToHex(hue, saturation, lightness) {
@@ -959,14 +959,14 @@ function rgb(value, green, blue) {
 		typeof blue == 'number'
 	)
 		return reduceHexValue$1(
-			'#' + numberToHex(value) + numberToHex(green) + numberToHex(blue)
+			'#' + numberToHex(value) + numberToHex(green) + numberToHex(blue),
 		)
 	if (typeof value == 'object' && green === void 0 && blue === void 0)
 		return reduceHexValue$1(
 			'#' +
 				numberToHex(value.red) +
 				numberToHex(value.green) +
-				numberToHex(value.blue)
+				numberToHex(value.blue),
 		)
 	throw new PolishedError(6)
 }
@@ -1082,7 +1082,7 @@ function darken(amount, color2) {
 	return toColorString(
 		_extends({}, hslColor, {
 			lightness: guard(0, 1, hslColor.lightness - parseFloat(amount)),
-		})
+		}),
 	)
 }
 var curriedDarken = curry(darken),
@@ -1093,7 +1093,7 @@ function lighten(amount, color2) {
 	return toColorString(
 		_extends({}, hslColor, {
 			lightness: guard(0, 1, hslColor.lightness + parseFloat(amount)),
-		})
+		}),
 	)
 }
 var curriedLighten = curry(lighten),
@@ -1117,7 +1117,7 @@ function transparentize(amount, color2) {
 			alpha: guard(
 				0,
 				1,
-				+(alpha * 100 - parseFloat(amount) * 100).toFixed(2) / 100
+				+(alpha * 100 - parseFloat(amount) * 100).toFixed(2) / 100,
 			),
 		})
 	return rgba(colorWithAlpha)
@@ -1264,7 +1264,7 @@ var curriedTransparentize = curry(transparentize),
 	isColorString = (color2) =>
 		typeof color2 != 'string'
 			? (logger.warn(
-					`Color passed to theme object should be a string. Instead ${color2}(${typeof color2}) was passed.`
+					`Color passed to theme object should be a string. Instead ${color2}(${typeof color2}) was passed.`,
 			  ),
 			  !1)
 			: !0,
@@ -1462,7 +1462,7 @@ var require_react_is_development = __commonJS({
 						hasWarnedAboutDeprecatedIsAsyncMode ||
 							((hasWarnedAboutDeprecatedIsAsyncMode = !0),
 							console.warn(
-								'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.'
+								'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.',
 							)),
 						isConcurrentMode(object) ||
 							typeOf(object) === REACT_ASYNC_MODE_TYPE
@@ -1548,7 +1548,7 @@ var require_react_is_development = __commonJS({
 	require_hoist_non_react_statics_cjs = __commonJS({
 		'../../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js'(
 			exports,
-			module
+			module,
 		) {
 			'use strict'
 			var reactIs = require_react_is(),
@@ -1606,7 +1606,7 @@ var require_react_is_development = __commonJS({
 			function hoistNonReactStatics2(
 				targetComponent,
 				sourceComponent,
-				blacklist
+				blacklist,
 			) {
 				if (typeof sourceComponent != 'string') {
 					if (objectPrototype) {
@@ -1616,13 +1616,13 @@ var require_react_is_development = __commonJS({
 							hoistNonReactStatics2(
 								targetComponent,
 								inheritedComponent,
-								blacklist
+								blacklist,
 							)
 					}
 					var keys = getOwnPropertyNames(sourceComponent)
 					getOwnPropertySymbols &&
 						(keys = keys.concat(
-							getOwnPropertySymbols(sourceComponent)
+							getOwnPropertySymbols(sourceComponent),
 						))
 					for (
 						var targetStatics = getStatics(targetComponent),
@@ -1640,7 +1640,7 @@ var require_react_is_development = __commonJS({
 						) {
 							var descriptor = getOwnPropertyDescriptor(
 								sourceComponent,
-								key
+								key,
 							)
 							try {
 								defineProperty(targetComponent, key, descriptor)
@@ -1731,7 +1731,7 @@ var StyleSheet = (function () {
 							`You're attempting to insert the following rule:
 ` +
 								rule +
-								'\n\n`@import` rules must be before all other types of rules in a stylesheet but other rules have already been inserted. Please ensure that `@import` rules are before all other rules.'
+								'\n\n`@import` rules must be before all other types of rules in a stylesheet but other rules have already been inserted. Please ensure that `@import` rules are before all other rules.',
 						),
 					(this._alreadyInsertedOrderInsensitiveRule =
 						this._alreadyInsertedOrderInsensitiveRule ||
@@ -1743,13 +1743,13 @@ var StyleSheet = (function () {
 						sheet.insertRule(rule, sheet.cssRules.length)
 					} catch (e) {
 						;/:(-moz-placeholder|-moz-focus-inner|-moz-focusring|-ms-input-placeholder|-moz-read-write|-moz-read-only|-ms-clear|-ms-expand|-ms-reveal){/.test(
-							rule
+							rule,
 						) ||
 							console.error(
 								'There was a problem inserting the following rule: "' +
 									rule +
 									'"',
-								e
+								e,
 							)
 					}
 				} else tag.appendChild(document.createTextNode(rule))
@@ -1841,7 +1841,7 @@ function copy(root, props) {
 		node('', null, null, '', null, null, 0),
 		root,
 		{ length: -root.length },
-		props
+		props,
 	)
 }
 function char() {
@@ -1919,8 +1919,8 @@ function delimit(type) {
 	return trim(
 		slice(
 			position - 1,
-			delimiter(type === 91 ? type + 2 : type === 40 ? type + 1 : type)
-		)
+			delimiter(type === 91 ? type + 2 : type === 40 ? type + 1 : type),
+		),
 	)
 }
 function whitespace(type) {
@@ -1981,7 +1981,17 @@ function identifier(index) {
 }
 function compile(value) {
 	return dealloc(
-		parse('', null, null, null, [''], (value = alloc(value)), 0, [0], value)
+		parse(
+			'',
+			null,
+			null,
+			null,
+			[''],
+			(value = alloc(value)),
+			0,
+			[0],
+			value,
+		),
 	)
 }
 function parse(
@@ -1993,7 +2003,7 @@ function parse(
 	rulesets,
 	pseudo,
 	points,
-	declarations
+	declarations,
 ) {
 	for (
 		var index = 0,
@@ -2021,9 +2031,9 @@ function parse(
 						(characters2 += replace(
 							delimit(character2),
 							'&',
-							'&\f'
+							'&\f',
 						)),
-						'&\f'
+						'&\f',
 					) != -1 && (ampersand = -1)
 					break
 				}
@@ -2047,7 +2057,7 @@ function parse(
 					case 47:
 						append(
 							comment(commenter(next(), caret()), root, parent),
-							declarations
+							declarations,
 						)
 						break
 					default:
@@ -2072,15 +2082,15 @@ function parse(
 											characters2 + ';',
 											rule,
 											parent,
-											length2 - 1
+											length2 - 1,
 									  )
 									: declaration(
 											replace(characters2, ' ', '') + ';',
 											rule,
 											parent,
-											length2 - 2
+											length2 - 2,
 									  ),
-								declarations
+								declarations,
 							)
 						break
 					case 59:
@@ -2099,9 +2109,9 @@ function parse(
 									type,
 									(props = []),
 									(children = []),
-									length2
+									length2,
 								)),
-								rulesets
+								rulesets,
 							),
 							character2 === 123)
 						)
@@ -2115,7 +2125,7 @@ function parse(
 									rulesets,
 									length2,
 									points,
-									children
+									children,
 								)
 							else
 								switch (
@@ -2144,15 +2154,15 @@ function parse(
 														type,
 														rules,
 														(props = []),
-														length2
+														length2,
 													),
-													children
+													children,
 												),
 											rules,
 											children,
 											length2,
 											points,
-											rule ? props : children
+											rule ? props : children,
 										)
 										break
 									default:
@@ -2165,7 +2175,7 @@ function parse(
 											children,
 											0,
 											points,
-											children
+											children,
 										)
 								}
 				}
@@ -2202,7 +2212,7 @@ function parse(
 							(atrule = peek()),
 							(offset = length2 =
 								strlen(
-									(type = characters2 += identifier(caret()))
+									(type = characters2 += identifier(caret())),
 								)),
 							character2++
 						break
@@ -2225,7 +2235,7 @@ function ruleset(
 	type,
 	props,
 	children,
-	length2
+	length2,
 ) {
 	for (
 		var post = offset - 1,
@@ -2245,7 +2255,7 @@ function ruleset(
 			++x
 		)
 			(z = trim(
-				j > 0 ? rule[x] + ' ' + y : replace(y, /&\f/g, rule[x])
+				j > 0 ? rule[x] + ' ' + y : replace(y, /&\f/g, rule[x]),
 			)) && (props[k++] = z)
 	return node(
 		value,
@@ -2254,7 +2264,7 @@ function ruleset(
 		offset === 0 ? RULESET : type,
 		props,
 		children,
-		length2
+		length2,
 	)
 }
 function comment(value, root, parent) {
@@ -2265,7 +2275,7 @@ function comment(value, root, parent) {
 		COMMENT,
 		from(char()),
 		substr(value, 2, -2),
-		0
+		0,
 	)
 }
 function declaration(value, root, parent, length2) {
@@ -2276,7 +2286,7 @@ function declaration(value, root, parent, length2) {
 		DECLARATION,
 		substr(value, 0, length2),
 		substr(value, length2 + 1, -1),
-		length2
+		length2,
 	)
 }
 function serialize(children, callback) {
@@ -2343,7 +2353,7 @@ var weakMemoize = function (func) {
 						(parsed[index] += identifierWithPointTracking(
 							position - 1,
 							points,
-							index
+							index,
 						))
 					break
 				case 2:
@@ -2423,7 +2433,7 @@ var weakMemoize = function (func) {
 		return function (element, index, children) {
 			if (!(element.type !== 'rule' || cache.compat)) {
 				var unsafePseudoClasses = element.value.match(
-					/(:first|:nth|:nth-last)-child/g
+					/(:first|:nth|:nth-last)-child/g,
 				)
 				if (unsafePseudoClasses) {
 					for (
@@ -2448,7 +2458,7 @@ var weakMemoize = function (func) {
 								unsafePseudoClass +
 								'" is potentially unsafe when doing server-side rendering. Try changing it to "' +
 								unsafePseudoClass.split('-child')[0] +
-								'-of-type".'
+								'-of-type".',
 						)
 					})
 				}
@@ -2477,12 +2487,12 @@ var weakMemoize = function (func) {
 		isImportRule(element) &&
 			(element.parent
 				? (console.error(
-						"`@import` rules can't be nested inside other rules. Please move it to the top level and put it before regular rules. Keep in mind that they can only be used within global styles."
+						"`@import` rules can't be nested inside other rules. Please move it to the top level and put it before regular rules. Keep in mind that they can only be used within global styles.",
 				  ),
 				  nullifyElement(element))
 				: isPrependedWithRegularRules(index, children) &&
 				  (console.error(
-						"`@import` rules can't be after other rules. Please put your `@import` rules before your other rules."
+						"`@import` rules can't be after other rules. Please put your `@import` rules before your other rules.",
 				  ),
 				  nullifyElement(element)))
 	}
@@ -2534,7 +2544,7 @@ function prefix(value, length2) {
 				replace(
 					value,
 					/(\w+).+(:[^]+)/,
-					WEBKIT + 'box-$1$2' + MS + 'flex-$1$2'
+					WEBKIT + 'box-$1$2' + MS + 'flex-$1$2',
 				) +
 				value
 			)
@@ -2595,10 +2605,10 @@ function prefix(value, length2) {
 					replace(
 						replace(value, /(zoom-|grab)/, WEBKIT + '$1'),
 						/(image-set)/,
-						WEBKIT + '$1'
+						WEBKIT + '$1',
 					),
 					value,
-					''
+					'',
 				) + value
 			)
 		case 5495:
@@ -2610,10 +2620,10 @@ function prefix(value, length2) {
 					replace(
 						value,
 						/(.+:)(flex-)?(.*)/,
-						WEBKIT + 'box-pack:$3' + MS + 'flex-pack:$3'
+						WEBKIT + 'box-pack:$3' + MS + 'flex-pack:$3',
 					),
 					/s.+-b[^;]+/,
-					'justify'
+					'justify',
 				) +
 				WEBKIT +
 				value +
@@ -2651,14 +2661,14 @@ function prefix(value, length2) {
 									MOZ +
 									(charat(value, length2 + 3) == 108
 										? '$3'
-										: '$2-$3')
+										: '$2-$3'),
 							) + value
 						)
 					case 115:
 						return ~indexof(value, 'stretch')
 							? prefix(
 									replace(value, 'stretch', 'fill-available'),
-									length2
+									length2,
 							  ) + value
 							: value
 				}
@@ -2669,7 +2679,7 @@ function prefix(value, length2) {
 			switch (
 				charat(
 					value,
-					strlen(value) - 3 - (~indexof(value, '!important') && 10)
+					strlen(value) - 3 - (~indexof(value, '!important') && 10),
 				)
 			) {
 				case 107:
@@ -2686,7 +2696,7 @@ function prefix(value, length2) {
 								WEBKIT +
 								'$2$3$1' +
 								MS +
-								'$2box$3'
+								'$2box$3',
 						) + value
 					)
 			}
@@ -2735,11 +2745,11 @@ var prefixer = function (element, index, children, callback) {
 								value: replace(
 									element.value,
 									'@',
-									'@' + WEBKIT
+									'@' + WEBKIT,
 								),
 							}),
 						],
-						callback
+						callback,
 					)
 				case RULESET:
 					if (element.length)
@@ -2754,12 +2764,12 @@ var prefixer = function (element, index, children, callback) {
 													replace(
 														value,
 														/:(read-\w+)/,
-														':' + MOZ + '$1'
+														':' + MOZ + '$1',
 													),
 												],
 											}),
 										],
-										callback
+										callback,
 									)
 								case '::placeholder':
 									return serialize(
@@ -2771,7 +2781,7 @@ var prefixer = function (element, index, children, callback) {
 														/:(plac\w+)/,
 														':' +
 															WEBKIT +
-															'input-$1'
+															'input-$1',
 													),
 												],
 											}),
@@ -2780,7 +2790,7 @@ var prefixer = function (element, index, children, callback) {
 													replace(
 														value,
 														/:(plac\w+)/,
-														':' + MOZ + '$1'
+														':' + MOZ + '$1',
 													),
 												],
 											}),
@@ -2789,12 +2799,12 @@ var prefixer = function (element, index, children, callback) {
 													replace(
 														value,
 														/:(plac\w+)/,
-														MS + 'input-$1'
+														MS + 'input-$1',
 													),
 												],
 											}),
 										],
-										callback
+										callback,
 									)
 							}
 							return ''
@@ -2809,7 +2819,7 @@ var prefixer = function (element, index, children, callback) {
 If multiple caches share the same key they might "fight" for each other's style elements.`)
 		if (key === 'css') {
 			var ssrStyles = document.querySelectorAll(
-				'style[data-emotion]:not([data-s])'
+				'style[data-emotion]:not([data-s])',
 			)
 			Array.prototype.forEach.call(ssrStyles, function (node2) {
 				var dataEmotionAttribute = node2.getAttribute('data-emotion')
@@ -2823,7 +2833,7 @@ If multiple caches share the same key they might "fight" for each other's style 
 			throw new Error(
 				'Emotion key must only contain lower case alphabetical characters and - but "' +
 					key +
-					'" was passed'
+					'" was passed',
 			)
 		var inserted = {},
 			container,
@@ -2831,7 +2841,7 @@ If multiple caches share the same key they might "fight" for each other's style 
 		;(container = options.container || document.head),
 			Array.prototype.forEach.call(
 				document.querySelectorAll(
-					'style[data-emotion^="' + key + ' "]'
+					'style[data-emotion^="' + key + ' "]',
 				),
 				function (node2) {
 					for (
@@ -2844,7 +2854,7 @@ If multiple caches share the same key they might "fight" for each other's style 
 					)
 						inserted[attrib[i]] = !0
 					nodesToHydrate.push(node2)
-				}
+				},
 			)
 		var _insert,
 			omnipresentPlugins = [compat, removeLabel]
@@ -2854,7 +2864,7 @@ If multiple caches share the same key they might "fight" for each other's style 
 					return cache.compat
 				},
 			}),
-			incorrectImportAlarm
+			incorrectImportAlarm,
 		)
 		{
 			var currentSheet,
@@ -2870,7 +2880,7 @@ If multiple caches share the same key they might "fight" for each other's style 
 					},
 				],
 				serializer = middleware(
-					omnipresentPlugins.concat(stylisPlugins, finalizingPlugins)
+					omnipresentPlugins.concat(stylisPlugins, finalizingPlugins),
 				),
 				stylis = function (styles) {
 					return serialize(compile(styles), serializer)
@@ -2886,7 +2896,7 @@ If multiple caches share the same key they might "fight" for each other's style 
 					stylis(
 						selector
 							? selector + '{' + serialized.styles + '}'
-							: serialized.styles
+							: serialized.styles,
 					),
 					shouldCache && (cache.inserted[serialized.name] = !0)
 			}
@@ -2910,12 +2920,12 @@ If multiple caches share the same key they might "fight" for each other's style 
 	},
 	emotion_cache_browser_esm_default = createCache,
 	import_hoist_non_react_statics = __toESM2(
-		require_hoist_non_react_statics_cjs()
+		require_hoist_non_react_statics_cjs(),
 	),
 	hoistNonReactStatics = function (targetComponent, sourceComponent) {
 		return (0, import_hoist_non_react_statics.default)(
 			targetComponent,
-			sourceComponent
+			sourceComponent,
 		)
 	},
 	emotion_react_isolated_hnrs_browser_esm_default = hoistNonReactStatics,
@@ -2947,7 +2957,7 @@ var registerStyles = function (cache, serialized, isStringTag) {
 					serialized === current ? '.' + className : '',
 					current,
 					cache.sheet,
-					!0
+					!0,
 				)
 				current = current.next
 			} while (current !== void 0)
@@ -3064,7 +3074,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 								}),
 								p1
 							)
-						}
+						},
 					)
 		}
 		return emotion_unitless_esm_default[key] !== 1 &&
@@ -3093,7 +3103,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 			throw new Error(
 				"You seem to be using a value for 'content' without quotes, try replacing it with `content: '\"" +
 					value +
-					'"\'`'
+					'"\'`',
 			)
 		var processed = oldProcessStyleValue(key, value)
 		return (
@@ -3109,7 +3119,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 							.replace(hyphenPattern, function (str, _char) {
 								return _char.toUpperCase()
 							}) +
-						'?'
+						'?',
 				)),
 			processed
 		)
@@ -3162,7 +3172,7 @@ function handleInterpolation(mergedProps, registered, interpolation) {
 			return createStringFromObject(
 				mergedProps,
 				registered,
-				interpolation
+				interpolation,
 			)
 		}
 		case 'function': {
@@ -3175,7 +3185,7 @@ function handleInterpolation(mergedProps, registered, interpolation) {
 				)
 			} else
 				console.error(
-					"Functions that are interpolated in css calls will be stringified.\nIf you want to have a css call based on props, create a function that returns a css call like this\nlet dynamicStyle = (props) => css`color: ${props.color}`\nIt can be called directly with props or interpolated in a styled call like this\nlet SomeComponent = styled('div')`${dynamicStyle}`"
+					"Functions that are interpolated in css calls will be stringified.\nIf you want to have a css call based on props, create a function that returns a css call like this\nlet dynamicStyle = (props) => css`color: ${props.color}`\nIt can be called directly with props or interpolated in a styled call like this\nlet SomeComponent = styled('div')`${dynamicStyle}`",
 				)
 			break
 		}
@@ -3192,13 +3202,13 @@ function handleInterpolation(mergedProps, registered, interpolation) {
 									' = keyframes`' +
 									p2.replace(
 										/^@keyframes animation-\w+/,
-										''
+										'',
 									) +
-									'`'
+									'`',
 							),
 							'${' + fakeVarName + '}'
 						)
-					}
+					},
 				)
 			matched.length &&
 				console.error(
@@ -3210,7 +3220,7 @@ function handleInterpolation(mergedProps, registered, interpolation) {
 You should wrap it with \`css\` like this:
 
 ` +
-						('css`' + replaced + '`')
+						('css`' + replaced + '`'),
 				)
 			break
 	}
@@ -3254,7 +3264,7 @@ function createStringFromObject(mergedProps, registered, obj) {
 					var interpolated = handleInterpolation(
 						mergedProps,
 						registered,
-						value
+						value,
 					)
 					switch (_key) {
 						case 'animation':
@@ -3330,7 +3340,7 @@ var cursor,
 	EmotionCacheContext = (0, import_react5.createContext)(
 		typeof HTMLElement < 'u'
 			? emotion_cache_browser_esm_default({ key: 'css' })
-			: null
+			: null,
 	)
 EmotionCacheContext.displayName = 'EmotionCacheContext'
 var CacheProvider = EmotionCacheContext.Provider,
@@ -3354,7 +3364,7 @@ var useTheme = function () {
 				Array.isArray(mergedTheme)
 			)
 				throw new Error(
-					'[ThemeProvider] Please return an object from your theme function, i.e. theme={() => ({})}!'
+					'[ThemeProvider] Please return an object from your theme function, i.e. theme={() => ({})}!',
 				)
 			return mergedTheme
 		}
@@ -3364,17 +3374,17 @@ var useTheme = function () {
 			Array.isArray(theme3)
 		)
 			throw new Error(
-				'[ThemeProvider] Please make your theme prop a plain object'
+				'[ThemeProvider] Please make your theme prop a plain object',
 			)
 		return _extends({}, outerTheme, theme3)
 	},
-	createCacheWithTheme = emotion_weak_memoize_esm_default(function (
-		outerTheme
-	) {
-		return emotion_weak_memoize_esm_default(function (theme3) {
-			return getTheme(outerTheme, theme3)
-		})
-	}),
+	createCacheWithTheme = emotion_weak_memoize_esm_default(
+		function (outerTheme) {
+			return emotion_weak_memoize_esm_default(function (theme3) {
+				return getTheme(outerTheme, theme3)
+			})
+		},
+	),
 	ThemeProvider = function (props) {
 		var theme3 = (0, import_react5.useContext)(ThemeContext)
 		return (
@@ -3383,7 +3393,7 @@ var useTheme = function () {
 			(0, import_react5.createElement)(
 				ThemeContext.Provider,
 				{ value: theme3 },
-				props.children
+				props.children,
 			)
 		)
 	}
@@ -3393,7 +3403,7 @@ function withTheme(Component) {
 			var theme3 = (0, import_react5.useContext)(ThemeContext)
 			return (0, import_react5.createElement)(
 				Component,
-				_extends({ theme: theme3, ref }, props)
+				_extends({ theme: theme3, ref }, props),
 			)
 		},
 		WithTheme = (0, import_react5.forwardRef)(render)
@@ -3444,7 +3454,7 @@ var getLastPart = function (functionName) {
 			throw new Error(
 				"Strings are not allowed as css prop values, please wrap it in a css template literal from '@emotion/react' like this: css`" +
 					props.css +
-					'`'
+					'`',
 			)
 		var newProps = {}
 		for (var key in props)
@@ -3483,13 +3493,13 @@ var getLastPart = function (functionName) {
 			? (className = getRegisteredStyles(
 					cache.registered,
 					registeredStyles,
-					props.className
+					props.className,
 			  ))
 			: props.className != null && (className = props.className + ' ')
 		var serialized = serializeStyles(
 			registeredStyles,
 			void 0,
-			(0, import_react5.useContext)(ThemeContext)
+			(0, import_react5.useContext)(ThemeContext),
 		)
 		if (serialized.name.indexOf('-') === -1) {
 			var labelFromStack = props[labelPropName]
@@ -3518,13 +3528,13 @@ var getLastPart = function (functionName) {
 					serialized,
 					isStringTag: typeof WrappedComponent == 'string',
 				}),
-				(0, import_react5.createElement)(WrappedComponent, newProps)
+				(0, import_react5.createElement)(WrappedComponent, newProps),
 			)
 		)
 	})
 Emotion.displayName = 'EmotionCssPropInternal'
 var import_hoist_non_react_statics2 = __toESM2(
-		require_hoist_non_react_statics_cjs()
+		require_hoist_non_react_statics_cjs(),
 	),
 	pkg = {
 		name: '@emotion/react',
@@ -3656,14 +3666,14 @@ var import_hoist_non_react_statics2 = __toESM2(
 		!warnedAboutCssPropForGlobal &&
 			(props.className || props.css) &&
 			(console.error(
-				"It looks like you're using the css prop on Global, did you mean to use the styles prop instead?"
+				"It looks like you're using the css prop on Global, did you mean to use the styles prop instead?",
 			),
 			(warnedAboutCssPropForGlobal = !0))
 		var styles = props.styles,
 			serialized = serializeStyles(
 				[styles],
 				void 0,
-				(0, import_react4.useContext)(ThemeContext)
+				(0, import_react4.useContext)(ThemeContext),
 			),
 			sheetRef = (0, import_react4.useRef)()
 		return (
@@ -3682,7 +3692,7 @@ var import_hoist_non_react_statics2 = __toESM2(
 								key +
 								' ' +
 								serialized.name +
-								'"]'
+								'"]',
 						)
 					return (
 						cache.sheet.tags.length &&
@@ -3697,7 +3707,7 @@ var import_hoist_non_react_statics2 = __toESM2(
 						}
 					)
 				},
-				[cache]
+				[cache],
 			),
 			useInsertionEffectWithLayoutFallback(
 				function () {
@@ -3719,7 +3729,7 @@ var import_hoist_non_react_statics2 = __toESM2(
 					}
 					cache.insert('', serialized, sheet, !1)
 				},
-				[cache, serialized.name]
+				[cache, serialized.name],
 			),
 			null
 		)
@@ -3760,7 +3770,7 @@ var keyframes = function () {
 							arg.styles !== void 0 &&
 								arg.name !== void 0 &&
 								console.error(
-									'You have passed styles created with `css` from `@emotion/react` package to the `cx`.\n`cx` is meant to compose class names (strings) so you should convert those styles to a class name by passing them to the `css` received from <ClassNames/> component.'
+									'You have passed styles created with `css` from `@emotion/react` package to the `cx`.\n`cx` is meant to compose class names (strings) so you should convert those styles to a class name by passing them to the `css` received from <ClassNames/> component.',
 								),
 								(toAdd = '')
 							for (var k in arg)
@@ -3783,7 +3793,7 @@ function merge(registered, css2, className) {
 		rawClassName = getRegisteredStyles(
 			registered,
 			registeredStyles,
-			className
+			className,
 		)
 	return registeredStyles.length < 2
 		? className
@@ -3847,7 +3857,7 @@ var Insertion3 = function (_ref) {
 					cache,
 					serializedArr,
 				}),
-				ele
+				ele,
 			)
 		)
 	})
@@ -3865,7 +3875,7 @@ ClassNames.displayName = 'EmotionClassNames'
 		(globalKey = '__EMOTION_REACT_' + pkg.version.split('.')[0] + '__'),
 		globalContext[globalKey] &&
 			console.warn(
-				'You are loading @emotion/react when it is already loaded. Running multiple instances may cause problems. This can happen if multiple versions are used, or if multiple builds of the same version are used.'
+				'You are loading @emotion/react when it is already loaded. Running multiple instances may cause problems. This can happen if multiple versions are used, or if multiple builds of the same version are used.',
 			),
 		(globalContext[globalKey] = !0))
 var isBrowser2,
@@ -3961,21 +3971,21 @@ You may have forgotten to import it.`)
 					mergedProps = {}
 					for (var key in props) mergedProps[key] = props[key]
 					mergedProps.theme = (0, import_react3.useContext)(
-						ThemeContext
+						ThemeContext,
 					)
 				}
 				typeof props.className == 'string'
 					? (className = getRegisteredStyles(
 							cache.registered,
 							classInterpolations,
-							props.className
+							props.className,
 					  ))
 					: props.className != null &&
 					  (className = props.className + ' ')
 				var serialized = serializeStyles(
 					styles.concat(classInterpolations),
 					cache.registered,
-					mergedProps
+					mergedProps,
 				)
 				;(className += cache.key + '-' + serialized.name),
 					targetClassName !== void 0 &&
@@ -4000,7 +4010,7 @@ You may have forgotten to import it.`)
 							serialized,
 							isStringTag: typeof FinalTag == 'string',
 						}),
-						(0, import_react3.createElement)(FinalTag, newProps)
+						(0, import_react3.createElement)(FinalTag, newProps),
 					)
 				)
 			})
@@ -4034,9 +4044,9 @@ You may have forgotten to import it.`)
 							shouldForwardProp: composeShouldForwardProps(
 								Styled,
 								nextOptions,
-								!0
+								!0,
 							),
-						})
+						}),
 					).apply(void 0, styles)
 				}),
 				Styled
@@ -4237,7 +4247,7 @@ var emotion_styled_browser_esm_default = newStyled,
 				borderRadius: 3,
 				margin: '1rem 0',
 			},
-		})
+		}),
 	),
 	createGlobal = (0, import_memoizerific.default)(1)(
 		({
@@ -4259,7 +4269,7 @@ var emotion_styled_browser_esm_default = newStyled,
 					borderTop: `1px solid ${color2.border}`,
 				},
 			}
-		}
+		},
 	),
 	easing = { rubber: 'cubic-bezier(0.175, 0.885, 0.335, 1.05)' },
 	rotate360 = keyframes`
@@ -4386,7 +4396,7 @@ var emotion_styled_browser_esm_default = newStyled,
 	convertColors = (colors) =>
 		Object.entries(colors).reduce(
 			(acc, [k, v]) => ({ ...acc, [k]: mkColor(v) }),
-			{}
+			{},
 		),
 	create2 = ({ colors, mono }) => {
 		let colorsObjs = convertColors(colors)
@@ -4615,7 +4625,7 @@ function dedent(templ) {
 	var strings = Array.from(typeof templ == 'string' ? [templ] : templ)
 	strings[strings.length - 1] = strings[strings.length - 1].replace(
 		/\r?\n([\t ]*)$/,
-		''
+		'',
 	)
 	var indentLengths = strings.reduce(function (arr, str) {
 		var matches = str.match(/\n([\t ]+|(?!\s).)/g)
@@ -4630,7 +4640,7 @@ function dedent(templ) {
 								: _a.length) !== null && _b !== void 0
 							? _b
 							: 0
-					})
+					}),
 			  )
 			: arr
 	}, [])
@@ -4640,13 +4650,13 @@ function dedent(templ) {
 [	 ]{` +
 				Math.min.apply(Math, indentLengths) +
 				'}',
-			'g'
+			'g',
 		)
 		strings = strings.map(function (str) {
 			return str.replace(
 				pattern_1,
 				`
-`
+`,
 			)
 		})
 	}
@@ -4663,7 +4673,7 @@ function dedent(templ) {
 				(indentedValue = String(value)
 					.split(
 						`
-`
+`,
 					)
 					.map(function (str, i2) {
 						return i2 === 0 ? str : '' + endentation + str
@@ -4685,7 +4695,7 @@ var ensure = (input) => {
 
           theme-data missing:
         `,
-					missing
+					missing,
 				),
 			convert(input)
 		)

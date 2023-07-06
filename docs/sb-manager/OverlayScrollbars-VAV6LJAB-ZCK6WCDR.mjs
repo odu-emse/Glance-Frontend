@@ -5,7 +5,7 @@ var import_react = __toESM(require_react(), 1),
 	require_OverlayScrollbars = __commonJS({
 		'../../node_modules/overlayscrollbars/js/OverlayScrollbars.js'(
 			exports,
-			module
+			module,
 		) {
 			;(function (global, factory) {
 				typeof define == 'function' && define.amd
@@ -17,7 +17,7 @@ var import_react = __toESM(require_react(), 1),
 					? (module.exports = factory(
 							global,
 							global.document,
-							void 0
+							void 0,
 					  ))
 					: factory(global, global.document, void 0)
 			})(
@@ -91,7 +91,7 @@ var import_react = __toESM(require_react(), 1),
 											currVendorWithoutDashes =
 												cssPrefixes[i].replace(
 													/-/g,
-													''
+													'',
 												),
 												resultPossibilities = [
 													name,
@@ -99,7 +99,7 @@ var import_react = __toESM(require_react(), 1),
 													currVendorWithoutDashes +
 														uppercasedName,
 													firstLetterToUpper(
-														currVendorWithoutDashes
+														currVendorWithoutDashes,
 													) + uppercasedName,
 												],
 												v = 0;
@@ -119,7 +119,7 @@ var import_react = __toESM(require_react(), 1),
 								_cssPropertyValue: function (
 									property,
 									values,
-									suffix
+									suffix,
 								) {
 									var name = property + ' ' + values,
 										result = cssCache[name]
@@ -207,7 +207,7 @@ var import_react = __toESM(require_react(), 1),
 								var proto = LEXICON.p,
 									aArgs = Array[proto].slice.call(
 										arguments,
-										2
+										2,
 									),
 									fNOP = function () {},
 									fBound = function () {
@@ -217,9 +217,9 @@ var import_react = __toESM(require_react(), 1),
 												: thisObj,
 											aArgs.concat(
 												Array[proto].slice.call(
-													arguments
-												)
-											)
+													arguments,
+												),
+											),
 										)
 									}
 								return (
@@ -235,13 +235,13 @@ var import_react = __toESM(require_react(), 1),
 									VENDORS._jsAPI,
 									0,
 									'MutationObserver',
-									!0
+									!0,
 								),
 								rO: bind(
 									VENDORS._jsAPI,
 									0,
 									'ResizeObserver',
-									!0
+									!0,
 								),
 								rAF: bind(
 									VENDORS._jsAPI,
@@ -251,9 +251,9 @@ var import_react = __toESM(require_react(), 1),
 									function (func) {
 										return window2.setTimeout(
 											func,
-											1e3 / 60
+											1e3 / 60,
 										)
-									}
+									},
 								),
 								cAF: bind(
 									VENDORS._jsAPI,
@@ -262,7 +262,7 @@ var import_react = __toESM(require_react(), 1),
 									!1,
 									function (id) {
 										return window2.clearTimeout(id)
-									}
+									},
 								),
 								now: function () {
 									return (
@@ -363,7 +363,7 @@ var import_react = __toESM(require_react(), 1),
 												.call(obj)
 												.replace(
 													/^\[object (.+)\]$/,
-													'$1'
+													'$1',
 												)
 												.toLowerCase()
 								},
@@ -453,7 +453,7 @@ var import_react = __toESM(require_react(), 1),
 									return (
 										-c *
 											_easingsMath.c(
-												(t / d) * (_easingsMath.p / 2)
+												(t / d) * (_easingsMath.p / 2),
 											) +
 										c +
 										b
@@ -463,7 +463,7 @@ var import_react = __toESM(require_react(), 1),
 									return (
 										c *
 											_easingsMath.s(
-												(t / d) * (_easingsMath.p / 2)
+												(t / d) * (_easingsMath.p / 2),
 											) +
 										b
 									)
@@ -472,7 +472,7 @@ var import_react = __toESM(require_react(), 1),
 									return (
 										(-c / 2) *
 											(_easingsMath.c(
-												(_easingsMath.p * t) / d
+												(_easingsMath.p * t) / d,
 											) -
 												1) +
 										b
@@ -484,7 +484,7 @@ var import_react = __toESM(require_react(), 1),
 										: c *
 												_easingsMath.w(
 													2,
-													10 * (t / d - 1)
+													10 * (t / d - 1),
 												) +
 												b
 								},
@@ -494,7 +494,7 @@ var import_react = __toESM(require_react(), 1),
 										: c *
 												(-_easingsMath.w(
 													2,
-													(-10 * t) / d
+													(-10 * t) / d,
 												) +
 													1) +
 												b
@@ -508,7 +508,7 @@ var import_react = __toESM(require_react(), 1),
 										? (c / 2) *
 												_easingsMath.w(
 													2,
-													10 * (t - 1)
+													10 * (t - 1),
 												) +
 										  b
 										: (c / 2) *
@@ -528,7 +528,7 @@ var import_react = __toESM(require_react(), 1),
 									return (
 										c *
 											_easingsMath.t(
-												1 - (t = t / d - 1) * t
+												1 - (t = t / d - 1) * t,
 											) +
 										b
 									)
@@ -541,7 +541,7 @@ var import_react = __toESM(require_react(), 1),
 												b
 										: (c / 2) *
 												(_easingsMath.t(
-													1 - (t -= 2) * t
+													1 - (t -= 2) * t,
 												) +
 													1) +
 												b
@@ -566,12 +566,12 @@ var import_react = __toESM(require_react(), 1),
 												a *
 												_easingsMath.w(
 													2,
-													10 * (t -= 1)
+													10 * (t -= 1),
 												) *
 												_easingsMath.s(
 													((t * d - s) *
 														(2 * _easingsMath.p)) /
-														p
+														p,
 												)
 										  ) + b)
 								},
@@ -596,7 +596,7 @@ var import_react = __toESM(require_react(), 1),
 												_easingsMath.s(
 													((t * d - s) *
 														(2 * _easingsMath.p)) /
-														p
+														p,
 												) +
 												c +
 												b)
@@ -622,25 +622,25 @@ var import_react = __toESM(require_react(), 1),
 														(a *
 															_easingsMath.w(
 																2,
-																10 * (t -= 1)
+																10 * (t -= 1),
 															) *
 															_easingsMath.s(
 																((t * d - s) *
 																	(2 *
 																		_easingsMath.p)) /
-																	p
+																	p,
 															)) +
 												  b
 												: a *
 														_easingsMath.w(
 															2,
-															-10 * (t -= 1)
+															-10 * (t -= 1),
 														) *
 														_easingsMath.s(
 															((t * d - s) *
 																(2 *
 																	_easingsMath.p)) /
-																p
+																p,
 														) *
 														0.5 +
 												  c +
@@ -720,7 +720,7 @@ var import_react = __toESM(require_react(), 1),
 												t * 2 - d,
 												0,
 												c,
-												d
+												d,
 										  ) *
 												0.5 +
 												c * 0.5 +
@@ -785,7 +785,7 @@ var import_react = __toESM(require_react(), 1),
 													(isPlainObject(copy) ||
 														(copyIsArray =
 															COMPATIBILITY.isA(
-																copy
+																copy,
 															)))
 														? (copyIsArray
 																? ((copyIsArray =
@@ -793,14 +793,14 @@ var import_react = __toESM(require_react(), 1),
 																  (clone =
 																		src &&
 																		COMPATIBILITY.isA(
-																			src
+																			src,
 																		)
 																			? src
 																			: []))
 																: (clone =
 																		src &&
 																		isPlainObject(
-																			src
+																			src,
 																		)
 																			? src
 																			: {}),
@@ -808,7 +808,7 @@ var import_react = __toESM(require_react(), 1),
 																extend(
 																	deep,
 																	clone,
-																	copy
+																	copy,
 																)))
 														: copy !== undefined2 &&
 														  (target[name] = copy))
@@ -838,14 +838,14 @@ var import_react = __toESM(require_react(), 1),
 										Object[proto].hasOwnProperty,
 									hasOwnConstructor = hasOwnProperty.call(
 										obj,
-										'constructor'
+										'constructor',
 									),
 									hasIsPrototypeOf =
 										obj.constructor &&
 										obj.constructor[proto] &&
 										hasOwnProperty.call(
 											obj.constructor[proto],
-											'isPrototypeOf'
+											'isPrototypeOf',
 										)
 								if (
 									obj.constructor &&
@@ -911,14 +911,14 @@ var import_react = __toESM(require_react(), 1),
 							function insertAdjacentElement(
 								el,
 								strategy,
-								child
+								child,
 							) {
 								if (COMPATIBILITY.isA(child))
 									for (var i = 0; i < child[LEXICON.l]; i++)
 										insertAdjacentElement(
 											el,
 											strategy,
-											child[i]
+											child[i],
 										)
 								else
 									_type(child) == TYPES.s
@@ -927,7 +927,7 @@ var import_react = __toESM(require_react(), 1),
 												strategy,
 												child.nodeType
 													? child
-													: child[0]
+													: child[0],
 										  )
 							}
 							function setCSSVal(el, prop, val) {
@@ -935,7 +935,7 @@ var import_react = __toESM(require_react(), 1),
 									el[LEXICON.s][prop] !== undefined2 &&
 										(el[LEXICON.s][prop] = parseCSSVal(
 											prop,
-											val
+											val,
 										))
 								} catch {}
 							}
@@ -949,7 +949,7 @@ var import_react = __toESM(require_react(), 1),
 							}
 							function startNextAnimationInQ(
 								animObj,
-								removeFromQ
+								removeFromQ,
 							) {
 								var index, nextAnim
 								removeFromQ !== !1 && animObj.q.splice(0, 1),
@@ -961,11 +961,11 @@ var import_react = __toESM(require_react(), 1),
 												nextAnim.duration,
 												nextAnim.easing,
 												nextAnim.complete,
-												!0
+												!0,
 										  ))
 										: ((index = inArray(
 												animObj,
-												_animations
+												_animations,
 										  )),
 										  index > -1 &&
 												_animations.splice(index, 1))
@@ -982,7 +982,7 @@ var import_react = __toESM(require_react(), 1),
 								options,
 								easing,
 								complete,
-								guaranteedNext
+								guaranteedNext,
 							) {
 								var hasOptions = isPlainObject(options),
 									from = {},
@@ -1077,14 +1077,14 @@ var import_react = __toESM(require_react(), 1),
 																0,
 																timeStart +
 																	duration -
-																	timeNow
+																	timeNow,
 															) / duration || 0))
 													for (key in to)
 														(fromVal = parseFloat(
-															from[key]
+															from[key],
 														)),
 															(toVal = parseFloat(
-																to[key]
+																to[key],
 															)),
 															(easedVal =
 																(toVal -
@@ -1100,13 +1100,13 @@ var import_react = __toESM(require_react(), 1),
 																			duration,
 																		0,
 																		1,
-																		duration
+																		duration,
 																	) +
 																fromVal),
 															setAnimationValue(
 																el,
 																key,
-																easedVal
+																easedVal,
 															),
 															isFunction(step) &&
 																step(easedVal, {
@@ -1134,19 +1134,19 @@ var import_react = __toESM(require_react(), 1),
 															MATH.max(
 																0,
 																duration -
-																	elapsed
-															)
+																	elapsed,
+															),
 														),
 														end
 															? (startNextAnimationInQ(
-																	animObj
+																	animObj,
 															  ),
 															  isFunction(
-																	complete
+																	complete,
 															  ) && complete())
 															: (qObj.frame =
 																	COMPATIBILITY.rAF()(
-																		frame
+																		frame,
 																	))
 												}),
 												(qObj.frame =
@@ -1156,7 +1156,7 @@ var import_react = __toESM(require_react(), 1),
 												setAnimationValue(
 													el,
 													key,
-													to[key]
+													to[key],
 												)
 											startNextAnimationInQ(animObj)
 										}
@@ -1184,13 +1184,13 @@ var import_react = __toESM(require_react(), 1),
 													setAnimationValue(
 														el,
 														key,
-														qObj.props[key]
+														qObj.props[key],
 													)
 											clearQ
 												? (animObj.q = [])
 												: startNextAnimationInQ(
 														animObj,
-														!1
+														!1,
 												  )
 										}
 										break
@@ -1216,13 +1216,13 @@ var import_react = __toESM(require_react(), 1),
 											selector.charAt(0) === '<'
 												? ((el =
 														document.createElement(
-															'div'
+															'div',
 														)),
 												  (el.innerHTML = selector),
 												  (elms = el.children))
 												: (elms =
 														document.querySelectorAll(
-															selector
+															selector,
 														));
 										i < elms[LEXICON.l];
 										i++
@@ -1265,7 +1265,7 @@ var import_react = __toESM(require_react(), 1),
 													)
 														el.addEventListener(
 															eventName[i],
-															handler
+															handler,
 														)
 												else if (el.detachEvent)
 													for (
@@ -1275,7 +1275,7 @@ var import_react = __toESM(require_react(), 1),
 													)
 														el.attachEvent(
 															'on' + eventName[i],
-															handler
+															handler,
 														)
 											} catch {}
 										})
@@ -1299,7 +1299,7 @@ var import_react = __toESM(require_react(), 1),
 													)
 														el.removeEventListener(
 															eventName[i],
-															handler
+															handler,
 														)
 												else if (el.detachEvent)
 													for (
@@ -1309,7 +1309,7 @@ var import_react = __toESM(require_react(), 1),
 													)
 														el.detachEvent(
 															'on' + eventName[i],
-															handler
+															handler,
 														)
 											} catch {}
 										})
@@ -1330,18 +1330,18 @@ var import_react = __toESM(require_react(), 1),
 															function (e) {
 																handler.call(
 																	this,
-																	e
+																	e,
 																),
 																	el.off(
 																		oneEventName,
-																		oneHandler
+																		oneHandler,
 																	)
 															}
 														el.on(
 															oneEventName,
-															oneHandler
+															oneHandler,
 														)
-													}
+													},
 												)
 											})
 										)
@@ -1353,16 +1353,16 @@ var import_react = __toESM(require_react(), 1),
 												document.createEvent
 													? ((event =
 															document.createEvent(
-																'HTMLEvents'
+																'HTMLEvents',
 															)),
 													  event.initEvent(
 															eventName,
 															!0,
-															!1
+															!1,
 													  ),
 													  el.dispatchEvent(event))
 													: el.fireEvent(
-															'on' + eventName
+															'on' + eventName,
 													  )
 										})
 									},
@@ -1371,7 +1371,7 @@ var import_react = __toESM(require_react(), 1),
 											insertAdjacentElement(
 												this,
 												'beforeend',
-												child
+												child,
 											)
 										})
 									},
@@ -1380,7 +1380,7 @@ var import_react = __toESM(require_react(), 1),
 											insertAdjacentElement(
 												this,
 												'afterbegin',
-												child
+												child,
 											)
 										})
 									},
@@ -1389,7 +1389,7 @@ var import_react = __toESM(require_react(), 1),
 											insertAdjacentElement(
 												this,
 												'beforebegin',
-												child
+												child,
 											)
 										})
 									},
@@ -1398,7 +1398,7 @@ var import_react = __toESM(require_react(), 1),
 											insertAdjacentElement(
 												this,
 												'afterend',
-												child
+												child,
 											)
 										})
 									},
@@ -1433,7 +1433,7 @@ var import_react = __toESM(require_react(), 1),
 											)
 												parent.insertBefore(
 													el.firstChild,
-													el
+													el,
 												)
 											parent.removeChild(el)
 										}
@@ -1466,7 +1466,7 @@ var import_react = __toESM(require_react(), 1),
 										return (
 											parent.insertBefore(
 												wrapper,
-												nextSibling
+												nextSibling,
 											),
 											this
 										)
@@ -1483,7 +1483,7 @@ var import_react = __toESM(require_react(), 1),
 									wrap: function (wrapperHTML) {
 										return this.each(function () {
 											FakejQuery(this).wrapAll(
-												wrapperHTML
+												wrapperHTML,
 											)
 										})
 									},
@@ -1504,7 +1504,7 @@ var import_react = __toESM(require_react(), 1),
 												  getCptStyle
 														? cptStyle != null
 															? cptStyle.getPropertyValue(
-																	styles
+																	styles,
 															  )
 															: el[LEXICON.s][
 																	styles
@@ -1514,7 +1514,7 @@ var import_react = __toESM(require_react(), 1),
 														setCSSVal(
 															this,
 															styles,
-															val
+															val,
 														)
 												  })
 											: this.each(function () {
@@ -1522,7 +1522,7 @@ var import_react = __toESM(require_react(), 1),
 														setCSSVal(
 															this,
 															key,
-															styles[key]
+															styles[key],
 														)
 											  })
 									},
@@ -1542,18 +1542,18 @@ var import_react = __toESM(require_react(), 1),
 												((classList = elem.classList),
 												(classList &&
 													classList.contains(
-														className
+														className,
 													)) ||
 													(elem.nodeType === 1 &&
 														(
 															_strSpace +
 															stripAndCollapse(
 																elem.className +
-																	_strEmpty
+																	_strEmpty,
 															) +
 															_strSpace
 														).indexOf(
-															classNamePrepared
+															classNamePrepared,
 														) > -1))
 											)
 												return !0
@@ -1574,7 +1574,7 @@ var import_react = __toESM(require_react(), 1),
 											for (
 												classes =
 													className.match(
-														_rnothtmlwhite
+														_rnothtmlwhite,
 													) || [];
 												(elem = this[i++]);
 
@@ -1603,7 +1603,7 @@ var import_react = __toESM(require_react(), 1),
 														elem.nodeType === 1 &&
 														_strSpace +
 															stripAndCollapse(
-																curValue
+																curValue,
 															) +
 															_strSpace),
 													cur)
@@ -1616,7 +1616,7 @@ var import_react = __toESM(require_react(), 1),
 														cur.indexOf(
 															_strSpace +
 																clazz +
-																_strSpace
+																_strSpace,
 														) < 0 &&
 															(cur +=
 																clazz +
@@ -1646,7 +1646,7 @@ var import_react = __toESM(require_react(), 1),
 											for (
 												classes =
 													className.match(
-														_rnothtmlwhite
+														_rnothtmlwhite,
 													) || [];
 												(elem = this[i++]);
 
@@ -1667,7 +1667,7 @@ var import_react = __toESM(require_react(), 1),
 
 													)
 														elmClassList.remove(
-															clazz
+															clazz,
 														)
 												else if (
 													((curValue =
@@ -1677,7 +1677,7 @@ var import_react = __toESM(require_react(), 1),
 														elem.nodeType === 1 &&
 														_strSpace +
 															stripAndCollapse(
-																curValue
+																curValue,
 															) +
 															_strSpace),
 													cur)
@@ -1692,7 +1692,7 @@ var import_react = __toESM(require_react(), 1),
 															cur.indexOf(
 																_strSpace +
 																	clazz +
-																	_strSpace
+																	_strSpace,
 															) > -1;
 
 														)
@@ -1700,7 +1700,7 @@ var import_react = __toESM(require_react(), 1),
 																_strSpace +
 																	clazz +
 																	_strSpace,
-																_strSpace
+																_strSpace,
 															)
 													;(finalValue =
 														stripAndCollapse(cur)),
@@ -1806,7 +1806,7 @@ var import_react = __toESM(require_react(), 1),
 												index >= 0
 													? index
 													: this[LEXICON.l] + index
-											]
+											],
 										)
 									},
 									find: function (selector) {
@@ -1817,7 +1817,7 @@ var import_react = __toESM(require_react(), 1),
 												var el = this,
 													ch =
 														el.querySelectorAll(
-															selector
+															selector,
 														)
 												for (
 													i = 0;
@@ -1845,11 +1845,11 @@ var import_react = __toESM(require_react(), 1),
 														selector
 															? ((el.matches &&
 																	el.matches(
-																		selector
+																		selector,
 																	)) ||
 																	matches(
 																		el,
-																		selector
+																		selector,
 																	)) &&
 															  children.push(el)
 															: children.push(el)
@@ -1865,7 +1865,7 @@ var import_react = __toESM(require_react(), 1),
 												;(parent = this.parentNode),
 													(!selector ||
 														FakejQuery(parent).is(
-															selector
+															selector,
 														)) &&
 														parents.push(parent)
 											}),
@@ -1915,7 +1915,7 @@ var import_react = __toESM(require_react(), 1),
 										props,
 										duration,
 										easing,
-										complete
+										complete,
 									) {
 										return this.each(function () {
 											animate(
@@ -1923,7 +1923,7 @@ var import_react = __toESM(require_react(), 1),
 												props,
 												duration,
 												easing,
-												complete
+												complete,
 											)
 										})
 									},
@@ -1957,7 +1957,7 @@ var import_react = __toESM(require_react(), 1),
 								else {
 									var index = COMPATIBILITY.inA(
 										target,
-										_targets
+										_targets,
 									)
 									if (index > -1)
 										if (argLen > 1)
@@ -2128,7 +2128,7 @@ var import_react = __toESM(require_react(), 1),
 																	TYPES.o &&
 															  (obj[key] =
 																	recursive(
-																		val
+																		val,
 																	)))
 												return obj
 											}
@@ -2136,8 +2136,8 @@ var import_react = __toESM(require_react(), 1),
 												FRAMEWORK.extend(
 													!0,
 													{},
-													optionsDefaultsAndTemplate
-												)
+													optionsDefaultsAndTemplate,
+												),
 											)
 										}
 									return {
@@ -2147,14 +2147,14 @@ var import_react = __toESM(require_react(), 1),
 											obj,
 											template,
 											writeErrors,
-											diffObj
+											diffObj,
 										) {
 											var validatedOptions = {},
 												validatedOptionsPrepared = {},
 												objectCopy = FRAMEWORK.extend(
 													!0,
 													{},
-													obj
+													obj,
 												),
 												inArray = FRAMEWORK.inArray,
 												isEmptyObj =
@@ -2165,7 +2165,7 @@ var import_react = __toESM(require_react(), 1),
 													diffData,
 													validatedOptions2,
 													validatedOptionsPrepared2,
-													prevPropName
+													prevPropName,
 												) {
 													for (var prop in template2)
 														if (
@@ -2173,7 +2173,7 @@ var import_react = __toESM(require_react(), 1),
 																LEXICON.hOP
 															](prop) &&
 															data[LEXICON.hOP](
-																prop
+																prop,
 															)
 														) {
 															var isValid = !1,
@@ -2184,14 +2184,14 @@ var import_react = __toESM(require_react(), 1),
 																	],
 																templateValueType =
 																	type(
-																		templateValue
+																		templateValue,
 																	),
 																templateIsComplex =
 																	templateValueType ==
 																	TYPES.o,
 																templateTypes =
 																	COMPATIBILITY.isA(
-																		templateValue
+																		templateValue,
 																	)
 																		? templateValue
 																		: [
@@ -2205,7 +2205,7 @@ var import_react = __toESM(require_react(), 1),
 																	data[prop],
 																dataValueType =
 																	type(
-																		dataValue
+																		dataValue,
 																	),
 																propPrefix =
 																	prevPropName
@@ -2256,7 +2256,7 @@ var import_react = __toESM(require_react(), 1),
 																			prop
 																		],
 																		propPrefix +
-																			prop
+																			prop,
 																	),
 																	FRAMEWORK.each(
 																		[
@@ -2266,17 +2266,17 @@ var import_react = __toESM(require_react(), 1),
 																		],
 																		function (
 																			index,
-																			value
+																			value,
 																		) {
 																			isEmptyObj(
 																				value[
 																					prop
-																				]
+																				],
 																			) &&
 																				delete value[
 																					prop
 																				]
-																		}
+																		},
 																	)
 															else if (
 																!templateIsComplex
@@ -2297,29 +2297,29 @@ var import_react = __toESM(require_react(), 1),
 																			]),
 																		(templateValueType =
 																			type(
-																				currType
+																				currType,
 																			)),
 																		(isRestrictedValue =
 																			templateValueType ==
 																				TYPES.s &&
 																			inArray(
 																				currType,
-																				possibleTemplateTypes
+																				possibleTemplateTypes,
 																			) ===
 																				-1),
 																		isRestrictedValue)
 																	)
 																		for (
 																			errorPossibleTypes.push(
-																				TYPES.s
+																				TYPES.s,
 																			),
 																				restrictedStringValuesSplit =
 																					currType.split(
-																						restrictedStringsSplit
+																						restrictedStringsSplit,
 																					),
 																				errorRestrictedStrings =
 																					errorRestrictedStrings.concat(
-																						restrictedStringValuesSplit
+																						restrictedStringValuesSplit,
 																					),
 																				v = 0;
 																			v <
@@ -2334,7 +2334,7 @@ var import_react = __toESM(require_react(), 1),
 																					restrictedStringValuesSplit[
 																						v
 																					].split(
-																						restrictedStringsPossibilitiesSplit
+																						restrictedStringsPossibilitiesSplit,
 																					),
 																					mainPossibility =
 																						restrictedStringValuesPossibilitiesSplit[0],
@@ -2363,7 +2363,7 @@ var import_react = __toESM(require_react(), 1),
 																		}
 																	else if (
 																		(errorPossibleTypes.push(
-																			currType
+																			currType,
 																		),
 																		dataValueType ===
 																			currType)
@@ -2384,7 +2384,7 @@ var import_react = __toESM(require_react(), 1),
 																	  (isRestrictedValue
 																			? inArray(
 																					dataDiffValue,
-																					restrictedStringValuesPossibilitiesSplit
+																					restrictedStringValuesPossibilitiesSplit,
 																			  ) <
 																			  0
 																			: isDiff) &&
@@ -2405,7 +2405,7 @@ var import_react = __toESM(require_react(), 1),
 Accepted types are: [ ` +
 																				errorPossibleTypes
 																					.join(
-																						', '
+																						', ',
 																					)
 																					.toUpperCase() +
 																				' ].' +
@@ -2417,16 +2417,16 @@ Accepted types are: [ ` +
 Valid strings are: [ ` +
 																					  errorRestrictedStrings
 																							.join(
-																								', '
+																								', ',
 																							)
 																							.split(
-																								restrictedStringsPossibilitiesSplit
+																								restrictedStringsPossibilitiesSplit,
 																							)
 																							.join(
-																								', '
+																								', ',
 																							) +
 																					  ' ].'
-																					: '')
+																					: ''),
 																	  ),
 																	delete data[
 																		prop
@@ -2440,13 +2440,13 @@ Valid strings are: [ ` +
 													template,
 													diffObj || {},
 													validatedOptions,
-													validatedOptionsPrepared
+													validatedOptionsPrepared,
 												),
 												!isEmptyObj(objectCopy) &&
 													writeErrors &&
 													console.warn(
 														`The following options are discarded due to invalidity:\r
-` + window2.JSON.stringify(objectCopy, null, 2)
+` + window2.JSON.stringify(objectCopy, null, 2),
 													),
 												{
 													_default: validatedOptions,
@@ -2461,12 +2461,12 @@ Valid strings are: [ ` +
 								_pluginsGlobals ||
 									(_pluginsGlobals =
 										new OverlayScrollbarsGlobals(
-											_pluginsOptions._defaults
+											_pluginsOptions._defaults,
 										)),
 									_pluginsAutoUpdateLoop ||
 										(_pluginsAutoUpdateLoop =
 											new OverlayScrollbarsAutoUpdateLoop(
-												_pluginsGlobals
+												_pluginsGlobals,
 											))
 							}
 							function OverlayScrollbarsGlobals(defaultOptions) {
@@ -2476,20 +2476,20 @@ Valid strings are: [ ` +
 									strScroll = 'scroll',
 									bodyElement = FRAMEWORK('body'),
 									scrollbarDummyElement = FRAMEWORK(
-										'<div id="os-dummy-scrollbar-size"><div></div></div>'
+										'<div id="os-dummy-scrollbar-size"><div></div></div>',
 									),
 									scrollbarDummyElement0 =
 										scrollbarDummyElement[0],
 									dummyContainerChild = FRAMEWORK(
 										scrollbarDummyElement
 											.children('div')
-											.eq(0)
+											.eq(0),
 									)
 								bodyElement.append(scrollbarDummyElement),
 									scrollbarDummyElement.hide().show()
 								var nativeScrollbarSize =
 										calcNativeScrollbarSize(
-											scrollbarDummyElement0
+											scrollbarDummyElement0,
 										),
 									nativeScrollbarIsOverlaid = {
 										x: nativeScrollbarSize.x === 0,
@@ -2513,10 +2513,10 @@ Valid strings are: [ ` +
 															msie2 + 5,
 															ua[strIndexOf](
 																'.',
-																msie2
-															)
+																msie2,
+															),
 														),
-														10
+														10,
 												  ))
 												: trident > 0
 												? (result = parseIntFunc(
@@ -2524,10 +2524,10 @@ Valid strings are: [ ` +
 															rv + 3,
 															ua[strIndexOf](
 																'.',
-																rv
-															)
+																rv,
+															),
 														),
-														10
+														10,
 												  ))
 												: edge > 0 &&
 												  (result = parseIntFunc(
@@ -2535,10 +2535,10 @@ Valid strings are: [ ` +
 															edge + 5,
 															ua[strIndexOf](
 																'.',
-																edge
-															)
+																edge,
+															),
 														),
-														10
+														10,
 												  )),
 											result
 										)
@@ -2553,21 +2553,21 @@ Valid strings are: [ ` +
 									nativeScrollbarStyling: (function () {
 										var result = !1
 										scrollbarDummyElement.addClass(
-											'os-viewport-native-scrollbars-invisible'
+											'os-viewport-native-scrollbars-invisible',
 										)
 										try {
 											result =
 												(scrollbarDummyElement.css(
-													'scrollbar-width'
+													'scrollbar-width',
 												) === 'none' &&
 													(msie > 9 || !msie)) ||
 												window2
 													.getComputedStyle(
 														scrollbarDummyElement0,
-														'::-webkit-scrollbar'
+														'::-webkit-scrollbar',
 													)
 													.getPropertyValue(
-														'display'
+														'display',
 													) === 'none'
 										} catch {}
 										return result
@@ -2577,12 +2577,12 @@ Valid strings are: [ ` +
 										VENDORS._cssPropertyValue(
 											'width',
 											'calc',
-											'(1px)'
+											'(1px)',
 										) || null,
 									restrictedMeasuring: (function () {
 										scrollbarDummyElement.css(
 											strOverflow,
-											strHidden
+											strHidden,
 										)
 										var scrollSize = {
 											w: scrollbarDummyElement0[
@@ -2594,7 +2594,7 @@ Valid strings are: [ ` +
 										}
 										scrollbarDummyElement.css(
 											strOverflow,
-											'visible'
+											'visible',
 										)
 										var scrollSize2 = {
 											w: scrollbarDummyElement0[
@@ -2651,8 +2651,8 @@ Valid strings are: [ ` +
 														get: function () {
 															supportsPassive = !0
 														},
-													}
-												)
+													},
+												),
 											)
 										} catch {}
 										return supportsPassive
@@ -2693,13 +2693,13 @@ Valid strings are: [ ` +
 															MATH.round(
 																newW /
 																	(windowWidth /
-																		100)
+																		100),
 															),
 														deltaHRatio =
 															MATH.round(
 																newH /
 																	(windowHeight /
-																		100)
+																		100),
 															),
 														absDeltaW = abs(deltaW),
 														absDeltaH = abs(deltaH),
@@ -2714,7 +2714,7 @@ Valid strings are: [ ` +
 														difference =
 															!differenceIsBiggerThanOne(
 																absDeltaWRatio,
-																absDeltaHRatio
+																absDeltaHRatio,
 															),
 														dprChanged =
 															newDPR !==
@@ -2729,12 +2729,12 @@ Valid strings are: [ ` +
 														newScrollbarSize
 													isZoom &&
 														(bodyElement.append(
-															scrollbarDummyElement
+															scrollbarDummyElement,
 														),
 														(newScrollbarSize =
 															_base.nativeScrollbarSize =
 																calcNativeScrollbarSize(
-																	scrollbarDummyElement[0]
+																	scrollbarDummyElement[0],
 																)),
 														scrollbarDummyElement.remove(),
 														(oldScrollbarSize.x !==
@@ -2745,14 +2745,14 @@ Valid strings are: [ ` +
 																INSTANCES(),
 																function () {
 																	INSTANCES(
-																		this
+																		this,
 																	) &&
 																		INSTANCES(
-																			this
+																			this,
 																		).update(
-																			'zoom'
+																			'zoom',
 																		)
-																}
+																},
 															)),
 														(windowWidth = newW),
 														(windowHeight = newH),
@@ -2761,7 +2761,7 @@ Valid strings are: [ ` +
 											}
 										function differenceIsBiggerThanOne(
 											valOne,
-											valTwo
+											valTwo,
 										) {
 											var absValOne = abs(valOne),
 												absValTwo = abs(valTwo)
@@ -2785,11 +2785,11 @@ Valid strings are: [ ` +
 										}
 										FRAMEWORK(window2).on(
 											'resize',
-											onResize
+											onResize,
 										)
 									})()
 								function calcNativeScrollbarSize(
-									measureElement
+									measureElement,
 								) {
 									return {
 										x:
@@ -2824,7 +2824,7 @@ Valid strings are: [ ` +
 											_loopID = COMPATIBILITY.rAF()(
 												function () {
 													loop()
-												}
+												},
 											)
 											var timeNew = _getNow(),
 												timeDelta =
@@ -2865,7 +2865,7 @@ Valid strings are: [ ` +
 																	1,
 																	instanceOptions[
 																		_strAutoUpdateInterval
-																	]
+																	],
 																)),
 															(now = _getNow()),
 															(instanceAutoUpdateAllowed ===
@@ -2878,21 +2878,21 @@ Valid strings are: [ ` +
 																	] >
 																	instanceAutoUpdateInterval &&
 																(instance.update(
-																	'auto'
+																	'auto',
 																),
 																(_loopingInstancesIntervalCache[
 																	i
 																] = new Date(
 																	(now +=
-																		instanceAutoUpdateInterval)
+																		instanceAutoUpdateInterval),
 																))),
 															(lowestInterval =
 																MATH.max(
 																	1,
 																	MATH.min(
 																		lowestInterval,
-																		instanceAutoUpdateInterval
-																	)
+																		instanceAutoUpdateInterval,
+																	),
 																)))
 												_loopInterval = lowestInterval
 											}
@@ -2904,7 +2904,7 @@ Valid strings are: [ ` +
 										-1 &&
 										(_loopingInstances.push(instance),
 										_loopingInstancesIntervalCache.push(
-											_getNow()
+											_getNow(),
 										),
 										_loopingInstances[_strLength] > 0 &&
 											!_loopIsActive &&
@@ -2916,12 +2916,12 @@ Valid strings are: [ ` +
 									(_base.remove = function (instance) {
 										var index = _inArray(
 											instance,
-											_loopingInstances
+											_loopingInstances,
 										)
 										index > -1 &&
 											(_loopingInstancesIntervalCache.splice(
 												index,
-												1
+												1,
 											),
 											_loopingInstances.splice(index, 1),
 											_loopingInstances[_strLength] ===
@@ -2932,7 +2932,7 @@ Valid strings are: [ ` +
 													_loopIsActive),
 												_loopID !== undefined2 &&
 													(COMPATIBILITY.cAF()(
-														_loopID
+														_loopID,
 													),
 													(_loopID = -1))))
 									})
@@ -2942,7 +2942,7 @@ Valid strings are: [ ` +
 								options,
 								extensions,
 								globals,
-								autoUpdateLoop
+								autoUpdateLoop,
 							) {
 								var type = COMPATIBILITY.type,
 									inArray = FRAMEWORK.inArray,
@@ -3271,7 +3271,7 @@ Valid strings are: [ ` +
 									eventNames,
 									listener,
 									remove2,
-									passiveOrOptions
+									passiveOrOptions,
 								) {
 									var collected =
 											COMPATIBILITY.isA(eventNames) &&
@@ -3286,7 +3286,7 @@ Valid strings are: [ ` +
 										i = 0,
 										passiveOrOptionsIsObj =
 											FRAMEWORK.isPlainObject(
-												passiveOrOptions
+												passiveOrOptions,
 											),
 										passive =
 											(_supportPassiveEvents &&
@@ -3307,7 +3307,7 @@ Valid strings are: [ ` +
 												eventNames[i],
 												listener[i],
 												remove2,
-												passiveOrOptions
+												passiveOrOptions,
 											)
 									else
 										for (; i < events[LEXICON.l]; i++)
@@ -3315,25 +3315,25 @@ Valid strings are: [ ` +
 												? element[0][method](
 														events[i],
 														listener,
-														nativeParam
+														nativeParam,
 												  )
 												: element[onOff](
 														events[i],
-														listener
+														listener,
 												  )
 								}
 								function addDestroyEventListener(
 									element,
 									eventNames,
 									listener,
-									passive
+									passive,
 								) {
 									setupResponsiveEventListener(
 										element,
 										eventNames,
 										listener,
 										!1,
-										passive
+										passive,
 									),
 										_destroyEvents.push(
 											COMPATIBILITY.bind(
@@ -3343,13 +3343,13 @@ Valid strings are: [ ` +
 												eventNames,
 												listener,
 												!0,
-												passive
-											)
+												passive,
+											),
 										)
 								}
 								function setupResizeObserver(
 									targetElement,
-									onElementResizedCallback
+									onElementResizedCallback,
 								) {
 									if (targetElement) {
 										var resizeObserver = COMPATIBILITY.rO(),
@@ -3359,7 +3359,7 @@ Valid strings are: [ ` +
 											constScroll = 3333333,
 											callback = function () {
 												targetElement[_strScrollTop](
-													constScroll
+													constScroll,
 												)[_strScrollLeft](
 													_isRTL
 														? _rtlScrollBehavior.n
@@ -3367,7 +3367,7 @@ Valid strings are: [ ` +
 															: _rtlScrollBehavior.i
 															? 0
 															: constScroll
-														: constScroll
+														: constScroll,
 												),
 													onElementResizedCallback()
 											}
@@ -3377,14 +3377,14 @@ Valid strings are: [ ` +
 														.addClass('observed')
 														.append(
 															generateDiv(
-																_classNameResizeObserverElement
-															)
+																_classNameResizeObserverElement,
+															),
 														)
 														.contents()[0],
 													observer = (element[
 														_strResizeObserverProperty
 													] = new resizeObserver(
-														callback
+														callback,
 													))
 												observer.observe(element)
 											} else if (
@@ -3402,8 +3402,8 @@ Valid strings are: [ ` +
 															generateDiv(
 																_classNameResizeObserverItemElement,
 																generateDiv(
-																	_classNameResizeObserverItemFinalElement
-																)
+																	_classNameResizeObserverItemFinalElement,
+																),
 															) +
 																generateDiv(
 																	_classNameResizeObserverItemElement,
@@ -3411,11 +3411,11 @@ Valid strings are: [ ` +
 																		{
 																			c: _classNameResizeObserverItemFinalElement,
 																			style: 'width: 200%; height: 200%',
-																		}
-																	)
-																)
-														)
-													)
+																		},
+																	),
+																),
+														),
+													),
 												)
 												var observerElement =
 														targetElement[0][
@@ -3424,18 +3424,18 @@ Valid strings are: [ ` +
 													shrinkElement = FRAMEWORK(
 														observerElement[
 															strChildNodes
-														][1]
+														][1],
 													),
 													expandElement = FRAMEWORK(
 														observerElement[
 															strChildNodes
-														][0]
+														][0],
 													),
 													expandElementChild =
 														FRAMEWORK(
 															expandElement[0][
 																strChildNodes
-															][0]
+															][0],
 														),
 													widthCache =
 														observerElement[
@@ -3474,7 +3474,7 @@ Valid strings are: [ ` +
 																callback())
 													},
 													onScroll = function (
-														event
+														event,
 													) {
 														return (
 															(currWidth =
@@ -3494,21 +3494,21 @@ Valid strings are: [ ` +
 															isDirty &&
 															!rAFId
 																? (COMPATIBILITY.cAF()(
-																		rAFId
+																		rAFId,
 																  ),
 																  (rAFId =
 																		COMPATIBILITY.rAF()(
-																			onResized
+																			onResized,
 																		)))
 																: event ||
 																  onResized(),
 															reset(),
 															event &&
 																(COMPATIBILITY.prvD(
-																	event
+																	event,
 																),
 																COMPATIBILITY.stpP(
-																	event
+																	event,
 																)),
 															!1
 														)
@@ -3533,24 +3533,24 @@ Valid strings are: [ ` +
 																1) *
 															factor
 														),
-													]
+													],
 												),
 													FRAMEWORK(
-														observerElement
+														observerElement,
 													).css(observerElementCSS),
 													expandElement.on(
 														_strScroll,
-														onScroll
+														onScroll,
 													),
 													shrinkElement.on(
 														_strScroll,
-														onScroll
+														onScroll,
 													),
 													targetElement.on(
 														strAnimationStartEvent,
 														function () {
 															onScroll(!1)
-														}
+														},
 													),
 													(expandChildCSS[_strWidth] =
 														constScroll),
@@ -3558,7 +3558,7 @@ Valid strings are: [ ` +
 														_strHeight
 													] = constScroll),
 													expandElementChild.css(
-														expandChildCSS
+														expandChildCSS,
 													),
 													reset()
 											} else {
@@ -3570,29 +3570,29 @@ Valid strings are: [ ` +
 												if (attachEvent)
 													targetElement.prepend(
 														generateDiv(
-															_classNameResizeObserverElement
-														)
+															_classNameResizeObserverElement,
+														),
 													),
 														findFirst(
 															targetElement,
 															_strDot +
-																_classNameResizeObserverElement
+																_classNameResizeObserverElement,
 														)[0].attachEvent(
 															'onresize',
-															callback
+															callback,
 														)
 												else {
 													var obj =
 														_documentElementNative.createElement(
-															TYPES.o
+															TYPES.o,
 														)
 													obj.setAttribute(
 														LEXICON.ti,
-														'-1'
+														'-1',
 													),
 														obj.setAttribute(
 															LEXICON.c,
-															_classNameResizeObserverElement
+															_classNameResizeObserverElement,
 														),
 														(obj.onload =
 															function () {
@@ -3602,7 +3602,7 @@ Valid strings are: [ ` +
 																		.defaultView
 																wnd.addEventListener(
 																	'resize',
-																	callback
+																	callback,
 																),
 																	(wnd.document.documentElement.style.display =
 																		'none')
@@ -3611,17 +3611,17 @@ Valid strings are: [ ` +
 															'text/html'),
 														isIE &&
 															targetElement.prepend(
-																obj
+																obj,
 															),
 														(obj.data =
 															'about:blank'),
 														isIE ||
 															targetElement.prepend(
-																obj
+																obj,
 															),
 														targetElement.on(
 															strAnimationStartEvent,
-															callback
+															callback,
 														)
 												}
 											}
@@ -3633,7 +3633,7 @@ Valid strings are: [ ` +
 													function () {
 														var dir =
 																_hostElement.css(
-																	'direction'
+																	'direction',
 																),
 															css = {},
 															scrollLeftValue = 0,
@@ -3671,7 +3671,7 @@ Valid strings are: [ ` +
 																_sizeObserverElement[
 																	_strScrollLeft
 																](
-																	scrollLeftValue
+																	scrollLeftValue,
 																)[
 																	_strScrollTop
 																](constScroll),
@@ -3690,14 +3690,14 @@ Valid strings are: [ ` +
 																directionChanged() &&
 																	update(),
 																COMPATIBILITY.prvD(
-																	event
+																	event,
 																),
 																COMPATIBILITY.stpP(
-																	event
+																	event,
 																),
 																!1
 															)
-														}
+														},
 													)
 											}
 										} else if (_supportResizeObserver) {
@@ -3717,9 +3717,9 @@ Valid strings are: [ ` +
 												targetElement
 													.children(
 														_strDot +
-															_classNameResizeObserverElement
+															_classNameResizeObserverElement,
 													)
-													.eq(0)
+													.eq(0),
 											)
 									}
 								}
@@ -3769,38 +3769,38 @@ Valid strings are: [ ` +
 																		mutationIsClass &&
 																		!doUpdateForce &&
 																		oldMutationVal.indexOf(
-																			_classNameHostElementForeign
+																			_classNameHostElementForeign,
 																		) >
 																			-1 &&
 																		newClassVal.indexOf(
-																			_classNameHostElementForeign
+																			_classNameHostElementForeign,
 																		) < 0 &&
 																		((hostClassNameRegex =
 																			createHostClassNameRegExp(
-																				!0
+																				!0,
 																			)),
 																		(_hostElementNative.className =
 																			newClassVal
 																				.split(
-																					_strSpace
+																					_strSpace,
 																				)
 																				.concat(
 																					oldMutationVal
 																						.split(
-																							_strSpace
+																							_strSpace,
 																						)
 																						.filter(
 																							function (
-																								name
+																								name,
 																							) {
 																								return name.match(
-																									hostClassNameRegex
+																									hostClassNameRegex,
 																								)
-																							}
-																						)
+																							},
+																						),
 																				)
 																				.join(
-																					_strSpace
+																					_strSpace,
 																				)),
 																		(doUpdate =
 																			doUpdateForce =
@@ -3810,7 +3810,7 @@ Valid strings are: [ ` +
 																			mutationIsClass
 																				? hostClassNamesChanged(
 																						oldMutationVal,
-																						newClassVal
+																						newClassVal,
 																				  )
 																				: mutationAttrName ===
 																				  LEXICON.s
@@ -3822,17 +3822,17 @@ Valid strings are: [ ` +
 																						.cssText
 																				: !0),
 																	mutatedAttrs.push(
-																		mutationAttrName
+																		mutationAttrName,
 																	)
-															}
+															},
 														),
 														updateViewportAttrsFromTarget(
-															mutatedAttrs
+															mutatedAttrs,
 														),
 														doUpdate &&
 															_base.update(
 																doUpdateForce ||
-																	_strAuto
+																	_strAuto,
 															)),
 													doUpdate
 												)
@@ -3852,11 +3852,11 @@ Valid strings are: [ ` +
 																			this),
 																		(doUpdate =
 																			isUnknownMutation(
-																				mutation
+																				mutation,
 																			)),
 																		!doUpdate
 																	)
-																}
+																},
 															),
 															doUpdate &&
 																((now =
@@ -3874,11 +3874,11 @@ Valid strings are: [ ` +
 																			sizeAuto
 																				? update()
 																				: _base.update(
-																						_strAuto
+																						_strAuto,
 																				  ))
 																	}),
 																clearTimeout(
-																	contentTimeout
+																	contentTimeout,
 																),
 																mutationObserverContentLag <=
 																	0 ||
@@ -3890,18 +3890,18 @@ Valid strings are: [ ` +
 																	: (contentTimeout =
 																			setTimeout(
 																				action,
-																				mutationObserverContentLag
+																				mutationObserverContentLag,
 																			)))),
 														doUpdate
 													)
 												}),
 											(_mutationObserverHost =
 												new mutationObserver(
-													_mutationObserverHostCallback
+													_mutationObserverHostCallback,
 												)),
 											(_mutationObserverContent =
 												new mutationObserver(
-													_mutationObserverContentCallback
+													_mutationObserverContentCallback,
 												))
 									}
 								}
@@ -3915,7 +3915,7 @@ Valid strings are: [ ` +
 												attributeOldValue: !0,
 												attributeFilter:
 													_mutationObserverAttrsHost,
-											}
+											},
 										),
 										_mutationObserverContent.observe(
 											_isTextarea
@@ -3930,7 +3930,7 @@ Valid strings are: [ ` +
 												attributeFilter: _isTextarea
 													? _mutationObserverAttrsTextarea
 													: _mutationObserverAttrsHost,
-											}
+											},
 										),
 										(_mutationObserversConnected = !0))
 								}
@@ -3954,7 +3954,7 @@ Valid strings are: [ ` +
 											}
 										;(changed = checkCache(
 											hostSize,
-											_hostElementSizeChangeDetectedCache
+											_hostElementSizeChangeDetectedCache,
 										)),
 											(_hostElementSizeChangeDetectedCache =
 												hostSize),
@@ -3969,7 +3969,7 @@ Valid strings are: [ ` +
 								function hostOnMouseLeave() {
 									_scrollbarsAutoHideLeave &&
 										!_bodyElement.hasClass(
-											_classNameDragging
+											_classNameDragging,
 										) &&
 										refreshScrollbarsAutoHide(!1)
 								}
@@ -3977,14 +3977,14 @@ Valid strings are: [ ` +
 									_scrollbarsAutoHideMove &&
 										(refreshScrollbarsAutoHide(!0),
 										clearTimeout(
-											_scrollbarsAutoHideMoveTimeoutId
+											_scrollbarsAutoHideMoveTimeoutId,
 										),
 										(_scrollbarsAutoHideMoveTimeoutId =
 											setTimeout(function () {
 												_scrollbarsAutoHideMove &&
 													!_destroyed &&
 													refreshScrollbarsAutoHide(
-														!1
+														!1,
 													)
 											}, 100)))
 								}
@@ -3997,19 +3997,24 @@ Valid strings are: [ ` +
 											elm = FRAMEWORK(event.target),
 											index = FRAMEWORK.inArray(
 												target,
-												_updateOnLoadElms
+												_updateOnLoadElms,
 											)
 										index > -1 &&
 											_updateOnLoadElms.splice(index, 1),
-											eachUpdateOnLoad(function (
-												i,
-												updateOnLoadSelector
-											) {
-												elm.is(updateOnLoadSelector) &&
-													update({
-														_contentSizeChanged: !0,
-													})
-											})
+											eachUpdateOnLoad(
+												function (
+													i,
+													updateOnLoadSelector,
+												) {
+													elm.is(
+														updateOnLoadSelector,
+													) &&
+														update({
+															_contentSizeChanged:
+																!0,
+														})
+												},
+											)
 									}
 								}
 								function setupHostMouseTouchEvents(destroy) {
@@ -4017,11 +4022,11 @@ Valid strings are: [ ` +
 										setupResponsiveEventListener(
 											_hostElement,
 											_strMouseTouchMoveEvent.split(
-												_strSpace
+												_strSpace,
 											)[0],
 											hostOnMouseMove,
 											!_scrollbarsAutoHideMove || destroy,
-											!0
+											!0,
 										),
 										setupResponsiveEventListener(
 											_hostElement,
@@ -4032,13 +4037,13 @@ Valid strings are: [ ` +
 											],
 											!_scrollbarsAutoHideLeave ||
 												destroy,
-											!0
+											!0,
 										),
 										!_initialized &&
 											!destroy &&
 											_hostElement.one(
 												'mouseover',
-												hostOnMouseEnter
+												hostOnMouseEnter,
 											)
 								}
 								function bodyMinSizeChanged() {
@@ -4049,19 +4054,20 @@ Valid strings are: [ ` +
 											((bodyMinSize.w =
 												parseToZeroOrNumber(
 													_contentArrangeElement.css(
-														_strMinMinus + _strWidth
-													)
+														_strMinMinus +
+															_strWidth,
+													),
 												)),
 											(bodyMinSize.h =
 												parseToZeroOrNumber(
 													_contentArrangeElement.css(
 														_strMinMinus +
-															_strHeight
-													)
+															_strHeight,
+													),
 												)),
 											(bodyMinSize.c = checkCache(
 												bodyMinSize,
-												_bodyMinSizeCache
+												_bodyMinSizeCache,
 											)),
 											(bodyMinSize.f = !0)),
 										(_bodyMinSizeCache = bodyMinSize),
@@ -4070,7 +4076,7 @@ Valid strings are: [ ` +
 								}
 								function hostClassNamesChanged(
 									oldClassNames,
-									newClassNames
+									newClassNames,
 								) {
 									var currClasses =
 											typeof newClassNames == TYPES.s
@@ -4082,11 +4088,11 @@ Valid strings are: [ ` +
 												: [],
 										diff = getArrayDifferences(
 											oldClasses,
-											currClasses
+											currClasses,
 										),
 										idx = inArray(
 											_classNameThemeNone,
-											diff
+											diff,
 										),
 										i,
 										regex
@@ -4097,7 +4103,7 @@ Valid strings are: [ ` +
 										for (
 											regex = createHostClassNameRegExp(
 												!0,
-												!0
+												!0,
 											),
 												i = 0;
 											i < diff.length;
@@ -4125,12 +4131,12 @@ Valid strings are: [ ` +
 										if (
 											attributeName === LEXICON.c &&
 											FRAMEWORK(mutationTarget).hasClass(
-												_classNameHostElement
+												_classNameHostElement,
 											)
 										)
 											return hostClassNamesChanged(
 												mutation.oldValue,
-												mutationTarget.className
+												mutationTarget.className,
 											)
 										if (
 											typeof mutationTarget[strClosest] !=
@@ -4140,14 +4146,14 @@ Valid strings are: [ ` +
 										if (
 											mutationTarget[strClosest](
 												_strDot +
-													_classNameResizeObserverElement
+													_classNameResizeObserverElement,
 											) !== null ||
 											mutationTarget[strClosest](
-												_strDot + _classNameScrollbar
+												_strDot + _classNameScrollbar,
 											) !== null ||
 											mutationTarget[strClosest](
 												_strDot +
-													_classNameScrollbarCorner
+													_classNameScrollbarCorner,
 											) !== null
 										)
 											return !1
@@ -4200,7 +4206,7 @@ Valid strings are: [ ` +
 										(bodyMinSizeC = bodyMinSizeChanged()),
 										(changed = checkCache(
 											contentElementScrollSize,
-											_contentElementScrollSizeChangeDetectedCache
+											_contentElementScrollSizeChangeDetectedCache,
 										)),
 										(_contentElementScrollSizeChangeDetectedCache =
 											contentElementScrollSize),
@@ -4222,7 +4228,7 @@ Valid strings are: [ ` +
 												{
 													_elem: _hostElement,
 													_attrs: _mutationObserverAttrsHost.concat(
-														':visible'
+														':visible',
 													),
 												},
 												{
@@ -4242,18 +4248,18 @@ Valid strings are: [ ` +
 																check._attrs,
 																function (
 																	index2,
-																	attr
+																	attr,
 																) {
 																	;(curr =
 																		attr.charAt(
-																			0
+																			0,
 																		) ===
 																		':'
 																			? elem.is(
-																					attr
+																					attr,
 																			  )
 																			: elem.attr(
-																					attr
+																					attr,
 																			  )),
 																		(cache =
 																			_updateAutoCache[
@@ -4261,28 +4267,28 @@ Valid strings are: [ ` +
 																			]),
 																		checkCache(
 																			curr,
-																			cache
+																			cache,
 																		) &&
 																			changedAttrs.push(
-																				attr
+																				attr,
 																			),
 																		(_updateAutoCache[
 																			attr
 																		] =
 																			curr)
-																}
+																},
 															)
-												}
+												},
 											),
 											updateViewportAttrsFromTarget(
-												changedAttrs
+												changedAttrs,
 											),
 											changedAttrs[LEXICON.l] > 0
 										)
 									}
 								}
 								function isSizeAffectingCSSProperty(
-									propertyName
+									propertyName,
 								) {
 									if (!_initialized) return !0
 									var flexGrow = 'flex-grow',
@@ -4348,7 +4354,7 @@ Valid strings are: [ ` +
 										sizeIsAffected = !1,
 										checkPropertyName = function (
 											arr,
-											name
+											name,
 										) {
 											for (
 												var i = 0;
@@ -4363,28 +4369,28 @@ Valid strings are: [ ` +
 											((sizeIsAffected =
 												checkPropertyName(
 													affectingPropsY,
-													propertyName
+													propertyName,
 												)),
 											!sizeIsAffected &&
 												!_isBorderBox &&
 												(sizeIsAffected =
 													checkPropertyName(
 														affectingPropsYContentBox,
-														propertyName
+														propertyName,
 													))),
 										checkX &&
 											!sizeIsAffected &&
 											((sizeIsAffected =
 												checkPropertyName(
 													affectingPropsX,
-													propertyName
+													propertyName,
 												)),
 											!sizeIsAffected &&
 												!_isBorderBox &&
 												(sizeIsAffected =
 													checkPropertyName(
 														affectingPropsXContentBox,
-														propertyName
+														propertyName,
 													))),
 										sizeIsAffected
 									)
@@ -4396,7 +4402,7 @@ Valid strings are: [ ` +
 											if (
 												COMPATIBILITY.inA(
 													attr,
-													_viewportAttrsFromTarget
+													_viewportAttrsFromTarget,
 												) > -1
 											) {
 												var targetAttr =
@@ -4404,10 +4410,10 @@ Valid strings are: [ ` +
 												type(targetAttr) == TYPES.s
 													? _viewportElement.attr(
 															attr,
-															targetAttr
+															targetAttr,
 													  )
 													: _viewportElement.removeAttr(
-															attr
+															attr,
 													  )
 											}
 										})
@@ -4441,7 +4447,7 @@ Valid strings are: [ ` +
 														origWidth,
 														_targetElementNative[
 															LEXICON.sW
-														] - 1
+														] - 1,
 												  )
 												: 1),
 											(css[_strWidth] = _widthAutoCache
@@ -4459,7 +4465,7 @@ Valid strings are: [ ` +
 												origHeight,
 												_targetElementNative[
 													LEXICON.sH
-												] - 1
+												] - 1,
 											)),
 											(css[_strWidth] = width),
 											(css[_strHeight] = height),
@@ -4511,7 +4517,7 @@ Valid strings are: [ ` +
 											(_swallowedUpdateTimeout =
 												setTimeout(
 													update,
-													_swallowUpdateLag
+													_swallowUpdateLag,
 												)),
 										!(
 											_destroyed ||
@@ -4521,7 +4527,7 @@ Valid strings are: [ ` +
 												!force &&
 												(displayIsHidden =
 													_hostElement.is(
-														':hidden'
+														':hidden',
 													))) ||
 											_hostElement.css('display') ===
 												'inline'
@@ -4539,7 +4545,7 @@ Valid strings are: [ ` +
 												: (_nativeScrollbarSize =
 														extendDeep(
 															{},
-															globals.nativeScrollbarSize
+															globals.nativeScrollbarSize,
 														)),
 											(_nativeScrollbarMinSize = {
 												x:
@@ -4562,7 +4568,7 @@ Valid strings are: [ ` +
 													this,
 													[].slice
 														.call(arguments)
-														.concat([force])
+														.concat([force]),
 												)
 											},
 											currScroll = {
@@ -4582,56 +4588,56 @@ Valid strings are: [ ` +
 											scrollbarsVisibilityChanged =
 												checkCacheAutoForce(
 													scrollbarsVisibility,
-													_scrollbarsVisibilityCache
+													_scrollbarsVisibilityCache,
 												),
 											scrollbarsAutoHide =
 												currentPreparedOptionsScrollbars.autoHide,
 											scrollbarsAutoHideChanged =
 												checkCacheAutoForce(
 													scrollbarsAutoHide,
-													_scrollbarsAutoHideCache
+													_scrollbarsAutoHideCache,
 												),
 											scrollbarsClickScrolling =
 												currentPreparedOptionsScrollbars.clickScrolling,
 											scrollbarsClickScrollingChanged =
 												checkCacheAutoForce(
 													scrollbarsClickScrolling,
-													_scrollbarsClickScrollingCache
+													_scrollbarsClickScrollingCache,
 												),
 											scrollbarsDragScrolling =
 												currentPreparedOptionsScrollbars.dragScrolling,
 											scrollbarsDragScrollingChanged =
 												checkCacheAutoForce(
 													scrollbarsDragScrolling,
-													_scrollbarsDragScrollingCache
+													_scrollbarsDragScrollingCache,
 												),
 											className =
 												_currentPreparedOptions.className,
 											classNameChanged =
 												checkCacheAutoForce(
 													className,
-													_classNameCache
+													_classNameCache,
 												),
 											resize =
 												_currentPreparedOptions.resize,
 											resizeChanged =
 												checkCacheAutoForce(
 													resize,
-													_resizeCache
+													_resizeCache,
 												) && !_isBody,
 											paddingAbsolute =
 												_currentPreparedOptions.paddingAbsolute,
 											paddingAbsoluteChanged =
 												checkCacheAutoForce(
 													paddingAbsolute,
-													_paddingAbsoluteCache
+													_paddingAbsoluteCache,
 												),
 											clipAlways =
 												_currentPreparedOptions.clipAlways,
 											clipAlwaysChanged =
 												checkCacheAutoForce(
 													clipAlways,
-													_clipAlwaysCache
+													_clipAlwaysCache,
 												),
 											sizeAutoCapable =
 												_currentPreparedOptions.sizeAutoCapable &&
@@ -4639,7 +4645,7 @@ Valid strings are: [ ` +
 											sizeAutoCapableChanged =
 												checkCacheAutoForce(
 													sizeAutoCapable,
-													_sizeAutoCapableCache
+													_sizeAutoCapableCache,
 												),
 											ignoreOverlayScrollbarHiding =
 												_currentPreparedOptions
@@ -4648,14 +4654,14 @@ Valid strings are: [ ` +
 											ignoreOverlayScrollbarHidingChanged =
 												checkCacheAutoForce(
 													ignoreOverlayScrollbarHiding,
-													_ignoreOverlayScrollbarHidingCache
+													_ignoreOverlayScrollbarHidingCache,
 												),
 											autoUpdate =
 												_currentPreparedOptions.autoUpdate,
 											autoUpdateChanged =
 												checkCacheAutoForce(
 													autoUpdate,
-													_autoUpdateCache
+													_autoUpdateCache,
 												),
 											overflowBehavior =
 												_currentPreparedOptions.overflowBehavior,
@@ -4663,21 +4669,21 @@ Valid strings are: [ ` +
 												checkCacheAutoForce(
 													overflowBehavior,
 													_overflowBehaviorCache,
-													force
+													force,
 												),
 											textareaDynWidth =
 												currentPreparedOptionsTextarea.dynWidth,
 											textareaDynWidthChanged =
 												checkCacheAutoForce(
 													_textareaDynWidthCache,
-													textareaDynWidth
+													textareaDynWidth,
 												),
 											textareaDynHeight =
 												currentPreparedOptionsTextarea.dynHeight,
 											textareaDynHeightChanged =
 												checkCacheAutoForce(
 													_textareaDynHeightCache,
-													textareaDynHeight
+													textareaDynHeight,
 												)
 										if (
 											((_scrollbarsAutoHideNever =
@@ -4723,7 +4729,7 @@ Valid strings are: [ ` +
 											(_overflowBehaviorCache =
 												extendDeep(
 													{},
-													overflowBehavior
+													overflowBehavior,
 												)),
 											(_textareaDynWidthCache =
 												textareaDynWidth),
@@ -4739,7 +4745,7 @@ Valid strings are: [ ` +
 													_hostElement,
 													_oldClassName +
 														_strSpace +
-														_classNameThemeNone
+														_classNameThemeNone,
 												),
 												addClass(
 													_hostElement,
@@ -4747,7 +4753,7 @@ Valid strings are: [ ` +
 														className !== null &&
 														className.length > 0
 														? className
-														: _classNameThemeNone
+														: _classNameThemeNone,
 												)),
 											autoUpdateChanged &&
 												(autoUpdate === !0 ||
@@ -4756,7 +4762,7 @@ Valid strings are: [ ` +
 													? (disconnectMutationObservers(),
 													  autoUpdateLoop.add(_base))
 													: (autoUpdateLoop.remove(
-															_base
+															_base,
 													  ),
 													  connectMutationObservers())),
 											sizeAutoCapableChanged)
@@ -4768,11 +4774,11 @@ Valid strings are: [ ` +
 														: ((_contentGlueElement =
 																FRAMEWORK(
 																	generateDiv(
-																		_classNameContentGlueElement
-																	)
+																		_classNameContentGlueElement,
+																	),
 																)),
 														  _paddingElement.before(
-																_contentGlueElement
+																_contentGlueElement,
 														  )),
 													_sizeAutoObserverAdded)
 												)
@@ -4781,13 +4787,13 @@ Valid strings are: [ ` +
 													;(_sizeAutoObserverElement =
 														FRAMEWORK(
 															generateDiv(
-																_classNameSizeAutoObserverElement
-															)
+																_classNameSizeAutoObserverElement,
+															),
 														)),
 														(_sizeAutoObserverElementNative =
 															_sizeAutoObserverElement[0]),
 														_contentGlueElement.before(
-															_sizeAutoObserverElement
+															_sizeAutoObserverElement,
 														)
 													var oldSize = {
 														w: -1,
@@ -4806,7 +4812,7 @@ Valid strings are: [ ` +
 															}
 															checkCache(
 																newSize,
-																oldSize
+																oldSize,
 															) &&
 																((_initialized &&
 																	_heightAutoCache &&
@@ -4825,7 +4831,7 @@ Valid strings are: [ ` +
 																update(),
 																(oldSize =
 																	newSize)
-														}
+														},
 													),
 														(_sizeAutoObserverAdded =
 															!0),
@@ -4833,7 +4839,7 @@ Valid strings are: [ ` +
 															_sizeAutoObserverElement.css(
 																_strHeight,
 																_cssCalc +
-																	'(100% + 1px)'
+																	'(100% + 1px)',
 															)
 												}
 											else
@@ -4855,31 +4861,31 @@ Valid strings are: [ ` +
 													: displayIsHidden)
 										var textareaAutoWrapping = _isTextarea
 												? _targetElement.attr(
-														'wrap'
+														'wrap',
 												  ) !== 'off'
 												: !1,
 											textareaAutoWrappingChanged =
 												checkCacheAutoForce(
 													textareaAutoWrapping,
-													_textareaAutoWrappingCache
+													_textareaAutoWrappingCache,
 												),
 											cssDirection =
 												_hostElement.css('direction'),
 											cssDirectionChanged =
 												checkCacheAutoForce(
 													cssDirection,
-													_cssDirectionCache
+													_cssDirectionCache,
 												),
 											boxSizing =
 												_hostElement.css('box-sizing'),
 											boxSizingChanged =
 												checkCacheAutoForce(
 													boxSizing,
-													_cssBoxSizingCache
+													_cssBoxSizingCache,
 												),
 											padding =
 												getTopRightBottomLeftHost(
-													_strPaddingMinus
+													_strPaddingMinus,
 												),
 											sizeAutoObserverElementBCRect
 										try {
@@ -4908,7 +4914,7 @@ Valid strings are: [ ` +
 													'none'
 													? MATH.round(
 															sizeAutoObserverElementBCRect.right -
-																sizeAutoObserverElementBCRect.left
+																sizeAutoObserverElementBCRect.left,
 													  ) === 0 &&
 													  (paddingAbsolute
 															? !0
@@ -4928,17 +4934,17 @@ Valid strings are: [ ` +
 													],
 												tmpCurrContentGlueWidth =
 													_contentGlueElement.css(
-														_strWidth
+														_strWidth,
 													)
 											_contentGlueElement.css(
 												_strWidth,
-												_strAuto
+												_strAuto,
 											)
 											var tmpNewHostWidth =
 												_hostElementNative[LEXICON.oW]
 											_contentGlueElement.css(
 												_strWidth,
-												tmpCurrContentGlueWidth
+												tmpCurrContentGlueWidth,
 											),
 												(widthAutoResizeDetection =
 													tmpCurrHostWidth !==
@@ -4946,7 +4952,7 @@ Valid strings are: [ ` +
 												widthAutoResizeDetection ||
 													(_contentGlueElement.css(
 														_strWidth,
-														tmpCurrHostWidth + 1
+														tmpCurrHostWidth + 1,
 													),
 													(tmpNewHostWidth =
 														_hostElementNative[
@@ -4954,7 +4960,7 @@ Valid strings are: [ ` +
 														]),
 													_contentGlueElement.css(
 														_strWidth,
-														tmpCurrContentGlueWidth
+														tmpCurrContentGlueWidth,
 													),
 													(widthAutoResizeDetection =
 														tmpCurrHostWidth !==
@@ -4968,7 +4974,7 @@ Valid strings are: [ ` +
 											widthAutoChanged =
 												checkCacheAutoForce(
 													widthAuto,
-													_widthAutoCache
+													_widthAutoCache,
 												),
 											wasWidthAuto =
 												!widthAuto && _widthAutoCache,
@@ -4978,13 +4984,13 @@ Valid strings are: [ ` +
 												!displayIsHidden
 													? MATH.round(
 															sizeAutoObserverElementBCRect.bottom -
-																sizeAutoObserverElementBCRect.top
+																sizeAutoObserverElementBCRect.top,
 													  ) === 0
 													: !1,
 											heightAutoChanged =
 												checkCacheAutoForce(
 													heightAuto,
-													_heightAutoCache
+													_heightAutoCache,
 												),
 											wasHeightAuto =
 												!heightAuto && _heightAutoCache,
@@ -4998,11 +5004,11 @@ Valid strings are: [ ` +
 												_strBorderMinus,
 												'-' + _strWidth,
 												!updateBorderX,
-												!updateBorderY
+												!updateBorderY,
 											),
 											margin =
 												getTopRightBottomLeftHost(
-													_strMarginMinus
+													_strMarginMinus,
 												),
 											contentElementCSS = {},
 											contentGlueElementCSS = {},
@@ -5029,7 +5035,7 @@ Valid strings are: [ ` +
 															] -
 																_contentElementNative[
 																	LEXICON.sW
-																]
+																],
 														),
 													h:
 														_paddingElementNative[
@@ -5042,7 +5048,7 @@ Valid strings are: [ ` +
 															] -
 																_contentElementNative[
 																	LEXICON.sH
-																]
+																],
 														),
 												}
 											},
@@ -5058,19 +5064,19 @@ Valid strings are: [ ` +
 												: 0),
 											(padding.c = checkCacheAutoForce(
 												padding,
-												_cssPaddingCache
+												_cssPaddingCache,
 											)),
 											(_borderX = border.l + border.r),
 											(_borderY = border.t + border.b),
 											(border.c = checkCacheAutoForce(
 												border,
-												_cssBorderCache
+												_cssBorderCache,
 											)),
 											(_marginX = margin.l + margin.r),
 											(_marginY = margin.t + margin.b),
 											(margin.c = checkCacheAutoForce(
 												margin,
-												_cssMarginCache
+												_cssMarginCache,
 											)),
 											(_textareaAutoWrappingCache =
 												textareaAutoWrapping),
@@ -5085,7 +5091,7 @@ Valid strings are: [ ` +
 												_sizeAutoObserverAdded &&
 												_sizeAutoObserverElement.css(
 													_strFloat,
-													isRTLRight
+													isRTLRight,
 												),
 											padding.c ||
 												cssDirectionChanged ||
@@ -5111,33 +5117,33 @@ Valid strings are: [ ` +
 													-padding.r,
 													-padding.b,
 													-padding.l,
-												]
+												],
 											),
 												paddingAbsolute
 													? (setTopRightBottomLeft(
 															paddingElementCSS,
 															_strEmpty,
-															paddingValues
-													  ),
-													  setTopRightBottomLeft(
-															_isTextarea
-																? textareaCSS
-																: contentElementCSS,
-															_strPaddingMinus
-													  ))
-													: (setTopRightBottomLeft(
-															paddingElementCSS,
-															_strEmpty
+															paddingValues,
 													  ),
 													  setTopRightBottomLeft(
 															_isTextarea
 																? textareaCSS
 																: contentElementCSS,
 															_strPaddingMinus,
-															paddingValues
+													  ))
+													: (setTopRightBottomLeft(
+															paddingElementCSS,
+															_strEmpty,
+													  ),
+													  setTopRightBottomLeft(
+															_isTextarea
+																? textareaCSS
+																: contentElementCSS,
+															_strPaddingMinus,
+															paddingValues,
 													  )),
 												_paddingElement.css(
-													paddingElementCSS
+													paddingElementCSS,
 												),
 												_targetElement.css(textareaCSS)
 										}
@@ -5149,7 +5155,7 @@ Valid strings are: [ ` +
 												_isTextarea &&
 												checkCacheAutoForce(
 													textareaSize,
-													_textareaSizeCache
+													_textareaSizeCache,
 												),
 											textareaDynOrigSize =
 												_isTextarea && textareaSize
@@ -5212,7 +5218,7 @@ Valid strings are: [ ` +
 												  ] =
 														VENDORS._cssPropertyValue(
 															_strWidth,
-															'max-content intrinsic'
+															'max-content intrinsic',
 														) || _strAuto),
 												  (contentElementCSS[
 														_strFloat
@@ -5233,10 +5239,10 @@ Valid strings are: [ ` +
 												  ] = _strEmpty),
 											sizeAutoCapable &&
 												_contentGlueElement.css(
-													contentGlueElementCSS
+													contentGlueElementCSS,
 												),
 											_contentElement.css(
-												contentElementCSS
+												contentElementCSS,
 											),
 											(contentElementCSS = {}),
 											(contentGlueElementCSS = {}),
@@ -5278,7 +5284,7 @@ Valid strings are: [ ` +
 														!ignoreOverlayScrollbarHiding
 															? _nativeScrollbarIsOverlaid.y
 																? _viewportElement.css(
-																		isRTLLeft
+																		isRTLLeft,
 																  )
 																: -_nativeScrollbarSize.y
 															: 0,
@@ -5288,16 +5294,16 @@ Valid strings are: [ ` +
 														!ignoreOverlayScrollbarHiding
 															? _nativeScrollbarIsOverlaid.x
 																? _viewportElement.css(
-																		_strBottom
+																		_strBottom,
 																  )
 																: -_nativeScrollbarSize.x
 															: 0
 												setTopRightBottomLeft(
 													viewportElementResetCSS,
-													_strEmpty
+													_strEmpty,
 												),
 													_viewportElement.css(
-														viewportElementResetCSS
+														viewportElementResetCSS,
 													)
 											}
 											var contentMeasureElement =
@@ -5334,7 +5340,7 @@ Valid strings are: [ ` +
 													? _strEmpty
 													: resetXTmp),
 												_viewportElement.css(
-													viewportElementResetCSS
+													viewportElementResetCSS,
 												)),
 												(_viewportSize =
 													getViewportSize())
@@ -5361,21 +5367,21 @@ Valid strings are: [ ` +
 															? contentSize.w
 															: scrollSize.w) +
 															paddingAbsoluteX,
-														hostAbsoluteRectSize.w
+														hostAbsoluteRectSize.w,
 													),
 													h: MATH.max(
 														(heightAuto
 															? contentSize.h
 															: scrollSize.h) +
 															paddingAbsoluteY,
-														hostAbsoluteRectSize.h
+														hostAbsoluteRectSize.h,
 													),
 												}
 											if (
 												((contentGlueSize.c =
 													checkCacheAutoForce(
 														contentGlueSize,
-														_contentGlueSizeCache
+														_contentGlueSizeCache,
 													)),
 												(_contentGlueSizeCache =
 													contentGlueSize),
@@ -5404,7 +5410,7 @@ Valid strings are: [ ` +
 														function (horizontal) {
 															var scrollbarVars =
 																	getScrollbarVars(
-																		horizontal
+																		horizontal,
 																	),
 																wh =
 																	scrollbarVars._w_h,
@@ -5460,8 +5466,8 @@ Valid strings are: [ ` +
 																		] =
 																			parseToZeroOrNumber(
 																				_textareaCoverElement.css(
-																					strWH
-																				)
+																					strWH,
+																				),
 																			) -
 																			1),
 																	(contentGlueElementCSS[
@@ -5477,21 +5483,21 @@ Valid strings are: [ ` +
 																			1,
 																			contentGlueElementCSS[
 																				strWH
-																			]
+																			],
 																		))
 														}
 												setContentGlueElementCSSfunction(
-													!0
+													!0,
 												),
 													setContentGlueElementCSSfunction(
-														!1
+														!1,
 													),
 													_isTextarea &&
 														_textareaCoverElement.css(
-															textareaCoverCSS
+															textareaCoverCSS,
 														),
 													_contentGlueElement.css(
-														contentGlueElementCSS
+														contentGlueElementCSS,
 													)
 											}
 											widthAuto &&
@@ -5504,7 +5510,7 @@ Valid strings are: [ ` +
 														_strFloat
 													] = 'none'),
 												_contentElement.css(
-													contentElementCSS
+													contentElementCSS,
 												),
 												(contentElementCSS = {})
 											var contentScrollSize = {
@@ -5519,7 +5525,7 @@ Valid strings are: [ ` +
 												contentSizeChanged =
 													checkCacheAutoForce(
 														contentScrollSize,
-														_contentScrollSizeCache
+														_contentScrollSizeCache,
 													)),
 												(_contentScrollSizeCache =
 													contentScrollSize),
@@ -5529,7 +5535,7 @@ Valid strings are: [ ` +
 												(hostSizeChanged =
 													checkCacheAutoForce(
 														hostSize,
-														_hostSizeCache
+														_hostSizeCache,
 													)),
 												(_hostSizeCache = hostSize)
 											var hideOverflowForceTextarea =
@@ -5553,11 +5559,11 @@ Valid strings are: [ ` +
 													function (horizontal) {
 														var scrollbarVars =
 																getScrollbarVars(
-																	horizontal
+																	horizontal,
 																),
 															scrollbarVarsInverted =
 																getScrollbarVars(
-																	!horizontal
+																	!horizontal,
 																),
 															xyI =
 																scrollbarVarsInverted._x_y,
@@ -5581,7 +5587,7 @@ Valid strings are: [ ` +
 																			] -
 																				_viewportSize[
 																					wh
-																				]
+																				],
 																	  )
 																	: 0,
 															checkFractionalOverflowAmount =
@@ -5621,8 +5627,8 @@ Valid strings are: [ ` +
 																		_viewportSize[
 																			wh
 																		]) *
-																		100
-																) / 100
+																		100,
+																) / 100,
 															)),
 															(overflowAmount[
 																xy
@@ -5682,21 +5688,21 @@ Valid strings are: [ ` +
 												(overflowAmount.c =
 													checkCacheAutoForce(
 														overflowAmount,
-														_overflowAmountCache
+														_overflowAmountCache,
 													)),
 												(_overflowAmountCache =
 													overflowAmount),
 												(hasOverflow.c =
 													checkCacheAutoForce(
 														hasOverflow,
-														_hasOverflowCache
+														_hasOverflowCache,
 													)),
 												(_hasOverflowCache =
 													hasOverflow),
 												(hideOverflow.c =
 													checkCacheAutoForce(
 														hideOverflow,
-														_hideOverflowCache
+														_hideOverflowCache,
 													)),
 												(_hideOverflowCache =
 													hideOverflow),
@@ -5727,7 +5733,7 @@ Valid strings are: [ ` +
 													(arrangeChanged =
 														checkCacheAutoForce(
 															arrangeContent,
-															_arrangeContentSizeCache
+															_arrangeContentSizeCache,
 														)),
 													(_arrangeContentSizeCache =
 														arrangeContent)),
@@ -5750,15 +5756,15 @@ Valid strings are: [ ` +
 															_strEmpty),
 														(setContentElementCSS =
 															function (
-																horizontal
+																horizontal,
 															) {
 																var scrollbarVars =
 																		getScrollbarVars(
-																			horizontal
+																			horizontal,
 																		),
 																	scrollbarVarsInverted =
 																		getScrollbarVars(
-																			!horizontal
+																			!horizontal,
 																		),
 																	xy =
 																		scrollbarVars._x_y,
@@ -5821,13 +5827,13 @@ Valid strings are: [ ` +
 															? addRemoveClass(
 																	_viewportElement,
 																	_classNameViewportNativeScrollbarsInvisible,
-																	!ignoreOverlayScrollbarHiding
+																	!ignoreOverlayScrollbarHiding,
 															  )
 															: (setContentElementCSS(
-																	!0
+																	!0,
 															  ),
 															  setContentElementCSS(
-																	!1
+																	!1,
 															  ))),
 													ignoreOverlayScrollbarHiding &&
 														((arrangeContent.w =
@@ -5850,17 +5856,17 @@ Valid strings are: [ ` +
 															((_contentArrangeElement =
 																FRAMEWORK(
 																	generateDiv(
-																		_classNameContentArrangeElement
-																	)
+																		_classNameContentArrangeElement,
+																	),
 																)),
 															_viewportElement.prepend(
-																_contentArrangeElement
+																_contentArrangeElement,
 															)),
 														_contentArrangeElement.css(
-															contentArrangeElementCSS
+															contentArrangeElementCSS,
 														)),
 													_contentElement.css(
-														contentElementCSS
+														contentElementCSS,
 													)
 											}
 											var viewportElementCSS = {},
@@ -5881,15 +5887,15 @@ Valid strings are: [ ` +
 													isRTLRight
 												] = _strEmpty),
 												(setViewportCSS = function (
-													horizontal
+													horizontal,
 												) {
 													var scrollbarVars =
 															getScrollbarVars(
-																horizontal
+																horizontal,
 															),
 														scrollbarVarsInverted =
 															getScrollbarVars(
-																!horizontal
+																!horizontal,
 															),
 														xy = scrollbarVars._x_y,
 														XY = scrollbarVars._X_Y,
@@ -6030,10 +6036,10 @@ Valid strings are: [ ` +
 													  ] =
 															strVisible)),
 												_paddingElement.css(
-													paddingElementCSS
+													paddingElementCSS,
 												),
 												_viewportElement.css(
-													viewportElementCSS
+													viewportElementCSS,
 												),
 												(viewportElementCSS = {}),
 												(hasOverflow.c ||
@@ -6072,30 +6078,30 @@ Valid strings are: [ ` +
 												if (_isRTL && widthAuto) {
 													var floatTmp =
 															_contentElement.css(
-																_strFloat
+																_strFloat,
 															),
 														posLeftWithoutFloat =
 															MATH.round(
 																_contentElement
 																	.css(
 																		_strFloat,
-																		_strEmpty
+																		_strEmpty,
 																	)
 																	.css(
 																		_strLeft,
-																		_strEmpty
+																		_strEmpty,
 																	)
 																	.position()
-																	.left
+																	.left,
 															)
 													_contentElement.css(
 														_strFloat,
-														floatTmp
+														floatTmp,
 													)
 													var posLeftWithFloat =
 														MATH.round(
 															_contentElement.position()
-																.left
+																.left,
 														)
 													posLeftWithoutFloat !==
 														posLeftWithFloat &&
@@ -6108,7 +6114,7 @@ Valid strings are: [ ` +
 													] = _strEmpty
 											if (
 												(_contentElement.css(
-													contentElementCSS
+													contentElementCSS,
 												),
 												_isTextarea &&
 													contentSizeChanged)
@@ -6195,12 +6201,12 @@ Valid strings are: [ ` +
 													](0),
 												heightAuto &&
 													_hostElement[_strScrollTop](
-														0
+														0,
 													),
 												_viewportElement[
 													_strScrollLeft
 												](currScroll.x)[_strScrollTop](
-													currScroll.y
+													currScroll.y,
 												)
 											var scrollbarsVisibilityVisible =
 													scrollbarsVisibility ===
@@ -6220,66 +6226,67 @@ Valid strings are: [ ` +
 															refreshScrollbarAppearance(
 																!0,
 																showX,
-																canScroll.x
+																canScroll.x,
 															),
 															refreshScrollbarAppearance(
 																!1,
 																showY,
-																canScroll.y
+																canScroll.y,
 															)
 													}
 											addRemoveClass(
 												_hostElement,
 												_classNameHostOverflow,
-												hideOverflow.x || hideOverflow.y
+												hideOverflow.x ||
+													hideOverflow.y,
 											),
 												addRemoveClass(
 													_hostElement,
 													_classNameHostOverflowX,
-													hideOverflow.x
+													hideOverflow.x,
 												),
 												addRemoveClass(
 													_hostElement,
 													_classNameHostOverflowY,
-													hideOverflow.y
+													hideOverflow.y,
 												),
 												cssDirectionChanged &&
 													!_isBody &&
 													addRemoveClass(
 														_hostElement,
 														_classNameHostRTL,
-														_isRTL
+														_isRTL,
 													),
 												_isBody &&
 													addClass(
 														_hostElement,
-														_classNameHostResizeDisabled
+														_classNameHostResizeDisabled,
 													),
 												resizeChanged &&
 													(addRemoveClass(
 														_hostElement,
 														_classNameHostResizeDisabled,
-														_resizeNone
+														_resizeNone,
 													),
 													addRemoveClass(
 														_scrollbarCornerElement,
 														_classNameScrollbarCornerResize,
-														!_resizeNone
+														!_resizeNone,
 													),
 													addRemoveClass(
 														_scrollbarCornerElement,
 														_classNameScrollbarCornerResizeB,
-														_resizeBoth
+														_resizeBoth,
 													),
 													addRemoveClass(
 														_scrollbarCornerElement,
 														_classNameScrollbarCornerResizeH,
-														_resizeHorizontal
+														_resizeHorizontal,
 													),
 													addRemoveClass(
 														_scrollbarCornerElement,
 														_classNameScrollbarCornerResizeV,
-														_resizeVertical
+														_resizeVertical,
 													)),
 												(scrollbarsVisibilityChanged ||
 													overflowBehaviorChanged ||
@@ -6290,34 +6297,34 @@ Valid strings are: [ ` +
 														? ignoreOverlayScrollbarHidingChanged &&
 														  (removeClass(
 																_hostElement,
-																_classNameHostScrolling
+																_classNameHostScrolling,
 														  ),
 														  ignoreOverlayScrollbarHiding &&
 																refreshScrollbarsVisibility(
-																	!1
+																	!1,
 																))
 														: scrollbarsVisibilityAuto
 														? refreshScrollbarsVisibility(
 																canScroll.x,
-																canScroll.y
+																canScroll.y,
 														  )
 														: scrollbarsVisibilityVisible
 														? refreshScrollbarsVisibility(
-																!0
+																!0,
 														  )
 														: scrollbarsVisibilityHidden &&
 														  refreshScrollbarsVisibility(
-																!1
+																!1,
 														  )),
 												(scrollbarsAutoHideChanged ||
 													ignoreOverlayScrollbarHidingChanged) &&
 													(setupHostMouseTouchEvents(
 														!_scrollbarsAutoHideLeave &&
-															!_scrollbarsAutoHideMove
+															!_scrollbarsAutoHideMove,
 													),
 													refreshScrollbarsAutoHide(
 														_scrollbarsAutoHideNever,
-														!_scrollbarsAutoHideNever
+														!_scrollbarsAutoHideNever,
 													)),
 												(hostSizeChanged ||
 													overflowAmount.c ||
@@ -6329,26 +6336,26 @@ Valid strings are: [ ` +
 													ignoreOverlayScrollbarHidingChanged ||
 													cssDirectionChanged) &&
 													(refreshScrollbarHandleLength(
-														!0
+														!0,
 													),
 													refreshScrollbarHandleOffset(
-														!0
+														!0,
 													),
 													refreshScrollbarHandleLength(
-														!1
+														!1,
 													),
 													refreshScrollbarHandleOffset(
-														!1
+														!1,
 													)),
 												scrollbarsClickScrollingChanged &&
 													refreshScrollbarsInteractive(
 														!0,
-														scrollbarsClickScrolling
+														scrollbarsClickScrolling,
 													),
 												scrollbarsDragScrollingChanged &&
 													refreshScrollbarsInteractive(
 														!1,
-														scrollbarsDragScrolling
+														scrollbarsDragScrolling,
 													),
 												dispatchCallback(
 													'onDirectionChanged',
@@ -6356,7 +6363,7 @@ Valid strings are: [ ` +
 														isRTL: _isRTL,
 														dir: cssDirection,
 													},
-													cssDirectionChanged
+													cssDirectionChanged,
 												),
 												dispatchCallback(
 													'onHostSizeChanged',
@@ -6364,7 +6371,7 @@ Valid strings are: [ ` +
 														width: _hostSizeCache.w,
 														height: _hostSizeCache.h,
 													},
-													hostSizeChanged
+													hostSizeChanged,
 												),
 												dispatchCallback(
 													'onContentSizeChanged',
@@ -6372,7 +6379,7 @@ Valid strings are: [ ` +
 														width: _contentScrollSizeCache.w,
 														height: _contentScrollSizeCache.h,
 													},
-													contentSizeChanged
+													contentSizeChanged,
 												),
 												dispatchCallback(
 													'onOverflowChanged',
@@ -6388,7 +6395,7 @@ Valid strings are: [ ` +
 															hideOverflow.y,
 													},
 													hasOverflow.c ||
-														hideOverflow.c
+														hideOverflow.c,
 												),
 												dispatchCallback(
 													'onOverflowAmountChanged',
@@ -6396,7 +6403,7 @@ Valid strings are: [ ` +
 														x: overflowAmount.x,
 														y: overflowAmount.y,
 													},
-													overflowAmount.c
+													overflowAmount.c,
 												)
 										}
 										_isBody &&
@@ -6410,14 +6417,14 @@ Valid strings are: [ ` +
 												_contentElement.css(
 													_strMinMinus + _strWidth,
 													_bodyMinSizeCache.w +
-														_overlayScrollbarDummySize.y
+														_overlayScrollbarDummySize.y,
 												),
 											_nativeScrollbarIsOverlaid.x &&
 												_hasOverflowCache.y &&
 												_contentElement.css(
 													_strMinMinus + _strHeight,
 													_bodyMinSizeCache.h +
-														_overlayScrollbarDummySize.x
+														_overlayScrollbarDummySize.x,
 												),
 											(_bodyMinSizeCache.c = !1)),
 											_initialized &&
@@ -6430,31 +6437,30 @@ Valid strings are: [ ` +
 								}
 								function updateElementsOnLoad() {
 									_isTextarea ||
-										eachUpdateOnLoad(function (
-											i,
-											updateOnLoadSelector
-										) {
-											_contentElement
-												.find(updateOnLoadSelector)
-												.each(function (i2, el) {
-													COMPATIBILITY.inA(
-														el,
-														_updateOnLoadElms
-													) < 0 &&
-														(_updateOnLoadElms.push(
-															el
-														),
-														FRAMEWORK(el)
-															.off(
-																_updateOnLoadEventName,
-																updateOnLoadCallback
-															)
-															.on(
-																_updateOnLoadEventName,
-																updateOnLoadCallback
-															))
-												})
-										})
+										eachUpdateOnLoad(
+											function (i, updateOnLoadSelector) {
+												_contentElement
+													.find(updateOnLoadSelector)
+													.each(function (i2, el) {
+														COMPATIBILITY.inA(
+															el,
+															_updateOnLoadElms,
+														) < 0 &&
+															(_updateOnLoadElms.push(
+																el,
+															),
+															FRAMEWORK(el)
+																.off(
+																	_updateOnLoadEventName,
+																	updateOnLoadCallback,
+																)
+																.on(
+																	_updateOnLoadEventName,
+																	updateOnLoadCallback,
+																))
+													})
+											},
+										)
 								}
 								function setOptions(newOptions) {
 									var validatedOpts =
@@ -6462,18 +6468,18 @@ Valid strings are: [ ` +
 											newOptions,
 											_pluginsOptions._template,
 											!0,
-											_currentOptions
+											_currentOptions,
 										)
 									return (
 										(_currentOptions = extendDeep(
 											{},
 											_currentOptions,
-											validatedOpts._default
+											validatedOpts._default,
 										)),
 										(_currentPreparedOptions = extendDeep(
 											{},
 											_currentPreparedOptions,
-											validatedOpts._prepared
+											validatedOpts._prepared,
 										)),
 										validatedOpts._prepared
 									)
@@ -6503,13 +6509,13 @@ Valid strings are: [ ` +
 													type(value) == TYPES.s &&
 														(key == LEXICON.c
 															? applyAdoptedAttrsElm.addClass(
-																	value
+																	value,
 															  )
 															: applyAdoptedAttrsElm.attr(
 																	key,
-																	value
+																	value,
 															  ))
-												}
+												},
 											)
 										},
 										hostElementClassNames = [
@@ -6541,49 +6547,49 @@ Valid strings are: [ ` +
 														[strParent]()
 												: FRAMEWORK(
 														generateDiv(
-															_classNameHostTextareaElement
-														)
+															_classNameHostTextareaElement,
+														),
 												  )
 											: _targetElement)),
 										(_contentElement =
 											_contentElement ||
 											selectOrGenerateDivByClass(
 												_classNameContentElement +
-													textareaClass
+													textareaClass,
 											)),
 										(_viewportElement =
 											_viewportElement ||
 											selectOrGenerateDivByClass(
 												_classNameViewportElement +
-													textareaClass
+													textareaClass,
 											)),
 										(_paddingElement =
 											_paddingElement ||
 											selectOrGenerateDivByClass(
 												_classNamePaddingElement +
-													textareaClass
+													textareaClass,
 											)),
 										(_sizeObserverElement =
 											_sizeObserverElement ||
 											selectOrGenerateDivByClass(
-												classNameResizeObserverHost
+												classNameResizeObserverHost,
 											)),
 										(_textareaCoverElement =
 											_textareaCoverElement ||
 											(_isTextarea
 												? selectOrGenerateDivByClass(
-														_classNameTextareaCoverElement
+														_classNameTextareaCoverElement,
 												  )
 												: undefined2)),
 										_domExists &&
 											addClass(
 												_hostElement,
-												_classNameHostElementForeign
+												_classNameHostElementForeign,
 											),
 										destroy &&
 											removeClass(
 												_hostElement,
-												hostElementClassNames
+												hostElementClassNames,
 											),
 										(adoptAttrs =
 											type(adoptAttrs) == TYPES.s
@@ -6596,7 +6602,7 @@ Valid strings are: [ ` +
 													(adoptAttrsMap[v] = destroy
 														? _hostElement.attr(v)
 														: _targetElement.attr(
-																v
+																v,
 														  ))
 											}),
 										destroy
@@ -6615,20 +6621,20 @@ Valid strings are: [ ` +
 																elm &&
 																	removeClass(
 																		elm.removeAttr(
-																			LEXICON.s
+																			LEXICON.s,
 																		),
-																		_classNamesDynamicDestroy
+																		_classNamesDynamicDestroy,
 																	)
-															}
+															},
 													  ),
 													  addClass(
 															_hostElement,
 															_isTextarea
 																? _classNameHostTextareaElement
-																: _classNameHostElement
+																: _classNameHostElement,
 													  ))
 													: (remove(
-															_sizeObserverElement
+															_sizeObserverElement,
 													  ),
 													  _contentElement
 															.contents()
@@ -6638,20 +6644,20 @@ Valid strings are: [ ` +
 													  _isTextarea &&
 															(_targetElement.unwrap(),
 															remove(
-																_hostElement
+																_hostElement,
 															),
 															remove(
-																_textareaCoverElement
+																_textareaCoverElement,
 															),
 															applyAdoptedAttrs())),
 											  _isTextarea &&
 													_targetElement.removeAttr(
-														LEXICON.s
+														LEXICON.s,
 													),
 											  _isBody &&
 													removeClass(
 														_htmlElement,
-														_classNameHTMLElement
+														_classNameHTMLElement,
 													))
 											: (_isTextarea &&
 													(_currentPreparedOptions.sizeAutoCapable ||
@@ -6659,84 +6665,84 @@ Valid strings are: [ ` +
 															_strWidth
 														] =
 															_targetElement.css(
-																_strWidth
+																_strWidth,
 															)),
 														(hostElementCSS[
 															_strHeight
 														] =
 															_targetElement.css(
-																_strHeight
+																_strHeight,
 															))),
 													_domExists ||
 														_targetElement
 															.addClass(
-																_classNameTextInherit
+																_classNameTextInherit,
 															)
 															.wrap(_hostElement),
 													(_hostElement =
 														_targetElement[
 															strParent
 														]().css(
-															hostElementCSS
+															hostElementCSS,
 														))),
 											  _domExists ||
 													(addClass(
 														_targetElement,
 														_isTextarea
 															? classNameTextareaElementFull
-															: _classNameHostElement
+															: _classNameHostElement,
 													),
 													_hostElement
 														.wrapInner(
-															_contentElement
+															_contentElement,
 														)
 														.wrapInner(
-															_viewportElement
+															_viewportElement,
 														)
 														.wrapInner(
-															_paddingElement
+															_paddingElement,
 														)
 														.prepend(
-															_sizeObserverElement
+															_sizeObserverElement,
 														),
 													(_contentElement =
 														findFirst(
 															_hostElement,
 															_strDot +
-																_classNameContentElement
+																_classNameContentElement,
 														)),
 													(_viewportElement =
 														findFirst(
 															_hostElement,
 															_strDot +
-																_classNameViewportElement
+																_classNameViewportElement,
 														)),
 													(_paddingElement =
 														findFirst(
 															_hostElement,
 															_strDot +
-																_classNamePaddingElement
+																_classNamePaddingElement,
 														)),
 													_isTextarea &&
 														(_contentElement.prepend(
-															_textareaCoverElement
+															_textareaCoverElement,
 														),
 														applyAdoptedAttrs())),
 											  _nativeScrollbarStyling &&
 													addClass(
 														_viewportElement,
-														_classNameViewportNativeScrollbarsInvisible
+														_classNameViewportNativeScrollbarsInvisible,
 													),
 											  _nativeScrollbarIsOverlaid.x &&
 													_nativeScrollbarIsOverlaid.y &&
 													addClass(
 														_viewportElement,
-														_classNameViewportNativeScrollbarsOverlaid
+														_classNameViewportNativeScrollbarsOverlaid,
 													),
 											  _isBody &&
 													addClass(
 														_htmlElement,
-														_classNameHTMLElement
+														_classNameHTMLElement,
 													),
 											  (_sizeObserverElementNative =
 													_sizeObserverElement[0]),
@@ -6767,7 +6773,7 @@ Valid strings are: [ ` +
 											doClearInterval &&
 												_autoUpdateRecommended &&
 												clearInterval(
-													textareaUpdateIntervalID
+													textareaUpdateIntervalID,
 												)
 									}
 									function textareaOnScroll(event) {
@@ -6776,7 +6782,7 @@ Valid strings are: [ ` +
 												_rtlScrollBehavior.i &&
 													_normalizeRTLCache
 													? 9999999
-													: 0
+													: 0,
 											),
 											_targetElement[_strScrollTop](0),
 											COMPATIBILITY.prvD(event),
@@ -6803,7 +6809,7 @@ Valid strings are: [ ` +
 										var keyCode = event.keyCode
 										inArray(
 											keyCode,
-											textareaKeyDownRestrictedKeyCodes
+											textareaKeyDownRestrictedKeyCodes,
 										) < 0 &&
 											(textareaKeyDownKeyCodesList[
 												LEXICON.l
@@ -6812,30 +6818,30 @@ Valid strings are: [ ` +
 												(textareaUpdateIntervalID =
 													setInterval(
 														updateTextarea,
-														1e3 / 60
+														1e3 / 60,
 													))),
 											inArray(
 												keyCode,
-												textareaKeyDownKeyCodesList
+												textareaKeyDownKeyCodesList,
 											) < 0 &&
 												textareaKeyDownKeyCodesList.push(
-													keyCode
+													keyCode,
 												))
 									}
 									function textareaOnKeyUp(event) {
 										var keyCode = event.keyCode,
 											index = inArray(
 												keyCode,
-												textareaKeyDownKeyCodesList
+												textareaKeyDownKeyCodesList,
 											)
 										inArray(
 											keyCode,
-											textareaKeyDownRestrictedKeyCodes
+											textareaKeyDownRestrictedKeyCodes,
 										) < 0 &&
 											(index > -1 &&
 												textareaKeyDownKeyCodesList.splice(
 													index,
-													1
+													1,
 												),
 											textareaKeyDownKeyCodesList[
 												LEXICON.l
@@ -6846,61 +6852,61 @@ Valid strings are: [ ` +
 											((event =
 												event.originalEvent || event),
 											isSizeAffectingCSSProperty(
-												event.propertyName
+												event.propertyName,
 											) && _base.update(_strAuto))
 									}
 									function viewportOnScroll(event) {
 										_sleeping ||
 											(scrollStopTimeoutId !== undefined2
 												? clearTimeout(
-														scrollStopTimeoutId
+														scrollStopTimeoutId,
 												  )
 												: ((_scrollbarsAutoHideScroll ||
 														_scrollbarsAutoHideMove) &&
 														refreshScrollbarsAutoHide(
-															!0
+															!0,
 														),
 												  nativeOverlayScrollbarsAreActive() ||
 														addClass(
 															_hostElement,
-															_classNameHostScrolling
+															_classNameHostScrolling,
 														),
 												  dispatchCallback(
 														'onScrollStart',
-														event
+														event,
 												  )),
 											_scrollbarsHandlesDefineScrollPos ||
 												(refreshScrollbarHandleOffset(
-													!0
+													!0,
 												),
 												refreshScrollbarHandleOffset(
-													!1
+													!1,
 												)),
 											dispatchCallback('onScroll', event),
 											(scrollStopTimeoutId = setTimeout(
 												function () {
 													_destroyed ||
 														(clearTimeout(
-															scrollStopTimeoutId
+															scrollStopTimeoutId,
 														),
 														(scrollStopTimeoutId =
 															undefined2),
 														(_scrollbarsAutoHideScroll ||
 															_scrollbarsAutoHideMove) &&
 															refreshScrollbarsAutoHide(
-																!1
+																!1,
 															),
 														nativeOverlayScrollbarsAreActive() ||
 															removeClass(
 																_hostElement,
-																_classNameHostScrolling
+																_classNameHostScrolling,
 															),
 														dispatchCallback(
 															'onScrollStop',
-															event
+															event,
 														))
 												},
-												scrollStopDelay
+												scrollStopDelay,
 											)))
 									}
 									_isTextarea
@@ -6909,7 +6915,7 @@ Valid strings are: [ ` +
 												? addDestroyEventListener(
 														_targetElement,
 														'input',
-														updateTextarea
+														updateTextarea,
 												  )
 												: addDestroyEventListener(
 														_targetElement,
@@ -6920,7 +6926,7 @@ Valid strings are: [ ` +
 														[
 															textareaOnKeyDown,
 															textareaOnKeyUp,
-														]
+														],
 												  ),
 										  addDestroyEventListener(
 												_targetElement,
@@ -6935,18 +6941,18 @@ Valid strings are: [ ` +
 													textareaOnDrop,
 													textareaOnFocus,
 													textareaOnFocusout,
-												]
+												],
 										  ))
 										: addDestroyEventListener(
 												_contentElement,
 												_strTransitionEndEvent,
-												contentOnTransitionEnd
+												contentOnTransitionEnd,
 										  ),
 										addDestroyEventListener(
 											_viewportElement,
 											_strScroll,
 											viewportOnScroll,
-											!0
+											!0,
 										)
 								}
 								function setupScrollbarsDOM(destroy) {
@@ -6961,17 +6967,17 @@ Valid strings are: [ ` +
 														_classNameScrollbar +
 															_strSpace +
 															scrollbarClassName,
-														!0
+														!0,
 													),
 												track =
 													selectOrGenerateDivByClass(
 														_classNameScrollbarTrack,
-														scrollbar
+														scrollbar,
 													),
 												handle =
 													selectOrGenerateDivByClass(
 														_classNameScrollbarHandle,
-														scrollbar
+														scrollbar,
 													)
 											return (
 												!_domExists &&
@@ -6998,17 +7004,17 @@ Valid strings are: [ ` +
 													function (i, elm) {
 														removeClass(
 															elm.removeAttr(
-																LEXICON.s
+																LEXICON.s,
 															),
-															_classNamesDynamicDestroy
+															_classNamesDynamicDestroy,
 														)
-													}
+													},
 											  )
 											: remove(
 													scrollbar ||
 														selectOrGenerateScrollbarDOM(
-															isHorizontal
-														)._scrollbar
+															isHorizontal,
+														)._scrollbar,
 											  )
 									}
 									var horizontalElements, verticalElements
@@ -7017,7 +7023,7 @@ Valid strings are: [ ` +
 										  resetScrollbarDOM())
 										: ((horizontalElements =
 												selectOrGenerateScrollbarDOM(
-													!0
+													!0,
 												)),
 										  (verticalElements =
 												selectOrGenerateScrollbarDOM()),
@@ -7035,10 +7041,10 @@ Valid strings are: [ ` +
 												verticalElements._handle),
 										  _domExists ||
 												(_paddingElement.after(
-													_scrollbarVerticalElement
+													_scrollbarVerticalElement,
 												),
 												_paddingElement.after(
-													_scrollbarHorizontalElement
+													_scrollbarHorizontalElement,
 												)))
 								}
 								function setupScrollbarEvents(isHorizontal) {
@@ -7085,13 +7091,13 @@ Valid strings are: [ ` +
 									function documentKeyDown(event) {
 										inArray(
 											event.keyCode,
-											increaseDecreaseScrollAmountKeyCodes
+											increaseDecreaseScrollAmountKeyCodes,
 										) > -1 && increaseTrackScrollAmount()
 									}
 									function documentKeyUp(event) {
 										inArray(
 											event.keyCode,
-											increaseDecreaseScrollAmountKeyCodes
+											increaseDecreaseScrollAmountKeyCodes,
 										) > -1 && decreaseTrackScrollAmount()
 									}
 									function onMouseTouchDownContinue(event) {
@@ -7106,7 +7112,7 @@ Valid strings are: [ ` +
 											!_scrollbarsDragScrollingCache ||
 											(isTouchEvent &&
 												!getPreparedScrollbarsOption(
-													'touchSupport'
+													'touchSupport',
 												))
 											? !1
 											: COMPATIBILITY.mBtn(event) === 1 ||
@@ -7132,7 +7138,7 @@ Valid strings are: [ ` +
 													scrollRange *
 													scrollDeltaPercent
 											;(scrollDelta = isFinite(
-												scrollDelta
+												scrollDelta,
 											)
 												? scrollDelta
 												: 0),
@@ -7143,14 +7149,14 @@ Valid strings are: [ ` +
 												_viewportElement[scroll](
 													MATH.round(
 														mouseDownScroll +
-															scrollDelta
-													)
+															scrollDelta,
+													),
 												),
 												_scrollbarsHandlesDefineScrollPos &&
 													refreshScrollbarHandleOffset(
 														isHorizontal,
 														mouseDownScroll +
-															scrollDelta
+															scrollDelta,
 													),
 												_supportPassiveEvents ||
 													COMPATIBILITY.prvD(event)
@@ -7176,7 +7182,7 @@ Valid strings are: [ ` +
 													documentKeyUp,
 													documentOnSelectStart,
 												],
-												!0
+												!0,
 											),
 											COMPATIBILITY.rAF()(function () {
 												setupResponsiveEventListener(
@@ -7184,31 +7190,31 @@ Valid strings are: [ ` +
 													strClickEvent,
 													stopClickEventPropagation,
 													!0,
-													{ _capture: !0 }
+													{ _capture: !0 },
 												)
 											}),
 											_scrollbarsHandlesDefineScrollPos &&
 												refreshScrollbarHandleOffset(
 													isHorizontal,
-													!0
+													!0,
 												),
 											(_scrollbarsHandlesDefineScrollPos =
 												!1),
 											removeClass(
 												_bodyElement,
-												_classNameDragging
+												_classNameDragging,
 											),
 											removeClass(
 												scrollbarVars._handle,
-												strActive
+												strActive,
 											),
 											removeClass(
 												scrollbarVars._track,
-												strActive
+												strActive,
 											),
 											removeClass(
 												scrollbarVars._scrollbar,
-												strActive
+												strActive,
 											),
 											(mouseDownScroll = undefined2),
 											(mouseDownOffset = undefined2),
@@ -7236,7 +7242,7 @@ Valid strings are: [ ` +
 												(_scrollbarsAutoHideScroll ||
 													_scrollbarsAutoHideMove) &&
 													refreshScrollbarsAutoHide(
-														!1
+														!1,
 													)
 										}
 									}
@@ -7245,12 +7251,12 @@ Valid strings are: [ ` +
 											onHandleMouseTouchDownAction(event)
 									}
 									function onHandleMouseTouchDownAction(
-										event
+										event,
 									) {
 										;(mouseDownScroll =
 											_viewportElement[scroll]()),
 											(mouseDownScroll = isNaN(
-												mouseDownScroll
+												mouseDownScroll,
 											)
 												? 0
 												: mouseDownScroll),
@@ -7270,19 +7276,19 @@ Valid strings are: [ ` +
 												getPointerPosition(event)),
 											(_scrollbarsHandlesDefineScrollPos =
 												!getPreparedScrollbarsOption(
-													strSnapHandle
+													strSnapHandle,
 												)),
 											addClass(
 												_bodyElement,
-												_classNameDragging
+												_classNameDragging,
 											),
 											addClass(
 												scrollbarVars._handle,
-												strActive
+												strActive,
 											),
 											addClass(
 												scrollbarVars._scrollbar,
-												strActive
+												strActive,
 											),
 											setupResponsiveEventListener(
 												_documentElement,
@@ -7295,7 +7301,7 @@ Valid strings are: [ ` +
 													documentDragMove,
 													documentMouseTouchUp,
 													documentOnSelectStart,
-												]
+												],
 											),
 											COMPATIBILITY.rAF()(function () {
 												setupResponsiveEventListener(
@@ -7303,7 +7309,7 @@ Valid strings are: [ ` +
 													strClickEvent,
 													stopClickEventPropagation,
 													!1,
-													{ _capture: !0 }
+													{ _capture: !0 },
 												)
 											}),
 											(_msieVersion || !_documentMixed) &&
@@ -7325,15 +7331,15 @@ Valid strings are: [ ` +
 																_contentScrollSizeCache[
 																	scrollbarVars
 																		._w_h
-																]
+																],
 														) *
 															scrollbarVars._info
-																._trackLength
+																._trackLength,
 													),
 												scrollDistance = MATH.round(
 													_viewportSize[
 														scrollbarVars._w_h
-													] * handleToViewportRatio
+													] * handleToViewportRatio,
 												),
 												scrollBaseDuration =
 													270 * handleToViewportRatio,
@@ -7356,14 +7362,14 @@ Valid strings are: [ ` +
 														_scrollbarsHandlesDefineScrollPos &&
 															refreshScrollbarHandleOffset(
 																isHorizontal,
-																transition
+																transition,
 															)
 													},
 												scrollActionInstantFinished =
 													function () {
 														scrollActionFinsished(),
 															onHandleMouseTouchDownAction(
-																event
+																event,
 															)
 													},
 												scrollAction = function () {
@@ -7389,7 +7395,7 @@ Valid strings are: [ ` +
 																isFirstIteration
 																	? MATH.max(
 																			scrollFirstIterationDelay,
-																			scrollDuration
+																			scrollDuration,
 																	  )
 																	: scrollDuration,
 															instantScrollPosition =
@@ -7415,7 +7421,7 @@ Valid strings are: [ ` +
 															animationObj = {
 																easing,
 																step: function (
-																	now
+																	now,
 																) {
 																	_scrollbarsHandlesDefineScrollPos &&
 																		(_viewportElement[
@@ -7423,13 +7429,13 @@ Valid strings are: [ ` +
 																		](now),
 																		refreshScrollbarHandleOffset(
 																			isHorizontal,
-																			now
+																			now,
 																		))
 																},
 															}
 														;(instantScrollPosition =
 															isFinite(
-																instantScrollPosition
+																instantScrollPosition,
 															)
 																? instantScrollPosition
 																: 0),
@@ -7444,7 +7450,7 @@ Valid strings are: [ ` +
 																? (_viewportElement[
 																		scroll
 																  ](
-																		instantScrollPosition
+																		instantScrollPosition,
 																  ),
 																  instantScrollTransition
 																		? ((instantScrollPosition =
@@ -7454,7 +7460,7 @@ Valid strings are: [ ` +
 																		  _viewportElement[
 																				scroll
 																		  ](
-																				currScroll
+																				currScroll,
 																		  ),
 																		  (instantScrollPosition =
 																				rtlIsNormal &&
@@ -7479,8 +7485,8 @@ Valid strings are: [ ` +
 																						duration: 130,
 																						complete:
 																							scrollActionInstantFinished,
-																					}
-																				)
+																					},
+																				),
 																		  ))
 																		: scrollActionInstantFinished())
 																: ((decreaseScroll =
@@ -7503,18 +7509,18 @@ Valid strings are: [ ` +
 																			  mouseOffset),
 																  finishedCondition
 																		? (clearTimeout(
-																				trackTimeout
+																				trackTimeout,
 																		  ),
 																		  _base.scrollStop(),
 																		  (trackTimeout =
 																				undefined2),
 																		  scrollActionFinsished(
-																				!0
+																				!0,
 																		  ))
 																		: ((trackTimeout =
 																				setTimeout(
 																					scrollAction,
-																					timeoutDelay
+																					timeoutDelay,
 																				)),
 																		  (scrollObj[
 																				xy
@@ -7530,8 +7536,8 @@ Valid strings are: [ ` +
 																					{
 																						duration:
 																							scrollDuration,
-																					}
-																				)
+																					},
+																				),
 																		  )),
 																  (isFirstIteration =
 																		!1))
@@ -7549,19 +7555,19 @@ Valid strings are: [ ` +
 													]),
 												(_scrollbarsHandlesDefineScrollPos =
 													!getPreparedScrollbarsOption(
-														strSnapHandle
+														strSnapHandle,
 													)),
 												addClass(
 													_bodyElement,
-													_classNameDragging
+													_classNameDragging,
 												),
 												addClass(
 													scrollbarVars._track,
-													strActive
+													strActive,
 												),
 												addClass(
 													scrollbarVars._scrollbar,
-													strActive
+													strActive,
 												),
 												setupResponsiveEventListener(
 													_documentElement,
@@ -7576,7 +7582,7 @@ Valid strings are: [ ` +
 														documentKeyDown,
 														documentKeyUp,
 														documentOnSelectStart,
-													]
+													],
 												),
 												scrollAction(),
 												COMPATIBILITY.prvD(event),
@@ -7601,7 +7607,7 @@ Valid strings are: [ ` +
 									addDestroyEventListener(
 										scrollbarVars._handle,
 										_strMouseTouchDownEvent,
-										onHandleMouseTouchDown
+										onHandleMouseTouchDown,
 									),
 										addDestroyEventListener(
 											scrollbarVars._track,
@@ -7614,12 +7620,12 @@ Valid strings are: [ ` +
 												onTrackMouseTouchDown,
 												onTrackMouseTouchEnter,
 												onTrackMouseTouchLeave,
-											]
+											],
 										),
 										addDestroyEventListener(
 											scrollbarVars._scrollbar,
 											_strMouseTouchDownEvent,
-											onScrollbarMouseTouchDown
+											onScrollbarMouseTouchDown,
 										),
 										_supportTransition &&
 											addDestroyEventListener(
@@ -7630,18 +7636,18 @@ Valid strings are: [ ` +
 														scrollbarVars
 															._scrollbar[0] &&
 														(refreshScrollbarHandleLength(
-															isHorizontal
+															isHorizontal,
 														),
 														refreshScrollbarHandleOffset(
-															isHorizontal
+															isHorizontal,
 														))
-												}
+												},
 											)
 								}
 								function refreshScrollbarAppearance(
 									isHorizontal,
 									shallBeVisible,
-									canScroll
+									canScroll,
 								) {
 									var scrollbarHiddenClassName = isHorizontal
 											? _classNameHostScrollbarHorizontalHidden
@@ -7652,31 +7658,31 @@ Valid strings are: [ ` +
 									addRemoveClass(
 										_hostElement,
 										scrollbarHiddenClassName,
-										!shallBeVisible
+										!shallBeVisible,
 									),
 										addRemoveClass(
 											scrollbarElement,
 											_classNameScrollbarUnusable,
-											!canScroll
+											!canScroll,
 										)
 								}
 								function refreshScrollbarsAutoHide(
 									shallBeVisible,
-									delayfree
+									delayfree,
 								) {
 									if (
 										(clearTimeout(
-											_scrollbarsAutoHideTimeoutId
+											_scrollbarsAutoHideTimeoutId,
 										),
 										shallBeVisible)
 									)
 										removeClass(
 											_scrollbarHorizontalElement,
-											_classNameScrollbarAutoHidden
+											_classNameScrollbarAutoHidden,
 										),
 											removeClass(
 												_scrollbarVerticalElement,
-												_classNameScrollbarAutoHidden
+												_classNameScrollbarAutoHidden,
 											)
 									else {
 										var anyActive,
@@ -7686,10 +7692,10 @@ Valid strings are: [ ` +
 													!_destroyed &&
 													((anyActive =
 														_scrollbarHorizontalHandleElement.hasClass(
-															strActive
+															strActive,
 														) ||
 														_scrollbarVerticalHandleElement.hasClass(
-															strActive
+															strActive,
 														)),
 													!anyActive &&
 														(_scrollbarsAutoHideScroll ||
@@ -7697,7 +7703,7 @@ Valid strings are: [ ` +
 															_scrollbarsAutoHideLeave) &&
 														addClass(
 															_scrollbarHorizontalElement,
-															_classNameScrollbarAutoHidden
+															_classNameScrollbarAutoHidden,
 														),
 													!anyActive &&
 														(_scrollbarsAutoHideScroll ||
@@ -7705,7 +7711,7 @@ Valid strings are: [ ` +
 															_scrollbarsAutoHideLeave) &&
 														addClass(
 															_scrollbarVerticalElement,
-															_classNameScrollbarAutoHidden
+															_classNameScrollbarAutoHidden,
 														))
 											}
 										_scrollbarsAutoHideDelay > 0 &&
@@ -7713,13 +7719,13 @@ Valid strings are: [ ` +
 											? (_scrollbarsAutoHideTimeoutId =
 													setTimeout(
 														hide,
-														_scrollbarsAutoHideDelay
+														_scrollbarsAutoHideDelay,
 													))
 											: hide()
 									}
 								}
 								function refreshScrollbarHandleLength(
-									isHorizontal
+									isHorizontal,
 								) {
 									var handleCSS = {},
 										scrollbarVars =
@@ -7731,7 +7737,7 @@ Valid strings are: [ ` +
 											_viewportSize[scrollbarVars._w_h] /
 												_contentScrollSizeCache[
 													scrollbarVars._w_h
-												]
+												],
 										)
 									;(handleCSS[scrollbarVars._width_height] =
 										MATH.floor(handleRatio * 100 * digit) /
@@ -7739,7 +7745,7 @@ Valid strings are: [ ` +
 										'%'),
 										nativeOverlayScrollbarsAreActive() ||
 											scrollbarVars._handle.css(
-												handleCSS
+												handleCSS,
 											),
 										(scrollbarVarsInfo._handleLength =
 											scrollbarVars._handle[0][
@@ -7751,7 +7757,7 @@ Valid strings are: [ ` +
 								}
 								function refreshScrollbarHandleOffset(
 									isHorizontal,
-									scrollOrTransition
+									scrollOrTransition,
 								) {
 									var transition =
 											type(scrollOrTransition) == TYPES.b,
@@ -7806,12 +7812,12 @@ Valid strings are: [ ` +
 														0,
 														MATH.min(
 															1,
-															base / maxScroll
-														)
+															base / maxScroll,
+														),
 												  )
 										},
 										getHandleOffset = function (
-											scrollRatio2
+											scrollRatio2,
 										) {
 											var offset =
 												handleTrackDiff * scrollRatio2
@@ -7836,7 +7842,7 @@ Valid strings are: [ ` +
 											getScrollRatio(currentScroll),
 										handleOffset =
 											getHandleOffset(
-												unsnappedScrollRatio
+												unsnappedScrollRatio,
 											),
 										snappedHandleOffset =
 											getHandleOffset(scrollRatio)
@@ -7869,10 +7875,10 @@ Valid strings are: [ ` +
 														transition &&
 														MATH.abs(
 															handleOffset -
-																scrollbarVarsInfo._handleOffset
+																scrollbarVarsInfo._handleOffset,
 														) > 1
 															? getCSSTransitionString(
-																	scrollbarVars._handle
+																	scrollbarVars._handle,
 															  ) +
 															  ', ' +
 															  (strTransform +
@@ -7885,7 +7891,7 @@ Valid strings are: [ ` +
 											  ] = handleOffset),
 										nativeOverlayScrollbarsAreActive() ||
 											(scrollbarVars._handle.css(
-												handleCSS
+												handleCSS,
 											),
 											_supportTransform &&
 												_supportTransition &&
@@ -7896,9 +7902,9 @@ Valid strings are: [ ` +
 														_destroyed ||
 															scrollbarVars._handle.css(
 																strTransition,
-																_strEmpty
+																_strEmpty,
 															)
-													}
+													},
 												)),
 										(scrollbarVarsInfo._handleOffset =
 											handleOffset),
@@ -7909,7 +7915,7 @@ Valid strings are: [ ` +
 								}
 								function refreshScrollbarsInteractive(
 									isTrack,
-									value
+									value,
 								) {
 									var action = value
 											? 'removeClass'
@@ -7963,22 +7969,22 @@ Valid strings are: [ ` +
 										_scrollbarCornerElement ||
 										selectOrGenerateDivByClass(
 											_classNameScrollbarCorner,
-											!0
+											!0,
 										)),
 										destroy
 											? _domExists && _initialized
 												? removeClass(
 														_scrollbarCornerElement.removeAttr(
-															LEXICON.s
+															LEXICON.s,
 														),
-														_classNamesDynamicDestroy
+														_classNamesDynamicDestroy,
 												  )
 												: remove(
-														_scrollbarCornerElement
+														_scrollbarCornerElement,
 												  )
 											: _domExists ||
 											  _hostElement.append(
-													_scrollbarCornerElement
+													_scrollbarCornerElement,
 											  )
 								}
 								function setupScrollbarCornerEvents() {
@@ -8011,7 +8017,7 @@ Valid strings are: [ ` +
 															mouseDownPosition.y) *
 															mouseDownInvertedScale.y),
 												_hostElement.css(
-													hostElementCSS
+													hostElementCSS,
 												),
 												COMPATIBILITY.stpP(event)
 										} else documentMouseTouchUp(event)
@@ -8031,11 +8037,11 @@ Valid strings are: [ ` +
 												documentDragMove,
 												documentMouseTouchUp,
 											],
-											!0
+											!0,
 										),
 											removeClass(
 												_bodyElement,
-												_classNameDragging
+												_classNameDragging,
 											),
 											_scrollbarCornerElement.releaseCapture &&
 												_scrollbarCornerElement.releaseCapture(),
@@ -8103,23 +8109,23 @@ Valid strings are: [ ` +
 														documentOnSelectStart,
 														documentDragMove,
 														documentMouseTouchUp,
-													]
+													],
 												),
 												addClass(
 													_bodyElement,
-													_classNameDragging
+													_classNameDragging,
 												),
 												_scrollbarCornerElement.setCapture &&
 													_scrollbarCornerElement.setCapture(),
 												COMPATIBILITY.prvD(event),
 												COMPATIBILITY.stpP(event))
-										}
+										},
 									)
 								}
 								function dispatchCallback(
 									name,
 									args,
-									dependent
+									dependent,
 								) {
 									if (dependent !== !1)
 										if (_initialized) {
@@ -8143,7 +8149,7 @@ Valid strings are: [ ` +
 															TYPES.f &&
 															ext.on(
 																extensionOnName,
-																args
+																args,
 															)
 												})
 										} else
@@ -8156,7 +8162,7 @@ Valid strings are: [ ` +
 								function setTopRightBottomLeft(
 									targetCSSObject,
 									prefix,
-									values
+									values,
 								) {
 									;(prefix = prefix || _strEmpty),
 										(values = values || [
@@ -8178,7 +8184,7 @@ Valid strings are: [ ` +
 									prefix,
 									suffix,
 									zeroX,
-									zeroY
+									zeroY,
 								) {
 									return (
 										(suffix = suffix || _strEmpty),
@@ -8190,8 +8196,8 @@ Valid strings are: [ ` +
 														_hostElement.css(
 															prefix +
 																_strTop +
-																suffix
-														)
+																suffix,
+														),
 												  ),
 											r: zeroX
 												? 0
@@ -8199,8 +8205,8 @@ Valid strings are: [ ` +
 														_hostElement.css(
 															prefix +
 																_strRight +
-																suffix
-														)
+																suffix,
+														),
 												  ),
 											b: zeroY
 												? 0
@@ -8208,8 +8214,8 @@ Valid strings are: [ ` +
 														_hostElement.css(
 															prefix +
 																_strBottom +
-																suffix
-														)
+																suffix,
+														),
 												  ),
 											l: zeroX
 												? 0
@@ -8217,8 +8223,8 @@ Valid strings are: [ ` +
 														_hostElement.css(
 															prefix +
 																_strLeft +
-																suffix
-														)
+																suffix,
+														),
 												  ),
 										}
 									)
@@ -8233,14 +8239,14 @@ Valid strings are: [ ` +
 										var regExpString =
 												'\\s*(([^,(]+(\\(.+?\\))?)+)[\\s,]*',
 											regExpMain = new RegExp(
-												regExpString
+												regExpString,
 											),
 											regExpValidate = new RegExp(
-												'^(' + regExpString + ')+$'
+												'^(' + regExpString + ')+$',
 											),
 											properties =
 												'property duration timing-function delay'.split(
-													' '
+													' ',
 												),
 											result = [],
 											strResult,
@@ -8248,7 +8254,7 @@ Valid strings are: [ ` +
 											i = 0,
 											j,
 											splitCssStyleByComma = function (
-												str
+												str,
 											) {
 												if (
 													((strResult = []),
@@ -8259,7 +8265,7 @@ Valid strings are: [ ` +
 													strResult.push(RegExp.$1),
 														(str = str.replace(
 															regExpMain,
-															_strEmpty
+															_strEmpty,
 														))
 												return strResult
 											};
@@ -8271,8 +8277,8 @@ Valid strings are: [ ` +
 												element.css(
 													transitionStr +
 														'-' +
-														properties[i]
-												)
+														properties[i],
+												),
 											),
 												j = 0;
 											j < valueArray[LEXICON.l];
@@ -8286,14 +8292,14 @@ Valid strings are: [ ` +
 								}
 								function createHostClassNameRegExp(
 									withCurrClassNameOption,
-									withOldClassNameOption
+									withOldClassNameOption,
 								) {
 									var i,
 										split,
 										appendix,
 										appendClasses = function (
 											classes,
-											condition
+											condition,
 										) {
 											if (
 												((appendix = ''),
@@ -8303,7 +8309,7 @@ Valid strings are: [ ` +
 												for (
 													split =
 														classes.split(
-															_strSpace
+															_strSpace,
 														),
 														i = 0;
 													i < split[LEXICON.l];
@@ -8319,13 +8325,13 @@ Valid strings are: [ ` +
 											'([-_].+|)$)' +
 											appendClasses(
 												_classNameCache,
-												withCurrClassNameOption
+												withCurrClassNameOption,
 											) +
 											appendClasses(
 												_oldClassName,
-												withOldClassNameOption
+												withOldClassNameOption,
 											),
-										'g'
+										'g',
 									)
 								}
 								function getHostElementInvertedScale() {
@@ -8403,7 +8409,7 @@ Valid strings are: [ ` +
 											textareaCurrentCursorRowSplit =
 												textareaValue.substr(
 													0,
-													textareaCursorPosition
+													textareaCursorPosition,
 												).split(`
 `),
 											widestRow = 0,
@@ -8467,7 +8473,7 @@ Valid strings are: [ ` +
 															attrs = _strEmpty
 														if (
 															FRAMEWORK.isPlainObject(
-																classesOrAttrs
+																classesOrAttrs,
 															)
 														)
 															for (key in classesOrAttrs)
@@ -8490,7 +8496,7 @@ Valid strings are: [ ` +
 								}
 								function selectOrGenerateDivByClass(
 									className,
-									selectParentOrOnlyChildren
+									selectParentOrOnlyChildren,
 								) {
 									var onlyChildren =
 											type(selectParentOrOnlyChildren) ==
@@ -8511,8 +8517,8 @@ Valid strings are: [ ` +
 												_strDot +
 													className.replace(
 														/\s/g,
-														_strDot
-													)
+														_strDot,
+													),
 										  ).eq(0)
 										: FRAMEWORK(generateDiv(className))
 								}
@@ -8567,14 +8573,14 @@ Valid strings are: [ ` +
 											if (prop !== 'c')
 												if (
 													current[LEXICON.hOP](
-														prop
+														prop,
 													) &&
 													cache[LEXICON.hOP](prop)
 												) {
 													if (
 														checkCache(
 															current[prop],
-															cache[prop]
+															cache[prop],
 														)
 													)
 														return !0
@@ -8585,19 +8591,19 @@ Valid strings are: [ ` +
 								function extendDeep() {
 									return FRAMEWORK.extend.apply(
 										this,
-										[!0].concat([].slice.call(arguments))
+										[!0].concat([].slice.call(arguments)),
 									)
 								}
 								function addClass(el, classes) {
 									return _frameworkProto.addClass.call(
 										el,
-										classes
+										classes,
 									)
 								}
 								function removeClass(el, classes) {
 									return _frameworkProto.removeClass.call(
 										el,
-										classes
+										classes,
 									)
 								}
 								function addRemoveClass(el, classes, doAdd) {
@@ -8648,15 +8654,15 @@ Valid strings are: [ ` +
 														? _mutationObserversConnected
 															? ((mutHost =
 																	_mutationObserverHostCallback(
-																		_mutationObserverHost.takeRecords()
+																		_mutationObserverHost.takeRecords(),
 																	)),
 															  (mutContent =
 																	_mutationObserverContentCallback(
-																		_mutationObserverContent.takeRecords()
+																		_mutationObserverContent.takeRecords(),
 																	)))
 															: (mutHost =
 																	_base.update(
-																		_strAuto
+																		_strAuto,
 																	))
 														: force === 'zoom' &&
 														  update({
@@ -8669,7 +8675,7 @@ Valid strings are: [ ` +
 															_sleeping || force),
 													  (_sleeping = !1),
 													  (!_base.update(
-															_strSync
+															_strSync,
 													  ) ||
 															force) &&
 															update({
@@ -8684,13 +8690,13 @@ Valid strings are: [ ` +
 									}),
 									(_base.options = function (
 										newOptions,
-										value
+										value,
 									) {
 										var option = {},
 											changedOps
 										if (
 											FRAMEWORK.isEmptyObject(
-												newOptions
+												newOptions,
 											) ||
 											!FRAMEWORK.isPlainObject(newOptions)
 										)
@@ -8699,14 +8705,14 @@ Valid strings are: [ ` +
 													setObjectPropVal(
 														option,
 														newOptions,
-														value
+														value,
 													),
 														(changedOps =
 															setOptions(option))
 												else
 													return getObjectPropVal(
 														_currentOptions,
-														newOptions
+														newOptions,
 													)
 											else return _currentOptions
 										else changedOps = setOptions(newOptions)
@@ -8720,10 +8726,10 @@ Valid strings are: [ ` +
 											autoUpdateLoop.remove(_base),
 												disconnectMutationObservers(),
 												setupResizeObserver(
-													_sizeObserverElement
+													_sizeObserverElement,
 												),
 												setupResizeObserver(
-													_sizeAutoObserverElement
+													_sizeAutoObserverElement,
 												)
 											for (var extName in _extensions)
 												_base.removeExt(extName)
@@ -8738,11 +8744,11 @@ Valid strings are: [ ` +
 													remove(_contentGlueElement),
 												_contentArrangeElement &&
 													remove(
-														_contentArrangeElement
+														_contentArrangeElement,
 													),
 												_sizeAutoObserverAdded &&
 													remove(
-														_sizeAutoObserverElement
+														_sizeAutoObserverElement,
 													),
 												setupScrollbarsDOM(!0),
 												setupScrollbarCornerDOM(!0),
@@ -8754,17 +8760,17 @@ Valid strings are: [ ` +
 												i++
 											)
 												FRAMEWORK(
-													_updateOnLoadElms[i]
+													_updateOnLoadElms[i],
 												).off(
 													_updateOnLoadEventName,
-													updateOnLoadCallback
+													updateOnLoadCallback,
 												)
 											;(_updateOnLoadElms = undefined2),
 												(_destroyed = !0),
 												(_sleeping = !0),
 												INSTANCES(
 													pluginTargetElement,
-													0
+													0,
 												),
 												dispatchCallback('onDestroyed')
 										}
@@ -8773,7 +8779,7 @@ Valid strings are: [ ` +
 										coordinates,
 										duration,
 										easing,
-										complete
+										complete,
 									) {
 										if (
 											arguments.length === 0 ||
@@ -8920,16 +8926,16 @@ Valid strings are: [ ` +
 												possibleElementIsJQuery
 													? !1
 													: isHTMLElement(
-															possibleElement
+															possibleElement,
 													  ),
 											updateScrollbarInfos = function () {
 												doScrollLeft &&
 													refreshScrollbarHandleOffset(
-														!0
+														!0,
 													),
 													doScrollTop &&
 														refreshScrollbarHandleOffset(
-															!1
+															!1,
 														)
 											},
 											proxyCompleteCallback =
@@ -8942,7 +8948,7 @@ Valid strings are: [ ` +
 													  }
 										function checkSettingsStringValue(
 											currValue,
-											allowedValues
+											allowedValues,
 										) {
 											for (
 												i = 0;
@@ -8958,7 +8964,7 @@ Valid strings are: [ ` +
 										}
 										function getRawScroll(
 											isX,
-											coordinates2
+											coordinates2,
 										) {
 											var coordinateProps = isX
 												? coordinatesXAxisProps
@@ -8997,7 +9003,7 @@ Valid strings are: [ ` +
 										}
 										function getFinalScroll(
 											isX,
-											rawScroll
+											rawScroll,
 										) {
 											var isString =
 													type(rawScroll) == TYPES.s,
@@ -9027,17 +9033,17 @@ Valid strings are: [ ` +
 															((possibleOperator =
 																rawScroll.substr(
 																	0,
-																	2
+																	2,
 																)),
 															inArray(
 																possibleOperator,
-																coordinatesOperators
+																coordinatesOperators,
 															) > -1 &&
 																(operator =
 																	possibleOperator)),
 													  (rawScroll = operator
 															? rawScroll.substr(
-																	2
+																	2,
 															  )
 															: rawScroll),
 													  (rawScroll = rawScroll[
@@ -9045,25 +9051,25 @@ Valid strings are: [ ` +
 													  ](/min/g, 0)
 															[strReplace](
 																/</g,
-																0
+																0,
 															)
 															[strReplace](
 																/max/g,
 																(normalizeShortcuts
 																	? '-'
 																	: _strEmpty) +
-																	_strHundredPercent
+																	_strHundredPercent,
 															)
 															[strReplace](
 																/>/g,
 																(normalizeShortcuts
 																	? '-'
 																	: _strEmpty) +
-																	_strHundredPercent
+																	_strHundredPercent,
 															)
 															[strReplace](
 																/px/g,
-																_strEmpty
+																_strEmpty,
 															)
 															[strReplace](
 																/%/g,
@@ -9073,28 +9079,28 @@ Valid strings are: [ ` +
 																		_rtlScrollBehavior.n
 																			? -1
 																			: 1)) /
-																		100
+																		100,
 															)
 															[strReplace](
 																/vw/g,
 																mult +
-																	_viewportSize.w
+																	_viewportSize.w,
 															)
 															[strReplace](
 																/vh/g,
 																mult +
-																	_viewportSize.h
+																	_viewportSize.h,
 															)),
 													  (amount =
 															parseToZeroOrNumber(
 																isNaN(rawScroll)
 																	? parseToZeroOrNumber(
 																			evalFunc(
-																				rawScroll
+																				rawScroll,
 																			),
-																			!0
+																			!0,
 																	  ).toFixed()
-																	: rawScroll
+																	: rawScroll,
 															)))
 													: (amount = rawScroll),
 												amount !== undefined2 &&
@@ -9161,15 +9167,15 @@ Valid strings are: [ ` +
 																	0,
 																	MATH.max(
 																		maxScroll,
-																		finalValue
-																	)
+																		finalValue,
+																	),
 															  )
 															: MATH.max(
 																	0,
 																	MATH.min(
 																		maxScroll,
-																		finalValue
-																	)
+																		finalValue,
+																	),
 															  ))
 											}
 											return finalValue === currScroll
@@ -9180,7 +9186,7 @@ Valid strings are: [ ` +
 											value,
 											valueInternalType,
 											defaultValue,
-											allowedValues
+											allowedValues,
 										) {
 											var resultDefault = [
 													defaultValue,
@@ -9212,12 +9218,12 @@ Valid strings are: [ ` +
 															((valueArrItem =
 																value[i]),
 															type(
-																valueArrItem
+																valueArrItem,
 															) !=
 																valueInternalType ||
 																!checkSettingsStringValue(
 																	valueArrItem,
-																	allowedValues
+																	allowedValues,
 																))
 														) {
 															value =
@@ -9236,7 +9242,7 @@ Valid strings are: [ ` +
 											return { x: value[0], y: value[1] }
 										}
 										function generateMargin(
-											marginTopRightBottomLeftArray
+											marginTopRightBottomLeftArray,
 										) {
 											var result = [],
 												currValue,
@@ -9271,16 +9277,16 @@ Valid strings are: [ ` +
 																				_strMarginMinus +
 																					valueDirections[
 																						i
-																					]
-																			)
+																					],
+																			),
 																	  )
-																	: 0
+																	: 0,
 														  )
 														: result.push(
 																currValueType ==
 																	TYPES.n
 																	? currValue
-																	: 0
+																	: 0,
 														  )
 											return result
 										}
@@ -9308,7 +9314,7 @@ Valid strings are: [ ` +
 													possibleElementIsJQuery
 														? possibleElement
 														: FRAMEWORK(
-																possibleElement
+																possibleElement,
 														  )),
 												finalElement[strLength] > 0)
 											) {
@@ -9331,12 +9337,12 @@ Valid strings are: [ ` +
 																			margin[1],
 																			margin[0],
 																			margin[1],
-																		]
+																		],
 																	))
 															: marginLength >= 4
 															? (margin =
 																	generateMargin(
-																		margin
+																		margin,
 																	))
 															: (margin =
 																	marginDefault))
@@ -9351,7 +9357,7 @@ Valid strings are: [ ` +
 													(settingsAxis =
 														checkSettingsStringValue(
 															axis,
-															elementObjSettingsAxisValues
+															elementObjSettingsAxisValues,
 														)
 															? axis
 															: 'xy'),
@@ -9360,14 +9366,14 @@ Valid strings are: [ ` +
 															scroll,
 															TYPES.s,
 															strAlways,
-															elementObjSettingsScrollValues
+															elementObjSettingsScrollValues,
 														)),
 													(settingsBlock =
 														getPerAxisValue(
 															block,
 															TYPES.s,
 															strBegin,
-															elementObjSettingsBlockValues
+															elementObjSettingsBlockValues,
 														)),
 													(settingsMargin = margin)
 												var viewportScroll = {
@@ -9402,14 +9408,14 @@ Valid strings are: [ ` +
 															viewportOffset[
 																_strLeft
 															] +
-															viewportScroll.l
+															viewportScroll.l,
 													),
 													y: MATH.round(
 														elementOffset[_strTop] -
 															viewportOffset[
 																_strTop
 															] +
-															viewportScroll.t
+															viewportScroll.t,
 													),
 												}
 												if (
@@ -9424,7 +9430,7 @@ Valid strings are: [ ` +
 																		elementOffset[
 																			_strLeft
 																		] +
-																		viewportScroll.l
+																		viewportScroll.l,
 																)),
 														_rtlScrollBehavior.n &&
 															normalizeRTL &&
@@ -9441,7 +9447,7 @@ Valid strings are: [ ` +
 																			_strLeft
 																		] +
 																		(_scrollHorizontalInfo._maxScroll -
-																			viewportScroll.l)
+																			viewportScroll.l),
 																))),
 													settingsBlock.x !=
 														strBegin ||
@@ -9489,7 +9495,7 @@ Valid strings are: [ ` +
 															function (isX) {
 																var vars =
 																		getScrollbarVars(
-																			isX
+																			isX,
 																		),
 																	wh =
 																		vars._w_h,
@@ -9614,15 +9620,15 @@ Valid strings are: [ ` +
 										;(finalScroll[_strScrollLeft] =
 											getFinalScroll(
 												!0,
-												getRawScroll(!0, coordinates)
+												getRawScroll(!0, coordinates),
 											)),
 											(finalScroll[_strScrollTop] =
 												getFinalScroll(
 													!1,
 													getRawScroll(
 														!1,
-														coordinates
-													)
+														coordinates,
+													),
 												)),
 											(doScrollLeft =
 												finalScroll[_strScrollLeft] !==
@@ -9637,7 +9643,7 @@ Valid strings are: [ ` +
 															proxyCompleteCallback),
 													  _viewportElement.animate(
 															finalScroll,
-															duration
+															duration,
 													  ))
 													: ((animationOptions = {
 															duration,
@@ -9645,10 +9651,10 @@ Valid strings are: [ ` +
 																proxyCompleteCallback,
 													  }),
 													  COMPATIBILITY.isA(
-															easing
+															easing,
 													  ) ||
 													  FRAMEWORK.isPlainObject(
-															easing
+															easing,
 													  )
 															? ((specialEasing[
 																	_strScrollLeft
@@ -9666,7 +9672,7 @@ Valid strings are: [ ` +
 																	easing),
 													  _viewportElement.animate(
 															finalScroll,
-															animationOptions
+															animationOptions,
 													  ))
 												: (doScrollLeft &&
 														_viewportElement[
@@ -9674,7 +9680,7 @@ Valid strings are: [ ` +
 														](
 															finalScroll[
 																_strScrollLeft
-															]
+															],
 														),
 												  doScrollTop &&
 														_viewportElement[
@@ -9682,26 +9688,26 @@ Valid strings are: [ ` +
 														](
 															finalScroll[
 																_strScrollTop
-															]
+															],
 														),
 												  updateScrollbarInfos())
 									}),
 									(_base.scrollStop = function (
 										param1,
 										param2,
-										param3
+										param3,
 									) {
 										return (
 											_viewportElement.stop(
 												param1,
 												param2,
-												param3
+												param3,
 											),
 											_base
 										)
 									}),
 									(_base.getElements = function (
-										elementName
+										elementName,
 									) {
 										var obj = {
 											target: _targetElementNative,
@@ -9735,10 +9741,10 @@ Valid strings are: [ ` +
 											var extended = extendDeep({}, obj2),
 												changePropertyName = function (
 													from,
-													to
+													to,
 												) {
 													extended[LEXICON.hOP](
-														from
+														from,
 													) &&
 														((extended[to] =
 															extended[from]),
@@ -9747,11 +9753,11 @@ Valid strings are: [ ` +
 											return (
 												changePropertyName(
 													'w',
-													_strWidth
+													_strWidth,
 												),
 												changePropertyName(
 													'h',
-													_strHeight
+													_strHeight,
 												),
 												delete extended.c,
 												extended
@@ -9761,7 +9767,7 @@ Valid strings are: [ ` +
 											destroyed: !!prepare(_destroyed),
 											sleeping: !!prepare(_sleeping),
 											autoUpdate: prepare(
-												!_mutationObserversConnected
+												!_mutationObserversConnected,
 											),
 											widthAuto: prepare(_widthAutoCache),
 											heightAuto:
@@ -9774,7 +9780,7 @@ Valid strings are: [ ` +
 											hasOverflow:
 												prepare(_hasOverflowCache),
 											contentScrollSize: prepare(
-												_contentScrollSizeCache
+												_contentScrollSizeCache,
 											),
 											viewportSize:
 												prepare(_viewportSize),
@@ -9785,7 +9791,7 @@ Valid strings are: [ ` +
 										return type(stateProperty) == TYPES.s
 											? getObjectPropVal(
 													obj,
-													stateProperty
+													stateProperty,
 											  )
 											: obj
 									}),
@@ -9793,19 +9799,19 @@ Valid strings are: [ ` +
 										var result,
 											privateMethods =
 												_extensionsPrivateMethods.split(
-													' '
+													' ',
 												),
 											i = 0
 										if (type(extName) == TYPES.s) {
 											if (
 												_extensions[LEXICON.hOP](
-													extName
+													extName,
 												)
 											)
 												for (
 													result = extendDeep(
 														{},
-														_extensions[extName]
+														_extensions[extName],
 													);
 													i < privateMethods.length;
 													i++
@@ -9818,14 +9824,14 @@ Valid strings are: [ ` +
 											for (i in _extensions)
 												result[i] = extendDeep(
 													{},
-													_base.ext(i)
+													_base.ext(i),
 												)
 										}
 										return result
 									}),
 									(_base.addExt = function (
 										extName,
-										extensionOptions
+										extensionOptions,
 									) {
 										var registeredExtensionObj =
 												_plugin.extension(extName),
@@ -9837,7 +9843,7 @@ Valid strings are: [ ` +
 										if (registeredExtensionObj) {
 											if (
 												_extensions[LEXICON.hOP](
-													extName
+													extName,
 												)
 											)
 												return _base.ext(extName)
@@ -9847,10 +9853,10 @@ Valid strings are: [ ` +
 														_base,
 														extendDeep(
 															{},
-															registeredExtensionObj.defaultOptions
+															registeredExtensionObj.defaultOptions,
 														),
 														FRAMEWORK,
-														COMPATIBILITY
+														COMPATIBILITY,
 													)),
 												instance &&
 													((instanceContract =
@@ -9859,11 +9865,11 @@ Valid strings are: [ ` +
 														TYPES.f &&
 														((contractResult =
 															instanceContract(
-																window2
+																window2,
 															)),
 														(contractFulfilled =
 															type(
-																contractResult
+																contractResult,
 															) == TYPES.b
 																? contractResult
 																: contractFulfilled)),
@@ -9877,7 +9883,7 @@ Valid strings are: [ ` +
 													type(instanceAdded) ==
 														TYPES.f &&
 														instanceAdded(
-															extensionOptions
+															extensionOptions,
 														),
 													_base.ext(extName)
 												)
@@ -9885,7 +9891,7 @@ Valid strings are: [ ` +
 											console.warn(
 												'A extension with the name "' +
 													extName +
-													`" isn't registered.`
+													`" isn't registered.`,
 											)
 									}),
 									(_base.removeExt = function (extName) {
@@ -9904,35 +9910,35 @@ Valid strings are: [ ` +
 								function construct(
 									targetElement,
 									options2,
-									extensions2
+									extensions2,
 								) {
 									;(_defaultOptions = globals.defaultOptions),
 										(_nativeScrollbarStyling =
 											globals.nativeScrollbarStyling),
 										(_nativeScrollbarSize = extendDeep(
 											{},
-											globals.nativeScrollbarSize
+											globals.nativeScrollbarSize,
 										)),
 										(_nativeScrollbarIsOverlaid =
 											extendDeep(
 												{},
-												globals.nativeScrollbarIsOverlaid
+												globals.nativeScrollbarIsOverlaid,
 											)),
 										(_overlayScrollbarDummySize =
 											extendDeep(
 												{},
-												globals.overlayScrollbarDummySize
+												globals.overlayScrollbarDummySize,
 											)),
 										(_rtlScrollBehavior = extendDeep(
 											{},
-											globals.rtlScrollBehavior
+											globals.rtlScrollBehavior,
 										)),
 										setOptions(
 											extendDeep(
 												{},
 												_defaultOptions,
-												options2
-											)
+												options2,
+											),
 										),
 										(_cssCalc = globals.cssCalc),
 										(_msieVersion = globals.msie),
@@ -9951,23 +9957,23 @@ Valid strings are: [ ` +
 										(_restrictedMeasuring =
 											globals.restrictedMeasuring),
 										(_documentElement = FRAMEWORK(
-											targetElement.ownerDocument
+											targetElement.ownerDocument,
 										)),
 										(_documentElementNative =
 											_documentElement[0]),
 										(_windowElement = FRAMEWORK(
 											_documentElementNative.defaultView ||
-												_documentElementNative.parentWindow
+												_documentElementNative.parentWindow,
 										)),
 										(_windowElementNative =
 											_windowElement[0]),
 										(_htmlElement = findFirst(
 											_documentElement,
-											'html'
+											'html',
 										)),
 										(_bodyElement = findFirst(
 											_htmlElement,
-											'body'
+											'body',
 										)),
 										(_targetElement =
 											FRAMEWORK(targetElement)),
@@ -9981,19 +9987,19 @@ Valid strings are: [ ` +
 											document),
 										(_domExists = _isTextarea
 											? _targetElement.hasClass(
-													_classNameTextareaElement
+													_classNameTextareaElement,
 											  ) &&
 											  _targetElement
 													.parent()
 													.hasClass(
-														_classNameContentElement
+														_classNameContentElement,
 													)
 											: _targetElement.hasClass(
-													_classNameHostElement
+													_classNameHostElement,
 											  ) &&
 											  _targetElement.children(
 													_strDot +
-														_classNamePaddingElement
+														_classNamePaddingElement,
 											  )[LEXICON.l])
 									var initBodyScroll,
 										bodyMouseTouchDownListener
@@ -10003,7 +10009,7 @@ Valid strings are: [ ` +
 											.nativeScrollbarsOverlaid.initialize
 										? ((_initialized = !0),
 										  dispatchCallback(
-												'onInitializationWithdrawn'
+												'onInitializationWithdrawn',
 										  ),
 										  _domExists &&
 												(setupStructureDOM(!0),
@@ -10024,7 +10030,7 @@ Valid strings are: [ ` +
 													](),
 													_windowElement[
 														_strScrollLeft
-													]()
+													](),
 												)),
 												(initBodyScroll.t = MATH.max(
 													_targetElement[
@@ -10035,19 +10041,19 @@ Valid strings are: [ ` +
 													](),
 													_windowElement[
 														_strScrollTop
-													]()
+													](),
 												)),
 												(bodyMouseTouchDownListener =
 													function () {
 														_viewportElement.removeAttr(
-															LEXICON.ti
+															LEXICON.ti,
 														),
 															setupResponsiveEventListener(
 																_viewportElement,
 																_strMouseTouchDownEvent,
 																bodyMouseTouchDownListener,
 																!0,
-																!0
+																!0,
 															)
 													})),
 										  setupStructureDOM(),
@@ -10060,7 +10066,7 @@ Valid strings are: [ ` +
 										  createMutationObservers(),
 										  setupResizeObserver(
 												_sizeObserverElement,
-												hostOnResized
+												hostOnResized,
 										  ),
 										  _isBody &&
 												(_viewportElement[
@@ -10073,7 +10079,7 @@ Valid strings are: [ ` +
 													_viewportElementNative.focus &&
 													(_viewportElement.attr(
 														LEXICON.ti,
-														'-1'
+														'-1',
 													),
 													_viewportElementNative.focus(),
 													setupResponsiveEventListener(
@@ -10081,7 +10087,7 @@ Valid strings are: [ ` +
 														_strMouseTouchDownEvent,
 														bodyMouseTouchDownListener,
 														!1,
-														!0
+														!0,
 													))),
 										  _base.update(_strAuto),
 										  (_initialized = !0),
@@ -10091,9 +10097,9 @@ Valid strings are: [ ` +
 												function (index, value) {
 													dispatchCallback(
 														value.n,
-														value.a
+														value.a,
 													)
-												}
+												},
 										  ),
 										  (_callbacksInitQeueue = []),
 										  type(extensions2) == TYPES.s &&
@@ -10103,29 +10109,29 @@ Valid strings are: [ ` +
 														extensions2,
 														function (
 															index,
-															value
+															value,
 														) {
 															_base.addExt(value)
-														}
+														},
 												  )
 												: FRAMEWORK.isPlainObject(
-														extensions2
+														extensions2,
 												  ) &&
 												  each(
 														extensions2,
 														function (key, value) {
 															_base.addExt(
 																key,
-																value
+																value,
 															)
-														}
+														},
 												  ),
 										  setTimeout(function () {
 												_supportTransition &&
 													!_destroyed &&
 													addClass(
 														_hostElement,
-														_classNameHostTransition
+														_classNameHostTransition,
 													)
 										  }, 333),
 										  _base)
@@ -10135,8 +10141,8 @@ Valid strings are: [ ` +
 										construct(
 											pluginTargetElement,
 											options,
-											extensions
-										)
+											extensions,
+										),
 									) && INSTANCES(pluginTargetElement, _base),
 									_base
 								)
@@ -10146,14 +10152,14 @@ Valid strings are: [ ` +
 									function (
 										pluginTargetElements,
 										options,
-										extensions
+										extensions,
 									) {
 										if (arguments[LEXICON.l] === 0)
 											return this
 										var arr = [],
 											optsIsPlainObj =
 												FRAMEWORK.isPlainObject(
-													options
+													options,
 												),
 											inst,
 											result
@@ -10175,7 +10181,7 @@ Valid strings are: [ ` +
 																pluginTargetElements,
 																function (
 																	i,
-																	v
+																	v,
 																) {
 																	;(inst = v),
 																		inst !==
@@ -10186,40 +10192,40 @@ Valid strings are: [ ` +
 																					options,
 																					extensions,
 																					_pluginsGlobals,
-																					_pluginsAutoUpdateLoop
-																				)
+																					_pluginsAutoUpdateLoop,
+																				),
 																			)
-																}
+																},
 														  )
 														: FRAMEWORK.each(
 																pluginTargetElements,
 																function (
 																	i,
-																	v
+																	v,
 																) {
 																	;(inst =
 																		INSTANCES(
-																			v
+																			v,
 																		)),
 																		((options ===
 																			'!' &&
 																			_plugin.valid(
-																				inst
+																				inst,
 																			)) ||
 																			(COMPATIBILITY.type(
-																				options
+																				options,
 																			) ==
 																				TYPES.f &&
 																				options(
 																					v,
-																					inst
+																					inst,
 																				)) ||
 																			options ===
 																				undefined2) &&
 																			arr.push(
-																				inst
+																				inst,
 																			)
-																}
+																},
 														  ),
 													(result =
 														arr[LEXICON.l] === 1
@@ -10235,12 +10241,12 @@ Valid strings are: [ ` +
 									var globals = FRAMEWORK.extend(
 										!0,
 										{},
-										_pluginsGlobals
+										_pluginsGlobals,
 									)
 									return delete globals.msie, globals
 								}),
 								(_plugin.defaultOptions = function (
-									newDefaultOptions
+									newDefaultOptions,
 								) {
 									initOverlayScrollbarsStatics()
 									var currDefaultOptions =
@@ -10249,7 +10255,7 @@ Valid strings are: [ ` +
 										return FRAMEWORK.extend(
 											!0,
 											{},
-											currDefaultOptions
+											currDefaultOptions,
 										)
 									_pluginsGlobals.defaultOptions =
 										FRAMEWORK.extend(
@@ -10260,8 +10266,8 @@ Valid strings are: [ ` +
 												newDefaultOptions,
 												_pluginsOptions._template,
 												!0,
-												currDefaultOptions
-											)._default
+												currDefaultOptions,
+											)._default,
 										)
 								}),
 								(_plugin.valid = function (osInstance) {
@@ -10273,7 +10279,7 @@ Valid strings are: [ ` +
 								(_plugin.extension = function (
 									extensionName,
 									extension,
-									defaultOptions
+									defaultOptions,
 								) {
 									var extNameTypeString =
 											COMPATIBILITY.type(extensionName) ==
@@ -10288,7 +10294,7 @@ Valid strings are: [ ` +
 													LEXICON.l
 												],
 											},
-											_pluginsExtensions
+											_pluginsExtensions,
 										)
 									if (extNameTypeString) {
 										if (
@@ -10314,7 +10320,7 @@ Valid strings are: [ ` +
 													if (argLen > 1)
 														_pluginsExtensions.splice(
 															i,
-															1
+															1,
 														)
 													else
 														return FRAMEWORK.extend(
@@ -10322,7 +10328,7 @@ Valid strings are: [ ` +
 															{},
 															_pluginsExtensions[
 																i
-															]
+															],
 														)
 									}
 								}),
@@ -10334,7 +10340,7 @@ Valid strings are: [ ` +
 							JQUERY.fn &&
 							(JQUERY.fn.overlayScrollbars = function (
 								options,
-								extensions
+								extensions,
 							) {
 								var _elements = this
 								return JQUERY.isPlainObject(options)
@@ -10346,7 +10352,7 @@ Valid strings are: [ ` +
 							}),
 						PLUGIN
 					)
-				}
+				},
 			)
 		},
 	}),
@@ -10366,18 +10372,18 @@ Valid strings are: [ ` +
 					(osInstance.current = (0, import_overlayscrollbars.default)(
 						osTargetRef.current,
 						options,
-						extensions
+						extensions,
 					)),
 					mergeHostClassNames(osInstance.current, className),
 					() => {
 						import_overlayscrollbars.default.valid(
-							osInstance.current
+							osInstance.current,
 						) &&
 							(osInstance.current.destroy(),
 							(osInstance.current = null))
 					}
 				),
-				[]
+				[],
 			),
 			(0, import_react.useEffect)(() => {
 				import_overlayscrollbars.default.valid(osInstance.current) &&
@@ -10402,9 +10408,9 @@ Valid strings are: [ ` +
 						import_react.default.createElement(
 							'div',
 							{ className: 'os-content' },
-							children
-						)
-					)
+							children,
+						),
+					),
 				),
 				import_react.default.createElement(
 					'div',
@@ -10414,8 +10420,8 @@ Valid strings are: [ ` +
 						{ className: 'os-scrollbar-track' },
 						import_react.default.createElement('div', {
 							className: 'os-scrollbar-handle',
-						})
-					)
+						}),
+					),
 				),
 				import_react.default.createElement(
 					'div',
@@ -10425,12 +10431,12 @@ Valid strings are: [ ` +
 						{ className: 'os-scrollbar-track' },
 						import_react.default.createElement('div', {
 							className: 'os-scrollbar-handle',
-						})
-					)
+						}),
+					),
 				),
 				import_react.default.createElement('div', {
 					className: 'os-scrollbar-corner',
-				})
+				}),
 			)
 		)
 	}
@@ -10441,7 +10447,7 @@ function mergeHostClassNames(osInstance, className) {
 				`(^os-host([-_].+|)$)|${osInstance
 					.options()
 					.className.replace(/\s/g, '$|')}$`,
-				'g'
+				'g',
 			),
 			osClassNames = host.className
 				.split(' ')

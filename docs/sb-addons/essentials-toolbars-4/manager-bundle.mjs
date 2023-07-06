@@ -143,7 +143,7 @@ try {
 				M,
 				{ active: o, title: a, onClick: l },
 				e && r.createElement(h, { icon: e }),
-				t ? `\xA0${t}` : null
+				t ? `\xA0${t}` : null,
 			),
 		W = ['reset'],
 		Y = (o) => o.filter((t) => !W.includes(t.type)).map((t) => t.value),
@@ -272,18 +272,18 @@ try {
 						  !i &&
 						  ((i = t),
 						  k(
-								`Using the \`name\` "${t}" as toolbar title for backward compatibility. \`name\` will stop having dual purposes in the future. Please specify either a \`title\` or an \`icon\` in \`globalTypes\` instead.`
+								`Using the \`name\` "${t}" as toolbar title for backward compatibility. \`name\` will stop having dual purposes in the future. Please specify either a \`title\` or an \`icon\` in \`globalTypes\` instead.`,
 						  ))
 						: ((i = t),
 						  k(
-								'`showName` is deprecated as `name` will stop having dual purposes in the future. Please specify a `title` in `globalTypes` instead.'
+								'`showName` is deprecated as `name` will stop having dual purposes in the future. Please specify a `title` in `globalTypes` instead.',
 						  )),
 					s && (i = j({ currentValue: m, items: l }) || i)
 				let _ = T(
 					(C) => {
 						c({ [o]: C })
 					},
-					[m, c]
+					[m, c],
 				)
 				return r.createElement(
 					V,
@@ -302,7 +302,7 @@ try {
 										onClick: () => {
 											_(g.value), C()
 										},
-									})
+									}),
 								)
 							return r.createElement(H, { links: F })
 						},
@@ -314,9 +314,9 @@ try {
 						description: e || '',
 						icon: u,
 						title: i || '',
-					})
+					}),
 				)
-			}
+			},
 		),
 		J = { type: 'item', value: '' },
 		Q = (o, t) => ({
@@ -347,7 +347,7 @@ try {
 						t.map((e) => {
 							let a = Q(e, o[e])
 							return r.createElement(Z, { key: e, id: e, ...a })
-						})
+						}),
 				  )
 				: null
 		}
@@ -358,12 +358,12 @@ try {
 			type: P.TOOL,
 			match: () => !0,
 			render: () => r.createElement(X, null),
-		})
+		}),
 	)
 } catch (e) {
 	console.error(
 		'[Storybook] One of your manager-entries failed: ' + import.meta.url,
-		e
+		e,
 	)
 }
 //# sourceMappingURL=manager-bundle.mjs.map

@@ -3,7 +3,7 @@
 	[3299],
 	{
 		'./node_modules/@babel/runtime/helpers/arrayLikeToArray.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _arrayLikeToArray(arr, len) {
 				;(null == len || len > arr.length) && (len = arr.length)
@@ -22,12 +22,12 @@
 				(module.exports.default = module.exports)
 		},
 		'./node_modules/@babel/runtime/helpers/assertThisInitialized.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _assertThisInitialized(self) {
 				if (void 0 === self)
 					throw new ReferenceError(
-						"this hasn't been initialised - super() hasn't been called"
+						"this hasn't been initialised - super() hasn't been called",
 					)
 				return self
 			}),
@@ -35,7 +35,7 @@
 				(module.exports.default = module.exports)
 		},
 		'./node_modules/@babel/runtime/helpers/asyncToGenerator.js': (
-			module
+			module,
 		) => {
 			function asyncGeneratorStep(
 				gen,
@@ -44,7 +44,7 @@
 				_next,
 				_throw,
 				key,
-				arg
+				arg,
 			) {
 				try {
 					var info = gen[key](arg),
@@ -70,7 +70,7 @@
 								_next,
 								_throw,
 								'next',
-								value
+								value,
 							)
 						}
 						function _throw(err) {
@@ -81,7 +81,7 @@
 								_next,
 								_throw,
 								'throw',
-								err
+								err,
 							)
 						}
 						_next(void 0)
@@ -102,13 +102,13 @@
 		'./node_modules/@babel/runtime/helpers/construct.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var setPrototypeOf = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/setPrototypeOf.js'
+					'./node_modules/@babel/runtime/helpers/setPrototypeOf.js',
 				),
 				isNativeReflectConstruct = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js'
+					'./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js',
 				)
 			function _construct(Parent, args, Class) {
 				return (
@@ -123,13 +123,13 @@
 									a.push.apply(a, args)
 									var instance = new (Function.bind.apply(
 										Parent,
-										a
+										a,
 									))()
 									return (
 										Class &&
 											setPrototypeOf(
 												instance,
-												Class.prototype
+												Class.prototype,
 											),
 										instance
 									)
@@ -146,10 +146,10 @@
 		'./node_modules/@babel/runtime/helpers/createClass.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var toPropertyKey = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/toPropertyKey.js'
+				'./node_modules/@babel/runtime/helpers/toPropertyKey.js',
 			)
 			function _defineProperties(target, props) {
 				for (var i = 0; i < props.length; i++) {
@@ -160,14 +160,14 @@
 						Object.defineProperty(
 							target,
 							toPropertyKey(descriptor.key),
-							descriptor
+							descriptor,
 						)
 				}
 			}
 			;(module.exports = function _createClass(
 				Constructor,
 				protoProps,
-				staticProps
+				staticProps,
 			) {
 				return (
 					protoProps &&
@@ -185,10 +185,10 @@
 		'./node_modules/@babel/runtime/helpers/defineProperty.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var toPropertyKey = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/toPropertyKey.js'
+				'./node_modules/@babel/runtime/helpers/toPropertyKey.js',
 			)
 			;(module.exports = function _defineProperty(obj, key, value) {
 				return (
@@ -229,15 +229,15 @@
 		'./node_modules/@babel/runtime/helpers/inherits.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var setPrototypeOf = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/setPrototypeOf.js'
+				'./node_modules/@babel/runtime/helpers/setPrototypeOf.js',
 			)
 			;(module.exports = function _inherits(subClass, superClass) {
 				if ('function' != typeof superClass && null !== superClass)
 					throw new TypeError(
-						'Super expression must either be null or a function'
+						'Super expression must either be null or a function',
 					)
 				;(subClass.prototype = Object.create(
 					superClass && superClass.prototype,
@@ -247,7 +247,7 @@
 							writable: !0,
 							configurable: !0,
 						},
-					}
+					},
 				)),
 					Object.defineProperty(subClass, 'prototype', {
 						writable: !1,
@@ -258,7 +258,7 @@
 				(module.exports.default = module.exports)
 		},
 		'./node_modules/@babel/runtime/helpers/interopRequireDefault.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj }
@@ -267,7 +267,7 @@
 				(module.exports.default = module.exports)
 		},
 		'./node_modules/@babel/runtime/helpers/isNativeFunction.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _isNativeFunction(fn) {
 				return (
@@ -278,7 +278,7 @@
 				(module.exports.default = module.exports)
 		},
 		'./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _isNativeReflectConstruct() {
 				if ('undefined' == typeof Reflect || !Reflect.construct)
@@ -288,7 +288,7 @@
 				try {
 					return (
 						Boolean.prototype.valueOf.call(
-							Reflect.construct(Boolean, [], function () {})
+							Reflect.construct(Boolean, [], function () {}),
 						),
 						!0
 					)
@@ -300,7 +300,7 @@
 				(module.exports.default = module.exports)
 		},
 		'./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _iterableToArrayLimit(arr, i) {
 				var _i =
@@ -349,11 +349,11 @@
 				(module.exports.default = module.exports)
 		},
 		'./node_modules/@babel/runtime/helpers/nonIterableRest.js': (
-			module
+			module,
 		) => {
 			;(module.exports = function _nonIterableRest() {
 				throw new TypeError(
-					'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+					'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
 				)
 			}),
 				(module.exports.__esModule = !0),
@@ -362,13 +362,13 @@
 		'./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var _typeof = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/typeof.js'
+					'./node_modules/@babel/runtime/helpers/typeof.js',
 				).default,
 				assertThisInitialized = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/assertThisInitialized.js'
+					'./node_modules/@babel/runtime/helpers/assertThisInitialized.js',
 				)
 			;(module.exports = function _possibleConstructorReturn(self, call) {
 				if (
@@ -378,7 +378,7 @@
 					return call
 				if (void 0 !== call)
 					throw new TypeError(
-						'Derived constructors may only return object or undefined'
+						'Derived constructors may only return object or undefined',
 					)
 				return assertThisInitialized(self)
 			}),
@@ -406,19 +406,19 @@
 		'./node_modules/@babel/runtime/helpers/slicedToArray.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var arrayWithHoles = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/arrayWithHoles.js'
+					'./node_modules/@babel/runtime/helpers/arrayWithHoles.js',
 				),
 				iterableToArrayLimit = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js'
+					'./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js',
 				),
 				unsupportedIterableToArray = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js'
+					'./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js',
 				),
 				nonIterableRest = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/nonIterableRest.js'
+					'./node_modules/@babel/runtime/helpers/nonIterableRest.js',
 				)
 			;(module.exports = function _slicedToArray(arr, i) {
 				return (
@@ -434,10 +434,10 @@
 		'./node_modules/@babel/runtime/helpers/toPrimitive.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var _typeof = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/typeof.js'
+				'./node_modules/@babel/runtime/helpers/typeof.js',
 			).default
 			;(module.exports = function _toPrimitive(input, hint) {
 				if ('object' !== _typeof(input) || null === input) return input
@@ -446,7 +446,7 @@
 					var res = prim.call(input, hint || 'default')
 					if ('object' !== _typeof(res)) return res
 					throw new TypeError(
-						'@@toPrimitive must return a primitive value.'
+						'@@toPrimitive must return a primitive value.',
 					)
 				}
 				return ('string' === hint ? String : Number)(input)
@@ -457,13 +457,13 @@
 		'./node_modules/@babel/runtime/helpers/toPropertyKey.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var _typeof = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/typeof.js'
+					'./node_modules/@babel/runtime/helpers/typeof.js',
 				).default,
 				toPrimitive = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/toPrimitive.js'
+					'./node_modules/@babel/runtime/helpers/toPrimitive.js',
 				)
 			;(module.exports = function _toPropertyKey(arg) {
 				var key = toPrimitive(arg, 'string')
@@ -475,10 +475,10 @@
 		'./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var arrayLikeToArray = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/arrayLikeToArray.js'
+				'./node_modules/@babel/runtime/helpers/arrayLikeToArray.js',
 			)
 			;(module.exports = function _unsupportedIterableToArray(o, minLen) {
 				if (o) {
@@ -503,19 +503,19 @@
 		'./node_modules/@babel/runtime/helpers/wrapNativeSuper.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			var getPrototypeOf = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/getPrototypeOf.js'
+					'./node_modules/@babel/runtime/helpers/getPrototypeOf.js',
 				),
 				setPrototypeOf = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/setPrototypeOf.js'
+					'./node_modules/@babel/runtime/helpers/setPrototypeOf.js',
 				),
 				isNativeFunction = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/isNativeFunction.js'
+					'./node_modules/@babel/runtime/helpers/isNativeFunction.js',
 				),
 				construct = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/construct.js'
+					'./node_modules/@babel/runtime/helpers/construct.js',
 				)
 			function _wrapNativeSuper(Class) {
 				var _cache = 'function' == typeof Map ? new Map() : void 0
@@ -526,7 +526,7 @@
 								return Class
 							if ('function' != typeof Class)
 								throw new TypeError(
-									'Super expression must either be null or a function'
+									'Super expression must either be null or a function',
 								)
 							if (void 0 !== _cache) {
 								if (_cache.has(Class)) return _cache.get(Class)
@@ -536,7 +536,7 @@
 								return construct(
 									Class,
 									arguments,
-									getPrototypeOf(this).constructor
+									getPrototypeOf(this).constructor,
 								)
 							}
 							return (
@@ -549,7 +549,7 @@
 											writable: !0,
 											configurable: !0,
 										},
-									}
+									},
 								)),
 								setPrototypeOf(Wrapper, Class)
 							)
@@ -566,11 +566,11 @@
 		'./node_modules/next-auth/client/_utils.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var _interopRequireDefault = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js'
+				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.BroadcastChannel = function BroadcastChannel() {
@@ -589,7 +589,7 @@
 												event.newValue) &&
 											void 0 !== _event$newValue
 											? _event$newValue
-											: '{}'
+											: '{}',
 									)
 									'session' ===
 										(null == message
@@ -605,7 +605,7 @@
 								function () {
 									return window.removeEventListener(
 										'storage',
-										handler
+										handler,
 									)
 								}
 							)
@@ -619,9 +619,9 @@
 											_objectSpread(
 												_objectSpread({}, message),
 												{},
-												{ timestamp: now() }
-											)
-										)
+												{ timestamp: now() },
+											),
+										),
 									)
 								} catch (_unused) {}
 						},
@@ -634,18 +634,18 @@
 				(exports.now = now)
 			var _regenerator = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/regenerator/index.js'
-					)
+						'./node_modules/@babel/runtime/regenerator/index.js',
+					),
 				),
 				_defineProperty2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/defineProperty.js'
-					)
+						'./node_modules/@babel/runtime/helpers/defineProperty.js',
+					),
 				),
 				_asyncToGenerator2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/asyncToGenerator.js'
-					)
+						'./node_modules/@babel/runtime/helpers/asyncToGenerator.js',
+					),
 				)
 			function ownKeys(object, enumerableOnly) {
 				var keys = Object.keys(object)
@@ -653,10 +653,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -667,19 +665,25 @@
 					var source = null != arguments[i] ? arguments[i] : {}
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
-								;(0,
-								_defineProperty2.default)(target, key, source[key])
+								;(0, _defineProperty2.default)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -688,131 +692,132 @@
 			function _fetchData() {
 				return (
 					(_fetchData = (0, _asyncToGenerator2.default)(
-						_regenerator.default.mark(function _callee(
-							path,
-							__NEXTAUTH,
-							logger
-						) {
-							var _ref,
-								ctx,
-								_ref$req,
-								req,
-								url,
-								_req$headers,
-								options,
-								res,
-								data,
-								_args = arguments
-							return _regenerator.default.wrap(
-								function _callee$(_context) {
-									for (;;)
-										switch (
-											(_context.prev = _context.next)
-										) {
-											case 0:
-												return (
-													(ctx = (_ref =
-														_args.length > 3 &&
-														void 0 !== _args[3]
-															? _args[3]
-															: {}).ctx),
-													(_ref$req = _ref.req),
-													(req =
-														void 0 === _ref$req
-															? null == ctx
-																? void 0
-																: ctx.req
-															: _ref$req),
-													(url = ''
-														.concat(
-															apiBaseUrl(
-																__NEXTAUTH
-															),
-															'/'
-														)
-														.concat(path)),
-													(_context.prev = 2),
-													(options = {
-														headers: _objectSpread(
-															{
-																'Content-Type':
-																	'application/json',
-															},
-															null != req &&
-																null !==
-																	(_req$headers =
-																		req.headers) &&
-																void 0 !==
-																	_req$headers &&
-																_req$headers.cookie
-																? {
-																		cookie: req
-																			.headers
-																			.cookie,
-																  }
-																: {}
-														),
-													}),
-													null != req &&
-														req.body &&
-														((options.body =
-															JSON.stringify(
-																req.body
-															)),
-														(options.method =
-															'POST')),
-													(_context.next = 7),
-													fetch(url, options)
-												)
-											case 7:
-												return (
-													(res = _context.sent),
-													(_context.next = 10),
-													res.json()
-												)
-											case 10:
-												if (
-													((data = _context.sent),
-													res.ok)
-												) {
-													_context.next = 13
-													break
-												}
-												throw data
-											case 13:
-												return _context.abrupt(
-													'return',
-													Object.keys(data).length > 0
-														? data
-														: null
-												)
-											case 16:
-												return (
-													(_context.prev = 16),
-													(_context.t0 =
-														_context.catch(2)),
-													logger.error(
-														'CLIENT_FETCH_ERROR',
-														{
-															error: _context.t0,
-															url,
-														}
-													),
-													_context.abrupt(
-														'return',
-														null
+						_regenerator.default.mark(
+							function _callee(path, __NEXTAUTH, logger) {
+								var _ref,
+									ctx,
+									_ref$req,
+									req,
+									url,
+									_req$headers,
+									options,
+									res,
+									data,
+									_args = arguments
+								return _regenerator.default.wrap(
+									function _callee$(_context) {
+										for (;;)
+											switch (
+												(_context.prev = _context.next)
+											) {
+												case 0:
+													return (
+														(ctx = (_ref =
+															_args.length > 3 &&
+															void 0 !== _args[3]
+																? _args[3]
+																: {}).ctx),
+														(_ref$req = _ref.req),
+														(req =
+															void 0 === _ref$req
+																? null == ctx
+																	? void 0
+																	: ctx.req
+																: _ref$req),
+														(url = ''
+															.concat(
+																apiBaseUrl(
+																	__NEXTAUTH,
+																),
+																'/',
+															)
+															.concat(path)),
+														(_context.prev = 2),
+														(options = {
+															headers:
+																_objectSpread(
+																	{
+																		'Content-Type':
+																			'application/json',
+																	},
+																	null !=
+																		req &&
+																		null !==
+																			(_req$headers =
+																				req.headers) &&
+																		void 0 !==
+																			_req$headers &&
+																		_req$headers.cookie
+																		? {
+																				cookie: req
+																					.headers
+																					.cookie,
+																		  }
+																		: {},
+																),
+														}),
+														null != req &&
+															req.body &&
+															((options.body =
+																JSON.stringify(
+																	req.body,
+																)),
+															(options.method =
+																'POST')),
+														(_context.next = 7),
+														fetch(url, options)
 													)
-												)
-											case 20:
-											case 'end':
-												return _context.stop()
-										}
-								},
-								_callee,
-								null,
-								[[2, 16]]
-							)
-						})
+												case 7:
+													return (
+														(res = _context.sent),
+														(_context.next = 10),
+														res.json()
+													)
+												case 10:
+													if (
+														((data = _context.sent),
+														res.ok)
+													) {
+														_context.next = 13
+														break
+													}
+													throw data
+												case 13:
+													return _context.abrupt(
+														'return',
+														Object.keys(data)
+															.length > 0
+															? data
+															: null,
+													)
+												case 16:
+													return (
+														(_context.prev = 16),
+														(_context.t0 =
+															_context.catch(2)),
+														logger.error(
+															'CLIENT_FETCH_ERROR',
+															{
+																error: _context.t0,
+																url,
+															},
+														),
+														_context.abrupt(
+															'return',
+															null,
+														)
+													)
+												case 20:
+												case 'end':
+													return _context.stop()
+											}
+									},
+									_callee,
+									null,
+									[[2, 16]],
+								)
+							},
+						),
 					)),
 					_fetchData.apply(this, arguments)
 				)
@@ -831,11 +836,11 @@
 		'./node_modules/next-auth/core/errors.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var _interopRequireDefault = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js'
+				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.UnsupportedStrategy =
@@ -851,7 +856,7 @@
 						void 0),
 				(exports.adapterErrorHandler = function adapterErrorHandler(
 					adapter,
-					logger
+					logger,
 				) {
 					if (!adapter) return
 					return Object.keys(adapter).reduce(function (acc, name) {
@@ -878,7 +883,7 @@
 																	_args2.length,
 																args =
 																	new Array(
-																		_len10
+																		_len10,
 																	),
 																_key10 = 0;
 															_key10 < _len10;
@@ -889,45 +894,45 @@
 														return (
 															logger.debug(
 																'adapter_'.concat(
-																	name
+																	name,
 																),
-																{ args }
+																{ args },
 															),
 															(method =
 																adapter[name]),
 															(_context2.next = 6),
 															method.apply(
 																void 0,
-																args
+																args,
 															)
 														)
 													case 6:
 														return _context2.abrupt(
 															'return',
-															_context2.sent
+															_context2.sent,
 														)
 													case 9:
 														throw (
 															((_context2.prev = 9),
 															(_context2.t0 =
 																_context2.catch(
-																	0
+																	0,
 																)),
 															logger.error(
 																'adapter_error_'.concat(
-																	name
+																	name,
 																),
-																_context2.t0
+																_context2.t0,
 															),
 															((e =
 																new UnknownError(
-																	_context2.t0
+																	_context2.t0,
 																)).name =
 																''.concat(
 																	capitalize(
-																		name
+																		name,
 																	),
-																	'Error'
+																	'Error',
 																)),
 															e)
 														)
@@ -938,9 +943,9 @@
 										},
 										_callee2,
 										null,
-										[[0, 9]]
+										[[0, 9]],
 									)
-								})
+								}),
 							)),
 							acc
 						)
@@ -949,7 +954,7 @@
 				(exports.capitalize = capitalize),
 				(exports.eventsErrorHandler = function eventsErrorHandler(
 					methods,
-					logger
+					logger,
 				) {
 					return Object.keys(methods).reduce(function (acc, name) {
 						return (
@@ -972,28 +977,28 @@
 															(_context.next = 4),
 															method.apply(
 																void 0,
-																_args
+																_args,
 															)
 														)
 													case 4:
 														return _context.abrupt(
 															'return',
-															_context.sent
+															_context.sent,
 														)
 													case 7:
 														;(_context.prev = 7),
 															(_context.t0 =
 																_context.catch(
-																	0
+																	0,
 																)),
 															logger.error(
 																''.concat(
 																	upperSnake(
-																		name
+																		name,
 																	),
-																	'_EVENT_ERROR'
+																	'_EVENT_ERROR',
 																),
-																_context.t0
+																_context.t0,
 															)
 													case 10:
 													case 'end':
@@ -1002,9 +1007,9 @@
 										},
 										_callee,
 										null,
-										[[0, 7]]
+										[[0, 7]],
 									)
-								})
+								}),
 							)),
 							acc
 						)
@@ -1013,48 +1018,48 @@
 				(exports.upperSnake = upperSnake)
 			var _regenerator = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/regenerator/index.js'
-					)
+						'./node_modules/@babel/runtime/regenerator/index.js',
+					),
 				),
 				_asyncToGenerator2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/asyncToGenerator.js'
-					)
+						'./node_modules/@babel/runtime/helpers/asyncToGenerator.js',
+					),
 				),
 				_assertThisInitialized2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/assertThisInitialized.js'
-					)
+						'./node_modules/@babel/runtime/helpers/assertThisInitialized.js',
+					),
 				),
 				_defineProperty2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/defineProperty.js'
-					)
+						'./node_modules/@babel/runtime/helpers/defineProperty.js',
+					),
 				),
 				_classCallCheck2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/classCallCheck.js'
-					)
+						'./node_modules/@babel/runtime/helpers/classCallCheck.js',
+					),
 				),
 				_createClass2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/createClass.js'
-					)
+						'./node_modules/@babel/runtime/helpers/createClass.js',
+					),
 				),
 				_inherits2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/inherits.js'
-					)
+						'./node_modules/@babel/runtime/helpers/inherits.js',
+					),
 				),
 				_possibleConstructorReturn2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js'
-					)
+						'./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js',
+					),
 				),
 				_getPrototypeOf2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/getPrototypeOf.js'
-					)
+						'./node_modules/@babel/runtime/helpers/getPrototypeOf.js',
+					),
 				)
 			function _createSuper(Derived) {
 				var hasNativeReflectConstruct =
@@ -1069,8 +1074,8 @@
 									Reflect.construct(
 										Boolean,
 										[],
-										function () {}
-									)
+										function () {},
+									),
 								),
 								!0
 							)
@@ -1083,13 +1088,13 @@
 						Super = (0, _getPrototypeOf2.default)(Derived)
 					if (hasNativeReflectConstruct) {
 						var NewTarget = (0, _getPrototypeOf2.default)(
-							this
+							this,
 						).constructor
 						result = Reflect.construct(Super, arguments, NewTarget)
 					} else result = Super.apply(this, arguments)
 					return (0, _possibleConstructorReturn2.default)(
 						this,
-						result
+						result,
 					)
 				}
 			}
@@ -1107,7 +1112,7 @@
 									null == error ? void 0 : error.message) &&
 								void 0 !== _message
 								? _message
-								: error
+								: error,
 						)).name = 'UnknownError'),
 						(_this.code = error.code),
 						error instanceof Error && (_this.stack = error.stack),
@@ -1133,9 +1138,9 @@
 				(0,
 				_interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/wrapNativeSuper.js'
-					)
-				).default)(Error)
+						'./node_modules/@babel/runtime/helpers/wrapNativeSuper.js',
+					),
+				).default)(Error),
 			)
 			exports.UnknownError = UnknownError
 			var OAuthCallbackError = (function (_UnknownError) {
@@ -1155,12 +1160,12 @@
 					return (
 						(_this2 = _super2.call.apply(
 							_super2,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this2),
 							'name',
-							'OAuthCallbackError'
+							'OAuthCallbackError',
 						),
 						_this2
 					)
@@ -1185,12 +1190,12 @@
 					return (
 						(_this3 = _super3.call.apply(
 							_super3,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this3),
 							'name',
-							'AccountNotLinkedError'
+							'AccountNotLinkedError',
 						),
 						_this3
 					)
@@ -1215,17 +1220,17 @@
 					return (
 						(_this4 = _super4.call.apply(
 							_super4,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this4),
 							'name',
-							'MissingAPIRouteError'
+							'MissingAPIRouteError',
 						),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this4),
 							'code',
-							'MISSING_NEXTAUTH_API_ROUTE_ERROR'
+							'MISSING_NEXTAUTH_API_ROUTE_ERROR',
 						),
 						_this4
 					)
@@ -1250,17 +1255,17 @@
 					return (
 						(_this5 = _super5.call.apply(
 							_super5,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this5),
 							'name',
-							'MissingSecretError'
+							'MissingSecretError',
 						),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this5),
 							'code',
-							'NO_SECRET'
+							'NO_SECRET',
 						),
 						_this5
 					)
@@ -1285,17 +1290,17 @@
 					return (
 						(_this6 = _super6.call.apply(
 							_super6,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this6),
 							'name',
-							'MissingAuthorizeError'
+							'MissingAuthorizeError',
 						),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this6),
 							'code',
-							'CALLBACK_CREDENTIALS_HANDLER_ERROR'
+							'CALLBACK_CREDENTIALS_HANDLER_ERROR',
 						),
 						_this6
 					)
@@ -1320,17 +1325,17 @@
 					return (
 						(_this7 = _super7.call.apply(
 							_super7,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this7),
 							'name',
-							'MissingAdapterError'
+							'MissingAdapterError',
 						),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this7),
 							'code',
-							'EMAIL_REQUIRES_ADAPTER_ERROR'
+							'EMAIL_REQUIRES_ADAPTER_ERROR',
 						),
 						_this7
 					)
@@ -1355,17 +1360,17 @@
 					return (
 						(_this8 = _super8.call.apply(
 							_super8,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this8),
 							'name',
-							'MissingAdapterMethodsError'
+							'MissingAdapterMethodsError',
 						),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this8),
 							'code',
-							'MISSING_ADAPTER_METHODS_ERROR'
+							'MISSING_ADAPTER_METHODS_ERROR',
 						),
 						_this8
 					)
@@ -1390,17 +1395,17 @@
 					return (
 						(_this9 = _super9.call.apply(
 							_super9,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this9),
 							'name',
-							'UnsupportedStrategyError'
+							'UnsupportedStrategyError',
 						),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this9),
 							'code',
-							'CALLBACK_CREDENTIALS_JWT_ERROR'
+							'CALLBACK_CREDENTIALS_JWT_ERROR',
 						),
 						_this9
 					)
@@ -1425,17 +1430,17 @@
 					return (
 						(_this10 = _super10.call.apply(
 							_super10,
-							[this].concat(args)
+							[this].concat(args),
 						)),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this10),
 							'name',
-							'InvalidCallbackUrl'
+							'InvalidCallbackUrl',
 						),
 						(0, _defineProperty2.default)(
 							(0, _assertThisInitialized2.default)(_this10),
 							'code',
-							'INVALID_CALLBACK_URL_ERROR'
+							'INVALID_CALLBACK_URL_ERROR',
 						),
 						_this10
 					)
@@ -1453,17 +1458,17 @@
 		'./node_modules/next-auth/react/index.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var process = __webpack_require__(
-					'./node_modules/process/browser.js'
+					'./node_modules/process/browser.js',
 				),
 				_interopRequireDefault = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/interopRequireDefault.js'
+					'./node_modules/@babel/runtime/helpers/interopRequireDefault.js',
 				),
 				_typeof = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/typeof.js'
+					'./node_modules/@babel/runtime/helpers/typeof.js',
 				)
 			Object.defineProperty(exports, '__esModule', { value: !0 })
 			var _exportNames = {
@@ -1480,7 +1485,7 @@
 				(exports.SessionProvider = function SessionProvider(props) {
 					if (!SessionContext)
 						throw new Error(
-							'React Context is unavailable in Server Components'
+							'React Context is unavailable in Server Components',
 						)
 					var children = props.children,
 						basePath = props.basePath,
@@ -1500,14 +1505,14 @@
 						}),
 						_React$useState4 = (0, _slicedToArray2.default)(
 							_React$useState3,
-							2
+							2,
 						),
 						session = _React$useState4[0],
 						setSession = _React$useState4[1],
 						_React$useState5 = React.useState(!hasInitialSession),
 						_React$useState6 = (0, _slicedToArray2.default)(
 							_React$useState5,
-							2
+							2,
 						),
 						loading = _React$useState6[0],
 						setLoading = _React$useState6[1]
@@ -1561,10 +1566,10 @@
 															(__NEXTAUTH._session =
 																_context.sent),
 															setSession(
-																__NEXTAUTH._session
+																__NEXTAUTH._session,
 															),
 															_context.abrupt(
-																'return'
+																'return',
 															)
 														)
 													case 10:
@@ -1582,7 +1587,7 @@
 															break
 														}
 														return _context.abrupt(
-															'return'
+															'return',
 														)
 													case 12:
 														return (
@@ -1596,7 +1601,7 @@
 														;(__NEXTAUTH._session =
 															_context.sent),
 															setSession(
-																__NEXTAUTH._session
+																__NEXTAUTH._session,
 															),
 															(_context.next = 22)
 														break
@@ -1604,11 +1609,11 @@
 														;(_context.prev = 19),
 															(_context.t0 =
 																_context.catch(
-																	1
+																	1,
 																)),
 															logger.error(
 																'CLIENT_SESSION_ERROR',
-																_context.t0
+																_context.t0,
 															)
 													case 22:
 														return (
@@ -1623,9 +1628,9 @@
 										},
 										_callee,
 										null,
-										[[1, 19, 22, 25]]
+										[[1, 19, 22, 25]],
 									)
-								})
+								}),
 							)),
 							__NEXTAUTH._getSession(),
 							function () {
@@ -1665,27 +1670,27 @@
 									document.addEventListener(
 										'visibilitychange',
 										visibilityHandler,
-										!1
+										!1,
 									),
 									function () {
 										return document.removeEventListener(
 											'visibilitychange',
 											visibilityHandler,
-											!1
+											!1,
 										)
 									}
 								)
 							},
-							[props.refetchOnWindowFocus]
+							[props.refetchOnWindowFocus],
 						)
 					var isOnline = (function useOnline() {
 							var _React$useState = React.useState(
 									'undefined' != typeof navigator &&
-										navigator.onLine
+										navigator.onLine,
 								),
 								_React$useState2 = (0, _slicedToArray2.default)(
 									_React$useState,
-									2
+									2,
 								),
 								isOnline = _React$useState2[0],
 								setIsOnline = _React$useState2[1],
@@ -1700,20 +1705,20 @@
 									return (
 										window.addEventListener(
 											'online',
-											setOnline
+											setOnline,
 										),
 										window.addEventListener(
 											'offline',
-											setOffline
+											setOffline,
 										),
 										function () {
 											window.removeEventListener(
 												'online',
-												setOnline
+												setOnline,
 											),
 												window.removeEventListener(
 													'offline',
-													setOffline
+													setOffline,
 												)
 										}
 									)
@@ -1732,14 +1737,14 @@
 												event: 'poll',
 											})
 									},
-									1e3 * refetchInterval
+									1e3 * refetchInterval,
 								)
 								return function () {
 									return clearInterval(refetchIntervalTimer)
 								}
 							}
 						},
-						[refetchInterval, shouldRefetch]
+						[refetchInterval, shouldRefetch],
 					)
 					var value = React.useMemo(
 						function () {
@@ -1757,7 +1762,7 @@
 												var newSession
 												return _regenerator.default.wrap(
 													function _callee2$(
-														_context2
+														_context2,
 													) {
 														for (;;)
 															switch (
@@ -1773,12 +1778,12 @@
 																		break
 																	}
 																	return _context2.abrupt(
-																		'return'
+																		'return',
 																	)
 																case 2:
 																	return (
 																		setLoading(
-																			!0
+																			!0,
 																		),
 																		(_context2.t0 =
 																			_utils.fetchData),
@@ -1815,7 +1820,7 @@
 																			'session',
 																			_context2.t1,
 																			_context2.t2,
-																			_context2.t7
+																			_context2.t7,
 																		)
 																	)
 																case 15:
@@ -1823,11 +1828,11 @@
 																		(newSession =
 																			_context2.sent),
 																		setLoading(
-																			!1
+																			!1,
 																		),
 																		newSession &&
 																			(setSession(
-																				newSession
+																				newSession,
 																			),
 																			broadcast.post(
 																				{
@@ -1836,11 +1841,11 @@
 																						trigger:
 																							'getSession',
 																					},
-																				}
+																				},
 																			)),
 																		_context2.abrupt(
 																			'return',
-																			newSession
+																			newSession,
 																		)
 																	)
 																case 19:
@@ -1848,15 +1853,15 @@
 																	return _context2.stop()
 															}
 													},
-													_callee2
+													_callee2,
 												)
-											}
-										)
+											},
+										),
 									)()
 								},
 							}
 						},
-						[session, loading]
+						[session, loading],
 					)
 					return (0, _jsxRuntime.jsx)(SessionContext.Provider, {
 						value,
@@ -1875,7 +1880,7 @@
 				(exports.useSession = function useSession(options) {
 					if (!SessionContext)
 						throw new Error(
-							'React Context is unavailable in Server Components'
+							'React Context is unavailable in Server Components',
 						)
 					var value = React.useContext(SessionContext)
 					0
@@ -1892,14 +1897,14 @@
 										new URLSearchParams({
 											error: 'SessionRequired',
 											callbackUrl: window.location.href,
-										})
+										}),
 									)
 									onUnauthenticated
 										? onUnauthenticated()
 										: (window.location.href = url)
 								}
 							},
-							[requiredAndNotLoading, onUnauthenticated]
+							[requiredAndNotLoading, onUnauthenticated],
 						),
 						requiredAndNotLoading)
 					)
@@ -1917,45 +1922,45 @@
 				_React$createContext,
 				_regenerator = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/regenerator/index.js'
-					)
+						'./node_modules/@babel/runtime/regenerator/index.js',
+					),
 				),
 				_defineProperty2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/defineProperty.js'
-					)
+						'./node_modules/@babel/runtime/helpers/defineProperty.js',
+					),
 				),
 				_asyncToGenerator2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/asyncToGenerator.js'
-					)
+						'./node_modules/@babel/runtime/helpers/asyncToGenerator.js',
+					),
 				),
 				_slicedToArray2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/slicedToArray.js'
-					)
+						'./node_modules/@babel/runtime/helpers/slicedToArray.js',
+					),
 				),
 				React = _interopRequireWildcard(
-					__webpack_require__('./node_modules/react/index.js')
+					__webpack_require__('./node_modules/react/index.js'),
 				),
 				_logger2 = _interopRequireWildcard(
 					__webpack_require__(
-						'./node_modules/next-auth/utils/logger.js'
-					)
+						'./node_modules/next-auth/utils/logger.js',
+					),
 				),
 				_parseUrl = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/next-auth/utils/parse-url.js'
-					)
+						'./node_modules/next-auth/utils/parse-url.js',
+					),
 				),
 				_utils = __webpack_require__(
-					'./node_modules/next-auth/client/_utils.js'
+					'./node_modules/next-auth/client/_utils.js',
 				),
 				_jsxRuntime = __webpack_require__(
-					'./node_modules/react/jsx-runtime.js'
+					'./node_modules/react/jsx-runtime.js',
 				),
 				_types = __webpack_require__(
-					'./node_modules/next-auth/react/types.js'
+					'./node_modules/next-auth/react/types.js',
 				)
 			function _getRequireWildcardCache(nodeInterop) {
 				if ('function' != typeof WeakMap) return null
@@ -2004,10 +2009,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -2018,19 +2021,25 @@
 					var source = null != arguments[i] ? arguments[i] : {}
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
-								;(0,
-								_defineProperty2.default)(target, key, source[key])
+								;(0, _defineProperty2.default)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -2055,7 +2064,7 @@
 								process.env.NEXTAUTH_URL) &&
 							void 0 !== _process$env$NEXTAUTH
 							? _process$env$NEXTAUTH
-							: process.env.VERCEL_URL
+							: process.env.VERCEL_URL,
 					).origin,
 					basePath: (0, _parseUrl.default)(process.env.NEXTAUTH_URL)
 						.path,
@@ -2070,7 +2079,7 @@
 									: process.env.NEXTAUTH_URL) &&
 							void 0 !== _ref
 							? _ref
-							: process.env.VERCEL_URL
+							: process.env.VERCEL_URL,
 					).origin,
 					basePathServer: (0, _parseUrl.default)(
 						null !==
@@ -2078,7 +2087,7 @@
 								process.env.NEXTAUTH_URL_INTERNAL) &&
 							void 0 !== _process$env$NEXTAUTH3
 							? _process$env$NEXTAUTH3
-							: process.env.NEXTAUTH_URL
+							: process.env.NEXTAUTH_URL,
 					).path,
 					_lastSync: 0,
 					_session: void 0,
@@ -2087,7 +2096,7 @@
 				broadcast = (0, _utils.BroadcastChannel)(),
 				logger = (0, _logger2.proxyLogger)(
 					_logger2.default,
-					__NEXTAUTH.basePath
+					__NEXTAUTH.basePath,
 				)
 			var SessionContext =
 				null === (_React$createContext = React.createContext) ||
@@ -2102,7 +2111,7 @@
 					_regenerator.default.mark(function _callee3(params) {
 						var _params$broadcast, session
 						return _regenerator.default.wrap(function _callee3$(
-							_context3
+							_context3,
 						) {
 							for (;;)
 								switch ((_context3.prev = _context3.next)) {
@@ -2113,7 +2122,7 @@
 												'session',
 												__NEXTAUTH,
 												logger,
-												params
+												params,
 											)
 										)
 									case 2:
@@ -2138,9 +2147,8 @@
 									case 'end':
 										return _context3.stop()
 								}
-						},
-						_callee3)
-					})
+						}, _callee3)
+					}),
 				)).apply(this, arguments)
 			}
 			function getCsrfToken(_x2) {
@@ -2151,7 +2159,7 @@
 					_regenerator.default.mark(function _callee4(params) {
 						var response
 						return _regenerator.default.wrap(function _callee4$(
-							_context4
+							_context4,
 						) {
 							for (;;)
 								switch ((_context4.prev = _context4.next)) {
@@ -2162,7 +2170,7 @@
 												'csrf',
 												__NEXTAUTH,
 												logger,
-												params
+												params,
 											)
 										)
 									case 2:
@@ -2172,16 +2180,15 @@
 												'return',
 												null == response
 													? void 0
-													: response.csrfToken
+													: response.csrfToken,
 											)
 										)
 									case 4:
 									case 'end':
 										return _context4.stop()
 								}
-						},
-						_callee4)
-					})
+						}, _callee4)
+					}),
 				)).apply(this, arguments)
 			}
 			function getProviders() {
@@ -2191,7 +2198,7 @@
 				return (_getProviders = (0, _asyncToGenerator2.default)(
 					_regenerator.default.mark(function _callee5() {
 						return _regenerator.default.wrap(function _callee5$(
-							_context5
+							_context5,
 						) {
 							for (;;)
 								switch ((_context5.prev = _context5.next)) {
@@ -2201,224 +2208,233 @@
 											(0, _utils.fetchData)(
 												'providers',
 												__NEXTAUTH,
-												logger
+												logger,
 											)
 										)
 									case 2:
 										return _context5.abrupt(
 											'return',
-											_context5.sent
+											_context5.sent,
 										)
 									case 3:
 									case 'end':
 										return _context5.stop()
 								}
-						},
-						_callee5)
-					})
+						}, _callee5)
+					}),
 				)).apply(this, arguments)
 			}
 			function _signIn() {
 				return (_signIn = (0, _asyncToGenerator2.default)(
-					_regenerator.default.mark(function _callee6(
-						provider,
-						options,
-						authorizationParams
-					) {
-						var _ref5,
-							_ref5$callbackUrl,
-							callbackUrl,
-							_ref5$redirect,
-							redirect,
-							baseUrl,
-							providers,
-							isCredentials,
-							isEmail,
-							isSupportingReturn,
-							signInUrl,
-							_signInUrl,
-							res,
-							data,
-							_data$url,
-							url,
-							error
-						return _regenerator.default.wrap(function _callee6$(
-							_context6
+					_regenerator.default.mark(
+						function _callee6(
+							provider,
+							options,
+							authorizationParams,
 						) {
-							for (;;)
-								switch ((_context6.prev = _context6.next)) {
-									case 0:
-										return (
-											(_ref5$callbackUrl = (_ref5 =
-												null != options ? options : {})
-												.callbackUrl),
-											(callbackUrl =
-												void 0 === _ref5$callbackUrl
-													? window.location.href
-													: _ref5$callbackUrl),
-											(_ref5$redirect = _ref5.redirect),
-											(redirect =
-												void 0 === _ref5$redirect ||
-												_ref5$redirect),
-											(baseUrl = (0, _utils.apiBaseUrl)(
-												__NEXTAUTH
-											)),
-											(_context6.next = 4),
-											getProviders()
-										)
-									case 4:
-										if ((providers = _context6.sent)) {
-											_context6.next = 8
-											break
-										}
-										return (
-											(window.location.href = ''.concat(
-												baseUrl,
-												'/error'
-											)),
-											_context6.abrupt('return')
-										)
-									case 8:
-										if (provider && provider in providers) {
-											_context6.next = 11
-											break
-										}
-										return (
-											(window.location.href = ''
-												.concat(baseUrl, '/signin?')
-												.concat(
-													new URLSearchParams({
-														callbackUrl,
-													})
-												)),
-											_context6.abrupt('return')
-										)
-									case 11:
-										return (
-											(isCredentials =
-												'credentials' ===
-												providers[provider].type),
-											(isEmail =
-												'email' ===
-												providers[provider].type),
-											(isSupportingReturn =
-												isCredentials || isEmail),
-											(signInUrl = ''
-												.concat(baseUrl, '/')
-												.concat(
-													isCredentials
-														? 'callback'
-														: 'signin',
-													'/'
-												)
-												.concat(provider)),
-											(_signInUrl = ''
-												.concat(signInUrl, '?')
-												.concat(
-													new URLSearchParams(
-														authorizationParams
-													)
-												)),
-											(_context6.t0 = fetch),
-											(_context6.t1 = _signInUrl),
-											(_context6.t2 = {
-												'Content-Type':
-													'application/x-www-form-urlencoded',
-											}),
-											(_context6.t3 = URLSearchParams),
-											(_context6.t4 = _objectSpread),
-											(_context6.t5 = _objectSpread(
-												{},
-												options
-											)),
-											(_context6.t6 = {}),
-											(_context6.next = 25),
-											getCsrfToken()
-										)
-									case 25:
-										return (
-											(_context6.t7 = _context6.sent),
-											(_context6.t8 = callbackUrl),
-											(_context6.t9 = {
-												csrfToken: _context6.t7,
-												callbackUrl: _context6.t8,
-												json: !0,
-											}),
-											(_context6.t10 = (0, _context6.t4)(
-												_context6.t5,
-												_context6.t6,
-												_context6.t9
-											)),
-											(_context6.t11 = new _context6.t3(
-												_context6.t10
-											)),
-											(_context6.t12 = {
-												method: 'post',
-												headers: _context6.t2,
-												body: _context6.t11,
-											}),
-											(_context6.next = 33),
-											(0, _context6.t0)(
-												_context6.t1,
-												_context6.t12
+							var _ref5,
+								_ref5$callbackUrl,
+								callbackUrl,
+								_ref5$redirect,
+								redirect,
+								baseUrl,
+								providers,
+								isCredentials,
+								isEmail,
+								isSupportingReturn,
+								signInUrl,
+								_signInUrl,
+								res,
+								data,
+								_data$url,
+								url,
+								error
+							return _regenerator.default.wrap(function _callee6$(
+								_context6,
+							) {
+								for (;;)
+									switch ((_context6.prev = _context6.next)) {
+										case 0:
+											return (
+												(_ref5$callbackUrl = (_ref5 =
+													null != options
+														? options
+														: {}).callbackUrl),
+												(callbackUrl =
+													void 0 === _ref5$callbackUrl
+														? window.location.href
+														: _ref5$callbackUrl),
+												(_ref5$redirect =
+													_ref5.redirect),
+												(redirect =
+													void 0 === _ref5$redirect ||
+													_ref5$redirect),
+												(baseUrl = (0,
+												_utils.apiBaseUrl)(__NEXTAUTH)),
+												(_context6.next = 4),
+												getProviders()
 											)
-										)
-									case 33:
-										return (
-											(res = _context6.sent),
-											(_context6.next = 36),
-											res.json()
-										)
-									case 36:
-										if (
-											((data = _context6.sent),
-											!redirect && isSupportingReturn)
-										) {
-											_context6.next = 42
-											break
-										}
-										return (
-											(url =
-												null !==
-													(_data$url = data.url) &&
-												void 0 !== _data$url
-													? _data$url
-													: callbackUrl),
-											(window.location.href = url),
-											url.includes('#') &&
-												window.location.reload(),
-											_context6.abrupt('return')
-										)
-									case 42:
-										if (
-											((error = new URL(
-												data.url
-											).searchParams.get('error')),
-											!res.ok)
-										) {
-											_context6.next = 46
-											break
-										}
-										return (
-											(_context6.next = 46),
-											__NEXTAUTH._getSession({
-												event: 'storage',
+										case 4:
+											if ((providers = _context6.sent)) {
+												_context6.next = 8
+												break
+											}
+											return (
+												(window.location.href =
+													''.concat(
+														baseUrl,
+														'/error',
+													)),
+												_context6.abrupt('return')
+											)
+										case 8:
+											if (
+												provider &&
+												provider in providers
+											) {
+												_context6.next = 11
+												break
+											}
+											return (
+												(window.location.href = ''
+													.concat(baseUrl, '/signin?')
+													.concat(
+														new URLSearchParams({
+															callbackUrl,
+														}),
+													)),
+												_context6.abrupt('return')
+											)
+										case 11:
+											return (
+												(isCredentials =
+													'credentials' ===
+													providers[provider].type),
+												(isEmail =
+													'email' ===
+													providers[provider].type),
+												(isSupportingReturn =
+													isCredentials || isEmail),
+												(signInUrl = ''
+													.concat(baseUrl, '/')
+													.concat(
+														isCredentials
+															? 'callback'
+															: 'signin',
+														'/',
+													)
+													.concat(provider)),
+												(_signInUrl = ''
+													.concat(signInUrl, '?')
+													.concat(
+														new URLSearchParams(
+															authorizationParams,
+														),
+													)),
+												(_context6.t0 = fetch),
+												(_context6.t1 = _signInUrl),
+												(_context6.t2 = {
+													'Content-Type':
+														'application/x-www-form-urlencoded',
+												}),
+												(_context6.t3 =
+													URLSearchParams),
+												(_context6.t4 = _objectSpread),
+												(_context6.t5 = _objectSpread(
+													{},
+													options,
+												)),
+												(_context6.t6 = {}),
+												(_context6.next = 25),
+												getCsrfToken()
+											)
+										case 25:
+											return (
+												(_context6.t7 = _context6.sent),
+												(_context6.t8 = callbackUrl),
+												(_context6.t9 = {
+													csrfToken: _context6.t7,
+													callbackUrl: _context6.t8,
+													json: !0,
+												}),
+												(_context6.t10 = (0,
+												_context6.t4)(
+													_context6.t5,
+													_context6.t6,
+													_context6.t9,
+												)),
+												(_context6.t11 =
+													new _context6.t3(
+														_context6.t10,
+													)),
+												(_context6.t12 = {
+													method: 'post',
+													headers: _context6.t2,
+													body: _context6.t11,
+												}),
+												(_context6.next = 33),
+												(0, _context6.t0)(
+													_context6.t1,
+													_context6.t12,
+												)
+											)
+										case 33:
+											return (
+												(res = _context6.sent),
+												(_context6.next = 36),
+												res.json()
+											)
+										case 36:
+											if (
+												((data = _context6.sent),
+												!redirect && isSupportingReturn)
+											) {
+												_context6.next = 42
+												break
+											}
+											return (
+												(url =
+													null !==
+														(_data$url =
+															data.url) &&
+													void 0 !== _data$url
+														? _data$url
+														: callbackUrl),
+												(window.location.href = url),
+												url.includes('#') &&
+													window.location.reload(),
+												_context6.abrupt('return')
+											)
+										case 42:
+											if (
+												((error = new URL(
+													data.url,
+												).searchParams.get('error')),
+												!res.ok)
+											) {
+												_context6.next = 46
+												break
+											}
+											return (
+												(_context6.next = 46),
+												__NEXTAUTH._getSession({
+													event: 'storage',
+												})
+											)
+										case 46:
+											return _context6.abrupt('return', {
+												error,
+												status: res.status,
+												ok: res.ok,
+												url: error ? null : data.url,
 											})
-										)
-									case 46:
-										return _context6.abrupt('return', {
-											error,
-											status: res.status,
-											ok: res.ok,
-											url: error ? null : data.url,
-										})
-									case 47:
-									case 'end':
-										return _context6.stop()
-								}
+										case 47:
+										case 'end':
+											return _context6.stop()
+									}
+							}, _callee6)
 						},
-						_callee6)
-					})
+					),
 				)).apply(this, arguments)
 			}
 			function _signOut() {
@@ -2434,7 +2450,7 @@
 							_data$url2,
 							url
 						return _regenerator.default.wrap(function _callee7$(
-							_context7
+							_context7,
 						) {
 							for (;;)
 								switch ((_context7.prev = _context7.next)) {
@@ -2448,7 +2464,7 @@
 													? window.location.href
 													: _ref6$callbackUrl),
 											(baseUrl = (0, _utils.apiBaseUrl)(
-												__NEXTAUTH
+												__NEXTAUTH,
 											)),
 											(_context7.t0 = {
 												'Content-Type':
@@ -2468,7 +2484,7 @@
 												json: !0,
 											}),
 											(_context7.t5 = new _context7.t1(
-												_context7.t4
+												_context7.t4,
 											)),
 											(fetchOptions = {
 												method: 'post',
@@ -2478,7 +2494,7 @@
 											(_context7.next = 13),
 											fetch(
 												''.concat(baseUrl, '/signout'),
-												fetchOptions
+												fetchOptions,
 											)
 										)
 									case 13:
@@ -2530,16 +2546,15 @@
 									case 'end':
 										return _context7.stop()
 								}
-						},
-						_callee7)
-					})
+						}, _callee7)
+					}),
 				)).apply(this, arguments)
 			}
 			exports.SessionContext = SessionContext
 		},
 		'./node_modules/next-auth/react/types.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 })
@@ -2547,11 +2562,11 @@
 		'./node_modules/next-auth/utils/logger.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var _interopRequireDefault = __webpack_require__(
-				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js'
+				'./node_modules/@babel/runtime/helpers/interopRequireDefault.js',
 			)
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
 				(exports.default = void 0),
@@ -2567,7 +2582,7 @@
 							_loop = function _loop(level) {
 								clientLogger[level] = function (
 									code,
-									metadata
+									metadata,
 								) {
 									_logger[level](code, metadata),
 										'error' === level &&
@@ -2588,41 +2603,43 @@
 													i % 2
 														? ownKeys(
 																Object(source),
-																!0
-														  ).forEach(function (
-																key
-														  ) {
-																;(0,
-																_defineProperty2.default)(
-																	target,
-																	key,
-																	source[key]
-																)
-														  })
+																!0,
+														  ).forEach(
+																function (key) {
+																	;(0,
+																	_defineProperty2.default)(
+																		target,
+																		key,
+																		source[
+																			key
+																		],
+																	)
+																},
+														  )
 														: Object.getOwnPropertyDescriptors
 														? Object.defineProperties(
 																target,
 																Object.getOwnPropertyDescriptors(
-																	source
-																)
+																	source,
+																),
 														  )
 														: ownKeys(
-																Object(source)
-														  ).forEach(function (
-																key
-														  ) {
-																Object.defineProperty(
-																	target,
-																	key,
-																	Object.getOwnPropertyDescriptor(
-																		source,
-																		key
+																Object(source),
+														  ).forEach(
+																function (key) {
+																	Object.defineProperty(
+																		target,
+																		key,
+																		Object.getOwnPropertyDescriptor(
+																			source,
+																			key,
+																		),
 																	)
-																)
-														  })
+																},
+														  )
 												}
 												return target
-											})({ level, code }, metadata)
+											})({ level, code }, metadata),
 										)
 									return navigator.sendBeacon
 										? navigator.sendBeacon(url, body)
@@ -2652,11 +2669,11 @@
 				})
 			var _defineProperty2 = _interopRequireDefault(
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/defineProperty.js'
-					)
+						'./node_modules/@babel/runtime/helpers/defineProperty.js',
+					),
 				),
 				_errors = __webpack_require__(
-					'./node_modules/next-auth/core/errors.js'
+					'./node_modules/next-auth/core/errors.js',
 				)
 			function ownKeys(object, enumerableOnly) {
 				var keys = Object.keys(object)
@@ -2664,10 +2681,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -2694,24 +2709,24 @@
 						console.error(
 							'[next-auth][error]['.concat(code, ']'),
 							'\nhttps://next-auth.js.org/errors#'.concat(
-								code.toLowerCase()
+								code.toLowerCase(),
 							),
 							metadata.message,
-							metadata
+							metadata,
 						)
 				},
 				warn: function warn(code) {
 					console.warn(
 						'[next-auth][warn]['.concat(code, ']'),
 						'\nhttps://next-auth.js.org/warnings#'.concat(
-							code.toLowerCase()
-						)
+							code.toLowerCase(),
+						),
 					)
 				},
 				debug: function debug(code, metadata) {
 					console.log(
 						'[next-auth][debug]['.concat(code, ']'),
-						metadata
+						metadata,
 					)
 				},
 			}
@@ -2720,7 +2735,7 @@
 		},
 		'./node_modules/next-auth/utils/parse-url.js': (
 			__unused_webpack_module,
-			exports
+			exports,
 		) => {
 			'use strict'
 			Object.defineProperty(exports, '__esModule', { value: !0 }),
@@ -2731,7 +2746,7 @@
 					const _url = new URL(
 							null !== (_url2 = url) && void 0 !== _url2
 								? _url2
-								: defaultUrl
+								: defaultUrl,
 						),
 						path = (
 							'/' === _url.pathname
@@ -2751,7 +2766,7 @@
 		'./node_modules/react/cjs/react-jsx-runtime.production.min.js': (
 			__unused_webpack_module,
 			exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			var f = __webpack_require__('./node_modules/react/index.js'),
@@ -2789,11 +2804,11 @@
 		'./node_modules/react/jsx-runtime.js': (
 			module,
 			__unused_webpack_exports,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			'use strict'
 			module.exports = __webpack_require__(
-				'./node_modules/react/cjs/react-jsx-runtime.production.min.js'
+				'./node_modules/react/cjs/react-jsx-runtime.production.min.js',
 			)
 		},
 	},

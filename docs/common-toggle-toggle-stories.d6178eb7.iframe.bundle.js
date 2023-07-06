@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,7 +62,7 @@
 		'./components/common/toggle/toggle.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -73,7 +73,7 @@
 				_Default$parameters2,
 				_Default$parameters2$,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				__jsx = react.createElement,
@@ -133,7 +133,7 @@
 								className: ''
 									.concat(
 										switchSize,
-										' p-1 rounded-full overflow-hidden '
+										' p-1 rounded-full overflow-hidden ',
 									)
 									.concat(switchDisabled, ' border-4 ')
 									.concat(
@@ -141,7 +141,7 @@
 											? ''
 													.concat(switchVariant, ' ')
 													.concat(switchBorderColor)
-											: 'bg-gray-300'
+											: 'bg-gray-300',
 									),
 								onClick: handleToggleSwitch,
 							},
@@ -156,37 +156,39 @@
 													: 'base' === size
 													? 'translate-x-6 text-gray-500'
 													: 'translate-x-9 text-gray-500',
-												' '
+												' ',
 											)
 											.concat(
-												'small' === size ? 'hidden' : ''
+												'small' === size
+													? 'hidden'
+													: '',
 											),
 								},
-								isChecked ? 'ON' : 'OFF'
+								isChecked ? 'ON' : 'OFF',
 							),
 							__jsx('div', {
 								className: 'transition '
 									.concat(
 										switchSlider,
-										' bg-white rounded-full transform '
+										' bg-white rounded-full transform ',
 									)
 									.concat(
 										isChecked
 											? switchTranslateX
-											: 'translate-x-0'
+											: 'translate-x-0',
 									),
-							})
+							}),
 						),
 						__jsx(
 							'p',
 							{
 								className: ''.concat(
 									'' === label ? '' : 'ml-1',
-									' select-none'
+									' select-none',
 								),
 							},
-							label
-						)
+							label,
+						),
 					)
 				}
 			;(ToggleSwitch.displayName = 'ToggleSwitch'),
@@ -283,10 +285,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -302,13 +302,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -349,7 +352,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -367,11 +370,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

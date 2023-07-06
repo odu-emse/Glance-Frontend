@@ -5,28 +5,28 @@
 		'./components/common/charts/pie/pie.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, {
 				R: () => PieComponent,
 			})
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/ResponsiveContainer.js'
+					'./node_modules/recharts/es6/component/ResponsiveContainer.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/recharts/es6/chart/PieChart.js'
+					'./node_modules/recharts/es6/chart/PieChart.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-					'./node_modules/recharts/es6/polar/Pie.js'
+					'./node_modules/recharts/es6/polar/Pie.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/Tooltip.js'
+					'./node_modules/recharts/es6/component/Tooltip.js',
 				),
 				recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-					'./node_modules/recharts/es6/component/Legend.js'
+					'./node_modules/recharts/es6/component/Legend.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				PieComponent = function PieComponent(_ref) {
@@ -77,7 +77,7 @@
 							tooltip &&
 								__jsx(
 									recharts__WEBPACK_IMPORTED_MODULE_4__.u,
-									null
+									null,
 								),
 							legend &&
 								__jsx(recharts__WEBPACK_IMPORTED_MODULE_5__.D, {
@@ -93,8 +93,8 @@
 									iconType: legendConfig.iconType
 										? legendConfig.iconType
 										: 'circle',
-								})
-						)
+								}),
+						),
 					)
 				}
 			;(PieComponent.displayName = 'PieComponent'),
@@ -421,7 +421,7 @@
 		'./components/common/panel/panel.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -431,11 +431,11 @@
 					default: () => panel_stories,
 				})
 			var defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				pie = __webpack_require__(
-					'./components/common/charts/pie/pie.tsx'
+					'./components/common/charts/pie/pie.tsx',
 				),
 				__jsx = react.createElement,
 				Panel = function Panel(_ref) {
@@ -459,9 +459,9 @@
 						__jsx(
 							'h1',
 							{ className: 'font-bold mb-2 text-2xl' },
-							title
+							title,
 						),
-						children
+						children,
 					)
 				}
 			;(Panel.displayName = 'Panel'),
@@ -605,10 +605,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -624,13 +622,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -673,7 +674,7 @@
 				children: panel_stories_jsx(
 					'p',
 					null,
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta consectetur, optio temporibus corrupti doloribus iure voluptatem tenetur enim, officiis debitis nemo vero vitae aspernatur! Distinctio, harum similique. In, excepturi.'
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta consectetur, optio temporibus corrupti doloribus iure voluptatem tenetur enim, officiis debitis nemo vero vitae aspernatur! Distinctio, harum similique. In, excepturi.',
 				),
 			}
 			var Chart = Template.bind({})
@@ -702,7 +703,7 @@
 						},
 						width: 100,
 						height: 100,
-					})
+					}),
 				),
 			}
 			var List = Template.bind({})
@@ -725,7 +726,7 @@
 					panel_stories_jsx('li', null),
 					panel_stories_jsx('li', null),
 					panel_stories_jsx('li', null),
-					panel_stories_jsx('li', null)
+					panel_stories_jsx('li', null),
 				),
 			}),
 				(Text.parameters = _objectSpread(
@@ -738,7 +739,7 @@
 								null === (_Text$parameters = Text.parameters) ||
 									void 0 === _Text$parameters
 									? void 0
-									: _Text$parameters.docs
+									: _Text$parameters.docs,
 							),
 							{},
 							{
@@ -755,11 +756,11 @@
 												_Text$parameters2.docs) ||
 										void 0 === _Text$parameters2$doc
 										? void 0
-										: _Text$parameters2$doc.source
+										: _Text$parameters2$doc.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Chart.parameters = _objectSpread(
 					_objectSpread({}, Chart.parameters),
@@ -772,7 +773,7 @@
 									(_Chart$parameters = Chart.parameters) ||
 									void 0 === _Chart$parameters
 									? void 0
-									: _Chart$parameters.docs
+									: _Chart$parameters.docs,
 							),
 							{},
 							{
@@ -790,11 +791,11 @@
 												_Chart$parameters2.docs) ||
 										void 0 === _Chart$parameters2$do
 										? void 0
-										: _Chart$parameters2$do.source
+										: _Chart$parameters2$do.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(List.parameters = _objectSpread(
 					_objectSpread({}, List.parameters),
@@ -806,7 +807,7 @@
 								null === (_List$parameters = List.parameters) ||
 									void 0 === _List$parameters
 									? void 0
-									: _List$parameters.docs
+									: _List$parameters.docs,
 							),
 							{},
 							{
@@ -823,11 +824,11 @@
 												_List$parameters2.docs) ||
 										void 0 === _List$parameters2$doc
 										? void 0
-										: _List$parameters2$doc.source
+										: _List$parameters2$doc.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

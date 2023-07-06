@@ -40,7 +40,7 @@ var require_memoizerific = __commonJS({
 							e,
 							t,
 							n,
-							r
+							r,
 						)
 					}
 					return n[o2].exports
@@ -113,7 +113,7 @@ var require_memoizerific = __commonJS({
 										(this.lastItem &&
 											this.isEqual(
 												this.lastItem.key,
-												key
+												key,
 											) &&
 											(this.lastItem = void 0),
 										(index = this.indexOf(key)),
@@ -138,7 +138,7 @@ var require_memoizerific = __commonJS({
 								}),
 								(Similar.prototype.forEach = function (
 									callback,
-									thisArg
+									thisArg,
 								) {
 									var i
 									for (i = 0; i < this.size; i++)
@@ -146,7 +146,7 @@ var require_memoizerific = __commonJS({
 											thisArg || this,
 											this.list[i].val,
 											this.list[i].key,
-											this
+											this,
 										)
 								}),
 								(Similar.prototype.indexOf = function (key) {
@@ -158,7 +158,7 @@ var require_memoizerific = __commonJS({
 								}),
 								(Similar.prototype.isEqual = function (
 									val1,
-									val2
+									val2,
 								) {
 									return (
 										val1 === val2 ||
@@ -183,7 +183,7 @@ var require_memoizerific = __commonJS({
 											argsLengthMinusOne =
 												arguments.length - 1,
 											lruPath = Array(
-												argsLengthMinusOne + 1
+												argsLengthMinusOne + 1,
 											),
 											isMemoized = !0,
 											i
@@ -194,7 +194,7 @@ var require_memoizerific = __commonJS({
 												argsLengthMinusOne + 1
 										)
 											throw new Error(
-												'Memoizerific functions should always be called with the same number of arguments'
+												'Memoizerific functions should always be called with the same number of arguments',
 											)
 										for (
 											i = 0;
@@ -209,17 +209,17 @@ var require_memoizerific = __commonJS({
 												currentCache.has(arguments[i]))
 											) {
 												currentCache = currentCache.get(
-													arguments[i]
+													arguments[i],
 												)
 												continue
 											}
 											;(isMemoized = !1),
 												(newMap = new MapOrSimilar(
-													void 0 === 'true'
+													void 0 === 'true',
 												)),
 												currentCache.set(
 													arguments[i],
-													newMap
+													newMap,
 												),
 												(currentCache = newMap)
 										}
@@ -228,25 +228,25 @@ var require_memoizerific = __commonJS({
 												(currentCache.has(
 													arguments[
 														argsLengthMinusOne
-													]
+													],
 												)
 													? (fnResult =
 															currentCache.get(
 																arguments[
 																	argsLengthMinusOne
-																]
+																],
 															))
 													: (isMemoized = !1)),
 											isMemoized ||
 												((fnResult = fn.apply(
 													null,
-													arguments
+													arguments,
 												)),
 												currentCache.set(
 													arguments[
 														argsLengthMinusOne
 													],
-													fnResult
+													fnResult,
 												)),
 											limit > 0 &&
 												((lruPath[argsLengthMinusOne] =
@@ -259,12 +259,12 @@ var require_memoizerific = __commonJS({
 												isMemoized
 													? moveToMostRecentLru(
 															lru,
-															lruPath
+															lruPath,
 													  )
 													: lru.push(lruPath),
 												lru.length > limit &&
 													removeCachedResult(
-														lru.shift()
+														lru.shift(),
 													)),
 											(memoizerific.wasMemoized =
 												isMemoized),
@@ -297,7 +297,7 @@ var require_memoizerific = __commonJS({
 										if (
 											!isEqual(
 												lru[i][ii].arg,
-												lruPath[ii].arg
+												lruPath[ii].arg,
 											)
 										) {
 											isMatch = !1
@@ -318,7 +318,7 @@ var require_memoizerific = __commonJS({
 									i >= 0 &&
 									((currentLru = removedLru[i]),
 									(tmp = currentLru.cacheItem.get(
-										currentLru.arg
+										currentLru.arg,
 									)),
 									!tmp || !tmp.size);
 									i--
@@ -336,7 +336,7 @@ var require_memoizerific = __commonJS({
 					],
 				},
 				{},
-				[3]
+				[3],
 			)(3)
 		})
 	},

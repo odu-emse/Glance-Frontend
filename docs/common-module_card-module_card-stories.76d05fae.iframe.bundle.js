@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,18 +62,18 @@
 		'./components/common/button/button.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { z: () => Button })
 			var _instructure_ui__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@instructure/ui-buttons/es/Button/index.js'
+						'./node_modules/@instructure/ui-buttons/es/Button/index.js',
 					),
 				prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./node_modules/prop-types/index.js'
+					'./node_modules/prop-types/index.js',
 				),
 				__jsx = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				).createElement,
 				Button = function Button(_ref) {
 					var _ref$variant = _ref.variant,
@@ -94,7 +94,7 @@
 							margin: 'small',
 							size,
 						},
-						children
+						children,
 					)
 				}
 			;(Button.displayName = 'Button'),
@@ -113,7 +113,7 @@
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.node,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
 							prop_types__WEBPACK_IMPORTED_MODULE_2__.number,
-						]
+						],
 					),
 					onClick: prop_types__WEBPACK_IMPORTED_MODULE_2__.func,
 					disabled: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
@@ -348,7 +348,7 @@
 		'./components/common/module_card/module_card.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -367,11 +367,11 @@
 				_Tertiary$parameters2,
 				_Tertiary$parameters3,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				button_button = __webpack_require__(
-					'./components/common/button/button.tsx'
+					'./components/common/button/button.tsx',
 				),
 				__jsx = react.createElement,
 				ModuleCard = function ModuleCard(_ref) {
@@ -401,7 +401,7 @@
 										? 'bg-green-400'
 										: percentageCompleted > 25
 										? 'bg-blue-300'
-										: 'bg-red-400'
+										: 'bg-red-400',
 								),
 						}),
 						__jsx(
@@ -424,7 +424,7 @@
 									},
 									''
 										.concat(parentCourse, ' - ')
-										.concat(moduleNumber)
+										.concat(moduleNumber),
 								),
 								__jsx(
 									'div',
@@ -432,7 +432,7 @@
 										className:
 											'flex lg:pb-4 font-bold text-base xl:text-lg',
 									},
-									moduleName
+									moduleName,
 								),
 								__jsx(
 									'div',
@@ -446,7 +446,7 @@
 											className:
 												'underline text-sm text-gray-700',
 										},
-										'Forum'
+										'Forum',
 									),
 									__jsx(
 										'p',
@@ -454,7 +454,7 @@
 											className:
 												'underline text-sm text-gray-700',
 										},
-										'Assignment'
+										'Assignment',
 									),
 									__jsx(
 										'p',
@@ -462,7 +462,7 @@
 											className:
 												'underline text-sm text-gray-700',
 										},
-										'Download'
+										'Download',
 									),
 									completion
 										? ''
@@ -472,9 +472,9 @@
 													className:
 														'underline text-sm text-red-700',
 												},
-												'Abandon'
-										  )
-								)
+												'Abandon',
+										  ),
+								),
 							),
 							__jsx(
 								'div',
@@ -489,8 +489,8 @@
 										'p',
 										{ className: 'lg:mt-5' },
 										percentageCompleted + '%',
-										' Viewed'
-									)
+										' Viewed',
+									),
 								),
 								__jsx(
 									'svg',
@@ -510,7 +510,8 @@
 										strokeDasharray: '10',
 										strokeDashoffset: ''.concat(
 											100 -
-												(percentageCompleted / 100) * 10
+												(percentageCompleted / 100) *
+													10,
 										),
 										strokeLinecap: 'round',
 										stroke: 'currentColor',
@@ -518,7 +519,7 @@
 										r: '30',
 										cx: '40',
 										cy: '40',
-									})
+									}),
 								),
 								__jsx(
 									'div',
@@ -536,13 +537,13 @@
 													'Average time: '
 														.concat(
 															averageTime,
-															' '
+															' ',
 														)
 														.concat(
 															1 === averageTime
 																? 'minute'
-																: 'minutes'
-														)
+																: 'minutes',
+														),
 												),
 												__jsx(
 													'p',
@@ -552,9 +553,9 @@
 														.concat(
 															1 === userTime
 																? 'minute'
-																: 'minutes'
-														)
-												)
+																: 'minutes',
+														),
+												),
 										  )
 										: __jsx(
 												'p',
@@ -565,10 +566,10 @@
 														1 === duration
 															? 'minute'
 															: 'minutes',
-														' left '
-													)
-										  )
-								)
+														' left ',
+													),
+										  ),
+								),
 							),
 							__jsx(
 								'div',
@@ -590,8 +591,8 @@
 													className:
 														'text-white bg-blue-300 px-20 py-1 w-full my-1',
 												},
-												'Continue'
-											)
+												'Continue',
+											),
 									  )
 									: __jsx(
 											'div',
@@ -605,7 +606,7 @@
 													className:
 														'text-gray-600 text-sm',
 												},
-												'Current Topic'
+												'Current Topic',
 											),
 											__jsx(
 												'div',
@@ -613,7 +614,7 @@
 													className:
 														'font-medium text-sm pr-2',
 												},
-												currentTopic
+												currentTopic,
 											),
 											__jsx(
 												'div',
@@ -641,9 +642,9 @@
 																className:
 																	'flex items-center justify-center',
 															},
-															primaryLinkLabel
-														)
-													)
+															primaryLinkLabel,
+														),
+													),
 												),
 												__jsx(
 													'div',
@@ -666,15 +667,15 @@
 																className:
 																	'flex items-center justify-center',
 															},
-															secondaryLinkLabel
-														)
+															secondaryLinkLabel,
+														),
 													),
-													' '
-												)
-											)
-									  )
-							)
-						)
+													' ',
+												),
+											),
+									  ),
+							),
+						),
 					)
 				}
 			;(ModuleCard.displayName = 'ModuleCard'),
@@ -867,10 +868,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -886,13 +885,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -970,7 +972,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -988,11 +990,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = _objectSpread(
 					_objectSpread({}, Secondary.parameters),
@@ -1006,7 +1008,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -1024,11 +1026,11 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Tertiary.parameters = _objectSpread(
 					_objectSpread({}, Tertiary.parameters),
@@ -1042,7 +1044,7 @@
 										Tertiary.parameters) ||
 									void 0 === _Tertiary$parameters
 									? void 0
-									: _Tertiary$parameters.docs
+									: _Tertiary$parameters.docs,
 							),
 							{},
 							{
@@ -1060,11 +1062,11 @@
 												_Tertiary$parameters2.docs) ||
 										void 0 === _Tertiary$parameters3
 										? void 0
-										: _Tertiary$parameters3.source
+										: _Tertiary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

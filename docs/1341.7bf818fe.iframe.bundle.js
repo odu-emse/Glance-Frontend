@@ -5,7 +5,7 @@
 		'./node_modules/@mdx-js/react/index.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -32,7 +32,7 @@
 						'function' == typeof components
 							? components(contextComponents)
 							: { ...contextComponents, ...components },
-					[contextComponents, components]
+					[contextComponents, components],
 				)
 			}
 			const emptyObject = {}
@@ -51,7 +51,7 @@
 					react.createElement(
 						MDXContext.Provider,
 						{ value: allComponents },
-						children
+						children,
 					)
 				)
 			}

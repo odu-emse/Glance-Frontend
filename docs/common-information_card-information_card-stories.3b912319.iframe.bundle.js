@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/extends.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _extends() {
 				return (
@@ -17,7 +17,7 @@
 									for (var key in source)
 										Object.prototype.hasOwnProperty.call(
 											source,
-											key
+											key,
 										) && (target[key] = source[key])
 								}
 								return target
@@ -30,7 +30,7 @@
 		'./components/common/information_card/information_card.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -49,20 +49,20 @@
 				_Secondary$parameters2,
 				_Secondary$parameters3,
 				defineProperty = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+					'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 				),
 				esm_extends = __webpack_require__(
-					'./node_modules/@babel/runtime/helpers/esm/extends.js'
+					'./node_modules/@babel/runtime/helpers/esm/extends.js',
 				),
 				react = __webpack_require__('./node_modules/react/index.js'),
 				index_esm = __webpack_require__(
-					'./node_modules/react-icons/fa/index.esm.js'
+					'./node_modules/react-icons/fa/index.esm.js',
 				),
 				bs_index_esm = __webpack_require__(
-					'./node_modules/react-icons/bs/index.esm.js'
+					'./node_modules/react-icons/bs/index.esm.js',
 				),
 				md_index_esm = __webpack_require__(
-					'./node_modules/react-icons/md/index.esm.js'
+					'./node_modules/react-icons/md/index.esm.js',
 				),
 				__jsx = react.createElement,
 				InformationCard = function InformationCard(_ref) {
@@ -98,7 +98,7 @@
 										__jsx(index_esm.wO, {
 											fill: 'green',
 											size: 30,
-										})
+										}),
 									),
 									__jsx(
 										'div',
@@ -109,7 +109,7 @@
 										__jsx(
 											'p',
 											{ className: 'mx-2 my-2 text-l' },
-											statusMessage
+											statusMessage,
 										),
 										__jsx(
 											'p',
@@ -117,9 +117,9 @@
 												className:
 													'mx-2 my-2 text-gray-400 inline-block text-xs',
 											},
-											percentComplete
-										)
-									)
+											percentComplete,
+										),
+									),
 								),
 								__jsx(
 									'div',
@@ -136,8 +136,8 @@
 										fill: 'gray',
 										size: 30,
 										onClick: handle,
-									})
-								)
+									}),
+								),
 							),
 						testType &&
 							__jsx(
@@ -157,7 +157,7 @@
 											null,
 											testType,
 											' : ',
-											testModule
+											testModule,
 										),
 										__jsx(
 											'p',
@@ -165,7 +165,7 @@
 												className:
 													'mx-2 my-2 text-gray-500 inline-block text-xs uppercase font-semibold',
 											},
-											moduleIdentifier
+											moduleIdentifier,
 										),
 										__jsx(
 											'div',
@@ -180,10 +180,10 @@
 												'p',
 												null,
 												'Opens in ',
-												dueDate
-											)
-										)
-									)
+												dueDate,
+											),
+										),
+									),
 								),
 								__jsx(
 									'div',
@@ -194,8 +194,8 @@
 									__jsx(bs_index_esm.nzA, {
 										size: 30,
 										onClick: handle,
-									})
-								)
+									}),
+								),
 							),
 						grade &&
 							__jsx(
@@ -212,7 +212,7 @@
 											id: 'secondary',
 										},
 										moduleIdentifier,
-										' '
+										' ',
 									),
 									__jsx(
 										'div',
@@ -222,7 +222,7 @@
 										},
 										percentage,
 										'% passing rate',
-										' '
+										' ',
 									),
 									__jsx(
 										'div',
@@ -232,8 +232,8 @@
 										},
 										'Average Grade: ',
 										grade,
-										' '
-									)
+										' ',
+									),
 								),
 								__jsx(
 									'div',
@@ -242,9 +242,9 @@
 											'moreOptions grid justify-items-end m-2 text-gray-500 inline-block text-sm',
 										onClick: handle,
 									},
-									'more'
-								)
-							)
+									'more',
+								),
+							),
 					)
 				}
 			;(InformationCard.displayName = 'InformationCard'),
@@ -407,10 +407,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -426,13 +424,16 @@
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -449,7 +450,7 @@
 			var Template = function Template(args) {
 				return information_card_stories_jsx(
 					InformationCard,
-					(0, esm_extends.Z)({}, args, { handle: onHandle })
+					(0, esm_extends.Z)({}, args, { handle: onHandle }),
 				)
 			}
 			Template.displayName = 'Template'
@@ -483,7 +484,7 @@
 										Default.parameters) ||
 									void 0 === _Default$parameters
 									? void 0
-									: _Default$parameters.docs
+									: _Default$parameters.docs,
 							),
 							{},
 							{
@@ -501,11 +502,11 @@
 												_Default$parameters2.docs) ||
 										void 0 === _Default$parameters2$
 										? void 0
-										: _Default$parameters2$.source
+										: _Default$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Primary.parameters = _objectSpread(
 					_objectSpread({}, Primary.parameters),
@@ -519,7 +520,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -537,11 +538,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = _objectSpread(
 					_objectSpread({}, Secondary.parameters),
@@ -555,7 +556,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -573,11 +574,11 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

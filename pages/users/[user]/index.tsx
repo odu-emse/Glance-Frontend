@@ -17,7 +17,7 @@ const UserProfilePage = () => {
 	const { data: sessionUser } = useSession()
 	const { user: account } = useContext(GlobalUserContext)
 	const [instructorMode, setInstructorMode] = useState(
-		isInstructor === 'true'
+		isInstructor === 'true',
 	)
 
 	const verifyEdit = (userToEdit: string): boolean => {
@@ -42,7 +42,7 @@ const UserProfilePage = () => {
 			biography?: string | null
 			phoneNumber?: string | null
 		},
-		instructorInput?: InstructorProfile
+		instructorInput?: InstructorProfile,
 	) => {
 		// we need to remove this field since the API knows users aren't allowed to edit this field,
 		// but we need to track it in the state
@@ -91,7 +91,7 @@ const UserProfilePage = () => {
 					socialInput,
 					userInput,
 					instructorInput,
-				}
+				},
 			)
 		}).catch((err) => {
 			console.log(err)
@@ -135,7 +135,7 @@ const UserProfilePage = () => {
 				`,
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	)
 
 	if (error) {

@@ -5,7 +5,7 @@
 		'./node_modules/@babel/runtime/helpers/esm/defineProperty.js': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			function _typeof(obj) {
 				return (
@@ -35,7 +35,7 @@
 						var res = prim.call(input, hint || 'default')
 						if ('object' !== _typeof(res)) return res
 						throw new TypeError(
-							'@@toPrimitive must return a primitive value.'
+							'@@toPrimitive must return a primitive value.',
 						)
 					}
 					return ('string' === hint ? String : Number)(input)
@@ -62,11 +62,11 @@
 		'./components/common/forms/inputs/select/select.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.d(__webpack_exports__, { P: () => Select })
 			var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement,
 				Select = function Select(_ref) {
@@ -103,7 +103,7 @@
 							{
 								className:
 									'bg-gray-50 text-gray-900 text-sm w-28 w-fit py-3 border-0 focus:ring-0 ml-1 focus:outline-dashed focus:outline-blue-500 '.concat(
-										disabled ? 'cursor-not-allowed' : ''
+										disabled ? 'cursor-not-allowed' : '',
 									),
 								onChange: handle,
 								disabled,
@@ -137,11 +137,11 @@
 													react__WEBPACK_IMPORTED_MODULE_0__.Fragment,
 													null,
 													option.icon && option.icon,
-													option.label
-											  )
+													option.label,
+											  ),
 									)
-								})
-						)
+								}),
+						),
 					)
 				}
 			;(Select.displayName = 'Select'),
@@ -279,7 +279,7 @@
 		'./components/common/forms/inputs/select/select.stories.tsx': (
 			__unused_webpack_module,
 			__webpack_exports__,
-			__webpack_require__
+			__webpack_require__,
 		) => {
 			__webpack_require__.r(__webpack_exports__),
 				__webpack_require__.d(__webpack_exports__, {
@@ -299,13 +299,13 @@
 				_Tertiary$parameters3,
 				_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__ =
 					__webpack_require__(
-						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js'
+						'./node_modules/@babel/runtime/helpers/esm/defineProperty.js',
 					),
 				react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-					'./node_modules/react/index.js'
+					'./node_modules/react/index.js',
 				),
 				_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-					'./components/common/forms/inputs/select/select.tsx'
+					'./components/common/forms/inputs/select/select.tsx',
 				),
 				__jsx = react__WEBPACK_IMPORTED_MODULE_0__.createElement
 			function ownKeys(object, enumerableOnly) {
@@ -314,10 +314,8 @@
 					var symbols = Object.getOwnPropertySymbols(object)
 					enumerableOnly &&
 						(symbols = symbols.filter(function (sym) {
-							return Object.getOwnPropertyDescriptor(
-								object,
-								sym
-							).enumerable
+							return Object.getOwnPropertyDescriptor(object, sym)
+								.enumerable
 						})),
 						keys.push.apply(keys, symbols)
 				}
@@ -329,18 +327,25 @@
 					i % 2
 						? ownKeys(Object(source), !0).forEach(function (key) {
 								;(0,
-								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(target, key, source[key])
+								_Users_jdesante_Development_Glance_Frontend_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_1__.Z)(
+									target,
+									key,
+									source[key],
+								)
 						  })
 						: Object.getOwnPropertyDescriptors
 						? Object.defineProperties(
 								target,
-								Object.getOwnPropertyDescriptors(source)
+								Object.getOwnPropertyDescriptors(source),
 						  )
 						: ownKeys(Object(source)).forEach(function (key) {
 								Object.defineProperty(
 									target,
 									key,
-									Object.getOwnPropertyDescriptor(source, key)
+									Object.getOwnPropertyDescriptor(
+										source,
+										key,
+									),
 								)
 						  })
 				}
@@ -391,7 +396,7 @@
 							{ label: 'Popularity', value: 'popularity' },
 							{ label: 'Latest', value: 'latest' },
 						],
-					}
+					},
 				)),
 				(Primary.parameters = _objectSpread(
 					_objectSpread({}, Primary.parameters),
@@ -405,7 +410,7 @@
 										Primary.parameters) ||
 									void 0 === _Primary$parameters
 									? void 0
-									: _Primary$parameters.docs
+									: _Primary$parameters.docs,
 							),
 							{},
 							{
@@ -423,11 +428,11 @@
 												_Primary$parameters2.docs) ||
 										void 0 === _Primary$parameters2$
 										? void 0
-										: _Primary$parameters2$.source
+										: _Primary$parameters2$.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Secondary.parameters = _objectSpread(
 					_objectSpread({}, Secondary.parameters),
@@ -441,7 +446,7 @@
 										Secondary.parameters) ||
 									void 0 === _Secondary$parameters
 									? void 0
-									: _Secondary$parameters.docs
+									: _Secondary$parameters.docs,
 							),
 							{},
 							{
@@ -459,11 +464,11 @@
 												_Secondary$parameters2.docs) ||
 										void 0 === _Secondary$parameters3
 										? void 0
-										: _Secondary$parameters3.source
+										: _Secondary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				)),
 				(Tertiary.parameters = _objectSpread(
 					_objectSpread({}, Tertiary.parameters),
@@ -477,7 +482,7 @@
 										Tertiary.parameters) ||
 									void 0 === _Tertiary$parameters
 									? void 0
-									: _Tertiary$parameters.docs
+									: _Tertiary$parameters.docs,
 							),
 							{},
 							{
@@ -495,11 +500,11 @@
 												_Tertiary$parameters2.docs) ||
 										void 0 === _Tertiary$parameters3
 										? void 0
-										: _Tertiary$parameters3.source
+										: _Tertiary$parameters3.source,
 								),
-							}
+							},
 						),
-					}
+					},
 				))
 		},
 	},

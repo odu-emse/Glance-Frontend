@@ -45,7 +45,7 @@ function CreateLearningPathPage() {
 				}
 			`,
 		},
-		gql_fetcher
+		gql_fetcher,
 	)
 
 	const courseGetter = (id: string) => {
@@ -73,7 +73,7 @@ function CreateLearningPathPage() {
 									].text,
 									sections: [],
 									carnegieHours: courseGetter(
-										event.target.value
+										event.target.value,
 									)?.carnegieHours,
 									required: courseGetter(event.target.value)
 										?.required,
@@ -110,8 +110,8 @@ function CreateLearningPathPage() {
 												checkedModules.filter(
 													(checkedModule) =>
 														checkedModule !==
-														e.target.value
-												)
+														e.target.value,
+												),
 											)
 										}
 									}}
@@ -144,8 +144,8 @@ function CreateLearningPathPage() {
 												checkedCollections.filter(
 													(checkedCollection) =>
 														checkedCollection !==
-														e.target.value
-												)
+														e.target.value,
+												),
 											)
 										}
 									}}
@@ -178,8 +178,8 @@ function CreateLearningPathPage() {
 												checkedLessons.filter(
 													(checkedLesson) =>
 														checkedLesson !==
-														e.target.value
-												)
+														e.target.value,
+												),
 											)
 										}
 									}}

@@ -48,7 +48,7 @@ const Index = ({}) => {
         }`,
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	) as { data: { user: Array<User> }; error: Error }
 
 	const { data, error } = useSWR(
@@ -95,7 +95,7 @@ const Index = ({}) => {
 					`,
 			  }
 			: null,
-		gqlFetcher
+		gqlFetcher,
 	) as {
 		data: {
 			threads: Array<ThreadType>
@@ -119,7 +119,7 @@ const Index = ({}) => {
 		)
 
 	const threadTopicSet = new Set<string>(
-		data.threads.map((thread) => thread.topics).flat()
+		data.threads.map((thread) => thread.topics).flat(),
 	)
 
 	return (
@@ -237,7 +237,7 @@ const Index = ({}) => {
 													>
 														{topic}
 													</li>
-												)
+												),
 											)}
 										</ul>
 									</div>
@@ -273,14 +273,14 @@ const Index = ({}) => {
 										v.body
 											?.toLowerCase()
 											.includes(
-												searchQuery.toLowerCase()
+												searchQuery.toLowerCase(),
 											) ||
 										v.topics?.some((topic) =>
 											topic
 												.toLowerCase()
 												.includes(
-													searchQuery.toLowerCase()
-												)
+													searchQuery.toLowerCase(),
+												),
 										))
 								)
 							}
@@ -296,7 +296,9 @@ const Index = ({}) => {
 									v.topics?.some((topic) =>
 										topic
 											.toLowerCase()
-											.includes(searchQuery.toLowerCase())
+											.includes(
+												searchQuery.toLowerCase(),
+											),
 									)
 								)
 							else return v.title !== null
